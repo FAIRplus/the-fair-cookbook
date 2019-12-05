@@ -5,7 +5,7 @@
 * The FAIR Cookbook is a project aiming at collating protocols for making data FAIR
 * The FAIR Cookbook is open source and licensed under CC-BY-4.0
 * The FAIR Coobook is writting using Markdown and deployed using `jupyter-tool`
-* The FAIR Cookbook is an activity of the [FAIRplus project](https://fairplus-project.eu/), grant agreement #802750 (2019-22), funded by the [Innovative Medicine Initiative (IMI)](www.imi.europa.eu)![alt text](https://www.imi.europa.eu/themes/custom/imi/images/imi_logo.png =250x250)
+* The FAIR Cookbook is an activity of the [FAIRplus project](https://fairplus-project.eu/), grant agreement #802750 (2019-22), funded by the [Innovative Medicine Initiative (IMI)](www.imi.europa.eu)![alt text](https://www.imi.europa.eu/themes/custom/imi/images/imi_logo.png )
    - [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668) (University of Oxford)
    - [Susanna-Assunta Sansone](https://orcid.org/0000-0001-5306-5690) (University of Oxford)
    - [Andrea Splendiani](https://orcid.org/0000-0002-3201-9617) (Novartis)
