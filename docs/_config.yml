@@ -33,9 +33,9 @@ url: YOUR URL                  # the base hostname & protocol for your site, e.g
 footer_text: 
   This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 
    2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.
-  <a href="https://europa.eu/"><img src="./images/logo/eu-flag.png" height="50" alt="EU flag" class="float-left bottom-margin"></a>
-  <a href="https://www.imi.europa.eu/"><img src="./images/logo/imi-logo.png" height="50" alt="IMI logo" class="float-left"></a>
-  <a href="https://efpia.eu"><img src="./images/logo/efpia-logo.png" height="50" alt="EFPIA logo" class="float-left"></a>
+  <a href="https://europa.eu/"><img src="./images/logo/eu-flag.png" height="20" alt="EU flag" class="float-left bottom-margin"></a>
+  <a href="https://www.imi.europa.eu/"><img src="./images/logo/imi-logo.png" height="20" alt="IMI logo" class="float-left"></a>
+  <a href="https://efpia.eu"><img src="./images/logo/efpia-logo.png" height="20" alt="EFPIA logo" class="float-left"></a>
 
   This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
   Jupyter Book Community</a>
