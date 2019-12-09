@@ -107,16 +107,16 @@
     url: /recipes/fair-data-matrix-recipe
     not_numbered: false
   - title: eTOX experience Recipe
-    url: /recipes/etox-recipe
+    url: /recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
     not_numbered: false    
   - title: RESOLUTE experience Recipe
-    url: /recipes/resolute-recipe
+    url: /recipes/resolute_raw/rawRecipe_resolute
     not_numbered: false 
   - title: ONCOTRACK experience Recipe
-    url: /recipes/oncotrack-recipe
+    url: /recipes/oncotrack_raw/rawRecipe-oncotrack
     not_numbered: false 
   - title: ND4BB experience Recipe
-    url: /recipes/nd4bb-recipe
+    url: /recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
     not_numbered: false
 
 # A chapter w/ a collection of sections beneath it

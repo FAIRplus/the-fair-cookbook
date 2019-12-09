@@ -1,0 +1,111 @@
+---
+redirect_from:
+  - "/recipes/oncotrack-raw/rawrecipe-oncotrack"
+title: |-
+  ONCOTRACK experience Recipe
+prev_page:
+  url: /recipes/resolute_raw/rawRecipe_resolute.html
+  title: |-
+    RESOLUTE experience Recipe
+next_page:
+  url: /recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html
+  title: |-
+    ND4BB experience Recipe
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Oncotrack</p>
+<h2 id="(To-be-updated)">(To be updated)<a class="anchor-link" href="#(To-be-updated)"> </a></h2><h2 id="Abstract">Abstract<a class="anchor-link" href="#Abstract"> </a></h2><h2 id="Data-Description">Data Description<a class="anchor-link" href="#Data-Description"> </a></h2><p>The OncoTrack colorectal carcinoma (CRC) biobank includes tumours from 106 patients, 35 organoids and 59 xenografts. Multi-omics experiments and various drug response studies have been performed on the CRC biobank.</p>
+<p>The OncoTrack metadata includes both project-level metadata and sample metadata. The project metadata is hosted on the Elixir <a href="https://datacatalog.elixir-luxembourg.org/dataset/64f33e4f-0d6d-4062-86c5-9c3db4e3a99a">IMI Catalog</a>, which includes general datasets information, planning site, intervention and observation, etc. The sample metadata includes published sample metadata and drug response experiment results, as well as private metadata, which includes patient ages,  surgery time, etc. Here, we focus the FAIRification of the public sample metadata of OncoTrack.</p>
+<h2 id="Data-FAIRification">Data FAIRification<a class="anchor-link" href="#Data-FAIRification"> </a></h2><p>The FAIRification of Oncotrack metadata includes four parts, accessing the data, Extract Transform and Load(ETL) pipeline, data curation and data sharing.</p>
+<p><img src="image_0.png" alt="image alt text">Data Access</p>
+<p>The public metadata is published as supplementary information in <a href="https://www.nature.com/articles/ncomms14262#Sec54">Schütte, et al</a>.  Sample metadata identifier annotation, and relevant entries in the public dataset are stored in OwnCloud, with controlled access to Squad team members.</p>
+<h4 id="Metadata-ETL-pipeline">Metadata ETL pipeline<a class="anchor-link" href="#Metadata-ETL-pipeline"> </a></h4><p>The original metadata was stored in Excel spreadsheets. In the <a href="https://drive.google.com/file/d/1GBEOIXMsTGvuSxUXJ_YhiBYh4ohdv4ag/view?usp=sharing">cohort metadata</a>, each sample is listed as a separate row in the spreadsheet. Each sample attribute, like tumour status, cancer stage, is listed as a separate column in the table. Each sample is named following the <a href="https://drive.google.com/file/d/1qTQ4cYsmD3AN9XYRxpwayOerc78LUzq6/view?usp=sharing">OncoTrack identifier system</a>, using patient ID, tumour type and patient-derived xenograft (PDX) /organoid(PDM) ID, for example, "150_MET1_XEN2" means “The second xenograft culture of the first metastatic tumour sample in patient 150.”</p>
+<h4><img src="image_1.png" alt="image alt text"></h4>
+<h5 id="Metadata-template">Metadata template<a class="anchor-link" href="#Metadata-template"> </a></h5><p>The frequent use of acronyms and inconsistent metadata structure make it difficult to interpret the metadata. To FAIRify the metadata, the data owner and data curators first agreed on the structure and content of the FAIRified metadata, including what attributes shall be extracted, how the attributes are presented and other domain-specific requirements. Below are five requirements:</p>
+<ul>
+<li>Enriched metadata </li>
+</ul>
+<p>Drug sensitivity is one important attributes of the PDX and PDM models. Hence, drug response information shall be included in the metadata.</p>
+<ul>
+<li>Handling missing values</li>
+</ul>
+<p>To compare properties across samples conveniently, missing values shall be replaced with NA instead of removing the empty attribute.</p>
+<ul>
+<li>Expanding acronyms </li>
+</ul>
+<p>All acronyms and abbreviations shall be replaced with their full forms to avoid ambiguity.</p>
+<ul>
+<li>Standardized data representations</li>
+</ul>
+<p>Special characters in attribute names shall be avoided.</p>
+<ul>
+<li>Formal representations: </li>
+</ul>
+<p>The attribute values shall correspond to ontology terms if applicable.</p>
+<p>The final sample metadata template can be found <a href="https://docs.google.com/document/d/1OXSQsZbw2EEZOZrrXJIaJpsb60Y3-4N4W-wu9LX5oa8/edit">here</a>.</p>
+<h5 id="Metadata-extract">Metadata extract<a class="anchor-link" href="#Metadata-extract"> </a></h5><h6 id="Cohort-metadata">Cohort metadata<a class="anchor-link" href="#Cohort-metadata"> </a></h6><p>The cohort metadata was converted to a <a href="https://docs.google.com/document/d/1pBjRe7rWO4xsUIVecIgxOm_SJaMWeWf8KBrsDTDVAmg/edit?usp=sharing">tab-delimited table</a>. Each row in the table represents one sample, and each column represents one sample attribute. Compared with the original dataset, all the abbreviations were expanded. Tumour type and sample origin information was retrieved from the sample name. The disease "colon and rectal cancer" was replaced by an ontology term <a href="http://www.ebi.ac.uk/efo/EFO_0005842">“Colorectal cancer”</a>. 144 samples from 106 patients were extracted, including 35 organoids and 59 xenografts.</p>
+<p><img src="image_2.png" alt="image alt text"></p>
+<h6 id="Drug-response-metadata">Drug response metadata<a class="anchor-link" href="#Drug-response-metadata"> </a></h6><p>The drug response metadata is also provided as an Excel document. Each sheet in the file represents one group of drug sensitivity experiments. In different groups, different measurement method, drug response scale are used. For example, in the organoid drug response experiment, the IC50 value was measured. While in the xenografts test, both IC50 and response evaluation criteria in solid tumours (<strong>RECIST</strong>)  were used to define the drug response. Moreover, some drug response data was colour coded.</p>
+<p><img src="image_3.png" alt="image alt text"></p>
+<p><img src="image_4.png" alt="image alt text"></p>
+<p><img src="image_5.png" alt="image alt text"></p>
+<p>To extract different groups of drug response data of the patient-derived models and combine them into the same format, we recalculated the drug response and mapped them to the corresponding level.  All drug response data was converted to a flat data frame, in which, each drug test of each sample was as a single row. The drug response defining criteria was stored in the attribute "unit", the drug response experiment output was stored in attribute “value”. 1829 drug tests were carried out in total. The detailed drug response summary is listed <a href="https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing">here</a>.</p>
+<p><img src="image_6.png" alt="image alt text"></p>
+<h4 id="Metadata-Transform">Metadata Transform<a class="anchor-link" href="#Metadata-Transform"> </a></h4><p>The cohort metadata and drug response metadata were extracted into two spreadsheets, making it difficult to collect all metadata related to one sample. Besides, a tab-demitted sample is not machine-readable and not compatible with the popular metadata host platforms, like the NCBI BioSample databases and EBI BioSamples database, standard. Hence, it’s important to combine all metadata related to one sample to a separate file and convert it to a machine-readable format.</p>
+<p>The metadata was transformed to JSON format to make it convenient for machines to parse,  generate and exchange. The <a href="https://drive.google.com/file/d/1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY/view">BioSamples JSON schema </a>was used as the sample metadata template, which enable direct submission to <a href="https://www.ebi.ac.uk/biosamples/">BioSamples database</a> and can be easily converted to other formats, like XML, spreadsheets, etc.</p>
+<p>The BioSamples JSON schema includes four blocks, API submission requirements( e.g. domain, release date, update date, etc), administrative information, (e.g. contacts, affiliations), general sample metadata (sample names, species, etc) and detailed sample data for more domain-specific. All information is stored in key: value pairs. Only flatten JSON objects can be accepted.</p>
+<p>In the metadata transformation, the metadata of each sample was kept in one seperate JSON file. The original sample name, which includes patient number, tissue ID and PDM ID,  was used as the JSON file name, to keep consistency different host platform.</p>
+<p>One limitation of BioSamples JSON schema is that it only supports strings as values and flat data structures, additional parsing is requested for complex metadata. For example, in the drug response metadata, one d</p>
+<p><img src="image_7.png" alt="image alt text"></p>
+<p>In the example above, cetuximab was tested twice on sample 100_MET_XEN, using different units and values. The second attribute was labelled with replicate number 2. Special letters were converted to ASCII encoding to avoid mojibake.  All the "µM" was converted to “microM”.</p>
+<p>It was converted to attributes:</p>
+<p>"Drug response (cetuximab) : Minor Response, IC50(microM) = 33"</p>
+<p>"Drug response (cetuximab_2) : Progressive disease,  RECIST criteria = 3.1"</p>
+<p>Administrative information was also added to each JSON data, including insititute, project name, and project website. Contact details were not provided because of ….</p>
+<p>The generated metadata can be valiated agains BioSamples schema can be validated with the <a href="https://github.com/elixir-europe/json-schema-validator">Elixir JSON validator</a>, which is based on AJV and includes custom keyword extensions that are relevant for life science data validation.</p>
+<h3 id="Data-curation">Data curation<a class="anchor-link" href="#Data-curation"> </a></h3><h4 id="Publications">Publications<a class="anchor-link" href="#Publications"> </a></h4><p>Publications are also updated on OncoTrack IMI catalog. The publications were extracted from <a href="http://www.oncotrack.eu/publications/index.html">http://www.oncotrack.eu/publications/index.html</a>. PMID . To retain a persistant identifier, we used links from identifier org instead of PubMed link. The publication file can be found here.</p>
+<h4 id="Drug">Drug<a class="anchor-link" href="#Drug"> </a></h4><p>17 drugs were tested on 4? PDMs. Drug response is a very important test on the PDM. So we also included it as part of the metadata.</p>
+<p>17 drugs are included in the OT database, including commercial drugs, antibodies (e.g. Avastin), proprietary, and in development drugs. To formalize the drug name and make it findable, we selected the official name , with drug ontology.</p>
+<p>The candidate databases were <a href="https://mednet-communities.net/inn">mednet INNs</a>, <a href="https://www.drugbank.ca/">DrugBank,</a> <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a>, <a href="https://www.ebi.ac.uk/chembl/">ChEMBL</a>. The use ChEBI as the primary ID, as it covers the majoritry of drugs. Also, the ChEBI database, has been imported as one ontology source in the <a href="https://www.ebi.ac.uk/ols/index">EBI Ontology Look Up service</a> (OLS).</p>
+<p><a href="https://www.ebi.ac.uk/spot/zooma/">ZOOMA</a>, only ChEBI selected as the ontology source and accepts all curation sources. The complete outcome of ZOOMA can be found here. Only those with high confidence was selected. Manaual curations were also applied. Two drugs not in CHEBI, we used ChEMBL instead. One drug not mapped to any thing, kept the original name. The <a href="https://drive.google.com/open?id=1kYH76-3K3mkz6wfTydFoT_UPf8WP0fe_">final ontology mapping</a> is here.</p>
+<p><img src="image_8.jpg" alt="image alt text"></p>
+<h4 id="Data-discrepancy">Data discrepancy<a class="anchor-link" href="#Data-discrepancy"> </a></h4><p>Discrepancy and errors were found in the published data. One drug response was wrongly marked, raw data provdided. Corrected. Missing data reported to the data owner. Checked in with the original record, if value provided, use the original. If missing, "provenance" contact the data generator. The checked files are here.</p>
+<h3 id="Data-sharing">Data sharing<a class="anchor-link" href="#Data-sharing"> </a></h3><p>The curated metadata was uploaded to Owncloud and G-drive with controlled access and versioning. It’s also possible to host the metadata as private samples on Public databases, e.g. biosamples. (add picture) in both JSON and tab-delimitted spreadsheet format, to make it both machine and human friendly. Checksum was also provided to ensure the metadata intergraty. The original script was added (add link)</p>
+<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges"> </a></h2><ul>
+<li><p>Data privacy</p>
+</li>
+<li><p>Data access</p>
+</li>
+</ul>
+<h2 id="Summary">Summary<a class="anchor-link" href="#Summary"> </a></h2><h2 id="Future-plan">Future plan<a class="anchor-link" href="#Future-plan"> </a></h2><ol>
+<li><p>Add more metadata once got data access permissions.</p>
+</li>
+<li><p>Add ontology annotation based on the data owner requirements.</p>
+</li>
+<li><p>Add license</p>
+</li>
+<li><p>Administrative metadata</p>
+</li>
+</ol>
+<h2 id="Supplementary-materials">Supplementary materials<a class="anchor-link" href="#Supplementary-materials"> </a></h2><p>Script 1: <a href="https://drive.google.com/file/d/1bbMMKZnygZ8kccdnSj2R_BRLDhd0vAS-/view?usp=sharing">Extract_cohort_metadata.R</a></p>
+<p>Script 2: <a href="https://drive.google.com/open?id=1eNxdNFGN7GAw7Z0Cmk0k2BJiMMZ7wbel">Extract_drugResponse_metadata.R</a></p>
+<p>Script 3: <a href="https://drive.google.com/file/d/18Ik3RryhWVFq9_2IIy6k8N-qpnP9Wgm3/view?usp=sharing">Transform to JSON.R</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
