@@ -1,16 +1,5 @@
 # RESOLUTE FAIRification Recipe
 
-**Identifier: **
-
-**Authors: **
-
-**Maintainers:**
-
-**Version: 1**
-
-**License: **
-
-
 ## Ingredients
 
 
@@ -54,7 +43,10 @@ One limitation of the FAIRsharing MINSEQE schema is that it is incompatible to t
 
 
 ![Transcriptomics schema](image_0.png)
-*Figure 1: Transcriptomics schema*
+
+
+_Figure 1: Transcriptomics schema_
+
 
 To solve this problem, we proposed a [transcriptomics schema](https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema) which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks (Figure 1). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. _(Note: This schema is still actively updated. Feedback welcomed)_
 

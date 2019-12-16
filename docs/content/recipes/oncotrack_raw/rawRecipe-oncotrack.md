@@ -1,18 +1,7 @@
 # Oncotrack FAIRification recipe
 
-**Identifier:**
-
-**Authors:**
-
-**Maintainers:**
-
-**Version: 1**
-
-**License:**
-
 
 ## Ingredients
-
 
 
 *   Metadata model
@@ -37,7 +26,7 @@
     *   Ontology mapping: [ZOOMA](https://www.ebi.ac.uk/spot/zooma/)
     *   File Integrity check: md5sum (GNU coreutils) 8.28
 
-	 	 	 	
+ 	 	 	
 
 
 ## Objective
@@ -50,15 +39,10 @@ This FAIRification pipeline converts the OncoTrack sample metadata to a structur
 The FAIRification of Oncotrack metadata includes four steps, accessing the data, metadata extraction, transform and load(ETL) pipeline, data curation and data sharing. (Figure 1)
 
 
-#### 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](image_0.png "image_tooltip")
 
 
-Figure 1: OncoTrack metadata FAIRification pipeline	
+_Figure 1: OncoTrack metadata FAIRification pipeline_	
 
 
 ### Data Description
@@ -70,34 +54,22 @@ The[ OncoTrack](http://www.oncotrack.eu/home/index.html) sample metadata include
 The original cohort metadata is stored in an Excel spreadsheet. Figure 2 is an example of the cohort metadata. Each sample is listed as a separate row in the spreadsheet. Sample attributes are listed in columns. The sample names follow the[ OncoTrack identifier system guidelines](https://drive.google.com/file/d/1qTQ4cYsmD3AN9XYRxpwayOerc78LUzq6/view?usp=sharing), which consists of patient ID, tumour type, and patient-derived cell culture model ID. For example,_ Sample “150_MET1_XEN2”_ represents _“The second xenograft culture of the first metastatic tumour sample in Patient 150.”_ 
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](image_1.png "image_tooltip")
 
 
-	Figure 2: Example of OncoTrack public cohort metadata
+_Figure 2: Example of OncoTrack public cohort metadata_
+
 
 The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drugs are tested on patient-derived organoid(PDO) and patient-derived xenografts(PDX) models in five sets of experiments. Different sets have their unique measurement methods, drug response scales. For example, in _Sheet 1: PDO drug response_ experiment, IC50 value is measured and defines the drug _response category_ (Figure 3a). In _Sheet 2: PDX drug response test_, the _response evaluation criteria in solid tumours (**RECIST**)_ scales defines the_ drug response category_ (Figure 3b). In both examples, the _drug response category _is marked by colour codes.
-
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK2.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](image_2.png "image_tooltip")
 
 
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK3.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](image_3.png "image_tooltip")
 
 
-Figure 3: Example of Oncotrack drug response data
+_Figure 3: Example of Oncotrack drug response data_
 
 
 ### Metadata ETL pipeline
@@ -109,26 +81,18 @@ Firstly, all missing values in the metadata shall be marked with _NAs _instead o
 The cohort metadata was converted to a[ tab-delimited table](https://docs.google.com/document/d/1pBjRe7rWO4xsUIVecIgxOm_SJaMWeWf8KBrsDTDVAmg/edit?usp=sharing), of which each row represents one sample, and each column represents one sample attribute. 144 samples from 106 patients were extracted, including 35 organoids and 59 xenografts. Tumour type and sample origin information was retrieved from the sample name. The disease name _“colon and rectal cancer”_ was replaced with ontology term[ “Colorectal cancer”](http://www.ebi.ac.uk/efo/EFO_0005842). Figure 4 is an example of the extracted cohort metadata.
 
 
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK4.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](image_4.png "image_tooltip")
 
 
-Figure 4: Example of the extracted cohort metadata 	 	
+_Figure 4: Example of the extracted cohort metadata_
 
 Drug sensitivity data were also extracted from the original spreadsheets. Each drug test per sample was listed as one entry. To coordinate different measurement approaches and response category scales, all drug sensitivity data were converted to a unified representation. All the measurement results were stored in Attribute _“Value”_, the drug response categorizes criteria were stored in Attribute _“Unit”,_ and the _drug response category _was recalculated and stored in Attribute _“Response”._ Figure 5 is an example of the extracted drug sensitivity data. 1829 drug tests were extracted in total. The drug response summary is [here](https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing). 
-
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK5.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](image_5.png "image_tooltip")
 
 
-	Figure 5: Example of extracted drug sensitivity data 	
+_Figure 5: Example of extracted drug sensitivity data_	
 
  	 	
 
@@ -161,14 +125,10 @@ The popular drug nomenclatures include International Nonproprietary Names (INNs)
 The OncoTrack drug names were mapped to corresponding ontology terms in ChEBI and ChEMBL using ZOOMA. ZOOMA is an ontology annotation tool, which maps free texts to ontology terms based on a curated repository of annotation knowledge. In OncoTrack drug name mapping, only ChEBI and ChEMBL were selected as ontology sources, and all curation sources except GWAS were selected to improve the coverage and increase the mapping confidence. Figure 6 is an example of the ZOOMA mapping output. Only entries with high mapping confidences were selected. The rest were mapped manually to terms in ChEBI databases. Among all 17 drugs, Drug “BI 860585” didn’t map to any pharmaceutical terms, so the original name was kept. The complete mapping results are listed[ here](https://drive.google.com/open?id=1kYH76-3K3mkz6wfTydFoT_UPf8WP0fe_). 
 
 
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK7.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](image_6.jpg "image_tooltip")
 
 
-Figure 6: Example of  ZOOMA ontology mapping results
+_Figure 6: Example of  ZOOMA ontology mapping results_
 
 
 #### Data discrepancy
