@@ -1,10 +1,10 @@
 *FAIRplus Project - FAIRirification Recipe - Squad 1*
 
-**Data normalization and integration through entity linking**
+# Data normalization and integration through entity linking
 
-**_The eTox Sampler Dataset applied scenario_**
+## _The eTox Sampler Dataset applied scenario_
 
-**Motivation and aim of the FAIRification Recipe**
+### Motivation and aim of the FAIRification Recipe
 
 The description of the metadata as well as the characterization of the actual content of a dataset often rely on short free-text excerpts. As an example, we can consider the names of the columns of a table (e.g. "laboratory tests") or the different values of the cells belonging to a specific table column (e.g. “cholesterol”, “blood sugar”, “liver function”, etc.). Often such free-text excerpts are not rigorously characterized inside and across datasets, thus leading to situations in which it is difficult to unambiguously describe the semantics of each excerpt due to polysemy (i.e. several meanings can be associated to the same excerpt) and synonymy (i.e. a specific meaning can be expressed by more than one excerpt).
 
@@ -30,7 +30,7 @@ As a general consideration, given a dataset, the selection of the knowledge reso
 
 Hereinafter this FAIRification Recipe, by relying on the OLS API, given an input dataset, presents into detail an automated ontology coverage evaluation strategy. Such strategy aims at: (i) identifying the knowledge resources that better describe the structure (i.e. metadata) and content of the dataset under consideration, in terms of semantic coverage; (ii) gathering the most relevant concepts useful to characterize each piece of knowledge that belongs to the input dataset (i.e. each text excerpt that describes a specific aspect of the input dataset). In particular, basic linguistic analyses are performed on both the descriptive text excerpts provided as input to the OLS API and the labels of the corresponding related concepts that are retrieved by the same API. By pre-processing each input text excerpt we intend to perform *basic query expansion procedures with the aim of increasing the recall of relevant concepts when querying the OLS knowledge resource indexer*. By analyzing the labels of the list of matching concepts retrieved by the OLS API, we intend to *refine such concept list by relying on rules and heuristics based on linguistic analyses*. When we deal with the evaluation of the semantic coverage of knowledge resources, it is not uncommon that the indexers we have at our disposal (e.g. the OLS) do not include all the knowledge resources we would like to consider as potential sources of useful concepts. To mitigate this issue, we rely on *OntoIndex*, a knowledge resource indexer based on Elasticsearch and developed by the Hospital del Mar Medical Research Institute (IMIM), Barcelona. The current version of *OntoIndex* supports the import, indexing and search for concepts that belong to ontologies formalized by means of the Ontology Web Language (OWL) or the Open Biological and Biomedical Ontology (OBO) format, the latter widely adopted to describe biomedical knowledge resources.
 
-**Procedural description**
+### Procedural description
 
 The exploitation of the concepts formalized by widely-adopted knowledge resources (i.e. ontologies, thesauri, etc.) to semantically describe the structure (i.e. metadata) and content of a dataset is a key aspect to foster the FAIRness of the same data. With this regard, here we present an approach whose ultimate objective is easing and automating the choice and usage of a consistent and informed set of knowledge resources to describe a dataset under consideration. In particular, the proposed strategy **automatically evaluates the suitability of a set of knowledge resources  (i.e. ontologies, thesauri, etc.) with respect to the semantic characterization of a list of terms that occur in an input dataset** (i.e. the presence inside the considered knowledge resources, of concepts that properly describe the terms belonging to the input list).  
 
