@@ -1,22 +1,169 @@
-# Feedback Form for the Recipe AMR dataset
+# ND4BB dataset FAIRification recipe
 
-Please fill the feedback form and /or comment on the ingested feedback 
+__Version:__ 2, this recipe is extracted from [Version 1](https://docs.google.com/document/d/1LOQAkDZY91Y-5aFCDSlwP-PUeufFavx4Jprnbnl1Hi4/edit)
 
-## Who
 
-This recipe relates to a data steward (as opposed to a data producer or a data user).
+## Ingredients
 
-## When 
+* Raw Data: [AMR Compounds Database](https://www.dsf.unica.it/translocation/abdb/)
 
-After the data has been generated (as opposed to project design, or while data is being produced)
+* Metadata Model
 
-## Why
+* Vocabularies and Terminologies 
 
-Generic improvement of FAIR parameters. Make the AMR data more visible by using a public repository instead of a local webpage at UNICA.
+* Data Format:
 
-## How (materials):
+	* Excel spreadsheet
+	
+<table>
+  <tr>
+   <td>PropertyGroup
+   </td>
+   <td>Property
+   </td>
+   <td>Value
+   </td>
+  </tr>
+</table>
 
-## How (process):
+* Tools and  Software:
+
+	* Data curation tools: Excel, JAVA
+	* FAIRification pipeline tools: KNIME workflow
+	* Ontology recommender: ZOOMA, NCBO
+	* FAIR assessment: [RDA indicator V0.03](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit?dls=true#gid=1320380260)
+
+
+    		
+
+
+## Objectives
+
+The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data to a public repository using machine readable format. Also generic improvement of the FAIR parameters.
+
+
+## Step by Step Process
+
+
+### Dataset description
+
+The AMR database consists of several nested static HTML pages. The information is well structured, results are mainly quantitative numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/)) and a machine-readable data set should be easily created.
+
+To get a good understanding of the AMR dataset, the AMR metadata shall be extracted. The AMR metadata includes four types of metadata: structural metadata, administrative metadata, and descriptive metadata. The structural metadata describes the structure of the dataset, for examples, column names and/or IDs. Administrative metadata contains the author, organization, and other provenance information. The descriptive metadata includes the procedure, usually protocols, in generating the experimental results. The descriptive metadata is always stored in a free-text format without data structure. 
+
+Figure 1 is an example of the simplified schematic workflow of FAIRification, which includes the extraction, transform, annotation, licensing and identifier assigning process. Due to the limit of time, we ere, we focus on the extraction and annotation of structural metadata, the administrative metadata, descriptive metadata will be added in the future.
+
+
+![alt_text](image_0.png "image_tooltip")
+
+
+_Figure 1:  Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows)._ 
+
+
+### Data extraction
+
+Data are extracted using a[ KNIME workflow](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf), which can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced. 
+
+Figure 2 is a snapshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (\<h3\>, shown in the red box in Figure 3) and compounds as an unsorted list (\<ul\>, shown in the yellow box in Figure 3).  
+
+
+
+![alt_text](image_1.jpg "image_tooltip")
+
+
+_Figure 2: Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted._
+
+
+![alt_text](image_2.jpg "image_tooltip")
+
+
+_Figure 3: Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound._
+
+We first identified all websites that contain the project data. The homepage (Figure 2) describes the compound names, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in Figure 4. 
+
+Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by <td>…</td>, chemical “Oxazolidinones” and “Tetracyclines” uses different data structure. Therefore the extracted XML document was updated before applying further nodes to the XML document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. The green boxes in Figure 4 highlighted the discrepancies we found in the original dataset.
+
+
+![alt_text](image_3.png "image_tooltip")
+
+
+_Figure 4: Workflow to extract antimicrobial classes and compound with their corresponding subpages_
+
+
+Links to all content in the sub-page are also extracted. Figure 5 is an example of the subpage of one compound, which consists of table selection with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources. (See the green boxes in Figure 5). External links were excluded from current data extraction.
+
+The complete workflow to extract the data from the compound/charge webpage is provided in [supplementary figure 1](#heading=h.q7ozvs96azbw).
+
+
+![alt_text](image_4.jpg "image_tooltip")
+
+
+_Figure 5: Example of one ND4BB raw data_
+
+
+### Data transform
+
+The data were extracted following the schema to facilitate future data annotation: PropertyGroup – Property – Value where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the propert is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in Figure 6. For each property, the corresponding values in a controlled vocabulary list are collected into a[ spreadsheet](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx). Missing values were fixed in this transform as well. 
+
+One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup). 
+
+
+![alt_text](image_5.png "image_tooltip")
+
+
+_Figure 6: Example data set for +3 charged Amikacin_
+
+
+### Extract and annotate structural metadata
+
+To prepare for the ontology annotation, we first generated lists of different types of attributes, which include “AMRclass”, “AMR compound”, “PropertyGroup”, etc. In each spreadsheet, the values are listed as separate rows for ontology annotation. 
+
+The strings went through additional parsing to improve mapping confidence. Duplicated or missing attributes were removed. Stemming and lemmatization were implemented to map the keyword to its root form to avoid mismatch because of spelling/form variations.  
+
+all the strings were sent through ZOOMA/NCBO API to search for ontology annotation. The ontology annotation results are listed here ([ZOOMA](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BZOOMA_1019.xlsx), [NCBO](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BNCBOREC_1021.xlsx)). The ontology annotations were ranked and selected based on its confidence. For strings that didn’t find proper ontology mapping, the original values were kept. The ontology annotation preparation workflow is [here](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_EBI_ZOOMA_requests_V5.knwf). 
+
+Both ZOOMA and NCBO ontology recommenders returned the nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only few cases the NCBO Recommender showed results (e.g. BAL29880 and MBX2319) were ZOOMA did not find a corresponding ontology. 
+
+One difference between these two ontology mappers is they process special characters (e.g. -_#) and spaces differently. For example, in NCBO, among “ ‘beta-lactamase inhibitors’, ‘beta lactamase inhibitors’ and ‘betalactamase inhibitors’ only the ontology annotation of the first item was found. While ZOOMA returned ontology annotation results for all three descriptions. Another example would be Aminonucleosides, Aminonucleoside, Amino nucleoside. While NCBO Recommender found no result, ZOOMA found at least a result for the terms ‘Aminonucleoside’, ‘Amino nucleoside’. This proves the necessity of running stemming or lemmatizing prior to ontology mapping service.
+
+Provenance metadata about the ontology annotation pipeline implementation are stored here in the same file. 
+
+
+## Results
+
+Both generated files ‘ExtractedMetadata_20190124_ZOOMA_0329.xlsx’ and ‘ExtractedMetadata_20190124_NCBOREC_0347.xlsx’ show nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only few cases the NCBO Recommender showed results (e.g. BAL29880 and MBX2319) were ZOOMA did not find a corresponding ontology. 
+
+The proposed workflow is insufficient to extract adequate and consistent semantic annotations for the structural metadata. In addition the retrieved links do not reflect the used version of the ontology. 
+
+
+## FAIR assessment
+
+The FAIRness of the ND4BB was also assessed based on the [RDA indicators (v0.03)](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit#gid=1320380260). Although there are a few indicators that are not applicable to the ND4BB dataset because of data type limitations, and some indicators are too ambiguous to provide a objective assessment. We got different data curators evaluating the FAIRness seperately and compared and discussed the conflicting assessment. In general, the FAIRness score against RDA FAIR indicator is 36%, of which the mandatory indicator score is 47% and the recommended indicator score is 32%. 
+
+
+## Future plan
+
+
+1. Extract administrative metadata, provenance information, e.g. owner, date of creation
+2. Add license to data set
+3. Store data (=experimental results) together with administrative, structural, and descriptive metadata in a repository
+4. Add PID to data set (=digital object)
+5. Add metadata together with PID to a public catalog
+6. Add metrics according to CMMI and add to the public catalog
+7. Add checksums for all files for QC and integrity checks
+8. Expand the ontology annotation to all terms
+
+## Summary
+
+The AMR dataset was provided as a first example as it was immediately available. A generic FAIRification workflow was also provided. We reviewed the workflow and derived general principles for the cookbook. However (as for the principles we learnt) the lack of a context for the data, and of goals for the FAIRification process made the actual action of FAIRification not valuable.
+
+As a result or our work on the AMR dataset, we  identified useful general principles, including the need for license, availability of the data, the importance of context (e.g.: what ontologies to map to) and other details included in our report.
+
+We also identified key FAIRification steps in the proposed process, some of which non obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow. 
+
+Overall this dataset has been very useful to start our overall process and team activities.
+
+## FAIRification process summary table
 
 <table>
   <tr>
@@ -144,7 +291,8 @@ Tool: Java functions compareTo() and contains()</td>
 Tool: manual</td>
     <td>- data can be annotated with multiple ontologies</td>
     <td>-  if there is a need to select one matching ontology term for each entity, no guidance exists</td>
-    <td>Comment by Andrea S:distinguish between suggestive choices vs objective ones.(Yes, but that will not e.g. make a protein a gene, or a liver a hepatocyte). So we need mappings and the subjective part translates into context and using lenses</td>
+    <td>Comment by Andrea S:distinguish between suggestive choices vs objective ones.
+(Yes, but that will not e.g. make a protein a gene, or a liver a hepatocyte). So we need mappings and the subjective part translates into context and using lenses</td>
   </tr>
   <tr>
     <td>Extract descriptive metadata and add semantic annotations based on publicly available ontologies</td>
@@ -268,220 +416,9 @@ e.g. python hashlib  </td>
   </tr>
 </table>
 
+## Supplementary information
 
-# Reflections on the workflow (trying to unify the part above, and what was suggested in the picture in the main doc.
 
-#### Figure P1
+![alt_text](image_6.png "image_tooltip")
 
-# FAIRification cookbook
-
-    1. Problem formulation
-
-Preface: I’m not the owner of the data, but would like to help making the data as useful as possible to the community, i.e. FAIR in the widest meaning: findable for everybody, accessible for everybody, interoperable for human and machine readability and linkable to any other resource, and re-usable by providing an accurate semantic annotation for all kind of metadata information (see below). Therefore it would be useful for me to understand what is missing or what could be done better to make the data set FAIR. I used a simple small data set for the first learnings. I’m aware that complexity will bring more and other issues to the process, but once we have solved the simple issues we can concentrate on more (possibly realistic?) cases. 
-
-Previous experiences along this line were collected in this document: [https://osf.io/sjzc8/](https://osf.io/sjzc8/) 
-
-The basic reason for using this simple data set is to generate as early as possible a common understanding within FAIRplus what FAIRification means and how to achieve FAIRification. Some initial questions are:	
-
-* What type of maturity matrix is appropriate, a single 5 star grading like RDA proposed in [https://doi.org/10.5281/zenodo.1285272](https://doi.org/10.5281/zenodo.1285272) on page 57 or a more complex 4x5 matrix like in [http://blog.ukdataservice.ac.uk/fair-data-assessment-tool/](http://blog.ukdataservice.ac.uk/fair-data-assessment-tool/) or [https://fairshake.](https://fairshake.cloud/)[cloud](https://fairshake.cloud/)[/](https://fairshake.cloud/) 
-
-* Can we generate a FAIR data set for only a single use case or does FAIRification implicitly means a general or universal FAIRification, i.e. once a data set is made FAIR it can be used in all thinkable scenarios?
-
-* Does FAIRification always means a complete FAIRification, or is it possible to have a partly FAIRified data set (e.g. only structural metadata are annotated)?
-
-* A more technical question could be: Is it sufficient to add the link of an ontology term or do we need also information about the version of the ontology used or other additional information (e.g. tool used to annotate…)?
-
-* Are there any best practice procedures described within Life science or other scientific areas which we can adopt?
-
-The AMR Compounds Database ([https://www.dsf.unica.it/translocation/abdb/](https://www.dsf.unica.it/translocation/abdb/)) (NOTE:  A Database of Force-Field Parameters, Dynamics, and Properties of Antimicrobial Compounds, https://doi.org/10.3390/molecules200813997) contains information about known compounds with antimicrobial activity. The data was generated during the IMI ND4BB TRANSLOCATION project at University of Cagliari using several different simulation tools. The data is worth to be made FAIR, especially for machine readability. 
-
-My personal proposal on maturity is (I prefer a 4x5 matrix):
-
-* F: 1 star - data set is findable via a web based search by using the correct keywords, but it is not listed in a common catalogue
-
-* A: 2 star – data can be accessed without restrictions, a dedicated license is missing; the URL is constant over a long period of time, a PID is missing, an API would be better
-
-* I: 2 star - data format of the webpages is homogeneous, also two small bugs hinder a straight download
-
-* R: 1 star – semantic annotations are missing, data structure is not like a simple 2D table,  units are given with data, clear separation of aggregated and raw data is not straightforward 
-
-In this use case the complete workload should be demonstrated to make the data set FAIR. This include but is not restricted (NOTE:  A very detailed Action Plan is given in Turning FAIR into Reality https://doi.org/10.2777/1524 on page 17) to
-
-* Extract the information (data and metadata) from original source(s)
-
-* Transform the extracted data into a common schema 
-
-* Extract administrative (NOTE:  The term administrative metadata is used for provenance information, e.g. owner, date of creation ) metadata 
-
-* Extract structural (NOTE:  The term structural metadata is used to specify metadata describing the structure of a data set. Commonly column names and/or IDs are used to describe the data (=experimental results). Other metadata are administrative (=provenance) or descriptive (=protocol) metadata. ) metadata and add semantic annotations based on publicly available ontologies
-
-* Extract descriptive (NOTE:  The term descriptive metadata is used for any (unstructured) text describing the procedure (commonly the protocol) to generate the experimental results (=data).  ) metadata and add semantic annotations based on publicly available ontologies
-
-* Add license to data set  
-
-* Store data (=experimental results) together with administrative, structural, and descriptive metadata in a repository
-
-* Add PID to data set (=digital object)
-
-* Add metadata together with PID to a public catalog 
-
-* Add metrics according to CMMI and add to the public catalog
-
-The process is visualized in the following figure. Some of the steps/phases might need some repetitions, while others may be optional.
-
-![image alt text](image_0.png)
-
-*Figure 1 my personal simplified schematic workflow of FAIRification. Some steps need repetitions (yellow arrows). Not all steps are mandatory, e.g. step 5 is required only if qualitative data are available.*
-
-The AMR database consists of several nested static HTML pages. The information is well structured, results are mainly quantitative (NOTE:  Quantitative data don’t need another complex step of semantic annotation in contrast to qualitative data (e.g. diagnoses)) numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. PubChem (NOTE:  The structure of the compound is extracted as sdf file from PubChem as noted in the Protocol (https://www.dsf.unica.it/translocation/db/protocol.html) )) and a machine readable data set should be easily creatable. 
-
-    2. Recipe 
-
-In the following recipe only steps 1, 2, 3, 4, and 7 of Figure 1 are studied, with special focus on extraction and semantic annotation of structural metadata. Missing steps are extraction of the administrative metadata (6) from homepage and the descriptive metadata (8) from page [https://www.dsf.unica.it/translocation/db/protocol.html](https://www.dsf.unica.it/translocation/db/protocol.html). Before steps 9-13 are implemented a discussion with the data owner should be initiated about additional improvements.
-
-        1. Extract data from AMR Compounds Database ([https://www.dsf.unica.it/translocation/abdb/](https://www.dsf.unica.it/translocation/abdb/))
-
-This workflow annotates the structural metadata (e.g. column names). No administrative or descriptive metadata are annotated. The data itself (results of measurement/analysis) are not checked for correctness. 
-
-Data are extracted from website using a KNIME workflow. The website is structured into a central part (see green frame in Figure 1) with data and two side columns on the left and right hand with additional information not in focus for FAIRification.
-
-![image alt text](image_1.png)
-
-The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (<h3>) and compounds as unsorted list (<ul>). 
-
-            <h1 align="left">ANTIMICROBIAL COMPOUNDS DATABASE</h1>
-
-            <table class="table1">
-
-                <tbody>
-
-                    <tr>
-
-                        <td>
-
-                            <h3 align="left">Aminoglycosides</h3>
-
-                            <ul class="list1">
-
-                                <li>
-
-                                    <a href"https://www.dsf.unica.it/translocation/abdb/amikacin.html">Amikacin</a>
-
-                                </li>
-
-                            </ul>
-
-                        </td>
-
-                        <td>
-
-                            <h3 align="left">Aminonucleosides</h3>
-
-                            <ul class="list1">
-
-                                <li>
-
-                                    <a href="https://www.dsf.unica.it/translocation/abdb/puromycin.html">Puromycin</a>
-
-                                </li>
-
-                            </ul>
-
-                        </td>
-
-    
-
-The compound class name and the compound name together with the link to the subpage is extracted by an XPATH node (see Figure 2).
-
-![image alt text](image_2.png)
-
-*Figure 3 Workflow to extract antimicrobial classes and compound with their corresponding subpages*
-
-REMARK: A bug was found between Oxazolidinones and Tetracyclines. All the other compound classes are table data separated by <td>…</td> except for this one. Therefore the extracted XML document was updated before applying further nodes to the XML document. 
-
-Next step in the workflow is to extract the AMR class name and the corresponding XML structure for further extraction
-
-REMARK: As all tables in the home page are labeled ‘table1’ therefore the extraction of XPATH could not use a named parameter like "//dns:table[@class='table1']/… ". Either a distinct table need to be referenced like "//dns:table[1]/dns:tbody/dns:tr/dns:td/dns:h3" or all tables are read and the empty rows are deleted
-
-Next steps are the extraction of the subpages via XPATH and HttpRetriever node. 
-
-REMARK: For two compounds (Amikacin and Ampicillin) multiple subpages for different charged molecules exist. Therefore these webpages have to follow and extended workflow (see Figure 3).
-
-![image alt text](image_3.png)
-
-*Figure 4 Workflow (lower part) for additional subpage for multiple charges*
-
-The last part of the workflow (see Figure 4) extracts the data from the subpage of the compound respectively charges (see Figure 5). Each webpage consists of a table section with the compound name, a 2D and 3D image, two tables with links to files or properties and a table with links to external sources. The external sources are not considered as relevant for FAIRification. 
-
-![image alt text](image_4.png)* Figure 5 Workflow to extract the data from compound/charge webpage*
-
-![image alt text](image_5.png)
-
-*Figure 6 Example of a webpage. Green frames are considered to be relevant for FAIRification*
-
-        2. Prepare data for semantic annotation 
-
-The data were extracted following the schema: PropertyGroup – Property – Value where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process.
-
-For the first section of a webpage no data can be extracted from the 2D image therefore a fixed value (‘2Dimage’) is given by the workflow. 
-
-![image alt text](image_6.png)
-
-*Figure 7 Example data set for +3 charged Amikacin *
-
-For each of the columns a separate excel sheet is generated with the unique values of the column (see Figure 7. 
-
-![image alt text](image_7.png)
-
-*Figure 8 Workflow to extract unique results for each column and write a separate worksheet to an Excel file*
-
-        3. Annotate data based on ontology terms
-
-For this step separate workflows are used. 
-
-Workflow consists of a preparation part shown in Figure 8. Preparation consists of generating the input filename and attaching the time point of workflow start for the output filename. In addition a list of search ontologies can be attached to the search query. A row splitter removes the sheet named ‘WorkflowDocu’ from the list of worksheets with terms to be annotated.
-
-![image alt text](image_8.png)
-
-*Figure 9 Preparation part of the annotation workflow*
-
-The resulting list of worksheets is then feed into a loop, which reads each worksheet, generates a request for the specific annotation service (ZOOMA or NCBO Recommender) and summarizes the results into a new Excel workbook named like the original workbook with service and time attached. The loop part of the workflow is shown in Figure 9. 
-
-![image alt text](image_9.png)
-
-*Figure 10 Repetead evaluation part of the annotation workflow*
-
-The last step of the workflow is shown in Figure 10. This part annotates the Excel worksheet with provenance data like the date of execution and the workflow name generating the Excel file. 
-
-![image alt text](image_10.png)
-
-*Figure 11 Final documentation part of the annotation workflow*
-
-        4. Results
-
-Both generated files ‘ExtractedMetadata_20190124_ZOOMA_0329.xlsx’ and ‘ExtractedMetadata_20190124_NCBOREC_0347.xlsx’ show nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only few cases the NCBO Recommender showed results (e.g. BAL29880 and MBX2319) were ZOOMA did not find a corresponding ontology. 
-
-        5. Enhancements
-
-For phrases with special characters (e.g. -_# etc.) several optional combination of words should be tested like ‘beta-lactamase inhibitors’, ‘beta lactamase inhibitors’ and ‘betalactamase inhibitors’ which might increase the chance to get a result. In the example NCBO-Recommender finds only results for the first term, while ZOOMA retrieves results for all three terms.
-
-Another example would be Aminonucleosides, Aminonucleoside, Amino nucleoside. While NCBO Recommender found no result, ZOOMA found at least a result for the terms ‘Aminonucleoside’, ‘Amino nucleosid’. Thus a stemmer or lemmatizer should be run prior to the ontology mapping service (or the service could offer this ;-))
-
-An example for an enhanced KNIME workflow is presented in Figure 11
-
-![image alt text](image_11.png)
-
-*Figure 12 Workflow enhancement for stemmed/lemmatized phrases*
-
-The output of the Workflow enhancement is shown in Table 1
-
-*Table 1 Output of workflow enhancement*
-
-![image alt text](image_12.png)
-
-Results of the enhanced workflows (ExtractedMetadata_20190124_TP+ZOOMA_1019.xlsx and ExtractedMetadata_20190124_TP+NCBOREC_1021.xlsx) show nearly similar no of results without mapping terms compared to the initial workflow, but both workflows retrieved different terms as ‘did not map’. In the initial workflow ‘Aminonucleosides’ did not map, while in the second workflow ‘aminoglycoside’ did not map. Therefore all terms/combination of terms need to be tested.
-
-    3. Conclusion
-
-The proposed workflow is insufficient to extract adequate and consistent semantic annotations for the structural metadata. In addition the retrieved links do not reflect the used version of the ontology. 
-
+_Supplement figure 1: Workflow to extract the data from compound/charge webpage_
