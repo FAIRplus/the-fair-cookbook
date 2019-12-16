@@ -111,7 +111,7 @@ One limitation of this schema is that Excel does not explicitly describe the rel
 ![alt_text](image_5.png "image_tooltip")
 
 
-_Figure 6: Example data set for +3 charged Amikacin _
+_Figure 6: Example data set for +3 charged Amikacin_
 
 
 ### Extract and annotate structural metadata
