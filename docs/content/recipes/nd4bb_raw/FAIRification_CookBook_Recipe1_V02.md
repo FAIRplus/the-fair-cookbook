@@ -1,27 +1,19 @@
 # ND4BB dataset FAIRification recipe
 
-**Version: **2, this recipe is extracted from [Version 1](https://docs.google.com/document/d/1LOQAkDZY91Y-5aFCDSlwP-PUeufFavx4Jprnbnl1Hi4/edit)
+__Version:__ 2, this recipe is extracted from [Version 1](https://docs.google.com/document/d/1LOQAkDZY91Y-5aFCDSlwP-PUeufFavx4Jprnbnl1Hi4/edit)
 
 
 ## Ingredients
 
+* Raw Data: [AMR Compounds Database](https://www.dsf.unica.it/translocation/abdb/)
 
-    1. Raw Data: [AMR Compounds Database](https://www.dsf.unica.it/translocation/abdb/)
+* Metadata Model
 
+* Vocabularies and Terminologies 
 
-    2. Metadata Model
+* Data Format:
 
-
-    2. Vocabularies and Terminologies 
-
-
-    3. Data Format:
-
-
-    	Excel spreadsheet
-
-
-    	Excel spreadsheet schema: 
+	* Excel spreadsheet
 	
 <table>
   <tr>
@@ -34,21 +26,12 @@
   </tr>
 </table>
 
+* Tools and  Software:
 
-
-    4. Tools and  Software:
-
-
-    	Data curation tools: Excel, JAVA
-
-
-    	FAIRification pipeline tools: KNIME workflow
-
-
-    	Ontology recommender: ZOOMA, NCBO
-
-
-    	FAIR assessment: [RDA indicator V0.03](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit?dls=true#gid=1320380260)
+	* Data curation tools: Excel, JAVA
+	* FAIRification pipeline tools: KNIME workflow
+	* Ontology recommender: ZOOMA, NCBO
+	* FAIR assessment: [RDA indicator V0.03](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit?dls=true#gid=1320380260)
 
 
     		
@@ -81,7 +64,7 @@ _Figure 1:  Schematic workflow of the general FAIRification pipeline. some steps
 
 Data are extracted using a[ KNIME workflow](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf), which can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced. 
 
-Figure 2 is a snapshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (<h3>, shown in the red box in Figure 3) and compounds as an unsorted list (<ul>, shown in the yellow box in Figure 3).  
+Figure 2 is a snapshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (\<h3\>, shown in the red box in Figure 3) and compounds as an unsorted list (\<ul\>, shown in the yellow box in Figure 3).  
 
 
 
