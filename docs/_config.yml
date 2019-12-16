@@ -33,7 +33,7 @@ url: YOUR URL                  # the base hostname & protocol for your site, e.g
 footer_text: 
   This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 
    2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.
-  <a href="https://europa.eu/"><img src="./images/logo/eu-flag.png" height="20" alt="EU flag" class="float-left bottom-margin"></a><a href="https://www.imi.europa.eu/"><img src="./images/logo/imi-logo.png" height="20" alt="IMI logo" class="float-left"></a><a href="https://efpia.eu"><img src="./images/logo/efpia-logo.png" height="20" alt="EFPIA logo" class="float-left"></a>
+  <a href="https://europa.eu/"><img src="/_build/images/logo/eu-flag.png" height="20" alt="EU flag" class="float-left bottom-margin"></a><a href="https://www.imi.europa.eu/"><img src="/_build/images/logo/imi-logo.png" height="20" alt="IMI logo" class="float-left"></a><a href="https://efpia.eu"><img src="/_build/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" class="float-left"></a>
 
   This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
   Jupyter Book Community</a>
@@ -42,7 +42,7 @@ footer_text:
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
 textbook_logo: images/logo/logo.png               # A logo to be displayed at the top of your textbook sidebar. Should be square
-textbook_logo_link: https://github.com/fair-cookbook/the-fair-cookbook/intro                    # A link for the logo.
+textbook_logo_link: https://github.com/FAIRplus/the-fair-cookbook/intro                    # A link for the logo.
 sidebar_footer_text: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 number_toc_chapters: true         # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
 
