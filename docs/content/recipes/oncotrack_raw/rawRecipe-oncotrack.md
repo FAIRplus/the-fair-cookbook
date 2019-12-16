@@ -1,148 +1,200 @@
-Oncotrack 
+# Oncotrack FAIRification recipe
 
-## (To be updated)
+**Identifier:**
 
-## Abstract
+**Authors:**
 
-## Data Description
+**Maintainers:**
 
-The OncoTrack colorectal carcinoma (CRC) biobank includes tumours from 106 patients, 35 organoids and 59 xenografts. Multi-omics experiments and various drug response studies have been performed on the CRC biobank. 
+**Version: 1**
 
-The OncoTrack metadata includes both project-level metadata and sample metadata. The project metadata is hosted on the Elixir [IMI Catalog](https://datacatalog.elixir-luxembourg.org/dataset/64f33e4f-0d6d-4062-86c5-9c3db4e3a99a), which includes general datasets information, planning site, intervention and observation, etc. The sample metadata includes published sample metadata and drug response experiment results, as well as private metadata, which includes patient ages,  surgery time, etc. Here, we focus the FAIRification of the public sample metadata of OncoTrack.
+**License:**
 
-## Data FAIRification
 
-The FAIRification of Oncotrack metadata includes four parts, accessing the data, Extract Transform and Load(ETL) pipeline, data curation and data sharing.
+## Ingredients
 
-![image alt text](image_0.png)Data Access
 
-The public metadata is published as supplementary information in [Schütte, et al](https://www.nature.com/articles/ncomms14262#Sec54).  Sample metadata identifier annotation, and relevant entries in the public dataset are stored in OwnCloud, with controlled access to Squad team members. 
 
-#### Metadata ETL pipeline 
+*   Metadata model
+    *   [Oncotrack cohort metadata](https://drive.google.com/open?id=13xmazrUUWaCZVooL8d3HXZg7URfVlupM)
+    *   [Oncotrack drug sensitivity data](https://drive.google.com/file/d/166IlLr-kZLBPoGLkxEyp7cLw8KFKtN1_/view?usp=sharing) 
+    *   [Oncotrack metadata template](https://docs.google.com/document/d/1OXSQsZbw2EEZOZrrXJIaJpsb60Y3-4N4W-wu9LX5oa8/edit?usp=sharing)
+*   Vocabularies and terminologies
+    *   Pharmaceutical drug names follow the nomenclature of ChEBI and ChEMBL database. All drug ontologies are listed [here](https://drive.google.com/open?id=1kYH76-3K3mkz6wfTydFoT_UPf8WP0fe_). 
+    *   All abbreviations and acronyms used in OncoTrack cohort metadata are listed in the [OncoTrack public metadata acronym table](https://drive.google.com/open?id=1voD6FGHVyHUgZEHFRfzh_HlTQa7CvW5-MtheGhydDAg).
+*   Data format
+    *   Input data: Excel
+    *   Output data: 
+        *   tab-delimited text file
+        *   JSON file (JSON schema: [BioSamples databases JSON schema](https://drive.google.com/open?id=1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY))
+*   Tools and software
+    *   Metadata extract and transform tool: R (Version 3.6.1)
+        *   String parsing: R package stringi_1.4.3, stringr_1.4.0
+        *   Excel file Loading: readxl_1.3.1
+        *   Data structure transform:plyr_1.8.4  
+        *   JSON format parsing: rjson_0.2.20 
+    *   JSON schema validator: [Elixir JSON schema validator](https://github.com/elixir-europe/json-schema-validator)
+    *   Ontology mapping: [ZOOMA](https://www.ebi.ac.uk/spot/zooma/)
+    *   File Integrity check: md5sum (GNU coreutils) 8.28
 
-The original metadata was stored in Excel spreadsheets. In the [cohort metadata](https://drive.google.com/file/d/1GBEOIXMsTGvuSxUXJ_YhiBYh4ohdv4ag/view?usp=sharing), each sample is listed as a separate row in the spreadsheet. Each sample attribute, like tumour status, cancer stage, is listed as a separate column in the table. Each sample is named following the [OncoTrack identifier system](https://drive.google.com/file/d/1qTQ4cYsmD3AN9XYRxpwayOerc78LUzq6/view?usp=sharing), using patient ID, tumour type and patient-derived xenograft (PDX) /organoid(PDM) ID, for example, "150_MET1_XEN2" means “The second xenograft culture of the first metastatic tumour sample in patient 150.”
+	 	 	 	
 
-#### ![image alt text](image_1.png)
 
-##### Metadata template
+## Objective
 
-The frequent use of acronyms and inconsistent metadata structure make it difficult to interpret the metadata. To FAIRify the metadata, the data owner and data curators first agreed on the structure and content of the FAIRified metadata, including what attributes shall be extracted, how the attributes are presented and other domain-specific requirements. Below are five requirements:
+This FAIRification pipeline converts the OncoTrack sample metadata to a structured and consistent data format, improves the findability, interoperability, and reusability of the metadata. The FAIRified metadata provides an enriched context to other Oncotrack derived datasets.
 
-* Enriched metadata 
 
-Drug sensitivity is one important attributes of the PDX and PDM models. Hence, drug response information shall be included in the metadata. 
+## Step-by-Step Process
 
-* Handling missing values
+The FAIRification of Oncotrack metadata includes four steps, accessing the data, metadata extraction, transform and load(ETL) pipeline, data curation and data sharing. (Figure 1)
 
-To compare properties across samples conveniently, missing values shall be replaced with NA instead of removing the empty attribute.
 
-* Expanding acronyms 
+#### 
 
-All acronyms and abbreviations shall be replaced with their full forms to avoid ambiguity. 
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-* Standardized data representations
 
-Special characters in attribute names shall be avoided. 
+![alt_text](image_0.png "image_tooltip")
 
-* Formal representations: 
 
-The attribute values shall correspond to ontology terms if applicable. 
+Figure 1: OncoTrack metadata FAIRification pipeline	
 
-The final sample metadata template can be found [here](https://docs.google.com/document/d/1OXSQsZbw2EEZOZrrXJIaJpsb60Y3-4N4W-wu9LX5oa8/edit).
 
-##### Metadata extract
+### Data Description
 
-###### Cohort metadata
+The OncoTrack colorectal carcinoma (CRC) biobank includes patient tumour samples, patient derived xenograft models (PDX) and patient-derived 3D  cell models (PDO) from 106 patients. Multi-omics experiments and various drug sensitivity studies have been performed on the CRC biobank.
 
-The cohort metadata was converted to a [tab-delimited table](https://docs.google.com/document/d/1pBjRe7rWO4xsUIVecIgxOm_SJaMWeWf8KBrsDTDVAmg/edit?usp=sharing). Each row in the table represents one sample, and each column represents one sample attribute. Compared with the original dataset, all the abbreviations were expanded. Tumour type and sample origin information was retrieved from the sample name. The disease "colon and rectal cancer" was replaced by an ontology term [“Colorectal cancer”](http://www.ebi.ac.uk/efo/EFO_0005842). 144 samples from 106 patients were extracted, including 35 organoids and 59 xenografts. 
+The[ OncoTrack](http://www.oncotrack.eu/home/index.html) sample metadata includes published sample metadata, drug sensitivity experiment results, and private cohort information. Here, we focus on the FAIRification of the public sample metadata. Drug sensitivity, as an important property of the patient-derived 3D cell culture models, is also included. The metadata is published on[ Schütte, et al](https://www.nature.com/articles/ncomms14262#Sec54). Annotations to the metadata are stored in[ OwnCloud](https://owncloud.lcsb.uni.lu/apps/files/?dir=/ONCOTRACK&fileid=10738223) with controlled access.
 
-![image alt text](image_2.png)
+The original cohort metadata is stored in an Excel spreadsheet. Figure 2 is an example of the cohort metadata. Each sample is listed as a separate row in the spreadsheet. Sample attributes are listed in columns. The sample names follow the[ OncoTrack identifier system guidelines](https://drive.google.com/file/d/1qTQ4cYsmD3AN9XYRxpwayOerc78LUzq6/view?usp=sharing), which consists of patient ID, tumour type, and patient-derived cell culture model ID. For example,_ Sample “150_MET1_XEN2”_ represents _“The second xenograft culture of the first metastatic tumour sample in Patient 150.”_ 
 
-###### Drug response metadata
 
-The drug response metadata is also provided as an Excel document. Each sheet in the file represents one group of drug sensitivity experiments. In different groups, different measurement method, drug response scale are used. For example, in the organoid drug response experiment, the IC50 value was measured. While in the xenografts test, both IC50 and response evaluation criteria in solid tumours (**RECIST**)  were used to define the drug response. Moreover, some drug response data was colour coded.
 
-![image alt text](image_3.png)
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-![image alt text](image_4.png)
 
-![image alt text](image_5.png)
+![alt_text](image_1.png "image_tooltip")
 
-To extract different groups of drug response data of the patient-derived models and combine them into the same format, we recalculated the drug response and mapped them to the corresponding level.  All drug response data was converted to a flat data frame, in which, each drug test of each sample was as a single row. The drug response defining criteria was stored in the attribute "unit", the drug response experiment output was stored in attribute “value”. 1829 drug tests were carried out in total. The detailed drug response summary is listed [here](https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing). 
 
-![image alt text](image_6.png)
+	Figure 2: Example of OncoTrack public cohort metadata
 
-#### Metadata Transform
+The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drugs are tested on patient-derived organoid(PDO) and patient-derived xenografts(PDX) models in five sets of experiments. Different sets have their unique measurement methods, drug response scales. For example, in _Sheet 1: PDO drug response_ experiment, IC50 value is measured and defines the drug _response category_ (Figure 3a). In _Sheet 2: PDX drug response test_, the _response evaluation criteria in solid tumours (**RECIST**)_ scales defines the_ drug response category_ (Figure 3b). In both examples, the _drug response category _is marked by colour codes.
 
-The cohort metadata and drug response metadata were extracted into two spreadsheets, making it difficult to collect all metadata related to one sample. Besides, a tab-demitted sample is not machine-readable and not compatible with the popular metadata host platforms, like the NCBI BioSample databases and EBI BioSamples database, standard. Hence, it’s important to combine all metadata related to one sample to a separate file and convert it to a machine-readable format.
 
-The metadata was transformed to JSON format to make it convenient for machines to parse,  generate and exchange. The [BioSamples JSON schema ](https://drive.google.com/file/d/1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY/view)was used as the sample metadata template, which enable direct submission to [BioSamples database](https://www.ebi.ac.uk/biosamples/) and can be easily converted to other formats, like XML, spreadsheets, etc. 
 
-The BioSamples JSON schema includes four blocks, API submission requirements( e.g. domain, release date, update date, etc), administrative information, (e.g. contacts, affiliations), general sample metadata (sample names, species, etc) and detailed sample data for more domain-specific. All information is stored in key: value pairs. Only flatten JSON objects can be accepted.
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK2.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-In the metadata transformation, the metadata of each sample was kept in one seperate JSON file. The original sample name, which includes patient number, tissue ID and PDM ID,  was used as the JSON file name, to keep consistency different host platform. 
 
-One limitation of BioSamples JSON schema is that it only supports strings as values and flat data structures, additional parsing is requested for complex metadata. For example, in the drug response metadata, one d
+![alt_text](image_2.png "image_tooltip")
 
-![image alt text](image_7.png)
 
-In the example above, cetuximab was tested twice on sample 100_MET_XEN, using different units and values. The second attribute was labelled with replicate number 2. Special letters were converted to ASCII encoding to avoid mojibake.  All the "µM" was converted to “microM”.
 
-It was converted to attributes:
 
- 
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK3.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-"Drug response (cetuximab) : Minor Response, IC50(microM) = 33"
 
-"Drug response (cetuximab_2) : Progressive disease,  RECIST criteria = 3.1"
+![alt_text](image_3.png "image_tooltip")
 
-Administrative information was also added to each JSON data, including insititute, project name, and project website. Contact details were not provided because of ….
 
-The generated metadata can be valiated agains BioSamples schema can be validated with the [Elixir JSON validator](https://github.com/elixir-europe/json-schema-validator), which is based on AJV and includes custom keyword extensions that are relevant for life science data validation.
+Figure 3: Example of Oncotrack drug response data
+
+
+### Metadata ETL pipeline
+
+The frequent use of acronyms and abbreviations in Oncotrack metadata and the inconsistent metadata structures make it difficult to interpret and reuse. To extract and annotate the metadata, the data owner and data curators first agreed on the structure and content of the FAIRified metadata, as well as the principles in metadata extraction.
+
+Firstly, all missing values in the metadata shall be marked with _NAs _instead of being removed, to facilitate cross-sample comparisons. Secondly, all acronyms and abbreviations shall be expanded to their full forms to avoid ambiguity. Thirdly, the sample attribute values shall correspond to ontology terms if applicable. The final sample metadata template can be found[ here](https://docs.google.com/document/d/1OXSQsZbw2EEZOZrrXJIaJpsb60Y3-4N4W-wu9LX5oa8/edit).
+
+The cohort metadata was converted to a[ tab-delimited table](https://docs.google.com/document/d/1pBjRe7rWO4xsUIVecIgxOm_SJaMWeWf8KBrsDTDVAmg/edit?usp=sharing), of which each row represents one sample, and each column represents one sample attribute. 144 samples from 106 patients were extracted, including 35 organoids and 59 xenografts. Tumour type and sample origin information was retrieved from the sample name. The disease name _“colon and rectal cancer”_ was replaced with ontology term[ “Colorectal cancer”](http://www.ebi.ac.uk/efo/EFO_0005842). Figure 4 is an example of the extracted cohort metadata.
+
+
+
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK4.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](image_4.png "image_tooltip")
+
+
+Figure 4: Example of the extracted cohort metadata 	 	
+
+Drug sensitivity data were also extracted from the original spreadsheets. Each drug test per sample was listed as one entry. To coordinate different measurement approaches and response category scales, all drug sensitivity data were converted to a unified representation. All the measurement results were stored in Attribute _“Value”_, the drug response categorizes criteria were stored in Attribute _“Unit”,_ and the _drug response category _was recalculated and stored in Attribute _“Response”._ Figure 5 is an example of the extracted drug sensitivity data. 1829 drug tests were extracted in total. The drug response summary is [here](https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing). 
+
+
+
+<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK5.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](image_5.png "image_tooltip")
+
+
+	Figure 5: Example of extracted drug sensitivity data 	
+
+ 	 	
+
+To associate drug sensitivity data with related sample cohort metadata and convert them to machine-readable formats, we combined cohort metadata and drug sensitivity data to JSON files. The[ BioSamples JSON schema](https://drive.google.com/file/d/1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY/view)<span style="text-decoration:underline;"> </span>was used as the sample metadata template, allowing direct submissions to[ BioSamples database](https://www.ebi.ac.uk/biosamples/) and can be easily converted to other formats, like XML, spreadsheets, etc.
+
+The BioSamples JSON schema includes four blocks, submission metadata( e.g. submission domain, release date, update date), administrative metadata, (e.g. contacts, affiliations), general sample metadata (sample names, species, etc) and sample characteristics. All information is stored in key: value pairs. In sample characteristics, only data with flatten structure is accepted. 
+
+All cohort metadata and drug sensitivity data of each sample were combined into separate JSON files, named after the original sample identifier.
+
+BioSamples JSON schema only supports strings as value types. Therefore, complex data, for example, drug sensitivity data, need additional parsing to fit into the schema. For each drug response experiments, four descriptive attributes were “_Drug Name_”, “_Value_”, “_Unit_” and “_Drug response level_” provided. To convert them to key: value pairs, the “_drug name_” was kept as part of the attribute key. “Value”, “Unit” and “Drug response level” information were joint into one string. For example, the drug response of _regorafenib in Sample 302_MET_CELL_XEN _(Figure 6) was converted to _“Drug response(regorafenib): Minor response, IC50(µM) = 29”._ For drugs that were tested more than once, a replicate ID was added to the attribute key.
+
+
+
+Administrative information was also added to each JSON object, including institute, project name, and project website. Contact details were not provided, which needs further confirmation from the data owners.
+
+All transformed metadata was validated against BioSamples schema with the[ Elixir JSON validator](https://github.com/elixir-europe/json-schema-validator)<span style="text-decoration:underline;">,</span> which is based on AJV with additional life science keyword validation.
+
 
 ### Data curation
 
-#### Publications
+Data curation was implemented to increase the findability of the extracted metadata, including ontology mapping, encoding, and fixing data discrepancy.
 
-Publications are also updated on OncoTrack IMI catalog. The publications were extracted from [http://www.oncotrack.eu/publications/index.html](http://www.oncotrack.eu/publications/index.html). PMID . To retain a persistant identifier, we used links from identifier org instead of PubMed link. The publication file can be found here.
 
-#### Drug 
+#### Drug name ontology
 
-17 drugs were tested on 4? PDMs. Drug response is a very important test on the PDM. So we also included it as part of the metadata.
+Different types of drug names were used in the original drug sensitivity data, including generic names, trade names and their chemical names. Some in-development drugs were labelled by their company code. All drug names were mapped to a standardized nomenclature, together with ontology annotations, to increase the findability of drug response results.
 
-17 drugs are included in the OT database, including commercial drugs, antibodies (e.g. Avastin), proprietary, and in development drugs. To formalize the drug name and make it findable, we selected the official name , with drug ontology.
+The popular drug nomenclatures include International Nonproprietary Names (INNs), [DrugBank](https://www.drugbank.ca/)<span style="text-decoration:underline;"> </span>names, Chemical Entities of Biological Interest ([ChEBI](https://www.ebi.ac.uk/chebi/)) database identifiers, and bioactivity database,[ ChEMBL](https://www.ebi.ac.uk/chembl/)<span style="text-decoration:underline;"> i</span>dentifiers. Among them, the ChEBI database cover most drugs in OncoTrack, is easy to access and has been curated as an ontology source in Open Biomedical Ontology (OBO). Hence, the drug names in ChEBI was selected as the primary drug names. For drugs or active compounds that were not included in ChEBI, their names in ChEMBL were selected.
 
-The candidate databases were [mednet INNs](https://mednet-communities.net/inn), [DrugBank,](https://www.drugbank.ca/) [ChEBI](https://www.ebi.ac.uk/chebi/), [ChEMBL](https://www.ebi.ac.uk/chembl/). The use ChEBI as the primary ID, as it covers the majoritry of drugs. Also, the ChEBI database, has been imported as one ontology source in the [EBI Ontology Look Up service](https://www.ebi.ac.uk/ols/index) (OLS). 
+The OncoTrack drug names were mapped to corresponding ontology terms in ChEBI and ChEMBL using ZOOMA. ZOOMA is an ontology annotation tool, which maps free texts to ontology terms based on a curated repository of annotation knowledge. In OncoTrack drug name mapping, only ChEBI and ChEMBL were selected as ontology sources, and all curation sources except GWAS were selected to improve the coverage and increase the mapping confidence. Figure 6 is an example of the ZOOMA mapping output. Only entries with high mapping confidences were selected. The rest were mapped manually to terms in ChEBI databases. Among all 17 drugs, Drug “BI 860585” didn’t map to any pharmaceutical terms, so the original name was kept. The complete mapping results are listed[ here](https://drive.google.com/open?id=1kYH76-3K3mkz6wfTydFoT_UPf8WP0fe_). 
 
-[ZOOMA](https://www.ebi.ac.uk/spot/zooma/), only ChEBI selected as the ontology source and accepts all curation sources. The complete outcome of ZOOMA can be found here. Only those with high confidence was selected. Manaual curations were also applied. Two drugs not in CHEBI, we used ChEMBL instead. One drug not mapped to any thing, kept the original name. The [final ontology mapping](https://drive.google.com/open?id=1kYH76-3K3mkz6wfTydFoT_UPf8WP0fe_) is here.
 
-![image alt text](image_8.jpg)
+
+<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/rawRecipe-ONCOTRACK7.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](image_6.jpg "image_tooltip")
+
+
+Figure 6: Example of  ZOOMA ontology mapping results
+
 
 #### Data discrepancy
 
-Discrepancy and errors were found in the published data. One drug response was wrongly marked, raw data provdided. Corrected. Missing data reported to the data owner. Checked in with the original record, if value provided, use the original. If missing, "provenance" contact the data generator. The checked files are here. 
+Discrepancy and errors were found in the published metadata. In the cohort metadata, the tumour purity of sample “150_MET1”, “208_MET1”, “209_MET2” and “209_T2” were wrongly labelled. We compared these entries with the original records in the OncoTrack database and found discrepancies between the published metadata and Oncotrack database records. Those values were removed from extracted data until further confirmation from the data owner. The updated cohort metadata is [here](https://drive.google.com/open?id=13xmazrUUWaCZVooL8d3HXZg7URfVlupM).  In drug response metadata extraction, we recalculated the drug response level and found one error in _cetuximab_ drug response level. The corrected drug response data is [here](https://drive.google.com/open?id=166IlLr-kZLBPoGLkxEyp7cLw8KFKtN1_). 
+
+
+#### Data encoding
+
+Special letters were converted to ASCII encoding to avoid mojibake. All the “µM”s in drug sensitivity data were converted to “microM”.
+
 
 ### Data sharing
 
-The curated metadata was uploaded to Owncloud and G-drive with controlled access and versioning. It’s also possible to host the metadata as private samples on Public databases, e.g. biosamples. (add picture) in both JSON and tab-delimitted spreadsheet format, to make it both machine and human friendly. Checksum was also provided to ensure the metadata intergraty. The original script was added (add link)
+The curated metadata, both in summary spreadsheet format and JSON format, were uploaded to Owncloud and Google drive. The OncoTrack sample metadata can be submitted directly to the EMBL BioSamples database upon request. Supplementary figure 1 is an example of how the metadata will be displayed in the BioSamples database. Checksums were also provided to verify metadata integrity. 
 
-## Challenges
-
-* Data privacy
-
-* Data access
 
 ## Summary
 
+The public cohort metadata and drug sensitivity data were converted to tab-delimited summary files. For each sample, corresponding cohort metadata and drug data were combined to a separate JSON file, which can be later loaded to EBI BioSamples database. Metadata were translated to consistent terminologies and linked with ontology terms.
+
+
 ## Future plan
 
-1. Add more metadata once got data access permissions.
+The current ontology annotation is limited to drug names. Other ontologies can be added upon request. More detailed administrative metadata will be added once getting permission from the OncoTrack consortium. The license will be added according to the drug release policy.
 
-2. Add ontology annotation based on the data owner requirements.
-
-1. Add license 
-
-2. Administrative metadata
 
 ## Supplementary materials
 
@@ -152,3 +204,4 @@ Script 2: [Extract_drugResponse_metadata.R](https://drive.google.com/open?id=1eN
 
 Script 3: [Transform to JSON.R](https://drive.google.com/file/d/18Ik3RryhWVFq9_2IIy6k8N-qpnP9Wgm3/view?usp=sharing)
 
+Supplementary figure 1: [Example of Sample 150-MET1-XEN2 in BioSamples database](https://drive.google.com/open?id=1ALOwGwB2RpWksH4TuGeye8qEnUm0ULVH)
