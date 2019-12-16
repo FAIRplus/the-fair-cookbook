@@ -108,14 +108,10 @@ The data were extracted following the schema to facilitate future data annotatio
 One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup). 
 
 
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ND4BB-raw5.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](image_5.png "image_tooltip")
 
 
-_Figure 7: Example data set for +3 charged Amikacin _
+_Figure 6: Example data set for +3 charged Amikacin _
 
 
 ### Extract and annotate structural metadata
@@ -157,7 +153,6 @@ The FAIRness of the ND4BB was also assessed based on the [RDA indicators (v0.03)
 7. Add checksums for all files for QC and integrity checks
 8. Expand the ontology annotation to all terms
 
-
 ## Summary
 
 The AMR dataset was provided as a first example as it was immediately available. A generic FAIRification workflow was also provided. We reviewed the workflow and derived general principles for the cookbook. However (as for the principles we learnt) the lack of a context for the data, and of goals for the FAIRification process made the actual action of FAIRification not valuable.
@@ -168,10 +163,262 @@ We also identified key FAIRification steps in the proposed process, some of whic
 
 Overall this dataset has been very useful to start our overall process and team activities.
 
+## FAIRification process summary table
+
+<table>
+  <tr>
+    <td>Defined FAIRification Steps</td>
+    <td>How it is implemented 
+Tools/Process</td>
+    <td>Pros</td>
+    <td>Cons</td>
+    <td>Comments/Questions 
+</td>
+  </tr>
+  <tr>
+    <td>Define use case or describe scientific question</td>
+    <td>missing</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Fill out ELSI questionnaire 
+https://drive.google.com/drive/u/0/folders/1iOShHkInNUuFoRYADwXKxS1_-UAIRmRK </td>
+    <td>missing</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Select/define target repository or schema</td>
+    <td>missing</td>
+    <td></td>
+    <td></td>
+    <td>Any restrictions due to the selected repository/schema, e.g. missing fields?</td>
+  </tr>
+  <tr>
+    <td>Extract the information (data and metadata) from original source(s)</td>
+    <td>Process: extracts data
+Tool: KNIME
+Source: Website</td>
+    <td>KNIME workflow:
+- Provides a Repeatable processes
+-  Handles complex data extraction flows
+ Easy to explain</td>
+    <td>- Creating KNIME workflow requires a certain level of expertise/or training
+
+- Workflows are customized to the data source (web page)
+each variation at the source requires an additional branch </td>
+    <td>Do we include the ETL processes in FAIRification cookbook ?
+Having a reusable ETL process might help to continuous FAIRification of the resource 
+</td>
+  </tr>
+  <tr>
+    <td>Transform the extracted data into a common schema</td>
+    <td>Process: transforms extracted data into a schema and if needed fills the missing values
+Tool: KNIME/Excel
+Output: Excel</td>
+    <td>KNIME workflows can be tailored to fix systematic missing values (e.g. 2D image)</td>
+    <td>- Excel does not explicitly describes the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Extract administrative metadata </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Extract structural metadata and add semantic annotations based on publicly available ontologies</td>
+    <td>it has four sub procedures: 
+1) Enhancement
+2) Annotation via vocabulary services 
+ZOOMA
+NCBO
+3) Assessing the relevance of suggested vocabularies 
+4) Merge
+</td>
+    <td>
+</td>
+    <td></td>
+    <td>PRS: PID are missing for the searches over zooma and bioportal</td>
+  </tr>
+  <tr>
+    <td>Substep1: Enhancement</td>
+    <td>Process: generate alternative syntax of data to increase the annotation performance
+Tool: KNIME
+</td>
+    <td>Variations in spelling of concepts (e.g. adding special characters) can be generated with workflows</td>
+    <td>heuristic approach ( these methods can be provided as tips in the cookbook)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Substep2a: Annotation via vocabulary services: ZOOMA</td>
+    <td>Process: Searching related ontology terminologies 
+Recommender Service: ZOOMA 
+Output: Excel</td>
+    <td>- easy to use</td>
+    <td>- performance relies on the recommender service</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Substep2b: Annotation via vocabulary services: NCBO</td>
+    <td>Process: Searching related ontology terminologies 
+Recommender Service: NCBO API
+Output: Excel</td>
+    <td>-	easy to use
+-	NCBO has a large collection of ontologies. KNIME workflow restricts the search to a curated list of ontologies (Search Ontologies.txt)</td>
+    <td>- performance relies on the recommender service
+- creating a curated list of ontologies requires domain expertise and knowledge on existing ontologies.
+</td>
+    <td>Success of the annotation  depends on the vocabulary services. Performance of recommender services can be tested before the annotation process. If needed performance improvement methods can be defined (e.g. restricted search)</td>
+  </tr>
+  <tr>
+    <td>Substep3: Assessing the relevance of suggested vocabularies</td>
+    <td>Process: assessing the relevance of the recommended ontology terms
+Tool: Java functions compareTo() and contains()</td>
+    <td>- readily available 
+- CompareTo() returns the exact matches</td>
+    <td>- contains() function returns positive when the query term is contained in the recommended term. Might require expert review.
+- recommender systems might suggest a term with a different spelling. These terms will not be considered as a match by the functions and will need an expert review.</td>
+    <td>Automated rating of the recommended terminologies is based on syntactical matches, expert review is required.</td>
+  </tr>
+  <tr>
+    <td>Substep4: merging annotations</td>
+    <td>Process: select  the results from multiple annotation flows
+Tool: manual</td>
+    <td>- data can be annotated with multiple ontologies</td>
+    <td>-  if there is a need to select one matching ontology term for each entity, no guidance exists</td>
+    <td>Comment by Andrea S:distinguish between suggestive choices vs objective ones.
+(Yes, but that will not e.g. make a protein a gene, or a liver a hepatocyte). So we need mappings and the subjective part translates into context and using lenses</td>
+  </tr>
+  <tr>
+    <td>Extract descriptive metadata and add semantic annotations based on publicly available ontologies</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Add license to data set </td>
+    <td>is this defined in the recipe ?</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Store data (=experimental results) together with administrative, structural, and descriptive metadata in a repository</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Add PID to data set (=digital object)</td>
+    <td>is this defined in the recipe ?</td>
+    <td></td>
+    <td></td>
+    <td>PID are missing for the searches over zooma and bioportal</td>
+  </tr>
+  <tr>
+    <td>Add metadata together with PID to a public catalog </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Add metrics according to CMMI and add to the public catalog</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>in your opinion if any FAIRification step is missing please add them here</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Suggested FAIRification Step</td>
+    <td>
+Why  it is needed</td>
+    <td>
+Place in the workflow</td>
+    <td>
+Any suggested tools/processes</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Assessment of the current FAIR level.
+(at the beginning)</td>
+    <td></td>
+    <td></td>
+    <td>Subjective. Is having data in html tales 1 or 2 stars ?</td>
+    <td>Out of the recipe, but present in the document. Is this something worth as a genetic first step? What would we use this assessment for?</td>
+  </tr>
+  <tr>
+    <td>Data fixing
+(at the beginning)</td>
+    <td>Manual? Issue detection as a sub-product of workflow definition?</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Schema /Data model definition</td>
+    <td>Targeted data model can be defined explicitly and annotated with a set of vocabularies</td>
+    <td>before the data extraction </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Add a manifest describing the content of the archive</td>
+    <td>eases dive into the datasets for humans who can obtains basic information about each of the element or bundles in a dataset</td>
+    <td>NA</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Add checksums for all files for QC and integrity checks</td>
+    <td>allow integrity checks thus enables reuse
+</td>
+    <td></td>
+    <td>various options.
+e.g. python hashlib  </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Executing the workflow fails owing to use of localized file references in Knime workflows (which seems unavoidable)</td>
+    <td>avoid hard links to local storage</td>
+    <td>KNIME worklows</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Absence of Ontology terms identifiers for all the terms retrieved from BioPortal/Zooma (only the strings are apparently retrieved)</td>
+    <td>curis should be included</td>
+    <td>knime/workflow output should always contains class label + class identifiers
+</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Selected Ontologies ought to be identified more completely</td>
+    <td>abbreviation (.e.g CHEBI) is reported but</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 ## Supplementary information
 
 
 ![alt_text](image_6.png "image_tooltip")
 
-_Supplement figure 1: _Workflow to extract the data from compound/charge webpage_
+_Supplement figure 1: Workflow to extract the data from compound/charge webpage_
