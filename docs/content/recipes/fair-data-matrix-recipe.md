@@ -78,9 +78,10 @@ Our results: semantically-anchored data matrices served as Linked Data, deposite
 ### Step1: Address Data Findability and Accessibility:
 
 We made the initial spreadsheet table discoverable and citable by:
-	- uploading it to Zenodo. 
-	- assigning an open license (CC-BY 4.0)
-	- obtaining a persistent unique identifier in the form of a DOI: https://doi.org/10.5281/zenodo.2598799
+
+- uploading it to Zenodo. 
+- assigning an open license (CC-BY 4.0)
+- obtaining a persistent unique identifier in the form of a DOI: https://doi.org/10.5281/zenodo.2598799
 
 
      

@@ -84,14 +84,11 @@ Our results: semantically-anchored data matrices served as Linked Data, deposite
 <li>evaluate efficiency of the method via a data integrate challenge</li>
 </ul>
 <h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step1:-Address-Data-Findability-and-Accessibility:">Step1: Address Data Findability and Accessibility:<a class="anchor-link" href="#Step1:-Address-Data-Findability-and-Accessibility:"> </a></h3><p>We made the initial spreadsheet table discoverable and citable by:</p>
-
-<pre><code>- uploading it to Zenodo. 
-- assigning an open license (CC-BY 4.0)
-- obtaining a persistent unique identifier in the form of a DOI: https://doi.org/10.5281/zenodo.2598799
-
-
-
-</code></pre>
+<ul>
+<li>uploading it to Zenodo. </li>
+<li>assigning an open license (CC-BY 4.0)</li>
+<li>obtaining a persistent unique identifier in the form of a DOI: <a href="https://doi.org/10.5281/zenodo.2598799">https://doi.org/10.5281/zenodo.2598799</a></li>
+</ul>
 <h3 id="Step2:-Address-Interoperability">Step2: Address Interoperability<a class="anchor-link" href="#Step2:-Address-Interoperability"> </a></h3><p>We regularized the three dimensions of the matrix (data cube), which represent: i) the metabolites (molecular entities), ii) the treatments (experimental conditions and corresponding biomaterials and bioassays), and iii) the quantitation type (measurements).</p>
 <h4 id="Step-2A:-semantic-anchoring">Step 2A: semantic anchoring<a class="anchor-link" href="#Step-2A:-semantic-anchoring"> </a></h4><p>Metabolites (free text) names were augmented with unambiguous InChI codes, assigned by accessing CHEBI (<a href="https://doi.org/10.25504/FAIRsharing.62qk8w">https://doi.org/10.25504/FAIRsharing.62qk8w</a>) programmatically via its LibChebi library (<a href="https://github.com/libChEBI/libChEBIpy">https://github.com/libChEBI/libChEBIpy</a>).<br>
 We unpacked the information held in the column header, identifying the main types of tabulated entities and their relationships, and replacing free text with ontology term.
