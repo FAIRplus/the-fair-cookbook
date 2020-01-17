@@ -37,6 +37,7 @@
 
 # Adds a searchbar link
 - title: Search
+  url: Search
   search: true
   not_numbered: true
 
