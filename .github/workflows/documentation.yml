@@ -1,0 +1,20 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Deploy to GitHub Pages - Python
+      uses: JacksonMaxfield/github-pages-deploy-action-python@2.1.0
+      env:
+        ACCESS_TOKEN: ${{ secrets.fpcbksecret }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: docs/_build  # The folder the action should deploy.
+        BUILD_SCRIPT: pip install jupyter-book && jupyter-book build docs --overwrite  # The build script the action should run prior to deploying.
