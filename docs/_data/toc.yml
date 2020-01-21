@@ -98,12 +98,9 @@
   not_numbered: true
   expand_sections: true
   sections:
-  - title: Recipe Template
-    url: /recipes/recipe-template
-    not_numbered: false 
-  - title: Anomynization Recipe
-    url: /recipes/anonymization-recipe
-    not_numbered: false
+  - title: FAIR Assessment Recipe
+    url: /recipes/fair-assessment-recipe
+    not_numbered: false  
   - title: FAIR data matrix Recipe
     url: /recipes/fair-data-matrix-recipe
     not_numbered: false
@@ -119,6 +116,12 @@
   - title: ND4BB experience Recipe
     url: /recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
     not_numbered: false
+  - title: Recipe Template
+    url: /recipes/recipe-template
+    not_numbered: false 
+  - title: Anomynization Recipe
+    url: /recipes/anonymization-recipe
+    not_numbered: false    
 
 # A chapter w/ a collection of sections beneath it
 - title: Features and customization
