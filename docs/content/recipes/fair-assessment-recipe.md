@@ -4,11 +4,11 @@
 
 **authors**
 
-    - [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+- [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
 
 **maintainers**
 
-    - [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
+- [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
 
 **version**
 
@@ -16,25 +16,25 @@
 
 **license**
 
-    - [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
+- [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 
 
 ## Ingredients:
 
-    1. Identifier Schema:
-        - [resolveable URI]()
+1. Identifier Schema:
+- [resolveable URI](    )
 
-    2. Metadata Model:
-        -
+2. Metadata Model:
+-
 
-    3. Vocabularies and Terminologies:
-        -
+3. Vocabularies and Terminologies:
+-
 
-    4. Data Format:
-        - [RDF/Linked Data](https://www.w3.org/standards/semanticweb/data)
+4. Data Format:
+- [RDF/Linked Data](https://www.w3.org/standards/semanticweb/data)
 
-    5. Tools and  Software:
-        -[FAIREvaluator](https://W3id.org/AmIFAIR)
+5. Tools and  Software:
+-[FAIREvaluator](https://W3id.org/AmIFAIR)
 
         
 
@@ -49,7 +49,7 @@
      
      Provide or obtain a resource which is uniquely identified by a globally unique identifier such as INCHI Keys, DOIs, Handles and URLs.
 
-     ![Running the FAIREvaluator - part 1 ](./assets/fair-eval-img1.png)
+     ![Running the FAIREvaluator - part 1 ](/assets/fair-eval-img1.png)
 
      ### Step2:
 
@@ -69,3 +69,7 @@
 
      Analyze the report:
 
+
+## Reference:
+
+Wilkinson, M.D., Dumontier, M., Sansone, S. et al. Evaluating FAIR maturity through a scalable, automated, community-governed framework. Sci Data 6, 174 (2019). [doi:10.1038/s41597-019-0184-5](https://doi.org/10.1038/s41597-019-0184-5)
