@@ -36,17 +36,20 @@
 - [handle based http proxy for DOI](https://doi.org/)
 
 2. Metadata Model:
+
 - topic dependent
 
 3. Vocabularies and Terminologies:
+
 - topic dependent
 
 4. Data Format:
+
 - [RDF/Linked Data](https://www.w3.org/standards/semanticweb/data)
 
 5. Tools and  Software:
 
-5.1  resolution services:
+    5.1  resolution services:
 
 - [EZID resolution service](https://ezid.cdlib.org/)
 
@@ -54,7 +57,7 @@
 
 - [identifiers.org](https://identifiers.org/)
 
-5.2 FAIR assessment tools
+    5.2 FAIR assessment tools
 
 - [FAIREvaluator](https://W3id.org/AmIFAIR)
 
