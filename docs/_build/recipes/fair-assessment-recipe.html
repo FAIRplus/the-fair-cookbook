@@ -91,47 +91,30 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <li><p><a href="https://fairshake.cloud/">FAIRShake</a></p>
 </li>
 </ul>
-<h2 id="Objectives:">Objectives:<a class="anchor-link" href="#Objectives:"> </a></h2>
-<pre><code>Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
-Obtain a machine readable report 
-
-</code></pre>
-<h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step1:">Step1:<a class="anchor-link" href="#Step1:"> </a></h3>
-<pre><code>Navigate the FAIREvaluator tool, which can be accessed via the following 2 addresses:
-
-- [https://w3id.org/AmIFAIR])(https://w3id.org/AmIFAIR)
-
-- [https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!)
-
-
-</code></pre>
+<h2 id="Objectives:">Objectives:<a class="anchor-link" href="#Objectives:"> </a></h2><p>Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
+Obtain a machine readable report</p>
+<h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step1:">Step1:<a class="anchor-link" href="#Step1:"> </a></h3><p>Navigate the FAIREvaluator tool, which can be accessed via the following 2 addresses:</p>
+<ul>
+<li><p><a href="https://w3id.org/AmIFAIR">https://w3id.org/AmIFAIR</a></p>
+</li>
+<li><p><a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!">https://fairsharing.github.io/FAIR-Evaluator-FrontEnd</a></p>
+</li>
+</ul>
 <p><img src="./assets/fair-eval-img1.png" alt="the FAIREvaluator Home page"></p>
-<h3 id="Step2:">Step2:<a class="anchor-link" href="#Step2:"> </a></h3>
-<pre><code>In order the run the FAIREvaluator, it is important to understand to notion of FAIR indicators (formerly referred to as FAIR metrics).
-One may browse the list of currently community defined indicators from the `Collections` page 
-
-</code></pre>
+<h3 id="Step2:">Step2:<a class="anchor-link" href="#Step2:"> </a></h3><p>In order the run the FAIREvaluator, it is important to understand to notion of FAIR indicators (formerly referred to as FAIR metrics).
+One may browse the list of currently community defined indicators from the <code>Collections</code> page</p>
 <p><img src="./assets/fair-eval-img2.png" alt="Select a &#39;FAIR Maturity Indicator - Collections&#39;"></p>
-<h3 id="Step3:">Step3:<a class="anchor-link" href="#Step3:"> </a></h3>
-<pre><code>To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
-
-</code></pre>
+<h3 id="Step3:">Step3:<a class="anchor-link" href="#Step3:"> </a></h3><p>To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:</p>
 <ol>
 <li>a collection of FAIR indicators, selected from the list described above.</li>
 <li>a globally unique, persistent, resolveable identifier for the resource to be evaluated.</li>
 <li>a title for the evaluation. Enforce a naming convention to make future searches easiers as these evaluations are saved.</li>
 <li>a person identifier in the form of an ORCID</li>
 </ol>
-<h3 id="Step4:">Step4:<a class="anchor-link" href="#Step4:"> </a></h3>
-<pre><code> Hit the 'Run Evaluation' button from 'https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate' page
-
-</code></pre>
 <p><img src="./assets/fair-eval-img4.png" alt="Running the FAIREvaluator - part 1: setting the input"></p>
+<h3 id="Step4:">Step4:<a class="anchor-link" href="#Step4:"> </a></h3><p>Hit the 'Run Evaluation' button from '<a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate">https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate</a>' page</p>
 <p><img src="./assets/fair-eval-img5.png" alt="Running the FAIREvaluator - part 2: execution "></p>
-<h3 id="Step5:">Step5:<a class="anchor-link" href="#Step5:"> </a></h3>
-<pre><code>Analyze the report:
-
-</code></pre>
+<h3 id="Step5:">Step5:<a class="anchor-link" href="#Step5:"> </a></h3><p>Analyze the report:</p>
 <p><img src="./assets/fair-eval-img6.png" alt="FAIREvaluator report - overall report "></p>
 <p>Time to dig into the details and figure out the reasons why some indicators are reporting a failure:</p>
 <p><img src="./assets/fair-eval-img7.png" alt="apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*"></p>

@@ -64,49 +64,51 @@
 
 ## Objectives:
 
-    Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
-    Obtain a machine readable report 
+Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
+Obtain a machine readable report 
 
 ## Step by Step Process:
 
 ### Step1: 
      
-    Navigate the FAIREvaluator tool, which can be accessed via the following 2 addresses:
+Navigate the FAIREvaluator tool, which can be accessed via the following 2 addresses:
 
-    - [https://w3id.org/AmIFAIR])(https://w3id.org/AmIFAIR)
+- [https://w3id.org/AmIFAIR](https://w3id.org/AmIFAIR)
 
-    - [https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!)
+- [https://fairsharing.github.io/FAIR-Evaluator-FrontEnd](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!)
 
 
 ![the FAIREvaluator Home page](./assets/fair-eval-img1.png)
 
 ### Step2:
 
-    In order the run the FAIREvaluator, it is important to understand to notion of FAIR indicators (formerly referred to as FAIR metrics).
-    One may browse the list of currently community defined indicators from the `Collections` page 
+In order the run the FAIREvaluator, it is important to understand to notion of FAIR indicators (formerly referred to as FAIR metrics).
+One may browse the list of currently community defined indicators from the `Collections` page 
 
 ![Select a 'FAIR Maturity Indicator - Collections'](./assets/fair-eval-img2.png)     
 
 ### Step3:
 
-    To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
+To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
 
 1. a collection of FAIR indicators, selected from the list described above.
 2. a globally unique, persistent, resolveable identifier for the resource to be evaluated.
 3. a title for the evaluation. Enforce a naming convention to make future searches easiers as these evaluations are saved.
 4. a person identifier in the form of an ORCID
 
+![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png)
+
 ### Step4:
 
-     Hit the 'Run Evaluation' button from 'https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate' page
+Hit the 'Run Evaluation' button from 'https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate' page
 
-![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png)
+
 
 ![Running the FAIREvaluator - part 2: execution ](./assets/fair-eval-img5.png)
      
 ### Step5:
 
-    Analyze the report:
+Analyze the report:
 
 ![FAIREvaluator report - overall report ](./assets/fair-eval-img6.png)
 
