@@ -105,22 +105,22 @@
     url: /recipes/fair-data-matrix-recipe
     not_numbered: false
     subsections:
-      - title: notebook-1
+      - title: Converting Excel to Frictionless Data Package
         url: /recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling
         not_numbered: false
         expand_sections: true
-      - title: notebook-2
+      - title: Plotting from Frictionless Data Package in Python
         url: /recipes/fair-data-matrix/1-rose-metabolites-Python-analysis
         not_numbered: false
         expand_sections: true
-      - title: notebook-3
-        url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
-        not_numbered: false
-        expand_sections: true
-      - title: notebook-4
+      - title: Plotting from Frictionless Data Package in R
         url: /recipes/fair-data-matrix/3-rose-metabolites-R-analysis
         not_numbered: false
-        expand_sections: true                
+        expand_sections: true         
+      - title: Exploration fo semantic model with SPARQL
+        url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
+        not_numbered: false
+        expand_sections: true               
   - title: eTOX experience Recipe
     url: /recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
     not_numbered: false    
