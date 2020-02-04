@@ -120,7 +120,11 @@
       - title: Exploration fo semantic model with SPARQL
         url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
         not_numbered: false
-        expand_sections: true               
+        expand_sections: true
+  - title: Chemical identities - Generating InChI and SMILES strings
+    url: /recipes/chemical-identities
+    not_numbered: false
+    notebooks: /recipes/chemical-identities/1-notebook          
   - title: eTOX experience Recipe
     url: /recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
     not_numbered: false    
