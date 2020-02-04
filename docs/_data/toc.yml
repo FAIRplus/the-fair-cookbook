@@ -36,10 +36,10 @@
 - divider: true
 
 # Adds a searchbar link
-- title: Search
-  #url: search
-  search: true
-  not_numbered: true
+#- title: Search
+ # url: Search
+ # search: true
+ # not_numbered: true
 
 # Divider for meta-pages and content page
 - divider: true
