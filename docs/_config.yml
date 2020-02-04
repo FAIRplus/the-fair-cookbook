@@ -16,14 +16,14 @@
 
 #######################################################################################
 # Jekyll site settings
-title: THE FAIR COOK BOOK
-author: YOUR AUTHOR NAME
-email: YOUR EMAIL
+title: THE FAIR COOKBOOK
+author: Philippe Rocca-Serra
+email:  philippe.rocca-serra@fairplusproject.eu
 description: >-
   A collection of protocols for making IMI and EFPIA partners data FAIR.
 
-baseurl: /  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: YOUR URL                  # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /the-fair-cookbook  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+url:  https://fairplus.github.io                  # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #######################################################################################
