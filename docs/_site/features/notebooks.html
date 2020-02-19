@@ -8,14 +8,14 @@
   <title>Jupyter notebooks</title>
   <meta name="description" content="        Content with notebooks You can also create content with Jupyter Notebooks. The content for the current page is containedin a Jupyter Notebook in the ...">
 
-  <link rel="canonical" href="/YOUR%20URL//features/notebooks.html">
-  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOK BOOK" href="/YOUR%20URL//feed.xml">
+  <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/features/notebooks.html">
+  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="https://fairplus.github.io/the-fair-cookbook/feed.xml">
 
-  <meta property="og:url"         content="/YOUR%20URL//features/notebooks.html" />
+  <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/features/notebooks.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Jupyter notebooks" />
 <meta property="og:description" content="        Content with notebooks You can also create content with Jupyter Notebooks. The content for the current page is containedin a Jupyter Notebook in the ..." />
-<meta property="og:image"       content="YOUR%20URL/images/logo/cookbook-logo-small.png" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/images/logo/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,35 +24,35 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "YOUR URL//features/notebooks.html",
+  "mainEntityOfPage": "https://fairplus.github.io/the-fair-cookbook/features/notebooks.html",
   "headline": "Jupyter notebooks",
-  "datePublished": "2020-02-19T14:39:35+00:00",
-  "dateModified": "2020-02-19T14:39:35+00:00",
+  "datePublished": "2020-02-19T15:58:49+00:00",
+  "dateModified": "2020-02-19T15:58:49+00:00",
   "description": "        Content with notebooks You can also create content with Jupyter Notebooks. The content for the current page is containedin a Jupyter Notebook in the ...",
   "author": {
     "@type": "Person",
-    "name": "YOUR AUTHOR NAME"
+    "name": "Philippe Rocca-Serra"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "YOUR URL/",
+      "url": "https://fairplus.github.io/the-fair-cookbook",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "YOUR URL/",
+    "url": "https://fairplus.github.io/the-fair-cookbook",
     "height": 60,
     "width": 60
   }
 }
 
   </script>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/css/styles.css">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -61,7 +61,7 @@
   <meta name="theme-color" content="#233947">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/images/logo/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/favicon.ico">
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
@@ -88,19 +88,19 @@ MathJax.Hub.Config({
 
 
   <!-- DOM updating function -->
-  <script src="/assets/js/page/dom-update.js"></script>
+  <script src="/the-fair-cookbook/assets/js/page/dom-update.js"></script>
 
   <!-- Selectors for elements on the page -->
-  <script src="/assets/js/page/documentSelectors.js"></script>
+  <script src="/the-fair-cookbook/assets/js/page/documentSelectors.js"></script>
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
-    const site_basename = '/';
+    const site_basename = '/the-fair-cookbook';
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
-  <script src="/assets/js/page/anchors.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/page/anchors.js" async></script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
@@ -114,145 +114,10 @@ MathJax.Hub.Config({
   <!-- Include Thebelab for interactive code if it's enabled -->
 
 
-<!-- Display Thebelab button in each code cell -->
-<script>
-/**
- * Set up thebelab button for code blocks
- */
-
-const thebelabCellButton = id =>
-  `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
-    <img src="/assets/images/edit-button.svg" alt="Start thebelab interactive mode">
-  </a>`
-
-
-const addThebelabButtonToCodeCells =  () => {
-
-  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
-  codeCells.forEach((codeCell, index) => {
-    const id = codeCellId(index)
-    codeCell.setAttribute('id', id)
-    if (document.getElementById("thebelab-cell-button-" + id) == null) {
-      codeCell.insertAdjacentHTML('afterend', thebelabCellButton(id));
-    }
-  })
-}
-
-initFunction(addThebelabButtonToCodeCells);
-</script>
-
-
-
-<script type="text/x-thebe-config">
-    {
-      requestKernel: true,
-      binderOptions: {
-        repo: 'YOUR-ORG/YOUR-REPO',
-        ref: 'gh-pages',
-      },
-      codeMirrorConfig: {
-        theme: "abcdef"
-      },
-      kernelOptions: {
-        name: 'python3',
-      }
-    }
-</script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
-<script>
-    /**
-     * Add attributes to Thebelab blocks
-     */
-
-    const initThebelab = () => {
-        const addThebelabToCodeCells = () => {
-            console.log("Adding thebelab to code cells...");
-            // If Thebelab hasn't loaded, wait a bit and try again. This
-            // happens because we load ClipboardJS asynchronously.
-            if (window.thebelab === undefined) {
-                setTimeout(addThebelabToCodeCells, 250)
-            return
-            }
-
-            // If we already detect a Thebelab cell, don't re-run
-            if (document.querySelectorAll('div.thebelab-cell').length > 0) {
-                return;
-            }
-
-            // Find all code cells, replace with Thebelab interactive code cells
-            const codeCells = document.querySelectorAll('.input_area pre')
-            codeCells.forEach((codeCell, index) => {
-                const id = codeCellId(index)
-                codeCell.setAttribute('data-executable', 'true')
-
-                // Figure out the language it uses and add this too
-                var parentDiv = codeCell.parentElement.parentElement;
-                var arrayLength = parentDiv.classList.length;
-                for (var ii = 0; ii < arrayLength; ii++) {
-                    var parts = parentDiv.classList[ii].split('language-');
-                    if (parts.length === 2) {
-                        // If found, assign dataLanguage and break the loop
-                        var dataLanguage = parts[1];
-                        break;
-                    }
-                }
-                codeCell.setAttribute('data-language', dataLanguage)
-
-                // If the code cell is hidden, show it
-                var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
-                if (inputCheckbox !== null) {
-                    setCodeCellVisibility(inputCheckbox, 'visible');
-                }
-            });
-
-            // Remove the event listener from the page so keyboard press doesn't
-            // Change page
-            document.removeEventListener('keydown', initPageNav)
-            keyboardListener = false;
-
-            // Init thebelab
-            thebelab.bootstrap();
-
-            // Remove copy buttons since they won't work anymore
-            const copyAndThebeButtons = document.querySelectorAll('.copybtn, .thebebtn')
-            copyAndThebeButtons.forEach((button, index) => {
-                button.remove();
-            });
-
-            // Remove outputs since they'll be stale
-            const outputs = document.querySelectorAll('.output *, .output')
-            outputs.forEach((output, index) => {
-                output.remove();
-            });
-
-            // Find any cells with an initialization tag and ask ThebeLab to run them when ready
-            var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
-            thebeInitCells.forEach((cell) => {
-                console.log("Initializing ThebeLab with cell: " + cell.id);
-                cell.querySelector('.thebelab-run-button').click();
-            });
-        }
-
-        // Add event listener for the function to modify code cells
-        const thebelabButtons = document.querySelectorAll('[id^=thebelab], [id$=thebelab]')
-        thebelabButtons.forEach((thebelabButton,index) => {
-            if (thebelabButton === null) {
-                setTimeout(initThebelab, 250)
-                return
-            };
-            thebelabButton.addEventListener('click', addThebelabToCodeCells);
-        });
-    }
-
-    // Initialize Thebelab
-    initFunction(initThebelab);
-</script>
-
-
 
   <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
-  <script src="/assets/js/page/tocbot.js"></script>
+  <script src="/the-fair-cookbook/assets/js/page/tocbot.js"></script>
 
   <!-- Google analytics -->
   
@@ -272,14 +137,155 @@ initFunction(addThebelabButtonToCodeCells);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
-  <script src="/assets/js/scripts.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/scripts.js" async></script>
 
   <!-- Load custom user CSS and JS  -->
-  <script src="/assets/custom/custom.js" async></script>
-  <link rel="stylesheet" href="/assets/custom/custom.css">
+  <script src="/the-fair-cookbook/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/custom/custom.css">
 
   <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
   
+<script>
+/**
+  * To auto-embed hub URLs in interact links if given in a RESTful fashion
+ */
+
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+    
+function dict2param(dict) {
+    params = Object.keys(dict).map(function(k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(dict[k])
+    });
+    return params.join('&')
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return dict2param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = document.querySelectorAll("a").forEach(function(link) {
+    var href = link.href;
+    // If the link is an internal link...
+    if (href.search("https://fairplus.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['jupyterhub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'jupyterhub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + dict2param(params);
+      link.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+
+// Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    jupyterHubUrl = rest['jupyterhub'];
+    var hubType = null;
+    var hubUrl = null;
+    if (jupyterHubUrl !== undefined) {
+      hubType = 'jupyterhub';
+      hubUrl = jupyterHubUrl;
+    }
+
+    if (hubType !== null) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      var interactButtons = document.querySelectorAll("button.interact-button")
+      var lastButton = interactButtons[interactButtons.length-1];
+      var link = lastButton.parentElement;
+
+      // If we've already run this, skip the link updating
+      if (link.nextElementSibling !== null) {
+        return;
+      }
+
+      // Update the link and add context div
+      var href = link.getAttribute('href');
+      if (lastButton.id === 'interact-button-binder') {
+        // If binder links exist, we need to re-work them for jupyterhub
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // If localhost, assume we're working from a local Jupyter server and remove `/hub`
+          first = [hubUrl, 'git-sync'].join('/')
+        } else {
+          first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+        }
+        href = first + '?' + binder2Jupyterhub(href);
+      } else {
+        // If interact button isn't binderhub, assume it's jupyterhub
+        // If JupyterHub links, we only need to replace the hub url
+        href = href.replace("", hubUrl);
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // Assume we're working from a local Jupyter server and remove `/hub`
+          href = href.replace("/hub/user-redirect", "");
+        }
+      }
+      link.setAttribute('href', decodeURIComponent(href));
+
+      // Add text after interact link saying where we're launching
+      hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+      link.insertAdjacentHTML('afterend', '<div class="interact-context">on ' + hubUrlNoHttp + '</div>');
+
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+runWhenDOMLoaded(updateInteractLink)
+document.addEventListener('turbolinks:load', updateInteractLink)
+</script>
+
 
   <!-- Lunr search code - will only be executed on the /search page -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
@@ -370,10 +376,10 @@ initFunction(initQuery);
 </script>
 
   <!-- Load JS that depends on site variables -->
-  <script src="/assets/js/page/copy-button.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/page/copy-button.js" async></script>
 
   <!-- Hide cell code -->
-  <script src="/assets/js/page/hide-cell.js" async></script>
+  <script src="/the-fair-cookbook/assets/js/page/hide-cell.js" async></script>
 
   <!-- Printing the screen -->
   <!-- Include nbinteract for interactive widgets -->
@@ -393,7 +399,7 @@ printContent = () => {
     printJS({
         printable: 'textbook_content',
         type: 'html',
-        css: "/assets/css/styles.css",
+        css: "/the-fair-cookbook/assets/css/styles.css",
         style: "#textbook_content {padding-top: 40px};",
         scanStyles: false,
         targetStyles: ["*"],
@@ -419,8 +425,8 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://fairplus.github.io/the-fair-cookbook/intro.html"><img src="/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
-  <h2 class="c-sidebar__title">THE FAIR COOK BOOK</h2>
+  <a href="https://fairplus.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">THE FAIR COOKBOOK</h2>
   <ul class="c-sidebar__chapters">
     
       
@@ -433,7 +439,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/intro.html"
+          href="/the-fair-cookbook/intro.html"
         >
           
           FAIR Cookbook
@@ -454,7 +460,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="https://github.com/fair-cookbook/the-fair-cookbook"
+          href="https://github.com/FAIRplus/the-fair-cookbook"
         >
           
           GitHub repository
@@ -479,10 +485,136 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href=".html"
+          href="/the-fair-cookbook/People.html"
         >
           
-          Search
+          People
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/Contributing.html"
+        >
+          
+          Contributing
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/Governance.html"
+        >
+          
+          Governance
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/license.html"
+        >
+          
+          License
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/disclaimer.html"
+        >
+          
+          Disclaimer
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/code_of_conduct.html"
+        >
+          
+          Code of Conduct
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/papers.html"
+        >
+          
+          Publications
         </a>
 
         
@@ -508,204 +640,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/People.html"
-        >
-          
-          People
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/Contributing.html"
-        >
-          
-          Contributing
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/Governance.html"
-        >
-          
-          Governance
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/license.html"
-        >
-          
-          License
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/disclaimer.html"
-        >
-          
-          Disclaimer
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/code_of_conduct.html"
-        >
-          
-          Code of Conduct
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/papers.html"
-        >
-          
-          Publications
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/ingredients/ingredient-list.html"
-        >
-          
-          Ingredients and Resources
-        </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections ">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/ingredients/ingredient-list.html"
-                >
-                  
-                  Ingredients
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/recipes/recipes.html"
+          href="/the-fair-cookbook/recipes/recipes.html"
         >
           
           Recipes
@@ -727,10 +662,10 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/recipes/recipe-template.html"
+                  href="/the-fair-cookbook/recipes/fair-assessment-recipe.html"
                 >
                   
-                  Recipe Template
+                  FAIR Assessment Recipe
                 </a>
 
                 
@@ -744,24 +679,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/recipes/anonymization-recipe.html"
-                >
-                  
-                  Anomynization Recipe
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/recipes/fair-data-matrix-recipe.html"
+                  href="/the-fair-cookbook/recipes/fair-data-matrix-recipe.html"
                 >
                   
                   FAIR data matrix Recipe
@@ -769,6 +687,50 @@ initFunction(initPrint)
 
                 
                 
+                  
+                  
+
+                  <li class="c-sidebar__subsection">
+                    <a class="c-sidebar__entry "
+                      href="/the-fair-cookbook/recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling.html"
+                    >
+                      
+                      Converting Excel to Frictionless Data Package
+                    </a>
+                
+                  
+                  
+
+                  <li class="c-sidebar__subsection">
+                    <a class="c-sidebar__entry "
+                      href="/the-fair-cookbook/recipes/fair-data-matrix/1-rose-metabolites-Python-analysis.html"
+                    >
+                      
+                      Plotting from Frictionless Data Package in Python
+                    </a>
+                
+                  
+                  
+
+                  <li class="c-sidebar__subsection">
+                    <a class="c-sidebar__entry "
+                      href="/the-fair-cookbook/recipes/fair-data-matrix/3-rose-metabolites-R-analysis.html"
+                    >
+                      
+                      Plotting from Frictionless Data Package in R
+                    </a>
+                
+                  
+                  
+
+                  <li class="c-sidebar__subsection">
+                    <a class="c-sidebar__entry "
+                      href="/the-fair-cookbook/recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html"
+                    >
+                      
+                      Exploration fo semantic model with SPARQL
+                    </a>
+                
 
               </li>
               
@@ -778,7 +740,24 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html"
+                  href="/the-fair-cookbook/recipes/chemical-identities.html"
+                >
+                  
+                  Chemical identities - Generating InChI and SMILES strings
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html"
                 >
                   
                   eTOX experience Recipe
@@ -795,7 +774,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/recipes/resolute_raw/rawRecipe_resolute.html"
+                  href="/the-fair-cookbook/recipes/resolute_raw/rawRecipe_resolute.html"
                 >
                   
                   RESOLUTE experience Recipe
@@ -812,7 +791,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/recipes/oncotrack_raw/rawRecipe-oncotrack.html"
+                  href="/the-fair-cookbook/recipes/oncotrack_raw/rawRecipe-oncotrack.html"
                 >
                   
                   ONCOTRACK experience Recipe
@@ -829,10 +808,44 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html"
+                  href="/the-fair-cookbook/recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html"
                 >
                   
                   ND4BB experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/recipes/recipe-template.html"
+                >
+                  
+                  Recipe Template
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/recipes/anonymization-recipe.html"
+                >
+                  
+                  Anomynization Recipe
                 </a>
 
                 
@@ -849,6 +862,10 @@ initFunction(initPrint)
     
       
       
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
 
       
       
@@ -857,7 +874,61 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/features/features.html"
+          href="/the-fair-cookbook/ingredients/ingredient-list.html"
+        >
+          
+          Ingredients and Resources
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/ingredients/ingredient-list.html"
+                >
+                  
+                  Ingredients
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/features/features.html"
         >
           
           Features and customization
@@ -879,7 +950,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/features/markdown.html"
+                  href="/the-fair-cookbook/features/markdown.html"
                 >
                   
                   Markdown files
@@ -896,7 +967,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/features/notebooks.html"
+                  href="/the-fair-cookbook/features/notebooks.html"
                 >
                   
                   Jupyter notebooks
@@ -932,9 +1003,9 @@ initFunction(initPrint)
     </button>
     <div class="buttons">
 <div class="download-buttons-dropdown">
-    <button id="dropdown-button-trigger" class="interact-button"><img src="/assets/images/download-solid.svg" alt="Download" /></button>
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/the-fair-cookbook/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/content/features/notebooks.ipynb" download>
+        <a href="/the-fair-cookbook/content/features/notebooks.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -943,10 +1014,16 @@ initFunction(initPrint)
 </div>
 
 
-  <button id="interact-button-thebelab" class="interact-button">Thebelab</button>
+  
+  
+  
 
-  
-  
+
+
+
+
+
+<a href="https://mybinder.org/v2/gh/FAIRplus/the-fair-cookbook/master?filepath=content%2Ffeatures%2Fnotebooks.ipynb"><button class="interact-button" id="interact-button-binder"><img class="interact-button-logo" src="/the-fair-cookbook/assets/images/logo_binder.svg" alt="Interact" />launch binder</button></a>
   
 
 
@@ -955,12 +1032,12 @@ initFunction(initPrint)
   </div>
   <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
   <aside class="sidebar__right">
-    <header><h4 class="nav__title"><img src="/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <header><h4 class="nav__title"><img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
     <nav class="onthispage">
     </nav>
   </aside>
-  <a href="/search.html" class="topbar-right-button" id="search-button">
-    <img src="/assets/images/search-solid.svg" alt="Search" />
+  <a href="/the-fair-cookbook/search.html" class="topbar-right-button" id="search-button">
+    <img src="/the-fair-cookbook/assets/images/search-solid.svg" alt="Search" />
   </a>
 </div>
 
@@ -1386,7 +1463,7 @@ depend on an underlying Python kernel to work.</p>
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/features/markdown.html">
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/the-fair-cookbook/features/markdown.html">
       〈 <span class="u-margin-right-tiny"></span> Markdown files
     </a>
   

@@ -1,0 +1,1690 @@
+---
+redirect_from:
+  - "/recipes/fair-data-matrix/0-rose-metabolites-python-data-handling"
+interact_link: content/recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
+kernel_name: venv372
+has_widgets: false
+title: |-
+  Converting Excel to Frictionless Data Package
+prev_page:
+  url: /recipes/fair-data-matrix-recipe.html
+  title: |-
+    FAIR data matrix Recipe
+next_page:
+  url: /recipes/fair-data-matrix/1-rose-metabolites-Python-analysis.html
+  title: |-
+    Plotting from Frictionless Data Package in Python
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Creating-a-FAIR-Frictionless-Data-Package-of-Rose-Scent-profiles-from-a-publication's-supplementary-data.">Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication's supplementary data.<a class="anchor-link" href="#Creating-a-FAIR-Frictionless-Data-Package-of-Rose-Scent-profiles-from-a-publication's-supplementary-data."> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>*Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre</p>
+<h2 id="Background:">Background:<a class="anchor-link" href="#Background:"> </a></h2><p>Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using <a href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of the data table.
+A few line of codes allow structure information aound key study design descriptors: the independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package itself.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Let's begin by installing the Python packages allowing easy access and use of data formatted as JSON Data Package</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">libchebipy</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">datapackage</span> <span class="k">import</span> <span class="n">Package</span>
+<span class="kn">from</span> <span class="nn">goodtables</span> <span class="k">import</span> <span class="n">validate</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Reading the data:</li>
+</ol>
+<p>We now simply read in the Excel file corresponding to the Nature Genetics Supplementary Table from the Zenodo archive</p>
+<p>(DOI: <a href="https://doi.org/10.5281/zenodo.2598799">https://doi.org/10.5281/zenodo.2598799</a>)</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df = pd.read_excel(&#39;Supplementary Data 3.xlsx&#39;, sheet_name=&#39;Feuil1&#39;)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;https://zenodo.org/api/files/91a610cb-8f1f-4ec5-9818-767a75a7a820/Supplementary%20Data%203.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Feuil1&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Unnamed: 1</th>
+      <th>Unnamed: 2</th>
+      <th>Unnamed: 3</th>
+      <th>Unnamed: 4</th>
+      <th>Unnamed: 5</th>
+      <th>Unnamed: 6</th>
+      <th>Unnamed: 7</th>
+      <th>Unnamed: 8</th>
+      <th>Unnamed: 9</th>
+      <th>Unnamed: 10</th>
+      <th>Unnamed: 11</th>
+      <th>Unnamed: 12</th>
+      <th>Unnamed: 13</th>
+      <th>Unnamed: 14</th>
+      <th>Unnamed: 15</th>
+      <th>Unnamed: 16</th>
+      <th>Unnamed: 17</th>
+      <th>Unnamed: 18</th>
+      <th>Unnamed: 19</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>repeated 3 times</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>fully opened flowers : 1 g petals in 2 mL hexa...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>injection of 2 microL, split 2:1, DB-5 gas chr...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3 min 40°C, 1.5°C/min until 180°C, 6°C/min unt...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ionosing voltage 70eV, mass scan rate 35-450 m...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Data analysis made with a threshold of 15 to d...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Long chain hydrocarbons are not presented</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Compounds determined with Wiley databasee, NIS...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Results in microg/g fresh weight of petals</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>For Rosa chinensis 'Old Blush', sepals ans sta...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>R. chinensis 'Old Blush' sepals</td>
+      <td>NaN</td>
+      <td>R. chinensis 'Old Blush' stamens</td>
+      <td>NaN</td>
+      <td>R. chinensis 'Old Blush' petals</td>
+      <td>NaN</td>
+      <td>R. gigantea petals</td>
+      <td>NaN</td>
+      <td>R. x damascena petals</td>
+      <td>NaN</td>
+      <td>R. gallica petals</td>
+      <td>NaN</td>
+      <td>R. moschata petals</td>
+      <td>NaN</td>
+      <td>R. wichurana petals</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Compound</td>
+      <td>Average</td>
+      <td>Standard Error</td>
+      <td>Average</td>
+      <td>Standard Error</td>
+      <td>Average</td>
+      <td>Standard Error</td>
+      <td>Average</td>
+      <td>Standard Error</td>
+      <td>Average</td>
+      <td>Standard Error</td>
+      <td>Average</td>
+      <td>Standard Error</td>
+      <td>Average</td>
+      <td>Standard error</td>
+      <td>Average</td>
+      <td>Standard error</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>hexan-2-ol</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.490829</td>
+      <td>0.245416</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0355417</td>
+      <td>0.0355417</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>hexanal</td>
+      <td>4.94848</td>
+      <td>0.588058</td>
+      <td>0.897499</td>
+      <td>0.455096</td>
+      <td>1.59342</td>
+      <td>0.220036</td>
+      <td>0.647444</td>
+      <td>0.0286613</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.178026</td>
+      <td>0.0897432</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>(E)-2-hexenal</td>
+      <td>57.616</td>
+      <td>7.34172</td>
+      <td>9.41258</td>
+      <td>1.23027</td>
+      <td>28.2611</td>
+      <td>4.93453</td>
+      <td>1.3526</td>
+      <td>0.166654</td>
+      <td>0.223466</td>
+      <td>0.223466</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.18431</td>
+      <td>0.0552462</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>(Z)-3-hexen-1-ol</td>
+      <td>7.63943</td>
+      <td>0.631271</td>
+      <td>5.39481</td>
+      <td>1.51407</td>
+      <td>15.1489</td>
+      <td>2.25769</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.65202</td>
+      <td>0.0413594</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>(E)-2-hexen-1-ol</td>
+      <td>1.78866</td>
+      <td>0.976951</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.11808</td>
+      <td>0.877508</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>hexan-1-ol</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.11539</td>
+      <td>0.378224</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>nonane</td>
+      <td>2.09493</td>
+      <td>0.0702616</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.477192</td>
+      <td>0.266689</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>alpha-pinene</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.65196</td>
+      <td>0.65196</td>
+      <td>1.01144</td>
+      <td>0.114528</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Following a manual inspection of the Excel Source, getting the start row of the data, we use Pandas take() function to extract first a row of headers (hence -axis set to 0)</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">header_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">13</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>We then extract all the columns of interest (same take() function, with -axis set to 1)</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_full</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># We now trim by removing the first 15 rows which contain no information</span>
+<span class="n">data_slice</span> <span class="o">=</span> <span class="n">data_full</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span>
+                             <span class="mi">39</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span>
+                             <span class="mi">62</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">76</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>We now rename the DataFrame automatically generated field header to something more meaningful</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_slice</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 3&quot;</span><span class="p">:</span> <span class="s2">&quot;chemical_name&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 4&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_1&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 5&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_1&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 6&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_2&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 7&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_2&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 8&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_3&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 9&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_3&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 10&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_4&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 11&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_4&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 12&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_5&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 13&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_5&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 14&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_6&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 15&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_6&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 16&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_7&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 17&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_7&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 18&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_8&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 19&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_8&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/philippe/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/core/frame.py:4025: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  return super(DataFrame, self).rename(**kwargs)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>inserting 2 new fields as placeholders for chemical information descriptors and we reinitialize the dataframe index so row numbering start at 0, not 16</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_slice</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">data_slice</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;chebi_identifier&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">data_slice</span> <span class="o">=</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Using LibChebi to retrieve CHEBI identifiers and InChi from a chemical name. Note: in this call, we retrieve only values for which an exact match on the chemical name is found in Chebi libchebi API does not allow easy searching on synonyms, thus we are failing to retrieve all relevant information. This is merely to showcase how to use libchebi.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">):</span>
+    <span class="n">hit</span> <span class="o">=</span> <span class="n">libchebipy</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hit</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HIT: &quot;</span><span class="p">,</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_inchi</span><span class="p">(),</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_inchi</span><span class="p">()</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nothing found: &quot;</span><span class="p">,</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">])</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Nothing found:  Compound
+HIT:  hexan-2-ol : InChI=1S/C6H14O/c1-3-4-5-6(2)7/h6-7H,3-5H2,1-2H3 | CHEBI:88370
+HIT:  hexanal : InChI=1S/C6H12O/c1-2-3-4-5-6-7/h6H,2-5H2,1H3 | CHEBI:88528
+Nothing found:  (E)-2-hexenal
+Nothing found:  (Z)-3-hexen-1-ol
+Nothing found:  (E)-2-hexen-1-ol
+HIT:  hexan-1-ol : InChI=1S/C6H14O/c1-2-3-4-5-6-7/h7H,2-6H2,1H3 | CHEBI:87393
+HIT:  nonane : InChI=1S/C9H20/c1-3-5-7-9-8-6-4-2/h3-9H2,1-2H3 | CHEBI:32892
+HIT:  alpha-pinene : InChI=1S/C10H16/c1-7-4-5-8-6-9(7)10(8,2)3/h4,8-9H,5-6H2,1-3H3 | CHEBI:36740
+HIT:  benzaldehyde : InChI=1S/C7H6O/c8-6-7-4-2-1-3-5-7/h1-6H | CHEBI:17169
+HIT:  beta-myrcene : InChI=1S/C10H16/c1-5-10(4)8-6-7-9(2)3/h5,7H,1,4,6,8H2,2-3H3 | CHEBI:17221
+Nothing found:  (Z)-3-hexenyl acetate
+HIT:  hexyl acetate : InChI=1S/C8H16O2/c1-3-4-5-6-7-10-8(2)9/h3-7H2,1-2H3 | CHEBI:87510
+Nothing found:  (E)-hexenyl acetate
+Nothing found:  (+/-)-limonene
+Nothing found:  benzylalcohol
+HIT:  phenylacetaldehyde : InChI=1S/C8H8O/c9-7-6-8-4-2-1-3-5-8/h1-5,7H,6H2 | CHEBI:16424
+HIT:  (E)-beta-ocimene : InChI=1S/C10H16/c1-5-10(4)8-6-7-9(2)3/h5,7-8H,1,6H2,2-4H3/b10-8+ | CHEBI:64280
+Nothing found:  (+/-)-linalool
+HIT:  nonanal : InChI=1S/C9H18O/c1-2-3-4-5-6-7-8-9-10/h9H,2-8H2,1H3 | CHEBI:84268
+HIT:  2-phenylethanol : InChI=1S/C8H10O/c9-7-6-8-4-2-1-3-5-8/h1-5,9H,6-7H2 | CHEBI:49000
+Nothing found:  (+/-)-beta-citronellal
+Nothing found:  (+/-)-alpha-terpineol
+HIT:  decanal : InChI=1S/C10H20O/c1-2-3-4-5-6-7-8-9-10-11/h10H,2-9H2,1H3 | CHEBI:31457
+HIT:  nerol : InChI=1S/C10H18O/c1-9(2)5-4-6-10(3)7-8-11/h5,7,11H,4,6,8H2,1-3H3/b10-7- | CHEBI:29452
+Nothing found:  (+/-)-beta-citronellol
+HIT:  neral : InChI=1S/C10H16O/c1-9(2)5-4-6-10(3)7-8-11/h5,7-8H,4,6H2,1-3H3/b10-7- | CHEBI:29020
+HIT:  geraniol : InChI=1S/C10H18O/c1-9(2)5-4-6-10(3)7-8-11/h5,7,11H,4,6,8H2,1-3H3/b10-7+ | CHEBI:17447
+HIT:  beta-phenylethyl acetate : InChI=1S/C10H12O2/c1-9(11)12-8-7-10-5-3-2-4-6-10/h2-6H,7-8H2,1H3 | CHEBI:31988
+HIT:  3,5-dimethoxytoluene : InChI=1S/C9H12O2/c1-7-4-8(10-2)6-9(5-7)11-3/h4-6H,1-3H3 | CHEBI:141217
+HIT:  geranial : InChI=1S/C10H16O/c1-9(2)5-4-6-10(3)7-8-11/h5,7-8H,4,6H2,1-3H3/b10-7+ | CHEBI:16980
+HIT:  undecanal : InChI=1S/C11H22O/c1-2-3-4-5-6-7-8-9-10-11-12/h11H,2-10H2,1H3 | CHEBI:46202
+Nothing found:  theaspirane A
+Nothing found:  (+/-)-beta-citronellyl acetate
+HIT:  eugenol : InChI=1S/C10H12O2/c1-3-4-8-5-6-9(11)10(7-8)12-2/h3,5-7,11H,1,4H2,2H3 | CHEBI:4917
+HIT:  neryl acetate : InChI=1S/C12H20O2/c1-10(2)6-5-7-11(3)8-9-14-12(4)13/h6,8H,5,7,9H2,1-4H3/b11-8- | CHEBI:141210
+HIT:  alpha-copaene : InChI=1S/C15H24/c1-9(2)11-7-8-15(4)12-6-5-10(3)14(15)13(11)12/h5,9,11-14H,6-8H2,1-4H3/t11-,12-,13-,14?,15-/m0/s1 | CHEBI:10221
+HIT:  geranyl acetate : InChI=1S/C12H20O2/c1-10(2)6-5-7-11(3)8-9-14-12(4)13/h6,8H,5,7,9H2,1-4H3/b11-8+ | CHEBI:5331
+HIT:  beta-elemene : None | CHEBI:62854
+Nothing found:  methyl eugenol
+Nothing found:  (E)-beta-caryophyllene
+HIT:  1,3,5-trimethoxybenzene : InChI=1S/C9H12O3/c1-10-7-4-8(11-2)6-9(5-7)12-3/h4-6H,1-3H3 | CHEBI:31038
+HIT:  dihydro-beta-ionone : InChI=1S/C13H22O/c1-10-6-5-9-13(3,4)12(10)8-7-11(2)14/h5-9H2,1-4H3 | CHEBI:18015
+Nothing found:  alpha guaiene
+Nothing found:  dihydro-beta-ionol
+Nothing found:  (E)-beta-farnesene
+HIT:  germacrene D : InChI=1S/C15H24/c1-12(2)15-10-8-13(3)6-5-7-14(4)9-11-15/h7-8,10,12,15H,3,5-6,9,11H2,1-2,4H3/b10-8+,14-7+ | CHEBI:49045
+HIT:  pentadecane : InChI=1S/C15H32/c1-3-5-7-9-11-13-15-14-12-10-8-6-4-2/h3-15H2,1-2H3 | CHEBI:28897
+HIT:  (E,E)-alpha-farnesene : InChI=1S/C15H24/c1-6-14(4)10-8-12-15(5)11-7-9-13(2)3/h6,9-10,12H,1,7-8,11H2,2-5H3/b14-10+,15-12+ | CHEBI:10280
+HIT:  gamma-cadinene : InChI=1S/C15H24/c1-10(2)13-8-6-12(4)14-7-5-11(3)9-15(13)14/h9-10,13-15H,4-8H2,1-3H3/t13-,14-,15-/m1/s1 | CHEBI:63203
+HIT:  delta-cadinene : InChI=1S/C15H24/c1-10(2)13-8-6-12(4)14-7-5-11(3)9-15(13)14/h9-10,13,15H,5-8H2,1-4H3 | CHEBI:140564
+HIT:  elemol : InChI=1S/C15H26O/c1-7-15(6)9-8-12(14(4,5)16)10-13(15)11(2)3/h7,12-13,16H,1-2,8-10H2,3-6H3/t12-,13+,15-/m1/s1 | CHEBI:141221
+Nothing found:  Germacrene D 4 ol
+HIT:  hexadecane : InChI=1S/C16H34/c1-3-5-7-9-11-13-15-16-14-12-10-8-6-4-2/h3-16H2,1-2H3 | CHEBI:45296
+HIT:  Tau-cadinol : InChI=1S/C15H26O/c1-10(2)12-7-8-15(4,16)14-6-5-11(3)9-13(12)14/h9-10,12-14,16H,5-8H2,1-4H3/t12-,13-,14+,15-/m0/s1 | CHEBI:138042
+HIT:  beta-eudesmol : InChI=1S/C15H26O/c1-11-6-5-8-15(4)9-7-12(10-13(11)15)14(2,3)16/h12-13,16H,1,5-10H2,2-4H3/t12-,13+,15-/m1/s1 | CHEBI:10417
+HIT:  alpha-cadinol : InChI=1S/C15H26O/c1-10(2)12-7-8-15(4,16)14-6-5-11(3)9-13(12)14/h9-10,12-14,16H,5-8H2,1-4H3/t12-,13-,14+,15+/m0/s1 | CHEBI:132905
+Nothing found:  heptadecene
+HIT:  heptadecane : InChI=1S/C17H36/c1-3-5-7-9-11-13-15-17-16-14-12-10-8-6-4-2/h3-17H2,1-2H3 | CHEBI:16148
+Nothing found:  (E,E)-farnesol
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>The following steps are needed to perform the table transformation from a 'wide' layout to a 'long table' one. Prep stubnames - pick out all the feature_model variables and remove the model suffices 'long table' layout is that relied on by Frictionless Tabular Data Packages and consumed by R ggplot2 library and Python plotnine library.
+Step1: obtain all the different 'dimension' measured for a given condition (i.e. repeating fields with an increment suffix)</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feature_models</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;(sample_mean|sem)_[0-9]&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;_[0-9]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">feature_model</span><span class="p">)</span> <span class="k">for</span> <span class="n">feature_model</span> <span class="ow">in</span> <span class="n">feature_models</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Step2: invoke Pandas pd.wide_to_long() function to carry out the table transformation. See Pandas documentation for more information:  <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide_to_long.html">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide_to_long.html</a> and the excellent blog: <a href="https://medium.com/@wangyuw/data-reshaping-with-pandas-explained-80b2f51f88d2">https://medium.com/@wangyuw/data-reshaping-with-pandas-explained-80b2f51f88d2</a></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">wide_to_long</span><span class="p">(</span><span class="n">data_slice</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="n">j</span><span class="o">=</span><span class="s1">&#39;treatment&#39;</span><span class="p">,</span> <span class="n">stubnames</span><span class="o">=</span><span class="n">features</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Apparently a feature in Pandas DataFrame causes an mismatch in the field position. We solve this by writing the DataFrame to file and reading it back in again, not ideal but it does the trick. Writing to a temporary file &amp;  reading from that file to solve the issue.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">long_df_from_file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Insert a new field 'unit' in the DataFrame at position 3 and setting value to empty.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df_from_file</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Adding new fields for each of the independent variable and associated URI, copying from 'treatment field'</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># adding a new field for &#39;sample size&#39; and setting the value to n=3</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Marking up with ontology terms and their resolvable URI for all factor values. This requires doing a manual mapping, better ways could be devised.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> sepals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74649&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sepals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009031&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> stamens&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74649&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;stamens&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009029&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74649&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. gigantea petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. gigantea&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74650&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Damascena petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Damascena&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_3765&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Gallica petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Gallica&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74632&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. moschata petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. moschata&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74646&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. wichurana petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. wichurana&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_2094184&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Dealing with missing values: setting empty values to zero for sample_mean and sem to enable calculation: to do this, we rely on Pandas fillna function.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Reorganizing Columns order in the DataFrame/File to match the Frictionless Tabular Data Package Layout. This is done very easily in Pandas by passing desired column order as an array:</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df_from_file</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;var2_levels&#39;</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_size&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_mean&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="s1">&#39;sem&#39;</span><span class="p">]]</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chemical_name</th>
+      <th>inchi</th>
+      <th>chebi_identifier</th>
+      <th>var1_levels</th>
+      <th>var1_uri</th>
+      <th>var2_levels</th>
+      <th>var2_uri</th>
+      <th>treatment</th>
+      <th>sample_size</th>
+      <th>sample_mean</th>
+      <th>unit</th>
+      <th>sem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Compound</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>R. chinensis 'Old Blush'</td>
+      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
+      <td>sepals</td>
+      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
+      <td>R. chinensis 'Old Blush' sepals</td>
+      <td>3</td>
+      <td>Average</td>
+      <td></td>
+      <td>Average</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>hexan-2-ol</td>
+      <td>InChI=1S/C6H14O/c1-3-4-5-6(2)7/h6-7H,3-5H2,1-2H3</td>
+      <td>CHEBI:88370</td>
+      <td>R. chinensis 'Old Blush'</td>
+      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
+      <td>sepals</td>
+      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
+      <td>R. chinensis 'Old Blush' sepals</td>
+      <td>3</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>hexanal</td>
+      <td>InChI=1S/C6H12O/c1-2-3-4-5-6-7/h6H,2-5H2,1H3</td>
+      <td>CHEBI:88528</td>
+      <td>R. chinensis 'Old Blush'</td>
+      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
+      <td>sepals</td>
+      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
+      <td>R. chinensis 'Old Blush' sepals</td>
+      <td>3</td>
+      <td>4.948484238934703</td>
+      <td></td>
+      <td>4.948484238934703</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>(E)-2-hexenal</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>R. chinensis 'Old Blush'</td>
+      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
+      <td>sepals</td>
+      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
+      <td>R. chinensis 'Old Blush' sepals</td>
+      <td>3</td>
+      <td>57.615979379973986</td>
+      <td></td>
+      <td>57.615979379973986</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>(Z)-3-hexen-1-ol</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>R. chinensis 'Old Blush'</td>
+      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
+      <td>sepals</td>
+      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
+      <td>R. chinensis 'Old Blush' sepals</td>
+      <td>3</td>
+      <td>7.639427405845331</td>
+      <td></td>
+      <td>7.639427405845331</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>We are now ready to write the file to disk as a UTF-8 encoded comma delimited file, with double quoted values and we are also dropping the dataframe index from the output.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">HOME</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="c1"># print(&quot;checking current directory #1: &quot;,HOME)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">)):</span>
+        <span class="c1"># print(&quot;checking current directory #2: &quot;, os.getcwd())</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">))</span>
+        <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&quot;</span><span class="p">,</span>
+                         <span class="n">quoting</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                         <span class="n">doublequote</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span>
+                         <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">))</span>
+
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>The Final step is to validate the output against JSON data package specifications, which are stored in the JSON Tabular DataPackage Definition folder.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;./../../../&#39;</span><span class="p">)</span>
+<span class="n">LOCAL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;moving to directory: &quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>moving to directory:  /Users/philippe/Documents/git/rose2018ng-notebook
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">package_definition</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">LOCAL</span><span class="p">,</span><span class="s1">&#39;./rose-metabo-JSON-DP-validated/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39;</span><span class="p">)</span>
+<span class="n">file_to_test</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">LOCAL</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;JSON data package definition:&quot;</span><span class="p">,</span> <span class="n">package_definition</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;csv file to evaluate:&quot;</span><span class="p">,</span> <span class="n">file_to_test</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">pack</span> <span class="o">=</span> <span class="n">Package</span><span class="p">(</span><span class="n">package_definition</span><span class="p">)</span>
+    <span class="n">pack</span><span class="o">.</span><span class="n">valid</span>
+    <span class="n">pack</span><span class="o">.</span><span class="n">errors</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">pack</span><span class="o">.</span><span class="n">errors</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="n">report</span> <span class="o">=</span> <span class="n">validate</span><span class="p">(</span><span class="n">file_to_test</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">report</span><span class="p">[</span><span class="s1">&#39;valid&#39;</span><span class="p">]</span><span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Success! </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">file_to_test</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">+</span> <span class="s2">&quot; is a valid Frictionless Tabular Data Package</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;It complies with the &#39;rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39; definition</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hmmm, something went wrong. Please, see the validation report for tracing the fault&quot;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>JSON data package definition: /Users/philippe/Documents/git/rose2018ng-notebook/./rose-metabo-JSON-DP-validated/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json
+csv file to evaluate: /Users/philippe/Documents/git/rose2018ng-notebook/../data/processed/denovo/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv
+Success! 
+
+&#39;/Users/philippe/Documents/git/rose2018ng-notebook/../data/processed/denovo/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#39; is a valid Frictionless Tabular Data Package
+It complies with the &#39;rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39; definition
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p>This concludes this notebook, which showed you how to convert a metabolite profiling dataset from a publication and create a FAIR data package. The other notebooks will show you how to visualize and plot the dataset but also convert it to a semantic graph as a Linked Data representation, query it and plot from it.</p>
+<ul>
+<li><a href="../notebooks/1-rose-metabolites-Python-analysis.ipynb">1-rose-metabolites-Python-analysis.ipynb</a></li>
+<li><p><a href="../notebooks/2-rose-metabolites-Python-RDF-querying-analysis.ipynb">2-rose-metabolites-Python-RDF-querying-analysis.ipynb</a></p>
+</li>
+<li><p><a href="../notebooks/3-rose-metabolites-R-analysis.ipynb">3-rose-metabolites-R-analysis.ipynb</a> 
+(NB: requires making an R kernel available to Jupyter)</p>
+</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Bibliographic-Reference:">Bibliographic Reference:<a class="anchor-link" href="#Bibliographic-Reference:"> </a></h4><p><a href="https://doi.org/10.1126/science.aab0696">1.Magnard JL, Roccia A, Caissard JC, Vergne P, Sun P, Hecquet R, Dubois A, Hibrand-Saint Oyant L, Jullien F, Nicolè F, Raymond O, Huguet S, Baltenweck R, Meyer S, Claudel P, Jeauffre J, Rohmer M, Foucher F, Hugueney P, Bendahmane M, Baudino S. PLANT VOLATILES. Biosynthesis of monoterpene scent compounds in roses. Science. 2015 Jul 3;349(6243):81-3.</a></p>
+<p><a href="https://doi.org/10.1038/s41588-018-0110-3">2.Raymond O, Gouzy J, Just J, Badouin H, Verdenaud M, Lemainque A, Vergne P, Moja S, Choisne N, Pont C, Carrère S, Caissard JC, Couloux A, Cottret L, Aury JM, Szécsi J, Latrasse D, Madoui MA, François L, Fu X, Yang SH, Dubois A, Piola F, Larrieu A, Perez M, Labadie K, Perrier L, Govetto B, Labrousse Y, Villand P, Bardoux C, Boltz V, Lopez-Roques C, Heitzler P, Vernoux T, Vandenbussche M, Quesneville H, Boualem A, Bendahmane A, Liu C, Le Bris M, Salse J, Baudino S, Benhamed M, Wincker P, Bendahmane M. The Rosa genome provides new insights into the domestication of modern roses. Nat Genet. 2018 Jun;50(6):772-777.</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
