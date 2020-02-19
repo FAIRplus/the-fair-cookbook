@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>FAIR data matrix Recipe</title>
+  <meta name="description" content="        Recipe-1: Making a Data Matrix FAIR identifier:authors:Philippe Rocca-SerraSusanna-Assunta Sansonemaintainers:Philippe Rocca-Serraversion:license:CC-...">
+
+  <link rel="canonical" href="/YOUR%20URL//recipes/fair-data-matrix-recipe.html">
+  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOK BOOK" href="/YOUR%20URL//feed.xml">
+
+  <meta property="og:url"         content="/YOUR%20URL//recipes/fair-data-matrix-recipe.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="FAIR data matrix Recipe" />
+<meta property="og:description" content="        Recipe-1: Making a Data Matrix FAIR identifier:authors:Philippe Rocca-SerraSusanna-Assunta Sansonemaintainers:Philippe Rocca-Serraversion:license:CC-..." />
+<meta property="og:image"       content="YOUR%20URL/images/logo/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "YOUR URL//recipes/fair-data-matrix-recipe.html",
+  "headline": "FAIR data matrix Recipe",
+  "datePublished": "2020-02-19T14:39:35+00:00",
+  "dateModified": "2020-02-19T14:39:35+00:00",
+  "description": "        Recipe-1: Making a Data Matrix FAIR identifier:authors:Philippe Rocca-SerraSusanna-Assunta Sansonemaintainers:Philippe Rocca-Serraversion:license:CC-...",
+  "author": {
+    "@type": "Person",
+    "name": "YOUR AUTHOR NAME"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "YOUR URL/",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "YOUR URL/",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
+    }
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
+
+  <!-- DOM updating function -->
+  <script src="/assets/js/page/dom-update.js"></script>
+
+  <!-- Selectors for elements on the page -->
+  <script src="/assets/js/page/documentSelectors.js"></script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/assets/js/page/anchors.js" async></script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+<!-- Display Thebelab button in each code cell -->
+<script>
+/**
+ * Set up thebelab button for code blocks
+ */
+
+const thebelabCellButton = id =>
+  `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
+    <img src="/assets/images/edit-button.svg" alt="Start thebelab interactive mode">
+  </a>`
+
+
+const addThebelabButtonToCodeCells =  () => {
+
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.getElementById("thebelab-cell-button-" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', thebelabCellButton(id));
+    }
+  })
+}
+
+initFunction(addThebelabButtonToCodeCells);
+</script>
+
+
+
+<script type="text/x-thebe-config">
+    {
+      requestKernel: true,
+      binderOptions: {
+        repo: 'YOUR-ORG/YOUR-REPO',
+        ref: 'gh-pages',
+      },
+      codeMirrorConfig: {
+        theme: "abcdef"
+      },
+      kernelOptions: {
+        name: 'python3',
+      }
+    }
+</script>
+<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
+<script>
+    /**
+     * Add attributes to Thebelab blocks
+     */
+
+    const initThebelab = () => {
+        const addThebelabToCodeCells = () => {
+            console.log("Adding thebelab to code cells...");
+            // If Thebelab hasn't loaded, wait a bit and try again. This
+            // happens because we load ClipboardJS asynchronously.
+            if (window.thebelab === undefined) {
+                setTimeout(addThebelabToCodeCells, 250)
+            return
+            }
+
+            // If we already detect a Thebelab cell, don't re-run
+            if (document.querySelectorAll('div.thebelab-cell').length > 0) {
+                return;
+            }
+
+            // Find all code cells, replace with Thebelab interactive code cells
+            const codeCells = document.querySelectorAll('.input_area pre')
+            codeCells.forEach((codeCell, index) => {
+                const id = codeCellId(index)
+                codeCell.setAttribute('data-executable', 'true')
+
+                // Figure out the language it uses and add this too
+                var parentDiv = codeCell.parentElement.parentElement;
+                var arrayLength = parentDiv.classList.length;
+                for (var ii = 0; ii < arrayLength; ii++) {
+                    var parts = parentDiv.classList[ii].split('language-');
+                    if (parts.length === 2) {
+                        // If found, assign dataLanguage and break the loop
+                        var dataLanguage = parts[1];
+                        break;
+                    }
+                }
+                codeCell.setAttribute('data-language', dataLanguage)
+
+                // If the code cell is hidden, show it
+                var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
+                if (inputCheckbox !== null) {
+                    setCodeCellVisibility(inputCheckbox, 'visible');
+                }
+            });
+
+            // Remove the event listener from the page so keyboard press doesn't
+            // Change page
+            document.removeEventListener('keydown', initPageNav)
+            keyboardListener = false;
+
+            // Init thebelab
+            thebelab.bootstrap();
+
+            // Remove copy buttons since they won't work anymore
+            const copyAndThebeButtons = document.querySelectorAll('.copybtn, .thebebtn')
+            copyAndThebeButtons.forEach((button, index) => {
+                button.remove();
+            });
+
+            // Remove outputs since they'll be stale
+            const outputs = document.querySelectorAll('.output *, .output')
+            outputs.forEach((output, index) => {
+                output.remove();
+            });
+
+            // Find any cells with an initialization tag and ask ThebeLab to run them when ready
+            var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
+            thebeInitCells.forEach((cell) => {
+                console.log("Initializing ThebeLab with cell: " + cell.id);
+                cell.querySelector('.thebelab-run-button').click();
+            });
+        }
+
+        // Add event listener for the function to modify code cells
+        const thebelabButtons = document.querySelectorAll('[id^=thebelab], [id$=thebelab]')
+        thebelabButtons.forEach((thebelabButton,index) => {
+            if (thebelabButton === null) {
+                setTimeout(initThebelab, 250)
+                return
+            };
+            thebelabButton.addEventListener('click', addThebelabToCodeCells);
+        });
+    }
+
+    // Initialize Thebelab
+    initFunction(initThebelab);
+</script>
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
+  <script src="/assets/js/page/tocbot.js"></script>
+
+  <!-- Google analytics -->
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
+
+  <!-- Load custom website scripts -->
+  <script src="/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://fairplus.github.io/the-fair-cookbook/intro.html"><img src="/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">THE FAIR COOK BOOK</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/intro.html"
+        >
+          
+          FAIR Cookbook
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="https://github.com/fair-cookbook/the-fair-cookbook"
+        >
+          
+          GitHub repository
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href=".html"
+        >
+          
+          Search
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">FAIR Cookbook</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/People.html"
+        >
+          
+          People
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/Contributing.html"
+        >
+          
+          Contributing
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/Governance.html"
+        >
+          
+          Governance
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/license.html"
+        >
+          
+          License
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/disclaimer.html"
+        >
+          
+          Disclaimer
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/code_of_conduct.html"
+        >
+          
+          Code of Conduct
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/papers.html"
+        >
+          
+          Publications
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/ingredients/ingredient-list.html"
+        >
+          
+          Ingredients and Resources
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/ingredients/ingredient-list.html"
+                >
+                  
+                  Ingredients
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/recipes/recipes.html"
+        >
+          
+          Recipes
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/recipes/recipe-template.html"
+                >
+                  
+                  Recipe Template
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/recipes/anonymization-recipe.html"
+                >
+                  
+                  Anomynization Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/recipes/fair-data-matrix-recipe.html"
+                >
+                  
+                  FAIR data matrix Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html"
+                >
+                  
+                  eTOX experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/recipes/resolute_raw/rawRecipe_resolute.html"
+                >
+                  
+                  RESOLUTE experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/recipes/oncotrack_raw/rawRecipe-oncotrack.html"
+                >
+                  
+                  ONCOTRACK experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html"
+                >
+                  
+                  ND4BB experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/features/features.html"
+        >
+          
+          Features and customization
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/features/markdown.html"
+                >
+                  
+                  Markdown files
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/features/notebooks.html"
+                >
+                  
+                  Jupyter notebooks
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">Powered by <a href="https://jupyterbook.org">Jupyter Book</a></p>
+</nav>
+
+      
+      <div class="c-topbar" id="top-navbar">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
+</div>
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/search.html" class="topbar-right-button" id="search-button">
+    <img src="/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+                  <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Recipe-1:-Making-a-Data-Matrix-FAIR">Recipe-1: Making a Data Matrix FAIR<a class="anchor-link" href="#Recipe-1:-Making-a-Data-Matrix-FAIR"> </a></h1><p><strong>identifier:</strong></p>
+<p><strong>authors:</strong></p>
+<ul>
+<li><a href="https://github.com/proccaserra">Philippe Rocca-Serra</a></li>
+<li><a href="https://github.com/susannasansone">Susanna-Assunta Sansone</a></li>
+</ul>
+<p><strong>maintainers:</strong></p>
+<ul>
+<li><a href="https://github.com/proccaserra">Philippe Rocca-Serra</a></li>
+</ul>
+<p><strong>version:</strong></p>
+<p><strong>license:</strong></p>
+<ul>
+<li><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></li>
+</ul>
+<h2 id="Ingredients:">Ingredients:<a class="anchor-link" href="#Ingredients:"> </a></h2><h3 id="Identifier-Schema:">Identifier Schema:<a class="anchor-link" href="#Identifier-Schema:"> </a></h3><ul>
+<li>DOI</li>
+<li>purl</li>
+</ul>
+<p>1.Metadata Models:</p>
+<ul>
+<li><a href="https://frictionlessdata.io/specs/data-package/">Frictionless JSON Data Package</a></li>
+<li><a href="https://doi.org/10.25504/FAIRsharing.53gp75">ISA-Tab</a></li>
+</ul>
+<p>2.Vocabularies and Terminologies:</p>
+<ul>
+<li><a href="http://www.obofoundry.org/ontology/chebi.html">CHEBI</a></li>
+<li><a href="https://www.stato-ontology.org">STATO</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi">NCBITaxonomy</a></li>
+<li><a href="http://www.obofoundry.org/ontology/po.html">Plant Ontology</a></li>
+</ul>
+<p>3.Data Format:</p>
+<ul>
+<li><a href="https://frictionlessdata.io/specs/data-package/">Frictionless JSON Data Package</a></li>
+<li><a href="https://doi.org/10.25504/FAIRsharing.53gp75">ISA-Tab</a></li>
+</ul>
+<p>4.Tools and  Software:</p>
+<ul>
+<li><a href="https://github.com/">github</a></li>
+<li><a href="https://developers.zenodo.org/">zenodo API</a></li>
+<li><p><a href="https://drivendata.github.io/cookiecutter-data-science/">cookie cutter for data science</a></p>
+</li>
+<li><p><a href="https://www.python.org/">python</a></p>
+</li>
+<li><a href="https://pandas.pydata.org/">pandas</a></li>
+<li><a href="https://camelot-py.readthedocs.io/en/master/">camelot-py</a></li>
+<li><a href="https://rdflib.readthedocs.io/en/stable/">rdflib</a></li>
+<li><a href="https://jupyter.org/">jupyter notebook</a></li>
+<li><p><a href="https://matplotlib.org/">matplotlib</a></p>
+</li>
+<li><p><a href="https://www.w3.org/TR/sparql11-query/">sparql</a></p>
+</li>
+</ul>
+<h2 id="Summary:">Summary:<a class="anchor-link" href="#Summary:"> </a></h2><p>Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) <a href="https://doi.org/10.1038/s41588-018-0110-3">https://doi.org/10.1038/s41588-018-0110-3</a>; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type.
+Our starting point: their human-understandable data in the supplementary table <a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip">https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip</a>, containing the mean concentrations of 61 metabolites measured in three different parts of the rose flower, in six distinct genotypes.
+Our second data source: article by Magnard et al. Science.Jul 3;349(6243):81-3 (2015) <a href="https://doi.org/10.1126/science.aab0696">https://doi.org/10.1126/science.aab0696</a>; this is early work of the same group author of the first data source.
+Our approach: we performed a retrospective curation and re-annotation of the data matrices, disambiguating of the experimental design, using community, open interoperability standards from FAIRsharing (<a href="https://fairsharing.org">https://fairsharing.org</a>); we focused on the clarity of the statistical results to ensure reusability and reproducibility of the analytical workflow by humans and machines. The FAIRification steps for the first data source are documented in the sections below; the same steps were applied to the second data source to assess inter-experiment agreement, as both studies used the same varieties of rose and plant parts. 
+Our results: semantically-anchored data matrices served as Linked Data, deposited in public archives (Zenodo and MetaboLights), and consumable by software agents for queries like “Retrieve study predictor variables and their levels” and “What is sample size used to compute the means?” to support study results review and assessment.</p>
+<h2 id="Objectives:">Objectives:<a class="anchor-link" href="#Objectives:"> </a></h2><ul>
+<li>ensure that results presented in MS Excel or PDF tables are made more open and unambiguous.</li>
+<li>provide an RDF representation</li>
+<li>enable reproduciblity of results</li>
+<li>evaluate efficiency of the method via a data integrate challenge</li>
+</ul>
+<h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step1:-Address-Data-Findability-and-Accessibility:">Step1: Address Data Findability and Accessibility:<a class="anchor-link" href="#Step1:-Address-Data-Findability-and-Accessibility:"> </a></h3><p>We made the initial spreadsheet table discoverable and citable by:</p>
+<ul>
+<li>uploading it to Zenodo. </li>
+<li>assigning an open license (CC-BY 4.0)</li>
+<li>obtaining a persistent unique identifier in the form of a DOI: <a href="https://doi.org/10.5281/zenodo.2598799">https://doi.org/10.5281/zenodo.2598799</a></li>
+</ul>
+<h3 id="Step2:-Address-Interoperability">Step2: Address Interoperability<a class="anchor-link" href="#Step2:-Address-Interoperability"> </a></h3><p>We regularized the three dimensions of the matrix (data cube), which represent: i) the metabolites (molecular entities), ii) the treatments (experimental conditions and corresponding biomaterials and bioassays), and iii) the quantitation type (measurements).</p>
+<h4 id="Step-2A:-semantic-anchoring">Step 2A: semantic anchoring<a class="anchor-link" href="#Step-2A:-semantic-anchoring"> </a></h4><p>Metabolites (free text) names were augmented with unambiguous InChI codes, assigned by accessing CHEBI (<a href="https://doi.org/10.25504/FAIRsharing.62qk8w">https://doi.org/10.25504/FAIRsharing.62qk8w</a>) programmatically via its LibChebi library (<a href="https://github.com/libChEBI/libChEBIpy">https://github.com/libChEBI/libChEBIpy</a>).<br>
+We unpacked the information held in the column header, identifying the main types of tabulated entities and their relationships, and replacing free text with ontology term.
+For example, we disambiguated the taxonomic name of the cultivar from the anatomical part using terms and identifiers from the NCBI Taxonomy (<a href="https://doi.org/10.25504/FAIRsharing.fj07xj">https://doi.org/10.25504/FAIRsharing.fj07xj</a>) and Plant Ontology (<a href="https://doi.org/10.25504/FAIRsharing.3ngg40">https://doi.org/10.25504/FAIRsharing.3ngg40</a>) respectively.</p>
+<h4 id="Step-2B:-disambiguation-of-the-experimental-design">Step 2B: disambiguation of the experimental design<a class="anchor-link" href="#Step-2B:-disambiguation-of-the-experimental-design"> </a></h4><p>We clarified the intent of the experimentalist, which is a comparison between two independent variables identified (the rose variety and the organism part), which are both categorical variables with six and three discrete factor levels, respectively. Since only eight factor combinations are reported, we concluded that this is a fractional factorial design (rather than a  factorial design, where eighteen theoretical factor combinations are possible)
+We disambiguated among the attributes of the samples those that are study factors and their values, to explicitly enable queries on treatment groups and their sizes. 
+We used the STATistics Ontology (STATO; <a href="https://doi.org/10.25504/FAIRsharing.na5xp">https://doi.org/10.25504/FAIRsharing.na5xp</a>) to unambiguously express and semantically type these notions.</p>
+<h4 id="Step-2C:-clarification-of-the-measurement-performed">Step 2C: clarification of the measurement performed<a class="anchor-link" href="#Step-2C:-clarification-of-the-measurement-performed"> </a></h4><p>We unpacked the type of measurement, and formally annotated them with the STATO classes; we also clarified the size of the sample over which the calculation was performed. 
+Two measurements were identified for each of the experimental conditions, and for each treatment, a single biological material was prepared and assayed three times on the same analytical platform. 
+We marked-up all entities with persistent resolvable identifiers to enhance dataset connectivity. Therefore, the computed sample mean can only be used to estimate the variability of the measurement technique, not the biological variability.</p>
+<h3 id="Step3:-Preservation-of-the-data-matrices-in-an-open-syntax">Step3: Preservation of the data matrices in an open syntax<a class="anchor-link" href="#Step3:-Preservation-of-the-data-matrices-in-an-open-syntax"> </a></h3><p>We used the Frictionless Tabular Data Package (<a href="https://frictionlessdata.io/data-packages">https://frictionlessdata.io/data-packages</a>) to describe the table headers in JSON format.
+The transformation is documented in a jupyter notebook (<a href="https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb">https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb</a>).</p>
+<h3 id="Step4:-Address-Reusability">Step4: Address Reusability<a class="anchor-link" href="#Step4:-Address-Reusability"> </a></h3><p>We performed a conversion to Linked Data, using terms from OBO Foundry Ontologies (<a href="https://fairsharing.org/collection/OBOFoundry">https://fairsharing.org/collection/OBOFoundry</a>) 
+As a result, the metabolite measurements can be plotted using popular visualization libraries (Python plotnine or R ggplot2) from either a SPARQL query over the RDF representation or from the data package directly.</p>
+<h3 id="Step5:-address-Findability-and-Accessibility">Step5: address Findability and Accessibility<a class="anchor-link" href="#Step5:-address-Findability-and-Accessibility"> </a></h3><p>We made the FAIRified outputs discoverable and citable by uploading them to Zenodo, assigning an open license (CC-BY 4.0), and obtaining persistent unique identifiers:</p>
+<ul>
+<li>GC-MS data from the 'Rose Genome' available as Frictionless Tabular Data Package: <a href="https://doi.org/10.5281/zenodo.2640873">https://doi.org/10.5281/zenodo.2640873</a></li>
+<li>RDF Linked Data representation of GC-MS data from the 'Rose Genome' article: <a href="https://doi.org/10.5281/zenodo.2598812">https://doi.org/10.5281/zenodo.2598812</a></li>
+<li>Comparison of GC-MS datasets available as Frictionless Tabular Data Package: <a href="https://doi.org/10.5281/zenodo.2640919">https://doi.org/10.5281/zenodo.2640919</a></li>
+<li>Rose scent FAIRification project code release: <a href="https://doi.org/10.5281/zenodo.2641109">https://doi.org/10.5281/zenodo.2641109</a></li>
+</ul>
+<p>To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison, also released via Zenodo (<a href="https://doi.org/10.5281/zenodo.2640919">https://doi.org/10.5281/zenodo.2640919</a>).
+Lastly, we produced a study description file, in ISA-Tab format (<a href="https://doi.org/10.25504/FAIRsharing.53gp75">https://doi.org/10.25504/FAIRsharing.53gp75</a>), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (<a href="https://doi.org/10.25504/FAIRsharing.kkdpxe">https://doi.org/10.25504/FAIRsharing.kkdpxe</a>).</p>
+<h2 id="Reference:">Reference:<a class="anchor-link" href="#Reference:"> </a></h2><p>Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics data matrices, an exemplar. Sci Data 6, 271 (2019) <a href="https://doi.org/10.1038/s41597-019-0286-0">doi:10.1038/s41597-019-0286-0</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              <nav class="c-page__nav">
+  
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/recipes/anonymization-recipe.html">
+      〈 <span class="u-margin-right-tiny"></span> Anomynization Recipe
+    </a>
+  
+
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+      eTOX experience Recipe <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+              <footer>
+  <p class="footer">This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. <a href="https://europa.eu/"><img src="/the-fair-cookbook/assets/images//logo/eu-flag.png" height="20" alt="EU flag" class="float-left bottom-margin"></a><a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/assets/images//logo/imi-logo.png" height="20" alt="IMI logo" class="float-left"></a><a href="https://efpia.eu"><img src="/the-fair-cookbook/assets/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" class="float-left"></a>
+This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
+            </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

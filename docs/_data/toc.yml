@@ -37,7 +37,7 @@
 
 # Adds a searchbar link
 - title: Search
-  search: true
+  search: false
   not_numbered: true
 
 # Divider for meta-pages and content page
@@ -46,7 +46,7 @@
 # Add a header and sample content section
 - header: FAIR Cookbook
 
-# publications section
+# people section
 - title: People
   url: People
   not_numbered: true  
@@ -61,12 +61,12 @@
   url: Governance
   not_numbered: true 
 
-# publications section
+# license section
 - title: License
   url: license
   not_numbered: true    
 
-# publications section
+# disclaimer section
 - title: Disclaimer
   url: disclaimer
   not_numbered: true  
