@@ -32,22 +32,17 @@
   external: true
   not_numbered: true
 
-# Divider for meta-pages and search page
-- divider: true
 
 # Adds a searchbar link
 #- title: Search
- # url: Search
- # search: true
- # not_numbered: true
+#  search: false
+#  not_numbered: true
+
 
 # Divider for meta-pages and content page
 - divider: true
 
-# Add a header and sample content section
-- header: FAIR Cookbook
-
-# publications section
+# people section
 - title: People
   url: People
   not_numbered: true  
@@ -62,12 +57,12 @@
   url: Governance
   not_numbered: true 
 
-# publications section
+# license section
 - title: License
   url: license
   not_numbered: true    
 
-# publications section
+# disclaimer section
 - title: Disclaimer
   url: disclaimer
   not_numbered: true  
@@ -82,15 +77,12 @@
   url: papers
   not_numbered: true    
 
-# A chapter w/ a collection of sections beneath it
-- title: Ingredients and Resources
-  url: /ingredients/ingredient-list
-  not_numbered: true
-  expand_sections: true
-  sections:
-  - title: Ingredients
-    url: /ingredients/ingredient-list
-    not_numbered: true
+
+# Divider for meta-pages and search page
+- divider: true
+
+# Add a header and sample content section
+- header: FAIR Cookbook
 
 # A chapter w/ a collection of sections beneath it
 - title: Recipes
@@ -143,6 +135,21 @@
   - title: Anomynization Recipe
     url: /recipes/anonymization-recipe
     not_numbered: false    
+
+# Divider for meta-pages and search page
+- divider: true
+# A chapter w/ a collection of sections beneath it
+- title: Ingredients and Resources
+  url: /ingredients/ingredient-list
+  not_numbered: true
+  expand_sections: true
+  sections:
+  - title: Ingredients
+    url: /ingredients/ingredient-list
+    not_numbered: true
+
+# Divider for meta-pages and search page
+- divider: true
 
 # A chapter w/ a collection of sections beneath it
 - title: Features and customization
