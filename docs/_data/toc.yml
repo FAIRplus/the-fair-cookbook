@@ -110,7 +110,7 @@
         not_numbered: false
         expand_sections: true         
       - title: Exploration fo semantic model with SPARQL
-        url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
+      - url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
         not_numbered: false
         expand_sections: true
   - title: Chemical identities - Generating InChI and SMILES strings
@@ -118,7 +118,7 @@
     not_numbered: false
     notebooks: /recipes/chemical-identities/1-notebook          
   - title: eTOX experience Recipe
-    url: /recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
+    url: /recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario 
     not_numbered: false    
   - title: RESOLUTE experience Recipe
     url: /recipes/resolute_raw/rawRecipe_resolute
@@ -163,3 +163,14 @@
   - title: Jupyter notebooks
     url: /features/notebooks
     not_numbered: false
+
+- divider: true
+- header: Demo textbook
+- title: frictionless
+  url: /1/frictionless
+  sections:
+  - title: 1
+    url: /1/testnb/0-rose-metabolites-Python-data-handling
+  - title: 2
+    url: /1/testnb/1-rose-metabolites-Python-analysis
+  
