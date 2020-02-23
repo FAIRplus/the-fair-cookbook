@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://fairplus.github.io/the-fair-cookbook/search",
   "headline": "Search the site",
-  "datePublished": "2020-02-20T18:08:42+00:00",
-  "dateModified": "2020-02-20T18:08:42+00:00",
+  "datePublished": "2020-02-23T09:45:56+00:00",
+  "dateModified": "2020-02-23T09:45:56+00:00",
   "description": "        ",
   "author": {
     "@type": "Person",
@@ -106,6 +106,12 @@ MathJax.Hub.Config({
   <!-- https://github.com/turbolinks/turbolinks -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
+
+<!-- using mermaind -->
+ <script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
+<!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
+ <script>mermaid.initialize({startOnLoad:true});</script>
+
 
   <!-- Load nbinteract for widgets -->
   
@@ -725,21 +731,10 @@ initFunction(initPrint)
 
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href=".html"
-                    >
-                      
-                      Exploration fo semantic model with SPARQL
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
                       href="/the-fair-cookbook/recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html"
                     >
                       
-                      
+                      Exploration fo semantic model with SPARQL
                     </a>
                 
 
@@ -1071,6 +1066,44 @@ initFunction(initPrint)
               </li>
               
             
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html"
+                >
+                  
+                    1.3
+                  
+                  3
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html"
+                >
+                  
+                    1.4
+                  
+                  4
+                </a>
+
+                
+                
+
+              </li>
+              
+            
           </ul>
         
       </li>
@@ -1130,7 +1163,7 @@ initFunction(initPrint)
         "title": "frictionless",
         
         "excerpt":
-            "             Frictionless Tabular Data Package  Making self describing tabular data using Frictionless tools instead of dumping Excel files.   flow st=&gt;start: Start op=&gt;operation: Convert Excel to Frictionless Tabular Data Package cond=&gt;condition: Yes or No? e=&gt;end st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op DISCLAIMER: this is a test   sequence Alice-&gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&gt;Alice: I am good thanks! ​ DISCLAIMER: this is another test  brew coffee now ```                     ",
+            "             Frictionless Tabular Data Package  Making self describing tabular data using Frictionless tools instead of dumping Excel files.    graph TD;     A-->B;     A-->C;     B-->D;     C-->D;      graph LR;     A[Hard edge] -->B(Round edge)     B --> C{Decision}     C -->|One| D[Result one]     C -->|Two| E[Result two]                     ",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/1/frictionless.html",
@@ -1166,6 +1199,22 @@ initFunction(initPrint)
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/1/testnb/1-rose-metabolites-Python-analysis.html",
+        "teaser":null},{
+        "title": "4",
+        
+        "excerpt":
+            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = &#39;&lt;table&gt;&lt;tr style=&quot;color:white;background-color:#43BFC7;font-weight:bold&quot;&gt;&#39; # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + &#39;&lt;td&gt;&#39; + varName + &#39;&lt;/td&gt;&#39; HTMLResult = HTMLResult + &#39;&lt;/tr&gt;&#39; # print values from each row and build...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html",
+        "teaser":null},{
+        "title": "3",
+        
+        "excerpt":
+            "Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed into R and exploited with rich graphical libraries, such as the well know ggplot2 (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly, this rapid exploration is possible because of independent variables and their levels have been clearly and unambiguously declared in the Tabular...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html",
         "teaser":null},{
         "title": "Contributing",
         
@@ -1327,7 +1376,7 @@ initFunction(initPrint)
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/fair-data-matrix/1-rose-metabolites-Python-analysis.html",
         "teaser":null},{
-        "title": "None",
+        "title": "Exploration fo semantic model with SPARQL",
         
         "excerpt":
             "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = &#39;&lt;table&gt;&lt;tr style=&quot;color:white;background-color:#43BFC7;font-weight:bold&quot;&gt;&#39; # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + &#39;&lt;td&gt;&#39; + varName + &#39;&lt;/td&gt;&#39; HTMLResult = HTMLResult + &#39;&lt;/tr&gt;&#39; # print values from each row and build...",

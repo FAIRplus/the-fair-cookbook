@@ -110,7 +110,7 @@
         not_numbered: false
         expand_sections: true         
       - title: Exploration fo semantic model with SPARQL
-      - url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
+        url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
         not_numbered: false
         expand_sections: true
   - title: Chemical identities - Generating InChI and SMILES strings
@@ -173,4 +173,8 @@
     url: /1/testnb/0-rose-metabolites-Python-data-handling
   - title: 2
     url: /1/testnb/1-rose-metabolites-Python-analysis
+  - title: 3
+    url: /1/testnb/3-rose-metabolites-R-analysis
+  - title: 4
+    url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis    
   

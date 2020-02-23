@@ -48,6 +48,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
 
+<!-- using mermaind -->
+ <script src="{{ site.js_url | relative_url }}/mermaid.min.js"></script>
+<!--  <script src="{{ site.js_url | relative_url }}/mermaid.js"></script>-->
+ <script>mermaid.initialize({startOnLoad:true});</script>
+
+
   <!-- Load nbinteract for widgets -->
   {% include js/nbinteract.html %}
 

@@ -2,29 +2,22 @@
 
 Making self describing tabular data using Frictionless tools instead of dumping Excel files.
 
+<div class="mermaid">
 
-```flow
-st=>start: Start
-op=>operation: Convert Excel to Frictionless Tabular Data Package
-cond=>condition: Yes or No?
-e=>end
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;  
+</div>
 
-
-DISCLAIMER: this is a test
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-​```
+<div class="mermaid">
 
 
+graph LR;
+    A[Hard edge] -->B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
 
-DISCLAIMER: this is another test
-
-
-
-brew coffee now
+</div>

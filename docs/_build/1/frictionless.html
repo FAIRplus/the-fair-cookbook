@@ -20,26 +20,23 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Frictionless-Tabular-Data-Package">Frictionless Tabular Data Package<a class="anchor-link" href="#Frictionless-Tabular-Data-Package"> </a></h1><p>Making self describing tabular data using Frictionless tools instead of dumping Excel files.</p>
+<div class="mermaid">
 
-<pre><code>flow
-st=&gt;start: Start
-op=&gt;operation: Convert Excel to Frictionless Tabular Data Package
-cond=&gt;condition: Yes or No?
-e=&gt;end
-st-&gt;op-&gt;cond
-cond(yes)-&gt;e
-cond(no)-&gt;op</code></pre>
-<p>DISCLAIMER: this is a test</p>
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;  
+</div><div class="mermaid">
 
-<pre><code>sequence
-Alice-&gt;Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob--&gt;Alice: I am good thanks!
-​</code></pre>
-<p>DISCLAIMER: this is another test</p>
-<p>brew coffee now
-```</p>
 
+graph LR;
+    A[Hard edge] -->B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+
+</div>
 </div>
 </div>
 </div>
