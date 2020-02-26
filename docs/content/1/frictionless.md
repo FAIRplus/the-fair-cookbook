@@ -12,12 +12,6 @@
 7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
 8. [License](#License)
 
-<!-- ## Example
-## Example2
-## Third Example
-## [Fourth Example](http://www.fourthexample.com) 
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text -->
 
 ---
 
