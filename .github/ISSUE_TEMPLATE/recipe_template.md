@@ -22,14 +22,6 @@ ___
 ## Graphical Overview of the FAIRification Recipe Objectives
 
 
-<div class="mermaid">
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-</div>
-
 ___
 
 ## Capability & Maturity Table
@@ -84,16 +76,6 @@ graph LR;
     C -->|No| E[Vendor locked Data]
 ```
 
-<div class="mermaid">
-graph LR;
-    A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
-    B["conversion to open format"]-->D(("output data"));
-    C["automatic annotation"]-->D(("output data"));  
-
-    style A fill:#FF5733,stroke:#333,stroke-width:2px
-    style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div>
 
 ___
 

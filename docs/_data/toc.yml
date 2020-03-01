@@ -56,6 +56,9 @@
   not_numbered: true
   expand_sections: false
   sections:
+  - title: How to create a recipe
+    url: /recipes/howtocreatecard
+    not_numbered: false    
   - title: FAIR Assessment Recipe
     url: /recipes/fair-assessment-recipe
     not_numbered: false  

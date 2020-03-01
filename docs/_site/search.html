@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://fairplus.github.io/the-fair-cookbook/search",
   "headline": "Search the site",
-  "datePublished": "2020-02-26T11:20:27+00:00",
-  "dateModified": "2020-02-26T11:20:27+00:00",
+  "datePublished": "2020-03-01T18:09:07+00:00",
+  "dateModified": "2020-03-01T18:09:07+00:00",
   "description": "        ",
   "author": {
     "@type": "Person",
@@ -53,6 +53,7 @@
 
   </script>
   <link rel="stylesheet" href="/the-fair-cookbook/assets/css/styles.css">
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/custom/custom.css">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -533,6 +534,23 @@ initFunction(initPrint)
           
 
           <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/recipes/howtocreatecard.html"
+                >
+                  
+                  How to create a recipe
+                </a>
+
+                
+                
+
+              </li>
+              
             
               
               
@@ -1304,7 +1322,7 @@ initFunction(initPrint)
         "title": "Disclaimer",
         
         "excerpt":
-            "             Disclaimer  This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.                     ",
+            "             Disclaimer   This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.                     ",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/disclaimer.html",
@@ -1408,7 +1426,7 @@ initFunction(initPrint)
         "title": "FAIR data matrix Recipe",
         
         "excerpt":
-            "Recipe-1: Making a Data Matrix FAIR identifier: authors: Philippe Rocca-Serra Susanna-Assunta Sansone maintainers: Philippe Rocca-Serra version: license: CC-BY-4.0 Ingredients: Identifier Schema: DOI purl 1.Metadata Models: Frictionless JSON Data Package ISA-Tab 2.Vocabularies and Terminologies: CHEBI STATO NCBITaxonomy Plant Ontology 3.Data Format: Frictionless JSON Data Package ISA-Tab 4.Tools and Software: github zenodo API cookie cutter for data science python pandas camelot-py rdflib jupyter notebook matplotlib sparql Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow...",
+            "Recipe-1: Making a Data Matrix FAIR identifier: DOI:https://doi.org/10.5072/FK2862KX83 version: version Table of Contents Summary Main Objectives Graphical Overview of the FAIRification Recipe Objectives Capability &amp; Maturity Table FAIRification Objectives, Inputs and Outputs Table of Data Standards Table of Software and Tools Step by Step Process References Authors License Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type. Our...",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/fair-data-matrix-recipe.html",
@@ -1444,6 +1462,14 @@ initFunction(initPrint)
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/fair-data-matrix/3-rose-metabolites-R-analysis.html",
+        "teaser":null},{
+        "title": "How to create a recipe",
+        
+        "excerpt":
+            "How to create a FAIRPlus Coobook Recipe ? Prequisites and Getting Set up: We rely on github infrastructure for hosting the documents making up the cookbook. The reliance of git subversion system ensures robust data provenance tracking as well as traceability of authors contributions. To make the most of the github infrastructure, we *strongly* advise about following the git flow process, which we will detail now. git clone the repository test that you are in the master branch by issueing the following command from the terminal: git clone http://github.com/FAIRplus/the-fair-cookbook/ git branch should show: master then issue the following git command:...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/recipes/howtocreatecard.html",
         "teaser":null},{
         "title": "ND4BB experience Recipe",
         
@@ -1496,7 +1522,7 @@ initFunction(initPrint)
         "title": "Recipe Template",
         
         "excerpt":
-            "             Recipe1: Anonymizing Patient Data  identifier  authors  maintainers  version  license  Ingredients:   Identifier Schema:  1. Metadata Model:     -     -     - 2. Vocabularies and Terminologies:     -     -     - 3. Data Format:     -     -     - 4. Tools and  Software:     -     -     -    Objectives:  Step by Step Process:    ### Step1:   ### Step2:   ### Step3:   ### Step4:   ### Step5:   ß                     ",
+            "Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives graph LR; A[Data Acquisition] -->B(Raw Data) B --> C{FAIR by Design} C -->|Yes| D[Standard Compliant Data] C -->|No| E[Vendor locked Data] Capability &amp; Maturity Table Capability Initial Maturity Level Final Maturity Level Interoperability minimal repeatable...",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/recipe-template.html",
