@@ -76,7 +76,6 @@ graph LR;
     C -->|No| E[Vendor locked Data]
 ```
 
-
 ___
 
 
