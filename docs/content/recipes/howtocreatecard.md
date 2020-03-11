@@ -1,6 +1,38 @@
 # How to create a FAIRPlus Coobook Recipe ?
 
-## Prequisites and Getting Set up:
+# Table of Contents
+1. [Main Objectives](#Main%20Objectives)
+2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
+3. [Prequisites and Getting Set up](#Prequisites%20and%20Getting%20Set%20up)
+4. [Option-1 Writing the recipe in Mardown syntax](#Option-1%20Writing%20the%20recipe%20in%20Mardown%20syntax)
+5. [Option-2 Writing the recipe as a Google document](#Option-2%20Writing%20the%20recipe%20as%20a%20Google%20document)
+6. [Dealing with merge conflicts](#mergeconflicts)
+7. [Authors:](#authors)
+8. [License:](#license)
+
+---
+
+## Main Objectives <a name="Main%20Objectives"></a>
+
+The main purpose of this recipe is:
+
+> Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template
+
+___
+
+## Graphical Overview of the FAIRification Recipe Objectives <a name="Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives"></a>
+
+
+<div class="mermaid">
+graph TD;
+    A[Data FAIRification] -->B(Write-up FAIRification experience)
+    B --> C{know markdown?}
+    C -->|Yes| D(use the markdown recipe template)
+    C -->|No| E(use Google doc recipe template instead)
+</div>
+
+
+## Prequisites and Getting Set up <a name="Prequisites%20and%20Getting%20Set%20up"></a>
 
 <p style='text-align: justify;'>
 We rely on github infrastructure for hosting the documents making up the cookbook. The reliance of git subversion system ensures robust data provenance tracking as well as traceability of authors contributions.
@@ -131,9 +163,7 @@ make serve
 Open a new tab in your favourite browser and point to the url `http://127.0.0.1:4000/the-fair-cookbook/` 
 
 
-## Writing the recipe itself
-
-### Option 1: write directly in Markdown syntax
+## Option-1 Writing the recipe in Mardown syntax <a name="Option-1%20Writing%20the%20recipe%20in%20Mardown%20syntax"></a>
 
  - use the recipe template available from the issue tracker ["create new recipe"](https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose)
  - the template uses the [Markdown syntax], for which guidelines are available [here](https://guides.github.com/features/mastering-markdown/)
@@ -161,7 +191,7 @@ Open a new tab in your favourite browser and point to the url `http://127.0.0.1:
  	 <p style='text-align: justify;'>
  	graphic representation currently encompass visual representatiion such as Gantt chart, Flow Chart, Flow Diagram and Sequence Diagram. These diagrammtic represntations are particularly useful to indicate key decision processes, action to perform and data transfrormation path which may be considered in various contexts.
 </p>
- 5. provide executuable code in the form a notebook. the code could be organized according to the cookie cutter templates for data science, which enhances the replicability of the process.
+ 5. provide executable code in the form a notebook. the code could be organized according to the cookie cutter templates for data science, which enhances the replicability of the process.
  <p style='text-align: justify;'>
  	you may also provide a machine actionable workflow and associated containers for execution in a safe environment or as microservice.
 </p>
@@ -170,16 +200,40 @@ Open a new tab in your favourite browser and point to the url `http://127.0.0.1:
  7. consider minting a DOI for the new recipe, so it is citeable and versionned.
 
 
-### Option 2: write in a google document and convert to markdown later.
+## Option 2 Writing the recipe as a Google document. <a name="Option-2%20Writing%20the%20recipe%20as%20a%20Google%20document"></a>
 <p style='text-align: justify;'>
 The main benefits are the collaborative editing feature capabilities this allows.
-The main drawbacks are the conversion losses that are bound to happen when using add-ons such as xxx
+The main drawbacks are the conversion losses that are bound to happen when using add-ons such as:
 </p>
+- [https://github.com/supreetpal/gdoc-markdown-converter/](https://github.com/supreetpal/gdoc-markdown-converter/blob/develop/README.md)
 
-## dealing with merge conflicts
+- [https://github.com/mangini/gdocs2md](https://github.com/mangini/gdocs2md)
+
+
+:zap: this add-ons may create security concerns and may not run on the FAIRplus googledrive, meaning the conversion would have to happen outside that private drive. 
+
+
+
+## Dealing with merge conflicts <a name="mergeconflicts"></a>
 
 See [Resolving a merge conflict using the command line](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)
 
+
+
+
+## Authors: <a name="authors"></a>
+
+| Name | Affiliation  | orcid | CrediT role  |
+| :------------- | :------------- | :------------- |:------------- |
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
+| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
+
+___
+
+
+## License: <a name="license"></a>
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
 
 
 

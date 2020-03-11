@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://fairplus.github.io/the-fair-cookbook/search",
   "headline": "Search the site",
-  "datePublished": "2020-03-01T18:09:07+00:00",
-  "dateModified": "2020-03-01T18:09:07+00:00",
+  "datePublished": "2020-03-11T15:36:00+00:00",
+  "dateModified": "2020-03-11T15:36:00+00:00",
   "description": "        ",
   "author": {
     "@type": "Person",
@@ -90,6 +90,10 @@ MathJax.Hub.Config({
 
   <!-- DOM updating function -->
   <script src="/the-fair-cookbook/assets/js/page/dom-update.js"></script>
+  <!-- using mermaid for rendering Diagram and flow chart -->
+ <script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
+ <script>mermaid.initialize({startOnLoad:true});</script>
+<!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
 
   <!-- Selectors for elements on the page -->
   <script src="/the-fair-cookbook/assets/js/page/documentSelectors.js"></script>
@@ -108,10 +112,7 @@ MathJax.Hub.Config({
   <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
 
-<!-- using mermaid for rendering Diagram and flow chart -->
- <script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
- <script>mermaid.initialize({startOnLoad:true});</script>
-<!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
+
 
 
 
@@ -428,6 +429,7 @@ initFunction(initPrint)
   <body>
     <!-- .js-show-sidebar shows sidebar by default -->
     <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
       
 
 
@@ -1466,7 +1468,7 @@ initFunction(initPrint)
         "title": "How to create a recipe",
         
         "excerpt":
-            "How to create a FAIRPlus Coobook Recipe ? Prequisites and Getting Set up: We rely on github infrastructure for hosting the documents making up the cookbook. The reliance of git subversion system ensures robust data provenance tracking as well as traceability of authors contributions. To make the most of the github infrastructure, we *strongly* advise about following the git flow process, which we will detail now. git clone the repository test that you are in the master branch by issueing the following command from the terminal: git clone http://github.com/FAIRplus/the-fair-cookbook/ git branch should show: master then issue the following git command:...",
+            "How to create a FAIRPlus Coobook Recipe ? Table of Contents Main Objectives Graphical Overview of the FAIRification Recipe Objectives Prequisites and Getting Set up Option-1 Writing the recipe in Mardown syntax Option-2 Writing the recipe as a Google document Dealing with merge conflicts Authors: License: Main Objectives The main purpose of this recipe is: Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template Graphical Overview of the FAIRification Recipe Objectives graph TD; A[Data FAIRification] -->B(Write-up FAIRification experience) B --> C{know markdown?} C -->|Yes| D(use the markdown recipe template)...",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/howtocreatecard.html",
@@ -1522,7 +1524,7 @@ initFunction(initPrint)
         "title": "Recipe Template",
         
         "excerpt":
-            "Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives graph LR; A[Data Acquisition] -->B(Raw Data) B --> C{FAIR by Design} C -->|Yes| D[Standard Compliant Data] C -->|No| E[Vendor locked Data] Capability &amp; Maturity Table Capability Initial Maturity Level Final Maturity Level Interoperability minimal repeatable...",
+            "Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives Note: use this section to provide a decision tree for the overall process described in the recipe For more information about the syntax used to generate the diagram, please refer to the following documentation graph...",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/recipe-template.html",

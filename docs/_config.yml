@@ -154,6 +154,7 @@ plugins:
 - jekyll-redirect-from
 - jekyll-scholar
 - jekyll-mermaid
+- jemoji
 
 mermaid:
   src: '/js/mermaid.js'

@@ -11,6 +11,9 @@ group :jekyll_plugins do
   # Diagram rendering plugins
   gem 'jekyll-mermaid'
 
+  # adds emoji support
+  gem 'jemoji'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
