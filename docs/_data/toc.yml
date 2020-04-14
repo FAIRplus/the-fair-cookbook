@@ -56,12 +56,18 @@
   not_numbered: true
   expand_sections: false
   sections:
-  - title: How to create a recipe
-    url: /recipes/howtocreatecard
-    not_numbered: false    
+  - title: How to create a recipe with git
+    url: /recipes/how-to-create-recipe-with-git
+    not_numbered: false
+  - title: How to used HackMD to write a FAIR Cookbook Recipe
+    url: /recipes/how-to-create-recipe-with-hackmd
+    not_numbered: false
+  - title: How to create a recipe with GoogleDoc
+    url: /recipes/how-to-create-recipe-with-gdoc
+    not_numbered: false
   - title: FAIR Assessment Recipe
     url: /recipes/fair-assessment-recipe
-    not_numbered: false  
+    not_numbered: false
   - title: FAIR data matrix Recipe
     url: /recipes/fair-data-matrix-recipe
     not_numbered: false
@@ -82,6 +88,9 @@
         url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
         not_numbered: false
         expand_sections: true
+  # - title: UC3R1
+  #   url: /recipes/UC3R13
+  #   not_numbered: false
   - title: Chemical identities - Generating InChI and SMILES strings
     url: /recipes/chemical-identities
     not_numbered: false

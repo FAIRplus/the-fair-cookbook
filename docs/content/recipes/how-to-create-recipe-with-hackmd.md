@@ -1,4 +1,4 @@
-# How to used HackMD to write a FAIR Cookbook Recipe 
+# How to use HackMD to write a FAIR Cookbook Recipe 
 
 **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
 
