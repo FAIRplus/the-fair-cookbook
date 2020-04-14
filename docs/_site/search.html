@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://fairplus.github.io/the-fair-cookbook/search",
   "headline": "Search the site",
-  "datePublished": "2020-02-19T15:58:49+00:00",
-  "dateModified": "2020-02-19T15:58:49+00:00",
+  "datePublished": "2020-03-11T15:36:00+00:00",
+  "dateModified": "2020-03-11T15:36:00+00:00",
   "description": "        ",
   "author": {
     "@type": "Person",
@@ -53,6 +53,7 @@
 
   </script>
   <link rel="stylesheet" href="/the-fair-cookbook/assets/css/styles.css">
+  <link rel="stylesheet" href="/the-fair-cookbook/assets/custom/custom.css">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -89,6 +90,10 @@ MathJax.Hub.Config({
 
   <!-- DOM updating function -->
   <script src="/the-fair-cookbook/assets/js/page/dom-update.js"></script>
+  <!-- using mermaid for rendering Diagram and flow chart -->
+ <script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
+ <script>mermaid.initialize({startOnLoad:true});</script>
+<!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
 
   <!-- Selectors for elements on the page -->
   <script src="/the-fair-cookbook/assets/js/page/documentSelectors.js"></script>
@@ -106,6 +111,10 @@ MathJax.Hub.Config({
   <!-- https://github.com/turbolinks/turbolinks -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
+
+
+
+
 
   <!-- Load nbinteract for widgets -->
   
@@ -421,6 +430,7 @@ initFunction(initPrint)
     <!-- .js-show-sidebar shows sidebar by default -->
     <div id="js-textbook" class="c-textbook js-show-sidebar">
       
+      
 
 
 
@@ -477,159 +487,29 @@ initFunction(initPrint)
         
       
       
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/People.html"
-        >
-          
-          People
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/Contributing.html"
-        >
-          
-          Contributing
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/Governance.html"
-        >
-          
-          Governance
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/license.html"
-        >
-          
-          License
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/disclaimer.html"
-        >
-          
-          Disclaimer
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/code_of_conduct.html"
-        >
-          
-          Code of Conduct
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-
-      
-      
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/papers.html"
-        >
-          
-          Publications
-        </a>
-
-        
-      </li>
-
-      
-    
-      
-      
-        <li class="c-sidebar__divider"></li>
-        
-      
-      
         <li><h2 class="c-sidebar__title">FAIR Cookbook</li>
         
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/roadmap.html"
+        >
+          
+          Development Roadmap
+        </a>
+
+        
+      </li>
+
+      
+    
       
       
 
@@ -655,7 +535,24 @@ initFunction(initPrint)
 
           
 
-          <ul class="c-sidebar__sections ">
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/recipes/howtocreatecard.html"
+                >
+                  
+                  How to create a recipe
+                </a>
+
+                
+                
+
+              </li>
+              
             
               
               
@@ -889,7 +786,7 @@ initFunction(initPrint)
 
           
 
-          <ul class="c-sidebar__sections ">
+          <ul class="c-sidebar__sections u-hidden-visually">
             
               
               
@@ -943,7 +840,7 @@ initFunction(initPrint)
 
           
 
-          <ul class="c-sidebar__sections ">
+          <ul class="c-sidebar__sections u-hidden-visually">
             
               
               
@@ -985,6 +882,299 @@ initFunction(initPrint)
 
       
     
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Help Section and Demonstration</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/1/frictionless.html"
+        >
+          
+            1.
+          
+          frictionless
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/1/testnb/0-rose-metabolites-Python-data-handling.html"
+                >
+                  
+                    1.1
+                  
+                  1
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/1/testnb/1-rose-metabolites-Python-analysis.html"
+                >
+                  
+                    1.2
+                  
+                  2
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html"
+                >
+                  
+                    1.3
+                  
+                  3
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html"
+                >
+                  
+                    1.4
+                  
+                  4
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/1/mermaidsetup.html"
+        >
+          
+            2.
+          
+          mermaidsetup
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/People.html"
+        >
+          
+          People
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/Contributing.html"
+        >
+          
+          Contributing
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/Governance.html"
+        >
+          
+          Governance
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/license.html"
+        >
+          
+          License
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/disclaimer.html"
+        >
+          
+          Disclaimer
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/code_of_conduct.html"
+        >
+          
+          Code of Conduct
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/the-fair-cookbook/papers.html"
+        >
+          
+          Publications
+        </a>
+
+        
+      </li>
+
+      
+    
   </ul>
   <p class="sidebar_footer">Powered by <a href="https://jupyterbook.org">Jupyter Book</a></p>
 </nav>
@@ -1016,7 +1206,7 @@ initFunction(initPrint)
   </div>
   <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
   <aside class="sidebar__right">
-    <header><h4 class="nav__title"><img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <header><h4 class="nav__title"><img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search" /> On this page</h4></header>
     <nav class="onthispage">
     </nav>
   </aside>
@@ -1035,6 +1225,70 @@ initFunction(initPrint)
 <script>
     // Add the lunr store since we will now search it
     var store = [{
+        "title": "frictionless",
+        
+        "excerpt":
+            "Frictionless Tabular Data Package Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives graph LR; A[Data Acquisition] -->B(Raw Data) B --> C{FAIR by Design} C -->|Yes| D[Standard Compliant Data] C -->|No| E[Vendor locked Data] Capability &amp; Maturity Table Capability Initial Maturity Level Final Maturity...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/frictionless.html",
+        "teaser":null},{
+        "title": "None",
+        
+        "excerpt":
+            "Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication's supplementary data. *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/frictionless/0-rose-metabolites-Python-data-handling.html",
+        "teaser":null},{
+        "title": "None",
+        
+        "excerpt":
+            "Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2 *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use python equivalent of ggplot2 , the rich R graphical libraries (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly,...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/frictionless/1-rose-metabolites-Python-analysis.html",
+        "teaser":null},{
+        "title": "mermaidsetup",
+        
+        "excerpt":
+            "How to enable flow diagrams in Github from gh-pages: github pages are served by jekyll and more information can be found in the following document github pages &amp; jekyll flow and sequence diagrams are popular mean to provide a graphical overview of processes. Since FAIRification recipes are processes at the core, it is a strong requirement to enhance the recipes with such graphical overview mermaid is a javascript library allowing to generate diagrams, charts, graphs or flows from markdown-like text via javascript. mermaid documentation is extensive, see here mermaid is compatible with jekyll via a gem plugin The following steps...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/mermaidsetup.html",
+        "teaser":null},{
+        "title": "1",
+        
+        "excerpt":
+            "Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication's supplementary data. *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/testnb/0-rose-metabolites-Python-data-handling.html",
+        "teaser":null},{
+        "title": "2",
+        
+        "excerpt":
+            "Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2 *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use python equivalent of ggplot2 , the rich R graphical libraries (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly,...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/testnb/1-rose-metabolites-Python-analysis.html",
+        "teaser":null},{
+        "title": "4",
+        
+        "excerpt":
+            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = &#39;&lt;table&gt;&lt;tr style=&quot;color:white;background-color:#43BFC7;font-weight:bold&quot;&gt;&#39; # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + &#39;&lt;td&gt;&#39; + varName + &#39;&lt;/td&gt;&#39; HTMLResult = HTMLResult + &#39;&lt;/tr&gt;&#39; # print values from each row and build...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html",
+        "teaser":null},{
+        "title": "3",
+        
+        "excerpt":
+            "Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed into R and exploited with rich graphical libraries, such as the well know ggplot2 (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly, this rapid exploration is possible because of independent variables and their levels have been clearly and unambiguously declared in the Tabular...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html",
+        "teaser":null},{
         "title": "Contributing",
         
         "excerpt":
@@ -1070,7 +1324,7 @@ initFunction(initPrint)
         "title": "Disclaimer",
         
         "excerpt":
-            "             Disclaimer  This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.                     ",
+            "             Disclaimer   This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.                     ",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/disclaimer.html",
@@ -1174,7 +1428,7 @@ initFunction(initPrint)
         "title": "FAIR data matrix Recipe",
         
         "excerpt":
-            "Recipe-1: Making a Data Matrix FAIR identifier: authors: Philippe Rocca-Serra Susanna-Assunta Sansone maintainers: Philippe Rocca-Serra version: license: CC-BY-4.0 Ingredients: Identifier Schema: DOI purl 1.Metadata Models: Frictionless JSON Data Package ISA-Tab 2.Vocabularies and Terminologies: CHEBI STATO NCBITaxonomy Plant Ontology 3.Data Format: Frictionless JSON Data Package ISA-Tab 4.Tools and Software: github zenodo API cookie cutter for data science python pandas camelot-py rdflib jupyter notebook matplotlib sparql Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow...",
+            "Recipe-1: Making a Data Matrix FAIR identifier: DOI:https://doi.org/10.5072/FK2862KX83 version: version Table of Contents Summary Main Objectives Graphical Overview of the FAIRification Recipe Objectives Capability &amp; Maturity Table FAIRification Objectives, Inputs and Outputs Table of Data Standards Table of Software and Tools Step by Step Process References Authors License Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type. Our...",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/fair-data-matrix-recipe.html",
@@ -1210,6 +1464,14 @@ initFunction(initPrint)
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/fair-data-matrix/3-rose-metabolites-R-analysis.html",
+        "teaser":null},{
+        "title": "How to create a recipe",
+        
+        "excerpt":
+            "How to create a FAIRPlus Coobook Recipe ? Table of Contents Main Objectives Graphical Overview of the FAIRification Recipe Objectives Prequisites and Getting Set up Option-1 Writing the recipe in Mardown syntax Option-2 Writing the recipe as a Google document Dealing with merge conflicts Authors: License: Main Objectives The main purpose of this recipe is: Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template Graphical Overview of the FAIRification Recipe Objectives graph TD; A[Data FAIRification] -->B(Write-up FAIRification experience) B --> C{know markdown?} C -->|Yes| D(use the markdown recipe template)...",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/recipes/howtocreatecard.html",
         "teaser":null},{
         "title": "ND4BB experience Recipe",
         
@@ -1262,7 +1524,7 @@ initFunction(initPrint)
         "title": "Recipe Template",
         
         "excerpt":
-            "             Recipe1: Anonymizing Patient Data  identifier  authors  maintainers  version  license  Ingredients:   Identifier Schema:  1. Metadata Model:     -     -     - 2. Vocabularies and Terminologies:     -     -     - 3. Data Format:     -     -     - 4. Tools and  Software:     -     -     -    Objectives:  Step by Step Process:    ### Step1:   ### Step2:   ### Step3:   ### Step4:   ### Step5:   ß                     ",
+            "Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives Note: use this section to provide a decision tree for the overall process described in the recipe For more information about the syntax used to generate the diagram, please refer to the following documentation graph...",
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/recipe-template.html",
@@ -1290,6 +1552,14 @@ initFunction(initPrint)
         "categories": [],
         "tags": [],
         "url": "https://fairplus.github.io/the-fair-cookbook/recipes/resolute_raw/rawRecipe_resolute.html",
+        "teaser":null},{
+        "title": "Development Roadmap",
+        
+        "excerpt":
+            "             FAIR cookbook development roadmap  An overview of the work planned for the coming year.   gantt     title A Gantt Diagram     dateFormat  YYYY-MM-DD     section Section     A task           :a1, 2014-01-01, 30d     Another task     :after a1  , 20d     section Another     Task in sec      :2014-01-12  , 12d     another task      : 24d An alternative plan   gantt     title Another Gantt Diagram     dateFormat  YYYY-MM-DD     section DataCatalog     model selection and design        :a1, 2020-01-28, 90d     curatorial policy              :a2, after a1, 5d     implementation                  :a3, after a2 , 60d     section Terminology Service     deploy        :a4, 2020-01-28, 90d     test               :a5, after a4, 5d     documentation                  :a6, after a5 , 60d                    ",
+        "categories": [],
+        "tags": [],
+        "url": "https://fairplus.github.io/the-fair-cookbook/roadmap.html",
         "teaser":null},]
 </script>
             </div>

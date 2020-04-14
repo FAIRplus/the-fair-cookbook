@@ -1,0 +1,219 @@
+---
+title: |-
+  How to create a recipe
+prev_page:
+  url: /recipes/recipes.html
+  title: |-
+    Recipes
+next_page:
+  url: /recipes/fair-assessment-recipe.html
+  title: |-
+    FAIR Assessment Recipe
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-to-create-a-FAIRPlus-Coobook-Recipe-?">How to create a FAIRPlus Coobook Recipe ?<a class="anchor-link" href="#How-to-create-a-FAIRPlus-Coobook-Recipe-?"> </a></h1><h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20Objectives">Main Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#Prequisites%20and%20Getting%20Set%20up">Prequisites and Getting Set up</a></li>
+<li><a href="#Option-1%20Writing%20the%20recipe%20in%20Mardown%20syntax">Option-1 Writing the recipe in Mardown syntax</a></li>
+<li><a href="#Option-2%20Writing%20the%20recipe%20as%20a%20Google%20document">Option-2 Writing the recipe as a Google document</a></li>
+<li><a href="#mergeconflicts">Dealing with merge conflicts</a></li>
+<li><a href="#authors">Authors:</a></li>
+<li><a href="#license">License:</a></li>
+</ol>
+<hr>
+<h2 id="Main-Objectives-">Main Objectives <a name="Main%20Objectives" /><a class="anchor-link" href="#Main-Objectives-"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template</p>
+</blockquote>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives-">Graphical Overview of the FAIRification Recipe Objectives <a name="Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives" /><a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives-"> </a></h2><div class="mermaid">
+graph TD;
+    A[Data FAIRification] -->B(Write-up FAIRification experience)
+    B --> C{know markdown?}
+    C -->|Yes| D(use the markdown recipe template)
+    C -->|No| E(use Google doc recipe template instead)
+</div><h2 id="Prequisites-and-Getting-Set-up-">Prequisites and Getting Set up <a name="Prequisites%20and%20Getting%20Set%20up" /><a class="anchor-link" href="#Prequisites-and-Getting-Set-up-"> </a></h2><p style='text-align: justify;'>
+We rely on github infrastructure for hosting the documents making up the cookbook. The reliance of git subversion system ensures robust data provenance tracking as well as traceability of authors contributions.
+
+To make the most of the github infrastructure, we *strongly* advise about following the git flow process, which we will detail now.
+</p><div class="highlight"><pre><span></span>git clone the repository
+</pre></div>
+<p style='text-align: justify;'>
+test that you are in the master branch by issueing the following command from the terminal:
+</p><div class="highlight"><pre><span></span>git clone http://github.com/FAIRplus/the-fair-cookbook/
+git branch
+</pre></div>
+<p>should show:</p>
+<div class="highlight"><pre><span></span>master
+</pre></div>
+<p>then issue the following git command:</p>
+<div class="highlight"><pre><span></span>git checkout -b my_recipe_branch master
+git branch
+</pre></div>
+<p>should show:</p>
+<div class="highlight"><pre><span></span>my_recipe
+</pre></div>
+<p style='text-align: justify;'>
+This means you are working on the dedicated copy of the master branch, any change made there will not affect the master files, which are held on the master files,
+when done with your edits, using the standard:
+</p><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;some meaninful meessage, possibly indicated that would be closing an issue&#39;</span>
+git add .
+
+git add my_recipe.md
+</pre></div>
+<p>followed by:</p>
+<div class="highlight"><pre><span></span>git push origin my_recipe_branch
+</pre></div>
+<p style='text-align: justify;'>
+if you are done with all the edits, you are now ready to send a "Pull Request" to the `master` branch. In github speak and jargon, a `pull request` always specifies a repository and a branch to merge into from a development branch on a repo (forked from a repo and simple cloned from the master as we are currently doing)
+</p>
+<p style='text-align: justify;'>
+When sending a `Pull Request` aslo known as `PR`, you will have to specify a `reviewer` known as an `assignee` in the github  world. This optimally ensures that someone will review the contribution before `merging` it with the main `master` branch of the repository.
+You should **NEVER** merge into the master branch without a review (unless you are the master owner / editor in chielf / benevolent dictator for life).
+</p>
+<p style='text-align: justify;'>
+Upon this `pull request`, the `assignee` will perform a review of the contribution. The contribution will either be merged in the master if all the quality control checks have passed or will be sent for correction to the submitter. the submitter will carry out the correction and send a new pull request for revision, following the same pattern of revision, submission acceptance merge.
+</p>
+<p style='text-align: justify;'>
+**Key ideas:**
+- Each recipe should be developed in its own branch from the main github repository or from a branch in a forked version of the said repository.
+more information from the 
+- commit often
+- remember to pull before committing in order to incorporate the latest changes from the master.
+</p><h3 id="test,-test-and-test-again-before-pushing!">test, test and test again before pushing!<a class="anchor-link" href="#test,-test-and-test-again-before-pushing!"> </a></h3><p>So you just wrote a new recipe and you'd like to see how it looks in the FAIRplus cookbook, what do you need to know ?</p>
+<ol>
+<li><p>Make sure your new recipe is listed in the <strong><code>_data/toc.yml</code></strong> file  where toc.yml is a YAML formatted file defining the Table of Content of the FAIR Cookbook.</p>
+</li>
+<li><p>Make sure you have python virtualenv running and where you have installed the jupyter-book python module. If you don't know what I am talking about, do the following:</p>
+<ol>
+<li>install pyenv</li>
+<li><p>once done, run <code>pyenv install &lt;python version&gt;</code>, for instance</p>
+<div class="highlight"><pre><span></span>pyenv install <span class="m">3</span>.7.5
+</pre></div>
+</li>
+<li><p>then you need to create the virtual environment by invoking:</p>
+<div class="highlight"><pre><span></span>pyenv virtualenv faircb375 <span class="m">3</span>.7.5
+</pre></div>
+</li>
+<li><p>to use the virtual environment, you'll have to call it using the following command:</p>
+<div class="highlight"><pre><span></span>pyenv activate faircb375
+</pre></div>
+<p>if all goes well, your terminal prompt should give you the status, indicate you are running in a virtualenv:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span>venv372<span class="o">)</span> hodr-MacBook-Pro-3:docs bob$
+</pre></div>
+</li>
+<li><p>Now install the python module <strong><code>jupyter-book</code></strong>. to do so, simply issue the following command:</p>
+<div class="highlight"><pre><span></span>pip install jupyter-book
+</pre></div>
+<p>NOTE: you may have to update <code>pip</code> if the system complains, sending. amessage looking like this ''</p>
+<div class="highlight"><pre><span></span>to update pip, issue <span class="sb">`</span>pip install pip --upgrade<span class="err">&#39;</span>
+</pre></div>
+<p><strong>Huzza!</strong> You are now reading te test if yuor recipe can be built in the jupyter-book. To just do this, you need to run the following command from the root of the github branch.</p>
+<div class="highlight"><pre><span></span>jupyter-book build docs --overwrite
+</pre></div>
+<p style='text-align: justify;'>
+where
+ - `build` is one of the command available from jupier-book package
+ - `docs` is the name of the target book (it has to be that string)
+ - `--overwrite` is an parameter to the `'buils'` 
+The command telling it to ...well discard all previously generated files by writing over them...pretty seff explanatory so far.
+if all goes well, you should have a green banner. If the process fails, your terminal will display a stack trace, indicateing that there is an error in your markdown files or your toc.yml.
+if all is well, test locally by start a jekyll server. To do so, you'll have to do:
+</p></li>
+</ol>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> docs
+make serve
+</pre></div>
+<p>Open a new tab in your favourite browser and point to the url <code>http://127.0.0.1:4000/the-fair-cookbook/</code></p>
+<h2 id="Option-1-Writing-the-recipe-in-Mardown-syntax-">Option-1 Writing the recipe in Mardown syntax <a name="Option-1%20Writing%20the%20recipe%20in%20Mardown%20syntax" /><a class="anchor-link" href="#Option-1-Writing-the-recipe-in-Mardown-syntax-"> </a></h2><ul>
+<li>use the recipe template available from the issue tracker <a href="https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose">"create new recipe"</a></li>
+<li>the template uses the [Markdown syntax], for which guidelines are available <a href="https://guides.github.com/features/mastering-markdown/">here</a></li>
+<li>the recipe template provides key sections for consistently structuring information about the process you want to document.</li>
+<li>briefly, you will need to fill in the following 5 sections:</li>
+</ul>
+<ol>
+<li>licence information:<p style='text-align: justify;'>
+you may use the default information which is provided or provide the terms of use of your liking.
+</p></li>
+<li>goal and objective of the recipe<p style='text-align: justify;'>
+you need to summerize the task using keywords, ideally expressing them in terms of `process` or `capability`.
+you should also annotate the terms with an ontology term, coming from resources such as. `EDAM.action` or `OBI.planned_process` or `OBI.data_transformation`
+</p></li>
+<li><p>declare and list the input information types (data files, data types) and the expected output datatypes.
+<p style='text-align: justify;'>
+you should use the table provided to structure the information and annotate those input. & output to indicate the file formats. 
+ </p>
+ For doing so, we strongly recommend performing a mark up by linking to either a <a href="https://www.fairsharing,org">FAIRsharing record about standards</a> and with and <a href="https://www.ebi.ac.uk/ols/ontologies/edam">EDAM.datatype</a></p>
+</li>
+<li><p>provide an overal graphical representation of the flow of actions required to accomplish the objectives set considering the set of input data elements.</p>
+<p>the representation may be done using the markdown syntax defined by the <a href="https://mermaid-js.github.io/mermaid/#/">mermaid project</a>*</p>
+<p style='text-align: justify;'>
+graphic representation currently encompass visual representatiion such as Gantt chart, Flow Chart, Flow Diagram and Sequence Diagram. These diagrammtic represntations are particularly useful to indicate key decision processes, action to perform and data transfrormation path which may be considered in various contexts.
+</p></li>
+<li>provide executable code in the form a notebook. the code could be organized according to the cookie cutter templates for data science, which enhances the replicability of the process.<p style='text-align: justify;'>
+you may also provide a machine actionable workflow and associated containers for execution in a safe environment or as microservice.
+</p></li>
+<li><p>don't forget to fill in the table of authors and contributors, by making sure you provide the orcid for each of contributors and the contribution by using the <a href="https://casrai.org/credit/">CredIT role</a></p>
+</li>
+<li><p>consider minting a DOI for the new recipe, so it is citeable and versionned.</p>
+</li>
+</ol>
+<h2 id="Option-2-Writing-the-recipe-as-a-Google-document.-">Option 2 Writing the recipe as a Google document. <a name="Option-2%20Writing%20the%20recipe%20as%20a%20Google%20document" /><a class="anchor-link" href="#Option-2-Writing-the-recipe-as-a-Google-document.-"> </a></h2><p><p style='text-align: justify;'>
+The main benefits are the collaborative editing feature capabilities this allows.
+The main drawbacks are the conversion losses that are bound to happen when using add-ons such as:
+</p></p>
+<ul>
+<li><p><a href="https://github.com/supreetpal/gdoc-markdown-converter/blob/develop/README.md">https://github.com/supreetpal/gdoc-markdown-converter/</a></p>
+</li>
+<li><p><a href="https://github.com/mangini/gdocs2md">https://github.com/mangini/gdocs2md</a></p>
+</li>
+</ul>
+<p>:zap: this add-ons may create security concerns and may not run on the FAIRplus googledrive, meaning the conversion would have to happen outside that private drive.</p>
+<h2 id="Dealing-with-merge-conflicts-">Dealing with merge conflicts <a name="mergeconflicts" /><a class="anchor-link" href="#Dealing-with-merge-conflicts-"> </a></h2><p>See <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line">Resolving a merge conflict using the command line</a></p>
+<h2 id="Authors:-">Authors: <a name="authors" /><a class="anchor-link" href="#Authors:-"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:-">License: <a name="license" /><a class="anchor-link" href="#License:-"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,5 +1,8 @@
 # the-fair-cookbook
 
+Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web page produced from the code in this repo. Right now you are seeing things that are relevant to editors of this book.
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/fair-cookbook/the-fair-cookbook/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
