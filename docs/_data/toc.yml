@@ -88,9 +88,9 @@
         url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
         not_numbered: false
         expand_sections: true
-  # - title: UC3R1
-  #   url: /recipes/UC3R13
-  #   not_numbered: false
+  - title: Recipe 1.3
+    url: /recipes/UC3R1-3
+    not_numbered: false
   - title: Chemical identities - Generating InChI and SMILES strings
     url: /recipes/chemical-identities
     not_numbered: false
