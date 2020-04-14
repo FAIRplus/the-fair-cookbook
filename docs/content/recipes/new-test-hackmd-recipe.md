@@ -1,3 +1,47 @@
+# How to used HackMD to write a FAIR Cookbook Recipe 
+
+**[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
+
+>**This document aims to guide you through the process devised by FAIRplus to create content and augment the [the FAIR cookbok](https://fairplus.github.io/the-fair-cookbook/intro).
+The document contains a checklist taking you point by point through the process
+The document contains a graphical overview of the key steps.**
+
+This is a comment by Phil
+
+
+- [x] 1. create a github account and obtain your github handle (e.g. [@proccaserra](https://github.com/proccaserra)) 
+- [x] 2. request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
+<kbd>![](https://i.imgur.com/wyTn5aS.png)</kbd>
+
+- [x] 3. create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
+<kbd>![](https://i.imgur.com/frsBwqc.png)</kbd>
+
+    :information_source:  remember to assign yourself or a team member to the issue
+    :information_source:  remember to assign the issue to a milestone
+    :information_source: remember to tag the issue with relevant label
+
+- [x] 4. create a new branch under the FAIR Cookbook github repository using the following command:
+> git checkout -b recipe_xx master
+
+- [x] 5. create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
+![](https://i.imgur.com/E2ok5ni.png)
+
+
+- [x] 6. Getting familiar with MarkDown with a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
+![](https://i.imgur.com/Kt3d9eo.png)
+
+
+- [x] 7. Build confidence using HackMD
+![](https://i.imgur.com/bt012cm.png)
+
+use the split view to have what you type immediately rendered
+
+- [x] 8. Use the FAIRplus Recipe Template as guide
+
+
+___
+
+
 # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
@@ -21,16 +65,6 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-Note: use this section to provide a decision tree for the overall process described in the recipe
-For more information about the syntax used to generate the diagram, please refer to the [following documentation](https://mermaid-js.github.io/mermaid/#/flowchart)
-
-<div class="mermaid">
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-</div>
 
 ___
 
@@ -85,17 +119,6 @@ graph LR;
     C -->|Yes| D[Standard Compliant Data]
     C -->|No| E[Vendor locked Data]
 ```
-
-<div class="mermaid">
-graph LR;
-    A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
-    B["conversion to open format"]-->D(("output data"));
-    C["automatic annotation"]-->D(("output data"));  
-
-    style A fill:#FF5733,stroke:#333,stroke-width:2px
-    style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div>
 
 ___
 
