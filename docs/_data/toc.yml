@@ -104,6 +104,9 @@
   - title: Anomynization Recipe
     url: /recipes/anonymization-recipe
     not_numbered: false    
+  - title: How to request new terms in existing ontologies
+    url: /recipes/new-ontology-term-request-recipe
+    not_numbered: false
 
 
 
