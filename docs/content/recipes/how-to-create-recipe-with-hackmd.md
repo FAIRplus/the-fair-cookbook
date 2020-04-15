@@ -2,20 +2,28 @@
 
 **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
 
+
+# Table of Contents
+1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+2. [Authors](#Authors)
+8. [License](#License)
+
+---
+
+## Main Objectives
+
 >**This document aims to guide you through the process devised by FAIRplus to create content and augment the [the FAIR cookbok](https://fairplus.github.io/the-fair-cookbook/intro).
 The document contains a checklist taking you point by point through the process
 The document contains a graphical overview of the key steps.**
 
-This is a comment by Phil
 
 
 - [x] 1. create a github account and obtain your github handle (e.g. [@proccaserra](https://github.com/proccaserra)) 
 - [x] 2. request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
 <kbd>![](https://i.imgur.com/wyTn5aS.png)</kbd>
+- [x] 3. create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
 
-- [x] 3. create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
-<kbd>![](https://i.imgur.com/frsBwqc.png)</kbd>
-
+<kbd>![](https://i.imgur.com/frsBwqc.png =750x)</kbd>
     :information_source:  remember to assign yourself or a team member to the issue
     :information_source:  remember to assign the issue to a milestone
     :information_source: remember to tag the issue with relevant label
@@ -24,106 +32,37 @@ This is a comment by Phil
 > git checkout -b recipe_xx master
 
 - [x] 5. create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
-![](https://i.imgur.com/E2ok5ni.png)
+![](https://i.imgur.com/E2ok5ni.png =450x)
+
+- [x] 6. :warning: **IMPORTANT: Install HackMD browser extension**.
+At the current time, the `HackMD-it` browser extension is only available for Chrome and Firefox and [this tutorial](https://hackmd.io/s/hackmd-it) details the installation procedure. 
+Once you've carried the extension installation, any github repository for which you have access and for which HackMD app has been authorized (which is already the case for all FAIRplus github repositories), any `Markdown` document will be readily editable using 'HackMD' and you should see the following *icon* 
+
+![](https://i.imgur.com/k79IQUA.png =145x)
 
 
-- [x] 6. Getting familiar with MarkDown with a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
+in the github repository bar as shown in the figure below:
+
+
+![](https://i.imgur.com/yI8TRNM.png)
+
+:warning: This button will only be visible from Chrome or Firefox once the `HackMD` browser extension has been installed. 
+:octopus: This will not be visible from Safari, Brave or Internet Explorer browsers *even if* you have HackMD activated for your repository.
+
+
+- [x] 7. Getting familiar with MarkDown with a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
 ![](https://i.imgur.com/Kt3d9eo.png)
 
 
-- [x] 7. Build confidence using HackMD
+- [x] 8. Build confidence using HackMD
 ![](https://i.imgur.com/bt012cm.png)
 
 use the split view to have what you type immediately rendered
 
-- [x] 8. Use the FAIRplus Recipe Template as guide
+- [x] 9. Use the FAIRplus Recipe Template as guide
 
 
 ___
-
-
-# Table of Contents
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
-2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
-4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-5. [Table of Data Standards](#Table%20of%20Data%20Standards)
-6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
-7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
-
----
-
-## Main Objectives
-
-The main purpose of this recipe is:
-
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files.
-
-___
-
-
-## Graphical Overview of the FAIRification Recipe Objectives
-
-
-___
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-----
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChi](https://fairsharing.org/FAIRsharing.ddk9t9) |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-| [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [annotated text](http://edamontology.org/data_3779)  |
-
-
-## Table of Data Standards
-
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)  | [SRA XML](https://fairsharing.org/FAIRsharing.q72e3w)  |
-| [DICOM](https://fairsharing.org/FAIRsharing.b7z8by)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [OMOP](https://fairsharing.org/FAIRsharing.qk984b)  |
-
-___
-
-
-## Executable Code in Notebook
-
-
-```python
-import isatools
-import json
-import pandas as pd 
-import holoview
-```
-
-___
-
-## How to create workflow figures
-
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
-
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
-
-___
-
-
-
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
@@ -132,8 +71,6 @@ ___
 | Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
 
 ___
-
-
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
