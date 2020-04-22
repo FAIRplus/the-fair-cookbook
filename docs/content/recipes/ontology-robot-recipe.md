@@ -14,8 +14,7 @@
 
 The main purpose of this recipe is:
 
-> Building an application ontology from source ontologies using ROBOT via a sustainable dynamic pipeline to allow seamless integration of source ontology updates
-
+> Building an **application ontology** from source ontologies using ROBOT via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. An **application ontology** is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the application ontology synchronized with the reference ontologies imports are made from.  We aim to document how a certain level of automation can be achieved
 ___
 
 ## Ingredients
@@ -58,7 +57,27 @@ ROBOT supports two types of ontology module extraction, Syntactic Locality Modul
 
 #### Module extraction - using manual text lists
 
-use PATO sex - MIREOT extraction as example
+Using `robot` tool provided by the `OBO foundry`, the creation of a module can be done with one command:
+
+```
+robot extract --method <some_selection> --input <some_input.owl>\ 
+              --term-file <list_of_classes_of_interest_in_ontology.txt \
+              --intermediates <choose_from_option>
+              --output results/extracted_module.owl
+```
+`robot` extract command takes several arguments:
+
+* *method*: `robot` uses 4 different algorithms to generate a module.  TOP, BOT, STAR (all from the SLME method), and MIREOT. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The STAR method creates a module by pulling all the properties and axioms of the seed classes but nothing else. MIREOT uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
+* *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
+* *imports*: this argument allows to specific whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
+* *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex)
+* *intermediates*: specific to the `MIREOT` method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (`all`,`minimal`, `none`).
+* *output*: the path to the owl file holding the results of the module extraction
+* *copy-ontology-annotations*: a boolean value true/false to pull or not any class annotation from the parent ontology. default is `false`
+* *sources*: optional, a pointer to a file mapping 
+* *annotate-with-source*: a boolean value true/false. default is `false`
+
+
 
 #### Module extraction - using SPARQL
 
@@ -202,6 +221,10 @@ ___
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft |
+|Fuqi Xu|EMBL-EBI||Writing - Review|
+|Philippe Rocca-Serra| UOXF|[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| Writing - Review| 
+|Karsten Quast|BI|| Writing|
+
 
 ___
 
