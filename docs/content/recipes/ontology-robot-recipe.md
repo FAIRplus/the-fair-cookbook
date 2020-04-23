@@ -16,6 +16,57 @@ The main purpose of this recipe is:
 
 > Building an **application ontology** from source ontologies using ROBOT via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. An **application ontology** is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the application ontology synchronized with the reference ontologies imports are made from.  We aim to document how a certain level of automation can be achieved
 
+## Graphical Overview of the FAIRification Recipe Objectives
+
+<!-- TO DO: REVIEW-->
+
+<div class="mermaid">
+graph TD
+  I1(fa:fa-university ontology source 1) -->|extract| M1(fa:fa-cube ontology module 1)
+  I2(fa:fa-university ontology source 2) -->|extract| M2(fa:fa-cube ontology module 2)
+  I3(fa:fa-university ontology source 3) -->|extract| M3(fa:fa-cube ontology module 3)
+  M1 --> |merge| R1(fa:fa-cubes core)
+  M2 --> |merge| R1(fa:fa-cubes core)
+  M3 --> |merge| R1(fa:fa-cubes core)
+  R1(fa:fa-cubes core) --> |materialize| R2(fa:fa-cubes reasoned & reduced core)
+
+  R2(fa:fa-cubes reasoned & reduced core) -->|report| R3(fa:fa-tasks report)
+  R2(fa:fa-cubes reasoned & reduced core) --> |edit| R4(fa:fa-cubes reasoned & reduced core)
+  R3 -->|edit| R4
+  R4 -->|annotate| R5(fa:fa-cubes fa:fa-tags fa:fa-cc annotated,reasoned,reduced core)
+  R5 -->|convert| R6(fa:fa-star-o obo version)
+  R5 -->|convert| R7(fa:fa-star owl version)
+  R5 -->|export| R8(fa:fa-list xlsx view)
+</div>
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pXG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KVxuXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pXG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KVxuXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)
+
+## Capability & Maturity Table
+
+<!-- TO DO -->
+
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+| :------------- | :------------- | :------------- |
+| Interoperability | minimal | repeatable |
+
+----
+
+## FAIRification Objectives, Inputs and Outputs
+
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [ontology building](http://edamontology.org/operation_XXXX)  | [tsv,OWL]|OWL|
+
+
+## Table of Data Standards
+
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  |   |   |
+| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  |   |   |
+
+___
+
 
 ### Competency questions
 
@@ -52,12 +103,14 @@ ___
 
 ## Ingredients
 
-Tools
-- Ontology development kit (https://github.com/INCATools/ontology-development-kit) (comes with ROBOT included)
-or
-- ROBOT (http://robot.obolibrary.org/)
-- Protégé/other ontology editor
-
+| Tool Name  |  Tool Location  | Tool function |
+| :------------- | :------------- | :------------ |
+| ROBOT | [http://robot.obolibrary.org/](http://robot.obolibrary.org/) | ontology management cli |
+| Ontology development kit | [https://github.com/INCATools/ontology-development-kit](https://github.com/INCATools/ontology-development-kit) (comes with ROBOT included)| ontology management environment |
+| Protégé/other ontology editor | [https://protege.stanford.edu/](https://protege.stanford.edu/) | ontology editor |
+| SPARQL | [https://www.w3.org/TR/sparql11-query/](https://www.w3.org/TR/sparql11-query/) | ontology query language |
+| ELK |[https://www.cs.ox.ac.uk/isg/tools/ELK/](https://www.cs.ox.ac.uk/isg/tools/ELK/)|ontology reasoner|
+|Hermit|[http://www.hermit-reasoner.com/](http://www.hermit-reasoner.com/)|ontology reasoner|
 
 
 ## Step by step process
@@ -159,55 +212,73 @@ uberon_subset.owl: uberon_seed_list.txt
 
 ### Step 4: Merge extracted modules under the umbrella
 
+```
+#MERGING:
+java -jar robot.jar merge \
+--input ./ontology-module/iao_mireot_robot-module.owl \
+--input ./ontology-module/obi_mireot_robot-module.owl \
+--input ./ontology-module/duo-mireot-robot-module.owl \
+--input ./ontology-module/chmo_mireot_module.owl \
+--input ./ontology-module/uo-mireot-robot-module.owl \
+--input ./ontology-module/psims-mireot-robot-module.owl \
+--input ./ontology-module/chebi_mireot_no-inter-new-upper-module.owl \
+--output ./results/msio-test-merge.owl
+```
 
 
 ### Step 5: Post-merge modifications
-eg removing extraneous classes
+reasoninng and removing extraneous classes
+
+```
+#MATERIALIZE:
+java -jar robot.jar materialize \
+--reasoner ELK  \
+--input ./results/msio-test-merge.owl  \
+reduce \
+--output ./materialize/msio-test-materialize.owl 
+```
 
 
+#### Step 5.2: Annotate
 
-## Graphical Overview of the FAIRification Recipe Objectives
+At minimum, this step is necessary to specify version
 
-<!-- TO DO -->
+```
+#ANNOTATE
+robot annotate --input edit.owl \
+  --ontology-iri "https://github.com/ontodev/robot/examples/annotated.owl" \
+  --version-iri "https://github.com/ontodev/robot/examples/annotated-1.owl" \
+  --annotation rdfs:comment "Comment" \
+  --annotation rdfs:label "Label" \
+  --annotation-file annotations.ttl \
+  --output results/annotated.owl
 
-<div class="mermaid">
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-</div>
+```
 
-___
+#### Step 5.3: Convert
 
-## Capability & Maturity Table
+Ontologies may be distributed in a variety of format. The following command shows how to convert an `owl` file to `obo`:
+```
+#CONVERT:
+robot convert \
+--input /Documents/git/stato/dev/ontology/stato.owl \
+--format obo \
+--output results/stato.obo
+```
 
-<!-- TO DO -->
+#### Step 5.4: Export
 
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-----
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChi](https://fairsharing.org/FAIRsharing.ddk9t9) |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-| [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [annotated text](http://edamontology.org/data_3779)  |
+An experimental feature to provide a list of an ontology classes in a tabular view:
+```
+java -jar robot.jar export \
+--input /Documents/git/stato/dev/ontology/stato.owl  \
+--header "IRI|ID|LABEL|definition" SubClass Of" \
+--include "classes properties" \
+--format xlsx \
+--export /Documents/git/stato/export-result/stato-view.xlsx
+```
 
 
-## Table of Data Standards
-
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)  | [SRA XML](https://fairsharing.org/FAIRsharing.q72e3w)  |
-| [DICOM](https://fairsharing.org/FAIRsharing.b7z8by)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [OMOP](https://fairsharing.org/FAIRsharing.qk984b)  |
-
-___
 
 
 ## Executable Code in Notebook
@@ -220,32 +291,7 @@ import pandas as pd
 import holoview
 ```
 
-___
 
-## How to create workflow figures
-
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
-
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
-
-<div class="mermaid">
-graph LR;
-    A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
-    B["conversion to open format"]-->D(("output data"));
-    C["automatic annotation"]-->D(("output data"));  
-
-    style A fill:#FF5733,stroke:#333,stroke-width:2px
-    style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div>
-
-___
 
 
 
@@ -253,10 +299,11 @@ ___
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
-| Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft |
-|Fuqi Xu|EMBL-EBI||Writing - Review|
-|Philippe Rocca-Serra| UOXF|[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| Writing - Review| 
-|Karsten Quast|BI|| Writing|
+| Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft, Code |
+|Philippe Rocca-Serra| UOXF|[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| Writing - Review, Code|
+|Fuqi Xu|EMBL-EBI|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)|Writing - Review|
+|Emiliano Reynes| Boeringher Ingelheim|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)|Writing - Review |
+|Karsten Quast|BI|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)| Writing|
 
 
 ___
