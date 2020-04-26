@@ -1,74 +1,45 @@
-# Recipe1: FAIR Assessment Recipe
+# Recipe 1: FAIR Assessment Recipe
 
 **identifier**
-
-**authors**
-
-- [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
-
-**maintainers**
-
-- [Philippe Rocca-Serra](https://orcid.org/orcid.org/0000-0001-9853-5668)
 
 **version**
 
     0.1
 
-**license**
-
-- [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
-
-
 ## Ingredients:
+	
+| Ingredient | Type| Comment|
+|:-----| :----|:-----|
+|[HTTP1.1 protocol](https://tools.ietf.org/html/rfc2616)| data communication protocol | |
+|[guidance on persistent resolvable identifiers](https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers)| policy| |
+|[Persistent Uniform Resource Locators - PURL](https://archive.org/services/purl/)|redirection service| |
+|[Archival Resource Key](https://n2t.net/e/ark_ids.html)| identifier minting service; identifier resolution service| |
+|[Handle system](http://www.rfc-editor.org/rfc/rfc3650.txt)|identifier minting service; identifier resolution service| |
+|[DOI](https://doi.org/)| identifier minting service| based on Handle system |
+|[identifiers.org](https://identifiers.org/)|identifier resolution service||
+|[EZID resolution service](https://ezid.cdlib.org/)|identifier resolution service||
+|[name2things rsolution service](http://n2t.net/)|identifier resolution service||
+|[FAIREvaluator](https://W3id.org/AmIFAIR)|FAIR assessment||
+|[FAIRShake](https://fairshake.cloud/)| FAIR assessment||
+|[RDF/Linked Data](https://www.w3.org/standards/semanticweb/data)| model | |
 
-1. Identifier Schema:
 
-- [guidance on persistent resolvable identifiers](https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers)
 
-- [HTTP1.1 protocol](https://tools.ietf.org/html/rfc2616)
-
-- [Persistent Uniform Resource Locators - PURL](https://archive.org/services/purl/)
-
-- [Archival Resource Key](https://n2t.net/e/ark_ids.html)
-
-- [handle system](http://www.rfc-editor.org/rfc/rfc3650.txt)
-
-- [handle based http proxy for DOI](https://doi.org/)
-
-2. Metadata Model:
-
-- topic dependent
-
-3. Vocabularies and Terminologies:
-
-- topic dependent
-
-4. Data Format:
-
-- [RDF/Linked Data](https://www.w3.org/standards/semanticweb/data)
-
-5. Tools and  Software:
-
-    5.1  resolution services:
-
-- [EZID resolution service](https://ezid.cdlib.org/)
-
-- [name2things rsolution service](http://n2t.net/)
-
-- [identifiers.org](https://identifiers.org/)
-
-    5.2 FAIR assessment tools
-
-- [FAIREvaluator](https://W3id.org/AmIFAIR)
-
-- [FAIRShake](https://fairshake.cloud/)
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| []()  | []() | []() |
+| []()  | []() | []() |
+| []()  | []() | []() |
+| []()  | []() | []() |
+| []()  | []() | []() |
+| []()  | []() | []() |
 
         
 
 ## Objectives:
 
 Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
-Obtain a machine readable report 
+Obtain human and machine readable reports highlighting the main 
 
 ## Step by Step Process:
 
@@ -126,3 +97,18 @@ Time to dig into the details and figure out the reasons why some indicators are 
 Wilkinson, M.D., Dumontier, M., Sansone, S. et al. Evaluating FAIR maturity through a scalable, automated, community-governed framework. Sci Data 6, 174 (2019). [doi:10.1038/s41597-019-0184-5](https://doi.org/10.1038/s41597-019-0184-5)
 
 Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Resources, Cell Systems (2019),[doi:10.1016/j.cels.2019.09.011](https://doi.org/10.1016/j.cels.2019.09.011)
+
+
+
+## Authors:
+
+| Name | Affiliation  | orcid | CrediT role  |
+| :------------- | :------------- | :------------- |:------------- |
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | 
+
+___
+
+
+## License:
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>

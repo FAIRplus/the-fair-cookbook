@@ -57,44 +57,15 @@
   not_numbered: true
   expand_sections: false
   sections:
-  - title: FAIR data matrix Recipe
-    url: /recipes/applied-examples/fair-data-matrix-recipe
-    not_numbered: false
-    subsections:
-      - title: Converting Excel to Frictionless Data Package
-        url: /recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling
-        not_numbered: false
-        expand_sections: true
-      - title: Plotting from Frictionless Data Package in Python
-        url: /recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis
-        not_numbered: false
-        expand_sections: true
-      - title: Plotting from Frictionless Data Package in R
-        url: /recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis
-        not_numbered: false
-        expand_sections: true         
-      - title: Exploration fo semantic model with SPARQL
-        url: /recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
-        not_numbered: false
-        expand_sections: true
-  - title: eTOX experience Recipe
-    url: /recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario 
-    not_numbered: false    
-  - title: RESOLUTE experience Recipe
-    url: /recipes/applied-examples/resolute_raw/rawRecipe_resolute
-    not_numbered: false 
-  - title: ONCOTRACK experience Recipe
-    url: /recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
-    not_numbered: false 
-  - title: ND4BB experience Recipe
-    url: /recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
-    not_numbered: false
-
-
   - title: Infrastructure for FAIR
     url: /recipes/infrastructure
     not_numbered: false
     subsections:
+      - title: Identifier Resolution Service
+        url: /recipes/infrastructure/id-resolution
+        not_numbered: false
+        expand_sections: false
+
       - title: Vocabulary Servers
         url: /recipes/infrastructure/UC3R1-3
         not_numbered: false
@@ -103,10 +74,6 @@
       #   url: /recipes/infrastructure/chemical-identities
       #   not_numbered: false
       #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook 
-      - title: Identifier Resolute Service
-        url: /recipes/infrastructure/id-resolution
-        not_numbered: false
-        expand_sections: false
       - title: Data Catalog model
         url: /recipes/infrastructure/data-catalog
         not_numbered: false
@@ -131,6 +98,42 @@
         url: /recipes/assessing-fairness/fair-assessment-recipe
         not_numbered: false 
 
+  - title: Applied Examples
+    url: /recipes/applied-examples
+    not_numbered: false
+    subsections:
+      - title: FAIR data matrix Recipe
+        url: /recipes/applied-examples/fair-data-matrix-recipe
+        not_numbered: false
+        subsections:
+          - title: Converting Excel to Frictionless Data Package
+            url: /recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling
+            not_numbered: false
+            expand_sections: true
+          - title: Plotting from Frictionless Data Package in Python
+            url: /recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis
+            not_numbered: false
+            expand_sections: true
+          - title: Plotting from Frictionless Data Package in R
+            url: /recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis
+            not_numbered: false
+            expand_sections: true         
+          - title: Exploration fo semantic model with SPARQL
+            url: /recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
+            not_numbered: false
+            expand_sections: true
+      - title: eTOX experience Recipe
+        url: /recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario 
+        not_numbered: false    
+      - title: RESOLUTE experience Recipe
+        url: /recipes/applied-examples/resolute_raw/rawRecipe_resolute
+        not_numbered: false 
+      - title: ONCOTRACK experience Recipe
+        url: /recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
+        not_numbered: false 
+      - title: ND4BB experience Recipe
+        url: /recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
+        not_numbered: false  
 
 # Divider for meta-pages and search page
 - divider: true
