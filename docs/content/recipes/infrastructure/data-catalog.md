@@ -6,13 +6,13 @@ The main purpose of this recipe is:
 
 > To detail the key elements for the creation of a `data catalogue` to enable data `findability` in an organisation.
 > We will cover the following points:
-1.     metadata model selection
-2.     annotation with controled vocabularies
-3.     ETL
-4.     data loading
-5.     data indexing
-6.     facet oriented searching
-7.     minting of stable, persistent and resolvable identifiers
+1. metadata model selection
+2. annotation with controled vocabularies
+3. ETL
+4. data loading
+5. data indexing
+6. facet oriented searching
+7. minting of stable, persistent and resolvable identifiers
 
 ___
 
