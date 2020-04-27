@@ -57,6 +57,9 @@
   not_numbered: true
   expand_sections: false
   sections:
+  - title: The Values of FAIR
+    url: /recipes/introduction/FAIRplus-values
+    not_numbered: false  
   - title: Infrastructure for FAIR
     url: /recipes/infrastructure
     not_numbered: false
@@ -74,7 +77,7 @@
       #   url: /recipes/infrastructure/chemical-identities
       #   not_numbered: false
       #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook 
-      - title: Data Catalog model
+      - title: Building a Data Catalogue
         url: /recipes/infrastructure/data-catalog
         not_numbered: false
         expand_sections: false
@@ -86,8 +89,11 @@
     url: /recipes/accessibility
     not_numbered: false
     subsections:
-      - title: Anomynization Recipe
-        url: /recipes/accessibility/anonymization-recipe
+      - title: Selecting a Licensing Mode
+        url: /recipes/accessibility/license-selection
+        not_numbered: false
+      - title: Anomynization of Data
+        url: /recipes/accessibility/anonymization
         not_numbered: false    
 
   - title: FAIR Assessment
