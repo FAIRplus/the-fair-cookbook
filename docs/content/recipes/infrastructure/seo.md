@@ -19,6 +19,11 @@ The main purpose of this recipe is:
 
 > to describe what `search engine optimisation` is and show how to implement markup with `schema.org` vocabulary to improve page discovery and visibility by web page indexers.
 
+There are sub-recipes for embedding search engine optimisation into specific web pages about a specific type or resource:
+- Data catalog
+- Dataset
+- Resource specific page (Gene, Molecular Entity, Protein)
+
 ___
 
 
@@ -29,13 +34,17 @@ ___
 ```
 graph TD
   A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
-  B --> C{which technique?}
-  C -->|One| D[fa:fa-star fa:fa-star fa:fa-star JSON-LD]
-  C -->|Two| E[fa:fa-star fa:fa-star RDFa]
-  C -->|Three| F[fa:fa-star microformat]
-  D --> G
-	E --> G
-  F	--> G[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
+  B --> C{what type of resource?}
+  C -->|One| D[Dataset]
+  C -->|Two| E[Data catalog]
+  C -->|Three| F[Gene]
+  C -->|Four| G[Molecular entity]
+  C -->|Five| H[Protein]
+  D --> I
+  E --> I
+  F --> I
+  G --> I
+  H	--> I[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
 ```  
   
 ___
@@ -45,6 +54,7 @@ ___
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
 | Findabililty | minimal | repeatable |
+| Interoperability | minimal | |
 
 ----
 
@@ -52,8 +62,9 @@ ___
 
 ### Finding web pages
 
-Providers of content for the Internet serve documents formatted or rendered in [`HTML` format](https://en.wikipedia.org/wiki/HTML). The web pages are hosted on servers, which are accessed via the [`HTTP protocol`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol). HTML pages can be styled with `cascading stylesheets (CSS)[https://en.wikipedia.org/wiki/Cascading_Style_Sheets]` and interactivity can be delivered via scripting language, in particular [`Javascript`](https://en.wikipedia.org/wiki/JavaScript).
-With billions of web pages served, a key issue is finding content. To assist in this task, search engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (.e.g site map), or by targeting specific data structures embedded in the web pages themselves.
+Providers of content for the Internet serve documents formatted or rendered in [`HTML` format](https://en.wikipedia.org/wiki/HTML). The web pages are hosted on servers, which are accessed via the [`HTTP protocol`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol). HTML pages can be styled with [`cascading stylesheets (CSS)`](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and interactivity can be delivered via scripting languages such as [`Javascript`](https://en.wikipedia.org/wiki/JavaScript).
+
+With billions of web pages served, a key issue is finding content. To assist in this task, search engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (e.g. site map), or by targeting specific data structures embedded in the web pages themselves.
 
 ### What is search engine optimization
 
@@ -65,9 +76,9 @@ Search engine index pages based on their content, as identified by web crawlers.
 A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
 Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation
 
-### How does schema.org works in practice:
+### How does Schema.org work in practice:
 
-The principle is actually fairly simple. It essentially relies on embebbed a file into the HTML content. A variety of options are available (RDFa, microformat, JSON-LD). `JSON-LD` is fast becoming a very popular way to representing key entities served by the page.
+The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). `JSON-LD` is widely recommended as the most suitable approach.
 
 Below is a regular plain vanilla HTML page providing information about an scientific joournal article.
 
@@ -136,12 +147,12 @@ Now, we are presenting the same information augmented with the JSON-LD file usin
 ```
 
 
-'JSON-LD' is an official serialization of RDF and the document is recognized as a `graph` holding a set of `triples`. These availability of such semantic statements from web page are exploited by the indexing algorithm to place the pages in a semantic search space moree accurately. 
+`JSON-LD` is an official serialization of `RDF` and the document is recognized as a `graph` holding a set of `triples`. The availability of such semantic statements from a web page are exploited by the indexing algorithms of search engines to provide improved search results. 
 
 
 ### Tools supported creation and validation to `structured data`
 
-Google has produced a online tool allowing developers to test the annotation they produce before rolling them out to production. 
+Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the [`Google Structured Data Testing Tool`](https://search.google.com/structured-data/testing-tool)
 
 ![](https://i.imgur.com/Ge8gsWL.png)
@@ -150,19 +161,21 @@ The tool is known as the [`Google Structured Data Testing Tool`](https://search.
 
 ### Bioschema: trying to address the coverage gap
 
-`Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschema` concerned itself with providing `types` addressing the unmeet needs of Bioinformiticians and `Findability` of biological information via search engine searches. The [main profiles](https://bioschemas.org/profiles/) currently specified by the `Bioschema` organisation are as follows:
+`Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschemas` focused on making Schema.org more relevant for the life sciences community by providing:
 
-* [Dataset]()
-* [Chemical Substance]()
-* [Molecular Entity]()
-* [Gene]()
-* [Protein]()
-* [Taxon]()
-* [Sample]()
+1. `types` for life sciences entities such as chemicals, genes, and proteins.
+1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable
 
+The [main profiles](https://bioschemas.org/profiles/) currently specified by the `Bioschemas` organisation are as follows:
 
-
-
+* [Chemical Substance](https://bioschemas.org/profiles/ChemicalSubstance)
+* [DataCatalog](https://bioschemas.org/profiles/DataCatalog)
+* [Dataset](https://bioschemas.org/profiles/Dataset)
+* [Gene](https://bioschemas.org/profiles/Gene)
+* [Molecular Entity](https://bioschemas.org/profiles/MolecularEntity)
+* [Protein](https://bioschemas.org/profiles/Protein)
+* [Sample](https://bioschemas.org/profiles/Sample)
+* [Taxon](https://bioschemas.org/profiles/Taxon)
 
 
 ----
@@ -180,7 +193,7 @@ The tool is known as the [`Google Structured Data Testing Tool`](https://search.
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 |  [JSON-LD](https://fairsharing.org/bsg-s001214/)  | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](https://fairsharing.org/FAIRsharing.qk984b)  |
-|   |  |   |
+| [JSON-LD](https://fairsharing.org/bsg-s001214/)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](https://fairsharing.org/FAIRsharing.qk984b)  |
 
 ___
 
@@ -191,6 +204,7 @@ ___
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | 
+| Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Contributions to text |
 
 ___
 
