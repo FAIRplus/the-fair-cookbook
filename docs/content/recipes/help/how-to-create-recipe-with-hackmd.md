@@ -34,7 +34,7 @@ The document contains a graphical overview of the key steps.**
 - [x] 5. create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
 ![](https://i.imgur.com/E2ok5ni.png =450x)
 
-- [x] 6. :warning: **IMPORTANT: Install HackMD browser extension**.
+- [x] 6. :warning: **IMPORTANT: Install HackMD browser extension ([Chrome](https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search))**.
 At the current time, the `HackMD-it` browser extension is only available for Chrome and Firefox and [this tutorial](https://hackmd.io/s/hackmd-it) details the installation procedure. 
 Once you've carried the extension installation, any github repository for which you have access and for which HackMD app has been authorized (which is already the case for all FAIRplus github repositories), any `Markdown` document will be readily editable using 'HackMD' and you should see the following *icon* 
 
