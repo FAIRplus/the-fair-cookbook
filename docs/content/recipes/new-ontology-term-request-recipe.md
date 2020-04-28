@@ -1,6 +1,4 @@
-# How to request new terms in existing ontologies
-
-## Main Objective
+# R2.2.1: (self) request terms to be added to a public ontology
 
 Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies.
 
@@ -8,11 +6,13 @@ Terms could be missing from public ontologies of choice. Where needed, new terms
 
 Requesting new terms in public (biomedical) ontologies might be a structured, streamlined process or completely undocumented, depending on the actual ontology. Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the target ontology.
 
-Some ontologies, often large projects organized by consortia, have a detailed formal request process, maybe even with a dedicated ticketing and tracking system. A big number of ontologies rely on GitHub as a publicly accessible ticketing system for reporting issues on the ontology and also for requesting new terms. They might provide explicit guidelines on how to create an issue for a new term request, or they rely on GitHub issues without guidelines. And there are also ontologies relying on email for requesting new terms. These different request processes can be summarized as follows:
+Some ontologies, often large projects organized by consortia, have a detailed formal request process, maybe even with a dedicated ticketing and tracking system. A big number of ontologies rely on [GitHub](https://github.com) as a publicly accessible ticketing system for reporting issues on the ontology and also for requesting new terms. They might provide explicit guidelines on how to create an issue for a new term request, or they rely on GitHub issues without guidelines. And there are also ontologies relying on email for requesting new terms. These different request processes can be summarized as follows:
 * Formal request process
-* Request via Github with explicit guidelines
-* Request via Github without guidelines
+* Request via GitHub with explicit guidelines
+* Request via GitHub without guidelines
 * Request via email
+
+In most ontologies, everybody can request new terms. However, in some ontologies only members have access to the request process. In case of a request process organized via GitHub, a free [GitHub account](https://github.com/join) is required.
 
 
 ## Ingredients
@@ -22,23 +22,22 @@ Some ontologies, often large projects organized by consortia, have a detailed fo
     
 ## Graphical Overview of FAIRification Recipe Objectives
 <div class="mermaid">
-graph LR;
-    A(target ontology) --> B[identify missing term]
-    B --> C(description of requested term)
-    C --> D{identify request process}
+graph LR
+    A(target <br> ontology) --> B[identify <br> missing term]
+    B --> C(description of <br> requested term)
+    C --> D{identify <br> request <br> process}
     A --> D
-    D -->|formal process| E[follow guidelines]
-    D -->|Github with explicit guidelines| F[post GitHub issue following guidelines]
-    D -->|Github without guidelines| G[post GitHub issue]
-    D -->|email| H[write email to editor/owner]
-    E --> I{decision on request}
+    D -->|formal <br> process| E[follow <br> guidelines]
+    D -->|GitHub with <br> explicit guidelines| F[post GitHub issue <br> following guidelines]
+    D -->|GitHub without <br> guidelines| G[post GitHub issue]
+    D -->|email| H[write email to <br> editor/owner]
+    E --> I{decision <br> on request}
     F --> I
     G --> I
     H --> I
     I -->|positive| J[use new term]
     I -->|negative| K[find alternative]
 </div>
-
 
 ## Capability & Maturity Table
 
@@ -55,7 +54,7 @@ graph LR;
 Identify and describe relevant terms not included in public ontology of choice.
 
 **Step 2**
-Identify request process of the public ontology (i.e. formal request process, Github request with guidelines, Github request without guidelines, email request).
+Identify request process of the public ontology (i.e. formal request process, GitHub request with guidelines, GitHub request without guidelines, email request).
 
 **Step 3**
 Prepare at least the following information for requesting a new term:
@@ -63,7 +62,7 @@ Prepare at least the following information for requesting a new term:
 * preferred term label: a unique, unambiguous label for the term
 * potential alternative terms: common synonyms or translations
 * textual definition: expresses the meaning of the term, add sources and fully expand abbreviations
-* logical definition: suggest parent terms
+* logical definition: suggest parent and child terms
 * example of usage: propose a use case
 * attribution: contributor names (and ORCIDs)
 
@@ -79,7 +78,7 @@ Finalize and submit term request. Depending on the ontology, it can take up to a
 [SNOMED CT - Systematized Nomenclature of Medicine](http://www.snomed.org/)
 
 **Scope of the ontology:**
-clinical findings, procedures, body structures, substances, pharmaceuticals, devices, specimen
+conditions, clinical findings, procedures, body structures, substances, pharmaceuticals, devices, specimen
 
 **Information about requesting changes or additions:**
 SNOMED CT has a [Content Request Service (CRS)](https://confluence.ihtsdotools.org/display/SCTCR/CRS+User+Guide). Requests can be submitted by members of SNOMED International, Nationale Release Centers or other authorized users, and must align with the [Editorial guide](https://confluence.ihtsdotools.org/display/DOCEG). 
@@ -87,11 +86,11 @@ When submitting a request, it is important to follow the aspects mentioned in **
 * Reference(s) from a scientific or professional journal, or professional society
 * Fully expanded abbreviations
 
-When submitting to the CRS, a request can have one of the sixteen possible statuses ('New', 'Draft', 'Accepted', 'Under Authoring', 'Ready for Release', 'In Inception', 'Clarification Needed', 'Pending Internal Input', 'On Hold', 'Forwarded', 'Withdrawn', 'Rejected', 'Completed', 'Appeal','Appeal rejected', 'In Appeal Clarification'). Within CRS, submitters are notifeid when a status has been changed.
+When submitting to the CRS, a request can have one of the sixteen possible statuses ('New', 'Draft', 'Accepted', 'Under Authoring', 'Ready for Release', 'In Inception', 'Clarification Needed', 'Pending Internal Input', 'On Hold', 'Forwarded', 'Withdrawn', 'Rejected', 'Completed', 'Appeal','Appeal rejected', 'In Appeal Clarification'). Within CRS, submitters are notified when a status has been changed.
 
-More information can be found [here](https://www.snomed.org/snomed-ct/change-or-add).
+More information can be found [here](https://www.snomed.org/snomed-ct/change-or-add) and in this [guide](https://www.snomed.org/SNOMED/media/SNOMED/documents/Version-8-0-CRS-Customer-Guidance-20191024.pdf).
 
-### Request via Github with explicit guidelines
+### Request via GitHub with explicit guidelines
 
 **Example ontology:**
 [OBI - Ontology for Biomedical Investigations](http://obi-ontology.org/)
@@ -111,7 +110,7 @@ For a proposed new term, they ask for the following information:
 * example of usage
 * term editor: your name, and that of any collaborators, as it should appear in OBI
 
-### Request via Github without guidelines
+### Request via GitHub without guidelines
 
 **Example ontology:**
 [CL - Cell Ontology](http://obofoundry.org/ontology/cl.html)
@@ -120,7 +119,7 @@ For a proposed new term, they ask for the following information:
 cell types
 
 **Information about requesting changes or additions**:
-The Cell Ontology provides a [GitHub repository](ttps://github.com/obophenotype/cell-ontology), a contact email, and a mail list. New-term requests (NTR) are formulated as issues on the Github repository. 
+The Cell Ontology provides a [GitHub repository](https://github.com/obophenotype/cell-ontology), a contact email, and a mail list. New-term requests (NTR) are formulated as issues on the GitHub repository. 
 
 ### Request via email
 
@@ -133,7 +132,7 @@ drugs
 **Information about requesting changes or additions**:
 Information about requesting terms can be found in the [FAQ section](https://www.nlm.nih.gov/research/umls/faq_main.html) of the Unified Medical Language System (UMLS) where RxNorm is part of.  
 
-Changes or additions to UMLS can be requested by contacting [NLM Customer Support](https://support.nlm.nih.gov/?style=classic&deptID=28054). The NLM Customer Support can be contacted through a [form](https://support.nlm.nih.gov/support/create-case/). If additions are specific to the source, you should contact the terminology source provider. Contact information is available in [Appendix 1](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement_appendix.html) of the Licence agreement.
+Changes or additions to UMLS can be requested by contacting [NLM Customer Support](https://support.nlm.nih.gov). The NLM Customer Support can be contacted through a [form](https://support.nlm.nih.gov/support/create-case/). If additions are specific to the source, you should contact the terminology source provider. Contact information is available in [Appendix 1](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement_appendix.html) of the Licence agreement.
 
 UMLS is updated in May and November of each year.
 
