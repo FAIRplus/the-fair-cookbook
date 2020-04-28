@@ -28,23 +28,31 @@ ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7d2hhdCB0eXBlIG9mIHBhZ2U_fVxuICBCIC0tPiBDW0RhdGFzZXRdXG4gIEIgLS0-IERbRGF0YSBjYXRhbG9nXVxuICBCIC0tPiBFW0RhdGEgcGFnZV1cbiAgRSAtLT4gRntXaGF0IHR5cGUgb2YgZGF0YSBwYWdlfVxuICBGIC0tPiBHW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiAgRiAtLT4gSFtHZW5lXVxuICBGIC0tPiBJW01vbGVjdWxhciBlbnRpdHldXG4gIEYgLS0-IEpbUHJvdGVpbl1cbiAgRiAtLT4gS1tTYW1wbGVdXG4gIEYgLS0-IExbVGF4b25dXG4gIEMgLS0-IE1cbiAgRCAtLT4gTVxuICBHIC0tPiBNXG4gIEhcdC0tPiBNXG4gIEkgLS0-IE1cbiAgSiAtLT4gTVxuICBLIC0tPiBNXG4gIEwgLS0-IE1bU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXVxuICBNIC0tPiBOW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgaW1wcm92ZWQgZGlzY292ZXJhYmlsaXR5XSIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7d2hhdCB0eXBlIG9mIHBhZ2U_fVxuICBCIC0tPiBDW0RhdGFzZXRdXG4gIEIgLS0-IERbRGF0YSBjYXRhbG9nXVxuICBCIC0tPiBFW0RhdGEgcGFnZV1cbiAgRSAtLT4gRntXaGF0IHR5cGUgb2YgZGF0YSBwYWdlfVxuICBGIC0tPiBHW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiAgRiAtLT4gSFtHZW5lXVxuICBGIC0tPiBJW01vbGVjdWxhciBlbnRpdHldXG4gIEYgLS0-IEpbUHJvdGVpbl1cbiAgRiAtLT4gS1tTYW1wbGVdXG4gIEYgLS0-IExbVGF4b25dXG4gIEMgLS0-IE1cbiAgRCAtLT4gTVxuICBHIC0tPiBNXG4gIEhcdC0tPiBNXG4gIEkgLS0-IE1cbiAgSiAtLT4gTVxuICBLIC0tPiBNXG4gIEwgLS0-IE1bU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXVxuICBNIC0tPiBOW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgaW1wcm92ZWQgZGlzY292ZXJhYmlsaXR5XSIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
 
 
 ```
 graph TD
-  A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
-  B --> C{what type of resource?}
-  C -->|One| D[Dataset]
-  C -->|Two| E[Data catalog]
-  C -->|Three| F[Gene]
-  C -->|Four| G[Molecular entity]
-  C -->|Five| H[Protein]
-  D --> I
-  E --> I
-  F --> I
-  G --> I
-  H	--> I[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
+  A[HTML page] -->| Search Engine Optimization| B{what type of page?}
+  B --> C[Dataset]
+  B --> D[Data catalog]
+  B --> E[Data page]
+  E --> F{What type of data page}
+  F --> G[Chemical Substance]
+  F --> H[Gene]
+  F --> I[Molecular entity]
+  F --> J[Protein]
+  F --> K[Sample]
+  F --> L[Taxon]
+  C --> M
+  D --> M
+  G --> M
+  H	--> M
+  I --> M
+  J --> M
+  K --> M
+  L --> M[Schema.org augmented HTML page]
+  M --> N[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
 ```
 
 ___
