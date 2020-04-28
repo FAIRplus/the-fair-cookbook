@@ -4,8 +4,9 @@
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
 4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
 5. [Table of Data Standards](#Table%20of%20Data%20Standards)
-6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
-7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
+6. [Main Content goes here...](#Main%20Content)
+    a. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
+    b. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
 8. [License](#License)
 
 ---
@@ -61,8 +62,11 @@ ___
 
 ___
 
+## Main Content
 
-## Executable Code in Notebook
+This is the place for your actual content. You can also ...
+
+### ... write executable code
 
 
 ```python
@@ -74,7 +78,7 @@ import holoview
 
 ___
 
-## How to create workflow figures
+### ... create workflow figures
 
 one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
 
