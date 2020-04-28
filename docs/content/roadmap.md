@@ -10,6 +10,8 @@ This Google Document is publicly available in "view mode", and with "edit mode" 
 
 ---
 
+Below you find examples how the development roadmap might be visualized in the future...
+
 <div class="mermaid">
 gantt
     title A Gantt Diagram
@@ -21,9 +23,6 @@ gantt
     Task in sec      :2014-01-12  , 12d
     another task      : 24d
 </div>
-
-
-An alternative plan
 
 <div class="mermaid">
 gantt
