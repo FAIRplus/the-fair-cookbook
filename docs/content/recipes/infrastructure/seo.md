@@ -20,9 +20,9 @@ The main purpose of this recipe is:
 > to describe what `search engine optimisation` is and show how to implement markup with `schema.org` vocabulary to improve page discovery and visibility by web page indexers.
 
 There are sub-recipes for embedding search engine optimisation into specific web pages about a specific type or resource:
-- Data catalog
-- Dataset
-- Resource specific page (Gene, Molecular Entity, Protein)
+- [Data catalog](bioschemas-datacatalog)
+- [Dataset](bioschemas-dataset)
+- [Resource specific page](bioschemas-protein) (Gene, Molecular Entity, Protein)
 
 ___
 
@@ -45,8 +45,8 @@ graph TD
   F --> I
   G --> I
   H	--> I[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
-```  
-  
+```
+
 ___
 
 ## Capability & Maturity Table
@@ -177,7 +177,6 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 * [Sample](https://bioschemas.org/profiles/Sample)
 * [Taxon](https://bioschemas.org/profiles/Taxon)
 
-
 ----
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -203,7 +202,7 @@ ___
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | 
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
 | Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Contributions to text |
 
 ___
