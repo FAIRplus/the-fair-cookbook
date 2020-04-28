@@ -1,12 +1,15 @@
-# Table of Contents
+# Title of Recipe
+
+__Table of Contents__
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
 4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-5. [Table of Data Standards](#Table%20of%20Data%20Standards)
-6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
-7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
+5. [Main body of the Recipe](#Main%20body%20of%20the%20Recipe)
+6. [Table of Data Standards](#Table%20of%20Data%20Standards)
+7. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
+8. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
+9. [License](#License)
 
 ---
 
@@ -39,6 +42,12 @@ ___
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
+
+----
+
+## Main body of the Recipe
+
+The main content of the recipe
 
 ----
 
@@ -106,7 +115,8 @@ ___
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
+| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition |
+| Alasdair Gray | Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Improvements to recipe template |
 
 ___
 
