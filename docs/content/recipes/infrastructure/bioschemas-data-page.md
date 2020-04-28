@@ -24,32 +24,25 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-Note: use this section to provide a decision tree for the overall process described in the recipe
-For more information about the syntax used to generate the diagram, please refer to the [following documentation](https://mermaid-js.github.io/mermaid/#/flowchart)
 
-<div class="mermaid">
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-</div>
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7d2hhdCB0eXBlIG9mIHJlc291cmNlP31cbiBCIC0tPiBDW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiBCIC0tPiBEW0dlbmVdXG4gQiAtLT4gRVtNb2xlY3VsYXIgRW50aXR5XVxuIEIgLS0-IEZbUHJvdGVpbl1cbiBCIC0tPiBHW1NhbXBsZV1cbiBCIC0tPiBIW1RheG9uXVxuIEMgLS0-IElcbiBEIC0tPiBJXG4gRSAtLT4gSVxuIEYgLS0-IElcbiBHIC0tPiBJXG4gSCAtLT4gSVtmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZV0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7d2hhdCB0eXBlIG9mIHJlc291cmNlP31cbiBCIC0tPiBDW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiBCIC0tPiBEW0dlbmVdXG4gQiAtLT4gRVtNb2xlY3VsYXIgRW50aXR5XVxuIEIgLS0-IEZbUHJvdGVpbl1cbiBCIC0tPiBHW1NhbXBsZV1cbiBCIC0tPiBIW1RheG9uXVxuIEMgLS0-IElcbiBEIC0tPiBJXG4gRSAtLT4gSVxuIEYgLS0-IElcbiBHIC0tPiBJXG4gSCAtLT4gSVtmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZV0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+
 ```
 graph TD
-  A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
-  B --> C{what type of resource?}
-  C -->|One| D[Chemical Substance]
-  C -->|Two| E[Gene]
-  C -->|Three| F[Molecular Entity]
-  C -->|Four| G[Protein]
-  C -->|Five| H[Sample]
-  C -->|Six| I[Taxon]
-  D --> J
-  E --> J
-  F --> J
-  G --> J
-  H	--> J
-  I --> J [fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
+ A[HTML page] --> B{what type of resource?}
+ B --> C[Chemical Substance]
+ B --> D[Gene]
+ B --> E[Molecular Entity]
+ B --> F[Protein]
+ B --> G[Sample]
+ B --> H[Taxon]
+ C --> I
+ D --> I
+ E --> I
+ F --> I
+ G --> I
+ H --> I[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
 ```
 
 
