@@ -17,7 +17,7 @@
 
 The main purpose of this recipe is:
 
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files.
+> To markup a webpage representing a data record with Bioschemas compliant markup.
 
 ___
 
@@ -34,13 +34,34 @@ graph LR;
     C -->|Yes| D[Standard Compliant Data]
     C -->|No| E[Vendor locked Data]
 </div>
+```
+graph TD
+  A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
+  B --> C{what type of resource?}
+  C -->|One| D[Chemical Substance]
+  C -->|Two| E[Gene]
+  C -->|Three| F[Molecular Entity]
+  C -->|Four| G[Protein]
+  C -->|Five| H[Sample]
+  C -->|Six| I[Taxon]
+  D --> J
+  E --> J
+  F --> J
+  G --> J
+  H	--> J
+  I --> J [fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
+```
+
+
+
 ___
 
 ## Capability & Maturity Table
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
+| Findability | minimal | repeatable |
+| Interoperability | minimal |  |
 
 ----
 
@@ -105,10 +126,9 @@ ___
 
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition |
+| Name          | Affiliation                                                  | orcid                                                        | Credit role              |
+| :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
+| Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
 
 ___
 
