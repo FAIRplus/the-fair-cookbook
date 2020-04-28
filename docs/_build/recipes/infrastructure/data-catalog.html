@@ -1,0 +1,190 @@
+---
+title: |-
+  Building a Data Catalogue
+prev_page:
+  url: /recipes/infrastructure/UC3R1-3.html
+  title: |-
+    Vocabulary Servers
+next_page:
+  url: /recipes/infrastructure/seo.html
+  title: |-
+    Search Engine optimization
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Building-a-Dataset-Catalogue">Building a Dataset Catalogue<a class="anchor-link" href="#Building-a-Dataset-Catalogue"> </a></h1><h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>To detail the key elements for the creation of a <code>data catalogue</code> to enable data <code>findability</code> in an organisation.
+We will cover the following points:</p>
+<ol>
+<li>metadata model selection</li>
+<li>annotation with controled vocabularies</li>
+<li>ETL</li>
+<li>data loading</li>
+<li>data indexing</li>
+<li>facet oriented searching</li>
+<li>minting of stable, persistent and resolvable identifiers</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p>TODO</p>
+<hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Findability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="User-Story">User Story<a class="anchor-link" href="#User-Story"> </a></h2><p>For <strong><code>role.Data Scientists</code></strong>, it is essential to be able to <em><code>action.identify</code></em> and <em><code>action.discover</code></em> datasets of potential relevance in the context of <em><code>action.data integration</code></em> and <em><code>action.meta-analytical work</code></em>.</p>
+<p>For <strong><code>role.Database Managers</code></strong>, a lightweight solution is needed to support a shallow indexing supported fast ingest without intense curation, but good potential for data discovery. Works should rely on approved data standards.</p>
+<p>For <strong><code>role.lab scientists</code></strong>, the key is to have a minimal burden when having to <em><code>action.deposit</code></em> a dataset to an institutional archive or simply <em><code>action.register</code></em> to dataset to the <code>data catalogue</code>.</p>
+<hr>
+<h2 id="Main-body-of-the-recipe">Main body of the recipe<a class="anchor-link" href="#Main-body-of-the-recipe"> </a></h2><h3 id="What-is-a-Data-Catalogue?">What is a Data Catalogue?<a class="anchor-link" href="#What-is-a-Data-Catalogue?"> </a></h3><p>A <code>Data Catalogue</code> is a resource meant to allow fast identification of <code>Data set</code>. In keeping with the familiar notion of catalogue, (be it that of an exhibition or that of brand products), the notion of <code>data catalogue</code> needs to be understood as the compendium of <code>short descriptive metadata elements</code> about an actual set of data. The <code>Data Index or Data Catalogue</code> <strong>does not</strong> store the datasets themselves but provides information about where the datasets can be obtained from. Therefore, <code>Data Catalogues</code> are often used to index the content of '<code>Data Repositories</code> and <code>Data Archives</code>, which provide hosting solutions for the actual datasets, which are often organized (but not always)' around specific <code>data types</code> or <code>data production modalities</code> (e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence archives and so on.)</p>
+<h3 id="What-are-the-standards-supporting-establishing-a-data-catalogue?">What are the standards supporting establishing a data catalogue?<a class="anchor-link" href="#What-are-the-standards-supporting-establishing-a-data-catalogue?"> </a></h3><p><code>Data Catalogues</code> have been identified as critical infrastructure and therefore a number of model exist to support their implementation.</p>
+<ol>
+<li><p>DATS:
+The <a href="">Data Article Tag Suite model</a> has been developed during the NIH-BD2K projects and underpins the <a href="https://datamed.org/">datamed catalogue</a>, the aim of which was to produce a prototype of a <a href="https://pubmed.ncbi.nlm.nih.gov/29346583/"><code>Pubmed for Datasets</code></a>.</p>
+</li>
+<li><p>DCAT:
+In the world of semantic web technologies, The <a href="">W3C DCAT specifications</a> (v1 and the newly released version 2) provide a vocabulary to express <code>data catalogue metadata</code> in <strong>RDF</strong>.</p>
+</li>
+<li>Schema.org:
+The vocabulary developed by the consortium of search engines has defined a metadata profile for <a href="https://schema.org/DataSet"><code>Dataset</code></a>, <a href="https://schema.org/DataCatalog"><code>Data Catalogue</code></a></li>
+</ol>
+<h3 id="How-are-Data-Catalogue-populated?">How are Data Catalogue populated?<a class="anchor-link" href="#How-are-Data-Catalogue-populated?"> </a></h3><p>A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories or harvesting JSON-LD files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more</p>
+<h3 id="What-are-examples-of-Data-Catalogues?">What are examples of Data Catalogues?<a class="anchor-link" href="#What-are-examples-of-Data-Catalogues?"> </a></h3><ul>
+<li><p>Commercial solutions:</p>
+<ul>
+<li><p>(Collibra](<a href="https://www.collibra.com/download/data-catalog-study-dresner-advisory-services-ppc?_bk=catalogue%20data&amp;_bt=389929247489&amp;_bm=e&amp;_bn=g">https://www.collibra.com/download/data-catalog-study-dresner-advisory-services-ppc?_bk=catalogue%20data&amp;_bt=389929247489&amp;_bm=e&amp;_bn=g</a>)</p>
+</li>
+<li><p><a href="https://datamed.org/">DataMed</a></p>
+</li>
+<li><a href="https://www.omicsdi.org/">OMICS-DI</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="">JSON</a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">RDF</a></td>
+<td style="text-align:left"><a href="">DCAT v1</a></td>
+<td style="text-align:left"><a href="">DATS</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">RDF</a></td>
+<td style="text-align:left"><a href="">DCAT v2</a></td>
+<td style="text-align:left"><a href="">DATS</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">JSON-LD</a></td>
+<td style="text-align:left"><a href="">Schema.org</a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Executable-Code-in-Notebook">Executable Code in Notebook<a class="anchor-link" href="#Executable-Code-in-Notebook"> </a></h2><p>TO BE AUGMENTED.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dats</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
+<span class="o">...</span>
+</pre></div>
+<h2 id="References:">References:<a class="anchor-link" href="#References:"> </a></h2><h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
