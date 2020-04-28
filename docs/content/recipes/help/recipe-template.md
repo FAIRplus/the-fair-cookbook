@@ -5,8 +5,8 @@
 4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
 5. [Table of Data Standards](#Table%20of%20Data%20Standards)
 6. [Main Content goes here...](#Main%20Content)
-    a. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
-    b. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
+    * [... writing executable code](#Executable%20Code%20in%20Notebook)
+    * [... creating workflow figures](#How%20to%20create%20workflow%20figures)
 8. [License](#License)
 
 ---
