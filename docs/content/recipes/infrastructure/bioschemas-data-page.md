@@ -126,7 +126,7 @@ ___
 
 ## Authors:
 
-| Name          | Affiliation                                                  | orcid                                                        | Credit role              |
+| Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
 | :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
 | Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
 
