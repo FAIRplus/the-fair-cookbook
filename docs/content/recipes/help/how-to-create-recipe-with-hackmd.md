@@ -19,11 +19,13 @@ The document contains a graphical overview of the key steps.**
 
 
 - [x] 1. create a github account and obtain your github handle (e.g. [@proccaserra](https://github.com/proccaserra)) 
+
 - [x] 2. request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
-<kbd>![](https://i.imgur.com/wyTn5aS.png)</kbd>
+![](https://i.imgur.com/wyTn5aS.png)
+
 - [x] 3. create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
 
-<kbd>![](https://i.imgur.com/frsBwqc.png =750x)</kbd>
+![](https://i.imgur.com/frsBwqc.png =750x)>
     :information_source:  remember to assign yourself or a team member to the issue
     :information_source:  remember to assign the issue to a milestone
     :information_source: remember to tag the issue with relevant label
@@ -35,6 +37,7 @@ The document contains a graphical overview of the key steps.**
 ![](https://i.imgur.com/E2ok5ni.png =450x)
 
 - [x] 6. :warning: **IMPORTANT: Install HackMD browser extension ([Chrome](https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search))**.
+
 At the current time, the `HackMD-it` browser extension is only available for Chrome and Firefox and [this tutorial](https://hackmd.io/s/hackmd-it) details the installation procedure. 
 Once you've carried the extension installation, any github repository for which you have access and for which HackMD app has been authorized (which is already the case for all FAIRplus github repositories), any `Markdown` document will be readily editable using 'HackMD' and you should see the following *icon* 
 
@@ -55,6 +58,7 @@ in the github repository bar as shown in the figure below:
 
 
 - [x] 8. Build confidence using HackMD
+
 ![](https://i.imgur.com/bt012cm.png)
 
 use the split view to have what you type immediately rendered
