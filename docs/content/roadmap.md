@@ -1,6 +1,16 @@
 # FAIR cookbook development roadmap
 
-An overview of the work planned for the coming year.
+The envisioned state of the FAIR cookbook can be found here: 
+
+https://docs.google.com/spreadsheets/d/13B2aLm5ZXFUwAu6DlcL7soWL8yzX6juR4ijgUpzIsv4/edit?usp=sharing
+
+This Google Document is publicly available in "view mode", and with "edit mode" for all FAIRplus members.
+
+
+
+---
+
+Below you find examples how the development roadmap might be visualized in the future...
 
 <div class="mermaid">
 gantt
@@ -13,9 +23,6 @@ gantt
     Task in sec      :2014-01-12  , 12d
     another task      : 24d
 </div>
-
-
-An alternative plan
 
 <div class="mermaid">
 gantt
