@@ -1,23 +1,21 @@
-name: build-github-pages-and-transfer-to-dev-repo
+name: transfer-dev-to-external-repo
 on:
   push:
     branches:
       - dev
 
 jobs:
-  build-and-deploy-to-other-repo:
+  copy-to-other-repo:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout dev branch
       uses: actions/checkout@v2
       with:
         ref: dev ## checkouts "dev" branch
-    - run: pip install jupyter-book
-    - run: jupyter-book build docs --overwrite
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Push to other repo
+      uses: pixta-dev/repository-mirroring-action@v1
       with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        external_repository: FAIRplus/cookbook-dev
-        publish_branch: master
-        publish_dir: ./public
+        target_repo_url:
+          git@gitlab.com:FAIRplus/cookbook-dev.git
+        ssh_private_key:                                # <-- use 'secrets' to pass credential information.
+          ${{ secrets.ACTIONS_DEPLOY_KEY }}
