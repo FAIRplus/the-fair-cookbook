@@ -229,19 +229,6 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 
 ___
 
-
-## Executable Code in Notebook
-
-
-```python
-import isatools
-import json
-import pandas as pd 
-import holoview
-```
-
-___
-
 ## Authors:
 
 | Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
