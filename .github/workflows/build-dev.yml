@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: build-github-pages-and-transfer-to-dev-repo
 on:
   push:
@@ -7,18 +5,13 @@ on:
       - dev
 
 jobs:
-  build-and-deploy:
+  build-and-deploy-to-other-repo:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout dev branch
       uses: actions/checkout@v2
       with:
         ref: dev ## checkouts "dev" branch
-    - name: Install python
-      uses: actions/setup-python@v1
-      with:
-        python-version: '3.8' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run: pip install jupyter-book
     - run: jupyter-book build docs --overwrite
     - name: Deploy
