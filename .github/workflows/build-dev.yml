@@ -1,0 +1,23 @@
+name: build-github-pages-and-transfer-to-dev-repo
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-and-deploy-to-other-repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout dev branch
+      uses: actions/checkout@v2
+      with:
+        ref: dev ## checkouts "dev" branch
+    - run: pip install jupyter-book
+    - run: jupyter-book build docs --overwrite
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        external_repository: FAIRplus/cookbook-dev
+        publish_branch: master
+        publish_dir: ./public
