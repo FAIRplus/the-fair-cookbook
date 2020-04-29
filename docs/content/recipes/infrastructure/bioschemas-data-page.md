@@ -140,7 +140,7 @@ We will outline the steps for marking up a page in your site. As a specific exam
          "taxonomicRange": {
            "@type": "Taxon",
            "@id": "https://www.wikidata.org/wiki/Q15978631"
-         }
+         },
          "sameAs": [
            "https://meshb.nlm.nih.gov/#/record/ui?ui=D019398",
            "https://www.ncbi.nlm.nih.gov/nuccore/NR_027676",
