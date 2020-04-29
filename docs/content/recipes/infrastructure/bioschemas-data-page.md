@@ -177,15 +177,36 @@ We will outline the steps for marking up a page in your site. As a specific exam
          },
      ```
 
-7. Include the `JSON-LD` script at the bottom of your HTML page template, but before the closing `</html>` tag
+     You can test that your JSON-LD is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
 
-8. Replace the values with variables that your web page templating system will replace with values from your database
+7. Once you are happy with your markup, include the `JSON-LD`, script tags and all, at the bottom of your HTML page template. Make sure that this is before the closing `</html>` tag
+
+8. Replace the values in your markup with variables that your web page templating system will replace with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
+
+     ```json
+     <script type="application/ld+json" >
+     {
+       "@context": "http://schema.org",
+       "@id": "%%%PAGEURL%%%",
+       "@type": "DataRecord",
+       "dct:conformsTo": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14",
+       "identifier": "%%%PAGEURL%%%",
+       "mainEntity": {
+         "@type": "Gene",
+         "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
+         "identifier": "%%%ACCESSIONNUMBER%%%",
+         "description": "%%%DESCRIPTION%%%",
+         ...
+     }
+     ```
+
+     
 
 Your site should now generate data pages with embedded markup. 
 
 You should complete this process for each different type of data that you include in your site, e.g. ChEMBL would have `MolecularEntity` markup on their chemical pages and `Protein` markup on their target pages so would need to complete this process twice.
 
-Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/).
+Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[2](#bioschemas-validator)</sup>.
 
 ----
 
@@ -236,4 +257,5 @@ ___
 
 ## Footnotes
 
-<a name="draft-profiles">1</a>: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile
+<a name="draft-profiles">1</a>: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile.  
+<a name="bioschemas-validator">2</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
