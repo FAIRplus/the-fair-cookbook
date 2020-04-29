@@ -24,13 +24,11 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-
-
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7d2hhdCB0eXBlIG9mIHJlc291cmNlP31cbiBCIC0tPiBDW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiBCIC0tPiBEW0dlbmVdXG4gQiAtLT4gRVtNb2xlY3VsYXIgRW50aXR5XVxuIEIgLS0-IEZbUHJvdGVpbl1cbiBCIC0tPiBHW1NhbXBsZV1cbiBCIC0tPiBIW1RheG9uXVxuIEMgLS0-IElcbiBEIC0tPiBJXG4gRSAtLT4gSVxuIEYgLS0-IElcbiBHIC0tPiBJXG4gSCAtLT4gSVtmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZV0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7d2hhdCB0eXBlIG9mIHJlc291cmNlP31cbiBCIC0tPiBDW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiBCIC0tPiBEW0dlbmVdXG4gQiAtLT4gRVtNb2xlY3VsYXIgRW50aXR5XVxuIEIgLS0-IEZbUHJvdGVpbl1cbiBCIC0tPiBHW1NhbXBsZV1cbiBCIC0tPiBIW1RheG9uXVxuIEMgLS0-IElcbiBEIC0tPiBJXG4gRSAtLT4gSVxuIEYgLS0-IElcbiBHIC0tPiBJXG4gSCAtLT4gSVtmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZV0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IHxDcmVhdGUgbWFya3VwIHRlbXBsYXRlfCBCe3doYXQgdHlwZSBvZiByZXNvdXJjZT99XG4gQiAtLT4gQ1tDaGVtaWNhbCBTdWJzdGFuY2VdXG4gQiAtLT4gRFtHZW5lXVxuIEIgLS0-IEVbTW9sZWN1bGFyIEVudGl0eV1cbiBCIC0tPiBGW1Byb3RlaW5dXG4gQiAtLT4gR1tTYW1wbGVdXG4gQiAtLT4gSFtUYXhvbl1cbiBDIC0tPiBJXG4gRCAtLT4gSVxuIEUgLS0-IElcbiBGIC0tPiBJXG4gRyAtLT4gSVxuIEggLS0-IEkoTWFya3VwIHRlbXBsYXRlKVxuIEkgLS0-IHxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBKW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IHxDcmVhdGUgbWFya3VwIHRlbXBsYXRlfCBCe3doYXQgdHlwZSBvZiByZXNvdXJjZT99XG4gQiAtLT4gQ1tDaGVtaWNhbCBTdWJzdGFuY2VdXG4gQiAtLT4gRFtHZW5lXVxuIEIgLS0-IEVbTW9sZWN1bGFyIEVudGl0eV1cbiBCIC0tPiBGW1Byb3RlaW5dXG4gQiAtLT4gR1tTYW1wbGVdXG4gQiAtLT4gSFtUYXhvbl1cbiBDIC0tPiBJXG4gRCAtLT4gSVxuIEUgLS0-IElcbiBGIC0tPiBJXG4gRyAtLT4gSVxuIEggLS0-IEkoTWFya3VwIHRlbXBsYXRlKVxuIEkgLS0-IHxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBKW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
 ```
 graph TD
- A[HTML page] --> B{what type of resource?}
+ A[HTML page] --> |Create markup template| B{what type of resource?}
  B --> C[Chemical Substance]
  B --> D[Gene]
  B --> E[Molecular Entity]
@@ -42,7 +40,8 @@ graph TD
  E --> I
  F --> I
  G --> I
- H --> I[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
+ H --> I(Markup template)
+ I --> |Embed template in website| J[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
 ```
 
 
