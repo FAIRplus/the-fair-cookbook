@@ -13,7 +13,7 @@ jobs:
       with:
         ref: dev ## checkouts "dev" branch
     - run: pip install jupyter-book
-    - run: jupyter-book build docs --overwrite
+    - run: python -m jupyter-book build docs --overwrite
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
