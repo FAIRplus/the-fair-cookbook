@@ -23,7 +23,7 @@
 
 # Top-level page
 - title: FAIR Cookbook
-  url: intro
+  url: /intro
   not_numbered: true
 
 # External link
