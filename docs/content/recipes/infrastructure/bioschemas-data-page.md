@@ -65,9 +65,7 @@ We will outline the steps for marking up a page in your site. As a specific exam
 
 2. Open the [Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
-   1.  Select the type of data page that you are marking up. In the example we will use `GeneRecord`. Here are the main data record profiles to choose from[^Draft profiles]. 
-
-      [^Draft profiles]: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile
+   1.  Select the type of data page that you are marking up. In the example we will use `GeneRecord`. Here are the main data record profiles to choose from <sup>[1](#draft-profiles)</sup>. 
 
       - `ChemicalSubstanceRecord` for a page about a chemical substance composed of molecular entities
 
@@ -235,3 +233,7 @@ ___
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+
+## Footnotes
+
+<a name="draft-profiles">1</a>: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile
