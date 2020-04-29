@@ -4,20 +4,27 @@ name: build-github-pages-and-transfer-to-dev-repo
 on:
   push:
     branches:
-      - master
+      - dev
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@dev
-    - name: Deploy to GitHub Pages - Python
-      uses: JacksonMaxfield/github-pages-deploy-action-python@2.1.0
-      env:
-        ACCESS_TOKEN: ${{ secrets.fpcbksecret }}
-        REPOSITORY_NAME: FAIRplus/cookbook-dev
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: docs # The folder the action should deploy.
-        BUILD_SCRIPT: pip install jupyter-book && jupyter-book build docs --overwrite  
+    - name: Checkout dev branch
+      uses: actions/checkout@v2
+      with:
+        ref: dev ## checkouts "dev" branch
+    - name: Install python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.8' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+    - run: pip install jupyter-book
+    - run: jupyter-book build docs --overwrite
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        external_repository: FAIRplus/cookbook-dev
+        publish_branch: master
+        publish_dir: ./public
