@@ -199,8 +199,8 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-|  [JSON-LD](https://fairsharing.org/bsg-s001214/)  | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](https://fairsharing.org/FAIRsharing.qk984b)  |
-| [JSON-LD](https://fairsharing.org/bsg-s001214/)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](https://fairsharing.org/FAIRsharing.qk984b)  |
+|  [JSON-LD](http://edamontology.org/format_3749)  | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](http://edamontology.org/data_2353)  |
+| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 
 ___
 
