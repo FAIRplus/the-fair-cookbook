@@ -8,18 +8,21 @@ jobs:
   copy-to-other-repo:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout dev branch
-      uses: actions/checkout@v2
+    - name: Checkout dev branch 🛎️
+      uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
       with:
-        ref: dev ## checkouts "dev" branch
-    - run: git remote -v
-    - run: git remote remove origin
-    - run: git remote add git@github.com:FAIRplus/cookbook-dev.git
-    - run: git push
-    - name: Push to other repo
-      uses: pixta-dev/repository-mirroring-action@v1
+        persist-credentials: false
+        ref: dev
+    - name: Setup Python
+      uses: actions/setup-python@v1.2.0
+    - name: Install and Build 🔧 
+      run: pip install jupyter-book && jupyter-book build ./docs --overwrite
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        target_repo_url:
-          git@github.com:FAIRplus/cookbook-dev.git
-        ssh_private_key:                                # <-- use 'secrets' to pass credential information.
-          ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        SSH: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        BASE_BRANCH: dev
+        REPOSITORY_NAME: FAIRplus/cookbook-dev
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: ./docs/_build # The folder the action should deploy.
+        
