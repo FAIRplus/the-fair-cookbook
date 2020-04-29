@@ -27,3 +27,4 @@ jobs:
         external_repository: FAIRplus/cookbook-dev
         publish_branch: master
         publish_dir: ./docs
+        enable_jekyll: true
