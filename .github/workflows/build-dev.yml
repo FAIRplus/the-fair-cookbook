@@ -12,6 +12,10 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: dev ## checkouts "dev" branch
+    - run: git remote -v
+    - run: git remote remove origin
+    - run: git remote add git@github.com:FAIRplus/cookbook-dev.git
+    - run: git push
     - name: Push to other repo
       uses: pixta-dev/repository-mirroring-action@v1
       with:
