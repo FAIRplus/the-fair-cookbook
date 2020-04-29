@@ -18,6 +18,7 @@ jobs:
         python-version: '3.x'
     - run: ls -alh .
     - run: pip install jupyter-book
+    - run: pip install -r ./docs/requirements.txt
     - run: jupyter-book build ./docs --overwrite
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
