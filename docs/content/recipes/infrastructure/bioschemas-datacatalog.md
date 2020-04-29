@@ -17,24 +17,27 @@
 
 The main purpose of this recipe is:
 
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files.
+> To embed Schema.org markup in a web page that publishes multiple datasets in a single page.
 
 ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-Note: use this section to provide a decision tree for the overall process described in the recipe
-For more information about the syntax used to generate the diagram, please refer to the [following documentation](https://mermaid-js.github.io/mermaid/#/flowchart)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBhYm91dCBtdWx0aXBsZSBkYXRhc2V0cz99XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIERhdGFDYXRhbG9nKVxuIEIgLS0-fE5PfCBGW1VzZSBEYXRhc2V0IFJlY2lwZV1cbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSlcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBhYm91dCBtdWx0aXBsZSBkYXRhc2V0cz99XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIERhdGFDYXRhbG9nKVxuIEIgLS0-fE5PfCBGW1VzZSBEYXRhc2V0IFJlY2lwZV1cbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSlcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
-<div class="mermaid">
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-</div>
-___
+```
+graph TD
+ A[HTML page] --> B{Page about multiple datasets?}
+ B -->|YES| C(Create markup for DataCatalog)
+ B -->|NO| F[Use Dataset Recipe]
+ C --> D(Markup Template)
+ D -->|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
+```
+
+
+
+----
 
 ## Capability & Maturity Table
 
