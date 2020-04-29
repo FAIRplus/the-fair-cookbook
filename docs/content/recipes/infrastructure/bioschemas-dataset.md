@@ -41,73 +41,32 @@ ___
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
+| Findability | minimal | repeatable |
+| Interoperability | minimal |  |
 
 ----
+
 
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChi](https://fairsharing.org/FAIRsharing.ddk9t9) |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-| [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [annotated text](http://edamontology.org/data_3779)  |
+| [text annotation](http://edamontology.org/operation_3778)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [annotated text](http://edamontology.org/data_3779)  |
+| [validation](http://edamontology.org/operation_2428) | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [report](http://edamontology.org/data_2048) |
 
 
 ## Table of Data Standards
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-| [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)  | [SRA XML](https://fairsharing.org/FAIRsharing.q72e3w)  |
-| [DICOM](https://fairsharing.org/FAIRsharing.b7z8by)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [OMOP](https://fairsharing.org/FAIRsharing.qk984b)  |
-
+| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
+| [HTML](http://edamontology.org/format_2331) | | |
 ___
-
-
-## Executable Code in Notebook
-
-
-```python
-import isatools
-import json
-import pandas as pd 
-import holoview
-```
-
-___
-
-## How to create workflow figures
-
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
-
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
-
-<div class="mermaid">
-graph LR;
-    A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
-    B["conversion to open format"]-->D(("output data"));
-    C["automatic annotation"]-->D(("output data"));  
-
-    style A fill:#FF5733,stroke:#333,stroke-width:2px
-    style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div>
-
-___
-
-
 
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
+| Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
+| :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
 | Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
 
 ___
