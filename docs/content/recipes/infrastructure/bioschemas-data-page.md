@@ -57,6 +57,18 @@ ___
 
 ----
 
+## Method
+
+1. Identify a data page in your site for which you will develop markup
+
+2. Open the [Bioschemas Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
+
+   ![Bioschemas Generator start screen](BioschemasGenerator.png)
+
+3. 
+
+----
+
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |
