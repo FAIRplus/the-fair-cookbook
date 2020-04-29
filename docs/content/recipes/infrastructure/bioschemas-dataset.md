@@ -17,12 +17,25 @@
 
 The main purpose of this recipe is:
 
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files.
+> To embed Schema.org markup in a web page representing a dataset.
 
 ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+
+```
+graph TD
+ A[HTML page] --> B{Page just about one dataset?}
+ B -->|YES| C(Create markup for dataset)
+ B -->|NO| F[Use DataCatalog Recipe]
+ C --> D(Markup Template)
+ D -->|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
+```
+
+
 
 Note: use this section to provide a decision tree for the overall process described in the recipe
 For more information about the syntax used to generate the diagram, please refer to the [following documentation](https://mermaid-js.github.io/mermaid/#/flowchart)
