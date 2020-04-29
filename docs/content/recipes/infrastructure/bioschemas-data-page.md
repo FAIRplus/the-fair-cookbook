@@ -89,33 +89,6 @@ import holoview
 
 ___
 
-## How to create workflow figures
-
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
-
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
-
-<div class="mermaid">
-graph LR;
-    A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
-    B["conversion to open format"]-->D(("output data"));
-    C["automatic annotation"]-->D(("output data"));  
-
-    style A fill:#FF5733,stroke:#333,stroke-width:2px
-    style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div>
-
-___
-
-
-
 ## Authors:
 
 | Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
