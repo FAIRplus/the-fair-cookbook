@@ -17,7 +17,7 @@ jobs:
       with:
         python-version: '3.x'
     - run: ls -alh .
-    - run: pip install jupyter-book
+    - run: pip install jupyter-book==0.6.4
     - run: pip install -r ./docs/requirements.txt
     - run: jupyter-book build ./docs --overwrite
     - name: Deploy
