@@ -71,6 +71,8 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
    - The form defaults to the data type with the first alphabetical character, e.g. for `identifier` this defaults to `PropertyValue` but `Text` or `URL ` will be more appropriate in most cases
    - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
 
+   ![Bioschemas Generator Dataset profile form](BioschemasGeneratorDatasetForm.png)
+
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our UniProtKB example, we get the following markup
 
    ```json
