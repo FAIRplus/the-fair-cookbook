@@ -14,7 +14,7 @@ jobs:
       uses: JacksonMaxfield/github-pages-deploy-action-python@2.1.0
       env:
         ACCESS_TOKEN: ${{ secrets.fpcbksecret }}
-        BASE_BRANCH: master # The branch the action should deploy from.
+        BASE_BRANCH: master # The branch the action should deploy from. 
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: docs # The folder the action should deploy.
         BUILD_SCRIPT: pip install jupyter-book && jupyter-book build docs --overwrite  # The build script the action should run prior to deploying.
