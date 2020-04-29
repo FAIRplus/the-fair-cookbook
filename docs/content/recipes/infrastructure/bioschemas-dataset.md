@@ -131,7 +131,7 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
 6. Make adjustments for any bits that could not be properly entered through the form. 
 
-   For example, for our generated markup we would change the `IncludedInDataCatalog` so that it provides a direct link rather than repeating the properties. We would replace
+   For example, for our generated markup we would change the `includedInDataCatalog` so that it provides a direct link rather than repeating the properties. We would replace
 
    ```json
    "includedInDataCatalog": [
