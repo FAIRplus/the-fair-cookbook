@@ -1,11 +1,15 @@
-# Table of Contents
+# [here comes the Title of the recipe]
+
+## Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
-4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-5. [Table of Data Standards](#Table%20of%20Data%20Standards)
-6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
-7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
+3. Requirements
+4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
+5. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
+6. [Table of Data Standards](#Table%20of%20Data%20Standards)
+7. [Main Content goes here...](#Main%20Content)
+    * [... writing executable code](#Executable%20Code%20in%20Notebook)
+    * [... creating workflow figures](#How%20to%20create%20workflow%20figures)
 8. [License](#License)
 
 ---
@@ -34,11 +38,26 @@ graph LR;
 
 ___
 
+
+## Requirements
+
+* technical requirements:
+   * bash knowledge
+   * ...
+* recipe dependency:
+   * read Recipe 1 first!
+* knowledge requirement:
+   * be sure to know what OBO is, or read it here: ...link to knowledge...
+
+---
+
 ## Capability & Maturity Table
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
+
+Help to fill this table out can be found ...(not yet)...
 
 ----
 
@@ -61,8 +80,11 @@ ___
 
 ___
 
+## Main Content
 
-## Executable Code in Notebook
+This is the place for your actual content. You can also ...
+
+### ... write executable code
 
 
 ```python
@@ -72,9 +94,8 @@ import pandas as pd
 import holoview
 ```
 
-___
 
-## How to create workflow figures
+### ... create workflow figures
 
 one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
 
@@ -103,14 +124,17 @@ ___
 
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
-
+| Name | Affiliation  | orcid | CrediT role  | specific contribution |
+| :------------- | :------------- | :------------- |:------------- |:------------- |
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | original format |
+| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | | 
+| Alasdair Gray | Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Review & Editing | minor improvements (see git) |
+| Robert Giessmann | Bayer AG | [0000-0002-0254-1500](https://orcid.org/0000-0002-0254-1500) | Writing - Review & Editing | minor improvements (see git) |
 ___
 
 
 ## License:
+
+This page is released under the Creative Commons 4.0 BY license.
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>

@@ -88,14 +88,18 @@
   - title: Accessibility
     url: /recipes/accessibility
     not_numbered: false
-    subsections:
-      - title: Selecting a Licensing Mode
-        url: /recipes/accessibility/license-selection
-        not_numbered: false
-      - title: Anomynization of Data
-        url: /recipes/accessibility/anonymization
-        not_numbered: false    
-
+  - title: Recipe Template
+    url: /recipes/recipe-template
+    not_numbered: false 
+  - title: Anonymization Recipe
+    url: /recipes/anonymization-recipe
+    not_numbered: false    
+  - title: How to request new terms in existing ontologies
+    url: /recipes/new-ontology-term-request-recipe
+    not_numbered: false
+  - title: Selecting a Licensing Mode
+    url: /recipes/accessibility/license-selection
+    not_numbered: false
   - title: FAIR Assessment
     url: /recipes/assessing-fairness
     not_numbered: false
