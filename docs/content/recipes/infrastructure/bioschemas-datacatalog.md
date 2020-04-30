@@ -235,6 +235,7 @@ ___
 | Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
 | :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
 | Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
+| Leyla Garcia | Bioschemas Community / ZBMED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
 
 ___
 
