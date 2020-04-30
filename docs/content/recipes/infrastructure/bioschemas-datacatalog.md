@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+1. [Main FAIRification Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
 4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
@@ -17,7 +17,7 @@
 
 The main purpose of this recipe is:
 
-> To embed Schema.org markup in a web page that publishes multiple datasets in a single page.
+> To embed `Schema.org` markup in a web page that publishes multiple datasets in a single page.
 
 ___
 
@@ -235,7 +235,7 @@ ___
 | Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
 | :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
 | Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
-| Leyla Garcia | Bioschemas Community / ZBMED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
+| Leyla Garcia | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
 
 ___
 

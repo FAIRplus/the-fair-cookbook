@@ -2,7 +2,7 @@
 
 
 # Table of Contents
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+1. [Main FAIRification Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
 4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
@@ -17,12 +17,12 @@
 
 The main purpose of this recipe is:
 
-> to describe what `search engine optimisation` is and show how to implement markup with the `Schema.org` vocabulary, and Bioschemas extension, to improve page discovery and visibility by web page indexers.
+> to describe what `search engine optimization` is and show how to implement markup with the [`Schema.org`](http://schema.org) vocabulary, and [`Bioschemas`](https://bioschemas.org) extension, to improve page discovery and visibility by web page indexers.
 
-There are sub-recipes for embedding search engine optimisation into specific web pages about a specific type or resource:
+There are sub-recipes for embedding search engine optimization into specific web pages about a specific type or resource:
 - [Data catalog](bioschemas-datacatalog)
 - [Dataset](bioschemas-dataset)
-- [Resource specific page](bioschemas-protein) (Gene, Molecular Entity, Protein)
+- [Resource specific page](bioschemas-data-page) (Gene, Molecular Entity, Protein)
 
 ___
 
@@ -75,7 +75,7 @@ With billions of web pages served, a key issue is finding content. To assist in 
 
 ### What is search engine optimization
 
-Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, `search engine optimization` covers any of the practises which aim at improving the position of a web page in a search result. 
+Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, `search engine optimization` covers any of the practices which aim at improving the position of a web page in a search result. 
 
 
 ### Schema.org Vocabulary
@@ -157,7 +157,7 @@ Now, we are presenting the same information augmented with the JSON-LD file usin
 `JSON-LD` is an official serialization of `RDF` and the document is recognized as a `graph` holding a set of `triples`. The availability of such semantic statements from a web page are exploited by the indexing algorithms of search engines to provide improved search results. 
 
 
-### Tools supported creation and validation to `structured data`
+### Tools supporting creation and validation of `structured data`
 
 Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the [`Google Structured Data Testing Tool`](https://search.google.com/structured-data/testing-tool)
@@ -168,7 +168,7 @@ The tool is known as the [`Google Structured Data Testing Tool`](https://search.
 
 ### Bioschemas: trying to address the coverage gap
 
-`Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschemas` focused on making Schema.org more relevant for the life sciences community by providing:
+`Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschemas` focuses on making Schema.org more relevant for the life sciences community by providing:
 
 1. `types` for life sciences entities such as chemicals, genes, and proteins.
 1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable
@@ -211,7 +211,7 @@ ___
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
 | Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Contributions to text |
-| Leyla Garcia | Bioschemas Community / ZBMED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
+| Leyla Garcia | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
 
 ___
 
