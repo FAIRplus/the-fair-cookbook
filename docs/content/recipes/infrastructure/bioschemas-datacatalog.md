@@ -196,7 +196,8 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
    with
 
    ```json
-"provider": {
+   "provider": [
+       {
          "@type": "Organization",
          "@id": "https://fairsharing.org/communities"
        }
