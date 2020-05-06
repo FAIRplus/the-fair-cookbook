@@ -35,17 +35,17 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </blockquote>
 <hr>
 <h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt=""></a></p>
-
-<pre><code>graph TD
-  A[HTML page] --&gt;| Search Engine Optimization| B(Schema.org augmented HTML page)
-  B --&gt; C{which technique?}
-  C --&gt;|One| D[fa:fa-star fa:fa-star fa:fa-star JSON-LD]
-  C --&gt;|Two| E[fa:fa-star fa:fa-star RDFa]
-  C --&gt;|Three| F[fa:fa-star microformat]
-  D --&gt; G
-    E --&gt; G
-  F --&gt; G[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]</code></pre>
-<hr>
+<div>
+graph TD
+  A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
+  B --> C{which technique?}
+  C -->|One| D[fa:fa-star fa:fa-star fa:fa-star JSON-LD]
+  C -->|Two| E[fa:fa-star fa:fa-star RDFa]
+  C -->|Three| F[fa:fa-star microformat]
+  D --> G
+    E --> G
+  F --> G[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
+</div><hr>
 <h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
 <thead><tr>
 <th style="text-align:left">Capability</th>

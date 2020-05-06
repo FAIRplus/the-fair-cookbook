@@ -25,8 +25,7 @@ ___
 ## Graphical Overview of the FAIRification Recipe Objectives
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
 
-
-```
+<div>
 graph TD
   A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
   B --> C{which technique?}
@@ -36,7 +35,7 @@ graph TD
   D --> G
 	E --> G
   F	--> G[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
-```  
+</div>
   
 ___
 

@@ -95,13 +95,12 @@ gantt
 <div class="mermaid">
 graph LR;
     A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
+    A["input data"]-->C["automatic annotation"]:::box;
     B["conversion to open format"]-->D(("output data"));
     C["automatic annotation"]-->D(("output data"));  
     style A fill:#FF5733,stroke:#333,stroke-width:2px
     style D fill:#0A749B,stroke:#333,stroke-width:2px
+    classDef box fill:#2a9fc9,color:#fff;
 </div>
-
-
 if you cannot view the Gantt chart or the State Diagram, it means you  are running an outdated version of the mermaid distribution.
 try upgrading by download the files from [here](https://unpkg.com/browse/mermaid@8.4.8/dist/)

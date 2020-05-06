@@ -23,11 +23,11 @@
 
 # Top-level page
 - title: FAIR Cookbook
-  url: intro
+  url: /intro
   not_numbered: true
 
 # External link
-- title: GitHub repository
+- title: Go to GitHub repository...
   url: https://github.com/FAIRplus/the-fair-cookbook
   external: true
   not_numbered: true
@@ -59,7 +59,7 @@
   sections:
   - title: The Values of FAIR
     url: /recipes/introduction/FAIRplus-values
-    not_numbered: false  
+    not_numbered: false
   - title: Infrastructure for FAIR
     url: /recipes/infrastructure
     not_numbered: false
@@ -76,7 +76,7 @@
       # - title: Chemical identities - Generating InChI and SMILES strings
       #   url: /recipes/infrastructure/chemical-identities
       #   not_numbered: false
-      #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook 
+      #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook
       - title: Building a Data Catalogue
         url: /recipes/infrastructure/data-catalog
         not_numbered: false
@@ -84,16 +84,16 @@
       - title: Search Engine optimization
         url: /recipes/infrastructure/seo
         not_numbered: false
-        expand_sections: false   
+        expand_sections: false
   - title: Accessibility
     url: /recipes/accessibility
     not_numbered: false
   - title: Recipe Template
-    url: /recipes/recipe-template
-    not_numbered: false 
+    url: /recipes/help/recipe-template
+    not_numbered: false
   - title: Anonymization Recipe
-    url: /recipes/anonymization-recipe
-    not_numbered: false    
+    url: /recipes/accessibility/anonymization
+    not_numbered: false
   - title: How to request new terms in existing ontologies
     url: /recipes/new-ontology-term-request-recipe
     not_numbered: false
@@ -106,7 +106,7 @@
     subsections:
       - title: Assessing FAIRness
         url: /recipes/assessing-fairness/fair-assessment-recipe
-        not_numbered: false 
+        not_numbered: false
 
   - title: Applied Examples
     url: /recipes/applied-examples
@@ -127,23 +127,23 @@
           - title: Plotting from Frictionless Data Package in R
             url: /recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis
             not_numbered: false
-            expand_sections: true         
+            expand_sections: true
           - title: Exploration fo semantic model with SPARQL
             url: /recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
             not_numbered: false
             expand_sections: true
       - title: eTOX experience Recipe
-        url: /recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario 
-        not_numbered: false    
+        url: /recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
+        not_numbered: false
       - title: RESOLUTE experience Recipe
         url: /recipes/applied-examples/resolute_raw/rawRecipe_resolute
-        not_numbered: false 
+        not_numbered: false
       - title: ONCOTRACK experience Recipe
         url: /recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
-        not_numbered: false 
+        not_numbered: false
       - title: ND4BB experience Recipe
         url: /recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
-        not_numbered: false  
+        not_numbered: false
 
 # Divider for meta-pages and search page
 - divider: true
@@ -193,7 +193,7 @@
   not_numbered: false
 - title: Recipe Template
   url: /recipes/help/recipe-template
-  not_numbered: false 
+  not_numbered: false
 
 
 - title: frictionless
@@ -208,7 +208,7 @@
   - title: 4
     url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
 - title: mermaidsetup
-  url: /1/mermaidsetup  
+  url: /1/mermaidsetup
 
 
 # Divider for meta-pages and content page
@@ -216,36 +216,35 @@
 
 # people section
 - title: People
-  url: People
-  not_numbered: true  
+  url: /People
+  not_numbered: true
 
 # Contribution section
 - title: Contributing
-  url: Contributing
+  url: /Contributing
   not_numbered: true
 
 # Governance section
 - title: Governance
-  url: Governance
-  not_numbered: true 
+  url: /Governance
+  not_numbered: true
 
 # license section
 - title: License
-  url: license
-  not_numbered: true    
+  url: /license
+  not_numbered: true
 
 # disclaimer section
 - title: Disclaimer
-  url: disclaimer
-  not_numbered: true  
+  url: /disclaimer
+  not_numbered: true
 
 # Code of Conduct section
 - title: Code of Conduct
-  url: code_of_conduct
-  not_numbered: true  
+  url: /code_of_conduct
+  not_numbered: true
 
 # publications section
 - title: Publications
-  url: papers
-  not_numbered: true    
-  
+  url: /papers
+  not_numbered: true

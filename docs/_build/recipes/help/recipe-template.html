@@ -19,14 +19,18 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<h1 id="[here-comes-the-Title-of-the-recipe]">[here comes the Title of the recipe]<a class="anchor-link" href="#[here-comes-the-Title-of-the-recipe]"> </a></h1><h2 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h2><ol>
 <li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
 <li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li>Requirements</li>
 <li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
 <li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
 <li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
-<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
-<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#Main%20Content">Main Content goes here...</a><ul>
+<li><a href="#Executable%20Code%20in%20Notebook">... writing executable code</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">... creating workflow figures</a></li>
+</ul>
+</li>
 <li><a href="#License">License</a></li>
 </ol>
 <hr>
@@ -43,6 +47,22 @@ graph LR;
     C -->|Yes| D[Standard Compliant Data]
     C -->|No| E[Vendor locked Data]
 </div><hr>
+<h2 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h2><ul>
+<li>technical requirements:<ul>
+<li>bash knowledge</li>
+<li>...</li>
+</ul>
+</li>
+<li>recipe dependency:<ul>
+<li>read Recipe 1 first!</li>
+</ul>
+</li>
+<li>knowledge requirement:<ul>
+<li>be sure to know what OBO is, or read it here: ...link to knowledge...</li>
+</ul>
+</li>
+</ul>
+<hr>
 <h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
 <thead><tr>
 <th style="text-align:left">Capability</th>
@@ -58,6 +78,7 @@ graph LR;
 </tr>
 </tbody>
 </table>
+<p>Help to fill this table out can be found ...(not yet)...</p>
 <hr>
 <h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
 <thead><tr>
@@ -110,13 +131,13 @@ graph LR;
 </tbody>
 </table>
 <hr>
-<h2 id="Executable-Code-in-Notebook">Executable Code in Notebook<a class="anchor-link" href="#Executable-Code-in-Notebook"> </a></h2><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">isatools</span>
+<h2 id="Main-Content">Main Content<a class="anchor-link" href="#Main-Content"> </a></h2><p>This is the place for your actual content. You can also ...</p>
+<h3 id="...-write-executable-code">... write executable code<a class="anchor-link" href="#...-write-executable-code"> </a></h3><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">isatools</span>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
 <span class="kn">import</span> <span class="nn">holoview</span>
 </pre></div>
-<hr>
-<h2 id="How-to-create-workflow-figures">How to create workflow figures<a class="anchor-link" href="#How-to-create-workflow-figures"> </a></h2><p>one may use the following <strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> syntax:</p>
+<h3 id="...-create-workflow-figures">... create workflow figures<a class="anchor-link" href="#...-create-workflow-figures"> </a></h3><p>one may use the following <strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> syntax:</p>
 
 <pre><code>graph LR;
     A[Data Acquisition] --&gt;B(Raw Data)
@@ -139,6 +160,7 @@ graph LR;
 <th style="text-align:left">Affiliation</th>
 <th style="text-align:left">orcid</th>
 <th style="text-align:left">CrediT role</th>
+<th style="text-align:left">specific contribution</th>
 </tr>
 </thead>
 <tbody>
@@ -147,17 +169,34 @@ graph LR;
 <td style="text-align:left">University of Oxford, Data Readiness Group</td>
 <td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
 <td style="text-align:left">Writing - Original Draft</td>
+<td style="text-align:left">original format</td>
 </tr>
 <tr>
 <td style="text-align:left">Susanna-Assunta Sansone</td>
 <td style="text-align:left">University of Oxford, Data Readiness Group</td>
 <td style="text-align:left"></td>
 <td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Alasdair Gray</td>
+<td style="text-align:left">Heriot-Watt Unviersity / ELIXIR-UK</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-5711-4872">0000-0002-5711-4872</a></td>
+<td style="text-align:left">Writing - Review &amp; Editing</td>
+<td style="text-align:left">minor improvements (see git)</td>
+</tr>
+<tr>
+<td style="text-align:left">Robert Giessmann</td>
+<td style="text-align:left">Bayer AG</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-0254-1500">0000-0002-0254-1500</a></td>
+<td style="text-align:left">Writing - Review &amp; Editing</td>
+<td style="text-align:left">minor improvements (see git)</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
 
 </div>
 </div>
