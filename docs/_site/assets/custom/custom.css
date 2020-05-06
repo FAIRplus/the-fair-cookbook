@@ -1,1 +1,7 @@
 /* Put your custom CSS here */
+
+.mermaidClass > rect{
+        fill:#FF0000;
+        stroke:#FFFF00;
+        stroke-width:4px;
+    }

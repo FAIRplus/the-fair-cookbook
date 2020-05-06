@@ -4,8 +4,10 @@
 
 The main purpose of this recipe is:
 
-> To detail the key elements for the creation of a `data catalogue` to enable data `findability` in an organisation.
-> We will cover the following points:
+>  To detail the key elements for the creation of a `data catalogue` to enable data `findability` in an organisation.
+
+We will cover the following points:
+
 1. metadata model selection
 2. annotation with controled vocabularies
 3. ETL
@@ -31,10 +33,54 @@ ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
+<style>
+    .mermaidClass > rect{
+        fill:#FF0000;
+        stroke:#FFFF00;
+        stroke-width:4px;
+    }
+</style>
 
-TODO
+ <div class="mermaid">
+  graph TD
 
-___
+  subgraph two
+  AA(Populate Data Catalogue):::box
+  AA --> |identify<br>data<br>sources| E(Data Source #1):::box
+  AA --> |identify<br>data<br>sources| F(Data Source #n):::box
+  
+  E -->|ETL-1|B1(instance file):::box
+  F -->|ETL-2|B2(instance file):::box
+
+  B1 -->|data persistence| DL(document oriented database)
+  B2 -->|data persistence| DL:::box
+
+  DL[Build Search Function] --> |build search index|SE(Search Engine):::box
+  SE -->|ontology tree search| SSS(Query Expansion):::box
+  SE -->|synonym space search| SSS(Query Expansion)
+  end
+
+  subgraph one
+  A(Building Data Catalogue):::box
+  style one fill:#e8eaeb,font-family:avenir
+  style two fill:#e8eaeb
+  A-->|define curation policies| A3(Curation<br> Policies):::box
+  A3-->|select data model| B(DATS):::box
+  B-->|select controled<br> vocabularies| CV1(key facet #1:<br> CV1):::box
+  B-->|select controled<br> vocabularies| CV2(key facet #2:<br> CV2):::box
+  B-->|select controled<br> vocabularies| CV3(key facet #n:<br> CVn):::box
+
+  linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+  end
+</div>
+
+<!-- 
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBcbiAgc3ViZ3JhcGggdHdvXG4gIEFBKFBvcHVsYXRlIERhdGEgQ2F0YWxvZ3VlKTo6OmJveFxuICBBQSAtLT4gfGlkZW50aWZ5PGJyPmRhdGE8YnI-c291cmNlc3wgRShEYXRhIFNvdXJjZSAjMSk6Ojpib3hcbiAgQUEgLS0-IHxpZGVudGlmeTxicj5kYXRhPGJyPnNvdXJjZXN8IEYoRGF0YSBTb3VyY2UgI24pOjo6Ym94XG4gIFxuICBFIC0tPnxFVEwtMXxCMShpbnN0YW5jZSBmaWxlKTo6OmJveFxuICBGIC0tPnxFVEwtMnxCMihpbnN0YW5jZSBmaWxlKTo6OmJveFxuXG4gIEIxIC0tPnxkYXRhIHBlcnNpc3RlbmNlfCBETChkb2N1bWVudCBvcmllbnRlZCBkYXRhYmFzZSlcbiAgQjIgLS0-fGRhdGEgcGVyc2lzdGVuY2V8IERMOjo6Ym94XG5cbiAgRExbQnVpbGQgU2VhcmNoIEZ1bmN0aW9uXSAtLT4gfGJ1aWxkIHNlYXJjaCBpbmRleHxTRShTZWFyY2ggRW5naW5lKTo6OmJveFxuICBTRSAtLT58b250b2xvZ3kgdHJlZSBzZWFyY2h8IFNTUyhRdWVyeSBFeHBhbnNpb24pOjo6Ym94XG4gIFNFIC0tPnxzeW5vbnltIHNwYWNlIHNlYXJjaHwgU1NTKFF1ZXJ5IEV4cGFuc2lvbilcbiAgZW5kXG5cbiAgc3ViZ3JhcGggb25lXG4gIEEoQnVpbGRpbmcgRGF0YSBDYXRhbG9ndWUpIFxuICBzdHlsZSBBIGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbiAgY2xhc3NEZWYgYm94IGZpbGw6IzJhOWZjOSxjb2xvcjojZmZmO1xuICBBIC0tPiB8ZGVmaW5lIGN1cmF0aW9uIHBvbGljaWVzfCBBMyhDdXJhdGlvbjxicj4gUG9saWNpZXMpOjo6Ym94XG4gIFxuICBCOjo6Ym94IC0tPnxzZWxlY3QgY29udHJvbGxlZDxicj4gdm9jYWJ1bGFyaWVzfCBDVjEoa2V5LWZhY2V0IzE6PGJyPiBDVjEpOjo6Ym94XG4gIEIgLS0-fHNlbGVjdCBjb250cm9sbGVkPGJyPiB2b2NhYnVsYXJpZXN8IENWMihrZXktZmFjZXQjMjo8YnI-IENWMik6Ojpib3hcbiAgQiAtLT58c2VsZWN0IGNvbnRyb2xsZWQ8YnI-IHZvY2FidWxhcmllc3wgQ1YzKGtleS1mYWNldCNuOjxicj4gQ1ZuKTo6OmJveFxuXG4gIEEzIC0tPnxzZWxlY3QgZGF0YSBtb2RlbHwgQihEQVRTKVxuICBlbmRcblx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBcbiAgc3ViZ3JhcGggdHdvXG4gIEFBKFBvcHVsYXRlIERhdGEgQ2F0YWxvZ3VlKTo6OmJveFxuICBBQSAtLT4gfGlkZW50aWZ5PGJyPmRhdGE8YnI-c291cmNlc3wgRShEYXRhIFNvdXJjZSAjMSk6Ojpib3hcbiAgQUEgLS0-IHxpZGVudGlmeTxicj5kYXRhPGJyPnNvdXJjZXN8IEYoRGF0YSBTb3VyY2UgI24pOjo6Ym94XG4gIFxuICBFIC0tPnxFVEwtMXxCMShpbnN0YW5jZSBmaWxlKTo6OmJveFxuICBGIC0tPnxFVEwtMnxCMihpbnN0YW5jZSBmaWxlKTo6OmJveFxuXG4gIEIxIC0tPnxkYXRhIHBlcnNpc3RlbmNlfCBETChkb2N1bWVudCBvcmllbnRlZCBkYXRhYmFzZSlcbiAgQjIgLS0-fGRhdGEgcGVyc2lzdGVuY2V8IERMOjo6Ym94XG5cbiAgRExbQnVpbGQgU2VhcmNoIEZ1bmN0aW9uXSAtLT4gfGJ1aWxkIHNlYXJjaCBpbmRleHxTRShTZWFyY2ggRW5naW5lKTo6OmJveFxuICBTRSAtLT58b250b2xvZ3kgdHJlZSBzZWFyY2h8IFNTUyhRdWVyeSBFeHBhbnNpb24pOjo6Ym94XG4gIFNFIC0tPnxzeW5vbnltIHNwYWNlIHNlYXJjaHwgU1NTKFF1ZXJ5IEV4cGFuc2lvbilcbiAgZW5kXG5cbiAgc3ViZ3JhcGggb25lXG4gIEEoQnVpbGRpbmcgRGF0YSBDYXRhbG9ndWUpIFxuICBzdHlsZSBBIGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbiAgY2xhc3NEZWYgYm94IGZpbGw6IzJhOWZjOSxjb2xvcjojZmZmO1xuICBBIC0tPiB8ZGVmaW5lIGN1cmF0aW9uIHBvbGljaWVzfCBBMyhDdXJhdGlvbjxicj4gUG9saWNpZXMpOjo6Ym94XG4gIFxuICBCOjo6Ym94IC0tPnxzZWxlY3QgY29udHJvbGxlZDxicj4gdm9jYWJ1bGFyaWVzfCBDVjEoa2V5LWZhY2V0IzE6PGJyPiBDVjEpOjo6Ym94XG4gIEIgLS0-fHNlbGVjdCBjb250cm9sbGVkPGJyPiB2b2NhYnVsYXJpZXN8IENWMihrZXktZmFjZXQjMjo8YnI-IENWMik6Ojpib3hcbiAgQiAtLT58c2VsZWN0IGNvbnRyb2xsZWQ8YnI-IHZvY2FidWxhcmllc3wgQ1YzKGtleS1mYWNldCNuOjxicj4gQ1ZuKTo6OmJveFxuXG4gIEEzIC0tPnxzZWxlY3QgZGF0YSBtb2RlbHwgQihEQVRTKVxuICBlbmRcblx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)  
+-->
+
+
+---
 
 ## Capability & Maturity Table 
 

@@ -42,7 +42,8 @@ ___
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
 | Findability | minimal | repeatable |
-| Interoperability | minimal |  |
+| Interoperability | minimal |   |
+
 
 ----
 
@@ -62,7 +63,7 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
    3.  Click on the `Show Form` button
 
-   ![Bioschemas Generator start screen](BioschemasGenerator.png)
+![Bioschemas Generator start screen](BioschemasGenerator.png )
 
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
 
@@ -163,7 +164,7 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 8. If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
    ```json
-   <script type="application/ld+json" >
+   <script type="application/ld+json">
    {
      "@context": "http://schema.org",
      "@id": "%%%PAGEURL%%%",
@@ -183,7 +184,9 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
          "name": "UniProt Consortium"
        }
        ...
+     ]
    }
+  </script>
    ```
 
 Your site should now generate dataset pages with embedded markup. 
@@ -206,6 +209,7 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 | :------------- | :------------- | :------------- |
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 | [HTML](http://edamontology.org/format_2331) | | |
+
 ___
 
 ## Authors:
@@ -217,11 +221,14 @@ ___
 
 ___
 
+## Footnotes:
+
+<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
+
+___
 
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
 
-## Footnotes:
 
-<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.

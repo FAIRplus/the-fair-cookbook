@@ -227,7 +227,8 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
-| [HTML](http://edamontology.org/format_2331) | | |
+| [HTML](http://edamontology.org/format_2331) | |  |
+
 ___
 
 ## Authors:
@@ -239,11 +240,14 @@ ___
 
 ___
 
+## Footnotes:
+
+<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
+
+___
 
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
 
-## Footnotes:
 
-<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
