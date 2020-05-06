@@ -2,7 +2,7 @@
 
 
 # Table of Contents
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+1. [Main FAIRification Objectives](#Main%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
 4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
@@ -17,26 +17,44 @@
 
 The main purpose of this recipe is:
 
-> to describe what `search engine optimisation` is and show how to implement markup with `schema.org` vocabulary to improve page discovery and visibility by web page indexers.
+> to describe what `search engine optimization` is and show how to implement markup with the [`Schema.org`](http://schema.org) vocabulary, and [`Bioschemas`](https://bioschemas.org) extension, to improve page discovery and visibility by web page indexers.
+
+There are sub-recipes for embedding search engine optimization into specific web pages about a specific type or resource:
+- [Data catalog](./seo/bioschemas-datacatalog.html)
+- [Dataset](./seo/bioschemas-dataset.html)
+- [Resource specific page](./seo/bioschemas-data-page.html) (Gene, Molecular Entity, Protein)
 
 ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
 
-<div>
+![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7d2hhdCB0eXBlIG9mIHBhZ2U_fVxuICBCIC0tPiBDW0RhdGFzZXRdXG4gIEIgLS0-IERbRGF0YSBjYXRhbG9nXVxuICBCIC0tPiBFW0RhdGEgcGFnZV1cbiAgRSAtLT4gRntXaGF0IHR5cGUgb2YgZGF0YSBwYWdlfVxuICBGIC0tPiBHW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiAgRiAtLT4gSFtHZW5lXVxuICBGIC0tPiBJW01vbGVjdWxhciBlbnRpdHldXG4gIEYgLS0-IEpbUHJvdGVpbl1cbiAgRiAtLT4gS1tTYW1wbGVdXG4gIEYgLS0-IExbVGF4b25dXG4gIEMgLS0-IE1cbiAgRCAtLT4gTVxuICBHIC0tPiBNXG4gIEhcdC0tPiBNXG4gIEkgLS0-IE1cbiAgSiAtLT4gTVxuICBLIC0tPiBNXG4gIEwgLS0-IE1bU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXVxuICBNIC0tPiBOW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgaW1wcm92ZWQgZGlzY292ZXJhYmlsaXR5XSIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+
+```
 graph TD
-  A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
-  B --> C{which technique?}
-  C -->|One| D[fa:fa-star fa:fa-star fa:fa-star JSON-LD]
-  C -->|Two| E[fa:fa-star fa:fa-star RDFa]
-  C -->|Three| F[fa:fa-star microformat]
-  D --> G
-	E --> G
-  F	--> G[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
-</div>
-  
+  A[HTML page] -->| Search Engine Optimization| B{what type of page?}
+  B --> C[Dataset]
+  B --> D[Data catalog]
+  B --> E[Data page]
+  E --> F{What type of data page}
+  F --> G[Chemical Substance]
+  F --> H[Gene]
+  F --> I[Molecular entity]
+  F --> J[Protein]
+  F --> K[Sample]
+  F --> L[Taxon]
+  C --> M
+  D --> M
+  G --> M
+  H	--> M
+  I --> M
+  J --> M
+  K --> M
+  L --> M[Schema.org augmented HTML page]
+  M --> N[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
+```
+
 ___
 
 ## Capability & Maturity Table
@@ -44,6 +62,7 @@ ___
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
 | Findabililty | minimal | repeatable |
+| Interoperability | minimal | |
 
 ----
 
@@ -51,12 +70,13 @@ ___
 
 ### Finding web pages
 
-Providers of content for the Internet serve documents formatted or rendered in [`HTML` format](https://en.wikipedia.org/wiki/HTML). The web pages are hosted on servers, which are accessed via the [`HTTP protocol`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol). HTML pages can be styled with `cascading stylesheets (CSS)[https://en.wikipedia.org/wiki/Cascading_Style_Sheets]` and interactivity can be delivered via scripting language, in particular [`Javascript`](https://en.wikipedia.org/wiki/JavaScript).
-With billions of web pages served, a key issue is finding content. To assist in this task, search engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (.e.g site map), or by targeting specific data structures embedded in the web pages themselves.
+Providers of content for the Internet serve documents formatted or rendered in [`HTML` format](https://en.wikipedia.org/wiki/HTML). The web pages are hosted on servers, which are accessed via the [`HTTP protocol`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol). HTML pages can be styled with [`cascading stylesheets (CSS)`](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and interactivity can be delivered via scripting languages such as [`Javascript`](https://en.wikipedia.org/wiki/JavaScript).
+
+With billions of web pages served, a key issue is finding content. To assist in this task, search engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (e.g. site map), or by targeting specific data structures embedded in the web pages themselves.
 
 ### What is search engine optimization
 
-Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, `search engine optimization` covers any of the practises which aim at improving the position of a web page in a search result. 
+Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, `search engine optimization` covers any of the practices which aim at improving the position of a web page in a search result. 
 
 
 ### Schema.org Vocabulary
@@ -64,9 +84,9 @@ Search engine index pages based on their content, as identified by web crawlers.
 A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
 Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation
 
-### How does schema.org works in practice:
+### How does Schema.org work in practice:
 
-The principle is actually fairly simple. It essentially relies on embebbed a file into the HTML content. A variety of options are available (RDFa, microformat, JSON-LD). `JSON-LD` is fast becoming a very popular way to representing key entities served by the page.
+The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). `JSON-LD` is widely recommended as the most suitable approach.
 
 Below is a regular plain vanilla HTML page providing information about an scientific joournal article.
 
@@ -135,42 +155,43 @@ Now, we are presenting the same information augmented with the JSON-LD file usin
 ```
 
 
-'JSON-LD' is an official serialization of RDF and the document is recognized as a `graph` holding a set of `triples`. These availability of such semantic statements from web page are exploited by the indexing algorithm to place the pages in a semantic search space moree accurately. 
+`JSON-LD` is an official serialization of `RDF` and the document is recognized as a `graph` holding a set of `triples`. The availability of such semantic statements from a web page are exploited by the indexing algorithms of search engines to provide improved search results. 
 
 
-### Tools supported creation and validation to `structured data`
+### Tools supporting creation and validation of `structured data`
 
-Google has produced a online tool allowing developers to test the annotation they produce before rolling them out to production. 
+Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the [`Google Structured Data Testing Tool`](https://search.google.com/structured-data/testing-tool)
 
 ![](https://i.imgur.com/Ge8gsWL.png)
 
 
 
-### Bioschema: trying to address the coverage gap
+### Bioschemas: trying to address the coverage gap
 
-`Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschema` concerned itself with providing `types` addressing the unmeet needs of Bioinformiticians and `Findability` of biological information via search engine searches. The [main profiles](https://bioschemas.org/profiles/) currently specified by the `Bioschema` organisation are as follows:
+`Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschemas` focuses on making Schema.org more relevant for the life sciences community by providing:
 
-* [Dataset]()
-* [Chemical Substance]()
-* [Molecular Entity]()
-* [Gene]()
-* [Protein]()
-* [Taxon]()
-* [Sample]()
+1. `types` for life sciences entities such as chemicals, genes, and proteins.
+1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable
 
+The [main profiles](https://bioschemas.org/profiles/) currently specified by the `Bioschemas` organisation are as follows:
 
-
-
-
+* [Chemical Substance](https://bioschemas.org/profiles/ChemicalSubstance)
+* [DataCatalog](https://bioschemas.org/profiles/DataCatalog)
+* [Dataset](https://bioschemas.org/profiles/Dataset)
+* [Gene](https://bioschemas.org/profiles/Gene)
+* [Molecular Entity](https://bioschemas.org/profiles/MolecularEntity)
+* [Protein](https://bioschemas.org/profiles/Protein)
+* [Sample](https://bioschemas.org/profiles/Sample)
+* [Taxon](https://bioschemas.org/profiles/Taxon)
 
 ----
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [text annotation](http://edamontology.org/operation_3778)  | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)  | [annotated text](http://edamontology.org/data_3779)  |
-| [validation](http://edamontology.org/operation_2428)  | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)  | [report](http://edamontology.org/data_2048)  |
+| [text annotation](http://edamontology.org/operation_3778)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)  | [annotated text](http://edamontology.org/data_3779)  |
+| [validation](http://edamontology.org/operation_2428)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)  | [report](http://edamontology.org/data_2048)  |
 
 
 
@@ -178,8 +199,8 @@ The tool is known as the [`Google Structured Data Testing Tool`](https://search.
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-|  [JSON-LD](https://fairsharing.org/bsg-s001214/)  | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](https://fairsharing.org/FAIRsharing.qk984b)  |
-|   |  |   |
+|  [JSON-LD](http://edamontology.org/format_3749)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](http://edamontology.org/data_2353)  |
+| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 
 ___
 
@@ -189,7 +210,9 @@ ___
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | 
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
+| Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Contributions to text |
+| Leyla Garcia | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
 
 ___
 

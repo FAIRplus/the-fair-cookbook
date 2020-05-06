@@ -84,9 +84,9 @@
         - title: bioschema data catalog
           url: /recipes/findability/seo/bioschemas-datacatalog
         - title: bioschema dataset
-          url: /recipes/findability/bioschemas-dataset
+          url: /recipes/findability/seo/bioschemas-dataset
         - title: bioschema data page
-          url: /recipes/findability/bioschemas-data-page
+          url: /recipes/findability/seo/bioschemas-data-page
         
   - title: Interoperability
     url:  /recipes/interoperability

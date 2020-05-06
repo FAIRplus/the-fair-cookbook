@@ -20,7 +20,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Findability:-Search-Engine-Optimization">Findability: Search Engine Optimization<a class="anchor-link" href="#Findability:-Search-Engine-Optimization"> </a></h1><h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
-<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Main%20Objectives">Main FAIRification Objectives</a></li>
 <li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
 <li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
 <li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
@@ -31,21 +31,39 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </ol>
 <hr>
 <h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
-<blockquote><p>to describe what <code>search engine optimisation</code> is and show how to implement markup with <code>schema.org</code> vocabulary to improve page discovery and visibility by web page indexers.</p>
+<blockquote><p>to describe what <code>search engine optimization</code> is and show how to implement markup with the <a href="http://schema.org"><code>Schema.org</code></a> vocabulary, and <a href="https://bioschemas.org"><code>Bioschemas</code></a> extension, to improve page discovery and visibility by web page indexers.</p>
 </blockquote>
+<p>There are sub-recipes for embedding search engine optimization into specific web pages about a specific type or resource:</p>
+<ul>
+<li><a href="./seo/bioschemas-datacatalog.html">Data catalog</a></li>
+<li><a href="./seo/bioschemas-dataset.html">Dataset</a></li>
+<li><a href="./seo/bioschemas-data-page.html">Resource specific page</a> (Gene, Molecular Entity, Protein)</li>
+</ul>
 <hr>
-<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEIoZmE6ZmEtc2VhcmNoIFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSlcbiAgQiAtLT4gQ3t3aGljaCB0ZWNobmlxdWU_fVxuICBDIC0tPnxPbmV8IERbZmE6ZmEtc3RhciBmYTpmYS1zdGFyIGZhOmZhLXN0YXIgSlNPTi1MRF1cbiAgQyAtLT58VHdvfCBFW2ZhOmZhLXN0YXIgZmE6ZmEtc3RhciBSREZhXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1zdGFyIG1pY3JvZm9ybWF0XVxuICBEIC0tPiBHXG5cdEUgLS0-IEdcbiAgRlx0LS0-IEdbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBpbXByb3ZlZCBkaXNjb3ZlcmFiaWxpdHldIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt=""></a></p>
-<div>
-graph TD
-  A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page)
-  B --> C{which technique?}
-  C -->|One| D[fa:fa-star fa:fa-star fa:fa-star JSON-LD]
-  C -->|Two| E[fa:fa-star fa:fa-star RDFa]
-  C -->|Three| F[fa:fa-star microformat]
-  D --> G
-    E --> G
-  F --> G[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
-</div><hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7d2hhdCB0eXBlIG9mIHBhZ2U_fVxuICBCIC0tPiBDW0RhdGFzZXRdXG4gIEIgLS0-IERbRGF0YSBjYXRhbG9nXVxuICBCIC0tPiBFW0RhdGEgcGFnZV1cbiAgRSAtLT4gRntXaGF0IHR5cGUgb2YgZGF0YSBwYWdlfVxuICBGIC0tPiBHW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiAgRiAtLT4gSFtHZW5lXVxuICBGIC0tPiBJW01vbGVjdWxhciBlbnRpdHldXG4gIEYgLS0-IEpbUHJvdGVpbl1cbiAgRiAtLT4gS1tTYW1wbGVdXG4gIEYgLS0-IExbVGF4b25dXG4gIEMgLS0-IE1cbiAgRCAtLT4gTVxuICBHIC0tPiBNXG4gIEhcdC0tPiBNXG4gIEkgLS0-IE1cbiAgSiAtLT4gTVxuICBLIC0tPiBNXG4gIEwgLS0-IE1bU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXVxuICBNIC0tPiBOW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgaW1wcm92ZWQgZGlzY292ZXJhYmlsaXR5XSIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" alt=""></p>
+
+<pre><code>graph TD
+  A[HTML page] --&gt;| Search Engine Optimization| B{what type of page?}
+  B --&gt; C[Dataset]
+  B --&gt; D[Data catalog]
+  B --&gt; E[Data page]
+  E --&gt; F{What type of data page}
+  F --&gt; G[Chemical Substance]
+  F --&gt; H[Gene]
+  F --&gt; I[Molecular entity]
+  F --&gt; J[Protein]
+  F --&gt; K[Sample]
+  F --&gt; L[Taxon]
+  C --&gt; M
+  D --&gt; M
+  G --&gt; M
+  H --&gt; M
+  I --&gt; M
+  J --&gt; M
+  K --&gt; M
+  L --&gt; M[Schema.org augmented HTML page]
+  M --&gt; N[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]</code></pre>
+<hr>
 <h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
 <thead><tr>
 <th style="text-align:left">Capability</th>
@@ -59,15 +77,19 @@ graph TD
 <td style="text-align:left">minimal</td>
 <td style="text-align:left">repeatable</td>
 </tr>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+</tr>
 </tbody>
 </table>
 <hr>
-<h2 id="Main-body-of-the-recipe">Main body of the recipe<a class="anchor-link" href="#Main-body-of-the-recipe"> </a></h2><h3 id="Finding-web-pages">Finding web pages<a class="anchor-link" href="#Finding-web-pages"> </a></h3><p>Providers of content for the Internet serve documents formatted or rendered in <a href="https://en.wikipedia.org/wiki/HTML"><code>HTML</code> format</a>. The web pages are hosted on servers, which are accessed via the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"><code>HTTP protocol</code></a>. HTML pages can be styled with <code>cascading stylesheets (CSS)[https://en.wikipedia.org/wiki/Cascading_Style_Sheets]</code> and interactivity can be delivered via scripting language, in particular <a href="https://en.wikipedia.org/wiki/JavaScript"><code>Javascript</code></a>.
-With billions of web pages served, a key issue is finding content. To assist in this task, search engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (.e.g site map), or by targeting specific data structures embedded in the web pages themselves.</p>
-<h3 id="What-is-search-engine-optimization">What is search engine optimization<a class="anchor-link" href="#What-is-search-engine-optimization"> </a></h3><p>Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, <code>search engine optimization</code> covers any of the practises which aim at improving the position of a web page in a search result.</p>
+<h2 id="Main-body-of-the-recipe">Main body of the recipe<a class="anchor-link" href="#Main-body-of-the-recipe"> </a></h2><h3 id="Finding-web-pages">Finding web pages<a class="anchor-link" href="#Finding-web-pages"> </a></h3><p>Providers of content for the Internet serve documents formatted or rendered in <a href="https://en.wikipedia.org/wiki/HTML"><code>HTML</code> format</a>. The web pages are hosted on servers, which are accessed via the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"><code>HTTP protocol</code></a>. HTML pages can be styled with <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"><code>cascading stylesheets (CSS)</code></a> and interactivity can be delivered via scripting languages such as <a href="https://en.wikipedia.org/wiki/JavaScript"><code>Javascript</code></a>.</p>
+<p>With billions of web pages served, a key issue is finding content. To assist in this task, search engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (e.g. site map), or by targeting specific data structures embedded in the web pages themselves.</p>
+<h3 id="What-is-search-engine-optimization">What is search engine optimization<a class="anchor-link" href="#What-is-search-engine-optimization"> </a></h3><p>Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, <code>search engine optimization</code> covers any of the practices which aim at improving the position of a web page in a search result.</p>
 <h3 id="Schema.org-Vocabulary">Schema.org Vocabulary<a class="anchor-link" href="#Schema.org-Vocabulary"> </a></h3><p>A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
 Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation</p>
-<h3 id="How-does-schema.org-works-in-practice:">How does schema.org works in practice:<a class="anchor-link" href="#How-does-schema.org-works-in-practice:"> </a></h3><p>The principle is actually fairly simple. It essentially relies on embebbed a file into the HTML content. A variety of options are available (RDFa, microformat, JSON-LD). <code>JSON-LD</code> is fast becoming a very popular way to representing key entities served by the page.</p>
+<h3 id="How-does-Schema.org-work-in-practice:">How does Schema.org work in practice:<a class="anchor-link" href="#How-does-Schema.org-work-in-practice:"> </a></h3><p>The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). <code>JSON-LD</code> is widely recommended as the most suitable approach.</p>
 <p>Below is a regular plain vanilla HTML page providing information about an scientific joournal article.</p>
 <div class="highlight"><pre><span></span><span class="c">&lt;!-- A list of the issues for a single volume of a given periodical. --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -127,19 +149,25 @@ Compared to plain keyword based indexing, annotation with structured vocabulary 
 <span class="p">}</span>
 <span class="err">&lt;/script&gt;</span>
 </pre></div>
-<p>'JSON-LD' is an official serialization of RDF and the document is recognized as a <code>graph</code> holding a set of <code>triples</code>. These availability of such semantic statements from web page are exploited by the indexing algorithm to place the pages in a semantic search space moree accurately.</p>
-<h3 id="Tools-supported-creation-and-validation-to-structured-data">Tools supported creation and validation to <code>structured data</code><a class="anchor-link" href="#Tools-supported-creation-and-validation-to-structured-data"> </a></h3><p>Google has produced a online tool allowing developers to test the annotation they produce before rolling them out to production. 
+<p><code>JSON-LD</code> is an official serialization of <code>RDF</code> and the document is recognized as a <code>graph</code> holding a set of <code>triples</code>. The availability of such semantic statements from a web page are exploited by the indexing algorithms of search engines to provide improved search results.</p>
+<h3 id="Tools-supporting-creation-and-validation-of-structured-data">Tools supporting creation and validation of <code>structured data</code><a class="anchor-link" href="#Tools-supporting-creation-and-validation-of-structured-data"> </a></h3><p>Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the <a href="https://search.google.com/structured-data/testing-tool"><code>Google Structured Data Testing Tool</code></a></p>
 <p><img src="https://i.imgur.com/Ge8gsWL.png" alt=""></p>
-<h3 id="Bioschema:-trying-to-address-the-coverage-gap">Bioschema: trying to address the coverage gap<a class="anchor-link" href="#Bioschema:-trying-to-address-the-coverage-gap"> </a></h3><p><code>Schema.org</code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a href="https://bioschemas.org/"><code>Bioschemas project</code></a>, which has been running for a few years with the support of the <a href="https://elixir-europe.org/"><code>EU-Elixir organization</code></a>. <code>Bioschema</code> concerned itself with providing <code>types</code> addressing the unmeet needs of Bioinformiticians and <code>Findability</code> of biological information via search engine searches. The <a href="https://bioschemas.org/profiles/">main profiles</a> currently specified by the <code>Bioschema</code> organisation are as follows:</p>
+<h3 id="Bioschemas:-trying-to-address-the-coverage-gap">Bioschemas: trying to address the coverage gap<a class="anchor-link" href="#Bioschemas:-trying-to-address-the-coverage-gap"> </a></h3><p><code>Schema.org</code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a href="https://bioschemas.org/"><code>Bioschemas project</code></a>, which has been running for a few years with the support of the <a href="https://elixir-europe.org/"><code>EU-Elixir organization</code></a>. <code>Bioschemas</code> focuses on making Schema.org more relevant for the life sciences community by providing:</p>
+<ol>
+<li><code>types</code> for life sciences entities such as chemicals, genes, and proteins.</li>
+<li><code>profiles</code> that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable</li>
+</ol>
+<p>The <a href="https://bioschemas.org/profiles/">main profiles</a> currently specified by the <code>Bioschemas</code> organisation are as follows:</p>
 <ul>
-<li><a href="">Dataset</a></li>
-<li><a href="">Chemical Substance</a></li>
-<li><a href="">Molecular Entity</a></li>
-<li><a href="">Gene</a></li>
-<li><a href="">Protein</a></li>
-<li><a href="">Taxon</a></li>
-<li><a href="">Sample</a></li>
+<li><a href="https://bioschemas.org/profiles/ChemicalSubstance">Chemical Substance</a></li>
+<li><a href="https://bioschemas.org/profiles/DataCatalog">DataCatalog</a></li>
+<li><a href="https://bioschemas.org/profiles/Dataset">Dataset</a></li>
+<li><a href="https://bioschemas.org/profiles/Gene">Gene</a></li>
+<li><a href="https://bioschemas.org/profiles/MolecularEntity">Molecular Entity</a></li>
+<li><a href="https://bioschemas.org/profiles/Protein">Protein</a></li>
+<li><a href="https://bioschemas.org/profiles/Sample">Sample</a></li>
+<li><a href="https://bioschemas.org/profiles/Taxon">Taxon</a></li>
 </ul>
 <hr>
 <h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
@@ -152,12 +180,12 @@ The tool is known as the <a href="https://search.google.com/structured-data/test
 <tbody>
 <tr>
 <td style="text-align:left"><a href="http://edamontology.org/operation_3778">text annotation</a></td>
-<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">Schema.org</a></td>
 <td style="text-align:left"><a href="http://edamontology.org/data_3779">annotated text</a></td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="http://edamontology.org/operation_2428">validation</a></td>
-<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">Schema.org</a></td>
 <td style="text-align:left"><a href="http://edamontology.org/data_2048">report</a></td>
 </tr>
 </tbody>
@@ -171,13 +199,14 @@ The tool is known as the <a href="https://search.google.com/structured-data/test
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://fairsharing.org/bsg-s001214/">JSON-LD</a></td>
-<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></td>
-<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.qk984b">RDF</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/format_3749">JSON-LD</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">Schema.org</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2353">RDF</a></td>
 </tr>
 <tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
+<td style="text-align:left"><a href="http://edamontology.org/format_3749">JSON-LD</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2353">RDF</a></td>
 </tr>
 </tbody>
 </table>
@@ -196,6 +225,18 @@ The tool is known as the <a href="https://search.google.com/structured-data/test
 <td style="text-align:left">University of Oxford, Data Readiness Group</td>
 <td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
 <td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Alasdair Gray</td>
+<td style="text-align:left">Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-5711-4872">0000-0002-5711-4872</a></td>
+<td style="text-align:left">Contributions to text</td>
+</tr>
+<tr>
+<td style="text-align:left">Leyla Garcia</td>
+<td style="text-align:left">Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0003-3986-0510">0000-0003-3986-0510</a></td>
+<td style="text-align:left">External review</td>
 </tr>
 </tbody>
 </table>
