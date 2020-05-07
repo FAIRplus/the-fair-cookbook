@@ -45,8 +45,12 @@ Once you've carried the extension installation, any github repository for which 
 
 in the github repository bar as shown in the figure below:
 
+![](https://i.imgur.com/yI8TRNM.png){: height="36px" width="36px"}
 
-![](https://i.imgur.com/yI8TRNM.png)
+![yI8TRNM]
+
+[yI8TRNM]: https://i.imgur.com/yI8TRNM.png
+{: height="36px" width="36px"}
 
 :warning: This button will only be visible from Chrome or Firefox once the `HackMD` browser extension has been installed. 
 :octopus: This will not be visible from Safari, Brave or Internet Explorer browsers *even if* you have HackMD activated for your repository.
@@ -119,6 +123,7 @@ Navigate to `Versions`. This will bring the following window:
 
 ![](https://i.imgur.com/6AUdRLo.png)
 
+
 Press the blue 'Push to Github' button to bring up the following menu:
 
 ![](https://i.imgur.com/zSMLtMU.png)
@@ -130,7 +135,6 @@ The process is very similar to that described when pulling a file. Except that i
 Fill all the necessary information and press the blue `Push` button.
 
 :radioactive_sign: If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the dedicated email or via our slack channel.
-
 
 ___
 ## Authors:

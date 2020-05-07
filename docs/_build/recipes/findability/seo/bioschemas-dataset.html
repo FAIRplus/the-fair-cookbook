@@ -34,15 +34,21 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <blockquote><p>To embed <code>Schema.org</code> markup in a web page representing a dataset.</p>
 </blockquote>
 <hr>
-<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt=""></a></p>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><!--
 
-<pre><code>graph TD
- A[HTML page] --&gt; B{Page just about one dataset?}
- B --&gt;|YES| C(Create markup for dataset)
- B --&gt;|NO| F[Use DataCatalog Recipe]
- C --&gt; D(Markup Template)
- D --&gt;|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]</code></pre>
-<hr>
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IEJ7UGFnZSA8YnI-IGp1c3QgYWJvdXQgPGJyPiBvbmUgZGF0YXNldD99Ojo6Ym94XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIGRhdGFzZXQpOjo6Ym94XG4gQiAtLT58Tk98IEYoVXNlIERhdGFDYXRhbG9nIFJlY2lwZSk6Ojpib3hcbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSk6Ojpib3hcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFKGZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlKTo6OmJveFxuIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuIGxpbmtTdHlsZSAwLDEsMiwzLDQgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IEJ7UGFnZSA8YnI-IGp1c3QgYWJvdXQgPGJyPiBvbmUgZGF0YXNldD99Ojo6Ym94XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIGRhdGFzZXQpOjo6Ym94XG4gQiAtLT58Tk98IEYoVXNlIERhdGFDYXRhbG9nIFJlY2lwZSk6Ojpib3hcbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSk6Ojpib3hcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFKGZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlKTo6OmJveFxuIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuIGxpbmtTdHlsZSAwLDEsMiwzLDQgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)
+-->
+
+<div class="mermaid">
+graph TD
+ A(HTML page):::box --> B{Page <br> just about <br> one dataset?}:::box
+ B -->|YES| C(Create markup for dataset):::box
+ B -->|NO| F(Use DataCatalog Recipe):::box
+ C --> D(Markup Template):::box
+ D -->|Embed template in website| E(fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page):::box
+ classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+ linkStyle 0,1,2,3,4 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+</div><hr>
 <h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
 <thead><tr>
 <th style="text-align:left">Capability</th>
@@ -79,7 +85,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </ol>
 </li>
 </ol>
-<p><img src="BioschemasGenerator.png" alt="Bioschemas Generator start screen"></p>
+<p><img src="BioschemasGenerator.png =450px" alt="Bioschemas Generator start screen"></p>
 <ol>
 <li><p>Complete the profile form with the data relevant for your page. Once completed, click on the <code>Generate Markup</code>  button</p>
 <ul>

@@ -23,26 +23,29 @@ ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
+<!--
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IHxDcmVhdGUgbWFya3VwIHRlbXBsYXRlfCBCe3doYXQgdHlwZSA8YnI-IG9mIHJlc291cmNlID99Ojo6Ym94XG4gQiAtLT4gQyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gQiAtLT4gRChHZW5lKTo6OmJveFxuIEIgLS0-IEUoTW9sZWN1bGFyIEVudGl0eSk6Ojpib3hcbiBCIC0tPiBGKFByb3RlaW4pOjo6Ym94XG4gQiAtLT4gRyhTYW1wbGUpOjo6Ym94XG4gQiAtLT4gSChUYXhvbik6Ojpib3hcbiBDIC0tPiBJXG4gRCAtLT4gSVxuIEUgLS0-IElcbiBGIC0tPiBJXG4gRyAtLT4gSVxuIEggLS0-IEkoTWFya3VwIHRlbXBsYXRlKTo6OmJveFxuIEkgLS0-IHxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBKKGZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlKTo6OmJveFxuICBjbGFzc0RlZiBib3ggZm9udC1mYW1pbHk6YXZlbmlyLGZvbnQtc2l6ZToxNHB4LGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbiBsaW5rU3R5bGUgMCwxLDIsMyw0LDUsNiw3LDgsOSwxMCwxMSwxMiwxMyBzdHJva2U6IzJhOWZjOSxzdHJva2Utd2lkdGg6MXB4LGNvbG9yOiMyYTlmYzksZm9udC1mYW1pbHk6YXZlbmlyOyIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IHxDcmVhdGUgbWFya3VwIHRlbXBsYXRlfCBCe3doYXQgdHlwZSA8YnI-IG9mIHJlc291cmNlID99Ojo6Ym94XG4gQiAtLT4gQyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gQiAtLT4gRChHZW5lKTo6OmJveFxuIEIgLS0-IEUoTW9sZWN1bGFyIEVudGl0eSk6Ojpib3hcbiBCIC0tPiBGKFByb3RlaW4pOjo6Ym94XG4gQiAtLT4gRyhTYW1wbGUpOjo6Ym94XG4gQiAtLT4gSChUYXhvbik6Ojpib3hcbiBDIC0tPiBJXG4gRCAtLT4gSVxuIEUgLS0-IElcbiBGIC0tPiBJXG4gRyAtLT4gSVxuIEggLS0-IEkoTWFya3VwIHRlbXBsYXRlKTo6OmJveFxuIEkgLS0-IHxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBKKGZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlKTo6OmJveFxuICBjbGFzc0RlZiBib3ggZm9udC1mYW1pbHk6YXZlbmlyLGZvbnQtc2l6ZToxNHB4LGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbiBsaW5rU3R5bGUgMCwxLDIsMyw0LDUsNiw3LDgsOSwxMCwxMSwxMiwxMyBzdHJva2U6IzJhOWZjOSxzdHJva2Utd2lkdGg6MXB4LGNvbG9yOiMyYTlmYzksZm9udC1mYW1pbHk6YXZlbmlyOyIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
+-->
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IHxDcmVhdGUgbWFya3VwIHRlbXBsYXRlfCBCe3doYXQgdHlwZSBvZiByZXNvdXJjZT99XG4gQiAtLT4gQ1tDaGVtaWNhbCBTdWJzdGFuY2VdXG4gQiAtLT4gRFtHZW5lXVxuIEIgLS0-IEVbTW9sZWN1bGFyIEVudGl0eV1cbiBCIC0tPiBGW1Byb3RlaW5dXG4gQiAtLT4gR1tTYW1wbGVdXG4gQiAtLT4gSFtUYXhvbl1cbiBDIC0tPiBJXG4gRCAtLT4gSVxuIEUgLS0-IElcbiBGIC0tPiBJXG4gRyAtLT4gSVxuIEggLS0-IEkoTWFya3VwIHRlbXBsYXRlKVxuIEkgLS0-IHxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBKW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IHxDcmVhdGUgbWFya3VwIHRlbXBsYXRlfCBCe3doYXQgdHlwZSBvZiByZXNvdXJjZT99XG4gQiAtLT4gQ1tDaGVtaWNhbCBTdWJzdGFuY2VdXG4gQiAtLT4gRFtHZW5lXVxuIEIgLS0-IEVbTW9sZWN1bGFyIEVudGl0eV1cbiBCIC0tPiBGW1Byb3RlaW5dXG4gQiAtLT4gR1tTYW1wbGVdXG4gQiAtLT4gSFtUYXhvbl1cbiBDIC0tPiBJXG4gRCAtLT4gSVxuIEUgLS0-IElcbiBGIC0tPiBJXG4gRyAtLT4gSVxuIEggLS0-IEkoTWFya3VwIHRlbXBsYXRlKVxuIEkgLS0-IHxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBKW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
-
-```
+<div class="mermaid">
 graph TD
- A[HTML page] --> |Create markup template| B{what type of resource?}
- B --> C[Chemical Substance]
- B --> D[Gene]
- B --> E[Molecular Entity]
- B --> F[Protein]
- B --> G[Sample]
- B --> H[Taxon]
+ A(HTML page):::box --> |Create markup template| B{what type <br> of resource ?}:::box
+ B --> C(Chemical Substance):::box
+ B --> D(Gene):::box
+ B --> E(Molecular Entity):::box
+ B --> F(Protein):::box
+ B --> G(Sample):::box
+ B --> H(Taxon):::box
  C --> I
  D --> I
  E --> I
  F --> I
  G --> I
- H --> I(Markup template)
- I --> |Embed template in website| J[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
-```
+ H --> I(Markup template):::box
+ I --> |Embed template in website| J(fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page):::box
+  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+ linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+</div>
 
 
 

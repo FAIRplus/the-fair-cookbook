@@ -29,32 +29,35 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtIVE1MIHBhZ2VdIC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7d2hhdCB0eXBlIG9mIHBhZ2U_fVxuICBCIC0tPiBDW0RhdGFzZXRdXG4gIEIgLS0-IERbRGF0YSBjYXRhbG9nXVxuICBCIC0tPiBFW0RhdGEgcGFnZV1cbiAgRSAtLT4gRntXaGF0IHR5cGUgb2YgZGF0YSBwYWdlfVxuICBGIC0tPiBHW0NoZW1pY2FsIFN1YnN0YW5jZV1cbiAgRiAtLT4gSFtHZW5lXVxuICBGIC0tPiBJW01vbGVjdWxhciBlbnRpdHldXG4gIEYgLS0-IEpbUHJvdGVpbl1cbiAgRiAtLT4gS1tTYW1wbGVdXG4gIEYgLS0-IExbVGF4b25dXG4gIEMgLS0-IE1cbiAgRCAtLT4gTVxuICBHIC0tPiBNXG4gIEhcdC0tPiBNXG4gIEkgLS0-IE1cbiAgSiAtLT4gTVxuICBLIC0tPiBNXG4gIEwgLS0-IE1bU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXVxuICBNIC0tPiBOW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgaW1wcm92ZWQgZGlzY292ZXJhYmlsaXR5XSIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+<!--
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQShIVE1MIHBhZ2UpOjo6Ym94IC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7V2hhdCA8YnI-dHlwZSA8YnI-IG9mPGJyPiBwYWdlP306Ojpib3hcbiAgQiAtLT4gQyhEYXRhc2V0KTo6OmJveFxuICBCIC0tPiBEKERhdGEgY2F0YWxvZyk6Ojpib3hcbiAgQiAtLT4gRShEYXRhIHBhZ2UpOjo6Ym94XG4gIEUgLS0-IEZ7V2hhdCA8YnI-IHR5cGUgb2YgPGJyPiBkYXRhIDxicj4gcGFnZX06Ojpib3hcbiAgRiAtLT4gRyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gIEYgLS0-IEgoR2VuZSk6Ojpib3hcbiAgRiAtLT4gSShNb2xlY3VsYXIgZW50aXR5KTo6OmJveFxuICBGIC0tPiBKKFByb3RlaW4pOjo6Ym94XG4gIEYgLS0-IEsoU2FtcGxlKTo6OmJveFxuICBGIC0tPiBMKFRheG9uKTo6OmJveFxuICBDIC0tPiBNXG4gIEQgLS0-IE1cbiAgRyAtLT4gTVxuICBIXHQtLT4gTVxuICBJIC0tPiBNXG4gIEogLS0-IE1cbiAgSyAtLT4gTVxuICBMIC0tPiBNKFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiAgTSAtLT4gTihmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IGltcHJvdmVkIGRpc2NvdmVyYWJpbGl0eSk6Ojpib3hcbmNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxubGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTkgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjpudWxsfSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQShIVE1MIHBhZ2UpOjo6Ym94IC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7V2hhdCA8YnI-dHlwZSA8YnI-IG9mPGJyPiBwYWdlP306Ojpib3hcbiAgQiAtLT4gQyhEYXRhc2V0KTo6OmJveFxuICBCIC0tPiBEKERhdGEgY2F0YWxvZyk6Ojpib3hcbiAgQiAtLT4gRShEYXRhIHBhZ2UpOjo6Ym94XG4gIEUgLS0-IEZ7V2hhdCA8YnI-IHR5cGUgb2YgPGJyPiBkYXRhIDxicj4gcGFnZX06Ojpib3hcbiAgRiAtLT4gRyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gIEYgLS0-IEgoR2VuZSk6Ojpib3hcbiAgRiAtLT4gSShNb2xlY3VsYXIgZW50aXR5KTo6OmJveFxuICBGIC0tPiBKKFByb3RlaW4pOjo6Ym94XG4gIEYgLS0-IEsoU2FtcGxlKTo6OmJveFxuICBGIC0tPiBMKFRheG9uKTo6OmJveFxuICBDIC0tPiBNXG4gIEQgLS0-IE1cbiAgRyAtLT4gTVxuICBIXHQtLT4gTVxuICBJIC0tPiBNXG4gIEogLS0-IE1cbiAgSyAtLT4gTVxuICBMIC0tPiBNKFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiAgTSAtLT4gTihmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IGltcHJvdmVkIGRpc2NvdmVyYWJpbGl0eSk6Ojpib3hcbmNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxubGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTkgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjpudWxsfSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+-->
 
-```
+<div class="mermaid">
 graph TD
-  A[HTML page] -->| Search Engine Optimization| B{what type of page?}
-  B --> C[Dataset]
-  B --> D[Data catalog]
-  B --> E[Data page]
-  E --> F{What type of data page}
-  F --> G[Chemical Substance]
-  F --> H[Gene]
-  F --> I[Molecular entity]
-  F --> J[Protein]
-  F --> K[Sample]
-  F --> L[Taxon]
+  A(HTML page):::box -->| Search Engine Optimization| B{What <br>type <br> of<br> page?}:::box
+  B --> C(Dataset):::box
+  B --> D(Data catalog):::box
+  B --> E(Data page):::box
+  E --> F{What <br> type of <br> data <br> page}:::box
+  F --> G(Chemical Substance):::box
+  F --> H(Gene):::box
+  F --> I(Molecular entity):::box
+  F --> J(Protein):::box
+  F --> K(Sample):::box
+  F --> L(Taxon):::box
   C --> M
   D --> M
   G --> M
-  H	--> M
+  H --> M
   I --> M
   J --> M
   K --> M
-  L --> M[Schema.org augmented HTML page]
-  M --> N[fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability]
-```
-
+  L --> M(Schema.org augmented HTML page):::box
+  M --> N(fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability):::box
+classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+</div>
 ___
 
 ## Capability & Maturity Table
@@ -163,7 +166,7 @@ Now, we are presenting the same information augmented with the JSON-LD file usin
 Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the [`Google Structured Data Testing Tool`](https://search.google.com/structured-data/testing-tool)
 
-![](https://i.imgur.com/Ge8gsWL.png)
+![](https://i.imgur.com/Ge8gsWL.png =650px)
 
 
 

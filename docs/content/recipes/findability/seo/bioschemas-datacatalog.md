@@ -23,17 +23,20 @@ ___
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
+<!--
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IEJ7UGFnZSBhYm91dCA8YnI-IG11bHRpcGxlIDxicj4gZGF0YXNldHM_fTo6OmJveFxuIEIgLS0-fFlFU3wgQyhDcmVhdGUgbWFya3VwIGZvciBEYXRhQ2F0YWxvZyk6Ojpib3hcbiBCIC0tPnxOT3wgRihVc2UgRGF0YXNldCBSZWNpcGUpOjo6Ym94XG4gQyAtLT4gRChNYXJrdXAgVGVtcGxhdGUpOjo6Ym94XG4gRCAtLT58RW1iZWQgdGVtcGxhdGUgaW4gd2Vic2l0ZXwgRShmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiBjbGFzc0RlZiBib3ggZm9udC1mYW1pbHk6YXZlbmlyLGZvbnQtc2l6ZToxNHB4LGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbmxpbmtTdHlsZSAwLDEsMiwzLDQgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IEJ7UGFnZSBhYm91dCA8YnI-IG11bHRpcGxlIDxicj4gZGF0YXNldHM_fTo6OmJveFxuIEIgLS0-fFlFU3wgQyhDcmVhdGUgbWFya3VwIGZvciBEYXRhQ2F0YWxvZyk6Ojpib3hcbiBCIC0tPnxOT3wgRihVc2UgRGF0YXNldCBSZWNpcGUpOjo6Ym94XG4gQyAtLT4gRChNYXJrdXAgVGVtcGxhdGUpOjo6Ym94XG4gRCAtLT58RW1iZWQgdGVtcGxhdGUgaW4gd2Vic2l0ZXwgRShmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiBjbGFzc0RlZiBib3ggZm9udC1mYW1pbHk6YXZlbmlyLGZvbnQtc2l6ZToxNHB4LGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbmxpbmtTdHlsZSAwLDEsMiwzLDQgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+-->
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBhYm91dCBtdWx0aXBsZSBkYXRhc2V0cz99XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIERhdGFDYXRhbG9nKVxuIEIgLS0-fE5PfCBGW1VzZSBEYXRhc2V0IFJlY2lwZV1cbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSlcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBhYm91dCBtdWx0aXBsZSBkYXRhc2V0cz99XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIERhdGFDYXRhbG9nKVxuIEIgLS0-fE5PfCBGW1VzZSBEYXRhc2V0IFJlY2lwZV1cbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSlcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFW2ZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
-
-```
+<div class="mermaid">
 graph TD
- A[HTML page] --> B{Page about multiple datasets?}
- B -->|YES| C(Create markup for DataCatalog)
- B -->|NO| F[Use Dataset Recipe]
- C --> D(Markup Template)
- D -->|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
-```
+ A(HTML page):::box --> B{Page about <br> multiple <br> datasets?}:::box
+ B -->|YES| C(Create markup for DataCatalog):::box
+ B -->|NO| F(Use Dataset Recipe):::box
+ C --> D(Markup Template):::box
+ D -->|Embed template in website| E(fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page):::box
+ classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+linkStyle 0,1,2,3,4 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+</div>
 
 ----
 

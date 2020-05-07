@@ -24,16 +24,21 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+<!--
 
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IEJ7UGFnZSA8YnI-IGp1c3QgYWJvdXQgPGJyPiBvbmUgZGF0YXNldD99Ojo6Ym94XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIGRhdGFzZXQpOjo6Ym94XG4gQiAtLT58Tk98IEYoVXNlIERhdGFDYXRhbG9nIFJlY2lwZSk6Ojpib3hcbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSk6Ojpib3hcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFKGZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlKTo6OmJveFxuIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuIGxpbmtTdHlsZSAwLDEsMiwzLDQgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBKEhUTUwgcGFnZSk6Ojpib3ggLS0-IEJ7UGFnZSA8YnI-IGp1c3QgYWJvdXQgPGJyPiBvbmUgZGF0YXNldD99Ojo6Ym94XG4gQiAtLT58WUVTfCBDKENyZWF0ZSBtYXJrdXAgZm9yIGRhdGFzZXQpOjo6Ym94XG4gQiAtLT58Tk98IEYoVXNlIERhdGFDYXRhbG9nIFJlY2lwZSk6Ojpib3hcbiBDIC0tPiBEKE1hcmt1cCBUZW1wbGF0ZSk6Ojpib3hcbiBEIC0tPnxFbWJlZCB0ZW1wbGF0ZSBpbiB3ZWJzaXRlfCBFKGZhOmZhLXNlYXJjaCBmYTpmYS1jb2cgZmE6ZmEtZmlnaHRlci1qZXQgU2NoZW1hLm9yZyBhdWdtZW50ZWQgSFRNTCBwYWdlKTo6OmJveFxuIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuIGxpbmtTdHlsZSAwLDEsMiwzLDQgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)
+-->
+
+<div class="mermaid">
 graph TD
- A[HTML page] --> B{Page just about one dataset?}
- B -->|YES| C(Create markup for dataset)
- B -->|NO| F[Use DataCatalog Recipe]
- C --> D(Markup Template)
- D -->|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]
-```
+ A(HTML page):::box --> B{Page <br> just about <br> one dataset?}:::box
+ B -->|YES| C(Create markup for dataset):::box
+ B -->|NO| F(Use DataCatalog Recipe):::box
+ C --> D(Markup Template):::box
+ D -->|Embed template in website| E(fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page):::box
+ classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+ linkStyle 0,1,2,3,4 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+</div>
 
 ___
 
@@ -63,7 +68,7 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
    3.  Click on the `Show Form` button
 
-![Bioschemas Generator start screen](BioschemasGenerator.png )
+![Bioschemas Generator start screen](BioschemasGenerator.png =450px)
 
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
 

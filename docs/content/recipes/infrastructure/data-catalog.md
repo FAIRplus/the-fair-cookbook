@@ -44,7 +44,7 @@ ___
  <div class="mermaid">
   graph TD
 
-  subgraph two
+  subgraph b
   AA(Populate Data Catalogue):::box
   AA --> |identify<br>data<br>sources| E(Data Source #1):::box
   AA --> |identify<br>data<br>sources| F(Data Source #n):::box
@@ -60,10 +60,10 @@ ___
   SE -->|synonym space search| SSS(Query Expansion)
   end
 
-  subgraph one
+  subgraph a
   A(Building Data Catalogue):::box
-  style one fill:#e8eaeb,font-family:avenir
-  style two fill:#e8eaeb
+  style a fill:#e8eaeb,font-family:avenir
+  style b fill:#e8eaeb
   A-->|define curation policies| A3(Curation<br> Policies):::box
   A3-->|select data model| B(DATS):::box
   B-->|select controled<br> vocabularies| CV1(key facet #1:<br> CV1):::box
