@@ -25,5 +25,5 @@ jobs:
         BASE_BRANCH: dev
         REPOSITORY_NAME: FAIRplus/cookbook-dev
         BRANCH: master # The branch the action should deploy to.
-        FOLDER: _build # The folder the action should deploy.
+        FOLDER: docs/_build # The folder the action should deploy.
         
