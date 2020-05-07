@@ -7,7 +7,7 @@ This is the github repository for the `FAIR Cookbook`, assembled by the [IMI FAI
 ---
 ## The official site
 
-Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **draft** version of the **FAIR Cookbook**.
+Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
 
 :oil_drum::construction: **This project is still in early phase and this is work in progress** :construction::oil_drum:
 
@@ -48,4 +48,4 @@ The `FAIRcoobook` is built using [jupyter-book](https://jupyterbook.org/intro.ht
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or [contact support](https://fairplus.github.io/the-fair-cookbook/People.html) and we’ll help you sort it out.
+Having troubles? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or [contact support](https://fairplus.github.io/the-fair-cookbook/People.html) and we’ll help you sort it out.
