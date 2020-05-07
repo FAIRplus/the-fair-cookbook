@@ -13,10 +13,10 @@ jobs:
       with:
         persist-credentials: false
         ref: dev
-    #- name: Setup Python
-    #  uses: actions/setup-python@v1.2.0
-    #- name: Install and Build 🔧 
-    #  run: pip install jupyter-book && jupyter-book build ./docs --overwrite
+    - name: Setup Python
+      uses: actions/setup-python@v1.2.0
+    - name: Install and Build 🔧 
+      run: pip install jupyter-book && jupyter-book build ./docs --overwrite
     - run: ls -alhR 
     - name: Install SSH Client 🔑
       uses: webfactory/ssh-agent@v0.2.0
@@ -26,8 +26,8 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         SSH: true
-        BASE_BRANCH: dev
-        REPOSITORY_NAME: FAIRplus/cookbook-dev
-        BRANCH: master # The branch the action should deploy to.
+        BASE_BRANCH: dev #The branch of this repository which should be transfered from.
+        REPOSITORY_NAME: FAIRplus/cookbook-dev # The repository on github.com to which will be deployed = pushed.
+        BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: docs/_build # The folder the action should deploy.
         
