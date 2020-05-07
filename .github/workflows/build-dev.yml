@@ -13,10 +13,11 @@ jobs:
       with:
         persist-credentials: false
         ref: dev
-    - name: Setup Python
-      uses: actions/setup-python@v1.2.0
-    - name: Install and Build 🔧 
-      run: pip install jupyter-book && jupyter-book build ./docs --overwrite
+    #- name: Setup Python
+    #  uses: actions/setup-python@v1.2.0
+    #- name: Install and Build 🔧 
+    #  run: pip install jupyter-book && jupyter-book build ./docs --overwrite
+    #- run: ls -alhR
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
