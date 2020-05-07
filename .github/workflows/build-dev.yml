@@ -23,6 +23,6 @@ jobs:
         SSH: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         BASE_BRANCH: dev
         REPOSITORY_NAME: FAIRplus/cookbook-dev
-        BRANCH: gh-pages # The branch the action should deploy to.
+        BRANCH: master # The branch the action should deploy to.
         FOLDER: docs/_build # The folder the action should deploy.
         
