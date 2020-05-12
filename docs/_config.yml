@@ -42,7 +42,7 @@ footer_text:
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
 textbook_logo: images/logo/cookbook-logo-small.png               # A logo to be displayed at the top of your textbook sidebar. Should be square
-textbook_logo_link: https://fairplus.github.io/the-fair-cookbook/intro.html                    # A link for the logo.
+textbook_logo_link: https://fairplus.github.io/cookbook-dev/intro.html                    # A link for the logo.
 sidebar_footer_text: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 number_toc_chapters: true         # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
 
