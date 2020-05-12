@@ -22,7 +22,7 @@ email:
 description: >-
   A collection of protocols for making IMI and EFPIA partners data FAIR.
 
-baseurl: /the-fair-cookbook  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+baseurl: /cookbook-dev  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 url:  https://fairplus.github.io                  # the base hostname & protocol for your site, e.g. http://example.com
 
 
