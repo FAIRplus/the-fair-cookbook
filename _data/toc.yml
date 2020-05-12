@@ -1,0 +1,194 @@
+  # This file contains the order and numbering for all sections in the book.
+#
+# It is a sample TOC file to help you get started. Fill it out with entries
+# for your own content.
+#
+# Each entry has the following schema:
+#
+# - title: mytitle   # Title of chapter or section
+#   url: /myurl  # URL of section relative to the /content/ folder.
+#   sections:  # Contains a list of more entries that make up the chapter's sections
+#   not_numbered: true  # if the section shouldn't have a number in the sidebar
+#     (e.g. Introduction or appendices)
+#   expand_sections: true  # if you'd like the sections of this chapter to always
+#     be expanded in the sidebar.
+#   external: true  # Whether the URL is an external link or points to content in the book
+#
+# Below are some special values that trigger specific behavior:
+# - search: true  # Will provide a link to a search page
+# - divider: true  # Will insert a divider in the sidebar
+# - header: My Header  # Will insert a header with no link in the sidebar
+#
+# See the links below for an example.
+
+# Top-level page
+- title: FAIR Cookbook
+  url: /intro
+  not_numbered: true
+
+# External link
+- title: GitHub repository
+  url: https://github.com/FAIRplus/the-fair-cookbook
+  external: true
+  not_numbered: true
+
+
+# Adds a searchbar link
+#- title: Search
+#  search: false
+#  not_numbered: true
+
+# Divider for meta-pages and search page
+- divider: true
+
+# Add a header and sample content section
+- header: FAIR Cookbook
+
+
+# The Roadmap
+- title: Development Roadmap
+  url: /roadmap
+  not_numbered: true
+  expand_sections: false
+# A chapter w/ a collection of sections beneath it
+- title: Recipes
+  url: /recipes/recipes
+  not_numbered: true
+  expand_sections: false
+  sections:
+  - title: How to create a recipe
+    url: /recipes/howtocreatecard
+    not_numbered: false    
+  - title: FAIR Assessment Recipe
+    url: /recipes/fair-assessment-recipe
+    not_numbered: false  
+  - title: FAIR data matrix Recipe
+    url: /recipes/fair-data-matrix-recipe
+    not_numbered: false
+    subsections:
+      - title: Converting Excel to Frictionless Data Package
+        url: /recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling
+        not_numbered: false
+        expand_sections: true
+      - title: Plotting from Frictionless Data Package in Python
+        url: /recipes/fair-data-matrix/1-rose-metabolites-Python-analysis
+        not_numbered: false
+        expand_sections: true
+      - title: Plotting from Frictionless Data Package in R
+        url: /recipes/fair-data-matrix/3-rose-metabolites-R-analysis
+        not_numbered: false
+        expand_sections: true         
+      - title: Exploration fo semantic model with SPARQL
+        url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
+        not_numbered: false
+        expand_sections: true
+  - title: Chemical identities - Generating InChI and SMILES strings
+    url: /recipes/chemical-identities
+    not_numbered: false
+    notebooks: /recipes/chemical-identities/1-notebook          
+  - title: eTOX experience Recipe
+    url: /recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario 
+    not_numbered: false    
+  - title: RESOLUTE experience Recipe
+    url: /recipes/resolute_raw/rawRecipe_resolute
+    not_numbered: false 
+  - title: ONCOTRACK experience Recipe
+    url: /recipes/oncotrack_raw/rawRecipe-oncotrack
+    not_numbered: false 
+  - title: ND4BB experience Recipe
+    url: /recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
+    not_numbered: false
+  - title: Recipe Template
+    url: /recipes/recipe-template
+    not_numbered: false 
+  - title: Anomynization Recipe
+    url: /recipes/anonymization-recipe
+    not_numbered: false    
+
+
+
+
+# Divider for meta-pages and search page
+- divider: true
+# A chapter w/ a collection of sections beneath it
+- title: Ingredients and Resources
+  url: /ingredients/ingredient-list
+  not_numbered: true
+  expand_sections: false
+  sections:
+  - title: Ingredients
+    url: /ingredients/ingredient-list
+    not_numbered: true
+
+# Divider for meta-pages and search page
+- divider: true
+
+# A chapter w/ a collection of sections beneath it
+- title: Features and customization
+  url: /features/features
+  not_numbered: true
+  expand_sections: false
+  sections:
+  - title: Markdown files
+    url: /features/markdown
+    not_numbered: false
+  - title: Jupyter notebooks
+    url: /features/notebooks
+    not_numbered: false
+
+- divider: true
+
+- header: Help Section and Demonstration
+- title: frictionless
+  url: /1/frictionless
+  sections:
+  - title: 1
+    url: /1/testnb/0-rose-metabolites-Python-data-handling
+  - title: 2
+    url: /1/testnb/1-rose-metabolites-Python-analysis
+  - title: 3
+    url: /1/testnb/3-rose-metabolites-R-analysis
+  - title: 4
+    url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
+- title: mermaidsetup
+  url: /1/mermaidsetup  
+
+
+# Divider for meta-pages and content page
+- divider: true
+
+# people section
+- title: People
+  url: People
+  not_numbered: true  
+
+# Contribution section
+- title: Contributing
+  url: Contributing
+  not_numbered: true
+
+# Governance section
+- title: Governance
+  url: Governance
+  not_numbered: true 
+
+# license section
+- title: License
+  url: license
+  not_numbered: true    
+
+# disclaimer section
+- title: Disclaimer
+  url: disclaimer
+  not_numbered: true  
+
+# Code of Conduct section
+- title: Code of Conduct
+  url: code_of_conduct
+  not_numbered: true  
+
+# publications section
+- title: Publications
+  url: papers
+  not_numbered: true    
+  

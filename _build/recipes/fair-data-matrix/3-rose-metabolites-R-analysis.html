@@ -1,0 +1,431 @@
+---
+redirect_from:
+  - "/recipes/fair-data-matrix/3-rose-metabolites-r-analysis"
+interact_link: content/recipes/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
+kernel_name: ir
+has_widgets: false
+title: |-
+  Plotting from Frictionless Data Package in R
+prev_page:
+  url: /recipes/fair-data-matrix/1-rose-metabolites-Python-analysis.html
+  title: |-
+    Plotting from Frictionless Data Package in Python
+next_page:
+  url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html
+  title: |-
+    Exploration fo semantic model with SPARQL
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exploring-and-comparing-Rose-Scent-profiles-stored-as-tabular-data-packages-with-ggplot2-R-library">Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library<a class="anchor-link" href="#Exploring-and-comparing-Rose-Scent-profiles-stored-as-tabular-data-packages-with-ggplot2-R-library"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>*Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre</p>
+<h2 id="Background:">Background:<a class="anchor-link" href="#Background:"> </a></h2><p>Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using <a href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed into R and exploited with rich graphical libraries, such as the well know ggplot2 (<a href="https://ggplot2.tidyverse.org/">https://ggplot2.tidyverse.org/</a>). A few line of codes allow to query datasets and rapidly explore the information. Most importantly, this rapid exploration is possible because of independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package itself.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Let's begin by installing the R packages allowing easy access and use of data formatted as JSON Data Package</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;readr&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+The downloaded binary packages are in
+	/var/folders/5n/rl6lqnks4rqb59pbtpvvntqw0000gr/T//Rtmpup8PJc/downloaded_packages
+
+The downloaded binary packages are in
+	/var/folders/5n/rl6lqnks4rqb59pbtpvvntqw0000gr/T//Rtmpup8PJc/downloaded_packages
+
+The downloaded binary packages are in
+	/var/folders/5n/rl6lqnks4rqb59pbtpvvntqw0000gr/T//Rtmpup8PJc/downloaded_packages
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span> 
+<span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Loading required package: usethis
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Here, we install an additional library, providing some additional customization of graphs and plots.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;kassambara/easyGgplot2&quot;</span><span class="p">)</span> 
+<span class="nf">library</span><span class="p">(</span><span class="n">easyGgplot2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Skipping install of &#39;easyGgplot2&#39; from a github remote, the SHA1 (cb017c1c) has not changed since last install.
+  Use `force = TRUE` to force installation
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Reading the data:</li>
+</ol>
+<p>We now simply read in the comma-separated-file associated with the tabular data package (a "long" table)</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># rose arome nature genetics data from 2018 and plotting for the different treatment groups:</span>
+<span class="c1"># rosedata &lt;- read_csv(&quot;../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&quot;)</span>
+<span class="n">rosedata</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;https://zenodo.org/api/files/ba3fbc84-14af-4858-a9ed-e6cfe8d4efd2/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Parsed with column specification:
+cols(
+  chemical_name = col_character(),
+  inchi = col_character(),
+  chebi_identifier = col_character(),
+  var1_levels = col_character(),
+  var1_uri = col_character(),
+  var2_levels = col_character(),
+  var2_uri = col_character(),
+  treatment = col_character(),
+  sample_size = col_double(),
+  sample_mean = col_double(),
+  unit = col_logical(),
+  sem = col_double()
+)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Plotting the data: We then generate a barplot using the ggplot2 library.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">ggplot2.barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">rosedata</span><span class="p">,</span> <span class="n">xName</span><span class="o">=</span><span class="s">&quot;chemical_name&quot;</span><span class="p">,</span> <span class="n">yName</span><span class="o">=</span><span class="s">&quot;sample_mean&quot;</span><span class="p">,</span> <span class="n">faceting</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">facetingVarNames</span><span class="o">=</span><span class="s">&quot;treatment&quot;</span><span class="p">,</span> <span class="n">facetingDirection</span><span class="o">=</span><span class="s">&quot;vertical&quot;</span><span class="p">,</span><span class="n">facetingScales</span><span class="o">=</span><span class="s">&quot;free&quot;</span><span class="p">,</span> <span class="n">groupName</span><span class="o">=</span><span class="s">&quot;treatment&quot;</span><span class="p">,</span> <span class="n">groupColors</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;#999999&#39;</span><span class="p">,</span><span class="s">&#39;#E69F00&#39;</span><span class="p">,</span><span class="s">&#39;pink&#39;</span><span class="p">,</span><span class="s">&#39;coral&#39;</span><span class="p">,</span><span class="s">&#39;grey&#39;</span><span class="p">,</span><span class="s">&#39;lightblue&#39;</span><span class="p">,</span><span class="s">&#39;aquamarine3&#39;</span><span class="p">,</span><span class="s">&#39;orange&#39;</span><span class="p">),</span> <span class="n">xtitle</span><span class="o">=</span><span class="s">&quot;chemical name&quot;</span><span class="p">,</span><span class="n">ytitle</span><span class="o">=</span><span class="s">&quot;mean concentration&quot;</span><span class="p">,</span> <span class="n">xtitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span><span class="n">ytitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span> <span class="n">xTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">yTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span><span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendPosition</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">,</span><span class="n">legendTitle</span><span class="o">=</span><span class="s">&quot;Treatment&quot;</span><span class="p">,</span> <span class="n">legendTitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="s">&quot;bold&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendTextFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="s">&quot;plain&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendBackground</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="s">&quot;solid&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span> <span class="p">))</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">1</span><span class="p">),</span><span class="n">strip.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">0</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="n">face</span><span class="o">=</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">8</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../../images/recipes/fair-data-matrix/3-rose-metabolites-R-analysis_10_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Let's now compare the dataset generated in 2015 and the dataset generated in 2018.</li>
+</ol>
+<p>Both datasets have been generated by the same team, on the same genotype (Rosa Chinensis 'Old Blush') and organism part ('sepals'). Both datasets are held in a Tabular Data Package with the same structure. To perform the comparison, we have simply created another tabular data package, which retains the exact same structure and that simply holds the measurements for the relevant conditions extracted from each dataset (the function to create such file is omitted).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># rose arome nature genetics data from 2018 and plotting for the different treatment groups:</span>
+<span class="c1"># ng2018sc2015 &lt;- read_csv(&quot;../data/processed/rose-data/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&quot;)</span>
+<span class="n">ng2018sc2015</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;https://zenodo.org/api/files/268f29fc-8ead-4049-bb86-181b72073682/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Parsed with column specification:
+cols(
+  chemical_name = col_character(),
+  inchi = col_character(),
+  chebi_identifier = col_character(),
+  var1_levels = col_character(),
+  var1_uri = col_character(),
+  var2_levels = col_character(),
+  var2_uri = col_character(),
+  treatment = col_character(),
+  sample_size = col_character(),
+  sample_mean = col_double(),
+  normalized_to_total_sum_concentration = col_double(),
+  unit = col_logical(),
+  sem = col_double(),
+  publication_year = col_double(),
+  journal = col_character()
+)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>We generate another barplot, which shows the concentration of the chemicals targeted by the GC-MS profiling assay.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">ggplot2.barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">ng2018sc2015</span><span class="p">,</span> <span class="n">xName</span><span class="o">=</span><span class="s">&quot;chemical_name&quot;</span><span class="p">,</span> <span class="n">yName</span><span class="o">=</span><span class="s">&quot;normalized_to_total_sum_concentration&quot;</span><span class="p">,</span> <span class="n">faceting</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">facetingVarNames</span><span class="o">=</span><span class="s">&quot;publication_year&quot;</span><span class="p">,</span> <span class="n">facetingDirection</span><span class="o">=</span><span class="s">&quot;vertical&quot;</span><span class="p">,</span><span class="n">facetingScales</span><span class="o">=</span><span class="s">&quot;free&quot;</span><span class="p">,</span> <span class="n">groupName</span><span class="o">=</span><span class="s">&quot;publication_year&quot;</span><span class="p">,</span> <span class="n">groupColors</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;aquamarine3&#39;</span><span class="p">,</span><span class="s">&#39;orange&#39;</span><span class="p">),</span> <span class="n">xtitle</span><span class="o">=</span><span class="s">&quot;chemical name&quot;</span><span class="p">,</span><span class="n">ytitle</span><span class="o">=</span><span class="s">&quot;normalizated to total sum concentration&quot;</span><span class="p">,</span> <span class="n">xtitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span><span class="n">ytitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span> <span class="n">xTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">yTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span><span class="s">&quot;black&quot;</span><span class="p">),</span>  <span class="n">legendPosition</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">,</span> <span class="n">legendTitle</span><span class="o">=</span><span class="s">&quot;Treatment&quot;</span><span class="p">,</span> <span class="n">legendTitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="s">&quot;bold&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span>           <span class="n">legendTextFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="s">&quot;plain&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendBackground</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="s">&quot;solid&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span> <span class="p">))</span>  <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">1</span><span class="p">),</span><span class="n">strip.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">0</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="n">face</span><span class="o">=</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">8</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../../images/recipes/fair-data-matrix/3-rose-metabolites-R-analysis_14_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What do we see? The figure shows how consistant the chemical profile of the scent between the 2 studies is, which prevalent compounds such as X, Y, and Z showing roughtly similar relative amount within and across studies.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Bibliographic-Reference:">Bibliographic Reference:<a class="anchor-link" href="#Bibliographic-Reference:"> </a></h4><p><a href="https://doi.org/10.1126/science.aab0696">1.Magnard JL, Roccia A, Caissard JC, Vergne P, Sun P, Hecquet R, Dubois A, Hibrand-Saint Oyant L, Jullien F, Nicolè F, Raymond O, Huguet S, Baltenweck R, Meyer S, Claudel P, Jeauffre J, Rohmer M, Foucher F, Hugueney P, Bendahmane M, Baudino S. PLANT VOLATILES. Biosynthesis of monoterpene scent compounds in roses. Science. 2015 Jul 3;349(6243):81-3.</a></p>
+<p><a href="https://doi.org/10.1038/s41588-018-0110-3">2.Raymond O, Gouzy J, Just J, Badouin H, Verdenaud M, Lemainque A, Vergne P, Moja S, Choisne N, Pont C, Carrère S, Caissard JC, Couloux A, Cottret L, Aury JM, Szécsi J, Latrasse D, Madoui MA, François L, Fu X, Yang SH, Dubois A, Piola F, Larrieu A, Perez M, Labadie K, Perrier L, Govetto B, Labrousse Y, Villand P, Bardoux C, Boltz V, Lopez-Roques C, Heitzler P, Vernoux T, Vandenbussche M, Quesneville H, Boualem A, Bendahmane A, Liu C, Le Bris M, Salse J, Baudino S, Benhamed M, Wincker P, Bendahmane M. The Rosa genome provides new insights into the domestication of modern roses. Nat Genet. 2018 Jun;50(6):772-777.</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

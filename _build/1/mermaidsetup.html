@@ -1,0 +1,132 @@
+---
+title: |-
+  mermaidsetup
+prev_page:
+  url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html
+  title: |-
+    4
+next_page:
+  url: /People.html
+  title: |-
+    People
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-to-enable-flow-diagrams-in-Github-from-gh-pages:">How to enable flow diagrams in Github from gh-pages:<a class="anchor-link" href="#How-to-enable-flow-diagrams-in-Github-from-gh-pages:"> </a></h1><ul>
+<li><p>github pages are served by jekyll and more information can be found in the following document <a href="https://jekyllrb.com/docs/github-pages/">github pages &amp; jekyll</a></p>
+</li>
+<li><p>flow and sequence diagrams are popular mean to provide a graphical overview of processes. Since FAIRification recipes are processes at the core, it is a strong requirement to enhance the recipes with such graphical overview</p>
+</li>
+<li><p><a href="https://github.com/mermaid-js/mermaid">mermaid</a> is a javascript library allowing to generate diagrams, charts, graphs or flows from markdown-like text via javascript.</p>
+<ul>
+<li>mermaid documentation is extensive, <a href="https://mermaid-js.github.io/mermaid/#/">see here</a></li>
+<li>mermaid is compatible with jekyll via a <a href="https://github.com/jasonbellamy/jekyll-mermaid/blob/master/readme.md">gem plugin</a></li>
+</ul>
+</li>
+<li><p>The following steps need to be performed to enable a github repository to serve mermaid defined diagrams.</p>
+<ol>
+<li><p>install the <code>jekyll mermaid plugin</code>:</p>
+<p>To do so, open a terminal, and run the following command in the suitable virtual environment</p>
+<div class="highlight"><pre><span></span>&gt; gem install jekyll-mermaid
+</pre></div>
+</li>
+<li><p>edit the the Jekyll <code>_config.yml</code> file:</p>
+<ul>
+<li><p>declare the plugin to the Jekyll <code>_config.yml</code> file by adding the following line:</p>
+<div class="highlight"><pre><span></span><span class="ss">gems</span><span class="p">:</span> <span class="o">[</span><span class="n">jekyll</span><span class="o">-</span><span class="n">mermaid</span><span class="o">]</span>
+</pre></div>
+<p>see the <a href="http://jekyllrb.com/docs/plugins/#installing-a-plugin">Jekyll documentation</a> for more installation options.</p>
+</li>
+<li><p>add the path the mermaid javascript library. Note this should be the distribution .js file, not the source files.</p>
+</li>
+<li><p>The distribution file for the mermaid javascript library can be obtained from:</p>
+<div class="highlight"><pre><span></span><span class="n">mermaid</span><span class="o">.</span><span class="n">js</span>
+  <span class="n">mermaid</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">js</span>
+  <span class="n">mermaid</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+<p>By default, the path the js library is set in the <code>_config.file</code> to <code>js_url: /assets/js</code>.
+Therefore, to indicate the path to the <code>mermaid.js</code> library, simply add the following:</p>
+<div class="highlight"><pre><span></span><span class="ss">mermaid</span><span class="p">:</span>
+ <span class="ss">src</span><span class="p">:</span> <span class="s1">&#39;/js/mermaid.js&#39;</span>
+ <span class="ss">src_config</span><span class="p">:</span> <span class="s1">&#39;/js/config.js&#39;</span>
+</pre></div>
+</li>
+</ul>
+<ul>
+<li><p>in order to have mermaid to work with jekyll on github, you need to obtain the library from the following site.
+<a href="https://unpkg.com/mermaid@7.1.0/dist/">mermaid library distribution</a></p>
+<div class="highlight"><pre><span></span>curl -O https://unpkg.com/mermaid@7.1.0/dist/mermaid.js
+curl -O https://unpkg.com/mermaid@7.1.0/dist/mermaid.core.js
+curl -O https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js
+</pre></div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+
+<pre><code>3. edit the `head.html` template under `_include` folder
+
+Since Jekyll build every page served by include the head.html template, it will also load by default the mermaid library,
+    which is then able to process the relevant section defining the diagrams:
+    ```
+    &lt;!-- using mermaid for rendering Diagram and flow chart --&gt;
+        &lt;script src="{{ site.js_url | relative_url }}/mermaid.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+        ```
+
+4. testing:
+
+    - Does this state diagram work?
+</code></pre>
+<div class="mermaid">
+stateDiagram
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+</div>        
+        - Does this Gantt chart display?  
+<div class="mermaid">
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+</div>
+        - Does this flowchart display?
+<div class="mermaid">
+graph LR;
+    A["input data"]-->B["conversion to open format"];
+    A["input data"]-->C["automatic annotation"];
+    B["conversion to open format"]-->D(("output data"));
+    C["automatic annotation"]-->D(("output data"));  
+    style A fill:#FF5733,stroke:#333,stroke-width:2px
+    style D fill:#0A749B,stroke:#333,stroke-width:2px
+</div><p>if you cannot view the Gantt chart or the State Diagram, it means you  are running an outdated version of the mermaid distribution.
+try upgrading by download the files from <a href="https://unpkg.com/browse/mermaid@8.4.8/dist/">here</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,0 +1,132 @@
+---
+title: |-
+  FAIR Assessment Recipe
+prev_page:
+  url: /recipes/howtocreatecard.html
+  title: |-
+    How to create a recipe
+next_page:
+  url: /recipes/fair-data-matrix-recipe.html
+  title: |-
+    FAIR data matrix Recipe
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Recipe1:-FAIR-Assessment-Recipe">Recipe1: FAIR Assessment Recipe<a class="anchor-link" href="#Recipe1:-FAIR-Assessment-Recipe"> </a></h1><p><strong>identifier</strong></p>
+<p><strong>authors</strong></p>
+<ul>
+<li><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a></li>
+</ul>
+<p><strong>maintainers</strong></p>
+<ul>
+<li><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a></li>
+</ul>
+<p><strong>version</strong></p>
+
+<pre><code>0.1
+
+</code></pre>
+<p><strong>license</strong></p>
+<ul>
+<li><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></li>
+</ul>
+<h2 id="Ingredients:">Ingredients:<a class="anchor-link" href="#Ingredients:"> </a></h2><ol>
+<li>Identifier Schema:</li>
+</ol>
+<ul>
+<li><p><a href="https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers">guidance on persistent resolvable identifiers</a></p>
+</li>
+<li><p><a href="https://tools.ietf.org/html/rfc2616">HTTP1.1 protocol</a></p>
+</li>
+<li><p><a href="https://archive.org/services/purl/">Persistent Uniform Resource Locators - PURL</a></p>
+</li>
+<li><p><a href="https://n2t.net/e/ark_ids.html">Archival Resource Key</a></p>
+</li>
+<li><p><a href="http://www.rfc-editor.org/rfc/rfc3650.txt">handle system</a></p>
+</li>
+<li><p><a href="https://doi.org/">handle based http proxy for DOI</a></p>
+</li>
+</ul>
+<ol>
+<li>Metadata Model:</li>
+</ol>
+<ul>
+<li>topic dependent</li>
+</ul>
+<ol>
+<li>Vocabularies and Terminologies:</li>
+</ol>
+<ul>
+<li>topic dependent</li>
+</ul>
+<ol>
+<li>Data Format:</li>
+</ol>
+<ul>
+<li><a href="https://www.w3.org/standards/semanticweb/data">RDF/Linked Data</a></li>
+</ul>
+<ol>
+<li><p>Tools and  Software:</p>
+<p>5.1  resolution services:</p>
+</li>
+</ol>
+<ul>
+<li><p><a href="https://ezid.cdlib.org/">EZID resolution service</a></p>
+</li>
+<li><p><a href="http://n2t.net/">name2things rsolution service</a></p>
+</li>
+<li><p><a href="https://identifiers.org/">identifiers.org</a></p>
+<p>5.2 FAIR assessment tools</p>
+</li>
+<li><p><a href="https://W3id.org/AmIFAIR">FAIREvaluator</a></p>
+</li>
+<li><p><a href="https://fairshake.cloud/">FAIRShake</a></p>
+</li>
+</ul>
+<h2 id="Objectives:">Objectives:<a class="anchor-link" href="#Objectives:"> </a></h2><p>Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
+Obtain a machine readable report</p>
+<h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step1:">Step1:<a class="anchor-link" href="#Step1:"> </a></h3><p>Navigate the FAIREvaluator tool, which can be accessed via the following 2 addresses:</p>
+<ul>
+<li><p><a href="https://w3id.org/AmIFAIR">https://w3id.org/AmIFAIR</a></p>
+</li>
+<li><p><a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!">https://fairsharing.github.io/FAIR-Evaluator-FrontEnd</a></p>
+</li>
+</ul>
+<p><img src="./assets/fair-eval-img1.png" alt="the FAIREvaluator Home page"></p>
+<h3 id="Step2:">Step2:<a class="anchor-link" href="#Step2:"> </a></h3><p>In order the run the FAIREvaluator, it is important to understand to notion of FAIR indicators (formerly referred to as FAIR metrics).
+One may browse the list of currently community defined indicators from the <code>Collections</code> page</p>
+<p><img src="./assets/fair-eval-img2.png" alt="Select a &#39;FAIR Maturity Indicator - Collections&#39;"></p>
+<h3 id="Step3:">Step3:<a class="anchor-link" href="#Step3:"> </a></h3><p>To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:</p>
+<ol>
+<li>a collection of FAIR indicators, selected from the list described above.</li>
+<li>a globally unique, persistent, resolveable identifier for the resource to be evaluated.</li>
+<li>a title for the evaluation. Enforce a naming convention to make future searches easiers as these evaluations are saved.</li>
+<li>a person identifier in the form of an ORCID</li>
+</ol>
+<p><img src="./assets/fair-eval-img4.png" alt="Running the FAIREvaluator - part 1: setting the input"></p>
+<h3 id="Step4:">Step4:<a class="anchor-link" href="#Step4:"> </a></h3><p>Hit the 'Run Evaluation' button from '<a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate">https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate</a>' page</p>
+<p><img src="./assets/fair-eval-img5.png" alt="Running the FAIREvaluator - part 2: execution "></p>
+<h3 id="Step5:">Step5:<a class="anchor-link" href="#Step5:"> </a></h3><p>Analyze the report:</p>
+<p><img src="./assets/fair-eval-img6.png" alt="FAIREvaluator report - overall report "></p>
+<p>Time to dig into the details and figure out the reasons why some indicators are reporting a failure:</p>
+<p><img src="./assets/fair-eval-img7.png" alt="apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*"></p>
+<h2 id="Reference:">Reference:<a class="anchor-link" href="#Reference:"> </a></h2><p>Wilkinson, M.D., Dumontier, M., Sansone, S. et al. Evaluating FAIR maturity through a scalable, automated, community-governed framework. Sci Data 6, 174 (2019). <a href="https://doi.org/10.1038/s41597-019-0184-5">doi:10.1038/s41597-019-0184-5</a></p>
+<p>Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Resources, Cell Systems (2019),<a href="https://doi.org/10.1016/j.cels.2019.09.011">doi:10.1016/j.cels.2019.09.011</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,0 +1,250 @@
+---
+title: |-
+  FAIR data matrix Recipe
+prev_page:
+  url: /recipes/fair-assessment-recipe.html
+  title: |-
+    FAIR Assessment Recipe
+next_page:
+  url: /recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling.html
+  title: |-
+    Converting Excel to Frictionless Data Package
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Recipe-1:-Making-a-Data-Matrix-FAIR">Recipe-1: Making a Data Matrix FAIR<a class="anchor-link" href="#Recipe-1:-Making-a-Data-Matrix-FAIR"> </a></h1><p><strong>identifier:</strong> DOI:<a href="https://doi.org/10.5072/FK2862KX83">https://doi.org/10.5072/FK2862KX83</a></p>
+<p><strong>version:</strong> <a href="v.1.0">version</a></p>
+<hr>
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Summary">Summary</a></li>
+<li><a href="#Main%20Objectives">Main Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Table%20of%20Software%20and%20Tools">Table of Software and Tools</a></li>
+<li><a href="#Step%20by%20Step%20Process">Step by Step Process</a></li>
+<li><a href="#References">References</a></li>
+<li><a href="#Authors">Authors</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Summary:">Summary:<a class="anchor-link" href="#Summary:"> </a></h2><p style='text-align: justify;'>
+Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type.
+Our starting point: their human-understandable data in the supplementary table https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip, containing the mean concentrations of 61 metabolites measured in three different parts of the rose flower, in six distinct genotypes.
+Our second data source: article by Magnard et al. Science.Jul 3;349(6243):81-3 (2015) https://doi.org/10.1126/science.aab0696; this is early work of the same group author of the first data source.
+Our approach: we performed a retrospective curation and re-annotation of the data matrices, disambiguating of the experimental design, using community, open interoperability standards from FAIRsharing (https://fairsharing.org); we focused on the clarity of the statistical results to ensure reusability and reproducibility of the analytical workflow by humans and machines. The FAIRification steps for the first data source are documented in the sections below; the same steps were applied to the second data source to assess inter-experiment agreement, as both studies used the same varieties of rose and plant parts. 
+Our results: semantically-anchored data matrices served as Linked Data, deposited in public archives (Zenodo and MetaboLights), and consumable by software agents for queries like “Retrieve study predictor variables and their levels” and “What is sample size used to compute the means?” to support study results review and assessment.
+</p><h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>Making self describing tabular data using Frictionless tools instead of dumping Excel files.</p>
+</blockquote>
+<ul>
+<li>ensure that results presented in MS Excel or PDF tables are made more open and unambiguous.</li>
+<li>provide an RDF representation</li>
+<li>enable reproduciblity of results</li>
+<li>evaluate efficiency of the method via a data integrate challenge</li>
+</ul>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><div class="mermaid">
+graph TD;
+    A(Excel Document) -->B(Raw Data)
+    B --> C{is wide table?}
+    C -->|Yes| D(perform wide to long table conversion)
+    C -->|No| E(proceed to semantic markup)
+    A --> F{has PID?}
+    F -->|Yes| G(perform a curl to test URI)
+    F -->|No| H(upload to zenodo and obtain DOI)
+</div><hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3434">conversion</a></td>
+<td style="text-align:left"><a href="">Microsoft Excel file (.xlsx)</a></td>
+<td style="text-align:left"><a href="https://frictionlessdata.io/specs/data-package/">Frictionless JSON Data Package</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3434">conversion</a></td>
+<td style="text-align:left"><a href="">Adobe PDF (.pdf)</a></td>
+<td style="text-align:left"><a href="https://frictionlessdata.io/specs/data-package/">Frictionless JSON Data Package</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_0336">format validation</a></td>
+<td style="text-align:left"><a href="https://frictionlessdata.io/specs/data-package/">Frictionless JSON Data Package</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2048">report</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3434">conversion</a></td>
+<td style="text-align:left"><a href="https://frictionlessdata.io/specs/data-package/">Frictionless JSON Data Package</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.p77ph9">RDF/linked data</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3778">text annotation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.kbtt7f">Human Phenotype Ontology</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_3779">annotated text</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://frictionlessdata.io/specs/data-package/">Frictionless JSON Data Package</a></td>
+<td style="text-align:left"><a href="http://www.obofoundry.org/ontology/chebi.html">CHEBI</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://doi.org/10.25504/FAIRsharing.53gp75">ISA-Tab</a></td>
+<td style="text-align:left"><a href="https://www.stato-ontology.org">STATO</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi">NCBITaxonomy</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="http://www.obofoundry.org/ontology/po.html">Plant Ontology</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Table-of-Software-and-Tools">Table of Software and Tools<a class="anchor-link" href="#Table-of-Software-and-Tools"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Tool Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://github.com/">github</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://developers.zenodo.org/">zenodo API</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://drivendata.github.io/cookiecutter-data-science/">cookie cutter for data science</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.python.org/">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://pandas.pydata.org/">pandas</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://camelot-py.readthedocs.io/en/master/">camelot-py</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://rdflib.readthedocs.io/en/stable/">rdflib</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://jupyter.org/">jupyter notebook</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://matplotlib.org/">matplotlib</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3.org/TR/sparql11-query/">sparql</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step1:-Address-Data-Findability-and-Accessibility:">Step1: Address Data Findability and Accessibility:<a class="anchor-link" href="#Step1:-Address-Data-Findability-and-Accessibility:"> </a></h3><p>We made the initial spreadsheet table discoverable and citable by:</p>
+<ul>
+<li>uploading it to Zenodo. </li>
+<li>assigning an open license (CC-BY 4.0)</li>
+<li>obtaining a persistent unique identifier in the form of a DOI: <a href="https://doi.org/10.5281/zenodo.2598799">https://doi.org/10.5281/zenodo.2598799</a></li>
+</ul>
+<h3 id="Step2:-Address-Interoperability">Step2: Address Interoperability<a class="anchor-link" href="#Step2:-Address-Interoperability"> </a></h3><p>We regularized the three dimensions of the matrix (data cube), which represent: i) the metabolites (molecular entities), ii) the treatments (experimental conditions and corresponding biomaterials and bioassays), and iii) the quantitation type (measurements).</p>
+<h4 id="Step-2A:-semantic-anchoring">Step 2A: semantic anchoring<a class="anchor-link" href="#Step-2A:-semantic-anchoring"> </a></h4><p>Metabolites (free text) names were augmented with unambiguous InChI codes, assigned by accessing CHEBI (<a href="https://doi.org/10.25504/FAIRsharing.62qk8w">https://doi.org/10.25504/FAIRsharing.62qk8w</a>) programmatically via its LibChebi library (<a href="https://github.com/libChEBI/libChEBIpy">https://github.com/libChEBI/libChEBIpy</a>).<br>
+We unpacked the information held in the column header, identifying the main types of tabulated entities and their relationships, and replacing free text with ontology term.
+For example, we disambiguated the taxonomic name of the cultivar from the anatomical part using terms and identifiers from the NCBI Taxonomy (<a href="https://doi.org/10.25504/FAIRsharing.fj07xj">https://doi.org/10.25504/FAIRsharing.fj07xj</a>) and Plant Ontology (<a href="https://doi.org/10.25504/FAIRsharing.3ngg40">https://doi.org/10.25504/FAIRsharing.3ngg40</a>) respectively.</p>
+<h4 id="Step-2B:-disambiguation-of-the-experimental-design">Step 2B: disambiguation of the experimental design<a class="anchor-link" href="#Step-2B:-disambiguation-of-the-experimental-design"> </a></h4><p>We clarified the intent of the experimentalist, which is a comparison between two independent variables identified (the rose variety and the organism part), which are both categorical variables with six and three discrete factor levels, respectively. Since only eight factor combinations are reported, we concluded that this is a fractional factorial design (rather than a  factorial design, where eighteen theoretical factor combinations are possible)
+We disambiguated among the attributes of the samples those that are study factors and their values, to explicitly enable queries on treatment groups and their sizes. 
+We used the STATistics Ontology (STATO; <a href="https://doi.org/10.25504/FAIRsharing.na5xp">https://doi.org/10.25504/FAIRsharing.na5xp</a>) to unambiguously express and semantically type these notions.</p>
+<h4 id="Step-2C:-clarification-of-the-measurement-performed">Step 2C: clarification of the measurement performed<a class="anchor-link" href="#Step-2C:-clarification-of-the-measurement-performed"> </a></h4><p>We unpacked the type of measurement, and formally annotated them with the STATO classes; we also clarified the size of the sample over which the calculation was performed. 
+Two measurements were identified for each of the experimental conditions, and for each treatment, a single biological material was prepared and assayed three times on the same analytical platform. 
+We marked-up all entities with persistent resolvable identifiers to enhance dataset connectivity. Therefore, the computed sample mean can only be used to estimate the variability of the measurement technique, not the biological variability.</p>
+<h3 id="Step3:-Preservation-of-the-data-matrices-in-an-open-syntax">Step3: Preservation of the data matrices in an open syntax<a class="anchor-link" href="#Step3:-Preservation-of-the-data-matrices-in-an-open-syntax"> </a></h3><p>We used the Frictionless Tabular Data Package (<a href="https://frictionlessdata.io/data-packages">https://frictionlessdata.io/data-packages</a>) to describe the table headers in JSON format.
+The transformation is documented in a jupyter notebook (<a href="https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb">https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb</a>).</p>
+<h3 id="Step4:-Address-Reusability">Step4: Address Reusability<a class="anchor-link" href="#Step4:-Address-Reusability"> </a></h3><p>We performed a conversion to Linked Data, using terms from OBO Foundry Ontologies (<a href="https://fairsharing.org/collection/OBOFoundry">https://fairsharing.org/collection/OBOFoundry</a>) 
+As a result, the metabolite measurements can be plotted using popular visualization libraries (Python plotnine or R ggplot2) from either a SPARQL query over the RDF representation or from the data package directly.</p>
+<h3 id="Step5:-address-Findability-and-Accessibility">Step5: address Findability and Accessibility<a class="anchor-link" href="#Step5:-address-Findability-and-Accessibility"> </a></h3><p>We made the FAIRified outputs discoverable and citable by uploading them to Zenodo, assigning an open license (CC-BY 4.0), and obtaining persistent unique identifiers:</p>
+<ul>
+<li>GC-MS data from the 'Rose Genome' available as Frictionless Tabular Data Package: <a href="https://doi.org/10.5281/zenodo.2640873">https://doi.org/10.5281/zenodo.2640873</a></li>
+<li>RDF Linked Data representation of GC-MS data from the 'Rose Genome' article: <a href="https://doi.org/10.5281/zenodo.2598812">https://doi.org/10.5281/zenodo.2598812</a></li>
+<li>Comparison of GC-MS datasets available as Frictionless Tabular Data Package: <a href="https://doi.org/10.5281/zenodo.2640919">https://doi.org/10.5281/zenodo.2640919</a></li>
+<li>Rose scent FAIRification project code release: <a href="https://doi.org/10.5281/zenodo.2641109">https://doi.org/10.5281/zenodo.2641109</a></li>
+</ul>
+<p>To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison, also released via Zenodo (<a href="https://doi.org/10.5281/zenodo.2640919">https://doi.org/10.5281/zenodo.2640919</a>).
+Lastly, we produced a study description file, in ISA-Tab format (<a href="https://doi.org/10.25504/FAIRsharing.53gp75">https://doi.org/10.25504/FAIRsharing.53gp75</a>), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (<a href="https://doi.org/10.25504/FAIRsharing.kkdpxe">https://doi.org/10.25504/FAIRsharing.kkdpxe</a>).</p>
+<h2 id="Reference:">Reference:<a class="anchor-link" href="#Reference:"> </a></h2><p>Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics data matrices, an exemplar. Sci Data 6, 271 (2019) <a href="https://doi.org/10.1038/s41597-019-0286-0">doi:10.1038/s41597-019-0286-0</a></p>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,0 +1,170 @@
+---
+title: |-
+  frictionless
+prev_page:
+  url: /features/notebooks.html
+  title: |-
+    Jupyter notebooks
+next_page:
+  url: /1/testnb/0-rose-metabolites-Python-data-handling.html
+  title: |-
+    1
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Frictionless-Tabular-Data-Package">Frictionless Tabular Data Package<a class="anchor-link" href="#Frictionless-Tabular-Data-Package"> </a></h1><hr>
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>Making self describing tabular data using Frictionless tools instead of dumping Excel files.</p>
+</blockquote>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><div class="mermaid">
+graph LR;
+    A[Data Acquisition] -->B(Raw Data)
+    B --> C{FAIR by Design}
+    C -->|Yes| D[Standard Compliant Data]
+    C -->|No| E[Vendor locked Data]
+</div><hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_2428">validation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ew26v7">Structure Data File (SDF)</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2048">report</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3438">calculation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ew26v7">Structure Data File (SDF)</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ddk9t9">InChi</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3438">calculation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ew26v7">Structure Data File (SDF)</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.qv4b3c">SMILES</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3778">text annotation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.kbtt7f">Human Phenotype Ontology</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_3779">annotated text</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.r2ts5t">FASTQ</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.2mk2zb">LOINC</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.q72e3w">SRA XML</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.b7z8by">DICOM</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.kbtt7f">Human Phenotype Ontology</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.qk984b">OMOP</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Executable-Code-in-Notebook">Executable Code in Notebook<a class="anchor-link" href="#Executable-Code-in-Notebook"> </a></h2><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">isatools</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">holoview</span>
+</pre></div>
+<hr>
+<h2 id="How-to-create-workflow-figures">How to create workflow figures<a class="anchor-link" href="#How-to-create-workflow-figures"> </a></h2><p>one may use the following <strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> syntax:</p>
+
+<pre><code>graph LR;
+    A[Data Acquisition] --&gt;B(Raw Data)
+    B --&gt; C{FAIR by Design}
+    C --&gt;|Yes| D[Standard Compliant Data]
+    C --&gt;|No| E[Vendor locked Data]</code></pre>
+<div class="mermaid">
+graph LR;
+    A["input data"]-->B["conversion to open format"];
+    A["input data"]-->C["automatic annotation"];
+    B["conversion to open format"]-->D(("output data"));
+    C["automatic annotation"]-->D(("output data"));  
+
+    style A fill:#FF5733,stroke:#333,stroke-width:2px
+    style D fill:#0A749B,stroke:#333,stroke-width:2px
+</div><hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

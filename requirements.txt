@@ -1,0 +1,19 @@
+# Requirements for the demo notebooks
+# Useful for MyBinder configuration
+pandas
+numpy
+datascience
+folium
+matplotlib
+nbinteract
+scipy
+jupyter-book
+
+isatools
+libchebipy
+datapackage
+goodtables
+xlrd>=1.0.0
+plotnine
+rdflib
+SPARQLWrapper
