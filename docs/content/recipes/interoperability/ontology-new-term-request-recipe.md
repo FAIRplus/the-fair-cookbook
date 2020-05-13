@@ -21,7 +21,7 @@ In most ontologies, everybody can request new terms. However, in some ontologies
     * E.g. SNOMED CT, MedDRA, OBI, EFO, BAO, CL, RxNorm, BTO - BRENDA, DCAT 2
     
 ## Graphical Overview of FAIRification Recipe Objectives
-<div class="mermaid">
+```mermaid
 graph LR
     A(target <br> ontology) --> B[identify <br> missing term]
     B --> C(description of <br> requested term)
@@ -37,10 +37,14 @@ graph LR
     H --> I
     I -->|positive| J[use new term]
     I -->|negative| K[find alternative]
-</div>
+```
 
 ## Capability & Maturity Table
 
+| Capability | Status before recipe | Status after recipe |
+| :--------- | :------------------- | :------------------ |
+| C_PO_3 |data insufficiently annotated | data well annotated |
+| C_S_7 |data not annotated | annotated data |
 
 ## FAIRification Objectives, Inputs and Outputs
 | Actions.Objectives.Tasks  | Input | Output  |
@@ -81,7 +85,8 @@ Finalize and submit term request. Depending on the ontology, it can take up to a
 conditions, clinical findings, procedures, body structures, substances, pharmaceuticals, devices, specimen
 
 **Information about requesting changes or additions:**
-SNOMED CT has a [Content Request Service (CRS)](https://confluence.ihtsdotools.org/display/SCTCR/CRS+User+Guide). Requests can be submitted by members of SNOMED International, Nationale Release Centers or other authorized users, and must align with the [Editorial guide](https://confluence.ihtsdotools.org/display/DOCEG). 
+SNOMED CT has a [Content Request Service (CRS)](https://confluence.ihtsdotools.org/display/SCTCR/CRS+User+Guide). Requests can be submitted by members of SNOMED International, National Release Centers or other authorized users, and must align with the [Editorial guide](https://confluence.ihtsdotools.org/display/DOCEG). When a person or organization wants to submit a request but is not a member of SNOMED International, the National Release Center of the country of residence should be contacted. To request access to the Content Request Service, an email can be send to info@snomed.org.  
+
 When submitting a request, it is important to follow the aspects mentioned in **Step 3** of the **Step-by-Step process**. In addition to these aspects, the following is important to provide as well:
 * Reference(s) from a scientific or professional journal, or professional society
 * Fully expanded abbreviations
@@ -145,6 +150,11 @@ UMLS is updated in May and November of each year.
 | [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)  |
 | Release Format 2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
 | Rich Release Format |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
+
+## Additional Information
+
+* [issue on FAIRplus GitHub](https://github.com/FAIRplus/FAIRPlus_squad1/issues/7)
+* [more ontology examples](https://docs.google.com/document/d/1sq73y2vF0yhJ8M4xGd4tR5uwzSV1pOptcte5pKSyi7U/edit#heading=h.xoq2y4kj3obq)
 
 ## Authors
 
