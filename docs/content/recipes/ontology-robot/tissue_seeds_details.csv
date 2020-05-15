@@ -1,0 +1,47 @@
+originalValue	termID	confidence	IRI	ZoomaValue	OlsValue
+Lung	UBERON_0002048	high	lung	lung	http://purl.obolibrary.org/obo/UBERON_0002048
+Anterior Cingulate Cortex	UBERON_0009835	high	anterior cingulate cortex	anterior cingulate cortex	http://purl.obolibrary.org/obo/UBERON_0009835
+Nucleus Accumbens	UBERON_0001882	high	nucleus accumbens	nucleus accumbens	http://purl.obolibrary.org/obo/UBERON_0001882
+Dorsolateral Prefrontal Cortex	UBERON_0009834	high	dorsolateral prefrontal cortex	dorsolateral prefrontal cortex	http://purl.obolibrary.org/obo/UBERON_0009834
+Liver	UBERON_0002107	high	liver	liver	http://purl.obolibrary.org/obo/UBERON_0002107
+Peripheral blood	UBERON_0000178	high	peripheral blood	blood	http://purl.obolibrary.org/obo/UBERON_0000178
+Bronchoalveolar Lavage	UBERON_0035963	corrected		epithelial lining fluid	http://purl.obolibrary.org/obo/UBERON_0035963
+Colon	UBERON_0001155	high	colon	colon	http://purl.obolibrary.org/obo/UBERON_0001155
+Ileum	UBERON_0002116	high	ileum	ileum	http://purl.obolibrary.org/obo/UBERON_0002116
+Cerebral Cortex	UBERON_0000956	high	cerebral cortex	cerebral cortex	http://purl.obolibrary.org/obo/UBERON_0000956
+Adrenal gland	UBERON_0002369	high	adrenal gland	adrenal gland	http://purl.obolibrary.org/obo/UBERON_0002369
+Bone Marrow	UBERON_0002371	high	bone marrow	bone marrow	http://purl.obolibrary.org/obo/UBERON_0002371
+Brain	UBERON_0000955	high	brain	brain	http://purl.obolibrary.org/obo/UBERON_0000955
+Forestomach	UBERON_0007359	corrected		ruminant forestomach	http://purl.obolibrary.org/obo/UBERON_0007359
+Heart	UBERON_0000948	high	heart	heart	http://purl.obolibrary.org/obo/UBERON_0000948
+Kidney	UBERON_0002113	high	kidney	kidney	http://purl.obolibrary.org/obo/UBERON_0002113
+Large intestine	UBERON_0000059	high	large intestine	large intestine	http://purl.obolibrary.org/obo/UBERON_0000059
+Muscle	UBERON_0002385	high	muscle	muscle tissue	http://purl.obolibrary.org/obo/UBERON_0002385
+Ovary	UBERON_0000992	high	ovary	ovary	http://purl.obolibrary.org/obo/UBERON_0000992
+Seminal vesicle	UBERON_0000998	high	seminal vesicle	seminal vesicle	http://purl.obolibrary.org/obo/UBERON_0000998
+Small Intestine	UBERON_0002108	high	small intestine	small intestine	http://purl.obolibrary.org/obo/UBERON_0002108
+Spleen	UBERON_0002106	high	spleen	spleen	http://purl.obolibrary.org/obo/UBERON_0002106
+Stomach	UBERON_0000945	high	stomach	stomach	http://purl.obolibrary.org/obo/UBERON_0000945
+Testis	UBERON_0000473	high	testis	testis	http://purl.obolibrary.org/obo/UBERON_0000473
+Thymus	UBERON_0002370	high	thymus	thymus	http://purl.obolibrary.org/obo/UBERON_0002370
+Uterus	UBERON_0000995	high	uterus	uterus	http://purl.obolibrary.org/obo/UBERON_0000995
+Retina	UBERON_0000966	high	retina	retina	http://purl.obolibrary.org/obo/UBERON_0000966
+Adrenal	UBERON_0002369	high	adrenal	adrenal gland	http://purl.obolibrary.org/obo/UBERON_0002369
+Testes	UBERON_0000473	high	testes	testis	http://purl.obolibrary.org/obo/UBERON_0000473
+Whole Blood	UBERON_0000178	high	whole blood	blood	http://purl.obolibrary.org/obo/UBERON_0000178
+S1 proximal tubule	UBERON_0004196	corrected		proximal convoluted tubule segment 1	http://purl.obolibrary.org/obo/UBERON_0004196
+S2 proximal tubule	UBERON_0004197	corrected		proximal convoluted tubule segment 2	http://purl.obolibrary.org/obo/UBERON_0004197
+S3 proximal tubule	UBERON_0001290	corrected		proximal straight tubule	http://purl.obolibrary.org/obo/UBERON_0001290
+Descending thin limb of short-loop nephron	UBERON_0005096	corrected		descending thin limb	http://purl.obolibrary.org/obo/UBERON_0005096
+Descending thin limb of long-loop nephron of outer medulla	UBERON_0005100	corrected		long descending thin limb	http://purl.obolibrary.org/obo/UBERON_0005100
+Descending thin limb of long-loop nephron of inner medulla	UBERON_0005100	corrected		long descending thin limb	http://purl.obolibrary.org/obo/UBERON_0005100
+Thin ascending limb	UBERON_0004193	corrected		loop of Henle ascending limb thin segment	http://purl.obolibrary.org/obo/UBERON_0004193
+Medullary thick ascending limb	UBERON_0006376	corrected		premacula segment of distal straight tubule	http://purl.obolibrary.org/obo/UBERON_0006376
+Cortical thick ascending limb	UBERON_0006854	corrected		distal straight tubule postmacula segment	http://purl.obolibrary.org/obo/UBERON_0006854
+Distal convoluted tubule	UBERON_0001292	corrected		Distal Convoluted Tubule	http://purl.obolibrary.org/obo/UBERON_0001292
+Connecting tubule	UBERON_0005097	corrected		renal connecting tubule	http://purl.obolibrary.org/obo/UBERON_0005097
+Cortical collecting duct	UBERON_0004203	corrected		cortical collecting duct	http://purl.obolibrary.org/obo/UBERON_0004203
+Outer medullary collecting duct	UBERON_0004204	corrected		outer medullary collecting duct	http://purl.obolibrary.org/obo/UBERON_0004204
+Inner medullary collecting duct	UBERON_0004205	corrected		inner medullary collecting duct	http://purl.obolibrary.org/obo/UBERON_0004205
+Whole kidney	UBERON_0002113	corrected		kidney	http://purl.obolibrary.org/obo/UBERON_0002113
+Glomerulus	UBERON_0000074	corrected		renal glomerulus	http://purl.obolibrary.org/obo/UBERON_0000074
