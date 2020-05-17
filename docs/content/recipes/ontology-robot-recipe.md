@@ -114,15 +114,53 @@ ___
 
 
 ## Step by step process
+### Step 0: Define the scope of the applicaion ontology
+
+- which domains shall be included: e.g. cell line, disease, tissue, species, and sex.
+- what competency question it answers:  e.g from tissues taken from patients suffering from a specific disease.
+- the application of this ontology: find data using patient metadata.
 
 ### Step 1: Select appropriate source ontologies & branches
 
-reference other recipe 
+#### Step 1.1 Select source ontologies
+Recommend reusing existing ontologies and ontology terms instead of creating new terms
+- Things to consider in reference ontology selection
+    - Format and style. OBO foundry format recommended.
+    - Similar umbrella terms for combinations. 
+    - license
+    - coverage
+    - term relationships, manitainance, etc.
+- Available source ontology in selected domains
+
+    |Domain|Ontologies|
+    |----|----|
+    |Disease| MONDO, DOID... |
+    |Organism|NCBItaxon|
+    |Cell line|CL,CLO|
+    |Tissue|NCIT,OMIT,UBERON|
+
+- how to estimate the coverage of specific source ontology?
+
+In this application ontology, we use MONDO, CL, UBRERON,because ...
+
+#### Step 1.2 Select seed ontology terms
+
+- What is seed terms. 
+- How to select: ontology term search + manual selection
+    - Tools: ZOOMA（maybe pros and cons using zooma) , BioPortal Annotator, OLS, others.
+    - SPARQL?
+    - An example with ZOOMA?
+- Rules in seed terms selection
+    - include the domain title, e.g. "tissue", "disease", etc.
+    - stick to one reference ontology if possible
+    - if term doesnt exist, solutions: new term request > use terms other reference ontology > create your own term
+    - Coverage. Should cover all terms.
 
 ### Step 2: Build the upper level "umbrella" ontology 
 
 tools: protege/other ontology editor
 considerations: ontology base URI/namespace
+
 
 ### Step 3: Extract ontology modules from source ontologies
 
@@ -139,6 +177,8 @@ curl -L http://purl.obolibrary.org/obo/uberon.owl > uberon.owl
 #### Extraction types 
 
 ROBOT supports two types of ontology module extraction, Syntactic Locality Module Extractor (SLME) and Minimum Information to Reference an External Ontology Term (MIREOT). SLME extractions can be further subdivided into TOP (top module), BOT (bottom module) and STAR (fixpoint-nested module). For full details of what these different options entail, see http://robot.obolibrary.org/extract.html. We recommend the use of BOT for comprehensive modules that preserve the links between ontology classes and the use of MIREOT if relationships apart from parent-child ones are less important. 
+
+:pencil:__WIP__ We used MIREOT to extract species in NCBITaxon, cell types in CL, and sex in PATO. For disease term, we used BOT to extract terms in MONDO. (as one of MONDO's features is the term hierarchy.) It's also possible to important the complete ontology if ???.
 
 
 #### Module extraction - using manual text lists
@@ -210,6 +250,18 @@ uberon_subset.owl: uberon_seed_list.txt
 
 ```
 
+#### Evaluation and validation of extracted branches
+
+? For example by comparing different outcomes of MIREOT, BOT
+? how to manually check it is a good branch
+
+### Step 3/4 ? : How to creat your own term [is this section necessary?]
+Always consider reusing existing terms first.
+If have to create a term, use portege. 
+How to give it a proper identifier.
+    EFO identifier generator tool?
+
+
 ### Step 4: Merge extracted modules under the umbrella
 
 ```
@@ -227,7 +279,17 @@ java -jar robot.jar merge \
 
 
 ### Step 5: Post-merge modifications
-reasoninng and removing extraneous classes
+
+#### Step 5.0 Add term relationships
+
+- why do we need term relationships.
+- where to get term relationships: borrow existing relationships in reference ontologies(e.g. MONDO, DIOD) or EFO; manually linking by domain expert
+- How to import relationship
+    WEBOLOUS. ROBOT spreadsheet to OWL.
+- how to make sure the relationship is consistent.
+- Example
+
+#### Step 5.1: reasoninng and removing extraneous classes
 
 ```
 #MATERIALIZE:
@@ -278,6 +340,8 @@ java -jar robot.jar export \
 --export /Documents/git/stato/export-result/stato-view.xlsx
 ```
 
+### Step 6: evolving ontology
+How to update and maintaing. e.g. 
 
 
 
