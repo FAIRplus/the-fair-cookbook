@@ -114,7 +114,7 @@ ___
 
 
 ## Step by step process
-### Step 0: Define the scope of the applicaion ontology
+### Step 0: Define the scope of the application ontology
 
 - which domains shall be included: e.g. cell line, disease, tissue, species, and sex.
 - what competency question it answers:  e.g from tissues taken from patients suffering from a specific disease.
@@ -129,7 +129,7 @@ Recommend reusing existing ontologies and ontology terms instead of creating new
     - Similar umbrella terms for combinations. 
     - license
     - coverage
-    - term relationships, manitainance, etc.
+    - term relationships, maintainance, etc.
 - Available source ontology in selected domains
 
     |Domain|Ontologies|
@@ -366,7 +366,7 @@ import holoview
 | Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft, Code |
 |Philippe Rocca-Serra| UOXF|[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| Writing - Review, Code|
 |Fuqi Xu|EMBL-EBI|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)|Writing - Review|
-|Emiliano Reynares| Boehringer Ingelheim|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Writing - Review |
+|Emiliano Reynares| Boehringer Ingelheim|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Writing - Review,  Code |
 |Karsten Quast|BI|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)| Writing|
 
 
