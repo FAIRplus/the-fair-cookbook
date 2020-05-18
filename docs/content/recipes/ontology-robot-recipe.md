@@ -135,9 +135,10 @@ Recommend reusing existing ontologies and ontology terms instead of creating new
     |Domain|Ontologies|
     |----|----|
     |Disease| MONDO, DOID... |
-    |Organism|NCBItaxon|
+    |Species|NCBItaxon|
     |Cell line|CL,CLO|
     |Tissue|NCIT,OMIT,UBERON|
+    |Gender|PATO|
 
 - how to estimate the coverage of specific source ontology?
 
