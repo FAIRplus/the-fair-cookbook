@@ -9,7 +9,7 @@ The following folder structure has been created in order to keep organized the i
 
 #### Notes:
 * The document shows Windows commands.
-* The paths shown in this document are relative to the 'branch_extraction' Google Drive folder (https://drive.google.com/open?id=1kY_oBDJvs901vNS_NKM7EFoozIXlWK9k). The artifacts were not versioned on the GitHub platform because I haven't the permission to push large files (ontologies).  
+* The paths shown in this document are relative to the `branch_extraction` Google Drive folder (https://drive.google.com/open?id=1kY_oBDJvs901vNS_NKM7EFoozIXlWK9k). The artifacts were not versioned on the GitHub platform because I haven't the permission to push large files (ontologies).  
 * Using Protege or a local deployment of OLS (Recipe 1.3) to show the results. Protege die when the ontology is pretty big.
 * I also develop a jupyter notebook using the Zooma Annotator API service, but I couldn't test it because Zooma was died.
 * A cleaning of the spreadsheet is needed. I can recognize similarities and erroneous values at the `gender` feature, but I'm not able to do that at - for example - the `disease` column.
