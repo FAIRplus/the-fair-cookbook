@@ -1,4 +1,18 @@
-# Recipe 1.3: How to deploy the service internally: an example with the EBI Ontology Lookup Service
+# Recipe 1.3: How to deploy a terminology service  - an example with the EBI Ontology Lookup Service
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post:	:white_circle:	:white_circle:	:white_circle:
+
+**_Reading time:_** 20 minutes
+
+**_Intended Audience:_** 
+  - [x] Terminology Manager
+  - [x] Ontologist
+  - [x] System Administrator
+  - [x] Data Scientist
+
+**_Recipe Type_**: Service deployment
+
+**_Executable code_**: Yes
 
 [TOC]
 
@@ -18,7 +32,7 @@ This recipe is intended for bioinformaticians or developers who wants to explore
 
 This recipe can also be applied by organizational users. Please check with your IT support staff about specific policies regarding the use of containerized applications, proxy settings, and firewalls.
 
-## Graphic view
+## Graphical overview
 ```mermaid
 graph LR
     A[Install dependencies] --> B[Import ontologies]
@@ -225,6 +239,7 @@ To customize the local OLS user interface, for example, adding corporate logos, 
 |Fuqi Xu|[EMBL-EBI](https://www.ebi.ac.uk/)|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Writing - Original Draft|
 |Eva Martin | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Writing - Original Draft |
 Emiliano Reynares|[Boehringer Ingelheim](https://www.boehringer-ingelheim.com/)|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Reviewing|
+| Philippe Rocca-Serra |  [University of Oxford, Data Readiness Group](https://datareadiness.eng.ox.ac.uk/)| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Reviewing |
 
 ## License
 
