@@ -215,7 +215,8 @@ The local OLS provides API endpoints for retrieving, submitting, updating, and q
 To customize the local OLS user interface, for example, adding corporate logos, please check the OLS source code [here](https://github.com/EBISPOT/OLS). 
 
 ## Reference
-* [‘Documentation < Ontology Lookup Service < EMBL-EBI’. Accessed 20 April 2020.](https://www.ebi.ac.uk/ols/docs/installation-guide)
+* [Documentation < Ontology Lookup Service < EMBL-EBI. Accessed 20 April 2020.](https://www.ebi.ac.uk/ols/docs/installation-guide)
+* [Jupp S. et al. (2015) A new Ontology Lookup Service at EMBL-EBI. In: Malone, J. et al. (eds.) Proceedings of SWAT4LS International Conference 2015](https://conferences.ncl.ac.uk/media/sites/conferencewebsites/ukon2016/UKON_2016_paper_9.pdf)
 * [Côté, Richard G., et al. "The Ontology Lookup Service, a lightweight cross-platform tool for controlled vocabulary queries." BMC bioinformatics 7.1 (2006): 97.](https://link.springer.com/article/10.1186/1471-2105-7-97)
 
 ## Authors
