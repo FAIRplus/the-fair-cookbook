@@ -1,5 +1,32 @@
 # Building a Dataset Catalogue
 
+**identifier:**
+
+**version:** [v0.1](v0.1)
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:  :triangular_flag_on_post: :white_circle:
+
+**_Reading time:_** 60 minutes (when the recipe is completed)
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Data Managers
+
+> :heavy_check_mark: Software Engineer
+
+> :heavy_check_mark: System Administrator
+
+> :heavy_check_mark: Data Scientists
+
+
+**_Recipe Type_**: Survey / Review
+
+**_Executable code_**: Yes
+
+___
+
 ## Main Objectives
 
 The main purpose of this recipe is:
@@ -29,7 +56,6 @@ ___
 8. [License](#License)
 
 ---
-
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
@@ -126,6 +152,7 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 ### What are examples of Data Catalogues?
 
 * Commercial solutions:
+
     *  (Collibra](https://www.collibra.com/download/data-catalog-study-dresner-advisory-services-ppc?_bk=catalogue%20data&_bt=389929247489&_bm=e&_bn=g)
 
     * [DataMed](https://datamed.org/)

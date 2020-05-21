@@ -8,14 +8,14 @@
   <title>Search the site</title>
   <meta name="description" content="        ">
 
-  <link rel="canonical" href="https://fairplus.github.io/cookbook-dev/search">
-  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="https://fairplus.github.io/cookbook-dev/feed.xml">
+  <link rel="canonical" href="https://the-fair-cookbook.netlify.app//search">
+  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="https://the-fair-cookbook.netlify.app//feed.xml">
 
-  <meta property="og:url"         content="https://fairplus.github.io/cookbook-dev/search" />
+  <meta property="og:url"         content="https://the-fair-cookbook.netlify.app//search" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Search the site" />
 <meta property="og:description" content="        " />
-<meta property="og:image"       content="https://fairplus.github.io/cookbook-dev/images/logo/cookbook-logo-small.png" />
+<meta property="og:image"       content="https://the-fair-cookbook.netlify.app/images/logo/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,10 +24,10 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://fairplus.github.io/cookbook-dev/search",
+  "mainEntityOfPage": "https://the-fair-cookbook.netlify.app//search",
   "headline": "Search the site",
-  "datePublished": "2020-05-13T13:58:54+01:00",
-  "dateModified": "2020-05-13T13:58:54+01:00",
+  "datePublished": "2020-05-21T12:15:23+01:00",
+  "dateModified": "2020-05-21T12:15:23+01:00",
   "description": "        ",
   "author": {
     "@type": "Person",
@@ -38,22 +38,22 @@
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://fairplus.github.io/cookbook-dev",
+      "url": "https://the-fair-cookbook.netlify.app/",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://fairplus.github.io/cookbook-dev",
+    "url": "https://the-fair-cookbook.netlify.app/",
     "height": 60,
     "width": 60
   }
 }
 
   </script>
-  <link rel="stylesheet" href="/cookbook-dev/assets/css/styles.css">
-  <link rel="stylesheet" href="/cookbook-dev/assets/custom/custom.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/custom/custom.css">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -62,7 +62,7 @@
   <meta name="theme-color" content="#233947">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/cookbook-dev/images/logo/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/logo/favicon.ico">
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
@@ -89,23 +89,23 @@ MathJax.Hub.Config({
 
 
   <!-- DOM updating function -->
-  <script src="/cookbook-dev/assets/js/page/dom-update.js"></script>
+  <script src="/assets/js/page/dom-update.js"></script>
   <!-- using mermaid for rendering Diagram and flow chart -->
- <script src="/cookbook-dev/assets/js/mermaid.min.js"></script>
+ <script src="/assets/js/mermaid.min.js"></script>
  <script>mermaid.initialize({startOnLoad:true});</script>
-<!--  <script src="/cookbook-dev/assets/js/mermaid.js"></script>-->
+<!--  <script src="/assets/js/mermaid.js"></script>-->
 
   <!-- Selectors for elements on the page -->
-  <script src="/cookbook-dev/assets/js/page/documentSelectors.js"></script>
+  <script src="/assets/js/page/documentSelectors.js"></script>
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
-    const site_basename = '/cookbook-dev';
+    const site_basename = '/';
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
-  <script src="/cookbook-dev/assets/js/page/anchors.js" async></script>
+  <script src="/assets/js/page/anchors.js" async></script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
@@ -126,7 +126,7 @@ MathJax.Hub.Config({
 
   <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
-  <script src="/cookbook-dev/assets/js/page/tocbot.js"></script>
+  <script src="/assets/js/page/tocbot.js"></script>
 
   <!-- Google analytics -->
   
@@ -146,11 +146,11 @@ MathJax.Hub.Config({
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
-  <script src="/cookbook-dev/assets/js/scripts.js" async></script>
+  <script src="/assets/js/scripts.js" async></script>
 
   <!-- Load custom user CSS and JS  -->
-  <script src="/cookbook-dev/assets/custom/custom.js" async></script>
-  <link rel="stylesheet" href="/cookbook-dev/assets/custom/custom.css">
+  <script src="/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/assets/custom/custom.css">
 
   <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
   
@@ -214,7 +214,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("https://fairplus.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("https://the-fair-cookbook.netlify.app") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
@@ -385,10 +385,10 @@ initFunction(initQuery);
 </script>
 
   <!-- Load JS that depends on site variables -->
-  <script src="/cookbook-dev/assets/js/page/copy-button.js" async></script>
+  <script src="/assets/js/page/copy-button.js" async></script>
 
   <!-- Hide cell code -->
-  <script src="/cookbook-dev/assets/js/page/hide-cell.js" async></script>
+  <script src="/assets/js/page/hide-cell.js" async></script>
 
   <!-- Printing the screen -->
   <!-- Include nbinteract for interactive widgets -->
@@ -408,7 +408,7 @@ printContent = () => {
     printJS({
         printable: 'textbook_content',
         type: 'html',
-        css: "/cookbook-dev/assets/css/styles.css",
+        css: "/assets/css/styles.css",
         style: "#textbook_content {padding-top: 40px};",
         scanStyles: false,
         targetStyles: ["*"],
@@ -435,7 +435,7 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://fairplus.github.io/cookbook-dev/intro.html"><img src="/cookbook-dev/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <a href="https://the-fair-cookbook.netlify.app/the-fair-cookbook/intro.html"><img src="/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent></a>
   <h2 class="c-sidebar__title">THE FAIR COOKBOOK</h2>
   <ul class="c-sidebar__chapters">
     
@@ -448,9 +448,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/cookbook-dev/intro.html"
-        >
+        <a class="c-sidebar__entry " href="/intro.html">
           
           FAIR Cookbook
         </a>
@@ -469,9 +467,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="https://github.com/FAIRplus/the-fair-cookbook"
-        >
+        <a class="c-sidebar__entry " href="https://github.com/FAIRplus/the-fair-cookbook">
           
           Go to GitHub repository...
         </a>
@@ -483,11 +479,11 @@ initFunction(initPrint)
     
       
       
-        <li class="c-sidebar__divider"></li>
+        <li class="c-sidebar__divider">
         
       
       
-        <li><h2 class="c-sidebar__title">FAIR Cookbook</li>
+        <li><h2 class="c-sidebar__title">FAIR Cookbook</h2></li>
         
       
       
@@ -498,9 +494,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/cookbook-dev/roadmap.html"
-        >
+        <a class="c-sidebar__entry " href="/roadmap.html">
           
           Development Roadmap
         </a>
@@ -519,11 +513,32 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/cookbook-dev/recipes/recipes.html"
-        >
+        <a class="c-sidebar__entry " href="/recipes/introduction/FAIRplus-values.html">
           
-          Recipes
+            1.
+          
+          The Values of FAIR
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry " href="/recipes/infrastructure.html">
+          
+            2.
+          
+          Infrastructure for FAIR
         </a>
 
         
@@ -541,11 +556,11 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/introduction/FAIRplus-values.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/infrastructure/id-resolution.html">
                   
-                  The Values of FAIR
+                    2.1
+                  
+                  Identifier Resolution Service
                 </a>
 
                 
@@ -558,36 +573,14 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/infrastructure.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/infrastructure/UC3_R13_local_ontology_services.html">
                   
-                  Infrastructure for FAIR
+                    2.2
+                  
+                  Deploying Vocabulary Servers
                 </a>
 
                 
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/infrastructure/id-resolution.html"
-                    >
-                      
-                      Identifier Resolution Service
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/infrastructure/data-catalog.html"
-                    >
-                      
-                      Building a Data Catalogue
-                    </a>
                 
 
               </li>
@@ -597,58 +590,14 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/findability.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/infrastructure/Selecting_and_using_ontology_lookup_services.html">
                   
-                  Findability
+                    2.3
+                  
+                  Selecting Terminology Services
                 </a>
 
                 
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/findability/seo.html"
-                    >
-                      
-                      Search Engine optimization
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/findability/seo/bioschemas-datacatalog.html"
-                    >
-                      
-                      bioschema data catalog
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/findability/seo/bioschemas-dataset.html"
-                    >
-                      
-                      bioschema dataset
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/findability/seo/bioschemas-data-page.html"
-                    >
-                      
-                      bioschema data page
-                    </a>
                 
 
               </li>
@@ -658,58 +607,14 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/interoperability.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
                   
-                  Interoperability
+                    2.4
+                  
+                  Criteria for selecting Ontology Services
                 </a>
 
                 
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/interoperability/creating-minimal-metadata-profiles.html"
-                    >
-                      
-                      Minimal MetaData Profiles
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/interoperability/UC3R1-3.html"
-                    >
-                      
-                      Vocabulary Servers
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/interoperability/ontology-new-term-request-recipe.html"
-                    >
-                      
-                      How to request new terms in existing ontologies
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/interoperability/ontology-robot-recipe.html"
-                    >
-                      
-                      How to build an application ontology
-                    </a>
                 
 
               </li>
@@ -719,180 +624,14 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/accessibility.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/infrastructure/data-catalog.html">
                   
-                  Accessibility
+                    2.5
+                  
+                  Building a Data Catalogue
                 </a>
 
                 
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/accessibility/anonymization.html"
-                    >
-                      
-                      Anonymization Recipe
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/accessibility/license-selection.html"
-                    >
-                      
-                      Selecting a Licensing Mode
-                    </a>
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/assessing-fairness.html"
-                >
-                  
-                  FAIR Assessment
-                </a>
-
-                
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/assessing-fairness/fair-assessment-recipe.html"
-                    >
-                      
-                      Assessing FAIRness
-                    </a>
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/applied-examples.html"
-                >
-                  
-                  Applied Examples
-                </a>
-
-                
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/fair-data-matrix-recipe.html"
-                    >
-                      
-                      FAIR data matrix Recipe
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html"
-                    >
-                      
-                      Converting Excel to Frictionless Data Package
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html"
-                    >
-                      
-                      Plotting from Frictionless Data Package in Python
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html"
-                    >
-                      
-                      Plotting from Frictionless Data Package in R
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html"
-                    >
-                      
-                      Exploration fo semantic model with SPARQL
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html"
-                    >
-                      
-                      eTOX experience Recipe
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html"
-                    >
-                      
-                      RESOLUTE experience Recipe
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html"
-                    >
-                      
-                      ONCOTRACK experience Recipe
-                    </a>
-                
-                  
-                  
-
-                  <li class="c-sidebar__subsection">
-                    <a class="c-sidebar__entry "
-                      href="/cookbook-dev/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html"
-                    >
-                      
-                      ND4BB experience Recipe
-                    </a>
                 
 
               </li>
@@ -906,7 +645,495 @@ initFunction(initPrint)
     
       
       
-        <li class="c-sidebar__divider"></li>
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry " href="/recipes/findability.html">
+          
+            3.
+          
+          Findability
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/findability/seo.html">
+                  
+                    3.1
+                  
+                  Search Engine optimization
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/findability/seo/bioschemas-datacatalog.html">
+                  
+                    3.2
+                  
+                  bioschema data catalog
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/findability/seo/bioschemas-dataset.html">
+                  
+                    3.3
+                  
+                  bioschema dataset
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/findability/seo/bioschemas-data-page.html">
+                  
+                    3.4
+                  
+                  bioschema data page
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry " href="/recipes/interoperability.html">
+          
+            4.
+          
+          Interoperability
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/interoperability/creating-minimal-metadata-profiles.html">
+                  
+                    4.1
+                  
+                  Minimal MetaData Profiles
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/interoperability/ontology-new-term-request-recipe.html">
+                  
+                    4.2
+                  
+                  How to request new terms in existing ontologies
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/interoperability/ontology-robot-recipe.html">
+                  
+                    4.3
+                  
+                  How to build an application ontology
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry " href="/recipes/accessibility.html">
+          
+            5.
+          
+          Accessibility
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/accessibility/anonymization.html">
+                  
+                    5.1
+                  
+                  Anonymization Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/accessibility/license-selection.html">
+                  
+                    5.2
+                  
+                  Selecting a Licensing Mode
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry " href="/recipes/assessing-fairness.html">
+          
+            6.
+          
+          FAIR Assessment
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/assessing-fairness/fair-assessment-recipe.html">
+                  
+                    6.1
+                  
+                  Assessing FAIRness
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry " href="/recipes/applied-examples.html">
+          
+            7.
+          
+          Applied Examples
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/fair-data-matrix-recipe.html">
+                  
+                    7.1
+                  
+                  FAIR data matrix Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+                  
+                    7.2
+                  
+                  Converting Excel to Frictionless Data Package
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+                  
+                    7.3
+                  
+                  Plotting from Frictionless Data Package in Python
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+                  
+                    7.4
+                  
+                  Plotting from Frictionless Data Package in R
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+                  
+                    7.5
+                  
+                  Exploration fo semantic model with SPARQL
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+                  
+                    7.6
+                  
+                  eTOX experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html">
+                  
+                    7.7
+                  
+                  RESOLUTE experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+                  
+                    7.8
+                  
+                  ONCOTRACK experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry " href="/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+                  
+                    7.9
+                  
+                  ND4BB experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider">
         
       
       
@@ -917,9 +1144,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/cookbook-dev/ingredients/ingredient-list.html"
-        >
+        <a class="c-sidebar__entry " href="/ingredients/ingredient-list.html">
           
           Ingredients and Resources
         </a>
@@ -939,9 +1164,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/ingredients/ingredient-list.html"
-                >
+                <a class="c-sidebar__entry " href="/ingredients/ingredient-list.html">
                   
                   Ingredients
                 </a>
@@ -960,15 +1183,15 @@ initFunction(initPrint)
     
       
       
-        <li class="c-sidebar__divider"></li>
+        <li class="c-sidebar__divider">
         
       
       
-        <li class="c-sidebar__divider"></li>
+        <li class="c-sidebar__divider">
         
       
       
-        <li><h2 class="c-sidebar__title">Help Section and Demonstration</li>
+        <li><h2 class="c-sidebar__title">Help Section and Demonstration</h2></li>
         
       
       
@@ -979,11 +1202,9 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/cookbook-dev/recipes/help.html"
-        >
+        <a class="c-sidebar__entry " href="/recipes/help.html">
           
-            1.
+            8.
           
           help
         </a>
@@ -1003,11 +1224,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-gdoc.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/help/how-to-create-recipe-with-gdoc.html">
                   
-                    1.1
+                    8.1
                   
                   How to create a recipe with GoogleDoc
                 </a>
@@ -1022,11 +1241,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-hackmd.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/help/how-to-create-recipe-with-hackmd.html">
                   
-                    1.2
+                    8.2
                   
                   How to use HackMD to write a FAIR Cookbook Recipe
                 </a>
@@ -1041,11 +1258,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-git.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/help/how-to-create-recipe-with-git.html">
                   
-                    1.3
+                    8.3
                   
                   How to create a recipe with git
                 </a>
@@ -1060,11 +1275,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/features/markdown.html"
-                >
+                <a class="c-sidebar__entry " href="/features/markdown.html">
                   
-                    1.4
+                    8.4
                   
                   Markdown files
                 </a>
@@ -1079,11 +1292,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/features/notebooks.html"
-                >
+                <a class="c-sidebar__entry " href="/features/notebooks.html">
                   
-                    1.5
+                    8.5
                   
                   Jupyter notebooks
                 </a>
@@ -1098,11 +1309,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/recipes/help/recipe-template.html"
-                >
+                <a class="c-sidebar__entry " href="/recipes/help/recipe-template.html">
                   
-                    1.6
+                    8.6
                   
                   Recipe Template
                 </a>
@@ -1117,11 +1326,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/1/mermaidsetup.html"
-                >
+                <a class="c-sidebar__entry " href="/1/mermaidsetup.html">
                   
-                    1.7
+                    8.7
                   
                   mermaidsetup
                 </a>
@@ -1147,11 +1354,9 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/cookbook-dev/1/frictionless.html"
-        >
+        <a class="c-sidebar__entry " href="/1/frictionless.html">
           
-            2.
+            9.
           
           frictionless data example
         </a>
@@ -1171,11 +1376,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/1/testnb/0-rose-metabolites-Python-data-handling.html"
-                >
+                <a class="c-sidebar__entry " href="/1/testnb/0-rose-metabolites-Python-data-handling.html">
                   
-                    2.1
+                    9.1
                   
                   1
                 </a>
@@ -1190,11 +1393,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/1/testnb/1-rose-metabolites-Python-analysis.html"
-                >
+                <a class="c-sidebar__entry " href="/1/testnb/1-rose-metabolites-Python-analysis.html">
                   
-                    2.2
+                    9.2
                   
                   2
                 </a>
@@ -1209,11 +1410,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/1/testnb/3-rose-metabolites-R-analysis.html"
-                >
+                <a class="c-sidebar__entry " href="/1/testnb/3-rose-metabolites-R-analysis.html">
                   
-                    2.3
+                    9.3
                   
                   3
                 </a>
@@ -1228,11 +1427,9 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html"
-                >
+                <a class="c-sidebar__entry " href="/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html">
                   
-                    2.4
+                    9.4
                   
                   4
                 </a>
@@ -1251,7 +1448,7 @@ initFunction(initPrint)
     
       
       
-        <li class="c-sidebar__divider"></li>
+        <li class="c-sidebar__divider">
         
       
       
@@ -1262,11 +1459,9 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/cookbook-dev/project_information.html"
-        >
+        <a class="c-sidebar__entry " href="/project_information.html">
           
-            3.
+            10.
           
           Project Information
         </a>
@@ -1286,9 +1481,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/People.html"
-                >
+                <a class="c-sidebar__entry " href="/People.html">
                   
                   People
                 </a>
@@ -1303,9 +1496,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/Contributing.html"
-                >
+                <a class="c-sidebar__entry " href="/Contributing.html">
                   
                   Contributing
                 </a>
@@ -1320,9 +1511,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/Governance.html"
-                >
+                <a class="c-sidebar__entry " href="/Governance.html">
                   
                   Governance
                 </a>
@@ -1337,9 +1526,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/license.html"
-                >
+                <a class="c-sidebar__entry " href="/license.html">
                   
                   License
                 </a>
@@ -1354,9 +1541,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/disclaimer.html"
-                >
+                <a class="c-sidebar__entry " href="/disclaimer.html">
                   
                   Disclaimer
                 </a>
@@ -1371,9 +1556,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/code_of_conduct.html"
-                >
+                <a class="c-sidebar__entry " href="/code_of_conduct.html">
                   
                   Code of Conduct
                 </a>
@@ -1388,9 +1571,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/cookbook-dev/papers.html"
-                >
+                <a class="c-sidebar__entry " href="/papers.html">
                   
                   Publications
                 </a>
@@ -1415,17 +1596,14 @@ initFunction(initPrint)
       <div class="c-topbar" id="top-navbar">
   <!-- We show the sidebar by default so we use .is-active -->
   <div class="c-topbar__buttons">
-    <button
-      id="js-sidebar-toggle"
-      class="hamburger hamburger--arrowalt is-active"
-    >
+    <button id="js-sidebar-toggle" class="hamburger hamburger--arrowalt is-active">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
     <div class="buttons">
 <div class="download-buttons-dropdown">
-    <button id="dropdown-button-trigger" class="interact-button"><img src="/cookbook-dev/assets/images/download-solid.svg" alt="Download" /></button>
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/assets/images/download-solid.svg" alt="Download"></button>
     <div class="download-buttons">
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
@@ -1438,19 +1616,20 @@ initFunction(initPrint)
   </div>
   <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
   <aside class="sidebar__right">
-    <header><h4 class="nav__title"><img src="/cookbook-dev/assets/images/list-solid.svg" alt="Search" /> On this page</h4></header>
+    <header><h4 class="nav__title">
+<img src="/assets/images/list-solid.svg" alt="Search"> On this page</h4></header>
     <nav class="onthispage">
     </nav>
   </aside>
-  <a href="/cookbook-dev/search.html" class="topbar-right-button" id="search-button">
-    <img src="/cookbook-dev/assets/images/search-solid.svg" alt="Search" />
+  <a href="/search.html" class="topbar-right-button" id="search-button">
+    <img src="/assets/images/search-solid.svg" alt="Search">
   </a>
 </div>
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
               <div class="search-content__inner-wrap">
-    <input type="text" id="lunr_search" class="search-input" tabindex="-1" placeholder="'Enter your search term...''" />
+    <input type="text" id="lunr_search" class="search-input" tabindex="-1" placeholder="'Enter your search term...''">
     <div id="results" class="results"></div>
 </div>
 
@@ -1460,10 +1639,10 @@ initFunction(initPrint)
         "title": "frictionless data example",
         
         "excerpt":
-            "Frictionless Tabular Data Package Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives graph LR; A[Data Acquisition] -->B(Raw Data) B --> C{FAIR by Design} C -->|Yes| D[Standard Compliant Data] C -->|No| E[Vendor locked Data] Capability &amp; Maturity Table Capability Initial Maturity Level Final Maturity...",
+            "Frictionless Tabular Data Package Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives graph LR; A[Data Acquisition] -->B(Raw Data) B --> C{FAIR by Design} C -->|Yes| D[Standard Compliant Data] C -->|No| E[Vendor locked Data] Capability & Maturity Table Capability Initial Maturity Level Final Maturity...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/frictionless.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/frictionless.html",
         "teaser":null},{
         "title": "None",
         
@@ -1471,7 +1650,7 @@ initFunction(initPrint)
             "Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication's supplementary data. *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/frictionless/0-rose-metabolites-Python-data-handling.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/frictionless/0-rose-metabolites-Python-data-handling.html",
         "teaser":null},{
         "title": "None",
         
@@ -1479,15 +1658,15 @@ initFunction(initPrint)
             "Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2 *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use python equivalent of ggplot2 , the rich R graphical libraries (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly,...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/frictionless/1-rose-metabolites-Python-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/frictionless/1-rose-metabolites-Python-analysis.html",
         "teaser":null},{
         "title": "mermaidsetup",
         
         "excerpt":
-            "How to enable flow diagrams in Github from gh-pages: github pages are served by jekyll and more information can be found in the following document github pages &amp; jekyll flow and sequence diagrams are popular mean to provide a graphical overview of processes. Since FAIRification recipes are processes at the core, it is a strong requirement to enhance the recipes with such graphical overview mermaid is a javascript library allowing to generate diagrams, charts, graphs or flows from markdown-like text via javascript. mermaid documentation is extensive, see here mermaid is compatible with jekyll via a gem plugin The following steps...",
+            "How to enable flow diagrams in Github from gh-pages: github pages are served by jekyll and more information can be found in the following document github pages & jekyll flow and sequence diagrams are popular mean to provide a graphical overview of processes. Since FAIRification recipes are processes at the core, it is a strong requirement to enhance the recipes with such graphical overview mermaid is a javascript library allowing to generate diagrams, charts, graphs or flows from markdown-like text via javascript. mermaid documentation is extensive, see here mermaid is compatible with jekyll via a gem plugin The following steps...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/mermaidsetup.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/mermaidsetup.html",
         "teaser":null},{
         "title": "1",
         
@@ -1495,7 +1674,7 @@ initFunction(initPrint)
             "Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication's supplementary data. *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/testnb/0-rose-metabolites-Python-data-handling.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/testnb/0-rose-metabolites-Python-data-handling.html",
         "teaser":null},{
         "title": "2",
         
@@ -1503,15 +1682,15 @@ initFunction(initPrint)
             "Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2 *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use python equivalent of ggplot2 , the rich R graphical libraries (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly,...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/testnb/1-rose-metabolites-Python-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/testnb/1-rose-metabolites-Python-analysis.html",
         "teaser":null},{
         "title": "4",
         
         "excerpt":
-            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = &#39;&lt;table&gt;&lt;tr style=&quot;color:white;background-color:#43BFC7;font-weight:bold&quot;&gt;&#39; # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + &#39;&lt;td&gt;&#39; + varName + &#39;&lt;/td&gt;&#39; HTMLResult = HTMLResult + &#39;&lt;/tr&gt;&#39; # print values from each row and build...",
+            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = '<table><tr style="color:white;background-color:#43BFC7;font-weight:bold">' # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + '<td>' + varName + '</td>' HTMLResult = HTMLResult + '</tr>' # print values from each row and build...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html",
         "teaser":null},{
         "title": "3",
         
@@ -1519,7 +1698,7 @@ initFunction(initPrint)
             "Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed into R and exploited with rich graphical libraries, such as the well know ggplot2 (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly, this rapid exploration is possible because of independent variables and their levels have been clearly and unambiguously declared in the Tabular...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/1/testnb/3-rose-metabolites-R-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/1/testnb/3-rose-metabolites-R-analysis.html",
         "teaser":null},{
         "title": "Contributing",
         
@@ -1527,7 +1706,7 @@ initFunction(initPrint)
             "Contributing to the FAIR cookbook Welcome to the FAIR cookbook repository! We're excited you're here and want to contribute. These guidelines are designed to make it as easy as possible to get involved. If you have any questions that aren't discussed below, please let us know by opening an issue! Before you start you'll need to set up a free GitHub account and sign in. Here are some instructions. Already know what you're looking for in this guide? Jump to the following sections: Joining the conversation Contributing through Github Understanding issues, milestones, and project boards Making a change Structuring contributions...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/Contributing.html",
+        "url": "https://the-fair-cookbook.netlify.app/Contributing.html",
         "teaser":null},{
         "title": "Governance",
         
@@ -1535,7 +1714,7 @@ initFunction(initPrint)
             "FAIR Cookbook Governance The purpose of this document is to formalize the governance process that the FAIR Cookbook project will be relying on. This document clarifies how decisions are made and how the various elements of our community interact, including the relationship between open source collaborative development and work that may be funded by for-profit or non-profit entities. Table of Contents Main Governance Document Code of Conduct Current Steering Council and Institutional Partners New Subproject Incubation Process Process for Authoring Related Academic Papers License of Governance Documents To the extent possible under law, FAIR Cookbook project has waived all copyright...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/Governance.html",
+        "url": "https://the-fair-cookbook.netlify.app/Governance.html",
         "teaser":null},{
         "title": "People",
         
@@ -1543,7 +1722,7 @@ initFunction(initPrint)
             "Steering Council and Institutional Partners Names are followed by GitHub usernames. Benevolent Dictator for Life Philippe Rocca-Serra is the Benevolent Dictator for Life (BDFL). Steering Council Andrea Splendiani Susanna Sansone Identifier Subcommittee Chris Evelo Alasdair Gray Ontology Subcommittee Tony Burdett CMMI Subcommittee Oya Beyan Data Hosting Subcommittee Wei Gu Venkata Institutional Partners Tier 1 Institutional Council members are noted with each institution. IMI (grant officer) FAIRplus (Herman Van Vlijmen) Tier 2 github New Steering Council Members When a new member joins the steering council, the following things are done: Announce the new member on the FAIR Cookbook mailing list Make...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/People.html",
+        "url": "https://the-fair-cookbook.netlify.app/People.html",
         "teaser":null},{
         "title": "Code of Conduct",
         
@@ -1551,15 +1730,15 @@ initFunction(initPrint)
             "FAIR Cookbook Code of Conduct FAIR Cookbook is an engaged and respectful community made up of people from all over the world. Your involvement helps us to further our mission and to create an open platform that serves a broad range of communities, from research and education, to journalism, industry and beyond. Naturally, this implies diversity of ideas and perspectives on often complex problems. Disagreement and healthy discussion of conflicting viewpoints is welcome: the best solutions to hard problems rarely come from a single angle. But disagreement is not an excuse for aggression: humans tend to take disagreement personally and...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/code_of_conduct.html",
+        "url": "https://the-fair-cookbook.netlify.app/code_of_conduct.html",
         "teaser":null},{
         "title": "Disclaimer",
         
         "excerpt":
-            "    \r     \r \r \r \r Disclaimer  \r This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.\r  \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             Disclaimer   This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/disclaimer.html",
+        "url": "https://the-fair-cookbook.netlify.app/disclaimer.html",
         "teaser":null},{
         "title": "Features and customization",
         
@@ -1567,7 +1746,7 @@ initFunction(initPrint)
             "Features This is a short demonstration textbook to show the general layout / style of textbooks built with Jupyter and Jekyll. The markdown files for this page (and others in the textbook) is generated from the notebooks with the scripts/generate_textbook.py script, which is called when you run make book. The content for the book is contained in a folder in the book's repository called content/. It has a combination of markdown and Jupyter notebooks. This content is rendered into the textbook that you see here! To begin, click on one of the chapter sections in the sidebar to the left....",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/features/features.html",
+        "url": "https://the-fair-cookbook.netlify.app/features/features.html",
         "teaser":null},{
         "title": "Markdown files",
         
@@ -1575,7 +1754,7 @@ initFunction(initPrint)
             "Creating book content The two kinds of files that contain course content are: Jupyter Notebooks Markdown files Each are contained in the content/ folder and referenced from _data/toc.yml. If the file is markdown, it will be copied over with front-matter YAML added so that Jekyll can parse it Sidebars with Jekyll You may notice that there's a sidebar to the right (if your screen is wide enough). These are automatically generated from the headers that are present in your page. The sidebar will automatically capture all 2nd and 3rd level section headers. The best way to designate these headers is...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/features/markdown.html",
+        "url": "https://the-fair-cookbook.netlify.app/features/markdown.html",
         "teaser":null},{
         "title": "Jupyter notebooks",
         
@@ -1583,15 +1762,15 @@ initFunction(initPrint)
             "Content with notebooks You can also create content with Jupyter Notebooks. The content for the current page is contained in a Jupyter Notebook in the notebooks/ folder of the repository. This means that we can include code blocks and their outputs, and export them to Jekyll markdown. You can find the original notebook for this page at this address Markdown + notebooks As it is markdown, you can embed images, HTML, etc into your posts! You an also $add_{math}$ and $$ math^{blocks} $$or $$ \\begin{align*} \\mbox{mean} la_{tex} \\\\ \\\\ math blocks \\end{align*} $$But make sure you \\$Escape \\$your \\$dollar signs...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/features/notebooks.html",
+        "url": "https://the-fair-cookbook.netlify.app/features/notebooks.html",
         "teaser":null},{
         "title": "Ingredients",
         
         "excerpt":
-            "    \r     \r \r \r \r Ingredients:  Standards:  \r SDFile (FairSharing doi:10.25504/fairsharing.ew26v7)\r SMILES (FairSharing doi:10.25504/fairsharing.qv4b3c)\r InChI (FairSharing doi:10.25504/fairsharing.ddk9t9)\r \r Databases:  Not applicable. \r Identifiers:  \r InChI\r \r Tools:  \r Programming Language: Groovy\r Dependencies: CDK 2.3\r \r Click here on how to use: \r Record validation  \r Input: SD file\r Output: Reports validation issues\r \r Calculate InChls  \r Input: SD file\r Output: list of InChIs\r \r Calculate SMILES strings  \r Input: SD file\r Output: list of SMILES strings\r \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             Ingredients:  Standards:   SDFile (FairSharing doi:10.25504/fairsharing.ew26v7) SMILES (FairSharing doi:10.25504/fairsharing.qv4b3c) InChI (FairSharing doi:10.25504/fairsharing.ddk9t9)  Databases:  Not applicable.  Identifiers:   InChI  Tools:   Programming Language: Groovy Dependencies: CDK 2.3  Click here on how to use:  Record validation   Input: SD file Output: Reports validation issues  Calculate InChls   Input: SD file Output: list of InChIs  Calculate SMILES strings   Input: SD file Output: list of SMILES strings                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/ingredients/ingredient-list.html",
+        "url": "https://the-fair-cookbook.netlify.app/ingredients/ingredient-list.html",
         "teaser":null},{
         "title": "FAIR Cookbook",
         
@@ -1599,15 +1778,15 @@ initFunction(initPrint)
             "FAIR Cookbook The FAIR Coobook overview The FAIR Cookbook is a project aiming at collating protocols for making data FAIR The FAIR Cookbook is open source and licensed under CC-BY-4.0 The FAIR Coobook is writting using Markdown and deployed using jupyter-tool The FAIR Cookbook is an activity of the FAIRplus project funded by the Innovative Medicine Initiative (IMI) under grant agreement #802750 (2019-22). The FAIR Cookbook is currently led by: Philippe Rocca-Serra (University of Oxford) Susanna-Assunta Sansone (University of Oxford) Andrea Splendiani (Novartis) Content and learning outcomes Learn how to FAIRify a number of exemplar datasets, putting the FAIR principles...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/intro.html",
+        "url": "https://the-fair-cookbook.netlify.app/intro.html",
         "teaser":null},{
         "title": "License",
         
         "excerpt":
-            "    \r     \r \r \r \r License for this book  All content in this book (ie, any files and content in the content/ folder)\r is licensed under the Creative Commons Attribution-ShareAlike 4.0 International\r (CC BY-SA 4.0) license. \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             License for this book  All content in this book (ie, any files and content in the content/ folder) is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license.                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/license.html",
+        "url": "https://the-fair-cookbook.netlify.app/license.html",
         "teaser":null},{
         "title": "Publications",
         
@@ -1615,15 +1794,15 @@ initFunction(initPrint)
             "Process for Authoring FAIR Cookbook Related Academic Papers disclaimer This pages borrows heavily from https://github.com/jupyter/governance/edit/master/papers.md This document describes the processes used to author FAIR Cookbook related academic papers, which are typically submitted to peer-reviewed journals. This does not include talks and posters submitted to conferences unless the conference also publishes written proceedings. On one hand, the primary focus of FAIR Cookbook is on producing open-source documentation and actionable recipes/workflows. To this day, many of our core contributors have academic positions and active research programs. This emphasis is also reflected in the usage of FAIR principles across all areas of scientific...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/papers.html",
+        "url": "https://the-fair-cookbook.netlify.app/papers.html",
         "teaser":null},{
         "title": "Project Information",
         
         "excerpt":
-            "    \r     \r \r \r \r FAIR CookBook BoilerPlate  \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             FAIR CookBook BoilerPlate                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/project_information.html",
+        "url": "https://the-fair-cookbook.netlify.app/project_information.html",
         "teaser":null},{
         "title": "Recipe 1.3",
         
@@ -1631,55 +1810,55 @@ initFunction(initPrint)
             "Recipe 1.3: How to deploy the service internally, an examplar AI: feedback to Squad1. more ontology services Main Objectives Ingredients Introduction Graphic view Step by step guide: 1. Installing dependencies Add memory requirements 2. Loading ontologies into OLS 2.1 Downloading configuration files from EBI OLS. 2.2 Loading ontologies from OBO Foundry 3. Set up OLS in the local environment Troubleshooting Summary Authors License Reference Main Objectives How to deploy public ontology services in local machines, take the EBI Ontology Lookup Service (OLS) as an example. Ingredients OLS Docker image OLS Documentation: Build a local version of OLS(without Docker) Ontology metadata...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/UC3R1-3.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/UC3R1-3.html",
         "teaser":null},{
         "title": "Accessibility",
         
         "excerpt":
-            "    \r     \r \r \r \r recipes  Text \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             recipes  Text                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/accessibility.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/accessibility.html",
         "teaser":null},{
         "title": "Anomynization Recipe",
         
         "excerpt":
-            "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  -DISCLAIMER: THIS IS A TEST &amp; A PLACEHOLDER \r identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  -DISCLAIMER: THIS IS A TEST & A PLACEHOLDER \r identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/accessibility/anonymization-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/accessibility/anonymization-recipe.html",
         "teaser":null},{
         "title": "Anonymization Recipe",
         
         "excerpt":
-            "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  -DISCLAIMER: THIS IS A TEST &amp; A PLACEHOLDER \r identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             Recipe1: Anonymizing Patient Data  -DISCLAIMER: THIS IS A TEST & A PLACEHOLDER  identifier  authors  maintainers  version  license  Ingredients:   Identifier Schema:  1. Metadata Model:     -     -     - 2. Vocabularies and Terminologies:     -     -     - 3. Data Format:     -     -     - 4. Tools and  Software:     -     -     -    Objectives:  Step by Step Process:    ### Step1:   ### Step2:   ### Step3:   ### Step4:   ### Step5:   ß                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/accessibility/anonymization.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/accessibility/anonymization.html",
         "teaser":null},{
         "title": "Selecting a Licensing Mode",
         
         "excerpt":
-            "    \r     \r \r \r \r Selection a Licensing Model and Determinizing conditions of Use and Condition of Access:  Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r \r \r \r Authors:  \r \r Name\r Affiliation\r orcid\r CrediT role\r \r \r \r \r Philippe Rocca-Serra\r University of Oxford, Data Readiness Group\r 0000-0001-9853-5668\r Writing - Original Draft\r \r \r \r \r License:   \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             Selection a Licensing Model and Determinizing conditions of Use and Condition of Access:  Ingredients:   Identifier Schema:  1. Metadata Model:     -     -     - 2. Vocabularies and Terminologies:     -     -     - 3. Data Format:     -     -     - 4. Tools and  Software:     -     -     -    Objectives:  Step by Step Process:    ### Step1:   ### Step2:   ### Step3:   ### Step4:   ### Step5:      Authors:    Name Affiliation orcid CrediT role     Philippe Rocca-Serra University of Oxford, Data Readiness Group 0000-0001-9853-5668 Writing - Original Draft     License:                       ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/accessibility/license-selection.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/accessibility/license-selection.html",
         "teaser":null},{
         "title": "Anomynization Recipe",
         
         "excerpt":
-            "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  -DISCLAIMER: THIS IS A TEST &amp; A PLACEHOLDER \r identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  -DISCLAIMER: THIS IS A TEST & A PLACEHOLDER \r identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/anonymization-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/anonymization-recipe.html",
         "teaser":null},{
         "title": "Applied Examples",
         
         "excerpt":
-            "    \r     \r \r \r \r applied examples  \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             applied examples                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples.html",
         "teaser":null},{
         "title": "eTOX experience Recipe",
         
@@ -1687,15 +1866,15 @@ initFunction(initPrint)
             "FAIRplus Project - FAIRirification Recipe - Squad 1 Data normalization and integration through entity linking The eTox Sampler Dataset applied scenario Motivation and aim of the FAIRification Recipe The description of the metadata as well as the characterization of the actual content of a dataset often rely on short free-text excerpts. As an example, we can consider the names of the columns of a table (e.g. \"laboratory tests\") or the different values of the cells belonging to a specific table column (e.g. “cholesterol”, “blood sugar”, “liver function”, etc.). Often such free-text excerpts are not rigorously characterized inside and across datasets,...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html",
         "teaser":null},{
         "title": "FAIR data matrix Recipe",
         
         "excerpt":
-            "Recipe-1: Making a Data Matrix FAIR identifier: DOI:https://doi.org/10.5072/FK2862KX83 version: version Table of Contents Summary Main Objectives Graphical Overview of the FAIRification Recipe Objectives Capability &amp; Maturity Table FAIRification Objectives, Inputs and Outputs Table of Data Standards Table of Software and Tools Step by Step Process References Authors License Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type. Our...",
+            "Recipe-1: Making a Data Matrix FAIR identifier: https://doi.org/10.5072/FK2862KX83 version: v1.0 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 15 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Managers <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientists Recipe Type: Practical Executable code: Yes Table of Contents Summary Main Objectives Graphical Overview of the FAIRification Recipe Objectives Capability & Maturity Table FAIRification Objectives, Inputs and Outputs Table of Data Standards Table of Software and Tools Step by Step Process References Authors License Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/fair-data-matrix-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/fair-data-matrix-recipe.html",
         "teaser":null},{
         "title": "Converting Excel to Frictionless Data Package",
         
@@ -1703,7 +1882,7 @@ initFunction(initPrint)
             "Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication's supplementary data. *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html",
         "teaser":null},{
         "title": "Plotting from Frictionless Data Package in Python",
         
@@ -1711,15 +1890,15 @@ initFunction(initPrint)
             "Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2 *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use python equivalent of ggplot2 , the rich R graphical libraries (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly,...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html",
         "teaser":null},{
         "title": "Exploration fo semantic model with SPARQL",
         
         "excerpt":
-            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = &#39;&lt;table&gt;&lt;tr style=&quot;color:white;background-color:#43BFC7;font-weight:bold&quot;&gt;&#39; # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + &#39;&lt;td&gt;&#39; + varName + &#39;&lt;/td&gt;&#39; HTMLResult = HTMLResult + &#39;&lt;/tr&gt;&#39; # print values from each row and build...",
+            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = '<table><tr style="color:white;background-color:#43BFC7;font-weight:bold">' # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + '<td>' + varName + '</td>' HTMLResult = HTMLResult + '</tr>' # print values from each row and build...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html",
         "teaser":null},{
         "title": "Plotting from Frictionless Data Package in R",
         
@@ -1727,7 +1906,7 @@ initFunction(initPrint)
             "Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed into R and exploited with rich graphical libraries, such as the well know ggplot2 (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly, this rapid exploration is possible because of independent variables and their levels have been clearly and unambiguously declared in the Tabular...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html",
         "teaser":null},{
         "title": "ND4BB experience Recipe",
         
@@ -1735,7 +1914,7 @@ initFunction(initPrint)
             "ND4BB dataset FAIRification recipe Version: 2, this recipe is extracted from Version 1 Ingredients Raw Data: AMR Compounds Database Metadata Model Vocabularies and Terminologies Data Format: Excel spreadsheet PropertyGroup Property Value Tools and Software: Data curation tools: Excel, JAVA FAIRification pipeline tools: KNIME workflow Ontology recommender: ZOOMA, NCBO FAIR assessment: RDA indicator V0.03 Objectives The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data to a public repository using machine readable format. Also generic improvement of the FAIR parameters. Step by Step Process Dataset description The AMR...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html",
         "teaser":null},{
         "title": "ONCOTRACK experience Recipe",
         
@@ -1743,7 +1922,7 @@ initFunction(initPrint)
             "Oncotrack FAIRification recipe Ingredients Metadata model Oncotrack cohort metadata Oncotrack drug sensitivity data Oncotrack metadata template Vocabularies and terminologies Pharmaceutical drug names follow the nomenclature of ChEBI and ChEMBL database. All drug ontologies are listed here. All abbreviations and acronyms used in OncoTrack cohort metadata are listed in the OncoTrack public metadata acronym table. Data format Input data: Excel Output data: tab-delimited text file JSON file (JSON schema: BioSamples databases JSON schema) Tools and software Metadata extract and transform tool: R (Version 3.6.1) String parsing: R package stringi_1.4.3, stringr_1.4.0 Excel file Loading: readxl_1.3.1 Data structure transform:plyr_1.8.4 JSON format parsing: rjson_0.2.20...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html",
         "teaser":null},{
         "title": "RESOLUTE experience Recipe",
         
@@ -1751,23 +1930,23 @@ initFunction(initPrint)
             "RESOLUTE FAIRification Recipe Ingredients Data transfer tools: SFTP server OneDrive Amazon S3 Buckets Data hosting platform: raw data: SRA [Transcriptomics] ProteomeXchange [Proteomics] Samples metadata: BioSamples Data standards Transcriptomics community standard: MINSEQE Sample metadata schema: BioSamples JSON schema Data submission portal schema FAIR evaluation standard: RDA FAIR indicators This recipe provides an example of sample metadata extraction and curation practices, suggests a community standard for transcriptomics data and proposes a transcriptomics JSON schema, which allows direct submission of transcriptomics data to the public databases. Different approaches to assess the FAIR level of the dataset is also discussed. Sample metadata ETL pipeline...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html",
         "teaser":null},{
         "title": "FAIR Assessment",
         
         "excerpt":
-            "    \r     \r \r \r \r recipes  Text \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             recipes  Text                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/assessing-fairness.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/assessing-fairness.html",
         "teaser":null},{
         "title": "Assessing FAIRness",
         
         "excerpt":
-            "Recipe 1: FAIR Assessment Recipe identifier version 0.1 Ingredients: Ingredient Type Comment HTTP1.1 protocol data communication protocol guidance on persistent resolvable identifiers policy Persistent Uniform Resource Locators - PURL redirection service Archival Resource Key identifier minting service; identifier resolution service Handle system identifier minting service; identifier resolution service DOI identifier minting service based on Handle system identifiers.org identifier resolution service EZID resolution service identifier resolution service name2things rsolution service identifier resolution service FAIREvaluator FAIR assessment FAIRShake FAIR assessment RDF/Linked Data model Actions.Objectives.Tasks Input Output Objectives: Perform an automatic assessment of the status of a dataset with respect to the FAIR...",
+            "Recipe 1: How to assess FAIRness identifier: version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 15 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Managers <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientists Recipe Type: Practical Executable code: Yes Ingredients: Ingredient Type Comment HTTP1.1 protocol data communication protocol guidance on persistent resolvable identifiers policy Persistent Uniform Resource Locators - PURL redirection service Archival Resource Key identifier minting service; identifier resolution service Handle system identifier minting service; identifier resolution service DOI identifier minting service based on Handle system identifiers.org identifier resolution service EZID resolution service identifier resolution service name2things rsolution service identifier resolution service FAIREvaluator FAIR...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/assessing-fairness/fair-assessment-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/assessing-fairness/fair-assessment-recipe.html",
         "teaser":null},{
         "title": "Chemical identities - Generating InChI and SMILES strings",
         
@@ -1775,7 +1954,7 @@ initFunction(initPrint)
             "    \r     \r \r \r \r Ingredients:  Standards:  \r SDFile (FairSharing doi:10.25504/fairsharing.ew26v7)\r SMILES (FairSharing doi:10.25504/fairsharing.qv4b3c)\r InChI (FairSharing doi:10.25504/fairsharing.ddk9t9)\r \r Databases:  Not applicable. \r Identifiers:  \r InChI\r \r Tools:  \r Programming Language: Groovy\r Dependencies: CDK 2.3\r \r Click here on how to use: \r Record validation  \r Input: SD file\r Output: Reports validation issues\r \r Calculate InChls  \r Input: SD file\r Output: list of InChIs\r \r Calculate SMILES strings  \r Input: SD file\r Output: list of SMILES strings\r \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/chemical-identities.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/chemical-identities.html",
         "teaser":null},{
         "title": "eTOX experience Recipe",
         
@@ -1783,7 +1962,7 @@ initFunction(initPrint)
             "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/etox-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/etox-recipe.html",
         "teaser":null},{
         "title": "eTOX experience Recipe",
         
@@ -1791,7 +1970,7 @@ initFunction(initPrint)
             "FAIRplus Project - FAIRirification Recipe - Squad 1 Data normalization and integration through entity linking The eTox Sampler Dataset applied scenario Motivation and aim of the FAIRification Recipe The description of the metadata as well as the characterization of the actual content of a dataset often rely on short free-text excerpts. As an example, we can consider the names of the columns of a table (e.g. \"laboratory tests\") or the different values of the cells belonging to a specific table column (e.g. “cholesterol”, “blood sugar”, “liver function”, etc.). Often such free-text excerpts are not rigorously characterized inside and across datasets,...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html",
         "teaser":null},{
         "title": "FAIR Assessment Recipe",
         
@@ -1799,15 +1978,15 @@ initFunction(initPrint)
             "Recipe1: FAIR Assessment Recipe identifier authors Philippe Rocca-Serra maintainers Philippe Rocca-Serra version 0.1 license CC-BY-4.0 Ingredients: Identifier Schema: guidance on persistent resolvable identifiers HTTP1.1 protocol Persistent Uniform Resource Locators - PURL Archival Resource Key handle system handle based http proxy for DOI Metadata Model: topic dependent Vocabularies and Terminologies: topic dependent Data Format: RDF/Linked Data Tools and Software: 5.1 resolution services: EZID resolution service name2things rsolution service identifiers.org 5.2 FAIR assessment tools FAIREvaluator FAIRShake Objectives: Perform an automatic assessment of the status of a dataset with respect to the FAIR principles. Obtain a machine readable report Step by Step Process:...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/fair-assessment-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/fair-assessment-recipe.html",
         "teaser":null},{
         "title": "FAIR data matrix Recipe",
         
         "excerpt":
-            "Recipe-1: Making a Data Matrix FAIR identifier: DOI:https://doi.org/10.5072/FK2862KX83 version: version Table of Contents Summary Main Objectives Graphical Overview of the FAIRification Recipe Objectives Capability &amp; Maturity Table FAIRification Objectives, Inputs and Outputs Table of Data Standards Table of Software and Tools Step by Step Process References Authors License Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type. Our...",
+            "Recipe-1: Making a Data Matrix FAIR identifier: DOI:https://doi.org/10.5072/FK2862KX83 version: version Table of Contents Summary Main Objectives Graphical Overview of the FAIRification Recipe Objectives Capability & Maturity Table FAIRification Objectives, Inputs and Outputs Table of Data Standards Table of Software and Tools Step by Step Process References Authors License Summary: Our first data source: article by Raymond et al. Nat Genet. 50:772-777 (2018) https://doi.org/10.1038/s41588-018-0110-3; this is targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type. Our...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/fair-data-matrix-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/fair-data-matrix-recipe.html",
         "teaser":null},{
         "title": "Converting Excel to Frictionless Data Package",
         
@@ -1815,7 +1994,7 @@ initFunction(initPrint)
             "Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication's supplementary data. *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling.html",
         "teaser":null},{
         "title": "Plotting from Frictionless Data Package in Python",
         
@@ -1823,15 +2002,15 @@ initFunction(initPrint)
             "Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2 *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use python equivalent of ggplot2 , the rich R graphical libraries (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly,...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/fair-data-matrix/1-rose-metabolites-Python-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/fair-data-matrix/1-rose-metabolites-Python-analysis.html",
         "teaser":null},{
         "title": "Exploration fo semantic model with SPARQL",
         
         "excerpt":
-            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = &#39;&lt;table&gt;&lt;tr style=&quot;color:white;background-color:#43BFC7;font-weight:bold&quot;&gt;&#39; # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + &#39;&lt;td&gt;&#39; + varName + &#39;&lt;/td&gt;&#39; HTMLResult = HTMLResult + &#39;&lt;/tr&gt;&#39; # print values from each row and build...",
+            "Exploring a rose garden with SPARQL *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre import rdflib from rdflib import Graph, RDF from IPython.core.display import display, HTML import os import json import csv import uuid from SPARQLWrapper import SPARQLWrapper, SPARQLWrapper2, JSON, JSONLD, CSV, TSV, N3, RDF, RDFXML, TURTLE import pandas as pds import itertools import numpy as np from plotnine import * def queryResultToHTMLTable(queryResult): HTMLResult = '<table><tr style="color:white;background-color:#43BFC7;font-weight:bold">' # print variable names and build header: for varName in queryResult.vars: HTMLResult = HTMLResult + '<td>' + varName + '</td>' HTMLResult = HTMLResult + '</tr>' # print values from each row and build...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html",
         "teaser":null},{
         "title": "Plotting from Frictionless Data Package in R",
         
@@ -1839,71 +2018,71 @@ initFunction(initPrint)
             "Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library *Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre Background: Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using OKFN Data Packages. Such components can be easily parsed into R and exploited with rich graphical libraries, such as the well know ggplot2 (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly, this rapid exploration is possible because of independent variables and their levels have been clearly and unambiguously declared in the Tabular...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/fair-data-matrix/3-rose-metabolites-R-analysis.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/fair-data-matrix/3-rose-metabolites-R-analysis.html",
         "teaser":null},{
         "title": "Findability",
         
         "excerpt":
-            "    \r     \r \r \r \r recipes  Text \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             recipes  Text                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/findability.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/findability.html",
         "teaser":null},{
         "title": "bioschema data page",
         
         "excerpt":
-            "Findability: Data Page Markup with Bioschemas Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To markup a webpage representing a data record with Bioschemas compliant markup. Graphical Overview of the FAIRification Recipe Objectives graph TD A[HTML page] --&gt; |Create markup template| B{what type of resource?} B --&gt; C[Chemical Substance] B --&gt; D[Gene] B --&gt; E[Molecular Entity] B --&gt; F[Protein] B --&gt; G[Sample] B...",
+            "Findability: Data Page Markup with Bioschemas Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To markup a webpage representing a data record with Bioschemas compliant markup. Graphical Overview of the FAIRification Recipe Objectives graph TD A[HTML page] --> |Create markup template| B{what type of resource?} B --> C[Chemical Substance] B --> D[Gene] B --> E[Molecular Entity] B --> F[Protein] B --> G[Sample] B...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/findability/bioschemas-data-page.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/findability/bioschemas-data-page.html",
         "teaser":null},{
         "title": "bioschema dataset",
         
         "excerpt":
-            "Findability: Dataset Markup Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To embed Schema.org markup in a web page representing a dataset. Graphical Overview of the FAIRification Recipe Objectives graph TD A[HTML page] --&gt; B{Page just about one dataset?} B --&gt;|YES| C(Create markup for dataset) B --&gt;|NO| F[Use DataCatalog Recipe] C --&gt; D(Markup Template) D --&gt;|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org...",
+            "Findability: Dataset Markup Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To embed Schema.org markup in a web page representing a dataset. Graphical Overview of the FAIRification Recipe Objectives graph TD A[HTML page] --> B{Page just about one dataset?} B -->|YES| C(Create markup for dataset) B -->|NO| F[Use DataCatalog Recipe] C --> D(Markup Template) D -->|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/findability/bioschemas-dataset.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/findability/bioschemas-dataset.html",
         "teaser":null},{
         "title": "Search Engine optimization",
         
         "excerpt":
-            "Findability: Search Engine Optimization Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: to describe what search engine optimization is and show how to implement markup with the Schema.org vocabulary, and Bioschemas extension, to improve page discovery and visibility by web page indexers. There are sub-recipes for embedding search engine optimization into specific web pages about a specific type or resource: Data catalog Dataset...",
+            "Findability: Search Engine Optimization identifier: RX.X version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 10 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Application Developer <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist Recipe Type: Guidance Executable code: No Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: to describe what search engine optimization is and show how to implement markup with the Schema.org vocabulary, and Bioschemas extension, to improve...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/findability/seo.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/findability/seo.html",
         "teaser":null},{
         "title": "bioschema data page",
         
         "excerpt":
-            "Findability: Data Page Markup with Bioschemas Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To markup a webpage representing a data record with Bioschemas compliant markup. Graphical Overview of the FAIRification Recipe Objectives graph TD A(HTML page):::box --> |Create markup template| B{what type of resource ?}:::box B --> C(Chemical Substance):::box B --> D(Gene):::box B --> E(Molecular Entity):::box B --> F(Protein):::box B --> G(Sample):::box...",
+            "Findability: Data Page Markup with Bioschemas identifier: RX.X version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 10 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Application Developer <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist Recipe Type: Guidance Executable code: No Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To markup a webpage representing a data record with Bioschemas compliant markup. Graphical Overview of the FAIRification Recipe Objectives graph...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/findability/seo/bioschemas-data-page.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/findability/seo/bioschemas-data-page.html",
         "teaser":null},{
         "title": "bioschema data catalog",
         
         "excerpt":
-            "Findability: Data Catalog Markup Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To embed Schema.org markup in a web page that publishes multiple datasets in a single page. Graphical Overview of the FAIRification Recipe Objectives graph TD A(HTML page):::box --> B{Page about multiple datasets?}:::box B -->|YES| C(Create markup for DataCatalog):::box B -->|NO| F(Use Dataset Recipe):::box C --> D(Markup Template):::box D -->|Embed template in...",
+            "Findability: Data Catalog Markup identifier: RX.X version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 10 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Application Developer <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist Recipe Type: Guidance Executable code: No Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To embed Schema.org markup in a web page that publishes multiple datasets in a single page. Graphical Overview of the FAIRification Recipe...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/findability/seo/bioschemas-datacatalog.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/findability/seo/bioschemas-datacatalog.html",
         "teaser":null},{
         "title": "bioschema dataset",
         
         "excerpt":
-            "Findability: Dataset Markup Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To embed Schema.org markup in a web page representing a dataset. Graphical Overview of the FAIRification Recipe Objectives graph TD A(HTML page):::box --> B{Page just about one dataset?}:::box B -->|YES| C(Create markup for dataset):::box B -->|NO| F(Use DataCatalog Recipe):::box C --> D(Markup Template):::box D -->|Embed template in website| E(fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org...",
+            "Findability: Dataset Markup identifier: RX.X version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 10 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Application Developer <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist Recipe Type: Guidance Executable code: No Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: To embed Schema.org markup in a web page representing a dataset. Graphical Overview of the FAIRification Recipe Objectives graph TD A(HTML page):::box -->...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/findability/seo/bioschemas-dataset.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/findability/seo/bioschemas-dataset.html",
         "teaser":null},{
         "title": "help",
         
         "excerpt":
-            "    \r     \r \r \r \r recipes  Text \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             recipes  Text                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/help.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/help.html",
         "teaser":null},{
         "title": "How to create a recipe with GoogleDoc",
         
@@ -1911,7 +2090,7 @@ initFunction(initPrint)
             "Using GoogleDocs to contribute a FAIR Cookbook Recipe The FAIR cookbook content can be expanded by adding a recipe. We present here the easiest way to do so. Simply create content by using the Google document Recipe template The default layout present in this Google Document is aligned with the recipe template available in git and to HackMD defined by the editorial group for the Markdown language. The reason for this Google Document template is mainly to allow for rapid onboarding of contributors, delegating the nitty gritty editorial aspects to the tech track. However, to ease this integration, contributors using...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/help/how-to-create-recipe-with-gdoc.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/help/how-to-create-recipe-with-gdoc.html",
         "teaser":null},{
         "title": "How to create a recipe with git",
         
@@ -1919,7 +2098,7 @@ initFunction(initPrint)
             "How to create a FAIRPlus Coobook Recipe ? Table of Contents Main Objectives Graphical Overview of the FAIRification Recipe Objectives Prequisites and Getting Set up Option-1 Writing the recipe in Mardown syntax Option-2 Writing the recipe as a Google document Dealing with merge conflicts Authors: License: Main Objectives The main purpose of this recipe is: Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template Graphical Overview of the FAIRification Recipe Objectives graph TD; A[Data FAIRification] -->B(Write-up FAIRification experience) B --> C{know markdown?} C -->|Yes| D(use the markdown recipe template)...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/help/how-to-create-recipe-with-git.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/help/how-to-create-recipe-with-git.html",
         "teaser":null},{
         "title": "How to use HackMD to write a FAIR Cookbook Recipe",
         
@@ -1927,15 +2106,15 @@ initFunction(initPrint)
             "How to use HackMD to write a FAIR Cookbook Recipe The FAIR cookbook Table of Contents Main Objectives Authors License Main Objectives This document aims to guide users through the process of getting set up to contribute content to the the FAIR cookbok using HackMD.io online editor. The document contains a checklist taking you point by point through the installation process and through the 2 main ways of using HackMD. [x] 1. create a github account and obtain your github handle (e.g. @proccaserra) [x] 2. request to be added to the FAIR Cookbook github repository and accept the invitation. [x]...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/help/how-to-create-recipe-with-hackmd.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/help/how-to-create-recipe-with-hackmd.html",
         "teaser":null},{
         "title": "Recipe Template",
         
         "excerpt":
-            "[here comes the Title of the recipe] Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives Requirements FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Main Content goes here... ... writing executable code ... creating workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives Note: use this section to provide a decision tree for the overall process described in the recipe For more information about the syntax used...",
+            "[here comes the Title of the recipe] Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives Requirements FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Main Content goes here... ... writing executable code ... creating workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives Note: use this section to provide a decision tree for the overall process described in the recipe For more information about the syntax used...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/help/recipe-template.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/help/recipe-template.html",
         "teaser":null},{
         "title": "How to create a recipe with GoogleDoc",
         
@@ -1943,7 +2122,7 @@ initFunction(initPrint)
             "Using GoogleDocs to contribute a FAIR Cookbook Recipe The FAIR cookbook content can be expanded by adding a recipe. We present here the easiest way to do so. Simply create content by using the Google document Recipe template The default layout present in this Google Document is aligned with the recipe template available in git and to HackMD defined by the editorial group for the Markdown language. The reason for this Google Document template is mainly to allow for rapid onboarding of contributors, delegating the nitty gritty editorial aspects to the tech track. However, to ease this integration, contributors using...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/how-to-create-recipe-with-gdoc.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/how-to-create-recipe-with-gdoc.html",
         "teaser":null},{
         "title": "How to create a recipe with git",
         
@@ -1951,7 +2130,7 @@ initFunction(initPrint)
             "How to create a FAIRPlus Coobook Recipe ? Table of Contents Main Objectives Graphical Overview of the FAIRification Recipe Objectives Prequisites and Getting Set up Option-1 Writing the recipe in Mardown syntax Option-2 Writing the recipe as a Google document Dealing with merge conflicts Authors: License: Main Objectives The main purpose of this recipe is: Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template Graphical Overview of the FAIRification Recipe Objectives graph TD; A[Data FAIRification] -->B(Write-up FAIRification experience) B --> C{know markdown?} C -->|Yes| D(use the markdown recipe template)...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/how-to-create-recipe-with-git.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/how-to-create-recipe-with-git.html",
         "teaser":null},{
         "title": "How to used HackMD to write a FAIR Cookbook Recipe",
         
@@ -1959,7 +2138,7 @@ initFunction(initPrint)
             "How to use HackMD to write a FAIR Cookbook Recipe The FAIR cookbook Table of Contents Main FAIRification Objectives Authors License Main Objectives This document aims to guide you through the process devised by FAIRplus to create content and augment the the FAIR cookbok. The document contains a checklist taking you point by point through the process The document contains a graphical overview of the key steps. [x] 1. create a github account and obtain your github handle (e.g. @proccaserra) [x] 2. request to be added to the FAIR Cookbook github repository and accept the invitation. ![](https://i.imgur.com/wyTn5aS.png) [x] 3. create...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/how-to-create-recipe-with-hackmd.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/how-to-create-recipe-with-hackmd.html",
         "teaser":null},{
         "title": "How to create a recipe",
         
@@ -1967,15 +2146,23 @@ initFunction(initPrint)
             "How to create a FAIRPlus Coobook Recipe ? Table of Contents Main Objectives Graphical Overview of the FAIRification Recipe Objectives Prequisites and Getting Set up Option-1 Writing the recipe in Mardown syntax Option-2 Writing the recipe as a Google document Dealing with merge conflicts Authors: License: Main Objectives The main purpose of this recipe is: Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template Graphical Overview of the FAIRification Recipe Objectives graph TD; A[Data FAIRification] -->B(Write-up FAIRification experience) B --> C{know markdown?} C -->|Yes| D(use the markdown recipe template)...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/howtocreatecard.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/howtocreatecard.html",
         "teaser":null},{
         "title": "Infrastructure for FAIR",
         
         "excerpt":
-            "    \r     \r \r \r \r recipes  Text \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             recipes  Text                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure.html",
+        "teaser":null},{
+        "title": "Selecting Terminology Services",
+        
+        "excerpt":
+            "Selection and exploitation of Ontology Lookup Services identifier: UC1 R1.3 version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 20 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Managers <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Procurement Officer <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Software Engineer <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientists Recipe Type: Survey / Review Executable code: No Table of Contents 1) Objective of the recipe: introduction to ontology lookup services 2) Selecting an ontology lookup service 3) Overview of widespread ontology lookup services Main Objective: introduction to ontology lookup services This recipe provides guidance on the selection and exploitation of ontology lookup services. An ‘ontology lookup service’ refers to any type of...",
+        "categories": [],
+        "tags": [],
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/Selecting_and_using_ontology_lookup_services.html",
         "teaser":null},{
         "title": "Vocabulary Servers",
         
@@ -1983,7 +2170,15 @@ initFunction(initPrint)
             "Recipe 1.3: How to deploy the service internally, an examplar AI: feedback to Squad1. more ontology services Main Objectives Ingredients Introduction Graphic view Step by step guide: 1. Installing dependencies Add memory requirements 2. Loading ontologies into OLS 2.1 Downloading configuration files from EBI OLS. 2.2 Loading ontologies from OBO Foundry 3. Set up OLS in the local environment Troubleshooting Summary Authors License Reference Main Objectives How to deploy public ontology services in local machines, take the EBI Ontology Lookup Service (OLS) as an example. Ingredients OLS Docker image OLS Documentation: Build a local version of OLS(without Docker) Ontology metadata...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure/UC3R1-3.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/UC3R1-3.html",
+        "teaser":null},{
+        "title": "Deploying Vocabulary Servers",
+        
+        "excerpt":
+            "Recipe 1.3: How to deploy a terminology service - an example with the EBI Ontology Lookup Service identifier: UC3 R1.3 version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 20 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Terminology Manager <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Ontologist <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> System Administrator <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist Recipe Type: Service deployment Executable code: Yes [TOC] Main Objectives This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service(OLS) on local machines. This demonstrates the workflow for deploying open source ontology service softwares in-house. Introduction With an increasing need for ontology infrastructure to improve the interoperability of information-based...",
+        "categories": [],
+        "tags": [],
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/UC3_R13_local_ontology_services.html",
         "teaser":null},{
         "title": "Chemical identities - Generating InChI and SMILES strings",
         
@@ -1991,23 +2186,23 @@ initFunction(initPrint)
             "    \r     \r \r \r \r Ingredients:  Standards:  \r SDFile (FairSharing doi:10.25504/fairsharing.ew26v7)\r SMILES (FairSharing doi:10.25504/fairsharing.qv4b3c)\r InChI (FairSharing doi:10.25504/fairsharing.ddk9t9)\r \r Databases:  Not applicable. \r Identifiers:  \r InChI\r \r Tools:  \r Programming Language: Groovy\r Dependencies: CDK 2.3\r \r Click here on how to use: \r Record validation  \r Input: SD file\r Output: Reports validation issues\r \r Calculate InChls  \r Input: SD file\r Output: list of InChIs\r \r Calculate SMILES strings  \r Input: SD file\r Output: list of SMILES strings\r \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure/chemical-identities.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/chemical-identities.html",
         "teaser":null},{
         "title": "Building a Data Catalogue",
         
         "excerpt":
-            "Building a Dataset Catalogue Main Objectives The main purpose of this recipe is: To detail the key elements for the creation of a data catalogue to enable data findability in an organisation. We will cover the following points: metadata model selection annotation with controled vocabularies ETL data loading data indexing facet oriented searching minting of stable, persistent and resolvable identifiers Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Graphical Overview of the...",
+            "Building a Dataset Catalogue identifier: version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 60 minutes (when the recipe is completed) Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Managers <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Software Engineer <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> System Administrator <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientists Recipe Type: Survey / Review Executable code: Yes Main Objectives The main purpose of this recipe is: To detail the key elements for the creation of a data catalogue to enable data findability in an organisation. We will cover the following points: metadata model selection annotation with controled vocabularies ETL data loading data indexing facet oriented searching minting of stable, persistent and resolvable...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure/data-catalog.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/data-catalog.html",
         "teaser":null},{
         "title": "Identifier Resolution Service",
         
         "excerpt":
-            "    \r     \r \r \r \r Identifier resolution services  placeholder  \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             Identifier resolution services  placeholder                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure/id-resolution.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/id-resolution.html",
         "teaser":null},{
         "title": "How to request new terms in existing ontologies",
         
@@ -2015,7 +2210,7 @@ initFunction(initPrint)
             "R2.2.1: (self) request terms to be added to a public ontology Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies. Background Requesting new terms in public (biomedical) ontologies might be a structured, streamlined process or completely undocumented, depending on the actual ontology. Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure/ontology-new-term-request-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/ontology-new-term-request-recipe.html",
         "teaser":null},{
         "title": "How to build an application ontology",
         
@@ -2023,23 +2218,31 @@ initFunction(initPrint)
             "    \r     \r \r \r \r How to build an application ontology with Robot  placeholder \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure/ontology-robot-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/ontology-robot-recipe.html",
         "teaser":null},{
         "title": "Search Engine optimization",
         
         "excerpt":
-            "Findability: Search Engine Optimization Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: to describe what search engine optimisation is and show how to implement markup with schema.org vocabulary to improve page discovery and visibility by web page indexers. Graphical Overview of the FAIRification Recipe Objectives graph TD A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page) B --> C{which technique?} C -->|One|...",
+            "Findability: Search Engine Optimization Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: to describe what search engine optimisation is and show how to implement markup with schema.org vocabulary to improve page discovery and visibility by web page indexers. Graphical Overview of the FAIRification Recipe Objectives graph TD A[HTML page] -->| Search Engine Optimization| B(Schema.org augmented HTML page) B --> C{which technique?} C -->|One|...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/infrastructure/seo.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/seo.html",
+        "teaser":null},{
+        "title": "Criteria for selecting Ontology Services",
+        
+        "excerpt":
+            "Recipe 1.2 Technical & architectural selection criteria of ontology lookup services identifier: UC1 R1.2 version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 20 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Terminology Manager <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Ontologist <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> System Administrator <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist Recipe Type: Technical Guidance Executable code: No [TOC] Main Objective This recipe provides guidance to make a  decision about feasibility of local deployment of offered open source ontology services software. By the expression ‘ontology lookup service’ we refer to any type of application, standalone or Web-based, that enables the use of existing ontologies to support knowledge formalization and sharing, by...",
+        "categories": [],
+        "tags": [],
+        "url": "https://the-fair-cookbook.netlify.app/recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html",
         "teaser":null},{
         "title": "Interoperability",
         
         "excerpt":
-            "    \r     \r \r \r \r interoperability section  \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             interoperability section                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/interoperability.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/interoperability.html",
         "teaser":null},{
         "title": "Vocabulary Servers",
         
@@ -2047,39 +2250,39 @@ initFunction(initPrint)
             "Recipe 1.3: How to deploy the service internally, an examplar AI: feedback to Squad1. more ontology services Main Objectives Ingredients Introduction Graphic view Step by step guide: 1. Installing dependencies Add memory requirements 2. Loading ontologies into OLS 2.1 Downloading configuration files from EBI OLS. 2.2 Loading ontologies from OBO Foundry 3. Set up OLS in the local environment Troubleshooting Summary Authors License Reference Main Objectives How to deploy public ontology services in local machines, take the EBI Ontology Lookup Service (OLS) as an example. Ingredients OLS Docker image OLS Documentation: Build a local version of OLS(without Docker) Ontology metadata...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/interoperability/UC3R1-3.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/interoperability/UC3R1-3.html",
         "teaser":null},{
         "title": "Minimal MetaData Profiles",
         
         "excerpt":
-            "    \r     \r \r \r \r interoperability section  \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             Creating a Metadata Profile  identifier: RX.X.X  version: v0.1   Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20">  Reading time: 45 minutes  Intended Audience:  <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20">  Terminology Manager  <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20">  Ontologist  <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20">  Data Scientist   Recipe Type: Practical  Executable code: No   Authors    Name Affiliation ORCID CRediT role       0000-0000-0000-0000 Writing - Original Draft      Writing - Original Draft    License                       ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/interoperability/creating-minimal-metadata-profiles.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/interoperability/creating-minimal-metadata-profiles.html",
         "teaser":null},{
         "title": "How to request new terms in existing ontologies",
         
         "excerpt":
-            "R2.2.1: (self) request terms to be added to a public ontology Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies. Background Requesting new terms in public (biomedical) ontologies might be a structured, streamlined process or completely undocumented, depending on the actual ontology. Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the...",
+            "R2.2.1: (self) request terms to be added to a public ontology identifier: R2.2.1 version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 15 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Terminology Manager <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Ontologist <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist Recipe Type: Ontology Term Request Executable code: No [TOC] Main Objective: Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies. Requesting new terms in public (biomedical) ontologies...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/interoperability/ontology-new-term-request-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/interoperability/ontology-new-term-request-recipe.html",
         "teaser":null},{
         "title": "How to build an application ontology",
         
         "excerpt":
-            "    \r     \r \r \r \r How to build an application ontology with Robot  placeholder \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             How to build an application ontology with Robot  identifier:  version: v0.1   Difficulty level:  <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20">  Reading time: 60 minutes  Intended Audience:  <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Terminology Manager  <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Ontologist  <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Application Developer  <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Data Scientist   Recipe Type: Hands-on practical  Executable code: No                      ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/interoperability/ontology-robot-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/interoperability/ontology-robot-recipe.html",
         "teaser":null},{
         "title": "The Values of FAIR",
         
         "excerpt":
-            "The Ethical Values behind FAIR and the FAIRPlus project Table of Contents Main FAIRification Objectives Capability &amp; Maturity Table License This document aims to identify the values underlying or correlated with the FAIR principles (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR. Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights. The list, non-exhaustive, is oriented towards answering the following question: “Why to share or...",
+            "The Ethical Values behind FAIR and the FAIRPlus project identifier: version: v0.1 Difficulty level: <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":triangular_flag_on_post:" alt=":triangular_flag_on_post:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> <img class="emoji" title=":white_circle:" alt=":white_circle:" src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png" height="20" width="20"> Reading time: 15 minutes Intended Audience: <img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Everyone Recipe Type: Perspective Executable code: No Table of Contents Main FAIRification Objectives Capability & Maturity Table License This document aims to identify the values underlying or correlated with the FAIR principles (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR. Legal measures are also included insofar as there are certain legal rules...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/introduction/FAIRplus-values.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/introduction/FAIRplus-values.html",
         "teaser":null},{
         "title": "ND4BB experience Recipe",
         
@@ -2087,7 +2290,7 @@ initFunction(initPrint)
             "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/nd4bb-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/nd4bb-recipe.html",
         "teaser":null},{
         "title": "ND4BB experience Recipe",
         
@@ -2095,7 +2298,7 @@ initFunction(initPrint)
             "ND4BB dataset FAIRification recipe Version: 2, this recipe is extracted from Version 1 Ingredients Raw Data: AMR Compounds Database Metadata Model Vocabularies and Terminologies Data Format: Excel spreadsheet PropertyGroup Property Value Tools and Software: Data curation tools: Excel, JAVA FAIRification pipeline tools: KNIME workflow Ontology recommender: ZOOMA, NCBO FAIR assessment: RDA indicator V0.03 Objectives The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data to a public repository using machine readable format. Also generic improvement of the FAIR parameters. Step by Step Process Dataset description The AMR...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html",
         "teaser":null},{
         "title": "How to request new terms in existing ontologies",
         
@@ -2103,7 +2306,7 @@ initFunction(initPrint)
             "R2.2.1: (self) request terms to be added to a public ontology Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies. Background Requesting new terms in public (biomedical) ontologies might be a structured, streamlined process or completely undocumented, depending on the actual ontology. Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/new-ontology-term-request-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/new-ontology-term-request-recipe.html",
         "teaser":null},{
         "title": "ONCOTRACK experience Recipe",
         
@@ -2111,7 +2314,7 @@ initFunction(initPrint)
             "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/oncotrack-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/oncotrack-recipe.html",
         "teaser":null},{
         "title": "ONCOTRACK experience Recipe",
         
@@ -2119,7 +2322,7 @@ initFunction(initPrint)
             "Oncotrack FAIRification recipe Ingredients Metadata model Oncotrack cohort metadata Oncotrack drug sensitivity data Oncotrack metadata template Vocabularies and terminologies Pharmaceutical drug names follow the nomenclature of ChEBI and ChEMBL database. All drug ontologies are listed here. All abbreviations and acronyms used in OncoTrack cohort metadata are listed in the OncoTrack public metadata acronym table. Data format Input data: Excel Output data: tab-delimited text file JSON file (JSON schema: BioSamples databases JSON schema) Tools and software Metadata extract and transform tool: R (Version 3.6.1) String parsing: R package stringi_1.4.3, stringr_1.4.0 Excel file Loading: readxl_1.3.1 Data structure transform:plyr_1.8.4 JSON format parsing: rjson_0.2.20...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/oncotrack_raw/rawRecipe-oncotrack.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/oncotrack_raw/rawRecipe-oncotrack.html",
         "teaser":null},{
         "title": "How to request new terms in existing ontologies",
         
@@ -2127,7 +2330,7 @@ initFunction(initPrint)
             "R2.2.1: (self) request terms to be added to a public ontology Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies. Background Requesting new terms in public (biomedical) ontologies might be a structured, streamlined process or completely undocumented, depending on the actual ontology. Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/ontology-new-term-request-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/ontology-new-term-request-recipe.html",
         "teaser":null},{
         "title": "First Recipe",
         
@@ -2135,7 +2338,7 @@ initFunction(initPrint)
             "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/recipe-1.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/recipe-1.html",
         "teaser":null},{
         "title": "Second Recipe",
         
@@ -2143,23 +2346,23 @@ initFunction(initPrint)
             "Recipe1: Making a Data Matrix FAIR identifier authors Philippe Rocca-Serra (@proccaserra) Susanna-Assunta Sansone (@susannasansone) maintainers Philippe Rocca-Serra (@proccaserra) version license Ingredients: Identifier Schema: - DOI - purl 1. Metadata Model: -[Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/) -[ISA-Tab](https://doi.org/10.25504/FAIRsharing.53gp75) 2. Vocabularies and Terminologies: -[CHEBI](http://www.obofoundry.org/ontology/chebi.html) -[STATO](https://www.stato-ontology.org) -[NCBITaxonomy](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi) -[Plant Ontology](http://www.obofoundry.org/ontology/po.html) 3. Data Format: - 4. Tools and Software: -[zenodo API] -[github] -[python] -[matplotlib] -[jupyter notebook] -[cookie cutter for data science] -[rdflib] Objectives: - ensure that results presented in MS Excel or PDF tables are made more open and unambiguous. - provide an RDF representation - enable reproduciblity of results - evaluate efficiency of the method via...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/recipe-2.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/recipe-2.html",
         "teaser":null},{
         "title": "Recipe Template",
         
         "excerpt":
-            "Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability &amp; Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives Note: use this section to provide a decision tree for the overall process described in the recipe For more information about the syntax used to generate the diagram, please refer to the following documentation graph...",
+            "Table of Contents Main FAIRification Objectives Graphical Overview of the FAIRification Recipe Objectives FAIRification Objectives, Inputs and Outputs Capability & Maturity Table Table of Data Standards Executable Code in Notebook How to create workflow figures License Main Objectives The main purpose of this recipe is: Making self describing tabular data using Frictionless tools instead of dumping Excel files. Graphical Overview of the FAIRification Recipe Objectives Note: use this section to provide a decision tree for the overall process described in the recipe For more information about the syntax used to generate the diagram, please refer to the following documentation graph...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/recipe-template.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/recipe-template.html",
         "teaser":null},{
         "title": "Recipes",
         
         "excerpt":
-            "    \r     \r \r \r \r recipes  Text \r \r \r \r \r \r \r  \r \r \r     \r     ",
+            "             recipes  Text                     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/recipes.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/recipes.html",
         "teaser":null},{
         "title": "RESOLUTE experience Recipe",
         
@@ -2167,7 +2370,7 @@ initFunction(initPrint)
             "    \r     \r \r \r \r Recipe1: Anonymizing Patient Data  identifier \r authors \r maintainers \r version \r license \r Ingredients:  \r Identifier Schema:\r \r 1. Metadata Model:\r     -\r     -\r     -\r 2. Vocabularies and Terminologies:\r     -\r     -\r     -\r 3. Data Format:\r     -\r     -\r     -\r 4. Tools and  Software:\r     -\r     -\r     -\r \r \r \r Objectives:  Step by Step Process:  \r  ### Step1:\r \r  ### Step2:\r \r  ### Step3:\r \r  ### Step4:\r \r  ### Step5:\r \r \r ß \r \r \r \r \r \r \r  \r \r \r     \r     ",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/resolute-recipe.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/resolute-recipe.html",
         "teaser":null},{
         "title": "RESOLUTE experience Recipe",
         
@@ -2175,7 +2378,7 @@ initFunction(initPrint)
             "RESOLUTE FAIRification Recipe Ingredients Data transfer tools: SFTP server OneDrive Amazon S3 Buckets Data hosting platform: raw data: SRA [Transcriptomics] ProteomeXchange [Proteomics] Samples metadata: BioSamples Data standards Transcriptomics community standard: MINSEQE Sample metadata schema: BioSamples JSON schema Data submission portal schema FAIR evaluation standard: RDA FAIR indicators This recipe provides an example of sample metadata extraction and curation practices, suggests a community standard for transcriptomics data and proposes a transcriptomics JSON schema, which allows direct submission of transcriptomics data to the public databases. Different approaches to assess the FAIR level of the dataset is also discussed. Sample metadata ETL pipeline...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/recipes/resolute_raw/rawRecipe_resolute.html",
+        "url": "https://the-fair-cookbook.netlify.app/recipes/resolute_raw/rawRecipe_resolute.html",
         "teaser":null},{
         "title": "Development Roadmap",
         
@@ -2183,7 +2386,7 @@ initFunction(initPrint)
             "FAIR cookbook development roadmap The envisioned state of the FAIR cookbook can be found here: https://docs.google.com/spreadsheets/d/13B2aLm5ZXFUwAu6DlcL7soWL8yzX6juR4ijgUpzIsv4/edit?usp=sharing This Google Document is publicly available in \"view mode\", and with \"edit mode\" for all FAIRplus members. Below you find examples how the development roadmap might be visualized in the future... gantt title A Gantt Diagram dateFormat YYYY-MM-DD section Section A task :a1, 2014-01-01, 30d Another task :after a1 , 20d section Another Task in sec :2014-01-12 , 12d another task : 24d gantt title Another Gantt Diagram dateFormat YYYY-MM-DD section DataCatalog model selection and design :a1, 2020-01-28, 90d curatorial policy :a2, after a1,...",
         "categories": [],
         "tags": [],
-        "url": "https://fairplus.github.io/cookbook-dev/roadmap.html",
+        "url": "https://the-fair-cookbook.netlify.app/roadmap.html",
         "teaser":null},]
 </script>
             </div>
@@ -2201,8 +2404,9 @@ This page was created with help of <a href="https://github.com/jupyter/jupyter-b
 
             </div>
 
-        </div>
-      </main>
-    </div>
+        </main>
+</div>
+      
+    
   </body>
 </html>

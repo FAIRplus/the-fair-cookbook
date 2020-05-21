@@ -1,8 +1,24 @@
 # Recipe-1: Making a Data Matrix FAIR
 
-**identifier:** DOI:[https://doi.org/10.5072/FK2862KX83](https://doi.org/10.5072/FK2862KX83)
+**identifier:** [https://doi.org/10.5072/FK2862KX83](https://doi.org/10.5072/FK2862KX83)
 
-**version:** [version](v.1.0)
+**version:** [v1.0](v1.0)
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:  :white_circle: :white_circle:
+
+**_Reading time:_** 15 minutes 
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Data Managers
+
+> :heavy_check_mark: Data Scientists
+
+**_Recipe Type_**: Practical
+
+**_Executable code_**: Yes
 
 ___
 
