@@ -1,18 +1,30 @@
 # Recipe 1.3: How to deploy a terminology service  - an example with the EBI Ontology Lookup Service
 
-**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post:	:white_circle:	:white_circle:	:white_circle:
+**identifier:** [UC3 R1.3](UC3R1.3)
+
+**version:** [v0.1](v0.1)
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post:	:triangular_flag_on_post:	:white_circle:	:white_circle:
 
 **_Reading time:_** 20 minutes
 
 **_Intended Audience:_** 
-  - [x] Terminology Manager
-  - [x] Ontologist
-  - [x] System Administrator
-  - [x] Data Scientist
+
+> :heavy_check_mark: Terminology Manager
+
+> :heavy_check_mark: Ontologist
+
+> :heavy_check_mark: System Administrator
+
+> :heavy_check_mark: Data Scientist
 
 **_Recipe Type_**: Service deployment
 
 **_Executable code_**: Yes
+
+___
 
 [TOC]
 
@@ -33,7 +45,8 @@ This recipe is intended for bioinformaticians or developers who wants to explore
 This recipe can also be applied by organizational users. Please check with your IT support staff about specific policies regarding the use of containerized applications, proxy settings, and firewalls.
 
 ## Graphical overview
-```mermaid
+
+<div class="mermaid">
 graph LR
     A[Install dependencies] --> B[Import ontologies]
     B--> C[Set up and start local OLS] 
@@ -65,7 +78,7 @@ graph LR
     style B1 fill:#FFFF99
     style B2 fill:#FFFF99
 
-```
+</div>
  
 ## Ingredients
 - [OLS Docker image](https://github.com/EBISPOT/OLS-docker) 
@@ -234,7 +247,8 @@ To customize the local OLS user interface, for example, adding corporate logos, 
 * [Côté, Richard G., et al. "The Ontology Lookup Service, a lightweight cross-platform tool for controlled vocabulary queries." BMC bioinformatics 7.1 (2006): 97.](https://link.springer.com/article/10.1186/1471-2105-7-97)
 
 ## Authors
-|Name|Institute|ORCID|Contributions|
+
+| Name | Affiliation  | ORCID | CRediT role  |
 |--|--|--|--|
 |Fuqi Xu|[EMBL-EBI](https://www.ebi.ac.uk/)|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Writing - Original Draft|
 |Eva Martin | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Writing - Original Draft |

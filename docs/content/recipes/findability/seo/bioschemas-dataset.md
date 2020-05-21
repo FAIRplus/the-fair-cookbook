@@ -1,5 +1,27 @@
 # Findability: Dataset Markup
 
+**identifier:** [RX.X](RX.X)
+
+**version:** [v0.1](v0.1)
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :white_circle: :white_circle:  :white_circle:  :white_circle:
+
+**_Reading time:_** 10 minutes
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Application Developer
+
+> :heavy_check_mark: Data Scientist
+
+**_Recipe Type_**: Guidance
+
+**_Executable code_**: No
+
+___
+
 # Table of Contents
 
 1. [Main FAIRification Objectives](#Main%20Objectives)

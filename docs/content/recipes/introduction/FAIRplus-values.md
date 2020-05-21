@@ -1,5 +1,24 @@
 # The Ethical Values behind FAIR and the FAIRPlus project
 
+**identifier:**
+
+**version:** [v0.1](v0.1)
+
+___
+
+**_Difficulty level:_**  :triangular_flag_on_post:  :triangular_flag_on_post: :triangular_flag_on_post: :white_circle: :white_circle:
+
+**_Reading time:_** 15 minutes
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: *Everyone*
+
+**_Recipe Type_**: Perspective
+
+**_Executable code_**: No
+
+___
 
 ## Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)

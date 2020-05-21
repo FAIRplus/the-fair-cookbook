@@ -1,8 +1,35 @@
 # R2.2.1: (self) request terms to be added to a public ontology
 
-Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies.
+**identifier:** [R2.2.1](R2.2.1)
 
-## Background
+**version:** [v0.1](v0.1)
+
+___
+
+
+**_Difficulty level:_** :triangular_flag_on_post: :white_circle: :white_circle:  :white_circle:  :white_circle:
+
+**_Reading time:_** 15 minutes
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark:  Terminology Manager
+
+> :heavy_check_mark:  Ontologist
+
+> :heavy_check_mark:  Data Scientist
+
+**_Recipe Type_**: Ontology Term Request 
+
+**_Executable code_**: No
+
+___
+
+[TOC]
+
+## Main Objective:
+
+Terms could be missing from public ontologies of choice. Where needed, new terms can be requested for these ontologies. The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies.
 
 Requesting new terms in public (biomedical) ontologies might be a structured, streamlined process or completely undocumented, depending on the actual ontology. Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the target ontology.
 

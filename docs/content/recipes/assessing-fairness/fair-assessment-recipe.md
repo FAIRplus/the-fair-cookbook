@@ -1,10 +1,27 @@
-# Recipe 1: FAIR Assessment Recipe
+# Recipe 1: How to assess FAIRness
 
-**identifier**
+**identifier:**
 
-**version**
+**version:** [v0.1](v0.1)
 
-    0.1
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle:
+
+**_Reading time:_** 15 minutes 
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Data Managers
+
+> :heavy_check_mark: Data Scientists
+
+**_Recipe Type_**: Practical
+
+**_Executable code_**: Yes
+
+___
+
 
 ## Ingredients:
 	

@@ -1,6 +1,35 @@
 # Recipe 1.2 Technical & architectural selection criteria of ontology lookup services
 
-## Objective of the recipe
+**identifier:** [UC1 R1.2](UC3R1.2)
+
+**version:** [v0.1](v0.1)
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post:	:white_circle:	:white_circle:	:white_circle:
+
+**_Reading time:_** 20 minutes
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Terminology Manager
+
+> :heavy_check_mark: Ontologist
+
+> :heavy_check_mark: System Administrator
+
+> :heavy_check_mark: Data Scientist
+
+**_Recipe Type_**: Technical Guidance
+
+**_Executable code_**: No
+
+___
+
+[TOC]
+
+___
+
+## Main Objective
 
 This recipe provides guidance to make a  decision about feasibility of local deployment of offered open source ontology services software. By the expression ‘ontology lookup service’ we refer **to any type of application, standalone or Web-based, that enables the use of existing ontologies to support knowledge formalization and sharing, by fostering ontology-based descriptions of knowledge**. Tools useful to build, edit or maintain ontologies are not considered ontology lookup services and thus are out of the scope of this recipe.
 
@@ -529,7 +558,7 @@ It uses only open source software with extensions that are all available to the 
 
 ### Authors
 
-| Name               | Affiliation            | ORCID             | Role          |
+| Name               | Affiliation            | ORCID             | CRediT Role          |
 |--------------------|------------------------|------------------:|--------------:|
 |Kurt Dauth          | Boehringer Ingelheim   | |Original Author|
 |Emiliano Reynares   | Boehringer Ingelheim   |0000-0002-5109-3716 | Author|
