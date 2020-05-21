@@ -28,6 +28,7 @@ ___
 ___
 
 # Table of Contents
+
 **1) [Objective of the recipe: introduction to ontology lookup services](#heading=h.bb3h294tvdau)**
 
 **2) [Selecting an ontology lookup service](#bookmark=id.okwm6u2vsbft)**
