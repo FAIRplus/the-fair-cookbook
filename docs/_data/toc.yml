@@ -21,10 +21,6 @@
 #
 # See the links below for an example.
 
-# Top-level page
-- title: FAIR Cookbook
-  url: /intro
-  not_numbered: true
 
 # External link
 - title: Go to GitHub repository...
@@ -44,7 +40,11 @@
 # Add a header and sample content section
 - header: FAIR Cookbook
 
-
+# Top-level page
+- title: FAIR Cookbook
+  url: /intro
+  not_numbered: true
+  
 # The Roadmap
 - title: Development Roadmap
   url: /roadmap

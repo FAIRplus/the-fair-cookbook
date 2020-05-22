@@ -1,6 +1,6 @@
 # The Ethical Values behind FAIR and the FAIRPlus project
 
-**identifier:**
+**identifier:** [TBD](TBD)
 
 **version:** [v0.1](v0.1)
 
@@ -21,11 +21,11 @@ ___
 ___
 
 ## Table of Contents
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+<!-- 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 
 2. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
 
-3. [License](#License)
+3. [License](#License) -->
 
 This document aims to identify the values underlying or correlated with the FAIR principles (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR. Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights.
 
@@ -41,15 +41,15 @@ As there will be projects related to different subjects and/or with different ki
 ### 1. values correlated with the FINDABLE character: universality and recognition of research
 
 
-- a.	**Better and more inclusive research**: Findable data help overcoming barriers to data sharing among research communities, facilitating data access and data re-use. 
+- **Better and more inclusive research**: Findable data help overcoming barriers to data sharing among research communities, facilitating data access and data re-use. 
 
-- b.	**Transparency**: to make data findable, data providers have to give information on the origin, process and sharing process of their FAIR data (metadata).  
+- **Transparency**: to make data findable, data providers have to give information on the origin, process and sharing process of their FAIR data (metadata).  
 
-- c.	**Sustainability**: facilitating the replication of studies for validation and avoiding unnecessary duplication, FAIR data reduces monetary and energy costs linked to the production of data, helping to preserve a good environment for present and future generations. 
+- **Sustainability**: facilitating the replication of studies for validation and avoiding unnecessary duplication, FAIR data reduces monetary and energy costs linked to the production of data, helping to preserve a good environment for present and future generations. 
 
-- d.	**Efficiency**: the inclusion of data in FAIRplus reduces the costs of medical research and makes medical technologies/innovations more affordable. This could represent a mutual benefit between data providers and the scientific community (FAIR data users). In the first case, FAIR data can for instance enable data providers expand their influence into new territories (beneficence) and, in the second one, FAIR data users can reuse data that in another way it would be too demanding to obtain.  
+- **Efficiency**: the inclusion of data in FAIRplus reduces the costs of medical research and makes medical technologies/innovations more affordable. This could represent a mutual benefit between data providers and the scientific community (FAIR data users). In the first case, FAIR data can for instance enable data providers expand their influence into new territories (beneficence) and, in the second one, FAIR data users can reuse data that in another way it would be too demanding to obtain.  
 
-- e.	**Recognition of work**; legitimacy of a number of tasks: by making data more visible the work of quality data production becomes more recognized, whereas it can be more neglected as an achievement or a research output if data are not findable
+- **Recognition of work**; legitimacy of a number of tasks: by making data more visible the work of quality data production becomes more recognized, whereas it can be more neglected as an achievement or a research output if data are not findable
 
 
 **Legal measures**: data sets must respect professional secret rules and data pseudonymization must be ensured to preserve individuals’ privacy and data confidentiality. If pseudonymization is not possible, it is required to obtain explicit, informed consent of all data participants. This consent has to be also documented. Data providers must also verify there are no rules related to classified information that can be applicable to these data.   
@@ -59,13 +59,13 @@ As there will be projects related to different subjects and/or with different ki
 ### 2. values correlated with the ACCESSIBLE character: Responsibility
 
 
-- a.	**Accountability**:  Accessible data give the opportunity for data providers to organise a fair and clear distribution of responsibilities along the data re-use chain. Data providers must adopt efficient mechanisms to make these rules applicable.
+- **Accountability**:  Accessible data give the opportunity for data providers to organise a fair and clear distribution of responsibilities along the data re-use chain. Data providers must adopt efficient mechanisms to make these rules applicable.
 
-- b.	**Trust**: data providers can only make their data accessible on the background of trust between them, patients, data users and medical community.  
+- **Trust**: data providers can only make their data accessible on the background of trust between them, patients, data users and medical community.  
 
-- c.	**Common good**: data providers may share their data in the aim to reflect openness to scientific community and general public to achieve a common good through knowledge. 
+- **Common good**: data providers may share their data in the aim to reflect openness to scientific community and general public to achieve a common good through knowledge. 
 
-- d.	**Health as a value**: Provision of a better health service (human well-being): data can be made accessible with the purpose of facilitating the development of safer technologies and of achieving a better patient care in general (public health). Linked to the value principle, the aim is to redesign health care delivery systems to maximize care value for patients .
+- **Health as a value**: Provision of a better health service (human well-being): data can be made accessible with the purpose of facilitating the development of safer technologies and of achieving a better patient care in general (public health). Linked to the value principle, the aim is to redesign health care delivery systems to maximize care value for patients .
 
 
 
@@ -73,31 +73,31 @@ As there will be projects related to different subjects and/or with different ki
 ### 3. values correlated with the INTEROPERABLE character: Universality and equity
 
 
-- a.	**Non-discrimination regarding access to data**: Interoperable data can contribute to equal access to knowledge and to equal advantages that data can offer. This can also facilitate distribution of benefits and opportunities particularly with respect to disadvantaged scientific or societal groups (i.e. due to economic, technical, or geographic disadvantages…). 
+- **Non-discrimination regarding access to data**: Interoperable data can contribute to equal access to knowledge and to equal advantages that data can offer. This can also facilitate distribution of benefits and opportunities particularly with respect to disadvantaged scientific or societal groups (i.e. due to economic, technical, or geographic disadvantages…). 
 
-- b.	**Reproducibility**: Essential verification and reproduction of results rely on interoperability of data. Facilitation of use of technical and organizational solutions available is a plus and avoids waste. 
+- **Reproducibility**: Essential verification and reproduction of results rely on interoperability of data. Facilitation of use of technical and organizational solutions available is a plus and avoids waste. 
 
-- c.	**Novelty**: new questions can be asked when interoperability of data provide large sample size.
+- **Novelty**: new questions can be asked when interoperability of data provide large sample size.
 
-- d.	**Quality**: improvement of quality of results through interoperability of data. 
+- **Quality**: improvement of quality of results through interoperability of data. 
 
 
 ### 4.  values correlated with the REUSABLE character: a sense of eternity!
 
 
-- a.	**Reciprocity**: data providers can make their data re-usable and in consequence receive recognition by the scientific community and/or the general public of their contribution beyond their initial expectation, as multiple uses increase the data impact. 
+- **Reciprocity**: data providers can make their data re-usable and in consequence receive recognition by the scientific community and/or the general public of their contribution beyond their initial expectation, as multiple uses increase the data impact. 
 
-- b.	**Benefit sharing**: making good quality data re-used is increasing the benefit in terms of research output of the efforts to generate these data, and multiple publications will come out of the (re) use of the same data..
+- **Benefit sharing**: making good quality data re-used is increasing the benefit in terms of research output of the efforts to generate these data, and multiple publications will come out of the (re) use of the same data..
 
-- c.	**Non maleficence**: as respect of privacy and data protection are part of the requirements for re-use of data, the “non nocere” principle is at the heart of the system. FAIR data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society. 
+- **Non maleficence**: as respect of privacy and data protection are part of the requirements for re-use of data, the “non nocere” principle is at the heart of the system. FAIR data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society. 
 
-- d.	**Long term view and generosity**: data re-use gives a temporal dimension to the original work done to produce the data that tends towards eternity.
+- **Long term view and generosity**: data re-use gives a temporal dimension to the original work done to produce the data that tends towards eternity.
 
-- e.	**Freedom of research**: by allowing data to be re-used for multiple researches that might otherwise be impossible, the freedom of research is enhanced.
+- **Freedom of research**: by allowing data to be re-used for multiple researches that might otherwise be impossible, the freedom of research is enhanced.
 
-- f.	**Legitimity of research**: the potential for re-use of data can be considered as a possibility to increase the legitimity of an initial research and its place in society.
+- **Legitimity of research**: the potential for re-use of data can be considered as a possibility to increase the legitimity of an initial research and its place in society.
 
-- g.	**Human dignity and respect for human autonomy**: making data reused can facilitate respect for the dignity of every human person. The principle of autonomy implies the respect of human freedom. In that sense, it implies that individuals have to be able to decide if they want to share or not their data. It also means that individuals have to be aware of the terms of collection and of sharing data process, the purposes of data sharing, and that they can withdraw their consent anytime. At the same time being aware of multiple research uses can give a perception of a higher societal importance of their participation in research. 
+- **Human dignity and respect for human autonomy**: making data reused can facilitate respect for the dignity of every human person. The principle of autonomy implies the respect of human freedom. In that sense, it implies that individuals have to be able to decide if they want to share or not their data. It also means that individuals have to be aware of the terms of collection and of sharing data process, the purposes of data sharing, and that they can withdraw their consent anytime. At the same time being aware of multiple research uses can give a perception of a higher societal importance of their participation in research. 
 
 
 **Legal measures**: The reutilization of data has to respect all restrictions expressed by data subjects, compliance with initial the information and consent given by the participant has to be achieved, and participants’ data protection rights have to be guaranteed. In addition, the data provider must define policies ruling the access and use of data sets that must be respected by data users. All parties must assure the respect of the data provider license (and FAIRplus objectives). 

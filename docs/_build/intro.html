@@ -19,44 +19,308 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="FAIR-Cookbook">FAIR Cookbook<a class="anchor-link" href="#FAIR-Cookbook"> </a></h1><h2 id="The-FAIR-Coobook-overview">The FAIR Coobook overview<a class="anchor-link" href="#The-FAIR-Coobook-overview"> </a></h2><ul>
+<h1 id="FAIR-Cookbook">FAIR Cookbook<a class="anchor-link" href="#FAIR-Cookbook"> </a></h1><hr>
+<h2 id="The-official-site">The official site<a class="anchor-link" href="#The-official-site"> </a></h2><p>Visit <a href="https://the-fair-cookbook.netlify.app/intro">https://fairplus.github.io/the-fair-cookbook</a> to see the web friendly <strong>work-in-progress</strong> version of the <strong>FAIR Cookbook</strong>.</p>
+<p>:oil_drum::construction: <strong>This project is still in early phase and this is work in progress</strong> :construction::oil_drum:</p>
+<hr>
+<h2 id="A-brief-overview">A brief overview<a class="anchor-link" href="#A-brief-overview"> </a></h2><p>This is the github repository for the <code>FAIR Cookbook</code>, assembled by the <a href="https://fairplus-project.eu/">IMI FAIRplus project</a>, an EU funded project running from <em>2018 to 2022</em>. The repository hosts  documentation, known as <code>FAIR recipes</code>, and supporting code in the form of <code>jupyter notebooks</code> about <strong><code>FAIRification processes</code></strong> and the content will be released regularly (quarterly) in order to reflect the work progress made by the project and the various working groups bringing together <code>academic</code> and <code>industry</code> partners.</p>
+<h2 id="Content-and-learning-outcomes">Content and learning outcomes<a class="anchor-link" href="#Content-and-learning-outcomes"> </a></h2><p>Learn how to FAIRify a number of exemplar datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.</p>
+<h2 id="Roadmap-and-Timeline">Roadmap and Timeline<a class="anchor-link" href="#Roadmap-and-Timeline"> </a></h2><p>The FAIRcookbook development process currently operates on a quarterly release cycle. Each cycle sees 2 <code>scrums</code> where specific <code>use cases</code> or <code>themes</code> are chosen and task forces assigned. The outcome of these efforts are new <code>FAIRification protocols</code>, or <code>FAIR recipes</code>, which after review are integrated to the main FAIRCookbook are tagged for release to the master branch, which is used to build the web-friendly version of the book.</p>
+<p>:heavy_check_mark:  FAIRcookbook development roadmap Gantt chart for the year 2020</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt=""></a></p>
+<p>:heavy_check_mark:  The envisioned table of content for the  FAIR cookbook can be found <a href="https://docs.google.com/spreadsheets/d/13B2aLm5ZXFUwAu6DlcL7soWL8yzX6juR4ijgUpzIsv4/edit?usp=sharing">here</a>     This Google Document is publicly available in <code>view mode</code>, and with <code>edit mode</code> for all FAIRplus members.</p>
+<hr>
+<h2 id="The-FAIR-Coobook-overview">The FAIR Coobook overview<a class="anchor-link" href="#The-FAIR-Coobook-overview"> </a></h2><ul>
 <li>The FAIR Cookbook is a project aiming at collating protocols for making data FAIR</li>
 <li>The FAIR Cookbook is open source and licensed under CC-BY-4.0</li>
 <li>The FAIR Coobook is writting using Markdown and deployed using <code>jupyter-tool</code></li>
-<li>The FAIR Cookbook is an activity of the <a href="https://fairplus-project.eu/">FAIRplus project</a> funded by the <a href="www.imi.europa.eu">Innovative Medicine Initiative (IMI)</a> <img src="./images/logo/imi-europe.png" alt=""> under grant agreement #802750 (2019-22).</li>
-<li><p>The FAIR Cookbook is currently led by:</p>
+<li><p>The FAIR Cookbook is an activity of the <a href="https://fairplus-project.eu/">FAIRplus project</a> funded by the <a href="www.imi.europa.eu">Innovative Medicine Initiative (IMI)</a> <img src="./images/logo/imi-europe.png" alt=""> under grant agreement #802750 (2019-22).</p>
+</li>
+<li><p>The FAIR Cookbook development currently coordinated by:</p>
 <ul>
 <li><a href="https://orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a> (University of Oxford)</li>
 <li><a href="https://orcid.org/0000-0001-5306-5690">Susanna-Assunta Sansone</a> (University of Oxford)</li>
 <li><a href="https://orcid.org/0000-0002-3201-9617">Andrea Splendiani</a> (Novartis)</li>
+<li><a href="https://orcid.org/0000-0002-0254-1500">Robert Giessman</a> (Bayer AG)</li>
 </ul>
 </li>
 </ul>
-<h2 id="Content-and-learning-outcomes">Content and learning outcomes<a class="anchor-link" href="#Content-and-learning-outcomes"> </a></h2><p>Learn how to FAIRify a number of exemplar datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.</p>
-<h2 id="Getting-started">Getting started<a class="anchor-link" href="#Getting-started"> </a></h2><p>To get started, you may be interested in the following links.
-Here are a few links of interest:</p>
 <ul>
-<li><p><strong><a href="features/features">Quickstart</a></strong> is a quick demo and overview of Jupyter Book.</p>
-</li>
-<li><p><strong><a href="https://jupyterbook.org/guide/01_overview.html">The Jupyter Book Guide</a></strong>
-will step you through the process of configuring and building your own Jupyter Book.</p>
-</li>
-<li><p><strong><a href="https://github.com/fair-cookbook/the-fair-cookbook">The FAIR Cookbook jupyter-book template repo</a></strong> is the template
-repository you'll use as a start for your Jupyter Book.</p>
-</li>
-<li><p><strong>A demo of the FAIR Book</strong> can be browsed via the sidebar to the left.</p>
-</li>
+<li>The FAIR Cookbook content was contributed by the following FAIRPlus Consortium Members:</li>
 </ul>
-<h2 id="Installation">Installation<a class="anchor-link" href="#Installation"> </a></h2><p>Here's a brief rundown of how to create your own Jupyter Book using this site. For a more
-complete guide, see <a href="https://jupyterbook.org/guide/01_overview.html">the Jupyter Book guide</a>.</p>
+<table>
+<thead><tr>
+<th>Name</th>
+<th>Affiliation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chuang Kee Ong</td>
+<td>AZ</td>
+</tr>
+<tr>
+<td>Colin Wood</td>
+<td>AZ</td>
+</tr>
+<tr>
+<td>Ola Engkvist</td>
+<td>AZ</td>
+</tr>
+<tr>
+<td>Ratnesh Sahay</td>
+<td>AZ</td>
+</tr>
+<tr>
+<td>David Henderson</td>
+<td>Bayer</td>
+</tr>
+<tr>
+<td>Robert Giessmann</td>
+<td>Bayer</td>
+</tr>
+<tr>
+<td>Kurt Dauth</td>
+<td>BI</td>
+</tr>
+<tr>
+<td>Karsten Quast</td>
+<td>Boehringer</td>
+</tr>
+<tr>
+<td>Emiliano Reynares</td>
+<td>Boehringer</td>
+</tr>
+<tr>
+<td>Karsten Quast</td>
+<td>Boehringer</td>
+</tr>
+<tr>
+<td>Eva Navarrete</td>
+<td>BSC</td>
+</tr>
+<tr>
+<td>Salvador Capella Gutierrez</td>
+<td>BSC</td>
+</tr>
+<tr>
+<td>Fuqi Xu</td>
+<td>EMBL-EBI</td>
+</tr>
+<tr>
+<td>Melanie Courtot</td>
+<td>EMBL-EBI</td>
+</tr>
+<tr>
+<td>Tony Burdett</td>
+<td>EMBL-EBI</td>
+</tr>
+<tr>
+<td>Andrea Zaliani</td>
+<td>Fraunhofer</td>
+</tr>
+<tr>
+<td>Andreas Pippow</td>
+<td>Fraunhofer</td>
+</tr>
+<tr>
+<td>Franziska Kroh</td>
+<td>Fraunhofer</td>
+</tr>
+<tr>
+<td>Gesa Witt</td>
+<td>Fraunhofer</td>
+</tr>
+<tr>
+<td>Manfred Kohler</td>
+<td>Fraunhofer</td>
+</tr>
+<tr>
+<td>Oya Deniz Beyan</td>
+<td>Fraunhofer</td>
+</tr>
+<tr>
+<td>Philip Gribbon</td>
+<td>Fraunhofer</td>
+</tr>
+<tr>
+<td>Ashni Sedani</td>
+<td>GSK</td>
+</tr>
+<tr>
+<td>Femi Akintobi</td>
+<td>GSK</td>
+</tr>
+<tr>
+<td>George Papadotas</td>
+<td>GSK</td>
+</tr>
+<tr>
+<td>Peter Woollard</td>
+<td>GSK</td>
+</tr>
+<tr>
+<td>Alasdair J G Gray</td>
+<td>HWU</td>
+</tr>
+<tr>
+<td>Petros Papadopoulos</td>
+<td>HWU</td>
+</tr>
+<tr>
+<td>Ilaria Maresi</td>
+<td>HYVE</td>
+</tr>
+<tr>
+<td>Jolanda Strubel</td>
+<td>HYVE</td>
+</tr>
+<tr>
+<td>Emma Vos</td>
+<td>Hyve</td>
+</tr>
+<tr>
+<td>Ibrahim Emam</td>
+<td>ICL</td>
+</tr>
+<tr>
+<td>Francesco Ronzano</td>
+<td>IMIM</td>
+</tr>
+<tr>
+<td>Laura Furlong</td>
+<td>IMIM</td>
+</tr>
+<tr>
+<td>Herman Van Vlijmen</td>
+<td>Janssen</td>
+</tr>
+<tr>
+<td>Jean-Marc Neefs</td>
+<td>Janssen</td>
+</tr>
+<tr>
+<td>Paul Peeters</td>
+<td>Janssen</td>
+</tr>
+<tr>
+<td>Rudi Verbeeck</td>
+<td>Janssen</td>
+</tr>
+<tr>
+<td>Scott Lusher</td>
+<td>Janssen</td>
+</tr>
+<tr>
+<td>Derek Marren</td>
+<td>Lilly</td>
+</tr>
+<tr>
+<td>Andrea Splendiani</td>
+<td>Novartis</td>
+</tr>
+<tr>
+<td>Dorothy Reilly</td>
+<td>Novartis</td>
+</tr>
+<tr>
+<td>Nick Lynch</td>
+<td>PHACTS</td>
+</tr>
+<tr>
+<td>Vitaly Sedlyarov</td>
+<td>RESOLUTE</td>
+</tr>
+<tr>
+<td>Ulrich Goldmann</td>
+<td>RESOLUTE</td>
+</tr>
+<tr>
+<td>Manuela Pruess</td>
+<td>SIB</td>
+</tr>
+<tr>
+<td>Mark Ibberson</td>
+<td>SIB</td>
+</tr>
+<tr>
+<td>Vassilios Ioannidis</td>
+<td>SIB</td>
+</tr>
+<tr>
+<td>Danielle Welter</td>
+<td>UL</td>
+</tr>
+<tr>
+<td>Venkata P. Satagopam</td>
+<td>UL</td>
+</tr>
+<tr>
+<td>Wei Gu</td>
+<td>UL</td>
+</tr>
+<tr>
+<td>Chris Evelo</td>
+<td>UM</td>
+</tr>
+<tr>
+<td>Egon Willighagen</td>
+<td>UM</td>
+</tr>
+<tr>
+<td>Nuno (Ryan) Silva Nunes</td>
+<td>UM</td>
+</tr>
+<tr>
+<td>Carole Goble</td>
+<td>UNIMAN</td>
+</tr>
+<tr>
+<td>Ebtisam Alharbi</td>
+<td>UNIMAN</td>
+</tr>
+<tr>
+<td>Nick Juty</td>
+<td>UNIMAN</td>
+</tr>
+<tr>
+<td>Dominique Batista</td>
+<td>UOXF</td>
+</tr>
+<tr>
+<td>Philippe Rocca-Serra</td>
+<td>UOXF</td>
+</tr>
+<tr>
+<td>Susanna-Assunta Sansone (OeRC)</td>
+<td>UOXF</td>
+</tr>
+<tr>
+<td>Alejandra Delfin Rossaro</td>
+<td>UPS</td>
+</tr>
+<tr>
+<td>Anne Cambon-Thomsen</td>
+<td>UPS</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Technology-stack">Technology stack<a class="anchor-link" href="#Technology-stack"> </a></h2><p>The <code>FAIRcoobook</code> is built using <a href="https://jupyterbook.org/intro.html">jupyter-book</a>, following the practice used by the Alan Turing's Instute Book of Data Science.</p>
 <ul>
-<li>Fork the FAIR Book jupyter-book template repo</li>
-<li>Update or Replace the files in <code>content/</code> with your own notebooks and markdown files.</li>
-<li>Update or create the Table of Contents yaml file by editing <code>_data/toc.yaml</code>.</li>
-<li>Generate the Jekyll markdown for your notebooks by running <code>jupyter-book build docs</code></li>
-<li>Push your changes to a branch on your GitHub fork (or wherever you host your site)!</li>
-<li>Send a Pull Requests to the remote GitHub repository</li>
+<li><strong><a href="https://github.com">github</a></strong> is used to version control and hosting</li>
+<li><strong><a href="https://guides.github.com/features/mastering-markdown/">Markdown</a></strong> is used for the write-up</li>
+<li><strong><a href="https://hackmd.io">HackMD</a></strong> is used as Markdown Editor thanks to its integration with <code>github</code> and its <a href="https://hackmd.io/s/hackmd-it"><code>browser extensions</code></a></li>
+<li><strong><a href="https://jupyter.org/">jupyter notebook</a></strong> can be used to provide executable code</li>
+<li><strong><a href="https://mybinder.org">binder</a></strong> is enabled which allows in web execution of any jupyter notebook distributed with the <code>FAIRCookbook</code></li>
+<li><p><strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> javascript library is used to produce flowcharts, Gantt charts and pie charts used in the book.</p>
+<!--* **[netlify]()** is being tested for web hosting and deployment --></li>
+<li><p><strong><a href="">Jekyll Themes</a></strong> provide the style for the web friendly version. The name of this theme is saved in the Jekyll <code>_config.yml</code> configuration file found in. <a href="https://github.com/fair-cookbook/the-fair-cookbook/settings">repository settings</a>.</p>
+</li>
 </ul>
+<hr>
+<h2 id="Support-or-Contact">Support or Contact<a class="anchor-link" href="#Support-or-Contact"> </a></h2><p>Having troubles? Check out our <a href="https://github.com/FAIRplus/the-fair-cookbook/issues">issue tracker</a> or <a href="mailto:fairplus-cookbook@elixir-europe.org">contact support</a> and we’ll help you sort it out.</p>
+<hr>
 <h2 id="Acknowledgements">Acknowledgements<a class="anchor-link" href="#Acknowledgements"> </a></h2><p>FAIR Cookbook is produced thanks to <code>Jupyter Book</code>, project originally created by <a href="http://www.samlau.me/">Sam Lau</a> and <a href="https://predictablynoisy.com">Chris Holdgraf</a>
 with support of the <strong>UC Berkeley Data Science Education Program and the Berkeley
 Institute for Data Science</strong>.</p>
