@@ -110,6 +110,11 @@
   url:  /recipes/interoperability
   expand_sections: true
   sections:
+    - title: How to select ontologies
+      url: /recipes/interoperability/selecting-ontologies
+      not_numbered: false
+
+  sections:
     - title: Minimal MetaData Profiles
       url: /recipes/interoperability/creating-minimal-metadata-profiles
       not_numbered: false
@@ -215,6 +220,9 @@
     - title: How to use HackMD to write a FAIR Cookbook Recipe
       url: /recipes/help/how-to-create-recipe-with-hackmd
       not_numbered: false
+    - title: HackMD Tips and Tricks
+      url: /recipes/help/tips-tricks
+      not_numbered: false      
     - title: How to create a recipe with git
       url: /recipes/help/how-to-create-recipe-with-git
       not_numbered: false
