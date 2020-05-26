@@ -114,37 +114,50 @@ ___
 
 
 ## Step by step process
-### Step 0: Define the scope of the application ontology
+### Step 1: Define the scope of the application ontology
 
-- which domains shall be included: e.g. cell line, disease, tissue, species, and sex.
-- what competency question it answers:  e.g from tissues taken from patients suffering from a specific disease.
-- the application of this ontology: find data using patient metadata.
+The development of application ontology is driven by the target data and use cases. The first step in building an application ontology is to identify the scope of the ontology, including which domain it covers, which use case it targets, which data set it could be applied and which terms it includes.
 
-### Step 1: Select appropriate source ontologies & branches
+In this recipe, we use example patient metadata to demonstrate how to build an application ontology for modelling patient metadata variables to support patient sequencing data investigation. The target domain of this ontology includes disease, taxonomy, tissue, cell line, and biological sex. Table 1 is a snapshot of the example dataset. The complete patient metadata example dataset is [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx).
 
-#### Step 1.1 Select source ontologies
-Recommend reusing existing ontologies and ontology terms instead of creating new terms
-- Things to consider in reference ontology selection
-    - Format and style. OBO foundry format recommended.
-    - Similar umbrella terms for combinations. 
-    - license
-    - coverage
-    - term relationships, maintainance, etc.
-- Available source ontology in selected domains
+>Table 1: Example patient metadata. 
+>
+>| Study                | source_id | sample_description  | tissue | source_tissue | cell                  | cellline | disease                       | gender | species      |
+>|----------------------|-----------|---------------------|--------|---------------|-----------------------|----------|-------------------------------|--------|--------------|
+>| GSE52463Nance2014    | EX08_001  | Lung - Normal       | Lung   |               |                       |          | Normal                        | male   | Homo sapiens |
+>| GSE52463Nance2014    | EX08_015  | Lung - IPF          | Lung   |               |                       |          | Idiopathic Pulmonary Fibrosis | male   | Homo sapiens |
+>| GSE116987Marcher2019 | EX101_1   | HSC CCl4-treated w0 |        |               | Hepatic Stellate Cell |          | NA                            |        | Mus musculus |
 
-    |Domain|Ontologies|
-    |----|----|
-    |Disease| MONDO, DOID... |
-    |Species|NCBItaxon|
-    |Cell line|CL,CLO|
-    |Tissue|NCIT,OMIT,UBERON|
-    |Gender|PATO|
 
-- how to estimate the coverage of specific source ontology?
+### Step 2: Select appropriate source ontologies & branches
 
-In this application ontology, we use MONDO, CL, UBRERON,because ...
+#### Step 2.1 Select source ontologies
 
-#### Step 1.2 Select seed ontology terms
+Reusing ontology terms from source ontologies captures the most accurate and complete term definition and term relationships, avoids redundancy across ontologies, and makes the application ontology more maintainable and evolvable. It's recommended to reuse existing ontology terms, instead of creating new ontology terms.
+
+Source ontology selection considers source ontology properties, application ontology use cases, and the target dataset. For source ontology properties, the first thing to check is the licence. For example, many ontologies in [the OBO foundary](http://www.obofoundry.org/) use [CC-BY](https://creativecommons.org/licenses/by/2.0/) licence, allowing sharing and adaptation, even commercially. Such ontologies can be used directly. Also, source ontologies with similar umbrella structure can be conviniently combined together in the application ontology. Maintainance, format and update frequency of the source ontology shall also be consideded. In terms of application ontology use cases, 
+
+>The scope of ontology (hyper-tension in HP and DOID), the coverage of corrent dataset. whether the ontology 
+
+>For specific use cases, for example, if use case is able finding data using multiple-domain keywords, they better ontology 
+includes both the property of the source ontology and how it matches the target dataset.  To select proper source ontology, several factors need to be considered. Firstly, the ontology license need to be checked. Most ontologies in the OBO foundry uses [CC-BY] license allowing sharing and adaptation even commercially. Secondly, since application ontologies covers multiple domains, to make it easier to combine branches in different ontologies, it is recommended to choose source ontologies with similar umbrella ontology terms. Thirdly, for specific domains, e.g. disease domain, the source ontology should cover terms in the data set as much as possible to ensure the consistency between term relationships and link all data together. Also, the format and style of the source ontology, the update frequency/maintainance of the source term ontology. Depending on the use case, the best source ontology varies.
+
+>The example dataset covers disease, species, cell line, tissue and biological sex. Ther are many reference ontologies covering the domain. Table 2 lists some source ontology available in selected domains. 
+> Table 2: Available source ontologies in selected domains 
+>
+>|Domain|Example source Ontologies|
+>|----|----|
+>|Disease| [Mondo Disease Ontology, MONDO](http://www.obofoundry.org/ontology/mondo.html)<br> [Disease Ontology, DIOD](https://disease-ontology.org/)<br> |
+>|Species|[NCBI organismal classification, NCBItaxon](http://www.obofoundry.org/ontology/ncbitaxon.html)|
+>|Cell line|[Cell Ontology, CL](http://www.obofoundry.org/ontology/cl.html)<br> [Cell Line Ontology, CLO](http://www.obofoundry.org/ontology/clo.html)|
+>|Tissue|[NCI Thesaurus OBO Edition, NCIT](http://www.obofoundry.org/ontology/ncit.html)<br> [Ontology for MIRNA Target, OMIT](http://www.obofoundry.org/ontology/omit.html)<br> [Uberon multi-species anatomy ontology, UBERON](http://www.obofoundry.org/ontology/uberon.html)|
+>|[Biological Sex]|[Phenotype And Trait Ontology, PATO](http://www.obofoundry.org/ontology/pato.html)|
+
+>In this recipe we choose MONDO, CL, UBRERON to demonstrate the ontology branch extraction selection. The best source ontology selection depending on the dataset and the use cases. 
+
+#### Step 2.2 Select seed ontology terms
+
+- why do i need to select a subset of the source ontology. what is ontology seed and ontology brach
 
 - What is seed terms. 
 - How to select: ontology term search + manual selection
@@ -291,6 +304,7 @@ java -jar robot.jar merge \
 - Example
 
 #### Step 5.1: reasoninng and removing extraneous classes
+Q: how to choose a proper reasoner?
 
 ```
 #MATERIALIZE:
