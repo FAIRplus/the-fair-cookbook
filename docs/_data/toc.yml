@@ -90,6 +90,9 @@
   url:  /recipes/findability
   expand_sections: true
   sections:
+      - title: Depositing to Zenodo
+        url: /recipes/findability/zenodo-deposition
+        not_numbered: false    
       - title: Search Engine optimization
         url: /recipes/findability/seo
         not_numbered: false
