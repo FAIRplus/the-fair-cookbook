@@ -7,6 +7,7 @@ The following folder structure has been created in order to keep organized the i
 * `seed_files` folder contains (1) a set of files listing the seed terms used to perform branch extraction, and (2) a set of files listing the terms that couldn't be mapped to ontology concepts by means of the jupyter lab notebook.
 * `extracted_branches` folder contains the ontology branches obtained from the branch extraction task.
 * `onto_results` folder contains the application ontologies obtained.
+* `templates` folder contains the ROBOT templates used to create ontology entities (classes and properties).
 
 #### Notes:
 * The document shows Windows commands.
