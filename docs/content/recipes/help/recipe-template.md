@@ -1,5 +1,28 @@
 # [here comes the Title of the recipe]
 
+**identifier:** [RX.X_FIXME](RX.X_FIXME)
+
+**version:** [<version_number_FIXME>](version_number_FIXME)
+
+___
+
+**_Difficulty level:_** moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle: _FIXME
+
+**_Reading time:_** _FIXME minutes 
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: set_value_FIXME, e.g. Data Scientist
+
+> :heavy_check_mark: set_value_FIXME, e.g. Data Scientist
+
+
+**_Recipe Type_**: set_value_FIXME, e.g. Hands on
+
+**_Executable code_**: set_value_FIXME, [Yes,No]
+
+
+[TOC]
 ## Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
@@ -18,7 +41,7 @@
 
 The main purpose of this recipe is:
 
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files.
+> Provid a summary statement about the purpose of the recipe.
 
 ___
 
@@ -127,8 +150,16 @@ graph LR;
 
 ___
 
+## Conclusion:
 
+> Summerize Key Learnings of the recipe.
+> 
+> Suggest further reading using the following:
+> #### What should I read next?
+> * [HackMD & MarkDown Tips and Tricks](TODO)
+> * [A related recipe which nice complements the current one ](TODO)
 
+___
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  | specific contribution |
