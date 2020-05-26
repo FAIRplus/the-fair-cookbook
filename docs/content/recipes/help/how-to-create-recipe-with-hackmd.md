@@ -2,11 +2,37 @@
 
 **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
 
+**identifier:** [RX.X](RX.X)
 
-# Table of Contents
-1. [Main Objectives](#Main%20FAIRification%20Objectives)
+**version:** [v1.0](v1.0)
+
+___
+
+**_Difficulty level:_** moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle:
+
+**_Reading time:_** 30 minutes 
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: FAIR Cookbook Contributors
+
+> :heavy_check_mark: Data Managers
+
+> :heavy_check_mark: Data Scientists
+
+
+
+**_Recipe Type_**: Hands on
+
+**_Executable code_**: No
+
+
+
+
+[TOC]
+<!-- 1. [Main Objectives](#Main%20FAIRification%20Objectives)
 2. [Authors](#Authors)
-8. [License](#License)
+8. [License](#License) -->
 
 ---
 
@@ -17,59 +43,83 @@ The document contains a checklist taking you point by point through the installa
 
 
 
-- [x] 1. create a github account and obtain your github handle (e.g. [@proccaserra](https://github.com/proccaserra)) 
-
-- [x] 2. request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
-![](https://i.imgur.com/wyTn5aS.png)
-
-- [x] 3. create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
-
-![](https://i.imgur.com/frsBwqc.png =750x)>
-    :information_source:  remember to assign yourself or a team member to the issue
-    :information_source:  remember to assign the issue to a milestone
-    :information_source: remember to tag the issue with relevant label
-
-- [x] 4. create a new branch under the FAIR Cookbook github repository using the following command:
-> git checkout -b recipe_xx master
-
-- [x] 5. create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
-![](https://i.imgur.com/E2ok5ni.png =450x)
-
-- [x] 6. :warning: **IMPORTANT: Install HackMD browser extension ([Chrome](https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search))**.
+## 1. :warning: **IMPORTANT: Install HackMD browser extension ([Chrome](https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search))**.
 
 At the current time, the `HackMD-it` browser extension is only available for Chrome and Firefox and [this tutorial](https://hackmd.io/s/hackmd-it) details the installation procedure. 
 Once you've carried the extension installation, any github repository for which you have access and for which HackMD app has been authorized (which is already the case for all FAIRplus github repositories), any `Markdown` document will be readily editable using 'HackMD' and you should see the following *icon* 
 
-![](https://i.imgur.com/k79IQUA.png =145x)
-
+<!-- ![](https://i.imgur.com/k79IQUA.png =145x) -->
+<div> <img src="https://i.imgur.com/k79IQUA.png" alt="drawing" style="width:145px;" border="1px solid black" align="top" />
+</div>
 
 in the github repository bar as shown in the figure below:
 
-![](https://i.imgur.com/yI8TRNM.png){: height="36px" width="36px"}
+<div> <img src="https://i.imgur.com/yI8TRNM.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
+</div>
+<!-- ![](https://i.imgur.com/yI8TRNM.png) -->
 
-![yI8TRNM]
+<!-- ![yI8TRNM] -->
 
-[yI8TRNM]: https://i.imgur.com/yI8TRNM.png
-{: height="36px" width="36px"}
+<!-- [yI8TRNM]: https://i.imgur.com/yI8TRNM.png -->
 
-:warning: This button will only be visible from Chrome or Firefox once the `HackMD` browser extension has been installed. 
+</br>
+
+:warning: This button will only be visible from Chrome or Firefox once the `HackMD` browser extension has been installed.
+
 :octopus: This will not be visible from Safari, Brave or Internet Explorer browsers *even if* you have HackMD activated for your repository.
 
 
-- [x] 7. Getting familiar with MarkDown with a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
+
+## 2. Create a github account and obtain your github handle (e.g. [@proccaserra](https://github.com/proccaserra)) 
+
+## 3. Request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
+<!-- ![](https://i.imgur.com/wyTn5aS.png) -->
+<div> <img src="https://i.imgur.com/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
+</div>
+
+## 4. Creating a new recipe:
+### 4.1 Create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+
+<!-- ![](https://i.imgur.com/frsBwqc.png =750x) -->
+<div> <img src="https://i.imgur.com/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
+</div>
+
+</br>
+
+>:information_source:  remember to assign yourself or a team member to the issue
+:information_source:  remember to assign the issue to a milestone
+:information_source: remember to tag the issue with relevant label
+
+## 4.2. create a new branch under the FAIR Cookbook github repository using the following command:
+> git checkout -b recipe_xx master
+
+## 6. create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
+<!-- ![](https://i.imgur.com/E2ok5ni.png =450x) -->
+<div> <img src="https://i.imgur.com/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" />
+</div>
+
+
+
+## 7. Getting familiar with MarkDown:
+
+Here is a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
 ![](https://i.imgur.com/Kt3d9eo.png)
 
 
-- [x] 8. Build confidence using HackMD
+## 8. Build confidence using HackMD
 
 ![](https://i.imgur.com/bt012cm.png)
 
 use the split view to have what you type immediately rendered.
 
-- [x] 9. Use the FAIRplus Recipe Template as guide
+## 9. Use the FAIRplus Recipe Template as guide
+
+FAIRPlus Cookbook Team is working at establishing a standard layout for easing the creation of a new recipe. The template contains key sections and outlines, which will help boostrap the process.
+
+[recipe template](https://github.com/FAIRplus/the-fair-cookbook/edit/dev/docs/content/recipes/help/recipe-template.md)
 
 
-## There are 2 main ways to use HackMD.io:
+## 10. Writing notes with HackMD.io:
 
 1. From a Github repository, by editing an existing Markdown 
 
@@ -134,7 +184,19 @@ The process is very similar to that described when pulling a file. Except that i
 
 Fill all the necessary information and press the blue `Push` button.
 
-:radioactive_sign: If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the dedicated email or via our slack channel.
+
+
+## Conclusion:
+
+>This recipe should get you started to contribute content, writing markdown documents, following the FAIRplus guidance and FAIRplus recipe template.
+>
+>:radioactive_sign: If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the [dedicated email](mailto:FAIRplus-cookbook@elixir-europe.org) or via our [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+> #### What should I read next?
+> * [HackMD & MarkDown Tips and Tricks](TODO)
+> * [How to create jupyter notebook?](https://jupyter-notebook.readthedocs.io/en/stable/)
+> * [FAIRplus recipe template](https://the-fair-cookbook.netlify.app/recipes/help/recipe-template)
+
+
 
 ___
 ## Authors:
@@ -142,7 +204,7 @@ ___
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
+| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group |[0000-0001-5306-5690](https://orcid.org/0000-0001-5306-5690) | Writing - Review & Editing, Funding acquisition | 
 
 ___
 ## License:
