@@ -263,7 +263,7 @@ Simple, lightweight, and quick approach. It only requires the domain expert iden
 1. the main entity (sample),
 2. its features (study, tissue, disease, etc.),
 3. the relationships among the main entity and its features, and
-4. equivalence relationships among the main entity and its features, with the ontology sources identified by the domain expert.
+4. subclassing composition of relationships among the main entity and its features, with the ontology sources identified by the domain expert.
 
 **Highlights**
 * Population of the ontology requires to identify the class to instantiate from the domain ontology specialized by a given feature. I.e.: if an instance has the `Male` value at the `gender` feature, then it requires to instantiate the `PATO_0000384 ` domain ontology class.
@@ -280,7 +280,7 @@ robot template --template ./templates/s1.tsv ,
 ### Ontology obtained
 Available at `.onto_results\s1.owl`
 
-![](https://i.imgur.com/TJHrQTr.png)
+![](https://i.imgur.com/Cjlqclj.png)
 
 ## Strategy 2. The pretty some complex approach
 ### Overview
@@ -314,7 +314,7 @@ robot template --merge-before ,
 ### Ontology obtained
 Available at `.onto_results\s2.owl`
 
-![](https://i.imgur.com/h1Jr83I.png)
+![](https://i.imgur.com/Wddb74u.png)
 
 ## Strategy 3. The complex approach
 **@Danielle's sugestion #2.** Fitting all the ontologies under a BFO upper:
