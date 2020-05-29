@@ -149,7 +149,7 @@ Then, simply use:
 
 ## Manual deployment
 
-If you would prefer not to use Docker and compile and run the data catalogue manually instead, please follow the instructions in the [README file](https://github.com/FAIRplus/imi-data-catalogue/)
+If you would prefer not to use Docker and compile and run the data catalogue manually instead, please follow the instructions in the [README file](https://github.com/FAIRplus/imi-data-catalogue/blob/master/README.md)
     
 ## Summary
 
