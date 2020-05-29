@@ -64,19 +64,21 @@ Unless otherwise specified, all the following commands should be run in a termin
 1. First, generate the certificates that will be used to enable HTTPS in reverse proxy. To do so, execute:
 
     ```shell=
-    $ docker/nginx/generate_keys.sh
+    $ cd docker/nginx/
+    $ ./generate_keys.sh
     ``` 
     
-    This relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this (warning - it would cause the HTTPS connection to be unsafe!).
+    _Please note that if you run this command out the `nginx` directory, the certificate and key will be generated in the wrong location._ 
+    This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this (warning - it would cause the HTTPS connection to be unsafe!).
 
-1. Then, copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. Edit the `settings.py` file to add a random string of characters in `SECRET_KEY`. For maximum security use:
+1. Return to the root directory (`$cd ../..`), then copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. Edit the `settings.py` file to add a random string of characters in `SECRET_KEY`. For maximum security use:
     ```python
     import os
     os.urandom(24)
     ```
     in python to generate this key.
 
-1.  Build and start the dockers containers by running:
+1.  Build and start the docker containers by running:
 	```shell=
 	(local) $ docker-compose up --build
 	```
@@ -99,7 +101,7 @@ Unless otherwise specified, all the following commands should be run in a termin
 	```
 	(PRESS CTRL+D or type: "exit" to kill the container)
 	
-1. The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection (beware that most browsers display a warning or block self-signed certificates). Alternatively, you can also access it via http://0.0.0.0:5000/.
+1. The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection (beware that most browsers display a warning or block self-signed certificates). 
 
 
 ### 2. Maintenance of docker-compose
@@ -110,11 +112,13 @@ Therefore, if you change any files in the project, in order to see changes in ap
 $ docker-compose up --build
 ```
 
-If you wanted to delete Solr data, you need to run (that will remove any persisted data - you must redo `solr create_core`):
+If you wanted to delete Solr data, you need to run:
 
 ```shell=
 $ docker-compose down --volumes
 ```
+
+This will remove any persisted data - you must redo `solr create_core` (see step 3 in the previous section) to recreate the Solr cores.
 
 ### 3. Modifying the datasets
 
