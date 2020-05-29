@@ -1,4 +1,16 @@
-# Table of Contents
+> TBD on Friday 29th May.
+>  1. how to present examples and use case
+>  2. how different audience group use this recipe: Developers-focus on automatic solution Biologists-?
+>  
+>  3 . should mondo, uberon be listed as ingreditents?
+>  
+>  4. how to present the examples? shall we keep the section below?
+>  5. ? and removing extraneous classes in reasoning?
+>  6. >TBD: shall we also add how to choose an identifer/domain for the recipe?
+
+
+
+# How to build application ontology with ROBOT
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
@@ -22,31 +34,25 @@ The main purpose of this recipe is:
 
 <div class="mermaid">
 graph TD
-  I1(fa:fa-university ontology source 1):::box -->|extract| M1(fa:fa-cube ontology module 1):::box
-  I2(fa:fa-university ontology source 2):::box -->|extract| M2(fa:fa-cube ontology module 2):::box
-  I3(fa:fa-university ontology source 3):::box -->|extract| M3(fa:fa-cube ontology module 3):::box
-  M1 --> |merge| R1(fa:fa-cubes core):::box
+  I1(fa:fa-university ontology source 1) -->|extract| M1(fa:fa-cube ontology module 1)
+  I2(fa:fa-university ontology source 2) -->|extract| M2(fa:fa-cube ontology module 2)
+  I3(fa:fa-university ontology source 3) -->|extract| M3(fa:fa-cube ontology module 3)
+  M1 --> |merge| R1(fa:fa-cubes core)
   M2 --> |merge| R1(fa:fa-cubes core)
   M3 --> |merge| R1(fa:fa-cubes core)
-  R1(fa:fa-cubes core) --> |materialize| R2(fa:fa-cubes reasoned & reduced core):::box
+  R1(fa:fa-cubes core) --> |materialize| R2(fa:fa-cubes reasoned & reduced core)
 
-  R2(fa:fa-cubes reasoned & reduced core) -->|report| R3(fa:fa-tasks report):::box
-  R2(fa:fa-cubes reasoned & reduced core) --> |edit| R4(fa:fa-cubes reasoned & reduced core):::box
+  R2(fa:fa-cubes reasoned & reduced core) -->|report| R3(fa:fa-tasks report)
+  R2(fa:fa-cubes reasoned & reduced core) --> |edit| R4(fa:fa-cubes reasoned & reduced core)
   R3 -->|edit| R4
-  R4 -->|annotate| R5(fa:fa-cubes fa:fa-tags fa:fa-cc annotated,reasoned,reduced core):::box
-  R5 -->|convert| R6(fa:fa-star-o obo version):::box
-  R5 -->|convert| R7(fa:fa-star owl version):::box
-  R5 -->|export| R8(fa:fa-list xlsx view):::box
-
-  linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
-  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+  R4 -->|annotate| R5(fa:fa-cubes fa:fa-tags fa:fa-cc annotated,reasoned,reduced core)
+  R5 -->|convert| R6(fa:fa-star-o obo version)
+  R5 -->|convert| R7(fa:fa-star owl version)
+  R5 -->|export| R8(fa:fa-list xlsx view)
 </div>
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSk6Ojpib3ggLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpOjo6Ym94XG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpOjo6Ym94IC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKTo6OmJveFxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKTo6OmJveCAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMyk6Ojpib3hcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSk6Ojpib3hcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpOjo6Ym94XG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydCk6Ojpib3hcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpOjo6Ym94XG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSk6Ojpib3hcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbik6Ojpib3hcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pOjo6Ym94XG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KTo6OmJveFxuXG4gIGxpbmtTdHlsZSAwLDEsMiwzLDQsNSw2LDcsOCw5LDEwLDExLDEyLDEzIHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7XG4gIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSk6Ojpib3ggLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpOjo6Ym94XG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpOjo6Ym94IC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKTo6OmJveFxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKTo6OmJveCAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMyk6Ojpib3hcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSk6Ojpib3hcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpOjo6Ym94XG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydCk6Ojpib3hcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpOjo6Ym94XG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSk6Ojpib3hcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbik6Ojpib3hcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pOjo6Ym94XG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KTo6OmJveFxuXG4gIGxpbmtTdHlsZSAwLDEsMiwzLDQsNSw2LDcsOCw5LDEwLDExLDEyLDEzIHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7XG4gIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
-
-<!--
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pXG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KVxuXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pXG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KVxuXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)
--->
+
 ## Capability & Maturity Table
 
 <!-- TO DO -->
@@ -74,39 +80,6 @@ graph TD
 ___
 
 
-### Competency questions
-
-General Questions
-
-- How to identify relevant public domain ontologies suiting our needs? (Might be out of scope for ROBOT)
-- How to establish an ontology covering all terms that are included in the actual data to be represented?
-- How to merge the internal ontology with publicly available ontologies?
-- How to remove terms from the resulting ontology that are not needed?
-- How to guarantee consistency of the final ontology?
-- How to identify differences in comparison to a previous version of the resulting ontology?
-
-Questions without specifying compounds or genes
-
-- Identify all data generated from tissues taken from patients suffering from a specific disease.
-- Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.
-- Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.
-- Identify all data generated from primary cells whose origin is the lung.
-- Identify all data generated from celllines whose origin is the lung.
-
-Questions including single genes or gene sets
-
-- What is the expression of PPARg / growths factors in lung tissue from IPF patients?
-- What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?
-- What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects? 
-
-Questions including compound or treatment information
-
-- Identify all data generated from primary cells treated with a kinase inhibitor.
-- Identify all data from patients treated with a specific medication.
-- Identify all data generated from cells / cell lines that have been treated with compounds targeting a member of a specific pathway.
-- What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific diseas
-___
-
 ## Ingredients
 
 | Tool Name  |  Tool Location  | Tool function |
@@ -120,6 +93,20 @@ ___
 
 
 ## Step by step process
+
+### Step 0: Preliminary considerations
+
+#### What is an application ontology?
+An application ontology is a semantic artifact which is developed to answer the needs of a specific use case or scenario. It reuse agreed knowledge specified on reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology.
+
+#### What is a use a case?
+
+#### Roles involved
+> TBD. Briefly depict each one.
+* _Domain Expert_
+* _Use case/Scenario Owner_
+* _Ontology Developer_
+
 ### Step 1: Define the scope of the application ontology
 
 The development of application ontology is driven by the target data and use cases. The first step in building an application ontology is to identify the scope of the ontology, including which domain it covers, which use case it targets, which data set it could be applied and which terms it includes.
@@ -137,18 +124,23 @@ In this recipe, we use example patient metadata to demonstrate how to build an a
 
 ### Step 2: Select appropriate source ontologies & branches
 
-#### Step 2.1 Select source ontologies
+#### Step 2.1 Select source ontologies -Fuqi
+
+> [name=ereynrs][color=red] The OBO Foundry aims to coordinate ontologies in a modular fashion, such that parts of some ontologies can be used as building blocks for other ontologies. There are a variety of different strategies for leveraging external ontologies and managing dependencies between ontologies, depending on the use case. This recipe applies the "extraction" strategy, which integrate knowledge stated on an external source by creating a module based on a set of entities to extract. The set of entities to extract are referenced as the "seeds" on this recipe. 
+> 
+> The previous paragraph has been - in part - extracted from the ROBOT article. Maybe could be a good introduction to the recipe, in order to clarify terminilogy.
 
 Reusing ontology terms from source ontologies captures the most accurate and complete term definition and term relationships, avoids redundancy across ontologies, and makes the application ontology more maintainable and evolvable. It's recommended to reuse existing ontology terms, instead of creating new ontology terms.
 
-Source ontology selection considers source ontology properties, application ontology use cases, and the target dataset. For source ontology properties, the first thing to check is the licence. For example, many ontologies in [the OBO foundary](http://www.obofoundry.org/) use [CC-BY](https://creativecommons.org/licenses/by/2.0/) licence, allowing sharing and adaptation, even commercially. Such ontologies can be used directly. Also, source ontologies with similar umbrella structure can be conviniently combined together in the application ontology. Maintainance, format and update frequency of the source ontology shall also be consideded. In terms of application ontology use cases, 
+Source ontology selection considers source ontology properties, application ontology use cases, and the target dataset. 
 
->The scope of ontology (hyper-tension in HP and DOID), the coverage of corrent dataset. whether the ontology 
+In terms of source ontology properties, the first thing to check is the licence. For example, many ontologies in [the OBO foundary](http://www.obofoundry.org/) use [CC-BY](https://creativecommons.org/licenses/by/2.0/) licence, allowing sharing and adaptation, even commercially. Such ontologies can be used directly. Also, source ontologies with similar umbrella structure can be conviniently combined together in the application ontology. Maintainance, format and update frequency of the source ontology shall also be consideded.
 
->For specific use cases, for example, if use case is able finding data using multiple-domain keywords, they better ontology 
-includes both the property of the source ontology and how it matches the target dataset.  To select proper source ontology, several factors need to be considered. Firstly, the ontology license need to be checked. Most ontologies in the OBO foundry uses [CC-BY] license allowing sharing and adaptation even commercially. Secondly, since application ontologies covers multiple domains, to make it easier to combine branches in different ontologies, it is recommended to choose source ontologies with similar umbrella ontology terms. Thirdly, for specific domains, e.g. disease domain, the source ontology should cover terms in the data set as much as possible to ensure the consistency between term relationships and link all data together. Also, the format and style of the source ontology, the update frequency/maintainance of the source term ontology. Depending on the use case, the best source ontology varies.
+The selection of proper source ontologies also relies on the use cases and the target datasets. If one ontology is designed for heterogeneous datasets with complicated data types and data relationships, source ontologies with rich ontology term relationsihps are preferred to improve the data findability. Different interpretations of the data also affect the selection of source ontologies. For example, _"hypertension"_ can be either treated as a phenotype and mapped to phenotype ontologies, or a disease mapped to disease ontologies.
 
->The example dataset covers disease, species, cell line, tissue and biological sex. Ther are many reference ontologies covering the domain. Table 2 lists some source ontology available in selected domains. 
+
+The example dataset covers _disease_, _species_, _cell lines_, _tissues_ and _biological sex_ domains. Table 2 lists some source ontologies available in these domains. This recipe uses _MONDO_, _CL_, _UBRERON_ ontologies to demonstrate the ontology development workflow. 
+
 > Table 2: Available source ontologies in selected domains 
 >
 >|Domain|Example source Ontologies|
@@ -157,75 +149,158 @@ includes both the property of the source ontology and how it matches the target 
 >|Species|[NCBI organismal classification, NCBItaxon](http://www.obofoundry.org/ontology/ncbitaxon.html)|
 >|Cell line|[Cell Ontology, CL](http://www.obofoundry.org/ontology/cl.html)<br> [Cell Line Ontology, CLO](http://www.obofoundry.org/ontology/clo.html)|
 >|Tissue|[NCI Thesaurus OBO Edition, NCIT](http://www.obofoundry.org/ontology/ncit.html)<br> [Ontology for MIRNA Target, OMIT](http://www.obofoundry.org/ontology/omit.html)<br> [Uberon multi-species anatomy ontology, UBERON](http://www.obofoundry.org/ontology/uberon.html)|
->|[Biological Sex]|[Phenotype And Trait Ontology, PATO](http://www.obofoundry.org/ontology/pato.html)|
-
->In this recipe we choose MONDO, CL, UBRERON to demonstrate the ontology branch extraction selection. The best source ontology selection depending on the dataset and the use cases. 
-
-#### Step 2.2 Select seed ontology terms
-
-- why do i need to select a subset of the source ontology. what is ontology seed and ontology brach
-
-- What is seed terms. 
-- How to select: ontology term search + manual selection
-    - Tools: ZOOMA（maybe pros and cons using zooma) , BioPortal Annotator, OLS, others.
-    - SPARQL?
-    - An example with ZOOMA?
-- Rules in seed terms selection
-    - include the domain title, e.g. "tissue", "disease", etc.
-    - stick to one reference ontology if possible
-    - if term doesnt exist, solutions: new term request > use terms other reference ontology > create your own term
-    - Coverage. Should cover all terms.
-
-### Step 2: Build the upper level "umbrella" ontology 
-
-tools: protege/other ontology editor
-considerations: ontology base URI/namespace
+>|Biological Sex|[Phenotype And Trait Ontology, PATO](http://www.obofoundry.org/ontology/pato.html)|
 
 
-### Step 3: Extract ontology modules from source ontologies
+#### Step 2.2 Select seed ontology terms - Emiliano
+**Aim**
 
-#### Preliminary considerations
+To identify the seeds needed to perform the knowledge extraction from external sources. are the set of entities to extract in order to be integrated on the application ontology.
 
-Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend to collect all steps together into a script or Make file to avoid missing steps. ROBOT steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.
+**Main roles and tasks**
 
-We recommend starting each (re)build of the application ontology with the latest versions of the source ontologies unless there is a good reason not to update to the latest version. Ideally, this should be done automatically, for example through a shell script that CURLs all ontologies from their source URIs, e.g.
+_Domain Expert_ and _Use Case/Scenario Owner_ identify the right seeds for a given application ontology.
 
-```shell script
-curl -L http://purl.obolibrary.org/obo/uberon.owl > uberon.owl
+**Supporting roles and tasks**
+
+_Ontology Developer_ provides the helper tools to ease and to scale the identification of the seeds.
+
+**Overview**
+
+Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - Zooma and NCBO Annotator - are depicted.
+
+ZOOMA is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the European Bioinformatics Institute (EMBL-EBI). It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the Ontology Lookup Service (OLS). ZOOMA contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
+
+The NCBO Annotator is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal ontologies.
+
+Both the Zooma and NCBO Annotator service provides a web interface and a REST API to identify the seed terms by annotation of free text. Two scripts able to automate the annotation of a set of free text terms are shown following.
+
+**Getting seed terms by Zooma**
+
+The following sample script uses the Zooma web service to get a list of seed terms - i.e., the URIs of ontology classes -. The service also states the level of confidence of every seed proposed.
+```python3
+#Python3
+#zooma-annotator-script.py file
+
+def get_annotations(propertyType, propertyValues, filters = ""):
+    """
+    Get Zooma annotations for the values of a given property of a given type.
+    """
+    
+    import requests
+    
+    annotations = []
+    no_annotations = []
+
+    for value in propertyValues:
+        ploads = {'propertyValue': value,
+                  'propertyType': propertyType,
+                  'filter': filters}
+        r = requests.get('http://www.ebi.ac.uk/spot/zooma/v2/api/services/annotate',
+                         params=ploads)
+            
+        import json
+        data = json.loads(r.text)
+        
+        if len(data) == 0:
+            no_annotations.append(value)
+        
+        for item in data:
+            annotations.append((f"{item['semanticTags'][0]} "
+                                f"# {value}"
+                                f"-Confidence:{item['confidence']}"))
+
+    return annotations, no_annotations
+
+if __name__ == "__main__":
+    propertyType = 'gender'
+    propertyValues = ['male', 'female', 'unknown']
+
+    annotations, no_annotations = get_annotations(propertyType, propertyValues)
+
+    from pprint import pprint
+    pprint(annotations)
+    pprint(no_annotations)
+```
+Running the before presented script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
+```python3
+['http://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH',
+ 'http://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH',
+ 'http://www.orpha.net/ORDO/Orphanet_288 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0003850 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0003952 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0009471 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0000203 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0003863 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0000616 # unknown-Confidence:MEDIUM',
+ 'http://purl.obolibrary.org/obo/HP_0000952 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0003853 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_1001331 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0003769 # unknown-Confidence:MEDIUM',
+ 'http://purl.obolibrary.org/obo/HP_0000132 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0000408 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0008549 # unknown-Confidence:MEDIUM',
+ 'http://www.ebi.ac.uk/efo/EFO_0001642 # unknown-Confidence:MEDIUM']
+[]
 ```
 
-#### Extraction types 
+**Getting seed terms by using NCBO Annotator**
 
-ROBOT supports two types of ontology module extraction, Syntactic Locality Module Extractor (SLME) and Minimum Information to Reference an External Ontology Term (MIREOT). SLME extractions can be further subdivided into TOP (top module), BOT (bottom module) and STAR (fixpoint-nested module). For full details of what these different options entail, see http://robot.obolibrary.org/extract.html. We recommend the use of BOT for comprehensive modules that preserve the links between ontology classes and the use of MIREOT if relationships apart from parent-child ones are less important. 
+The following sample script uses the NCBO Annotator web service to get a list of seed terms - i.e., the URIs of ontology classes -.
+```python3
+#Python3
+#ncbo-annotator-script.py file
 
-:pencil:__WIP__ We used MIREOT to extract species in NCBITaxon, cell types in CL, and sex in PATO. For disease term, we used BOT to extract terms in MONDO. (as one of MONDO's features is the term hierarchy.) It's also possible to important the complete ontology if ???.
+def get_annotations(propertyValues, ontologies = ''):
+    """
+    Get NCBO Annotations for the values of a given property.
+    """
+        
+    import requests
+    
+    annotations = []
+    no_annotations = []
+    
+    for value in propertyValues:
+        ploads = {'apikey': '8b5b7825-538d-40e0-9e9e-5ab9274a9aeb',
+                  'text': value,
+                  'ontologies': ontologies,
+                  'longest_only': 'true',
+                  'exclude_numbers': 'false',
+                  'whole_word_only': 'true',
+                  'exclude_synonyms': 'false'}
+        r = requests.get('http://data.bioontology.org/annotator', params=ploads)
+        
+        import json
+        data = json.loads(r.text)
+        
+        if len(data) == 0:
+            no_annotations.append(value)
+        
+        for item in data:
+            annotations.append(f"{item['annotatedClass']['@id']} # {value}")
 
+    return annotations, no_annotations
 
-#### Module extraction - using manual text lists
+if __name__ == "__main__":
+    propertyType = 'gender'
+    propertyValues = ['male', 'female', 'unknown']
 
-Using `robot` tool provided by the `OBO foundry`, the creation of a module can be done with one command:
+    annotations, no_annotations = get_annotations(propertyType, propertyValues)
 
+    from pprint import pprint
+    pprint(annotations)
+    pprint(no_annotations)
 ```
-robot extract --method <some_selection> --input <some_input.owl>\ 
-              --term-file <list_of_classes_of_interest_in_ontology.txt \
-              --intermediates <choose_from_option>
-              --output results/extracted_module.owl
+Running the before presented script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
+```python3
+['http://purl.obolibrary.org/obo/UBERON_0003101 # male',
+ 'http://purl.obolibrary.org/obo/UBERON_0003100 # female']
+['unknown']
 ```
-`robot` extract command takes several arguments:
 
-* *method*: `robot` uses 4 different algorithms to generate a module.  TOP, BOT, STAR (all from the SLME method), and MIREOT. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The STAR method creates a module by pulling all the properties and axioms of the seed classes but nothing else. MIREOT uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
-* *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
-* *imports*: this argument allows to specific whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
-* *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex)
-* *intermediates*: specific to the `MIREOT` method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (`all`,`minimal`, `none`).
-* *output*: the path to the owl file holding the results of the module extraction
-* *copy-ontology-annotations*: a boolean value true/false to pull or not any class annotation from the parent ontology. default is `false`
-* *sources*: optional, a pointer to a file mapping 
-* *annotate-with-source*: a boolean value true/false. default is `false`
-
-
-
-#### Module extraction - using SPARQL
+#### Step2.2.3 seed term extraction - using SPARQL -Emiliano/Danille
+> [name=ereynrs][color=red] Maybe this step is a bit disconnected of the previous ones. 
 
 Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a SPARQL query. Here, we generate a subset of UBERON terms which have a crossreference to either FMA or MA terms.
 
@@ -258,6 +333,47 @@ FILTER regex( ?xref, "^FMA|^MA:", "i")
 }
 ```
 
+
+### Step 3: Extract ontology modules from source ontologies
+
+Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend to collect all steps together into a script or Make file to avoid missing steps. ROBOT steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.
+
+#### Step 3.1 Get source ontology files
+
+We recommend starting each (re)build of the application ontology with the latest versions of the source ontologies unless there is a good reason not to update to the latest version. Ideally, this should be done automatically, for example through a shell script that CURLs all ontologies from their source URIs, e.g.
+
+```shell script
+curl -L http://purl.obolibrary.org/obo/uberon.owl > uberon.owl
+```
+#### Step 3.2 Choose ontology extraction algorithms
+
+ROBOT supports two types of ontology module extraction, Syntactic Locality Module Extractor (SLME) and Minimum Information to Reference an External Ontology Term (MIREOT). SLME extractions can be further subdivided into TOP (top module), BOT (bottom module) and STAR (fixpoint-nested module). For full details of what these different options entail, see http://robot.obolibrary.org/extract.html. We recommend the use of BOT for comprehensive modules that preserve the links between ontology classes and the use of MIREOT if relationships apart from parent-child ones are less important. 
+
+
+#### Step3.3 Extract modules using seed terms
+
+Using `robot` tool provided by the `OBO foundry`, the creation of a module can be done with one command:
+
+```bash
+robot extract --method <some_selection> \
+    --input <some_input.owl> \ 
+    --term-file <list_of_classes_of_interest_in_ontology.txt> \
+    --intermediates <choose_from_option> \
+    --output ./ontology_modules/extracted_module.owl
+```
+`robot` extract command takes several arguments:
+
+* *method*: `robot` uses 4 different algorithms to generate a module.  TOP, BOT, STAR (all from the SLME method), and MIREOT. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The STAR method creates a module by pulling all the properties and axioms of the seed classes but nothing else. MIREOT uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
+* *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
+* *imports*: this argument allows to specific whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
+* *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex)
+* *intermediates*: specific to the `MIREOT` method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (`all`,`minimal`, `none`).
+* *output*: the path to the owl file holding the results of the module extraction
+* *copy-ontology-annotations*: a boolean value true/false to pull or not any class annotation from the parent ontology. default is `false`
+* *sources*: optional, a pointer to a file mapping 
+* *annotate-with-source*: a boolean value true/false. default is `false`
+
+
 The above query, saved under `select_anatomy_subset.sparql` can be used to generate a dynamic seed list, then do a BOT extraction: 
 
 ```shell script
@@ -270,47 +386,93 @@ uberon_subset.owl: uberon_seed_list.txt
 
 ```
 
-#### Evaluation and validation of extracted branches
+#### Step3.4 Assess extracted modules
 
-? For example by comparing different outcomes of MIREOT, BOT
-? how to manually check it is a good branch
+The extracted modules shall be manually checked to make sure it covers all seed terms and correctly reflects the relationship between terms. The minmum requirement of the extracted modules is to include all seed terms. The coverage check can also be expanded to the whole dataset to check if the extracted module has decent coverage of the whole dataset. Besides, the hierarchical structure of the source ontology should be preserved in the extracted module to ensure the selected ontology terms can be linked together. 
 
-### Step 3/4 ? : How to creat your own term [is this section necessary?]
-Always consider reusing existing terms first.
-If have to create a term, use portege. 
-How to give it a proper identifier.
-    EFO identifier generator tool?
+### Step 4: Build the upper level _umbrella_ ontology - Emiliano
+**Aim**
 
+To build the umbrella ontology, aimed to model the main entity of the use case and its relationships with the ontology classes extracted on the previous Step.
 
-### Step 4: Merge extracted modules under the umbrella
+**Main roles and tasks**
 
+_Domain Expert_ and _Use Case/Scenario Owner_ identify the main entity of the use case and its relationships with extracted modules. Both, the main entity and the relationships with the ontology classes previously extracted can be locally specified - i.e., be defined in the scope of the application ontology - or can also be extracted from external knolwedge sources.
+
+**Supporting roles and tasks**
+
+_Ontology Developer_ generates the artifacts to build the _umbrella_ ontology by means of the ROBOT tool.
+
+**Overview**
+
+ROBOT provides a template-driven ontology term generation system. A ROBOT template is a tab-separated values (TSV) or comma-separated values (CSV) file that depicts a set of patterns to build ontology entities - i.e., classes, properties, and individuals -. These templates can be used for modular ontology development.
+After the _Domain Expert_ and the _Use Case/Scenario Owner_ specify the main entity of the use case and its relationships with remaining ontology entities, the _Ontology Developer_ generates the ROBOT templates depicting the set of patterns aimed to build the _umbrella_ ontology.
+
+A ROBOT command using a template to build an ontology is shown below:
+```bash
+robot template --template template.csv \
+    --prefix "r4: https://fairplus-project.eu/ontologies/R4/" \
+    --ontology-iri "https://fairplus-project.eu/ontologies/R4/" \
+    --output ./templates/umbrella.owl
 ```
-#MERGING:
+
+And a template sample is presented following:
+
+
+| ID | Label | Entity Type | Equivalent Axioms | Characteristic | Domain | Range | 
+| -------- | -------- | -------- | -------- |-------- | -------- | -------- |
+| ID     | LABEL     | TYPE     | EC % | CHARACTERISTIC | DOMAIN | RANGE |
+|ex:cl_2 | Class_2 | class |-|-|-|-|
+|ex:cl_3 | Class_3 | class |ex:cl_2|-|-|-|
+|ex:op_1	|Prop_1| object property|-|Class_2|Class_3|
+|ex:dp_1	|Prop_2| data property|-|functional|Class_2|xsd:string|
+
+:bulb: **_Tip:_** The generated ontology can be visualized by using the Protege tool or a local deployment of OLS (Recipe 1.3). The OLS local deployment option is recommended by this recipe, given that Protege crash when loading medium or large size ontologies.
+    
+### Step 5: Merge ontology modules and _umbrella_ ontology
+**Aim**
+
+To built a first draft of the application ontology by merging the ontology modules previuosly extracted and the _umbrella_ ontology locally built.
+
+**Main roles and tasks**
+
+_Ontology Developer_ merge (a) the ontology modules extracted from domain ontologies, and (b) the _umbrella_ ontology built on the previous step, by running the corresponding ROBOT command.
+
+**Supporting roles and tasks**
+
+Not needed.
+
+**Overview**
+The "merge" ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the ROBOT command merging the _umbrella_ ontology and the modules is shown:
+```bash
 java -jar robot.jar merge \
---input ./ontology-module/iao_mireot_robot-module.owl \
---input ./ontology-module/obi_mireot_robot-module.owl \
---input ./ontology-module/duo-mireot-robot-module.owl \
---input ./ontology-module/chmo_mireot_module.owl \
---input ./ontology-module/uo-mireot-robot-module.owl \
---input ./ontology-module/psims-mireot-robot-module.owl \
---input ./ontology-module/chebi_mireot_no-inter-new-upper-module.owl \
---output ./results/msio-test-merge.owl
+    --input ./ontology_modules/iao_mireot_robot-module_1.owl \
+    --input ./ontology_modules/obi_mireot_robot-module_2.owl \
+    --input ./ontology_modules/duo-mireot-robot-module_3.owl \
+    --input ./templates/umbrella.owl \
+    --output ./results/r4_app_ontology.owl
 ```
 
+### Step 6: Post-merge modifications - Fuqi
+__Aim__
 
-### Step 5: Post-merge modifications
+The application ontology should be logically consistent, self-describing and reusable. It is also recommended to make the application ontology compatiable to ontology standards and user friendly. This section suggests post-merge modifications. Steps with asterisks(*) are recommended but not essential.
 
-#### Step 5.0 Add term relationships
+__Main roles and tasks__
 
-- why do we need term relationships.
-- where to get term relationships: borrow existing relationships in reference ontologies(e.g. MONDO, DIOD) or EFO; manually linking by domain expert
-- How to import relationship
-    WEBOLOUS. ROBOT spreadsheet to OWL.
-- how to make sure the relationship is consistent.
-- Example
+The Ontology developer inspects the quality of the ontology and export the style and format of the ontology according to the use case requirement. 
 
-#### Step 5.1: reasoninng and removing extraneous classes
-Q: how to choose a proper reasoner?
+__Supporting roles and tasks__
+
+The Use Case/Scenario Owner defines the standards for the ontology and how  to make this ontology user friendly.
+
+#### Step 6.1: reasoninng 
+
+Ontology reasoning validates the ontology logic and perfoms automatic classification. It is crucial to the consistency and coherency of the application ontology. ROBOT provides _ELK_, _hermit_, _jfact_ and [other reasoners](http://robot.obolibrary.org/reason). [Here](http://owl.cs.manchester.ac.uk/tools/list-of-reasoners/) is a comperensive list of ontology reasoners and detailed description.
+
+@7GH6ArIbRnm_7fgcv8mmWw The ROBOT commands REASON, REPORT, VALIDATE, and VERIFY could be more aligned to the aim of this step.
+
+Below is a example of ontology materializatioon using  ELK reasoner.
 
 ```
 #MATERIALIZE:
@@ -322,9 +484,13 @@ reduce \
 ```
 
 
-#### Step 5.2: Annotate
+#### Step 6.2: Annotate
 
-At minimum, this step is necessary to specify version
+Ontology metadata describes the license, name, IRI, versions and other information. It improves the reusability of the ontology and makes it easier to maintain the ontology.
+
+Ontology IRIs, version IRIs, ontology title and descriptions and license annotations are recommended. To manage the application in a ontology management services, such as the EBI OLS, ontology ID, URL should also be provided. Other metadata, for example, reasoner, XXX can also be provided.
+
+The ontology metadata can be provided in a turtle(.ttl) file and added to the ontology with following commands.
 
 ```
 #ANNOTATE
@@ -337,10 +503,15 @@ robot annotate --input edit.owl \
   --output results/annotated.owl
 
 ```
+>[name=fuqi][color=green]
+>The example ontology-iri and version-iri doesn't work.
+>
+>Provide a annotatios.ttl example.
 
-#### Step 5.3: Convert
+#### Step 6.3*: Convert
 
-Ontologies may be distributed in a variety of format. The following command shows how to convert an `owl` file to `obo`:
+In the previous steps, we have demonstrate how to create an application ontology using .owl format. Besides, .owl format, in biomedical domain, the Open Biomedical Ontology (OBO) format is also widely used. The following command shows how to convert an `owl` file to `obo`:
+
 ```
 #CONVERT:
 robot convert \
@@ -349,25 +520,51 @@ robot convert \
 --output results/stato.obo
 ```
 
-#### Step 5.4: Export
+#### Step 6.4*: Export
 
-An experimental feature to provide a list of an ontology classes in a tabular view:
+Using the application ontology directly through an owl file is not very convinient. It is recommend to load the ontology to ontology management serives, which support browsering, querying to make it more usable to other users.
+
+Another option is to convert the ontology to a flat-table. ROBOT provides an experimental feature to create a list of an ontology classes in a tabular view:
 ```
+# generate class table
 java -jar robot.jar export \
 --input /Documents/git/stato/dev/ontology/stato.owl  \
 --header "IRI|ID|LABEL|definition" SubClass Of" \
 --include "classes properties" \
 --format xlsx \
 --export /Documents/git/stato/export-result/stato-view.xlsx
-```
+`
+### Step 7: Assess the ontology against the data/use case
+> TODO: two types of assessment: the ontology itself is it consistent and conherent in Step6.1// is it useful?
+> - implement competency questions in SPARQL query. 
+> - query on the ontology-level. and the instance/data level.
+> 
 
-### Step 6: evolving ontology
-How to update and maintaing. e.g. 
+**Aim**
+
+
+**Main roles and tasks**
+
+
+**Supporting roles and tasks**
+
+Not needed.
+
+**Overview**
+
+ROBOT can execute SPARQL queries against an ontology. The verify command is similar, but is used to test that an ontology conforms to the specified rules. The query command can execute SPARQL ASK, SELECT, and CONSTRUCT queries.
+
+### Step 8*: Maintain ontology
+
+>TODO
+> - evolution of ontology: asking new terms, update frequency, term deprecation, link to other recipes.
+> - dev: use ROBOT in the ODK framework.
 
 
 
 ## Executable Code in Notebook
 
+>TBD: check with Philippe
 
 ```python
 import isatools
@@ -375,18 +572,13 @@ import json
 import pandas as pd 
 import holoview
 ```
-
-
-
-
-
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft, Code |
 |Philippe Rocca-Serra| UOXF|[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| Writing - Review, Code|
-|Fuqi Xu|EMBL-EBI|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)|Writing - Review|
+|Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)|Writing - Draft, Review|
 |Emiliano Reynares| Boehringer Ingelheim|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Writing - Review,  Code |
 |Karsten Quast|BI|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)| Writing|
 
