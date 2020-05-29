@@ -32,7 +32,7 @@ This recipe is a step-by-step guide on how to deploy the IMI Data Catalogue in D
 
 ## Introduction
 
-For a more general introduction to data catalogues, their elements and data models, see the [data catalogue recipe](link). This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. The catalogue is not intended to hold the actual data 
+For a more general introduction to data catalogues, their elements and data models, see the [data catalogue recipe](link). This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, together with information on any access restrictions.
 
 ## Requirements
 
