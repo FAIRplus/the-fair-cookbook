@@ -118,7 +118,7 @@ If you wanted to delete Solr data, you need to run:
 $ docker-compose down --volumes
 ```
 
-This will remove any persisted data - you must redo `solr create_core` (see step 3 in the previous section) to recreate the Solr cores.
+This will remove any persisted data - you must redo `solr create_core` (see step 4 in the previous section) to recreate the Solr cores.
 
 ### 3. Modifying the datasets
 
