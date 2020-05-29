@@ -1,7 +1,7 @@
 # Deploying a data catalogue
 
 
-**identifier:**
+**identifier:** UC9.1
 
 **version:** [v0.1](v0.1)
 
@@ -14,12 +14,11 @@ ___
 
 **_Intended Audience:_** 
 
-> :heavy_check_mark: Data Managers
-
 > :heavy_check_mark: Software Engineer
 
 > :heavy_check_mark: System Administrator
 
+> :heavy_check_mark: Data Manager
 
 **_Recipe Type_**: Service deployment
 
@@ -32,6 +31,8 @@ ___
 This recipe is a step-by-step guide on how to deploy the IMI Data Catalogue in Docker. 
 
 ## Introduction
+
+For a more general introduction to data catalogues, their elements and data models, see the [data catalogue recipe](link). This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. The catalogue is not intended to hold the actual data 
 
 ## Requirements
 
