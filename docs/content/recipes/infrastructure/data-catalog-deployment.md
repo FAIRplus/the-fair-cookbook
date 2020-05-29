@@ -41,8 +41,6 @@ The following need to be installed on the machine the deployment is run on:
 - [Docker](https://www.docker.com/)
 
 
-
-
 ## Ingredients
 - [IMI data catalogue code](https://github.com/FAIRplus/imi-data-catalogue) 
 
@@ -51,6 +49,8 @@ Check out the code to your local machine by running the following command in a t
 ```shell
 $ git clone git@github.com:FAIRplus/imi-data-catalogue.git
 ```
+
+Thanks to docker-compose, it is possible to easily manage all the components (solr and web server) required to run the application.
 
 
 ## Step-by-step guide:
@@ -69,13 +69,19 @@ Unless otherwise specified, all the following commands should be run in a termin
     
     This relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this (warning - it would cause the HTTPS connection to be unsafe!).
 
-1. Then, copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. Edit the `settings.py` file to add a random string of characters in `SECRET_KEY` and then run:
+1. Then, copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. Edit the `settings.py` file to add a random string of characters in `SECRET_KEY`. For maximum security use:
+    ```python
+    import os
+    os.urandom(24)
+    ```
+    in python to generate this key.
 
+1.  Build and start the dockers containers by running:
 	```shell=
 	(local) $ docker-compose up --build
 	```
 	
-	That will create a container with datacatalog web application, and a container for solr (the data will be persisted between runs).
+	That will create a container with datacatalog web application, and a container for Solr (the data will be persistant between runs).
 
 1. In a new terminal, to create Solr cores:
 
@@ -93,8 +99,7 @@ Unless otherwise specified, all the following commands should be run in a termin
 	```
 	(PRESS CTRL+D or type: "exit" to kill the container)
 	
-1. The web application should now be available with loaded data via  http://0.0.0.0:5000/ or https://localhost 
-
+1. The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection (beware that most browsers display a warning or block self-signed certificates). Alternatively, you can also access it via http://0.0.0.0:5000/.
 
 
 ### 2. Maintenance of docker-compose
