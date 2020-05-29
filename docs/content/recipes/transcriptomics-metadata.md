@@ -101,7 +101,7 @@ Common metadata include any information that is not specific to transcriptomics 
 
 #### Suggested metadata fields
 
-The following table contains a non-exhaustive list of suggested minimum metadata fields for biological samples. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE, FAANG and HCA.
+The following table contains a non-exhaustive list of suggested minimum metadata fields for biological samples. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE, FAANG and HCA. Fields were included if they occurred in at least two of the standards.
 
 |Metadata field|Required|Comment|
 |--------|--------|--------|
@@ -201,7 +201,7 @@ The following table contains a non-exhaustive list of suggested minimum metadata
 
 ## Ontologies for transcriptomics data
 
-While it is essential that any transcriptomics metadata be annotated with ontology terms wherever possible, there is no absolute set of ontologies that must be used above all others. There is however a consensus set of ontologies and other standardised resources that are commonly used in transcriptomics metadata, including in the main data archives. The most commonly used ontologies are listed below.
+While it is essential that any transcriptomics metadata be annotated with ontology terms wherever possible, there is no absolute set of ontologies that must be used above all others. There is however a consensus set of ontologies and other standardised resources that are commonly used in transcriptomics metadata, including in the main data archives. The most commonly used ontologies and fields they apply to are listed below. This table represents an absolute minimum of ontology annotations that should be included in a transcriptomics metadata set for it to be considered as FAIR. Not all fields suggested for ontology annotation in the previous section are repeated here for this reason. 
 
 |Data type|Ontology/Entity sources|Type|Notes|
 |--|--|--|--|
