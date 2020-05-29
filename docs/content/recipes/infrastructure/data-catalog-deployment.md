@@ -165,9 +165,10 @@ This recipe provides a step-by-step guide to deploying the IMI data catalogue to
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/orcid.org/0000-0003-1058-2668) | Writing - Original Draft |
-| Valentin Grouès | LCSB, University of Luxembourg |||
-| Wei Gu | LCSB, University of Luxembourg |||
-| Philippe Rocca-Serra ||||
+| Valentin Grouès | LCSB, University of Luxembourg |[0000-0001-6501-0806 ](https://orcid.org/orcid.org/0000-0001-6501-0806 )|Writing - Original Draft|
+| Wei Gu | LCSB, University of Luxembourg |[0000-0003-3951-6680](https://orcid.org/orcid.org/0000-0003-3951-6680)|Writing - Review|
+| Venkata Satagopam | LCSB, University of Luxembourg |[0000-0002-6532-5880](https://orcid.org/orcid.org/0000-0002-6532-5880)|Writing - Review|
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Review |
 
 
 ___
