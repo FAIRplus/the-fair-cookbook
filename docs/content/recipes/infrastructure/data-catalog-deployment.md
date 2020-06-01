@@ -50,7 +50,7 @@ Check out the code to your local machine by running the following command in a t
 $ git clone git@github.com:FAIRplus/imi-data-catalogue.git
 ```
 
-Thanks to docker-compose, it is possible to easily manage all the components (solr and web server) required to run the application.
+Thanks to `docker-compose`, it is possible to easily manage all the components (solr and web server) required to run the application.
 
 
 ## Step-by-step guide:
@@ -63,56 +63,62 @@ Unless otherwise specified, all the following commands should be run in a termin
 
 1. First, generate the certificates that will be used to enable HTTPS in reverse proxy. To do so, execute:
 
-    ```shell=
+    ```bash
     $ cd docker/nginx/
-    $ ./generate_keys.sh
+$ ./generate_keys.sh
     ``` 
-    
+        
     >:warning: _Please note that if you run this command outside the `nginx` directory, the certificate and key will be generated in the wrong location._ 
-    
+        
     This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this.
+
     >:warning: - it would cause the HTTPS connection to be unsafe!
 
-1. Return to the root directory (`$cd ../..`), then copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. 
-    ```shell=
+2. Return to the root directory (`$cd ../..`), then copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. 
+
+    ```bash
     $ cd ../..
-    $ cp datacatalog/settings.py.template datacatalog/settings.py
+$ cp datacatalog/settings.py.template datacatalog/settings.py
     ```
 
 3. Edit the `settings.py` file to add a random string of characters in `SECRET_KEY` attribute. For maximum security, in `Python`, use the following to generate this key:
+
     ```python
     import os
     os.urandom(24)
     ```
     
-1.  Build and start the docker containers by running:
-	```shell=
-	(local) $ docker-compose up --build
-	```
+4.  Build and start the docker containers by running:
+
+    ```bash
+    (local) $ docker-compose up --build
+    ```
 	
-	That will create:
+    That will create:
     * a container with `datacatalog web application`
+
     * a container for `Solr`
     
     > :thumbsup:  the data will be persistant between runs.
 
-1. In a new terminal, to create `Solr` cores, do:
+5. In a new terminal, to create `Solr` cores, do:
 
-	```shell=
-	(local) $ docker-compose exec solr solr create_core -c datacatalog
-	(local) $ docker-compose exec solr solr create_core -c datacatalog_test
-	```
+    ```bash
+    (local) $ docker-compose exec solr solr create_core -c datacatalog
+(local) $ docker-compose exec solr solr create_core -c datacatalog_test
+    ```
 
-1. Then, still in the second terminal, put Solr data into the cores:  
+6. Then, still in the second terminal, put Solr data into the cores:  
 
-	```shell=
-	(local) $ docker-compose exec web /bin/bash
-	(web container) $ python manage.py init_index 
-	(web container) $ python manage.py import_entities Json dataset 
-	```
-	> :bell: to kill the container, press `CTRL+D` or type: `exit` from the terminal
+    ```bash
+    (local) $ docker-compose exec web /bin/bash
+(web container) $ python manage.py init_index 
+(web container) $ python manage.py import_entities Json dataset 
+    ```
+
+    > :bell: to kill the container, press `CTRL+D` or type: `exit` from the terminal
 	
-1. The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection 
+7. The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection 
 
     > :warning: most browsers display a warning or block self-signed certificates. 
 
@@ -142,6 +148,7 @@ First, to stop all the containers:
 $ CTRL+D
 ```
 Then rebuild and restart the containers:
+
 ```shell=
 $ docker-compose up --build
 ```
@@ -151,9 +158,10 @@ Finally, reindex the datasets using:
 (local) $ docker-compose exec web /bin/bash
 (web container) $ python manage.py import_entities Json dataset 
 ```
-> :bell: to kill the container, press `CTRL+D` or type: `exit` from the terminal
 
+> :bell: to kill the container, press "`CTRL+D`" or type: "`exit`" from the terminal
 
+---
 
 ## Single Docker deployment
 In some cases, you might not want Solr and Nginx to run (for example, if there are **multiple instances** of `Data Catalog` running).
@@ -167,8 +175,10 @@ Then, simply use:
 ## Manual deployment
 
 If you would prefer not to use Docker and compile and run the data catalogue manually instead, please follow the instructions in the [README file](https://github.com/FAIRplus/imi-data-catalogue/blob/master/README.md)
+
+---
     
-## Summary
+## Conclusion:
 
 This recipe provides a step-by-step guide to deploying the `IMI data catalogue` developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb), as parrt of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
@@ -179,7 +189,7 @@ This recipe provides a step-by-step guide to deploying the `IMI data catalogue` 
 > * [How to create a minimal information metadata profile?]()
 
  
-
+---
 
 
 ## Authors:

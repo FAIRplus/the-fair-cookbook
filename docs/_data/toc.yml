@@ -84,7 +84,10 @@
     #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook
     - title: Building a Data Catalogue
       url: /recipes/infrastructure/data-catalog
-
+      not_numbered: false
+    - title: Deploying the FAIRplus IMI Data Catalogue
+      url: /recipes/infrastructure/data-catalog-deployment  
+      not_numbered: false
 
 - title: Findability
   url:  /recipes/findability
