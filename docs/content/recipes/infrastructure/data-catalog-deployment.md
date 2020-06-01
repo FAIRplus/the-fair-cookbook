@@ -55,7 +55,7 @@ Thanks to docker-compose, it is possible to easily manage all the components (so
 
 ## Step-by-step guide:
 
-Unless otherwise specified, all the following commands should be run in a terminal from the base directory of the data catalogue code.
+Unless otherwise specified, all the following commands should be run in a terminal *from the base directory of the data catalogue code*.
 
 ### 1. Building
 
@@ -68,24 +68,35 @@ Unless otherwise specified, all the following commands should be run in a termin
     $ ./generate_keys.sh
     ``` 
     
-    _Please note that if you run this command out the `nginx` directory, the certificate and key will be generated in the wrong location._ 
-    This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this (warning - it would cause the HTTPS connection to be unsafe!).
+    >:warning: _Please note that if you run this command outside the `nginx` directory, the certificate and key will be generated in the wrong location._ 
+    
+    This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this.
+    >:warning: - it would cause the HTTPS connection to be unsafe!
 
-1. Return to the root directory (`$cd ../..`), then copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. Edit the `settings.py` file to add a random string of characters in `SECRET_KEY`. For maximum security use:
+1. Return to the root directory (`$cd ../..`), then copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. 
+    ```shell=
+    $ cd ../..
+    $ cp datacatalog/settings.py.template datacatalog/settings.py
+    ```
+
+3. Edit the `settings.py` file to add a random string of characters in `SECRET_KEY` attribute. For maximum security, in `Python`, use the following to generate this key:
     ```python
     import os
     os.urandom(24)
     ```
-    in python to generate this key.
-
+    
 1.  Build and start the docker containers by running:
 	```shell=
 	(local) $ docker-compose up --build
 	```
 	
-	That will create a container with datacatalog web application, and a container for Solr (the data will be persistant between runs).
+	That will create:
+    * a container with `datacatalog web application`
+    * a container for `Solr`
+    
+    > :thumbsup:  the data will be persistant between runs.
 
-1. In a new terminal, to create Solr cores:
+1. In a new terminal, to create `Solr` cores, do:
 
 	```shell=
 	(local) $ docker-compose exec solr solr create_core -c datacatalog
@@ -99,20 +110,21 @@ Unless otherwise specified, all the following commands should be run in a termin
 	(web container) $ python manage.py init_index 
 	(web container) $ python manage.py import_entities Json dataset 
 	```
-	(PRESS CTRL+D or type: "exit" to kill the container)
+	> :bell: to kill the container, press `CTRL+D` or type: `exit` from the terminal
 	
-1. The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection (beware that most browsers display a warning or block self-signed certificates). 
+1. The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection 
+
+    > :warning: most browsers display a warning or block self-signed certificates. 
 
 
 ### 2. Maintenance of docker-compose
-Docker container keeps the application in the state that it has been when it was built. 
-Therefore, if you change any files in the project, in order to see changes in application the container has to be rebuilt:
+Docker container keeps the application in the state it was when  built. Therefore, **if you change any files in the project, the container has to be rebuilt in order to see changes in application** :
 
 ```shell=
 $ docker-compose up --build
 ```
 
-If you wanted to delete Solr data, you need to run:
+If you wanted to delete Solr data, you'd need to run:
 
 ```shell=
 $ docker-compose down --volumes
@@ -122,12 +134,12 @@ This will remove any persisted data - you must redo `solr create_core` (see step
 
 ### 3. Modifying the datasets
 
-The datasets are all defined in the file `tests/data/records.json`. This file can me modified to add, delete and modify datasets. After saving the file, rebuild and restart docker-compose.
+The datasets are all defined in the file `tests/data/records.json`. This file can me modified to add, delete and modify datasets. **After saving the file, rebuild and restart docker-compose**.
 
 First, to stop all the containers:
 
 ```shell=
-$ CTLR+D
+$ CTRL+D
 ```
 Then rebuild and restart the containers:
 ```shell=
@@ -139,11 +151,12 @@ Finally, reindex the datasets using:
 (local) $ docker-compose exec web /bin/bash
 (web container) $ python manage.py import_entities Json dataset 
 ```
-(PRESS CTRL+D or type: "exit" to to kill the container)
+> :bell: to kill the container, press `CTRL+D` or type: `exit` from the terminal
+
 
 
 ## Single Docker deployment
-In some cases, you might not want Solr and Nginx to run (for example if there are multiple instances of Data Catalog runnning).
+In some cases, you might not want Solr and Nginx to run (for example, if there are **multiple instances** of `Data Catalog` running).
 Then, simply use:
 
 ```shell=
@@ -157,8 +170,13 @@ If you would prefer not to use Docker and compile and run the data catalogue man
     
 ## Summary
 
-This recipe provides a step-by-step guide to deploying the IMI data catalogue to a local system. 
+This recipe provides a step-by-step guide to deploying the `IMI data catalogue` developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb), as parrt of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
+> #### What should I read next?
+> * [How to build a data catalogue?]()
+> * [How to deploy the FAIRPORT data catalogue?]()
+> * [What is search engine optimization?]()
+> * [How to create a minimal information metadata profile?]()
 
  
 
