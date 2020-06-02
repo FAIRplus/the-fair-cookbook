@@ -2,13 +2,13 @@
 title: |-
   mermaidsetup
 prev_page:
-  url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html
+  url: /recipes/help/recipe-template.html
   title: |-
-    4
+    Recipe Template
 next_page:
-  url: /People.html
+  url: /1/frictionless.html
   title: |-
-    People
+    frictionless data example
 suffix: .md
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
@@ -87,7 +87,7 @@ Since Jekyll build every page served by include the head.html template, it will 
 
     - Does this state diagram work?
 </code></pre>
-<div class="mermaid">
+<p><div class="mermaid">
 stateDiagram
     [*] --> Still
     Still --> [*]
@@ -95,9 +95,11 @@ stateDiagram
     Moving --> Still
     Moving --> Crash
     Crash --> [*]
-</div>        
-        - Does this Gantt chart display?  
-<div class="mermaid">
+</div></p>
+
+<pre><code>    - Does this Gantt chart display?  
+</code></pre>
+<p><div class="mermaid">
 gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
@@ -107,17 +109,21 @@ gantt
     section Another
     Task in sec      :2014-01-12  , 12d
     another task      : 24d
-</div>
-        - Does this flowchart display?
-<div class="mermaid">
+</div></p>
+
+<pre><code>    - Does this flowchart display?
+</code></pre>
+<p><div class="mermaid">
 graph LR;
     A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
+    A["input data"]-->C["automatic annotation"]:::box;
     B["conversion to open format"]-->D(("output data"));
     C["automatic annotation"]-->D(("output data"));  
     style A fill:#FF5733,stroke:#333,stroke-width:2px
     style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div><p>if you cannot view the Gantt chart or the State Diagram, it means you  are running an outdated version of the mermaid distribution.
+    classDef box fill:#2a9fc9,color:#fff;
+</div>
+if you cannot view the Gantt chart or the State Diagram, it means you  are running an outdated version of the mermaid distribution.
 try upgrading by download the files from <a href="https://unpkg.com/browse/mermaid@8.4.8/dist/">here</a></p>
 
 </div>
