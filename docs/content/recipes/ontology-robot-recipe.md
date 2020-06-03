@@ -14,7 +14,7 @@
 
 The main purpose of this recipe is:
 
-> Building an **application ontology** from source ontologies using ROBOT via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. An **application ontology** is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the application ontology synchronized with the reference ontologies imports are made from.  We aim to document how a certain level of automation can be achieved
+> Building an **application ontology** from source ontologies using ROBOT via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. An **application ontology** is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the application ontology synchronized with the reference ontologies that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
 :bulb: Ontology population process is out of the scope of the recipe.
 
@@ -90,7 +90,7 @@ ___
 ### Step 0: Preliminary considerations
 
 #### What is an application ontology?
-An application ontology is a semantic artifact which is developed to answer the needs of a specific use case or scenario. It reuse agreed knowledge specified on reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology.
+An application ontology is a semantic artefact which is developed to answer the needs of a specific use case or scenario. It reuses agreed knowledge specified in reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology.
 
 #### What is a use a case?
 
@@ -104,9 +104,9 @@ An application ontology is a semantic artifact which is developed to answer the 
 
 ### Step 1: Define the goal of the application ontology
 
-The development of application ontology is driven by specific use cases and target datasets. The first step in application ontology development is to determine the subject of the ontology and the aim of the application ontology. 
+The development of an application ontology is driven by specific use cases and target datasets. The first step in application ontology development is to determine the subject and the aim of the application ontology. 
 
-In this recipe, we demonstrate the workflow of building application ontology for patient metadata and patient sequencing data investigations. Competency questions of this ontology are provided [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md). _Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx).
+In this recipe, we demonstrate the workflow of building an application ontology for patient metadata and patient sequencing data investigations. Competency questions of this ontology are provided [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md). _Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx).
 
 _Table 1: Patient metadata example_
 
