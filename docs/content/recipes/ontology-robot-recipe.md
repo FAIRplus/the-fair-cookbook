@@ -354,7 +354,7 @@ robot extract --method <some_selection> \
     --intermediates <choose_from_option> \
     --output ./ontology_modules/extracted_module.owl
 ```
-`robot` extract command takes several arguments:
+The `robot` extract command takes several arguments:
 
 * *method*: `robot` uses 4 different algorithms to generate a module.  TOP, BOT, STAR (all from the SLME method), and MIREOT. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The STAR method creates a module by pulling all the properties and axioms of the seed classes but nothing else. MIREOT uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
 * *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
@@ -370,18 +370,14 @@ robot extract --method <some_selection> \
 The above query, saved under `select_anatomy_subset.sparql` can be used to generate a dynamic seed list, then do a BOT extraction: 
 
 ```shell script
-uberon_seed_list.txt: $(UBERON_WHOLE)
-	$(ROBOT) query --input $(UBERON_WHOLE) --query select_anatomy_subset.sparql uberon_seed_list.txt
+robot query --input uberon.owl --query select_anatomy_subset.sparql uberon_seed_list.txt
 
-
-uberon_subset.owl: uberon_seed_list.txt
-	$(ROBOT) extract --method BOT --input $(UBERON_WHOLE) --term-file $< -o $@
-
+robot extract --method BOT --input uberon.owl --term-file uberon_seed_list.txt -o uberon_subset.owl
 ```
 
 #### Step 3.4 Assess extracted modules
 
-The extracted ontology module shall include all seed terms and represent the term relationships correctly. It should also preserve the correct hierarchical structure of the source ontology and have consistent granularity.
+The extracted ontology module should include all seed terms and represent the term relationships correctly. It should also preserve the correct hierarchical structure of the source ontology and have consistent granularity.
 
 
 ### Step 4: Build the upper level umbrella ontology
@@ -530,7 +526,7 @@ The _Use Case/Scenario Owner_ collaborate with the _Ontology Developer_ on the a
 
 **Overview**
 
-An ontology development workflow tipically include query operations aimed to verify and validate the ontology. ROBOT provides the `query` command to perform SPARQL queries  against an ontology.
+An ontology development workflow typically include query operations aimed to verify and validate the ontology. ROBOT provides the `query` command to perform SPARQL queries  against an ontology.
 The query command run SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: a query file and an output file. Instead of specifying one or more pairs (query file, output file), it is also specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this commmand is shown following.
 
 ```bash
