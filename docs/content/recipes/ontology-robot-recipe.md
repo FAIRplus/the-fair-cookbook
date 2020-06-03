@@ -217,7 +217,7 @@ if __name__ == "__main__":
     pprint(annotations)
     pprint(no_annotations)
 ```
-Running the before presented script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
+Running the above script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
 ```python3
 ['http://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH',
  'http://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH',
@@ -286,7 +286,7 @@ if __name__ == "__main__":
     pprint(annotations)
     pprint(no_annotations)
 ```
-Running the before presented script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
+Running the above script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
 ```python3
 ['http://purl.obolibrary.org/obo/UBERON_0003101 # male',
  'http://purl.obolibrary.org/obo/UBERON_0003100 # female']
@@ -295,7 +295,7 @@ Running the before presented script to get the seeds for the terms `male`, `fema
 
 #### Step2.2.3 Seed term extraction with SPARQL 
 
-Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a SPARQL query. Here, we generate a subset of UBERON terms which have a crossreference to either FMA or MA terms.
+Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a SPARQL query. Here, we generate a subset of UBERON terms which have a crossreference to either FMA (for human anatomy) or MA (for mouse anatomy) terms, since our example datasets includes human, mouse and rat data.
 
 ```sql
 PREFIX scdo: <http://scdontology.h3abionet.org/ontology/>
@@ -329,7 +329,7 @@ FILTER regex( ?xref, "^FMA|^MA:", "i")
 
 ### Step 3: Extract ontology modules from source ontologies
 
-Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend to collect all steps together into a script or Make file to avoid missing steps. ROBOT steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.
+Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend to collect all steps together into a script or Makefile to avoid missing steps. ROBOT steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.
 
 #### Step 3.1 Get source ontology files
 
@@ -526,8 +526,8 @@ The _Use Case/Scenario Owner_ collaborate with the _Ontology Developer_ on the a
 
 **Overview**
 
-An ontology development workflow typically include query operations aimed to verify and validate the ontology. ROBOT provides the `query` command to perform SPARQL queries  against an ontology.
-The query command run SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: a query file and an output file. Instead of specifying one or more pairs (query file, output file), it is also specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this commmand is shown following.
+An ontology development workflow typically includes query operations aimed at verifying and validating the ontology. ROBOT provides the `query` command to perform SPARQL queries  against an ontology.
+The query command runs SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: a query file and an output file. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown following.
 
 ```bash
 robot query --input <input_ontology_file> \
