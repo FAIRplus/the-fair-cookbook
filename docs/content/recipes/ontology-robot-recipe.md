@@ -1,4 +1,5 @@
 # How to build application ontology with ROBOT
+
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
@@ -8,19 +9,16 @@
 7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
 8. [License](#License)
 
----
-
 ## Main Objectives
 
-The main purpose of this recipe is:
+The main purpose of this recipe is building an application ontology from source ontologies using ROBOT via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. 
 
-> Building an **application ontology** from source ontologies using ROBOT via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. An **application ontology** is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the application ontology synchronized with the reference ontologies that imports are made from.  We aim to document how a certain level of automation can be achieved.
+An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the application ontology synchronized with the reference ontologies that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
-:bulb: Ontology population process is out of the scope of the recipe.
+[ROBOT](http://robot.obolibrary.org/) is an open source tool for ontology development. It supports ontology editing, ontology annotation, ontology format conversion, and other functions. It runs on the Java Virtual Machine (JVM) and can be used through command line tools on Windows, macOS and Linux.
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-<!-- TO DO: REVIEW-->
 
 <div class="mermaid">
 graph TD
@@ -38,13 +36,10 @@ graph TD
   R4 -->|annotate| R5(fa:fa-cubes fa:fa-tags fa:fa-cc annotated,reasoned,reduced core)
   R5 -->|convert| R6(fa:fa-star-o obo version)
   R5 -->|convert| R7(fa:fa-star owl version)
-  R5 -->|export| R8(fa:fa-list xlsx view)
 </div>
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pXG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KVxuXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pXG4gIFI1IC0tPnxleHBvcnR8IFI4KGZhOmZhLWxpc3QgeGxzeCB2aWV3KVxuXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSBvbnRvbG9neSBzb3VyY2UgMSkgLS0-fGV4dHJhY3R8IE0xKGZhOmZhLWN1YmUgb250b2xvZ3kgbW9kdWxlIDEpXG4gIEkyKGZhOmZhLXVuaXZlcnNpdHkgb250b2xvZ3kgc291cmNlIDIpIC0tPnxleHRyYWN0fCBNMihmYTpmYS1jdWJlIG9udG9sb2d5IG1vZHVsZSAyKVxuICBJMyhmYTpmYS11bml2ZXJzaXR5IG9udG9sb2d5IHNvdXJjZSAzKSAtLT58ZXh0cmFjdHwgTTMoZmE6ZmEtY3ViZSBvbnRvbG9neSBtb2R1bGUgMylcbiAgTTEgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTIgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgTTMgLS0-IHxtZXJnZXwgUjEoZmE6ZmEtY3ViZXMgY29yZSlcbiAgUjEoZmE6ZmEtY3ViZXMgY29yZSkgLS0-IHxtYXRlcmlhbGl6ZXwgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG5cbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPnxyZXBvcnR8IFIzKGZhOmZhLXRhc2tzIHJlcG9ydClcbiAgUjIoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpIC0tPiB8ZWRpdHwgUjQoZmE6ZmEtY3ViZXMgcmVhc29uZWQgJiByZWR1Y2VkIGNvcmUpXG4gIFIzIC0tPnxlZGl0fCBSNFxuICBSNCAtLT58YW5ub3RhdGV8IFI1KGZhOmZhLWN1YmVzIGZhOmZhLXRhZ3MgZmE6ZmEtY2MgYW5ub3RhdGVkLHJlYXNvbmVkLHJlZHVjZWQgY29yZSlcbiAgUjUgLS0-fGNvbnZlcnR8IFI2KGZhOmZhLXN0YXItbyBvYm8gdmVyc2lvbilcbiAgUjUgLS0-fGNvbnZlcnR8IFI3KGZhOmZhLXN0YXIgb3dsIHZlcnNpb24pIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwifX0)
 
->[name=Fuqi][color=green]
->I didnt find the `robot export` command. Is it in historical versions.
 
 ## Capability & Maturity Table
 
@@ -87,20 +82,9 @@ ___
 
 ## Step by step process
 
-### Step 0: Preliminary considerations
+### Preliminary requirements
 
-#### What is an application ontology?
-An application ontology is a semantic artefact which is developed to answer the needs of a specific use case or scenario. It reuses agreed knowledge specified in reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology.
-
-#### What is a use a case?
-
-#### Roles involved
-> Reference project roles by Oya: [FAIR+ Grive here](https://docs.google.com/spreadsheets/d/1cmCj0GmOw4DFX8f6p-_EkJdPT2UUeAdd4wmeI8F9aVI/edit#gid=1559358961)
-
-> TBD. Briefly depict each one.
-* _Domain Expert_ --> "Subject Matter Expert" according to the Oya's spreadsheet?
-* _Use case/Scenario Owner_ --> Any Oya's spreadsheet role match this one? 
-* _Ontology Developer_ --> It could be the "IT Specialist" according to the Oya's spreadsheet, but such a role does not reflect ontology modelling skills required.
+The development of application ontology requires joint contributions from domain experts, use case owners and ontology developers. The domain expert provides essential domain knowledge. The use case owners defines the competency questions of the application ontology. And the ontology developers are IT speciallist working on the construction of the application ontology.
 
 ### Step 1: Define the goal of the application ontology
 
@@ -148,25 +132,25 @@ _Table 2: Available reference ontologies in selected domains_
 #### Step 2.2 Select seed ontology terms
 > :book: _Seed ontology terms_: A set of entities extracted from reference ontologies for the application ontology.
 > 
-**Aim**
 
-To identify the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology.
+This step identifies the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology. Ontology Developer can provide the tools to ease and to scale the identification of the seeds. Domain experts can identify the right seeds for a given application ontology.
 
-**Main roles and tasks**
+Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [ZOOMA](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
-_Domain Expert_ and _Use Case/Scenario Owner_ identify the right seeds for a given application ontology.
+```mermaid
+graph LR
+  A(fa:fa-file-text-o Select seed terms) -->B1(fa:fa-user-o Manual selection)
+  A -->B2(fa:fa-database Selection with ZOOMA)
+  A -->B3(fa:fa-database Selection with NCBO Annotator)
+  A -->B4(fa:fa-cogs Selection with SPARQL)
 
-**Supporting roles and tasks**
+```
+_Figure 1: Ontology seed term selection approaches_
 
-_Ontology Developer_ provides the helper tools to ease and to scale the identification of the seeds.
+[ZOOMA](https://www.ebi.ac.uk/spot/zooma/) is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the [European Bioinformatics Institute (EMBL-EBI)](https://www.ebi.ac.uk)
+. It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/index). ZOOMA contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
 
-**Overview**
-
-Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - Zooma and NCBO Annotator - are depicted.
-
-ZOOMA is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the European Bioinformatics Institute (EMBL-EBI). It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the Ontology Lookup Service (OLS). ZOOMA contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
-
-The NCBO Annotator is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal ontologies.
+The [NCBO Annotator](https://bioportal.bioontology.org/annotator) is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal ontologies.
 
 Both the Zooma and NCBO Annotator service provides a web interface and a REST API to identify the seed terms by annotation of free text. Two scripts able to automate the annotation of a set of free text terms are shown following.
 
@@ -382,19 +366,7 @@ The extracted ontology module should include all seed terms and represent the te
 
 ### Step 4: Build the upper level umbrella ontology
 
-**Aim**
-
-To build the umbrella ontology, aimed to model the main entity of the use case and its relationships with the ontology classes extracted on the previous Step.
-
-**Main roles and tasks**
-
-_Domain Expert_ and _Use Case/Scenario Owner_ identify the main entity of the use case and its relationships with extracted modules. Both, the main entity and the relationships with the ontology classes previously extracted can be locally specified - i.e., be defined in the scope of the application ontology - or can also be extracted from external knolwedge sources.
-
-**Supporting roles and tasks**
-
-_Ontology Developer_ generates the artifacts to build the _umbrella_ ontology by means of the ROBOT tool.
-
-**Overview**
+The umbrella ontology is the root structure of the ontology. Building the umbrella ontology aims to model the main entity of the use case and its relationships with the ontology classes extracted on the previous step.The main identity of the ontology and relationships with extracted modules can be identified by domain experts, or specified by the use case owner.
 
 ROBOT provides a template-driven ontology term generation system. A ROBOT template is a tab-separated values (TSV) or comma-separated values (CSV) file that depicts a set of patterns to build ontology entities - i.e., classes, properties, and individuals -. These templates can be used for modular ontology development.
 After the _Domain Expert_ and the _Use Case/Scenario Owner_ specify the main entity of the use case and its relationships with remaining ontology entities, the _Ontology Developer_ generates the ROBOT templates depicting the set of patterns aimed to build the _umbrella_ ontology.
@@ -420,21 +392,12 @@ And a template sample is presented following:
 
 >:bulb: **_Tip:_** The generated ontology can be visualized by using the Protege tool or a local deployment of OLS (Recipe 1.3). The OLS local deployment option is recommended by this recipe, given that Protege crash when loading medium or large size ontologies.
     
-### Step 5: Merge ontology modules and _umbrella_ ontology
-**Aim**
+### Step 5: Merge ontology modules and umbrella ontology
 
-To built a first draft of the application ontology by merging the ontology modules previuosly extracted and the _umbrella_ ontology locally built.
+Merging the ontology modules previuosly extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
 
-**Main roles and tasks**
+The `merge` ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the ROBOT command merging the umbrella ontology and the modules is shown:
 
-_Ontology Developer_ merge (a) the ontology modules extracted from domain ontologies, and (b) the _umbrella_ ontology built on the previous step, by running the corresponding ROBOT command.
-
-**Supporting roles and tasks**
-
-Not needed.
-
-**Overview**
-The "merge" ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the ROBOT command merging the _umbrella_ ontology and the modules is shown:
 ```bash
 java -jar robot.jar merge \
     --input ./ontology_modules/iao_mireot_robot_module_1.owl \
@@ -512,21 +475,10 @@ robot convert \
 
 ### Step 7: Assess coverage of the ontology scope
 
-**Aim**
+The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of SPARQL queries and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The use case owner_ and ontology developer can also collaborate on the assessment of the competency questions answers/results. 
 
-To assess coverage of the ontology scope by verifying if it is able to answer the competency questions formulated on Step 1.
+ROBOT provides the `query` command to perform SPARQL queries  against an ontology to veridy and validate the ontology.
 
-**Main roles and tasks**
-
-The _Ontology Developer_ implements the competency questions as a set of SPARQL queries and runs them against the developed ontology. It checks if the answers/results are aligned with the scope of the ontology.
-
-**Supporting roles and tasks**
-
-The _Use Case/Scenario Owner_ collaborate with the _Ontology Developer_ on the assessment of the competency questions answers/results. 
-
-**Overview**
-
-An ontology development workflow typically includes query operations aimed at verifying and validating the ontology. ROBOT provides the `query` command to perform SPARQL queries  against an ontology.
 The query command runs SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: a query file and an output file. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown following.
 
 ```bash
@@ -535,16 +487,16 @@ robot query --input <input_ontology_file> \
     --output-dir <path_to_rsults> results/
 ```
 
-### References
+## References
 - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
 - Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015.
 
-## Supplementary material:
+## Supplementary material
 - [Example Dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)
 - [Competency questions](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md)
 - [Scripts and intermediate artifacts](https://github.com/FAIRplus/the-fair-cookbook/tree/ontology_robot_recipe/docs/content/recipes/ontology-robot)
 
-## Authors:
+## Authors
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
@@ -552,7 +504,7 @@ robot query --input <input_ontology_file> \
 |Philippe Rocca-Serra| UOXF|[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| Writing - Review, Code|
 |Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)|Writing - Draft, Review|
 |Emiliano Reynares| Boehringer Ingelheim|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Writing - Review,  Code |
-|Karsten Quast|BI|[TODO-XXXX-XXXX-XXXX](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)| Writing|
+|Karsten Quast|Boehringer Ingelheim|| Writing|
 
 
 ___
