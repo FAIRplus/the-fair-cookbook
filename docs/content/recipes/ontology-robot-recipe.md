@@ -477,7 +477,7 @@ robot convert \
 
 The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of SPARQL queries and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The use case owner_ and ontology developer can also collaborate on the assessment of the competency questions answers/results. 
 
-ROBOT provides the `query` command to perform SPARQL queries  against an ontology to veridy and validate the ontology.
+ROBOT provides the `query` command to perform SPARQL queries  against an ontology to verify and validate the ontology.
 
 The query command runs SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: a query file and an output file. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown following.
 
