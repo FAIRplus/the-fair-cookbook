@@ -8,14 +8,14 @@
   <title>RESOLUTE experience Recipe</title>
   <meta name="description" content="        RESOLUTE FAIRification Recipe Ingredients Data transfer tools: SFTP serverOneDriveAmazon S3 BucketsData hosting platform: raw data: SRA [Transcriptom...">
 
-  <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/recipes/resolute_raw/rawRecipe_resolute.html">
-  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="https://fairplus.github.io/the-fair-cookbook/feed.xml">
+  <link rel="canonical" href="https://fairplus.github.io/cookbook-dev/recipes/resolute_raw/rawRecipe_resolute.html">
+  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="https://fairplus.github.io/cookbook-dev/feed.xml">
 
-  <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/recipes/resolute_raw/rawRecipe_resolute.html" />
+  <meta property="og:url"         content="https://fairplus.github.io/cookbook-dev/recipes/resolute_raw/rawRecipe_resolute.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="RESOLUTE experience Recipe" />
 <meta property="og:description" content="        RESOLUTE FAIRification Recipe Ingredients Data transfer tools: SFTP serverOneDriveAmazon S3 BucketsData hosting platform: raw data: SRA [Transcriptom..." />
-<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/images/logo/cookbook-logo-small.png" />
+<meta property="og:image"       content="https://fairplus.github.io/cookbook-dev/images/logo/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,10 +24,10 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://fairplus.github.io/the-fair-cookbook/recipes/resolute_raw/rawRecipe_resolute.html",
+  "mainEntityOfPage": "https://fairplus.github.io/cookbook-dev/recipes/resolute_raw/rawRecipe_resolute.html",
   "headline": "RESOLUTE experience Recipe",
-  "datePublished": "2020-06-15T18:05:50+01:00",
-  "dateModified": "2020-06-15T18:05:50+01:00",
+  "datePublished": "2020-06-15T18:20:11+01:00",
+  "dateModified": "2020-06-15T18:20:11+01:00",
   "description": "        RESOLUTE FAIRification Recipe Ingredients Data transfer tools: SFTP serverOneDriveAmazon S3 BucketsData hosting platform: raw data: SRA [Transcriptom...",
   "author": {
     "@type": "Person",
@@ -38,22 +38,22 @@
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://fairplus.github.io/the-fair-cookbook",
+      "url": "https://fairplus.github.io/cookbook-dev",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://fairplus.github.io/the-fair-cookbook",
+    "url": "https://fairplus.github.io/cookbook-dev",
     "height": 60,
     "width": 60
   }
 }
 
   </script>
-  <link rel="stylesheet" href="/the-fair-cookbook/assets/css/styles.css">
-  <link rel="stylesheet" href="/the-fair-cookbook/assets/custom/custom.css">
+  <link rel="stylesheet" href="/cookbook-dev/assets/css/styles.css">
+  <link rel="stylesheet" href="/cookbook-dev/assets/custom/custom.css">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -62,7 +62,7 @@
   <meta name="theme-color" content="#233947">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/the-fair-cookbook/images/logo/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/cookbook-dev/images/logo/favicon.ico">
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
@@ -89,23 +89,23 @@ MathJax.Hub.Config({
 
 
   <!-- DOM updating function -->
-  <script src="/the-fair-cookbook/assets/js/page/dom-update.js"></script>
+  <script src="/cookbook-dev/assets/js/page/dom-update.js"></script>
   <!-- using mermaid for rendering Diagram and flow chart -->
- <script src="/the-fair-cookbook/assets/js/mermaid.min.js"></script>
+ <script src="/cookbook-dev/assets/js/mermaid.min.js"></script>
  <script>mermaid.initialize({startOnLoad:true});</script>
-<!--  <script src="/the-fair-cookbook/assets/js/mermaid.js"></script>-->
+<!--  <script src="/cookbook-dev/assets/js/mermaid.js"></script>-->
 
   <!-- Selectors for elements on the page -->
-  <script src="/the-fair-cookbook/assets/js/page/documentSelectors.js"></script>
+  <script src="/cookbook-dev/assets/js/page/documentSelectors.js"></script>
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
-    const site_basename = '/the-fair-cookbook';
+    const site_basename = '/cookbook-dev';
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
-  <script src="/the-fair-cookbook/assets/js/page/anchors.js" async></script>
+  <script src="/cookbook-dev/assets/js/page/anchors.js" async></script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
@@ -126,7 +126,7 @@ MathJax.Hub.Config({
 
   <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
-  <script src="/the-fair-cookbook/assets/js/page/tocbot.js"></script>
+  <script src="/cookbook-dev/assets/js/page/tocbot.js"></script>
 
   <!-- Google analytics -->
   
@@ -146,11 +146,11 @@ MathJax.Hub.Config({
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
-  <script src="/the-fair-cookbook/assets/js/scripts.js" async></script>
+  <script src="/cookbook-dev/assets/js/scripts.js" async></script>
 
   <!-- Load custom user CSS and JS  -->
-  <script src="/the-fair-cookbook/assets/custom/custom.js" async></script>
-  <link rel="stylesheet" href="/the-fair-cookbook/assets/custom/custom.css">
+  <script src="/cookbook-dev/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/cookbook-dev/assets/custom/custom.css">
 
   <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
   
@@ -385,10 +385,10 @@ initFunction(initQuery);
 </script>
 
   <!-- Load JS that depends on site variables -->
-  <script src="/the-fair-cookbook/assets/js/page/copy-button.js" async></script>
+  <script src="/cookbook-dev/assets/js/page/copy-button.js" async></script>
 
   <!-- Hide cell code -->
-  <script src="/the-fair-cookbook/assets/js/page/hide-cell.js" async></script>
+  <script src="/cookbook-dev/assets/js/page/hide-cell.js" async></script>
 
   <!-- Printing the screen -->
   <!-- Include nbinteract for interactive widgets -->
@@ -408,7 +408,7 @@ printContent = () => {
     printJS({
         printable: 'textbook_content',
         type: 'html',
-        css: "/the-fair-cookbook/assets/css/styles.css",
+        css: "/cookbook-dev/assets/css/styles.css",
         style: "#textbook_content {padding-top: 40px};",
         scanStyles: false,
         targetStyles: ["*"],
@@ -435,7 +435,7 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://fairplus.github.io/the-fair-cookbook/intro.html"><img src="/the-fair-cookbook/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <a href="https://fairplus.github.io/cookbook-dev/intro.html"><img src="/cookbook-dev/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">THE FAIR COOKBOOK</h2>
   <ul class="c-sidebar__chapters">
     
@@ -478,7 +478,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/intro.html"
+          href="/cookbook-dev/intro.html"
         >
           
           FAIR Cookbook
@@ -499,7 +499,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/roadmap.html"
+          href="/cookbook-dev/roadmap.html"
         >
           
           Development Roadmap
@@ -520,7 +520,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/introduction/FAIRplus-values.html"
+          href="/cookbook-dev/recipes/introduction/FAIRplus-values.html"
         >
           
             1.
@@ -543,7 +543,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/infrastructure.html"
+          href="/cookbook-dev/recipes/infrastructure.html"
         >
           
             2.
@@ -567,7 +567,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/infrastructure/id-resolution.html"
+                  href="/cookbook-dev/recipes/infrastructure/id-resolution.html"
                 >
                   
                     2.1
@@ -586,7 +586,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/infrastructure/UC3_R13_local_ontology_services.html"
+                  href="/cookbook-dev/recipes/infrastructure/UC3_R13_local_ontology_services.html"
                 >
                   
                     2.2
@@ -605,7 +605,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/infrastructure/Selecting_and_using_ontology_lookup_services.html"
+                  href="/cookbook-dev/recipes/infrastructure/Selecting_and_using_ontology_lookup_services.html"
                 >
                   
                     2.3
@@ -624,7 +624,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html"
+                  href="/cookbook-dev/recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html"
                 >
                   
                     2.4
@@ -643,7 +643,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/infrastructure/data-catalog.html"
+                  href="/cookbook-dev/recipes/infrastructure/data-catalog.html"
                 >
                   
                     2.5
@@ -662,7 +662,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/infrastructure/data-catalog-deployment.html"
+                  href="/cookbook-dev/recipes/infrastructure/data-catalog-deployment.html"
                 >
                   
                     2.6
@@ -692,7 +692,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/findability.html"
+          href="/cookbook-dev/recipes/findability.html"
         >
           
             3.
@@ -716,7 +716,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/findability/zenodo-deposition.html"
+                  href="/cookbook-dev/recipes/findability/zenodo-deposition.html"
                 >
                   
                     3.1
@@ -735,7 +735,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/findability/seo.html"
+                  href="/cookbook-dev/recipes/findability/seo.html"
                 >
                   
                     3.2
@@ -754,7 +754,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/findability/seo/bioschemas-datacatalog.html"
+                  href="/cookbook-dev/recipes/findability/seo/bioschemas-datacatalog.html"
                 >
                   
                     3.3
@@ -773,7 +773,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/findability/seo/bioschemas-dataset.html"
+                  href="/cookbook-dev/recipes/findability/seo/bioschemas-dataset.html"
                 >
                   
                     3.4
@@ -792,7 +792,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/findability/seo/bioschemas-data-page.html"
+                  href="/cookbook-dev/recipes/findability/seo/bioschemas-data-page.html"
                 >
                   
                     3.5
@@ -822,7 +822,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/interoperability.html"
+          href="/cookbook-dev/recipes/interoperability.html"
         >
           
             4.
@@ -846,7 +846,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/interoperability/creating-minimal-metadata-profiles.html"
+                  href="/cookbook-dev/recipes/interoperability/creating-minimal-metadata-profiles.html"
                 >
                   
                     4.1
@@ -865,7 +865,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/interoperability/ontology-new-term-request-recipe.html"
+                  href="/cookbook-dev/recipes/interoperability/ontology-new-term-request-recipe.html"
                 >
                   
                     4.2
@@ -884,7 +884,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/interoperability/ontology-robot-recipe.html"
+                  href="/cookbook-dev/recipes/interoperability/ontology-robot-recipe.html"
                 >
                   
                     4.3
@@ -899,7 +899,7 @@ initFunction(initPrint)
 
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/the-fair-cookbook/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html"
+                      href="/cookbook-dev/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html"
                     >
                       
                         4.3.1
@@ -928,7 +928,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/accessibility.html"
+          href="/cookbook-dev/recipes/accessibility.html"
         >
           
             5.
@@ -952,7 +952,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/accessibility/anonymization.html"
+                  href="/cookbook-dev/recipes/accessibility/anonymization.html"
                 >
                   
                     5.1
@@ -971,7 +971,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/accessibility/license-selection.html"
+                  href="/cookbook-dev/recipes/accessibility/license-selection.html"
                 >
                   
                     5.2
@@ -1001,7 +1001,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/assessing-fairness.html"
+          href="/cookbook-dev/recipes/assessing-fairness.html"
         >
           
             6.
@@ -1025,7 +1025,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/assessing-fairness/fair-assessment-recipe.html"
+                  href="/cookbook-dev/recipes/assessing-fairness/fair-assessment-recipe.html"
                 >
                   
                     6.1
@@ -1055,7 +1055,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/applied-examples.html"
+          href="/cookbook-dev/recipes/applied-examples.html"
         >
           
             7.
@@ -1079,7 +1079,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/fair-data-matrix-recipe.html"
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix-recipe.html"
                 >
                   
                     7.1
@@ -1098,7 +1098,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html"
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html"
                 >
                   
                     7.2
@@ -1117,7 +1117,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html"
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html"
                 >
                   
                     7.3
@@ -1136,7 +1136,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html"
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html"
                 >
                   
                     7.4
@@ -1155,7 +1155,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html"
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html"
                 >
                   
                     7.5
@@ -1174,7 +1174,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html"
+                  href="/cookbook-dev/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html"
                 >
                   
                     7.6
@@ -1193,7 +1193,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html"
+                  href="/cookbook-dev/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html"
                 >
                   
                     7.7
@@ -1212,7 +1212,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html"
+                  href="/cookbook-dev/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html"
                 >
                   
                     7.8
@@ -1231,7 +1231,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html"
+                  href="/cookbook-dev/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html"
                 >
                   
                     7.9
@@ -1265,7 +1265,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/ingredients/ingredient-list.html"
+          href="/cookbook-dev/ingredients/ingredient-list.html"
         >
           
           Ingredients and Resources
@@ -1287,7 +1287,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/ingredients/ingredient-list.html"
+                  href="/cookbook-dev/ingredients/ingredient-list.html"
                 >
                   
                   Ingredients
@@ -1327,7 +1327,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/recipes/help.html"
+          href="/cookbook-dev/recipes/help.html"
         >
           
             8.
@@ -1351,7 +1351,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/help/how-to-create-recipe-with-gdoc.html"
+                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-gdoc.html"
                 >
                   
                     8.1
@@ -1370,7 +1370,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/help/how-to-create-recipe-with-hackmd.html"
+                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-hackmd.html"
                 >
                   
                     8.2
@@ -1389,7 +1389,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/help/tips-tricks.html"
+                  href="/cookbook-dev/recipes/help/tips-tricks.html"
                 >
                   
                     8.3
@@ -1408,7 +1408,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/help/how-to-create-recipe-with-git.html"
+                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-git.html"
                 >
                   
                     8.4
@@ -1427,7 +1427,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/features/markdown.html"
+                  href="/cookbook-dev/features/markdown.html"
                 >
                   
                     8.5
@@ -1446,7 +1446,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/features/notebooks.html"
+                  href="/cookbook-dev/features/notebooks.html"
                 >
                   
                     8.6
@@ -1465,7 +1465,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/recipes/help/recipe-template.html"
+                  href="/cookbook-dev/recipes/help/recipe-template.html"
                 >
                   
                     8.7
@@ -1484,7 +1484,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/1/mermaidsetup.html"
+                  href="/cookbook-dev/1/mermaidsetup.html"
                 >
                   
                     8.8
@@ -1514,7 +1514,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/1/frictionless.html"
+          href="/cookbook-dev/1/frictionless.html"
         >
           
             9.
@@ -1538,7 +1538,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/1/testnb/0-rose-metabolites-Python-data-handling.html"
+                  href="/cookbook-dev/1/testnb/0-rose-metabolites-Python-data-handling.html"
                 >
                   
                     9.1
@@ -1557,7 +1557,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/1/testnb/1-rose-metabolites-Python-analysis.html"
+                  href="/cookbook-dev/1/testnb/1-rose-metabolites-Python-analysis.html"
                 >
                   
                     9.2
@@ -1576,7 +1576,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/1/testnb/3-rose-metabolites-R-analysis.html"
+                  href="/cookbook-dev/1/testnb/3-rose-metabolites-R-analysis.html"
                 >
                   
                     9.3
@@ -1595,7 +1595,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html"
+                  href="/cookbook-dev/1/testnb/2-rose-metabolites-Python-RDF-querying-analysis.html"
                 >
                   
                     9.4
@@ -1629,7 +1629,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/the-fair-cookbook/project_information.html"
+          href="/cookbook-dev/project_information.html"
         >
           
             10.
@@ -1653,7 +1653,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/People.html"
+                  href="/cookbook-dev/People.html"
                 >
                   
                   People
@@ -1670,7 +1670,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/Contributing.html"
+                  href="/cookbook-dev/Contributing.html"
                 >
                   
                   Contributing
@@ -1687,7 +1687,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/Governance.html"
+                  href="/cookbook-dev/Governance.html"
                 >
                   
                   Governance
@@ -1704,7 +1704,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/license.html"
+                  href="/cookbook-dev/license.html"
                 >
                   
                   License
@@ -1721,7 +1721,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/disclaimer.html"
+                  href="/cookbook-dev/disclaimer.html"
                 >
                   
                   Disclaimer
@@ -1738,7 +1738,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/code_of_conduct.html"
+                  href="/cookbook-dev/code_of_conduct.html"
                 >
                   
                   Code of Conduct
@@ -1755,7 +1755,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/the-fair-cookbook/papers.html"
+                  href="/cookbook-dev/papers.html"
                 >
                   
                   Publications
@@ -1791,7 +1791,7 @@ initFunction(initPrint)
     </button>
     <div class="buttons">
 <div class="download-buttons-dropdown">
-    <button id="dropdown-button-trigger" class="interact-button"><img src="/the-fair-cookbook/assets/images/download-solid.svg" alt="Download" /></button>
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/cookbook-dev/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
@@ -1804,12 +1804,12 @@ initFunction(initPrint)
   </div>
   <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
   <aside class="sidebar__right">
-    <header><h4 class="nav__title"><img src="/the-fair-cookbook/assets/images/list-solid.svg" alt="Search" /> On this page</h4></header>
+    <header><h4 class="nav__title"><img src="/cookbook-dev/assets/images/list-solid.svg" alt="Search" /> On this page</h4></header>
     <nav class="onthispage">
     </nav>
   </aside>
-  <a href="/the-fair-cookbook/search.html" class="topbar-right-button" id="search-button">
-    <img src="/the-fair-cookbook/assets/images/search-solid.svg" alt="Search" />
+  <a href="/cookbook-dev/search.html" class="topbar-right-button" id="search-button">
+    <img src="/cookbook-dev/assets/images/search-solid.svg" alt="Search" />
   </a>
 </div>
 
@@ -1899,14 +1899,14 @@ We have updated the scoring for the transcriptomics data to this new version (v0
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/the-fair-cookbook/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/cookbook-dev/recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
       〈 <span class="u-margin-right-tiny"></span> eTOX experience Recipe
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/the-fair-cookbook/recipes/oncotrack_raw/rawRecipe-oncotrack.html">
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/cookbook-dev/recipes/oncotrack_raw/rawRecipe-oncotrack.html">
       ONCOTRACK experience Recipe <span class="u-margin-right-tiny"></span> 〉
     </a>
   
