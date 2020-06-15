@@ -65,8 +65,8 @@ use_binder_button: true                 # If 'true', add a binder button for int
 binderhub_url: https://mybinder.org                        # The URL for your BinderHub. If no URL, use ""
 binder_repo_base: https://fairplus.github.io/                     # The site on which the textbook repository is hosted
 binder_repo_org: FAIRplus                     # The username or organization that owns this repository
-binder_repo_name: the-fair-cookbook                        # The name of the repository on the web
-binder_repo_branch: gh-pages                   # The branch on which your textbook is hosted.
+binder_repo_name: cookbook-dev               # [!!! IMPORTANT: switch to "the-fair-cookbook" when committing to master !!!] 
+binder_repo_branch: dev                   # [!!! IMPORTANT: switch to "the-fair-cookbook" when committing to master !!!] 
 binderhub_interact_text: launch binder              # The text that interact buttons will contain.
 
 # Thebelab settings
