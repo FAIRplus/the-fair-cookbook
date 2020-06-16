@@ -151,11 +151,11 @@ The Name-to-Thing ([N2T](http://n2t.net/)) service provided by the California Di
 
 *For more details, see the [Identifier Resolution Services recipe](./identifier-services/id-resolution.html).*
 
-#### Identifier Equivalence/Mapping Services
 ##### Persistent Identifier Services
 
 A special form of resolution service are known as persistent identifier services. These services provide a permanent URL for a resource. When an address is accessed, the client is redirected to the current location for the resource. The two most widely used services are PURL (https://purl.org) and w3id (https://w3id.org).
 
+### Identifier Mapping Services
 
 The consequence of each database minting their own identifiers is that we end up with a large number of identifiers notionally for the same concept. Although in reality there will be subtle differences, e.g. a chemical may be different salt form, which may affect applications using the data. 
 
@@ -182,9 +182,8 @@ ___
 > Suggest further reading using the following:
 > #### What should I read next?
 > * Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data ([doi:10.1371/journal.pbio.2001414](https://doi.org/10.1371/journal.pbio.2001414))
-> * [Persistent Identifier Services](TODO)
-> * [Identifier Resolution Services](TODO)
-> * [Identifier Mapping/Equivalence Services](TODO)
+> * [Identifier Resolution Services](./identifier-services/id-resolution.html)
+> * [Identifier Mapping Services](./identifier-services/identifier-mapping.html)
 
 ___
 ## Authors:
