@@ -97,7 +97,7 @@ ___
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [IRI](https://tools.ietf.org/html/rfc3987) |   |   |
-|   |   |   |
+| [CURIE](https://www.w3.org/TR/2010/NOTE-curie-20101216/) |   |   |
 
 ___
 
@@ -109,14 +109,30 @@ With regard to identifiers, the FAIR principles state:
 >
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol
 
+In this recipe we give a brief overview of the main ideas around identifiers and provide links to more detailed recipes on how to work with them.
+
+### Properties of Identifiers
+
+Identifiers allow for the unambiguous reference of items in a dataset, e.g. in the context of the UniProt dataset the accession number [P38398](https://www.uniprot.org/uniprot/P38398) allows us to identify the BRCA1 Breast cancer type 1 susceptibility protein. It is the only protein in the dataset with that accession number, i.e. it is *unique*. 
+
+The UniProt accession number is described as an *opaque* identifier. This means that no interpretation about what is identified can be gleaned from the identifier itself. This is in contrast to the Wikipedia page about BRCA1 which uses the  gene name as the identifier ([BRCA1](https://en.wikipedia.org/wiki/BRCA1)). In this case the identifier is *transparent*, since meaning can be inferred from the identifier. Within a scientific context, opaque identifiers are preferred since names and labels can vary over time as our understanding of the concept evolves.
+
 ### Global and Local Identifiers
 
-Identifiers allow for the unambiguous reference of items in a dataset, e.g. in the context of the UniProt dataset the accession number [P38398](https://www.uniprot.org/uniprot/P38398) allows us to identify the BRCA1 Breast cancer type 1 susceptibility protein. While P38398 is unique within UniProt, i.e. there is only one protein in UniProt that has the accession number P38398, it is not globally unique. For example the same accession number is used as the identifier in several different datasets including Protein Data Bank (http://www.rcsb.org/pdb/protein/P38398), SignaLink (http://signalink.org/protein/P38398), and string-db (http://string-db.org/newstring_cgi/show_network_section.pl?identifier=P38398).To make the UniProt accession number globally unique, we need to provide the context in which the accession number is unique. This can either be done using an International Resource Identifier (IRI – commonly referred to as a URL) or a CURIE – a form of compact identifier.
+While P38398 is unique within UniProt, i.e. there is only one protein in UniProt that has the accession number P38398, it is not globally unique. For example the same accession number is used as the identifier in several different datasets including Protein Data Bank (http://www.rcsb.org/pdb/protein/P38398), SignaLink (http://signalink.org/protein/P38398), and string-db (http://string-db.org/newstring_cgi/show_network_section.pl?identifier=P38398). Although in these cases they are referring to the same or broadly similar protein. However, the identifier also refers to a 'Satin Chrome 2-way Light Switch' ([Tool Station](https://www.toolstation.com/satin-chrome-white-switch-10a/p38398)). 
 
 ### Converting a Local Identifier into a Global Identifier
 
-- [ ] Add namespace
-- [ ] Namespace hijacking
+To make the UniProt accession number globally unique, we need to provide the context in which the accession number is unique. This can either be done by converting it into an International Resource Identifier (IRI – commonly referred to as a URL), or by turning it into a CURIE – a form of compact identifier.
+
+To convert a local identifier into an IRI, we simply need to provide a namespace to the identifier. This should be a namespace for which you have ownership, otherwise you cannot guarantee that the minted IRI will be globally unique; the organization or person who owns the namespace may already, or at some point in the future, use the IRI that you created for some other purpose. In the case of UniProt, they have provided IRIs for each page about a protein as well as separate IRIs for the protein itself. This is achieved by using different namespaces for the different types of resource.
+
+- UniProt P38398 web page IRI: https://www.uniprot.org/uniprot/P38398
+- UniProt protein P38398 IRI: http://purl.uniprot.org/uniprot/P38398
+
+CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Working Group Note [CURIE Syntax 1.0](https://www.w3.org/TR/2010/NOTE-curie-20101216/), and provide a human readable shortening of IRIs. The CURIE consists of a namespace prefix followed by the local identifier. There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI `[doi:10.1038/sdata.2016.18]` refers to the FAIR Principles paper[^safe-CURIE]. Namespaces can be defined by convention, such as the case with `doi`, and registered with services to allow for the resolution of CURIEs (see [Identifier Resolution Services](#identifier-resolution-services) below). Therefore, we can use the CURIE `[uniprot:P38398]` to refer to the UniProt record for the protein. This is very useful for including unambiguous, global identifiers in scientific articles.
+
+[^safe-CURIE]: The CURIES are included in square brackets to make them *safe CURIEs*, meaning that they should not be confused for URIs.
 
 ### Identifier Services
 
