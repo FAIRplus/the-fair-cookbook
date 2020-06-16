@@ -38,7 +38,7 @@ ___
 
 The main purpose of this recipe is:
 
-> Provid a summary statement about the purpose of the recipe.
+> To understand the purpose of a globally unique and persistent identifier.
 
 ___
 
