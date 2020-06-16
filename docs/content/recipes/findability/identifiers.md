@@ -98,6 +98,7 @@ ___
 | :------------- | :------------- | :------------- |
 | [IRI](https://tools.ietf.org/html/rfc3987) |   |   |
 | [CURIE](https://www.w3.org/TR/2010/NOTE-curie-20101216/) |   |   |
+| [URL](https://tools.ietf.org/html/rfc1738) |  |  |
 
 ___
 
@@ -145,8 +146,15 @@ CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Worki
 
 #### Identifier Resolution Services
 
-- [ ] Identifiers.org
-- [ ] California service
+FAIR Principle A1 states that (meta)data should be retrievable by its identifier. When the identifier is not a resolvable URL, then Identifier Resolution Services are required that know how to map an IRI to a location for the data. These are extensively used to map CURIEs to URLs that can be resolved. 
+
+The Digital Object Identifier System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL https://www.doi.org/10.1038/sdata.2016.18 to resolve the paper's DOI. This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
+
+Within the life sciences, [Identifiers.org](https://identifiers.org) hosted by the EBI provides a resolution service, both as a web form and through the URL pattern. Datasets can register their namespace prefix together with their identifier pattern. The service can then be used in the same way as the DOI resolution service. So for the UniProt page about BRCA1, we can resolve the CURIE `[uniprot:P38938]` using Identifiers.org. This means that the URL https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org/uniprot/P38938.
+
+The Name-to-Thing ([N2T](http://n2t.net/)) service provided by the California Digital Library offers similar functionality and collaborates with Identifiers.org in order to ensure consistency of namespace registrations.
+
+*For more details, see the [Identifier Resolution Services recipe](./identifier-services/id-resolution.html).*
 
 #### Identifier Equivalence/Mapping Services
 
