@@ -109,37 +109,36 @@ With regard to identifiers, the FAIR principles state:
 >
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol
 
+### Global and Local Identifiers
 
-```python
-import isatools
-import json
-import pandas as pd 
-import holoview
-```
+Identifiers allow for the unambiguous reference of items in a dataset, e.g. in the context of the UniProt dataset the accession number [P38398](https://www.uniprot.org/uniprot/P38398) allows us to identify the BRCA1 Breast cancer type 1 susceptibility protein. While P38398 is unique within UniProt, i.e. there is only one protein in UniProt that has the accession number P38398, it is not globally unique. For example the same accession number is used as the identifier in several different datasets including Protein Data Bank (http://www.rcsb.org/pdb/protein/P38398), SignaLink (http://signalink.org/protein/P38398), and string-db (http://string-db.org/newstring_cgi/show_network_section.pl?identifier=P38398).To make the UniProt accession number globally unique, we need to provide the context in which the accession number is unique. This can either be done using an International Resource Identifier (IRI – commonly referred to as a URL) or a CURIE – a form of compact identifier.
 
+### Converting a Local Identifier into a Global Identifier
 
-### ... create workflow figures
+- [ ] Add namespace
+- [ ] Namespace hijacking
 
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
+### Identifier Services
 
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
+#### Persistent Identifier Services
 
-<div class="mermaid">
-graph LR;
-    A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
-    B["conversion to open format"]-->D(("output data"));
-    C["automatic annotation"]-->D(("output data"));  
+- [ ] pURL
+- [ ] w3id
 
-    style A fill:#FF5733,stroke:#333,stroke-width:2px
-    style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div>
+#### Identifier Resolution Services
+
+- [ ] Identifiers.org
+- [ ] California service
+
+#### Identifier Equivalence/Mapping Services
+
+The consequence of each database minting their own identifiers is that we end up with a large number of identifiers notionally for the same concept. Although in reality there will be subtle differences, e.g. a chemical may be different salt form, which may affect applications using the data. 
+
+Databases often contain lists of equivalent identifiers in other data sources but these can also be extracted into services that provide mappings between identifiers. That is, you can ask these services for all identifiers that are equivalent to your identifier. The following is an incomplete list of such services
+
+- [BridgeDb](https://bridgedb.github.io/)
+- [sameAs.org](http://sameas.org)
+- [UniChem](https://www.ebi.ac.uk/unichem/)
 
 ___
 
