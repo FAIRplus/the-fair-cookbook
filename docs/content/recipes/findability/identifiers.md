@@ -81,9 +81,7 @@ ___
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-Help to fill this table out can be found ...(not yet)...
+| Findability | minimal | repeatable |
 
 ----
 
