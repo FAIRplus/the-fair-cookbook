@@ -41,7 +41,7 @@ ___
 
 ## Main Objectives
 
-The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. 
+> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. 
 
 An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
@@ -140,13 +140,12 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 | **Theme**                                             | **Competency Questions**                                                                                                              |
 |:------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
 | **General Questions**                                 |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs? (Might be out of scope for ROBOT)              |
-|                                                       | :heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?            |
-|                                                       | :heavy_plus_sign: How to merge the internal ontology with publicly available ontologies?                                             |
+|                                                       | :heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs?             |
+|                                                       | :heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?
 |                                                       | :heavy_plus_sign: How to remove terms from the resulting ontology that are not needed?                                               |
 |                                                       | :heavy_plus_sign: How to guarantee consistency of the final ontology?                                                                |
 |                                                       | :heavy_plus_sign: How to identify differences in comparison to a previous version of the resulting ontology?                         |
-| **Questions without specifying compounds or genes**   |                                                                                                                                       |
+| **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
 |                                                       | :heavy_plus_sign: Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
 |                                                       | :heavy_plus_sign: Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
 |                                                       | :heavy_plus_sign: Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
@@ -160,7 +159,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 |                                                       | :heavy_plus_sign: Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
 |                                                       | :heavy_plus_sign: Identify all data from patients treated with a specific medication.                                                                 |
 |                                                       | :heavy_plus_sign: Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific diseas |
+|                                                       | :heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
 
 
 
@@ -474,7 +473,7 @@ And a template sample is presented following:
 |ex:op_1	|Prop_1| object property|-|Class_2|Class_3| |
 |ex:dp_1	|Prop_2| data property|-|functional|Class_2|xsd:string|
 
->:warning: **_Tip:_** The generated ontology can be visualized by using the Protege tool or a local deployment of OLS (Recipe 1.3). The `OLS local deployment` option is recommended by this recipe, given that `Protege` crash when loading medium or large size ontologies.
+>:warning: **_Tip:_** The generated ontology can be visualized by using the Protege tool or a [local deployment of OLS](https://hackmd.io/@FAIRcookbook/H1axYY3wU). The `OLS local deployment` option is recommended by this recipe, given that `Protege` crash when loading medium or large size ontologies.
     
 ### Step 5: Merge ontology modules and umbrella ontology
 
