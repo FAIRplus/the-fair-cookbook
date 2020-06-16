@@ -117,6 +117,8 @@ Identifiers allow for the unambiguous reference of items in a dataset, e.g. in t
 
 The UniProt accession number is described as an *opaque* identifier. This means that no interpretation about what is identified can be gleaned from the identifier itself. This is in contrast to the Wikipedia page about BRCA1 which uses the  gene name as the identifier ([BRCA1](https://en.wikipedia.org/wiki/BRCA1)). In this case the identifier is *transparent*, since meaning can be inferred from the identifier. Within a scientific context, opaque identifiers are preferred since names and labels can vary over time as our understanding of the concept evolves.
 
+There is an expectation that identifiers will be *persistent*. This pertains to two criteria. First that the identifier will be available going into the future and second that the identifier will not be reused for another concept.
+
 ### Global and Local Identifiers
 
 While P38398 is unique within UniProt, i.e. there is only one protein in UniProt that has the accession number P38398, it is not globally unique. For example the same accession number is used as the identifier in several different datasets including Protein Data Bank (http://www.rcsb.org/pdb/protein/P38398), SignaLink (http://signalink.org/protein/P38398), and string-db (http://string-db.org/newstring_cgi/show_network_section.pl?identifier=P38398). Although in these cases they are referring to the same or broadly similar protein. However, the identifier also refers to a 'Satin Chrome 2-way Light Switch' ([Tool Station](https://www.toolstation.com/satin-chrome-white-switch-10a/p38398)). 
