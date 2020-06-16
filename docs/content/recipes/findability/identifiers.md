@@ -139,11 +139,6 @@ CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Worki
 
 ### Identifier Services
 
-#### Persistent Identifier Services
-
-- [ ] pURL
-- [ ] w3id
-
 #### Identifier Resolution Services
 
 FAIR Principle A1 states that (meta)data should be retrievable by its identifier. When the identifier is not a resolvable URL, then Identifier Resolution Services are required that know how to map an IRI to a location for the data. These are extensively used to map CURIEs to URLs that can be resolved. 
@@ -157,6 +152,10 @@ The Name-to-Thing ([N2T](http://n2t.net/)) service provided by the California Di
 *For more details, see the [Identifier Resolution Services recipe](./identifier-services/id-resolution.html).*
 
 #### Identifier Equivalence/Mapping Services
+##### Persistent Identifier Services
+
+A special form of resolution service are known as persistent identifier services. These services provide a permanent URL for a resource. When an address is accessed, the client is redirected to the current location for the resource. The two most widely used services are PURL (https://purl.org) and w3id (https://w3id.org).
+
 
 The consequence of each database minting their own identifiers is that we end up with a large number of identifiers notionally for the same concept. Although in reality there will be subtle differences, e.g. a chemical may be different salt form, which may affect applications using the data. 
 
