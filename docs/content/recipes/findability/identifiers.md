@@ -2,24 +2,21 @@
 
 **identifier:** [RX.X_FIXME](RX.X_FIXME)
 
-**version:** [<version_number_FIXME>](version_number_FIXME)
+**version:** v0.1
 
 ___
 
-**_Difficulty level:_** moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle: _FIXME
+**_Difficulty level:_** easy :triangular_flag_on_post: :white_circle: :white_circle:  :white_circle: :white_circle: 
 
 **_Reading time:_** _FIXME minutes 
 
 **_Intended Audience:_** 
 
-> :heavy_check_mark: set_value_FIXME, e.g. Data Scientist
+> :heavy_check_mark: Everyone
 
-> :heavy_check_mark: set_value_FIXME, e.g. Data Scientist
+**_Recipe Type_**: Information
 
-
-**_Recipe Type_**: set_value_FIXME, e.g. Hands on
-
-**_Executable code_**: set_value_FIXME, [Yes,No]
+**_Executable code_**: No
 
 
 [TOC]
