@@ -143,12 +143,19 @@ ___
 
 ## Conclusion:
 
-> Summerize Key Learnings of the recipe.
-> 
+> In this recipe we have given an overview of globally unique and persistent identifier, i.e. FAIR principle F1. We have covered:
+>
+> - The difference between global and local identifiers;
+> - How to convert a local identifier into a global one;
+> - Opaque and transparent identifiers
+>
+> We have given an overview of the different services available for handling identifiers.
+>
 > Suggest further reading using the following:
 > #### What should I read next?
-> * [HackMD & MarkDown Tips and Tricks](TODO)
-> * [A related recipe which nice complements the current one ](TODO)
+> * [Persistent Identifier Services](TODO)
+> * [Identifier Resolution Services](TODO)
+> * [Identifier Mapping/Equivalence Services](TODO)
 
 ___
 ## Authors:
