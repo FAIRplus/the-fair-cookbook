@@ -153,6 +153,7 @@ ___
 >
 > Suggest further reading using the following:
 > #### What should I read next?
+> * Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data ([doi:10.1371/journal.pbio.2001414](https://doi.org/10.1371/journal.pbio.2001414))
 > * [Persistent Identifier Services](TODO)
 > * [Identifier Resolution Services](TODO)
 > * [Identifier Mapping/Equivalence Services](TODO)
