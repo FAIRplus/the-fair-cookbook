@@ -38,7 +38,7 @@ ___
 
 The main purpose of this recipe is:
 
-> To understand the purpose of a globally unique and persistent identifier.
+> To understand the purpose of a globally unique and persistent identifier and how they can be used to retrieve the associated (meta)data using a standardized communication protocol.
 
 ___
 
