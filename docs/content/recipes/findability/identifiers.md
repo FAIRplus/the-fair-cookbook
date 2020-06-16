@@ -166,6 +166,8 @@ Databases often contain lists of equivalent identifiers in other data sources bu
 - [sameAs.org](http://sameas.org)
 - [UniChem](https://www.ebi.ac.uk/unichem/)
 
+*For more details, see the [Identifier Mapping Services recipe](./identifier-services/identifier-mapping.html).*
+
 ___
 
 ## Conclusion:
