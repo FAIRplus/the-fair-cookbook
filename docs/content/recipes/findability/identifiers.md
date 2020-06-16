@@ -103,9 +103,11 @@ ___
 
 ## Main Content
 
-This is the place for your actual content. You can also ...
+With regard to identifiers, the FAIR principles state:
 
-### ... write executable code
+> F1. (Meta)data are assigned a globally unique and persistent identifier
+>
+> A1. (Meta)data are retrievable by their identifier using a standardised communications protocol
 
 
 ```python
