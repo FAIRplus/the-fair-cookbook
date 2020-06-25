@@ -93,11 +93,12 @@ This recipe in its current form has the following limitations:
   - the above assumes that everything is placed in your home folder. If this is not the case, replace `~`, the home directory indicator, by the corresponding path, or execute specifically all `md5sum` commands only with relative pathes (by navigating in the corresponding directory, first).
   - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: TODO
   - you should mind the general limitations of checksums, which are however not covered in this recipe.
-
+  - there is a known clash between the output format of the GNU / Linux tool `md5sum` and the macOS tool `md5`. They are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward.
 
 ### Extendability of this recipe
 
-- The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture). However, additional steps would be needed to align the generated checksums to each other (questions: how would they be stored; how would they be brought together in one file to enable effective transport of the file containing the checksum entries)
+- The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture). However, additional steps would be needed to align the generated checksums to each other (questions: how would they be stored; how would they be brought together in one file to enable effective transport of the file containing the checksum entries).
+- The procedure above could be combined with a file length indicator (usually the amount of octets = bytes); the file length is usually retrieved much faster than the checksum, and might already indicate the inequality of two files (albeit similar file length does not guarantee content-identity, of course).
 
 ## Possible improvements from the current state of this recipe
 
@@ -129,7 +130,7 @@ TODO
 
 ---
 
-## Table of Data Standards 
+## Table of Data Standards
 
 TODO
 
