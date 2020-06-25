@@ -54,11 +54,15 @@ This recipe assumes the following:
   - you have basic knowledge of how to use a terminal (called "shell", this can be bash or similar)
   - the tool `md5sum` is installed
   - the source and target files are both placed in your home directory; we assume they are called `file_to_compare.txt` (replace this filename as necessary in the recipe instructions; you can download a demo file from here: ##TODO
+  - for the more complex example (compare many files): the source and target files are both placed in a directory called `path_to_directory` within your home directory; we assume that this directory contains many image files with arbitrary names, but the common file extension ´.jpg´.
 
 
 Checking the requirements (tests):
 
   - Start up a console. Type `md5sum -v` and hit return. You should see `TODO` as output.
+  - Execute on the console `ls ~/file_to_compare.txt`. The output should be `file_to_compare.txt`
+  - Execute on the console `ls -1 ~/path_to_directory/*.jpg`. You should see a list of all image files.
+
 
 ___
 
@@ -68,7 +72,7 @@ ___
 
 On the shell execute:
 
-`md5sum file_to_compare.txt`
+`md5sum ~/file_to_compare.txt`
 
 The output should be:
 
@@ -81,7 +85,7 @@ The output should be:
 
 On the shell execute:
 
-`md5sum file_to_compare.txt`
+`md5sum ~/file_to_compare.txt`
 
 The output should be:
 
@@ -93,7 +97,7 @@ The output should be:
 
 On the shell execute:
 
-`md5sum file_to_compare.txt`
+`md5sum ~/path_to_directory/*.jpg`
 
 The output should be:
 
@@ -106,7 +110,8 @@ The output should be:
 
 This recipe in its current form has the following limitations:
 
-  - the above assumes that you .
+  - the above assumes that everything is placed in your home folder. If this is not the case, replace `~`, the home directory indicator, by the corresponding path, or execute specifically all `md5sum` commands only with relative pathes (by navigating in the corresponding directory, first).
+  - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: TODO  
 
 
 ### Extendability of this recipe
