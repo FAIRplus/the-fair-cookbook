@@ -76,14 +76,37 @@ The output should be:
 
 ```
 
+### Storing the checksums in a dedicated file
+
+
+On the shell execute:
+
+`md5sum file_to_compare.txt`
+
+The output should be:
+
+```
+
+```
+
+### Calculating the checksums for all files in one directory
+
+On the shell execute:
+
+`md5sum file_to_compare.txt`
+
+The output should be:
+
+```
+
+```
+
 
 ### Limitations of this recipe
 
 This recipe in its current form has the following limitations:
 
-  - with the tool above, the nucleotide alphabet is checked by default only on whether it conforms to a "SingleLetterAlphabet", but this allows even insensible characters such as `ä` as nucleotide letters.
-  - the error messages are not indicating at which position exactly an error occured, i.e. which letter of the quality score is incorrect (the error message is e.g. `ValueError: Invalid character in quality string` where it might be preferable to get an error message like `ValueError: Invalid character "ö" in quality string of read 12 at position 5.`)
-  - the read names are not further checked and might not fulfill specific requirements of the subsequent tool, for which this check was supposed to be designed.
+  - the above assumes that you .
 
 
 ### Extendability of this recipe
