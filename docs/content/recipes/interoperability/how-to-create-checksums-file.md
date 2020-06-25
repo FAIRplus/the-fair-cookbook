@@ -111,29 +111,27 @@ The output should be:
 This recipe in its current form has the following limitations:
 
   - the above assumes that everything is placed in your home folder. If this is not the case, replace `~`, the home directory indicator, by the corresponding path, or execute specifically all `md5sum` commands only with relative pathes (by navigating in the corresponding directory, first).
-  - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: TODO  
+  - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: TODO
+  - you should mind the general limitations of checksums, which are however not covered in this recipe.
 
 
 ### Extendability of this recipe
 
-- The tool above can also be used to check selectively for other variants of the PHRED score encoding, i.e. `fastq-illumina` or `fastq-solexa`. See <https://biopython.org/wiki/SeqIO> for a list of supported file formats.
-- This recipe can also be applied to check general sequences without quality scores, e.g. files in FASTA format.
+- The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture).
 
+## Possible improvements from the current state of this recipe
 
-## Possible improvements from the state of this recipe
-
-- It would be preferable to introduce a further, harder check for the specification of the nucleotide sequence, e.g. only allowing the the "IUPAC DNA alphabet" (see <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC322779>), including degenerate bases (e.g. `B` representing the bases (`A` OR `G` OR `T`), lowercase and uppercase mixtures (e.g. `acGTgTGaa`), and gaps (symbolized by `.`).
-- It might be possible to extend the tool above into the desired direction of more consistent checks, considering the content of <https://biopython.org/wiki/SeqIO_dev>.
-- It would be preferable to be able to exchange the concrete FASTQ specification that was used to derive the validation result with other tools and/or make them visible.
-- It would be preferable to document the result of the file format validation in a machine-readable and consistent way.
+- while md5 is the most common hashing algorithm, but known to have vulnerabilities for checksum hacking, and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. sha512.
 
 
 ## Further reading
 
-- The documentation of BioPython, and specifically Bio.SeqIO: <https://biopython.org/docs/1.77/api/Bio.SeqIO.QualityIO.html>
-
+- Wikipedia article on checksums:
+- Wikipedia article on md5:
 
 ## Capability & Maturity Table
+
+TODO
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
@@ -143,6 +141,8 @@ This recipe in its current form has the following limitations:
 
 ## FAIRification Objectives, Inputs and Outputs
 
+TODO
+
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
 | [Format Validation](http://edamontology.org/operation_0336)  | [FASTQ file](https://fairsharing.org/FAIRsharing.r2ts5t)  | [report](http://edamontology.org/data_2048)  |
@@ -150,6 +150,8 @@ This recipe in its current form has the following limitations:
 ---
 
 ## Table of Data Standards
+
+TODO
 
 | Data Formats  |
 | :------------- |
