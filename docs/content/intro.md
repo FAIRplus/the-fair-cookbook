@@ -13,10 +13,260 @@ Visit [https://fairplus.github.io/the-fair-cookbook](https://the-fair-cookbook.n
 
 This is the github repository for the `FAIR Cookbook`, assembled by the [IMI FAIRplus project](https://fairplus-project.eu/), an EU funded project running from *2018 to 2022*. The repository hosts  documentation, known as `FAIR recipes`, and supporting code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly (quarterly) in order to reflect the work progress made by the project and the various working groups bringing together `academic` and `industry` partners.
 
+<div class="row">
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Helmut Utwiklig</b></h4>
+	    <p>Architect & Engineer</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Jean Dupoint</b></h4>
+	    <p>Data Scientist</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Fulvia Innocenti</b></h4>
+	    <p>Data Curator</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Wang Ju Fong</b></h4>
+	    <p>Head of Clinical Research</p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<!-- 
+<div class="cards-container">
+  <div class="card-container">
+    <div class="card">
+      <div class="front">
+	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
+	    <h4><b>Helmut Entwikgung</b></h4>
+	    <p color="#300861">Architect & Engineer</p>
+      </div>
+      <div class="back">
+	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
+	    <h4 color="white"><b>Wang Ju Fong</b></h4>
+	    <div>
+ 		<img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" />
+		</div>
+	    <p color="#300861">Head of Clinical Research</p>
+      </div>
+    </div>
+</div>
+
+<div class="cards-container">
+   <div class="card-container">
+    <div class="card">
+      <div class="front">
+	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
+	    <h4><b>Helmut Entwikgung</b></h4>
+	    <p>Architect & Engineer</p>
+      </div>
+      <div class="back">
+	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
+	    <h4 color="#300861"><b>Wang Ju Fong</b></h4>
+	    <p color="#300861">Head of Clinical Research</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
 
 ## Content and learning outcomes
 
 Learn how to FAIRify a number of exemplar datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges. 
+
+<div>
+ <img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" />
+</div>
+
+
+
+<div class="row">
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>FINDABILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+	    <h4><b>Search Engine Optimitization</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+	  	<br/>
+	    <h4><b>Open Archive Deposition</b></h4>
+	    <p>TODO: add text here </p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+	    <h4><b>Annotation</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+ </div>
+</div>
+<div> 
+<div class="row">
+
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
+	    <h4><b>ACCESSIBILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+	    <h4><b>Access condition</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+	    <h4><b>License selection</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+	    <h4><b>Standards</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
+	    <h4><b>INTEROPERABILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+	    <h4><b>Metadata Standards</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+	    <h4><b>Open Syntax</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+	    <h4><b>Ontology</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+ </div>
+
+<div class="row">
+
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
+	    <h4><b>REUSABILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+	    <h4><b>Standards</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+	    <h4><b>Ontology</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+	    <h4><b>SMART API</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+</div>
+ 
+
+
+
+
+
 
 ## Roadmap and Timeline
 
@@ -38,7 +288,10 @@ ___
 * The FAIR Cookbook is a project aiming at collating protocols for making data FAIR
 * The FAIR Cookbook is open source and licensed under CC-BY-4.0
 * The FAIR Coobook is writting using Markdown and deployed using `jupyter-tool`
-* The FAIR Cookbook is an activity of the [FAIRplus project](https://fairplus-project.eu/) funded by the [Innovative Medicine Initiative (IMI)](www.imi.europa.eu) ![](./images/logo/imi-europe.png) under grant agreement #802750 (2019-22).
+* The FAIR Cookbook is an activity of the [FAIRplus project](https://fairplus-project.eu/) funded by the [Innovative Medicine Initiative (IMI)](www.imi.europa.eu)  
+ <img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).
+
+<!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
 
 * The FAIR Cookbook development currently coordinated by: 
  
@@ -51,72 +304,41 @@ ___
 
 * The FAIR Cookbook content was contributed by the following FAIRPlus Consortium Members:
 
+| Name                       | Affiliation | Name                           | Affiliation |
+|:----------------------------|:-------------|:--------------------------------|:-------------|
+| Chuang Kee Ong             | AZ          | Ibrahim Emam                   | ICL         |
+| Colin Wood                 | AZ          | Francesco Ronzano              | IMIM        |
+| Ola Engkvist               | AZ          | Laura Furlong                  | IMIM        |
+| Ratnesh Sahay              | AZ          | Herman Van Vlijmen             | Janssen     |
+| David Henderson            | Bayer       | Jean-Marc Neefs                | Janssen     |
+| Robert Giessmann           | Bayer       | Paul Peeters                   | Janssen     |
+| Kurt Dauth                 | BI          | Rudi Verbeeck                  | Janssen     |
+| Karsten Quast              | Boehringer  | Scott Lusher                   | Janssen     |
+| Emiliano Reynares          | Boehringer  | Derek Marren                   | Lilly       |
+| Karsten Quast              | Boehringer  | Andrea Splendiani              | Novartis    |
+| Eva Navarrete              | BSC         | Dorothy Reilly                 | Novartis    |
+| Salvador Capella Gutierrez | BSC         | Nick Lynch                     | PHACTS      |
+| Fuqi Xu                    | EMBL-EBI    | Vitaly Sedlyarov               | RESOLUTE    |
+| Melanie Courtot            | EMBL-EBI    | Ulrich Goldmann                | RESOLUTE    |
+| Tony Burdett               | EMBL-EBI    | Manuela Pruess                 | SIB         |
+| Andrea Zaliani             | Fraunhofer  | Mark Ibberson                  | SIB         |
+| Andreas Pippow             | Fraunhofer  | Vassilios Ioannidis            | SIB         |
+| Franziska Kroh             | Fraunhofer  | Danielle Welter                | UL          |
+| Gesa Witt                  | Fraunhofer  | Venkata P. Satagopam           | UL          |
+| Manfred Kohler             | Fraunhofer  | Wei Gu                         | UL          |
+| Oya Deniz Beyan            | Fraunhofer  | Chris Evelo                    | UM          |
+| Philip Gribbon             | Fraunhofer  | Egon Willighagen               | UM          |
+| Ashni Sedani               | GSK         | Nuno (Ryan) Silva Nunes        | UM          |
+| Femi Akintobi              | GSK         | Carole Goble                   | UNIMAN      |
+| George Papadotas           | GSK         | Ebtisam Alharbi                | UNIMAN      |
+| Peter Woollard             | GSK         | Nick Juty                      | UNIMAN      |
+| Alasdair J G Gray          | HWU         | Dominique Batista              | UOXF        |
+| Petros Papadopoulos        | HWU         | Philippe Rocca-Serra           | UOXF        |
+| Ilaria Maresi              | HYVE        | Susanna-Assunta Sansone (OeRC) | UOXF        |
+| Jolanda Strubel            | HYVE        | Alejandra Delfin Rossaro       | UPS         |
+| Emma Vos                   | HYVE        | Anne Cambon-Thomsen            | UPS         |
 
 
-| Name                           | Affiliation |
-|--------------------------------|-------------|
-| Chuang Kee Ong                 | AZ          |
-| Colin Wood                     | AZ          |
-| Ola Engkvist                   | AZ          |
-| Ratnesh Sahay                  | AZ          |
-| David Henderson                | Bayer       |
-| Robert Giessmann               | Bayer       |
-| Kurt Dauth                     | BI          |
-| Karsten Quast                  | Boehringer  |
-| Emiliano Reynares              | Boehringer  |
-| Karsten Quast                  | Boehringer  |
-| Eva Navarrete                  | BSC         |
-| Salvador Capella Gutierrez     | BSC         |
-| Fuqi Xu                        | EMBL-EBI    |
-| Melanie Courtot                | EMBL-EBI    |
-| Tony Burdett                   | EMBL-EBI    |
-| Andrea Zaliani                 | Fraunhofer  |
-| Andreas Pippow                 | Fraunhofer  |
-| Franziska Kroh                 | Fraunhofer  |
-| Gesa Witt                      | Fraunhofer  |
-| Manfred Kohler                 | Fraunhofer  |
-| Oya Deniz Beyan                | Fraunhofer  |
-| Philip Gribbon                 | Fraunhofer  |
-| Ashni Sedani                   | GSK         |
-| Femi Akintobi                  | GSK         |
-| George Papadotas               | GSK         |
-| Peter Woollard                 | GSK         |
-| Alasdair J G Gray              | HWU         |
-| Petros Papadopoulos            | HWU         |
-| Ilaria Maresi                  | HYVE        |
-| Jolanda Strubel                | HYVE        |
-| Emma Vos                       | Hyve        |
-| Ibrahim Emam                   | ICL         |
-| Francesco Ronzano              | IMIM        |
-| Laura Furlong                  | IMIM        |
-| Herman Van Vlijmen             | Janssen     |
-| Jean-Marc Neefs                | Janssen     |
-| Paul Peeters                   | Janssen     |
-| Rudi Verbeeck                  | Janssen     |
-| Scott Lusher                   | Janssen     |
-| Derek Marren                   | Lilly       |
-| Andrea Splendiani              | Novartis    |
-| Dorothy Reilly                 | Novartis    |
-| Nick Lynch                     | PHACTS      |
-| Vitaly Sedlyarov               | RESOLUTE    |
-| Ulrich Goldmann                | RESOLUTE    |
-| Manuela Pruess                 | SIB         |
-| Mark Ibberson                  | SIB         |
-| Vassilios Ioannidis            | SIB         |
-| Danielle Welter                | UL          |
-| Venkata P. Satagopam           | UL          |
-| Wei Gu                         | UL          |
-| Chris Evelo                    | UM          |
-| Egon Willighagen               | UM          |
-| Nuno (Ryan) Silva Nunes        | UM          |
-| Carole Goble                   | UNIMAN      |
-| Ebtisam Alharbi                | UNIMAN      |
-| Nick Juty                      | UNIMAN      |
-| Dominique Batista              | UOXF        |
-| Philippe Rocca-Serra           | UOXF        |
-| Susanna-Assunta Sansone (OeRC) | UOXF        |
-| Alejandra Delfin Rossaro       | UPS         |
-| Anne Cambon-Thomsen            | UPS         |
 
 
 ---

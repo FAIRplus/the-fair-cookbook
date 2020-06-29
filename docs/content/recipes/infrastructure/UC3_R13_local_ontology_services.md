@@ -1,6 +1,6 @@
 # Recipe 1.3: How to deploy a terminology service  - an example with the EBI Ontology Lookup Service
 
-**identifier:** [UC3 R1.3](UC3R1.3)
+<!-- **identifier:** [UC3 R1.3](UC3R1.3)
 
 **version:** [v0.1](v0.1)
 
@@ -22,7 +22,64 @@ ___
 
 **_Recipe Type_**: Service deployment
 
-**_Executable code_**: Yes
+**_Executable code_**: Yes -->
+
+
+___
+
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">UC3 R1.3</a> </p>
+        <p> version: <a href="">v1.0</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 20 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+        <p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Managers </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+        <p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrators</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ___
 
@@ -196,16 +253,19 @@ To add or remove ontologies, modify corresponding sections in the configuration 
 Before rebuilding the Docker image, the existing container needs to be stopped and removed. The OLS container can be stopped and removed by providing the container name. According to the parameters presented on the previous Docker creation command block, the name of the OLS Docker container is "OLS": 
 
 >:bulb: By rebuilding the OLS image, all loaded ontologies will be automatically updated to the latest version.
+
 ```shell
 ## Stop OLS container
 docker stop OLS
 
 ## Remove OLS container
 docker rm OLS
-``` 
+```
+
 The Docker container can also be stopped and removed using the Docker image ID.
 
 The previous Docker image shall also be removed before rebuilding the image.
+
 ```shell
 ## Remove previous docker image
 sudo docker rmi ols
@@ -224,15 +284,21 @@ sudo docker run -d -p 8080:8080 --name=OLS -t ols
 ### Troubleshooting
 - Loading multiple ontologies from disk
     
-    If more than one ontologies are going to be loaded into OLS from disk, the `Dockerfile` needs modifications before building the Docker container:
+If more than one ontologies are going to be loaded into OLS from disk, the `Dockerfile` needs modifications before building the Docker container:
 
-    In Line 3, replace `ENV OLS_HOME /opt/ols` with `ENV OLS_HOME /opt/ols/`
+In Line 3, replace `ENV OLS_HOME /opt/ols` with `ENV OLS_HOME /opt/ols/`
     
-    In Line 14, replace 
-    > && java -Dols.obofoundry.ontology.config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}/ols-config.yaml -jar ${OLS_HOME}/ols-config-importer.jar \
+In Line 14, replace
+
+```bash
+&& java -Dols.obofoundry.ontology.config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}/ols-config.yaml -jar ${OLS_HOME}/ols-config-importer.jar
+```
     
-    with 
-    >&& java -Dols.obofoundry.ontology.config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}ols-config.yaml -jar ${OLS_HOME}ols-config-importer.jar \
+    with:
+
+```bash
+&& java -Dols.obofoundry.ontology.config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}ols-config.yaml -jar ${OLS_HOME}ols-config-importer.jar
+```
     
 ## Summary
 The local OLS provides API endpoints for retrieving, submitting, updating, and querying ontology data, as well as a user interface for searching and browsing ontologies and ontology terms. For example, all ontologies loaded can be queried through endpoint ` http://localhost:8080/api/ontologies`. A detailed description of OLS functions can be found in the built-in documentation page.

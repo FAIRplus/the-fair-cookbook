@@ -200,7 +200,7 @@
     not_numbered: true
 
 # Divider for meta-pages and search page
-- divider: true
+# - divider: true
 
 # A chapter w/ a collection of sections beneath it
 # - title: Features and customization

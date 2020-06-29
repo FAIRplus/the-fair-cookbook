@@ -21,20 +21,84 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Recipe-1.3:-How-to-deploy-a-terminology-service----an-example-with-the-EBI-Ontology-Lookup-Service">Recipe 1.3: How to deploy a terminology service  - an example with the EBI Ontology Lookup Service<a class="anchor-link" href="#Recipe-1.3:-How-to-deploy-a-terminology-service----an-example-with-the-EBI-Ontology-Lookup-Service"> </a></h1><p><strong>identifier:</strong> <a href="UC3R1.3">UC3 R1.3</a></p>
-<p><strong>version:</strong> <a href="v0.1">v0.1</a></p>
+<h1 id="Recipe-1.3:-How-to-deploy-a-terminology-service----an-example-with-the-EBI-Ontology-Lookup-Service">Recipe 1.3: How to deploy a terminology service  - an example with the EBI Ontology Lookup Service<a class="anchor-link" href="#Recipe-1.3:-How-to-deploy-a-terminology-service----an-example-with-the-EBI-Ontology-Lookup-Service"> </a></h1><!-- **identifier:** [UC3 R1.3](UC3R1.3)
+
+**version:** [v0.1](v0.1)
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:   :white_circle:  :white_circle:
+
+**_Reading time:_** 20 minutes
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Terminology Manager
+
+> :heavy_check_mark: Ontologist
+
+> :heavy_check_mark: System Administrator
+
+> :heavy_check_mark: Data Scientist
+
+**_Recipe Type_**: Service deployment
+
+**_Executable code_**: Yes -->
+
+
 <hr>
-<p><strong><em>Difficulty level:</em></strong> :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:   :white_circle:  :white_circle:</p>
-<p><strong><em>Reading time:</em></strong> 20 minutes</p>
-<p><strong><em>Intended Audience:</em></strong></p>
-<blockquote><p>:heavy_check_mark: Terminology Manager</p>
-<p>:heavy_check_mark: Ontologist</p>
-<p>:heavy_check_mark: System Administrator</p>
-<p>:heavy_check_mark: Data Scientist</p>
-</blockquote>
-<p><strong><em>Recipe Type</em></strong>: Service deployment</p>
-<p><strong><em>Executable code</em></strong>: Yes</p>
-<hr>
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">UC3 R1.3</a> </p>
+        <p> version: <a href="">v1.0</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 20 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+        <p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Managers </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+        <p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrators</p>
+      </div>
+    </div>
+  </div>
+</div><hr>
 <p>[TOC]</p>
 <h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service(OLS) on local machines. This demonstrates the workflow for deploying open source ontology service softwares in-house.</p>
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2><p>With an increasing need for ontology infrastructure to improve the interoperability of information-based R&amp;D activities, many pharmaceutical companies seek ontology management solutions and ontology services. Compared with developing local ontology services from scratch, reusing and redeveloping open-source ontology services save the time and cost. <strong>Recipe 3.1</strong> identifies public open-source ontology services. In this recipe, we use the <a href="https://www.ebi.ac.uk/ols/index">Ontology Lookup Service</a> to demonstrate the workflow of deploying public ontology services in-house.</p>
@@ -199,18 +263,19 @@ sudo docker run -d -p <span class="m">8080</span>:8080 --name<span class="o">=</
 <h3 id="4.-Manage-ontologies">4. Manage ontologies<a class="anchor-link" href="#4.-Manage-ontologies"> </a></h3><p>OLS allows the addition, update, and removal of ontologies. Such ontology management is achieved through editing the configuration file, <code>ols-config.yaml</code>. The ontology changes can be loaded by rebuilding the image and restarting the service.</p>
 <h4 id="4.1-Modify-OLS-configuration">4.1 Modify OLS configuration<a class="anchor-link" href="#4.1-Modify-OLS-configuration"> </a></h4><p>To add or remove ontologies, modify corresponding sections in the configuration file. Loaded ontologies will be updated to the latest version automatically by rebuilding the Docker image.</p>
 <h4 id="4.2-Rebuild-OLS-image-and-restart-OLS">4.2 Rebuild OLS image and restart OLS<a class="anchor-link" href="#4.2-Rebuild-OLS-image-and-restart-OLS"> </a></h4><p>Before rebuilding the Docker image, the existing container needs to be stopped and removed. The OLS container can be stopped and removed by providing the container name. According to the parameters presented on the previous Docker creation command block, the name of the OLS Docker container is "OLS":</p>
-<blockquote><p>:bulb: By rebuilding the OLS image, all loaded ontologies will be automatically updated to the latest version.
-```shell</p>
-<h2 id="Stop-OLS-container">Stop OLS container<a class="anchor-link" href="#Stop-OLS-container"> </a></h2><p>docker stop OLS</p>
+<blockquote><p>:bulb: By rebuilding the OLS image, all loaded ontologies will be automatically updated to the latest version.</p>
 </blockquote>
-<h2 id="Remove-OLS-container">Remove OLS container<a class="anchor-link" href="#Remove-OLS-container"> </a></h2><p>docker rm OLS</p>
+<div class="highlight"><pre><span></span><span class="c1">## Stop OLS container</span>
+docker stop OLS
 
-<pre><code>The Docker container can also be stopped and removed using the Docker image ID.
-
-The previous Docker image shall also be removed before rebuilding the image.
-```shell
-## Remove previous docker image
-sudo docker rmi ols</code></pre>
+<span class="c1">## Remove OLS container</span>
+docker rm OLS
+</pre></div>
+<p>The Docker container can also be stopped and removed using the Docker image ID.</p>
+<p>The previous Docker image shall also be removed before rebuilding the image.</p>
+<div class="highlight"><pre><span></span><span class="c1">## Remove previous docker image</span>
+sudo docker rmi ols
+</pre></div>
 <p>To rebuild the Docker image, repeat the commands in Step 3.</p>
 <div class="highlight"><pre><span></span><span class="c1">## Build OLS docker image</span>
 sudo docker build -t ols .
@@ -219,17 +284,19 @@ sudo docker build -t ols .
 sudo docker run -d -p <span class="m">8080</span>:8080 --name<span class="o">=</span>OLS -t ols
 </pre></div>
 <h3 id="Troubleshooting">Troubleshooting<a class="anchor-link" href="#Troubleshooting"> </a></h3><ul>
-<li><p>Loading multiple ontologies from disk</p>
+<li>Loading multiple ontologies from disk</li>
+</ul>
 <p>If more than one ontologies are going to be loaded into OLS from disk, the <code>Dockerfile</code> needs modifications before building the Docker container:</p>
 <p>In Line 3, replace <code>ENV OLS_HOME /opt/ols</code> with <code>ENV OLS_HOME /opt/ols/</code></p>
 <p>In Line 14, replace</p>
-<blockquote><p>&amp;&amp; java -Dols.obofoundry.ontology.config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}/ols-config.yaml -jar ${OLS_HOME}/ols-config-importer.jar \</p>
-</blockquote>
-<p>with</p>
-<blockquote><p>&amp;&amp; java -Dols.obofoundry.ontology.config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}ols-config.yaml -jar ${OLS_HOME}ols-config-importer.jar \</p>
-</blockquote>
-</li>
-</ul>
+<div class="highlight"><pre><span></span><span class="o">&amp;&amp;</span> java -Dols.obofoundry.ontology.config<span class="o">=</span>foo.yaml -Dols.ontology.config<span class="o">=</span>file://<span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>/ols-config.yaml -jar <span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>/ols-config-importer.jar
+</pre></div>
+
+<pre><code>with:
+
+</code></pre>
+<div class="highlight"><pre><span></span><span class="o">&amp;&amp;</span> java -Dols.obofoundry.ontology.config<span class="o">=</span>foo.yaml -Dols.ontology.config<span class="o">=</span>file://<span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>ols-config.yaml -jar <span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>ols-config-importer.jar
+</pre></div>
 <h2 id="Summary">Summary<a class="anchor-link" href="#Summary"> </a></h2><p>The local OLS provides API endpoints for retrieving, submitting, updating, and querying ontology data, as well as a user interface for searching and browsing ontologies and ontology terms. For example, all ontologies loaded can be queried through endpoint <code>http://localhost:8080/api/ontologies</code>. A detailed description of OLS functions can be found in the built-in documentation page.</p>
 <p>To customize the local OLS user interface, for example, adding corporate logos, please check the OLS source code <a href="https://github.com/EBISPOT/OLS">here</a>.</p>
 <h2 id="Reference">Reference<a class="anchor-link" href="#Reference"> </a></h2><ul>
