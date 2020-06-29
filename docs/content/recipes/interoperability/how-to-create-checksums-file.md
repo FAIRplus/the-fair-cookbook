@@ -97,7 +97,7 @@ The output should be:
 
 On the shell execute:
 
-`md5sum ~/path_to_directory/*.jpg`
+`md5sum ~/path_to_directory/*.jpg > ~/checksums.md5`
 
 The output should be:
 
@@ -120,10 +120,11 @@ This recipe in its current form has the following limitations:
 
 - The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture).
 - The procedure above could be combined with a file length indicator (usually the amount of octets = bytes); the file length is usually retrieved much faster than the checksum, and might already indicate the inequality of two files (albeit similar file length does not guarantee content-identity, of course).
-- 
+- From Wikipedia: "Windows users may use the included PowerShell function "Get-FileHash"
+-
 ## Possible improvements from the current state of this recipe
 
-- while md5 is the most common hashing algorithm, but known to have vulnerabilities for checksum hacking, and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. sha512.
+- while md5 is the most common hashing algorithm, but known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. sha512.
 
 
 ## Further reading

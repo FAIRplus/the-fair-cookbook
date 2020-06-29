@@ -77,7 +77,7 @@ ___
 
 On the shell execute:
 
-`md5sum ~/file_to_compare.txt`
+`md5sum -c ~/checksums.md5`
 
 The output should be:
 
@@ -108,7 +108,8 @@ This recipe in its current form has the following limitations:
 ## Further reading
 
 - Wikipedia article on checksums:
-- Wikipedia article on md5:
+- Wikipedia article on md5sum: https://en.wikipedia.org/wiki/Md5sum
+- Overview of checksum comparison with respect to file transmission: https://en.wikipedia.org/wiki/File:CPT-Hashing-File-Transmission.svg
 
 ## Capability & Maturity Table
 
