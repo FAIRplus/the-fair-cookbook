@@ -31,21 +31,19 @@ ___
 
 ## Graphical Overview
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbkF7UmVxdWlyZW1lbnRzIGZ1bGZpbGxlZD99IC0tPnxZZXN8IEJbQXBwbHkgdGhpcyByZWNpcGVdXG5BIC0tPnxOb3wgRChTVE9QKVxuQiAtLT4gQyhGQVNUUSBmaWxlIHZhbGlkYXRpb24gb3V0cHV0KVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbkF7UmVxdWlyZW1lbnRzIGZ1bGZpbGxlZD99IC0tPnxZZXN8IEJbQXBwbHkgdGhpcyByZWNpcGVdXG5BIC0tPnxOb3wgRChTVE9QKVxuQiAtLT4gQyhGQVNUUSBmaWxlIHZhbGlkYXRpb24gb3V0cHV0KVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblN0YXJ0KFNUQVJUKSAtLT4gQVxuQXtSZXF1aXJlbWVudHMgZnVsZmlsbGVkP30gLS0-fFllc3wgQltBcHBseSB0aGlzIHJlY2lwZV1cbkEgLS0-fE5vfCBTdG9wKFNUT1ApXG5CIC0tPiBDKENhbGN1bGF0ZSB0aGUgY2hlY2tzdW1zIGluIHNvdXJjZSBzeXN0ZW0pXG5DIC0tPiBFbmQoRU5EKSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblN0YXJ0KFNUQVJUKSAtLT4gQVxuQXtSZXF1aXJlbWVudHMgZnVsZmlsbGVkP30gLS0-fFllc3wgQltBcHBseSB0aGlzIHJlY2lwZV1cbkEgLS0-fE5vfCBTdG9wKFNUT1ApXG5CIC0tPiBDKENhbGN1bGF0ZSB0aGUgY2hlY2tzdW1zIGluIHNvdXJjZSBzeXN0ZW0pXG5DIC0tPiBFbmQoRU5EKSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
 <div class="mermaid">
 graph TD
-S(START) --> A
+Start(START) --> A
 A{Requirements fulfilled?} -->|Yes| B[Apply this recipe]
-A -->|No| D(STOP)
-B --> C(Calculate the checksums in source and target system)
-C --> D{Checksums identical?}
-D -->|Yes| E(Identity confirmed)
-D -->|No| F(Identity could not be confirmed)
+A -->|No| Stop(STOP)
+B --> C(Calculate the checksums in source system)
+C --> End(END)
 </div>
 
 ---
-
+ 
 ## Requirements:
 
 This recipe assumes the following:
@@ -53,15 +51,22 @@ This recipe assumes the following:
   - both source and target systems have the Linux operating system, preferentially Debian (no root access needed)
   - you have basic knowledge of how to use a terminal (called "shell", this can be bash or similar)
   - the tool `md5sum` is installed
-  - the source and target files are both placed in your home directory; we assume they are called `file_to_compare.txt` (replace this filename as necessary in the recipe instructions; you can download a demo file from here: ##TODO
-  - for the more complex example (compare many files): the source and target files are both placed in a directory called `path_to_directory` within your home directory; we assume that this directory contains many image files with arbitrary names, but the common file extension ´.jpg´.
+  - the source and target files are both placed in your home directory; we assume they are called `file_to_compare.txt` (replace this filename as necessary in the recipe instructions; you can download a demo file from here: [../assets/file_to_compare.txt]
+  - for the more complex example (compare many files): the source and target files are both placed in a directory called `path_to_directory` within your home directory; we assume that this directory contains many image files with arbitrary names, but all with the common file extension ´.jpg´.
 
 
 Checking the requirements (tests):
 
-  - Start up a console. Type `md5sum -v` and hit return. You should see `TODO` as output.
-  - Execute on the console `ls ~/file_to_compare.txt`. The output should be `file_to_compare.txt`
-  - Execute on the console `ls -1 ~/path_to_directory/*.jpg`. You should see a list of all image files.
+  - Start up a console. Type `md5sum --version` and hit return. You should see as output: ````
+md5sum (GNU coreutils) 8.30
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Ulrich Drepper, Scott Miller, and David Madore.```.
+  - Execute on the console `ls ~/file_to_compare.txt`. The output should be something like `/home/USERNAME/file_to_compare.txt`, where `USERNAME` is your username on the computer system. The output should NOT be something like `ls: cannot access '/home/USERNAME/file_to_compare.txt2': No such file or directory`.
+  - Execute on the console `ls -1 ~/path_to_directory/*.jpg`. You should see a list of all image files. The output should NOT be something like `ls: cannot access '/home/USERNAME/path_to_directory/*.jpg': No such file or directory`.
 
 
 ___
@@ -76,22 +81,24 @@ On the shell execute:
 
 The output should be:
 
-```
-
-```
+`c691b3d2fc2678839a9c141b6ee1524e  /home/USERNAME/file_to_compare.txt`
 
 ### Storing the checksums in a dedicated file
 
 
 On the shell execute:
 
-`md5sum ~/file_to_compare.txt`
+`md5sum ~/file_to_compare.txt > checksums.md5`
+
+You will not get output for this command. 
+
+Execute: 
+
+`cat checksums.md5`
 
 The output should be:
 
-```
-
-```
+`c691b3d2fc2678839a9c141b6ee1524e  /home/USERNAME/file_to_compare.txt`
 
 ### Calculating the checksums for all files in one directory
 
@@ -99,11 +106,9 @@ On the shell execute:
 
 `md5sum ~/path_to_directory/*.jpg > ~/checksums.md5`
 
-The output should be:
+There will be no output; however, this command may take a while to execute.
 
-```
-
-```
+For 60 pictures of 3.5 MB each, this command took 1.6 seconds on a MacBook Pro (2017) with a SSD drive.
 
 
 ### Limitations of this recipe
@@ -111,9 +116,9 @@ The output should be:
 This recipe in its current form has the following limitations:
 
   - the above assumes that everything is placed in your home folder. If this is not the case, replace `~`, the home directory indicator, by the corresponding path, or execute specifically all `md5sum` commands only with relative pathes (by navigating in the corresponding directory, first).
-  - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: TODO
+  - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: 0.01 seconds per MB of data.  
   - you should mind the general limitations of checksums, which are however not covered in this recipe.
-  - there is a known clash between the output format of the GNU / Linux tool `md5sum` and the macOS tool `md5`. They are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward.
+  - there is a known clash between the output format of the GNU / Linux tool `md5sum` and the macOS / BSD tool `md5`. Their standard output formats are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward. (hint: the Linux tool has the `--tag` flag which generates macOS-compatible output.) 
 
 
 ### Extendability of this recipe
@@ -121,20 +126,20 @@ This recipe in its current form has the following limitations:
 - The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture).
 - The procedure above could be combined with a file length indicator (usually the amount of octets = bytes); the file length is usually retrieved much faster than the checksum, and might already indicate the inequality of two files (albeit similar file length does not guarantee content-identity, of course).
 - From Wikipedia: "Windows users may use the included PowerShell function "Get-FileHash"
--
+
 ## Possible improvements from the current state of this recipe
 
-- while md5 is the most common hashing algorithm, but known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. sha512.
+- `md5` is the most common hashing algorithm, but is also known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. `sha512`.
+- `md5` and checksum concepts are neither part of EDAM ontology nor of FAIRsharing.org. It would greatly benefit the community if these terminologies were introduced.
 
 
 ## Further reading
 
-- Wikipedia article on checksums:
-- Wikipedia article on md5:
+- Wikipedia article on checksums: <https://en.wikipedia.org/wiki/Checksum>
+- Wikipedia article on the algorithm `md5`: <https://en.wikipedia.org/wiki/MD5>
+- Wikipedia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 
 ## Capability & Maturity Table
-
-TODO
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
@@ -144,21 +149,20 @@ TODO
 
 ## FAIRification Objectives, Inputs and Outputs
 
-TODO
-
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [Format Validation](http://edamontology.org/operation_0336)  | [FASTQ file](https://fairsharing.org/FAIRsharing.r2ts5t)  | [report](http://edamontology.org/data_2048)  |
+
+COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology.
 
 ---
 
 ## Table of Data Standards
 
-TODO
-
 | Data Formats  |
 | :------------- |
-| [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  |
+
+COMMENT: the concepts in this recipe did not map to any terms from the FAIRsharing.org database.
+
 
 ---
 
