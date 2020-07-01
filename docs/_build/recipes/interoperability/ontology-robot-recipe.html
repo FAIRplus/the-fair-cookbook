@@ -110,7 +110,8 @@ ___
 <li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
 <li><a href="#License">License</a></li>
 </ol>
-<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is building an application ontology from source ontologies using <code>ROBOT</code> via a sustainable dynamic pipeline to allow seamless integration of source ontology updates.</p>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><blockquote><p>The main purpose of this recipe is building an application ontology from source ontologies using <code>ROBOT</code> via a sustainable dynamic pipeline to allow seamless integration of source ontology updates.</p>
+</blockquote>
 <p>An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the <code>application ontology</code> synchronized with the <code>reference ontologies</code> that imports are made from.  We aim to document how a certain level of automation can be achieved.</p>
 <p><a href="http://robot.obolibrary.org/">ROBOT</a> is an open source tool for ontology development. It supports ontology editing, ontology annotation, ontology format conversion, and other functions. It runs on the Java Virtual Machine (JVM) and can be used through command line tools on Windows, macOS and Linux.</p>
 <h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><div class="mermaid">
@@ -251,15 +252,11 @@ graph TD
 </tr>
 <tr>
 <td style="text-align:left"></td>
-<td style="text-align:left">:heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs? (Might be out of scope for ROBOT)</td>
+<td style="text-align:left">:heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs?</td>
 </tr>
 <tr>
 <td style="text-align:left"></td>
 <td style="text-align:left">:heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">:heavy_plus_sign: How to merge the internal ontology with publicly available ontologies?</td>
 </tr>
 <tr>
 <td style="text-align:left"></td>
@@ -274,7 +271,7 @@ graph TD
 <td style="text-align:left">:heavy_plus_sign: How to identify differences in comparison to a previous version of the resulting ontology?</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>Questions without specifying compounds or genes</strong></td>
+<td style="text-align:left"><strong>Questions without specifying compounds or genes for the <a href="https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx">example dataset</a></strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -331,7 +328,7 @@ graph TD
 </tr>
 <tr>
 <td style="text-align:left"></td>
-<td style="text-align:left">:heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific diseas</td>
+<td style="text-align:left">:heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease</td>
 </tr>
 </tbody>
 </table>
@@ -686,7 +683,7 @@ After the <em>Domain Expert</em> and the <em>Use Case/Scenario Owner</em> specif
 </tr>
 </tbody>
 </table>
-<blockquote><p>:warning: <strong><em>Tip:</em></strong> The generated ontology can be visualized by using the Protege tool or a local deployment of OLS (Recipe 1.3). The <code>OLS local deployment</code> option is recommended by this recipe, given that <code>Protege</code> crash when loading medium or large size ontologies.</p>
+<blockquote><p>:warning: <strong><em>Tip:</em></strong> The generated ontology can be visualized by using the Protege tool or a <a href="https://hackmd.io/@FAIRcookbook/H1axYY3wU">local deployment of OLS</a>. The <code>OLS local deployment</code> option is recommended by this recipe, given that <code>Protege</code> crash when loading medium or large size ontologies.</p>
 </blockquote>
 <h3 id="Step-5:-Merge-ontology-modules-and-umbrella-ontology">Step 5: Merge ontology modules and umbrella ontology<a class="anchor-link" href="#Step-5:-Merge-ontology-modules-and-umbrella-ontology"> </a></h3><p>Merging the ontology modules previuosly extracted and the umbrella ontology locally built produces a first draft of the application ontology.</p>
 <p>The <code>merge</code> ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the <code>ROBOT</code> command merging the umbrella ontology and the modules is shown:</p>

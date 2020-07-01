@@ -13,12 +13,18 @@ Visit [https://fairplus.github.io/the-fair-cookbook](https://the-fair-cookbook.n
 
 This is the github repository for the `FAIR Cookbook`, assembled by the [IMI FAIRplus project](https://fairplus-project.eu/), an EU funded project running from *2018 to 2022*. The repository hosts  documentation, known as `FAIR recipes`, and supporting code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly (quarterly) in order to reflect the work progress made by the project and the various working groups bringing together `academic` and `industry` partners.
 
+
+## Persona-based content browsing
+
+:construction: **This section is under development** :construction:
+
+
 <div class="row">
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
-	    <h4><b>Helmut Utwiklig</b></h4>
+	    <h4><b>Helmut</b></h4>
 	    <p>Architect & Engineer</p>
 	  </div>
 	</div>
@@ -27,7 +33,7 @@ This is the github repository for the `FAIR Cookbook`, assembled by the [IMI FAI
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-2x" style="color:#fc7a4a;"></i>
-	    <h4><b>Jean Dupoint</b></h4>
+	    <h4><b>Jean</b></h4>
 	    <p>Data Scientist</p>
 	  </div>
 	</div>
@@ -36,7 +42,7 @@ This is the github repository for the `FAIR Cookbook`, assembled by the [IMI FAI
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
-	    <h4><b>Fulvia Innocenti</b></h4>
+	    <h4><b>Fulvia</b></h4>
 	    <p>Data Curator</p>
 	  </div>
 	</div>
@@ -45,7 +51,7 @@ This is the github repository for the `FAIR Cookbook`, assembled by the [IMI FAI
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
-	    <h4><b>Wang Ju Fong</b></h4>
+	    <h4><b>Wang Ju</b></h4>
 	    <p>Head of Clinical Research</p>
 	  </div>
 	</div>
@@ -92,14 +98,21 @@ This is the github repository for the `FAIR Cookbook`, assembled by the [IMI FAI
 
 
 
-## Content and learning outcomes
+## Content and learning objectives
 
 Learn how to FAIRify a number of exemplar datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges. 
 
+
+## The FAIRification Process
 <div>
- <img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" />
+ <img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" onclick="window.open('./images/userjourney.svg', '_blank');" />
 </div>
 
+
+
+## The FAIR principles & key recipes: 
+
+:construction: **This section is under development** :construction:
 
 
 <div class="row">
@@ -268,7 +281,7 @@ Learn how to FAIRify a number of exemplar datasets, putting the FAIR principles 
 
 
 
-## Roadmap and Timeline
+## Development Roadmap
 
 The FAIRcookbook development process currently operates on a quarterly release cycle. Each cycle sees 2 `scrums` where specific `use cases` or `themes` are chosen and task forces assigned. The outcome of these efforts are new `FAIRification protocols`, or `FAIR recipes`, which after review are integrated to the main FAIRCookbook are tagged for release to the master branch, which is used to build the web-friendly version of the book.
 
@@ -287,11 +300,14 @@ ___
 
 * The FAIR Cookbook is a project aiming at collating protocols for making data FAIR
 * The FAIR Cookbook is open source and licensed under CC-BY-4.0
-* The FAIR Coobook is writting using Markdown and deployed using `jupyter-tool`
+* The FAIR Coobook is written using Markdown and deployed using `jupyter-tool`
 * The FAIR Cookbook is an activity of the [FAIRplus project](https://fairplus-project.eu/) funded by the [Innovative Medicine Initiative (IMI)](www.imi.europa.eu)  
  <img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).
 
 <!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
+
+
+## Meet the developers:
 
 * The FAIR Cookbook development currently coordinated by: 
  

@@ -58,6 +58,10 @@
 #   expand_sections: true
 #   sections:
 
+# - title: What is FAIR
+#   url: /recipes/introduction/FAIR
+#   not_numbered: false
+
 - title: The Values of FAIR
   url: /recipes/introduction/FAIRplus-values
   not_numbered: false
@@ -65,7 +69,7 @@
 - title: Infrastructure for FAIR
   url: /recipes/infrastructure
   not_numbered: false
-  expand_sections: true
+  expand_sections: false
   sections:
     - title: Identifier Resolution Service
       url: /recipes/infrastructure/id-resolution
@@ -108,6 +112,18 @@
       - title: bioschema data page
         url: /recipes/findability/seo/bioschemas-data-page
         not_numbered: false
+
+- title: Accessibility
+  url: /recipes/accessibility
+  not_numbered: false
+  expand_sections: false
+  sections:
+    - title: Anonymization Recipe
+      url: /recipes/accessibility/anonymization
+      not_numbered: false
+    - title: Selecting a Licensing Mode
+      url: /recipes/accessibility/license-selection
+      not_numbered: false
     
 - title: Interoperability
   url:  /recipes/interoperability
@@ -133,18 +149,10 @@
           url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process
           not_numbered: false
 
-- title: Accessibility
-  url: /recipes/accessibility
-  not_numbered: false
-  expand_sections: true
-  sections:
-    - title: Anonymization Recipe
-      url: /recipes/accessibility/anonymization
-      not_numbered: false
-    - title: Selecting a Licensing Mode
-      url: /recipes/accessibility/license-selection
-      not_numbered: false
-
+- title: Reusability
+  url:  /recipes/reusability
+  expand_sections: false
+  
 - title: FAIR Assessment
   url: /recipes/assessing-fairness
   not_numbered: false
@@ -157,7 +165,7 @@
 - title: Applied Examples
   url: /recipes/applied-examples
   not_numbered: false
-  expand_sections: true
+  expand_sections: false
   sections:
     - title: FAIR data matrix Recipe
       url: /recipes/applied-examples/fair-data-matrix-recipe
@@ -266,7 +274,7 @@
 - divider: true
 - title: Project Information
   url: /project_information
-  expand_sections: true
+  expand_sections: false
   sections:
   # people section
   - title: People
