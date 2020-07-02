@@ -10,7 +10,7 @@ Names are followed by GitHub usernames.
 
 - [Andrea Splendiani](https://github.com/sfcs)
 - [Susanna Sansone](https://github.com/susannasansone)
-- [Robert Giessmann](https://github.com/sfcs)
+- [Robert Giessmann](https://github.com/robertgiessmann)
 
 
 ### Identifier Subcommittee
