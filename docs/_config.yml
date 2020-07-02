@@ -40,6 +40,7 @@ footer_text:
   <div class="column" style="center"><a href="https://europa.eu/"><img src="/cookbook-dev/assets/images//logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
   <div class="column"><a href="https://www.imi.europa.eu/"><img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
   <div class="column"><a href="https://efpia.eu"><img src="/cookbook-dev/assets/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
+  <br/>
   </div>
 
   <div class="row_footer">
@@ -129,7 +130,7 @@ defaults:
     toc_icon: list-ul
     excerpt: ''
 
-favicon_path: images/logo/fairplus-favicon_io/favicon.ico
+favicon_path: images/logo/favicon.ico
 
 # Markdown Processing
 markdown: kramdown
