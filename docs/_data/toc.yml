@@ -138,7 +138,8 @@
       url: /recipes/interoperability/creating-minimal-metadata-profiles
       not_numbered: false
     - title: Covid19 Sample MetaData Profile Shex Validation
-      url: /recipes/interoperability/covid19-sample-metadata_profile-shex-use-case
+      url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
+      # url: /recipes/interoperability/covid19-test
       not_numbered: false
     - title: How to request new terms in existing ontologies
       url: /recipes/interoperability/ontology-new-term-request-recipe
