@@ -1,6 +1,14 @@
-# the-fair-cookbook
+# The FAIR cookbook
 
-Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web page produced from the code in this repo. Right now you are seeing things that are relevant to editors of this book.
+FAIR data is **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. 
+
+This means: 
+  - your data can be cited
+  - the impact and visibility of your research will be increased
+  - you benefit the public good
+  - your data is more useful because it is easier to compare with other data
+  
+This FAIR cookbook gives you step-by-step recipes for making your data FAIR.
 
 
 ## For readers
