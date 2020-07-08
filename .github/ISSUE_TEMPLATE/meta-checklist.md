@@ -16,7 +16,7 @@ For issue meta-management, please conduct the following steps:
 - [ ] add this issue to the corresponding Project, i.e. Kanban board (at your right side: click "Projects" -> "UC..."
 
 Now you can delete the text above.
-If you needed to add a task to the list above, please think about amending the issue template: https://github.com/FAIRplus/the-fair-cookbook/blob/master/.github/ISSUE_TEMPLATE/meta-checklist.md
+If you needed to add a task to the list below, please think about amending the issue template: https://github.com/FAIRplus/the-fair-cookbook/blob/master/.github/ISSUE_TEMPLATE/meta-checklist.md
 Great! Now, to the actual tasks:
 
 - [ ] identify author
