@@ -16,20 +16,17 @@ For issue meta-management, please conduct the following steps:
 - [ ] label this issue with the corresponding Use Case Number (at your right side: click "Labels" -> "UC..."
 - [ ] add this issue to the corresponding Project, i.e. Kanban board (at your right side: click "Projects" -> "UC..."
 
-
+Now you can delete the text above.
+If you needed to add a task to the list above, please think about amending the issue template: https://github.com/FAIRplus/the-fair-cookbook/blob/master/.github/ISSUE_TEMPLATE/meta-checklist.md
 Great! Now, to the actual tasks:
 
-- [ ] facilitator: identify author for this recipe
-- [ ] facilitator: agree with editors on scope and position within the cookbook 
-- [ ] author: write abstract; share via issue (LINK TO ISSUE HERE) 
-- [ ] editors: write feedback on abstract; share via issue  (LINK TO ISSUE HERE)
-- [ ] author: make corresponding changes to abstract
-- [ ] author: write recipe; share the recipe  (LINK TO ISSUE HERE)
-- [ ] facilitator: identify reviewer for this recipe 
-- [ ] reviewer: conduct review; share the review output  (LINK TO ISSUE HERE)
-- [ ] author: introduce reviewer's comments
-- [ ] editors: incorporate recipe into cookbook (LINK TO ISSUE HERE)
-
-Cool, that's it! 
-
-If you needed to add a task to the list above, please think about amending the issue template: https://github.com/FAIRplus/the-fair-cookbook/blob/master/.github/ISSUE_TEMPLATE/meta-checklist.md
+- [ ] identify author
+- [ ] agree with editors on scope
+- [ ] write abstract
+- [ ] write feedback on abstract
+- [ ] make corresponding changes to abstract
+- [ ] write recipe
+- [ ] identify reviewer
+- [ ] conduct review
+- [ ] incorporate reviewer's comments
+- [ ] publish recipe
