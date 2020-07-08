@@ -17,4 +17,4 @@ jobs:
         BASE_BRANCH: master # The branch the action should deploy from. 
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: docs # The folder the action should deploy.
-        BUILD_SCRIPT: pip install jupyter-book && jupyter-book build docs --overwrite  # The build script the action should run prior to deploying.
+        BUILD_SCRIPT: pip install jupyter-book==0.6.5 && jupyter-book build docs --overwrite  # The build script the action should run prior to deploying.
