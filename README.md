@@ -3,40 +3,17 @@
 Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web page produced from the code in this repo. Right now you are seeing things that are relevant to editors of this book.
 
 
-## Welcome to GitHub Pages
+## For readers
 
-You can use the [editor on GitHub](https://github.com/fair-cookbook/the-fair-cookbook/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You are probably looking for [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook). Or do you want to leave feedback? If so, please see below.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## For authors, editors, and developers 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Detailed information for authors is available here: [Info For Authors](./for_authors.md)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## Feedback, Support or Contact
 
-- Bulleted
-- List
+Having trouble with the page? Want to give feedback? Drop us a line at FAIRplus-PM@elixir-europe.org or file an Issue here on GitHub. Looking forward to hear from you!
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fair-cookbook/the-fair-cookbook/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
