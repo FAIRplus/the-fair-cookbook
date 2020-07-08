@@ -159,36 +159,36 @@
 
 # people section
 - title: People
-  url: People
+  url: /People
   not_numbered: true  
 
 # Contribution section
 - title: Contributing
-  url: Contributing
+  url: /Contributing
   not_numbered: true
 
 # Governance section
 - title: Governance
-  url: Governance
+  url: /Governance
   not_numbered: true 
 
 # license section
 - title: License
-  url: license
+  url: /license
   not_numbered: true    
 
 # disclaimer section
 - title: Disclaimer
-  url: disclaimer
+  url: /disclaimer
   not_numbered: true  
 
 # Code of Conduct section
 - title: Code of Conduct
-  url: code_of_conduct
+  url: /code_of_conduct
   not_numbered: true  
 
 # publications section
 - title: Publications
-  url: papers
+  url: /papers
   not_numbered: true    
   
