@@ -1,0 +1,332 @@
+---
+title: |-
+  Search Engine optimization
+prev_page:
+  url: /recipes/findability/zenodo-deposition.html
+  title: |-
+    Depositing to Zenodo
+next_page:
+  url: /recipes/findability/seo/bioschemas-datacatalog.html
+  title: |-
+    bioschema data catalog
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Findability:-Search-Engine-Optimization">Findability: Search Engine Optimization<a class="anchor-link" href="#Findability:-Search-Engine-Optimization"> </a></h1><!-- **identifier:** [RX.X](RX.X)
+
+**version:** [v0.1](v0.1)
+
+ **_Difficulty level:_** :triangular_flag_on_post: :white_circle: :white_circle:  :white_circle:  :white_circle:
+
+**_Reading time:_** 10 minutes
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Application Developer
+
+> :heavy_check_mark: Data Scientist
+
+**_Recipe Type_**: Guidance
+
+**_Executable code_**: No -->
+
+<hr>
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">RX.X</a> </p>
+        <p> version: <a href="">v1.0</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 10 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle" style="color:#fc7a4a;"></i> No</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+<!--         <p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigators </p> -->
+        <p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+ <!--        <p> <i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funders</p> -->
+      </div>
+    </div>
+  </div>
+</div><hr>
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>to describe what <code>search engine optimization</code> is and show how to implement markup with the <a href="http://schema.org"><code>Schema.org</code></a> vocabulary, and <a href="https://bioschemas.org"><code>Bioschemas</code></a> extension, to improve page discovery and visibility by web page indexers.</p>
+</blockquote>
+<p>There are sub-recipes for embedding search engine optimization into specific web pages about a specific type or resource:</p>
+<ul>
+<li><a href="./seo/bioschemas-datacatalog.html">Data catalog</a></li>
+<li><a href="./seo/bioschemas-dataset.html">Dataset</a></li>
+<li><a href="./seo/bioschemas-data-page.html">Resource specific page</a> (Gene, Molecular Entity, Protein)</li>
+</ul>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><!--
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQShIVE1MIHBhZ2UpOjo6Ym94IC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7V2hhdCA8YnI-dHlwZSA8YnI-IG9mPGJyPiBwYWdlP306Ojpib3hcbiAgQiAtLT4gQyhEYXRhc2V0KTo6OmJveFxuICBCIC0tPiBEKERhdGEgY2F0YWxvZyk6Ojpib3hcbiAgQiAtLT4gRShEYXRhIHBhZ2UpOjo6Ym94XG4gIEUgLS0-IEZ7V2hhdCA8YnI-IHR5cGUgb2YgPGJyPiBkYXRhIDxicj4gcGFnZX06Ojpib3hcbiAgRiAtLT4gRyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gIEYgLS0-IEgoR2VuZSk6Ojpib3hcbiAgRiAtLT4gSShNb2xlY3VsYXIgZW50aXR5KTo6OmJveFxuICBGIC0tPiBKKFByb3RlaW4pOjo6Ym94XG4gIEYgLS0-IEsoU2FtcGxlKTo6OmJveFxuICBGIC0tPiBMKFRheG9uKTo6OmJveFxuICBDIC0tPiBNXG4gIEQgLS0-IE1cbiAgRyAtLT4gTVxuICBIXHQtLT4gTVxuICBJIC0tPiBNXG4gIEogLS0-IE1cbiAgSyAtLT4gTVxuICBMIC0tPiBNKFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiAgTSAtLT4gTihmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IGltcHJvdmVkIGRpc2NvdmVyYWJpbGl0eSk6Ojpib3hcbmNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxubGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTkgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjpudWxsfSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQShIVE1MIHBhZ2UpOjo6Ym94IC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7V2hhdCA8YnI-dHlwZSA8YnI-IG9mPGJyPiBwYWdlP306Ojpib3hcbiAgQiAtLT4gQyhEYXRhc2V0KTo6OmJveFxuICBCIC0tPiBEKERhdGEgY2F0YWxvZyk6Ojpib3hcbiAgQiAtLT4gRShEYXRhIHBhZ2UpOjo6Ym94XG4gIEUgLS0-IEZ7V2hhdCA8YnI-IHR5cGUgb2YgPGJyPiBkYXRhIDxicj4gcGFnZX06Ojpib3hcbiAgRiAtLT4gRyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gIEYgLS0-IEgoR2VuZSk6Ojpib3hcbiAgRiAtLT4gSShNb2xlY3VsYXIgZW50aXR5KTo6OmJveFxuICBGIC0tPiBKKFByb3RlaW4pOjo6Ym94XG4gIEYgLS0-IEsoU2FtcGxlKTo6OmJveFxuICBGIC0tPiBMKFRheG9uKTo6OmJveFxuICBDIC0tPiBNXG4gIEQgLS0-IE1cbiAgRyAtLT4gTVxuICBIXHQtLT4gTVxuICBJIC0tPiBNXG4gIEogLS0-IE1cbiAgSyAtLT4gTVxuICBMIC0tPiBNKFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiAgTSAtLT4gTihmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IGltcHJvdmVkIGRpc2NvdmVyYWJpbGl0eSk6Ojpib3hcbmNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxubGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTkgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjpudWxsfSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+-->
+
+<p><div class="mermaid">
+graph TD
+  A(HTML page):::box -->| Search Engine Optimization| B{What <br>type <br> of<br> page?}:::box
+  B --> C(Dataset):::box
+  B --> D(Data catalog):::box
+  B --> E(Data page):::box
+  E --> F{What <br> type of <br> data <br> page}:::box
+  F --> G(Chemical Substance):::box
+  F --> H(Gene):::box
+  F --> I(Molecular entity):::box
+  F --> J(Protein):::box
+  F --> K(Sample):::box
+  F --> L(Taxon):::box
+  C --> M
+  D --> M
+  G --> M
+  H --> M
+  I --> M
+  J --> M
+  K --> M
+  L --> M(Schema.org augmented HTML page):::box
+  M --> N(fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability):::box
+classDef box font-family:avenir,font-size:14px,fill:#300861,stroke:#222,color:#fff,stroke-width:1px
+linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+</div></p>
+<hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Findabililty</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Main-body-of-the-recipe">Main body of the recipe<a class="anchor-link" href="#Main-body-of-the-recipe"> </a></h2><h3 id="Finding-web-pages">Finding web pages<a class="anchor-link" href="#Finding-web-pages"> </a></h3><p>Providers of content for the Internet serve documents formatted or rendered in <a href="https://en.wikipedia.org/wiki/HTML"><code>HTML</code> format</a>. The web pages are hosted on servers, which are accessed via the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"><code>HTTP protocol</code></a>. HTML pages can be styled with <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"><code>cascading stylesheets (CSS)</code></a> and interactivity can be delivered via scripting languages such as <a href="https://en.wikipedia.org/wiki/JavaScript"><code>Javascript</code></a>.</p>
+<p>With billions of web pages served, a key issue is finding content. To assist in this task, search engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (e.g. site map), or by targeting specific data structures embedded in the web pages themselves.</p>
+<h3 id="What-is-search-engine-optimization">What is search engine optimization<a class="anchor-link" href="#What-is-search-engine-optimization"> </a></h3><p>Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, <code>search engine optimization</code> covers any of the practices which aim at improving the position of a web page in a search result.</p>
+<h3 id="Schema.org-Vocabulary">Schema.org Vocabulary<a class="anchor-link" href="#Schema.org-Vocabulary"> </a></h3><p>A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
+Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation</p>
+<h3 id="How-does-Schema.org-work-in-practice:">How does Schema.org work in practice:<a class="anchor-link" href="#How-does-Schema.org-work-in-practice:"> </a></h3><p>The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). <code>JSON-LD</code> is widely recommended as the most suitable approach.</p>
+<p>Below is a regular plain vanilla HTML page providing information about an scientific joournal article.</p>
+<div class="highlight"><pre><span></span><span class="c">&lt;!-- A list of the issues for a single volume of a given periodical. --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>The Lancet<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Volume 376, July 2010-December 2010<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Published by Elsevier
+ <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>ISSN: 0140-6736<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Issues:<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>No. 9734 Jul 3, 2010 p 1-68<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>No. 9735 Jul 10, 2010 p 69-140<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>Now, we are presenting the same information augmented with the JSON-LD file using Schema.org <code>ScholarlyArticle</code> profile. Note how the file is provided with the HTML <code>script</code> tag</p>
+<div class="highlight"><pre><span></span><span class="err">&lt;script</span> <span class="err">type=</span><span class="s2">&quot;application/ld+json&quot;</span><span class="err">&gt;</span>
+<span class="p">{</span>
+  <span class="nd">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+  <span class="nd">&quot;@graph&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nd">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;#issue&quot;</span><span class="p">,</span>
+        <span class="nd">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicationIssue&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;issueNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2012&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;isPartOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nd">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;#periodical&quot;</span><span class="p">,</span>
+            <span class="nd">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;PublicationVolume&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Periodical&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Cataloging &amp; Classification Quarterly&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;issn&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;1544-4554&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;0163-9374&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;volumeNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;50&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Taylor &amp; Francis Group&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nd">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ScholarlyArticle&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;isPartOf&quot;</span><span class="p">:</span> <span class="s2">&quot;#issue&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The library catalog as a catalog of works was an infectious idea, which together with research led to reconceptualization in the form of the FRBR conceptual model. Two categories of lacunae emerge--the expression entity, and gaps in the model such as aggregates and dynamic documents. Evidence needed to extend the FRBR model is available in contemporary research on instantiation. The challenge for the bibliographic community is to begin to think of FRBR as a form of knowledge organization system, adding a final dimension to classification. The articles in the present special issue offer a compendium of the promise of the FRBR model.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.1080/01639374.2012.682254&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;about&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Works&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Catalog&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;pageEnd&quot;</span><span class="p">:</span> <span class="s2">&quot;368&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;pageStart&quot;</span><span class="p">:</span> <span class="s2">&quot;360&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Be Careful What You Wish For: FRBR, Some Lacunae, A Review&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Smiraglia, Richard P.&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+<span class="err">&lt;/script&gt;</span>
+</pre></div>
+<p><code>JSON-LD</code> is an official serialization of <code>RDF</code> and the document is recognized as a <code>graph</code> holding a set of <code>triples</code>. The availability of such semantic statements from a web page are exploited by the indexing algorithms of search engines to provide improved search results.</p>
+<h3 id="Tools-supporting-creation-and-validation-of-structured-data">Tools supporting creation and validation of <code>structured data</code><a class="anchor-link" href="#Tools-supporting-creation-and-validation-of-structured-data"> </a></h3><p>Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
+The tool is known as the <a href="https://search.google.com/structured-data/testing-tool"><code>Google Structured Data Testing Tool</code></a></p>
+<p><img src="https://i.imgur.com/Ge8gsWL.png =650px" alt=""></p>
+<h3 id="Bioschemas:-trying-to-address-the-coverage-gap">Bioschemas: trying to address the coverage gap<a class="anchor-link" href="#Bioschemas:-trying-to-address-the-coverage-gap"> </a></h3><p><code>Schema.org</code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a href="https://bioschemas.org/"><code>Bioschemas project</code></a>, which has been running for a few years with the support of the <a href="https://elixir-europe.org/"><code>EU-Elixir organization</code></a>. <code>Bioschemas</code> focuses on making Schema.org more relevant for the life sciences community by providing:</p>
+<ol>
+<li><code>types</code> for life sciences entities such as chemicals, genes, and proteins.</li>
+<li><code>profiles</code> that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable</li>
+</ol>
+<p>The <a href="https://bioschemas.org/profiles/">main profiles</a> currently specified by the <code>Bioschemas</code> organisation are as follows:</p>
+<ul>
+<li><a href="https://bioschemas.org/profiles/ChemicalSubstance">Chemical Substance</a></li>
+<li><a href="https://bioschemas.org/profiles/DataCatalog">DataCatalog</a></li>
+<li><a href="https://bioschemas.org/profiles/Dataset">Dataset</a></li>
+<li><a href="https://bioschemas.org/profiles/Gene">Gene</a></li>
+<li><a href="https://bioschemas.org/profiles/MolecularEntity">Molecular Entity</a></li>
+<li><a href="https://bioschemas.org/profiles/Protein">Protein</a></li>
+<li><a href="https://bioschemas.org/profiles/Sample">Sample</a></li>
+<li><a href="https://bioschemas.org/profiles/Taxon">Taxon</a></li>
+</ul>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3778">text annotation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">Schema.org</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_3779">annotated text</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_2428">validation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">Schema.org</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2048">report</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/format_3749">JSON-LD</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">Schema.org</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2353">RDF</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/format_3749">JSON-LD</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2353">RDF</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Alasdair Gray</td>
+<td style="text-align:left">Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-5711-4872">0000-0002-5711-4872</a></td>
+<td style="text-align:left">Contributions to text</td>
+</tr>
+<tr>
+<td style="text-align:left">Leyla Garcia</td>
+<td style="text-align:left">Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0003-3986-0510">0000-0003-3986-0510</a></td>
+<td style="text-align:left">External review</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

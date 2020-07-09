@@ -1,0 +1,168 @@
+---
+title: |-
+  HackMD Tips and Tricks
+prev_page:
+  url: /recipes/help/how-to-create-recipe-with-hackmd.html
+  title: |-
+    How to use HackMD to write a FAIR Cookbook Recipe
+next_page:
+  url: /recipes/help/how-to-create-recipe-with-git.html
+  title: |-
+    How to create a recipe with git
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="FAIR-cookbook-recipe-template">FAIR cookbook recipe template<a class="anchor-link" href="#FAIR-cookbook-recipe-template"> </a></h1><p><strong><a href="https://fairplus.github.io/the-fair-cookbook/intro">The FAIR cookbook</a></strong></p>
+<p><strong>identifier:</strong> <a href="RX.X">RX.X</a></p>
+<p><strong>version:</strong> <a href="v1.0">v1.0</a></p>
+<hr>
+<p><strong><em>Difficulty level:</em></strong> moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle:</p>
+<p><strong><em>Reading time:</em></strong> 30 minutes</p>
+<p><strong><em>Intended Audience:</em></strong></p>
+<blockquote><p>:heavy_check_mark: FAIR Cookbook Contributors</p>
+</blockquote>
+<p><strong><em>Recipe Type</em></strong>: Hands on</p>
+<p><strong><em>Executable code</em></strong>: No</p>
+<p>[TOC]</p>
+<hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>to provide tips and tricks to styling Markdown Documents, styling Mermaid Flowcharts and creating Markdown tables.</p>
+</blockquote>
+<hr>
+<h2 id="1.-HackMD-help-and-Documentation">1. HackMD help and Documentation<a class="anchor-link" href="#1.-HackMD-help-and-Documentation"> </a></h2><p>If you are new the Markdown and HackMD, you may find the following to link quite valuable in getting you off the ground</p>
+<ol>
+<li><a href="https://hackmd.io/s/features">HackMD feature</a></li>
+</ol>
+<p>Consider this a reference point as it really provides excellent basis for a successfull interaction with HackMD and Markdown.</p>
+<ol>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">MarkDown syntax</a></li>
+</ol>
+<p>There are many such references online. This one is actually pretty good.</p>
+<ol>
+<li><a href="https://github.com/ikatyang/emoji-cheat-sheet">Emoji for Markdown cheatsheet</a></li>
+</ol>
+<p>For instance, if you'd like add a <code>warning</code> site, you can do th e following:</p>
+<p><code>:warning:</code>
+which should be rendered as this sign:</p>
+<p>:warning:</p>
+<h2 id="2.-Styling-Mermaid-Flowchart:">2. Styling Mermaid Flowchart:<a class="anchor-link" href="#2.-Styling-Mermaid-Flowchart:"> </a></h2><p>you can check the <a href="https://mermaid-js.github.io/mermaid/#/examples?id=larger-flowchart-with-some-styling">mermaid documentation</a></p>
+<p>We however provide some help with examples below</p>
+<h3 id="Problem-1:-My-text-is-long-and-the-box-becomes-huge">Problem 1: My text is long and the box becomes huge<a class="anchor-link" href="#Problem-1:-My-text-is-long-and-the-box-becomes-huge"> </a></h3><p>use an html <code>&lt;br&gt;</code> tag to add a new line in the box, like so:</p>
+
+<pre><code>subgraph one
+  A(Building &lt;br&gt; Data &lt;br&gt; Catalogue):::box
+
+
+  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+  end</code></pre>
+<h3 id="Problem-2:-how-to-change-font,-box-color?">Problem 2: how to change font, box color?<a class="anchor-link" href="#Problem-2:-how-to-change-font,-box-color?"> </a></h3><p>Use styling for the element using the <code>classDef</code> following by a short-name for this style.
+The mermaid element (boxes) can then be suffixed with that short-name using the triple colon <code>:::</code> as syntax marker.</p>
+
+<pre><code>subgraph one
+  A(Building &lt;br&gt; Data &lt;br&gt; Catalogue):::box
+
+  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+  end</code></pre>
+<h3 id="Problem-3:-how-to-change-the-color-of-the-connectors?">Problem 3: how to change the color of the connectors?<a class="anchor-link" href="#Problem-3:-how-to-change-the-color-of-the-connectors?"> </a></h3><p>Use the <code>linkStyle</code> element.
+:warning: make sure to provide the right number of connector as comma separated integers. If you get an error, it is often down to a discrepancy on this parameter.</p>
+<p>The other argument are regular <code>CSS</code> like styling.</p>
+
+<pre><code>subgraph one
+ A(Building &lt;br&gt; Data &lt;br&gt; Catalogue):::box
+ A--&gt;|define curation policies| B(Curation &lt;br&gt; Policies):::box
+
+ linkStyle 0 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;</code></pre>
+<h2 id="Problem-4:-Struggling-with-Markdown-Table">Problem 4: Struggling with Markdown Table<a class="anchor-link" href="#Problem-4:-Struggling-with-Markdown-Table"> </a></h2><p>Formatting table can be a painful process.</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.r2ts5t">FASTQ</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.2mk2zb">LOINC</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.q72e3w">SRA XML</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.b7z8by">DICOM</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.kbtt7f">Human Phenotype Ontology</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.qk984b">OMOP</a></td>
+</tr>
+</tbody>
+</table>
+<p>To cut on the hardship, simply using the following online <a href="https://www.tablesgenerator.com/markdown_tables">Markdown table generator</a></p>
+<p><img src="https://i.imgur.com/Pek2BoQ.png" alt=""></p>
+<p>The component is intuitive to use and support copy and pate from say Excel for instance. Do the necessary tuning and then hit the <code>Generate</code> button to produce the Table in MarkDown format. 
+Then, click on the green 'copy to clipboard button', go back to your markdown editor or HackMD and paste.</p>
+<p>job done!</p>
+<h2 id="Problem-5:-How-to-resize-images-or-figures:">Problem 5: How to resize images or figures:<a class="anchor-link" href="#Problem-5:-How-to-resize-images-or-figures:"> </a></h2><p>When using HackMD, images can be inserting using the common toolbar and these are uploaded to imgur and the markdown looks like this:</p>
+
+<pre><code>Markdown
+![](https://i.imgur.com/yI8TRNM.png)</code></pre>
+<p>but sizing is not properly supported which leads to rendering issues.</p>
+<p>To solve the issue, the <code>best</code> course of action is to use an HTML <code>div</code> tag, which can be styled at will, as shown below:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">img</span> 
+<span class="na">src</span><span class="o">=</span><span class="s">&quot;https://i.imgur.com/yI8TRNM.png&quot;</span> 
+<span class="na">alt</span><span class="o">=</span><span class="s">&quot;drawing&quot;</span> 
+<span class="na">style</span><span class="o">=</span><span class="s">&quot;width:750px;&quot;</span> 
+<span class="na">border</span><span class="o">=</span><span class="s">&quot;1px solid black&quot;</span> 
+<span class="na">align</span><span class="o">=</span><span class="s">&quot;top&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>Adjust the <code>width</code> element to resize the image to something satisfying.</p>
+<hr>
+<hr>
+<h2 id="How-to-create-workflow-figures">How to create workflow figures<a class="anchor-link" href="#How-to-create-workflow-figures"> </a></h2><p>one may use the following <strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> syntax:</p>
+
+<pre><code>graph LR;
+    A[Data Acquisition] --&gt;B(Raw Data)
+    B --&gt; C{FAIR by Design}
+    C --&gt;|Yes| D[Standard Compliant Data]
+    C --&gt;|No| E[Vendor locked Data]</code></pre>
+<hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-5306-5690">0000-0001-5306-5690</a></td>
+<td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
