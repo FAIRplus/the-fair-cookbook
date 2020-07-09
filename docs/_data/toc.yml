@@ -292,7 +292,6 @@
     url: /People
     not_numbered: true
 
-<<<<<<< HEAD
 # people section
 - title: People
   url: /People
@@ -328,34 +327,3 @@
   url: /papers
   not_numbered: true    
   
-=======
-  # Contribution section
-  - title: Contributing
-    url: /Contributing
-    not_numbered: true
-
-  # Governance section
-  - title: Governance
-    url: /Governance
-    not_numbered: true
-
-  # license section
-  - title: License
-    url: /license
-    not_numbered: true
-
-  # disclaimer section
-  - title: Disclaimer
-    url: /disclaimer
-    not_numbered: true
-
-  # Code of Conduct section
-  - title: Code of Conduct
-    url: /code_of_conduct
-    not_numbered: true
-
-  # publications section
-  - title: Publications
-    url: /papers
-    not_numbered: true
->>>>>>> dev
