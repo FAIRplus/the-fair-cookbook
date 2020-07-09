@@ -1,15 +1,16 @@
-# Steering Council and Institutional Partners
+# FAIR Cookbook Steering Council and Institutional Partners
 
 Names are followed by GitHub usernames.
 
-## Benevolent Dictator for Life
+## FAIR Cookbook Benevolent Dictator for Life
 
 - [Philippe Rocca-Serra](https://github.com/proccaserra) is the Benevolent Dictator for Life (BDFL).
 
-## Steering Council
+## FAIR Cookbook Steering Council
 
 - [Andrea Splendiani](https://github.com/sfcs)
 - [Susanna Sansone](https://github.com/susannasansone)
+- [Robert Giessmann](https://github.com/robertgiessmann)
 
 
 ### Identifier Subcommittee
@@ -36,7 +37,9 @@ Names are followed by GitHub usernames.
 Institutional Council members are noted with each institution.
 
 - [IMI](https://www.imi.com/) (grant officer)
-- [FAIRplus](https://fairplus-project.eu/) (Herman Van Vlijmen)
+- [FAIRplus](https://fairplus-project.eu/) [Herman Van Vlijmen](https://orcid.org/0000-0002-1915-3141)
+- [FAIRplus](https://fairplus-project.eu/) [Serena Scollen(https://orcid.org/0000-0002-9311-1337)
+- [FAIRplus](https://fairplus-project.eu/) [Hanna Hurst](https://orcid.org/0000-0002-1119-9321)
 
 
 ### Tier 2
