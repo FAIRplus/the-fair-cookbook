@@ -21,6 +21,10 @@
 #
 # See the links below for an example.
 
+# Top-level page
+- title: FAIR Cookbook
+  url: /intro
+  not_numbered: true
 
 # External link
 - title: Go to GitHub repository...
@@ -58,6 +62,10 @@
 #   expand_sections: true
 #   sections:
 
+# - title: What is FAIR
+#   url: /recipes/introduction/FAIR
+#   not_numbered: false
+
 - title: The Values of FAIR
   url: /recipes/introduction/FAIRplus-values
   not_numbered: false
@@ -65,7 +73,7 @@
 - title: Infrastructure for FAIR
   url: /recipes/infrastructure
   not_numbered: false
-  expand_sections: true
+  expand_sections: false
   sections:
     - title: Identifier Resolution Service
       url: /recipes/infrastructure/id-resolution
@@ -108,6 +116,18 @@
       - title: bioschema data page
         url: /recipes/findability/seo/bioschemas-data-page
         not_numbered: false
+
+- title: Accessibility
+  url: /recipes/accessibility
+  not_numbered: false
+  expand_sections: false
+  sections:
+    - title: Anonymization Recipe
+      url: /recipes/accessibility/anonymization
+      not_numbered: false
+    - title: Selecting a Licensing Mode
+      url: /recipes/accessibility/license-selection
+      not_numbered: false
     
 - title: Interoperability
   url:  /recipes/interoperability
@@ -117,30 +137,33 @@
       url: /recipes/interoperability/selecting-ontologies
       not_numbered: false
 
-  sections:
     - title: Minimal MetaData Profiles
       url: /recipes/interoperability/creating-minimal-metadata-profiles
       not_numbered: false
-
+    - title: Covid19 Sample MetaData Profile Shex Validation
+      url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
+      # url: /recipes/interoperability/covid19-test
+      not_numbered: false
     - title: How to request new terms in existing ontologies
       url: /recipes/interoperability/ontology-new-term-request-recipe
       not_numbered: false
+
     - title: How to build an application ontology
       url: /recipes/interoperability/ontology-robot-recipe
       not_numbered: false
+      subsections:
+        - title: MSIO robot build process
+          url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process
+          not_numbered: false
 
-- title: Accessibility
-  url: /recipes/accessibility
-  not_numbered: false
-  expand_sections: true
-  sections:
-    - title: Anonymization Recipe
-      url: /recipes/accessibility/anonymization
-      not_numbered: false
-    - title: Selecting a Licensing Mode
-      url: /recipes/accessibility/license-selection
+    - title: How to convert to open format from propriatory
+      url: /recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar
       not_numbered: false
 
+- title: Reusability
+  url:  /recipes/reusability
+  expand_sections: false
+  
 - title: FAIR Assessment
   url: /recipes/assessing-fairness
   not_numbered: false
@@ -153,7 +176,7 @@
 - title: Applied Examples
   url: /recipes/applied-examples
   not_numbered: false
-  expand_sections: true
+  expand_sections: false
   sections:
     - title: FAIR data matrix Recipe
       url: /recipes/applied-examples/fair-data-matrix-recipe
@@ -196,7 +219,7 @@
     not_numbered: true
 
 # Divider for meta-pages and search page
-- divider: true
+# - divider: true
 
 # A chapter w/ a collection of sections beneath it
 # - title: Features and customization
@@ -262,39 +285,45 @@
 - divider: true
 - title: Project Information
   url: /project_information
-  expand_sections: true
+  expand_sections: false
   sections:
   # people section
   - title: People
     url: /People
     not_numbered: true
 
-  # Contribution section
-  - title: Contributing
-    url: /Contributing
-    not_numbered: true
+# people section
+- title: People
+  url: /People
+  not_numbered: true  
 
-  # Governance section
-  - title: Governance
-    url: /Governance
-    not_numbered: true
+# Contribution section
+- title: Contributing
+  url: /Contributing
+  not_numbered: true
 
-  # license section
-  - title: License
-    url: /license
-    not_numbered: true
+# Governance section
+- title: Governance
+  url: /Governance
+  not_numbered: true 
 
-  # disclaimer section
-  - title: Disclaimer
-    url: /disclaimer
-    not_numbered: true
+# license section
+- title: License
+  url: /license
+  not_numbered: true    
 
-  # Code of Conduct section
-  - title: Code of Conduct
-    url: /code_of_conduct
-    not_numbered: true
+# disclaimer section
+- title: Disclaimer
+  url: /disclaimer
+  not_numbered: true  
 
-  # publications section
-  - title: Publications
-    url: /papers
-    not_numbered: true
+# Code of Conduct section
+- title: Code of Conduct
+  url: /code_of_conduct
+  not_numbered: true  
+
+# publications section
+- title: Publications
+  url: /papers
+  not_numbered: true    
+  

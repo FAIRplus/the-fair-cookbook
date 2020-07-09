@@ -1,0 +1,375 @@
+---
+title: |-
+  How to convert to open format from propriatory
+prev_page:
+  url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process.html
+  title: |-
+    MSIO robot build process
+next_page:
+  url: /recipes/reusability.html
+  title: |-
+    Reusability
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="From-proprietary-format-to-open-standard-format:-an-exemplar">From proprietary format to open standard format: an exemplar<a class="anchor-link" href="#From-proprietary-format-to-open-standard-format:-an-exemplar"> </a></h1><h2 id="Converting-Mass-Spectrometry-data-to-mzML-format">Converting Mass Spectrometry data to mzML format<a class="anchor-link" href="#Converting-Mass-Spectrometry-data-to-mzML-format"> </a></h2><div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">RX.X</a> </p>
+        <p> version: <a href="">v1.0</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 20 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+        <p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigators </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+<!--         <p> <i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funders</p> -->
+      </div>
+    </div>
+  </div>
+</div><h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><ul>
+<li>Document how to convert raw data from a propriatory, vendor specific format to an open standard format.</li>
+<li>Apply the approach to an IMI dataset, more specifically  a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project.</li>
+</ul>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><div class="mermaid">
+
+graph LR;
+    A[Data Acquisition] -->B(Raw Data)
+    B --> C{FAIR by Design}
+    C -->|Yes| D[Standard Compliant Data]
+    C -->|No| E[Vendor locked Data]
+    F[Metadata available] --> G(sample metadata)
+    G
+
+</div><hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3438">formatting</a></td>
+<td style="text-align:left"><a href="">Waters MS format</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.26dmba">mzML</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3778">text annotation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.284e1z">PSI-MS</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_3779">annotated text</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.26dmba">mzML</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.284e1z">PSI-MS</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Ingredients:">Ingredients:<a class="anchor-link" href="#Ingredients:"> </a></h2><p>Tools and  Software:</p>
+<ul>
+<li><a href="https://github.com/">github</a></li>
+<li><a href="https://www.docker.com/">docker</a></li>
+<li><a href="https://www.python.org/">python</a><!-- - [zenodo API](https://developers.zenodo.org/) --></li>
+</ul>
+<!-- - [pandas](https://pandas.pydata.org/) -->
+
+<!-- - [rdflib](https://rdflib.readthedocs.io/en/stable/)
+- [jupyter notebook](https://jupyter.org/)
+- [sparql](https://www.w3.org/TR/sparql11-query/) -->
+
+
+
+<h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step-1:-obtain-the-dataset">Step 1: obtain the dataset<a class="anchor-link" href="#Step-1:-obtain-the-dataset"> </a></h3><p>In the case of the <a href="">IMI RESOLUTE</a> project, the data is released via the <a href="">University of Luxembourg</a> server (assuming you have access resolved):</p>
+<div class="highlight"><pre><span></span>$&gt; sftp fairplus@NNN.000.000.NNN
+&gt;get RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz
+&gt;exit
+$&gt;
+</pre></div>
+<p>:warning: <code>NNN.000.000.NNN</code> should be replaced with the proper IP address to the University of Luxembourg server once users have obtained data access clearance.</p>
+<h3 id="Step-2:-inspect-the-content-of-the-archive">Step 2: inspect the content of the archive<a class="anchor-link" href="#Step-2:-inspect-the-content-of-the-archive"> </a></h3><h4 id="i.-copying-the-archive-to-a-working-directory">i. copying the archive to a working directory<a class="anchor-link" href="#i.-copying-the-archive-to-a-working-directory"> </a></h4><div class="highlight"><pre><span></span>$&gt;mv RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz /IMI-FAIR+/RESOLUTE
+$&gt;cd /IMI-FAIR+/RESOLUTE/
+</pre></div>
+<h4 id="ii.-expand-the-archive">ii. expand the archive<a class="anchor-link" href="#ii.-expand-the-archive"> </a></h4><div class="highlight"><pre><span></span>$&gt;gunzip RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz
+$&gt;tar -xvf RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar
+$&gt;cd RESOLUTE_Targted_Metabolomics_of_parental_cell_lines
+</pre></div>
+<h4 id="iii.-inspect-the-folder">iii. inspect the folder<a class="anchor-link" href="#iii.-inspect-the-folder"> </a></h4><div class="highlight"><pre><span></span>&gt;<span class="nv">$anaconda3</span>-2019.10<span class="o">)</span> bob-MacBook-3:RESOLUTE_Targted_Metabolomics_of_parental_cell_lines philippe$ ls -la
+total <span class="m">1400</span>
+drwxr-xr-x   <span class="m">10</span> bob  staff     <span class="m">320</span> <span class="m">14</span> Jan <span class="m">16</span>:05 .
+drwxr-xr-x    <span class="m">8</span> bob  staff     <span class="m">256</span> <span class="m">14</span> Jan <span class="m">10</span>:29 ..
+-rwxr-xr-x@   <span class="m">1</span> bob  staff  <span class="m">520170</span> <span class="m">15</span> Nov <span class="m">14</span>:02 Data_Release_Proposal_20191115_Metabolome_of_parental_cell_lines.docx
+-rw-r--r--@   <span class="m">1</span> bob  staff   <span class="m">72868</span>  <span class="m">5</span> Nov <span class="m">20</span>:49 EX0003_processed_data.txt
+-rw-r--r--@   <span class="m">1</span> bob  staff    <span class="m">6907</span> <span class="m">23</span> Oct <span class="m">16</span>:06 EX0003_sample_metadata.tsv
+drwxr-xr-x@   <span class="m">7</span> bob  staff     <span class="m">224</span> <span class="m">14</span> Jan <span class="m">10</span>:43 Raw
+drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span> <span class="m">14</span> Jan <span class="m">15</span>:53 data
+-rw-r--r--@   <span class="m">1</span> bob  staff   <span class="m">95677</span>  <span class="m">7</span> Nov <span class="m">11</span>:02 p180_metabolites_metadata.tsv
+-rw-r--r--@   <span class="m">1</span> bob  staff     <span class="m">162</span> <span class="m">14</span> Jan <span class="m">10</span>:59 ~<span class="nv">$ta_Release_Proposal_20191115_Metabolome_of_parental_cell_lines</span>.doc
+</pre></div>
+<blockquote><p>:octopus: The archive would have benefitted from having a manifest file listing all the files and their associated checksums. In so doing, it would have allowed validation and verification that no corruption happened during file transfer.</p>
+<p>:octopus: Refer to the recipe: "<a href="">How to calculate file checksums</a>"</p>
+<p>:octopus: Refer to the recipe: "<a href="">How to package data for shipping with BDbags</a>"</p>
+</blockquote>
+<h3 id="Step-3:-Convert-vendor-specific-format-to-an-open-format">Step 3: Convert vendor specific format to an open format<a class="anchor-link" href="#Step-3:-Convert-vendor-specific-format-to-an-open-format"> </a></h3><p>One can consult the Elixir-UK <a href="https://fairsharing.org/">FAIRsharing catalog</a> of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (DOI), <a href="https://fairsharing.org/FAIRsharing.26dmba">https://fairsharing.org/FAIRsharing.26dmba</a> for HUPO-PSI mzML specifications.</p>
+<div>
+  <img src="https://i.imgur.com/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
+</div><p>The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a <code>containerized</code> version of the <a href="https://github.com/ProteoWizard/pwiz">Proteowizard</a>.</p>
+<blockquote><p><strong>requirements</strong>:</p>
+</blockquote>
+<h4 id="1.-install-docker:">1. install docker:<a class="anchor-link" href="#1.-install-docker:"> </a></h4><p>on a MacOS system, invoke the following:</p>
+<div class="highlight"><pre><span></span>&gt;brew update
+&gt;brew install docker
+</pre></div>
+<h4 id="2.-start-and-sign-in-to-docker">2. start and sign in to docker<a class="anchor-link" href="#2.-start-and-sign-in-to-docker"> </a></h4><div class="highlight"><pre><span></span>&gt;docker start
+&gt;docker login
+</pre></div>
+<h4 id="3.-sign-up-and/or-login-to-https://hub.docker.com/">3. sign-up and/or login to <a href="https://hub.docker.com/">https://hub.docker.com/</a><a class="anchor-link" href="#3.-sign-up-and/or-login-to-https://hub.docker.com/"> </a></h4><h4 id="4.-pull-the-docker-container-for-ProteoWizard:">4. pull the docker container for ProteoWizard:<a class="anchor-link" href="#4.-pull-the-docker-container-for-ProteoWizard:"> </a></h4><p>:warning: be sure to sign-up and login to <a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
+<div class="highlight"><pre><span></span>&gt;docker pull chambm/pwiz-i-agree-to-the-vendor-licenses
+</pre></div>
+<ul>
+<li>In order to be able to reach</li>
+</ul>
+<p><a href="https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses">https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses</a></p>
+<ul>
+<li>Run the Proteowizard <code>pwiz tool</code> from the container over the WATERS raw data, by issueing the following command from the terminal:</li>
+</ul>
+<div class="highlight"><pre><span></span>&gt;docker run -it --rm -e <span class="nv">WINEDEBUG</span><span class="o">=</span>-all -v /Users/bob/Documents/IMI-FAIR+/Resolute/RESOLUTE_Targted_Metabolomics_of_parental_cell_lines/Raw/MCC025_p180_102024_102059_20190125/raw<span class="se">\ </span>data/KIT2-0-8015_1024503073/:/data chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert /data/KIT2-0-8015_1024503073_01_0_1_1_10_11000002.raw --mzML
+</pre></div>
+<p>The command explained:</p>
+<p>By essence, the resulting mzML files generated during the conversion are syntactically valid documents as the <code>pwiz</code> performs validation against the mzml xml schema during the serialization.</p>
+<p>In some situations, the conversion will fails and no mzML output will be generated. Various reasons can explain failure to convert. The most common ones are corrupted:</p>
+<ul>
+<li>raw data files </li>
+<li>unsupported vendor format</li>
+</ul>
+<p>To address the former, it is good practice to compute a hash (md5, sha2) checksum fingerprinting each of the files. This allows to ensure that no file corruption has occurred during transfer and copy.</p>
+<p>To address the latter, one should consult to table of compatibility:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Format</th>
+<th style="text-align:left">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ABI T2D</td>
+<td style="text-align:left">not working</td>
+</tr>
+<tr>
+<td style="text-align:left">Agilent MHDAC (non-IMS)</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Agilent MIDAC (IMS)</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Bruker BAF</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Bruker FID/YEP</td>
+<td style="text-align:left">not working</td>
+</tr>
+<tr>
+<td style="text-align:left">Bruker TDF</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Sciex WIFF</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Sciex WIFF2</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Shimadzu QQQ</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Shimadzu QTOF</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Thermo RAW</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Waters RAW</td>
+<td style="text-align:left">working</td>
+</tr>
+<tr>
+<td style="text-align:left">Waters UNIFI</td>
+<td style="text-align:left">not working</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5.-Testing-and-processing-the-resulting-mzML-files:">5. Testing and processing the resulting mzML files:<a class="anchor-link" href="#5.-Testing-and-processing-the-resulting-mzML-files:"> </a></h4><p>for users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.</p>
+<p>A number of libraries are available for parsing (reading and writing) <code>mzML</code> document. <code>mzML</code> is a king of <code>XML</code> format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the <code>pymzml</code> library.</p>
+<div>
+<img src="https://i.imgur.com/BTs0GUS.png" width="750" border="1"/>
+</div><div class="highlight"><pre><span></span>import os
+import sys
+import pymzml
+from pymzml.plot import Factory
+
+<span class="nv">mzml_file</span> <span class="o">=</span><span class="s2">&quot;KIT3-0-8015_1024503088_42_0_1_1_00_1024502932.mzML&quot;</span>
+<span class="nv">msrun</span> <span class="o">=</span> pymzml.run.Reader<span class="o">(</span>mzml_file<span class="o">)</span>
+
+<span class="nv">mzml_basename</span> <span class="o">=</span> os.path.basename<span class="o">(</span>mzml_file<span class="o">)</span>
+<span class="nv">pf</span> <span class="o">=</span> Factory<span class="o">()</span>
+pf.new_plot<span class="o">()</span>
+pf.add<span class="o">(</span>msrun<span class="o">[</span><span class="s2">&quot;TIC&quot;</span><span class="o">]</span>.peaks<span class="o">()</span>, <span class="nv">color</span><span class="o">=(</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span><span class="o">)</span>, <span class="nv">style</span><span class="o">=</span><span class="s2">&quot;lines&quot;</span>, <span class="nv">title</span><span class="o">=</span>mzml_basename<span class="o">)</span>
+pf.save<span class="o">(</span>
+        <span class="s2">&quot;chromatogram_{0}.html&quot;</span>.format<span class="o">(</span>mzml_basename<span class="o">)</span>,
+        <span class="nv">layout</span><span class="o">={</span><span class="s2">&quot;xaxis&quot;</span>: <span class="o">{</span><span class="s2">&quot;title&quot;</span>: <span class="s2">&quot;Retention time&quot;</span><span class="o">}</span>, <span class="s2">&quot;yaxis&quot;</span>: <span class="o">{</span><span class="s2">&quot;title&quot;</span>: <span class="s2">&quot;TIC&quot;</span><span class="o">}}</span>,
+<span class="o">)</span>
+</pre></div>
+<div>
+<img src="https://i.imgur.com/caaqwFo.png" width="650"/>
+</div><p>In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML documents. But in the following, we'll show how to read an mzML file using a python library.</p>
+<h1 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:"> </a></h1><p>In this recipe, we have shown how to convert a proprietary file format to an open standard format, using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data formats and unfortunately not all benefit from the support of open source / open format communities. However by consulting the <a href="https://Elixirhug.org">Elixir UK</a> <a href="https://fairsharing.org">FAIRsharing registry</a>, it is possible to identify if such open format specifications are available.
+Then, interrogating the <a href="https://bio.tools/">Biotools catalog</a>, it may well be also possible to retrieve libraries and software components allowing manipulations of such format.</p>
+<blockquote><h4 id="What-to-read-next:">What to read next:<a class="anchor-link" href="#What-to-read-next:"> </a></h4><ul>
+<li><a href="">How to calculate file checksums</a></li>
+<li><a href="">How to package data for shipping with BDbags</a></li>
+<li><a href="">How to produce an ISA metadata file from a set of mzML fles</a></li>
+<li><a href="">How to deposit data to Zenodo</a></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="References:">References:<a class="anchor-link" href="#References:"> </a></h2><ol>
+<li>Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918–920 (2012). <a href="https://doi.org/10.1038/nbt.237">https://doi.org/10.1038/nbt.237</a></li>
+<li>Bald T, Barth J, Niehues A, et al. pymzML--Python module for high-throughput bioinformatics on mass spectrometry data. Bioinformatics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI: 10.1093/bioinformatics/bts066.</li>
+</ol>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Review</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Contribution</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -15,7 +15,7 @@ The reason for this `Google Document template` is mainly to allow for rapid onbo
 Once you feel your edits are complete and think your recipe is ready for release, you can choose between the following 2 approaches:
 
 1. **Direct handover to an FAIR Cookbook Editor**:
-If you are not comfortable with `Markdown` and `git`, this is the easiest route and this is what we recommend. Simply drop an email to [fairplus-cookbook@elixirhub.org](fairplus-cookbook@elixirhub.org) stating the **recipe github issue** identifier.
+If you are not comfortable with `Markdown` and `git`, this is the easiest route and this is what we recommend. Simply drop an email to [fairplus-cookbook@elixirhub.org](fairplus-cookbook@elixir-europe.org) stating the **recipe github issue** identifier.
 
 2. **Convert to Markdown before handing over**:
 If you wish to go a bit further and help the editors, you can convert the gdoc to markdown using an add-on to the Google document

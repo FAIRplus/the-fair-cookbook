@@ -1,0 +1,435 @@
+---
+redirect_from:
+  - "/recipes/interoperability/ontology-robot/msio-robot-build-process"
+interact_link: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+kernel_name: venv374
+has_widgets: false
+title: |-
+  MSIO robot build process
+prev_page:
+  url: /recipes/interoperability/ontology-robot-recipe.html
+  title: |-
+    How to build an application ontology
+next_page:
+  url: /recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.html
+  title: |-
+    How to convert to open format from propriatory
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="ROBOT-Build-Process-for-Generating-MSIO:">ROBOT Build Process for Generating MSIO:<a class="anchor-link" href="#ROBOT-Build-Process-for-Generating-MSIO:"> </a></h1><p><strong>title:</strong> Metabolomics Standard Initiative Ontology build process <br>
+<strong>author:</strong> philippe.rocca-serra@oerc.ox.ac.uk <br>
+<strong>date:</strong> 2020-05-11 <br>
+<strong>license:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">creative-commons-by-sa-4.0</a> <br>
+<strong>keywords:</strong> Ontology <br>
+<strong>description:</strong> MSIO an Application Ontology for Metabolomics. We detail how we use OBO Foundry ROBOT tool for generating the ontology from a set of seeds, which have been established by manual selection of the key classes to build a mild level ontology for experiments. MSIO specific classes are added the MSIO namespace but remain compatible with OBI for which MSIO can become a module. <br></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Obtaining-and-installing-robot">Obtaining and installing robot<a class="anchor-link" href="#Obtaining-and-installing-robot"> </a></h1><p>The robot tool is available from: <a href="http://robot.obolibrary.org/">http://robot.obolibrary.org/</a> with detailed instructions available from the official pages.
+One may obtain the <a href="https://github.com/ontodev/robot/releases">latest official version</a> or the <a href="https://build.obolibrary.io/job/ontodev/job/robot/job/master/lastSuccessfulBuild/artifact/bin/robot.jar">latest successful build</a> from the obofoundry project. This the latter option we go for in this notebook as we want to test a new function available from version 1.7, onwards.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">robot_dir</span><span class="o">=</span><span class="s2">&quot;robot_jar&quot;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">robot_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">robot_dir</span><span class="p">)</span>
+    
+<span class="c1"># Check if a newer versio exists a:</span>
+
+<span class="n">get_robot_curl</span><span class="o">=</span><span class="s2">&quot;curl -L https://build.obolibrary.io/job/ontodev/job/robot/job/master/lastSuccessfulBuild/artifact/bin/robot.jar &gt; ./robot_jar/robot.jar&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">get_robot_curl</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_curl</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">ioe_curl</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">resources</span><span class="o">=</span><span class="p">[</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/duo.owl   &gt; ./ontology-sources-test/duo.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/stato.owl &gt; ./ontology-sources-test/stato.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/chmo.owl  &gt; ./ontology-sources-test/chmo.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/iao.owl   &gt; ./ontology-sources-test/iao.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/obi.owl   &gt; ./ontology-sources-test/obi.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/ms.owl    &gt; ./ontology-sources-test/ms.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L https://raw.githubusercontent.com/MSI-Metabolomics-Standards-Initiative/nmrcv/master/nmrCV-corrected-namespace.owl &gt; ./ontology-sources-test/nmrcv.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/chebi.owl &gt; ./ontology-sources-test/chebi.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/uo.owl    &gt; ./ontology-sources-test/uo.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/stato.owl &gt; ./ontology-sources-test/stato.owl&quot;</span>          
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cwd</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Downloading-Reference-Ontologies-&amp;-Key-Resources:">1. Downloading Reference Ontologies &amp; Key Resources:<a class="anchor-link" href="#1.-Downloading-Reference-Ontologies-&amp;-Key-Resources:"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ontoresource_dir</span><span class="o">=</span><span class="s2">&quot;ontology-sources-test&quot;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ontoresource_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ontoresource_dir</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">resources</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ieo_curl</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">ioe_curl</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Module-Extraction-from-seeds-using-the-MIREOT-approach:">2. Module Extraction from seeds using the MIREOT approach:<a class="anchor-link" href="#2.-Module-Extraction-from-seeds-using-the-MIREOT-approach:"> </a></h2><p>Using a number of seed files, which contains the classes manually selected by the ontology developers, we use the <a href="http://dx.doi.org/10.3233/AO-2011-0087">MIREOT method</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">onto_outputdir</span><span class="o">=</span><span class="s2">&quot;ontology-msio-build-modules&quot;</span>
+
+<span class="n">extractors</span><span class="o">=</span><span class="p">[</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/chebi.owl --upper-terms ./ontology-select-classes/chebi-upper-terms.txt --lower-terms ./ontology-select-classes/chebi-lower-terms.txt --intermediates none --imports exclude --copy-ontology-annotations true --output ./ontology-msio-build-modules/chebi_mireot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/chmo.owl  --lower-terms ./ontology-select-classes/chmo-lower-terms.txt  --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/chmo_mireot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/iao.owl   --lower-terms ./ontology-select-classes/iao-lower-terms.txt   --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/iao_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/obi.owl   --lower-terms ./ontology-select-classes/obi-lower-terms.txt   --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/obi_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/ms.owl --lower-terms ./ontology-select-classes/psims-lower-terms.txt --intermediates minimal --copy-ontology-annotations true --output ./ontology-msio-build-modules/psims_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/uo.owl    --lower-terms ./ontology-select-classes/uo-lower-terms.txt    --intermediates minimal --copy-ontology-annotations true --output ./ontology-msio-build-modules/uo_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/duo.owl   --lower-terms ./ontology-select-classes/duo-lower-terms.txt   --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/duo_mireot_robot_module.owl&quot;</span>
+<span class="p">]</span> 
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">onto_outputdir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">onto_outputdir</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">extractor</span> <span class="ow">in</span> <span class="n">extractors</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">extractor</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">extractor</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">ioe</span><span class="p">)</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Merging-Extracted-Modules-into-Application-Ontology:">3. Merging Extracted Modules into Application Ontology:<a class="anchor-link" href="#3.-Merging-Extracted-Modules-into-Application-Ontology:"> </a></h2><p>This step simply fuses all the input OWL files into one single output, avoiding use of import statements.<br/>
+:octocat: A <code>merge</code> can be <em>undone</em>( with <code>unmerge</code> command also available from <code>robot tool</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-build-results&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-build-results&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar merge --input ./ontology-msio-build-modules/iao_mireot_robot_module.owl --input ./ontology-msio-build-modules/obi_mireot_robot_module.owl --input ./ontology-msio-build-modules/duo_mireot_robot_module.owl --input ./ontology-msio-build-modules/chmo_mireot_module.owl --input ./ontology-msio-build-modules/uo_mireot_robot_module.owl --input ./ontology-msio-build-modules/psims_mireot_robot_module.owl  --input ./ontology-msio-build-modules/chebi_mireot_module.owl --output ./ontology-msio-build-results/msio-test-merge.owl&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_merge</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_merge</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar merge --input ./ontology-msio-build-modules/iao_mireot_robot_module.owl --input ./ontology-msio-build-modules/obi_mireot_robot_module.owl --input ./ontology-msio-build-modules/duo_mireot_robot_module.owl --input ./ontology-msio-build-modules/chmo_mireot_module.owl --input ./ontology-msio-build-modules/uo_mireot_robot_module.owl --input ./ontology-msio-build-modules/psims_mireot_robot_module.owl  --input ./ontology-msio-build-modules/chebi_mireot_module.owl --output ./ontology-msio-build-results/msio-test-merge.owl&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_merge</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_merge</span><span class="p">)</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-Working-with-ELK-reasoner-with-Robot-Materialize:">4. Working with ELK reasoner with Robot Materialize:<a class="anchor-link" href="#4.-Working-with-ELK-reasoner-with-Robot-Materialize:"> </a></h2><p>With this step, the goal is to ensure that the ontology is logically consistent. This can only be checked by running a <code>reasoner</code>, which will formally assess the various axioms used in the ontology and classify the classes bases on these constraints. Robot allows this step to be performed and provides various options as to which reasoner to offer. Here, the <a href="https://www.cs.ox.ac.uk/isg/tools/ELK/">ELK reasoner</a> is used.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-materialize&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-materialize&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar materialize --reasoner ELK  --input ./ontology-msio-build-results/msio-test-merge.owl  reduce --output ./ontology-msio-materialize/msio-test-materialize.owl&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_reason</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_reason</span><span class="p">)</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Convert-to-OBO-Format:">5. Convert to OBO Format:<a class="anchor-link" href="#5.-Convert-to-OBO-Format:"> </a></h2><p>The module extraction, merging and reasoning function produce Ontology Web Language (<a href="https://www.w3.org/TR/owl-features/">OWL</a>) documents. For reaching a wider audience and to allow use by some data entry tools, it is interesting to release the ontology in the <a href="https://owlcollab.github.io/oboformat/doc/GO.format.obo-1_4.html">OBO format</a>. The following section details how to invoke the command.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-convert&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-convert&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar convert --input ./ontology-msio-materialize/msio-test-materialize.owl --format obo --output ./ontology-msio-convert/msio-test-conversion.obo&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_reason</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_reason</span><span class="p">)</span> 
+<span class="k">else</span><span class="p">:</span>    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar convert --input ./ontology-msio-materialize/msio-test-materialize.owl --format obo --output ./ontology-msio-convert/msio-test-conversion.obo&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_reason</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_reason</span><span class="p">)</span>         
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.-Importing-stato-and-nmrCV-ontology">6. Importing stato and nmrCV ontology<a class="anchor-link" href="#6.-Importing-stato-and-nmrCV-ontology"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># if not os.path.exists(&quot;ontology-msio-merge&quot;):</span>
+<span class="c1">#     os.makedirs(&quot;ontology-msio-merge&quot;)</span>
+<span class="c1"># else: </span>
+<span class="c1">#     try:</span>
+<span class="c1">#         os.system(&quot;java -jar robot.jar merge --input ./ontology-msio-materialize/msio-test-materialize.owl --input ./ontology-sources-modules/stato.owl --input ./ontology-sources-modules/nmrcv.owl --output ./ontology-msio-merge/msio-test-merge-round2.owl&quot;)</span>
+<span class="c1">#     except IOError as ioe_convert:</span>
+<span class="c1">#         print(ioe_convert)     </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="7.-Export-as-Tabular-Representation-in-Excel-format">7. Export as Tabular Representation in Excel format<a class="anchor-link" href="#7.-Export-as-Tabular-Representation-in-Excel-format"> </a></h2><p>A new function in Robot tool (starting with version 1.7) provides the option of exporting the classes and properties of an ontology in a tabular representation, which can be useful to engage with users and curators for review and extension. The following section details how to invoke the command.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-export&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-export&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar export --input ./ontology-msio-materialize/msio-test-materialize.owl --header &#39;IRI|ID|LABEL|SubClass Of|definition&#39; --format xlsx --export ./ontology-msio-export/msio-test-export.xlsx&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_convert</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_convert</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar export --input ./ontology-msio-materialize/msio-test-materialize.owl --header &#39;IRI|ID|LABEL|SubClass Of|definition&#39; --format xlsx --export ./ontology-msio-export/msio-test-export.xlsx&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_convert</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_convert</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="References:">References:<a class="anchor-link" href="#References:"> </a></h1><ol>
+<li>Jackson R.C., Balhoff J.P., Douglass E.,Harris N.L., Mungall C.J. and Overton J.A. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.<a href="https://doi.org/10.1186/s12859-019-3002-3">https://doi.org/10.1186/s12859-019-3002-3</a></li>
+<li>Hastings J., Owen G., Dekker A., Ennis M., Kale N., Muthukrishnan V., Turner S., Swainston N., Mendes P., Steinbeck C.(2016). ChEBI in 2016: Improved services and an expanding collection of metabolites. Nucleic Acids Res.<a href="http://dx.doi.org/10.1093/nar/gks1146">http://dx.doi.org/10.1093/nar/gks1146</a></li>
+<li>Haug K., Cochrane K., Nainala V.C., Williams M., Chang J., Jayaseelan K.N. and O’Donovan C. MetaboLights: a resource evolving in response to the needs of its scientific community. Nucleic Acids Research, gkz1019, <a href="https://doi.org/10.1093/nar/gkz1019">https://doi.org/10.1093/nar/gkz1019</a></li>
+<li>IAO: <a href="https://github.com/information-artifact-ontology/IAO/">https://github.com/information-artifact-ontology/IAO/</a></li>
+<li>The Ontology for Biomedical Investigations, PLoS One. 2016 Apr 29;11(4):e0154556. eCollection 2016. <a href="https://doi.org/10.1371/journal.pone.0154556">https://doi.org/10.1371/journal.pone.0154556</a>. </li>
+<li>STATO: <a href="https:stato-ontology.org">https:stato-ontology.org</a></li>
+<li>nmrCV: <a href="http://nmrml.org/cv/">http://nmrml.org/cv/</a></li>
+<li>CHMO: <a href="https://github.com/rsc-ontologies/rsc-cmo">https://github.com/rsc-ontologies/rsc-cmo</a></li>
+<li>UO: <a href="https://github.com/bio-ontology-research-group/unit-ontology">https://github.com/bio-ontology-research-group/unit-ontology</a></li>
+<li>PSI-MS: <a href="http://www.psidev.info/groups/controlled-vocabularies">http://www.psidev.info/groups/controlled-vocabularies</a></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

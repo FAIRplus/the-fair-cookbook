@@ -1,6 +1,6 @@
-# Making Datasets findable via Zenodo Repository
+# Deposition to Zenodo Archive
 
-**identifier:** [RX.X](RX.X)
+<!-- **identifier:** [RX.X](RX.X)
 
 **version:** [v1.0](v1.0)
 
@@ -22,9 +22,69 @@ ___
 
 **_Recipe Type_**: Hands on
 
-**_Executable code_**: Yes
+**_Executable code_**: Yes -->
 
 ___
+
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">RX.X</a> </p>
+        <p> version: <a href="">v1.0</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 15 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+        <p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigators </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+        <p> <i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funders</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+
+
+___
+
 # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
@@ -60,9 +120,10 @@ ___
 
 ### What is Zenodo?
 
-Zenodo is a repository developed by [CERN](), under the [OpenAire]() program which focus is on **open data**. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the `Innovative Medicine Initiative (IMI)`
+Zenodo is a repository developed by [CERN](https://home.cern/), under the [OpenAire](https://www.openaire.eu/) program which focus is on **open data**. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the `Innovative Medicine Initiative (IMI)`.
 
 ### Why use Zenodo?
+
 To cite `Zenodo's documentation`, here are a few reasons why using the repository services provides a `low entry barrier` to making data findable:
 * Safe — your research is stored safely for the future in CERN’s Data Centre for as long as CERN exists.
 * Trusted — built and operated by CERN and OpenAIRE to ensure that everyone can join in Open Science.
@@ -184,8 +245,11 @@ Since Zenodo mission is to collect EC funded data, the repository provides the m
 
 ### Create a zenodo account and obtain an API token
 
-`ACCESS_TOKEN` = "<enter-your_writeonly_token_for_testing or your_deposit_token if you want to get a DOI  >"
+* First, it is necessary to obtain an api key:
 
+    `ACCESS_TOKEN` = "<enter-your_writeonly_token_for_testing or your_deposit_token if you want to get a DOI  >"
+
+* Then, the following code invoking the Zenodo REST endpoint will allow deposition:
 
     ```python
     import requests
@@ -208,9 +272,8 @@ Since Zenodo mission is to collect EC funded data, the repository provides the m
     ```
 
 ### Create the payload for the programmatic deposition.
+
 *  For example, it can be obtained by parsing the content of a metadata template or from a dedicated acquisition form specifically made by a `data manager`
-
-
 
     ```python
     # getting the record id
