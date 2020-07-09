@@ -34,37 +34,11 @@ graph LR;
 
 ___
 
-## User Stories
-
-<strong> WHO </strong> Specify your role or the user's role (e.g. As a scientist, or as a data analyst, etc.)  
-<br/>
-<b>As a</b>
-<br/> 
-<br/> 
-<strong> WHAT</strong> Specify the action you or the user want to perform   
-<br/>
-<b>I want</b>
-<br/>
-<br/> 
-<strong> WHY</strong> Specify why the actions needs to be performed, for what result, for what benefit
-<br/>
-<b>So that</b>
-<br/>
-<br/>
-Tips for what are user stories and how to collect them: 
-
-[https://github.com/FAIRplus/the-fair-cookbook/docs/content/recipes/]<How to Collect User Stories.pptx>
-___
-
 ## Capability & Maturity Table
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
-| Findability  |  level a | level b |
-| Accessibility  |  level a | level b | 
-| Interoperability |  level a | level b |
-| Reusability | level a | level b |
-
+| Interoperability | minimal | repeatable |
 
 ----
 
