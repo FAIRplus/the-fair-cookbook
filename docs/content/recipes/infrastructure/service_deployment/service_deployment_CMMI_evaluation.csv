@@ -1,0 +1,8 @@
+Capability	Status before recipe	Status after recipe
+C_PO_5	No way to reuse external/community ontologies in an internally controlled environment.	External/community ontologies are registered in an internal repository.
+C_M_6	No way to reuse ontologies by groups in the organization.	Organization ontologies are registered, searchable and have associated internal persistent identifiers.
+C_M_7	Previously used ontologies and metadata could not be stored and accessed.	 
+C_S_3	No way to search terms across ontologies.	 
+C_S_5	No way to search and use organizational ontologies	 
+C_S_6	No way to access organization wide standardez ontologies/vocabularies	 
+C_S_7	No way to annotate data sets with referenceable ontologies/vocabularies	 

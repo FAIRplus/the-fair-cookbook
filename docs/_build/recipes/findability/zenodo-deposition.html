@@ -1,0 +1,453 @@
+---
+title: |-
+  Depositing to Zenodo
+prev_page:
+  url: /recipes/findability.html
+  title: |-
+    Findability
+next_page:
+  url: /recipes/findability/seo.html
+  title: |-
+    Search Engine optimization
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Deposition-to-Zenodo-Archive">Deposition to Zenodo Archive<a class="anchor-link" href="#Deposition-to-Zenodo-Archive"> </a></h1><!-- **identifier:** [RX.X](RX.X)
+
+**version:** [v1.0](v1.0)
+
+___
+
+**_Difficulty level:_** easy :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle:
+
+**_Reading time:_** 15 minutes 
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Principal Investigators
+
+> :heavy_check_mark: Data Managers
+
+> :heavy_check_mark: Data Scientists
+
+> :heavy_check_mark: Funders
+
+**_Recipe Type_**: Hands on
+
+**_Executable code_**: Yes -->
+
+<hr>
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">RX.X</a> </p>
+        <p> version: <a href="">v1.0</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 15 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+        <p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigators </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+        <p> <i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funders</p>
+      </div>
+    </div>
+  </div>
+</div><hr>
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>To show how to take advantage of CERN Zenodo repository to document the existence of datasets, thus increasing its findeability. This is of particular relevant for IMI projects since Zenodo is aimed to support the European Commission (EC) nascent Open Data policy and is commissioned by the EC.</p>
+</blockquote>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p>TODO:</p>
+<hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Findability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Introduction-to-Zenodo-repository">Introduction to Zenodo repository<a class="anchor-link" href="#Introduction-to-Zenodo-repository"> </a></h2><h3 id="What-is-Zenodo?">What is Zenodo?<a class="anchor-link" href="#What-is-Zenodo?"> </a></h3><p>Zenodo is a repository developed by <a href="https://home.cern/">CERN</a>, under the <a href="https://www.openaire.eu/">OpenAire</a> program which focus is on <strong>open data</strong>. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the <code>Innovative Medicine Initiative (IMI)</code>.</p>
+<h3 id="Why-use-Zenodo?">Why use Zenodo?<a class="anchor-link" href="#Why-use-Zenodo?"> </a></h3><p>To cite <code>Zenodo's documentation</code>, here are a few reasons why using the repository services provides a <code>low entry barrier</code> to making data findable:</p>
+<ul>
+<li>Safe — your research is stored safely for the future in CERN’s Data Centre for as long as CERN exists.</li>
+<li>Trusted — built and operated by CERN and OpenAIRE to ensure that everyone can join in Open Science.</li>
+<li>Citeable — every upload is assigned a Digital Object Identifier (DOI), to make them citable and trackable.</li>
+<li>No waiting time — Uploads are made available online as soon as you hit publish, and your DOI is registered within seconds.</li>
+<li>Open or closed — Share e.g. anonymized clinical trial data with only medical professionals via our restricted access mode.</li>
+<li>Versioning — Easily update your dataset with our versioning feature.</li>
+<li>GitHub integration — Easily preserve your GitHub repository in Zenodo.</li>
+<li>Usage statisics — All uploads display standards compliant usage statistics</li>
+</ul>
+<h2 id="1.-How-to-use-Zenodo-Deposition-Web-Interface?">1. How to use Zenodo Deposition Web Interface?<a class="anchor-link" href="#1.-How-to-use-Zenodo-Deposition-Web-Interface?"> </a></h2><p>This section guides users through the key steps to perform to organize a deposition to Zenodo using the user interface web component provided by the repository.</p>
+<hr>
+<h3 id="Zenodo-Compatible-Data-Collection---Login-in">Zenodo Compatible Data Collection - Login-in<a class="anchor-link" href="#Zenodo-Compatible-Data-Collection---Login-in"> </a></h3><ul>
+<li>Login via ORCID or Github credentials</li>
+</ul>
+<p><a href="https://zenodo.org/">Zenodo</a> has integrated authentication mechanism key partners such as <a href="https://github.com">github</a>  and <a href="https://orcid.org">Orcid</a>. For <a href="https://imi.org">IMI</a> and for <a href="https://fairplus-project.eu">FAIRplus</a>, this means that consortium members can easyly login if they already have credentials on these 2 services.</p>
+<hr>
+<h3 id="Zenodo-Compatible-Data-Collection---Data-upload">Zenodo Compatible Data Collection - Data upload<a class="anchor-link" href="#Zenodo-Compatible-Data-Collection---Data-upload"> </a></h3><div> <img src="https://i.imgur.com/TYpr8jM.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" />
+</div><p>Files can be dragged and dropped, with the following limitations:</p>
+<ul>
+<li>5GB max each, </li>
+<li>50 GB total / dataset</li>
+</ul>
+<p>After adding the set of files associated with the submission, the upload should be initiated by the pressing the <code>start upload</code> green button.
+Failing to do so will result in a failure to proceed with the submission and an error will be thrown, reminding users to do so.</p>
+<p><img src="https://i.imgur.com/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /></p>
+<p>:warning:</p>
+<p>The next key step is to select the <code>upload type</code>. In this instance, the <code>Dataset</code> is selected. This matters as it provide strong typing which is relied on by <code>search engine</code> and therefore impacts <code>findability</code>.</p>
+<p><img src="https://i.imgur.com/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /></p>
+<hr>
+<h3 id="Zenodo-Compatible-Data-Collection---Providing-Metadata">Zenodo Compatible Data Collection - Providing Metadata<a class="anchor-link" href="#Zenodo-Compatible-Data-Collection---Providing-Metadata"> </a></h3><ul>
+<li>Basic metadata such as. <code>title</code>, <code>description</code>, at minima should be provided.</li>
+<li>Authors should be identified, ideally using their <code>orcid</code>, so linking can be performed. This impacts authors citation and impact evaluation. For IMI FAIRplus participants, since all have now such an identifier, the link should be made systematically.</li>
+</ul>
+<p><img src="https://i.imgur.com/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /></p>
+<ul>
+<li><strong>Reserve a Digital Object Identifier</strong>: This is a service provided natively by the Zenodo service owing the integration with Datacite services. This is quite an important point as it means the a Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information <strong>can not be changed without creating a new version of the archive and therefore minting a new doi</strong></li>
+</ul>
+<ul>
+<li>'Keywords' can be adding to tag the submission. These are free text and no controlled terminology can be used in the interface at the moment.</li>
+</ul>
+<p><img src="https://i.imgur.com/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /></p>
+<hr>
+<h3 id="Zenodo-Compatible-Data-Collection---Access-and-License-informatioon">Zenodo Compatible Data Collection - Access and License informatioon<a class="anchor-link" href="#Zenodo-Compatible-Data-Collection---Access-and-License-informatioon"> </a></h3><ul>
+<li>Zenodo provides facilities to set <code>Access Conditions</code> and <code>License</code>, <code>Data Controler Contact Information</code>, as well as <code>Embargo Duration</code> if applicable</li>
+<li>As indicated above, it is possible to <code>set an Embargo Period</code>, if the option <code>embargoed access</code> is selected under the <code>Access right</code> section.</li>
+</ul>
+<p><img src="https://i.imgur.com/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></p>
+<ul>
+<li>Zenodo places to no limit when it comes to duration of the embargo period. So submitters should check EC and IMI guidelines or local institutional requirements for guidance.</li>
+</ul>
+<ul>
+<li>Setting Access Conditions/License, Data Controler Contact Information, Embargo Duration if applicable</li>
+</ul>
+<p><img src="https://i.imgur.com/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></p>
+<ul>
+<li>Start typing to display more licenses available from Zenodo</li>
+</ul>
+<p><img src="https://i.imgur.com/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/></p>
+<hr>
+<h3 id="Zenodo-Compatible-Data-Collection---Funding-Information">Zenodo Compatible Data Collection - Funding Information<a class="anchor-link" href="#Zenodo-Compatible-Data-Collection---Funding-Information"> </a></h3><p>Since Zenodo mission is to collect EC funded data, the repository provides the means to lookup <code>Grant Information</code>:</p>
+<p><img src="https://i.imgur.com/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /></p>
+<ul>
+<li><p>Zenodo: openAIRE connected repository</p>
+</li>
+<li><p>Connected to funding agencies</p>
+</li>
+</ul>
+<hr>
+<h3 id="Zenodo-Compatible-Data-Collection---Miscellaneous-Information">Zenodo Compatible Data Collection - Miscellaneous Information<a class="anchor-link" href="#Zenodo-Compatible-Data-Collection---Miscellaneous-Information"> </a></h3><ul>
+<li>Miscellaneous Information:</li>
+</ul>
+<p><img src="https://i.imgur.com/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /></p>
+<ul>
+<li><p>Contributors</p>
+</li>
+<li><p>References:</p>
+</li>
+<li><p>Journal, Conference, Book, and so on.</p>
+</li>
+</ul>
+<h2 id="2.-Programmatic-Deposition-to-Zenodo-via-the-REST-API:">2. Programmatic Deposition to Zenodo via the REST-API:<a class="anchor-link" href="#2.-Programmatic-Deposition-to-Zenodo-via-the-REST-API:"> </a></h2><h3 id="Create-a-zenodo-account-and-obtain-an-API-token">Create a zenodo account and obtain an API token<a class="anchor-link" href="#Create-a-zenodo-account-and-obtain-an-API-token"> </a></h3><ul>
+<li><p>First, it is necessary to obtain an api key:</p>
+<p><code>ACCESS_TOKEN</code> = "&lt;enter-your_writeonly_token_for_testing or your_deposit_token if you want to get a DOI  &gt;"</p>
+</li>
+<li><p>Then, the following code invoking the Zenodo REST endpoint will allow deposition:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+  <span class="kn">import</span> <span class="nn">json</span>
+
+  <span class="n">zenodo_baseurl</span> <span class="o">=</span> <span class="s2">&quot;https://zenodo.org/api/&quot;</span>
+  <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">}</span>
+
+  <span class="n">ACCESS_TOKEN</span> <span class="o">=</span> <span class="s2">&quot;&lt;YOUR_TOKEN_GOES_HERE&gt;&quot;</span>
+  <span class="c1"># testing the connection</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://zenodo.org/api/deposit/depositions&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;access_token&quot;</span><span class="p">:</span> <span class="n">ACCESS_TOKEN</span><span class="p">})</span>
+
+  <span class="c1"># creating an empty submission to get an zenodo record id:</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://zenodo.org/api/deposit/depositions&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;access_token&#39;</span><span class="p">:</span> <span class="n">ACCESS_TOKEN</span><span class="p">},</span> <span class="n">json</span><span class="o">=</span><span class="p">{},</span>
+                    <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+  <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+
+  <span class="c1"># obtain the zenodo metadata payload as json containing the id</span>
+  <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</li>
+</ul>
+<h3 id="Create-the-payload-for-the-programmatic-deposition.">Create the payload for the programmatic deposition.<a class="anchor-link" href="#Create-the-payload-for-the-programmatic-deposition."> </a></h3><ul>
+<li><p>For example, it can be obtained by parsing the content of a metadata template or from a dedicated acquisition form specifically made by a <code>data manager</code></p>
+<div class="highlight"><pre><span></span><span class="c1"># getting the record id</span>
+ <span class="n">deposition_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+
+ <span class="c1"># uploading the data</span>
+
+ <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39;</span><span class="p">}</span>
+ <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)}</span>
+ <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://zenodo.org/api/deposit/depositions/</span><span class="si">%s</span><span class="s1">/files&#39;</span> <span class="o">%</span> <span class="n">deposition_id</span><span class="p">,</span>
+                    <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;access_token&#39;</span><span class="p">:</span> <span class="n">ACCESS_TOKEN</span><span class="p">},</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+                    <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+ <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</li>
+</ul>
+<ul>
+<li><p>Forming the augmented data payload for a dataset corresponding to the JSON data package for the matrix</p>
+<div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
+       <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Frictionless Tabular data package for GC-MS data from Rose Genome article published</span><span class="se">\</span>
+<span class="s2">            in Nature genetics, June, 2018&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;upload_type&quot;</span><span class="p">:</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This dataset, in the form of a Frictionless Tabular Data Package </span><span class="se">\</span>
+<span class="s2">           (https://frictionlessdata.io/specs/tabular-data-package/), </span><span class="se">\</span>
+<span class="s2">            holds the measurements of 61 known metabolites (all annotated with resolvable CHEBI identifiers and InChi), </span><span class="se">\</span>
+<span class="s2">            measured by gas chromatography mass-spectrometry (GC-MS) in 6 different Rose cultivars (all annotated with </span><span class="se">\</span>
+<span class="s2">            resolvable NCBITaxId) and 3 organism parts (all annotated with resolvable Plant Ontology identifiers).</span><span class="se">\</span>
+<span class="s2">            The data was extracted from a supplementary material table, available from </span><span class="se">\</span>
+<span class="s2">            https://static-content.springer.com/esm/art%3A10.1038</span><span class="si">%2F</span><span class="s2">s41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip </span><span class="se">\</span>
+<span class="s2">            and published alongside the Nature Genetics manuscript identified by the following doi: </span><span class="se">\</span>
+<span class="s2">            https://doi.org/10.1038/s41588-018-0110-3, published in June 2018. </span><span class="se">\</span>
+<span class="s2">            This dataset is used to demonstrate how to make data Findeable, Accessible, Discoverable and Interoperable&quot;</span> \
+            <span class="s2">&quot;(FAIR) and how Tabular Data Package representations can be easily mobilized for re-analysis and data science. </span><span class="se">\</span>
+<span class="s2">            It is associated to the following project available from github at: </span><span class="se">\</span>
+<span class="s2">            &#39;https://github.com/proccaserra/rose2018ng-notebook&#39; with all necessary information and Jupyter notebooks.&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;creators&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                          <span class="s2">&quot;affiliation&quot;</span><span class="p">:</span> <span class="s2">&quot;University of Oxford&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Philippe Rocca-Serra&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;orcid&quot;</span><span class="p">:</span> <span class="s2">&quot;0000-0001-9853-5668&quot;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                          <span class="s2">&quot;affiliation&quot;</span><span class="p">:</span> <span class="s2">&quot;University of Oxford&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Susanna Assunta Sansone&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;orcid&quot;</span><span class="p">:</span> <span class="s2">&quot;0000-0001-5306-5690&quot;</span>
+                        <span class="p">}</span>
+                      <span class="p">],</span>
+           <span class="s2">&quot;access_right&quot;</span><span class="p">:</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+               <span class="s2">&quot;FAIR data&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;Design of Experiment&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;Rose scent&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;targeted metabolite profiling&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;gas chromatography mass spectrometry&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;Tabular Data Package&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;STATO ontology&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;ISA format&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;interoperability&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;eng&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;CC-BY-4.0&quot;</span>
+                      <span class="p">},</span>
+           <span class="s2">&quot;publication_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-03-13&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;references&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;https://doi.org/10.1038/s41588-018-0110-3&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;related_identifiers&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;relation&quot;</span><span class="p">:</span> <span class="s2">&quot;cites&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;10.1038/s41588-018-0110-3&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;relation&quot;</span><span class="p">:</span> <span class="s2">&quot;cites&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;10.5281/zenodo.2598799&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="s2">&quot;relation&quot;</span><span class="p">:</span> <span class="s2">&quot;isNewVersionOf&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;10.5281/zenodo.2557893&quot;</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+           <span class="s2">&quot;grants&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;links&quot;</span><span class="p">:{</span><span class="s2">&quot;self&quot;</span><span class="p">:</span><span class="s2">&quot;https://zenodo.org/api/grants/10.13039/501100000780::654241&quot;</span><span class="p">},</span><span class="s2">&quot;acronym&quot;</span><span class="p">:</span> <span class="s2">&quot;PhenoMenAl&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;H2020&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;funder&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;10.13039/501100000780&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;acronyms&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;EC&quot;</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;European Commission&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="s2">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://zenodo.org/api/funders/10.13039/501100000780&quot;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+                       <span class="p">}]</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;https://zenodo.org/api/deposit/depositions/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">deposition_id</span><span class="p">,</span>
+                    <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;access_token&quot;</span><span class="p">:</span> <span class="n">ACCESS_TOKEN</span><span class="p">},</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">metadata</span><span class="p">),</span>
+                   <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+  <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</li>
+</ul>
+<h3 id="Finalize-request-and-post:">Finalize request and post:<a class="anchor-link" href="#Finalize-request-and-post:"> </a></h3><ul>
+<li>Finally, combine metadata and data payload in order to send a properlly formed request and obtain a DOI.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">data_2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#39;</span><span class="p">}</span>
+<span class="n">files_2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://zenodo.org/api/deposit/depositions/</span><span class="si">%s</span><span class="s1">/files&#39;</span> <span class="o">%</span> <span class="n">deposition_id</span><span class="p">,</span>
+                   <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;access_token&#39;</span><span class="p">:</span> <span class="n">ACCESS_TOKEN</span><span class="p">},</span> <span class="n">data</span><span class="o">=</span><span class="n">data_2</span><span class="p">,</span>
+                   <span class="n">files</span><span class="o">=</span><span class="n">files_2</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+<hr>
+<h2 id="Conclusions:">Conclusions:<a class="anchor-link" href="#Conclusions:"> </a></h2><blockquote><p>Relying on CERN Zenodo repository using any of the submission mechanisms (either web component or API) is one the simplest yet highly effective ways to deliver <strong>dataset findeability</strong> for assets generated by publicly funded resources. 
+The integration with <a href="">ORCID</a> makes it very easy to obtain an account on the CERN's service. 
+The integration with <a href="">Datacite</a> means that submitters can reserve and obtain Digital Object Identifiers (DOI) very simply. These can then be cited and used as references to the datasets.
+The integration with <a href="">Crossref</a> means that funding information case be easily looked up, thus reducing data entry burden in most conditions but especially for EU funded projects such as IMI.
+Licensing information can also be easily supplied
+Data access and embargo dates can be reserved.
+Findability via search engines is enhanced as Zenodo supports content negotiation, serving <a href="https://schema.org">schema.org</a> based JSON-LD documents
+Users should however be reminded of the following limitations of the service:</p>
+<ul>
+<li>absence of contraints on the nature of the datafiles being uploaded</li>
+<li>no domain specific awareness and domain specific metadata</li>
+<li>absent of connection with specialized repositories</li>
+<li>size limitation for a given datasets.</li>
+</ul>
+<h4 id="What-should-I-read-next?">What should I read next?<a class="anchor-link" href="#What-should-I-read-next?"> </a></h4><ul>
+<li><a href="">How to build a data catalogue?</a></li>
+<li><a href="">How to deploy the FAIRPORT data catalogue?</a></li>
+<li><a href="">What is search engine optimization?</a></li>
+</ul>
+</blockquote>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3431">deposition</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_3671">text</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_1188">DOI</a></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/fairsharing.me4qwe">Datacite</a></td>
+<td style="text-align:left">none</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/bsg-s001212/">JSON</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/bsg-s001214/">JSON-LD</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

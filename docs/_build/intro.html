@@ -1,65 +1,508 @@
 ---
 title: |-
   FAIR Cookbook
+pagenum: 0
 prev_page:
   url: 
-  title: |-
-    
 next_page:
   url: /roadmap.html
-  title: |-
-    Development Roadmap
 suffix: .md
+search: fair book jupyter cookbook org guide overview project data using markdown imi orcid learn own template github sam chris coobook under fairplus eu www university oxford content fairness started links features demo jupyterbook html repo com repository create site fork update files notebooks yaml berkeley science aiming collating protocols making open source licensed cc writting deployed tool activity funded innovative medicine initiative europa images logo europe png grant agreement currently led philippe rocca serra susanna assunta sansone andrea splendiani novartis learning outcomes fairify exemplar datasets putting principles practices levels indicators maturity model technologies tools available assess improve skills required well
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
     <main class="jupyter-page">
+    <div id="page-info"></div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="FAIR-Cookbook">FAIR Cookbook<a class="anchor-link" href="#FAIR-Cookbook"> </a></h1><h2 id="The-FAIR-Coobook-overview">The FAIR Coobook overview<a class="anchor-link" href="#The-FAIR-Coobook-overview"> </a></h2><ul>
-<li>The FAIR Cookbook is a project aiming at collating protocols for making data FAIR</li>
+<h1 id="FAIR-Cookbook">FAIR Cookbook<a class="anchor-link" href="#FAIR-Cookbook"> </a></h1><hr>
+<h2 id="The-official-site">The official site<a class="anchor-link" href="#The-official-site"> </a></h2><p>Visit <a href="https://the-fair-cookbook.netlify.app/intro">https://fairplus.github.io/the-fair-cookbook</a> to see the web friendly <strong>work-in-progress</strong> version of the <strong>FAIR Cookbook</strong>.</p>
+<p>:oil_drum::construction: <strong>This project is still in early phase and this is work in progress</strong> :construction::oil_drum:</p>
+<hr>
+<h2 id="The-FAIR-Cookbook-overview">The FAIR Cookbook overview<a class="anchor-link" href="#The-FAIR-Cookbook-overview"> </a></h2><ul>
+<li>The FAIR Cookbook is an activity of the <a href="https://fairplus-project.eu/">FAIRplus project</a> funded by the <a href="www.imi.europa.eu">Innovative Medicine Initiative (IMI)</a><br>
+<img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).</li>
+<li>The FAIR Cookbook is a project aiming at collating protocols for making data FAIR and provide examples of IMI dataset FAIRification.</li>
 <li>The FAIR Cookbook is open source and licensed under CC-BY-4.0</li>
-<li>The FAIR Coobook is writting using Markdown and deployed using <code>jupyter-tool</code></li>
-<li>The FAIR Cookbook is an activity of the <a href="https://fairplus-project.eu/">FAIRplus project</a> funded by the <a href="www.imi.europa.eu">Innovative Medicine Initiative (IMI)</a> <img src="./images/logo/imi-europe.png" alt=""> under grant agreement #802750 (2019-22).</li>
-<li><p>The FAIR Cookbook is currently led by:</p>
+<li>The FAIR Cookbook is written using Markdown and deployed using <code>jupyter-book</code></li>
+<li>the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as <code>FAIR recipes</code>, and supporting code in the form of <code>jupyter notebooks</code> about <strong><code>FAIRification processes</code></strong> and the content will be released regularly (quarterly) in order to reflect the progress made by the project and the various working groups, which bring together <code>academic</code> and <code>industry</code> partners.</li>
+</ul>
+<h2 id="Persona-based-content-browsing">Persona-based content browsing<a class="anchor-link" href="#Persona-based-content-browsing"> </a></h2><p>:construction: <strong>This section is under development</strong> :construction:</p>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
+        <h4><b>Helmut</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-2x" style="color:#fc7a4a;"></i>
+        <h4><b>Jean</b></h4>
+        <p>Data Scientist</p>
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
+        <h4><b>Fulvia</b></h4>
+        <p>Data Curator</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
+        <h4><b>Wang Ju</b></h4>
+        <p>Head of Clinical Research</p>
+      </div>
+    </div>
+  </div>
+</div><!-- 
+<div class="cards-container">
+  <div class="card-container">
+    <div class="card">
+      <div class="front">
+        <i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
+        <h4><b>Helmut Entwikgung</b></h4>
+        <p color="#300861">Architect & Engineer</p>
+      </div>
+      <div class="back">
+        <i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
+        <h4 color="white"><b>Wang Ju Fong</b></h4>
+        <div>
+        <img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" />
+        </div>
+        <p color="#300861">Head of Clinical Research</p>
+      </div>
+    </div>
+</div>
+
+<div class="cards-container">
+   <div class="card-container">
+    <div class="card">
+      <div class="front">
+        <i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
+        <h4><b>Helmut Entwikgung</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+      <div class="back">
+        <i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
+        <h4 color="#300861"><b>Wang Ju Fong</b></h4>
+        <p color="#300861">Head of Clinical Research</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<h2 id="Content-and-learning-objectives">Content and learning objectives<a class="anchor-link" href="#Content-and-learning-objectives"> </a></h2><p>Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.</p>
+<h2 id="The-FAIRification-Process">The FAIRification Process<a class="anchor-link" href="#The-FAIRification-Process"> </a></h2><div>
+ <img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" onclick="window.open('./images/userjourney.svg', '_blank');" />
+</div><h2 id="The-FAIR-principles-&amp;-key-recipes:">The FAIR principles &amp; key recipes:<a class="anchor-link" href="#The-FAIR-principles-&amp;-key-recipes:"> </a></h2><p>:construction: <strong>This section is under development</strong> :construction:</p>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
+        <h4><b>FINDABILITY</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+        <h4><b>Search Engine Optimitization</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+        <br/>
+        <h4><b>Open Archive Deposition</b></h4>
+        <p>TODO: add text here </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+        <h4><b>Annotation</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+ </div>
+</div>
+<div> 
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
+        <h4><b>ACCESSIBILITY</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+        <h4><b>Access condition</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+        <h4><b>License selection</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+        <h4><b>Standards</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+</div><div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
+        <h4><b>INTEROPERABILITY</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+        <h4><b>Metadata Standards</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+        <h4><b>Open Syntax</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+        <h4><b>Ontology</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+ </div><div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
+        <h4><b>REUSABILITY</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+        <h4><b>Standards</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+        <h4><b>Ontology</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+        <h4><b>SMART API</b></h4>
+        <p>TODO: add text here</p>
+      </div>
+    </div>
+  </div>
+</div><h2 id="Development-Roadmap">Development Roadmap<a class="anchor-link" href="#Development-Roadmap"> </a></h2><p>The FAIRcookbook development process currently operates on a quarterly release cycle. Each cycle sees 2 <code>scrums</code> where specific <code>use cases</code> or <code>themes</code> are chosen and task forces assigned. The outcome of these efforts are new <code>FAIRification protocols</code>, or <code>FAIR recipes</code> which, after review, are integrated to the main FAIR Cookbook and tagged for release in the github main branch, which is used to build the web-friendly version of the book.</p>
+<p>:heavy_check_mark:  FAIR Cookbook development roadmap Gantt chart for the year 2020</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt=""></a></p>
+<p>:heavy_check_mark:  The envisioned table of content for the  FAIR Cookbook can be found <a href="https://docs.google.com/spreadsheets/d/13B2aLm5ZXFUwAu6DlcL7soWL8yzX6juR4ijgUpzIsv4/edit?usp=sharing">here</a> 
+This Google Document is publicly available in <code>view mode</code>, and with <code>edit mode</code> for all FAIRplus members.</p>
+<hr>
+<!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
+
+
+<h2 id="Meet-the-developers:">Meet the developers:<a class="anchor-link" href="#Meet-the-developers:"> </a></h2><ul>
+<li><p>The FAIR Cookbook development currently coordinated by:</p>
 <ul>
 <li><a href="https://orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a> (University of Oxford)</li>
 <li><a href="https://orcid.org/0000-0001-5306-5690">Susanna-Assunta Sansone</a> (University of Oxford)</li>
 <li><a href="https://orcid.org/0000-0002-3201-9617">Andrea Splendiani</a> (Novartis)</li>
+<li><a href="https://orcid.org/0000-0002-0254-1500">Robert Giessman</a> (Bayer AG)</li>
 </ul>
 </li>
 </ul>
-<h2 id="Content-and-learning-outcomes">Content and learning outcomes<a class="anchor-link" href="#Content-and-learning-outcomes"> </a></h2><p>Learn how to FAIRify a number of exemplar datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.</p>
-<h2 id="Getting-started">Getting started<a class="anchor-link" href="#Getting-started"> </a></h2><p>To get started, you may be interested in the following links.
-Here are a few links of interest:</p>
 <ul>
-<li><p><strong><a href="features/features">Quickstart</a></strong> is a quick demo and overview of Jupyter Book.</p>
-</li>
-<li><p><strong><a href="https://jupyterbook.org/guide/01_overview.html">The Jupyter Book Guide</a></strong>
-will step you through the process of configuring and building your own Jupyter Book.</p>
-</li>
-<li><p><strong><a href="https://github.com/fair-cookbook/the-fair-cookbook">The FAIR Cookbook jupyter-book template repo</a></strong> is the template
-repository you'll use as a start for your Jupyter Book.</p>
-</li>
-<li><p><strong>A demo of the FAIR Book</strong> can be browsed via the sidebar to the left.</p>
-</li>
+<li>The FAIR Cookbook content was contributed by the following FAIRplus Consortium Members:</li>
 </ul>
-<h2 id="Installation">Installation<a class="anchor-link" href="#Installation"> </a></h2><p>Here's a brief rundown of how to create your own Jupyter Book using this site. For a more
-complete guide, see <a href="https://jupyterbook.org/guide/01_overview.html">the Jupyter Book guide</a>.</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Chuang Kee Ong</td>
+<td style="text-align:left">AZ</td>
+<td style="text-align:left">Ibrahim Emam</td>
+<td style="text-align:left">ICL</td>
+</tr>
+<tr>
+<td style="text-align:left">Colin Wood</td>
+<td style="text-align:left">AZ</td>
+<td style="text-align:left">Francesco Ronzano</td>
+<td style="text-align:left">IMIM</td>
+</tr>
+<tr>
+<td style="text-align:left">Ola Engkvist</td>
+<td style="text-align:left">AZ</td>
+<td style="text-align:left">Laura Furlong</td>
+<td style="text-align:left">IMIM</td>
+</tr>
+<tr>
+<td style="text-align:left">Ratnesh Sahay</td>
+<td style="text-align:left">AZ</td>
+<td style="text-align:left">Herman Van Vlijmen</td>
+<td style="text-align:left">Janssen</td>
+</tr>
+<tr>
+<td style="text-align:left">David Henderson</td>
+<td style="text-align:left">Bayer</td>
+<td style="text-align:left">Jean-Marc Neefs</td>
+<td style="text-align:left">Janssen</td>
+</tr>
+<tr>
+<td style="text-align:left">Robert Giessmann</td>
+<td style="text-align:left">Bayer</td>
+<td style="text-align:left">Paul Peeters</td>
+<td style="text-align:left">Janssen</td>
+</tr>
+<tr>
+<td style="text-align:left">Kurt Dauth</td>
+<td style="text-align:left">BI</td>
+<td style="text-align:left">Rudi Verbeeck</td>
+<td style="text-align:left">Janssen</td>
+</tr>
+<tr>
+<td style="text-align:left">Karsten Quast</td>
+<td style="text-align:left">Boehringer</td>
+<td style="text-align:left">Scott Lusher</td>
+<td style="text-align:left">Janssen</td>
+</tr>
+<tr>
+<td style="text-align:left">Emiliano Reynares</td>
+<td style="text-align:left">Boehringer</td>
+<td style="text-align:left">Derek Marren</td>
+<td style="text-align:left">Lilly</td>
+</tr>
+<tr>
+<td style="text-align:left">Eva Navarrete</td>
+<td style="text-align:left">BSC</td>
+<td style="text-align:left">Andrea Splendiani</td>
+<td style="text-align:left">Novartis</td>
+</tr>
+<tr>
+<td style="text-align:left">Salvador Capella Gutierrez</td>
+<td style="text-align:left">BSC</td>
+<td style="text-align:left">Dorothy Reilly</td>
+<td style="text-align:left">Novartis</td>
+</tr>
+<tr>
+<td style="text-align:left">Hannah Hurst</td>
+<td style="text-align:left">EMBL-EBI</td>
+<td style="text-align:left">Nick Lynch</td>
+<td style="text-align:left">PHACTS</td>
+</tr>
+<tr>
+<td style="text-align:left">Fuqi Xu</td>
+<td style="text-align:left">EMBL-EBI</td>
+<td style="text-align:left">Vitaly Sedlyarov</td>
+<td style="text-align:left">RESOLUTE</td>
+</tr>
+<tr>
+<td style="text-align:left">Melanie Courtot</td>
+<td style="text-align:left">EMBL-EBI</td>
+<td style="text-align:left">Ulrich Goldmann</td>
+<td style="text-align:left">RESOLUTE</td>
+</tr>
+<tr>
+<td style="text-align:left">Tony Burdett</td>
+<td style="text-align:left">EMBL-EBI</td>
+<td style="text-align:left">Manuela Pruess</td>
+<td style="text-align:left">SIB</td>
+</tr>
+<tr>
+<td style="text-align:left">Andrea Zaliani</td>
+<td style="text-align:left">Fraunhofer</td>
+<td style="text-align:left">Mark Ibberson</td>
+<td style="text-align:left">SIB</td>
+</tr>
+<tr>
+<td style="text-align:left">Andreas Pippow</td>
+<td style="text-align:left">Fraunhofer</td>
+<td style="text-align:left">Vassilios Ioannidis</td>
+<td style="text-align:left">SIB</td>
+</tr>
+<tr>
+<td style="text-align:left">Franziska Kroh</td>
+<td style="text-align:left">Fraunhofer</td>
+<td style="text-align:left">Danielle Welter</td>
+<td style="text-align:left">UL</td>
+</tr>
+<tr>
+<td style="text-align:left">Gesa Witt</td>
+<td style="text-align:left">Fraunhofer</td>
+<td style="text-align:left">Venkata P. Satagopam</td>
+<td style="text-align:left">UL</td>
+</tr>
+<tr>
+<td style="text-align:left">Manfred Kohler</td>
+<td style="text-align:left">Fraunhofer</td>
+<td style="text-align:left">Wei Gu</td>
+<td style="text-align:left">UL</td>
+</tr>
+<tr>
+<td style="text-align:left">Oya Deniz Beyan</td>
+<td style="text-align:left">Fraunhofer</td>
+<td style="text-align:left">Chris Evelo</td>
+<td style="text-align:left">UM</td>
+</tr>
+<tr>
+<td style="text-align:left">Philip Gribbon</td>
+<td style="text-align:left">Fraunhofer</td>
+<td style="text-align:left">Egon Willighagen</td>
+<td style="text-align:left">UM</td>
+</tr>
+<tr>
+<td style="text-align:left">Ashni Sedani</td>
+<td style="text-align:left">GSK</td>
+<td style="text-align:left">Nuno (Ryan) Silva Nunes</td>
+<td style="text-align:left">UM</td>
+</tr>
+<tr>
+<td style="text-align:left">Femi Akintobi</td>
+<td style="text-align:left">GSK</td>
+<td style="text-align:left">Carole Goble</td>
+<td style="text-align:left">UNIMAN</td>
+</tr>
+<tr>
+<td style="text-align:left">George Papadotas</td>
+<td style="text-align:left">GSK</td>
+<td style="text-align:left">Ebtisam Alharbi</td>
+<td style="text-align:left">UNIMAN</td>
+</tr>
+<tr>
+<td style="text-align:left">Peter Woollard</td>
+<td style="text-align:left">GSK</td>
+<td style="text-align:left">Nick Juty</td>
+<td style="text-align:left">UNIMAN</td>
+</tr>
+<tr>
+<td style="text-align:left">Alasdair J G Gray</td>
+<td style="text-align:left">HWU</td>
+<td style="text-align:left">Dominique Batista</td>
+<td style="text-align:left">UOXF</td>
+</tr>
+<tr>
+<td style="text-align:left">Petros Papadopoulos</td>
+<td style="text-align:left">HWU</td>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">UOXF</td>
+</tr>
+<tr>
+<td style="text-align:left">Ilaria Maresi</td>
+<td style="text-align:left">HYVE</td>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">UOXF</td>
+</tr>
+<tr>
+<td style="text-align:left">Jolanda Strubel</td>
+<td style="text-align:left">HYVE</td>
+<td style="text-align:left">Alejandra Delfin Rossaro</td>
+<td style="text-align:left">UPS</td>
+</tr>
+<tr>
+<td style="text-align:left">Emma Vos</td>
+<td style="text-align:left">HYVE</td>
+<td style="text-align:left">Anne Cambon-Thomsen</td>
+<td style="text-align:left">UPS</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Technology-stack">Technology stack<a class="anchor-link" href="#Technology-stack"> </a></h2><p>The <code>FAIR Cookbook</code> is built using <a href="https://jupyterbook.org/intro.html">jupyter-book</a>, following the practice used by the Alan Turing's Institute Book of Data Science.</p>
 <ul>
-<li>Fork the FAIR Book jupyter-book template repo</li>
-<li>Update or Replace the files in <code>content/</code> with your own notebooks and markdown files.</li>
-<li>Update or create the Table of Contents yaml file by editing <code>_data/toc.yaml</code>.</li>
-<li>Generate the Jekyll markdown for your notebooks by running <code>jupyter-book build docs</code></li>
-<li>Push your changes to a branch on your GitHub fork (or wherever you host your site)!</li>
-<li>Send a Pull Requests to the remote GitHub repository</li>
+<li><strong><a href="https://github.com">github</a></strong> is used to version control and hosting</li>
+<li><strong><a href="https://guides.github.com/features/mastering-markdown/">Markdown</a></strong> is used for the write-up</li>
+<li><strong><a href="https://hackmd.io">HackMD</a></strong> is used as Markdown Editor thanks to its integration with <code>github</code> and its <a href="https://hackmd.io/s/hackmd-it"><code>browser extensions</code></a></li>
+<li><strong><a href="https://jupyter.org/">jupyter notebook</a></strong> can be used to provide executable code</li>
+<li><strong><a href="https://mybinder.org">binder</a></strong> is enabled which allows in web execution of any jupyter notebook distributed with the <code>FAIR Cookbook</code></li>
+<li><p><strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> javascript library is used to produce flowcharts, Gantt charts and pie charts used in the book.</p>
+<!--* **[netlify]()** is being tested for web hosting and deployment --></li>
+<li><p><strong><a href="">Jekyll Themes</a></strong> provide the style for the web friendly version. The name of this theme is saved in the Jekyll <code>_config.yml</code> configuration file found in. <a href="https://github.com/fair-cookbook/the-fair-cookbook/settings">repository settings</a>.</p>
+</li>
 </ul>
-<h2 id="Acknowledgements">Acknowledgements<a class="anchor-link" href="#Acknowledgements"> </a></h2><p>FAIR Cookbook is produced thanks to <code>Jupyter Book</code>, project originally created by <a href="http://www.samlau.me/">Sam Lau</a> and <a href="https://predictablynoisy.com">Chris Holdgraf</a>
-with support of the <strong>UC Berkeley Data Science Education Program and the Berkeley
-Institute for Data Science</strong>.</p>
+<hr>
+<h2 id="Support-or-Contact">Support or Contact<a class="anchor-link" href="#Support-or-Contact"> </a></h2><p>Having troubles? Check out our <a href="https://github.com/FAIRplus/the-fair-cookbook/issues">issue tracker</a> or <a href="mailto:fairplus-cookbook@elixir-europe.org">contact support</a> and we’ll help you sort it out.</p>
+<hr>
+<h2 id="Acknowledgements">Acknowledgements<a class="anchor-link" href="#Acknowledgements"> </a></h2><p>The FAIR Cookbook is produced thanks to <code>Jupyter Book</code>, a project originally created by <a href="http://www.samlau.me/">Sam Lau</a> and <a href="https://predictablynoisy.com">Chris Holdgraf</a>
+with support of the <strong>UC Berkeley Data Science Education Program and the Berkeley Institute for Data Science</strong>.</p>
 
 </div>
 </div>

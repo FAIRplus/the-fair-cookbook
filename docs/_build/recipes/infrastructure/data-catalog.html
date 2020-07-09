@@ -1,0 +1,311 @@
+---
+title: |-
+  Building a Data Catalogue
+prev_page:
+  url: /recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html
+  title: |-
+    Criteria for selecting Ontology Services
+next_page:
+  url: /recipes/infrastructure/data-catalog-deployment.html
+  title: |-
+    Deploying the FAIRplus IMI Data Catalogue
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Building-a-Dataset-Catalogue">Building a Dataset Catalogue<a class="anchor-link" href="#Building-a-Dataset-Catalogue"> </a></h1><!-- **identifier:**
+
+**version:** [v0.1](v0.1)
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:  :triangular_flag_on_post: :white_circle:
+
+**_Reading time:_** 60 minutes (when the recipe is completed)
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Data Managers
+
+> :heavy_check_mark: Software Engineer
+
+> :heavy_check_mark: System Administrator
+
+> :heavy_check_mark: Data Scientists
+
+
+**_Recipe Type_**: Survey / Review
+
+**_Executable code_**: Yes -->
+
+<hr>
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">RX.X</a> </p>
+        <p> version: <a href="">v0.1</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:l#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 60 minutes (upon recipe completion)</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+<!--         <p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Managers </p> -->
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+        <p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developers </p>
+        <p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrators</p>
+      </div>
+    </div>
+  </div>
+</div><hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>To detail the key elements for the creation of a <code>data catalogue</code> to enable data <code>findability</code> in an organisation.</p>
+</blockquote>
+<p>We will cover the following points:</p>
+<ol>
+<li>metadata model selection</li>
+<li>annotation with controled vocabularies</li>
+<li>ETL</li>
+<li>data loading</li>
+<li>data indexing</li>
+<li>facet oriented searching</li>
+<li>minting of stable, persistent and resolvable identifiers</li>
+</ol>
+<hr>
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><style>
+    .mermaidClass > rect{
+        fill:#FF0000;
+        stroke:#FFFF00;
+        stroke-width:4px;
+    }
+</style><div class="mermaid">
+  graph TD
+
+  subgraph b
+  AA(Populate Data Catalogue):::box
+  AA --> |identify<br>data<br>sources| E(Data Source #1):::box
+  AA --> |identify<br>data<br>sources| F(Data Source #n):::box
+
+  E -->|ETL-1|B1(instance file):::box
+  F -->|ETL-2|B2(instance file):::box
+
+  B1 -->|data persistence| DL(document oriented database)
+  B2 -->|data persistence| DL:::box
+
+  DL[Build Search Function] --> |build search index|SE(Search Engine):::box
+  SE -->|ontology tree search| SSS(Query Expansion):::box
+  SE -->|synonym space search| SSS(Query Expansion)
+  end
+
+  subgraph a
+  A(Building Data Catalogue):::box
+  style a fill:#e8eaeb,font-family:avenir
+  style b fill:#e8eaeb
+  A-->|define curation policies| A3(Curation<br> Policies):::box
+  A3-->|select data model| B(DATS):::box
+  B-->|select controled<br> vocabularies| CV1(key facet #1:<br> CV1):::box
+  B-->|select controled<br> vocabularies| CV2(key facet #2:<br> CV2):::box
+  B-->|select controled<br> vocabularies| CV3(key facet #n:<br> CVn):::box
+
+  linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+  end
+</div><!-- 
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBcbiAgc3ViZ3JhcGggdHdvXG4gIEFBKFBvcHVsYXRlIERhdGEgQ2F0YWxvZ3VlKTo6OmJveFxuICBBQSAtLT4gfGlkZW50aWZ5PGJyPmRhdGE8YnI-c291cmNlc3wgRShEYXRhIFNvdXJjZSAjMSk6Ojpib3hcbiAgQUEgLS0-IHxpZGVudGlmeTxicj5kYXRhPGJyPnNvdXJjZXN8IEYoRGF0YSBTb3VyY2UgI24pOjo6Ym94XG4gIFxuICBFIC0tPnxFVEwtMXxCMShpbnN0YW5jZSBmaWxlKTo6OmJveFxuICBGIC0tPnxFVEwtMnxCMihpbnN0YW5jZSBmaWxlKTo6OmJveFxuXG4gIEIxIC0tPnxkYXRhIHBlcnNpc3RlbmNlfCBETChkb2N1bWVudCBvcmllbnRlZCBkYXRhYmFzZSlcbiAgQjIgLS0-fGRhdGEgcGVyc2lzdGVuY2V8IERMOjo6Ym94XG5cbiAgRExbQnVpbGQgU2VhcmNoIEZ1bmN0aW9uXSAtLT4gfGJ1aWxkIHNlYXJjaCBpbmRleHxTRShTZWFyY2ggRW5naW5lKTo6OmJveFxuICBTRSAtLT58b250b2xvZ3kgdHJlZSBzZWFyY2h8IFNTUyhRdWVyeSBFeHBhbnNpb24pOjo6Ym94XG4gIFNFIC0tPnxzeW5vbnltIHNwYWNlIHNlYXJjaHwgU1NTKFF1ZXJ5IEV4cGFuc2lvbilcbiAgZW5kXG5cbiAgc3ViZ3JhcGggb25lXG4gIEEoQnVpbGRpbmcgRGF0YSBDYXRhbG9ndWUpIFxuICBzdHlsZSBBIGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbiAgY2xhc3NEZWYgYm94IGZpbGw6IzJhOWZjOSxjb2xvcjojZmZmO1xuICBBIC0tPiB8ZGVmaW5lIGN1cmF0aW9uIHBvbGljaWVzfCBBMyhDdXJhdGlvbjxicj4gUG9saWNpZXMpOjo6Ym94XG4gIFxuICBCOjo6Ym94IC0tPnxzZWxlY3QgY29udHJvbGxlZDxicj4gdm9jYWJ1bGFyaWVzfCBDVjEoa2V5LWZhY2V0IzE6PGJyPiBDVjEpOjo6Ym94XG4gIEIgLS0-fHNlbGVjdCBjb250cm9sbGVkPGJyPiB2b2NhYnVsYXJpZXN8IENWMihrZXktZmFjZXQjMjo8YnI-IENWMik6Ojpib3hcbiAgQiAtLT58c2VsZWN0IGNvbnRyb2xsZWQ8YnI-IHZvY2FidWxhcmllc3wgQ1YzKGtleS1mYWNldCNuOjxicj4gQ1ZuKTo6OmJveFxuXG4gIEEzIC0tPnxzZWxlY3QgZGF0YSBtb2RlbHwgQihEQVRTKVxuICBlbmRcblx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBcbiAgc3ViZ3JhcGggdHdvXG4gIEFBKFBvcHVsYXRlIERhdGEgQ2F0YWxvZ3VlKTo6OmJveFxuICBBQSAtLT4gfGlkZW50aWZ5PGJyPmRhdGE8YnI-c291cmNlc3wgRShEYXRhIFNvdXJjZSAjMSk6Ojpib3hcbiAgQUEgLS0-IHxpZGVudGlmeTxicj5kYXRhPGJyPnNvdXJjZXN8IEYoRGF0YSBTb3VyY2UgI24pOjo6Ym94XG4gIFxuICBFIC0tPnxFVEwtMXxCMShpbnN0YW5jZSBmaWxlKTo6OmJveFxuICBGIC0tPnxFVEwtMnxCMihpbnN0YW5jZSBmaWxlKTo6OmJveFxuXG4gIEIxIC0tPnxkYXRhIHBlcnNpc3RlbmNlfCBETChkb2N1bWVudCBvcmllbnRlZCBkYXRhYmFzZSlcbiAgQjIgLS0-fGRhdGEgcGVyc2lzdGVuY2V8IERMOjo6Ym94XG5cbiAgRExbQnVpbGQgU2VhcmNoIEZ1bmN0aW9uXSAtLT4gfGJ1aWxkIHNlYXJjaCBpbmRleHxTRShTZWFyY2ggRW5naW5lKTo6OmJveFxuICBTRSAtLT58b250b2xvZ3kgdHJlZSBzZWFyY2h8IFNTUyhRdWVyeSBFeHBhbnNpb24pOjo6Ym94XG4gIFNFIC0tPnxzeW5vbnltIHNwYWNlIHNlYXJjaHwgU1NTKFF1ZXJ5IEV4cGFuc2lvbilcbiAgZW5kXG5cbiAgc3ViZ3JhcGggb25lXG4gIEEoQnVpbGRpbmcgRGF0YSBDYXRhbG9ndWUpIFxuICBzdHlsZSBBIGZpbGw6IzJhOWZjOSxzdHJva2U6IzIyMixjb2xvcjojZmZmLHN0cm9rZS13aWR0aDoxcHhcbiAgY2xhc3NEZWYgYm94IGZpbGw6IzJhOWZjOSxjb2xvcjojZmZmO1xuICBBIC0tPiB8ZGVmaW5lIGN1cmF0aW9uIHBvbGljaWVzfCBBMyhDdXJhdGlvbjxicj4gUG9saWNpZXMpOjo6Ym94XG4gIFxuICBCOjo6Ym94IC0tPnxzZWxlY3QgY29udHJvbGxlZDxicj4gdm9jYWJ1bGFyaWVzfCBDVjEoa2V5LWZhY2V0IzE6PGJyPiBDVjEpOjo6Ym94XG4gIEIgLS0-fHNlbGVjdCBjb250cm9sbGVkPGJyPiB2b2NhYnVsYXJpZXN8IENWMihrZXktZmFjZXQjMjo8YnI-IENWMik6Ojpib3hcbiAgQiAtLT58c2VsZWN0IGNvbnRyb2xsZWQ8YnI-IHZvY2FidWxhcmllc3wgQ1YzKGtleS1mYWNldCNuOjxicj4gQ1ZuKTo6OmJveFxuXG4gIEEzIC0tPnxzZWxlY3QgZGF0YSBtb2RlbHwgQihEQVRTKVxuICBlbmRcblx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)  
+-->
+
+
+<hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Findability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="User-Story">User Story<a class="anchor-link" href="#User-Story"> </a></h2><p>For <strong><code>role.Data Scientists</code></strong>, it is essential to be able to <em><code>action.identify</code></em> and <em><code>action.discover</code></em> datasets of potential relevance in the context of <em><code>action.data integration</code></em> and <em><code>action.meta-analytical work</code></em>.</p>
+<p>For <strong><code>role.Database Managers</code></strong>, a lightweight solution is needed to support a shallow indexing supported fast ingest without intense curation, but good potential for data discovery. Works should rely on approved data standards.</p>
+<p>For <strong><code>role.lab scientists</code></strong>, the key is to have a minimal burden when having to <em><code>action.deposit</code></em> a dataset to an institutional archive or simply <em><code>action.register</code></em> to dataset to the <code>data catalogue</code>.</p>
+<hr>
+<h2 id="Main-body-of-the-recipe">Main body of the recipe<a class="anchor-link" href="#Main-body-of-the-recipe"> </a></h2><h3 id="What-is-a-Data-Catalogue?">What is a Data Catalogue?<a class="anchor-link" href="#What-is-a-Data-Catalogue?"> </a></h3><p>A <code>Data Catalogue</code> is a resource meant to allow fast identification of <code>Data set</code>. In keeping with the familiar notion of catalogue, (be it that of an exhibition or that of brand products), the notion of <code>data catalogue</code> needs to be understood as the compendium of <code>short descriptive metadata elements</code> about an actual set of data. The <code>Data Index or Data Catalogue</code> <strong>does not</strong> store the datasets themselves but provides information about where the datasets can be obtained from. Therefore, <code>Data Catalogues</code> are often used to index the content of '<code>Data Repositories</code> and <code>Data Archives</code>, which provide hosting solutions for the actual datasets, which are often organized (but not always)' around specific <code>data types</code> or <code>data production modalities</code> (e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence archives and so on.)</p>
+<h3 id="What-are-the-standards-supporting-establishing-a-data-catalogue?">What are the standards supporting establishing a data catalogue?<a class="anchor-link" href="#What-are-the-standards-supporting-establishing-a-data-catalogue?"> </a></h3><p><code>Data Catalogues</code> have been identified as critical infrastructure and therefore a number of model exist to support their implementation.</p>
+<ol>
+<li><p>DATS:
+The <a href="">Data Article Tag Suite model</a> has been developed during the NIH-BD2K projects and underpins the <a href="https://datamed.org/">datamed catalogue</a>, the aim of which was to produce a prototype of a <a href="https://pubmed.ncbi.nlm.nih.gov/29346583/"><code>Pubmed for Datasets</code></a>.</p>
+</li>
+<li><p>DCAT:
+In the world of semantic web technologies, The <a href="">W3C DCAT specifications</a> (v1 and the newly released version 2) provide a vocabulary to express <code>data catalogue metadata</code> in <strong>RDF</strong>.</p>
+</li>
+<li>Schema.org:
+The vocabulary developed by the consortium of search engines has defined a metadata profile for <a href="https://schema.org/DataSet"><code>Dataset</code></a>, <a href="https://schema.org/DataCatalog"><code>Data Catalogue</code></a></li>
+</ol>
+<h3 id="How-are-Data-Catalogue-populated?">How are Data Catalogue populated?<a class="anchor-link" href="#How-are-Data-Catalogue-populated?"> </a></h3><p>A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories or harvesting JSON-LD files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more</p>
+<h3 id="What-are-examples-of-Data-Catalogues?">What are examples of Data Catalogues?<a class="anchor-link" href="#What-are-examples-of-Data-Catalogues?"> </a></h3><ul>
+<li><p>Commercial solutions:</p>
+<ul>
+<li><p>(Collibra](<a href="https://www.collibra.com/download/data-catalog-study-dresner-advisory-services-ppc?_bk=catalogue%20data&amp;_bt=389929247489&amp;_bm=e&amp;_bn=g">https://www.collibra.com/download/data-catalog-study-dresner-advisory-services-ppc?_bk=catalogue%20data&amp;_bt=389929247489&amp;_bm=e&amp;_bn=g</a>)</p>
+</li>
+<li><p><a href="https://datamed.org/">DataMed</a></p>
+</li>
+<li><a href="https://www.omicsdi.org/">OMICS-DI</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="">JSON</a></td>
+<td style="text-align:left"><a href=""></a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">RDF</a></td>
+<td style="text-align:left"><a href="">DCAT v1</a></td>
+<td style="text-align:left"><a href="">DATS</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">RDF</a></td>
+<td style="text-align:left"><a href="">DCAT v2</a></td>
+<td style="text-align:left"><a href="">DATS</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">JSON-LD</a></td>
+<td style="text-align:left"><a href="">Schema.org</a></td>
+<td style="text-align:left"><a href=""></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Executable-Code-in-Notebook">Executable Code in Notebook<a class="anchor-link" href="#Executable-Code-in-Notebook"> </a></h2><p>TO BE AUGMENTED.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dats</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
+<span class="o">...</span>
+</pre></div>
+<h2 id="References:">References:<a class="anchor-link" href="#References:"> </a></h2><h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
