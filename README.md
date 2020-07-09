@@ -1,4 +1,4 @@
-# The FAIR cookbook
+# The FAIR Cookbook :construction: 
 
 FAIR data is **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. 
 
