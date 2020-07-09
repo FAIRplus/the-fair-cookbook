@@ -1,4 +1,4 @@
-# The FAIR Cookbook :construction:
+# The FAIR Cookbook :construction: 
 
 ## A brief overview
 
