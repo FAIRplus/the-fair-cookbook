@@ -303,6 +303,7 @@ DEPENDENCIES
   jekyll-mermaid
   jekyll-redirect-from
   jekyll-scholar
+  jemoji
   tzinfo-data
 
 BUNDLED WITH

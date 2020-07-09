@@ -22,7 +22,7 @@ email:
 description: >-
   A collection of protocols for making IMI and EFPIA partners data FAIR.
 
-baseurl: /the-fair-cookbook  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+baseurl: /cookbook-dev  # [!!! IMPORTANT: switch to "the-fair-cookbook" when committing to master !!!] the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 url:  https://fairplus.github.io                  # the base hostname & protocol for your site, e.g. http://example.com
 
 
@@ -31,18 +31,27 @@ url:  https://fairplus.github.io                  # the base hostname & protocol
 
 # Main page settings
 footer_text: 
+  <div class="row_footer">
   This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 
    2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.
-  <a href="https://europa.eu/"><img src="/the-fair-cookbook/assets/images//logo/eu-flag.png" height="20" alt="EU flag" class="float-left bottom-margin"></a><a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/assets/images//logo/imi-logo.png" height="20" alt="IMI logo" class="float-left"></a><a href="https://efpia.eu"><img src="/the-fair-cookbook/assets/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" class="float-left"></a>
+  </div>
 
-  This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
-  Jupyter Book Community</a>
+  <div class="row_footer">
+  <div class="column" style="center"><a href="https://europa.eu/"><img src="/cookbook-dev/assets/images//logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
+  <div class="column"><a href="https://www.imi.europa.eu/"><img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
+  <div class="column"><a href="https://efpia.eu"><img src="/cookbook-dev/assets/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
+  <br/>
+  </div>
+
+  <div class="row_footer">
+  This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a>
+  </div>
  
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
 textbook_logo: images/logo/cookbook-logo-small.png               # A logo to be displayed at the top of your textbook sidebar. Should be square
-textbook_logo_link: https://fairplus.github.io/the-fair-cookbook/intro.html                    # A link for the logo.
+textbook_logo_link: https://fairplus.github.io/cookbook-dev/intro.html                    # A link for the logo.
 sidebar_footer_text: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 number_toc_chapters: true         # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
 
@@ -65,8 +74,8 @@ use_binder_button: true                 # If 'true', add a binder button for int
 binderhub_url: https://mybinder.org                        # The URL for your BinderHub. If no URL, use ""
 binder_repo_base: https://fairplus.github.io/                     # The site on which the textbook repository is hosted
 binder_repo_org: FAIRplus                     # The username or organization that owns this repository
-binder_repo_name: the-fair-cookbook                        # The name of the repository on the web
-binder_repo_branch: gh-pages                   # The branch on which your textbook is hosted.
+binder_repo_name: cookbook-dev               # [!!! IMPORTANT: switch to "the-fair-cookbook" when committing to master !!!] 
+binder_repo_branch: dev                   # [!!! IMPORTANT: switch to "the-fair-cookbook" when committing to master !!!] 
 binderhub_interact_text: launch binder              # The text that interact buttons will contain.
 
 # Thebelab settings
@@ -129,6 +138,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+
 sass:
   style: compressed
 
@@ -154,6 +164,7 @@ plugins:
 - jekyll-redirect-from
 - jekyll-scholar
 - jekyll-mermaid
+- jemoji
 
 mermaid:
   src: '/js/mermaid.js'

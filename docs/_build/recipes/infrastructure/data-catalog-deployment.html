@@ -1,0 +1,256 @@
+---
+title: |-
+  Deploying the FAIRplus IMI Data Catalogue
+prev_page:
+  url: /recipes/infrastructure/data-catalog.html
+  title: |-
+    Building a Data Catalogue
+next_page:
+  url: /recipes/findability.html
+  title: |-
+    Findability
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Deploying-a-data-catalogue">Deploying a data catalogue<a class="anchor-link" href="#Deploying-a-data-catalogue"> </a></h1><!-- **identifier:** UC9.1
+
+**version:** [v0.1](v0.1)
+
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:  :white_circle: :white_circle:
+
+**_Reading time:_** 20 minutes (when the recipe is completed)
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Software Engineer
+
+> :heavy_check_mark: System Administrator
+
+> :heavy_check_mark: Data Manager
+
+**_Recipe Type_**: Service deployment
+
+**_Executable code_**: No -->
+
+<hr>
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">UC9.1</a> </p>
+        <p> version: <a href="">v0.1</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 20 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#fc7a4a;"></i> No</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+<!--         <p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Managers </p> -->
+        <p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developers </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrators</p>
+      </div>
+    </div>
+  </div>
+</div><hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>This recipe is a step-by-step guide on how to deploy the IMI Data Catalogue in Docker.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2><p>For a more general introduction to data catalogues, their elements and data models, see the <a href="link">data catalogue recipe</a>. This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, together with information on any access restrictions.</p>
+<h2 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h2><p>The following need to be installed on the machine the deployment is run on:</p>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+</ul>
+<h2 id="Ingredients">Ingredients<a class="anchor-link" href="#Ingredients"> </a></h2><ul>
+<li><a href="https://github.com/FAIRplus/imi-data-catalogue">IMI data catalogue code</a> </li>
+</ul>
+<p>Check out the code to your local machine by running the following command in a terminal:</p>
+<div class="highlight"><pre><span></span>$ git clone git@github.com:FAIRplus/imi-data-catalogue.git
+</pre></div>
+<p>Thanks to <code>docker-compose</code>, it is possible to easily manage all the components (solr and web server) required to run the application.</p>
+<h2 id="Step-by-step-guide:">Step-by-step guide:<a class="anchor-link" href="#Step-by-step-guide:"> </a></h2><p>Unless otherwise specified, all the following commands should be run in a terminal <em>from the base directory of the data catalogue code</em>.</p>
+<h3 id="1.-Building">1. Building<a class="anchor-link" href="#1.-Building"> </a></h3><p><code>(local)</code> and <code>(web container)</code> indicate context of execution.</p>
+<ol>
+<li><p>First, generate the certificates that will be used to enable HTTPS in reverse proxy. To do so, execute:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> docker/nginx/
+$ ./generate_keys.sh
+</pre></div>
+<blockquote><p>:warning: <em>Please note that if you run this command outside the <code>nginx</code> directory, the certificate and key will be generated in the wrong location.</em></p>
+</blockquote>
+<p>This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this.</p>
+<blockquote><p>:warning: - it would cause the HTTPS connection to be unsafe!</p>
+</blockquote>
+</li>
+<li><p>Return to the root directory (<code>$cd ../..</code>), then copy <code>datacatalog/settings.py.template</code> to <code>datacatalog/settings.py</code>.</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ../..
+$ cp datacatalog/settings.py.template datacatalog/settings.py
+</pre></div>
+</li>
+<li><p>Edit the <code>settings.py</code> file to add a random string of characters in <code>SECRET_KEY</code> attribute. For maximum security, in <code>Python</code>, use the following to generate this key:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+ <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+</pre></div>
+</li>
+<li><p>Build and start the docker containers by running:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">local</span><span class="o">)</span> $ docker-compose up --build
+</pre></div>
+<p>That will create:</p>
+<ul>
+<li><p>a container with <code>datacatalog web application</code></p>
+</li>
+<li><p>a container for <code>Solr</code></p>
+</li>
+</ul>
+<blockquote><p>:thumbsup:  the data will be persistant between runs.</p>
+</blockquote>
+</li>
+<li><p>In a new terminal, to create <code>Solr</code> cores, do:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">local</span><span class="o">)</span> $ docker-compose <span class="nb">exec</span> solr solr create_core -c datacatalog
+<span class="o">(</span><span class="nb">local</span><span class="o">)</span> $ docker-compose <span class="nb">exec</span> solr solr create_core -c datacatalog_test
+</pre></div>
+</li>
+<li><p>Then, still in the second terminal, put Solr data into the cores:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">local</span><span class="o">)</span> $ docker-compose <span class="nb">exec</span> web /bin/bash
+<span class="o">(</span>web container<span class="o">)</span> $ python manage.py init_index 
+<span class="o">(</span>web container<span class="o">)</span> $ python manage.py import_entities Json dataset
+</pre></div>
+<blockquote><p>:bell: to kill the container, press <code>CTRL+D</code> or type: <code>exit</code> from the terminal</p>
+</blockquote>
+</li>
+<li><p>The web application should now be available with loaded data via  <a href="http://localhost">http://localhost</a> and <a href="https://localhost">https://localhost</a> with ssl connection</p>
+<blockquote><p>:warning: most browsers display a warning or block self-signed certificates.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="2.-Maintenance-of-docker-compose">2. Maintenance of docker-compose<a class="anchor-link" href="#2.-Maintenance-of-docker-compose"> </a></h3><p>Docker container keeps the application in the state it was when  built. Therefore, <strong>if you change any files in the project, the container has to be rebuilt in order to see changes in application</strong> :</p>
+<div class="highlight"><pre><span></span>$ docker-compose up --build
+</pre></div>
+<p>If you wanted to delete Solr data, you'd need to run:</p>
+<div class="highlight"><pre><span></span>$ docker-compose down --volumes
+</pre></div>
+<p>This will remove any persisted data - you must redo <code>solr create_core</code> (see step 4 in the previous section) to recreate the Solr cores.</p>
+<h3 id="3.-Modifying-the-datasets">3. Modifying the datasets<a class="anchor-link" href="#3.-Modifying-the-datasets"> </a></h3><p>The datasets are all defined in the file <code>tests/data/records.json</code>. This file can me modified to add, delete and modify datasets. <strong>After saving the file, rebuild and restart docker-compose</strong>.</p>
+<p>First, to stop all the containers:</p>
+<div class="highlight"><pre><span></span>$ CTRL+D
+</pre></div>
+<p>Then rebuild and restart the containers:</p>
+<div class="highlight"><pre><span></span>$ docker-compose up --build
+</pre></div>
+<p>Finally, reindex the datasets using:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">local</span><span class="o">)</span> $ docker-compose <span class="nb">exec</span> web /bin/bash
+<span class="o">(</span>web container<span class="o">)</span> $ python manage.py import_entities Json dataset
+</pre></div>
+<blockquote><p>:bell: to kill the container, press "<code>CTRL+D</code>" or type: "<code>exit</code>" from the terminal</p>
+</blockquote>
+<hr>
+<h2 id="Single-Docker-deployment">Single Docker deployment<a class="anchor-link" href="#Single-Docker-deployment"> </a></h2><p>In some cases, you might not want Solr and Nginx to run (for example, if there are <strong>multiple instances</strong> of <code>Data Catalog</code> running).
+Then, simply use:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">local</span><span class="o">)</span> $ docker build . -t <span class="s2">&quot;data-catalog&quot;</span>
+<span class="o">(</span><span class="nb">local</span><span class="o">)</span> $ docker run --name data-catalog --entrypoint <span class="s2">&quot;gunicorn&quot;</span> -p <span class="m">5000</span>:5000 -t data-catalog -t <span class="m">600</span> -w <span class="m">2</span> datacatalog:app --bind <span class="m">0</span>.0.0.0:5000
+</pre></div>
+<h2 id="Manual-deployment">Manual deployment<a class="anchor-link" href="#Manual-deployment"> </a></h2><p>If you would prefer not to use Docker and compile and run the data catalogue manually instead, please follow the instructions in the <a href="https://github.com/FAIRplus/imi-data-catalogue/blob/master/README.md">README file</a></p>
+<hr>
+<h2 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:"> </a></h2><p>This recipe provides a step-by-step guide to deploying the <code>IMI data catalogue</code> developed at <a href="https://wwwen.uni.lu/lcsb">University of Luxembourg</a>, as parrt of <a href="https://fairplus-project.eu/">IMI FAIRplus</a> to a local system.</p>
+<blockquote><h4 id="What-should-I-read-next?">What should I read next?<a class="anchor-link" href="#What-should-I-read-next?"> </a></h4><ul>
+<li><a href="">How to build a data catalogue?</a></li>
+<li><a href="">How to deploy the FAIRPORT data catalogue?</a></li>
+<li><a href="">What is search engine optimization?</a></li>
+<li><a href="">How to create a minimal information metadata profile?</a></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Danielle Welter</td>
+<td style="text-align:left">LCSB, University of Luxembourg</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0003-1058-2668">0000-0003-1058-2668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Valentin Grouès</td>
+<td style="text-align:left">LCSB, University of Luxembourg</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0001-6501-0806">0000-0001-6501-0806 </a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Wei Gu</td>
+<td style="text-align:left">LCSB, University of Luxembourg</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0003-3951-6680">0000-0003-3951-6680</a></td>
+<td style="text-align:left">Writing - Review</td>
+</tr>
+<tr>
+<td style="text-align:left">Venkata Satagopam</td>
+<td style="text-align:left">LCSB, University of Luxembourg</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-6532-5880">0000-0002-6532-5880</a></td>
+<td style="text-align:left">Writing - Review</td>
+</tr>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Review</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

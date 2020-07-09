@@ -1,0 +1,9 @@
+Title : Deploy ontology service in the local machine
+Owner : Eva Martin, Fuqi Xu
+As a: data manager in the pharma
+I want: to have internal ontology management services by reusing public open source services
+So that: I can build a collection of preferred ontology sources and improve data security.
+Role-Main: Data management, Data infrastructure
+Role-Detail: Data steward, Data consumer
+Stakeholder: service provider
+Stakeholder-Focus: privacy and security, PID services, data annotation, data maintenance
