@@ -27,7 +27,7 @@
   not_numbered: true
 
 # External link
-- title: GitHub repository
+- title: Go to GitHub repository...
   url: https://github.com/FAIRplus/the-fair-cookbook
   external: true
   not_numbered: true
@@ -44,69 +44,167 @@
 # Add a header and sample content section
 - header: FAIR Cookbook
 
-
+# Top-level page
+- title: FAIR Cookbook
+  url: /intro
+  not_numbered: true
+  
 # The Roadmap
 - title: Development Roadmap
   url: /roadmap
   not_numbered: true
   expand_sections: false
 # A chapter w/ a collection of sections beneath it
-- title: Recipes
-  url: /recipes/recipes
-  not_numbered: true
+
+# - title: Recipes
+#   url: /recipes/recipes
+#   not_numbered: false
+#   expand_sections: true
+#   sections:
+
+# - title: What is FAIR
+#   url: /recipes/introduction/FAIR
+#   not_numbered: false
+
+- title: The Values of FAIR
+  url: /recipes/introduction/FAIRplus-values
+  not_numbered: false
+
+- title: Infrastructure for FAIR
+  url: /recipes/infrastructure
+  not_numbered: false
   expand_sections: false
   sections:
-  - title: How to create a recipe
-    url: /recipes/howtocreatecard
-    not_numbered: false    
-  - title: FAIR Assessment Recipe
-    url: /recipes/fair-assessment-recipe
-    not_numbered: false  
-  - title: FAIR data matrix Recipe
-    url: /recipes/fair-data-matrix-recipe
-    not_numbered: false
-    subsections:
-      - title: Converting Excel to Frictionless Data Package
-        url: /recipes/fair-data-matrix/0-rose-metabolites-Python-data-handling
-        not_numbered: false
-        expand_sections: true
-      - title: Plotting from Frictionless Data Package in Python
-        url: /recipes/fair-data-matrix/1-rose-metabolites-Python-analysis
-        not_numbered: false
-        expand_sections: true
-      - title: Plotting from Frictionless Data Package in R
-        url: /recipes/fair-data-matrix/3-rose-metabolites-R-analysis
-        not_numbered: false
-        expand_sections: true         
-      - title: Exploration fo semantic model with SPARQL
-        url: /recipes/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
-        not_numbered: false
-        expand_sections: true
-  - title: Chemical identities - Generating InChI and SMILES strings
-    url: /recipes/chemical-identities
-    not_numbered: false
-    notebooks: /recipes/chemical-identities/1-notebook          
-  - title: eTOX experience Recipe
-    url: /recipes/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario 
-    not_numbered: false    
-  - title: RESOLUTE experience Recipe
-    url: /recipes/resolute_raw/rawRecipe_resolute
-    not_numbered: false 
-  - title: ONCOTRACK experience Recipe
-    url: /recipes/oncotrack_raw/rawRecipe-oncotrack
-    not_numbered: false 
-  - title: ND4BB experience Recipe
-    url: /recipes/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
-    not_numbered: false
-  - title: Recipe Template
-    url: /recipes/recipe-template
-    not_numbered: false 
-  - title: Anomynization Recipe
-    url: /recipes/anonymization-recipe
-    not_numbered: false    
+    - title: Identifier Resolution Service
+      url: /recipes/infrastructure/id-resolution
+    - title: Deploying Vocabulary Servers 
+      url: /recipes/infrastructure/UC3_R13_local_ontology_services
+      not_numbered: false
+    - title: Selecting Terminology Services 
+      url: /recipes/infrastructure/Selecting_and_using_ontology_lookup_services
+      not_numbered: false
+    - title: Criteria for selecting Ontology Services 
+      url: /recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services
+      not_numbered: false
+    # - title: Chemical identities - Generating InChI and SMILES strings
+    #   url: /recipes/infrastructure/chemical-identities
+    #   not_numbered: false
+    #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook
+    - title: Building a Data Catalogue
+      url: /recipes/infrastructure/data-catalog
+      not_numbered: false
+    - title: Deploying the FAIRplus IMI Data Catalogue
+      url: /recipes/infrastructure/data-catalog-deployment  
+      not_numbered: false
 
+- title: Findability
+  url:  /recipes/findability
+  expand_sections: true
+  sections:
+      - title: Depositing to Zenodo
+        url: /recipes/findability/zenodo-deposition
+        not_numbered: false    
+      - title: Search Engine optimization
+        url: /recipes/findability/seo
+        not_numbered: false
+      - title: bioschema data catalog
+        url: /recipes/findability/seo/bioschemas-datacatalog
+        not_numbered: false
+      - title: bioschema dataset
+        url: /recipes/findability/seo/bioschemas-dataset
+        not_numbered: false
+      - title: bioschema data page
+        url: /recipes/findability/seo/bioschemas-data-page
+        not_numbered: false
 
+- title: Accessibility
+  url: /recipes/accessibility
+  not_numbered: false
+  expand_sections: false
+  sections:
+    - title: Anonymization Recipe
+      url: /recipes/accessibility/anonymization
+      not_numbered: false
+    - title: Selecting a Licensing Mode
+      url: /recipes/accessibility/license-selection
+      not_numbered: false
+    
+- title: Interoperability
+  url:  /recipes/interoperability
+  expand_sections: true
+  sections:
+    - title: How to select ontologies
+      url: /recipes/interoperability/selecting-ontologies
+      not_numbered: false
 
+    - title: Minimal MetaData Profiles
+      url: /recipes/interoperability/creating-minimal-metadata-profiles
+      not_numbered: false
+    - title: Covid19 Sample MetaData Profile Shex Validation
+      url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
+      # url: /recipes/interoperability/covid19-test
+      not_numbered: false
+    - title: How to request new terms in existing ontologies
+      url: /recipes/interoperability/ontology-new-term-request-recipe
+      not_numbered: false
+
+    - title: How to build an application ontology
+      url: /recipes/interoperability/ontology-robot-recipe
+      not_numbered: false
+      subsections:
+        - title: MSIO robot build process
+          url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process
+          not_numbered: false
+
+    - title: How to convert to open format from propriatory
+      url: /recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar
+      not_numbered: false
+
+- title: Reusability
+  url:  /recipes/reusability
+  expand_sections: false
+  
+- title: FAIR Assessment
+  url: /recipes/assessing-fairness
+  not_numbered: false
+  expand_sections: true
+  sections:
+    - title: Assessing FAIRness
+      url: /recipes/assessing-fairness/fair-assessment-recipe
+      not_numbered: false
+
+- title: Applied Examples
+  url: /recipes/applied-examples
+  not_numbered: false
+  expand_sections: false
+  sections:
+    - title: FAIR data matrix Recipe
+      url: /recipes/applied-examples/fair-data-matrix-recipe
+      not_numbered: false
+    - title: Converting Excel to Frictionless Data Package
+      url: /recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling
+    - title: Plotting from Frictionless Data Package in Python
+      url: /recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis
+    - title: Plotting from Frictionless Data Package in R
+      url: /recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis
+      not_numbered: false
+      expand_sections: true
+    - title: Exploration fo semantic model with SPARQL
+      url: /recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
+      not_numbered: false
+      expand_sections: true
+    - title: eTOX experience Recipe
+      url: /recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
+      not_numbered: false
+    - title: RESOLUTE experience Recipe
+      url: /recipes/applied-examples/resolute_raw/rawRecipe_resolute
+      not_numbered: false
+    - title: ONCOTRACK experience Recipe
+      url: /recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
+      not_numbered: false
+    - title: ND4BB experience Recipe
+      url: /recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
+      not_numbered: false
 
 # Divider for meta-pages and search page
 - divider: true
@@ -121,26 +219,56 @@
     not_numbered: true
 
 # Divider for meta-pages and search page
-- divider: true
+# - divider: true
 
 # A chapter w/ a collection of sections beneath it
-- title: Features and customization
-  url: /features/features
-  not_numbered: true
-  expand_sections: false
-  sections:
-  - title: Markdown files
-    url: /features/markdown
-    not_numbered: false
-  - title: Jupyter notebooks
-    url: /features/notebooks
-    not_numbered: false
+# - title: Features and customization
+#   url: /features/features
+#   not_numbered: true
+#   expand_sections: false
+#   sections:
+#   - title: Markdown files
+#     url: /features/markdown
+#     not_numbered: false
+#   - title: Jupyter notebooks
+#     url: /features/notebooks
+#     not_numbered: false
 
 - divider: true
 
 - header: Help Section and Demonstration
-- title: frictionless
+- title: help
+  url: /recipes/help
+  sections:
+    - title: How to create a recipe with GoogleDoc
+      url: /recipes/help/how-to-create-recipe-with-gdoc
+      not_numbered: false
+    - title: How to use HackMD to write a FAIR Cookbook Recipe
+      url: /recipes/help/how-to-create-recipe-with-hackmd
+      not_numbered: false
+    - title: HackMD Tips and Tricks
+      url: /recipes/help/tips-tricks
+      not_numbered: false      
+    - title: How to create a recipe with git
+      url: /recipes/help/how-to-create-recipe-with-git
+      not_numbered: false
+    - title: Markdown files
+      url: /features/markdown
+      not_numbered: false
+    - title: Jupyter notebooks
+      url: /features/notebooks
+      not_numbered: false
+    - title: Recipe Template
+      url: /recipes/help/recipe-template
+      not_numbered: false
+    - title: mermaidsetup
+      url: /1/mermaidsetup
+      not_numbered: false
+
+
+- title: frictionless data example
   url: /1/frictionless
+  expand_sections: false
   sections:
   - title: 1
     url: /1/testnb/0-rose-metabolites-Python-data-handling
@@ -150,12 +278,19 @@
     url: /1/testnb/3-rose-metabolites-R-analysis
   - title: 4
     url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
-- title: mermaidsetup
-  url: /1/mermaidsetup  
+
 
 
 # Divider for meta-pages and content page
 - divider: true
+- title: Project Information
+  url: /project_information
+  expand_sections: false
+  sections:
+  # people section
+  - title: People
+    url: /People
+    not_numbered: true
 
 # people section
 - title: People

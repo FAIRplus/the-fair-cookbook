@@ -34,7 +34,6 @@ ___
 ___
 ## User Stories
 
-
 ## Capability & Maturity Table
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |

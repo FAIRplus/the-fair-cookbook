@@ -1,0 +1,276 @@
+---
+title: |-
+  bioschema dataset
+prev_page:
+  url: /recipes/findability/seo/bioschemas-datacatalog.html
+  title: |-
+    bioschema data catalog
+next_page:
+  url: /recipes/findability/bioschemas-data-page.html
+  title: |-
+    bioschema data page
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Findability:-Dataset-Markup">Findability: Dataset Markup<a class="anchor-link" href="#Findability:-Dataset-Markup"> </a></h1><h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
+<li><a href="#Main%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>To embed <code>Schema.org</code> markup in a web page representing a dataset.</p>
+</blockquote>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiBBW0hUTUwgcGFnZV0gLS0-IEJ7UGFnZSBqdXN0IGFib3V0IG9uZSBkYXRhc2V0P31cbiBCIC0tPnxZRVN8IEMoQ3JlYXRlIG1hcmt1cCBmb3IgZGF0YXNldClcbiBCIC0tPnxOT3wgRltVc2UgRGF0YUNhdGFsb2cgUmVjaXBlXVxuIEMgLS0-IEQoTWFya3VwIFRlbXBsYXRlKVxuIEQgLS0-fEVtYmVkIHRlbXBsYXRlIGluIHdlYnNpdGV8IEVbZmE6ZmEtc2VhcmNoIGZhOmZhLWNvZyBmYTpmYS1maWdodGVyLWpldCBTY2hlbWEub3JnIGF1Z21lbnRlZCBIVE1MIHBhZ2VdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt=""></a></p>
+
+<pre><code>graph TD
+ A[HTML page] --&gt; B{Page just about one dataset?}
+ B --&gt;|YES| C(Create markup for dataset)
+ B --&gt;|NO| F[Use DataCatalog Recipe]
+ C --&gt; D(Markup Template)
+ D --&gt;|Embed template in website| E[fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page]</code></pre>
+<hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Findability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Method">Method<a class="anchor-link" href="#Method"> </a></h2><p>We will outline the steps for marking up a page in your site that is about a specific dataset that you publish. The resulting markup will be compliant with both <a href="https://developers.google.com/search/docs/data-types/dataset">Google's Dataset markup guidelines</a> and the <a href="https://bioschemas.org/profiles/Dataset">Bioschemas Dataset Profile</a>. The resulting webpage will be indexable by the major search engines and should eventually appear in <a href="https://datasetsearch.research.google.com/">Google's Dataset Search Tool</a>.</p>
+<p>We will use <a href="https://www.uniprot.org/uniprot/">UniProtKB</a> as an example for this recipe.</p>
+<ol>
+<li><p>Identify the page in your site about a specific dataset, e.g. <a href="https://www.uniprot.org/uniprot/">https://www.uniprot.org/uniprot/</a></p>
+</li>
+<li><p>Open the  <a href="http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/">Bioschemas Generator</a></p>
+<ol>
+<li><p>Select <code>Dataset</code> from the Bioschemas Profile dropdown</p>
+</li>
+<li><p>Enter the URL of the page in URL box, e.g. <code>https://www.uniprot.org/uniprot/</code></p>
+</li>
+<li><p>Click on the <code>Show Form</code> button</p>
+</li>
+</ol>
+<p><img src="BioschemasGenerator.png =450x" alt="Bioschemas Generator start screen"></p>
+</li>
+<li><p>Complete the profile form with the data relevant for your page. Once completed, click on the <code>Generate Markup</code>  button</p>
+<ul>
+<li>You should complete all <em>Minimum</em> properties and as many <em>Recommended</em> properties as possible. You can show/hide properties using the <code>Additional Properties</code> buttons.</li>
+<li>Where possible you should link to other resources. The Bioschemas Generator does not make this as simple as it could, but you can do it in step 5 once you have generated your markup, e.g. our dataset will link to a page with DataCatalog markup in rather than repeating all the properties for now we will just enter a <code>url</code> and no other properties</li>
+<li>The form defaults to the data type with the first alphabetical character, e.g. for <code>identifier</code> this defaults to <code>PropertyValue</code> but <code>Text</code> or <code>URL</code> will be more appropriate in most cases</li>
+<li>The right side of the screen gives examples for properties, where these have been provided by the Bioschemas profile authors. Click on the <code>Show</code> button to see the example for a specific property. Click on <code>Minimum</code>, <code>Recommended</code>, or <code>Optional</code> to expand/contract the section and see the properties contained at that marginality level</li>
+</ul>
+<p><img src="BioschemasGeneratorDatasetForm.png =450x" alt="Bioschemas Generator Dataset profile form"></p>
+</li>
+<li><p>You will now see the generated markup in <code>JSON-LD</code> format. You can click on the <code>Microdata</code> and <code>RDFa</code> tabs to see the same content rendered in the different formats. However, we recommend the use of <code>JSON-LD</code>. For our UniProtKB example, we get the following markup</p>
+<div class="highlight"><pre><span></span><span class="err">&lt;script</span> <span class="err">type=</span><span class="s2">&quot;application/ld+json&quot;</span> <span class="err">&gt;</span>
+<span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.uniprot.org/uniprot/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;citation&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.1093/nar/gky1049&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;creator&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. &quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UniProt Consortium&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The UniProt Knowledgebase (UniProtKB) is the central hub for the collection of functional information on proteins, with accurate, consistent and rich annotation. In addition to capturing the core data mandatory for each UniProtKB entry (mainly, the amino acid sequence, protein name or description, taxonomic data and citation information), as much annotation information as possible is added.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.uniprot.org/downloads#uniprotkblink&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;https://www.uniprot.org/uniprot/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;includedInDataCatalog&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataCatalog&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://uniprot.org&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Protein&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Protein annotation&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;http://creativecommons.org/licenses/by/4.0/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UniProtKB&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.uniprot.org/uniprot/&quot;</span>
+<span class="p">}</span>
+<span class="err">&lt;/script</span> <span class="err">&gt;</span>
+</pre></div>
+</li>
+<li><p>Download or copy and paste the generated markup</p>
+</li>
+<li><p>Make adjustments for any bits that could not be properly entered through the form.</p>
+<p>For example, for our generated markup we would change the <code>includedInDataCatalog</code> so that it provides a direct link rather than repeating the properties. We would replace</p>
+<div class="highlight"><pre><span></span><span class="s2">&quot;includedInDataCatalog&quot;</span><span class="err">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataCatalog&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://uniprot.org&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span><span class="err">,</span>
+</pre></div>
+<p>with</p>
+<div class="highlight"><pre><span></span><span class="s2">&quot;includedInDataCatalog&quot;</span><span class="err">:</span> <span class="p">{</span>
+   <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataCatalog&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://uniprot.org&quot;</span>
+ <span class="p">}</span><span class="err">,</span>
+</pre></div>
+<p>You can test that your JSON-LD is valid syntax, and visualise your markup using the <a href="https://json-ld.org/playground/">JSON-LD Playground</a>.</p>
+</li>
+<li><p>Once you are happy with your markup, include the <code>JSON-LD</code>, script tags and all, at the bottom of your HTML page template. Make sure that this is before the closing <code>&lt;/html&gt;</code> tag</p>
+</li>
+<li><p>If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database. For example, the follow snippet uses variables of the form <code>%%%PAGEURL%%%</code></p>
+<div class="highlight"><pre><span></span><span class="err">&lt;script</span> <span class="err">type=</span><span class="s2">&quot;application/ld+json&quot;</span><span class="err">&gt;</span>
+<span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;%%%PAGEURL%%%&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;citation&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;%%%DOI%%%&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;creator&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. &quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UniProt Consortium&quot;</span>
+    <span class="p">}</span>
+    <span class="err">...</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+<span class="err">&lt;/script&gt;</span>
+</pre></div>
+</li>
+</ol>
+<p>Your site should now generate dataset pages with embedded markup.</p>
+<p>Once you have deployed this on your web server, you can test it with the <a href="http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/">Bioschemas Validator</a> which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.</p>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3778">text annotation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_3779">annotated text</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_2428">validation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2048">report</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/format_3749">JSON-LD</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2353">RDF</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/format_2331">HTML</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Alasdair Gray</td>
+<td style="text-align:left">Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-5711-4872">0000-0002-5711-4872</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Leyla Garcia</td>
+<td style="text-align:left">Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0003-3986-0510">0000-0003-3986-0510</a></td>
+<td style="text-align:left">External review</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Footnotes:">Footnotes:<a class="anchor-link" href="#Footnotes:"> </a></h2><p><a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.</p>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

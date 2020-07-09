@@ -1,0 +1,237 @@
+---
+title: |-
+  Recipe Template
+prev_page:
+  url: /features/notebooks.html
+  title: |-
+    Jupyter notebooks
+next_page:
+  url: /1/mermaidsetup.html
+  title: |-
+    mermaidsetup
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="[here-comes-the-Title-of-the-recipe]">[here comes the Title of the recipe]<a class="anchor-link" href="#[here-comes-the-Title-of-the-recipe]"> </a></h1><p><strong>identifier:</strong> <a href="RX.X_FIXME">RX.X_FIXME</a></p>
+<p><strong>version:</strong> <a href="version_number_FIXME"><version_number_FIXME></a></p>
+<hr>
+<p><strong><em>Difficulty level:</em></strong> moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle: _FIXME</p>
+<p><strong><em>Reading time:</em></strong> _FIXME minutes</p>
+<p><strong><em>Intended Audience:</em></strong></p>
+<blockquote><p>:heavy_check_mark: set_value_FIXME, e.g. Data Scientist</p>
+<p>:heavy_check_mark: set_value_FIXME, e.g. Data Scientist</p>
+</blockquote>
+<p><strong><em>Recipe Type</em></strong>: set_value_FIXME, e.g. Hands on</p>
+<p><strong><em>Executable code</em></strong>: set_value_FIXME, [Yes,No]</p>
+<p>[TOC]</p>
+<h2 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h2><ol>
+<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
+<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
+<li>Requirements</li>
+<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
+<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
+<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
+<li><a href="#Main%20Content">Main Content goes here...</a><ul>
+<li><a href="#Executable%20Code%20in%20Notebook">... writing executable code</a></li>
+<li><a href="#How%20to%20create%20workflow%20figures">... creating workflow figures</a></li>
+</ul>
+</li>
+<li><a href="#License">License</a></li>
+</ol>
+<hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
+<blockquote><p>Provid a summary statement about the purpose of the recipe.</p>
+</blockquote>
+<hr>
+<h2 id="Graphical-Overview-of-the-FAIRification-Recipe-Objectives">Graphical Overview of the FAIRification Recipe Objectives<a class="anchor-link" href="#Graphical-Overview-of-the-FAIRification-Recipe-Objectives"> </a></h2><p>Note: use this section to provide a decision tree for the overall process described in the recipe
+For more information about the syntax used to generate the diagram, please refer to the <a href="https://mermaid-js.github.io/mermaid/#/flowchart">following documentation</a></p>
+<!--
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgQShEYXRhIEFjcXVpc2l0aW9uKTo6OmJveCAtLT5CKFJhdyBEYXRhKTo6OmJveFxuICAgIEIgLS0-IEN7RkFJUiBieSBEZXNpZ259XG4gICAgQzo6OmJveC0tPnxZZXN8IEQoU3RhbmRhcmQgQ29tcGxpYW50IERhdGEpOjo6Ym94XG4gICAgQzo6OmJveCAtLT58Tm98IEUoVmVuZG9yIGxvY2tlZCBEYXRhKTo6OmJveFxuICAgIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuICAgIGxpbmtTdHlsZSAwLDEsMiwzIHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7IiwibWVybWFpZCI6eyJ0aGVtZSI6bnVsbH0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgQShEYXRhIEFjcXVpc2l0aW9uKTo6OmJveCAtLT5CKFJhdyBEYXRhKTo6OmJveFxuICAgIEIgLS0-IEN7RkFJUiBieSBEZXNpZ259XG4gICAgQzo6OmJveC0tPnxZZXN8IEQoU3RhbmRhcmQgQ29tcGxpYW50IERhdGEpOjo6Ym94XG4gICAgQzo6OmJveCAtLT58Tm98IEUoVmVuZG9yIGxvY2tlZCBEYXRhKTo6OmJveFxuICAgIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuICAgIGxpbmtTdHlsZSAwLDEsMiwzIHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7IiwibWVybWFpZCI6eyJ0aGVtZSI6bnVsbH0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+-->
+
+
+<div class="mermaid">
+graph LR;
+    A(Data Acquisition):::box -->B(Raw Data):::box
+    B --> C{FAIR by Design}
+    C:::box-->|Yes| D(Standard Compliant Data):::box
+    C:::box -->|No| E(Vendor locked Data):::box
+    classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+    linkStyle 0,1,2,3 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+</div><hr>
+<h2 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h2><ul>
+<li>technical requirements:<ul>
+<li>bash knowledge</li>
+<li>...</li>
+</ul>
+</li>
+<li>recipe dependency:<ul>
+<li>read Recipe 1 first!</li>
+</ul>
+</li>
+<li>knowledge requirement:<ul>
+<li>be sure to know what OBO is, or read it here: ...link to knowledge...</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Interoperability</td>
+<td style="text-align:left">minimal</td>
+<td style="text-align:left">repeatable</td>
+</tr>
+</tbody>
+</table>
+<p>Help to fill this table out can be found ...(not yet)...</p>
+<hr>
+<h2 id="FAIRification-Objectives,-Inputs-and-Outputs">FAIRification Objectives, Inputs and Outputs<a class="anchor-link" href="#FAIRification-Objectives,-Inputs-and-Outputs"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Actions.Objectives.Tasks</th>
+<th style="text-align:left">Input</th>
+<th style="text-align:left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_2428">validation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ew26v7">Structure Data File (SDF)</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_2048">report</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3438">calculation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ew26v7">Structure Data File (SDF)</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ddk9t9">InChi</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3438">calculation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.ew26v7">Structure Data File (SDF)</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.qv4b3c">SMILES</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://edamontology.org/operation_3778">text annotation</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.kbtt7f">Human Phenotype Ontology</a></td>
+<td style="text-align:left"><a href="http://edamontology.org/data_3779">annotated text</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Data-Standards">Table of Data Standards<a class="anchor-link" href="#Table-of-Data-Standards"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Data Formats</th>
+<th style="text-align:left">Terminologies</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.r2ts5t">FASTQ</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.2mk2zb">LOINC</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.q72e3w">SRA XML</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.b7z8by">DICOM</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.kbtt7f">Human Phenotype Ontology</a></td>
+<td style="text-align:left"><a href="https://fairsharing.org/FAIRsharing.qk984b">OMOP</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Main-Content">Main Content<a class="anchor-link" href="#Main-Content"> </a></h2><p>This is the place for your actual content. You can also ...</p>
+<h3 id="...-write-executable-code">... write executable code<a class="anchor-link" href="#...-write-executable-code"> </a></h3><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">isatools</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">holoview</span>
+</pre></div>
+<h3 id="...-create-workflow-figures">... create workflow figures<a class="anchor-link" href="#...-create-workflow-figures"> </a></h3><p>one may use the following <strong><a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> syntax:</p>
+
+<pre><code>graph LR;
+    A[Data Acquisition] --&gt;B(Raw Data)
+    B --&gt; C{FAIR by Design}
+    C --&gt;|Yes| D[Standard Compliant Data]
+    C --&gt;|No| E[Vendor locked Data]</code></pre>
+<div class="mermaid">
+graph LR;
+    A["input data"]-->B["conversion to open format"];
+    A["input data"]-->C["automatic annotation"];
+    B["conversion to open format"]-->D(("output data"));
+    C["automatic annotation"]-->D(("output data"));  
+
+    style A fill:#FF5733,stroke:#333,stroke-width:2px
+    style D fill:#0A749B,stroke:#333,stroke-width:2px
+</div><hr>
+<h2 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:"> </a></h2><blockquote><p>Summerize Key Learnings of the recipe.</p>
+<p>Suggest further reading using the following:</p>
+<h4 id="What-should-I-read-next?">What should I read next?<a class="anchor-link" href="#What-should-I-read-next?"> </a></h4><ul>
+<li><a href="TODO">HackMD &amp; MarkDown Tips and Tricks</a></li>
+<li><a href="TODO">A related recipe which nice complements the current one </a></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+<th style="text-align:left">specific contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Philippe Rocca-Serra</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
+<td style="text-align:left">Writing - Original Draft</td>
+<td style="text-align:left">original format</td>
+</tr>
+<tr>
+<td style="text-align:left">Susanna-Assunta Sansone</td>
+<td style="text-align:left">University of Oxford, Data Readiness Group</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Writing - Review &amp; Editing, Funding acquisition</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Alasdair Gray</td>
+<td style="text-align:left">Heriot-Watt Unviersity / ELIXIR-UK</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-5711-4872">0000-0002-5711-4872</a></td>
+<td style="text-align:left">Writing - Review &amp; Editing</td>
+<td style="text-align:left">minor improvements (see git)</td>
+</tr>
+<tr>
+<td style="text-align:left">Robert Giessmann</td>
+<td style="text-align:left">Bayer AG</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-0254-1500">0000-0002-0254-1500</a></td>
+<td style="text-align:left">Writing - Review &amp; Editing</td>
+<td style="text-align:left">minor improvements (see git)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
