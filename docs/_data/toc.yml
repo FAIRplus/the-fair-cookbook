@@ -133,7 +133,6 @@
       url: /recipes/interoperability/selecting-ontologies
       not_numbered: false
 
-  sections:
     - title: Minimal MetaData Profiles
       url: /recipes/interoperability/creating-minimal-metadata-profiles
       not_numbered: false
@@ -144,6 +143,7 @@
     - title: How to request new terms in existing ontologies
       url: /recipes/interoperability/ontology-new-term-request-recipe
       not_numbered: false
+
     - title: How to build an application ontology
       url: /recipes/interoperability/ontology-robot-recipe
       not_numbered: false
@@ -151,6 +151,10 @@
         - title: MSIO robot build process
           url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process
           not_numbered: false
+
+    - title: How to convert to open format from propriatory
+      url: /recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar
+      not_numbered: false
 
 - title: Reusability
   url:  /recipes/reusability
