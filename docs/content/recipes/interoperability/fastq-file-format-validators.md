@@ -16,6 +16,8 @@ FASTQ file is the de facto sequencing file format, and it is the foundation of m
 
 Also, intergrating FASTQ file variation to pipelines improves the reproducibility of the process and offers a better way to check the status.
 
+"Its is a common practice to re-use data deposited in one of the large public repositories.  In some cases only highly processed quantitated data will be used, but often it is better to go back to lower level formats such as fastq files to run your analysis.  In these cases we rely on the repository providing accurate data from which we can work but there are a number of ways in which this can fail."
+
 ## Graphical Overview of the FAIRification Recipe Objectives
 
 TODO
@@ -30,7 +32,7 @@ graph LR;
 ___
 ## User Stories
 
-The table below listed use cases where the FASTQ files need to be validated. This recipe provides a solution to these users. and avoid going into too much details/.
+The table below listed use cases where the FASTQ files need to be validated. This recipe provides a solution to these users. and avoid going into too much detail.
 
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
@@ -52,108 +54,136 @@ The table below listed use cases where the FASTQ files need to be validated. Thi
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| File content validation  | [FASTQ file](https://fairsharing.org/FAIRsharing.r2ts5t)  | Validation report  |
+| [Format validation](http://edamontology.org/operation_0336)  | [FASTQ file](http://edamontology.org/format_2182)  | Validation results  |
 
 
 ## Table of Data Standards
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-| [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | 
+| [FASTQ](http://edamontology.org/format_2182)  | |
 ___
 
-## What a validator does
+Most validators detects FASTQ variants automaticlly. The Quality control of FASTQ file are not included in this recipe. 
 
-It validates
-- :heavy_check_mark: whether the file is corrupted
-- :heavy_check_mark: whether the score matches with the bases
-- :heavy_check_mark: whether the base and scores are correctly representated
-- :heavy_check_mark: whether paired-end reads have the same number of reads and if the reads are paired
+FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding. For paired-end reads, they also checks if the forward reads have the same number of reads, and paired with the reverse reads. Most validators can detect different FASTQ variants and process compressed FASTQ files automatically.
 
-It doesn't 
-- :x: check which variant the fastq file it is
-- :x: perform quality control analysis
+[FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been used in __popular archives___, European Nucleotide Archive, (ENA) and several research projects, __Human Cell Atlas__, for example.
 
-### Avaiable fastq validators
+Here is an example of validating FASTQ file with _FASTQ-utils_
 
-### Where to find the FASTQ validators
-- bio.tools
-- Archives, e.g SRA, ENA, ArrayExpress
-- ? _forums, publications?_
-
-|Valiators| Users|
-|---|---|
-|FASTQ utils| Used by ENA|
-|samtools htsjdk library| Used by ENA+EGA| 
-| LibStatGen: FASTQ| [GH](https://github.com/statgen/fastQValidator) [documentaion](https://genome.sph.umich.edu/wiki/FastQValidator)
-| Fqtools | [paper](https://academic.oup.com/bioinformatics/article/32/12/1883/1744334)
-
-### How to choose
-
-|Validators| |FASTQ-utils|validatior_2|XX|XX|XX|
-|--|--|--|--|--|--|--|
-|basic validation*|line length |:heavy_check_mark:|:x:||
-| | ascii code| ||| 
-|FASTQ variants| fastq-illumina| :heavy_check_mark:|:x:|
-| |fastq-sanger| :heavy_check_mark:|:x:|
-| |fastq- solexa| :heavy_check_mark:|:x:|
-|Paired end reads validation| paired-reads as seperate files| :heavy_check_mark:|:x:|
-| |interleaved _"8-line"_ files|:heavy_check_mark:|:x:|
-| |concatenated files| :heavy_check_mark:|:x:|
-|interface| GUI|:heavy_check_mark:|:x:|
-| | CLI| :heavy_check_mark:|:x:|
-|by sequencing machine|illumina|:heavy_check_mark:|:x:|
-| |nanopore| :heavy_check_mark:|:x:|
-| |454 |:heavy_check_mark:|:x:|
-| |pacbio| :heavy_check_mark:|:x:|
-|performance| memory requirement| :heavy_check_mark:|:x:|
-| |speed| :heavy_check_mark:|:x:|
-|compressed files| gzip| :heavy_check_mark:|:x:|
-| | bzip2|:heavy_check_mark:|:x:|
- 
-
-*what is basic validation
-
-- Validation purpose: for personal use, for data submission, etc.
-- Special requirement: paired ends, _.gz_ files 
-- speed
-
-["Benchmark data for various FASTQ processing tools."](https://academic.oup.com/view-large/84799791)
-
-benchmarking details [here](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bioinformatics/32/12/10.1093_bioinformatics_btw088/2/btw088_Supplementary_Data.zip?Expires=1595360722&Signature=yeN19WVt31E1zHxBBhgN9MHxvLMLOjozIUYAtZowqQVYjvWTTzEEq1Gx4PX8h5abHv7HQaGhZvzKZQ~FiM6ots3ODYx1ci7jm~nzwlK3-L5tXGKI6UFsTm1I-pZkw0aBVdJBUEHj666M59qbpPfnjZzjSlA9-lm3c-0CgzTPsv77hYwK7MMKVbZHNd8ccqEdiNAp174TOu6RMj~bJpUmhFr0yOFnXWSyUVStWZwp9dWa7hLaUWAlMUqoof~WE4JtPGXEf-AHY21B5~FR~odj2~oP3NzYYw9cQ7DaQKRzqA2nvkacPEiuq0wjrR5ThRTx0Tj6QKjdINuPUdq5cx0O3A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
-|Tool| Valid | Invalid | Process .gz | Plain (reads/s)	|Compressed (reads/)|
-|--|--|--|--|--|--|
-|fqtools|Y |	Y| 	R+W| 	701 375 |	444 |648 
-
-### Example of how to use a FASTQ utils
-#### online validators
-#### local validators
-An example of validating FASTQ files with _fastq-utils_.
-
-__Step 1: Installing fastq-utils__
+### Step 1: Install fastq-utils
 ```shell
 conda install -c bioconda fastq_utils
 ```
+___fastq-utils_ can also be installed using the source code.__
 
-__Step 2: Get example test file__ 
+### Step 2: Get example file for testing*
+> *Users can skip this step and test with their own files.
 
-To test the validator, we use Illumina iSeq 100 paired end sequencing; SARS-CoV-2/186197/human/2020/Malaysia_EPI_ISL_417919  files from [ENA](https://www.ebi.ac.uk/ena/data/view/SRR11542244).
+__Here we provide two FASTQ examples in ENA for testing.__ The first example is _Ion Torrent S5_ sequencing FASTQ single read. The second example is _Illumina iSeq 100_ paired end sequencing files.
 
-Users can also test with their own paired end files.
+__Example 1: Get single read FASTQ file__
+
+The command below downloads an _Ion Torrent S5_ fastq file from ENA. [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the Whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
 ```shell
-# Get example paired-end data
-wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_1.fastq.gz
+wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
+```
+Uses can inspect the _fastq.gz_ file using `gzip -cd SRR12132977.fastq.gz | head -8`. Below is the header of the FASTQ file.
+```
+@SRR12132977.1 1/1
+AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACAAACTAAAATGTCTGATAATGGACCCCAAAATCAGCGAAATGCACCCCGCATTACGTTTGGTGGACCCTCAG
++
+C@CCD>DBC?B692;;;09?<BBBBC>BBBBBBBBB@?ABB@BC<BBB>@A?:999992;=>>@??==:=C;>=<:'555)8;;;;;AG:AAAAADD;CCBB>?@;;;0:<@A>CEE?CFCC
+@SRR12132977.2 2/1
+AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATAACTAATTACTGTCGTTGACAGGACACGAGTAACTCGTCTATCTTCTGCAGGCTGCTTACGGTTTCGTCCGTGTTGCAGCCGATCATCAGCAC
++
+A>A@@=@@F@D@C<999,:<@ABBBB@B=>=BB@BBB?@@><;;7>??=BBB>BDD;D>????@@;@CDC@@@BBB>BBB@AAC>>9BBBB;;;@@?;><::;99<9<;A;>><@@A:=:>@@@>A@>:>===>:=<<>>;;;>=BCAA?>=A>>>:==>;998<=;===@@@<>>9>>>?;??==:=>>>>:>>;;;;;;;<;;
+```
+__Example 2: Get paired-read FASTQ files__
 
-wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_2.fastq.gz
+The command below downloads Illumina iSeq 100 paired end sequencing files from ENA. [These files](https://www.ebi.ac.uk/ena/data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
+
+```shell
+wget -c \
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_1.fastq.gz \
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_2.fastq.gz
+```
+Below is the headers of the two files. The paired info are indicated in the read ID.
+```
+# Header of the forward read, SRR11542244_1.fastq.gz
+@SRR11542244.1 1/1
+GTGTGTGTATACATATATATATATATCACATTTTCTTTATCCATTTATCTGTTGTTGGACACTTAGGTTGATTCCATATCTTGGCTATTGTGAATAGTG
++
+,,FFFFFFFFFFFFFFFFFFFFFFFF:FFF:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFFF
+@SRR11542244.2 2/1
+GTGATTCCTCAAAGATTTAGAACCAGAAATACCATGTGACCCAGCAATTCCATTACCAGGTCTAAACCCAAAGGAATATAAATCATTCTGTAATGAAGATA
++
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+
+# Header of the reverse read, SRR11542244_2.fastq.gz
+@SRR11542244.1 1/2
+CTATTGGGTATTTAATCCAAAGAAAGGAAATCGGTATATCAAAGAGACATCTGCATGCCCATGTTTATTGTAGCACTATTCACAATAGCCAAGATATGGAA
++
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFF
+@SRR11542244.2 2/2
+GAACATATGTGTGCATGTATCTTCATTACAGAATGATTTATATTCCTTTGGGTTTAGACCTGGTAATGGAATTGCTGGGTCACATGGTATTTCTGGTTCTA
++
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 ```
 
-__Step 3: Validate paired end files__ 
+
+### Step 3: Perform validation
+
+The command below validates the single read file in _Example 1_. 
+
 ```shell
-fastq_info SRR11542244_1.fastq.gz SRR11542244_2.fastq.gz
+fastq_info -r SRR12132977.fastq.gz
 ```
-Optional Arguments:
-    `-s`: "used when the reads are sorted in the same way in two paired fastq files"
+Here is an validation result. __Explain quality encoding__
+```
+Skipping check for duplicated read names
+1900000
+------------------------------------
+Number of reads: 1919741
+Quality encoding range: 34 77
+Quality encoding: 33
+Read length: 25 352 215
+OK
+```
+
+The validation of paired end reads is similar to single read file validation.
+
+```shell
+fastq_info -s SRR11542244_1.fastq.gz SRR11542244_2.fastq.gz
+```
+Here is an example output.
+```
+DEFAULT_HASHSIZE=39000001
+Scanning and indexing all reads from SRR11542244_1.fastq.gz
+700000Scanning complete.
+
+Reads processed: 733611
+Memory used in indexing: ~47 MB
+------------------------------------
+Number of reads: 733611
+Quality encoding range: 35 70
+Quality encoding: 33
+Read length: 35 101 96
+OK
+```
+_fastq_util_ also provides additional argument to customize the validation:
+`-s`: to validate two paired fastq files when the reads are sorted in the same way.
+`-r`: to skip duplicated read names validation. This uses less memory and runs faster.
     `-r`: Skip check for duplicated read names. The validation uses less memory and runs faster.
+    
+ -h  : print this help message
+ -s  : the reads in the two fastq files have the same ordering
+ -e  : do not fail with empty files
+ -q  : do not fail if quality encoding cannot be determined
+ -r  : skip check for duplicated readnames
+
 
 Example output
 ```shell
@@ -174,19 +204,44 @@ Quality encoding: 33
 Read length: 35 101 96
 OK
 ```
+:bulb: :bulb: :bulb:
+If the paired-end reads doens't match, it returns
+```
+```
+__Example invalid files and outputs__
 
-If the paired-end reads doens't match, it will 
+#### Overview of fastq utils
 
-### Challenges in FASTQ validation
-- different variants
-Example variants [here](https://academic.oup.com/view-large/82650903)
+|Aspects|Validation content |Description|FASTQ-utils|
+|--|--|--|--|
+|Basic validation|4-line format|Check if the FASTQ file validates the format|:heavy_check_mark:|
+| |Character encoding| Check if the base calls and quality score encoding are correct.  |:heavy_check_mark:| 
+||Read length| check if the length of the base calls are the same as that of the quality scores|:heavy_check_mark:|
+||File truncation|Check if the file is truncated or not|:heavy_check_mark:|
+|Paired end reads| Deinterleaved paired reads| Forward and reverse reads are provided in two files.|:x:|
+| |Interleaved _"8-line"_ files|Forward and reverse reads are provided together as an 8-line file|:x:|
+|Compressed files| gzip| Compressed fastq files, with extension `fastq.gz`|:heavy_check_mark:|
+|FASTQ variants| fastq-illumina|A fastq varaint, using PHRED score. </br> ASCII character offset = 66|:heavy_check_mark:|
+| |fastq-sanger|A fastq varaint, using PHRED score.</br> ASCII character offset = 33|:heavy_check_mark:||
+| |fastq- solexa|A fastq varaint, using Solexa quality score| |
+|File by sequencing machines|Illumina|FASTQ files produced by Illumina sequencing machines|:heavy_check_mark:|
+| |nanopore|FASTQ files produced by Illumina sequencing machines |:heavy_check_mark:|:x:|
+| |454 |FASTQ files produced by Illumina sequencing machines|:heavy_check_mark:|:x:|
+| |pacbio|FASTQ files produced by Illumina sequencing machines| :heavy_check_mark:|:x:|
+|performance| memory||`N/A`|
+| |speed| |`N/A`|
+|Archieve compatiablity|ENA|File validated can be submitted to the ENA archive.|:heavy_check_mark:|
+||ArrayExpress|File validated can be submitted to Array Express.|:heavy_check_mark:|
+||SRA|File validated can be submitted to the SRA archive.|:heavy_check_mark:|
+|Interface|Command line interface||:heavy_check_mark:|
+|License|Free license|A license allowing use the data 'freely', e.g."CC-BY"|:heavy_check_mark:|
+|Code|Open source|Source code available on public platforms|:heavy_check_mark:|
+ 
+## Summary
 
-Difference between `fastq-sanger`, `fastq-illumina`, and `fastq-solexa`. Ignore format `ABI SOLID sequencing`: 
-- how the quality score is calculated-
-- How the quality score is represented.
-> TODO: test how the validator handles ASCII 33, 59. (whether fastq-sanger and fastq-solexa compatiable)
-> TODO: is fastq-solexa still in use?
-- large size
+
+
+
 
 
 ## Authors
@@ -198,77 +253,3 @@ Difference between `fastq-sanger`, `fastq-illumina`, and `fastq-solexa`. Ignore 
 ## License
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
-
-
-
-
-
-
-
-
-
-## Popular downstream analysis
-- samtools
-- fastqQC. (QC vs validation)
-- BLAST
-- & related formats
-- .sam, .bam, .bai
-- .fastq.gz, .fa 
-
-
-
-
-
-### Common errors.
-
-
-- 
-
-
-### What does it validate
-:woman: What to pay attention when I get a validator
-
-#### Basics
-- "The ability to process the full range of valid FASTQ files;"
-    - "a corresponding quality line with the same number of characters"
-    - "correctly formatted, basically that it consists of groups of 4 lines"
-    - ends with a new line, that it isn't truncated
-
-- "The ability to detect the full range of FASTQ errors" 
-
-test files provided [here](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/38/6/10.1093_nar_gkp1137/2/gkp1137_Supplementary_Data.zip?Expires=1596783175&Signature=oXlAOGzTznD3Kpg3aRUJ3bkG8Xpe9ddYoEN0nVPt5i8e5vCFb0rxhj-qIMA4hV2mvkaN4uJu3Uh5zPfXqGqq0RebK~Z4lR7xhBrFZIvMfeSRE9-QZwkamwBc1thR5skoczq9h3zXh1qAuaXo-iOaHe7FzDHIrIYk9t9awAIG190JY8to8NYY0XUH0lnzu6SiIKyKj-N5du-DNk~q0t~bnd~PD656NIm-2~s91Js82AVJB5-PRUcP4GvIXq-v96yGXclhU2Ib70Hpu0t1PsLugpV75qHmZZ7bEabBBQj5iXsSJUVln~0dDA8Bs0wtI8nLQcaBW46OEI7ESsdGeHZOZQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
-- truncated reads, examples where the sequence
-- quality lengths differ
-- and invalid ASCII characters in the quality lines.
-#### Advanced 
-
-- "The ability to read and write compressed data"
-- " The processing speed."
-- paired-end reads: "The two files of a paired reads run have the same size and number of sequences"
-
-
-
-considerations in [fqtools paper](https://academic.oup.com/bioinformatics/article/32/12/1883/1744334)
-
- - The ability to process the full range of valid FASTQ files;
- - The ability to detect the full range of FASTQ errors;
- - The ability to read and write compressed data; and
- - The processing speed.
-
-
-
-
-
-
-### Considerations
-
-> From Tony's doc
-- memory requirements: "astQValidator checks for unique sequence names, it may use a large amount of memory - this can be disabled by specifying the --disableSeqI"
-- ENA and EGA uses _samtools_ but with additional custom logic for checking the correct sets of files are received depending on the technology
-- paired read files are now validated seperately in the recipes
-- 10x sequencing we require BAM/CRAM rather than FASTQ because of the potential for missing barcodes
-- long reads produced by nanopore [link](https://www.nature.com/articles/nbt.2181)
-
-__Define which senario we want to cover in this recipe__ 
-
-
