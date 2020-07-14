@@ -1,19 +1,3 @@
->Dear reviewer,
->
-> Thank you for helping me improve the recipe. You are welcomed to modify the doc directly or provide your feedback as in-line comments. It would be great if you can also complete this CATCULT review form, and add your contribution in the [authors](https://github.com/FAIRplus/the-fair-cookbook/blob/UC30R2_FASTQ-validator_in_archives/docs/content/recipes/interoperability/fastq-file-format-validators.md#Authors) section in the recipe.
-
-_CATCULT review form, see examples [here](https://docs.google.com/spreadsheets/d/1uyDyXKPE9L_fd_XlTR5X_wcVITQ4rXH2bTxRfeKguJk/edit#gid=0)_
-|Indicators|Review|
-|--|--|
-|Coverage||
-|Assumptions||
-|Tested?||
-|Comprehensible?||
-|Uses markdown?||
-|Layout||
-|Transferable?||
-|comments||
-
 # File format validation, an example with FASTQ files
 
 [toc]
