@@ -1,4 +1,22 @@
->:bulb: __W.I.P__
+>Dear reviewer,
+>
+> Thank you for helping me improve the recipe. 
+> 
+> You are welcomed to modify the doc directly or provide your feedback as in-line comments. 
+> 
+> It would be great if you can also complete this CATCULT review form, and add your contribution in the `authors` section in the recipe.
+
+_CATCULT review form, see examples [here](https://docs.google.com/spreadsheets/d/1uyDyXKPE9L_fd_XlTR5X_wcVITQ4rXH2bTxRfeKguJk/edit#gid=0)_
+|Indicators|Review|
+|--|--|
+|Coverage||
+|Assumptions||
+|Tested?||
+|Comprehensible?||
+|Uses markdown?||
+|Layout||
+|Transferable?||
+|comments||
 
 # File format validation, an example with FASTQ files
 
@@ -31,6 +49,7 @@ graph TD;
     
 ```
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7U3RhbmRhcmQgZmlsZSBmb3JtYXQgYXZhaWxhYmxlP31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7U3RhbmRhcmQgZmlsZSBmb3JtYXQgYXZhaWxhYmxlP31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+
 :octopus: Related recipes: [From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
 
 ## User Stories
