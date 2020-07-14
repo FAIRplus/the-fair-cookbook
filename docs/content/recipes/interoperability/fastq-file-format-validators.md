@@ -52,10 +52,10 @@ The table below lists common file validation use cases. This recipe provides sol
 
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
-|Data owner| Validate my sequencing files before depositing to public archives| Reduce the risk of submitting invalid files or rejected submission|
+|Data owner| Validate my sequencing files before depositing to public archives| Reduce the risk of submitting invalid files or submission rejection|
 |Data consumer| Validate files before running analysis|Avoid wasting time and resource processing corrupted files|
-|Data consumer| Intergrate file format validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
-|Data librarian| Check files downloaded from unknown sources before depositione| Ensure the file is usable in the future.|
+|Data consumer| Integrate file format validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
+|Data librarian| Check files downloaded from unknown sources before deposition| Ensure the file is usable in the future.|
 
 
 ## Capability & Maturity Table
@@ -80,16 +80,17 @@ The table below lists common file validation use cases. This recipe provides sol
 | [FASTQ](http://edamontology.org/format_2182)  | |
 ___
 
-[FASTQ](edamontology.org/format_2182) is the _de facto_ sequencing file format, and one of the most common file format in bioinformatics analysis. Researchers receive FASTQ files from various sources. These files are used intensitively in automated data process pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis pipelines.
+[FASTQ](edamontology.org/format_2182) is the _de facto_ sequencing file format and one of the most common file formats in bioinformatics analysis. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformatics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis process.
 
-FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also checks if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle compressed FASTQ files. Quality control is out of the scope of file format validation.
+FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle compressed FASTQ files. 
 
-[FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate process FASTQ files. It has been applied in the [European Nucleotide Archive, (ENA)](https://www.ebi.ac.uk/ena), and several research initiatives. 
+> Quality control is out of the scope of file format validation.
+
+[FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been applied in the [European Nucleotide Archive(ENA)](https://www.ebi.ac.uk/ena), and several research initiatives. 
+
+This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on MacOS and Linux machines.
 
 ![](https://i.imgur.com/jOYK2ZM.jpg)
-
-
-This recipe provides an example of validating FASTQ file with _FASTQ-utils_ on MacOS and Linux machines.
 
 ### Software requirements
 - [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
@@ -110,7 +111,7 @@ In this step, we download example FASTQ files from ENA for testing. The first ex
 
 _Example 1: Get single read FASTQ file_
 
-The command below downloads an _Ion Torrent S5_ fastq file from ENA. [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the Whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
+The command below downloads an _Ion Torrent S5_ fastq file from ENA. [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
 ```shell
 wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
 ```
@@ -132,9 +133,9 @@ The command below downloads Illumina iSeq 100 paired end sequencing files from E
 ```shell
 wget -c \
 ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_1.fastq.gz \
-ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/0r11542244/SRR11542244_2.fastq.gz
 ```
-Below is the headers of the two files. The paired info are indicated in the read IDs.
+Below is the headers of the two files. The read pairs info is listed in the read IDs.
 ```
 # Header of the forward read, SRR11542244_1.fastq.gz
 @SRR11542244.1 1/1
@@ -166,7 +167,7 @@ The command below validates the single read file in _Example 1_.
 ```shell
 fastq_info -r SRR12132977.fastq.gz
 ```
-Here is the validation results. _fastq-utils_ returns the number of reads, read length details, and encoding info. Field `Quality encoding` indicates the fastq file variant. It returns `OK` for a valid fastq file. Otherwise, it will return the validation details in the Error message.
+Below are the validation results. _fastq-utils_ returns the number of reads, read length details, and encoding info. Field `Quality encoding` indicates the fastq file variant. FASTQ-utils returns `OK` for a valid fastq file. Otherwise, it will return the validation details in the Error message.
 
 ```
 Skipping check for duplicated read names
@@ -184,7 +185,7 @@ The validation of paired end reads is similar to single read file validation.
 ```shell
 fastq_info SRR11542244_1.fastq.gz SRR11542244_2.fastq.gz
 ```
-Here is the validation results.
+Here are the validation results.
 ```
 fastq_utils 0.23.0
 DEFAULT_HASHSIZE=39000001
@@ -244,10 +245,13 @@ _*See details in the [FASTQ specification recipe]()._
  
 ## Summary
 
-In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expand to other file formats and other use cases.
+In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file formats and other use cases.
 
 ## References
-
+- Cock, Peter J. A., Christopher J. Fields, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FASTQ File Format for Sequences with Quality Scores, and the Solexa/Illumina FASTQ Variants’. Nucleic Acids Research 38, no. 6 (1 April 2010): 1767–71. https://doi.org/10.1093/nar/gkp1137.
+- ENA. ‘Accepted Read Data Formats — ENA Training Modules 1 Documentation’. Accessed 6 July 2020. https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format.
+- NCBI. ‘File Format Guide’. Accessed 14 July 2020. https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files.
+- Nuno Fonseca, and Jonathan Manning. Nunofonseca/Fastq_utils 0.24.0. Zenodo, 2020. https://doi.org/10.5281/zenodo.3936692.
 
 
 ## Authors
