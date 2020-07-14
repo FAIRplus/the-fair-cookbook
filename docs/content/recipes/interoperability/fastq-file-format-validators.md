@@ -1,6 +1,6 @@
 >:bulb: __W.I.P__
 
-# FASTQ file validation
+# File format validation, an example with FASTQ files
 
 [toc]
 
@@ -8,38 +8,41 @@
 
 ## Main Objectives
 
-The main purpose of this recipe is:
+The main purpose of this recipe is to:
 
-> FASTQ file validation solutions. Available validators, how to select and how to use.
+> provide a FASTQ file validation solution, and suggest a general file validation workflow. 
 
-FASTQ file is the de facto sequencing file format, and it is the foundation of many downstream analysis. The downstream analysis is usually automated, time-consuming and error-prone. Hence it is important to validate FASTQ files before further analysis.
+Data reuse in life science is common and important. Biologists and bioinformaticians To make sure the data can be reuse, before deposition and ?
 
-Also, intergrating FASTQ file variation to pipelines improves the reproducibility of the process and offers a better way to check the status.
-
-"Its is a common practice to re-use data deposited in one of the large public repositories.  In some cases only highly processed quantitated data will be used, but often it is better to go back to lower level formats such as fastq files to run your analysis.  In these cases we rely on the repository providing accurate data from which we can work but there are a number of ways in which this can fail."
+[FASTQ](edamontology.org/format_2182) is the _de facto_ sequencing file format, and the foundamental file format for many bioinformatics analysis. It is a common practice to reuse FASTQ files in public archives for analysis. Since the files may come from different sources, and the FASTQ-based downstream analysis is usually automated, time-consuming and error-prone, it is important to validate FASTQ files. 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-TODO
 ```mermaid
-graph LR;
+graph TD;
     A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
+    B --> C{Standard file format available?}
+    C -->|Yes| D{File format valid?}
+    C -->|No| E[Convert to standard file format]
+    D --> |Yes|F[- Data deposition </br>  - Data sharing </br>  - Downstream analysis ]
+    D --> |No|G[Revise file]
+    E -->  D
+    G --> |revise|D
+    
 ```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7U3RhbmRhcmQgZmlsZSBmb3JtYXQgYXZhaWxhYmxlP31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7U3RhbmRhcmQgZmlsZSBmb3JtYXQgYXZhaWxhYmxlP31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+:octopus: Related recipes: [From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
 
-___
 ## User Stories
 
-The table below listed use cases where the FASTQ files need to be validated. This recipe provides a solution to these users. and avoid going into too much detail.
+The table below lists common file validation use cases. This recipe provide solutions with FASTQ files as an example.
 
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
-|Data owner| validate my sequencing files before submission| avoid wasting time __submitting large corrupted files??__|
-|Data consumer| validate the FASTQ files before running analysis|Avoid wasting time and resource on processing corrupted files|
-|Data consumer| intergrate FASTQ validation into my data analysis pipeline| Build a more reproducible and error-proof pipeline| 
-|Data manager| validate the FASTQ file I got from unknown source before depositing the file| Ensure the file is usable in the future.|
+|Data owner| Validate my sequencing files before depositing to public archives| Reduce the risk of submitting invalid files or rejected submission|
+|Data consumer| Validate files before running analysis|Avoid wasting time and resource processing corrupted files|
+|Data consumer| Intergrate file format validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
+|Data librarian| check the file from unknown source before depositing the file| Ensure the file is usable in the future.|
 
 
 ## Capability & Maturity Table
@@ -64,9 +67,9 @@ The table below listed use cases where the FASTQ files need to be validated. Thi
 | [FASTQ](http://edamontology.org/format_2182)  | |
 ___
 
-Most validators detects FASTQ variants automaticlly. The Quality control of FASTQ file are not included in this recipe. 
+FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also checks if the forward reads are paired with the reverse reads. Most validators can detect different FASTQ variants and process compressed FASTQ files automatically. 
 
-FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding. For paired-end reads, they also checks if the forward reads have the same number of reads, and paired with the reverse reads. Most validators can detect different FASTQ variants and process compressed FASTQ files automatically.
+Most validators detects FASTQ variants automaticlly. The Quality control of FASTQ file are not included in this recipe. 
 
 [FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been used in __popular archives___, European Nucleotide Archive, (ENA) and several research projects, __Human Cell Atlas__, for example.
 
@@ -76,10 +79,10 @@ Here is an example of validating FASTQ file with _FASTQ-utils_
 ```shell
 conda install -c bioconda fastq_utils
 ```
-___fastq-utils_ can also be installed using the source code.__
+It is also possible to install fastq_utils from [the source code](https://github.com/nunofonseca/fastq_utils).
 
 ### Step 2: Get example file for testing*
-> *Users can skip this step and test with their own files.
+_* :bulb: Users can skip this step and test with their own files._ 
 
 __Here we provide two FASTQ examples in ENA for testing.__ The first example is _Ion Torrent S5_ sequencing FASTQ single read. The second example is _Illumina iSeq 100_ paired end sequencing files.
 
