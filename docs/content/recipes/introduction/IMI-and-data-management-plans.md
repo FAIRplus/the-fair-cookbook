@@ -1,4 +1,4 @@
-## IMI and Data Management
+# IMI and Data Management
 
 ___
 <div class="row">
