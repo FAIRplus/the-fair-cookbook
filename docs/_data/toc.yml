@@ -66,6 +66,22 @@
 #   url: /recipes/introduction/FAIR
 #   not_numbered: false
 
+- title: What is IMI
+  url: /recipes/introduction/what-is-IMI
+  not_numbered: false
+
+- title: IMI and Data Management
+  url: /recipes/introduction/IMI-and-data-management-plans
+  not_numbered: false 
+
+- title: FAIR in IMI context
+  url: /recipes/introduction/FAIR-in-IMI-context
+  not_numbered: false  
+
+- title: The FAIR principles
+  url: /recipes/introduction/FAIR-principle
+  not_numbered: false
+
 - title: The Values of FAIR
   url: /recipes/introduction/FAIRplus-values
   not_numbered: false
