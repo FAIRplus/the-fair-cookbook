@@ -1,5 +1,7 @@
 # What are the FAIR Principles?
 
+---
+
 <div class="row">
 
   <div class="column">
@@ -53,6 +55,8 @@
   </div>
 </div>
 
+___
+
 ## Introduction
 
 The goal of this section is to go over each of the principles for FAIR data management as described by Wilkinson and coworkers in their Nature Springer Scientific Data manuscript published in 2016.
@@ -62,40 +66,51 @@ Owing to the success of the principles, now endorsed by funding agencies (IMI, W
 
 ## The FAIR Guiding Principles
 
+<div>
+	<img src="https://i.imgur.com/RxkoNed.png" width="350" style="border:1px solid black;align:center"/>
+</div>
 
+doi: 10.1038/sdata.2016.18
+
+```YAML
 ### F. To be Findable:
 
->F1. (meta)data are assigned a globally unique and persistent identifier
->F2. data are described with rich metadata (defined by R1 below)
+>F1. (meta)data are assigned a **globally unique and persistent identifier**
+>
+>F2. data are described with **rich metadata** (defined by R1 below)
+>
 >F3. metadata clearly and explicitly include the identifier of the data it describes
->F4. (meta)data are registered or indexed in a searchable resource
+>
+>F4. (meta)data are registered or **indexed in a searchable resource**
 
 ### A. To be Accessible:
 
->A1. (meta)data are retrievable by their identifier using a standardized communications protocol
->A1.1 the protocol is open, free, and universally implementable
+>A1. (meta)data are retrievable by their identifier using **a standardized communications protocol**
+
+>A1.1 the protocol is **open, free, and universally implementable**
 >
 >A1.2 the protocol allows for an authentication and authorization procedure, where necessary
 >
->A2. metadata are accessible, even when the data are no longer available
+>A2. **metadata are accessible**, even when the data are no longer available
 
 ### I. To be Interoperable:
 
->I1. (meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.
+>I1. (meta)data use a **formal, accessible, shared, and broadly applicable language for knowledge representation**.
 >
->I2. (meta)data use vocabularies that follow FAIR principles
+>I2. (meta)data use **vocabularies that follow FAIR principles**
 >
->I3. (meta)data include qualified references to other (meta)data
+>I3. (meta)data include **qualified references** to other (meta)data
 
 ### R. To be Reusable:
 
->R1. meta(data) are richly described with a plurality of accurate and relevant attributes
+>R1. meta(data) are richly described with a **plurality of accurate and relevant attributes**
 >
->R1.1. (meta)data are released with a clear and accessible data usage license
+>R1.1. (meta)data are released with a **clear and accessible data usage license**
 >
->R1.2. (meta)data are associated with detailed provenance
+>R1.2. (meta)data are associated with **detailed provenance**
 >
->R1.3. (meta)data meet domain-relevant community standards
+>R1.3. (meta)data meet domain-relevant **community standards**
+```
 
 ## The FAIR principles and FAIRplus.
 
@@ -263,6 +278,8 @@ The principles will be the organizing principle for the FAIRplus Cookbook. While
 	</div>
   </div>
 </div>
+
+___
  
 ## Conclusions:
 
@@ -271,23 +288,31 @@ This section should be seen as a refresher for any one unclear about the FAIR pr
 > #### What to read read next?
 > * [the values of FAIR]()
 > * [the IMI FAIRplus FAIRification Process overview]()
+> * [Assessing FAIRness]()
 
-
+___
 
 # Reference:
 
 1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
 2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6
+
+___
+
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft|
-|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)|Writing - Original Draft|
-|||Review|
-|||Review|
+|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-5306-5690](https://orcid.org/orcid.org/0000-0001-5306-5690)|Writing - Original Draft|
+||||Review|
+||||Review|
 
 ___
+
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+
+___
+

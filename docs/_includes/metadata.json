@@ -1,6 +1,6 @@
 {
   "@context": "http://schema.org",
-  "@type": "NewsArticle",
+  "@type": "HowTo",
   "mainEntityOfPage": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
   "headline": "{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
   "datePublished": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
@@ -8,14 +8,16 @@
   "description": "{{ page.content | strip_html | strip_newlines | truncate: 160 }}",
   "author": {
     "@type": "Person",
-    "name": "{{ site.author }}"
+    "name": "{{ site.author }}",
+    "url" : "{{ site.email }}"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Data 100 at UC Berkeley",
+    "name": "The FAIR Cookbook",
+    "url": "https://fairplus.github.io/the-fair-cookbook",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+      "url": "{{ site.logo | prepend: site.url }}",
       "width": 60,
       "height": 60
     }

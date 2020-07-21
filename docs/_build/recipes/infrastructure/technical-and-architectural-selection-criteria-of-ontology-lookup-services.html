@@ -35,7 +35,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <hr>
 <p>[TOC]</p>
 <hr>
-<h2 id="Main-Objective">Main Objective<a class="anchor-link" href="#Main-Objective"> </a></h2><p>This recipe provides guidance to make a  decision about feasibility of local deployment of offered open source ontology services software. By the expression ‘ontology lookup service’ we refer <strong>to any type of application, standalone or Web-based, that enables the use of existing ontologies to support knowledge formalization and sharing, by fostering ontology-based descriptions of knowledge</strong>. Tools useful to build, edit or maintain ontologies are not considered ontology lookup services and thus are out of the scope of this recipe.</p>
+<h2 id="Main-Objective">Main Objective<a class="anchor-link" href="#Main-Objective"> </a></h2><p>This recipe provides guidance on making a decision about the feasibility of a local deployment of existing open source ontology service software. By the expression <strong><code>"ontology lookup service"</code></strong>, we refer <strong>to any type of application, standalone or Web-based, that enables the use of existing ontologies to support knowledge formalization and sharing, by fostering ontology-based descriptions of knowledge</strong>. Therefore, tools useful to build, edit or maintain ontologies are not considered as ontology lookup services and thus are out of the scope of this document.</p>
 <p>The recipe will:</p>
 <ul>
 <li>define the most common selection criteria to be considered</li>
@@ -43,7 +43,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <li>provide recommendations for applying those selection criteria</li>
 <li>give an overview about the most common open source ontology service software</li>
 </ul>
-<h2 id="Software-selection-criteria">Software selection criteria<a class="anchor-link" href="#Software-selection-criteria"> </a></h2><p>This section presents the minimal criteria to take in account when analyzing alternatives for ontology-based services development and deployment. Additional criteria, including a more detailed analysis of technical features can be found on the resources mentioned in section “Additional resources”.</p>
+<h2 id="Software-selection-criteria">Software selection criteria<a class="anchor-link" href="#Software-selection-criteria"> </a></h2><p>This section presents the minimal criteria to take in account when analyzing alternatives for ontology-based services development and deployment. Additional criteria, including a more detailed analysis of technical features can be found on the resources mentioned in section <strong><code>Additional resources</code></strong>.</p>
 <h3 id="Functionality">Functionality<a class="anchor-link" href="#Functionality"> </a></h3><p>Functionality of a software determines the range of capabilities and functions it can perform. 
 Please note that specific functional selection criteria are beyond the scope of this recipe. Because functionality plays a very important role in the overall selection process it was added to show how it relates to the technical &amp; architecture selection process.<br>
 Functional selection criteria is covered by Recipe 1.1 (&lt;to be replaced with recipe 1.1 URL&gt;)</p>
@@ -69,12 +69,14 @@ It gives you an idea whether you could replace some of the components by softwar
 <h2 id="Deployment-model">Deployment model<a class="anchor-link" href="#Deployment-model"> </a></h2><p>The deployment model shows where and how the software can be installed and who owns the service.</p>
 <p>Regarding ontology lookup service selection the most important deployment aspects are:</p>
 <ul>
-<li><em>On premise versus cloud deployment</em>
-Depending on your organisation policies and best practices it might be the case that you want to install and maintain the software on your own infrastructure (on premise) or you prefer to buy it as a service on the cloud. </li>
-<li><em>Manual versus docker versus virtual image installation</em>
-With a manual installation you have full control over the installation but you need typically more time. 
-A virtual image installation bundles software together with the operating system, so it is easier to install, but typically you would need additional infrastructure and knowledge in your organisation to maintain all virtual images. 
-A docker based installation is also easy to install and typically saves more hardware resources than a virtual image installation, because you share the operating system amongst multiple docker applications. Similar to virtual image installation you would need additional infrastructure and knowledge in your organisation to run and maintain all docker images.</li>
+<li><strong><code>On premise versus cloud deployment</code></strong>
+Depending on your organisation policies and best practices, it might be the case that you want to install and maintain the software on your own infrastructure (<em><code>on premise</code></em>) or you prefer to buy it as a service on the cloud. </li>
+<li><strong><code>Manual</code> versus <code>docker</code> versus <code>virtual image</code> installation</strong><ul>
+<li>With a <code>manual installation</code>, you have full control over the installation but you need typically more time. </li>
+<li>A <code>virtual image installation</code> bundles software together with the operating system, so it is easier to install, but typically you would need additional infrastructure and knowledge in your organisation to maintain all virtual images.</li>
+<li>A <code>docker based installation</code> is also easy to install and typically saves more hardware resources than a virtual image installation, because you share the operating system amongst multiple docker applications. Similar to virtual image installation you would need additional infrastructure and knowledge in your organisation to run and maintain all docker images.</li>
+</ul>
+</li>
 </ul>
 <h2 id="Hardware-and-software-requirements">Hardware and software requirements<a class="anchor-link" href="#Hardware-and-software-requirements"> </a></h2><p>The hardware requirements have mainly an impact on the costs. The software requirements have an impact on knowledge and costs (e.g. licences for operating systems).</p>
 <p>The specific requirements of your organisation for data processing and storage will also influence the costs.</p>
@@ -84,70 +86,76 @@ A docker based installation is also easy to install and typically saves more har
 <li>matches with your intended use </li>
 <li>produces costs that  are acceptable for your organisation from a price/performance point of view.</li>
 </ul>
-<h3 id="Database-Technology">Database Technology<a class="anchor-link" href="#Database-Technology"> </a></h3><p>The database is a central component that will store the ontologies. From an ontology perspective state of the art is to use a graph database.</p>
-<p>Two types of graph databases are currently available:</p>
-<ul>
-<li>Label-Property
-A labeled-property graph model is represented by a set of nodes, relationships, properties, and labels. </li>
-<li>Triple store
-A triple store database allows you to store OWL formats natively and use the “query from remote” flexibility of a SPARQL endpoint. Also Shape Constraint Language (SHACL) W3C standard could help to add quality checks.</li>
-</ul>
-<p>For storing metadata representable in flat taxonomies often Relational Database Management Systems (RDBMS) are used which represent data in tabular format.</p>
-<p>The database system is considered as a core component of data quality supporting atomic consistent transactions for replacing ontologies or subsets of them.</p>
-<p>A Database system is a complex piece of software where you need knowledge for managing it. In order to reduce overall complexity you will typically define per used database technology type. Therefore it might be an important selection criteria whether you can use your own standard.</p>
+<h3 id="Database-Technology-for-storing-knowledge-representation-resources">Database Technology for storing knowledge representation resources<a class="anchor-link" href="#Database-Technology-for-storing-knowledge-representation-resources"> </a></h3><p>The <code>terminology database</code> is a central component of knowledge management stack as it will store the ontologies.</p>
+<p>This database system is considered as a core component of data quality supporting atomic consistent transactions for replacing ontologies or subsets of them 
+[REVIEWER TODO:Rephrase above sentence, as currently unclear].</p>
+<p>A database system is a complex piece of software where you need knowledge for managing it. In order to reduce overall complexity you will typically define per used database technology type. Therefore it might be an important selection criteria whether you can use your own standard.</p>
 <p>The database system will typically also have a major impact on performance and scalability, because the bulk of ontology query processing will take place within the database system.</p>
 <p>An ontology lookup service is defined to be <strong>database agnostic</strong>, if its database component:</p>
 <ul>
-<li>provides Interfaces that use standard protocols for communication</li>
-<li>provides an configurable access to the database </li>
-<li>Allows that any database product that supports the used standards (e.g. SPARQL) can be used </li>
+<li>provides interfaces that use standard protocols for communication</li>
+<li>provides a configurable access to the database </li>
+<li>allows that any database product that supports the used standards (e.g. SPARQL) can be used 
+[REVIEWER TODO:Rephrase above sentence, as currently unclear].</li>
 </ul>
 <p>A database agnostic ontology lookup service software will give you therefore the maximum freedom to use your defined database type standard.</p>
-<h3 id="Ontology-language">Ontology language<a class="anchor-link" href="#Ontology-language"> </a></h3><p>Following ontology languages are widely used in the pharma research arena to model ontologies:</p>
+<h4 id="Relational-databases:">Relational databases:<a class="anchor-link" href="#Relational-databases:"> </a></h4><ul>
+<li>For storing metadata representable in flat taxonomies often Relational Database Management Systems (RDBMS) are used which represent data in tabular format.</li>
+</ul>
+<h4 id="Graph-databases">Graph databases<a class="anchor-link" href="#Graph-databases"> </a></h4><p>From an ontology perspective, state of the art is to use a <a href="https://en.wikipedia.org/wiki/Graph_database"><code>graph database</code></a>. Two types of graph databases are currently available:</p>
 <ul>
-<li>Web Ontology Language (OWL) 
+<li><strong><code>Labeled-Property</code></strong>
+A <code>labeled-property graph model</code> is represented by a set of nodes, relationships, properties, and labels. </li>
+<li><strong><code>Triple store</code></strong>
+A <code>triple store database</code> allows to store documents in <a href="https://www.w3.org/TR/rdf-concepts/#section-data-model">RDF</a> or <a href="https://www.w3.org/TR/owl2-rdf-based-semantics/">OWL/RDF format</a> natively and use the <code>query from remote</code> flexibility of a <a href="https://www.w3.org/TR/rdf-sparql-query/"><code>SPARQL endpoint</code></a>. Also, <a href="https://www.w3.org/TR/shacl/"><code>Shape Constraint Language (SHACL)</code></a> W3C standard could help to add quality checks.</li>
+</ul>
+<h3 id="Ontology-language">Ontology language<a class="anchor-link" href="#Ontology-language"> </a></h3><p>The following ontology languages are widely used in the pharma research arena to model ontologies:</p>
+<ul>
+<li><code>Web Ontology Language (OWL)</code> 
 OWL is defined by W3C and has become the de facto standard for ontology modelling. Therefore OWL support is considered as a must for the ontology lookup service. </li>
-<li>OBO
+<li><code>OBO</code>
 The OBO file format is a biology-oriented language for building ontologies, based on the principles of OWL. A standard common mapping has been created for lossless roundtrip transformations among both languages. </li>
 </ul>
+<p>[REVIEWER QUESTIONS: What about SKOS ontologies?]</p>
 <p>If you have ontologies in different languages you will need to transform them to OWL.</p>
+<p>[REVIEWER QUESTIONS: is this always possible?]</p>
 <h3 id="Programming-language">Programming language<a class="anchor-link" href="#Programming-language"> </a></h3><p>Programming languages are used to implement the data processing logic and user interface logic of the ontology lookup service.</p>
 <p>The used programming languages will impact:</p>
 <ul>
 <li>Required programming language knowledge you need for customization or support</li>
 <li>Customization effort, e.g. The Python/Ruby programming languages are considered much more compact than Java.</li>
 </ul>
-<h3 id="Support">Support<a class="anchor-link" href="#Support"> </a></h3><p>Important support aspects for the ontology lookup service are:</p>
+<p>[REVIEWER QUESTIONS: this comment would require expansion and further details]</p>
+<h3 id="Support">Support<a class="anchor-link" href="#Support"> </a></h3><p>Important support aspects for a vocabulary service/ontology lookup service are:</p>
 <ul>
 <li>Ongoing development of the tool </li>
 <li>Frequency of issues and how fast they are solved</li>
 <li>Which organization you can get support from, and what is the associated cost?</li>
 </ul>
-<h2 id="General-selection-considerations">General selection considerations<a class="anchor-link" href="#General-selection-considerations"> </a></h2><p>Before looking into a concrete ontology service, some general thoughts are recommended. Two type of portal tools are available:</p>
+<h2 id="General-selection-considerations">General selection considerations<a class="anchor-link" href="#General-selection-considerations"> </a></h2><p>Before looking into a concrete ontology service, some general thoughts are recommended. Two types of portal tools are available:</p>
 <ul>
-<li>Open data portal tool
-Open data portals provide web-based interfaces designed to make it easier to find and access re-usable information. Some of them support also importing and exporting ontologies including a SPARQL endpoint and provide ontology lookup service core functionality.
-An Open Portal Tool is the underlying software that is used to implement the ontology portal functionalities.</li>
-<li>Ontology portal tool
-A formal definition of Ontology Portal does not exist. In the context of this document an Ontology Portal is defined as an Open Data Portal that is specialized to ontologies as data and typically provides out of the box more fine granulare ontology based functions.
+<li><strong>Open data portal tool</strong>
+<code>Open data portals</code> provide web-based interfaces designed to make it easier to find and access re-usable information. Some of them also support importing and exporting ontologies, including a SPARQL endpoint and provide ontology lookup service core functionality.
+An <code>Open Portal Tool</code> is the underlying software that is used to implement the ontology portal functionalities.</li>
+<li><strong>Ontology portal tool</strong>
+A formal definition of an <code>Ontology Portal</code> does not exist. In the context of this document, an <code>Ontology Portal</code> is defined as an Open Data Portal that is specialized to ontologies as data and typically provides out of the box more fine granular ontology based functions.
 An Ontology Portal Tool is the underlying software that is used to implement the ontology portal functionalities.</li>
 </ul>
 <p>If you have only minimum functional requirements in sharing ontologies it might be also an option for you to use an open data portal tool. In this case you could extend the functionality by developing additional web pages using the SPARQL endpoint. Having data and metadata in one database, such a solution would allow to add functionality that needs to combine ontologies with data (e.g. by annotation).</p>
-<p>If you need fine granular ontology lookup service functionality an ontology portal tool is recommended.</p>
-<p>An additional option would be to combine an Open data platform tool with an Ontology portal tool in parallel. If both tools use a triplestore database this should be possible in principle. The challenge will be that you would need additional customisation.</p>
-<h2 id="Choosing-an-ontology-service-software">Choosing an ontology service software<a class="anchor-link" href="#Choosing-an-ontology-service-software"> </a></h2><p>As each organization may have its own preferences and requirements there is no common standard way to select the best suitable ontology service software. This section demonstrates a general selection process based on aforementioned selection criteria and gives guidance on a set of questions that must be answered in order to filter out tools that do not fit to your use case at an early stage. Therefore simplifying the ontology software selection process.</p>
+<p>If you need <code>fine granular ontology lookup service functionality</code>, an ontology portal tool is recommended.</p>
+<p>An additional option would be to combine an Open data platform tool with an Ontology portal tool in parallel. If both tools use a triplestore database, this should be possible in principle. The challenge will be that you would need additional customisation.</p>
+<h2 id="Choosing-an-ontology-service-software">Choosing an ontology service software<a class="anchor-link" href="#Choosing-an-ontology-service-software"> </a></h2><p>As each organization may have its own preferences and requirements, there is no standard way to select the best suitable ontology service software. This section presents a general selection process based on the aforementioned selection criteria and gives guidance on a set of questions that should be answered in order to filter out tools that do not fit to use case at an early stage.</p>
 <h2 id="Overall-Selection-Process">Overall Selection Process<a class="anchor-link" href="#Overall-Selection-Process"> </a></h2><p>A three step selection approach is proposed:</p>
 <ul>
-<li>High Level Gap Analysis
-First it should be checked on a high level whether the tool does match with your high level requirements. </li>
-<li>Low Level Gap Analysis
-Only if the tool matches on a high level more effort should be invested in a more fine granular analysis to find out whether the tool is still a candidate for you. </li>
-<li>From Candidates Selection 
-Once you have identified the tool candidates you would rank them by assigning fulfillment numbers to the weighted criteria reflecting the importance for your organization.  Finally you will calculate the total fulfillment number out of them and choose the tool with the highest number. </li>
+<li><code>High Level Gap Analysis</code>
+First, it should be checked on a high level whether the tool does match the high level requirements. </li>
+<li><code>Low Level Gap Analysis</code>
+Only if the tool matches on a high level, more efforts should be invested in a finer analysis to find out whether the tool is still a suitable candidate. </li>
+<li><code>From Candidates Selection</code> 
+Once the tool candidates have been identified, a ranking process can start by assigning fulfillment numbers to the weighted criteria reflecting the importance for the requesting organization.  Finally, completing the ranking by summing up the total numbers from each atomic ranking criteria will allow to choose the tool, based on the highest scorer. </li>
 </ul>
 <p>Following figure shows the overall process:</p>
-
-<pre><code>mermaid
+<div class="mermaid">
 graph TB
 No[Tool does not fit]
 Candidate[Tool is a candidate]
@@ -155,30 +163,30 @@ Candidate[Tool is a candidate]
 subgraph High Level Criteria Selection
 HlCheck[Does the tool match the high level criteria?]
 end
-HlCheck --&gt;|yes| LlCheck
-HlCheck --&gt;|no| No 
+HlCheck -->|yes| LlCheck
+HlCheck -->|no| No 
 
 subgraph Low Level Criteria Selection
 LlCheck[Does the tool match the low level criteria?]
 end
-LlCheck --&gt;|yes| Candidate
-LlCheck --&gt;|no| No
-Candidate --&gt;  Calc
+LlCheck -->|yes| Candidate
+LlCheck -->|no| No
+Candidate -->  Calc
 
 subgraph From Candidates Selection
-Calc[Define per criteria fullfillment number] --&gt; Sum[Sum weightened fullfillment numbers]
-Sum --&gt;  Highest[Has candidate highest fullfillment number]
+Calc[Define per criteria fullfillment number] --> Sum[Sum weightened fullfillment numbers]
+Sum -->  Highest[Has candidate highest fullfillment number]
 end
-Highest --&gt;|yes| Yes[Best Tool for you]
-Highest --&gt;|no| NotBest[Not Best Tool for you]
+Highest -->|yes| Yes[Best Tool for you]
+Highest -->|no| NotBest[Not Best Tool for you]
 style Candidate fill:lightgreen
 style Yes fill:green
 style No fill:red
-style NotBest fill:#FF9999</code></pre>
-<p>Figure 1: Overall Selection Process</p>
-<h3 id="High-Level-Gap-Analysis">High Level Gap Analysis<a class="anchor-link" href="#High-Level-Gap-Analysis"> </a></h3><p>As guidance for the High Level Gap Analysis an analysis order based on selection criteria is proposed. The most important selection criteria contain one major question that has to be answered positively either by the offerings of the tool or by some additional tool customization.</p>
-
-<pre><code>mermaid
+style NotBest fill:#FF9999
+</div><p>Figure 1: Overall Selection Process</p>
+<h3 id="High-Level-Gap-Analysis">High Level Gap Analysis<a class="anchor-link" href="#High-Level-Gap-Analysis"> </a></h3><p>As guidance for the <code>High Level Gap Analysis</code>, an analysis order based on selection criteria is proposed. The most important selection criteria contains one major question that has to be answered positively, either by the offerings of the tool or by some additional tool customization.</p>
+<!--```mermaid -->
+<div class="mermaid">
 graph TB
 subgraph Functionality
 FuncGap[Do you need more functions than offered?] 
@@ -186,11 +194,11 @@ FuncCust[Can I add the functions by customization?]
 end
 FuncNo[Tool does not fit]
 style FuncNo fill:red
-FuncGap--&gt;|no| FuncOk
-FuncGap--&gt;|yes| FuncCust
-FuncCust--&gt;|yes| FuncOk
-FuncCust--&gt;|no| FuncNo
-FuncOk[Ok] --&gt; IfGap
+FuncGap-->|no| FuncOk
+FuncGap-->|yes| FuncCust
+FuncCust-->|yes| FuncOk
+FuncCust-->|no| FuncNo
+FuncOk[Ok] --> IfGap
 style FuncOk fill:lightgreen
 
 subgraph Interfaces
@@ -199,11 +207,11 @@ IfCust[Can I add my interfaces by customization?]
 end
 IfNo[Tool does not fit]
 style IfNo fill:red
-IfGap --&gt;|yes| IfCust
-IfGap--&gt;|no| IfOk
-IfCust --&gt;|yes| IfOk
-IfCust --&gt;|no| IfNo
-IfOk[Ok] --&gt; Arch 
+IfGap -->|yes| IfCust
+IfGap-->|no| IfOk
+IfCust -->|yes| IfOk
+IfCust -->|no| IfNo
+IfOk[Ok] --> Arch 
 style IfOk fill:lightgreen
 
 subgraph Architecture
@@ -211,9 +219,9 @@ Arch[Is the architecture too complex for solving your requirements?]
 end
 ArchNo[Tool does not fit]
 style ArchNo fill:red
-Arch --&gt;|yes| ArchOk
-Arch --&gt;|no| ArchNo
-ArchOk[Ok] --&gt; CostGap
+Arch -->|yes| ArchOk
+Arch -->|no| ArchNo
+ArchOk[Ok] --> CostGap
 style ArchOk fill:lightgreen
 
 subgraph Costs
@@ -221,9 +229,9 @@ CostGap[Are the licence costs for the tool acceptable?]
 end
 CostNo[Tool does not fit]
 style CostNo fill:red
-CostGap--&gt;|yes| CostOk
-CostGap--&gt;|no| CostNo
-CostOk[Ok] --&gt; PerfGap
+CostGap-->|yes| CostOk
+CostGap-->|no| CostNo
+CostOk[Ok] --> PerfGap
 style CostOk fill:lightgreen
 
 subgraph Performance
@@ -231,8 +239,8 @@ PerfGap[Does any existing installation cover your volume and processing profile?
 end
 PerfNo[Tool does not fit]
 style PerfNo fill:red
-PerfGap--&gt;|yes| SupGap
-PerfGap--&gt;|no| PerfNo
+PerfGap-->|yes| SupGap
+PerfGap-->|no| PerfNo
 
 subgraph Support
 SupGap[Does the tool support match with your quality and long term support requirements?] 
@@ -241,57 +249,75 @@ SupNo[Tool does not fit]
 style SupNo fill:red
 Candidate[Tool is a candidate]
 style Candidate fill:lightgreen
-SupGap--&gt;|yes| Candidate
-SupGap--&gt;|no| SupNo</code></pre>
-<p>Figure 2: High Level Gap Analysis</p>
-<h3 id="Low-Level-Gap-Analysis">Low Level Gap Analysis<a class="anchor-link" href="#Low-Level-Gap-Analysis"> </a></h3><p>For a single low level selection criteria no common recommendation for the “tool does not fit” decision can be given, because the decision highly depends on the preferences set in your specific context. Instead a set of questions will be presented per selection criteria. You have then to pick out those questions that are absolutely mandatory in our context. If such an absolutely mandatory question can not be solved by the tool or by tool customization the “Tool does not fit” will fire.</p>
-<p>Please note that for ontology functionality no questions will be presented, because functionality is out of the scope of this recipe.</p>
+SupGap-->|yes| Candidate
+SupGap-->|no| SupNo
 
-<pre><code>mermaid
+<!-- ``` -->
+</div>d
+
+Figure 2: High Level Gap Analysis
+
+### Low Level Gap Analysis
+
+For a single `low level selection criteria`, no common recommendation for the “tool does not fit” decision can be given, because the decision highly depends on the preferences set in your specific context. Instead, a set of questions will be presented per selection criteria. One has then to pick out those questions that are absolutely mandatory in a local context. If such an absolutely mandatory question can not be solved by the tool or by tool customization, the “Tool does not fit” will fire.
+
+:warning: Please note that for `ontology functionality`, no questions will be presented, because functionality is out of the scope of this recipe.
+
+<!-- ``mermaid -->
+<div class="mermaid">
+
 graph TB;
 No[Tool does not fit]
 style No fill:red
 Candidate[Tool is a candidate]
 style Candidate fill:lightgreen
-Start --&gt; SCL
+Start --> SCL
 
 subgraph Selection Criteria Loop
-SCL&gt;For each: Selection Criteria]
+SCL>For each: Selection Criteria]
 style SCL fill:darkgrey
 SCLF[Last Selection Criteria finished]
 end
 
-SCL --&gt; SCLF
-SCLF --&gt; Candidate 
-SCL --&gt; SCQL 
+SCL --> SCLF
+SCLF --> Candidate 
+SCL --> SCQL 
 
 subgraph Low Level Selection Criteria Gap Analysis
-SCQL&gt;For each: Selection Criteria Question]
+SCQL>For each: Selection Criteria Question]
 style SCQL fill:darkgrey
 SCQM[Is a yes to the question yes mandatory for you?]
 end
-SCQL --&gt; SCQM
-SCQM --&gt;|yes| SCQY
+SCQL --> SCQM
+SCQM -->|yes| SCQY
 
 
 subgraph Single Mandatory Question Analysis 
 SCQY[Is the answer to the question yes?]
 SCQC[Can customization provide a yes answer with costs below your limits?]
 end
-SCQY --&gt;|no| SCQC
-SCQC --&gt;|no| No</code></pre>
-<p>Figure 3: Low Level Gap Analysis</p>
-<p>Following figures are showing typical questions you will have to answer for the low level analysis. Please adapt or extend questions to your specific needs.</p>
+SCQY -->|no| SCQC
+SCQC -->|no| No
+<!-- ``` -->
+</div>
 
-<pre><code>mermaid
+Figure 3: Low Level Gap Analysis
+
+The following figures are showing typical questions one would have to answer for the low level analysis. These questions would have to be adapted or extended depending on the local, specific needs.
+
+<!-- ```mermaid  -->
+<div class="mermaid">
 graph TB;
 
 subgraph Functional Questions
 FQ["Functional questions not covered by this recipe!"]
-end</code></pre>
-<p>Figure 4: Typical Low Level Functional Questions</p>
+end
+<!-- ``` -->
+</div>
+Figure 4: Typical Low Level Functional Questions
 
-<pre><code>mermaid
+<!-- ```mermaid -->
+<div class="mermaid">
 graph TB;
 subgraph Interface Questions
 Int1[Is the upload of Ontologies supported?]
@@ -303,10 +329,13 @@ Int6[Is SPARQL endpoint supported?]
 IntL[Is federation supported for SPARQL endpoint?]
 end
 
-Int1 --&gt; Int2 --&gt; Int3 --&gt; Int4 --&gt; Int5 --&gt; Int6 --&gt;  IntL</code></pre>
-<p>Figure 5: Typical Low Level Interface Questions</p>
+Int1 --> Int2 --> Int3 --> Int4 --> Int5 --> Int6 -->  IntL
+<!-- ``` -->
+</div>
 
-<pre><code>mermaid
+Figure 5: Typical Low Level Interface Questions
+<!-- ```mermaid -->
+<div class="mermaid">
 graph TB;
 
 subgraph Architecture Questions
@@ -322,11 +351,14 @@ Arch9[Does the system support cloud installation?]
 Arch10[Is the system deployment supported by virtual image?]
 ArchL[Is the system deployment support by docker images?]
 end
-Arch1 --&gt; Arch2 --&gt; Arch3 --&gt; Arch4 --&gt; Arch5
-Arch5 --&gt; Arch6 --&gt; Arch7 --&gt; Arch8 --&gt; Arch9 --&gt; Arch10 --&gt; ArchL</code></pre>
-<p>Figure 6: Typical Low Level Architecture Questions</p>
+Arch1 --> Arch2 --> Arch3 --> Arch4 --> Arch5
+Arch5 --> Arch6 --> Arch7 --> Arch8 --> Arch9 --> Arch10 --> ArchL
+<!-- ``` -->
+</div>
 
-<pre><code>mermaid
+Figure 6: Typical Low Level Architecture Questions
+<div class="mermaid">
+<!-- ```mermaid -->
 graph TB;
 
 subgraph "Costs Questions (Initial and Ongoing)"
@@ -337,10 +369,15 @@ Cost4[Are the training costs acceptable?]
 Cost5[Are the support costs acceptable?]
 CostL[Are the customization costs acceptable?]
 end
-Cost1 --&gt; Cost2 --&gt; Cost3 --&gt; Cost4 --&gt; Cost5 --&gt; CostL</code></pre>
-<p>Figure 7: Typical Low Level Costs Questions</p>
+Cost1 --> Cost2 --> Cost3 --> Cost4 --> Cost5 --> CostL
+<!-- ``` -->
+<div>
 
-<pre><code>mermaid
+</div>
+
+Figure 7: Typical Low Level Costs Questions
+<div class="mermaid">
+<!-- ```mermaid -->
 graph TB;
 
 subgraph Performance Questions 
@@ -350,10 +387,13 @@ Perf3[Is the number of users of existing installations similar or beyond my numb
 Perf4[Does the system collect performance indicators?]
 PerfL[Does the system offer automatic performance measurements?]
 end
-Perf1 --&gt; Perf2 --&gt; Perf3 --&gt; Perf4 --&gt; PerfL</code></pre>
-<p>Figure 8: Typical Low Level Performance Questions</p>
+Perf1 --> Perf2 --> Perf3 --> Perf4 --> PerfL
+</div>
+<!-- ``` -->
 
-<pre><code>mermaid
+<p>Figure 8: Typical Low Level Performance Questions</p>
+<div class="mermaid">
+<!-- ```mermaid -->
 graph TB;
 
 subgraph "Delivery Questions"
@@ -364,49 +404,49 @@ Del4[How much effort is needed for manual installation?]
 Del5[Is virtual image based installation supported?] 
 DelL[Is Docker based installation supported?] 
 end
-Del1 --&gt; Del2 --&gt; Del3 --&gt; Del4  --&gt; Del5 --&gt; DelL</code></pre>
-<p>Figure 9: Typical Low Level Delivery Questions</p>
-
-<pre><code>mermaid
-graph TB;
-
-subgraph "Support (per component)"
+Del1 --> Del2 --> Del3 --> Del4  --> Del5 --> DelL
+<!-- ``` -->
+</div><p>Figure 9: Typical Low Level Delivery Questions</p>
+<p><div class="mermaid">
+<!-- ```mermaid -->
+graph TB;</p>
+<p>subgraph "Support (per component)"
 Sup1[Was the system continuously improved?] 
 Sup2[Do you have confidence in the future development of the system?] 
 Sup3[Do you have a fallback if further support for the product is frozen?] 
 Sup4[Do you have confidence that bugs are fixed in a reasonable time frame?]
 Sup5[Is commercial support available?]
 SupL[Is the support quality sufficient for you?]
-end
-
-Sup1 --&gt; Sup2 --&gt; Sup3 --&gt; Sup4  --&gt; Sup5 --&gt; SupL</code></pre>
+end</p>
+<p>Sup1 --&gt; Sup2 --&gt; Sup3 --&gt; Sup4  --&gt; Sup5 --&gt; SupL
+<!-- ``` --></p>
 <p>Figure 10: Typical Low Level Support Questions</p>
-<h2 id="Available-common-open-source-software">Available common open source software<a class="anchor-link" href="#Available-common-open-source-software"> </a></h2><h3 id="Ontology-Lookup-Service-(Ontology-Portal-Tool)">Ontology Lookup Service (Ontology Portal Tool)<a class="anchor-link" href="#Ontology-Lookup-Service-(Ontology-Portal-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>It is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. It allows browsing the ontologies through the website as well as programmatically via the OLS API. It is part of the ELIXIR interoperability service.</p>
+<h2 id="Available-common-open-source-software">Available common open source software<a class="anchor-link" href="#Available-common-open-source-software"> </a></h2><h3 id="EMBL-EBI-Ontology-Lookup-Service-(Ontology-Portal-Tool)"><a href="">EMBL-EBI Ontology Lookup Service</a> (Ontology Portal Tool)<a class="anchor-link" href="#EMBL-EBI-Ontology-Lookup-Service-(Ontology-Portal-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>It is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. It allows browsing the ontologies through the website as well as programmatically via the OLS API. It is part of the ELIXIR interoperability service.</p>
 <h4 id="Details">Details<a class="anchor-link" href="#Details"> </a></h4><ol>
-<li>Functionality: Ontology Portal Tool</li>
-<li>Interface: REST-style API supported, SPARQL endpoint under development.</li>
-<li>Architecture: OLS has been developed with the Spring Data and Spring Boot framework.<ol>
+<li><strong><code>Functionality</code></strong>: Ontology Portal Tool</li>
+<li><strong><code>Interface</code></strong>: REST-style API supported, SPARQL endpoint under development.</li>
+<li><strong><code>Architecture</code></strong>: OLS has been developed with the Spring Data and Spring Boot framework.<ol>
 <li>Tomcat is used as a web server.</li>
 <li>MongoDB is used for storing configuration yaml files.</li>
 <li>Neo4J node-property graph database is used for storing and accessing the ontologies. OWL format is converted to a node-property representation.</li>
 </ol>
 </li>
-<li>Deployment model: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.</li>
-<li>Requirements<ol>
+<li><strong><code>Deployment model</code></strong>: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.</li>
+<li><strong><code>Requirements</code></strong>:<ol>
 <li>Hardware requirements. It requires a standard workstation, 1GB main memory, and about 100MB hard disk.</li>
 <li>Software requirements. It is implemented as a Java Web Application to be deployed to the Tomcat 7.5 Java Application Container. It requires Java 8, Maven 3+ as dependency manager and build environment, MongoDB 2.7.8+ as database; and solr 5.2.1+ as indexing and search engine.</li>
 <li>License model. Apache Software Licence (v. 2.0).</li>
 </ol>
 </li>
-<li>Databases: It supports the Neo4J graph store, which allows querying using Cypher query language. Reasoning supports two profiles: OWL2 and EL. Default is EL. The reasoners supported are HermiT and ELK.</li>
-<li>Ontology Language: Custom translation of OBO and OWL 2 languages to the Neo4J graph model.</li>
-<li>Programming Language: Java.</li>
+<li><strong><code>Databases</code></strong>: It supports the Neo4J graph store, which allows querying using Cypher query language. Reasoning supports two profiles: OWL2 and EL. Default is EL. The reasoners supported are HermiT and ELK.</li>
+<li><strong><code>Ontology Language</code></strong>: Custom translation of OBO and OWL 2 languages to the Neo4J graph model.</li>
+<li><strong><code>Programming Language</code></strong>: Java.</li>
 </ol>
-<h3 id="Virtual-Appliance-(Ontology-Portal-Tool)">Virtual Appliance (Ontology Portal Tool)<a class="anchor-link" href="#Virtual-Appliance-(Ontology-Portal-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>The National Center for Biomedical Ontology (NCBO).</p>
+<h3 id="NCBO-Bioportal-Virtual-Appliance-(Ontology-Portal-Tool)"><a href="">NCBO Bioportal Virtual Appliance</a> (Ontology Portal Tool)<a class="anchor-link" href="#NCBO-Bioportal-Virtual-Appliance-(Ontology-Portal-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>The National Center for Biomedical Ontology (NCBO).</p>
 <h4 id="Details">Details<a class="anchor-link" href="#Details"> </a></h4><ol>
-<li>Functionality: Ontology Portal Tool</li>
-<li>Interface: REST-style API supported, SPARQL endpoint </li>
-<li>Architecture: Virtual Appliance defines the framework for the Web Service. The system internally uses the following components<ol>
+<li><strong><code>Functionality</code></strong>: Ontology Portal Tool</li>
+<li><strong><code>Interface</code></strong>: REST-style API supported, SPARQL endpoint </li>
+<li><strong><code>Architecture</code></strong>: Virtual Appliance defines the framework for the Web Service. The system internally uses the following components<ol>
 <li>A set of additional ruby based modules that implement the user interface and additional functionality can be found <a href="https://github.com/ncbo">here</a>.</li>
 <li>4Store triple store database is used to store and access ontologies. </li>
 <li>Solr is used to create indexes out of description text metadata.  </li>
@@ -414,8 +454,8 @@ Sup1 --&gt; Sup2 --&gt; Sup3 --&gt; Sup4  --&gt; Sup5 --&gt; SupL</code></pre>
 <li>MGrep is used for annotating text to ontologies.</li>
 </ol>
 </li>
-<li>Deployment model: It is available both as an on-premises and cloud-based solution. It is available as virtual VMWare Virtual Appliance or Amazon AWS AMI. </li>
-<li>Requirements:<ol>
+<li><strong><code>Deployment model</code></strong>: It is available both as an on-premises and cloud-based solution. It is available as virtual VMWare Virtual Appliance or Amazon AWS AMI. </li>
+<li><strong><code>Requirements</code></strong>:<ol>
 <li>Hardware requirements. <ol>
 <li>Minimum: 2 CPU (2 GHz), 4GB RAM, 20GB hard disk space.</li>
 <li>Recommended for heavier usage: 3 CPU (3 GHz), 8GB RAM (or more depending on the size/number of ontologies), 20GB hard disk space (or more depending on number/size of ontologies)</li>
@@ -428,15 +468,28 @@ Sup1 --&gt; Sup2 --&gt; Sup3 --&gt; Sup4  --&gt; Sup5 --&gt; SupL</code></pre>
 </li>
 </ol>
 </li>
-<li>Databases: It supports the 4Store triple store and MySQL</li>
-<li>Ontology Language: OBO, OWL, UMLS</li>
-<li>Programming Language: Ruby, Java.</li>
+<li><strong><code>Databases</code></strong>: It supports the 4Store triple store and MySQL</li>
+<li><strong><code>Ontology Language</code></strong>: OBO, OWL, UMLS</li>
 </ol>
-<h3 id="Apache-Marmotta-(Open-Data-Platform-Tool)">Apache Marmotta (Open Data Platform Tool)<a class="anchor-link" href="#Apache-Marmotta-(Open-Data-Platform-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>It is an Open Data Platform for Linked Data, which provides an open implementation of a Linked Data Platform that can be used, extended and deployed easily by organizations who want to publish Linked Data or build custom applications on Linked Data. It provides (a) read-write Linked Data server for the Java EE stack, (b) custom triple store built on top of RDBMS, with transactions, versioning and rule-based reasoning support, (c) pluggable RDF triple stores based on Eclipse RDF4J,  (d) LDP, SPARQL and LDPath querying, (e) transparent Linked Data Caching, and (f) Integrated basic security mechanisms.</p>
+<p>[REVIEWER QUESTIONS: is UMLS an ontology language ?]</p>
+<ol>
+<li><strong><code>Programming Language</code></strong>: Ruby, Java.</li>
+</ol>
+<h3 id="Apache-Marmotta-(Open-Data-Platform-Tool)"><a href="https://marmotta.apache.org/">Apache Marmotta</a> (Open Data Platform Tool)<a class="anchor-link" href="#Apache-Marmotta-(Open-Data-Platform-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>It is an Open Data Platform for Linked Data, which provides an open implementation of a Linked Data Platform that can be used, extended and deployed easily by organizations who want to publish Linked Data or build custom applications on Linked Data. It provides:</p>
+<blockquote><ul>
+<li>a) read-write Linked Data server for the <code>Java EE stack</code> </li>
+<li>b) custom triple store built on top of RDBMS, with transactions, versioning and rule-based reasoning support</li>
+<li>c) pluggable RDF triple stores based on <a href="https://projects.eclipse.org/projects/technology.rdf4j"><code>Eclipse RDF4J</code></a>,</li>
+<li>d) LDP, SPARQL and LDPath querying</li>
+<li>e) transparent Linked Data Caching</li>
+<li>f) Integrated basic security mechanisms.</li>
+</ul>
+</blockquote>
+<p>[REVIEWER QUESTION: this is lifted from marmotta document, citing the source is needed].</p>
 <h4 id="Details">Details<a class="anchor-link" href="#Details"> </a></h4><ol>
-<li>Functionality: Open (Linked) Data Platform.</li>
-<li>Interface: REST-style API, SPARQL endpoint supported.</li>
-<li>Architecture, the architecture comprises the following tiers:<ol>
+<li><strong><code>Functionality</code></strong>: Open (Linked) Data Platform.</li>
+<li><strong><code>Interface</code></strong>: REST-style API, SPARQL endpoint supported.</li>
+<li><strong><code>Architecture</code></strong>, the architecture comprises the following tiers:<ol>
 <li>User Interface Layer. It mostly consists of admin and development interfaces and is not intended for end users.</li>
 <li>Web-service Layer. It offers REST web-services to access most of the server functionality.</li>
 <li>Service Layer. It offers CDI services to develop custom Java applications.</li>
@@ -444,23 +497,23 @@ Sup1 --&gt; Sup2 --&gt; Sup3 --&gt; Sup4  --&gt; Sup5 --&gt; SupL</code></pre>
 <li>Persistence Layer. It is outside the Apache Marmotta Platform, which can use a number of Open Source database systems.</li>
 </ol>
 </li>
-<li>Deployment Model: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.</li>
-<li>Requirements:<ol>
+<li><strong><code>Deployment Model</code></strong>: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.</li>
+<li><strong><code>Requirements</code></strong>:<ol>
 <li>Hardware requirements. It requires a standard workstation, 1GB main memory, and about 100MB hard disk.</li>
 <li>Software requirements. It is implemented as a Java Web Application that can, in principle, be deployed to any Java Application Container. It has been tested under Jetty 6.x and Tomcat 7.x. It requires Java JDK 6 or higher, Java Application Server (Tomcat 7.x or Jetty 6.x), and a database (PostgreSQL, MySQL). If not explicitly configured, an embedded H2 database will be used.</li>
 <li>License model. Apache Software Licence (v. 2.0).</li>
 </ol>
 </li>
-<li>Databases: It supports the following triple store backends: (a) KiWi Triple Store, (b) Sesame Native, and (c) BigData triple store. The default backend is the KiWi triple store, which stores all data in a relational database and it is the only option that supports reasoning and versioning.</li>
-<li>Ontology Language: OWL serialized as RDF/RDFS triples. </li>
-<li>Programming Language: Java.</li>
+<li><strong><code>Databases</code></strong>: It supports the following triple store backends: (a.) KiWi Triple Store, (b.) Sesame Native, and (c.) BigData triple store. The default backend is the KiWi triple store, which stores all data in a relational database and it is the only option that supports reasoning and versioning.</li>
+<li><strong><code>Ontology Language</code></strong>: OWL serialized as RDF/RDFS triples. </li>
+<li><strong><code>Programming Language</code></strong>: Java.</li>
 </ol>
-<h3 id="European-Data-Portal-(Open-Data-Platform-Tool)">European Data Portal (Open Data Platform Tool)<a class="anchor-link" href="#European-Data-Portal-(Open-Data-Platform-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>European data portal  (EDP) is an initiative by the Publications Office of the European Union and by the European Commission that aims to increase the impact of open data by making it easy to find and re-use by everyone.
-It uses only open source software with extensions that are all available to the public for own use. As a core component CKAN open data portal software with DCAT-AF RDF extension is used. It allows sharing various data formats e.g. tabular data, RDF data (e.g. ontologies) combining relational and semantic technologies. The Triple Store database Virtuoso is used for storing ontologies. For metadata in relational format Postgres database is used as part of CKAN.</p>
+<h3 id="European-Data-Portal-(Open-Data-Platform-Tool)"><a href="">European Data Portal</a> (Open Data Platform Tool)<a class="anchor-link" href="#European-Data-Portal-(Open-Data-Platform-Tool)"> </a></h3><h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p><a href="https://www.europeandataportal.eu/en">European data portal</a>  (EDP) is an initiative by the <a href="https://op.europa.eu/da/home">Publications Office of the European Union</a> and by the <a href="https://ec.europa.eu/info/index_en">European Commission</a> that aims to increase the impact of open data by making it easy to find and re-use by everyone.
+It uses only open source software with extensions that are all available to the public for own use. As a core component, <a href="https://ckan.org/">CKAN open data portal software</a> with <a href="https://op.europa.eu/da/web/eu-vocabularies/dcat-ap">DCAT-AP</a> RDF extension is used. It allows sharing various data formats e.g. tabular data, RDF data (e.g. ontologies) combining relational and semantic technologies. The <a href="https://virtuoso.openlinksw.com/">Triple Store database Virtuoso</a> is used for storing ontologies. For metadata in relational format, the <a href="https://www.postgresql.org/">PostgreSQL</a> database is used as part of CKAN.</p>
 <h4 id="Details">Details<a class="anchor-link" href="#Details"> </a></h4><ol>
-<li>Functionality: Open Data Portal </li>
-<li>Interface: REST-style API, SPARQL endpoint supported.</li>
-<li>Architecture:<ol>
+<li><code>Functionality</code>: Open Data Portal </li>
+<li><code>Interface</code>: REST-style API, SPARQL endpoint supported.</li>
+<li><code>Architecture</code>:<ol>
 <li>CKAN manages and provides metadata content (datasets) in a central repository. </li>
 <li>DRUPAL provides the Portal’s Home Page with editorial content (e.g. Portal’s objectives, articles, news, events, tweets, etc.) and links to an Adapt Framework based training platform. </li>
 <li>The CKAN metadata is replicated into a Virtuoso triple store database via a CKAN synchronisation extension, in order to ensure that both repositories have the same set of metadata. </li>
@@ -469,15 +522,25 @@ It uses only open source software with extensions that are all available to the 
 <li>The Harvester is a separate component that is able to harvest data from multiple data sources with different formats and APIs. </li>
 </ol>
 </li>
-<li>Deployment model: It is available both as an on-premises and cloud-based solution.</li>
-<li>Requirements:<ol>
+<li><code>Deployment model</code>: It is available both as an on-premises and cloud-based solution.</li>
+<li><code>Requirements</code>:<ol>
 <li>The setup of the EDP consists of 20 virtual servers per computer room and environment (PROD, TEST)</li>
 </ol>
 </li>
-<li>Databases: Postgres RDBMS for CKAN catalogue, Virtuoso for RDF data</li>
-<li>Ontology Language: RDF, RDFS, OWL 2</li>
-<li>Programming Language: Python(CKAN), PHP(Drupal)</li>
+<li><code>Databases</code>: PostgreSQL RDBMS for CKAN catalogue, Virtuoso for RDF data</li>
+<li><code>Ontology Language</code>: RDF, RDFS, OWL 2</li>
+<li><code>Programming Language</code>: Python(CKAN), PHP(Drupal)</li>
 </ol>
+<hr>
+<h2 id="Conclusions:">Conclusions:<a class="anchor-link" href="#Conclusions:"> </a></h2><p>Determining which infrastructure to rely on for service terminologies and ontologies is a complex issue. This FAIRcookbook recipe gave an overview of non-functional criteria to take into consideration when appraising a software solution.</p>
+<p>To complement this recipe, reading the following chapter is highly encouraged.</p>
+<blockquote><h4 id="What-should-I-read-next?">What should I read next?<a class="anchor-link" href="#What-should-I-read-next?"> </a></h4><ul>
+<li><a href="">Key functional requirements to consider when selecting an ontology service?</a>]</li>
+<li><a href="">How to select an ontology?</a></li>
+<li><a href="">How to build an application ontology?</a></li>
+</ul>
+</blockquote>
+<hr>
 <h3 id="Authors">Authors<a class="anchor-link" href="#Authors"> </a></h3><table>
 <thead><tr>
 <th>Name</th>
@@ -490,30 +553,37 @@ It uses only open source software with extensions that are all available to the 
 <tr>
 <td>Kurt Dauth</td>
 <td>Boehringer Ingelheim</td>
-<td style="text-align:right"></td>
+<td style="text-align:right"><a href=""></a></td>
 <td style="text-align:right">Original Author</td>
 </tr>
 <tr>
 <td>Emiliano Reynares</td>
 <td>Boehringer Ingelheim</td>
-<td style="text-align:right">0000-0002-5109-3716</td>
+<td style="text-align:right"><a href="https://orcid.org/orcid.org/0000-0002-5109-3716">0000-0002-5109-3716</a></td>
 <td style="text-align:right">Author</td>
 </tr>
 <tr>
 <td>Petros Papadopoulos</td>
 <td>Heriot-Watt University</td>
-<td style="text-align:right">0000-0002-8110-7576</td>
+<td style="text-align:right"><a href="https://orcid.org/orcid.org/0000-0002-8110-7576">0000-0002-8110-7576</a></td>
 <td style="text-align:right">Author</td>
 </tr>
 <tr>
 <td>Karsten Quast</td>
 <td>Boehringer Ingelheim</td>
-<td style="text-align:right">0000-0003-3922-5701</td>
+<td style="text-align:right"><a href="https://orcid.org/orcid.org/0000-0003-3922-5701">0000-0003-3922-5701</a></td>
+<td style="text-align:right">Reviewer</td>
+</tr>
+<tr>
+<td>Philippe Rocca-Serra</td>
+<td>University of Oxford, Data Readiness Group</td>
+<td style="text-align:right"><a href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></td>
 <td style="text-align:right">Reviewer</td>
 </tr>
 </tbody>
 </table>
-<h3 id="Licence">Licence<a class="anchor-link" href="#Licence"> </a></h3><p><a href="https://creativecommons.org/licenses/by/4.0/">Please click here for licence</a></p>
+<hr>
+<h3 id="Licence">Licence<a class="anchor-link" href="#Licence"> </a></h3><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
 
 </div>
 </div>

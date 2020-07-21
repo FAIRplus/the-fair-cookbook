@@ -1079,6 +1079,7 @@ Hripcsak, George et al. “Observational Health Data Sciences and Informatics (O
 
 
 ___
+
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
@@ -1087,6 +1088,9 @@ ___
 | Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
 
 ___
+
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+
+___

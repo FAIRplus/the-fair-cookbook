@@ -3,23 +3,23 @@ redirect_from:
   - "/1/testnb/1-rose-metabolites-python-analysis"
 interact_link: content/1/testnb/1-rose-metabolites-Python-analysis.ipynb
 kernel_name: venv372
-kernel_path: content/1/testnb
 has_widgets: false
 title: |-
   2
-pagenum: 24
 prev_page:
   url: /1/testnb/0-rose-metabolites-Python-data-handling.html
+  title: |-
+    1
 next_page:
   url: /1/testnb/3-rose-metabolites-R-analysis.html
+  title: |-
+    3
 suffix: .ipynb
-search: data p m package s tabular r j python ggplot such dataset same l f c scent packages using org datasets simply file generated bendahmane plotnine philippe rocca serra profiling libraries graphical lets read relevant generate barplot similar both rosa structure another shows studies compounds x y caissard jc vergne dubois raymond o baudino roses science doi h exploring comparing rose profiles stored port oerc ox ac uk university oxford e research centre background experimental results metabolite published straightfowardly reported okfn frictionlessdata io specs components easily parsed frames exploiting visualization purpose implementing grammar concepts here show equivalent rich tidyverse few
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
     <main class="jupyter-page">
-    <div id="page-info"></div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
@@ -65,7 +65,7 @@ A few line of codes allow to query datasets and rapidly explore the information.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 
     </div>
@@ -100,6 +100,65 @@ A few line of codes allow to query datasets and rapidly explore the information.
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-2-39f76dc87f95&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>data <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">parser_f</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)</span>
+<span class="ansi-green-intense-fg ansi-bold">    683</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    684</span> 
+<span class="ansi-green-fg">--&gt; 685</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> _read<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">,</span> kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    686</span> 
+<span class="ansi-green-intense-fg ansi-bold">    687</span>     parser_f<span class="ansi-blue-fg">.</span>__name__ <span class="ansi-blue-fg">=</span> name
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    455</span> 
+<span class="ansi-green-intense-fg ansi-bold">    456</span>     <span class="ansi-red-fg"># Create the parser.</span>
+<span class="ansi-green-fg">--&gt; 457</span><span class="ansi-red-fg">     </span>parser <span class="ansi-blue-fg">=</span> TextFileReader<span class="ansi-blue-fg">(</span>fp_or_buf<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    458</span> 
+<span class="ansi-green-intense-fg ansi-bold">    459</span>     <span class="ansi-green-fg">if</span> chunksize <span class="ansi-green-fg">or</span> iterator<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, f, engine, **kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    893</span>             self<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;has_index_names&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> kwds<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;has_index_names&#34;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    894</span> 
+<span class="ansi-green-fg">--&gt; 895</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_make_engine<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>engine<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    896</span> 
+<span class="ansi-green-intense-fg ansi-bold">    897</span>     <span class="ansi-green-fg">def</span> close<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">_make_engine</span><span class="ansi-blue-fg">(self, engine)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1133</span>     <span class="ansi-green-fg">def</span> _make_engine<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> engine<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;c&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1134</span>         <span class="ansi-green-fg">if</span> engine <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;c&#34;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1135</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_engine <span class="ansi-blue-fg">=</span> CParserWrapper<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>self<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1136</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1137</span>             <span class="ansi-green-fg">if</span> engine <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;python&#34;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, src, **kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1915</span>         kwds<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;usecols&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>usecols
+<span class="ansi-green-intense-fg ansi-bold">   1916</span> 
+<span class="ansi-green-fg">-&gt; 1917</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_reader <span class="ansi-blue-fg">=</span> parsers<span class="ansi-blue-fg">.</span>TextReader<span class="ansi-blue-fg">(</span>src<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1918</span>         self<span class="ansi-blue-fg">.</span>unnamed_cols <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_reader<span class="ansi-blue-fg">.</span>unnamed_cols
+<span class="ansi-green-intense-fg ansi-bold">   1919</span> 
+
+<span class="ansi-green-fg">pandas/_libs/parsers.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader.__cinit__</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas/_libs/parsers.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._setup_parser_source</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] File b&#39;../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#39; does not exist: b&#39;../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#39;</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -154,121 +213,15 @@ A few line of codes allow to query datasets and rapidly explore the information.
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-4-304fa4ce4ebd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>data<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>chemical_name</th>
-      <th>inchi</th>
-      <th>chebi_identifier</th>
-      <th>var1_levels</th>
-      <th>var1_uri</th>
-      <th>var2_levels</th>
-      <th>var2_uri</th>
-      <th>treatment</th>
-      <th>sample_size</th>
-      <th>sample_mean</th>
-      <th>unit</th>
-      <th>sem</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>hexan-2-ol</td>
-      <td>InChI=1S/C6H14O/c1-3-4-5-6(2)7/h6-7H,3-5H2,1-2H3</td>
-      <td>chebi:88370</td>
-      <td>R. chinensis 'Old Blush'</td>
-      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
-      <td>sepal</td>
-      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
-      <td>R. chinensis 'Old Blush' sepals</td>
-      <td>3</td>
-      <td>0.00</td>
-      <td>NaN</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>hexanal</td>
-      <td>InChI=1S/C6H12O/c1-2-3-4-5-6-7/h6H,2-5H2,1H3</td>
-      <td>chebi:88528</td>
-      <td>R. chinensis 'Old Blush'</td>
-      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
-      <td>sepal</td>
-      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
-      <td>R. chinensis 'Old Blush' sepals</td>
-      <td>3</td>
-      <td>4.95</td>
-      <td>NaN</td>
-      <td>0.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>(E)-2-hexenal</td>
-      <td>InChI=1S/C6H10O/c1-2-3-4-5-6-7/h4-6H,2-3H2,1H3...</td>
-      <td>chebi:28913</td>
-      <td>R. chinensis 'Old Blush'</td>
-      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
-      <td>sepal</td>
-      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
-      <td>R. chinensis 'Old Blush' sepals</td>
-      <td>3</td>
-      <td>57.62</td>
-      <td>NaN</td>
-      <td>7.34</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>(Z)-3-hexen-1-ol</td>
-      <td>InChI=1S/C6H12O/c1-2-3-4-5-6-7/h3-4,7H,2,5-6H2...</td>
-      <td>chebi:28857</td>
-      <td>R. chinensis 'Old Blush'</td>
-      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
-      <td>sepal</td>
-      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
-      <td>R. chinensis 'Old Blush' sepals</td>
-      <td>3</td>
-      <td>7.64</td>
-      <td>NaN</td>
-      <td>0.63</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>(E)-2-hexen-1-ol</td>
-      <td>InChI=1S/C6H12O/c1-2-3-4-5-6-7/h4-5,7H,2-3,6H2...</td>
-      <td>chebi:141205</td>
-      <td>R. chinensis 'Old Blush'</td>
-      <td>http://purl.obolibrary.org/obo/NCBITaxon_74649</td>
-      <td>sepal</td>
-      <td>http://purl.obolibrary.org/obo/PO_0009031</td>
-      <td>R. chinensis 'Old Blush' sepals</td>
-      <td>3</td>
-      <td>1.79</td>
-      <td>NaN</td>
-      <td>0.98</td>
-    </tr>
-  </tbody>
-</table>
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
 </div>
-</div>
-
 </div>
 </div>
 </div>
@@ -330,24 +283,19 @@ A few line of codes allow to query datasets and rapidly explore the information.
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-8b6cd2b54fc3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span>  <span class="ansi-blue-fg">+</span> scale_y_continuous<span class="ansi-blue-fg">(</span>expand <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     14</span>  <span class="ansi-blue-fg">+</span> facet_wrap<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;~treatment&#39;</span><span class="ansi-blue-fg">,</span> dir<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;v&#39;</span><span class="ansi-blue-fg">,</span>ncol<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 15</span><span class="ansi-red-fg">  </span><span class="ansi-blue-fg">+</span> theme<span class="ansi-blue-fg">(</span>figure_size <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">16</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span> )
+<span class="ansi-green-intense-fg ansi-bold">     17</span> 
 
-
-<div class="output_png output_subarea ">
-<img src="../../images/1/testnb/1-rose-metabolites-Python-analysis_10_0.png"
->
+<span class="ansi-red-fg">NameError</span>: name &#39;data&#39; is not defined</pre>
 </div>
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;ggplot: (-9223372036575161305)&gt;</pre>
-</div>
-
 </div>
 </div>
 </div>
@@ -382,6 +330,66 @@ A few line of codes allow to query datasets and rapidly explore the information.
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-33683c5df1e2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>ng2018sc2015 <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;../data/processed/rose-data/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># ng2018sc2015 = pd.read_csv(&#34;https://zenodo.org/api/files/268f29fc-8ead-4049-bb86-181b72073682/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&#34;)</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">parser_f</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)</span>
+<span class="ansi-green-intense-fg ansi-bold">    683</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    684</span> 
+<span class="ansi-green-fg">--&gt; 685</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> _read<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">,</span> kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    686</span> 
+<span class="ansi-green-intense-fg ansi-bold">    687</span>     parser_f<span class="ansi-blue-fg">.</span>__name__ <span class="ansi-blue-fg">=</span> name
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    455</span> 
+<span class="ansi-green-intense-fg ansi-bold">    456</span>     <span class="ansi-red-fg"># Create the parser.</span>
+<span class="ansi-green-fg">--&gt; 457</span><span class="ansi-red-fg">     </span>parser <span class="ansi-blue-fg">=</span> TextFileReader<span class="ansi-blue-fg">(</span>fp_or_buf<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    458</span> 
+<span class="ansi-green-intense-fg ansi-bold">    459</span>     <span class="ansi-green-fg">if</span> chunksize <span class="ansi-green-fg">or</span> iterator<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, f, engine, **kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    893</span>             self<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;has_index_names&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> kwds<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;has_index_names&#34;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    894</span> 
+<span class="ansi-green-fg">--&gt; 895</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_make_engine<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>engine<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    896</span> 
+<span class="ansi-green-intense-fg ansi-bold">    897</span>     <span class="ansi-green-fg">def</span> close<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">_make_engine</span><span class="ansi-blue-fg">(self, engine)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1133</span>     <span class="ansi-green-fg">def</span> _make_engine<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> engine<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;c&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1134</span>         <span class="ansi-green-fg">if</span> engine <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;c&#34;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1135</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_engine <span class="ansi-blue-fg">=</span> CParserWrapper<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>self<span class="ansi-blue-fg">.</span>options<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1136</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1137</span>             <span class="ansi-green-fg">if</span> engine <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;python&#34;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, src, **kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1915</span>         kwds<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;usecols&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>usecols
+<span class="ansi-green-intense-fg ansi-bold">   1916</span> 
+<span class="ansi-green-fg">-&gt; 1917</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_reader <span class="ansi-blue-fg">=</span> parsers<span class="ansi-blue-fg">.</span>TextReader<span class="ansi-blue-fg">(</span>src<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1918</span>         self<span class="ansi-blue-fg">.</span>unnamed_cols <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_reader<span class="ansi-blue-fg">.</span>unnamed_cols
+<span class="ansi-green-intense-fg ansi-bold">   1919</span> 
+
+<span class="ansi-green-fg">pandas/_libs/parsers.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader.__cinit__</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas/_libs/parsers.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._setup_parser_source</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] File b&#39;../data/processed/rose-data/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&#39; does not exist: b&#39;../data/processed/rose-data/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&#39;</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -427,24 +435,19 @@ A few line of codes allow to query datasets and rapidly explore the information.
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-86bb638daf4f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>  <span class="ansi-blue-fg">+</span> geom_col<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>  <span class="ansi-blue-fg">+</span> facet_wrap<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;~publication_year&#39;</span><span class="ansi-blue-fg">,</span> dir<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;h&#39;</span><span class="ansi-blue-fg">,</span> ncol<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">  </span><span class="ansi-blue-fg">+</span> theme<span class="ansi-blue-fg">(</span>axis_text_x<span class="ansi-blue-fg">=</span>element_text<span class="ansi-blue-fg">(</span>rotation<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">90</span><span class="ansi-blue-fg">,</span> hjust<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> fontsize<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-intense-fg ansi-bold">      7</span> )
 
-
-<div class="output_png output_subarea ">
-<img src="../../images/1/testnb/1-rose-metabolites-Python-analysis_14_0.png"
->
+<span class="ansi-red-fg">NameError</span>: name &#39;ng2018sc2015&#39; is not defined</pre>
 </div>
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;ggplot: (312054136)&gt;</pre>
-</div>
-
 </div>
 </div>
 </div>

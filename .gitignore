@@ -5,3 +5,4 @@ docs/Gemfile.lock
 .gitignore~
 docs/_config_netlify.yml
 docs/_build/
+.jekyll-cache/

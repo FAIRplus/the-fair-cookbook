@@ -62,9 +62,9 @@
 #   expand_sections: true
 #   sections:
 
-# - title: What is FAIR
-#   url: /recipes/introduction/FAIR
-#   not_numbered: false
+- title: What is FAIR
+  url: /recipes/introduction/FAIR-principle
+  not_numbered: false
 
 - title: What is IMI
   url: /recipes/introduction/what-is-IMI

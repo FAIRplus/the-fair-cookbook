@@ -1,5 +1,7 @@
 # FAIR in the context of IMI.
 
+___
+
 <div class="row">
 
   <div class="column">
@@ -53,6 +55,8 @@
   </div>
 </div>
 
+___
+
 ## Introduction
 
 In the recipes leading to this section, the IMI organization and mode of operation has been outlined. The overview also highlighted the `default opt-in` to the `Open Research Data Pilot` of the IMI for all new funded projects, from call 11 and onwards.
@@ -68,10 +72,10 @@ IMI builds on the [Guidelines on FAIR Data Management in Horizon 2020](https://e
 
 Briefly, IMI states the following:
 > Research data should be:
->- [x] identified in a persistent manner using community conventions
->- [x] described using sufficiently rich metadata;
->- [x] stored in such a way that they can be accessed by humans and machines;
->- [x] structured in such a way that they can be combined with other data sets;
+> - identified in a persistent manner using community conventions
+> - described using sufficiently rich metadata;
+> - stored in such a way that they can be accessed by humans and machines;
+> - structured in such a way that they can be combined with other data sets;
 >- [x] licensed or have terms-of-use that spell out how they can be used by others.
 
 
@@ -83,31 +87,37 @@ It is therefore important to contrast the projected expenditure to the estimated
 
 With IMI funding such a diverse variety of projects, ranging from `drug discovery` or `vaccine development`, to `drug safety assessment` and to `clinical trials` and `observational studdies`, it is obvious that a `one size fits all` approach can not work and that **context aware FAIRification processes** have to be developed, to meet the specifics of IMI projects and their needs.
 
+___
+
 ### FAIRification: Data Readiness and Big Data
 
 With IMI2 under way, the EU is consenting a significant effort towards supporting research and discovery in the context of health and healthcare, for the benefit of the EU citizen but also in support of EU industry.
 Owing to their objective and size, some IMI projects are emblematic and illustrative of the challenges ahead. 
+
 * In the context of `drug discovery`, the [IMI OpenPhacts project](www.openphacts.org), obtaining €20.1 Million, trailblazed the use to RDF/Linked Data to represent chemical and drug information knowledge to achieve 	Semantic interoperability for drug discovery and to `design methods for common standards and sharing of data for more efficient drug development and patient treatment in the future`
 
 
 * For instance, in the context of `health data`, the [IMI European Health Data and Evidence Network (EHDEN) project](https://www.ehden.eu/), with a dotation of €28.9 Million,  ambitions to make available to researchers the data of over 100 millions european patients, in a privacy preserving fashion. To this end, an `Harmonization fund` of €18 Million is available so standardized against [OMOP](https://www.ohdsi.org/data-standardization/the-common-data-model/).
 
 <!-- ![](https://i.imgur.com/Z9eiWHL.png) -->
-<div>
-<img src="https://i.imgur.com/Z9eiWHL.png" width="650" style="border:1px solid black;align:center"/>
+
+
+<div style="display: flex; justify-content: center;">
+<img src="https://i.imgur.com/Z9eiWHL.png" width="650" style="border:1px solid black"/>
 </div>
 
-<br/>
 
 * In the context of 'blood cancer', the [IMI Harmony](https://www.imi.europa.eu/projects-results/project-factsheets/harmony) received €42 Million to harmonize data from over 45000 patients affected by common blood cell malignancies using standards such as [OMOP](https://www.ohdsi.org/data-standardization/the-common-data-model/), [LOINC]() and [SNOMED]().
 
 
 <!-- ![](https://i.imgur.com/pNgpTA1.jpg) -->
 
-<div>
-<img src="https://i.imgur.com/mXKjpAR.jpg
-" width="650" border="1" style="border:1px solid black"/>
+<div style="display: flex; justify-content: center;">
+<img src="https://i.imgur.com/mXKjpAR.jpg" width="650" style="border:1px solid black"/>
 </div>
+
+___
+
     
 ### The IMI FAIRplus project
 
@@ -116,6 +126,8 @@ In 2019, the IMI awarded funds to a project whose sole purpose is to devise, def
 The main outcome of the FAIRplus project is the present [FAIRplus Cookbook](https://fairplus.github.io/the-fair-cookbook/intro.html), which aims to provide a set of representative FAIRification process supporting various context and showing cases how data standardization operates.
 
 The so-called `recipes` will ranges from simple protocols (e.g. computing hash function for file fingerprinting) to very advanced ones allowed code execution, carrying an ETL process and a data integration challenge using semantic web technologies such SPARQL federated querying to perform a `semantic mash up` against a well documented `query case`.
+
+___
 
 
 ## Conclusion:
@@ -127,8 +139,10 @@ The section also outlined how IMI FAIRplus can leverage sister projects to scale
 > * [the IMI FAIRplus FAIRification Process overview]()
 
 
+___
 
 ## Reference
+
 1. https://www.imi.europa.eu/news-events/newsroom/when-data-fair-citizens-ultimately-reap-benefit
 2. [Guidelines on FAIR Data Management in Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf)
 3. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
@@ -137,18 +151,23 @@ The section also outlined how IMI FAIRplus can leverage sister projects to scale
 6. [LOINC]()
 7. [SNOMED]()
 
+___
+
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft|
-|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)|Writing - Original Draft|
-|||Review|
-|||Review|
+|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-5306-5690](https://orcid.org/orcid.org/0000-0001-5306-5690)|Writing - Original Draft|
+||||Review|
+||||Review|
 
 ___
+
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+
+____
 
 
