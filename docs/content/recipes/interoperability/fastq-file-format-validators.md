@@ -1,7 +1,7 @@
 # File format validation, an example with FASTQ files
 
 [toc]
-
+>TODO: manual toc
 ---
 
 ## Main Objectives
@@ -15,7 +15,7 @@ The main purpose of this recipe is to:
 ```mermaid
 graph TD;
     A[Data Acquisition] -->B(Raw Data)
-    B --> C{Standard file format available?}
+    B --> C{Is standard format?}
     C -->|Yes| D{File format valid?}
     C -->|No| E[Convert to standard file format]
     D --> |Yes|F[- Data deposition </br>  - Data sharing </br>  - Downstream analysis ]
@@ -24,11 +24,12 @@ graph TD;
     G --> |revise|D
     
 ```
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7U3RhbmRhcmQgZmlsZSBmb3JtYXQgYXZhaWxhYmxlP31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7U3RhbmRhcmQgZmlsZSBmb3JtYXQgYXZhaWxhYmxlP31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
 :octopus: Related recipes: 
 - [From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
 - [FASTQ file specification recipe](TBD)
+- [FASTQ file validator in Biopython](TBD)
 
 ## User Stories
 
@@ -62,6 +63,7 @@ The table below lists common file validation use cases. This recipe provides sol
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [FASTQ](http://edamontology.org/format_2182)  | |
+| [Compressed Format](https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_4006)| |
 ___
 
 [FASTQ](edamontology.org/format_2182) is the _de facto_ sequencing file format and one of the most common file formats in bioinformatics analysis. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformatics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis process.
@@ -76,12 +78,21 @@ This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on 
 
 ![](https://i.imgur.com/jOYK2ZM.jpg)
 
-### Software requirements
-- [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
+### Requirements
+
+> TODO: users are expected to know balabalaba
+
+|Software|Description|Version|
+|--|--|--|
+|[conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)|Package manager for installing validators |4.8.3
+|[FASTQ-utils](https://github.com/nunofonseca/fastq_utils)| FASTQ validator|0.23.0
+|[wget](https://www.gnu.org/software/wget/)|File downloader|1.19.4|
 
 ### Step 1: Install fastq-utils
 
 The command below installs _fastq-utils_ via Conda. It is also possible to install _fastq-utils_ from [the source code](https://github.com/nunofonseca/fastq_utils).
+
+>:bulb: TODO add downloading using source code
 
 ```shell
 conda install -c bioconda fastq_utils
@@ -113,6 +124,8 @@ A>A@@=@@F@D@C<999,:<@ABBBB@B=>=BB@BBB?@@><;;7>??=BBB>BDD;D>????@@;@CDC@@@BBB>BBB
 __Example 2: Get paired-read FASTQ files__
 
 The command below downloads Illumina iSeq 100 paired end sequencing files from ENA. [These files](https://www.ebi.ac.uk/ena/data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
+
+>TODO: fix links
 
 ```shell
 wget -c \
@@ -198,7 +211,10 @@ _fastq_util_ also provides additional arguments to tune the validation:
 
 `-q`: not to fail if the encoding can't be decided.
 
-#### FASTA-utils feature summary
+
+>:bulb: TODO add example error messages
+
+### FASTA-utils feature summary
 
 The table lists technical considerations when selecting the validator, including basic validation function, performance, interface, etc. It also provides a detailed summary of _fastq-utils_ features.  
 
@@ -242,7 +258,8 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 |Name|Institute|ORCID|Contributions|
 |--|--|--|--|
 |Fuqi Xu|[EMBL-EBI](https://www.ebi.ac.uk/)|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Writing - Original Draft|
-|Eva Martin | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Discussion and Editing |
+|Eva Martin | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Reviewing and editing |
+|Peter Woollard|[GSK](https://www.gsk.com/en-gb/)|[0000-0002-7654-6902](https://orcid.org/0000-0002-7654-6902)|Reviewing|
 
 ## License
 
