@@ -85,6 +85,13 @@ graph LR;
     C -->|No| E[Vendor locked Data]
 ```
 
+## Related recipes
+- [Recipe 1](recipe 1 link)
+- [Recipe 2](recipe 2 link)
+
+## References
+-
+- 
 ___
 
 
