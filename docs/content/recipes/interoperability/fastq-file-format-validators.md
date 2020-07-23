@@ -1,14 +1,29 @@
 # File format validation, an example with FASTQ files
 
-[toc]
->TODO: manual toc
+- [Main objectives](#Main-Objectives)
+- [Graphical Overview of the FAIRification Recipe Objectives](#Graphical-Overview-of-the-FAIRification-Recipe-Objectives)
+- [User Stories](#User-Stories)
+- [Capability & Maturity Table](#Capability-amp-Maturity-Table)
+- [FAIRification Objectives, Inputs and Outputs](#FAIRification-Objectives-Inputs-and-Outputs)
+- [Table of Data Standards](#Table-of-Data-Standards)
+    - [Requirements](#Requirements)
+    - [Step 1: Install fastq-utils](#Step-1-Install-fastq-utils)
+    - [Step 2: Get example file for testing*](#Step-2-Get-example-file-for-testing)
+    - [Step 3: Perform validation](#Step-3-Perform-validation)
+    - [FASTA-utils feature summary](#FASTA-utils-feature-summary)
+- [Summary](#Summary)
+- [Related Recipes](#Related-recipes)
+- [References](#References)
+- [Authors](#Authors)
+- [License](#License)
 ---
 
 ## Main Objectives
 
 The main purpose of this recipe is to:
 
-> provide a FASTQ file validation solution, and propose a general file validation workflow. 
+> - provide a FASTQ file validation solution
+> - propose a general file validation workflow. 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
@@ -18,18 +33,13 @@ graph TD;
     B --> C{Is standard format?}
     C -->|Yes| D{File format valid?}
     C -->|No| E[Convert to standard file format]
-    D --> |Yes|F[- Data deposition </br>  - Data sharing </br>  - Downstream analysis ]
+    D --> |Yes|F[- Data deposition <br>  - Data sharing <br> - Downstream analysis ]
     D --> |No|G[Revise file]
     E -->  D
     G --> |revise|D
-    
+  
 ```
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDwvYnI-ICAtIERhdGEgc2hhcmluZyA8L2JyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
-
-:octopus: Related recipes: 
-- [From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
-- [FASTQ file specification recipe](TBD)
-- [FASTQ file validator in Biopython](TBD)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDxicj4gLSBEYXRhIHNoYXJpbmcgPGJyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDxicj4gLSBEYXRhIHNoYXJpbmcgPGJyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn19)
 
 ## User Stories
 
@@ -47,7 +57,7 @@ The table below lists common file validation use cases. This recipe provides sol
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
-|TBD   | TBD |  TBD |
+|Interoperability |minimal |	repeatable|
 
 ----
 
@@ -70,17 +80,17 @@ ___
 
 FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle compressed FASTQ files. 
 
-> Quality control is out of the scope of file format validation.
-
 [FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been applied in the [European Nucleotide Archive(ENA)](https://www.ebi.ac.uk/ena), and several research initiatives. 
 
 This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on MacOS and Linux machines.
+
+>:bulb: Quality control is out of the scope of file format validation.
 
 ![](https://i.imgur.com/jOYK2ZM.jpg)
 
 ### Requirements
 
-> TODO: users are expected to know balabalaba
+The users are expected to be comfortable with Unix-based OS and basic Bash programming syntax and commands.
 
 |Software|Description|Version|
 |--|--|--|
@@ -92,8 +102,6 @@ This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on 
 
 The command below installs _fastq-utils_ via Conda. It is also possible to install _fastq-utils_ from [the source code](https://github.com/nunofonseca/fastq_utils).
 
->:bulb: TODO add downloading using source code
-
 ```shell
 conda install -c bioconda fastq_utils
 ```
@@ -104,7 +112,7 @@ _:bulb:*  Users can skip this step and test with their own files._
 
 In this step, we download example FASTQ files from ENA for testing. The first example file is a single read file, the other ones are paired-end read files.
 
-_Example 1: Get single read FASTQ file_
+__Example 1: Get single read FASTQ file__
 
 The command below downloads an _Ion Torrent S5_ fastq file from ENA. [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
 ```shell
@@ -125,12 +133,10 @@ __Example 2: Get paired-read FASTQ files__
 
 The command below downloads Illumina iSeq 100 paired end sequencing files from ENA. [These files](https://www.ebi.ac.uk/ena/data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
 
->TODO: fix links
-
 ```shell
 wget -c \
 ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_1.fastq.gz \
-ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/0r11542244/SRR11542244_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_2.fastq.gz
 ```
 Below is the headers of the two files. The read pairs info is listed in the read IDs.
 ```
@@ -211,8 +217,14 @@ _fastq_util_ also provides additional arguments to tune the validation:
 
 `-q`: not to fail if the encoding can't be decided.
 
+#### Error messages for invalid files
+FASTQ-utils returns an error message with the location of invalid lines and type of errors if the files are invalid. Below are examples of error messages.
 
->:bulb: TODO add example error messages
+- Invalid file example 1, duplicated reads
+    > ERROR: Error in file SRR11542244_2.fastq: line 16: duplicated sequence SRR11542244.5 5/
+
+- Invalid file example 2, wrong base call encoding
+    > ERROR: Error in file SRR11542244_2.fastq: line 5: invalid character 'e' (hex. code:'65'), expected ACGTacgt0123nN.
 
 ### FASTA-utils feature summary
 
@@ -246,6 +258,11 @@ _*See details in the [FASTQ specification recipe]()._
 ## Summary
 
 In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file formats and other use cases.
+
+## Related recipes
+- :octopus:[From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
+- :octopus:[FASTQ file specification recipe](TBD)
+- :octopus:[FASTQ file validator in Biopython](TBD)
 
 ## References
 - Cock, Peter J. A., Christopher J. Fields, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FASTQ File Format for Sequences with Quality Scores, and the Solexa/Illumina FASTQ Variants’. Nucleic Acids Research 38, no. 6 (1 April 2010): 1767–71. https://doi.org/10.1093/nar/gkp1137.
