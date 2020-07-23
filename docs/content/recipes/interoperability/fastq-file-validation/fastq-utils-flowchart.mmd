@@ -1,0 +1,9 @@
+graph TD;
+    A[Data Acquisition] -->B(Raw Data)
+    B --> C{Is standard format?}
+    C -->|Yes| D{File format valid?}
+    C -->|No| E[Convert to standard file format]
+    D --> |Yes|F[- Data deposition <br>  - Data sharing <br> - Downstream analysis ]
+    D --> |No|G[Revise file]
+    E -->  D
+    G --> |revise|D
