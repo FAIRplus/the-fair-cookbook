@@ -30,9 +30,23 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
+__How to create workflow figures__
 
+one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
+
+```
+graph LR;
+    A[Data Acquisition] -->B(Raw Data)
+    B --> C{FAIR by Design}
+    C -->|Yes| D[Standard Compliant Data]
+    C -->|No| E[Vendor locked Data]
+```
 ___
 ## User Stories
+| As a ...  | I want to...    |  So that ... |
+|----------|:-------------:|------:|
+| Data consumer | adopt data standards| I can better share with collaborators |
+|  |      |   |
 
 ## Capability & Maturity Table
 
@@ -72,23 +86,16 @@ import pandas as pd
 import holoview
 ```
 
-___
+## Summary
 
-## How to create workflow figures
+A brief summary about the recipe
 
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
+## Related recipes
+- :octopus: [Recipe: how to use bioschema](dfsf)
+- :octopus: [Recipe: how to build an application ontology](dfsf)
 
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
-
-___
-
-
+## References
+- Mons, Barend, et al. ["Cloudy, increasingly FAIR; revisiting the FAIR Data guiding principles for the European Open Science Cloud."](https://content.iospress.com/articles/information-services-and-use/isu824) Information Services & Use 37.1 (2017): 49-56.
 
 ## Authors:
 
