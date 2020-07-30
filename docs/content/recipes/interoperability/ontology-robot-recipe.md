@@ -1,5 +1,5 @@
 # How to build an application ontology with Robot
-
+<!-- 
 **identifier:**
 
 **version:** [v0.1](v0.1)
@@ -24,9 +24,65 @@ ___
 
 **_Recipe Type_**: Hands-on practical
 
-**_Executable code_**: No
+**_Executable code_**: No -->
 
----
+___
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">RX.X</a> </p>
+        <p> version: <a href="">v0.1</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#8038d1;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#8038d1;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 60 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle" style="color:#fc7a4a;"></i> No</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+        <p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Managers </p> 
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+        <p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developers </p>
+<!--         <p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrators</p>  -->       
+      </div>
+    </div>
+  </div>
+</div>
+
+___
 
 # How to build application ontology with ROBOT
 
@@ -41,7 +97,7 @@ ___
 
 ## Main Objectives
 
-The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. 
+> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. 
 
 An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
@@ -140,13 +196,12 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 | **Theme**                                             | **Competency Questions**                                                                                                              |
 |:------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
 | **General Questions**                                 |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs? (Might be out of scope for ROBOT)              |
-|                                                       | :heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?            |
-|                                                       | :heavy_plus_sign: How to merge the internal ontology with publicly available ontologies?                                             |
+|                                                       | :heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs?             |
+|                                                       | :heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?
 |                                                       | :heavy_plus_sign: How to remove terms from the resulting ontology that are not needed?                                               |
 |                                                       | :heavy_plus_sign: How to guarantee consistency of the final ontology?                                                                |
 |                                                       | :heavy_plus_sign: How to identify differences in comparison to a previous version of the resulting ontology?                         |
-| **Questions without specifying compounds or genes**   |                                                                                                                                       |
+| **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
 |                                                       | :heavy_plus_sign: Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
 |                                                       | :heavy_plus_sign: Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
 |                                                       | :heavy_plus_sign: Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
@@ -160,7 +215,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 |                                                       | :heavy_plus_sign: Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
 |                                                       | :heavy_plus_sign: Identify all data from patients treated with a specific medication.                                                                 |
 |                                                       | :heavy_plus_sign: Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific diseas |
+|                                                       | :heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
 
 
 
@@ -474,7 +529,7 @@ And a template sample is presented following:
 |ex:op_1	|Prop_1| object property|-|Class_2|Class_3| |
 |ex:dp_1	|Prop_2| data property|-|functional|Class_2|xsd:string|
 
->:warning: **_Tip:_** The generated ontology can be visualized by using the Protege tool or a local deployment of OLS (Recipe 1.3). The `OLS local deployment` option is recommended by this recipe, given that `Protege` crash when loading medium or large size ontologies.
+>:warning: **_Tip:_** The generated ontology can be visualized by using the Protege tool or a [local deployment of OLS](https://hackmd.io/@FAIRcookbook/H1axYY3wU). The `OLS local deployment` option is recommended by this recipe, given that `Protege` crash when loading medium or large size ontologies.
     
 ### Step 5: Merge ontology modules and umbrella ontology
 

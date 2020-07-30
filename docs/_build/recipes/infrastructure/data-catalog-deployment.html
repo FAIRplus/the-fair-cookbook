@@ -19,19 +19,82 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Deploying-a-data-catalogue">Deploying a data catalogue<a class="anchor-link" href="#Deploying-a-data-catalogue"> </a></h1><p><strong>identifier:</strong> UC9.1</p>
-<p><strong>version:</strong> <a href="v0.1">v0.1</a></p>
+<h1 id="Deploying-a-data-catalogue">Deploying a data catalogue<a class="anchor-link" href="#Deploying-a-data-catalogue"> </a></h1><!-- **identifier:** UC9.1
+
+**version:** [v0.1](v0.1)
+
+
+___
+
+**_Difficulty level:_** :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:  :white_circle: :white_circle:
+
+**_Reading time:_** 20 minutes (when the recipe is completed)
+
+**_Intended Audience:_** 
+
+> :heavy_check_mark: Software Engineer
+
+> :heavy_check_mark: System Administrator
+
+> :heavy_check_mark: Data Manager
+
+**_Recipe Type_**: Service deployment
+
+**_Executable code_**: No -->
+
 <hr>
-<p><strong><em>Difficulty level:</em></strong> :triangular_flag_on_post: :triangular_flag_on_post: :triangular_flag_on_post:  :white_circle: :white_circle:</p>
-<p><strong><em>Reading time:</em></strong> 20 minutes (when the recipe is completed)</p>
-<p><strong><em>Intended Audience:</em></strong></p>
-<blockquote><p>:heavy_check_mark: Software Engineer</p>
-<p>:heavy_check_mark: System Administrator</p>
-<p>:heavy_check_mark: Data Manager</p>
-</blockquote>
-<p><strong><em>Recipe Type</em></strong>: Service deployment</p>
-<p><strong><em>Executable code</em></strong>: No</p>
-<hr>
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">UC9.1</a> </p>
+        <p> version: <a href="">v0.1</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 20 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#fc7a4a;"></i> No</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+<!--         <p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Managers </p> -->
+        <p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developers </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrators</p>
+      </div>
+    </div>
+  </div>
+</div><hr>
 <h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>This recipe is a step-by-step guide on how to deploy the IMI Data Catalogue in Docker.</p>
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2><p>For a more general introduction to data catalogues, their elements and data models, see the <a href="link">data catalogue recipe</a>. This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, together with information on any access restrictions.</p>
 <h2 id="Requirements">Requirements<a class="anchor-link" href="#Requirements"> </a></h2><p>The following need to be installed on the machine the deployment is run on:</p>

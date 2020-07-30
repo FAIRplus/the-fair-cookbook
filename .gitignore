@@ -1,6 +1,8 @@
 .DS_Store
-docs/_site
+docs/_site/
 docs/.sass-cache
 docs/Gemfile.lock
 .gitignore~
 docs/_config_netlify.yml
+docs/_build/
+.jekyll-cache/
