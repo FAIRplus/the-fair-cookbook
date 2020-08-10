@@ -6,3 +6,4 @@ docs/Gemfile.lock
 docs/_config_netlify.yml
 docs/_build/
 .jekyll-cache/
+pip-environment-cookbook-jb06.txt

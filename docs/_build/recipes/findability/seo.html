@@ -19,25 +19,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Findability:-Search-Engine-Optimization">Findability: Search Engine Optimization<a class="anchor-link" href="#Findability:-Search-Engine-Optimization"> </a></h1><!-- **identifier:** [RX.X](RX.X)
-
-**version:** [v0.1](v0.1)
-
- **_Difficulty level:_** :triangular_flag_on_post: :white_circle: :white_circle:  :white_circle:  :white_circle:
-
-**_Reading time:_** 10 minutes
-
-**_Intended Audience:_** 
-
-> :heavy_check_mark: Application Developer
-
-> :heavy_check_mark: Data Scientist
-
-**_Recipe Type_**: Guidance
-
-**_Executable code_**: No -->
-
-<hr>
+<h1 id="Findability:-Search-Engine-Optimization">Findability: Search Engine Optimization<a class="anchor-link" href="#Findability:-Search-Engine-Optimization"> </a></h1><hr>
 <div class="row">
 
   <div class="column">
@@ -89,17 +71,18 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
       </div>
     </div>
   </div>
-</div><hr>
-<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
-<li><a href="#Main%20Objectives">Main FAIRification Objectives</a></li>
-<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
-<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
-<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
-<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
-<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
-<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
-<li><a href="#License">License</a></li>
-</ol>
+</div><!-- ___
+
+# Table of Contents
+1. [Main FAIRification Objectives](#Main%20Objectives)
+2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
+3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
+4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
+5. [Table of Data Standards](#Table%20of%20Data%20Standards)
+6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
+7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
+8. [License](#License) -->
+
 <hr>
 <h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is:</p>
 <blockquote><p>to describe what <code>search engine optimization</code> is and show how to implement markup with the <a href="http://schema.org"><code>Schema.org</code></a> vocabulary, and <a href="https://bioschemas.org"><code>Bioschemas</code></a> extension, to improve page discovery and visibility by web page indexers.</p>
@@ -115,7 +98,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQShIVE1MIHBhZ2UpOjo6Ym94IC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7V2hhdCA8YnI-dHlwZSA8YnI-IG9mPGJyPiBwYWdlP306Ojpib3hcbiAgQiAtLT4gQyhEYXRhc2V0KTo6OmJveFxuICBCIC0tPiBEKERhdGEgY2F0YWxvZyk6Ojpib3hcbiAgQiAtLT4gRShEYXRhIHBhZ2UpOjo6Ym94XG4gIEUgLS0-IEZ7V2hhdCA8YnI-IHR5cGUgb2YgPGJyPiBkYXRhIDxicj4gcGFnZX06Ojpib3hcbiAgRiAtLT4gRyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gIEYgLS0-IEgoR2VuZSk6Ojpib3hcbiAgRiAtLT4gSShNb2xlY3VsYXIgZW50aXR5KTo6OmJveFxuICBGIC0tPiBKKFByb3RlaW4pOjo6Ym94XG4gIEYgLS0-IEsoU2FtcGxlKTo6OmJveFxuICBGIC0tPiBMKFRheG9uKTo6OmJveFxuICBDIC0tPiBNXG4gIEQgLS0-IE1cbiAgRyAtLT4gTVxuICBIXHQtLT4gTVxuICBJIC0tPiBNXG4gIEogLS0-IE1cbiAgSyAtLT4gTVxuICBMIC0tPiBNKFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiAgTSAtLT4gTihmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IGltcHJvdmVkIGRpc2NvdmVyYWJpbGl0eSk6Ojpib3hcbmNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxubGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTkgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjpudWxsfSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQShIVE1MIHBhZ2UpOjo6Ym94IC0tPnwgU2VhcmNoIEVuZ2luZSBPcHRpbWl6YXRpb258IEJ7V2hhdCA8YnI-dHlwZSA8YnI-IG9mPGJyPiBwYWdlP306Ojpib3hcbiAgQiAtLT4gQyhEYXRhc2V0KTo6OmJveFxuICBCIC0tPiBEKERhdGEgY2F0YWxvZyk6Ojpib3hcbiAgQiAtLT4gRShEYXRhIHBhZ2UpOjo6Ym94XG4gIEUgLS0-IEZ7V2hhdCA8YnI-IHR5cGUgb2YgPGJyPiBkYXRhIDxicj4gcGFnZX06Ojpib3hcbiAgRiAtLT4gRyhDaGVtaWNhbCBTdWJzdGFuY2UpOjo6Ym94XG4gIEYgLS0-IEgoR2VuZSk6Ojpib3hcbiAgRiAtLT4gSShNb2xlY3VsYXIgZW50aXR5KTo6OmJveFxuICBGIC0tPiBKKFByb3RlaW4pOjo6Ym94XG4gIEYgLS0-IEsoU2FtcGxlKTo6OmJveFxuICBGIC0tPiBMKFRheG9uKTo6OmJveFxuICBDIC0tPiBNXG4gIEQgLS0-IE1cbiAgRyAtLT4gTVxuICBIXHQtLT4gTVxuICBJIC0tPiBNXG4gIEogLS0-IE1cbiAgSyAtLT4gTVxuICBMIC0tPiBNKFNjaGVtYS5vcmcgYXVnbWVudGVkIEhUTUwgcGFnZSk6Ojpib3hcbiAgTSAtLT4gTihmYTpmYS1zZWFyY2ggZmE6ZmEtY29nIGZhOmZhLWZpZ2h0ZXItamV0IGltcHJvdmVkIGRpc2NvdmVyYWJpbGl0eSk6Ojpib3hcbmNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxubGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTkgc3Ryb2tlOiMyYTlmYzksc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMmE5ZmM5LGZvbnQtZmFtaWx5OmF2ZW5pcjsiLCJtZXJtYWlkIjp7InRoZW1lIjpudWxsfSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
 -->
 
-<p><div class="mermaid">
+<div class="mermaid">
 graph TD
   A(HTML page):::box -->| Search Engine Optimization| B{What <br>type <br> of<br> page?}:::box
   B --> C(Dataset):::box
@@ -139,8 +122,7 @@ graph TD
   M --> N(fa:fa-search fa:fa-cog fa:fa-fighter-jet improved discoverability):::box
 classDef box font-family:avenir,font-size:14px,fill:#300861,stroke:#222,color:#fff,stroke-width:1px
 linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
-</div></p>
-<hr>
+</div><hr>
 <h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><table>
 <thead><tr>
 <th style="text-align:left">Capability</th>
@@ -230,7 +212,9 @@ Compared to plain keyword based indexing, annotation with structured vocabulary 
 <h3 id="Tools-supporting-creation-and-validation-of-structured-data">Tools supporting creation and validation of <code>structured data</code><a class="anchor-link" href="#Tools-supporting-creation-and-validation-of-structured-data"> </a></h3><p>Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the <a href="https://search.google.com/structured-data/testing-tool"><code>Google Structured Data Testing Tool</code></a></p>
 <p><img src="https://i.imgur.com/Ge8gsWL.png =650px" alt=""></p>
-<h3 id="Bioschemas:-trying-to-address-the-coverage-gap">Bioschemas: trying to address the coverage gap<a class="anchor-link" href="#Bioschemas:-trying-to-address-the-coverage-gap"> </a></h3><p><code>Schema.org</code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a href="https://bioschemas.org/"><code>Bioschemas project</code></a>, which has been running for a few years with the support of the <a href="https://elixir-europe.org/"><code>EU-Elixir organization</code></a>. <code>Bioschemas</code> focuses on making Schema.org more relevant for the life sciences community by providing:</p>
+<div style="display: flex; justify-content: center;">
+<img src="https://i.imgur.com/Ge8gsWL.png" width="650" style="border:1px solid black"/>
+</div><h3 id="Bioschemas:-trying-to-address-the-coverage-gap">Bioschemas: trying to address the coverage gap<a class="anchor-link" href="#Bioschemas:-trying-to-address-the-coverage-gap"> </a></h3><p><code>Schema.org</code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a href="https://bioschemas.org/"><code>Bioschemas project</code></a>, which has been running for a few years with the support of the <a href="https://elixir-europe.org/"><code>EU-Elixir organization</code></a>. <code>Bioschemas</code> focuses on making Schema.org more relevant for the life sciences community by providing:</p>
 <ol>
 <li><code>types</code> for life sciences entities such as chemicals, genes, and proteins.</li>
 <li><code>profiles</code> that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable</li>

@@ -28,12 +28,6 @@ ___
 
 
 
-
-[TOC]
-<!-- 1. [Main Objectives](#Main%20FAIRification%20Objectives)
-2. [Authors](#Authors)
-8. [License](#License) -->
-
 ---
 
 ## Main Objectives

@@ -1,4 +1,5 @@
 # FAIR cookbook recipe template
+___
 
 **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
 
@@ -21,7 +22,7 @@ ___
 
 **_Executable code_**: No
 
-[TOC]
+
 
 ---
 

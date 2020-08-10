@@ -2,9 +2,9 @@
 title: |-
   How to convert to open format from propriatory
 prev_page:
-  url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process.html
+  url: /recipes/interoperability/fastq-file-format-validators.html
   title: |-
-    MSIO robot build process
+    How to validate file formats
 next_page:
   url: /recipes/reusability.html
   title: |-
@@ -19,7 +19,8 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="From-proprietary-format-to-open-standard-format:-an-exemplar">From proprietary format to open standard format: an exemplar<a class="anchor-link" href="#From-proprietary-format-to-open-standard-format:-an-exemplar"> </a></h1><h2 id="Converting-Mass-Spectrometry-data-to-mzML-format">Converting Mass Spectrometry data to mzML format<a class="anchor-link" href="#Converting-Mass-Spectrometry-data-to-mzML-format"> </a></h2><div class="row">
+<h1 id="From-proprietary-format-to-open-standard-format:-an-exemplar">From proprietary format to open standard format: an exemplar<a class="anchor-link" href="#From-proprietary-format-to-open-standard-format:-an-exemplar"> </a></h1><hr>
+<div class="row">
 
   <div class="column">
     <div class="card">
@@ -70,16 +71,16 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
       </div>
     </div>
   </div>
-</div><h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents"> </a></h1><ol>
-<li><a href="#Main%20FAIRification%20Objectives">Main FAIRification Objectives</a></li>
-<li><a href="#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives">Graphical Overview of the FAIRification Recipe Objectives</a></li>
-<li><a href="#FAIRification%20Objectives,%20Inputs%20and%20Outputs">FAIRification Objectives, Inputs and Outputs</a></li>
-<li><a href="#Capability%20&amp;%20Maturity%20Table">Capability &amp; Maturity Table</a></li>
-<li><a href="#Table%20of%20Data%20Standards">Table of Data Standards</a></li>
-<li><a href="#Executable%20Code%20in%20Notebook">Executable Code in Notebook</a></li>
-<li><a href="#How%20to%20create%20workflow%20figures">How to create workflow figures</a></li>
-<li><a href="#License">License</a></li>
-</ol>
+</div><!-- # Table of Contents
+1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
+3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
+4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
+5. [Table of Data Standards](#Table%20of%20Data%20Standards)
+6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
+7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
+8. [License](#License) -->
+
 <hr>
 <h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><ul>
 <li>Document how to convert raw data from a propriatory, vendor specific format to an open standard format.</li>
@@ -161,8 +162,7 @@ graph LR;
 - [sparql](https://www.w3.org/TR/sparql11-query/) -->
 
 
-
-<h2 id="Step-by-Step-Process:">Step by Step Process:<a class="anchor-link" href="#Step-by-Step-Process:"> </a></h2><h3 id="Step-1:-obtain-the-dataset">Step 1: obtain the dataset<a class="anchor-link" href="#Step-1:-obtain-the-dataset"> </a></h3><p>In the case of the <a href="">IMI RESOLUTE</a> project, the data is released via the <a href="">University of Luxembourg</a> server (assuming you have access resolved):</p>
+<h2 id="Converting-Mass-Spectrometry-data-to-mzML-format:-a-Step-by-Step-Process.">Converting Mass Spectrometry data to mzML format: a Step by Step Process.<a class="anchor-link" href="#Converting-Mass-Spectrometry-data-to-mzML-format:-a-Step-by-Step-Process."> </a></h2><h3 id="Step-1:-obtain-the-dataset">Step 1: obtain the dataset<a class="anchor-link" href="#Step-1:-obtain-the-dataset"> </a></h3><p>In the case of the <a href="">IMI RESOLUTE</a> project, the data is released via the <a href="">University of Luxembourg</a> server (assuming you have access resolved):</p>
 <div class="highlight"><pre><span></span>$&gt; sftp fairplus@NNN.000.000.NNN
 &gt;get RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz
 &gt;exit

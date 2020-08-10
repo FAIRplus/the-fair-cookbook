@@ -7,7 +7,7 @@ folium
 matplotlib
 nbinteract
 scipy
-jupyter-book
+jupyter-book==0.6.4
 
 isatools
 libchebipy

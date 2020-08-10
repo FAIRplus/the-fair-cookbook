@@ -82,7 +82,7 @@ ___
  
 
 
-
+<!-- 
 ___
 
 # Table of Contents
@@ -93,7 +93,7 @@ ___
 5. [Table of Data Standards](#Table%20of%20Data%20Standards)
 6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
 7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
+8. [License](#License) -->
 
 ---
 

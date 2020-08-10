@@ -81,7 +81,6 @@ ___
 
 ___
 
-[TOC]
 
 ## Main Objective:
 

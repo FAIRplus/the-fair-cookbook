@@ -82,8 +82,8 @@ ___
 ___
 
 
-[TOC]
-
+<!-- [TOC]
+ -->
 <!-- # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
