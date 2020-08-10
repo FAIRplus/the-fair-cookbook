@@ -8,7 +8,7 @@ Visit [https://fairplus.github.io/the-fair-cookbook](https://the-fair-cookbook.n
 :oil_drum::construction: **This project is still in early phase and this is work in progress** :construction::oil_drum:
 
 
-
+<!-- 
 some text goes here:
 
 
@@ -17,7 +17,7 @@ some text goes here:
 
 but also here: {% cite holdgraf_portable_2017 ruby %}
 
-
+ -->
 
 
 
@@ -401,6 +401,6 @@ with support of the **UC Berkeley Data Science Education Program and the Berkele
 [chris]: https://predictablynoisy.com
 
 
-which should allow to generate a bibliographyh thx to the activation of jekyll-scholar plugin
+<!-- which should allow to generate a bibliographyh thx to the activation of jekyll-scholar plugin
 
-{% bibliography %}
+{% bibliography %} -->

@@ -8,14 +8,14 @@
   <title>Ingredients</title>
   <meta name="description" content="        Ingredients: Standards: SDFile (FairSharing doi:10.25504/fairsharing.ew26v7)SMILES (FairSharing doi:10.25504/fairsharing.qv4b3c)InChI (FairSharing do...">
 
-  <link rel="canonical" href="https://fairplus.github.io/cookbook-dev/ingredients/ingredient-list.html">
-  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="https://fairplus.github.io/cookbook-dev/feed.xml">
+  <link rel="canonical" href="http://0.0.0.0:4000/cookbook-dev/ingredients/ingredient-list.html">
+  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="http://0.0.0.0:4000/cookbook-dev/feed.xml">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <meta property="og:url"         content="https://fairplus.github.io/cookbook-dev/ingredients/ingredient-list.html" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/cookbook-dev/ingredients/ingredient-list.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Ingredients" />
 <meta property="og:description" content="        Ingredients: Standards: SDFile (FairSharing doi:10.25504/fairsharing.ew26v7)SMILES (FairSharing doi:10.25504/fairsharing.qv4b3c)InChI (FairSharing do..." />
-<meta property="og:image"       content="https://fairplus.github.io/cookbook-dev/images/logo/cookbook-logo-small.png" />
+<meta property="og:image"       content="http://0.0.0.0:4000/cookbook-dev/images/logo/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,10 +24,10 @@
   {
   "@context": "http://schema.org",
   "@type": "HowTo",
-  "mainEntityOfPage": "https://fairplus.github.io/cookbook-dev/ingredients/ingredient-list.html",
+  "mainEntityOfPage": "http://0.0.0.0:4000/cookbook-dev/ingredients/ingredient-list.html",
   "headline": "Ingredients",
-  "datePublished": "2020-08-10T14:57:27+01:00",
-  "dateModified": "2020-08-10T14:57:27+01:00",
+  "datePublished": "2020-08-10T09:07:15-05:00",
+  "dateModified": "2020-08-10T09:07:15-05:00",
   "description": "        Ingredients: Standards: SDFile (FairSharing doi:10.25504/fairsharing.ew26v7)SMILES (FairSharing doi:10.25504/fairsharing.qv4b3c)InChI (FairSharing do...",
   "author": {
     "@type": "Person",
@@ -40,14 +40,14 @@
     "url": "https://fairplus.github.io/the-fair-cookbook",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://fairplus.github.io",
+      "url": "http://0.0.0.0:4000",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://fairplus.github.io/cookbook-dev",
+    "url": "http://0.0.0.0:4000/cookbook-dev",
     "height": 60,
     "width": 60
   }
@@ -216,7 +216,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("https://fairplus.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("http://0.0.0.0:4000") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
