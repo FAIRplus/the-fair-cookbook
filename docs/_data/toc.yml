@@ -81,9 +81,9 @@
     - title: FAIR in IMI context
       url: /recipes/introduction/FAIR-in-IMI-context
       not_numbered: false  
-    - title: The FAIR principles
-      url: /recipes/introduction/FAIR-principles
-      not_numbered: false
+    # - title: The FAIR principles
+    #   url: /recipes/introduction/fair-principle
+    #   not_numbered: false
     - title: The Values of FAIR
       url: /recipes/introduction/FAIRplus-values
       not_numbered: false

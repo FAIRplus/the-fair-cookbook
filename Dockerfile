@@ -4,6 +4,9 @@
 # Use a small linux with Python
 FROM python:3.7.8-slim-buster AS jupyterbookbuilder-base-image
 
+# Install dos2unix
+RUN apt-get update && apt-get install -y dos2unix
+
 # Copy installation requirements & expected versions
 COPY ./docker/requirements.txt /requirements.txt
 
@@ -18,6 +21,9 @@ RUN cat /pip_freeze_actual.txt
 
 # Copy expected pip freeze
 COPY ./docker/pip_freeze.txt /pip_freeze_expected.txt
+
+# Convert line endings
+RUN dos2unix /pip_freeze_expected.txt
 
 # Compare ; the whole container exits if files differ (because exit code -> 1)
 RUN diff /pip_freeze_expected.txt /pip_freeze_actual.txt
