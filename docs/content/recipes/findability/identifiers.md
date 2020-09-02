@@ -263,26 +263,9 @@ In our context, the use of the hashing function is to generate a unique key whic
 
 Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers *resolvable (a notion also known as `dereferencable`)*.
 
-In other words, in order to create globally unique identifiers `for the web`, it is necessary to understand what [Uniform Resource Locators]() (a.k.a `url`) are and how to construct them for use with the [Hypertext Transfer Protocol]()
+In other words, in order to create globally unique identifiers `for the web`, it is necessary to understand what [Uniform Resource Locators]() (a.k.a `URL`) are and how to construct them for use with the [Hypertext Transfer Protocol]().
 
-In order to this, one needs to be reminded about the structure of `url`, which according to the W3C specifications, have the following form:
-
-```bash
-URI = scheme:[//authority]path[?query][#fragment]
-```
-
-#### `scheme`:
-In this structure, the notion of `scheme` defined the nature of the protocol or application to use to obtain the resource. The list of official `scheme` is maintained by the **Internet Assigned Numbers Authority** and the following link (https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) holds the most up to date version.
-
-The most relevant `uri scheme` in the context of FAIR data and Linked Open Data are `http` and `https` which denote the `Internet Hypertext Transfer Protocol` and `Secure` version  protocols.
-
-#### `authority`:
-
-Besides setting the `scheme`, the other essential fragment of a URI is the `authority`, which according to the IETF specifications, presents the following characteristics:
-```
-authority = [userinfo@]host[:port]
-```
-Note how the required part is the `host`, with `userinfo` and `port` information being optional
+This results in URLs of the following form
 
 ```
           userinfo       host      port
@@ -294,13 +277,32 @@ Note how the required part is the `host`, with `userinfo` and `port` information
 source:[https://en.wikipedia.org/wiki/Uniform_Resource_Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 
 
+The structure of `URL`, according to the World Wide Web Consortium (W3C) specification, is as follows:
+
+```bash
+URI = scheme:[//authority]path[?query][#fragment]
+```
+
+#### `scheme`:
+In this structure, the `scheme` defines the protocol or application to use to obtain the resource. The list of official `scheme` is maintained by the **Internet Assigned Numbers Authority** and the following link (https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) holds the most up to date version.
+
+The most relevant `URI scheme` in the context of FAIR data and Linked Open Data are `http` and `https` which denote the `Hypertext Transfer Protocol` and the `Hypertext Tranfer Protocol Secure`.
+
+#### `authority`:
+
+Besides setting the `scheme`, the other essential fragment of a URI is the `authority`, which according to the Internet Engineering Task Force (IETF) specifications, presents the following characteristics:
+```
+authority = [userinfo@]host[:port]
+```
+Note how the required part is the `host`, with `userinfo` and `port` information being optional and should be avoided in identifiers for data.
+
 #### `host`:
 
-In the `authority`, the notion of `host` corresponds to the `Internet Protocol (IP) address` of a server hosting a resource. Often, the IP address corresponding to the `host` is given a `host name` such as `www.example.org`. The `host name` should be a `Qualified Domain Name` at minima, or a `Fully Qualified Domain Name (FQDN)` ideally and registered with `Domain Name Service (DNS)` which allows the resolution (lookup) between the `ip address` and the `hostname`.
+In the `authority`, the notion of `host` corresponds to the `Internet Protocol (IP) address` of a server hosting a resource. Often, the IP address corresponding to the `host` is given a `host name` such as `www.example.org`. The `host name` should be a `Qualified Domain Name` at minima, or a `Fully Qualified Domain Name (FQDN)` ideally and registered with the `Domain Name Service (DNS)` which allows the resolution (lookup) between the `ip address` and the `hostname`.
 
 ___
 >:information_source:
-it is often the case the `authority` is reduced to the `host` , which is then referred to 'namespace' or 'domain name' in an abuse of language.
+it is often the case the `authority` is reduced to the `host` , which is then referred to as a 'namespace' or 'domain name' in an abuse of language.
 `host` is in fact further specified by 3 element
 >  - top-level domain , `com` in the www.example.com web address
 >  - second-level domain,  `example` in the www.example.com web address
@@ -310,6 +312,17 @@ ___
 >:information_source:
 >`subdomain` can be defined in the Domain Name Service and belong to the main domain.  Technically, to add a subdomain pointing to the domain name, one needs to create/add a CNAME to the DNS for a registered domain name
 ___
+
+#### `path`: 
+The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zeor or more path segements separated by a `/`.
+
+#### `query`:
+The `query` is an optional part of the URL syntax that starts with a `?`. Typically the `query` component consists of a service of key-value pairs separated by an `&` deliminator.
+
+In the context resolvable identiers, `query` components should be avoided.
+
+#### `fragment`
+The `fragement` is an optional part of the URL syntax that starts with a `#`. It identifies a component within the returned resource and is used for client side processing, e.g. to scroll to a particular section within a webpage.
 
 ## Generating a resolvable url:
 
