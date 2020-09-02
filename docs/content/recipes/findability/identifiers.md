@@ -95,7 +95,7 @@ From these principles, it is necessary to explain three key processes, which are
 
 **`URI resolution`** is fundamentally about **`directing requests to the relevant identified entity`**
 
-    The standard approach would be to have a `REST service with content negotiation`.
+    The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
 All these key points will be developed in this recipe.
 
@@ -361,8 +361,8 @@ This relates to this other FAIR principle mentioned in the introduction.
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol.
 
 
-:notebook_with_decorative_cover: **`URI resolution` is fundamentally about directing requests to the relevant identified entity**
-Here, the **standard** would be to have a `REST service with content negotiation`.
+:notebook_with_decorative_cover: **`URI resolution` is fundamentally about directing requests to the relevant identified entity.**  
+The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
 A PURL is a **`persistent URL`**, meaning that it provides a ++permanent address to access a resource on the web++.
 
