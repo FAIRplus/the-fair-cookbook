@@ -60,6 +60,7 @@ ___
 
 The **FAIR principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
 > F1. (Meta)data are assigned a globally unique and persistent identifier
+> 
 >A1. (Meta)data are retrievable by their identifier using a standardised communications protocol 
 
 ## Main Objectives
@@ -75,16 +76,16 @@ From these principles, it is necessary to explain three key processes, which are
 1. Identifier minting
 
  **`Identifier minting`** is fundamentally about the **`authority deciding identity`**. 
-    - the tax office
-    - the HR department
-    - the company registry
-    - the EMBL-EBI
+ - the tax office
+ - the HR department
+ - the company registry
+ - the EMBL-EBI
 
 2. URI construction
 
 **`URI construction`** is fundamentally about **`scoping the authority`**.
 
-    >for example, should the web address be:
+    > for example, should the web address be:
         > http://organization/people/1123 
         > or
         > http://organization/commercial/people/1123
@@ -168,7 +169,7 @@ There are 2 ways to produce non-resolvable, globally unique identifiers:
 
 ### UUID based identifiers
 
-With this approach, the notion of `universally unique` is a probabilistic one. *The probability to find a duplicate within 103 trillion version-4 UUIDs is one in a billion*. The likelihood of collision (generation of the exact same identifier) is extremely small but not null. Therefore, with an ever increase in digital resources to index, collisions should not be ruled out.
+With this approach, the notion of `universally unique` is a probabilistic one. *The probability to find a duplicate within 103 trillion version-4 UUIDs is one in a billion*. The likelihood of collision (generation of the exact same identifier) is extremely small but not null. Therefore, with an ever increasing number of digital resources to index, collisions should not be ruled out.
 According to the [RFC4122 specifications](https://tools.ietf.org/html/rfc4122), a UUID is an identifier that is unique across both space and time, with respect to the space of all UUIDs.  Since a UUID is a fixed  size and contains a time field, it is possible for values to rollover (around A.D. 3400, depending on the specific algorithm  used).  A UUID can be used for multiple purposes, from tagging objects with an extremely short lifetime, to reliably identifying very persistent objects across a network.
 
 
@@ -184,7 +185,8 @@ Key Fact about UUID:
 ___
 
 
-#### using Python uuid package:
+#### Generation in Python
+The following code snippet shows the generation of a UUID using the Python uuid package.
 
 
 ```Python
@@ -200,7 +202,7 @@ print(id)
 ### Hash based identifiers
 
 This approach uses 2 inputs: 
-- a cryptographic hashing algorithm implementing as a software function
+- a cryptographic hashing algorithm implemented as a software function
 - a digital resource (e.g. a file)
 
 Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource.
@@ -209,13 +211,14 @@ The first two are considered obsolete, while the latter two are most advanced an
 
 ---
 >:information_source: 
->It is not possible to reconstruct the original data from these hashes strings. These are only **fingerprints**, which can therefore only be used to do the following tasks:
+>Key fact about hash identifiers: It is not possible to reconstruct the original data from these hash strings. These are only **fingerprints**, which can therefore only be used to do the following tasks:
 >- message authentication
 >- digital signature
 >- public key encryption
 ---
 
-#### using Python hashlib package:
+#### Generation in Python
+The following code snippet shows the generation of a hash for a string using the Python hashlib package:
 
 ```python
 import hashlib
@@ -239,7 +242,8 @@ print("BLAKE2s:", hashlib.blake2s(message).hexdigest())
 print("BLAKE2b:", hashlib.blake2b(message).hexdigest())
 ```
 
-#### using [`curl`](https://curl.haxx.se/)
+#### Generation of hashes using curl
+The following snippet shows how a b2sum hash can be generated using [`curl`](https://curl.haxx.se/)
 
 ```bash
 curl https://fairplus.github.io/cookbook-dev/intro | b2sum --length 256 --binary
@@ -250,7 +254,7 @@ curl https://fairplus.github.io/cookbook-dev/intro | b2sum --length 256 --binary
 
 
 
-In our context, the use of hashing function is to generate a unique key which may be used to generate a URL. This simply indicates a technical option for generating opaque URL, not that it is necessarily the most widespread approach.
+In our context, the use of the hashing function is to generate a unique key which may be used to generate a URL. This simply indicates a technical option for generating opaque URL, not that it is necessarily the most widespread approach.
 
 
 ## Understanding Uniform Resource Locators and Generating resolvable identifiers
