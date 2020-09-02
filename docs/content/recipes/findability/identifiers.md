@@ -257,7 +257,7 @@ curl https://fairplus.github.io/cookbook-dev/intro | b2sum --length 256 --binary
 In our context, the use of the hashing function is to generate a unique key which may be used to generate a URL. This simply indicates a technical option for generating opaque URL, not that it is necessarily the most widespread approach.
 
 
-## Understanding Uniform Resource Locators and Generating resolvable identifiers
+## Understanding Uniform Resource Locators (URLs)
 
 >:notebook_with_decorative_cover: **URI construction is fundamentally about scoping the authority**.
 
@@ -324,34 +324,34 @@ In the context resolvable identiers, `query` components should be avoided.
 #### `fragment`
 The `fragement` is an optional part of the URL syntax that starts with a `#`. It identifies a component within the returned resource and is used for client side processing, e.g. to scroll to a particular section within a webpage.
 
-## Generating a resolvable url:
+## Generating Resolvable URLs
 
-
-In the context of FAIR data, resources on the web must have **unique**, **persistent**, **resolvable** identifiers.
-In order to achieve the capability of `persistence`, it is necessary for the resource identifiers to comply to the RFC 3986 IETF standard for URIs (and IRIs, which are URI extended to cope with unicode).
+In the context of FAIR data, resources on the web must have **unique**, **persistent**, and **resolvable** identifiers.
+In order to achieve the capability of `persistence`, it is necessary for the resource identifiers to comply to the RFC 3986 IETF standard for URIs (and IRIs, which are URI extended to cope with unicode). This means that it must comprise the following components:
 
 1. scheme: https
 2. an authority: www.example.com
-3. a local identifier (such as database accession number, such as P12133 from uniprot) or a globally unique identifier (such as a uuid or hash code).
+3. optionally a path: `/dataset-name/`
+4. a local identifier (such as database accession number, such as P12133 from uniprot) or a globally unique identifier (such as a UUID or hash code).
 
-* In a virtual example, it looks like this
+In a virtual example which uses a UUID for the local identifier and does not use a path, it looks like this
 
 ```bash
 https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
-* Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can either be done by converting it into an `International Resource Identifier` (IRI – commonly referred to as a URL)
+Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier` (IRI – commonly referred to as a URL) by appending the local identifier onto a namesapce.
 
-    To convert a `local identifier into an IRI`, one simply needs to provide a `namespace` to the identifier. 
+___
+>:information_source:
+> You should only use a `namespace` over which you have ownership (the authority), otherwise you cannot guarantee that the minted IRI will be **globally unique**; the organization or person who owns the namespace may already, or at some point in the future, use the IRI that you created for some other purpose.
 
-    This should be a `namespace` over which one has ownership (the authority), otherwise one cannot guarantee that the minted IRI will be **globally unique**; the organization or person who owns the namespace may already, or at some point in the future, use the IRI that you created for some other purpose.
-    In the case of UniProt, the resource has provided IRIs for each page about a protein as well as separate IRIs for the protein itself. This is achieved by using different namespaces for the different types of resource.
+In the case of UniProt, the resource has provided IRIs for each page about a protein as well as separate IRIs for the protein itself; this is because the page is not the concept of the protein by a document that describes properties of the protein. This separation of identities is achieved by using different namespaces for the different types of resource.
 
-    - UniProt P38398 web page IRI: https://www.uniprot.org/uniprot/P38398
-    - UniProt protein P38398 IRI: http://purl.uniprot.org/uniprot/P38398
+- UniProt P38398 web page IRI: https://www.uniprot.org/uniprot/P38398
+- UniProt protein P38398 IRI: http://purl.uniprot.org/uniprot/P38398
 
-
-Once such URIs are available, one may also turn them into a CURIE – a form of compact identifier. This will be discussed further in the next section.
+Once such URIs are available, one may also turn them into compact identifiers called CURIEs. This will be discussed further in the next section.
 
 ## Identifier Resolution - Enabling persistence through indirection
 
