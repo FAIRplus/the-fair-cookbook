@@ -16,7 +16,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v1.2.0
     - name: Install and Build 🔧 
-      run: pip install jupyter-book==0.6.3 && jupyter-book build ./docs --overwrite
+      run: pip install nbconvert==5.6.1 jupyter-book==0.6.3 && jupyter-book build ./docs --overwrite
     - run: ls -alhR 
     - name: Install SSH Client 🔑
       uses: webfactory/ssh-agent@v0.2.0
