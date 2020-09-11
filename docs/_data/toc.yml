@@ -245,14 +245,14 @@
 # Divider for meta-pages and search page
 - divider: true
 # A chapter w/ a collection of sections beneath it
-- title: Ingredients and Resources
-  url: /ingredients/ingredient-list
-  not_numbered: true
-  expand_sections: false
-  sections:
-  - title: Ingredients
-    url: /ingredients/ingredient-list
-    not_numbered: true
+# - title: Ingredients and Resources
+#   url: /ingredients/ingredient-list
+#   not_numbered: true
+#   expand_sections: false
+#   sections:
+#   - title: Ingredients
+#     url: /ingredients/ingredient-list
+#     not_numbered: true
 
 # Divider for meta-pages and search page
 # - divider: true
