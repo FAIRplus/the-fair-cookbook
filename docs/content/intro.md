@@ -1,5 +1,5 @@
 ---
-dummy
+dummy: dummy
 ---
 
 # FAIR Cookbook
