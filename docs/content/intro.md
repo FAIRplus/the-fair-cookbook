@@ -8,18 +8,6 @@ Visit [https://fairplus.github.io/the-fair-cookbook](https://the-fair-cookbook.n
 :oil_drum::construction: **This project is still in early phase and this is work in progress** :construction::oil_drum:
 
 
-<!-- 
-some text goes here:
-
-
-{% cite holdgraf_evidence_2014 %}
-
-
-but also here: {% cite holdgraf_portable_2017 ruby %}
-
- -->
-
-
 
 ---
 ## The FAIR Cookbook overview
@@ -400,7 +388,3 @@ with support of the **UC Berkeley Data Science Education Program and the Berkele
 [sam]: http://www.samlau.me/
 [chris]: https://predictablynoisy.com
 
-
-<!-- which should allow to generate a bibliographyh thx to the activation of jekyll-scholar plugin
-
-{% bibliography %} -->
