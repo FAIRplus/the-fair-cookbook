@@ -17,4 +17,58 @@ jobs:
         BASE_BRANCH: master # The branch the action should deploy from. 
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: docs # The folder the action should deploy.
-        BUILD_SCRIPT: pip install nbconvert==5.6.1 jupyter-book==0.6.5 && jupyter-book build docs --overwrite  # The build script the action should run prior to deploying.
+        BUILD_SCRIPT: run: >
+                           pip install 
+                           attrs==19.3.0 
+                           backcall==0.2.0 
+                           bleach==3.1.5 
+                           decorator==4.4.2 
+                           defusedxml==0.6.0 
+                           entrypoints==0.3 
+                           importlib-metadata==1.7.0 
+                           iniconfig==1.0.1 
+                           ipykernel==5.3.4 
+                           ipython==7.17.0 
+                           ipython-genutils==0.2.0 
+                           jedi==0.17.2 
+                           Jinja2==2.11.2 
+                           jsonschema==3.2.0 
+                           jupyter-book==0.6.3 
+                           jupyter-client==6.1.6 
+                           jupyter-core==4.6.3 
+                           jupytext==1.5.2 
+                           libsass==0.20.0 
+                           MarkupSafe==1.1.1 
+                           mistune==0.8.4 
+                           more-itertools==8.4.0 
+                           nbconvert==5.6.1 
+                           nbformat==5.0.7 
+                           packaging==20.4 
+                           pandocfilters==1.4.2 
+                           parso==0.7.1 
+                           pexpect==4.8.0 
+                           pickleshare==0.7.5 
+                           pluggy==0.13.1 
+                           prompt-toolkit==3.0.6 
+                           ptyprocess==0.6.0 
+                           py==1.9.0 
+                           Pygments==2.6.1 
+                           pyparsing==2.4.7 
+                           pyrsistent==0.16.0 
+                           pytest==6.0.1 
+                           python-dateutil==2.8.1 
+                           PyYAML==5.3.1 
+                           pyzmq==19.0.2 
+                           ruamel.yaml==0.16.10 
+                           ruamel.yaml.clib==0.2.0 
+                           six==1.15.0 
+                           testpath==0.4.4 
+                           toml==0.10.1 
+                           tornado==6.0.4 
+                           tqdm==4.48.2 
+                           traitlets==4.3.3 
+                           wcwidth==0.2.5 
+                           webencodings==0.5.1 
+                           zipp==3.1.0 
+                           && 
+                           jupyter-book build ./docs --overwrite
