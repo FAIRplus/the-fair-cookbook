@@ -1,5 +1,5 @@
 ---
-empty_frontmatter: true
+dummy
 ---
 
 # FAIR Cookbook
