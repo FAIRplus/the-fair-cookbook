@@ -1,3 +1,7 @@
+---
+dummy: dummy
+---
+
 # How to generate globally unique, resolvable and persistent identifiers
 
 ___

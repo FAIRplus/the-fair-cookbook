@@ -1,3 +1,7 @@
+---
+dummy: dummy
+---
+
 # FAIR cookbook recipe template
 ___
 

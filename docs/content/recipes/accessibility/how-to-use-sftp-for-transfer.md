@@ -1,3 +1,7 @@
+---
+dummy: dummy
+---
+
 # How to use SFTP to transfer data files between collaborating institutions.
 
 ---

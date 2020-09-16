@@ -1,3 +1,7 @@
+---
+dummy: dummy
+---
+
 # File format validation, an example with FASTQ files
 
 ---

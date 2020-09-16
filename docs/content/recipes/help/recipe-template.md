@@ -1,3 +1,7 @@
+---
+dummy: dummy
+---
+
 # [here comes the Title of the recipe]
 
 **identifier:** [RX.X_FIXME](RX.X_FIXME)
