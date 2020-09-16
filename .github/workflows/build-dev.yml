@@ -16,7 +16,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v1.2.0
     - name: Install and Build 🔧 
-      run: |
+      run: >
            pip install 
            attrs==19.3.0 
            backcall==0.2.0 
