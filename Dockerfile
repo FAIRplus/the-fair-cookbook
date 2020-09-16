@@ -10,17 +10,18 @@ RUN apt-get update && apt-get install -y dos2unix
 # Copy installation requirements & expected versions
 COPY ./docker/requirements.txt /requirements.txt
 
+# Copy expected pip freeze
+COPY ./docker/pip_freeze.txt /pip_freeze_expected.txt
+
 # Install 
-RUN pip install -r /requirements.txt
+#RUN pip install -r /requirements.txt
+RUN pip install -r /pip_freeze_expected.txt
 
 # Document
 RUN pip freeze > /pip_freeze_actual.txt
 
 # Print
 RUN cat /pip_freeze_actual.txt
-
-# Copy expected pip freeze
-COPY ./docker/pip_freeze.txt /pip_freeze_expected.txt
 
 # Convert line endings
 RUN dos2unix /pip_freeze_expected.txt
