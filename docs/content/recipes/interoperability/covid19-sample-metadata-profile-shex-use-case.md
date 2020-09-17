@@ -1,5 +1,6 @@
 # RDF Metadata Profile Validation with Shape Expression:
 
+
 ## the Covid-19 sample metadata use case 
 
 ___
@@ -393,7 +394,7 @@ select distinct ?sample ?p ?o
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
 | [validation]()  | [text]()  | [DOI]()  |
-||file||
+||file|.|
 
 ## Table of Data Standards
 
@@ -401,29 +402,29 @@ select distinct ?sample ?p ?o
 | :------------- | :------------- | :------------- |
 | [YAML]()  | [EFO]()  |   |
 | [RDF]()|[SIO]()||
-| [SPARQL]()|[SDO](https://schema.org)||
-| |[EDAM]()||
-| |[OBO]()||
+| [SPARQL]()|[SDO]()||
+| |[EDAM]()| |
+| |[OBO]()| .|
 
 ___ 
 
 ## Biobliographic reference:
 
-<!-- {% bibliography --cited %} -->
+
 
 ___
+
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft, Shex expression, ontology mapping |
-| Danielle Welter |  University of Luxembourg | xxxx-xxxx-xxxx-xxx| Review, ontology mapping| 
-| Jose Emilio Labra Gayo |  University of Oviedo | xxxx-xxxx-xxxx-xxx| Shex Expression | 
-||||
-||||
-||||
+| Danielle Welter |  University of Luxembourg | [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668)| Review, ontology mapping| 
+| Jose Emilio Labra Gayo |  University of Oviedo | [0000-0001-8907-5348](https://orcid.org/0000-0001-8907-5348)| Shex Expression | 
+
 
 ___
+
 ## License:
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
