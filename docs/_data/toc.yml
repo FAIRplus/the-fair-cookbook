@@ -48,22 +48,6 @@
 - title: FAIR Cookbook
   url: /intro
   not_numbered: true
-  
-# The Roadmap
-- title: Development Roadmap
-  url: /roadmap
-  not_numbered: true
-  expand_sections: false
-# A chapter w/ a collection of sections beneath it
-
-# - title: Recipes
-#   url: /recipes/recipes
-#   not_numbered: false
-#   expand_sections: true
-#   sections:
-- title: FAIR Cookbook - an Introduction
-  url: /recipes/introduction
-  not_numbered: false
   expand_sections: false
   sections:
     - title: Who should read the FAIR Cookbook
@@ -89,7 +73,24 @@
       not_numbered: false
     - title: Data Sharing Models
       url: /recipes/introduction/data-sharing-models
-      not_numbered: false
+      not_numbered: false  
+# # The Roadmap
+# - title: Development Roadmap
+#   url: /roadmap
+#   not_numbered: true
+#   expand_sections: false
+# A chapter w/ a collection of sections beneath it
+
+# - title: Recipes
+#   url: /recipes/recipes
+#   not_numbered: false
+#   expand_sections: true
+#   sections:
+
+# - title: FAIR Cookbook - an Introduction
+#   url: /recipes/introduction
+#   not_numbered: false
+  
 
 
 - title: Infrastructure for FAIR

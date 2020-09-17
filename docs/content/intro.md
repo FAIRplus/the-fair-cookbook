@@ -7,7 +7,7 @@ dummy: dummy
 ---
 ## The official site
 
-Visit [https://fairplus.github.io/the-fair-cookbook](https://the-fair-cookbook.netlify.app/intro) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
+Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
 
 :oil_drum::construction: **This project is still in early phase and this is work in progress** :construction::oil_drum:
 
