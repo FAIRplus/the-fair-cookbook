@@ -1,6 +1,6 @@
-<!-- ---
+---
 dummy: dummy
---- -->
+---
 
 # FAIR Cookbook
 

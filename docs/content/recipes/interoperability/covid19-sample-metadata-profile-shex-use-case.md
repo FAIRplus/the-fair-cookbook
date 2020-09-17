@@ -409,7 +409,7 @@ ___
 
 ## Biobliographic reference:
 
-{% bibliography --cited %}
+<!-- {% bibliography --cited %} -->
 
 ___
 ## Authors:

@@ -45,35 +45,35 @@
 - header: FAIR Cookbook
 
 # Top-level page
-- title: FAIR Cookbook
+- title: FAIR Cookbooks
   url: /intro
-  not_numbered: true
+  not_numbered: false
   expand_sections: false
   sections:
     - title: Who should read the FAIR Cookbook
       url: /recipes/introduction/FAIR-cookbook-audience
-      not_numbered: false
+      not_numbered: true
     - title: What is FAIR
       url: /recipes/introduction/fair-principle
-      not_numbered: false
+      not_numbered: true
     - title: What is IMI
       url: /recipes/introduction/what-is-IMI
-      not_numbered: false
+      not_numbered: true
     - title: IMI and Data Management
       url: /recipes/introduction/IMI-and-data-management-plans
-      not_numbered: false 
+      not_numbered: ontology-new-term-request-recipe 
     - title: FAIR in IMI context
       url: /recipes/introduction/FAIR-in-IMI-context
-      not_numbered: false  
+      not_numbered: true  
     # - title: The FAIR principles
     #   url: /recipes/introduction/fair-principle
     #   not_numbered: false
     - title: The Values of FAIR
       url: /recipes/introduction/FAIRplus-values
-      not_numbered: false
+      not_numbered: true
     - title: Data Sharing Models
       url: /recipes/introduction/data-sharing-models
-      not_numbered: false  
+      not_numbered: true  
 # # The Roadmap
 # - title: Development Roadmap
 #   url: /roadmap
