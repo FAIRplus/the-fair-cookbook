@@ -387,11 +387,14 @@ ___
 
 ## Acknowledgements
 
+The FAIR Cookbook is produced thanks to `Jupyter Book`
+
+<!-- 
 The FAIR Cookbook is produced thanks to `Jupyter Book`, a project originally created by [Sam Lau][sam] and [Chris Holdgraf][chris]
 with support of the **UC Berkeley Data Science Education Program and the Berkeley Institute for Data Science**.
 
 [sam]: http://www.samlau.me/
-[chris]: https://predictablynoisy.com
+[chris]: https://predictablynoisy.com -->
 
 
 
