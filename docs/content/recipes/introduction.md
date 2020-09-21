@@ -387,5 +387,4 @@ ___
 
 ## Acknowledgements
 
-The FAIR Cookbook is produced thanks to `Jupyter Book`
-
+The FAIR Cookbook is produced thanks to `Jupyter Book`.
