@@ -1,6 +1,6 @@
 # RDF Metadata Profile Validation with Shape Expression:
 
-## the Covid-19 sample metadata use case 
+## The Covid-19 sample metadata use case 
 
 ___
 
@@ -59,6 +59,13 @@ ___
 
 ___
 
+## Overview:
+
+The purpose of this recipe is to show how to create a metadata collection form complying with a community minimal information checklist (MIUViG), in the context of Covid-19 strain sequencing assays carried on patient collected samples.
+In addition, the recipe includes the conversion of sample metadata to an RDF/Linked Data graph and checks its structure for conformance to requirement using the ShapeExpression specifications.
+Finally, use queries expressed in SPARQL are shown to demonstrate potential data integration scenarios.
+
+
 
 ## Introduction:
 
@@ -114,8 +121,8 @@ The following sections detail each of these steps
 
 ## Defining the metadata fields
 
-<div><img src="https://i.imgur.com/lwV1cPd.png" width="300" border="1"/></div>
-<div><img src="https://i.imgur.com/1ahQLjy.png" width="300" border="1"/></div> 
+<div><img src="https://i.imgur.com/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
+<div><img src="https://i.imgur.com/1ahQLjy.png" width="300" style="border:1px solid black"/></div> 
 
 
 
@@ -133,7 +140,7 @@ Several distinct to the following resources mappings have been made by the devel
 
 <!-- ![](https://i.imgur.com/Ro92a7D.png) -->
 
-<div><img src="https://i.imgur.com/Ro92a7D.png" width="800" border="1"/></div>
+<div><img src="https://i.imgur.com/Ro92a7D.png" width="800" style="border:1px solid black"/></div>
 
 
 
@@ -142,7 +149,7 @@ Several distinct to the following resources mappings have been made by the devel
 However, for the final implementation, only the OBO related mappings have been used as show in the following figure.
 
 
-<div><img src="https://i.imgur.com/Lc7FcPs.png" width="800" border="1"/></div>
+<div><img src="https://i.imgur.com/Lc7FcPs.png" width="800" style="border:1px solid black"/></div>
 
 <!-- ![](https://i.imgur.com/Lc7FcPs.png) -->
 
@@ -223,16 +230,16 @@ $graph:
           _id: http://www.ebi.ac.uk/efo/EFO_0000727
 ```
 
-source: https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml
+`source`: https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml
 
 
 ### The corresponding metadata acquisition web form:
 
-<div><img src="https://i.imgur.com/5eQN9hw.png" width="800" border="1"/></div>
+<div><img src="https://i.imgur.com/5eQN9hw.png" width="800" style="border:1px solid black"/></div>
 
 <!-- ![](https://i.imgur.com/5eQN9hw.png) -->
 
-<div><img src="https://i.imgur.com/RR5GSgi.png" width="800" border="1"/></div>
+<div><img src="https://i.imgur.com/RR5GSgi.png" width="800" style="border:1px solid black"/></div>
 
 <!-- ![](https://i.imgur.com/RR5GSgi.png) -->
 
@@ -294,7 +301,7 @@ submitter:
 
 ```
 
-source: https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml
+`source`: https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml
 
 ## 3. Conversion from YAML to RDF:
 
@@ -315,10 +322,21 @@ $ schema-salad-tool --print-pre myschema.yml mydocument.yml > mydocument.jsonld
 ```
 
 
-## 4. SHEX expression:
+## 4. RDF graph validation with ShEx expression:
+
+### 4.1 What is ShEx?
+
+ShEx stands for `Shape Expression` and is a syntax for validating and describing RDF graphs. ShEx expressions can be used both to describe RDF and check the conformance of RDF data. The ShEx language  specification was published by the W3C Shape Expressions Community Group but it is not a W3C Standard nor is it on the W3C Standards Track.
+
+It should be noted that the current W3C Technical Recommendations for RDF shape validation is the [SHACL specification](https://www.w3.org/TR/shacl/).
+
+ShEx was selected owing to its simplicity, ease of use and availability of experts.
 
 
-Working with a domain expert ([Dr Jose Emilio Labra Gayo - (Oviedo Uni)](http://di002.edv.uniovi.es/~labra/), using [Shape Expression syntax](https://shex.io/shex-semantics/) the following profile was developed and used to validate the RDF before persistence to the SPARQL endpoint:
+### 4.2 Why is this needed?
+
+
+While defining a SALAD schema using YAML allows to list key entities and their attributes, it does not allow to check constraints. This has to be done on the RDF which needs to be checks for compliancee against a set of constraints which can be expressed using ShEx. Working with a ShEx expert ([Dr Jose Emilio Labra Gayo - (Oviedo Uni)](http://di002.edv.uniovi.es/~labra/), the following [Shape Expression syntax](https://shex.io/shex-semantics/) profile was developed and used to validate the RDF before persistence to the SPARQL endpoint.
 
 
 ```bash
@@ -392,11 +410,11 @@ PREFIX wikidata: <http://www.wikidata.org/entity/>
 }
 ```
 
-source: https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-shex.rdf
+`source:` https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-shex.rdf
 
-Using the [WESO](http://www.weso.es/) developed [dedicated tool](http://rdfshape.weso.es/),  Shape Expression can be viewed. In the example below a [schema.org](https://schema.org) base shex expression in presented.
+Using the [WESO](http://www.weso.es/) developed [RDF shape viewer](http://rdfshape.weso.es/),  Shape Expression can be rendered graphical. In the example below a [schema.org](https://schema.org) base shex expression in presented.
 
-<div><img src="https://i.imgur.com/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" border="1"></div>
+<div><img src="https://i.imgur.com/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
 
 <!-- ![](https://i.imgur.com/z2rriQu.png) -->
 
@@ -452,6 +470,7 @@ select distinct ?sample ?p ?o
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
+| [semantic markup]()|[text]()  | [URI]()|
 | [constraint validation]()  | [text]()  | [DOI]()  |
 ||file||
 
@@ -459,11 +478,12 @@ select distinct ?sample ?p ?o
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-| [YAML](https://yaml.org)  | [EFO]()  |   |
-| [RDF](https://www.w3.org/TR/rdf11-concepts/)|[SIO]()||
-| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[SDO](https://schema.org)||
-| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM]()||
-| |[OBO]()||
+| [YAML](https://yaml.org)  | [EFO](https://fairsharing.org/FAIRsharing.1gr4tz)  |  [MIxS](https://fairsharing.org/bsg-s000518/) |
+| [RDF](https://www.w3.org/TR/rdf11-concepts/)|[SIO](https://fairsharing.org/FAIRsharing.dpkb5f)|[MIUVIG]()|
+| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)||
+| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)||
+| |[OBO foundry](https://fairsharing.org/biodbcore-001083/)||
+| |[Wikidata](https://fairsharing.org/FAIRsharing.PB6595)||
 
 ## Tools:
 | Tool Name| capability|
@@ -480,6 +500,11 @@ ___
 ## Bibliographic reference:
 
 
+[1]. Avro - http://avro.apache.org
+[2]. metaschema - https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml
+[3]. schema salad - http://www.commonwl.org/v1.0/SchemaSalad.html
+[4]. https://www.w3.org/RDF/
+[5]. https://shex.io/shex-semantics/
 
 
 ___
