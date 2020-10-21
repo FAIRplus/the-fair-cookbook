@@ -194,6 +194,10 @@ Every resource with access-restricted data should clearly state what kind of dat
 
 Restrictions can be displayed on a dataset by dataset basis alongside publicly available high-level metadata such as number of samples, data types and species, or a resource can have a single static page displaying this information.
 
+#### Machine-readable data access requirements
+
+- curato
+- Bioschemas
 
 
 ### Examples of controlled access notifications
