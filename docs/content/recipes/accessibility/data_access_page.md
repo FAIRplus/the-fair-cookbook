@@ -204,6 +204,8 @@ Restrictions can be displayed on a dataset by dataset basis alongside publicly a
 
 #### EGA
 
+<!-- https://www.ebi.ac.uk/ega/datasets/EGAD00000000001 -->
+
 #### need second example of access controlled resource - pref entirely access controlled
  
 
