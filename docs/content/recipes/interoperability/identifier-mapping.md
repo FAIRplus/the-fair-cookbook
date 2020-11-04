@@ -78,6 +78,8 @@ This recipe assumes that you are already familiar with identifiers and the minti
 
 ___
 
+**ToDo:** Update diagram
+
 
 <div class="mermaid">
 graph TD
@@ -127,15 +129,25 @@ ___
 
 > :notebook_with_decorative_cover: **"Identifiers are used to tag, identify, find and retrieve entities which are part of a collection or a resource maintained by some organization. "**
 
-Organisations must create identifiers for namespaces for which they are the `authority` and this is often done in isolation of other organisations. This results in each organisation independently creating identifiers for the same concept, although there may be subtleties in the representation that mean that they are in fact unique concepts.
+To satisfy the Findability criteria F1, organisations must create identifiers for the concepts within their database. This generates locally unique identifiers which can in turn be transformed into globally unique identifiers using namespaces for which the database organisation are the `authority`. 
 
+Databases often contain information in common with other databases. For example, a gene database such as Ensembl includes information about the proteins that are related to a specific gene, or a database about chemicals that are of interest for drugs often contains details of the protein targets that the chemical is known to interact with. This results in a large number of identifiers notionally for the same concept. In turn, this large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. 
 
+The need for each database to mint their own identifier is a result of each taking a different perspective on the concept, e.g. a chemical may be in a different salt form. These subtle differences can affect applications using the data. Ideally, the database owners should not pre-determine for the users of the data what identifiers in another database are equivalent, but they should provide indications together with provenance information as to why they are deemed equivalent (see *Scientific Lenses paper* for more details).
 
- 
-
-
+While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the [Human Protein Atlas](https://www.proteinatlas.org/) database reuses [Ensembl](https://www.ensembl.org/) identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data can be connected through the common identifier.
 
 #### Identifier Mapping services
+
+Identifier mapping services are databases that contain lists of identifiers, often from different databases, that are known to be equivalent. For example, they may contain lists of entries similar to the following example between Ensembl and UniProt.
+
+> | Ensembl         | UniProt |
+> | --------------- | ------- |
+> | ENSG00000171105 | P06213  |
+> | ENSG00000012048 | P38398  |
+> | ...             | ...     |
+
+The basic functionality offered by these services is to return a set of equivalent identifiers for a given identifier. That is, you can ask these services for all identifiers that are equivalent to your identifier. The following is an incomplete list of such services.
 
 **ToDo:** Update the content of this section with available identifier mapping services
 
@@ -201,20 +213,7 @@ ___
 
 ## References:
 
-1. IRI. [https://tools.ietf.org/html/rfc3987](https://tools.ietf.org/html/rfc3987)
-2. CURIE. [https://www.w3.org/TR/2010/NOTE-curie-20101216/](https://www.w3.org/TR/2010/NOTE-curie-20101216/)
-3. URL. [https://tools.ietf.org/html/rfc1738](https://tools.ietf.org/html/rfc1738)
-4. RDF concepts. https://www.w3.org/TR/rdf-concepts/ 
-5. MD5 specifications. https://tools.ietf.org/html/rfc1321
-6. Blake2 specifications. https://tools.ietf.org/html/rfc7693
-7. Cool URIs don't change. https://www.w3.org/Provider/Style/URI
-8. Leo Sauermann and Richard Cyganiak (eds.) (2008 December 3). Cool URIs for the Semantic Web, W3C Semantic Web Education and Outreach Interest Group Note, http://w3.org/TR/cooluris/
-9. https://blog.adamretter.org.uk/archival-identifiers-for-digital-files/
-10. https://blog.adamretter.org.uk/archival-catalog-identifiers/
-11. Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data. https://doi.org/10.1371/journal.pbio.2001414
-12. Nick Juty, Sarala M Wimalaratne, Stian Soiland-Reyes, John Kunze, Carole A Goble, and Tim Clark. 2020. Unique, persistent, resolvable: Identifiers as the foundation of FAIR. Data Intelligence (2020), 30–39. https://doi.org/10.1162/dint_a_00025
-13. Nick Juty, Nicolas Le Novere, and Camille Laibe. 2012. Identifiers.org and MIRIAM Registry: Community resources to provide persistent identification. Nucleic Acids Research 40, D1 (2012), D580–D586. https://doi.org/10.1093/nar/gkr1097
-14. Rachana Ananthakrishnan, Kyle  Chard, Mike  D'Arcy, Ian T Foster, Carl F Kesselman , Brendan  McCollam , Jim Christopher Pruyne , Philippe  Rocca-Serra, Robert E Schuler, Rick P Wagner. An Open Ecosystem for Pervasive Use of Persistent Identifiers. https://doi.org/10.1145/3311790.3396660
+1. Colin Batchelor, Christian Y. A. Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T. Evelo, Anna Gaulton, Carole Goble, Alasdair J. G. Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P. Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, Egon L. Willighagen. Scientific Lenses to Support Multiple Views over Linked Chemistry Data. In ISWC 2014: The Semantic Web – ISWC 2014 pp 98-113. https://doi.org/10.1007/978-3-319-11964-9_7
 
 
 ___
