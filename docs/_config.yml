@@ -44,7 +44,10 @@ footer_text:
   </div>
 
   <div class="row_footer">
-  This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a>
+  This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a>.
+  <!-- dirty fix: reloads mermaid -->
+  <script>mermaid.init();</script>
+  <!--/dirty fix -->
   </div>
  
 # Sidebar settings
