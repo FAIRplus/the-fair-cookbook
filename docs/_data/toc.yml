@@ -45,18 +45,21 @@
 - header: FAIR Cookbook
 
 # Top-level page
-- title: FAIR Cookbook
+- title: Introduction
   url: /intro
   not_numbered: false
   expand_sections: false
   sections:
-    - title: Who should read the FAIR Cookbook
+    - title: Who should read this book ?
       url: /recipes/introduction/FAIR-cookbook-audience
       not_numbered: false
-    - title: What is FAIR
+    - title: What is FAIR ?
       url: /recipes/introduction/fair-principle
       not_numbered: false
-    - title: What is IMI
+    - title: The Values of FAIR
+      url: /recipes/introduction/FAIRplus-values
+      not_numbered: false
+    - title: What is IMI ?
       url: /recipes/introduction/what-is-IMI
       not_numbered: false
     - title: IMI and Data Management
@@ -68,10 +71,7 @@
     # - title: The FAIR principles
     #   url: /recipes/introduction/fair-principle
     #   not_numbered: false
-    - title: The Values of FAIR
-      url: /recipes/introduction/FAIRplus-values
-      not_numbered: false
-    - title: Data Sharing Models
+    - title: Models for Data Sharing
       url: /recipes/introduction/data-sharing-models
       not_numbered: false  
 # # The Roadmap
@@ -122,24 +122,25 @@
 
 - title: Findability
   url:  /recipes/findability
-  expand_sections: true
+  not_numbered: false
+  expand_sections: false
   sections:
       - title: How to create persistent resolvable identifiers
         url: /recipes/findability/identifiers
         not_numbered: false      
-      - title: Depositing to Zenodo
+      - title: Depositing to a Data Catalogue - The Zenodo example
         url: /recipes/findability/zenodo-deposition
         not_numbered: false    
-      - title: Search Engine optimization
+      - title: Search Engine Optimization
         url: /recipes/findability/seo
         not_numbered: false
-      - title: bioschema data catalog
+      - title: Marking up Data Catalog with Bioschema
         url: /recipes/findability/seo/bioschemas-datacatalog
         not_numbered: false
-      - title: bioschema dataset
+      - title: Marking up Dataset with Bioschema
         url: /recipes/findability/seo/bioschemas-dataset
         not_numbered: false
-      - title: bioschema data page
+      - title: Marking up Datapage with Bioschema
         url: /recipes/findability/seo/bioschemas-data-page
         not_numbered: false
 
@@ -151,9 +152,6 @@
     - title: Anonymization Recipe
       url: /recipes/accessibility/anonymization
       not_numbered: false
-    - title: Selecting a Licensing Mode
-      url: /recipes/accessibility/license-selection
-      not_numbered: false
     - title: File Transfer via sFTP
       url: /recipes/accessibility//how-to-use-sftp-for-transfer
       not_numbered: false
@@ -163,18 +161,11 @@
     
 - title: Interoperability
   url:  /recipes/interoperability
-  expand_sections: true
+  not_numbered: false
+  expand_sections: false
   sections:
     - title: How to select ontologies
       url: /recipes/interoperability/selecting-ontologies
-      not_numbered: false
-
-    - title: Minimal MetaData Profiles
-      url: /recipes/interoperability/creating-minimal-metadata-profiles
-      not_numbered: false
-
-    - title: Covid19 Sample MetaData Profile Shex Validation
-      url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
       not_numbered: false
       
     - title: How to request new terms in existing ontologies
@@ -189,6 +180,14 @@
           url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process
           not_numbered: false
 
+    - title: Minimal MetaData Profiles
+      url: /recipes/interoperability/creating-minimal-metadata-profiles
+      not_numbered: false
+
+    - title: Covid19 Sample MetaData Profile Shex Validation
+      url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
+      not_numbered: false
+
     - title: How to validate file formats
       url: /recipes/interoperability/fastq-file-format-validators
       not_numbered: false
@@ -199,16 +198,39 @@
 
 - title: Reusability
   url:  /recipes/reusability
+  not_numbered: false
   expand_sections: false
+  sections:
+      - title: Selecting a Licensing Mode
+        url: /recipes/accessibility/license-selection
+        not_numbered: false
+      - title: Choosing a License
+        url: /recipes/help/recipe-template
+        not_numbered: false
+      - title: Licensing for Software
+        url: /recipes/help/recipe-template
+        not_numbered: false
+      - title: Licensing for Data
+        url: /recipes/help/recipe-template
+        not_numbered: false
   
 - title: FAIR Assessment
   url: /recipes/assessing-fairness
   not_numbered: false
-  expand_sections: true
+  expand_sections: false
   sections:
-    - title: Assessing FAIRness
+    - title: FAIR indicators
+      url: /recipes/assessing-fairness/fair-indicators
+    - title: manual assessment
+      url: /recipes/assessing-fairness/manual-fair-assessment
+      not_numbered: false 
+    - title: automatic assessment with FAIREvaluator
       url: /recipes/assessing-fairness/fair-assessment-recipe
       not_numbered: false
+    - title: automatic assessment with FAIRshake
+      url: /recipes/assessing-fairness/fair-assessment-fairshake
+      not_numbered: false
+           
 
 - title: Applied Examples
   url: /recipes/applied-examples
@@ -244,7 +266,7 @@
       not_numbered: false
 
 # Divider for meta-pages and search page
-- divider: true
+# - divider: true
 # A chapter w/ a collection of sections beneath it
 # - title: Ingredients and Resources
 #   url: /ingredients/ingredient-list
@@ -320,6 +342,7 @@
 
 # Divider for meta-pages and content page
 - divider: true
+
 - title: Project Information
   url: /project_information
   expand_sections: false
