@@ -144,7 +144,9 @@ While the minting of identifiers is often done in isolation of other organisatio
 
 ### Identifier Equivalences
 
-Identifier equivalences can come about in several ways and capture different forms of relationship.
+Identifier equivalences can come about in several ways and capture different forms of relationship. For example, a database may declare that their record is the same as an entry in another because they share the same name, or they may declare it based on a common representation (gene sequence or InChI). To support reuse of the data, the `provenance` of the cross-references need to be made explicit. 
+
+Depending on the nature of the data, there are different ways that equivalences can be computed. The following is a list of recipes that give details.
 
 
 
