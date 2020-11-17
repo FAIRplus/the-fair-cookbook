@@ -231,22 +231,38 @@ The basic functionality offered by these services is to return a set of equivale
 
 * [bridgedb.org](https://bridgedb.org/)
 
-    >
+    > [BridgeDb](https://bridgedb.org/) is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions.It is provided as a web service, a standalone application that can be installed locally, or a Java library.
+    > 
+    > It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following `curl` command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) `L` identifier `1234` for the `Human` gene [CCR5](https://www.ncbi.nlm.nih.gov/gene/1234) as a TSV file.
+    > ```
+    > curl -X GET "https://webservice.bridgedb.org/Human/xrefs/L/1234" -H "accept: */*"
+    > ```
+    > For more details about using BridgeDb as an identifier mapping service, please see [this recipe]XXX.
 
 * [UniChem](https://www.ebi.ac.uk/unichem/)
-
+    > [UniChem](https://www.ebi.ac.uk/unichem/) is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
+    > 
+    > The following `curl` command retrieves the equivalent database identifiers for the ChEMBL identifier `CHEMBL12` [DIAZEPAM](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/) and returns the result as a JSON object.
+    > ```
+    > curl -X GET "https://www.ebi.ac.uk/unichem/rest/src_compound_id/CHEMBL12/1" -H "accept: */*"
+    > ```
+    > For more information including the available methods, see the [UniChem REST documentation](https://www.ebi.ac.uk/unichem/info/webservices).
 * [sameas.org](https://sameas.org/)
   
+    > [sameas.org](https://sameas.org/) is a general purpose service that will return a set of equivalent URLs for a given URL. The equivalences are based on an incomplete set of `owl:sameAs` statements contained in data available on the web.
     > 
+    > The following `curl` command retrieves the equivalent URLs for EBI RDF Platform representation of ChEMBL [DIAZEPAM](https://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL12) as a JSON object.
+    > ```
+    > curl -iLH "Accept: application/json" "http://sameas.org/?uri=http://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL12"
+    > ```
+    > Note that the coverage of sameas.org within the life sciences is very small.
 
 
 * [Identifiers.org](http://identifiers.org/)
 
-    > [Identifiers.org](https://identifiers.org) is a **Resolution Service** provides consistent access to life science data using [`Compact Uniform Resource Identifiers`](https://www.w3.org/TR/2010/NOTE-curie-20101216/), hosted by the EBI provides a resolution service, both as a web form and through the URL pattern. 
-    >`Compact Identifiers` consist of an `assigned`, `unique` `prefix` and a `local provider designated` **`accession number`** (prefix:accession).
-    > The resolving location of `Compact Identifiers` is determined using information that is stored in the [Identifiers.org Registry](http://identifiers.org/).
-    > Datasets can register their *namespace `prefix`* together with their `identifier pattern`. The service can then be used in the same way as the DOI resolution service. So for the UniProt page about BRCA1, we can resolve the CURIE `[uniprot:P38938]` using Identifiers.org. This means that the URL https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org/uniprot/P38938.  
-    > *For more details, see the [Identifier Resolution Services recipe](./identifier-services/id-resolution.html).*
+    > [Identifiers.org](https://identifiers.org) is a **Resolution Service** that provides access to alternative mirrors of the same database which are located at different URLs on the web. For example, the UniProt database is based as the Swiss Institute of Bioinformatics but is also mirrored on the NCBI in the States.
+    > 
+    > The following URL https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org/uniprot/P38938 by default (meaning that these identifiers are equivalent) but if the SIB service is unavailable will resolve to https://www.ncbi.nlm.nih.gov/protein/P38938.
 
 
 
