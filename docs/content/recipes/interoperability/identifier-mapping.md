@@ -152,15 +152,16 @@ Depending on the nature of the data, there are different ways that equivalences 
 
 ### Exchanging Identifier Mappings
 
-There are several file format for exchanging identifier equivalences. We will discuss the most widely used formats and demonstrate them with a sample of data derived from [ChEMBL](https://www.ebi.ac.uk/chembl/) which provides two database cross-reference equivalences as asserted by ChEMBL.
+There are several file format for exchanging identifier equivalences. We will discuss the most widely used formats and demonstrate them with a sample of data derived from [ChEMBL](https://www.ebi.ac.uk/chembl/) which provides cross-reference equivalences for two records in the ChEMBL database to UniProt proteins.
 
 #### Text File
 
-The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns with lists of identifiers. The interpretation is that they are equivalent. These files tend to carry little to no metadata about the mappings.
+The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the verison of the datasets that were linked.
 
 The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.
 
 ```
+ChEMBL_Target_Component    UniProt
 CHEMBL_TC_4803    A0ZX81
 CHEMBL_TC_2584    A1ZA98 
 ```
@@ -171,7 +172,7 @@ The Vocabulary of Interlinked Datasets ([VoID](http://www.w3.org/TR/void/)) prov
 
 A `linkset` contains the identifier mappings together with either the metadata at the top of the file or a link to a VoID file describing the data source. The Open PHACTS project defined a usage profile for use within the life sciences community [Open PHACTS Dataset Descriptions](http://www.openphacts.org/specs/datadesc/) which was later refined by the W3C Health Care and Life Sciences Community Group ([W3C HCLS Linksets](https://www.w3.org/TR/hcls-dataset/#linksets)).
 
-The following example shows a VoID Linkset in turtle notation with the minimum metadata given in the header.
+The following example shows a VoID Linkset in turtle notation with the minimum metadata given in the header. The metadata block links to the ChEMBL 17 RDF description and the UniProt March 2015 release. The `linkPredicate` tells us that the link is an exact match, i.e. the linked instances can be deemed equivalent for most applications, and the `linksetJustification` property states that the link is declared as a Database Cross Reference assertion, rather than being computed based on an equivalent protein sequence. These properties allow consuming applications to make more informed choices about their reuse of the data.
 
 ```xml
 @prefix bdb: <http://vocabularies.bridgedb.org/ops#> .
@@ -184,7 +185,7 @@ The following example shows a VoID Linkset in turtle notation with the minimum m
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :chembl17-uniprot-exactMatch-linkset a void:Linkset ;
-    void:subjectsTarget :chembl-rdf ;
+    void:subjectsTarget :chembl17-rdf ;
     void:objectsTarget <http://purl.uniprot.org/void#UniProtDataset_2015_03> ;
     void:linkPredicate skos:exactMatch ;
     bdb:linksetJustification sio:database-cross-reference
@@ -198,9 +199,9 @@ chembl_target_cmpt:CHEMBL_TC_2584 skos:exactMatch uniprot:A1ZA98 .
 
 #### Simple Standard for Sharing Ontology Mappings (SSSOM)
 
-The OBOFoundry Simple Standard for Sharing Ontology Mappings ([SSSOM](https://github.com/OBOFoundry/SSSOM)) is a newly emerging standard for exchanging mapping information with minimal metadata. It consists of a tab-separated-value file (TSV) with each row representing a mapping. The columns in the file have been defined by the community ([latest version](https://github.com/OBOFoundry/SSSOM/blob/master/SSSOM.md)) and provide the mapping together with its provenance. At present, four columns are required (`subject_id`, `predicate_id`, `object_id`, `match_type`) with optional columns to provide more provenance to support the mapping, e.g. licensing information, author information, creation method. The use of CURIEs within the TSV is strongly encouraged.
+The OBOFoundry Simple Standard for Sharing Ontology Mappings ([SSSOM](https://github.com/OBOFoundry/SSSOM)) is a newly emerging standard for exchanging mapping information with minimal metadata, although the minimal model is extensible. It consists of a tab-separated-value file (TSV) with each row representing a mapping. The columns in the file have been defined by the community ([latest version](https://github.com/OBOFoundry/SSSOM/blob/master/SSSOM.md)) and provide the mapping together with its provenance. At present, four columns are required (`subject_id`, `predicate_id`, `object_id`, `match_type`) with optional columns to provide more provenance to support the mapping, e.g. licensing information, author information, creation method. The use of CURIEs within the TSV is strongly encouraged.
 
-The following TSV shows our example data as a mapping file using the minimal columns.
+The following TSV shows our example data as a mapping file using the minimal columns (correct as of November 2020). The information provided is less than the minimal VoID model above.
 
 ```
 subject_id    predicate_id    object_id    match_type
@@ -212,7 +213,7 @@ chembl:CHEMBL_TC_2584    skos:exactMatch    uniprot:A1ZA98    sio:database-cross
 
 The VoID Linkset approach for exchanging mappings separates the metadata from the data mappings. This eliminates duplication of metadata. However, as currently defined, the VoID Linksets can only be used for RDF data.
 
-SSSOM is an emerging community standard that is still not finalised. 
+SSSOM is an emerging community standard that is still not finalised. While the basic metadata model has less information than the VoID file, there are additional properties for providing more detail. Properties that related to the set of mappings can can be included as a comment block at the start of the TSV.
 
 The above has shown that the two formats can represent the same information. Both VoID and SSSOM can be used to provide very rich metadata for exchanging data.
 
