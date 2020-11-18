@@ -281,6 +281,9 @@ ___
 > #### What should I read next?
 > * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
 > * [Identifier Resolution Services](./identifier-services/id-resolution.html)
+> * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
+> * [Simple Standard for Sharing Ontology Mappings (SSSOM)](https://github.com/OBOFoundry/SSSOM/blob/master/SSSOM.md)
+> * [BridgeDbR Tutorial](https://bioconductor.org/packages/release/bioc/vignettes/BridgeDbR/inst/doc/tutorial.html)
 
 
 ___
