@@ -270,26 +270,17 @@ ___
 
 ## Conclusion:
 
-**ToDo:** Update the text in this section
-
-> In this recipe, we have given an overview of globally unique and persistent identifier, i.e. FAIR principle F1. We have covered:
+> In this recipe, we have given an overview of the need to map between globally unique and persistent identifier from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
 >
-> - The difference between global and local identifiers;
-> - How to convert a local identifier into a global one;
-> - Opaque and transparent identifiers
+> - The idea of data identifier equivalence;
+> - How to publish and exchange data identifier equivalences;
+> - Data identifier mapping services which can be queried to find equivalences for a given identifier.
 >
-> We have given an overview of the different services available for handling identifiers.
-> 
-> But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI, RDF and HTTP.
-> 
+> Data identifier equivalences increase the interoperability between data sources since it allows data about an individual to be integrated together. As a minimum, you should aim to link your dataset's persistant data identifiers to one major dataset within the community. The [ELIXIR Core Data Resources](https://elixir-europe.org/platforms/data/core-data-resources) provide a useful list of major datasets within the life sciences.
 >
 > #### What should I read next?
 > * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> * [Identifier Minting with Minid Client
-](./infrastructure/minids.html)
-> * [Why resolvable identifiers matter?](./findability/why-identifiers.html)
 > * [Identifier Resolution Services](./identifier-services/id-resolution.html)
-> * [Identifier Mapping Services](./identifier-services/identifier-mapping.html)
 
 
 ___
