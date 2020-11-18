@@ -41,7 +41,7 @@ ___
         <h4><b>Recipe Type</b></h4>
         <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Background Information</p>
         <h4><b>Executable Code</b></h4>
-        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No</p>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Minimal</p>
       </div>
     </div>
   </div>
