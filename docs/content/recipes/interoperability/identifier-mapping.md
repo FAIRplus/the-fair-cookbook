@@ -219,15 +219,11 @@ The above has shown that the two formats can represent the same information. Bot
 
 ### Identifier Mapping services
 
-Identifier mapping services are databases that contain lists of identifiers, often from different databases, that are known to be equivalent. For example, they may contain lists of entries similar to the following example between Ensembl and UniProt.
+Identifier mapping services are databases that contain lists of identifiers, often from different databases, that are known to be equivalent. These are consumed from original data sources and third parties in one of the formats provided above.
 
-> | Ensembl         | UniProt |
-> | --------------- | ------- |
-> | ENSG00000171105 | P06213  |
-> | ENSG00000012048 | P38398  |
-> | ...             | ...     |
+The common functionality offered by these services is to return a set of equivalent identifiers for a given identifier. That is, you can ask these services for all identifiers that are equivalent to your identifier. The services will vary in the response depending on their coverage of data sources and whether they decide to compute the transitive closure of the identifiers. That is, if data source A declares that `A:id1` is equivalent to `B:acc32`, and data source C declares that `C:67cb2865-781f-4450-a99c-e9b33bf4d5b5` is equivalent to `B:acc32`, should a lookup for equivalent identifiers for `A:id1` return `C:67cb2865-781f-4450-a99c-e9b33bf4d5b5` since `A:id1 <=> B:acc32` and `B:acc32 <=> C:67cb2865-781f-4450-a99c-e9b33bf4d5b5`.
 
-The basic functionality offered by these services is to return a set of equivalent identifiers for a given identifier. That is, you can ask these services for all identifiers that are equivalent to your identifier. The following is an incomplete list of such services.
+The following is an incomplete list of identifier mapping services.
 
 * [bridgedb.org](https://bridgedb.org/)
 
