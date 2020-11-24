@@ -115,31 +115,30 @@ Common metadata include any information that is not specific to transcriptomics 
 
 The following table contains a non-exhaustive list of suggested minimum metadata fields for biological samples. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE, FAANG and HCA. Fields were included if they occurred in at least two of the standards.
 
-|Metadata field|Required|Comment|
-|--------|--------|--------|
-|unique ID|required||
-|sample type|required|ontology field - eg OBI or EFO|
-|species|required|ontolofy field - NCBITaxonomy|
-|tissue/organism part|required|ontology field - eg Uberon|
-|disease|required|ontology field - eg MONDO or DO|
-|sex|required|ontology field - eg PATO|
-|development stage|required|ontology field - eg Uberon or Hsadpdv; species dependent|
-|collection date|required||
-|external accessions|recommended|eg Biosamples, Biostudies|
-|strain|recommended|ontology field - eg NCBITaxonomy|
-|ancestry/ethnicity|recommended|ontology field - eg HANCESTRO|
-|age |recommended||
-|age unit|recommended|ontology field - eg UO|
-|BMI|recommended||
-|treatment category|recommended|ontology field - eg OBI, NCIt or OGMS|
-|cell type|recommended|ontology field - eg CL|
-|growth conditions|recommended||
-|strain|recommended|ontology field - species dependent|
-|genetic variation|recommended||
-|sample collection technique|recommended|ontology field - eg EFO or OBI|
-|phenotype|recommended|ontology field - eg HP or MP; species dependent|
-|cell cycle|recommended|ontology field - eg GO|
-|cell location|recommended|ontology field - eg GO|
+|Metadata field|Required?|Definition|Comment|
+|--------|--------|--------|--------|
+|unique ID|required|Identifier for a sample that is at least unique within the project||
+|sample type|required|The type of the collected specimen, eg tissue biopsy, blood draw or throat swab|ontology field - eg OBI or EFO|
+|species|required|The primary species of the specimen, preferably the taxonomic identifier|This may not be the same as the "host" organism, eg in the case of a PDX tissue sample, the host may be a mouse but the tissue may be human. Ontology field - NCBITaxonomy|
+|tissue/organism part|required|The tissue from which the sample was taken|ontology field - eg Uberon|
+|disease|required|Any diseases that may affect the sample|This may not necessarily be the same as the host's disease, eg healthy brain tissue might be collected from a host with type II diabetes while cirrhotic liver tissue might be collected from an otherwise healthy individual. Ontology field - eg MONDO or DO|
+|sex|required|The biological/genetic sex of the sample|ontology field - eg PATO|
+|development stage|required|The developmental stage of the sample|ontology field - eg Uberon or Hsadpdv; species dependent|
+|collection date|required|The date on which the sample was collected, in a standardised format|Collection date in combination with other fields such as location and disease may be sufficient to de-anonymise a sample|
+|external accessions|recommended|Accession numbers from any external resources to which the sample was submitted|eg Biosamples, Biostudies|
+|strain|recommended|Strain of the species from which the sample was collected, if applicable|ontology field - eg NCBITaxonomy|
+|ancestry/ethnicity|recommended|Ancestry or ethnic group of the individual from which the sample was collected|ontology field - eg HANCESTRO|
+|age |recommended|Age of the organism from which the sample was collected||
+|age unit|recommended|Unit of the value of the age field|ontology field - eg UO|
+|BMI|recommended|Body mass index of the individual from which the sample was collected|Only applies to human samples|
+|treatment category|recommended|Treatments that the sample might have undergone after collection|ontology field - eg OBI, NCIt or OGMS|
+|cell type|recommended|The cell type(s) known or selected to be present in the sample|ontology field - eg CL|
+|growth conditions|recommended|Features relating to the growth and/or maintenance of the sample||
+|genetic variation|recommended|Any relevant genetic differences from the specimen or sample to the expected genomic information for this species, eg abnormal chromosome counts, major translocations or indels||
+|sample collection technique|recommended|The technique used to collect the specimen, eg blood draw or surgical resection|ontology field - eg EFO or OBI|
+|phenotype|recommended|Any relevant (usually abnormal) phenotypes of the specimen or sample |ontology field - eg HP or MP; species dependent|
+|cell cycle|recommended|The cell cycle phase of the sample (for synchronized growing cells or a single-cell sample), if known|ontology field - eg GO|
+|cell location|recommended|The cell location from which genetic material was collected (usually either nucleus or mitochondria)|ontology field - eg GO|
 
 
 ### Assay metadata
@@ -157,32 +156,31 @@ Assay-level metadata covers any metadata directly related to the preparation of 
 
 The following table contains a non-exhaustive list of suggested minimum metadata fields for assays. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE and HCA. This list can and should be further broken down based on specific technologies used, such as microarrays or whole genome sequencing.
 
-|Metadata field|Required|Comment|
-|--------|--------|--------|
-|unique ID|required||
-|experiment type|required|ontology field - eg EFO or OBI|
-|extracted nucleic acid/material type|required|ontology field - eg ChEBI or EFO|
-|platform|required|ontology field - eg EFO or OBI|
-|instrument model|required|ontology field - eg EFO or OBI|
-|nucleic acid extraction method|required|ontology field - eg EFO or OBI|
-|cDNA library amplication method|required|ontology field - eg EFO or OBI|
-|array or sequencing method|required|ontology field - eg EFO or OBI|
-|biological or technical replicate|required|boolean or CV|
-|end bias|required|standardised field or ontology|
-|external accessions|recommended|eg protocols.io, AE|
-|assay start time|recommended||
-|assay end time|recommended||
-|assay duration|recommended||
-|array quality|recommended||
-|cell quality|recommended||
-|chemical compound|recommended|ontology field - eg ChEBI|
-|labeling molecule used|recommended|ontology field - eg ChEBI|
-|spike-in kit used|recommended||
-|cDNA primer|recommended|standardised field or ontology|
-|library strandedness|recommended|standardised field or ontology|
-|cell quality|recommended|standardised field or ontology|
-|cell barcode|recommended||
-|UMI barcode|recommended||
+|Metadata field|Required?|Definition|Comment|
+|--------|--------|--------|--------|
+|unique ID|required|Identifier for the assay that is at least unique within the project||
+|experiment type|required|The type of experiment performed, eg ATAC-seq or seqFISH|ontology field - eg EFO or OBI|
+|extracted nucleic acid/material type|required|The type of material that was extracted from the sample, eg polyA RNA|ontology field - eg ChEBI or EFO|
+|platform|required|The type of instrument used to perform the assay, eg Illumina HiSeq 4000 or Fluidigm C1 microfluidics platform|ontology field - eg EFO or OBI|
+|nucleic acid extraction method|required|Technique used to extract the nucleic acid from the cell|ontology field - eg EFO or OBI|
+|cDNA library amplication method|required|Technique used to amplify a cDNA library|ontology field - eg EFO or OBI|
+|array or sequencing method|required|The array or sequencing technology used - may be the same as `experiment type` or can be a more specific term|ontology field - eg EFO or OBI|
+|biological or technical replicate|required|Information whether the sample on which the assay was performed was biological or technical replicate.|boolean or CV|
+|end bias|required|The type of tag or end bias the library has, eg 3 prime tag or 5 prime end bias|standardised field or ontology|
+|external accessions|recommended|Accession numbers from external resources to which assay or protocol information was submitted|eg protocols.io, AE|
+|instrument model|required|The specific instrument on which the assay was performed. Essential for QC purposes.|ontology field - eg EFO or OBI|
+|assay start time|recommended|The exact time at which the assay was started||
+|assay end time|recommended|The exact time at which the assay was completed||
+|assay duration|recommended|The duration, in a relevant time unit (eg minutes or hours), of the assay from start to finish||
+|array quality|recommended|The overall quality of the array||
+|chemical compound|recommended|Any relevant chemical compounds used in the assay|ontology field - eg ChEBI|
+|labeling molecule used|recommended|The type of labeling molecule used in an array-based experiment|ontology field - eg ChEBI|
+|spike-in kit used|recommended|Information about the spike-in kit used during sequencing library preparation||
+|cDNA primer|recommended|Type of primer used for cDNA synthesis from RNA, eg polyA or random|standardised field or ontology|
+|library strandedness|recommended|The strandedness of the cDNA library |standardised field or ontology|
+|cell quality|recommended|Information about the quality of a single cell such as morphology or percent viability|standardised field or ontology|
+|cell barcode|recommended|Information about the cell identifier barcode used to tag individual cells in single cell sequencing||
+|UMI barcode|recommended|Information about the Unique Molecular Identifier barcodes used to tag DNA fragments||
 
 ### Analysis metadata
 
@@ -196,20 +194,20 @@ Analysis-level metadata includes any metadata related to the files that come out
 
 The following table contains a non-exhaustive list of suggested minimum metadata fields for analyses. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE and HCA. This list can and should be further broken down based on the specific analysis type (primary, secondary or teriatry analysis, meta-analysis etc)
 
-|Metadata field|Required|Comment|
-|--------|--------|--------|
-|analysis type|required|ontology field - eg EFO, OBI or EDAM|
-|computational method|required|ontology field - eg EFO or EDAM|
-|normalisation strategy|required|ontology field - eg EFO or EDAM|
-|file format|required|ontology field - eg EDAM|
-|file storage location|required||
-|software package|recommended||
-|software version|recommended||
-|analysis date|recommended||
-|read index|recommended||
-|read length|recommended||
-|assembly type|recommended||
-|reference genome version|recommended||
+|Metadata field|Required?|Definition|Comment|
+|--------|--------|--------|--------|
+|analysis type|required|The type of analysis performed, eg genome assembly or variant calling  |ontology field - eg EFO, OBI or EDAM|
+|computational method|required|The specific computational method or algorithm used as part of the analysis|ontology field - eg EFO or EDAM|
+|normalisation strategy|required|The approach used to normalise the data|ontology field - eg EFO or EDAM|
+|file format|required|The file format in which the analysis is provided|ontology field - eg EDAM|
+|file storage location|required|The location in which the data files are stored||
+|software package|recommended|The software package used for data analysis||
+|software version|recommended|The exact version number of the software package ||
+|analysis date|recommended|The date on which the analysis was performed||
+|read index|recommended|The sequencing read a specific file represents, eg read1 or index1||
+|read length|recommended|The length of a sequenced read in this file, in nucleotides.||
+|assembly type|recommended|The assembly type of the genome reference file, eg primary, complete or patch assembly.|standardised field or ontology|
+|reference genome version|recommended|The genome version of the reference file.||
 
 ## Ontologies for transcriptomics data
 
