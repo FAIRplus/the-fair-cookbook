@@ -184,6 +184,10 @@
       url: /recipes/interoperability/creating-minimal-metadata-profiles
       not_numbered: false
 
+    - title: A Transcriptomics MetaData Profile
+      url: /recipes/interoperability/transcriptomics-metadata
+      not_numbered: false
+
     - title: Covid19 Sample MetaData Profile Shex Validation
       url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
       not_numbered: false
