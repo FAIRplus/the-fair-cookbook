@@ -1,32 +1,8 @@
----
-dummy: dummy
----
 
-# [here comes the Title of the recipe]
-
-**identifier:** [RX.X_FIXME](RX.X_FIXME)
-
-**version:** [<version_number_FIXME>](version_number_FIXME)
-
-___
-
-**_Difficulty level:_** moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle: _FIXME
-
-**_Reading time:_** _FIXME minutes 
-
-**_Intended Audience:_** 
-
-> :heavy_check_mark: set_value_FIXME, e.g. Data Scientist
-
-> :heavy_check_mark: set_value_FIXME, e.g. Data Scientist
+# Identifier mapping with BridgeDB
 
 
-**_Recipe Type_**: set_value_FIXME, e.g. Hands on
 
-**_Executable code_**: set_value_FIXME, [Yes,No]
-
-
-[TOC]
 ## Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
@@ -45,7 +21,8 @@ ___
 
 The main purpose of this recipe is:
 
-> Provid a summary statement about the purpose of the recipe.
+> Providing practical examples on how two of BridgeDB's interfaces (R package and Webservices) can be used to map identifiers 
+> 
 
 ___
 
@@ -61,13 +38,7 @@ For more information about the syntax used to generate the diagram, please refer
 
 
 <div class="mermaid">
-graph LR;
-    A(Data Acquisition):::box -->B(Raw Data):::box
-    B --> C{FAIR by Design}
-    C:::box-->|Yes| D(Standard Compliant Data):::box
-    C:::box -->|No| E(Vendor locked Data):::box
-    classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
-    linkStyle 0,1,2,3 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+
 </div>
 
 ___
