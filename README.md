@@ -1,9 +1,9 @@
 # The FAIR Cookbook :construction: 
 
-FAIR data is **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. 
+FAIR is for **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. 
 
 This means: 
-  - your data can be cited
+  - your data and services can be cited
   - the impact and visibility of your research will be increased
   - you benefit the public good
   - your data is more useful because it is easier to compare with other data
@@ -18,10 +18,13 @@ You are probably looking for [https://fairplus.github.io/the-fair-cookbook](http
 
 ## For authors, editors, and developers 
 
-Detailed information for authors is available here: [Info For Authors](./for_authors.md)
+More information about the authors of the FAIRPlus Cookbook is available here: [Info For Authors](https://fairplus.github.io/cookbook-dev/intro.html#Meet-the-developers:s)
 
 
 ## Feedback, Support or Contact
 
-Having trouble with the page? Want to give feedback? Drop us a line at FAIRplus-PM@elixir-europe.org or file an Issue here on GitHub. Looking forward to hear from you!
+Having trouble with the page? Want to give feedback? 
+
+- Option 1: Drop us a line at: FAIRplus-cookbook@elixir-europe.org 
+- Option 2:file an Issue here on [GitHub tracker](https://github.com/FAIRplus/the-fair-cookbook/issues). Looking forward to hear from you!
 
