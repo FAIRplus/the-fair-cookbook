@@ -126,7 +126,7 @@ ___
 
 ----
 
-## The context is everything
+## Context is everything
 
 The domain of operation will somehow dictate the semantic framework that makes most sense selecting. This is simply a consequence of the fact that the advances in data standardization in specific fields is such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
 
@@ -1083,6 +1083,6 @@ ___
 
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
 
-___
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

@@ -168,6 +168,7 @@ ascp version 3.9.6.176292
 * Look at the dockerised version of the client?
 * write a new recipe for uploading - probably update this.
 
+---
 
 ## Authors:
 
@@ -176,3 +177,13 @@ ascp version 3.9.6.176292
 | Peter Woollard  | GSK, metadata group in R&D Data and Computational Sciences  |  0000-0002-7654-6902 |  Writing - Original Draft |
 | Philippe Rocca-Sera | Oxford University| | reviewer |
 | | | | |
+
+
+
+--- 
+
+## License:
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

@@ -508,6 +508,7 @@ ___
 
 
 ___
+
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
@@ -518,6 +519,9 @@ ___
 |Robert Giessmann|Bayer AG|[0000-0002-0254-1500](https://orcid.org/orcid.org/0000-0002-0254-1500)|Reviewer|
 
 ___
+
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

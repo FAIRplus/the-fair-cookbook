@@ -109,10 +109,10 @@
     - title: Criteria for selecting Ontology Services 
       url: /recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services
       not_numbered: false
-    # - title: Chemical identities - Generating InChI and SMILES strings
-    #   url: /recipes/infrastructure/chemical-identities
-    #   not_numbered: false
-    #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook
+    - title: Chemical identities - Generating InChI and SMILES strings
+      url: /recipes/infrastructure/chemical-identities
+      not_numbered: false
+      # notebooks: /recipes/infrastructure/chemical-identities/1-notebook
     - title: Building a Data Catalogue
       url: /recipes/infrastructure/data-catalog
       not_numbered: false
@@ -236,7 +236,7 @@
       not_numbered: false
            
 
-- title: Applied Examples
+- title: FAIRification Examples
   url: /recipes/applied-examples
   not_numbered: false
   expand_sections: false
@@ -256,6 +256,12 @@
       url: /recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
       not_numbered: false
       expand_sections: true
+
+- title: FAIRification of IMI datasets
+  url: /recipes/fairified-imi-data
+  not_numbered: false
+  expand_sections: false
+  sections:      
     - title: eTOX experience Recipe
       url: /recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
       not_numbered: false
@@ -269,6 +275,19 @@
       url: /recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
       not_numbered: false
 
+
+- title: Capability & Maturity indicators
+  url: /recipes/cmmi
+  not_numbered: false
+
+
+- title: Tools for FAIR
+  url: /recipes/tools4fair
+  not_numbered: false
+
+- title: Glossary
+  url: /recipes/glossary-fair-terms
+  not_numbered: false
 # Divider for meta-pages and search page
 # - divider: true
 # A chapter w/ a collection of sections beneath it
@@ -297,36 +316,6 @@
 #     url: /features/notebooks
 #     not_numbered: false
 
-- divider: true
-
-- header: Help Section and Demonstration
-- title: help
-  url: /recipes/help
-  sections:
-    - title: How to create a recipe with GoogleDoc
-      url: /recipes/help/how-to-create-recipe-with-gdoc
-      not_numbered: false
-    - title: How to use HackMD to write a FAIR Cookbook Recipe
-      url: /recipes/help/how-to-create-recipe-with-hackmd
-      not_numbered: false
-    - title: HackMD Tips and Tricks
-      url: /recipes/help/tips-tricks
-      not_numbered: false      
-    - title: How to create a recipe with git
-      url: /recipes/help/how-to-create-recipe-with-git
-      not_numbered: false
-    - title: Markdown files
-      url: /features/markdown
-      not_numbered: false
-    - title: Jupyter notebooks
-      url: /features/notebooks
-      not_numbered: false
-    - title: Recipe Template
-      url: /recipes/help/recipe-template
-      not_numbered: false
-    - title: mermaidsetup
-      url: /1/mermaidsetup
-      not_numbered: false
 
 
 # - title: frictionless data example
@@ -346,48 +335,78 @@
 
 # Divider for meta-pages and content page
 - divider: true
-
+- header: Project Information
 - title: Project Information
+  not_numbered: true
   url: /project_information
   expand_sections: false
   sections:
+
   # people section
   - title: People
     url: /People
+    not_numbered: true  
+
+  # Contribution section
+  - title: Contributing
+    url: /Contributing
     not_numbered: true
 
-# people section
-- title: People
-  url: /People
-  not_numbered: true  
+  # Governance section
+  - title: Governance
+    url: /Governance
+    not_numbered: true 
 
-# Contribution section
-- title: Contributing
-  url: /Contributing
-  not_numbered: true
+  # license section
+  - title: License
+    url: /license
+    not_numbered: true    
 
-# Governance section
-- title: Governance
-  url: /Governance
+  # disclaimer section
+  - title: Disclaimer
+    url: /disclaimer
+    not_numbered: true  
+
+  # Code of Conduct section
+  - title: Code of Conduct
+    url: /code_of_conduct
+    not_numbered: true  
+
+  # publications section
+  - title: Publications
+    url: /papers
+    not_numbered: true  
+
+- divider: true
+
+- header: Help Section
+- title: Contributing Content
+  url: /recipes/help
   not_numbered: true 
+  sections:
+    - title: How to create a recipe with GoogleDoc
+      url: /recipes/help/how-to-create-recipe-with-gdoc
+      not_numbered: true
+    - title: How to use HackMD to write a FAIR Cookbook Recipe
+      url: /recipes/help/how-to-create-recipe-with-hackmd
+      not_numbered: true
+    - title: HackMD Tips and Tricks
+      url: /recipes/help/tips-tricks
+      not_numbered: true      
+    - title: How to create a recipe with git
+      url: /recipes/help/how-to-create-recipe-with-git
+      not_numbered: true
+    - title: Markdown files
+      url: /features/markdown
+      not_numbered: true
+    - title: Jupyter notebooks
+      url: /features/notebooks
+      not_numbered: true
+    - title: Recipe Template
+      url: /recipes/help/recipe-template
+      not_numbered: true
+    - title: mermaidsetup
+      url: /1/mermaidsetup
+      not_numbered: true
 
-# license section
-- title: License
-  url: /license
-  not_numbered: true    
-
-# disclaimer section
-- title: Disclaimer
-  url: /disclaimer
-  not_numbered: true  
-
-# Code of Conduct section
-- title: Code of Conduct
-  url: /code_of_conduct
-  not_numbered: true  
-
-# publications section
-- title: Publications
-  url: /papers
-  not_numbered: true    
   

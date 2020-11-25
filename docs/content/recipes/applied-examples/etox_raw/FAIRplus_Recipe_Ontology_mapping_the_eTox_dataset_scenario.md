@@ -74,3 +74,11 @@ _Figure 1 - Overview of the automatic ontology coverage evaluation strategy_
 
 _Figure 2 - Example of textual analyses of terms / concept labels_
 
+
+---
+
+## License:
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

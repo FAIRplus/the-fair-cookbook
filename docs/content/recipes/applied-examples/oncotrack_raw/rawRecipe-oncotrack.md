@@ -165,3 +165,17 @@ Script 2: [Extract_drugResponse_metadata.R](https://drive.google.com/open?id=1eN
 Script 3: [Transform to JSON.R](https://drive.google.com/file/d/18Ik3RryhWVFq9_2IIy6k8N-qpnP9Wgm3/view?usp=sharing)
 
 Supplementary figure 1: [Example of Sample 150-MET1-XEN2 in BioSamples database](https://drive.google.com/open?id=1ALOwGwB2RpWksH4TuGeye8qEnUm0ULVH)
+
+___
+
+## Authors:
+
+---
+
+## License:
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+
+

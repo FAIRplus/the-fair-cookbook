@@ -13,8 +13,8 @@ ___
       <div class="container">
         <i class="fa fa-qrcode fa-2x" style="color:#7e0038"></i>
         <h4><b>Recipe metadata</b></h4>
-        <p> identifier: <a href="">RX.X</a> </p>
-        <p> version: <a href="">v1.0</a> </p>
+        <p>identifier:<br><a href="http://hdl.handle.net/21.11101/0000-0007-EA08-9">21.11101/0000-0007-EA08-9</a></p>
+        <p>version:<br><a href="">v1.0</a> </p>
       </div>
     </div>
   </div>
@@ -504,4 +504,4 @@ ___
 
 This page is released under the Creative Commons 4.0 BY license.
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
