@@ -1,4 +1,4 @@
-# Chemical Identity - Generating InChi Keys and SMILES strings:
+# Chemical Identity - Generating InChIKey and SMILES strings:
 
 <!-- **identifier:** [RX.X](RX.X)
 
