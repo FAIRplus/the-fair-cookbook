@@ -4,7 +4,7 @@
 
 
 ## Table of Contents
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+1. [Main Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. Requirements
 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
@@ -22,7 +22,7 @@
 The main purpose of this recipe is:
 
 > Providing practical examples on how two of BridgeDB's interfaces (R package and Webservices) can be used to map identifiers 
-> 
+
 
 ___
 
@@ -32,13 +32,25 @@ ___
 Note: use this section to provide a decision tree for the overall process described in the recipe
 For more information about the syntax used to generate the diagram, please refer to the [following documentation](https://mermaid-js.github.io/mermaid/#/flowchart)
 
-<!--
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgQShEYXRhIEFjcXVpc2l0aW9uKTo6OmJveCAtLT5CKFJhdyBEYXRhKTo6OmJveFxuICAgIEIgLS0-IEN7RkFJUiBieSBEZXNpZ259XG4gICAgQzo6OmJveC0tPnxZZXN8IEQoU3RhbmRhcmQgQ29tcGxpYW50IERhdGEpOjo6Ym94XG4gICAgQzo6OmJveCAtLT58Tm98IEUoVmVuZG9yIGxvY2tlZCBEYXRhKTo6OmJveFxuICAgIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuICAgIGxpbmtTdHlsZSAwLDEsMiwzIHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7IiwibWVybWFpZCI6eyJ0aGVtZSI6bnVsbH0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgQShEYXRhIEFjcXVpc2l0aW9uKTo6OmJveCAtLT5CKFJhdyBEYXRhKTo6OmJveFxuICAgIEIgLS0-IEN7RkFJUiBieSBEZXNpZ259XG4gICAgQzo6OmJveC0tPnxZZXN8IEQoU3RhbmRhcmQgQ29tcGxpYW50IERhdGEpOjo6Ym94XG4gICAgQzo6OmJveCAtLT58Tm98IEUoVmVuZG9yIGxvY2tlZCBEYXRhKTo6OmJveFxuICAgIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuICAgIGxpbmtTdHlsZSAwLDEsMiwzIHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7IiwibWVybWFpZCI6eyJ0aGVtZSI6bnVsbH0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
--->
-
 
 <div class="mermaid">
 
+    flowchart TB 
+
+        subgraph TSV
+        A[Local identifier]-->B[Affy]
+        end
+
+        subgraph BridgeDb
+        C[Affy]-->Ensembl
+        end
+
+        subgraph Script
+        D[Local identifier] --> F[Affy] --> E[Ensembl]
+        end
+
+        TSV --> Script
+        BridgeDb --> Script
 </div>
 
 ___
@@ -47,12 +59,12 @@ ___
 ## Requirements
 
 * technical requirements:
-   * bash knowledge
-   * ...
+    * R
+    * Webservices
+    * Python
 * recipe dependency:
-   * read Recipe 1 first!
-* knowledge requirement:
-   * be sure to know what OBO is, or read it here: ...link to knowledge...
+    * "How to generate globally unique, resolvable and persistent identifiers"
+    * "How to interlink data from different sources?"
 
 ---
 
@@ -61,73 +73,97 @@ ___
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
-
-Help to fill this table out can be found ...(not yet)...
-
-----
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChi](https://fairsharing.org/FAIRsharing.ddk9t9) |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-| [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [annotated text](http://edamontology.org/data_3779)  |
+| Reusability | minimal| reusable|
 
 
 ## Table of Data Standards
+<!--
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)  | [SRA XML](https://fairsharing.org/FAIRsharing.q72e3w)  |
 | [DICOM](https://fairsharing.org/FAIRsharing.b7z8by)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [OMOP](https://fairsharing.org/FAIRsharing.qk984b)  |
-
+-->
 ___
 
-## Main Content
+## Identifier mapping with Bridgedb
 
-This is the place for your actual content. You can also ...
+[Identifier mapping](https://github.com/FAIRplus/the-fair-cookbook/blob/id-map-services/docs/content/recipes/interoperability/identifier-mapping.md) often is an essential step for data reusability and interoperability. 
 
-### ... write executable code
+#### Use cases:
 
+1. Connect data with known identifiers to different known identifiers
+3. Connect data with local identifiers that were mapped to a known identifier to a different known identifier
+
+BridgeDB is an open source tool that can help us perform identifier mapping using three different interfaces:
+* Java API
+* R package
+* Webservices
+
+In this recipe we will cover how the R package and webservices can be used to accomplish the stated objectives.
+
+## Webservices in Python
+One of the biggest benefits of using BridgeDb's webservices is that these can be accessed using any programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a BridgeDb Python library we show here how to use the Webservices to perform the mappings suggested under "Use cases" 
+
+### Mapping known identifier to other known identifier
+In this case we have a list of elements with an identifier that is part of [BridgeDbs data sources]((https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv)). In our example we will use a list of Affymetrix Zen Mays gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
+
+For this tutorial Python v3.8.5 and [pandas](https://pandas.pydata.org/) v1.1.3  were used.
+
+We start by defining strings containing the url to the webservices and the specific method from the Webservices that we want to use. In our case a batch cross reference. When we do our query we will specify the organism and the source dataset. We can also optionally specify a target data source if we only want to map one of them (e.g. Ensembl)  
 
 ```python
-import isatools
-import json
-import pandas as pd 
-import holoview
+url = "https://webservice.bridgedb.org/"
+batch_request = url+"{org}/xrefsBatch/{source}{}"
+```
+We start by loading our data into a pandas dataframe. We then call the requests library using our query
+
+```python
+query = batch_request.format('?dataSource=En', org='Zea Mays', source='X')
+response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
 
+The webserivce's response is now stored in the `response` variable. We can now simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module. This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
 
-### ... create workflow figures
+In our case the output of `to_df` is:
+| original                 | source   | mapping        | target   |
+|:-------------------------|:---------|:---------------|:---------|
+| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037873 | En       |
+| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037877 | En       |
+| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037875 | En       |
+| AFFX-Zm_Ubiquitin_M_f_at | Affy     | Zm00001d053838 | En       |
+| AFFX-Zm_Ubiquitin_5_f_at | Affy     | Zm00001d053838 | En       |
 
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
+The output table will contain:
+* The original identifier
+* The data source that the identifier is part of
+* The mapped identifier
+* The data source for the mapped identifier
 
-```
-graph LR;
-    A[Data Acquisition] -->B(Raw Data)
-    B --> C{FAIR by Design}
-    C -->|Yes| D[Standard Compliant Data]
-    C -->|No| E[Vendor locked Data]
-```
+If we were to not specify the target data source we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
+| original            | source   | mapping    | target   |
+|:--------------------|:---------|:-----------|:---------|
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H3 | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H2 | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J4 | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | GO         | T        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J3 | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | Q9M7E4     | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H0 | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J2 | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | B6SKA7     | S        |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J1 | S        |
 
-<div class="mermaid">
-graph LR;
-    A["input data"]-->B["conversion to open format"];
-    A["input data"]-->C["automatic annotation"];
-    B["conversion to open format"]-->D(("output data"));
-    C["automatic annotation"]-->D(("output data"));  
+### Mapping local identifier to known identifier
+[NEED HELP HERE]
+This is a step that should be done manually. In this case an important decision should be made, which identifiers to map to. To decide this you should look for the data source that contains the closest definition of the concepts to the one you used for your local identifiers.
 
-    style A fill:#FF5733,stroke:#333,stroke-width:2px
-    style D fill:#0A749B,stroke:#333,stroke-width:2px
-</div>
-
+### Mapping local identifier to a different known identifier
 ___
 
 ## Conclusion:
 
-> Summerize Key Learnings of the recipe.
+> Summarize Key Learnings of the recipe.
 > 
 > Suggest further reading using the following:
 > #### What should I read next?
@@ -139,10 +175,11 @@ ___
 
 | Name | Affiliation  | orcid | CrediT role  | specific contribution |
 | :------------- | :------------- | :------------- |:------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | original format |
-| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | | 
+| Lucas Giovanni Uberti-Bona Marin |  Maastricht University| | Writing - Original Draft | Original format |
+| Chris Evelo |  Maastricht University | | Writing - Review & Editing, Funding acquisition | | 
+| Egon Willighagen |  Maastricht University | | Writing - Review & Editing, Funding acquisition | | 
 | Alasdair Gray | Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Review & Editing | minor improvements (see git) |
-| Robert Giessmann | Bayer AG | [0000-0002-0254-1500](https://orcid.org/0000-0002-0254-1500) | Writing - Review & Editing | minor improvements (see git) |
+
 ___
 
 
