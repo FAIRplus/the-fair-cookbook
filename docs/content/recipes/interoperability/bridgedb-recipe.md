@@ -29,12 +29,10 @@ ___
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-Note: use this section to provide a decision tree for the overall process described in the recipe
+This recipe will cover the highlighted topics
+```mermaid
 
-For big picture stuff
-<div class="mermaid">
-
-    flowchart TB
+    graph TB
       I[Identifier]
       I --> IM[Identifier Mapping]
       M[Mapping] --> OM[Ontology Mapping]
@@ -48,13 +46,13 @@ For big picture stuff
       IE -- mentions--> SL{{Scientific Lenses}}
 
       IMS([Identifier Mapping Services])
-      IMS --> BDb[BridgeDb]
+      IMS -- mentions --> BDb[BridgeDb]
       IMS -- mentions --> UniChem{{UniChem}}
       IMS -- mentions --> Sameas{{Sameas}}
       IMS -- mentions --> Identifiers{{Identifiers.org}}
 
-      BDb --> MGG[Mapping global identifiers to other global identifiers]
-      BDb --> MLG[Mapping local identifiers to other global identifiers]
+      BDb -- has section --> MGG[Mapping global identifiers to other global identifiers]
+      BDb -- has section --> MLG[Mapping local identifiers to other global identifiers]
 
       MGG -- has section --> P1([Python])
       MGG -- has section --> R1([R])
@@ -64,52 +62,19 @@ For big picture stuff
         style OM stroke-dasharray: 5 5
         style M stroke-dasharray: 5 5
 
-       style BDb fill:#f9f
-       style MLG fill:#f9f
-       style MGG fill:#f9f
+       classDef select fill:#f9f;
+       class BDb select;
+       class MLG select;
+       class MGG select;
+       class P1 select;
+       class P2 select;
+       class R1 select;
+       class R2 select;
       %% style IM fill:#f9f
       %% style I fill:#f9f
       %% style OxO fill:#f9f
-</div>
+```
 
-<div class="mermaid">
-
-    flowchart TB 
-
-        subgraph TSV
-        A[Local identifier]-->B[Affy]
-        end
-
-        subgraph BridgeDb
-        C[Affy]-->Ensembl
-        end
-
-        subgraph Script
-        D[Local identifier] --> F[Affy] --> E[Ensembl]
-        end
-
-        TSV --> Script
-        BridgeDb --> Script
-</div>
-
-or 
-
-<div class="mermaid">
-
-    flowchart TB 
-      subgraph Script
-          subgraph BridgeDb
-              B[Affy]-->E[Ensembl]
-              B[Affy]-->F[Entrez]
-              B[Affy] --> H[UniProt]
-          end
-          subgraph TSV
-            A[Local identifier]-->B[Affy]
-          end
-        end
-    
- 
-</div>
 ___
 
 
@@ -143,7 +108,7 @@ ___
 -->
 ___
 
-## Identifier mapping with BridgeDb
+# Identifier mapping with BridgeDb
 
 [Identifier mapping](https://github.com/FAIRplus/the-fair-cookbook/blob/id-map-services/docs/content/recipes/interoperability/identifier-mapping.md) is an essential step for data reusability and interoperability as discussed in the linked recipe. This step requires of dedicated tools that help us, in this recipe we show how BridgeDb can help us in this process.
 
@@ -166,46 +131,51 @@ BridgeDB is an open source tool that can help us perform identifier mapping usin
 
 In this recipe we will cover how the R package and webservices can be used to accomplish the stated objectives.
 
-## Webservices in Python
-One of the biggest benefits of using BridgeDb's webservices is that these can be accessed using any programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a BridgeDb Python library we show here how to use the Webservices to perform the mappings suggested under [Cases](#Cases) 
-
-### Mapping global identifier to other global identifier
+## Mapping global identifier to other global identifier
 In this case we have a list of elements with an identifier that is part of [BridgeDbs data sources](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv). In our example we will use a list of Affymetrix Zen Mays gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
 
-For this tutorial Python v3.8.5 and [pandas](https://pandas.pydata.org/) v1.1.3  were used.
+### Webservices in Python
+> :exclamation: For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3 and BridgeDb Webservices v0.9.0 were used.
+
+One of the biggest benefits of using BridgeDb's webservices is that these can be accessed using any programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a BridgeDb Python library we show here how to use the Webservices to perform the mappings suggested under [Cases](#Cases) 
 
 We start by defining strings containing the url to the webservices and the specific method from the Webservices that we want to use. In our case a batch cross reference. When we do our query we will specify the organism and the source dataset. We can also optionally specify a target data source if we only want to map one of them (e.g. Ensembl)  
 
-```python
+```python=3.8.5
 url = "https://webservice.bridgedb.org/"
 batch_request = url+"{org}/xrefsBatch/{source}{}"
 ```
 
-If our scope is to map to only a specific target data source we can call the webservices running
-```python
+If we aim to map only to a specific target data source we can check whether the mapping is supported by calling the webservices running the following 
+```python=3.8.5
 mapping_available = "{org}/isMappingSupported/{source}/{target}"
-query = url+mapping_available.format(org='Zea mays', source='X', target='En')
+query = url+mapping_available.format(org='Zea mays', source='En', target='S')
 requests.get(query).text
 ```
-Which will return "true".
+Which will return `True` if the mapping between the given source and target is supported for the given organism or `False` otherwise.
 
 We then load our data into a pandas dataframe and call the requests library using our query.
 
-```python
-query = batch_request.format('?dataSource=En', org='Zea mays', source='X')
+```python=3.8.5
+query = batch_request.format('?dataSource=S', org='Zea mays', source='En')
 response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
 
-The webserivce's response is now stored in the `response` variable. We can now simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module. This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
+The webserivce's response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module. This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
 
 In our case the output of `to_df` is:
-| original                 | source   | mapping        | target   |
-|:-------------------------|:---------|:---------------|:---------|
-| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037873 | En       |
-| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037877 | En       |
-| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037875 | En       |
-| AFFX-Zm_Ubiquitin_M_f_at | Affy     | Zm00001d053838 | En       |
-| AFFX-Zm_Ubiquitin_5_f_at | Affy     | Zm00001d053838 | En       |
+| original       | source   | mapping    | target   |
+|:---------------|:---------|:-----------|:---------|
+| Zm00001d037873 | Ensembl  | A0A1D6M1G2 | S        |
+| Zm00001d037873 | Ensembl  | A0A1D6M1G1 | S        |
+| Zm00001d037873 | Ensembl  | A0A1D6M1H2 | S        |
+| Zm00001d037873 | Ensembl  | A0A1D6M1J4 | S        |
+| Zm00001d037873 | Ensembl  | Q9M7E4     | S        |
+| Zm00001d037873 | Ensembl  | A0A1D6M1H0 | S        |
+| Zm00001d037873 | Ensembl  | A0A1D6M1I1 | S        |
+| Zm00001d037873 | Ensembl  | A0A0B4J3C2 | S        |
+| Zm00001d037873 | Ensembl  | A0A1D6M1F7 | S        |
+| Zm00001d037873 | Ensembl  | A0A1D6M1G3 | S        |
 
 The output table will contain:
 * The original identifier
@@ -213,7 +183,7 @@ The output table will contain:
 * The mapped identifier
 * The data source for the mapped identifier
 
-If we were to not specify the target data source we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
+If we were to not specify the target data source (by passing an empty string as the parameter) we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
 | original            | source   | mapping    | target   |
 |:--------------------|:---------|:-----------|:---------|
 | AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H3 | S        |
@@ -227,6 +197,15 @@ If we were to not specify the target data source we would get all the potential 
 | AFFX-Zm-ef1a-5_a_at | Affy     | B6SKA7     | S        |
 | AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J1 | S        |
 
+### R package
+> :exclamation: For this tutorial R v4.0.3, tidyverse v1.3.0 and BridgeDbR v2.0.0 were used.
+
+Here we will present how to perform the mappings for the two previous use cases using the R package of BridgeDb.
+
+```r
+
+``` 
+
 <!--
 This will maybe link to the identifier mapping recipe in the future, where there will be a specific section detailing identifier equivalence files taking into account scientific lenses, as discussed with Egon. 
 
@@ -239,16 +218,130 @@ This is a step that should be done manually. In this case an important decision 
 
 -->
 
-### Mapping local identifier to a different global identifier
+## Mapping local identifier to a different global identifier
 
-Here we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case this will be contained in a TSV where we map our local identifier to Affy. You can see other potential data formats in the [Identifier Mapping recipe]()
+> :bulb: Here we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case this will be contained in a TSV where we map our local identifier to Affy. You can see other potential data formats in the [Identifier Mapping recipe](). The mapping should be **one-to-one** for this recipe. 
 
-## Using R package
+As before we will define variables including the webservice's URL and the method that we will use, which will again be xRefsBatch.
+
+Our TSV mapping file looks as follows:
+|   local | source         |
+|--------:|:---------------|
+|    1234 | Zm00001d037873 |
+|    6789 | Zm00001d037877 |
+|    5555 | Zm00001d053839 |
+You may notice the `source` identifiers correspond with those used in the previous example.
+
+
+This is how the mapping will work
+```mermaid
+
+    graph TB 
+      subgraph Script
+
+          subgraph BridgeDb
+              B[Affy]-->E[Gene Ontology]
+              B[Affy]-->F[NCBI gene]
+              B[Affy] --> H[UniProt]
+          subgraph Pre-made mapping
+            A[Local identifier]-->B[Ensembl]
+          end
+          end
+        end
+```
+
+### Webservices in Python
+In this case we pass the source column to the post request as follows
+
+```python=3.8.5
+source_data = case2.source.to_csv(index=False, header=False)
+query = batch_request.format('', org=org, source=source)
+response2 = requests.post(query, data = source_data)
+```
+You may notice here that we did not pass a target source, this could be done as specified before.
+Then we use `to_df` again and as expected obtain the same dataframe as before.
+Then to see the equivalences with our local identifiers we can simply join the dataframes
+```python=3.8.5
+local_mapping = mappings.join(case2.set_index('source'), on='original')
+```
+which will return the following table
+| original            | source   | mapping    | target   |   local |
+|:--------------------|:---------|:-----------|:---------|--------:|
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H3 | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H2 | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J4 | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | GO         | T        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J3 | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | Q9M7E4     | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H0 | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J2 | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | B6SKA7     | S        |    1234 |
+| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J1 | S        |    1234 |
+
+in case we did specify the target we would instead get
+
+| original                 | source   | mapping        | target   |   local |
+|:-------------------------|:---------|:---------------|:---------|--------:|
+| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037873 | En       |    1234 |
+| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037877 | En       |    1234 |
+| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037875 | En       |    1234 |
+| AFFX-Zm_Ubiquitin_M_f_at | Affy     | Zm00001d053838 | En       |    6789 |
+| AFFX-Zm_Ubiquitin_5_f_at | Affy     | Zm00001d053838 | En       |    5555 |
+
+
+You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below
+```mermaid
+graph LR 
+
+  classDef sources stroke-width:4px;
+
+  class En sources;
+  class X sources;
+  class Local sources;
+
+  classDef BDb fill: #d5fca6, fontSize: 40px, stroke-width:6px, stroke: #000
+  class BridgeDb BDb;
+  
+  1234 <==>  AF1
+  5555 <==> AF3
+  6789 <==> AF2
+
+  subgraph Local
+    1234
+    5555
+    6789
+  end
+
+  
+  subgraph BridgeDb
+    AF1 --> ZM1
+    AF1 --> ZM2
+    AF1 --> ZM3
+    AF2 --> ZM4
+    AF3 --> ZM4
+    subgraph Affy
+      AF1[AFFX-Zm-ef1a-5_a_at]
+      AF2[AFFX-Zm_Ubiquitin_M_f_at]
+      AF3[AFFX-Zm_Ubiquitin_5_f_at]
+    end
+    subgraph Ensembl
+      ZM1[Zm00001d037873]
+      ZM2[Zm00001d037877]
+      ZM3[Zm00001d037875]
+      ZM4[Zm00001d053838]
+    end
+  end
+
+```
+
+> :book: This N-to-N relationship stems from different *scientific lenses* in the data sources. You can read more about these in **[CITE]**. The core idea is that depending on the domain/application of 
+
+### R Package
 ___
 
 ## Conclusion:
 
-> Summarize Key Learnings of the recipe.
+> Here we showed how to use BridgeDb's webservices to map 
 > 
 > #### What should I read next?
 > * [Identifiers](TODO)
@@ -257,7 +350,7 @@ ___
 ___
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  | specific contribution |
+| Name | Affiliation  | orcid | Credit role  | specific contribution |
 | :------------- | :------------- | :------------- |:------------- |:------------- |
 | Lucas Giovanni Uberti-Bona Marin |  Maastricht University| | Writing - Original Draft | Original format |
 | Chris Evelo |  Maastricht University |[0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) | Writing - Review & Editing | | 
