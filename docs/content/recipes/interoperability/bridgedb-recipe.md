@@ -132,7 +132,7 @@ BridgeDB is an open source tool that can help us perform identifier mapping usin
 In this recipe we will cover how the R package and webservices can be used to accomplish the stated objectives.
 
 ## Mapping global identifier to other global identifier
-In this case we have a list of elements with an identifier that is part of [BridgeDbs data sources](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv). In our example we will use a list of Affymetrix Zen Mays gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
+In this case we have a list of elements with an identifier that is part of [BridgeDbs data sources](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv). In our example we will use a list of Homo Sapiens, Hugo Gene Nomenclature Convention (HGNC) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
 
 ### Webservices in Python
 > :exclamation: For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3 and BridgeDb Webservices v0.9.0 were used.
@@ -149,7 +149,7 @@ batch_request = url+"{org}/xrefsBatch/{source}{}"
 If we aim to map only to a specific target data source we can check whether the mapping is supported by calling the webservices running the following 
 ```python=3.8.5
 mapping_available = "{org}/isMappingSupported/{source}/{target}"
-query = url+mapping_available.format(org='Zea mays', source='En', target='S')
+query = url+mapping_available.format(org='Homo sapiens', source='H', target='En')
 requests.get(query).text
 ```
 Which will return `True` if the mapping between the given source and target is supported for the given organism or `False` otherwise.
@@ -157,25 +157,18 @@ Which will return `True` if the mapping between the given source and target is s
 We then load our data into a pandas dataframe and call the requests library using our query.
 
 ```python=3.8.5
-query = batch_request.format('?dataSource=S', org='Zea mays', source='En')
+query = batch_request.format('?dataSource=En', org='Homo sapiens', source='H')
 response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
 
 The webserivce's response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module. This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
 
 In our case the output of `to_df` is:
-| original       | source   | mapping    | target   |
-|:---------------|:---------|:-----------|:---------|
-| Zm00001d037873 | Ensembl  | A0A1D6M1G2 | S        |
-| Zm00001d037873 | Ensembl  | A0A1D6M1G1 | S        |
-| Zm00001d037873 | Ensembl  | A0A1D6M1H2 | S        |
-| Zm00001d037873 | Ensembl  | A0A1D6M1J4 | S        |
-| Zm00001d037873 | Ensembl  | Q9M7E4     | S        |
-| Zm00001d037873 | Ensembl  | A0A1D6M1H0 | S        |
-| Zm00001d037873 | Ensembl  | A0A1D6M1I1 | S        |
-| Zm00001d037873 | Ensembl  | A0A0B4J3C2 | S        |
-| Zm00001d037873 | Ensembl  | A0A1D6M1F7 | S        |
-| Zm00001d037873 | Ensembl  | A0A1D6M1G3 | S        |
+| original   | source   | mapping         | target   |
+|:-----------|:---------|:----------------|:---------|
+| A1BG       | HGNC     | ENSG00000121410 | En       |
+| A1CF       | HGNC     | ENSG00000148584 | En       |
+| A2MP1      | HGNC     | ENSG00000256069 | En       |
 
 The output table will contain:
 * The original identifier
@@ -184,27 +177,51 @@ The output table will contain:
 * The data source for the mapped identifier
 
 If we were to not specify the target data source (by passing an empty string as the parameter) we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
-| original            | source   | mapping    | target   |
-|:--------------------|:---------|:-----------|:---------|
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H3 | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H2 | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J4 | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | GO         | T        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J3 | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | Q9M7E4     | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H0 | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J2 | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | B6SKA7     | S        |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J1 | S        |
+| original   | source   | mapping      | target   |
+|:-----------|:---------|:-------------|:---------|
+| A1BG       | HGNC     | uc002qsd.5   | Uc       |
+| A1BG       | HGNC     | 8039748      | X        |
+| A1BG       | HGNC     | GO:0072562   | T        |
+| A1BG       | HGNC     | uc061drj.1   | Uc       |
+| A1BG       | HGNC     | ILMN_2055271 | Il       |
+| A1BG       | HGNC     | Hs.529161    | U        |
+| A1BG       | HGNC     | GO:0070062   | T        |
+| A1BG       | HGNC     | GO:0002576   | T        |
+| A1BG       | HGNC     | uc061drt.1   | Uc       |
+| A1BG       | HGNC     | 51020_at     | X        |
 
 ### R package
 > :exclamation: For this tutorial R v4.0.3, tidyverse v1.3.0 and BridgeDbR v2.0.0 were used.
 
 Here we will present how to perform the mappings for the two previous use cases using the R package of BridgeDb.
 
-```r
+After having loaded the required packages we read the data and create a new column to include the source of the identifier.
 
+```r
+data_df <- read_tsv(filepath, col_names=c('identifier'))
+data_df$source = 'H'
 ``` 
+
+We then load the data for the organism we are mapping from.
+
+```r
+ location <- getDatabase('Homo sapiens')
+ mapper <- loadDatabase(location)
+```
+
+And use the package function to map the identifiers
+
+```r
+mapping = maps(mapper, data_df, target='En')
+```
+This will return:
+| source     |identifier| mapping         | target   |
+|:-----------|:---------|:----------------|:---------|
+| HGNC       | A1BG     | ENSG00000121410 | En       |
+| HGNC       | A1CF     | ENSG00000148584 | En       |
+| HGNC       | A2MP1    | ENSG00000256069 | En       |
+
+As before we can also not specify the target
 
 <!--
 This will maybe link to the identifier mapping recipe in the future, where there will be a specific section detailing identifier equivalence files taking into account scientific lenses, as discussed with Egon. 
@@ -225,11 +242,11 @@ This is a step that should be done manually. In this case an important decision 
 As before we will define variables including the webservice's URL and the method that we will use, which will again be xRefsBatch.
 
 Our TSV mapping file looks as follows:
-|   local | source         |
-|--------:|:---------------|
-|    1234 | Zm00001d037873 |
-|    6789 | Zm00001d037877 |
-|    5555 | Zm00001d053839 |
+| local   | source   |
+|:--------|:---------|
+| aa11    | A1BG     |
+| bb34    | A1CF     |
+| eg93    | A2MP1    |
 You may notice the `source` identifiers correspond with those used in the previous example.
 
 
