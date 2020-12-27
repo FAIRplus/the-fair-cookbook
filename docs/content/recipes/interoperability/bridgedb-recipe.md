@@ -114,7 +114,7 @@ ___
 
 > :book: In the context of this recipe we will use two terms to categorize identifiers:
 >* *Local identifiers* which refer to identifiers that are locally defined and minted within an organization or database
->* *Global identifiers* which will refer to identifiers from BridgeDb's [data sources file]((https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv))
+>* *Global identifiers* which will refer to identifiers from BridgeDb's [data sources file](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv)
 
 We will focus here on two different cases that depend on the data that we have available, namely, whether our data is already using global identifiers or local identifiers. 
 
@@ -221,7 +221,19 @@ This will return:
 | HGNC       | A1CF     | ENSG00000148584 | En       |
 | HGNC       | A2MP1    | ENSG00000256069 | En       |
 
-As before we can also not specify the target
+As before we can also not specify the target and obtain all possible mappings. This as before will result in (top 10) 
+| source     |identifier| mapping      | target   |
+|:-----------|:---------|:-------------|:---------|
+| HGNC       | A1BG     | uc002qsd.5   | Uc       |
+| HGNC       | A1BG     | 8039748      | X        |
+| HGNC       | A1BG     | GO:0072562   | T        |
+| HGNC       | A1BG     | uc061drj.1   | Uc       |
+| HGNC       | A1BG     | ILMN_2055271 | Il       |
+| HGNC       | A1BG     | Hs.529161    | U        |
+| HGNC       | A1BG     | GO:0070062   | T        |
+| HGNC       | A1BG     | GO:0002576   | T        |
+| HGNC       | A1BG     | uc061drt.1   | Uc       |
+| HGNC       | A1BG     | 51020_at     | X        |
 
 <!--
 This will maybe link to the identifier mapping recipe in the future, where there will be a specific section detailing identifier equivalence files taking into account scientific lenses, as discussed with Egon. 
@@ -281,32 +293,32 @@ Then to see the equivalences with our local identifiers we can simply join the d
 ```python=3.8.5
 local_mapping = mappings.join(case2.set_index('source'), on='original')
 ```
-which will return the following table
-| original            | source   | mapping    | target   |   local |
-|:--------------------|:---------|:-----------|:---------|--------:|
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H3 | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H2 | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J4 | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | GO         | T        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J3 | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | Q9M7E4     | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1H0 | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J2 | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | B6SKA7     | S        |    1234 |
-| AFFX-Zm-ef1a-5_a_at | Affy     | A0A1D6M1J1 | S        |    1234 |
+which will return the following table (first 10 rows)
+| original   | source   | mapping      | target   | local   |
+|:-----------|:---------|:-------------|:---------|:--------|
+| A1BG       | HGNC     | uc002qsd.5   | Uc       | aa11    |
+| A1BG       | HGNC     | 8039748      | X        | aa11    |
+| A1BG       | HGNC     | GO:0072562   | T        | aa11    |
+| A1BG       | HGNC     | uc061drj.1   | Uc       | aa11    |
+| A1BG       | HGNC     | ILMN_2055271 | Il       | aa11    |
+| A1BG       | HGNC     | Hs.529161    | U        | aa11    |
+| A1BG       | HGNC     | GO:0070062   | T        | aa11    |
+| A1BG       | HGNC     | GO:0002576   | T        | aa11    |
+| A1BG       | HGNC     | uc061drt.1   | Uc       | aa11    |
+| A1BG       | HGNC     | 51020_at     | X        | aa11    |
 
 in case we did specify the target we would instead get
 
-| original                 | source   | mapping        | target   |   local |
-|:-------------------------|:---------|:---------------|:---------|--------:|
-| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037873 | En       |    1234 |
-| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037877 | En       |    1234 |
-| AFFX-Zm-ef1a-5_a_at      | Affy     | Zm00001d037875 | En       |    1234 |
-| AFFX-Zm_Ubiquitin_M_f_at | Affy     | Zm00001d053838 | En       |    6789 |
-| AFFX-Zm_Ubiquitin_5_f_at | Affy     | Zm00001d053838 | En       |    5555 |
+| original   | source   | mapping         | target   | local   |
+|:-----------|:---------|:----------------|:---------|:--------|
+| A1BG       | HGNC     | ENSG00000121410 | En       | aa11    |
+| A1CF       | HGNC     | ENSG00000148584 | En       | bb34    |
+| A2MP1      | HGNC     | ENSG00000256069 | En       | eg93    |
 
+Here we see a 1-to-1 relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is 1-to-N. The relation could also be N-to-N as shown below.
 
-You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below
+<!--
+You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below-->
 ```mermaid
 graph LR 
 
@@ -351,9 +363,21 @@ graph LR
 
 ```
 
-> :book: This N-to-N relationship stems from different *scientific lenses* in the data sources. You can read more about these in **[CITE]**. The core idea is that depending on the domain/application of 
+> :book: This N-to-N relationship stems from different *scientific lenses* in the data sources. You can read more about these in **[CITE]**. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to N-to-N relationships.
 
 ### R Package
+
+Here we will follow the same steps as in the previous case. The only difference is that when loading the data we will specify the columns as:
+
+```r
+data_df <- read_tsv(filepath, col_names=c('local', 'identifier'))
+``` 
+Then, after computing the mapping we can join it with the local identifier as follows:
+
+```r
+right_join(data_df, mapping)
+```
+
 ___
 
 ## Conclusion:
