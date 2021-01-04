@@ -10,7 +10,7 @@
 
 The main purpose of this recipe is:
 
-> Providing practical examples on to map identifiers using two of BridgeDB's interfaces (R package and Webservices).
+> Providing practical examples on how to map identifiers using two of BridgeDB's interfaces (R package and Webservices).
 
 
 ___
@@ -20,7 +20,6 @@ ___
 
 This recipe will cover the highlighted topics
 ```mermaid
-
     graph TB
       I[Identifier]
       I --> IM[Identifier Mapping]
@@ -98,7 +97,13 @@ ___
 
 ## Identifier mapping with BridgeDb
 
-[Identifier mapping](https://github.com/FAIRplus/the-fair-cookbook/blob/id-map-services/docs/content/recipes/interoperability/identifier-mapping.md) is an essential step for data reusability and interoperability as discussed in the linked recipe. This step requires of dedicated tools that help us, in this recipe we show how BridgeDb can help us in this process.
+[Identifier mapping](https://github.com/FAIRplus/the-fair-cookbook/blob/id-map-services/docs/content/recipes/interoperability/identifier-mapping.md) is an essential step for data reusability and interoperability. This step requires of dedicated tools, here we show how BridgeDb can help us in this process.
+
+BridgeDB is an open source tool that can help us perform identifier mapping using three different interfaces:
+* Java API
+* R package
+* Webservices
+
 
 > :book: In the context of this recipe we will use two terms to categorize identifiers:
 >* *Local identifiers* which refer to identifiers that are locally defined and minted within an organization or database
@@ -112,11 +117,6 @@ We will focus here on two different cases that depend on the data that we have a
 1. Connect data with global identifiers to different global identifiers
 3. Connect data with local identifiers that were mapped to a global identifier to a different global identifier
 
-BridgeDB is an open source tool that can help us perform identifier mapping using three different interfaces:
-* Java API
-* R package
-* Webservices
-
 In this recipe we will cover how the R package and webservices can be used to accomplish the stated objectives.
 
 ### Mapping global identifier to other global identifier
@@ -125,9 +125,9 @@ In this case we have a list of elements with an identifier that is part of [Brid
 #### Webservices in Python
 > :exclamation: For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3 and BridgeDb Webservices v0.9.0 were used.
 
-One of the biggest benefits of using BridgeDb's webservices is that these can be accessed using any programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a BridgeDb Python library we show here how to use the Webservices to perform the mappings suggested under [Cases](#Cases) 
+One of the biggest benefits of using BridgeDb's webservices is that these can be accessed using most programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a BridgeDb Python library we show here how to use the Webservices to perform the mappings suggested under [Cases](#Cases) 
 
-We start by defining strings containing the url to the webservices and the specific method from the Webservices that we want to use. In our case a batch cross reference. When we do our query we will specify the organism and the source dataset. We can also optionally specify a target data source if we only want to map one of them (e.g. Ensembl)  
+We start by defining strings containing the url of the webservices and the specific method from the Webservices that we want to use. In our case a batch cross reference. When we do our query we will specify the organism and the source dataset. We can also optionally specify a target data source if we only want to map one of them (e.g. Ensembl)  
 
 ```python=3.8.5
 url = "https://webservice.bridgedb.org/"
@@ -149,7 +149,7 @@ query = batch_request.format('?dataSource=En', org='Homo sapiens', source='H')
 response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
 
-The webserivce's response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module. This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
+The webserivce's response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module (see [Code](#Code)). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
 
 In our case the output of `to_df` is:
 | original   | source   | mapping         | target   |
@@ -179,9 +179,7 @@ If we were to not specify the target data source (by passing an empty string as 
 | A1BG       | HGNC     | 51020_at     | X        |
 
 #### R package
-> :exclamation: For this tutorial R v4.0.3, tidyverse v1.3.0 and BridgeDbR v2.0.0 were used.
-
-Here we will present how to perform the mappings for the two previous use cases using the R package of BridgeDb.
+> :exclamation: For this tutorial R v4.0.3, [tidyverse](https://www.tidyverse.org/) v1.3.0 and [BridgeDbR](https://www.bioconductor.org/packages/release/bioc/html/BridgeDbR.html) v2.0.0 were used.
 
 After having loaded the required packages we read the data and create a new column to include the source of the identifier.
 
@@ -209,7 +207,7 @@ This will return:
 | A1CF       | H      | En     | ENSG00000148584 |
 | A2MP1      | H      | En     | ENSG00000256069 |
 
-As before we can also not specify the target and obtain all possible mappings. This as before will result in (top 10) 
+As before we can also not specify the target and obtain all possible mappings. This will result in (top 10) 
 | identifier | source | target | mapping      |
 |:---------- |:------ |:------ |:------------ |
 | A1BG       | H      | Uc     | uc002qsd.5   |
@@ -223,7 +221,7 @@ As before we can also not specify the target and obtain all possible mappings. T
 | A1BG       | H      | Uc     | uc061drt.1   |
 | A1BG       | H      | X      | 51020_at     |
 
-> :warning: An error message indicating "Error in download.file" might be caused by timeout being too low. To avoid this increase the timeout by calling `options(timeout=300)`
+> :warning: An error message indicating "Error in download.file" might be caused by timeout being set to a value that is too low. To avoid this increase the timeout by calling `options(timeout=300)`
 <!--
 This will maybe link to the identifier mapping recipe in the future, where there will be a specific section detailing identifier equivalence files taking into account scientific lenses, as discussed with Egon. 
 
@@ -238,9 +236,7 @@ This is a step that should be done manually. In this case an important decision 
 
 ### Mapping local identifier to a different global identifier
 
-> :bulb: Here we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case this will be contained in a TSV where we map our local identifier to Affy. You can see other potential data formats in the [Identifier Mapping recipe](). The mapping should be **one-to-one** for this recipe. 
-
-As before we will define variables including the webservice's URL and the method that we will use, which will again be xRefsBatch.
+> :bulb: Here we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case this will be contained in a TSV where we map our local identifier to HGNC. You can see other potential data formats in the [Identifier Mapping recipe](). The mapping should be **one-to-one** for this recipe. 
 
 Our TSV mapping file looks as follows:
 | local   | source   |
@@ -253,7 +249,6 @@ You may notice the `source` identifiers correspond with those used in the previo
 
 This is how the mapping will work
 ```mermaid
-
     graph TB 
       subgraph Script
 
@@ -269,6 +264,9 @@ This is how the mapping will work
 ```
 
 #### Webservices in Python
+
+As before we will define variables including the webservice's URL and the method that we will use, which will be xRefsBatch.
+
 In this case we pass the source column to the post request as follows
 
 ```python=3.8.5
@@ -276,9 +274,8 @@ source_data = case2.source.to_csv(index=False, header=False)
 query = batch_request.format('', org=org, source=source)
 response2 = requests.post(query, data = source_data)
 ```
-You may notice here that we did not pass a target source, this could be done as specified before.
-Then we use `to_df` again and as expected obtain the same dataframe as before.
-Then to see the equivalences with our local identifiers we can simply join the dataframes
+You may notice here that we did not pass a target source, this could be done as specified before. Then we use `to_df` again and as expected obtain the same dataframe as before.
+To see the equivalences with our local identifiers we can simply join the dataframes
 ```python=3.8.5
 local_mapping = mappings.join(case2.set_index('source'), on='original')
 ```
@@ -304,13 +301,12 @@ in case we did specify the target we would instead get
 | A1CF       | HGNC     | ENSG00000148584 | En       | bb34    |
 | A2MP1      | HGNC     | ENSG00000256069 | En       | eg93    |
 
-Here we see a 1-to-1 relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is 1-to-N. The relation could also be N-to-N as shown below.
+Here we see a 1-to-1 relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is 1-to-N. Depending on the identifiers relation could also be N-to-N as shown below.
 
 <!--
 You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below-->
 ```mermaid
 graph LR 
-
   classDef sources stroke-width:4px;
 
   class En sources;
@@ -361,7 +357,7 @@ Here we will follow the same steps as in the previous case. The only difference 
 ```r
 data_df <- read_tsv(filepath, col_names=c('local', 'identifier'))
 ``` 
-Then, after computing the mapping (as before) we can join it with the local identifier
+Then, after computing the mapping we can join it with the local identifier
 
 ```r
 right_join(data_df, mapping)
@@ -395,7 +391,7 @@ You can find ready-made methods to map using R and Python for the given use case
 
 ## Conclusion
 
-> Here we showed how to use BridgeDb's webservices to map 
+> We showed how to use BridgeDb's webservices and R package to map identifiers from different data sources using toy data. 
 > 
 > #### What should I read next?
 > * [Identifiers](#TODO)
