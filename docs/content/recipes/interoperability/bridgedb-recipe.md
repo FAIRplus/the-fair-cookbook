@@ -1,19 +1,8 @@
 
 # Identifier mapping with BridgeDB
 
-
-
 ## Table of Contents
-1. [Main Objectives](#Main%20FAIRification%20Objectives)
-2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-3. [Requirements](#Requirements)
-4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
-5. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-6. [Table of Data Standards](#Table%20of%20Data%20Standards)
-7. [Identifier mapping with BridgeDb](#Identifier%20mapping%20with%20BridgeDb)
-    * [Webservices in Python](#Webservices%20using%20Python)
-    * [Using R package](#Using%20R%20package) 
-9. [License](#License)
+[toc]
 
 ---
 
@@ -21,7 +10,7 @@
 
 The main purpose of this recipe is:
 
-> Providing practical examples on how two of BridgeDB's interfaces (R package and Webservices) can be used to map identifiers
+> Providing practical examples on to map identifiers using two of BridgeDB's interfaces (R package and Webservices).
 
 
 ___
@@ -82,7 +71,6 @@ ___
 
 * technical requirements:
     * R
-    * Webservices
     * Python
 * recipe dependency:
     * "How to generate globally unique, resolvable and persistent identifiers"
@@ -98,8 +86,8 @@ ___
 | Reusability | minimal| reusable|
 
 
-## Table of Data Standards
-<!--
+<!--## Table of Data Standards
+
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
@@ -108,7 +96,7 @@ ___
 -->
 ___
 
-# Identifier mapping with BridgeDb
+## Identifier mapping with BridgeDb
 
 [Identifier mapping](https://github.com/FAIRplus/the-fair-cookbook/blob/id-map-services/docs/content/recipes/interoperability/identifier-mapping.md) is an essential step for data reusability and interoperability as discussed in the linked recipe. This step requires of dedicated tools that help us, in this recipe we show how BridgeDb can help us in this process.
 
@@ -131,10 +119,10 @@ BridgeDB is an open source tool that can help us perform identifier mapping usin
 
 In this recipe we will cover how the R package and webservices can be used to accomplish the stated objectives.
 
-## Mapping global identifier to other global identifier
+### Mapping global identifier to other global identifier
 In this case we have a list of elements with an identifier that is part of [BridgeDbs data sources](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv). In our example we will use a list of Homo Sapiens, Hugo Gene Nomenclature Convention (HGNC) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
 
-### Webservices in Python
+#### Webservices in Python
 > :exclamation: For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3 and BridgeDb Webservices v0.9.0 were used.
 
 One of the biggest benefits of using BridgeDb's webservices is that these can be accessed using any programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a BridgeDb Python library we show here how to use the Webservices to perform the mappings suggested under [Cases](#Cases) 
@@ -190,7 +178,7 @@ If we were to not specify the target data source (by passing an empty string as 
 | A1BG       | HGNC     | uc061drt.1   | Uc       |
 | A1BG       | HGNC     | 51020_at     | X        |
 
-### R package
+#### R package
 > :exclamation: For this tutorial R v4.0.3, tidyverse v1.3.0 and BridgeDbR v2.0.0 were used.
 
 Here we will present how to perform the mappings for the two previous use cases using the R package of BridgeDb.
@@ -215,26 +203,27 @@ And use the package function to map the identifiers
 mapping = maps(mapper, data_df, target='En')
 ```
 This will return:
-| source     |identifier| mapping         | target   |
-|:-----------|:---------|:----------------|:---------|
-| HGNC       | A1BG     | ENSG00000121410 | En       |
-| HGNC       | A1CF     | ENSG00000148584 | En       |
-| HGNC       | A2MP1    | ENSG00000256069 | En       |
+| identifier | source | target | mapping         |
+|:---------- |:------ |:------ |:--------------- |
+| A1BG       | H      | En     | ENSG00000121410 |
+| A1CF       | H      | En     | ENSG00000148584 |
+| A2MP1      | H      | En     | ENSG00000256069 |
 
 As before we can also not specify the target and obtain all possible mappings. This as before will result in (top 10) 
-| source     |identifier| mapping      | target   |
-|:-----------|:---------|:-------------|:---------|
-| HGNC       | A1BG     | uc002qsd.5   | Uc       |
-| HGNC       | A1BG     | 8039748      | X        |
-| HGNC       | A1BG     | GO:0072562   | T        |
-| HGNC       | A1BG     | uc061drj.1   | Uc       |
-| HGNC       | A1BG     | ILMN_2055271 | Il       |
-| HGNC       | A1BG     | Hs.529161    | U        |
-| HGNC       | A1BG     | GO:0070062   | T        |
-| HGNC       | A1BG     | GO:0002576   | T        |
-| HGNC       | A1BG     | uc061drt.1   | Uc       |
-| HGNC       | A1BG     | 51020_at     | X        |
+| identifier | source | target | mapping      |
+|:---------- |:------ |:------ |:------------ |
+| A1BG       | H      | Uc     | uc002qsd.5   |
+| A1BG       | H      | X      | 8039748      |
+| A1BG       | H      | T      | GO:0072562   |
+| A1BG       | H      | Uc     | uc061drj.1   |
+| A1BG       | H      | Il     | ILMN_2055271 |
+| A1BG       | H      | U      | Hs.529161    |
+| A1BG       | H      | T      | GO:0070062   |
+| A1BG       | H      | T      | GO:0002576   |
+| A1BG       | H      | Uc     | uc061drt.1   |
+| A1BG       | H      | X      | 51020_at     |
 
+> :warning: An error message indicating "Error in download.file" might be caused by timeout being too low. To avoid this increase the timeout by calling `options(timeout=300)`
 <!--
 This will maybe link to the identifier mapping recipe in the future, where there will be a specific section detailing identifier equivalence files taking into account scientific lenses, as discussed with Egon. 
 
@@ -247,7 +236,7 @@ This is a step that should be done manually. In this case an important decision 
 
 -->
 
-## Mapping local identifier to a different global identifier
+### Mapping local identifier to a different global identifier
 
 > :bulb: Here we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case this will be contained in a TSV where we map our local identifier to Affy. You can see other potential data formats in the [Identifier Mapping recipe](). The mapping should be **one-to-one** for this recipe. 
 
@@ -279,7 +268,7 @@ This is how the mapping will work
         end
 ```
 
-### Webservices in Python
+#### Webservices in Python
 In this case we pass the source column to the post request as follows
 
 ```python=3.8.5
@@ -365,31 +354,61 @@ graph LR
 
 > :book: This N-to-N relationship stems from different *scientific lenses* in the data sources. You can read more about these in **[CITE]**. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to N-to-N relationships.
 
-### R Package
+#### R Package
 
 Here we will follow the same steps as in the previous case. The only difference is that when loading the data we will specify the columns as:
 
 ```r
 data_df <- read_tsv(filepath, col_names=c('local', 'identifier'))
 ``` 
-Then, after computing the mapping we can join it with the local identifier as follows:
+Then, after computing the mapping (as before) we can join it with the local identifier
 
 ```r
 right_join(data_df, mapping)
 ```
+Assuming we did not specify the target data source we obtain the following table (first 10 rows):
+| local | identifier | source | target | mapping      |
+|:----- |:--------   |:------ |:------ |:------------ |
+| aa11  | A1BG       | H      | Uc     | uc002qsd.5   |
+| aa11  | A1BG       | H      | X      | 8039748      |
+| aa11  | A1BG       | H      | T      | GO:0072562   |
+| aa11  | A1BG       | H      | Uc     | uc061drj.1   |
+| aa11  | A1BG       | H      | Il     | ILMN_2055271 |
+| aa11  | A1BG       | H      | U      | Hs.529161    |
+| aa11  | A1BG       | H      | T      | GO:0070062   |
+| aa11  | A1BG       | H      | T      | GO:0002576   |
+| aa11  | A1BG       | H      | Uc     | uc061drt.1   |
+| aa11  | A1BG       | H      | X      | 51020_at     |
 
+In case we did specify the target data source we would get:
+
+| local | identifier | source | target | mapping         |
+|:----- |:---------- |:------ |:------ |:--------------- |
+| aa11  | A1BG       | HGNC   | En     | ENSG00000121410 |
+| bb34  | A1CF       | HGNC   | En     | ENSG00000148584 |
+| eg93  | A2MP1      | HGNC   | En     | ENSG00000256069 |
 ___
+## Code 
+You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/mavrokefalidis/bridgedb-recipe-code). These assume the data has the structure described in this recipe.
 
-## Conclusion:
+---
+
+## Conclusion
 
 > Here we showed how to use BridgeDb's webservices to map 
 > 
 > #### What should I read next?
-> * [Identifiers](TODO)
+> * [Identifiers](#TODO)
 > * [Identifier mapping](#TODO)
 
+## References
+---
+1. Brenninkmeijer, C., Evelo, C., Goble, C., Gray, A. J. G., Groth, P., Pettifer, S., Stevens, R., Williams, A. J., & Willighagen, L. (n.d.). Scientiﬁc Lenses over Linked Data: An approach to support task speciﬁc views of the data. A vision. 4.
+2. Leemans C, Willighagen E, Slenter D, Bohler A, Eijssen L (2020). BridgeDbR: Code for using BridgeDb identifier mapping framework from within R. R package version 2.0.0, https://github.com/bridgedb/BridgeDbR. 
+3. Standardised access to Gene, Gene-Variant, Protein, Metabolite and Interaction Identifier Mapping Services. (n.d.). bridgedb.github.io. Retrieved January 4, 2021, from https://bridgedb.github.io/
+
 ___
-## Authors:
+## Authors
 
 | Name | Affiliation  | orcid | Credit role  | specific contribution |
 | :------------- | :------------- | :------------- |:------------- |:------------- |
@@ -401,7 +420,7 @@ ___
 ___
 
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 
