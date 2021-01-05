@@ -244,6 +244,7 @@ Our TSV mapping file looks as follows:
 | aa11    | A1BG     |
 | bb34    | A1CF     |
 | eg93    | A2MP1    |
+
 You may notice the `source` identifiers correspond with those used in the previous example.
 
 
@@ -306,45 +307,45 @@ Here we see a 1-to-1 relation between the identifiers in HGNC and En while the r
 <!--
 You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below-->
 ```mermaid
-graph LR 
-  classDef sources stroke-width:4px;
+    graph LR 
+      classDef sources stroke-width:4px;
 
-  class En sources;
-  class X sources;
-  class Local sources;
+      class En sources;
+      class X sources;
+      class Local sources;
 
-  classDef BDb fill: #d5fca6, fontSize: 40px, stroke-width:6px, stroke: #000
-  class BridgeDb BDb;
-  
-  1234 <==>  AF1
-  5555 <==> AF3
-  6789 <==> AF2
+      classDef BDb fill: #d5fca6, fontSize: 40px, stroke-width:6px, stroke: #000
+      class BridgeDb BDb;
 
-  subgraph Local
-    1234
-    5555
-    6789
-  end
+      1234 <==>  AF1
+      5555 <==> AF3
+      6789 <==> AF2
 
-  
-  subgraph BridgeDb
-    AF1 --> ZM1
-    AF1 --> ZM2
-    AF1 --> ZM3
-    AF2 --> ZM4
-    AF3 --> ZM4
-    subgraph Affy
-      AF1[AFFX-Zm-ef1a-5_a_at]
-      AF2[AFFX-Zm_Ubiquitin_M_f_at]
-      AF3[AFFX-Zm_Ubiquitin_5_f_at]
-    end
-    subgraph Ensembl
-      ZM1[Zm00001d037873]
-      ZM2[Zm00001d037877]
-      ZM3[Zm00001d037875]
-      ZM4[Zm00001d053838]
-    end
-  end
+      subgraph Local
+        1234
+        5555
+        6789
+      end
+
+
+      subgraph BridgeDb
+        AF1 --> ZM1
+        AF1 --> ZM2
+        AF1 --> ZM3
+        AF2 --> ZM4
+        AF3 --> ZM4
+        subgraph Affy
+          AF1[AFFX-Zm-ef1a-5_a_at]
+          AF2[AFFX-Zm_Ubiquitin_M_f_at]
+          AF3[AFFX-Zm_Ubiquitin_5_f_at]
+        end
+        subgraph Ensembl
+          ZM1[Zm00001d037873]
+          ZM2[Zm00001d037877]
+          ZM3[Zm00001d037875]
+          ZM4[Zm00001d053838]
+        end
+      end
 
 ```
 
