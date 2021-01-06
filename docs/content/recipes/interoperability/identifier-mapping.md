@@ -78,6 +78,53 @@ This recipe assumes that you are already familiar with identifiers and the minti
 
 *For more details on identifiers, see the [How to generate globally unique, resolvable and persistent identifiers](https://fairplus.github.io/cookbook-dev/recipes/findability/identifiers.html) recipe.*
 
+
+## Graphical Overview of the FAIRification Recipe Objectives
+
+This recipe will cover the highlighted topics
+```mermaid
+    graph TB
+      I[Identifier]
+      I --> IM[Identifier Mapping]
+      M[Mapping] --> OM[Ontology Mapping]
+      OM --> OxO
+
+      M --> IM
+
+      IM -- has section --> IMS
+
+      IM -- has section--> IE([Identifier Equivalence])
+      IE -- mentions--> SL{{Scientific Lenses}}
+
+      IMS([Identifier Mapping Services])
+      IMS -- mentions --> BDb[BridgeDb]
+      IMS -- mentions --> UniChem{{UniChem}}
+      IMS -- mentions --> Sameas{{Sameas}}
+      IMS -- mentions --> Identifiers{{Identifiers.org}}
+
+      BDb -- has section --> MGG[Mapping global identifiers to other global identifiers]
+      BDb -- has section --> MLG[Mapping local identifiers to other global identifiers]
+
+      MGG -- has section --> P1([Python])
+      MGG -- has section --> R1([R])
+      MLG -- has section --> P2([Python])
+      MLG -- has section --> R2([R])
+
+        style OM stroke-dasharray: 5 5
+        %% style M stroke-dasharray: 5 5
+
+       classDef select fill:#f9f;
+       class IM select;
+       class IMS select;
+       class BDb select;
+       class UniChem select;
+       class Sameas select;
+       class Identifiers select;
+       class M select;
+      %% style IM fill:#f9f
+      %% style I fill:#f9f
+      %% style OxO fill:#f9f
+```
 ___
 
 **ToDo:** Update diagram
@@ -227,7 +274,7 @@ The following is an incomplete list of identifier mapping services.
 
 * [bridgedb.org](https://bridgedb.org/)
 
-    > [BridgeDb](https://bridgedb.org/) is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions.It is provided as a web service, a standalone application that can be installed locally, or a Java library.
+    > [BridgeDb](https://bridgedb.org/) is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
     > 
     > It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following `curl` command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) `L` identifier `1234` for the `Human` gene [CCR5](https://www.ncbi.nlm.nih.gov/gene/1234) as a TSV file.
     > ```
