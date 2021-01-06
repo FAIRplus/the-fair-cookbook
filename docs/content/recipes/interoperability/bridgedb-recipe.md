@@ -349,7 +349,7 @@ You may notice that despite the 1-to-1 relation between `local` and `original` w
 
 ```
 
-> :book: This N-to-N relationship stems from different *scientific lenses* in the data sources. You can read more about these in **[CITE]**. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to N-to-N relationships.
+> :book: This N-to-N relationship stems from different *scientific lenses* in the data sources. You can read more about these in (Brenninkmeijer et al., n.d.). The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to N-to-N relationships.
 
 #### R Package
 
@@ -410,9 +410,6 @@ ___
 | Name | Affiliation  | orcid | Credit role  | specific contribution |
 | :------------- | :------------- | :------------- |:------------- |:------------- |
 | Lucas Giovanni Uberti-Bona Marin |  Maastricht University| | Writing - Original Draft | Original format |
-| Chris Evelo |  Maastricht University |[0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) | Writing - Review & Editing | | 
-| Egon Willighagen |  Maastricht University | [0000-0001-7542-0286](https://orcid.org/0000-0001-7542-0286)| Writing - Review & Editing | | 
-| Alasdair Gray | Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Review & Editing |  |
 
 ___
 
