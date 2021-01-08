@@ -86,17 +86,17 @@ ___
 
 ## Main FAIRification Objectives
 
-Scope: Based on prior experience with other IMI projects, it is essentail to have a comprehensive data dictionary that annotates all the variables collected in a dataset. Building a FAIR data dictionary template will be useful to deal with current IMI projects as well as guide future one.
+Scope: Based on prior experience with other IMI projects, it is essentail to have a comprehensive data dictionary that annotates all the variables collected in a dataset. Building a FAIR data dictionary template will be useful to deal with current IMI projects as well as guide future ones.
 
 The main purpose of this recipe is:
 
-> Provide a guide on what factors should be considered when building a data dictionary for data collection, data processing and analysis.
-> Give an example of data dictionary template
+> Provide a guide on what factors should be considered when building a data dictionary for data collection, data processing and analysis. 
+> Give an example of a data dictionary template.
 ___
 
 ## User Stories
 
-When working on data from previous IMI projects, it has been discovered that a well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.
+When working on data from previous IMI projects, it became apparent that a well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.
 
 ## Capability & Maturity Table
 
@@ -116,13 +116,13 @@ When working on data from previous IMI projects, it has been discovered that a w
 
 | File Name            | Field Name         | Field Label               | Field Ontology Source | Filed Ontology ID                                   | Field Type | Field Size | Max Allowed Value | Min Allowed Value | Unit   | Regex      | Allowed Values | Allowed Value Description       | Computed Value          | Unique (alone) | Unique (Combined with) | Required | Collection Form Name | Comments                                    |
 | -------------------- | ------------------ | ------------------------- | --------------------- | --------------------------------------------------- | ---------- | ---------- | ----------------- | ----------------- | ------ | ---------- | -------------- | ------------------------------- | ----------------------- | -------------- | ---------------------- | -------- | ---------------------- | ------------------------------------------- |
-| 1\_Subjects.txt      | SUBJECT\_ID        | Subject Number            |                       |                                                     | integer    |            |                   |                   |        |            |                |                                 |                         | Y              |                        | Y        | FORM 1                 |                                             |
+| 1\_Subjects.txt      | SUBJECT\_ID        | Subject number            |                       |                                                     | integer    |            |                   |                   |        |            |                |                                 |                         | Y              |                        | Y        | FORM 1                 |                                             |
 | 1\_Subjects.txt      | SPECIES            | Species name              |                       |                                                     | string     |            |                   |                   |        |            |                |                                 |                         |                |                        |          | FORM 1                 |                                             |
 | 1\_Subjects.txt      | STRAIN             | Strain                    |                       |                                                     | string     |            |                   |                   |        |            |                |                                 |                         |                |                        |          | FORM 1                 |                                             |
 | 1\_Subjects.txt      | AGE                | Age at study initiation   |                       |                                                     | integer    |            |                   |                   | month  |            |                |                                 |                         |                |                        | Y        | FORM 1                 |                                             |
 | 1\_Subjects.txt      | SEX                | Sex                       | LOINC                 | http://purl.bioontology.org/ontology/LNC/MTHU002975 | enum       |            |                   |                   |        |            | M;F            | M=male;F=female                 |                         |                |                        |          | FORM 1                 |                                             |
 | 1\_Subjects.txt      | SOMEDATE           | Date of acquiring subject |                       |                                                     | date       |            |                   |                   |        | YYYY-MM-DD |                |                                 |                         |                |                        |          | FORM 1                 |                                             |
-| 1\_Subjects.txt      | HOMOGLOBIN         | Hematology: Hemoglobin    |                       |                                                     | float      | 2,1        | 15.0              | 4.0               | mmol/l |            |                |                                 |                         |                |                        |          | FORM 1                 | Field size denotes "places, decimal places" |
+| 1\_Subjects.txt      | HEMOGLOBIN         | Hematology: Hemoglobin    |                       |                                                     | float      | 2,1        | 15.0              | 4.0               | mmol/l |            |                |                                 |                         |                |                        |          | FORM 1                 | Field size denotes "places, decimal places" |
 | 1\_Subjects.txt      | HEIGHT             | Body size                 |                       |                                                     | float      |            | 2,5               | 0,5               | m      |            |                |                                 |                         |                |                        |          |                        |                                             |
 | 1\_Subjects.txt      | WEIGHT             | Body weight               |                       |                                                     | float      |            | 300               | 25                | kg     |            |                |                                 |                         |                |                        |          |                        |                                             |
 | 1\_Subjects.txt      | BMI                | Body mass index           |                       |                                                     | float      |            | 100               | 10                |        |            |                |                                 | WEIGHT/(HEIGHT\*HEIGHT) |                |                        |          |                        |                                             |
@@ -132,32 +132,39 @@ When working on data from previous IMI projects, it has been discovered that a w
 | 2\_Samples.txt       | ANALYTE\_TYPE      | Type of analysis          |                       |                                                     | string     |            |                   |                   |        |            |                |                                 |                         |                |                        | Y        | FORM 2                 |                                             |
 | 2\_Samples.txt       | GENOTYPING\_CENTER | GENOTYPING\_CENTER        |                       |                                                     | string     |            |                   |                   |        |            |                |                                 |                         |                |                        |          | FORM 2                 |                                             |
 | 2\_Samples.txt       | SEQUENCING\_CENTER | SEQUENCING\_CENTER        |                       |                                                     | string     |            |                   |                   |        |            |                |                                 |                         |                |                        |          | FORM 2                 |                                             |
-| 3\_SampleMapping.txt | SUBJECT\_ID        | Subject Number            |                       |                                                     | integer    |            |                   |                   |        |            |                |                                 |                         |                | SAMPLE\_ID             | Y        | FORM 3                 |                                             |
+| 3\_SampleMapping.txt | SUBJECT\_ID        | Subject number            |                       |                                                     | integer    |            |                   |                   |        |            |                |                                 |                         |                | SAMPLE\_ID             | Y        | FORM 3                 |                                             |
 | 3\_SampleMapping.txt | SAMPLE\_ID         | Sample ID                 |                       |                                                     | string     |            |                   |                   |        |            |                |                                 |                         |                | SUBJECT\_ID            | Y        | FORM 3                 |                                             |
 
 ___
 
-## Factors to be considered when building a data dictionary
+## Elements that should be included when building a data dictionary
 
 * **File Name:** The file that contains the the annotated variable(s).
-* **Field Name:** Name of the variables (fields).
-* **Field Label:** A self explainable annotation of the variables.
+* **Field Name:** Name of the variable (field).
+* **Field Label:** A self explanatory annotation of the variable.
 * **Field Ontology Source:** If the variable has been mapped to an ontology term, the source of that ontology.
-* **Filed Ontology ID:** The ontology ID.
-* **Field Type:** The type of the variables. It is recommended to use the same type definition as it will be implemented in the data capturing system.
+* **Field Ontology ID:** The ontology term ID.
+* **Field Type:** The type of the variable. It is recommended to use the same type definition as it will be implemented in the data capturing system.
 * **Field Size:** The size (length) of the variable value, e.g. 8 digits, 5,3 (for floating numbers)...
 * **Max Allowed Value:** Upper limit of the allowed value.
 * **Min Allowed Value:** Lower limit of the allowed value.
 * **Unit:** Unit of the value.
-* **Regex:** if the value should follow certain pattern (e.g. "\d{5}" for a 5-digits Post Code).
+* **Regex:** If the value should follow a certain pattern (e.g. "\d{5}" for a 5-digits Post Code).
 * **Allowed Values:** Customised list of allowed values (e.g. "M" and "F" for Gender).
 * **Allowed Value Description:** Annotation of the list of allowed values (e.g.: M=male;F=female).
 * **Computed Value:** If a field is computed based on values from other fields, annotate the calculation rule (e.g BMI=	WEIGHT/(HEIGHT*HEIGHT) ).
 * **Unique (alone):** If the value of in a field should be unique (e.g. Subject ID).
-* **Unique (Combined with):** If the combination of several fields should be unique (e.g. Sample ID and Visit Number).
+* **Unique (combined with):** If the combination of several fields should be unique (e.g. Sample ID and Visit Number).
 * **Required:** If the field should NOT allow empty value.
 * **Collection Form Name:** Optional, if the field is collected in certain forms (e.g. in Case Report Forms from a clinical trial).
 * **Comments:** Optional, for futher information.
+
+
+### What fields to include in a data dictionary?
+
+The right fields to include in a data dictionary are strongly dependent on the needs of the project. As a starting point, review existing community standards or minimum information checklists for your subject area to identify recommended fields (see for example recipes on [minimal metadata profiles for transcriptomics metadata](transcriptomics-metadata.md) and [guidance on creating minimal metadata profiles](creating-minimal-metadata-profiles.md)). 
+
+Make sure you capture all relevant variables for your planned analyses, in particular if you plan any non-standard or novel analyses. Also ensure that variables are captured in the correct format (standardised if appropriate) in order to minimise the need for transformations later. Capture variables in the most atomised fashion possible as it is easier to aggregate separate fields into a new combined value than to extract values from a larger field.
 
 ___
 
