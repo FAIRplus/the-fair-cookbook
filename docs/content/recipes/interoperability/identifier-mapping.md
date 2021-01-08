@@ -121,6 +121,8 @@ This recipe will cover the highlighted topics
        class Sameas select;
        class Identifiers select;
        class M select;
+       class IE select;
+       class SL select;
       %% style IM fill:#f9f
       %% style I fill:#f9f
       %% style OxO fill:#f9f
@@ -175,6 +177,24 @@ graph TD
 | [TSV]() |  |  |
 | [VoID Linkset]() |  |  |
 
+---
+## Mappings
+Before diving into identifier mapping it is important to understand the possible types of mappings that can be performed between entities. While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest. 
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses". These lenses allow us
+to dynamically select which mappings to consider relevant and which to ignore. For example allowing or disallowing mappings between stereoisomers or between genes and proteins.
+
+Examples of types of mappings are:
+* **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparison of INCHI identifiers for chemical compounds
+* **Ontology mapping**: this can either be 
+    * As a direct 1-to-1 mapping between equivalent terms in different ontologies
+    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see [[2]](#References).
+* **Identifier mapping**: The focus of this relationship. This can either be:
+    * Mapping between differently formed identifiers that resolve to the same entity.
+    * Mapping between identical local identifiers with different namespaces
+    * Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these)
+    * Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB)
+
+
 ___
 
 ## Identifier Mappings
@@ -191,7 +211,7 @@ While the minting of identifiers is often done in isolation of other organisatio
 
 ### Identifier Equivalences
 
-Identifier equivalences can come about in several ways and capture different forms of relationship. For example, a database may declare that their record is the same as an entry in another because they share the same name, or they may declare it based on a common representation (gene sequence or InChI). To support reuse of the data, the `provenance` of the cross-references need to be made explicit. 
+Identifier equivalences can come about in several ways and capture different forms of relationship as presented in [Mappings](#Mappings). For example, a database may declare that their record is the same as an entry in another because they share the same name, or they may declare it based on a common representation (gene sequence or InChI). To support reuse of the data, the `provenance` of the cross-references need to be made explicit. 
 
 Depending on the nature of the data, there are different ways that equivalences can be computed. The following is a list of recipes that give details.
 
@@ -338,17 +358,22 @@ ___
 ## References:
 
 1. Colin Batchelor, Christian Y. A. Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T. Evelo, Anna Gaulton, Carole Goble, Alasdair J. G. Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P. Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, Egon L. Willighagen. Scientific Lenses to Support Multiple Views over Linked Chemistry Data. In ISWC 2014: The Semantic Web – ISWC 2014 pp 98-113. https://doi.org/10.1007/978-3-319-11964-9_7
+2. Wang, Y., Liu, W., & Bell, D. (2010). A Concept Hierarchy Based Ontology Mapping Approach. In Y. Bi & M.-A. Williams (Eds.), Knowledge Science, Engineering and Management (pp. 101–113). Springer. https://doi.org/10.1007/978-3-642-15280-1_12
+
 
 
 ___
 
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  | specific contribution |
-| :------------- | :------------- | :------------- |:------------- |:------------- |
-| Alasdair Gray | Heriot-Watt University / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft | Original format<br />Converting to online format |
-| Chris Evelo | Maastricht University | [0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) | Writing - Original Draft | Original format |
-| Egon Willighagen | Maastricht University | [0000-0001-7542-0286](https://orcid.org/0000-0001-7542-0286) | Writing - Original Draft | Original format |
+| Name             | Affiliation                        | orcid                                                        | CrediT role              | specific contribution                            |
+|:---------------- |:---------------------------------- |:------------------------------------------------------------ |:------------------------ |:------------------------------------------------ |
+| Alasdair Gray    | Heriot-Watt University / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft | Original format<br />Converting to online format |
+| Chris Evelo      | Maastricht University              | [0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) | Writing - Original Draft | Original format                       
+| Egon Willighagen | Maastricht University              | [0000-0001-7542-0286](https://orcid.org/0000-0001-7542-0286) | Writing - Original Draft | Original format|
+|Lucas Giovanni Uberti-Bona Marin| Maastricht University|[0000-0001-6518-9535](https://orcid.org/0000-0001-6518-9535) | Writing – review & editing |
+
+
 
 ___
 
