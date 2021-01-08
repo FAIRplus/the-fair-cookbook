@@ -307,10 +307,15 @@ The local OLS provides API endpoints for retrieving, submitting, updating, and q
 
 To customize the local OLS user interface, for example, adding corporate logos, please check the OLS source code [here](https://github.com/EBISPOT/OLS). 
 
+---
+
 ## Reference
 * [Documentation < Ontology Lookup Service < EMBL-EBI. Accessed 20 April 2020.](https://www.ebi.ac.uk/ols/docs/installation-guide)
 * [Jupp S. et al. (2015) A new Ontology Lookup Service at EMBL-EBI. In: Malone, J. et al. (eds.) Proceedings of SWAT4LS International Conference 2015](https://conferences.ncl.ac.uk/media/sites/conferencewebsites/ukon2016/UKON_2016_paper_9.pdf)
 * [Côté, Richard G., et al. "The Ontology Lookup Service, a lightweight cross-platform tool for controlled vocabulary queries." BMC bioinformatics 7.1 (2006): 97.](https://link.springer.com/article/10.1186/1471-2105-7-97)
+
+
+---
 
 ## Authors
 
@@ -321,6 +326,11 @@ To customize the local OLS user interface, for example, adding corporate logos, 
 Emiliano Reynares|[Boehringer Ingelheim](https://www.boehringer-ingelheim.com/)|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Reviewing|
 | Philippe Rocca-Serra |  [University of Oxford, Data Readiness Group](https://datareadiness.eng.ox.ac.uk/)| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Reviewing |
 
-## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+---
+
+## License:
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

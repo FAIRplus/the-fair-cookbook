@@ -1,3 +1,7 @@
+---
+dummy: dummy
+---
+
 # Recipe 1.2 Technical & architectural selection criteria of ontology lookup services
 
 **identifier:** [UC1 R1.2](UC3R1.2)

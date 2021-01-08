@@ -1,0 +1,2735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Data Sharing Models</title>
+  <meta name="description" content="        High level data sharing models. LCSB How-To cards analysis. identifier:version: First draft.                            Recipe metadata         ident...">
+
+  <link rel="canonical" href="https://fairplus.github.io/cookbook-dev/recipes/introduction/data-sharing-models.html">
+  <link rel="alternate" type="application/rss+xml" title="THE FAIR COOKBOOK" href="https://fairplus.github.io/cookbook-dev/feed.xml">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <meta property="og:url"         content="https://fairplus.github.io/cookbook-dev/recipes/introduction/data-sharing-models.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Data Sharing Models" />
+<meta property="og:description" content="        High level data sharing models. LCSB How-To cards analysis. identifier:version: First draft.                            Recipe metadata         ident..." />
+<meta property="og:image"       content="https://fairplus.github.io/cookbook-dev/images/logo/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "HowTo",
+  "mainEntityOfPage": "https://fairplus.github.io/cookbook-dev/recipes/introduction/data-sharing-models.html",
+  "headline": "Data Sharing Models",
+  "datePublished": "2020-08-04T12:33:19+01:00",
+  "dateModified": "2020-08-04T12:33:19+01:00",
+  "description": "        High level data sharing models. LCSB How-To cards analysis. identifier:version: First draft.                            Recipe metadata         ident...",
+  "author": {
+    "@type": "Person",
+    "name": "Philippe Rocca-Serra",
+    "url" : "https://www.orcid.org/0000-0001-9853-5668"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The FAIR Cookbook",
+    "url": "https://fairplus.github.io/the-fair-cookbook",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fairplus.github.io",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://fairplus.github.io/cookbook-dev",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/cookbook-dev/assets/css/styles.css">
+  <link rel="stylesheet" href="/cookbook-dev/assets/custom/custom.css">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/cookbook-dev/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
+    }
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
+
+  <!-- DOM updating function -->
+  <script src="/cookbook-dev/assets/js/page/dom-update.js"></script>
+  <!-- using mermaid for rendering Diagram and flow chart -->
+ <script src="/cookbook-dev/assets/js/mermaid.min.js"></script>
+ <script>mermaid.initialize({startOnLoad:true});</script>
+<!--  <script src="/cookbook-dev/assets/js/mermaid.js"></script>-->
+
+  <!-- Selectors for elements on the page -->
+  <script src="/cookbook-dev/assets/js/page/documentSelectors.js"></script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/cookbook-dev';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/cookbook-dev/assets/js/page/anchors.js" async></script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+
+
+
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
+  <script src="/cookbook-dev/assets/js/page/tocbot.js"></script>
+
+  <!-- Google analytics -->
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171697285-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171697285-1');
+</script>
+
+
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
+
+  <!-- Load custom website scripts -->
+  <script src="/cookbook-dev/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/cookbook-dev/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/cookbook-dev/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+<script>
+/**
+  * To auto-embed hub URLs in interact links if given in a RESTful fashion
+ */
+
+function getJsonFromUrl(url) {
+  var query = url.split('?');
+  if (query.length < 2) {
+    // No queries so just return false
+    return false;
+  }
+  query = query[1];
+  // Collect REST params into a dictionary
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+    
+function dict2param(dict) {
+    params = Object.keys(dict).map(function(k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(dict[k])
+    });
+    return params.join('&')
+}
+
+// Parse a Binder URL, converting it to the string needed for JupyterHub
+function binder2Jupyterhub(url) {
+  newUrl = {};
+  parts = url.split('v2/gh/')[1];
+  // Grab the base repo information
+  repoinfo = parts.split('?')[0];
+  var [org, repo, ref] = repoinfo.split('/');
+  newUrl['repo'] = ['https://github.com', org, repo].join('/');
+  newUrl['branch'] = ref
+  // Grab extra parameters passed
+  params = getJsonFromUrl(url);
+  if (params['filepath'] !== undefined) {
+    newUrl['subPath'] = params['filepath']
+  }
+  return dict2param(newUrl);
+}
+
+// Filter out potentially unsafe characters to prevent xss
+function safeUrl(url)
+{
+   return String(encodeURIComponent(url))
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+function addParamToInternalLinks(hub) {
+  var links = document.querySelectorAll("a").forEach(function(link) {
+    var href = link.href;
+    // If the link is an internal link...
+    if (href.search("https://fairplus.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+      // Assume we're an internal link, add the hub param to it
+      var params = getJsonFromUrl(href);
+      if (params !== false) {
+        // We have REST params, so append a new one
+        params['jupyterhub'] = hub;
+      } else {
+        // Create the REST params
+        params = {'jupyterhub': hub};
+      }
+      // Update the link
+      var newHref = href.split('?')[0] + '?' + dict2param(params);
+      link.setAttribute('href', decodeURIComponent(newHref));
+    }
+  });
+  return false;
+}
+
+
+// Update interact links
+function updateInteractLink() {
+    // hack to make this work since it expects a ? in the URL
+    rest = getJsonFromUrl("?" + location.search.substr(1));
+    jupyterHubUrl = rest['jupyterhub'];
+    var hubType = null;
+    var hubUrl = null;
+    if (jupyterHubUrl !== undefined) {
+      hubType = 'jupyterhub';
+      hubUrl = jupyterHubUrl;
+    }
+
+    if (hubType !== null) {
+      // Sanitize the hubUrl
+      hubUrl = safeUrl(hubUrl);
+
+      // Add HTTP text if omitted
+      if (hubUrl.indexOf('http') < 0) {hubUrl = 'http://' + hubUrl;}
+      var interactButtons = document.querySelectorAll("button.interact-button")
+      var lastButton = interactButtons[interactButtons.length-1];
+      var link = lastButton.parentElement;
+
+      // If we've already run this, skip the link updating
+      if (link.nextElementSibling !== null) {
+        return;
+      }
+
+      // Update the link and add context div
+      var href = link.getAttribute('href');
+      if (lastButton.id === 'interact-button-binder') {
+        // If binder links exist, we need to re-work them for jupyterhub
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // If localhost, assume we're working from a local Jupyter server and remove `/hub`
+          first = [hubUrl, 'git-sync'].join('/')
+        } else {
+          first = [hubUrl, 'hub', 'user-redirect', 'git-sync'].join('/')
+        }
+        href = first + '?' + binder2Jupyterhub(href);
+      } else {
+        // If interact button isn't binderhub, assume it's jupyterhub
+        // If JupyterHub links, we only need to replace the hub url
+        href = href.replace("", hubUrl);
+        if (hubUrl.indexOf('http%3A%2F%2Flocalhost') > -1) {
+          // Assume we're working from a local Jupyter server and remove `/hub`
+          href = href.replace("/hub/user-redirect", "");
+        }
+      }
+      link.setAttribute('href', decodeURIComponent(href));
+
+      // Add text after interact link saying where we're launching
+      hubUrlNoHttp = decodeURIComponent(hubUrl).replace('http://', '').replace('https://', '');
+      link.insertAdjacentHTML('afterend', '<div class="interact-context">on ' + hubUrlNoHttp + '</div>');
+
+      // Update internal links so we retain the hub url
+      addParamToInternalLinks(hubUrl);
+    }
+}
+
+runWhenDOMLoaded(updateInteractLink)
+document.addEventListener('turbolinks:load', updateInteractLink)
+</script>
+
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/cookbook-dev/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/cookbook-dev/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/cookbook-dev/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://fairplus.github.io/cookbook-dev/intro.html"><img src="/cookbook-dev/images/logo/cookbook-logo-small.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">THE FAIR COOKBOOK</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="https://github.com/FAIRplus/the-fair-cookbook"
+        >
+          
+          Go to GitHub repository...
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">FAIR Cookbook</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry c-sidebar__entry--active"
+          href="/cookbook-dev/intro.html"
+        >
+          
+          FAIR Cookbook
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/roadmap.html"
+        >
+          
+          Development Roadmap
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry c-sidebar__entry--active"
+          href="/cookbook-dev/recipes/introduction.html"
+        >
+          
+            1.
+          
+          FAIR Cookbook - an Introduction
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/introduction/FAIR-cookbook-audience.html"
+                >
+                  
+                    1.1
+                  
+                  Who should read the FAIR Cookbook
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/introduction/FAIR-principle.html"
+                >
+                  
+                    1.2
+                  
+                  What is FAIR
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/introduction/what-is-IMI.html"
+                >
+                  
+                    1.3
+                  
+                  What is IMI
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/introduction/IMI-and-data-management-plans.html"
+                >
+                  
+                    1.4
+                  
+                  IMI and Data Management
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/introduction/FAIR-in-IMI-context.html"
+                >
+                  
+                    1.5
+                  
+                  FAIR in IMI context
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/introduction/FAIR-principle.html"
+                >
+                  
+                    1.6
+                  
+                  The FAIR principles
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/introduction/FAIRplus-values.html"
+                >
+                  
+                    1.7
+                  
+                  The Values of FAIR
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/cookbook-dev/recipes/introduction/data-sharing-models.html"
+                >
+                  
+                    1.8
+                  
+                  Data Sharing Models
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/infrastructure.html"
+        >
+          
+            2.
+          
+          Infrastructure for FAIR
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/infrastructure/id-resolution.html"
+                >
+                  
+                    2.1
+                  
+                  Identifier Resolution Service
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/infrastructure/UC3_R13_local_ontology_services.html"
+                >
+                  
+                    2.2
+                  
+                  Deploying Vocabulary Servers
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/infrastructure/Selecting_and_using_ontology_lookup_services.html"
+                >
+                  
+                    2.3
+                  
+                  Selecting Terminology Services
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html"
+                >
+                  
+                    2.4
+                  
+                  Criteria for selecting Ontology Services
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/infrastructure/data-catalog.html"
+                >
+                  
+                    2.5
+                  
+                  Building a Data Catalogue
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/infrastructure/data-catalog-deployment.html"
+                >
+                  
+                    2.6
+                  
+                  Deploying the FAIRplus IMI Data Catalogue
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/findability.html"
+        >
+          
+            3.
+          
+          Findability
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/findability/identifiers.html"
+                >
+                  
+                    3.1
+                  
+                  How to create persistent resolvable identifiers
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/findability/zenodo-deposition.html"
+                >
+                  
+                    3.2
+                  
+                  Depositing to Zenodo
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/findability/seo.html"
+                >
+                  
+                    3.3
+                  
+                  Search Engine optimization
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/findability/seo/bioschemas-datacatalog.html"
+                >
+                  
+                    3.4
+                  
+                  bioschema data catalog
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/findability/seo/bioschemas-dataset.html"
+                >
+                  
+                    3.5
+                  
+                  bioschema dataset
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/findability/seo/bioschemas-data-page.html"
+                >
+                  
+                    3.6
+                  
+                  bioschema data page
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/accessibility.html"
+        >
+          
+            4.
+          
+          Accessibility
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/accessibility/anonymization.html"
+                >
+                  
+                    4.1
+                  
+                  Anonymization Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/accessibility/license-selection.html"
+                >
+                  
+                    4.2
+                  
+                  Selecting a Licensing Mode
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/accessibility//how-to-use-sftp-for-transfer.html"
+                >
+                  
+                    4.3
+                  
+                  File Transfer via sFTP
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/accessibility/aspera.html"
+                >
+                  
+                    4.4
+                  
+                  Fast File Transfer via Aspera
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/interoperability.html"
+        >
+          
+            5.
+          
+          Interoperability
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/interoperability/selecting-ontologies.html"
+                >
+                  
+                    5.1
+                  
+                  How to select ontologies
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/interoperability/creating-minimal-metadata-profiles.html"
+                >
+                  
+                    5.2
+                  
+                  Minimal MetaData Profiles
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.html"
+                >
+                  
+                    5.3
+                  
+                  Covid19 Sample MetaData Profile Shex Validation
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/interoperability/ontology-new-term-request-recipe.html"
+                >
+                  
+                    5.4
+                  
+                  How to request new terms in existing ontologies
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/interoperability/ontology-robot-recipe.html"
+                >
+                  
+                    5.5
+                  
+                  How to build an application ontology
+                </a>
+
+                
+                
+                  
+                  
+
+                  <li class="c-sidebar__subsection">
+                    <a class="c-sidebar__entry "
+                      href="/cookbook-dev/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html"
+                    >
+                      
+                        5.5.1
+                        
+                      
+                      MSIO robot build process
+                    </a>
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/interoperability/fastq-file-format-validators.html"
+                >
+                  
+                    5.6
+                  
+                  How to validate file formats
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.html"
+                >
+                  
+                    5.7
+                  
+                  How to convert to open format from propriatory
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/reusability.html"
+        >
+          
+            6.
+          
+          Reusability
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/assessing-fairness.html"
+        >
+          
+            7.
+          
+          FAIR Assessment
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/assessing-fairness/fair-assessment-recipe.html"
+                >
+                  
+                    7.1
+                  
+                  Assessing FAIRness
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/applied-examples.html"
+        >
+          
+            8.
+          
+          Applied Examples
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix-recipe.html"
+                >
+                  
+                    8.1
+                  
+                  FAIR data matrix Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html"
+                >
+                  
+                    8.2
+                  
+                  Converting Excel to Frictionless Data Package
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html"
+                >
+                  
+                    8.3
+                  
+                  Plotting from Frictionless Data Package in Python
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html"
+                >
+                  
+                    8.4
+                  
+                  Plotting from Frictionless Data Package in R
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html"
+                >
+                  
+                    8.5
+                  
+                  Exploration fo semantic model with SPARQL
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html"
+                >
+                  
+                    8.6
+                  
+                  eTOX experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html"
+                >
+                  
+                    8.7
+                  
+                  RESOLUTE experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html"
+                >
+                  
+                    8.8
+                  
+                  ONCOTRACK experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html"
+                >
+                  
+                    8.9
+                  
+                  ND4BB experience Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/ingredients/ingredient-list.html"
+        >
+          
+          Ingredients and Resources
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/ingredients/ingredient-list.html"
+                >
+                  
+                  Ingredients
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Help Section and Demonstration</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/recipes/help.html"
+        >
+          
+            9.
+          
+          help
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-gdoc.html"
+                >
+                  
+                    9.1
+                  
+                  How to create a recipe with GoogleDoc
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-hackmd.html"
+                >
+                  
+                    9.2
+                  
+                  How to use HackMD to write a FAIR Cookbook Recipe
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/help/tips-tricks.html"
+                >
+                  
+                    9.3
+                  
+                  HackMD Tips and Tricks
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/help/how-to-create-recipe-with-git.html"
+                >
+                  
+                    9.4
+                  
+                  How to create a recipe with git
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/features/markdown.html"
+                >
+                  
+                    9.5
+                  
+                  Markdown files
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/features/notebooks.html"
+                >
+                  
+                    9.6
+                  
+                  Jupyter notebooks
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/recipes/help/recipe-template.html"
+                >
+                  
+                    9.7
+                  
+                  Recipe Template
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/1/mermaidsetup.html"
+                >
+                  
+                    9.8
+                  
+                  mermaidsetup
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/project_information.html"
+        >
+          
+            10.
+          
+          Project Information
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections u-hidden-visually">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/cookbook-dev/People.html"
+                >
+                  
+                  People
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/People.html"
+        >
+          
+          People
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/Contributing.html"
+        >
+          
+          Contributing
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/Governance.html"
+        >
+          
+          Governance
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/license.html"
+        >
+          
+          License
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/disclaimer.html"
+        >
+          
+          Disclaimer
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/code_of_conduct.html"
+        >
+          
+          Code of Conduct
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cookbook-dev/papers.html"
+        >
+          
+          Publications
+        </a>
+
+        
+      </li>
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">Powered by <a href="https://jupyterbook.org">Jupyter Book</a></p>
+</nav>
+
+      
+      <div class="c-topbar" id="top-navbar">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/cookbook-dev/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
+</div>
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/cookbook-dev/assets/images/list-solid.svg" alt="Search" /> On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/cookbook-dev/search.html" class="topbar-right-button" id="search-button">
+    <img src="/cookbook-dev/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+                  <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="High-level-data-sharing-models.-LCSB-How-To-cards-analysis.">High level data sharing models. LCSB How-To cards analysis.<a class="anchor-link" href="#High-level-data-sharing-models.-LCSB-How-To-cards-analysis."> </a></h1><p><strong>identifier:</strong></p>
+<p><strong>version:</strong> First draft.</p>
+<hr>
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Recipe metadata</b></h4>
+        <p> identifier: <a href="">RX.X</a> </p>
+        <p> version: <a href="">v1.0</a> </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Difficulty level</b></h4>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
+      </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Reading Time</b></h4>
+        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 15 minutes</p>
+        <h4><b>Recipe Type</b></h4>
+        <p><i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on</p>
+        <h4><b>Executable Code</b></h4>
+        <p><i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
+        <h4><b>Intended Audience</b></h4>
+        <p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigators </p>
+        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
+        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
+        <p> <i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funders</p>
+      </div>
+    </div>
+  </div>
+</div><hr>
+<h2 id="Main-Objectives">Main Objectives<a class="anchor-link" href="#Main-Objectives"> </a></h2><p>The main purpose of this recipe is to evaluate the current Data Sharing procedure offered by the Luxembourg Centre for Systems Biomedicine (<a href="https://www.uni.lu/lcsb">LCSB</a>) of the University of Luxembourg as found <a href="https://r3.pages.uni.lu/howto-cards/stable/">here</a>.</p>
+<p>To provide a transparent Evaluation the recipe will:</p>
+<ul>
+<li>Define an abstract model to explain what data sharing is</li>
+<li>Define the common criteria for evaluating data sharing procedures</li>
+<li>Evaluate the common criteria against the LCSB offering</li>
+<li>Propose potential improvements for the LCSB offering </li>
+</ul>
+<hr>
+<h2 id="Capability-&amp;-Maturity-Table">Capability &amp; Maturity Table<a class="anchor-link" href="#Capability-&amp;-Maturity-Table"> </a></h2><!-- TO DO -->
+
+<table>
+<thead><tr>
+<th style="text-align:left">Capability</th>
+<th style="text-align:left">Initial Maturity Level</th>
+<th style="text-align:left">Final Maturity Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Data-Sharing">Data Sharing<a class="anchor-link" href="#Data-Sharing"> </a></h2><p>This chapter explains what data sharing is. It defines a high-level logical data sharing model, to help a user who is not familiar with data sharing get an overview of the major components. Please note that in the real world the defined components are not always explicitly defined. Often implicit concept definitions are used and people are not always aware of the implicit definitions. Sometimes some of the components may even not exist, because for the given data sharing use case they might not be needed.</p>
+<div class="mermaid" align="left">
+classDiagram
+  SharedData <-- DataOwner: owns
+  SharedData <-- DataConsumer: consumes
+  SharedData <-- DataProvider: provides
+  class SharedData
+  class DataOwner
+  class DataProvider
+  class DataConsumer
+
+</div><p><em>Figure 1: The core model of data sharing</em></p>
+<p>The Figure 1 depicts the three roles that can be distinguished in a data sharing context: <strong><em>DataOwner</em></strong>, <strong><em>DataConsumer</em></strong>, and <strong><em>DataProvider</em></strong>. The roles are typically played by different entities, which can be both organizations or persons. Then, a brief description of the roles is presented.</p>
+<p>The <strong><em>DataOwner</em></strong> role is played by the entity that has legal ownership of the data being shared.</p>
+<p>The <strong><em>DataConsumer</em></strong> role is played by the entity that has been granted access to the data being shared, according to the license agreement signed with the Data Owner.</p>
+<p>The <strong><em>DataProvider</em></strong> role is played by the entity that provides the technical infrastructure to support the sharing of data.</p>
+<div class="mermaid"  align="left">
+classDiagram
+  SharedData "1" *-- "1..*" Dataset: has
+  Dataset "1" *-- "1" Data: has
+  Dataset "1" *-- "0..1" DatasetProfile: has
+  Dataset "1" *-- "1" DatasetMetadata: has
+  SharedData "1..*" *-- "1" ConsumerLicenceDefinition: has
+  SharedData "1..*" *-- "0..1" ProviderLicenceDefinition: has
+  DatasetMetadata "1" *-- "1" DatasetLevelMetadata: has
+  DatasetMetadata "1" *-- "0..*" ColumnMetadata: has
+  DatasetMetadata "1" *-- "0..1" ProvenanceMetadata: has
+  DatasetMetadata "1" *-- "0..1" QualityMetadata: has
+
+  class SharedData
+  class Dataset
+  class Data
+  class DatasetMetadata
+  class ProviderLicenceDefinition
+  class ConsumerLicenceDefinition
+  class DatasetLevelMetadata
+  class ColumnMetadata
+  class ProvenanceMetadata
+</div><p><em>Figure 2: The SharedData entity components</em></p>
+<p>The Figure 2 depicts the structure of the bundle of the data being shared, represented by the <strong><em>SharedData</em></strong> entity. It has a complex structure, as depicted following.</p>
+<p>The <strong><em>DataSet</em></strong> entity is the main component of the SharedData entity, and it comprises the <strong><em>Data</em></strong>, <strong><em>DatasetProfile</em></strong>, and <strong><em>DatasetMetadata</em></strong> entities.</p>
+<p>The <strong><em>Data</em></strong> entity represents the data object of the exchange.</p>
+<p>The <strong><em>DatasetProfile</em></strong> depicts statistics and informative summaries about that data being shared.</p>
+<p>The <strong><em>DatasetMetadata</em></strong>, is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource (More information can be found in <a href="https://www.europeandataportal.eu/">European Data Portal</a> and the <a href="https://www.niso.org/">National Information Standards Organization</a>). The metadata categories are depicted following.</p>
+<p>The <strong><em>DatasetLevelMetadata</em></strong> entity briefly depicts the dataset the metadata is related to. It presents general information on the dataset level, e.g., summary or description, author, date of creation, date of sharing, main concepts, size, etc.</p>
+<p>The <strong><em>ColumnMetadata</em></strong> entity describes the features or attributes of the dataset. This metadata can include external sources of knowledge - e.g., upper or domain ontologies, taxonomies, vocabularies, standards, etc. - to establish the type of entities a specific dataset attribute/feature is related to, or to constrain the set of values or data-types the attribute/feature is associated with. A label, tag, or column header for each dataset attribute/feature is a ColumnMetadata minimal requirement.</p>
+<p>The <strong><em>ProvenanceMatadata</em></strong> entity describes entities and processes involved in producing, delivering, and/or otherwise influencing the dataset. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. 
+The required provenance metadata strongly depends on the subject matter the dataset belongs to. For example, establishing the origin and ownership of a cultural artifact is sufficient to determine its authenticity.  Instead, a scientific context establishes data integration pipelines according to the collection and pre-processing methods used, and the reproducibility of the experiment requires details about protocols, instruments, etc.</p>
+<p>The <strong><em>QualityMetadata</em></strong> entity depicts dataset quality measures and indicators. Jointly with provenance metadata, it should provide a basis for enabling the trust and reproducibility of the results depicted by the dataset.</p>
+<div class="mermaid"  align="left">
+classDiagram
+  SharedData *-- ConsumerLicenceDefinition: has
+  SharedData *-- ProviderLicenceDefinition: has
+  DataSharingAgreement <-- DataConsumer: agrees to
+  DataSharingAgreement <-- DataOwner: agrees to
+  SharedData <-- DataSharingAgreement: refers to
+  DataProvisioningAgreement <-- DataProvider: agrees to
+  DataProvisioningAgreement <-- DataOwner: agrees to
+  SharedData <-- DataProvisioningAgreement: refers to  
+  ProviderLicenceDefinition <-- DataProvisioningAgreement: confirms
+  ConsumerLicenceDefinition <-- DataSharingAgreement : confirms
+
+  class DataSharingAgreement
+  class DataProvisioningAgreement
+  class SharedData
+  class DataProvider
+  class DataOwner
+  class DataConsumer
+  class ProviderLicenceDefinition
+  class ConsumerLicenceDefinition
+</div><p><em>Figure 3: The data sharing agreements</em></p>
+<p>The Figure 3 depicts the agreements that must be reached for the sharing of data, and the artifacts generated as results of the commitment signed by the involved roles. The sharing of data implies the definition of two different agreements formally established through specific licenses.</p>
+<p>The <strong><em>ConsumerLicenseDefinition</em></strong> establishes the terms under which the data being shared can be used by the DataConsumer. These terms are agreed upon by the DataOwner and the DataConsumer by signing the <strong><em>DataSharingAgreement</em></strong>. 
+This agreement can be negotiated and signed on a per sharing basis, i.e. the DataOwner and the DataConsumer negotiate the terms of the license for a specific SharedData entity or set of SharedData entities. On the other hand, the DataOwner could establish a specific license or set of licenses for sharing a SharedData entity or set of SharedData entities the DataConsumer must agree to get access to the data.</p>
+<p>The <strong><em>ProviderLicenseDefinition</em></strong> establishes the terms under which the data being shared can be made available on the DataProvider infrastructure. These terms are agreed by the DataOwner and the DataProvider by signing the <strong><em>DataProvisioningAgreement</em></strong>.</p>
+<div class="mermaid" align="left">
+classDiagram
+    DataCatalogue --> SharedData: registers
+    DataSharingPlatform *-- DataCatalogue: provides
+    DataSharingPlatform *-- DataProcessingPlatform: provides
+    DataSharingPlatform *-- DataQueryInterface: provides
+    DataSharingPlatform *-- DataSharingCommunication: provides
+    DataSharingPlatform *-- DataSharingWorkflow: provides
+    DataSharingPlatform *-- DataConsumerInterface: provides
+    DataSharingPlatform *-- DataOwnerInterface: provides
+    DataProvider --> DataSharingPlatform: provides
+    DataOwner --> DataOwnerInterface: uses
+    DataConsumer --> DataConsumerInterface: uses
+
+    class SharedData
+    class DataCatalogue
+    class DataProcessingPlatform
+    class DataQueryInterface
+    class DataSharingCommunication
+    class DataSharingWorkflow
+    class DataConsumerInterface
+    class DataOwnerInterface
+    class DataSharingPlatform
+    class DataOwner
+    class DataConsumer
+    class DataProvider
+</div><p><em>Figure 4: The DataSharingComponents platform components</em></p>
+<p>The Figure 4 depicts the <strong><em>DataSharingPlatform</em></strong> components, which is hosted by the  <strong><em>DataProvider</em></strong> role as the technical infrastructure aimed to support the sharing of data. The platform components are depicted following.</p>
+<p>The <strong><em>DataCatalog</em></strong> provides a way to register the SharedData.</p>
+<p>The <strong><em>DataProcessingPlatform</em></strong> provides the infrastructure to host and execute data processing pipelines. Typically, such infrastructure provides an environment or sandbox - through virtual machines and/or container-based technology- where the DataConsumer can deploy custom data processing workflows and the corresponding technological stack.</p>
+<p>The <strong><em>DataQueryInterface</em></strong> supports the execution of queries over the dataset and its associated metadata, e.g. by providing a SPARQL endpoint.</p>
+<p>The <strong><em>DataSharingCommunication</em></strong> provides an informal communication channel to the roles involved in the sharing of data. A chat, wiki, comments platform, or any environment allowing those involved to interact with each other could be used in this way.</p>
+<p>The <strong><em>DataSharingWorkflow</em></strong> provides the environment to reach an agreement (DataSharingAgreement or DataProvisioningAgreement) and establish a license (<strong><em>ConsumerLicenseDefinition</em></strong> or <strong><em>ProviderLicenseDefinition</em></strong> ), and to cancel an agreement when the agreed conditions have not been satisfied by either party.</p>
+<p>The <strong><em>DataOwnerInterface</em></strong> provides the DataOwner a unified interface to interact with the DataSharingPlatform.</p>
+<div class="mermaid"  align="left">
+classDiagram
+    DataSharingPlatform *-- DataOwnerInterface: provides
+    DataSharingPlatform *-- DataSharingWorkflow: provides
+    DataSharingPlatform *-- DataSharingCommunication: provides
+
+    DataOwnerInterface *-- GetAccessWorkflow: provides
+    DataOwnerInterface *-- Connect: provides
+    DataOwnerInterface *-- Upload: provides
+    DataOwnerInterface *-- AdminDataSharing: provides
+
+    GetAccessWorkflow *-- FirstAccessWorkflow: has
+    GetAccessWorkflow *-- SecurityUpdateWorkflow: has
+    AdminDataSharing *-- SharedData: administrate
+    AdminDataSharing *-- DataSharingConsumptionReport: provide
+
+    class SharedData
+    claas GetAccessWorkflow
+    class SecurityUpdateWorkflow
+    class FirstAccessWorkflow
+    class AdminDataSharing
+    class DataSharingConsumptionReport
+    class Upload
+    class Connect
+    class DataOwnerInterface
+    class DataSharingPlatform
+</div><p><em>Figure 5: The DataOwnerInterface components</em></p>
+<p>The Figure 5 depicts the <strong><em>DataOwnerInterface</em></strong> components, which provides the DataOwner a unified interface to interact with the DataSharingPlatform. The interface components are depicted following.</p>
+<p>The <strong><em>Connect</em></strong> module allows the DataOwner to initiate an authenticated session on the DataSharingPlatform.</p>
+<p>The <strong><em>GetAccessWorkflow</em></strong> module allows the DataOwner to set the authentication details to get access to the platform through the <strong><em>FirstAccessWorkflow</em></strong> module - e.g. setting of username a passwords accounts-, and to perform security maintenance tasks - e.g., reset a password account- by using the <strong><em>SecurityUpdateWorkflow</em></strong>.</p>
+<p>The <strong><em>Upload</em></strong> module allows the DataOwner to provide access to physical data so that it can be physically consumed. This does not necessarily mean uploading the SharedData to the DataSharingPlatform. Granting access to the data stored on the infrastructure of the DataOwner is also a possible alternative.</p>
+<p>The <strong><em>AdminDataSharing</em></strong> module allows the DataOwner to manage the SharedData and to get summaries and statistics about the usage and consumption of the data being shared through the <strong><em>DataSharingConsumptionReport</em></strong>. The usage and consumption reports can be generated on different levels of granularity: from a per sharing agreement to the set of all SharedData managed by the DataOwner.</p>
+<div class="mermaid"  align="left">
+classDiagram
+  DataSharingPlatform *-- DataCatalogue: provides
+  DataSharingPlatform *-- DataProcessingPlatform: provides
+  DataSharingPlatform *-- DataQueryInterface: provides
+  DataSharingPlatform *-- DataSharingWorkflow: provides
+  DataSharingPlatform *-- DataSharingCommunication: provides
+  DataSharingPlatform *-- DataConsumerInterface: provides
+
+  DataConsumerInterface *-- GetAccessWorkflow: provides
+  DataConsumerInterface *-- Connect: provides
+  DataConsumerInterface *-- Download: provides
+  DataConsumerInterface *-- DataSharingConsumptionReport: provides
+
+  GetAccessWorkflow --* FirstAccessWorkflow: provides
+  GetAccessWorkflow --* SecurityUpdateWorkflow: provides
+
+  class GetAccessWorkflow
+  class SecurityUpdateWorkflow
+  class FirstAccessWorkflow
+  class DataSharingConsumptionReport
+  class DataSharingCommunication
+  class Download
+  class Connect
+  class DataCatalogue
+  class DataProcessingPlatform
+  class DataQueryInterface
+  class DataConsumerInterface
+  class DataSharingPlatform
+</div><p><em>Figure 6: The DataConsumerInterface components</em></p>
+<p>The Figure 6 depicts the <strong><em>DataConsumerInterface</em></strong> components, which provides the DataConsumer a unified interface to interact with the DataSharingPlatform. The interface components are depicted following.</p>
+<p>The <strong><em>Connect</em></strong> module allows the DataConsumer to initiate an authenticated session on the DataSharingPlatform.</p>
+<p>The <strong><em>GetAccessWorkflow</em></strong> module allows the DataConsumer to set the authentication details to get access to the platform through the <strong><em>FirstAccessWorkflow</em></strong> module - e.g. setting of username a passwords accounts-, and to perform security maintenance tasks - e.g., reset a password account- by using the <strong><em>SecurityUpdateWorkflow</em></strong>.</p>
+<p>The <strong><em>Download</em></strong> module allows the DataConsumer to get access to physical data so that it can be physically consumed. This does not necessarily mean downloading the SharedData from the DataSharingPlatform. Getting access to the data stored on the infrastructure of the DataOwner is also a possible alternative.</p>
+<p>The <strong><em>DataSharingConsumptionReport</em></strong> module allows the DataConsumer to get a summary and statistics about its usage and consumption of the data being shared. Typically, the usage and consumption reports are generated in a per sharing agreement granularity level.</p>
+<hr>
+<h2 id="Data-Sharing-Process-Evaluation-Criteria">Data Sharing Process Evaluation Criteria<a class="anchor-link" href="#Data-Sharing-Process-Evaluation-Criteria"> </a></h2><p>This chapter will define the main criteria for evaluating the given data sharing processes.
+Because there is a wide range of different data sharing solutions driven by a broad range of different use cases, the goal is to define those characteristics that are common for all data sharing processes.
+For a specific data sharing process evaluation, the classification criteria might be further refined and weighted according to the specific patterns of the use case.</p>
+<p>Evaluating a single data sharing workflow has always to look at two aspects:</p>
+<ul>
+<li>Does the workflow support the final goal defined by the data sharing role?</li>
+<li>How optimal do the workflow steps support the data sharing role to reach the goal?</li>
+</ul>
+<p>The workflows that are evaluated are:</p>
+<ul>
+<li>Data Sharing Workflow</li>
+<li>Upload/Download</li>
+<li>Maintaining Shared Data</li>
+<li>Using common platform components</li>
+</ul>
+<p>The evaluation criteria are classified into the following major categories:</p>
+<ul>
+<li><strong>Generic criteria</strong>
+These are criteria that are given by the inherent structure of the shared data and the data sharing roles.</li>
+<li><strong>Platform criteria</strong>
+These criteria define how optimal the given platform supports the data sharing workflows.</li>
+</ul>
+<h3 id="Generic-criteria">Generic criteria<a class="anchor-link" href="#Generic-criteria"> </a></h3><ol>
+<li><p><strong>Role Perspective</strong>
+The data sharing workflows have to be evaluated from a data sharing role perspective because they might be very different per role. The  DataPlatformOwner role is seen only as a role that finally enables data sharing and will be ignored. The evaluation will only be done for the DataOwner and DataConsumer perspectives.</p>
+</li>
+<li><p><strong>Data Profile</strong>
+The data profile classifies the base structural properties of the shared data that have a major impact on the sharing workflows. The following properties are considered:</p>
+<ul>
+<li><strong>Dynamic versus static data</strong>
+Static data are loaded only once and not changed afterward.
+Dynamic data is changed typically periodically after the first upload.
+A high update frequency may lead to an automatic workflow requirement.</li>
+<li><strong>Data Volume</strong>
+The volume of the shared data may have a big impact on the processing time of some of the workflows.</li>
+<li><strong>Number of Files</strong>
+A high number of shared datasets may lead to automatic workflow requirements because manual interaction might become impractical. Also, a completeness overview can become a challenge.</li>
+<li><strong>Complexity of metadata</strong>
+The complexity of metadata also has an impact on the practicability of workflows. E.g. maintenance of metadata might get challenging if metadata complexity is increasing.</li>
+</ul>
+</li>
+<li><p><strong>Understandability</strong>
+Evaluates how easy it is to understand the workflow(s). Two levels of understanding are considered:</p>
+<ul>
+<li><strong>Single Workflow</strong>
+Evaluates how easy a single workflow is understood</li>
+<li><strong>Overall Workflow</strong>
+Evaluates how easy the overall approach of the workflows is understood.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Platform-criteria">Platform criteria<a class="anchor-link" href="#Platform-criteria"> </a></h3><ol>
+<li><strong>Speed</strong> 
+Evaluates how fast a workflow is processed on the platform</li>
+<li><strong>Simplicity</strong> 
+Evaluates how simple a workflow is implemented on the platform</li>
+<li><strong>Completeness</strong>
+Evaluates whether there are any gaps  not provided by the platform workflow implementation</li>
+<li><strong>Reliability</strong>
+Evaluates how reliable workflows are implemented by the platform</li>
+<li><strong>Robustness</strong>
+Evaluates how easy temporary malfunctioning of the platform workflow processing can be overcome</li>
+<li><strong>Security</strong>
+Evaluates how secure the platform workflows are implemented</li>
+</ol>
+<hr>
+<h2 id="Data-Sharing-Process-Evaluation-Workflow">Data Sharing Process Evaluation Workflow<a class="anchor-link" href="#Data-Sharing-Process-Evaluation-Workflow"> </a></h2><div class="mermaid">
+graph TD
+
+    subgraph Analyse Use Cases
+    WhatUseCases[What data sharing use cases are supported?]
+    WhatSharedData[What data are shared?]
+    DOAudience[Who are the data owners?]
+    DOExpectations[What are the requirements of the data owners?]
+    DCAudience[Who are the data consumers?]
+    DCExpectations[What are the requirements of the data consumers?]
+    AnalyseUseCaseEnd[End of use cases analysis]
+    end
+
+    WhatUseCases --> WhatSharedData --> DOAudience --> DOExpectations --> AnalyseUseCaseEnd
+    WhatSharedData --> DCAudience --> DCExpectations --> AnalyseUseCaseEnd
+    AnalyseUseCaseEnd --> SelectRelevantEC
+
+    subgraph Evaluation Criteria Scoping
+    SelectRelevantEC[Select the relevant evaluation criteria]
+    DefineECImportance[Weighten the importance for each relevant evaluation criteria]
+    RefineEC[Optional Refinement of the relevant evaluation criteria]
+
+    SelectRelevantEC --> DefineECImportance --> RefineEC
+    end
+
+    RefineEC --> WfL
+
+    subgraph Evaluation of single Workflows
+    WfL>For each: DataSharingWorkflow]
+    style WfL fill:darkgrey
+    DSWorkflow[Evaluate data sharing workflow]
+    EndWfL[End of single workflow loop]
+    end
+    WfL --> DSWorkflow
+    WfL --> EndWfL --> OverallEvalutationCriteria
+
+
+    subgraph Perform Overall Evaluation
+    OverallEvalutationCriteria[Evaluate criteria from overall perspective]
+    end
+</div><p><em>Figure 7: The data sharing process evaluation workflow</em></p>
+<p>The figure shows the proposed evaluation steps group into the following major steps:</p>
+<ol>
+<li><strong>Analyse Use Cases</strong>
+First, you have to understand the analyzed data sharing solution from a data owner and data consumer perspective.</li>
+<li><strong>Evaluation Criteria Scoping</strong>
+Depending on the analysis result of the use cases, you decide which criteria are relevant for your analysis and weigh them. E.g. not all data sharing workflows might be relevant for the specific use case. Some might be more important and some might be less important for your use case. It could also make sense to refine at least some of the important for your use case.  </li>
+<li><strong>Evaluation of Single Workflows</strong>
+In these steps, you analyse in detail the data sharing workflows you defined in the scoping.</li>
+<li><strong>Perform Overall Evaluation</strong>
+Finally, you look with an overall perspective to the data sharing solution and evaluate against overall criteria e.g. overall understandability.</li>
+</ol>
+<h2 id="Evaluation-of-LCSB-Data-Sharing-Procedure">Evaluation of LCSB Data Sharing Procedure<a class="anchor-link" href="#Evaluation-of-LCSB-Data-Sharing-Procedure"> </a></h2><p>This chapter assesses the LSCB Data Sharing Procedure according to the previously depicted criteria. The evaluation is performed in terms of the generic, data profile, and platform criteria. These outcomes have to be further refined and weighted according to the specific characteristics of the use case being addressed.</p>
+<ol>
+<li><strong>Analyse Use Cases</strong></li>
+</ol>
+<ul>
+<li><p><em>What data sharing use cases are supported?</em>
+No explicit described use cases could be identified.</p>
+</li>
+<li><p><em>What data are shared?</em>
+What data is shared is not explicitly mentioned. The How-to Cards introduction text indicates that “biomedical research data” are shared. Also, How-to Cards are shared that give practical guidance of data management, data protection, lab support, and others. Please note that within this evaluation we consider the How-to Cards also as data.</p>
+</li>
+<li><p><em>Who are the data owners?</em>
+The data owners are not explicitly mentioned. It is assumed from the introduction text that researchers from the LCSB are the data owners. From the found portal pages it is unclear whether a broader audience of data owners is supported.</p>
+</li>
+<li><p><em>What are the requirements of the data owners?</em>
+This is not explicitly stated. The assumption from text wording is that they:</p>
+<ul>
+<li>are cooperating with other data consumers </li>
+<li>need a platform for the cooperation </li>
+<li>are willing to share their biomedical research data or knowledge about data management, data protection, lab support, etc. </li>
+<li>have an interest for a data consumer role </li>
+</ul>
+</li>
+<li><p><em>Who are the data consumers?</em>
+This is not explicitly stated. The assumption from text wording is that it is the same audience as the data owners. From the found portal pages it is unclear whether a broader audience of data consumers (e.g. outside the LCSB organisation) is supported.</p>
+</li>
+<li><p><em>What are the requirements of the data consumers?</em>
+This is not explicitly stated. The assumption from text wording is that they:</p>
+<ul>
+<li>have typically difficulties implementing data management, data protection, lab support, etc, and they want to get practical knowledge to improve their processes and setup</li>
+<li>want to reuse biomedical research data</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><strong>Evaluation Criteria Scoping</strong>
+Some criteria are not used or only partly applied as described in the text below.
+No refinement or weighting for the evaluation criteria was done because no argument was found for doing this.
+The evaluation is done per data platform/data asset type because the two offerings are implemented independently.</li>
+</ol>
+<ul>
+<li><p><strong>Generic criteria</strong></p>
+<ul>
+<li><em>Role perspective</em><br>
+Evaluation is done only from a data owner perspective because the LCBS How-to Cards are purely data owner oriented.</li>
+<li><em>Data Profile</em>
+All subcriteria are considered besides:<ul>
+<li><em>Complexity of metadata</em>
+Because none of the data sharing platforms supports the management of metadata. So the only way to share metadata for biomedical research data would be to share them as data, without having any common agreements for their format and contents.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Platform criteria</strong>
+All criteria will be used.</p>
+</li>
+<li><p><strong>Evaluated workflows</strong>
+  Only data owner data sharing workflows are evaluated.
+Following data sharing workflows are not evaluated because they seem out of scope of the offered data sharing platforms</p>
+<ul>
+<li><em>Shared Data</em>
+Please note that the offered platforms don’t provide any common metadata approach. Shared Data is limited to the upload and download of data. Therefore any workflows to access the shared data besides uploading and downloading are out of the scope of the evaluated solution.</li>
+<li><em>Data Sharing Communication</em></li>
+<li><em>Sharing Consumption Report</em></li>
+<li><em>Admin Data Sharing</em>
+Please note that no metadata are shared in a structured way</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><strong>Evaluation of Single Workflows</strong></li>
+</ol>
+<p><strong>Biomedical Research Data Sharing</strong>
+The LCSB Biomedical Research Data Sharing Procedure provides two platforms:</p>
+<ul>
+<li><em>AsperaWEB</em> 
+which is an IBM Aspera deployment at the LCSB supporting end-to-end encrypted data transfer and can handle high data volumes. </li>
+<li><em>ownCloud</em>
+which is a private cloud storage service for the use of LCSB staff and collaborators, suitable for exchanging up to 2 gigabyte-sized files. All communication with the LCSB ownCloud server is SSL encrypted.
+Derived from a further documentation link within the LCSB web pages it seems to be based on the server product available <a href="http://owncloud.com">here</a>.</li>
+</ul>
+<p>Both platforms are described on the start page under the “Exchange Channels” category.
+As a new data owner, you will ask which option to use best. A direct comparison between both is not given for guiding the data owner to a platform recommendation. From reading both texts, the assumption is that for huge data you have to use AsperaWEB. For files up to 2 gigabytes, you could use both without noticing a major difference.</p>
+<ul>
+<li><p><strong>First Access Workflow</strong></p>
+<ul>
+<li><em>Aspera Web</em>
+As described under “Start Page-&gt;Aspera Web Quick Guide” you contact your research collaborator at the LCSB-University, so that he initiates the creation of access for you. You will then get an email that contains an URL.
+You can access the URL only once to read your password. After you have accessed the URL, this URL is no longer accessible. Although this is not explicitly mentioned, the assumption is that this protects you from somebody else getting access to your email from also getting access to your password.
+How much time the workflow typically takes is not mentioned.</li>
+<li><em>ownCloud</em>
+As described under “Start Page-&gt;Owncloud” you have to send an email to the LCSB admin team for getting access to the platform. It is not described what email contents the support team expects from you to accept an account creation, what the next steps are, and how much time it takes until you finally get an account. In the end, you will get a so-called LUMS account, which is a different account then for Aspera Web.
+External collaborators need also a VPN account so that they can access the LCSB servers. </li>
+</ul>
+</li>
+<li><p><strong>Security Update Workflow</strong>
+For ownCloud, an explanation to managing the credentials can be found <a href="https://r3.pages.uni.lu/howto-cards/stable/external/access/passwords">here</a>. Also for the VPN account, a password change and reset are supported. For AsperaWeb no explanation was found in the LCSB web pages.</p>
+</li>
+<li><p><strong>Connect Workflow</strong></p>
+<ul>
+<li><p><em>Aspera Web</em>
+As described under “Start Page-&gt;Aspera Web Quick Guide” you have two different connections options.</p>
+<ul>
+<li><p><em>Standard Web Browser</em>
+It is defined as the preferred connection option. Firefox 66.x web browser or later is recommended in “Start Page-&gt;Aspera Web Quick Guide-&gt;section of the guide”.
+For the first time, you have to install the “IBM Aspera Connect” client. No further explanation of the "IBM Aspera Connect" client. A Google search leading to <a href="https://www.ibm.com/de-de/products/aspera/technology">this page</a>, explained that it is optimized for high-speed cloud data transfer with lots of capabilities. More details can be found in <a href="https://www.ibm.com/downloads/cas/AWOQXB8G">this</a> IBM Cloud Technical whitepaper.
+If your client Operating System is Windows and you want to use Microsoft Edge as browser, you need a different IBM Aspera Connect client. This you will find only by occasion if you scroll down the documentation.
+The documentation is not precise about client operating system requirements for Aspera. From Google search results it seems that Aspera connect is quite independent of client operating systems.
+<a href="https://www.ibm.com/aspera/platform-support/">Here</a> you can find all supported browsers/client operating systems.</p>
+</li>
+<li><p><em>Command-Line Tool</em>
+“Start Page-&gt;Aspera Web Quick Guide-&gt;section of the guide” explains that you will typically use this option if a web browser would not be an option in your environment. It shows how to use the command-line tool, but not how to install it. From Google search {results](<a href="https://downloads.asperasoft.com/en/downloads/2">https://downloads.asperasoft.com/en/downloads/2</a>) it seems that Aspera client is meant, which supports all common operating systems. 
+Besides you can use a diagnostic tool from IBM for troubleshooting connectivity issues. The ICBS pages provide a link to the <a href="https://test-connect.asperasoft.com/">IBM Aspera Diagnostic Tool</a> tool, but no further explanation or recommendation.</p>
+</li>
+</ul>
+</li>
+<li><p><em>ownCloud</em>
+For getting access to the platform, you have to send an email to the LCSB admin team. It is not described what email contents they expect to accept an account creation, what the next steps are, and how long it takes until you finally get an account.
+As described under “Start Page-&gt;Owncloud” you have two different connections options:</p>
+<ul>
+<li><em>Standard Web Browser</em>
+There is no further documentation given, so it seems to be that no additional software is needed. Also, no further web browser release information is given.
+A Google search led to <a href="https://doc.owncloud.com/server/user_manual/webinterface.html">this page</a> which shows exactly what versions are supported, with some uncertainty for the LCBS server version. </li>
+<li><em>Client Tool</em>
+For the client tool installation documentation is found under “Start Page-&gt;Owncloud” 
+Installation steps are combined with upload/download steps, so you have to scroll if you are interested in the help of only one topic.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Upload Workflow</strong>
+The upload workflow is supported by the underlying commonly used platform tools. 
+For Aspera Web, the LCBS pages give no upload use explanation. For ownCloud, they give an upload example showing you how data is synchronized between the source and data sharing platform. For Aspera Web, you have to look to the web pages of the tool to get familiar with the offering.</p>
+<ul>
+<li><em>Dynamic versus static data</em>
+No specific explanations are found for the smooth handling of dynamic files, so the assumption is that the data owner has to get familiar with the tool and investigate for himself what dynamic pattern is supported by each platform.
+The assumption is therefore that for the handled use cases there are low dynamic requirements and the data owner can find a solution in a reasonable time by looking at the referred tool web pages.</li>
+<li><em>Data Volume</em>
+The AsperaWEB platform supports data transfer in the terabytes range. The ownCloud platform is suitable for exchanging up to 2 gigabyte-sized files.</li>
+<li><em>Number of files</em>
+No specific explanations are found on how to handle a high number of files best. Therefore the assumption is if you would ever have a high number of files for the found use cases they could be combined to a compressed file as part of a common data sharing agreement.
+For the ownCloud solution, some directory organisation standards are given that will help to make files more findable. Of course, this approach is limited as anybody knows from searching files on a big file server.</li>
+<li><em>Speed</em>
+Quality features inherited from the deployed platforms (AsperaWeb, Owncloud). No details provided by the How-to Cards. As described above a Google search led for Aspera Web to a white paper, that gave a lot of explanation about speed improvements. For the data owner, it would be useful to know what networking speeds the platforms are offering for uploading huge data. This can have a high impact on the usability of the upload workflow.  </li>
+<li><em>Simplicity</em>
+The upload workflows are implemented through widely known tools, which can be used by non-expert users.</li>
+<li><em>Reliability</em>
+Quality features inherited from the deployed platforms (Aspera, ownCloud). No details provided by the How-to Cards. </li>
+<li><p><em>Robustness</em>
+Quality features inherited from the deployed platforms (Aspera, Owncloud). No details provided by the How-to Cards. Especially for high volumes, it would be interesting to know whether in case of errors you can continue a broken upload avoiding to retransmit already successfully transferred data blocks.</p>
+<p>Both platforms seem to offer a technical upload infrastructure. Questions going beyond the technical sharing mechanism can not be answered by the offered LCSB portal pages e.g. data related questions similar to:</p>
+</li>
+<li><em>How long is the data stored?</em></li>
+<li><em>Where is the data stored?</em></li>
+<li><em>Are they any replicas, where are they stored, who has access to it?</em></li>
+<li><em>What is the process of data deletion and can I rely on it?</em></li>
+</ul>
+</li>
+<li><p><strong>Data Sharing Agreement Workflow</strong>
+The data sharing workflow is limited to giving access to the data consumers by the underlying commonly used platform tools. Several options are documented on how the underlying password can be sent in a securely.
+So there is only an implicit agreement by the data owner by giving access to the data to a user. Any specific constraints for the data use are up to the data owner to communicate and are not supported by the platform.</p>
+</li>
+</ul>
+<p><strong>Overall Understandability</strong>
+For a new user, it is hard to get an overview of the overall approach and pick out some topics of interest. The detailed explanations are very precise, but sometimes only technical component focused, not always designed for the user perspective.</p>
+<p><strong>Overall Security</strong>
+Best practices on security issues are spread over different How-to cards. Some of them are reinforced by the workflow and platforms, while others are just recommended practices.</p>
+<p><strong>How-To Card Data Sharing</strong>
+The How-To Card data Sharing Procedure is provided by the ownCloud platform. First Access Workflow, Security Update, and Connect Workflows are described as made above for the ownCloud platform.</p>
+<p>For the Upload and Data Sharing workflow also a git client is required. Several GUI clients and integrated development environments are proposed. Moreover, URLs are added to the LCBS webpages for getting installation documentation and additional help.
+Markdown lightweight markup language is used for text formatting of the How-To cards. Some tips are added to the LCSB web pages on how to write in markdown and for what purposes it should be used. A list of editors is also proposed.</p>
+<ul>
+<li><p><strong>Upload Workflow</strong>
+For the upload workflow, an explanation is given on how to add and edit a How-To card. 
+This How-To card is limited to the formal technical steps that are required, no content-related or structural uniformness guidelines are given.</p>
+</li>
+<li><p><strong>Data Sharing Agreement Workflow</strong>
+The data sharing agreement workflow is implicitly done by the push of the data owner to the GitLab platform. He accepts by the push that anybody who has access to target GitLab can read. All additional data sharing agreements are out of the scope of the platform.</p>
+</li>
+</ul>
+<hr>
+<h2 id="Recommendations-for-LCSB-Data-Sharing-Procedure-Improvement">Recommendations for LCSB Data Sharing Procedure Improvement<a class="anchor-link" href="#Recommendations-for-LCSB-Data-Sharing-Procedure-Improvement"> </a></h2><p>The offered data sharing workflows can be seen as a kind of providing core IT infrastructure components for offering:</p>
+<ul>
+<li>Data space.</li>
+<li>Encrypted network transfer.</li>
+<li>User account management.</li>
+<li>Sharing data to a limited number of people working commonly for a program/project.</li>
+</ul>
+<p>It does not contain as part of the data sharing platforms any capability regarding data profiles or metadata or workflows that cover use-case specific data sharing aspects.</p>
+<p>Because no background information is available regarding the underlying use cases no speculation is done regarding what could be improved from a use case perspective.</p>
+<p>From a FAIR data sharing perspective often many improvement options regarding metadata, data profiles, data standardisation, data cleansing, platform enhancements do exist. On the other hand, additional improvement options require additional resource effort that has to be balanced against the earned business value.</p>
+<p>From FAIR principles perspective, the platforms and workflows only provide minimum functionality for data sharing.</p>
+<p>Therefore for this section assumption is, that the offerings are good enough for the existing use cases and only recommendations are made for the existing use.</p>
+<p>Given this context these are our recommendations to improve the existing LCSB data sharing workflows:</p>
+<ul>
+<li><p><strong>Add platform goals and use case types</strong>
+  For a new user, it is hard to understand what the data sharing platforms and workflows are used for. If he gets only technical information it is hard to understand for him whether it is the right platform for his data sharing requirements. Some base policies for using the platforms and workflows would also be appreciated.</p>
+</li>
+<li><p><strong>Overall overview</strong>
+  It is hard for a new user to get an overview of the overall setup, the different platform offerings, and intended use. In the given structure of the web pages, the user is lost in cascading pages and technical details and it is hard for him to get an overview and find detailed information for a specific topic of interest. This can lead also to misunderstanding.
+It would be useful to get an overall architecture figure and understand from this figure what additional detailed information is related to the shown components.</p>
+</li>
+<li><p><strong>Detailed descriptions</strong>
+  The current pages are organized more by technical components and categories and not by a user-centric view. The data sharing model and defined data sharing workflows of this recipe should give an idea of how a data owner looks at data sharing workflows. In our opinion, it would help users to understand portal offerings much better if the documentation would be organized related to the model components we explained at the beginning.</p>
+</li>
+<li><p><strong>Answering typically user questions directly</strong>
+  In the analysis part of the recipe, you will also find questions for which the data owner currently finds not a direct answer without further Google search and trying for himself. This should be checked against the current use cases, to find out whether the current explanations should be improved.
+Often it is very time-consuming for a user to find from complex tool documents answers for core questions.</p>
+</li>
+<li><p><strong>Overall security overview</strong>
+  It would be useful for a user to get an overall security overview. This would increase confidence for the offered platform. Sometimes very detailed information (e.g. for forwarding of passwords) is there, whereas for other important security aspects information is missing (e.g. data protection of datasets, retention period, who has access).</p>
+</li>
+<li><p><strong>How-To cards</strong>
+  For the How-To cards, it would be useful to understand the intent to write and share it. The data management topic is a very broad topic where you find already a lot of information on the web. The assumption is that it is about sharing special aspects for the management of biomedical research data. Also at least showing example workflows, or giving guidance about the content structure and quality would help to promote people for sharing.
+Depending on the number of shared How-To cards we could imagine that introduction of metadata would help to make them more findable.</p>
+</li>
+</ul>
+<hr>
+<h2 id="Authors:">Authors:<a class="anchor-link" href="#Authors:"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Affiliation</th>
+<th style="text-align:left">orcid</th>
+<th style="text-align:left">CrediT role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Kurt Dauth</td>
+<td style="text-align:left">Boehringer Ingelheim</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Writing - Original Draft</td>
+</tr>
+<tr>
+<td style="text-align:left">Emiliano Reynares</td>
+<td style="text-align:left">Boehringer Ingelheim</td>
+<td style="text-align:left"><a href="https://orcid.org/0000-0002-5109-3716">0000-0002-5109-3716</a></td>
+<td style="text-align:left">Writing - Review &amp; Editing.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="License:">License:<a class="anchor-link" href="#License:"> </a></h2><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+<!--               <nav class="c-page__nav">
+  
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/cookbook-dev/recipes/introduction/FAIRplus-values.html">
+      〈 <span class="u-margin-right-tiny"></span> The Values of FAIR
+    </a>
+  
+
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/cookbook-dev/recipes/infrastructure.html">
+      Infrastructure for FAIR <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+ -->
+              <footer>
+  <p class="footer"><div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="/cookbook-dev/assets/images//logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="/cookbook-dev/assets/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div></p>
+</footer>
+
+            </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

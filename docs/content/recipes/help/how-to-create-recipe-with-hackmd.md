@@ -28,12 +28,6 @@ ___
 
 
 
-
-[TOC]
-<!-- 1. [Main Objectives](#Main%20FAIRification%20Objectives)
-2. [Authors](#Authors)
-8. [License](#License) -->
-
 ---
 
 ## Main Objectives
@@ -207,6 +201,10 @@ ___
 | Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group |[0000-0001-5306-5690](https://orcid.org/0000-0001-5306-5690) | Writing - Review & Editing, Funding acquisition | 
 
 ___
+
+
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

@@ -1,6 +1,10 @@
+---
+dummy: dummy
+---
+
 # From proprietary format to open standard format: an exemplar
 
-## Converting Mass Spectrometry data to mzML format
+---
 
 <div class="row">
 
@@ -57,7 +61,7 @@
  
 
 
-# Table of Contents
+<!-- # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
@@ -65,7 +69,7 @@
 5. [Table of Data Standards](#Table%20of%20Data%20Standards)
 6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
 7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
+8. [License](#License) -->
 
 ---
 
@@ -140,8 +144,7 @@ ___
 - [sparql](https://www.w3.org/TR/sparql11-query/) -->
 
 
-
-## Step by Step Process:
+## Converting Mass Spectrometry data to mzML format: a Step by Step Process.
 
 ### Step 1: obtain the dataset
 
@@ -319,7 +322,7 @@ Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be a
 
 
 
-> ####What to read next:
+> #### What to read next:
   >  - [How to calculate file checksums]()
   >  - [How to package data for shipping with BDbags]()
   >  - [How to produce an ISA metadata file from a set of mzML fles]()
@@ -344,8 +347,8 @@ ___
 
 ___
 
-
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
 
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

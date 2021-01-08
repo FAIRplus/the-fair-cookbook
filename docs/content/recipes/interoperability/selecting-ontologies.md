@@ -1,4 +1,8 @@
-# Which ontology should I use? 
+---
+dummy: dummy
+---
+
+# Which ontology orr terminology to use? 
 
 <!-- **identifier:** [RX.X](RX.X)
 
@@ -79,21 +83,7 @@ ___
   </div>
 </div>
 
-___
 
-
-[TOC]
-
-<!-- # Table of Contents
-1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
-2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
-4. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-5. [Table of Data Standards](#Table%20of%20Data%20Standards)
-6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
-7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
- -->
 ---
 
 ## Main Objectives
@@ -105,7 +95,7 @@ The main purpose of this recipe to provide guidances on how to select the most s
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSB3aGF0IGlzIHRoZSBjb250ZXh0Pyk6Ojpib3ggLS0-fGZyYW1ld29ya3wgTTEoZmE6ZmEtY3ViZSBjbGluaWNhbCB0cmlhbCBjb250ZXh0KTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMihmYTpmYS1jdWJlIG9ic2VydmF0aW9uYWwgcGF0aWVudCBvdXRjb21lKTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMyhmYTpmYS1jdWJlIGJhc2ljIHJlc2VhcmNoKTo6OmJveFxuXG4gIE0xIC0tPiB8Y29uc2lkZXJ8IFIxKGZhOmZhLWN1YmVzIENESVNDIFZvY2FidWxhcnkpOjo6Ym94XG4gIE0yIC0tPiB8Y29uc2lkZXJ8IFIyKGZhOmZhLWN1YmVzIE9IRFNJIEF0aGVuYSB0ZXJtaW5vbG9naWVzKTo6OmJveFxuICBNMyAtLT4gfGNvbnNpZGVyfCBSMyhmYTpmYS1jdWJlcyBPQk8gRm91bmRyeSByZXNvdXJjZXMpOjo6Ym94XG4gIFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH06Ojpib3ggLS0-fE5vIHxSMzo6OmJveFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH0gLS0-fFllc3xNNChjb25zdWx0IEZBSVJzaGFyaW5nKTo6OmJveFxuXG4gIE00IC0tPiB8RUJJIHJlc291cmNlc3xNNShFRk8pOjo6Ym94XG5cbiAgbGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4IHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7XG4gIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSB3aGF0IGlzIHRoZSBjb250ZXh0Pyk6Ojpib3ggLS0-fGZyYW1ld29ya3wgTTEoZmE6ZmEtY3ViZSBjbGluaWNhbCB0cmlhbCBjb250ZXh0KTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMihmYTpmYS1jdWJlIG9ic2VydmF0aW9uYWwgcGF0aWVudCBvdXRjb21lKTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMyhmYTpmYS1jdWJlIGJhc2ljIHJlc2VhcmNoKTo6OmJveFxuXG4gIE0xIC0tPiB8Y29uc2lkZXJ8IFIxKGZhOmZhLWN1YmVzIENESVNDIFZvY2FidWxhcnkpOjo6Ym94XG4gIE0yIC0tPiB8Y29uc2lkZXJ8IFIyKGZhOmZhLWN1YmVzIE9IRFNJIEF0aGVuYSB0ZXJtaW5vbG9naWVzKTo6OmJveFxuICBNMyAtLT4gfGNvbnNpZGVyfCBSMyhmYTpmYS1jdWJlcyBPQk8gRm91bmRyeSByZXNvdXJjZXMpOjo6Ym94XG4gIFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH06Ojpib3ggLS0-fE5vIHxSMzo6OmJveFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH0gLS0-fFllc3xNNChjb25zdWx0IEZBSVJzaGFyaW5nKTo6OmJveFxuXG4gIE00IC0tPiB8RUJJIHJlc291cmNlc3xNNShFRk8pOjo6Ym94XG5cbiAgbGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4IHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7XG4gIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
-<<div class="mermaid">
+<div class="mermaid">
 graph TD
   I1(fa:fa-university what is the context?):::box -->|framework| M1(fa:fa-cube clinical trial context):::box
   I1(fa:fa-university what is the context?) -->|framework| M2(fa:fa-cube observational patient outcome):::box
@@ -124,6 +114,7 @@ graph TD
   classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
 	
 </div>
+
 ___
 
 ## Capability & Maturity Table
@@ -134,13 +125,14 @@ ___
 
 
 ----
-## The context is everything:
+
+## Context is everything
 
 The domain of operation will somehow dictate the semantic framework that makes most sense selecting. This is simply a consequence of the fact that the advances in data standardization in specific fields is such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
 
 We will be giving two examples of such situations now:
 
-### Clinical Trial Data:
+### Clinical Trial Data
 
 Operating in the field of Clinical Trials means that datasets are generated during `interventional studies`, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents in order to gain insights in terms of benefits in patient outcomes.
 In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by US FDA reviewers. This means that the [CDISC standards]() are the *`de-facto standard`* in the area, which mandates the use of semantics resources such as:
@@ -1079,6 +1071,7 @@ Hripcsak, George et al. “Observational Health Data Sciences and Informatics (O
 
 
 ___
+
 ## Authors:
 
 | Name | Affiliation  | orcid | CrediT role  |
@@ -1087,6 +1080,9 @@ ___
 | Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
 
 ___
+
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

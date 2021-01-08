@@ -1,11 +1,17 @@
+---
+dummy: dummy
+---
+
 # FAIR Cookbook
 
 ---
 ## The official site
 
-Visit [https://fairplus.github.io/the-fair-cookbook](https://the-fair-cookbook.netlify.app/intro) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
+Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
 
 :oil_drum::construction: **This project is still in early phase and this is work in progress** :construction::oil_drum:
+
+
 
 ---
 ## The FAIR Cookbook overview
@@ -380,8 +386,5 @@ ___
 
 ## Acknowledgements
 
-The FAIR Cookbook is produced thanks to `Jupyter Book`, a project originally created by [Sam Lau][sam] and [Chris Holdgraf][chris]
-with support of the **UC Berkeley Data Science Education Program and the Berkeley Institute for Data Science**.
+The FAIR Cookbook is produced thanks to `Jupyter Book`
 
-[sam]: http://www.samlau.me/
-[chris]: https://predictablynoisy.com

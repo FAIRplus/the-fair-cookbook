@@ -422,3 +422,16 @@ e.g. python hashlib  </td>
 ![alt_text](image_6.png "image_tooltip")
 
 _Supplement figure 1: Workflow to extract the data from compound/charge webpage_
+
+---
+
+## Authors:
+
+
+---
+
+## License:
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

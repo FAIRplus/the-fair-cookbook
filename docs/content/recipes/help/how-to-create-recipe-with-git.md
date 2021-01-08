@@ -1,15 +1,5 @@
 # How to create a FAIRPlus Coobook Recipe ?
 
-# Table of Contents
-1. [Main Objectives](#Main%20Objectives)
-2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
-3. [Prequisites and Getting Set up](#Prequisites%20and%20Getting%20Set%20up)
-4. [Option-1 Writing the recipe in Mardown syntax](#Option-1%20Writing%20the%20recipe%20in%20Mardown%20syntax)
-5. [Option-2 Writing the recipe as a Google document](#Option-2%20Writing%20the%20recipe%20as%20a%20Google%20document)
-6. [Dealing with merge conflicts](#mergeconflicts)
-7. [Authors:](#authors)
-8. [License:](#license)
-
 ---
 
 ## Main Objectives <a name="Main%20Objectives"></a>
@@ -231,10 +221,12 @@ See [Resolving a merge conflict using the command line](https://help.github.com/
 ___
 
 
-## License: <a name="license"></a>
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+## License:
 
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
 
 
 

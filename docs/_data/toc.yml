@@ -22,9 +22,9 @@
 # See the links below for an example.
 
 # Top-level page
-- title: FAIR Cookbook
-  url: /intro
-  not_numbered: true
+# - title: FAIR Cookbook
+#   url: /intro
+#   not_numbered: true
 
 # External link
 - title: Go to GitHub repository...
@@ -45,15 +45,40 @@
 - header: FAIR Cookbook
 
 # Top-level page
-- title: FAIR Cookbook
+- title: Introduction
   url: /intro
-  not_numbered: true
-  
-# The Roadmap
-- title: Development Roadmap
-  url: /roadmap
-  not_numbered: true
+  not_numbered: false
   expand_sections: false
+  sections:
+    - title: Who should read this book ?
+      url: /recipes/introduction/FAIR-cookbook-audience
+      not_numbered: false
+    - title: What is FAIR ?
+      url: /recipes/introduction/fair-principle
+      not_numbered: false
+    - title: The Values of FAIR
+      url: /recipes/introduction/FAIRplus-values
+      not_numbered: false
+    - title: What is IMI ?
+      url: /recipes/introduction/what-is-IMI
+      not_numbered: false
+    - title: IMI and Data Management
+      url: /recipes/introduction/IMI-and-data-management-plans
+      not_numbered: false
+    - title: FAIR in IMI context
+      url: /recipes/introduction/FAIR-in-IMI-context
+      not_numbered: false  
+    # - title: The FAIR principles
+    #   url: /recipes/introduction/fair-principle
+    #   not_numbered: false
+    - title: Models for Data Sharing
+      url: /recipes/introduction/data-sharing-models
+      not_numbered: false  
+# # The Roadmap
+# - title: Development Roadmap
+#   url: /roadmap
+#   not_numbered: true
+#   expand_sections: false
 # A chapter w/ a collection of sections beneath it
 
 # - title: Recipes
@@ -62,13 +87,11 @@
 #   expand_sections: true
 #   sections:
 
-# - title: What is FAIR
-#   url: /recipes/introduction/FAIR
+# - title: FAIR Cookbook - an Introduction
+#   url: /recipes/introduction
 #   not_numbered: false
+  
 
-- title: The Values of FAIR
-  url: /recipes/introduction/FAIRplus-values
-  not_numbered: false
 
 - title: Infrastructure for FAIR
   url: /recipes/infrastructure
@@ -86,10 +109,10 @@
     - title: Criteria for selecting Ontology Services 
       url: /recipes/infrastructure/technical-and-architectural-selection-criteria-of-ontology-lookup-services
       not_numbered: false
-    # - title: Chemical identities - Generating InChI and SMILES strings
-    #   url: /recipes/infrastructure/chemical-identities
-    #   not_numbered: false
-    #   # notebooks: /recipes/infrastructure/chemical-identities/1-notebook
+    - title: Chemical identities - Generating InChI and SMILES strings
+      url: /recipes/infrastructure/chemical-identities
+      not_numbered: false
+      # notebooks: /recipes/infrastructure/chemical-identities/1-notebook
     - title: Building a Data Catalogue
       url: /recipes/infrastructure/data-catalog
       not_numbered: false
@@ -99,21 +122,25 @@
 
 - title: Findability
   url:  /recipes/findability
-  expand_sections: true
+  not_numbered: false
+  expand_sections: false
   sections:
-      - title: Depositing to Zenodo
+      - title: How to create persistent resolvable identifiers
+        url: /recipes/findability/identifiers
+        not_numbered: false      
+      - title: Depositing to a Data Catalogue - The Zenodo example
         url: /recipes/findability/zenodo-deposition
         not_numbered: false    
-      - title: Search Engine optimization
+      - title: Search Engine Optimization
         url: /recipes/findability/seo
         not_numbered: false
-      - title: bioschema data catalog
+      - title: Marking up Data Catalog with Bioschema
         url: /recipes/findability/seo/bioschemas-datacatalog
         not_numbered: false
-      - title: bioschema dataset
+      - title: Marking up Dataset with Bioschema
         url: /recipes/findability/seo/bioschemas-dataset
         not_numbered: false
-      - title: bioschema data page
+      - title: Marking up Datapage with Bioschema
         url: /recipes/findability/seo/bioschemas-data-page
         not_numbered: false
 
@@ -125,25 +152,22 @@
     - title: Anonymization Recipe
       url: /recipes/accessibility/anonymization
       not_numbered: false
-    - title: Selecting a Licensing Mode
-      url: /recipes/accessibility/license-selection
+    - title: File Transfer via sFTP
+      url: /recipes/accessibility//how-to-use-sftp-for-transfer
+      not_numbered: false
+    - title: Fast File Transfer via Aspera
+      url: /recipes/accessibility/aspera
       not_numbered: false
     
 - title: Interoperability
   url:  /recipes/interoperability
-  expand_sections: true
+  not_numbered: false
+  expand_sections: false
   sections:
     - title: How to select ontologies
       url: /recipes/interoperability/selecting-ontologies
       not_numbered: false
-
-    - title: Minimal MetaData Profiles
-      url: /recipes/interoperability/creating-minimal-metadata-profiles
-      not_numbered: false
-    - title: Covid19 Sample MetaData Profile Shex Validation
-      url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
-      # url: /recipes/interoperability/covid19-test
-      not_numbered: false
+      
     - title: How to request new terms in existing ontologies
       url: /recipes/interoperability/ontology-new-term-request-recipe
       not_numbered: false
@@ -156,24 +180,63 @@
           url: /recipes/interoperability/ontology-robot/MSIO-robot-build-process
           not_numbered: false
 
+    - title: Minimal MetaData Profiles
+      url: /recipes/interoperability/creating-minimal-metadata-profiles
+      not_numbered: false
+
+    - title: A Transcriptomics MetaData Profile
+      url: /recipes/interoperability/transcriptomics-metadata
+      not_numbered: false
+
+    - title: Covid19 Sample MetaData Profile Shex Validation
+      url: /recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
+      not_numbered: false
+
+    - title: How to validate file formats
+      url: /recipes/interoperability/fastq-file-format-validators
+      not_numbered: false
+
     - title: How to convert to open format from propriatory
       url: /recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar
       not_numbered: false
 
 - title: Reusability
   url:  /recipes/reusability
+  not_numbered: false
   expand_sections: false
+  sections:
+      - title: Selecting a Licensing Mode
+        url: /recipes/accessibility/license-selection
+        not_numbered: false
+      - title: Choosing a License
+        url: /recipes/help/recipe-template
+        not_numbered: false
+      - title: Licensing for Software
+        url: /recipes/help/recipe-template
+        not_numbered: false
+      - title: Licensing for Data
+        url: /recipes/help/recipe-template
+        not_numbered: false
   
 - title: FAIR Assessment
   url: /recipes/assessing-fairness
   not_numbered: false
-  expand_sections: true
+  expand_sections: false
   sections:
-    - title: Assessing FAIRness
+    - title: FAIR indicators
+      url: /recipes/assessing-fairness/fair-indicators
+    - title: manual assessment
+      url: /recipes/assessing-fairness/manual-fair-assessment
+      not_numbered: false 
+    - title: automatic assessment with FAIREvaluator
       url: /recipes/assessing-fairness/fair-assessment-recipe
       not_numbered: false
+    - title: automatic assessment with FAIRshake
+      url: /recipes/assessing-fairness/fair-assessment-fairshake
+      not_numbered: false
+           
 
-- title: Applied Examples
+- title: FAIRification Examples
   url: /recipes/applied-examples
   not_numbered: false
   expand_sections: false
@@ -193,6 +256,12 @@
       url: /recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis
       not_numbered: false
       expand_sections: true
+
+- title: FAIRification of IMI datasets
+  url: /recipes/fairified-imi-data
+  not_numbered: false
+  expand_sections: false
+  sections:      
     - title: eTOX experience Recipe
       url: /recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
       not_numbered: false
@@ -206,17 +275,30 @@
       url: /recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
       not_numbered: false
 
+
+- title: Capability & Maturity indicators
+  url: /recipes/cmmi
+  not_numbered: false
+
+
+- title: Tools for FAIR
+  url: /recipes/tools4fair
+  not_numbered: false
+
+- title: Glossary
+  url: /recipes/glossary-fair-terms
+  not_numbered: false
 # Divider for meta-pages and search page
-- divider: true
+# - divider: true
 # A chapter w/ a collection of sections beneath it
-- title: Ingredients and Resources
-  url: /ingredients/ingredient-list
-  not_numbered: true
-  expand_sections: false
-  sections:
-  - title: Ingredients
-    url: /ingredients/ingredient-list
-    not_numbered: true
+# - title: Ingredients and Resources
+#   url: /ingredients/ingredient-list
+#   not_numbered: true
+#   expand_sections: false
+#   sections:
+#   - title: Ingredients
+#     url: /ingredients/ingredient-list
+#     not_numbered: true
 
 # Divider for meta-pages and search page
 # - divider: true
@@ -234,96 +316,97 @@
 #     url: /features/notebooks
 #     not_numbered: false
 
-- divider: true
-
-- header: Help Section and Demonstration
-- title: help
-  url: /recipes/help
-  sections:
-    - title: How to create a recipe with GoogleDoc
-      url: /recipes/help/how-to-create-recipe-with-gdoc
-      not_numbered: false
-    - title: How to use HackMD to write a FAIR Cookbook Recipe
-      url: /recipes/help/how-to-create-recipe-with-hackmd
-      not_numbered: false
-    - title: HackMD Tips and Tricks
-      url: /recipes/help/tips-tricks
-      not_numbered: false      
-    - title: How to create a recipe with git
-      url: /recipes/help/how-to-create-recipe-with-git
-      not_numbered: false
-    - title: Markdown files
-      url: /features/markdown
-      not_numbered: false
-    - title: Jupyter notebooks
-      url: /features/notebooks
-      not_numbered: false
-    - title: Recipe Template
-      url: /recipes/help/recipe-template
-      not_numbered: false
-    - title: mermaidsetup
-      url: /1/mermaidsetup
-      not_numbered: false
 
 
-- title: frictionless data example
-  url: /1/frictionless
-  expand_sections: false
-  sections:
-  - title: 1
-    url: /1/testnb/0-rose-metabolites-Python-data-handling
-  - title: 2
-    url: /1/testnb/1-rose-metabolites-Python-analysis
-  - title: 3
-    url: /1/testnb/3-rose-metabolites-R-analysis
-  - title: 4
-    url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
+# - title: frictionless data example
+#   url: /1/frictionless
+#   expand_sections: false
+#   sections:
+#   - title: 1
+#     url: /1/testnb/0-rose-metabolites-Python-data-handling
+#   - title: 2
+#     url: /1/testnb/1-rose-metabolites-Python-analysis
+#   - title: 3
+#     url: /1/testnb/3-rose-metabolites-R-analysis
+#   - title: 4
+#     url: /1/testnb/2-rose-metabolites-Python-RDF-querying-analysis
 
 
 
 # Divider for meta-pages and content page
 - divider: true
+- header: Project Information
 - title: Project Information
+  not_numbered: true
   url: /project_information
   expand_sections: false
   sections:
+
   # people section
   - title: People
     url: /People
+    not_numbered: true  
+
+  # Contribution section
+  - title: Contributing
+    url: /Contributing
     not_numbered: true
 
-# people section
-- title: People
-  url: /People
-  not_numbered: true  
+  # Governance section
+  - title: Governance
+    url: /Governance
+    not_numbered: true 
 
-# Contribution section
-- title: Contributing
-  url: /Contributing
-  not_numbered: true
+  # license section
+  - title: License
+    url: /license
+    not_numbered: true    
 
-# Governance section
-- title: Governance
-  url: /Governance
+  # disclaimer section
+  - title: Disclaimer
+    url: /disclaimer
+    not_numbered: true  
+
+  # Code of Conduct section
+  - title: Code of Conduct
+    url: /code_of_conduct
+    not_numbered: true  
+
+  # publications section
+  - title: Publications
+    url: /papers
+    not_numbered: true  
+
+- divider: true
+
+- header: Help Section
+- title: Contributing Content
+  url: /recipes/help
   not_numbered: true 
+  sections:
+    - title: How to create a recipe with GoogleDoc
+      url: /recipes/help/how-to-create-recipe-with-gdoc
+      not_numbered: true
+    - title: How to use HackMD to write a FAIR Cookbook Recipe
+      url: /recipes/help/how-to-create-recipe-with-hackmd
+      not_numbered: true
+    - title: HackMD Tips and Tricks
+      url: /recipes/help/tips-tricks
+      not_numbered: true      
+    - title: How to create a recipe with git
+      url: /recipes/help/how-to-create-recipe-with-git
+      not_numbered: true
+    - title: Markdown files
+      url: /features/markdown
+      not_numbered: true
+    - title: Jupyter notebooks
+      url: /features/notebooks
+      not_numbered: true
+    - title: Recipe Template
+      url: /recipes/help/recipe-template
+      not_numbered: true
+    - title: mermaidsetup
+      url: /1/mermaidsetup
+      not_numbered: true
 
-# license section
-- title: License
-  url: /license
-  not_numbered: true    
-
-# disclaimer section
-- title: Disclaimer
-  url: /disclaimer
-  not_numbered: true  
-
-# Code of Conduct section
-- title: Code of Conduct
-  url: /code_of_conduct
-  not_numbered: true  
-
-# publications section
-- title: Publications
-  url: /papers
-  not_numbered: true    
   

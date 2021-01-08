@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+   build-and-serve:
+      build: 
+         context: .
+      image: rgiessmann/build-and-serve:latest
+      ports:
+         - 127.0.0.1:4000:4000
+      volumes: []      

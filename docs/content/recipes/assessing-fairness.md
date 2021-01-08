@@ -10,10 +10,13 @@ We will therefore cover topics such as:
 
 :warning: tentative outline
 
-1. Current Resources for Automatic Assessment of FAIRness
-2. Developping FAIR Metrics 
-3. FAIRNess and Data Readiness
-4. Maintaining and Improving FAIRness
+1. Using and Developping FAIR Indicators 
+2. Carrying out FAIR assessments manually:
+3. Automatic Assessment with FAIREvaluator
+4. Automatic Assessment with FAIRShake
+
+5. FAIRNess and Data Readiness
+6. Maintaining and Improving FAIRness
 
 :oil_drum::construction: **This project is still in early phase and this is work in progress** :construction::oil_drum:
 

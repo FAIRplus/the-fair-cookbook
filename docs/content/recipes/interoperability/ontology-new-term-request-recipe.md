@@ -1,27 +1,4 @@
 # R2.2.1: (self) request terms to be added to a public ontology
-<!-- 
-**identifier:** [R2.2.1](R2.2.1)
-
-**version:** [v0.1](v0.1)
-
-___
-
-
-**_Difficulty level:_** :triangular_flag_on_post: :white_circle: :white_circle:  :white_circle:  :white_circle:
-
-**_Reading time:_** 15 minutes
-
-**_Intended Audience:_** 
-
-> :heavy_check_mark:  Terminology Manager
-
-> :heavy_check_mark:  Ontologist
-
-> :heavy_check_mark:  Data Scientist
-
-**_Recipe Type_**: Ontology Term Request 
-
-**_Executable code_**: No -->
 
 ___
 
@@ -81,7 +58,6 @@ ___
 
 ___
 
-[TOC]
 
 ## Main Objective:
 
@@ -229,6 +205,8 @@ UMLS is updated in May and November of each year.
 | Release Format 2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
 | Rich Release Format |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
 
+---
+
 ## Authors
 
 | Name | Affiliation  | ORCID | CRediT role  |
@@ -236,9 +214,14 @@ UMLS is updated in May and November of each year.
 | Ulrich Goldmann | CeMM - Research Center for Molecular Medicine of the Austrian Academy of Sciences | [0000-0003-1120-6912](https://orcid.org/0000-0003-1120-6912) | Writing - Original Draft |
 | Emma Vos |  The Hyve | | Writing - Original Draft | 
 
-## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+---
+
+## License:
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
 
 
 

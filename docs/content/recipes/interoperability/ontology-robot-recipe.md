@@ -84,7 +84,7 @@ ___
 
 ___
 
-# How to build application ontology with ROBOT
+<!-- # How to build application ontology with ROBOT
 
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
@@ -93,7 +93,7 @@ ___
 5. [Table of Data Standards](#Table%20of%20Data%20Standards)
 6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
 7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
+8. [License](#License) -->
 
 ## Main Objectives
 
@@ -664,7 +664,8 @@ ___
 
 ___
 
-
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

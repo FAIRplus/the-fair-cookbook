@@ -1,25 +1,5 @@
 # Findability: Search Engine Optimization
 
-
-
-<!-- **identifier:** [RX.X](RX.X)
-
-**version:** [v0.1](v0.1)
-
- **_Difficulty level:_** :triangular_flag_on_post: :white_circle: :white_circle:  :white_circle:  :white_circle:
-
-**_Reading time:_** 10 minutes
-
-**_Intended Audience:_** 
-
-> :heavy_check_mark: Application Developer
-
-> :heavy_check_mark: Data Scientist
-
-**_Recipe Type_**: Guidance
-
-**_Executable code_**: No -->
-
 ___
 
 <div class="row">
@@ -75,7 +55,7 @@ ___
   </div>
 </div>
 
-___
+<!-- ___
 
 # Table of Contents
 1. [Main FAIRification Objectives](#Main%20Objectives)
@@ -85,7 +65,7 @@ ___
 5. [Table of Data Standards](#Table%20of%20Data%20Standards)
 6. [Executable Code in Notebook](#Executable%20Code%20in%20Notebook)
 7. [How to create workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
+8. [License](#License) -->
 
 ---
 
@@ -134,6 +114,8 @@ graph TD
 classDef box font-family:avenir,font-size:14px,fill:#300861,stroke:#222,color:#fff,stroke-width:1px
 linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
 </div>
+
+
 ___
 
 ## Capability & Maturity Table
@@ -143,7 +125,7 @@ ___
 | Findabililty | minimal | repeatable |
 | Interoperability | minimal | |
 
-----
+---
 
 ## Main body of the recipe
 
@@ -244,7 +226,9 @@ The tool is known as the [`Google Structured Data Testing Tool`](https://search.
 
 ![](https://i.imgur.com/Ge8gsWL.png =650px)
 
-
+<div style="display: flex; justify-content: center;">
+<img src="https://i.imgur.com/Ge8gsWL.png" width="650" style="border:1px solid black"/>
+</div>
 
 ### Bioschemas: trying to address the coverage gap
 
@@ -298,4 +282,6 @@ ___
 
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

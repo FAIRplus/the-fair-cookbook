@@ -82,3 +82,16 @@ The FAIRness level of the transcriptomics dataset for the HUH-7 cell line (as pu
 2. EBI BioSamples database is the master hosting platform for sample metadata, allowing curation and basic ontology annotation. 
 3. MINSEQE is the recommended community standard for transcriptomics data. 
 4. A new transcriptomics schema was proposed which reflects the transcriptomics community guideline and supported by the EBI database submission platform.
+
+
+---
+## Authors:
+
+
+---
+
+## License:
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

@@ -1,4 +1,4 @@
-# Contributing to the `FAIR cookbook`
+# Contributing to the FAIR cookbook
 
 Welcome to the `FAIR cookbook` repository! We're excited you're here and want to contribute.
 
@@ -26,8 +26,8 @@ As a reminder, we expect all contributors to `FAIR cookbook` to adhere to the [F
 
 ## Contributing through GitHub
 
-[git][link_git] is a really useful tool for version control.
-[GitHub][link_github] sits on top of git and supports collaborative and distributed working.
+- [git][link_git] is a really useful tool for version control.
+- [GitHub][link_github] sits on top of git and supports collaborative and distributed working.
 
 You'll use [Markdown][markdown] to chat in issues and pull requests on GitHub.
 You can think of Markdown as a few little symbols around your text that will allow GitHub
@@ -161,7 +161,7 @@ You're awesome. :wave::smiley:
 [readthedocs]: https://docs.readthedocs.io/en/latest/index.html
 
 [link_issues]: https://github.com/fair-cookbook/the-fair-cookbook/issues
-[link_coc]: https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md
+[link_coc]: https://fairplus.github.io/cookbook-dev/code_of_conduct.html
 
 [link_labels]: https://github.com/fair-cookbook/the-fair-cookbook/labels
 [link_bugs]: https://github.com/fair-cookbook/the-fair-cookbook/labels/bug

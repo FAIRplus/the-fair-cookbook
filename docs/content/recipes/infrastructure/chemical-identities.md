@@ -1,6 +1,6 @@
 # Chemical Identity - Generating InChi Keys and SMILES strings:
 
-**identifier:** [RX.X](RX.X)
+<!-- **identifier:** [RX.X](RX.X)
 
 **version:** [v0.1](v0.1)
 ___
@@ -22,7 +22,7 @@ ___
 
 **_Recipe Type_**: Hands-on practical
 
-**_Executable code_**: Yes
+**_Executable code_**: Yes -->
 
 
 ___
@@ -81,9 +81,6 @@ ___
   </div>
 </div>
 
-___
-
-[TOC]
 
 ___
 
@@ -166,9 +163,10 @@ groovy smiles.groovy -f foo.sdf
 
 ___
 
-
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
 
 
