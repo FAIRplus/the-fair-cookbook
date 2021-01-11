@@ -74,15 +74,14 @@ ___
 ___
 
 
-# Table of Contents
+
+<!-- # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [User Stories](#User%20Stories)
 3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
 5. [An Example of Data Dictionary](#An%20Example%20of%20Data%20Dictionary)
-6. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary)
-
----
+6. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary) -->
 
 ## Main FAIRification Objectives
 
@@ -104,6 +103,43 @@ ___
 ## User Stories
 
 When working on data from previous IMI projects, it became apparent that a well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.
+
+---
+
+## Graphical overview
+```mermaid
+graph LR
+  A(project):::box -->|data collection| B(Data Management Plan):::box
+
+  B -->|refers to| C(Data Dictionary):::box
+  B -->|identifies| F(fa:fa-car Metadata Models):::box5
+  B -->|lists| E(Data Collection <br> Formulaires):::box5
+
+  C --> |declares| D(variable):::box
+
+  D --> |defined by| G(variable data type <br> e.g. string,integer,float):::box
+  D --> |defined by| H(variable statistical type <br> one of continuous,categorical or ordinal variable):::box
+  D --> |defined by| I(variable semantic type <br> e.g. associated a class from an ontology <br>or controlled vocabulary):::box
+  D --> |defined by| J(variable values range for continuous variables):::box
+  D --> |defined by| K(variable values sets for categorical variables):::box
+  D --> |defined by| L(allowed values to indicate missing values <br> e.g. `NaN`,`None`,``):::box
+  D --> |defined by| LL(regular expression for input validation):::box
+  D --> |defined by| LLL(computation formula if specifying a derived variable):::box
+  D --> |defined by| L4(variable domain grouping, e.g. clinical chemistry variable):::box
+  D --> |used in| E
+  L4 --> |refers to| E
+  C --> |states| M(license):::box1
+  C --> |states| N(terms of use):::box1
+  C --> |authored_by| O(authors):::box1
+  C --> |documented in open format| P(format):::box1
+
+linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 stroke:#2a9fc9,stroke-width:1px,color:#2a9fc9,font-family:avenir;
+classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+classDef box1 font-family:avenir,font-size:14px,fill:purple,stroke:#222,color:#fff,stroke-width:1px
+classDef box5 font-family:avenir,font-size:14px,fill:#FF3371,stroke:#222,color:#fff,stroke-width:1px
+```
+
+---
 
 ## Capability & Maturity Table
 
