@@ -2,7 +2,7 @@
 dummy: dummy
 ---
 
-# Which ontology orr terminology to use? 
+# Which ontology or terminology to use? 
 
 <!-- **identifier:** [RX.X](RX.X)
 
