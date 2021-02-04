@@ -86,30 +86,30 @@ This recipe will cover the highlighted topics
     graph TB
       I[Identifier]
       I --> IM[Identifier Mapping]
-      M[Mapping] --> OM[Ontology Mapping]
-      OM --> OxO
+      M[Mapping Process] --> OM[Ontology Mapping]
+      OM --> OxO[OxO Service]
 
       M --> IM
 
-      IM -- has section --> IMS
+      IM -- performs --> IMS
 
-      IM -- has section--> IE([Identifier Equivalence])
-      IE -- mentions--> SL{{Scientific Lenses}}
+      IM -- performs--> IE([Identifier Equivalence Assessment])
+      IE -- uses service--> SL{{Scientific Lenses}}
 
       IMS([Identifier Mapping Services])
-      IMS -- mentions --> BDb[BridgeDb]
-      IMS -- mentions --> UniChem{{UniChem}}
-      IMS -- mentions --> Sameas{{Sameas}}
-      IMS -- mentions --> Identifiers{{Identifiers.org}}
+      IMS -- uses service --> BDb[BridgeDb]
+      IMS -- uses service --> UniChem{{UniChem}}
+      IMS -- uses service --> Sameas{{Sameas}}
+      IMS -- uses service --> Identifiers{{Identifiers.org}}
 
-      BDb -- has section --> MGG[Mapping global identifiers to other global identifiers]
-      BDb -- has section --> MLG[Mapping local identifiers to other global identifiers]
+      BDb -- performs --> MGG[Mapping global identifiers to other global identifiers]
+      BDb -- performs --> MLG[Mapping local identifiers to other global identifiers]
 
-      MGG -- has section --> P1([Python])
-      MGG -- has section --> R1([R])
-      MLG -- has section --> P2([Python])
-      MLG -- has section --> R2([R])
-
+      MGG -- implemented in --> P1([Python])
+      MGG -- implemented in --> R1([R])
+      MLG -- implemented in --> P2([Python])
+      MLG -- implemented in --> R2([R])
+      
         style OM stroke-dasharray: 5 5
         %% style M stroke-dasharray: 5 5
 
@@ -127,23 +127,7 @@ This recipe will cover the highlighted topics
       %% style I fill:#f9f
       %% style OxO fill:#f9f
 ```
-___
 
-**ToDo:** Update diagram
-
-
-<div class="mermaid">
-graph TD
-
-  Process2[Identifier Minting]:::bix --> A1(authority decide identity):::box
-  Process2 --> Process3
-  Process3[URI construction]:::bix --> A2(scoping the authority):::box
-  Process3 --> Process4
-  Process4[URI resolution]:::bix --> A3(directing requests to the relevant identified entity):::box
-
-  classDef bix font-family:avenir,font-size:14px,fill:#7e0038,stroke:#222,color:#fff,stroke-width:1px
-  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
-</div>
 
 ---
 
@@ -171,24 +155,24 @@ graph TD
 | [IRI](https://tools.ietf.org/html/rfc3987) |   |   |
 | [CURIE](https://www.w3.org/TR/2010/NOTE-curie-20101216/) |   |   |
 | [URL](https://tools.ietf.org/html/rfc1738) |  |  |
-| [HTTP]() |  |  |
-| [RDF]() |  |  |
-| [CSV]() |  |  |
-| [TSV]() |  |  |
-| [VoID Linkset]() |  |  |
+| [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) |  |  |
+| [RDF](https://www.w3.org/RDF/) |  |  |
+| [CSV](https://tools.ietf.org/html/rfc4180) |  |  |
+| [TSV](https://www.iana.org/assignments/media-types/text/tab-separated-values) |  |  |
+| [VoID Linkset](https://www.w3.org/TR/void/) |  |  |
 
 ---
 ## Mappings
 Before diving into identifier mapping it is important to understand the possible types of mappings that can be performed between entities. While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest. 
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses". These lenses allow us
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see [[1]](#References)). These lenses allow us
 to dynamically select which mappings to consider relevant and which to ignore. For example allowing or disallowing mappings between stereoisomers or between genes and proteins.
 
 Examples of types of mappings are:
-* **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparison of INCHI identifiers for chemical compounds
+* **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparison of InChI identifiers for chemical compounds
 * **Ontology mapping**: this can either be 
     * As a direct 1-to-1 mapping between equivalent terms in different ontologies
     * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see [[2]](#References).
-* **Identifier mapping**: The focus of this relationship. This can either be:
+* **Identifier mapping**: The focus of this recipe. This can either be:
     * Mapping between differently formed identifiers that resolve to the same entity.
     * Mapping between identical local identifiers with different namespaces
     * Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these)
