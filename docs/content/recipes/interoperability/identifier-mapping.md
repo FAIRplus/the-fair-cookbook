@@ -164,17 +164,17 @@ This recipe will cover the highlighted topics
 ---
 ## Mappings
 Before diving into identifier mapping it is important to understand the possible types of mappings that can be performed between entities. While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest. 
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see [[1]](#References)). These lenses allow us
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see [[2]](#References)). These lenses allow us
 to dynamically select which mappings to consider relevant and which to ignore. For example allowing or disallowing mappings between stereoisomers or between genes and proteins.
 
 Examples of types of mappings are:
 * **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparison of InChI identifiers for chemical compounds
 * **Ontology mapping**: this can either be 
     * As a direct 1-to-1 mapping between equivalent terms in different ontologies
-    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see [[2]](#References).
+    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see [[4]](#References).
 * **Identifier mapping**: The focus of this recipe. This can either be:
-    * Mapping between differently formed identifiers that resolve to the same entity.
-    * Mapping between identical local identifiers with different namespaces
+    * Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl)
+    * Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different)
     * Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these)
     * Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB)
 
@@ -211,10 +211,10 @@ The simplest way to exchange equivalences is in a simple text file, which could 
 
 The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.
 
-```
-ChEMBL_Target_Component    UniProt
-CHEMBL_TC_4803    A0ZX81
-CHEMBL_TC_2584    A1ZA98 
+```tsv
+ChEMBL_Target_Component	UniProt
+CHEMBL_TC_4803	A0ZX81
+CHEMBL_TC_2584	A1ZA98 
 ```
 
 #### Vocabulary of Interlinked Datasets Linkset Files
@@ -254,10 +254,10 @@ The OBOFoundry Simple Standard for Sharing Ontology Mappings ([SSSOM](https://gi
 
 The following TSV shows our example data as a mapping file using the minimal columns (correct as of November 2020). The information provided is less than the minimal VoID model above.
 
-```
-subject_id    predicate_id    object_id    match_type
-chembl:CHEMBL_TC_4803    skos:exactMatch    uniprot:A0ZX81    sio:database-cross-reference
-chembl:CHEMBL_TC_2584    skos:exactMatch    uniprot:A1ZA98    sio:database-cross-reference
+```tsv
+subject_id	predicate_id	object_id	match_type
+chembl:CHEMBL_TC_4803	skos:exactMatch	uniprot:A0ZX81	sio:database-cross-reference
+chembl:CHEMBL_TC_2584	skos:exactMatch	uniprot:A1ZA98	sio:database-cross-reference
 ```
 
 #### Discussion
@@ -276,9 +276,9 @@ The common functionality offered by these services is to return a set of equival
 
 The following is an incomplete list of identifier mapping services.
 
-* [bridgedb.org](https://bridgedb.org/)
+* [bridgedb.org](https://bridgedb.github.io/) 
 
-    > [BridgeDb](https://bridgedb.org/) is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
+    > [BridgeDb](https://bridgedb.github.io/)  [[3]](#References) is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
     > 
     > It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following `curl` command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) `L` identifier `1234` for the `Human` gene [CCR5](https://www.ncbi.nlm.nih.gov/gene/1234) as a TSV file.
     > ```
@@ -287,7 +287,7 @@ The following is an incomplete list of identifier mapping services.
     > For more details about using BridgeDb as an identifier mapping service, please see [this recipe]XXX.
 
 * [UniChem](https://www.ebi.ac.uk/unichem/)
-    > [UniChem](https://www.ebi.ac.uk/unichem/) is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
+    > [UniChem](https://www.ebi.ac.uk/unichem/) [[1]](#References) is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
     > 
     > The following `curl` command retrieves the equivalent database identifiers for the ChEMBL identifier `CHEMBL12` [DIAZEPAM](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/) and returns the result as a JSON object.
     > ```
@@ -305,7 +305,7 @@ The following is an incomplete list of identifier mapping services.
     > Note that the coverage of sameas.org within the life sciences is very small.
 
 
-* [Identifiers.org](http://identifiers.org/)
+* [Identifiers.org](https://identifiers.org/)
 
     > [Identifiers.org](https://identifiers.org) is a **Resolution Service** that provides access to alternative mirrors of the same database which are located at different URLs on the web. For example, the UniProt database is based as the Swiss Institute of Bioinformatics but is also mirrored on the NCBI in the States.
     > 
@@ -340,9 +340,10 @@ ___
 ___
 
 ## References:
-
-1. Colin Batchelor, Christian Y. A. Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T. Evelo, Anna Gaulton, Carole Goble, Alasdair J. G. Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P. Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, Egon L. Willighagen. Scientific Lenses to Support Multiple Views over Linked Chemistry Data. In ISWC 2014: The Semantic Web – ISWC 2014 pp 98-113. https://doi.org/10.1007/978-3-319-11964-9_7
-2. Wang, Y., Liu, W., & Bell, D. (2010). A Concept Hierarchy Based Ontology Mapping Approach. In Y. Bi & M.-A. Williams (Eds.), Knowledge Science, Engineering and Management (pp. 101–113). Springer. https://doi.org/10.1007/978-3-642-15280-1_12
+1. Chambers, J., Davies, M., Gaulton, A., Hersey, A., Velankar, S., Petryszak, R., Hastings, J., Bellis, L., McGlinchey, S., & Overington, J. P. (2013). UniChem: A unified chemical structure cross-referencing and identifier tracking system. Journal of Cheminformatics, 5(1), 3. https://doi.org/10.1186/1758-2946-5-3
+4. Colin Batchelor, Christian Y. A. Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T. Evelo, Anna Gaulton, Carole Goble, Alasdair J. G. Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P. Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, Egon L. Willighagen. Scientific Lenses to Support Multiple Views over Linked Chemistry Data. In ISWC 2014: The Semantic Web – ISWC 2014 pp 98-113. https://doi.org/10.1007/978-3-319-11964-9_7
+3. van Iersel, M. P., Pico, A. R., Kelder, T., Gao, J., Ho, I., Hanspers, K., Conklin, B. R., & Evelo, C. T. (2010). The BridgeDb framework: Standardized access to gene, protein and metabolite identifier mapping services. BMC Bioinformatics, 11(1), 5. https://doi.org/10.1186/1471-2105-11-5
+4. Wang, Y., Liu, W., & Bell, D. (2010). A Concept Hierarchy Based Ontology Mapping Approach. In Y. Bi & M.-A. Williams (Eds.), Knowledge Science, Engineering and Management (pp. 101–113). Springer. https://doi.org/10.1007/978-3-642-15280-1_12
 
 
 
