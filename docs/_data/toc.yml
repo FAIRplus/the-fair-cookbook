@@ -199,6 +199,9 @@
     - title: How to convert to open format from propriatory
       url: /recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar
       not_numbered: false
+    - title: Tools to convert your data to RDF
+      url: /recipes/interoperability/conversion-to-rdf-tools
+      not_numbered: false
 
 - title: Reusability
   url:  /recipes/reusability
