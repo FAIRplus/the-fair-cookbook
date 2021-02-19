@@ -27,23 +27,11 @@ ___
 **_Executable code_**: set_value_FIXME, [Yes,No]
 
 
-[TOC]
 ## Table of Contents
 
-- [[here comes the Title of the recipe]](#here-comes-the-title-of-the-recipe)
-  - [Table of Contents](#table-of-contents)
-  - [Main Objectives](#main-objectives)
-  - [Graphical Overview of the FAIRification Recipe Objectives](#graphical-overview-of-the-fairification-recipe-objectives)
-  - [Requirements](#requirements)
-  - [Capability & Maturity Table](#capability--maturity-table)
-  - [FAIRification Objectives, Inputs and Outputs](#fairification-objectives-inputs-and-outputs)
-  - [Table of Data Standards](#table-of-data-standards)
-  - [Main Content](#main-content)
-    - [... write executable code](#-write-executable-code)
-    - [... create workflow figures](#-create-workflow-figures)
-  - [Conclusion:](#conclusion)
-  - [Authors:](#authors)
-  - [License:](#license)
+[TOC]
+
+
 
 ---
 
@@ -375,14 +363,12 @@ ___
 
 > Summerize Key Learnings of the recipe.
 
-> #### What should I read next?
+#### What should I read next?
 
-*   Provide dataset description, provenance (?)
-    *   Mention FAIR workflows
-*   Upload/publish your data
-    *   Link to recipe: 2.6, 2.7, 3.2 ?
-*   Include pointers to follow-up recipes
-*   Further reading?
+* [A data engineer's guide to semantic modelling - Ilaria Maresi](https://zenodo.org/record/3898519#.YC-abmhKiHs) (Zenodo)
+* Upload/publish your data: recipe: 2.6, 2.7, 3.2 ?
+
+
 
 ___
 ## Authors:
