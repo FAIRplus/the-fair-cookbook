@@ -1,3 +1,4 @@
+(interoperability-identifier_mapping)=
 ---
 dummy: dummy
 ---
@@ -197,7 +198,14 @@ While the minting of identifiers is often done in isolation of other organisatio
 
 Identifier equivalences can come about in several ways and capture different forms of relationship as presented in [Mappings](#Mappings). For example, a database may declare that their record is the same as an entry in another because they share the same name, or they may declare it based on a common representation (gene sequence or InChI). To support reuse of the data, the `provenance` of the cross-references need to be made explicit. 
 
-Depending on the nature of the data, there are different ways that equivalences can be computed. The following is a list of recipes that give details.
+Depending on the nature of the data, there are different ways that equivalences can be computed. 
+
+Some elements to take into consideration are:
+1. **An indicator of identity** (similar to what is found in the ontology world with skos:sameAs or skos:narrower)
+1. **The evidence backing up that indication** (e.g. a similarity measure, a score).
+1. **Audit and trail information** (who, what, when, e.g. agent X, mapping tools Y, DDMMYYYY).
+
+
 
 
 
