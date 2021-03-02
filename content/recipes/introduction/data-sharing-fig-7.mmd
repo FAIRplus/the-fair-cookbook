@@ -1,0 +1,42 @@
+graph TD
+
+subgraph Analyse Use Cases
+WhatUseCases(What data sharing use cases are supported?):::box1 
+WhatSharedData(What data are shared?):::box1 
+DOAudience(Who are the data owners?):::box1
+DOExpectations(What are the requirements of the data owners?):::box1 
+DCAudience(Who are the data consumers?):::box1 
+DCExpectations(What are the requirements of the data consumers?):::box1 
+AnalyseUseCaseEnd(End of use cases analysis):::box1 
+end
+
+WhatUseCases --> WhatSharedData --> DOAudience --> DOExpectations --> AnalyseUseCaseEnd
+WhatSharedData --> DCAudience --> DCExpectations --> AnalyseUseCaseEnd
+AnalyseUseCaseEnd --> SelectRelevantEC
+
+subgraph Evaluation Criteria Scoping
+SelectRelevantEC(Select the relevant evaluation criteria):::box 
+DefineECImportance(Weighten the importance for each relevant evaluation criteria):::box 
+RefineEC(Optional Refinement of the relevant evaluation criteria):::box     
+SelectRelevantEC --> DefineECImportance --> RefineEC
+end 
+
+RefineEC:::box  --> WfL:::box 
+
+subgraph Evaluation of single Workflows
+WfL>For each: DataSharingWorkflow]
+style WfL fill:darkgrey
+DSWorkflow(Evaluate data sharing workflow)
+EndWfL(End of single workflow loop)
+end
+
+WfL --> DSWorkflow:::box 
+WfL --> EndWfL:::box  --> OverallEvalutationCriteria:::box 
+
+subgraph Perform Overall Evaluation
+OverallEvalutationCriteria(Evaluate criteria from overall perspective)
+end
+
+classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
+classDef box1 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
+linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir;

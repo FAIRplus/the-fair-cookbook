@@ -1,0 +1,156 @@
+- file: content/home
+
+- file: content/recipes/introduction
+  title: Introduction
+  numbered: true
+  sections:
+      - file: content/recipes/introduction/ATI-turingway
+      - file: content/recipes/introduction/FAIR-cookbook-audience
+      - file: content/recipes/introduction/brief-FAIR-principles
+      - file: content/recipes/introduction/what-is-IMI
+      - file: content/recipes/introduction/FAIR-in-IMI-context
+      # - file: content/recipes/introduction/IMI-and-data-management-plans
+      - file: content/recipes/introduction/IMI-Data-Access-Request-Process
+      - file: content/recipes/introduction/FAIRplus-values
+      - file: content/recipes/introduction/data-sharing-models
+
+# - file: content/recipes/cmmi
+#   title: Maturity models
+#   numbered: false
+
+# -header: assessment
+- file: content/recipes/assessing-fairness
+  title: Assessing FAIR 
+  numbered: true
+  sections:
+      - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
+      - file: content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model
+      - file: content/recipes/assessing-fairness/cmmi/Data-Usage-Areas
+      - file: content/recipes/assessing-fairness/fair-indicators
+        sections:
+          - file: content/recipes/assessing-fairness/cmmi/RDA-Indicators
+          - file: content/recipes/assessing-fairness/cmmi/FAIRPlus-Indicators
+      - file: content/recipes/assessing-fairness/manual-fair-assessment 
+        sections:
+          - file: content/recipes/assessing-fairness/cmmi/evaluation-method
+          - file: content/recipes/assessing-fairness/cmmi/rda-evaluation
+      - file: content/recipes/assessing-fairness/automatic-fair-assessment
+        sections:
+          - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
+          - file: content/recipes/assessing-fairness/fair-assessment-fairshake
+
+- file: content/recipes/infrastructure
+  title: Infrastructure for FAIR
+  numbered: true
+  sections:
+      - file: content/recipes/infrastructure/id-resolution
+      - file: content/recipes/infrastructure/data-catalog
+      - file: content/recipes/infrastructure/data-catalog-deployment
+      - file: content/recipes/infrastructure/vocabularies
+        sections:      
+          - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
+          - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
+          - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
+
+# - header: findability
+- file: content/recipes/findability
+  title: Improving Findability
+  numbered: true
+  sections:
+      - file: content/recipes/findability/identifiers
+      - file: content/recipes/infrastructure/chemical-identities
+      - file: content/recipes/findability/identifiers-minids
+      - file: content/recipes/findability/zenodo-deposition
+      - file: content/recipes/findability/seo
+        sections:
+          - file: content/recipes/findability/seo/bioschemas-data-page
+          - file: content/recipes/findability/seo/bioschemas-dataset
+          - file: content/recipes/findability/seo/bioschemas-datacatalog
+
+
+# - header: accessibility
+- file: content/recipes/accessibility
+  title: Improving Accessibility
+  numbered: true
+  sections:
+    - file: content/recipes/accessibility/anonymization
+    - file: content/recipes/accessibility/how-to-use-sftp-for-transfer
+    - file: content/recipes/accessibility/aspera
+
+
+- file: content/recipes/interoperability
+  title: Improving Interoperability
+  numbered: false
+  sections:
+      # - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+      - file: content/recipes/interoperability/selecting-ontologies
+      - file: content/recipes/interoperability/ontology-new-term-request-recipe
+      - file: content/recipes/interoperability/ontology-robot-recipe
+        sections:
+          - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+      - file: content/recipes/interoperability/creating-minimal-metadata-profiles
+        sections:
+          - file: content/recipes/interoperability/transcriptomics-metadata
+          - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
+      - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar    
+      - file: content/recipes/interoperability/fastq-file-format-validators
+
+
+# -header: reusability
+- file: content/recipes/reusability
+  title: Improving Reusability
+  numbered: true
+  sections:
+    - file: content/recipes/reusability/ATI-licensing
+    - file: content/recipes/reusability/ATI_licensing_software
+    - file: content/recipes/reusability/ATI_licensing_data
+    # - file: content/recipes/reusability/license-selection
+    - file: content/recipes/reusability/provenance
+    - file: content/recipes/reusability/community-standards
+
+ 
+- file: content/recipes/applied-examples
+  title: Making IMI data FAIR
+  numbered: false
+  sections:
+    - file: content/recipes/applied-examples/fair-data-matrix-recipe
+      numbered: false
+      sections:
+        - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
+        - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
+        - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
+        - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
+    - file: content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
+    - file: content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
+    - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
+    - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
+
+
+- file: content/recipes/glossary-fair-terms
+  title: Glossary of FAIR things
+  numbered: true
+
+- file: content/recipes/help
+  title: Help
+  numbered: true
+  sections:
+    - file: content/recipes/help/tips-tricks
+    - file: content/recipes/help/recipe-template
+    - file: content/recipes/help/how-to-create-recipe-with-gdoc
+    - file: content/recipes/help/how-to-create-recipe-with-hackmd
+    - file: content/recipes/help/how-to-create-recipe-with-git
+
+
+- file: content/recipes/boilerplate
+  title: Miscellaneous
+  numbered: true
+  sections:
+      - file: content/recipes/boilerplate/license
+      - file: content/recipes/boilerplate/people
+      - file: content/recipes/boilerplate/governance
+      - file: content/recipes/boilerplate/code_of_conduct
+      - file: content/recipes/boilerplate/project_information
+      - file: content/recipes/boilerplate/roadmap
+      - file: content/recipes/boilerplate/contributing
+      - file: content/recipes/boilerplate/disclaimer
+

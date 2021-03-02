@@ -1,0 +1,75 @@
+#######################################################################################
+# Book settings
+title                       :  # The title of the book. Will be placed in the left navbar.
+author                      : The FAIRplus project members  # The author of the book
+copyright                   : "2020 (CC-BY 4.0)"  # Copyright year to be placed in the footer
+logo                        : "./_static/cookbook-logo-small.png"  # A path to the book logo
+exclude_patterns            : []  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks         : off  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  cache                     : ""  # A path to the jupyter cache that will be used to store execution artifacs. Defaults to `_build/.jupyter_cache/`
+  exclude_patterns          : []  # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
+
+#######################################################################################
+# HTML-specific settings
+html:
+  favicon                   : "./_static/images/logo/favicon.ico"  # A path to a favicon image
+  navbar_number_sections    : True  # Add a number to each section in your left navbar
+  use_edit_page_button      : True  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : True  # Whether to add a link to your repository button
+  use_issues_button         : True  # Whether to add an "open an issue" button
+  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+  extra_footer              :   # Will be displayed underneath the footer.
+    <script>mermaid.init();</script>
+    <div class="row_footer">
+    This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 
+    2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.
+    </div>
+
+    <div class="row_footer">
+    This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a>
+    </div>
+
+    <div class="row_footer">
+    <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
+    <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
+    <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
+    <br/>
+    </div>
+
+ 
+  google_analytics_id       : ""  # A GA id that can be used to track book views.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : "https://proccaserra.github.io/the-fair-cookbook-ng"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+
+  comments:
+    hypothesis: true
+    utterances:
+      repo: "https://github.com/proccaserra/the-fair-cookbook-ng"
+#######################################################################################
+# Launch button settings
+launch_buttons:
+  notebook_interface        : "jupyterlab" # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : "https://mybinder.org"  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebelab                  : false  # Add a thebelab button to pages (requires the repository to run on Binder)
+  colab_url                 : "https://colab.research.google.com"
+
+repository:
+  url                       : https://github.com/proccaserra/the-fair-cookbook-ng  # The URL to your book's repository
+  path_to_book              : "the-fair-cookbook"  # A path to your book's folder, relative to the repository root.
+  branch                    : main  # Which branch of the repository should be used when creating links
+
+#######################################################################################
+# Advanced and power-user settings  
+sphinx:
+  extra_extensions          :   # A list of extra extensions to load by Sphinx.
+   # - sphinx_tabs.tabs
+  config                    :   # key-value pairs to directly over-ride the Sphinx configuration
+
+# bibtex_bibfiles:
+#    - ../_bibliography/fairbookreferences.bib
+   # - ./content/fairbookreferences.bib
