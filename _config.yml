@@ -21,6 +21,8 @@ html:
   use_edit_page_button      : True  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : True  # Whether to add a link to your repository button
   use_issues_button         : True  # Whether to add an "open an issue" button
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : "https://fairplus.github.io/the-fair-cookbook"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   extra_footer              :   # Will be displayed underneath the footer.
     <script>mermaid.init();</script>
@@ -34,21 +36,16 @@ html:
     </div>
 
     <div class="row_footer">
-    <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
-    <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
-    <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
+    <div class="column" style="center"><a href="https://europa.eu/"><img src="_build/html/_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
+    <div class="column"><a href="https://www.imi.europa.eu/"><img src="./_build/html/_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
+    <div class="column"><a href="https://efpia.eu"><img src="../_build/html/_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
     <br/>
     </div>
-
- 
-  google_analytics_id       : ""  # A GA id that can be used to track book views.
-  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
-  baseurl                   : "https://proccaserra.github.io/the-fair-cookbook-ng"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
-
+  google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
   comments:
     hypothesis: true
     utterances:
-      repo: "https://github.com/proccaserra/the-fair-cookbook-ng"
+      repo: "FAIRplus/the-fair-cookbook"
 #######################################################################################
 # Launch button settings
 launch_buttons:
@@ -59,9 +56,9 @@ launch_buttons:
   colab_url                 : "https://colab.research.google.com"
 
 repository:
-  url                       : https://github.com/proccaserra/the-fair-cookbook-ng  # The URL to your book's repository
-  path_to_book              : "the-fair-cookbook"  # A path to your book's folder, relative to the repository root.
-  branch                    : main  # Which branch of the repository should be used when creating links
+  url                       : https://github.com/FAIRplus/the-fair-cookbook  # The URL to your book's repository
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  branch                    : migration  # Which branch of the repository should be used when creating links
 
 #######################################################################################
 # Advanced and power-user settings  
@@ -70,6 +67,5 @@ sphinx:
    # - sphinx_tabs.tabs
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
 
-# bibtex_bibfiles:
-#    - ../_bibliography/fairbookreferences.bib
-   # - ./content/fairbookreferences.bib
+bibtex_bibfiles:
+   - ./_bibliography/fairbookreferences.bib
