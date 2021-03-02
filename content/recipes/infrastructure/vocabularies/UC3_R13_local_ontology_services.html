@@ -1,0 +1,1266 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>4.3. How to deploy a terminology service - EBI Ontology Lookup Service</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Findability" href="../../findability.html" />
+    <link rel="prev" title="4.2. Selection and exploitation of Ontology Lookup Services" href="Selecting_and_using_ontology_lookup_services.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="How to deploy a terminology service - EBI Ontology Lookup Service" />
+<meta property="og:description" content="How to deploy a terminology service - EBI Ontology Lookup Service    &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="../vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   4.3.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   4.3.2. Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   4.3.3. Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   4.3.4. Graphical overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingredients">
+   4.3.5. Ingredients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-guide">
+   4.3.6. Step-by-step guide:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-dependencies">
+     4.3.6.1. 1. Install dependencies
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-ontologies-into-ols">
+     4.3.6.2. 2. Load ontologies into OLS
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-ontology-metadata-from-the-ebi-ols">
+       4.3.6.2.1. 2.1 Get ontology metadata from the EBI OLS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-up-ols-in-the-local-environment">
+     4.3.6.3. 3. Set up OLS in the local environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manage-ontologies">
+     4.3.6.4. 4. Manage ontologies
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modify-ols-configuration">
+       4.3.6.4.1. 4.1 Modify OLS configuration
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rebuild-ols-image-and-restart-ols">
+       4.3.6.4.2. 4.2 Rebuild OLS image and restart OLS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#troubleshooting">
+     4.3.6.5. Troubleshooting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   4.3.7. Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   4.3.8. Reference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   4.3.9. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   4.3.10. License:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="how-to-deploy-a-terminology-service-ebi-ontology-lookup-service">
+<h1><span class="section-number">4.3. </span>How to deploy a terminology service - EBI Ontology Lookup Service<a class="headerlink" href="#how-to-deploy-a-terminology-service-ebi-ontology-lookup-service" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a> 
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-fire fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fas fa-clock fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 20 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-users fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
+<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
+<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p>
+<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrator </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">4.3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service(OLS) on local machines. This demonstrates the workflow for deploying open source ontology service softwares in-house.</p>
+</div>
+<div class="section" id="introduction">
+<h2><span class="section-number">4.3.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>With an increasing need for ontology infrastructure to improve the interoperability of information-based R&amp;D activities, many pharmaceutical companies seek ontology management solutions and ontology services. Compared with developing local ontology services from scratch, reusing and redeveloping open-source ontology services save the time and cost. <strong>Recipe 3.1</strong> identifies public open-source ontology services. In this recipe, we use the <a class="reference external" href="https://www.ebi.ac.uk/ols/index">Ontology Lookup Service</a> to demonstrate the workflow of deploying public ontology services in-house.</p>
+<p>Ontology Lookup Service is an open-source ontology management service developed by <a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a>. It is a repository for biomedical ontologies, and serves as a single point of access to query, browse and navigate different ontologies. OLS supports the <a class="reference external" href="http://www.obofoundry.org/">Open Biological and Biomedical Ontology (OBO) Foundry</a> guidelines and connects with other ontology services. It provides both web interface and API to search and browser ontologies. <strong>Recipe 3.1</strong> provides a detailed description of OLS.</p>
+<p>A local OLS allows users to protect and control their ontology-related data, and make stable and fast access to ontology services possible. It can serve as the hub of internal ontology eco-system, linking internal vocabulary, terminology management and data annotation activities together to improve the interoperability.</p>
+</div>
+<div class="section" id="requirements">
+<h2><span class="section-number">4.3.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This recipe is intended for bioinformaticians or developers who wants to explore public ontologies and ontology services. The users are expected to be familiar with Unix-based OS and basic Bash programming syntax and commands. The users should also be comfortable with YAML or other data-serialization languages. Knowledge about <a class="reference external" href="https://www.docker.com/">Docker</a> allows users to further customize their local service.</p>
+<p>This recipe can also be applied by organizational users. Please check with your IT support staff about specific policies regarding the use of containerized applications, proxy settings, and firewalls.</p>
+</div>
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">4.3.4. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="mermaid">
+graph LR
+    A[Install dependencies] --> B[Import ontologies]
+    B--> C[Set up and start local OLS] 
+    C--> D[Manage ontologies]
+    D --> C
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>subgraph Get ontology resources
+B1([From the online sources])
+B2([From local files])
+end
+
+subgraph Ontology management
+E([Add new ontologies])
+F([Update existing ontologies])
+G([Delete ontologies])
+end
+
+B1-.-&gt; B
+B2 -.-&gt;B
+
+E -.-&gt; D
+F -.-&gt; D
+G -.-&gt; D
+
+style E fill:#FFFF99
+style F fill:#FFFF99
+style G fill:#FFFF99
+style B1 fill:#FFFF99
+style B2 fill:#FFFF99
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ingredients">
+<h2><span class="section-number">4.3.5. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EBISPOT/OLS-docker">OLS Docker image</a></p></li>
+<li><p><a class="reference external" href="https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config">Ontology metadata in OBO foundry</a></p></li>
+</ul>
+</div>
+<div class="section" id="step-by-step-guide">
+<h2><span class="section-number">4.3.6. </span>Step-by-step guide:<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-dependencies">
+<h3><span class="section-number">4.3.6.1. </span>1. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Unix-based environment (macOS, Linux):</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Software</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Installation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Git</p></td>
+<td><p>Get the versioned source file</p></td>
+<td><p>2.17.1</p></td>
+<td><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Official guide</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Docker</p></td>
+<td><p>Deliver software in containers</p></td>
+<td><p>18.09.01</p></td>
+<td><p><a class="reference external" href="https://docs.docker.com/install/">Official guide</a></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Windows-based enviroment (Windows 10 64bits):</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Software</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Installation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Git</p></td>
+<td><p>Get the versioned source file</p></td>
+<td><p>2.26.2.windows.1</p></td>
+<td><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Official guide</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Docker Desktop</p></td>
+<td><p>Deliver software in containers</p></td>
+<td><p>2.2.0.5 (Engine v.19.03.8)</p></td>
+<td><p><a class="reference external" href="https://docs.docker.com/install/">Official guide</a></p></td>
+</tr>
+<tr class="row-even"><td><p>PowerShell</p></td>
+<td><p>Execute commands</p></td>
+<td><p>5.1.17763(Desktop Edition)</p></td>
+<td><p><a class="reference external" href="https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7">Official Guide</a></p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>:bulb: This recipe was developed on a Unix-based environment and tested on Linux, macOS and Windows machines. Minor modifications are required  to run it on Windows machines.</p>
+</div></blockquote>
+</div>
+<div class="section" id="load-ontologies-into-ols">
+<h3><span class="section-number">4.3.6.2. </span>2. Load ontologies into OLS<a class="headerlink" href="#load-ontologies-into-ols" title="Permalink to this headline">¶</a></h3>
+<p>Ontologies in both <a class="reference external" href="https://fairsharing.org/10.25504/FAIRsharing.aa0eat">OBO</a> and <a class="reference external" href="https://fairsharing.org/10.25504/FAIRsharing.atygwy">OWL</a> formats can be loaded to OLS by adding ontology metadata to the configuration file, <code class="docutils literal notranslate"><span class="pre">ols-config.yaml</span></code>. Three fields, <code class="docutils literal notranslate"><span class="pre">id</span></code>,<code class="docutils literal notranslate"><span class="pre">url</span></code> and <code class="docutils literal notranslate"><span class="pre">ontology_purl</span></code> are mandatory ontology metadata attributes. Other fields are also recommended, especially for self-defined ontologies. Below is an example configuration of the Experimental Factor Ontology (EFO) provided by <a class="reference external" href="https://www.ebi.ac.uk/ols/docs/installation-guide">OLS</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## EFO
+# * are required fields
+    id: efo // short unique id for the ontology *
+    preferredPrefix: EFO // preferred display name for the ontology
+    title: Experimental Factor Ontology // Short title of the ontology
+    uri: http://www.ebi.ac.uk/efo // The ontology URI * description: &quot;The Experimental Factor Ontology (EFO) provides a…​&quot; // Full ontology description
+    ontology_purl: http://www.ebi.ac.uk/efo/efo.owl // URL to get the ontology from *
+    homepage: http://www.ebi.ac.uk/efo // homepage of the ontology
+    mailing_list: efo-users@lists.sourceforge.net // assocaited mailing list
+    definition_property: // predicates that are used for term definitions
+     — http://www.ebi.ac.uk/efo/definition
+    synonym_property: // prediates used for synonyms
+     — http://www.ebi.ac.uk/efo/alternative_term
+    hierarchical_property: // predicates that are hierarchical (like part of) will be included in default tree view
+     — http://purl.obolibrary.org/obo/BFO_0000050
+     — http://purl.obolibrary.org/obo/RO_0002202
+    hidden_property: // any predicates that should be ignored when indexing
+     — http://www.ebi.ac.uk/efo/has_flag
+    base_uri: // base URIs for local terms
+     — http://www.ebi.ac.uk/efo/EFO_
+    reasoner: OWL2 // can be one of OWL2, EL, NONE - deafult is EL
+    oboSlims: false // contains OBO style slim annotations
+</pre></div>
+</div>
+<p>The location of the target ontology shall be specified in the <code class="docutils literal notranslate"><span class="pre">ontology_purl</span></code> field in the <code class="docutils literal notranslate"><span class="pre">ols-config.yaml</span></code> file. Ontologies from both local files and online resources can be imported.</p>
+<p>To add local ontologies, the ontology files need to be first copied to the <code class="docutils literal notranslate"><span class="pre">OLS-docker</span></code> directory. By default, the ontology file location is specified as<code class="docutils literal notranslate"><span class="pre">/opt/ols/example.owl</span></code>. For example,  <code class="docutils literal notranslate"><span class="pre">ontology_purl:file:///opt/ols/example.owl</span></code>.</p>
+<p>To add ontologies from online resources, ontology URLs are required. Most reference ontologies use the OBO foundry Permanent URLs (PURLs). The PURLs can be found <a class="reference external" href="http://www.obofoundry.org/">here</a>. For example, the location of Data Usage Ontology (DUO) can be specified by adding <code class="docutils literal notranslate"><span class="pre">ontology_purl:</span> <span class="pre">http://purl.obolibrary.org/obo/duo.owl</span></code> to the configuration file.</p>
+<p>Ontology metadata for the configuration file can be written by users. For common public ontologies, the ontology metadata can also be downloaded from either the EBI OLS or the OBO Foundry.</p>
+<div class="section" id="get-ontology-metadata-from-the-ebi-ols">
+<h4><span class="section-number">4.3.6.2.1. </span>2.1 Get ontology metadata from the EBI OLS<a class="headerlink" href="#get-ontology-metadata-from-the-ebi-ols" title="Permalink to this headline">¶</a></h4>
+<p>For ontologies included in the EBI OLS, the metadata can be downloaded directly using the EBI OLS endpoint, <code class="docutils literal notranslate"><span class="pre">https://www.ebi.ac.uk/ols/api/ols-config\?ids\=&lt;ontologies-short-names-list&gt;</span></code>, by providing the ontology short names. Metadata of multiple ontologies can be downloaded at the same time.  <a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies">Here</a> is a list of all the ontologies available at OLS, along with their respective “short name” and other information.</p>
+<p>For example, the following command downloads the ontologies metadata of EFO and Adverse Event Reporting Ontology (AERO) and saves it as <code class="docutils literal notranslate"><span class="pre">ols-config.yaml</span></code>:</p>
+<blockquote>
+<div><p>:warning: The command overwrites the original <code class="docutils literal notranslate"><span class="pre">ols-config.yml</span></code> file and removes pre-loaded ontologies.</p>
+</div></blockquote>
+<blockquote>
+<div><p>On Windows systems, add quotations around the URL. e.g.<code class="docutils literal notranslate"><span class="pre">&quot;&lt;URL&gt;&quot;</span></code>.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget -O ols-config.yaml https://www.ebi.ac.uk/ols/api/ols-config<span class="se">\?</span>ids<span class="se">\=</span>aero,efo
+</pre></div>
+</div>
+<p>To avoid losing pre-loaded ontologies, the metadata of EFO and AERO can also be appended to the already existing <code class="docutils literal notranslate"><span class="pre">ols-config.yml</span></code> using:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget -O - https://www.ebi.ac.uk/ols/api/ols-config<span class="se">\?</span>ids<span class="se">\=</span>efo,aero &gt;&gt; ols-config.yaml
+</pre></div>
+</div>
+<blockquote>
+<div><p>:warning: The file needs to be manually edited by removing the header of the new metadata and adding proper indentation.</p>
+</div></blockquote>
+<p>For ontologies that are in the OBO foundry, the metadata can also be downloaded from the <a class="reference external" href="https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config">OBO Foundry GitHub repository</a>. Additional formatting is required for metadata downloaded from the OBO foundry.</p>
+</div>
+</div>
+<div class="section" id="set-up-ols-in-the-local-environment">
+<h3><span class="section-number">4.3.6.3. </span>3. Set up OLS in the local environment<a class="headerlink" href="#set-up-ols-in-the-local-environment" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>For Windows machines, run the Docker Desktop app to start the Docker daemon.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">## Download OLS docker image</span>
+git clone https://github.com/EBISPOT/OLS-docker
+<span class="nb">cd</span> OLS-docker
+
+<span class="c1">##  Start docker</span>
+sudo snap services
+sudo snap start docker
+
+<span class="c1">## Build OLS docker image</span>
+sudo docker build -t ols .
+
+<span class="c1">## Run OLS docker image at port 8080</span>
+sudo docker run -d -p <span class="m">8080</span>:8080 --name<span class="o">=</span>OLS -t ols
+</pre></div>
+</div>
+<p>The local OLS service can be accessed at http://localhost:8080/index</p>
+</div>
+<div class="section" id="manage-ontologies">
+<h3><span class="section-number">4.3.6.4. </span>4. Manage ontologies<a class="headerlink" href="#manage-ontologies" title="Permalink to this headline">¶</a></h3>
+<p>OLS allows the addition, update, and removal of ontologies. Such ontology management is achieved through editing the configuration file, <code class="docutils literal notranslate"><span class="pre">ols-config.yaml</span></code>. The ontology changes can be loaded by rebuilding the image and restarting the service.</p>
+<div class="section" id="modify-ols-configuration">
+<h4><span class="section-number">4.3.6.4.1. </span>4.1 Modify OLS configuration<a class="headerlink" href="#modify-ols-configuration" title="Permalink to this headline">¶</a></h4>
+<p>To add or remove ontologies, modify corresponding sections in the configuration file. Loaded ontologies will be updated to the latest version automatically by rebuilding the Docker image.</p>
+</div>
+<div class="section" id="rebuild-ols-image-and-restart-ols">
+<h4><span class="section-number">4.3.6.4.2. </span>4.2 Rebuild OLS image and restart OLS<a class="headerlink" href="#rebuild-ols-image-and-restart-ols" title="Permalink to this headline">¶</a></h4>
+<p>Before rebuilding the Docker image, the existing container needs to be stopped and removed. The OLS container can be stopped and removed by providing the container name. According to the parameters presented on the previous Docker creation command block, the name of the OLS Docker container is “OLS”:</p>
+<blockquote>
+<div><p>:bulb: By rebuilding the OLS image, all loaded ontologies will be automatically updated to the latest version.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">## Stop OLS container</span>
+docker stop OLS
+
+<span class="c1">## Remove OLS container</span>
+docker rm OLS
+</pre></div>
+</div>
+<p>The Docker container can also be stopped and removed using the Docker image ID.</p>
+<p>The previous Docker image shall also be removed before rebuilding the image.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">## Remove previous docker image</span>
+sudo docker rmi ols
+</pre></div>
+</div>
+<p>To rebuild the Docker image, repeat the commands in Step 3.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">## Build OLS docker image</span>
+sudo docker build -t ols .
+
+<span class="c1">## Run OLS docker image at port 8080</span>
+sudo docker run -d -p <span class="m">8080</span>:8080 --name<span class="o">=</span>OLS -t ols
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h3><span class="section-number">4.3.6.5. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Loading multiple ontologies from disk</p></li>
+</ul>
+<p>If more than one ontologies are going to be loaded into OLS from disk, the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> needs modifications before building the Docker container:</p>
+<p>In Line 3, replace <code class="docutils literal notranslate"><span class="pre">ENV</span> <span class="pre">OLS_HOME</span> <span class="pre">/opt/ols</span></code> with <code class="docutils literal notranslate"><span class="pre">ENV</span> <span class="pre">OLS_HOME</span> <span class="pre">/opt/ols/</span></code></p>
+<p>In Line 14, replace</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;&amp;</span> java -Dols.obofoundry.ontology.config<span class="o">=</span>foo.yaml -Dols.ontology.config<span class="o">=</span>file://<span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>/ols-config.yaml -jar <span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>/ols-config-importer.jar
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>with:
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;&amp;</span> java -Dols.obofoundry.ontology.config<span class="o">=</span>foo.yaml -Dols.ontology.config<span class="o">=</span>file://<span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>ols-config.yaml -jar <span class="si">${</span><span class="nv">OLS_HOME</span><span class="si">}</span>ols-config-importer.jar
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">4.3.7. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>The local OLS provides API endpoints for retrieving, submitting, updating, and querying ontology data, as well as a user interface for searching and browsing ontologies and ontology terms. For example, all ontologies loaded can be queried through endpoint <code class="docutils literal notranslate"> <span class="pre">http://localhost:8080/api/ontologies</span></code>. A detailed description of OLS functions can be found in the built-in documentation page.</p>
+<p>To customize the local OLS user interface, for example, adding corporate logos, please check the OLS source code <a class="reference external" href="https://github.com/EBISPOT/OLS">here</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="reference">
+<h2><span class="section-number">4.3.8. </span>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ebi.ac.uk/ols/docs/installation-guide">Documentation &lt; Ontology Lookup Service &lt; EMBL-EBI. Accessed 20 April 2020.</a></p></li>
+<li><p><a class="reference external" href="https://conferences.ncl.ac.uk/media/sites/conferencewebsites/ukon2016/UKON_2016_paper_9.pdf">Jupp S. et al. (2015) A new Ontology Lookup Service at EMBL-EBI. In: Malone, J. et al. (eds.) Proceedings of SWAT4LS International Conference 2015</a></p></li>
+<li><p><a class="reference external" href="https://link.springer.com/article/10.1186/1471-2105-7-97">Côté, Richard G., et al. “The Ontology Lookup Service, a lightweight cross-platform tool for controlled vocabulary queries.” BMC bioinformatics 7.1 (2006): 97.</a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">4.3.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>CRediT role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fuqi Xu</p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a></p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0002-5923-3859">0000-0002-5923-3859</a></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p>Eva Martin</p></td>
+<td><p><a class="reference external" href="https://www.bsc.es/">Barcelona Supercomputing Center (BSC)</a></p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0001-8324-2897">0000-0001-8324-2897</a></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-even"><td><p>Emiliano Reynares</p></td>
+<td><p><a class="reference external" href="https://www.boehringer-ingelheim.com/">Boehringer Ingelheim</a></p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0002-5109-3716">0000-0002-5109-3716</a></p></td>
+<td><p>Reviewing</p></td>
+</tr>
+<tr class="row-odd"><td><p>Philippe Rocca-Serra</p></td>
+<td><p><a class="reference external" href="https://datareadiness.eng.ox.ac.uk/">University of Oxford, Data Readiness Group</a></p></td>
+<td><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></p></td>
+<td><p>Reviewing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">4.3.10. </span>License:<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/infrastructure/vocabularies"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Selecting_and_using_ontology_lookup_services.html" title="previous page"><span class="section-number">4.2. </span>Selection and exploitation of Ontology Lookup Services</a>
+    <a class='right-next' id="next-link" href="../../findability.html" title="next page">Findability</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

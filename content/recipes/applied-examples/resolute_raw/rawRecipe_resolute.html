@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>RESOLUTE FAIRification Recipe</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Glossary of FAIR Things" href="../../glossary-fair-terms.html" />
+    <link rel="prev" title="Oncotrack FAIRification recipe" href="../oncotrack_raw/rawRecipe-oncotrack.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="RESOLUTE FAIRification Recipe" />
+<meta property="og:description" content="RESOLUTE FAIRification Recipe  Ingredients  Data transfer tools:  SFTP server  OneDrive  Amazon S3 Buckets  Data hosting platform:  raw data: SRA [Transcriptomi" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingredients">
+   Ingredients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-metadata-etl-pipeline">
+   Sample metadata ETL pipeline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transcriptomics-data-community-standard">
+   Transcriptomics data community standard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fair-assessment">
+   FAIR assessment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="resolute-fairification-recipe">
+<span id="fcb-fairify-examples-resolute"></span><h1>RESOLUTE FAIRification Recipe<a class="headerlink" href="#resolute-fairification-recipe" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ingredients">
+<h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Data transfer tools:</p>
+<ul>
+<li><p>SFTP server</p></li>
+<li><p>OneDrive</p></li>
+<li><p>Amazon S3 Buckets</p></li>
+</ul>
+</li>
+<li><p>Data hosting platform:</p>
+<ul>
+<li><p>raw data: SRA [Transcriptomics]</p></li>
+<li><p>ProteomeXchange [Proteomics]</p></li>
+<li><p>Samples metadata: BioSamples</p></li>
+</ul>
+</li>
+<li><p>Data standards</p>
+<ul>
+<li><p>Transcriptomics community standard: <a class="reference external" href="http://fged.org/projects/minseqe/">MINSEQE</a></p></li>
+<li><p>Sample metadata schema: <a class="reference external" href="https://github.com/EBIBioSamples/biosamples-v4/blob/dev/webapps/core/src/main/resources/schemas/core/sample.json">BioSamples JSON schema</a></p></li>
+<li><p><a class="reference external" href="https://www.ebi.ac.uk/submission/">Data submission portal</a> schema</p></li>
+</ul>
+</li>
+<li><p>FAIR evaluation standard:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/RDA-FAIR/FAIR-data-maturity-model-WG/tree/master/results%20of%20preliminary%20analysis">RDA FAIR indicators</a></p></li>
+</ul>
+</li>
+</ul>
+<p>This recipe provides an example of sample metadata extraction and curation practices, suggests a community standard for transcriptomics data and proposes a transcriptomics JSON schema, which allows direct submission of transcriptomics data to the public databases. Different approaches to assess the FAIR level of the dataset is also discussed.</p>
+</div>
+<div class="section" id="sample-metadata-etl-pipeline">
+<h2>Sample metadata ETL pipeline<a class="headerlink" href="#sample-metadata-etl-pipeline" title="Permalink to this headline">¶</a></h2>
+<p>The RESOLUTE datasets include 21 samples of seven cell lines. Each cell line has three replicates. The first draft of cell line metadata was first submitted to the NCBI SRA database and stored in the NCBI BioSample database. The raw sample metadata includes cell line name, provider and other administrative information.</p>
+<p>To avoid ambiguity and provide detailed cell line information, the RESOLUTE cell lines were linked to cell lines in the Cellosaurus databases by the Cellosaurus accession ID, for example, cell line “HCT 116” was linked to accession “CVCL_0291”. Cellosaurus also provided enriched cell line information, including disease, species of origin, cell line category. Such information was fetched from the Cellosaurus website and mapped to corresponding samples.</p>
+<p>Besides the cell line enriched cell line annotation, the RESOLUTE Data Release Plan also specified the cell line provider, culturing conditions and quality control information. Such information is also added to the cell line. License information was also mapped to the metadata.</p>
+<p>The sample metadata can be found in the EBI Biosamples database with additional curation. For example, in sample <a class="reference external" href="https://www.ebi.ac.uk/biosamples/samples/SAMN11893688">SAMN11893688</a>, all missing values were omitted. Attribute cell line, organism, sex and tissue were mapped to ontologies in the OLS database. All curations can record can be found <a class="reference external" href="https://www.ebi.ac.uk/biosamples/samples/SAMN11893688/curationlinks">here</a>.</p>
+</div>
+<div class="section" id="transcriptomics-data-community-standard">
+<h2>Transcriptomics data community standard<a class="headerlink" href="#transcriptomics-data-community-standard" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://fged.org/projects/minseqe/">Minimum Information about a high-throughput SEQuencing Experiment (MINSEQE)</a> is a recommended community standard of transcriptomics data. It defined five elements of transcriptomics data that shall be harvested, including metadata, sequence read data, final processed data and experimental protocols.</p>
+<p>FAIRsharing organization interpreted the MINSEQE guidelines and translated them into a machine-readable <a class="reference external" href="https://github.com/FAIRsharing/mircat/tree/master/minseqe">MINSEQE recommended JSON schema</a>. The FAIRsharing MINSEQE JSON schema provided a framework of transcriptomics data. When it comes to different experiments, the actual data be extended. <a class="reference external" href="https://raw.githubusercontent.com/ebi-ait/FAIRPlus/master/RESOLUTE/transcriptomics/data/RESOLUTE_transcriptomics_metadata_MINSEQE.json">Here</a> is an example of RESOLUTE transcriptomics data following this schema</p>
+<p>One limitation of the FAIRsharing MINSEQE schema is that it is incompatible to the submission standards of popular transcriptomics database, like the European Nucleotide Archive(ENA). Transcriptomics data following the FAIRsharing MINSEQE standard must be modified to be submitted.</p>
+<!-- 
+![Transcriptomics schema](image_0.png)
+_Figure 1: Transcriptomics schema_
+ -->
+<div class="figure align-default" id="transcriptomics-schema">
+<a class="reference internal image-reference" href="../../../../_images/image_03.png"><img alt="Transcriptomics schema." src="../../../../_images/image_03.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Transcriptomics schema.</span><a class="headerlink" href="#transcriptomics-schema" title="Permalink to this image">¶</a></p>
+</div>
+<p>To solve this problem, we proposed a <a class="reference external" href="https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema">transcriptomics schema</a> which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks (Figure 1). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. <em>(Note: This schema is still actively updated. Feedback welcomed)</em></p>
+</div>
+<div class="section" id="fair-assessment">
+<h2>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
+<p>The level of “FAIRness” of the RESOLUTE transcriptomics was first determined using the CMMI maturity model described <a class="reference external" href="https://docs.google.com/document/d/1URLfNpBYkCrICpizKZJ7NE29FddNNcoR0T0o_SQza7U/edit#heading=h.w0g0276fq5i6">in this document.</a> The results of this first assessment can be found <a class="reference external" href="https://docs.google.com/document/d/1Q_Su8kY9uNYfCV30jSIoWNdeV8GxA_DTGAcGOSZscQM/edit?usp=sharing">here</a>. In a follow-up meeting, we defined actions that could be taken to increase the level for certain indicators (see <a class="reference external" href="https://docs.google.com/document/d/1yYDcUvyXzYLfq9NZX23tbgIjCSOenSURjcRj61FMdzQ/edit?usp=sharing">this document</a>). These actions were defined within Github.</p>
+<p>A <a class="reference external" href="https://docs.google.com/spreadsheets/d/11-jDoMbuxw8Nreurk7yKzk3EHJ54APAQnBl6VTKZPBk/edit#gid=1559176954">new FAIRplus maturity model</a> was set up, based on the RDA indicators. The focus was only on the indicators regarding Findability/Discoverability at that point. Before we could use this model however, the indicators were updated within the RDA initiative. We used their <a class="reference external" href="https://docs.google.com/spreadsheets/d/1mkjElFrTBPBH0QViODexNur0xNGhJqau0zkL4w8RRAw/edit?usp=sharing">new indicators</a>) (for findability, v0.01) and their level definition to determine the levels for both the transcriptomics and proteomics datasets. The result can be found <a class="reference external" href="https://docs.google.com/spreadsheets/d/1abQ5_sOmBWbxAZhQVEUxQ_ybI1yTi0t-tJAVY5J5VY8/edit?usp=sharing">here</a>.</p>
+<p>In the meantime, an improved version of the RDA indicators was released (v0.02). In the results document a comparison/mapping is made between v0.02 and v0.01 for possible future reference. <br />
+We have updated the scoring for the transcriptomics data to this new version (v0.02).</p>
+<ul class="simple">
+<li><p>Results of the scoring (to v0.01):</p>
+<ul>
+<li><p>transcriptomics data set (as in SRA)</p>
+<ul>
+<li><p>58% for the mandatory indicators</p></li>
+<li><p>63% for the recommended indicators</p></li>
+<li><p>4 indicators were thought to be not applicable</p></li>
+</ul>
+</li>
+<li><p>proteomics data set (as in OwnCloud)</p>
+<ul>
+<li><p>42% for the mandatory indicators</p></li>
+<li><p>44% for the recommended indicators</p></li>
+<li><p>6 indicators were thought to be not applicable</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The FAIRness level of the transcriptomics dataset for the HUH-7 cell line (as published on SRA) was also determined using the <a class="reference external" href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#%21/#%2F%21">FAIR evaluation services</a> (an online evaluator). The result was this dataset only passed for 3 out of the 22 indicators tested. This was mainly due to the limitations on machine readability of metadata and license details within SRA. The complete results can be viewed <a class="reference external" href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#%21/evaluations/170">here</a>.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Cellosaurus accession is recommended as an identifier for cell lines. Cellosaurus also provides enriched information about different cell lines.</p></li>
+<li><p>EBI BioSamples database is the master hosting platform for sample metadata, allowing curation and basic ontology annotation.</p></li>
+<li><p>MINSEQE is the recommended community standard for transcriptomics data.</p></li>
+<li><p>A new transcriptomics schema was proposed which reflects the transcriptomics community guideline and supported by the EBI database submission platform.</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>orcid</p></th>
+<th class="text-align:left head"><p>CrediT role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0000-0000-0000">0000-0000-0000-0000</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>Writing - Review &amp; Editing, Funding acquisition</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/applied-examples/resolute_raw"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../oncotrack_raw/rawRecipe-oncotrack.html" title="previous page">Oncotrack FAIRification recipe</a>
+    <a class='right-next' id="next-link" href="../../glossary-fair-terms.html" title="next page">Glossary of FAIR Things</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

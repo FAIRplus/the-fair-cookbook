@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>File format validation, an example with FASTQ files</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/interoperability/fastq-file-format-validators.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Reusability" href="../reusability.html" />
+    <link rel="prev" title="From proprietary to open standard data format" href="from-proprietary-to-open-standard-mzml-exemplar.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/interoperability/fastq-file-format-validators.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="File format validation, an example with FASTQ files" />
+<meta property="og:description" content="File format validation, an example with FASTQ files    &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  ide" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/fastq-file-format-validators.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/fastq-file-format-validators.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/interoperability/fastq-file-format-validators.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-stories">
+   User Stories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   Table of Data Standards
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requirements">
+     Requirements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-install-fastq-utils">
+     Step 1: Install fastq-utils
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-get-example-file-for-testing">
+     Step 2: Get example file for testing*
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-perform-validation">
+     Step 3: Perform validation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#error-messages-for-invalid-files">
+       Error messages for invalid files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fasta-utils-feature-summary">
+     FASTA-utils feature summary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="file-format-validation-an-example-with-fastq-files">
+<span id="fcb-interop-fastqval"></span><h1>File format validation, an example with FASTQ files<a class="headerlink" href="#file-format-validation-an-example-with-fastq-files" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a> 
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-fire fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fas fa-clock fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-users fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
+<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
+<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The main purpose of this recipe is to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>provide a FASTQ file validation solution</p></li>
+<li><p>propose a general file validation workflow.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="graphical-overview">
+<h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="validating-fastq-open-standard-file-format">
+<a class="reference internal image-reference" href="../../../_images/fastq-validation.png"><img alt="Validating FASTQ open standard file format" src="../../../_images/fastq-validation.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Validating FASTQ open standard file format.</span><a class="headerlink" href="#validating-fastq-open-standard-file-format" title="Permalink to this image">¶</a></p>
+</div>
+<!-- [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDxicj4gLSBEYXRhIHNoYXJpbmcgPGJyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDxicj4gLSBEYXRhIHNoYXJpbmcgPGJyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn19) -->
+</div>
+<div class="section" id="user-stories">
+<h2>User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
+<p>The table below lists common file validation use cases. This recipe provides solutions with FASTQ files as an example.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>As a ..</p></th>
+<th class="head"><p>I want to ..</p></th>
+<th class="head"><p>So that I can ..</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Data owner</p></td>
+<td><p>Validate my sequencing files before depositing to public archives</p></td>
+<td><p>Reduce the risk of submitting invalid files or submission rejection</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data consumer</p></td>
+<td><p>Validate files before running analysis</p></td>
+<td><p>Avoid wasting time and resource processing corrupted files</p></td>
+</tr>
+<tr class="row-even"><td><p>Data consumer</p></td>
+<td><p>Integrate file format validation into my data process pipeline</p></td>
+<td><p>Build a more reproducible and error-proof pipeline</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data librarian</p></td>
+<td><p>Check files downloaded from unknown sources before deposition</p></td>
+<td><p>Ensure the file is usable in the future.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="capability-maturity-table">
+<h2>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>minimal</p></td>
+<td class="text-align:left"><p>repeatable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_0336">Format validation</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/format_2182">FASTQ file</a></p></td>
+<td class="text-align:left"><p>Validation results</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-data-standards">
+<h2>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/format_2182">FASTQ</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_4006">Compressed Format</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><a class="reference external" href="http://edamontology.org/format_2182">FASTQ</a> is the <em>de facto</em> sequencing file format and one of the most common file formats in bioinformatics analysis. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformatics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis process.</p>
+<p>FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle compressed FASTQ files.</p>
+<p><a class="reference external" href="https://github.com/nunofonseca/fastq_utils">FASTQ-utils</a> is an open-source software to validate and process FASTQ files. It has been applied in the <a class="reference external" href="https://www.ebi.ac.uk/ena">European Nucleotide Archive(ENA)</a>, and several research initiatives.</p>
+<p>This recipe provides an example of validating FASTQ files with <em>FASTQ-utils</em> on MacOS and Linux machines.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>⚠️ Quality control is out of the scope of file format validation.</p>
+</div>
+<!-- ![](https://i.imgur.com/jOYK2ZM.jpg) -->
+<div class="figure align-default" id="fastqutils-library">
+<a class="reference internal image-reference" href="https://i.imgur.com/jOYK2ZM.jpg"><img alt="FASTQutils library" src="https://i.imgur.com/jOYK2ZM.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">the FASTQutils library.</span><a class="headerlink" href="#fastqutils-library" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>The users are expected to be comfortable with Unix-based OS and basic Bash programming syntax and commands.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Software</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Version</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/">conda</a></p></td>
+<td><p>Package manager for installing validators</p></td>
+<td><p>4.8.3</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/nunofonseca/fastq_utils">FASTQ-utils</a></p></td>
+<td><p>FASTQ validator</p></td>
+<td><p>0.23.0</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.gnu.org/software/wget/">wget</a></p></td>
+<td><p>File downloader</p></td>
+<td><p>1.19.4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="step-1-install-fastq-utils">
+<h3>Step 1: Install fastq-utils<a class="headerlink" href="#step-1-install-fastq-utils" title="Permalink to this headline">¶</a></h3>
+<p>The command below installs <em>fastq-utils</em> via Conda. It is also possible to install <em>fastq-utils</em> from <a class="reference external" href="https://github.com/nunofonseca/fastq_utils">the source code</a>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install -c bioconda fastq_utils
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-get-example-file-for-testing">
+<h3>Step 2: Get example file for testing*<a class="headerlink" href="#step-2-get-example-file-for-testing" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Users can skip this step and test with their own files._</p></li>
+</ul>
+</div>
+<p>In this step, we download example FASTQ files from ENA for testing. The first example file is a single read file, the other ones are paired-end read files.</p>
+<p><strong>Example 1: Get single read FASTQ file</strong></p>
+<p>The command below downloads an <em>Ion Torrent S5</em> fastq file from ENA. <a class="reference external" href="https://www.ebi.ac.uk/ena/browser/view/SRR12132977">This file</a> is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
+</pre></div>
+</div>
+<p>Uses can inspect the <em>fastq.gz</em> file using <code class="docutils literal notranslate"><span class="pre">gzip</span> <span class="pre">-cd</span> <span class="pre">SRR12132977.fastq.gz</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">-8</span></code>. Below is the header of this FASTQ file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@SRR12132977.1 1/1
+AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACAAACTAAAATGTCTGATAATGGACCCCAAAATCAGCGAAATGCACCCCGCATTACGTTTGGTGGACCCTCAG
++
+C@CCD&gt;DBC?B692;;;09?&lt;BBBBC&gt;BBBBBBBBB@?ABB@BC&lt;BBB&gt;@A?:999992;=&gt;&gt;@??==:=C;&gt;=&lt;:&#39;555)8;;;;;AG:AAAAADD;CCBB&gt;?@;;;0:&lt;@A&gt;CEE?CFCC
+@SRR12132977.2 2/1
+AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATAACTAATTACTGTCGTTGACAGGACACGAGTAACTCGTCTATCTTCTGCAGGCTGCTTACGGTTTCGTCCGTGTTGCAGCCGATCATCAGCAC
++
+A&gt;A@@=@@F@D@C&lt;999,:&lt;@ABBBB@B=&gt;=BB@BBB?@@&gt;&lt;;;7&gt;??=BBB&gt;BDD;D&gt;????@@;@CDC@@@BBB&gt;BBB@AAC&gt;&gt;9BBBB;;;@@?;&gt;&lt;::;99&lt;9&lt;;A;&gt;&gt;&lt;@@A:=:&gt;@@@&gt;A@&gt;:&gt;===&gt;:=&lt;&lt;&gt;&gt;;;;&gt;=BCAA?&gt;=A&gt;&gt;&gt;:==&gt;;998&lt;=;===@@@&lt;&gt;&gt;9&gt;&gt;&gt;?;??==:=&gt;&gt;&gt;&gt;:&gt;&gt;;;;;;;;&lt;;;
+</pre></div>
+</div>
+<p><strong>Example 2: Get paired-read FASTQ files</strong></p>
+<p>The command below downloads Illumina iSeq 100 paired end sequencing files from ENA. <a class="reference external" href="https://www.ebi.ac.uk/ena/data/view/SRR11542244">These files</a> are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget -c <span class="se">\</span>
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_1.fastq.gz <span class="se">\</span>
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_2.fastq.gz
+</pre></div>
+</div>
+<p>Below is the headers of the two files. The read pairs info is listed in the read IDs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Header of the forward read, SRR11542244_1.fastq.gz</span>
+<span class="nd">@SRR11542244</span><span class="o">.</span><span class="mi">1</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">GTGTGTGTATACATATATATATATATCACATTTTCTTTATCCATTTATCTGTTGTTGGACACTTAGGTTGATTCCATATCTTGGCTATTGTGAATAGTG</span>
+<span class="o">+</span>
+<span class="p">,,</span><span class="n">FFFFFFFFFFFFFFFFFFFFFFFF</span><span class="p">:</span><span class="n">FFF</span><span class="p">:</span><span class="n">FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</span><span class="p">:</span><span class="n">FFFFFFFFFFFF</span><span class="p">:</span><span class="n">FFFFFFFFFFFFFFFFFFFFFF</span>
+<span class="nd">@SRR11542244</span><span class="o">.</span><span class="mi">2</span> <span class="mi">2</span><span class="o">/</span><span class="mi">1</span>
+<span class="n">GTGATTCCTCAAAGATTTAGAACCAGAAATACCATGTGACCCAGCAATTCCATTACCAGGTCTAAACCCAAAGGAATATAAATCATTCTGTAATGAAGATA</span>
+<span class="o">+</span>
+<span class="n">FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</span>
+
+
+<span class="c1"># Header of the reverse read, SRR11542244_2.fastq.gz</span>
+<span class="nd">@SRR11542244</span><span class="o">.</span><span class="mi">1</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">CTATTGGGTATTTAATCCAAAGAAAGGAAATCGGTATATCAAAGAGACATCTGCATGCCCATGTTTATTGTAGCACTATTCACAATAGCCAAGATATGGAA</span>
+<span class="o">+</span>
+<span class="n">FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</span><span class="p">:</span><span class="n">FFFFFFFFFFFFFFFFFFFF</span>
+<span class="nd">@SRR11542244</span><span class="o">.</span><span class="mi">2</span> <span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">GAACATATGTGTGCATGTATCTTCATTACAGAATGATTTATATTCCTTTGGGTTTAGACCTGGTAATGGAATTGCTGGGTCACATGGTATTTCTGGTTCTA</span>
+<span class="o">+</span>
+<span class="n">FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-perform-validation">
+<h3>Step 3: Perform validation<a class="headerlink" href="#step-3-perform-validation" title="Permalink to this headline">¶</a></h3>
+<p>The command below validates the single read file in <em>Example 1</em>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fastq_info -r SRR12132977.fastq.gz
+</pre></div>
+</div>
+<p>Below are the validation results. <em>fastq-utils</em> returns the number of reads, read length details, and encoding info. Field <code class="docutils literal notranslate"><span class="pre">Quality</span> <span class="pre">encoding</span></code> indicates the fastq file variant. FASTQ-utils returns <code class="docutils literal notranslate"><span class="pre">OK</span></code> for a valid fastq file. Otherwise, it will return the validation details in the Error message.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Skipping</span> <span class="n">check</span> <span class="k">for</span> <span class="n">duplicated</span> <span class="n">read</span> <span class="n">names</span>
+<span class="mi">1900000</span>
+<span class="o">------------------------------------</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">reads</span><span class="p">:</span> <span class="mi">1919741</span>
+<span class="n">Quality</span> <span class="n">encoding</span> <span class="nb">range</span><span class="p">:</span> <span class="mi">34</span> <span class="mi">77</span>
+<span class="n">Quality</span> <span class="n">encoding</span><span class="p">:</span> <span class="mi">33</span>
+<span class="n">Read</span> <span class="n">length</span><span class="p">:</span> <span class="mi">25</span> <span class="mi">352</span> <span class="mi">215</span>
+<span class="n">OK</span>
+</pre></div>
+</div>
+<p>The validation of paired end reads is similar to single read file validation.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fastq_info SRR11542244_1.fastq.gz SRR11542244_2.fastq.gz
+</pre></div>
+</div>
+<p>Here are the validation results.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fastq_utils</span> <span class="mf">0.23</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">DEFAULT_HASHSIZE</span><span class="o">=</span><span class="mi">39000001</span>
+<span class="n">Scanning</span> <span class="ow">and</span> <span class="n">indexing</span> <span class="nb">all</span> <span class="n">reads</span> <span class="kn">from</span> <span class="nn">SRR11542244_1.fastq.gz</span>
+<span class="mi">700000</span><span class="n">Scanning</span> <span class="n">complete</span><span class="o">.</span>
+
+<span class="n">Reads</span> <span class="n">processed</span><span class="p">:</span> <span class="mi">733611</span>
+<span class="n">Memory</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">indexing</span><span class="p">:</span> <span class="o">~</span><span class="mi">47</span> <span class="n">MB</span>
+<span class="n">File</span> <span class="n">SRR11542244_1</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span> <span class="n">processed</span>
+<span class="n">Next</span> <span class="n">file</span> <span class="n">SRR11542244_2</span><span class="o">.</span><span class="n">fastq</span><span class="o">.</span><span class="n">gz</span>
+<span class="mi">700000</span>
+<span class="o">------------------------------------</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">reads</span><span class="p">:</span> <span class="mi">733611</span>
+<span class="n">Quality</span> <span class="n">encoding</span> <span class="nb">range</span><span class="p">:</span> <span class="mi">35</span> <span class="mi">70</span>
+<span class="n">Quality</span> <span class="n">encoding</span><span class="p">:</span> <span class="mi">33</span>
+<span class="n">Read</span> <span class="n">length</span><span class="p">:</span> <span class="mi">35</span> <span class="mi">101</span> <span class="mi">96</span>
+<span class="n">OK</span>
+</pre></div>
+</div>
+<p><em>fastq_util</em> also provides additional arguments to tune the validation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">-s</span></code>: to validate if reads in two files have the same ordering.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-r</span></code>: to skip duplicated read names validation. It uses less memory and runs faster.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-e</span></code>: to allow empty files pass the validation</p>
+<p><code class="docutils literal notranslate"><span class="pre">-q</span></code>: not to fail if the encoding can’t be decided.</p>
+<div class="section" id="error-messages-for-invalid-files">
+<h4>Error messages for invalid files<a class="headerlink" href="#error-messages-for-invalid-files" title="Permalink to this headline">¶</a></h4>
+<p>FASTQ-utils returns an error message with the location of invalid lines and type of errors if the files are invalid. Below are examples of error messages.</p>
+<ul>
+<li><p>Invalid file example 1, duplicated reads</p>
+<blockquote>
+<div><p>ERROR: Error in file SRR11542244_2.fastq: line 16: duplicated sequence SRR11542244.5 5/</p>
+</div></blockquote>
+</li>
+<li><p>Invalid file example 2, wrong base call encoding</p>
+<blockquote>
+<div><p>ERROR: Error in file SRR11542244_2.fastq: line 5: invalid character ‘e’ (hex. code:’65’), expected ACGTacgt0123nN.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="fasta-utils-feature-summary">
+<h3>FASTA-utils feature summary<a class="headerlink" href="#fasta-utils-feature-summary" title="Permalink to this headline">¶</a></h3>
+<p>The table lists technical considerations when selecting the validator, including basic validation function, performance, interface, etc. It also provides a detailed summary of <em>fastq-utils</em> features.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aspects</p></th>
+<th class="head"><p>Validation content</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>FASTQ-utils</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Basic validation</p></td>
+<td><p>4-line format</p></td>
+<td><p>Check if the FASTQ file is a 4-line file</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Character encoding</p></td>
+<td><p>Check if the base calls and quality score encoding are correct.</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Read length</p></td>
+<td><p>Check if the length of the base calls are the same as that of the quality scores</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>File truncation</p></td>
+<td><p>Check if the file is truncated or not</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p>Paired-end reads validation</p></td>
+<td><p>Deinterleaved paired reads</p></td>
+<td><p>Validate when the forward and reverse reads are in two files.</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Interleaved <em>“8-line”</em> files</p></td>
+<td><p>Validate when the forward and reverse reads are listed together as an 8-line file</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p>Compressed file validation</p></td>
+<td><p>gzip</p></td>
+<td><p>Validate compressed fastq files, with extension <code class="docutils literal notranslate"><span class="pre">fastq.gz</span></code></p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-odd"><td><p>FASTQ variants* validation</p></td>
+<td><p>fastq-illumina</p></td>
+<td><p>Validate the <em>fastq-illumina</em> format</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>fastq-sanger</p></td>
+<td><p>Validate the <em>fastq-sanger</em> format</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>fastq-solexa</p></td>
+<td><p>Validate the <em>fastq-solexa</em> format</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p>Performance</p></td>
+<td><p>Memory</p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">N/A</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Speed</p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">N/A</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Archieve compatiablity</p></td>
+<td><p>ENA</p></td>
+<td><p>File validated can be submitted to the ENA archive.</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>ArrayExpress</p></td>
+<td><p>File validated can be submitted to Array Express.</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>SRA</p></td>
+<td><p>File validated can be submitted to the SRA archive.</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-odd"><td><p>Interface</p></td>
+<td><p>Command line interface</p></td>
+<td><p>Can be used in shell and intergerated in pipe commands</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p>License</p></td>
+<td><p>Licensed</p></td>
+<td><p></p></td>
+<td><p>☑️<a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Commercial use</p></td>
+<td><p>Can be used for commercial purpose</p></td>
+<td><p>☑️</p></td>
+</tr>
+<tr class="row-even"><td><p>Code</p></td>
+<td><p>Open source</p></td>
+<td><p>Source code available on public platforms</p></td>
+<td><p>☑️</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>*See details in the <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">FASTQ specification recipe</span></a>.</em></p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file formats and other use cases.</p>
+<div class="section" id="what-to-read-next">
+<h3>What to read next<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>🐙<a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md">From proprietary format to open standard format: an exemplar</a></p></li>
+<li><p>🐙<a class="reference external" href="https://www.TBD.org">FASTQ file specification recipe</a></p></li>
+<li><p>🐙<a class="reference external" href="https://www.TBD.org">FASTQ file validator in Biopython</a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Cock, Peter J. A., Christopher J. Fields, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FASTQ File Format for Sequences with Quality Scores, and the Solexa/Illumina FASTQ Variants’. Nucleic Acids Research 38, no. 6 (1 April 2010): 1767–71. https://doi.org/10.1093/nar/gkp1137.</p></li>
+<li><p>ENA. ‘Accepted Read Data Formats — ENA Training Modules 1 Documentation’. Accessed 6 July 2020. https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format.</p></li>
+<li><p>NCBI. ‘File Format Guide’. Accessed 14 July 2020. https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files.</p></li>
+<li><p>Nuno Fonseca, and Jonathan Manning. Nunofonseca/Fastq_utils 0.24.0. Zenodo, 2020. https://doi.org/10.5281/zenodo.3936692.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Institute</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Contributions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fuqi Xu</p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a></p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0002-5923-3859">0000-0002-5923-3859</a></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p>Eva Martin</p></td>
+<td><p><a class="reference external" href="https://www.bsc.es/">Barcelona Supercomputing Center (BSC)</a></p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0001-8324-2897">0000-0001-8324-2897</a></p></td>
+<td><p>Reviewing and editing</p></td>
+</tr>
+<tr class="row-even"><td><p>Peter Woollard</p></td>
+<td><p><a class="reference external" href="https://www.gsk.com/en-gb/">GSK</a></p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0002-7654-6902">0000-0002-7654-6902</a></p></td>
+<td><p>Reviewing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="from-proprietary-to-open-standard-mzml-exemplar.html" title="previous page">From proprietary to open standard data format</a>
+    <a class='right-next' id="next-link" href="../reusability.html" title="next page">Reusability</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

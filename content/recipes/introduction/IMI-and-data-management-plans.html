@@ -1,0 +1,1101 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>IMI and Data Management</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/introduction/IMI-and-data-management-plans.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/introduction/IMI-and-data-management-plans.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="IMI and Data Management" />
+<meta property="og:description" content="IMI and Data Management    &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  identifier: &lt;a href=&#34;&#34;&gt;RX.X&lt;/a&gt;" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/introduction/IMI-and-data-management-plans.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/introduction/IMI-and-data-management-plans.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/introduction/IMI-and-data-management-plans.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publication-and-open-access-dissemination">
+   Publication and Open Access Dissemination
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imi-projects-and-data-management-plan-dmp">
+   IMI projects and Data Management Plan (DMP)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-organise-the-dmp">
+     How to organise the DMP?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resources-to-use-to-help-build-a-dmp-for-an-imi-project">
+     Resources to use to help build a DMP for an IMI project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-read-next">
+     What to read read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="imi-and-data-management">
+<span id="fcb-intro-imi-dmgnt"></span><h1>IMI and Data Management<a class="headerlink" href="#imi-and-data-management" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a> 
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-fire fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fas fa-clock fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Background Information
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-users fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
+<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
+<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
+<p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>Starting with IMI2 and the stipulation of article 29.2 of the new <a class="reference external" href="https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement%E2%80%93AGA.pdf">IMI-JU Grant Agreement</a> [1], <strong>if they elect to disseminate results</strong>, rather than patent and exploit them, IMI2 grant awardees must ensure that all published peer reviewed publications produced using data generated during IMI projects must be made open access.</p>
+<p>From Call 11 onwards, <strong>all IMI2 projects participate <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">default</span></code> in the <code class="docutils literal notranslate"><span class="pre">Horizon</span> <span class="pre">2020</span> <span class="pre">Open</span> <span class="pre">Research</span> <span class="pre">Data</span> <span class="pre">Pilot</span> <span class="pre">(ORDP)</span></code></strong>, covered by Article 29.3 of the IMI2 Grant Agreement.
+Although IMI2 encourages grant awardees to remain part of the ORDP, grant awardees retain the right to opt-out if necessary.
+The reasons for withdrawing from the ORDP should however be documented in the Data Management Plan.</p>
+<div class="section" id="publication-and-open-access-dissemination">
+<h2>Publication and Open Access Dissemination<a class="headerlink" href="#publication-and-open-access-dissemination" title="Permalink to this headline">¶</a></h2>
+<p>If the publication route is following, awardees must comply with the following protocol:</p>
+<ol class="simple">
+<li><p>deposit publications in repositories (online archive);</p></li>
+<li><p>provide open access to publications and related bibliographic metadata.</p></li>
+</ol>
+<ul class="simple">
+<li><p>The European Commission guidelines encourage authors to retain their copyright and grant adequate licences to publishers. Creative Commons offers useful licensing solutions (e.g. CC BY). This type of licence is a good legal tool for providing open access in its broadest sense.</p></li>
+<li><p>The bibliographic metadata must be in a <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">format</span></code> and must include all of the following:</p>
+<ul>
+<li><p>the terms <code class="docutils literal notranslate"><span class="pre">Innovative</span> <span class="pre">Medicines</span> <span class="pre">Initiative</span> <span class="pre">2</span> <span class="pre">Joint</span> <span class="pre">Undertaking</span></code>, <code class="docutils literal notranslate"><span class="pre">European</span> <span class="pre">Union</span> <span class="pre">(EU)</span></code>, <code class="docutils literal notranslate"><span class="pre">Horizon</span> <span class="pre">2020</span></code>, and <code class="docutils literal notranslate"><span class="pre">[insert</span> <span class="pre">names</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">JU</span> <span class="pre">members</span> <span class="pre">other</span> <span class="pre">than</span> <span class="pre">the</span> <span class="pre">EU]</span></code> and <code class="docutils literal notranslate"><span class="pre">[insert</span> <span class="pre">name(s)</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">associated</span> <span class="pre">partner(s)]</span></code></p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">acronym</span></code> and <code class="docutils literal notranslate"><span class="pre">grant</span> <span class="pre">number</span></code> of the IMI action/project</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">publication</span> <span class="pre">date</span></code>, and <code class="docutils literal notranslate"><span class="pre">length</span> <span class="pre">of</span> <span class="pre">embargo</span> <span class="pre">period</span></code> if applicable</p></li>
+<li><p>a <code class="docutils literal notranslate"><span class="pre">persistent</span> <span class="pre">identifier</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>The IMI also requires participants to ensure that all projects related publication output is kept up to date via the IMI Participant Portal using 3 possible routes:</p>
+<ol class="simple">
+<li><p>by registering the publication in the <a class="reference external" href="https://www.openaire.eu/">Open Access Infrastructure for Research in Europe (OpenAIRE)</a>. Each project has its own page on OpenAIRE, featuring project information, related project publications and data sets, and a statistics section.</p></li>
+</ol>
+<!-- ![](https://i.imgur.com/74g21gr.png) -->
+<!-- 
+<div style="justify-content: center;">
+<img src="https://i.imgur.com/xKNIuWl.png" width="750" style="border:1px solid black"/>
+</div>
+
+**Figure 1**: The IMI FAIRplus page as viewed from the [OpenAIRE Explore](https://explore.openaire.eu/search/project?projectId=corda__h2020::c856d93d6e57aef0701866afb1876d1b) site -->
+<!-- 
+
+```{figure} https://i.imgur.com/xKNIuWl.png
+---
+height: 650px
+name: 
+alt: The IMI FAIRplus page as viewed from the OpenAIRE Explore
+---
+_Open AIRE_ The IMI FAIRplus page as viewed from the site.
+```
+ -->
+<ol class="simple">
+<li><p>by encoding the publication’s Digital Object Identifier (DOI)</p></li>
+<li><p>by entering manually the full reference data.</p></li>
+</ol>
+</div>
+<div class="section" id="imi-projects-and-data-management-plan-dmp">
+<h2>IMI projects and Data Management Plan (DMP)<a class="headerlink" href="#imi-projects-and-data-management-plan-dmp" title="Permalink to this headline">¶</a></h2>
+<p>When an <code class="docutils literal notranslate"><span class="pre">IMI</span> <span class="pre">grant</span> <span class="pre">awardee</span></code> elects to remain part of the <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Research</span> <span class="pre">Data</span> <span class="pre">Pilot</span></code>, the awardee should take all necessary measures to enable third parties to access, mine, exploit, reproduce and disseminate (free of charge for any user) this research data.
+This starts with devising a <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Management</span> <span class="pre">Plan</span> <span class="pre">(DMP)</span></code> and keeping it up to date throughout the projects, for instance by providing regular (every 6 months) updates.</p>
+<p>The initial version of the DMP should be submitted within the first 6 months of start of the project.</p>
+<div class="section" id="how-to-organise-the-dmp">
+<h3>How to organise the DMP?<a class="headerlink" href="#how-to-organise-the-dmp" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>An example of an annotated Horizon 2020 DMP template for Health projects is available [3].</p></li>
+</ul>
+<!-- ![](https://i.imgur.com/WQxwuCn.png) -->
+<!-- <div style="flex; justify-content: center;">
+<img src="https://i.imgur.com/WQxwuCn.png" width="750" style="border:1px solid black"/>
+</div> -->
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="https://i.imgur.com/WQxwuCn.png"><img alt="An example of an annotated Horizon 2020 DMP template for Health project" src="https://i.imgur.com/WQxwuCn.png" style="height: 650px;" /></a>
+<p class="caption"><span class="caption-text"><em>DMP</em> An example of an annotated Horizon 2020 DMP template for Health project.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The DMP should be augmented as the project progresses. Updates should be made whenever significant changes occur, and, at a minimum, in line with project reviews.</p>
+<p>Ideally, DMP produced by IMI projects should identify:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>all the different <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">types</span></code> (e.g. medical images, gene expression profiles, safety data)</p></li>
+<li><p>a set of well established, community <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">standards</span></code> (syntax and semantic solutions)</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">repositories</span></code> vetted by the community or endorsed by the funding agencies or required by the regulators to ensure data archival and data review.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="resources-to-use-to-help-build-a-dmp-for-an-imi-project">
+<h3>Resources to use to help build a DMP for an IMI project<a class="headerlink" href="#resources-to-use-to-help-build-a-dmp-for-an-imi-project" title="Permalink to this headline">¶</a></h3>
+<p><strong>1. FAIRsharing:</strong></p>
+<p>This is an Elixir UK resources acting as a one stop shop for finding out about Data Standards, Vocabularies, Ontologies and Data repositories implementing those standards. A highly curated resources, it provides powerful search capabilities and a powerful API which can be used to build DMP.</p>
+<!-- <div style="justify-content: center;"><img src="https://i.imgur.com/forEgHB.png" width="750" style="border:1px solid black"/></div> -->
+<div class="figure align-default" id="fairsharing">
+<a class="reference internal image-reference" href="https://i.imgur.com/forEgHB.png"><img alt="the FAIRsharing catalogue of data management resources" src="https://i.imgur.com/forEgHB.png" style="height: 650px;" /></a>
+<p class="caption"><span class="caption-text"><em>FAIRsharing</em> The FAIRsharing catalogue of data management resources.</span><a class="headerlink" href="#fairsharing" title="Permalink to this image">¶</a></p>
+</div>
+<hr class="docutils" />
+<p><strong>2. ELIXIR Deposition Databases for Biomolecular Data</strong></p>
+<!-- <div style="justify-content: center;">
+<img src="https://i.imgur.com/glgIArj.png" width="750" style="border:1px solid black"/>
+</div> -->
+<div class="figure align-default" id="elixir-deposition-databases">
+<a class="reference internal image-reference" href="https://i.imgur.com/glgIArj.png"><img alt="the ELIXIR Deposition Databases for Biomolecular Data" src="https://i.imgur.com/glgIArj.png" style="height: 650px;" /></a>
+<p class="caption"><span class="caption-text"><em>Elixir</em> The ELIXIR Deposition Databases for Biomolecular Data.</span><a class="headerlink" href="#elixir-deposition-databases" title="Permalink to this image">¶</a></p>
+</div>
+<hr class="docutils" />
+<p><strong>3. Data Stewardship Wizard</strong></p>
+<p>This is an example of a tool produced by Elixir-CZ to help Scientists and Researchers create a Data Management Plan.</p>
+<!-- <div style="justify-content: center;">
+<img src="https://i.imgur.com/k74XsJ6.png" width="750" style="border:1px solid black"/>
+</div> -->
+<div class="figure align-default" id="data-stewardship-wizard">
+<a class="reference internal image-reference" href="https://i.imgur.com/k74XsJ6.png"><img alt="Data Stewardship Wizard" src="https://i.imgur.com/k74XsJ6.png" style="height: 650px;" /></a>
+<p class="caption"><span class="caption-text"><em>DSW</em> Data Stewardship Wizard</span><a class="headerlink" href="#data-stewardship-wizard" title="Permalink to this image">¶</a></p>
+</div>
+<hr class="docutils" />
+<p><strong>4. Existing Data Management Plans: the IMI Resolute example</strong></p>
+<p>Since DMP are now a default deliverable of IMI2 projects, Zenodo repository offers a good source of such documents. Among all the DMPs deposited to the repository, <a class="reference internal" href="../introduction.html"><span class="doc std std-doc">IMI RESOLUTE</span></a> has produced a very robust document, of which 2 screenshots are provided below:</p>
+<!-- <div style="justify-content: center;">
+<img src="https://i.imgur.com/eTVZjq4.png" width="750" style="border:1px solid black"/>
+</div>
+ -->
+<div class="figure align-default" id="data-management-plan-by-imi-resolute">
+<a class="reference internal image-reference" href="https://i.imgur.com/eTVZjq4.png"><img alt="Data Management Plan by IMI Resolute" src="https://i.imgur.com/eTVZjq4.png" style="height: 650px;" /></a>
+<p class="caption"><span class="caption-text"><em>DMP Resolute</em>  Data Management Plan by IMI Resolute</span><a class="headerlink" href="#data-management-plan-by-imi-resolute" title="Permalink to this image">¶</a></p>
+</div>
+<p>The following screenshot provides a good example of layout which could be exploited owing the structure is provides for including critical information describing a data type and data assets generated by an IMI project.</p>
+<!-- <div style="justify-content: center;">
+<img src="https://i.imgur.com/s156swK.png" width="750" style="border:1px solid black"/>
+</div> -->
+<div class="figure align-default" id="data-stewardship-wizard-detail">
+<a class="reference internal image-reference" href="https://i.imgur.com/s156swK.png"><img alt="Data Stewardship Wizard detail" src="https://i.imgur.com/s156swK.png" style="height: 650px;" /></a>
+<p class="caption"><span class="caption-text"><em>DMP Resolute 2</em> Data Management Plan by IMI Resolute detail</span><a class="headerlink" href="#data-stewardship-wizard-detail" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This piece aimed to provide some background to Data Management activities in the context of Innovative Medicine Initiative funded projects.
+Key resources have been highlighted as well as examples of Data Management Plans.</p>
+<div class="section" id="what-to-read-read-next">
+<h3>What to read read next?<a class="headerlink" href="#what-to-read-read-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../introduction.html"><span class="doc std std-doc">FAIR in the context of IMI</span></a></p></li>
+<li><p><a class="reference internal" href="../introduction.html"><span class="doc std std-doc">Preparing to engage with FAIRplus</span></a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>https://www.imi.europa.eu/resources-projects/open-access-and-data-management-projects</p></li>
+<li><p>https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement–AGA.pdf</p></li>
+<li><p>https://ec.europa.eu/research/participants/data/ref/h2020/other/gm/reporting/h2020-tpl-oa-data-mgt-plan-annotated_en.pdf</p></li>
+<li><p>FAIRsharing.org</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>orcid</p></th>
+<th class="text-align:left head"><p>CrediT role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Philippe Rocca-Serra</p></td>
+<td class="text-align:left"><p>University of Oxford, Data Readiness Group</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Susanna Assunta Sansone</p></td>
+<td class="text-align:left"><p>University of Oxford, Data Readiness Group</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0001-5306-5690">0000-0001-5306-5690</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>Review</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>Review</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

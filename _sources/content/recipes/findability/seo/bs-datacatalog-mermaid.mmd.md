@@ -1,0 +1,8 @@
+graph TD
+ A(HTML page):::box --> B{Page about <br> multiple <br> datasets?}:::box
+ B -->|YES| C(Create markup for DataCatalog):::box
+ B -->|NO| F(Use Dataset Recipe):::box
+ C --> D(Markup Template):::box
+ D -->|Embed template in website| E(fa:fa-search fa:fa-cog fa:fa-fighter-jet Schema.org augmented HTML page):::box
+ classDef box font-family:avenir,font-size:14px,fill:B30000,stroke:#222,color:#fff,stroke-width:1px
+linkStyle 0,1,2,3,4 stroke:B30000,stroke-width:1px,color:B30000,font-family:avenir;

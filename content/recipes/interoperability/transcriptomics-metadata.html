@@ -1,0 +1,1485 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Establishing a Metadata Profile for Transcriptomics</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/interoperability/transcriptomics-metadata.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Metadata Profile Validation in RDF with Shape Expression:" href="covid19-sample-metadata-profile-shex-use-case.html" />
+    <link rel="prev" title="Creating a Metadata Profile" href="creating-minimal-metadata-profiles.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/interoperability/transcriptomics-metadata.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Establishing a Metadata Profile for Transcriptomics" />
+<meta property="og:description" content="Establishing a Metadata Profile for Transcriptomics    &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  ide" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/transcriptomics-metadata.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/transcriptomics-metadata.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/interoperability/transcriptomics-metadata.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main Objectives:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#who-is-this-recipe-aimed-at">
+     Who is this recipe aimed at?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transcriptomics-data-model">
+   Transcriptomics Data model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#existing-standards-and-checklists">
+     Existing standards and checklists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-metadata-vs-desirable-metadata">
+     Minimum metadata vs desirable metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-metadata">
+     Common metadata
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#suggested-metadata-fields">
+       Suggested metadata fields
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assay-metadata">
+     Assay metadata
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Suggested metadata fields
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-metadata">
+     Analysis metadata
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Suggested metadata fields
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ontologies-for-transcriptomics-data">
+   Ontologies for transcriptomics data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="establishing-a-metadata-profile-for-transcriptomics">
+<span id="fcb-interop-txmetadata"></span><h1>Establishing a Metadata Profile for Transcriptomics<a class="headerlink" href="#establishing-a-metadata-profile-for-transcriptomics" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a> 
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-fire fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fas fa-clock fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-users fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
+<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
+<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p> 
+<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
+<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Ontologist </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2>Main Objectives:<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The main purpose of this recipe is:</p>
+<blockquote>
+<div><p>To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments, from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing.</p>
+</div></blockquote>
+<div class="section" id="who-is-this-recipe-aimed-at">
+<h3>Who is this recipe aimed at?<a class="headerlink" href="#who-is-this-recipe-aimed-at" title="Permalink to this headline">¶</a></h3>
+<p>This document is aimed at anyone interested in the metadata, and specifically the ontology annotations, required to capture variables and experimental factors related to a transcriptomics experiment. General knowledge of transcriptomics experiments would be beneficial. No specific technical knowledge is required.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="capability-maturity-table">
+<h2>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>minimal</p></td>
+<td class="text-align:left"><p>repeatable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="transcriptomics-data-model">
+<h2>Transcriptomics Data model<a class="headerlink" href="#transcriptomics-data-model" title="Permalink to this headline">¶</a></h2>
+<p>Large sections of any transcriptomics data model are not unique to transcriptomics experiments but are common to a wide range of experiments in the biomedical domain. This includes general project- and sample-level information, which will be briefly covered in this recipe but will also be covered in more depth elsewhere.</p>
+<p>Where possible, metadata should be mapped to ontologies to maximise the FAIRness of any dataset. This recipe will suggest possible ontologies for metadata fields where these are available. These lists may however not be exhaustive as new ontologies emerge regularly.</p>
+<div class="section" id="existing-standards-and-checklists">
+<h3>Existing standards and checklists<a class="headerlink" href="#existing-standards-and-checklists" title="Permalink to this headline">¶</a></h3>
+<p>A set of well-established standards and minimum metadata checklists exist for various aspects of transcriptomics. They include:</p>
+<p>Minimum Information About a Microarray Experiment (MIAME) - MIAME is intended to specify all the information necessary for an unambiguous interpretation of a microarray experiment, and potentially to reproduce it. MIAME defines the content but not the format for this information. The MIAME standard has been in existence for over 20 years and has been widely adopted across the scientific community. The data models of the major transcriptomics repositories such as ArrayExpress, the Expression Atlas and the Gene Expression Omnibus (GEO) are MIAME-compliant.</p>
+<p>Minimum Information about a high-throughput nucleotide SEQuencing Experiment (MINSEQE) - MINSEQE describes the minimum metadata that is needed to enable the unambiguous interpretation and facilitate reproduction of the results of the experiment. By analogy to the MIAME guidelines for microarray experiments, adherence to the MINSEQE guidelines will improve integration of multiple experiments across different modalities, thereby maximising the value of high-throughput research. MINSEQE has been integrated into a number of transcriptomics and sequencing archives.</p>
+<p>Functional Annotation of Animal Genomes (FAANG) - FAANG provides a set of orthogonal standards for the capture of well-structured metadata for experiments, samples and analyses in the animal genomics domain. The FAANG standards support the MIAME and MINSEQE guidelines, and aim to convert them to a concrete specification.</p>
+<p>Human Cell Atlas Metadata (HCA-Metadata) - the HCA metadata model provides a concrete specification for capturing the metadata for single cell sequencing experiments. It is based on the three standards above, while focusing on the specific requirements of the single cell space.</p>
+</div>
+<div class="section" id="minimum-metadata-vs-desirable-metadata">
+<h3>Minimum metadata vs desirable metadata<a class="headerlink" href="#minimum-metadata-vs-desirable-metadata" title="Permalink to this headline">¶</a></h3>
+<p>A minimum metadata set constitutes metadata items that always need to be supplied with any experimental data. For validation purposes, these should not be omittable. Desirable or recommended metadata items on the other hand should be supplied if available but will not cause a validation failure if absent.</p>
+</div>
+<div class="section" id="common-metadata">
+<h3>Common metadata<a class="headerlink" href="#common-metadata" title="Permalink to this headline">¶</a></h3>
+<p>Common metadata include any information that is not specific to transcriptomics experiments but applies to most experiments in the biomedical domain. They include:</p>
+<ul class="simple">
+<li><p>Project level metadata</p></li>
+<li><p>Common sample level metadata such as species, tissue, cell type etc.</p></li>
+</ul>
+<div class="section" id="suggested-metadata-fields">
+<h4>Suggested metadata fields<a class="headerlink" href="#suggested-metadata-fields" title="Permalink to this headline">¶</a></h4>
+<p>The following table contains a non-exhaustive list of suggested minimum metadata fields for biological samples. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE, FAANG and HCA. Fields were included if they occurred in at least two of the standards.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metadata field</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>unique ID</p></td>
+<td><p>required</p></td>
+<td><p>Identifier for a sample that is at least unique within the project</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>sample type</p></td>
+<td><p>required</p></td>
+<td><p>The type of the collected specimen, eg tissue biopsy, blood draw or throat swab</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. OBI or EFO</p></td>
+</tr>
+<tr class="row-even"><td><p>species</p></td>
+<td><p>required</p></td>
+<td><p>The primary species of the specimen, preferably the taxonomic identifier</p></td>
+<td><p>This may not be the same as the “host” organism, eg in the case of a PDX tissue sample, the host may be a mouse but the tissue may be human. Ontology field - NCBITaxonomy</p></td>
+</tr>
+<tr class="row-odd"><td><p>tissue/organism part</p></td>
+<td><p>required</p></td>
+<td><p>The tissue from which the sample was taken</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. Uberon</p></td>
+</tr>
+<tr class="row-even"><td><p>disease</p></td>
+<td><p>required</p></td>
+<td><p>Any diseases that may affect the sample</p></td>
+<td><p>This may not necessarily be the same as the host’s disease, eg healthy brain tissue might be collected from a host with type II diabetes while cirrhotic liver tissue might be collected from an otherwise healthy individual. Ontology field - e.g. MONDO or DO</p></td>
+</tr>
+<tr class="row-odd"><td><p>sex</p></td>
+<td><p>required</p></td>
+<td><p>The biological/genetic sex of the sample</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. PATO</p></td>
+</tr>
+<tr class="row-even"><td><p>development stage</p></td>
+<td><p>required</p></td>
+<td><p>The developmental stage of the sample</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. Uberon or Hsadpdv; species dependent</p></td>
+</tr>
+<tr class="row-odd"><td><p>collection date</p></td>
+<td><p>required</p></td>
+<td><p>The date on which the sample was collected, in a standardised format</p></td>
+<td><p>Collection date in combination with other fields such as location and disease may be sufficient to de-anonymise a sample</p></td>
+</tr>
+<tr class="row-even"><td><p>external accessions</p></td>
+<td><p>recommended</p></td>
+<td><p>Accession numbers from any external resources to which the sample was submitted</p></td>
+<td><p>eg Biosamples, Biostudies</p></td>
+</tr>
+<tr class="row-odd"><td><p>strain</p></td>
+<td><p>recommended</p></td>
+<td><p>Strain of the species from which the sample was collected, if applicable</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. NCBITaxonomy</p></td>
+</tr>
+<tr class="row-even"><td><p>ancestry/ethnicity</p></td>
+<td><p>recommended</p></td>
+<td><p>Ancestry or ethnic group of the individual from which the sample was collected</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. HANCESTRO</p></td>
+</tr>
+<tr class="row-odd"><td><p>age</p></td>
+<td><p>recommended</p></td>
+<td><p>Age of the organism from which the sample was collected</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>age unit</p></td>
+<td><p>recommended</p></td>
+<td><p>Unit of the value of the age field</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. UO</p></td>
+</tr>
+<tr class="row-odd"><td><p>BMI</p></td>
+<td><p>recommended</p></td>
+<td><p>Body mass index of the individual from which the sample was collected</p></td>
+<td><p>Only applies to human samples</p></td>
+</tr>
+<tr class="row-even"><td><p>treatment category</p></td>
+<td><p>recommended</p></td>
+<td><p>Treatments that the sample might have undergone after collection</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. OBI, NCIt or OGMS</p></td>
+</tr>
+<tr class="row-odd"><td><p>cell type</p></td>
+<td><p>recommended</p></td>
+<td><p>The cell type(s) known or selected to be present in the sample</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. CL</p></td>
+</tr>
+<tr class="row-even"><td><p>growth conditions</p></td>
+<td><p>recommended</p></td>
+<td><p>Features relating to the growth and/or maintenance of the sample</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>genetic variation</p></td>
+<td><p>recommended</p></td>
+<td><p>Any relevant genetic differences from the specimen or sample to the expected genomic information for this species, eg abnormal chromosome counts, major translocations or indels</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>sample collection technique</p></td>
+<td><p>recommended</p></td>
+<td><p>The technique used to collect the specimen, eg blood draw or surgical resection</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or OBI</p></td>
+</tr>
+<tr class="row-odd"><td><p>phenotype</p></td>
+<td><p>recommended</p></td>
+<td><p>Any relevant (usually abnormal) phenotypes of the specimen or sample</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. HP or MP; species dependent</p></td>
+</tr>
+<tr class="row-even"><td><p>cell cycle</p></td>
+<td><p>recommended</p></td>
+<td><p>The cell cycle phase of the sample (for synchronized growing cells or a single-cell sample), if known</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. GO</p></td>
+</tr>
+<tr class="row-odd"><td><p>cell location</p></td>
+<td><p>recommended</p></td>
+<td><p>The cell location from which genetic material was collected (usually either nucleus or mitochondria)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. GO</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="assay-metadata">
+<h3>Assay metadata<a class="headerlink" href="#assay-metadata" title="Permalink to this headline">¶</a></h3>
+<p>Assay-level metadata covers any metadata directly related to the preparation of the biomaterial undergoing the assay and the process of performing the assay. Most, though not all, of this metadata is specific to transcriptomics. Examples include:</p>
+<ul class="simple">
+<li><p>Library information, including what sample the library was originally derived from and whether any replicates are biological or technical</p></li>
+<li><p>Process (wet experiment) metadata</p></li>
+<li><p>Technology type (e.g. bulk RNA-Seq, scRNA-Seq, CITE-Seq)</p></li>
+<li><p>Instrument metadata</p></li>
+<li><p>Other assay-specific metadata</p></li>
+<li><p>QC information</p></li>
+<li><p>Workflow metadata</p></li>
+</ul>
+<div class="section" id="id1">
+<h4>Suggested metadata fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>The following table contains a non-exhaustive list of suggested minimum metadata fields for assays. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE and HCA. This list can and should be further broken down based on specific technologies used, such as microarrays or whole genome sequencing.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metadata field</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>unique ID</p></td>
+<td><p>required</p></td>
+<td><p>Identifier for the assay that is at least unique within the project</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>experiment type</p></td>
+<td><p>required</p></td>
+<td><p>The type of experiment performed, eg ATAC-seq or seqFISH</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or OBI</p></td>
+</tr>
+<tr class="row-even"><td><p>extracted nucleic acid/material type</p></td>
+<td><p>required</p></td>
+<td><p>The type of material that was extracted from the sample, eg polyA RNA</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. ChEBI or EFO</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform</p></td>
+<td><p>required</p></td>
+<td><p>The type of instrument used to perform the assay, eg Illumina HiSeq 4000 or Fluidigm C1 microfluidics platform</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or OBI</p></td>
+</tr>
+<tr class="row-even"><td><p>nucleic acid extraction method</p></td>
+<td><p>required</p></td>
+<td><p>Technique used to extract the nucleic acid from the cell</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or OBI</p></td>
+</tr>
+<tr class="row-odd"><td><p>cDNA library amplication method</p></td>
+<td><p>required</p></td>
+<td><p>Technique used to amplify a cDNA library</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or OBI</p></td>
+</tr>
+<tr class="row-even"><td><p>array or sequencing method</p></td>
+<td><p>required</p></td>
+<td><p>The array or sequencing technology used - may be the same as <code class="docutils literal notranslate"><span class="pre">experiment</span> <span class="pre">type</span></code> or can be a more specific term</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or OBI</p></td>
+</tr>
+<tr class="row-odd"><td><p>biological or technical replicate</p></td>
+<td><p>required</p></td>
+<td><p>Information whether the sample on which the assay was performed was biological or technical replicate.</p></td>
+<td><p>boolean or CV</p></td>
+</tr>
+<tr class="row-even"><td><p>end bias</p></td>
+<td><p>required</p></td>
+<td><p>The type of tag or end bias the library has, eg 3 prime tag or 5 prime end bias</p></td>
+<td><p>standardised field or ontology</p></td>
+</tr>
+<tr class="row-odd"><td><p>external accessions</p></td>
+<td><p>recommended</p></td>
+<td><p>Accession numbers from external resources to which assay or protocol information was submitted</p></td>
+<td><p>eg protocols.io, AE</p></td>
+</tr>
+<tr class="row-even"><td><p>instrument model</p></td>
+<td><p>required</p></td>
+<td><p>The specific instrument on which the assay was performed. Essential for QC purposes.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or OBI</p></td>
+</tr>
+<tr class="row-odd"><td><p>assay start time</p></td>
+<td><p>recommended</p></td>
+<td><p>The exact time at which the assay was started</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>assay end time</p></td>
+<td><p>recommended</p></td>
+<td><p>The exact time at which the assay was completed</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>assay duration</p></td>
+<td><p>recommended</p></td>
+<td><p>The duration, in a relevant time unit (eg minutes or hours), of the assay from start to finish</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>array quality</p></td>
+<td><p>recommended</p></td>
+<td><p>The overall quality of the array</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>chemical compound</p></td>
+<td><p>recommended</p></td>
+<td><p>Any relevant chemical compounds used in the assay</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. ChEBI</p></td>
+</tr>
+<tr class="row-even"><td><p>labeling molecule used</p></td>
+<td><p>recommended</p></td>
+<td><p>The type of labeling molecule used in an array-based experiment</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. ChEBI</p></td>
+</tr>
+<tr class="row-odd"><td><p>spike-in kit used</p></td>
+<td><p>recommended</p></td>
+<td><p>Information about the spike-in kit used during sequencing library preparation</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>cDNA primer</p></td>
+<td><p>recommended</p></td>
+<td><p>Type of primer used for cDNA synthesis from RNA, eg polyA or random</p></td>
+<td><p>standardised field or ontology</p></td>
+</tr>
+<tr class="row-odd"><td><p>library strandedness</p></td>
+<td><p>recommended</p></td>
+<td><p>The strandedness of the cDNA library</p></td>
+<td><p>standardised field or ontology</p></td>
+</tr>
+<tr class="row-even"><td><p>cell quality</p></td>
+<td><p>recommended</p></td>
+<td><p>Information about the quality of a single cell such as morphology or percent viability</p></td>
+<td><p>standardised field or ontology</p></td>
+</tr>
+<tr class="row-odd"><td><p>cell barcode</p></td>
+<td><p>recommended</p></td>
+<td><p>Information about the cell identifier barcode used to tag individual cells in single cell sequencing</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>UMI barcode</p></td>
+<td><p>recommended</p></td>
+<td><p>Information about the Unique Molecular Identifier barcodes used to tag DNA fragments</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="analysis-metadata">
+<h3>Analysis metadata<a class="headerlink" href="#analysis-metadata" title="Permalink to this headline">¶</a></h3>
+<p>Analysis-level metadata includes any metadata related to the files that come out of the experiment, from the sequencing or imaging files generated directly by the machine to files generated during the various stages of processing and analysis, as well as details of any analyses performed. It is very important to always capture versions of software and reference genomes used in order to allow accurate replication of results. Analysis metadata includes</p>
+<ul class="simple">
+<li><p>Type of analysis</p></li>
+<li><p>File formats, e.g. BAM, fastq or gene count</p></li>
+<li><p>File location e.g. URL</p></li>
+<li><p>Summarisation of data, e.g. enrichment analysis</p></li>
+</ul>
+<div class="section" id="id2">
+<h4>Suggested metadata fields<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>The following table contains a non-exhaustive list of suggested minimum metadata fields for analyses. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE and HCA. This list can and should be further broken down based on the specific analysis type (primary, secondary or teriatry analysis, meta-analysis etc)</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metadata field</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>analysis type</p></td>
+<td><p>required</p></td>
+<td><p>The type of analysis performed, eg genome assembly or variant calling</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO, OBI or EDAM</p></td>
+</tr>
+<tr class="row-odd"><td><p>computational method</p></td>
+<td><p>required</p></td>
+<td><p>The specific computational method or algorithm used as part of the analysis</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or EDAM</p></td>
+</tr>
+<tr class="row-even"><td><p>normalisation strategy</p></td>
+<td><p>required</p></td>
+<td><p>The approach used to normalise the data</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EFO or EDAM</p></td>
+</tr>
+<tr class="row-odd"><td><p>file format</p></td>
+<td><p>required</p></td>
+<td><p>The file format in which the analysis is provided</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">field</span></code> - e.g. EDAM</p></td>
+</tr>
+<tr class="row-even"><td><p>file storage location</p></td>
+<td><p>required</p></td>
+<td><p>The location in which the data files are stored</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>software package</p></td>
+<td><p>recommended</p></td>
+<td><p>The software package used for data analysis</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>software version</p></td>
+<td><p>recommended</p></td>
+<td><p>The exact version number of the software package</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>analysis date</p></td>
+<td><p>recommended</p></td>
+<td><p>The date on which the analysis was performed</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>read index</p></td>
+<td><p>recommended</p></td>
+<td><p>The sequencing read a specific file represents, eg read1 or index1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>read length</p></td>
+<td><p>recommended</p></td>
+<td><p>The length of a sequenced read in this file, in nucleotides.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>assembly type</p></td>
+<td><p>recommended</p></td>
+<td><p>The assembly type of the genome reference file, eg primary, complete or patch assembly.</p></td>
+<td><p>standardised field or ontology</p></td>
+</tr>
+<tr class="row-odd"><td><p>reference genome version</p></td>
+<td><p>recommended</p></td>
+<td><p>The genome version of the reference file.</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="ontologies-for-transcriptomics-data">
+<h2>Ontologies for transcriptomics data<a class="headerlink" href="#ontologies-for-transcriptomics-data" title="Permalink to this headline">¶</a></h2>
+<p>While it is essential that any transcriptomics metadata be annotated with ontology terms wherever possible, there is no absolute set of ontologies that must be used above all others. There is however a consensus set of ontologies and other standardised resources that are commonly used in transcriptomics metadata, including in the main data archives. The most commonly used ontologies and fields they apply to are listed below. This table represents an absolute minimum of ontology annotations that should be included in a transcriptomics metadata set for it to be considered as FAIR. Not all fields suggested for ontology annotation in the previous section are repeated here for this reason.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data type</p></th>
+<th class="head"><p>Ontology/Entity sources</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Species</p></td>
+<td><p>NCBI taxonomy Scientific name + ID</p></td>
+<td><p>Ontology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Tissue</p></td>
+<td><p>Uberon term and Id</p></td>
+<td><p>Ontology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Cell type</p></td>
+<td><p>CL term and Id</p></td>
+<td><p>Ontology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Disease</p></td>
+<td><p>MONDO, DO or MeSH</p></td>
+<td><p>Ontology</p></td>
+<td><p>no single solution - options vary depending on resource and individual requirements</p></td>
+</tr>
+<tr class="row-even"><td><p>Phenotype/Trait</p></td>
+<td><p>HPO (human),  MP(other mammals), various others for model organisms (yeast, zebrafish, Xenopus, C. elegans)</p></td>
+<td><p>Ontology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Experiment Type</p></td>
+<td><p>EFO, OBI</p></td>
+<td><p>Ontology</p></td>
+<td><p>e.g. RNASeq, CITESeq etc. -</p></td>
+</tr>
+<tr class="row-even"><td><p>Cell location/cycle</p></td>
+<td><p>GO</p></td>
+<td><p>Ontology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Developmental stage</p></td>
+<td><p>HSAPDV/Uberon</p></td>
+<td><p>Ontology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Chemical compound</p></td>
+<td><p>ChEBI</p></td>
+<td><p>Ontology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Chemical compound</p></td>
+<td><p>UniChem, SMILE, InChi</p></td>
+<td><p>Entity</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Gene/protein</p></td>
+<td><p>ENSEMBL, ENTREZ_GENE, UNIPROT, HGNC ID, INSDC</p></td>
+<td><p>Entity</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Metabolites</p></td>
+<td><p>MetaboLights compound accession, ChEBI</p></td>
+<td><p>Entity</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Nucleotide reference sequence</p></td>
+<td><p>ReqSeq</p></td>
+<td><p>Entity</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to easily define a comprehensive metadata template to capture all the experimental variables to describe any transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata template is provided <a class="reference internal" href="creating-minimal-metadata-profiles.html"><span class="doc std std-doc">here</span></a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>Orcid</p></th>
+<th class="text-align:left head"><p>Credit role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Danielle Welter</p></td>
+<td class="text-align:left"><p>LCSB, University of Luxembourg</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0003-1058-2668">0000-0003-1058-2668</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Karsten Quast</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Peter Woollard</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="creating-minimal-metadata-profiles.html" title="previous page">Creating a Metadata Profile</a>
+    <a class='right-next' id="next-link" href="covid19-sample-metadata-profile-shex-use-case.html" title="next page">Metadata Profile Validation in RDF with Shape Expression:</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

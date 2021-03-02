@@ -1,0 +1,1166 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>MSIO, an application ontology for Metabolomics</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Creating a Metadata Profile" href="../creating-minimal-metadata-profiles.html" />
+    <link rel="prev" title="Building an application ontology with Robot" href="../ontology-robot-recipe.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="MSIO, an application ontology for Metabolomics" />
+<meta property="og:description" content="MSIO, an application ontology for Metabolomics    &lt;i class=&#39;fa fa-qrcode fa-2x&#39; style=&#39;color:#7e0038;&#39;&gt;&lt;/i&gt;&lt;br&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  identifier: &lt;a" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="../ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/proccaserra/the-fair-cookbook-ng/main?urlpath=lab/tree/the-fair-cookbook/content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/proccaserra/the-fair-cookbook-ng/blob/main/the-fair-cookbook/content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#obtaining-and-installing-robot">
+   Obtaining and installing robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-reference-ontologies-key-resources">
+   1. Downloading Reference Ontologies &amp; Key Resources:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-extraction-from-seeds-using-the-mireot-approach">
+   2. Module Extraction from seeds using the MIREOT approach:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-extracted-modules-into-application-ontology">
+   3. Merging Extracted Modules into Application Ontology:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-elk-reasoner-with-robot-materialize">
+   4. Working with ELK reasoner with Robot Materialize:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-to-obo-format">
+   5. Convert to OBO Format:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-stato-and-nmrcv-ontology">
+   6. Importing stato and nmrCV ontology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#export-as-tabular-representation-in-excel-format">
+   7. Export as Tabular Representation in Excel format
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="msio-an-application-ontology-for-metabolomics">
+<h1>MSIO, an application ontology for Metabolomics<a class="headerlink" href="#msio-an-application-ontology-for-metabolomics" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3&lt;br&gt; docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-qrcode fa-2x' style='color:#7e0038;'></i><br></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a>
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-fire fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:lightgrey'></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fas fa-clock fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class='fa fa-clock fa-lg' style='color:#7e0038;'></i> 30 minutes
+<h4><b>Recipe Type</b></h4>
+<i class='fa fa-globe fa-lg' style='color:#7e0038;'></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class='fa fa-play-circle fa-lg' style='color:#7e0038;'></i> Yes
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-users fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<!-- <p> <i class='fa fa-user-md fa-lg' style='color:#7e0038;'></i> Principal Investigator </p> -->
+<p> <i class='fa fa-database fa-lg' style='color:#7e0038;'></i> Data Manager </p>
+<p> <i class='fa fa-wrench fa-lg' style='color:#7e0038;'></i> Data Scientist </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>title:</strong> <code class="docutils literal notranslate"><span class="pre">MSIO</span> <span class="pre">build</span> <span class="pre">process</span></code> <br>
+<strong>author:</strong> <code class="docutils literal notranslate"><span class="pre">philippe.rocca-serra&#64;oerc.ox.ac.uk</span></code> <br>
+<strong>date:</strong> <code class="docutils literal notranslate"><span class="pre">2020-05-11</span></code> <br>
+<strong>license:</strong> <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/"><code class="docutils literal notranslate"><span class="pre">creative-commons-by-sa-4.0</span></code></a> <br>
+<strong>keywords:</strong> <code class="docutils literal notranslate"><span class="pre">ontology</span></code> <br>
+<strong>description:</strong> <code class="docutils literal notranslate"><span class="pre">MSIO</span> <span class="pre">an</span> <span class="pre">Application</span> <span class="pre">Ontology</span> <span class="pre">for</span> <span class="pre">Metabolomics.</span> <span class="pre">We</span> <span class="pre">detail</span> <span class="pre">how</span> <span class="pre">we</span> <span class="pre">use</span> <span class="pre">OBO</span> <span class="pre">Foundry</span> <span class="pre">ROBOT</span> <span class="pre">tool</span> <span class="pre">for</span> <span class="pre">generating</span> <span class="pre">the</span> <span class="pre">ontology</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">seeds,</span> <span class="pre">which</span> <span class="pre">have</span> <span class="pre">been</span> <span class="pre">established</span> <span class="pre">by</span> <span class="pre">manual</span> <span class="pre">selection</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">key</span> <span class="pre">classes</span> <span class="pre">to</span> <span class="pre">build</span> <span class="pre">a</span> <span class="pre">mild</span> <span class="pre">level</span> <span class="pre">ontology</span> <span class="pre">for</span> <span class="pre">experiments.</span> <span class="pre">MSIO</span> <span class="pre">specific</span> <span class="pre">classes</span> <span class="pre">are</span> <span class="pre">added</span> <span class="pre">the</span> <span class="pre">MSIO</span> <span class="pre">namespace</span> <span class="pre">but</span> <span class="pre">remain</span> <span class="pre">compatible</span> <span class="pre">with</span> <span class="pre">OBI</span> <span class="pre">for</span> <span class="pre">which</span> <span class="pre">MSIO</span> <span class="pre">can</span> <span class="pre">become</span> <span class="pre">a</span> <span class="pre">module.</span></code> <br></p>
+<div class="section" id="obtaining-and-installing-robot">
+<h2>Obtaining and installing robot<a class="headerlink" href="#obtaining-and-installing-robot" title="Permalink to this headline">¶</a></h2>
+<p>The robot tool is available from: http://robot.obolibrary.org/ with detailed instructions available from the official pages.
+One may obtain the <a class="reference external" href="https://github.com/ontodev/robot/releases">latest official version</a> or the <a class="reference external" href="https://build.obolibrary.io/job/ontodev/job/robot/job/master/lastSuccessfulBuild/artifact/bin/robot.jar">latest successful build</a> from the obofoundry project. This the latter option we go for in this notebook as we want to test a new function available from version 1.7, onwards.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">robot_dir</span><span class="o">=</span><span class="s2">&quot;robot_jar&quot;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">robot_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">robot_dir</span><span class="p">)</span>
+    
+<span class="c1"># Check if a newer versio exists a:</span>
+
+<span class="n">get_robot_curl</span><span class="o">=</span><span class="s2">&quot;curl -L https://build.obolibrary.io/job/ontodev/job/robot/job/master/lastSuccessfulBuild/artifact/bin/robot.jar &gt; ./robot_jar/robot.jar&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">get_robot_curl</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_curl</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">ioe_curl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resources</span><span class="o">=</span><span class="p">[</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/duo.owl   &gt; ./ontology-sources-test/duo.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/stato.owl &gt; ./ontology-sources-test/stato.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/chmo.owl  &gt; ./ontology-sources-test/chmo.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/iao.owl   &gt; ./ontology-sources-test/iao.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/obi.owl   &gt; ./ontology-sources-test/obi.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/ms.owl    &gt; ./ontology-sources-test/ms.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L https://raw.githubusercontent.com/MSI-Metabolomics-Standards-Initiative/nmrcv/master/nmrCV-corrected-namespace.owl &gt; ./ontology-sources-test/nmrcv.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/chebi.owl &gt; ./ontology-sources-test/chebi.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/uo.owl    &gt; ./ontology-sources-test/uo.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;curl -L http://purl.obolibrary.org/obo/stato.owl &gt; ./ontology-sources-test/stato.owl&quot;</span>          
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cwd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/ontology-robot
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="downloading-reference-ontologies-key-resources">
+<h2>1. Downloading Reference Ontologies &amp; Key Resources:<a class="headerlink" href="#downloading-reference-ontologies-key-resources" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ontoresource_dir</span><span class="o">=</span><span class="s2">&quot;ontology-sources-test&quot;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ontoresource_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ontoresource_dir</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">resources</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ieo_curl</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">ioe_curl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="module-extraction-from-seeds-using-the-mireot-approach">
+<h2>2. Module Extraction from seeds using the MIREOT approach:<a class="headerlink" href="#module-extraction-from-seeds-using-the-mireot-approach" title="Permalink to this headline">¶</a></h2>
+<p>Using a number of seed files, which contains the classes manually selected by the ontology developers, we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011-0087">MIREOT method</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">onto_outputdir</span><span class="o">=</span><span class="s2">&quot;ontology-msio-build-modules&quot;</span>
+
+<span class="n">extractors</span><span class="o">=</span><span class="p">[</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/chebi.owl --upper-terms ./ontology-select-classes/chebi-upper-terms.txt --lower-terms ./ontology-select-classes/chebi-lower-terms.txt --intermediates none --imports exclude --copy-ontology-annotations true --output ./ontology-msio-build-modules/chebi_mireot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/chmo.owl  --lower-terms ./ontology-select-classes/chmo-lower-terms.txt  --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/chmo_mireot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/iao.owl   --lower-terms ./ontology-select-classes/iao-lower-terms.txt   --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/iao_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/obi.owl   --lower-terms ./ontology-select-classes/obi-lower-terms.txt   --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/obi_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/ms.owl --lower-terms ./ontology-select-classes/psims-lower-terms.txt --intermediates minimal --copy-ontology-annotations true --output ./ontology-msio-build-modules/psims_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/uo.owl    --lower-terms ./ontology-select-classes/uo-lower-terms.txt    --intermediates minimal --copy-ontology-annotations true --output ./ontology-msio-build-modules/uo_mireot_robot_module.owl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;java -jar ./robot_jar/robot.jar extract --method MIREOT --input ./ontology-sources-test/duo.owl   --lower-terms ./ontology-select-classes/duo-lower-terms.txt   --intermediates all --copy-ontology-annotations true --output ./ontology-msio-build-modules/duo_mireot_robot_module.owl&quot;</span>
+<span class="p">]</span> 
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">onto_outputdir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">onto_outputdir</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">extractor</span> <span class="ow">in</span> <span class="n">extractors</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">extractor</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">extractor</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">ioe</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="merging-extracted-modules-into-application-ontology">
+<h2>3. Merging Extracted Modules into Application Ontology:<a class="headerlink" href="#merging-extracted-modules-into-application-ontology" title="Permalink to this headline">¶</a></h2>
+<p>This step simply fuses all the input OWL files into one single output, avoiding use of import statements.<br/>
+:octocat: A <code class="docutils literal notranslate"><span class="pre">merge</span></code> can be <em>undone</em>( with <code class="docutils literal notranslate"><span class="pre">unmerge</span></code> command also available from <code class="docutils literal notranslate"><span class="pre">robot</span> <span class="pre">tool</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-build-results&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-build-results&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar merge --input ./ontology-msio-build-modules/iao_mireot_robot_module.owl --input ./ontology-msio-build-modules/obi_mireot_robot_module.owl --input ./ontology-msio-build-modules/duo_mireot_robot_module.owl --input ./ontology-msio-build-modules/chmo_mireot_module.owl --input ./ontology-msio-build-modules/uo_mireot_robot_module.owl --input ./ontology-msio-build-modules/psims_mireot_robot_module.owl  --input ./ontology-msio-build-modules/chebi_mireot_module.owl --output ./ontology-msio-build-results/msio-test-merge.owl&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_merge</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_merge</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar merge --input ./ontology-msio-build-modules/iao_mireot_robot_module.owl --input ./ontology-msio-build-modules/obi_mireot_robot_module.owl --input ./ontology-msio-build-modules/duo_mireot_robot_module.owl --input ./ontology-msio-build-modules/chmo_mireot_module.owl --input ./ontology-msio-build-modules/uo_mireot_robot_module.owl --input ./ontology-msio-build-modules/psims_mireot_robot_module.owl  --input ./ontology-msio-build-modules/chebi_mireot_module.owl --output ./ontology-msio-build-results/msio-test-merge.owl&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_merge</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_merge</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/ontology-robot
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="working-with-elk-reasoner-with-robot-materialize">
+<h2>4. Working with ELK reasoner with Robot Materialize:<a class="headerlink" href="#working-with-elk-reasoner-with-robot-materialize" title="Permalink to this headline">¶</a></h2>
+<p>With this step, the goal is to ensure that the ontology is logically consistent. This can only be checked by running a <code class="docutils literal notranslate"><span class="pre">reasoner</span></code>, which will formally assess the various axioms used in the ontology and classify the classes bases on these constraints. Robot allows this step to be performed and provides various options as to which reasoner to offer. Here, the <a class="reference external" href="https://www.cs.ox.ac.uk/isg/tools/ELK/">ELK reasoner</a> is used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-materialize&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-materialize&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar materialize --reasoner ELK  --input ./ontology-msio-build-results/msio-test-merge.owl  reduce --output ./ontology-msio-materialize/msio-test-materialize.owl&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_reason</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_reason</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="convert-to-obo-format">
+<h2>5. Convert to OBO Format:<a class="headerlink" href="#convert-to-obo-format" title="Permalink to this headline">¶</a></h2>
+<p>The module extraction, merging and reasoning function produce Ontology Web Language (<a class="reference external" href="https://www.w3.org/TR/owl-features/">OWL</a>) documents. For reaching a wider audience and to allow use by some data entry tools, it is interesting to release the ontology in the <a class="reference external" href="https://owlcollab.github.io/oboformat/doc/GO.format.obo-1_4.html">OBO format</a>. The following section details how to invoke the command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-convert&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-convert&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar convert --input ./ontology-msio-materialize/msio-test-materialize.owl --format obo --output ./ontology-msio-convert/msio-test-conversion.obo&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_reason</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_reason</span><span class="p">)</span> 
+<span class="k">else</span><span class="p">:</span>    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar convert --input ./ontology-msio-materialize/msio-test-materialize.owl --format obo --output ./ontology-msio-convert/msio-test-conversion.obo&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_reason</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_reason</span><span class="p">)</span>         
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importing-stato-and-nmrcv-ontology">
+<h2>6. Importing stato and nmrCV ontology<a class="headerlink" href="#importing-stato-and-nmrcv-ontology" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># if not os.path.exists(&quot;ontology-msio-merge&quot;):</span>
+<span class="c1">#     os.makedirs(&quot;ontology-msio-merge&quot;)</span>
+<span class="c1"># else: </span>
+<span class="c1">#     try:</span>
+<span class="c1">#         os.system(&quot;java -jar robot.jar merge --input ./ontology-msio-materialize/msio-test-materialize.owl --input ./ontology-sources-modules/stato.owl --input ./ontology-sources-modules/nmrcv.owl --output ./ontology-msio-merge/msio-test-merge-round2.owl&quot;)</span>
+<span class="c1">#     except IOError as ioe_convert:</span>
+<span class="c1">#         print(ioe_convert)     </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="export-as-tabular-representation-in-excel-format">
+<h2>7. Export as Tabular Representation in Excel format<a class="headerlink" href="#export-as-tabular-representation-in-excel-format" title="Permalink to this headline">¶</a></h2>
+<p>A new function in Robot tool (starting with version 1.7) provides the option of exporting the classes and properties of an ontology in a tabular representation, which can be useful to engage with users and curators for review and extension. The following section details how to invoke the command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;ontology-msio-export&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;ontology-msio-export&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar export --input ./ontology-msio-materialize/msio-test-materialize.owl --header &#39;IRI|ID|LABEL|SubClass Of|definition&#39; --format xlsx --export ./ontology-msio-export/msio-test-export.xlsx&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_convert</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_convert</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;java -jar ./robot_jar/robot.jar export --input ./ontology-msio-materialize/msio-test-materialize.owl --header &#39;IRI|ID|LABEL|SubClass Of|definition&#39; --format xlsx --export ./ontology-msio-export/msio-test-export.xlsx&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">ioe_convert</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ioe_convert</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Jackson R.C., Balhoff J.P., Douglass E.,Harris N.L., Mungall C.J. and Overton J.A. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.<a class="reference external" href="https://doi.org/10.1186/s12859-019-3002-3">https://doi.org/10.1186/s12859-019-3002-3</a></p></li>
+<li><p>Hastings J., Owen G., Dekker A., Ennis M., Kale N., Muthukrishnan V., Turner S., Swainston N., Mendes P., Steinbeck C.(2016). ChEBI in 2016: Improved services and an expanding collection of metabolites. Nucleic Acids Res.<a class="reference external" href="http://dx.doi.org/10.1093/nar/gks1146">http://dx.doi.org/10.1093/nar/gks1146</a></p></li>
+<li><p>Haug K., Cochrane K., Nainala V.C., Williams M., Chang J., Jayaseelan K.N. and O’Donovan C. MetaboLights: a resource evolving in response to the needs of its scientific community. Nucleic Acids Research, gkz1019, <a class="reference external" href="https://doi.org/10.1093/nar/gkz1019">https://doi.org/10.1093/nar/gkz1019</a></p></li>
+<li><p>IAO: <a class="reference external" href="https://github.com/information-artifact-ontology/IAO/">https://github.com/information-artifact-ontology/IAO/</a></p></li>
+<li><p>The Ontology for Biomedical Investigations, PLoS One. 2016 Apr 29;11(4):e0154556. eCollection 2016. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0154556">https://doi.org/10.1371/journal.pone.0154556</a>.</p></li>
+<li><p>STATO: <a class="reference external" href="https:///stato-ontology.org">https:stato-ontology.org</a></p></li>
+<li><p>nmrCV: <a class="reference external" href="http://nmrml.org/cv/">http://nmrml.org/cv/</a></p></li>
+<li><p>CHMO: <a class="reference external" href="https://github.com/rsc-ontologies/rsc-cmo">https://github.com/rsc-ontologies/rsc-cmo</a></p></li>
+<li><p>UO: <a class="reference external" href="https://github.com/bio-ontology-research-group/unit-ontology">https://github.com/bio-ontology-research-group/unit-ontology</a></p></li>
+<li><p>PSI-MS: <a class="reference external" href="http://www.psidev.info/groups/controlled-vocabularies">http://www.psidev.info/groups/controlled-vocabularies</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venv374"
+        },
+        kernelOptions: {
+            kernelName: "venv374",
+            path: "./content/recipes/interoperability/ontology-robot"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venv374'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../ontology-robot-recipe.html" title="previous page">Building an application ontology with Robot</a>
+    <a class='right-next' id="next-link" href="../creating-minimal-metadata-profiles.html" title="next page">Creating a Metadata Profile</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

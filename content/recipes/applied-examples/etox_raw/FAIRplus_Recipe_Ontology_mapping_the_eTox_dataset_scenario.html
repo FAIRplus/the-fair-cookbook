@@ -1,0 +1,919 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Data normalization and integration through entity linking</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="ND4BB dataset FAIRification recipe" href="../nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html" />
+    <link rel="prev" title="Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library" href="../fair-data-matrix/3-rose-metabolites-R-analysis.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Data normalization and integration through entity linking" />
+<meta property="og:description" content="Data normalization and integration through entity linking  The eTox Sampler Dataset applied scenario  Motivation and aim of the FAIRification Recipe  The descri" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-etox-sampler-dataset-applied-scenario">
+   <em>
+    The eTox Sampler Dataset applied scenario
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation-and-aim-of-the-fairification-recipe">
+     Motivation and aim of the FAIRification Recipe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#procedural-description">
+     Procedural description
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="data-normalization-and-integration-through-entity-linking">
+<span id="fcb-fairify-examples-etox"></span><h1>Data normalization and integration through entity linking<a class="headerlink" href="#data-normalization-and-integration-through-entity-linking" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-etox-sampler-dataset-applied-scenario">
+<h2><em>The eTox Sampler Dataset applied scenario</em><a class="headerlink" href="#the-etox-sampler-dataset-applied-scenario" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="motivation-and-aim-of-the-fairification-recipe">
+<h3>Motivation and aim of the FAIRification Recipe<a class="headerlink" href="#motivation-and-aim-of-the-fairification-recipe" title="Permalink to this headline">¶</a></h3>
+<p>The description of the metadata as well as the characterization of the actual content of a dataset often rely on short free-text excerpts. As an example, we can consider the names of the columns of a table (e.g. “laboratory tests”) or the different values of the cells belonging to a specific table column (e.g. “cholesterol”, “blood sugar”, “liver function”, etc.). Often such free-text excerpts are not rigorously characterized inside and across datasets, thus leading to situations in which it is difficult to unambiguously describe the semantics of each excerpt due to polysemy (i.e. several meanings can be associated to the same excerpt) and synonymy (i.e. a specific meaning can be expressed by more than one excerpt).</p>
+<p>In this regard, the possibility to describe both the structure (i.e. metadata) and content of a dataset by relying on the concepts formalized by widely-adopted knowledge resources (i.e. ontologies, thesauri, etc.) plays a key role in substantially improving the level of FAIRness of the same data: the identification of the concepts that better describe each piece of information included in a dataset is usually referred to as <strong>entity linking</strong>. The use of standardized, shared, consistent identifiers to unambiguously characterize the semantics of data fosters <em>Interoperability</em> and <em>Reusability</em>: indeed, the fact that distinct datasets rely on the same, shared set of concepts to describe (part of) their content makes their integration significantly easier, thus opening up novel possibilities for cross-fertilization. Also the <em>Findability</em> and <em>Accessibility</em> of information significantly benefit from the availability of descriptions of datasets based on standard vocabularies: information from distinct datasets can be seamlessly indexed and searched and data consumers, both humans and machines, can easily interpret, validate and summarize their content.</p>
+<p>Given a  dataset, this FAIRification Recipe focuses on (semi-)automated approaches and best practices to:</p>
+<ul class="simple">
+<li><p>support the <strong>selection of the knowledge resources (i.e. ontologies, thesauri, etc.) that provide higher semantic coverage with respect to the description of the structure (i.e. metadata) and content</strong> of the dataset;</p></li>
+<li><p>enable the <strong>selection from these knowledge resources, of (sets of) concepts useful to describe the structure and content</strong> of the dataset.</p></li>
+</ul>
+<p>As a general consideration, given a dataset, the selection of the knowledge resources useful to describe its structure and content should be driven by the following general principles:</p>
+<ul class="simple">
+<li><p>the selection of a specific knowledge resource among a set of alternatives should be driven by: (i) <em>higher semantic coverage</em> with respect to the description of the dataset under consideration; (ii) <em>better formalization of key facets of the data to describe</em> with respect to the implementation of future data integration and indexing activities; (iii) <em>higher level of integration and availability of mappings from the chosen knowledge resources to other complementary ones</em>.</p></li>
+<li><p>the reuse and combination of existing, widespread knowledge resources should be privileged as much as possible;</p></li>
+<li><p>when (part of) the semantics of the dataset can’t be formalized by any existing knowledge resources, the extension of an existing knowledge resources should be preferred over the creation of a new one, to cover such semantic gap.</p></li>
+</ul>
+<p><em>Knowledge resource indexes</em> represent core tools to enable data normalization and integration through concept mapping, thus fostering the reuse of existing knowledge resources. Knowledge resource indexes are repositories where several types of knowledge resources (e.g. ontologies, thesauri, etc.), usually describing distinct facets of a knowledge domain, are stored. Such indexes provide users with <strong>specific mechanisms to identify inside the set of indexed knowledge resources, the most relevant concepts useful to formally characterize the semantics of a piece of knowledge that is usually represented by a text excerpt</strong>. In particular, given a text excerpt (i.e. “neoplasia”), knowledge resource indexes select and rank concepts useful to characterize its semantics by relying on string matching strategies: the set of concepts that are described by labels (i.e. names or longer descriptions) that better match the text excerpt provided as input are retrieved. For instance, given the input text excerpt “neoplasia”, the concept with identifier <em>MC_0000002</em> lexicalized by means of the label “<em>Neoplasia</em>”, belonging to the Histopathology ontology is retrieved. In this FAIRification Recipe, we will rely on the EBI Ontology Lookup Service (OLS), a knowledge resource index that at the time of writing, stores the most recent versions of 236 widespread biomedical ontologies. OLS provides an open REST API that supports the retrieval of the most relevant concepts useful to describe a text excerpt provided as input.</p>
+<p>Hereinafter this FAIRification Recipe, by relying on the OLS API, given an input dataset, presents into detail an automated ontology coverage evaluation strategy. Such strategy aims at: (i) identifying the knowledge resources that better describe the structure (i.e. metadata) and content of the dataset under consideration, in terms of semantic coverage; (ii) gathering the most relevant concepts useful to characterize each piece of knowledge that belongs to the input dataset (i.e. each text excerpt that describes a specific aspect of the input dataset). In particular, basic linguistic analyses are performed on both the descriptive text excerpts provided as input to the OLS API and the labels of the corresponding related concepts that are retrieved by the same API. By pre-processing each input text excerpt we intend to perform <em>basic query expansion procedures with the aim of increasing the recall of relevant concepts when querying the OLS knowledge resource indexer</em>. By analyzing the labels of the list of matching concepts retrieved by the OLS API, we intend to <em>refine such concept list by relying on rules and heuristics based on linguistic analyses</em>. When we deal with the evaluation of the semantic coverage of knowledge resources, it is not uncommon that the indexers we have at our disposal (e.g. the OLS) do not include all the knowledge resources we would like to consider as potential sources of useful concepts. To mitigate this issue, we rely on <em>OntoIndex</em>, a knowledge resource indexer based on Elasticsearch and developed by the Hospital del Mar Medical Research Institute (IMIM), Barcelona. The current version of <em>OntoIndex</em> supports the import, indexing and search for concepts that belong to ontologies formalized by means of the Ontology Web Language (OWL) or the Open Biological and Biomedical Ontology (OBO) format, the latter widely adopted to describe biomedical knowledge resources.</p>
+</div>
+<div class="section" id="procedural-description">
+<h3>Procedural description<a class="headerlink" href="#procedural-description" title="Permalink to this headline">¶</a></h3>
+<p>The exploitation of the concepts formalized by widely-adopted knowledge resources (i.e. ontologies, thesauri, etc.) to semantically describe the structure (i.e. metadata) and content of a dataset is a key aspect to foster the FAIRness of the same data. With this regard, here we present an approach whose ultimate objective is easing and automating the choice and usage of a consistent and informed set of knowledge resources to describe a dataset under consideration. In particular, the proposed strategy <strong>automatically evaluates the suitability of a set of knowledge resources  (i.e. ontologies, thesauri, etc.) with respect to the semantic characterization of a list of terms that occur in an input dataset</strong> (i.e. the presence inside the considered knowledge resources, of concepts that properly describe the terms belonging to the input list).</p>
+<p>The input of our approach is represented by a list of terms (i.e. short free-text excerpts, see Figure 1) that are used to describe a varied set of aspects of a dataset under analysis (e.g. the names of the columns of the tables of the dataset - i.e. cell headers). By considering the knowledge resources stored in as index (namely the OLS, eventually complemented by <em>OntoIndex</em>) we intend to generate as final outputs:</p>
+<ul class="simple">
+<li><p>a <strong>knowledge resource coverage report</strong>: that provides statistics about the semantic coverage of the knowledge resources stored in the index. The coverage is evaluated in terms of number of input terms described by the concepts formalized in a specific knowledge resource. In particular, we evaluate the semantic coverage by considering exclusively <strong>exact matches</strong> or <strong>partial matches</strong> of terms to concepts (see below for a detailed description <strong>exact</strong> and <strong>partial</strong> matches);</p></li>
+<li><p>a list of <strong>knowledge resource mappings</strong>: for each input term we generate an easy-to-review list of <strong>exact matches</strong> and <strong>partial matches</strong> of terms to knowledge resource concepts.</p></li>
+</ul>
+<p>The <strong>knowledge resource coverage report</strong> provides <em>useful insights to select the set of knowledge resources that better support the semantic characterization of the dataset under analysis</em>. Moreover, the list of <strong>knowledge resource mappings</strong> enables users to explore term specific mappings to concepts in order to <em>obtain finer-grained information on the quality of the automatically generated mappings</em> as well as to support <em>activities of manual revision and validation of the proposed mappings</em>.</p>
+<p>The sequential steps that compose the proposed approach are (see Figure 1):</p>
+<ol class="simple">
+<li><p><strong>Query expansion</strong>: we analyze the text of each input term. In case it includes plural nouns or adjectives we generate an alternative term substituting plural with singular words (the term “neoplasias” generates the alternative term “neoplasia”). We also consider the presence of punctuation in the input term, generating an alternative term without punctuation. All the text analyses exploited during the query expansion step are performed by relying on the Stanford CoreNLP tools. This strategy is motivated by the fact that some knowledge resource indexes like the OLS substantially change their results if we consider linguistic variations of the query string, for instance with respect to the singular and plural forms of nouns and adjectives. For instance, at the time of writing, when we query the OLS, all the top-10 results (i.e. matching ontological concepts) we get for the input term “neoplasm” are different from the top-10 results we can retrieve if we use the plural of the same term, “neoplasms”.</p></li>
+<li><p><strong>Querying knowledge resource indexes</strong>: by considering each input term as well as each related alternative term obtained by the term expansion, we query (a set of) knowledge resource indexes. In particular, in Figure 2 the following knowledge resource indexes are considered: the OLS index and <em>OntoIndex</em>. The latter is a knowledge resource indexer developed by the Hospital del Mar Medical Research Institute (IMIM), Barcelona. It is exploited to complement the OLS when we need to search for concept matches against knowledge resources that are not contemplated by the OLS;</p></li>
+<li><p><strong>Merging and characterization of retrieved mappings</strong>: for each input term, eventually complemented with alternative terms by query expansion, each knowledge resource index retrieves a set of matching concepts. We merge all the concepts retrieved by the knowledge resource indexes by querying such index by considering both the input term and its alternative terms. The merging strategy is mainly useful to avoid duplicate concepts. From the set of merged matching concepts that describe an input term we derive two non-intersecting subsets: concepts with <strong>exact match</strong> and concepts with <strong>partial match</strong> (see below for a detailed description <strong>exact</strong> and <strong>partial</strong> matches);</p></li>
+<li><p><strong>Concept mapping statistics generation</strong>: this final step takes care of the generation of both knowledge resource coverage report and the list of knowledge resource mappings, previously described in detail.</p></li>
+</ol>
+<p>To conclude the description of this FAIRification recipe, we explain the approach we use to identify two subsets of concepts referred to as <strong>exact matches</strong> and <strong>partial matches</strong>, starting from the whole set of concepts matching a specific input term. We analyze each term as well as each label associated with the retrieved matching concepts by means of the Stanford CoreNLP tools: we process each one of these texts by performing tokenization, lemmatization and PartOfSpeech tagging. Figure 2 shows an example of textual analysis of the term “Atretic follicles, increased number”.</p>
+<p>Given an input term and a label of a related matching concept, we consider the following two types of matches:</p>
+<ul class="simple">
+<li><p><strong>Exact match</strong>: when the set of lemmas belonging to the input term and the set of lemmas belonging to the concept label are equal. We exclude from this comparison lemmas identified as punctuation, numbers, determiners and conjunctions. We consider as negated exact matches (a particular type of exact matches) scenarios in which the set of lemmas of the input term and and the set of lemmas of the concept label differ by the addition of the negation words <em>no</em>, <em>not</em> and <em>without</em>.</p></li>
+<li><p><strong>Partial match</strong>: when the set of lemmas belonging to the input term and the set of lemmas belonging to the concept label: (i) in their intersection include at least one noun and (ii) all the lemmas that belong only to the concept label (i.e. are not present in the input term), if any, are not nouns.</p></li>
+</ul>
+<p>These heuristics will be refined and extended iteratively by exploring term to concept matching results. When given an input term, there are several synonyms (i.e. alternative labels) of a matching concepts that represent <strong>exact</strong> or <strong>partial</strong> matches, we classify the term to concept match as <strong>exact</strong> or <strong>partial</strong> by means of the following rules:</p>
+<ul class="simple">
+<li><p>if one or more <strong>exact</strong> matches are present, the term to concept match is described as an <strong>exact</strong> match and one of the labels (randomly chosen) of the matching concept that generated the exact match, is considered;</p></li>
+<li><p>if no <strong>exact</strong> matches are present, the term to concept match is described as a <strong>partial</strong> match. If there is more than one label of the matching concept that generated a <strong>partial</strong> match we consider the concept labels that has the higher number of shared lemmas with the original term.</p></li>
+</ul>
+<!-- ![overview](image_0.png) -->
+<div class="figure align-default" id="overview-of-the-automatic-ontology-coverage-evaluation-strategy">
+<a class="reference internal image-reference" href="../../../../_images/image_0.png"><img alt="Overview of the automatic ontology coverage evaluation strategy" src="../../../../_images/image_0.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Overview of the automatic ontology coverage evaluation strategy.</span><a class="headerlink" href="#overview-of-the-automatic-ontology-coverage-evaluation-strategy" title="Permalink to this image">¶</a></p>
+</div>
+<!-- _Figure 1 - Overview of the automatic ontology coverage evaluation strategy_ -->
+<!-- ![example](image_1.png) -->
+<div class="figure align-default" id="example-of-textual-analyses-of-terms-concept-labels">
+<a class="reference internal image-reference" href="../../../../_images/image_1.png"><img alt="Example of textual analyses of terms / concept labels" src="../../../../_images/image_1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Example of textual analyses of terms / concept labels.</span><a class="headerlink" href="#example-of-textual-analyses-of-terms-concept-labels" title="Permalink to this image">¶</a></p>
+</div>
+<!-- _Figure 2 - Example of textual analyses of terms / concept labels_ -->
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>orcid</p></th>
+<th class="text-align:left head"><p>CrediT role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0000-0000-0000">0000-0000-0000-0000</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/applied-examples/etox_raw"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../fair-data-matrix/3-rose-metabolites-R-analysis.html" title="previous page">Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library</a>
+    <a class='right-next' id="next-link" href="../nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html" title="next page">ND4BB dataset FAIRification recipe</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

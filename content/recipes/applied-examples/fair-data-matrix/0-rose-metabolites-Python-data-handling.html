@@ -1,0 +1,1576 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bibliographic Reference:</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2" href="1-rose-metabolites-Python-analysis.html" />
+    <link rel="prev" title="Making a Data Matrix FAIR" href="../fair-data-matrix-recipe.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Bibliographic Reference:" />
+<meta property="og:description" content="Bibliographic Reference:  1.Magnard JL, Roccia A, Caissard JC, Vergne P, Sun P, Hecquet R, Dubois A, Hibrand-Saint Oyant L, Jullien F, Nicolè F, Raymond O, Hugu" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
+     2. Chemical Identity - InChi and SMILES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="../fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/proccaserra/the-fair-cookbook-ng/main?urlpath=lab/tree/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/proccaserra/the-fair-cookbook-ng/blob/main/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>(fcb-notebook-1)=# Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.</p>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3&lt;br&gt; docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-qrcode fa-2x' style='color:#7e0038;'></i><br></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a>
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-fire fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:lightgrey'></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fas fa-clock fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class='fa fa-clock fa-lg' style='color:#7e0038;'></i> 30 minutes
+<h4><b>Recipe Type</b></h4>
+<i class='fa fa-globe fa-lg' style='color:#7e0038;'></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class='fa fa-play-circle fa-lg' style='color:#7e0038;'></i> Yes
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-users fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<!-- <p> <i class='fa fa-user-md fa-lg' style='color:#7e0038;'></i> Principal Investigator </p> -->
+<p> <i class='fa fa-database fa-lg' style='color:#7e0038;'></i> Data Manager </p>
+<p> <i class='fa fa-wrench fa-lg' style='color:#7e0038;'></i> Data Scientist </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>title:</strong> <code class="docutils literal notranslate"> </code> <br>
+<strong>author:</strong> <code class="docutils literal notranslate"><span class="pre">philippe.rocca-serra&#64;oerc.ox.ac.uk</span></code> <br>
+<strong>date:</strong> <code class="docutils literal notranslate"><span class="pre">2020-05-11</span></code> <br>
+<strong>license:</strong> <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/"><code class="docutils literal notranslate"><span class="pre">creative-commons-by-sa-4.0</span></code></a> <br>
+<strong>keywords:</strong> <code class="docutils literal notranslate"> </code> <br>
+<strong>description:</strong> <code class="docutils literal notranslate"> </code> <br></p>
+<p>Background:</p>
+<p>Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using <a class="reference external" href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of the data table.
+A few line of codes allow structure information aound key study design descriptors: the independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package itself.</p>
+<ol class="simple">
+<li><p>Let’s begin by installing the Python packages allowing easy access and use of data formatted as JSON Data Package</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">libchebipy</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">datapackage</span> <span class="kn">import</span> <span class="n">Package</span>
+<span class="kn">from</span> <span class="nn">goodtables</span> <span class="kn">import</span> <span class="n">validate</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Reading the data:</p></li>
+</ol>
+<p>We now simply read in the Excel file corresponding to the Nature Genetics Supplementary Table from the Zenodo archive</p>
+<p>(DOI: https://doi.org/10.5281/zenodo.2598799)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df = pd.read_excel(&#39;Supplementary Data 3.xlsx&#39;, sheet_name=&#39;Feuil1&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;https://zenodo.org/api/files/91a610cb-8f1f-4ec5-9818-767a75a7a820/Supplementary%20Data%203.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Feuil1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">URLError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">412784865280</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;https://zenodo.org/api/files/91a610cb-8f1f-4ec5-9818-767a75a7a820/Supplementary%20Data%203.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Feuil1&#39;</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span>                     <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
+<span class="ne">--&gt; </span><span class="mi">208</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span> 
+<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/excel/_base.py</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, squeeze, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, verbose, parse_dates, date_parser, thousands, comment, skip_footer, skipfooter, convert_float, mangle_dupe_cols, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span> 
+<span class="g g-Whitespace">    </span><span class="mi">309</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">310</span>         <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span>     <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/excel/_base.py</span> in <span class="ni">__init__</span><span class="nt">(self, io, engine)</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_io</span> <span class="o">=</span> <span class="n">_stringify_path</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">818</span> 
+<span class="ne">--&gt; </span><span class="mi">819</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engines</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">_io</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">820</span> 
+<span class="g g-Whitespace">    </span><span class="mi">821</span>     <span class="k">def</span> <span class="nf">__fspath__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/excel/_xlrd.py</span> in <span class="ni">__init__</span><span class="nt">(self, filepath_or_buffer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>         <span class="n">err_msg</span> <span class="o">=</span> <span class="s2">&quot;Install xlrd &gt;= 1.0.0 for Excel support&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>         <span class="n">import_optional_dependency</span><span class="p">(</span><span class="s2">&quot;xlrd&quot;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">err_msg</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">21</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> 
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="nd">@property</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/io/excel/_base.py</span> in <span class="ni">__init__</span><span class="nt">(self, filepath_or_buffer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>         <span class="c1"># If filepath_or_buffer is a url, load the data into a BytesIO</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>         <span class="k">if</span> <span class="n">_is_url</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">348</span>             <span class="n">filepath_or_buffer</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">urlopen</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span>         <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="p">(</span><span class="n">ExcelFile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workbook_class</span><span class="p">)):</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span>             <span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_filepath_or_buffer</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/3.7.2/lib/python3.7/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span> 
+<span class="g g-Whitespace">    </span><span class="mi">224</span> <span class="k">def</span> <span class="nf">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">):</span>
+
+<span class="nn">~/.pyenv/versions/3.7.2/lib/python3.7/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">523</span>             <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span> 
+<span class="ne">--&gt; </span><span class="mi">525</span>         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">526</span> 
+<span class="g g-Whitespace">    </span><span class="mi">527</span>         <span class="c1"># post-process response</span>
+
+<span class="nn">~/.pyenv/versions/3.7.2/lib/python3.7/urllib/request.py</span> in <span class="ni">_open</span><span class="nt">(self, req, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">546</span> 
+<span class="g g-Whitespace">    </span><span class="mi">547</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">548</span>                                 <span class="s1">&#39;unknown_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">549</span> 
+<span class="g g-Whitespace">    </span><span class="mi">550</span>     <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+<span class="nn">~/.pyenv/versions/3.7.2/lib/python3.7/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>         <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">503</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>                 <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">~/.pyenv/versions/3.7.2/lib/python3.7/urllib/request.py</span> in <span class="ni">unknown_open</span><span class="nt">(self, req)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1385</span>     <span class="k">def</span> <span class="nf">unknown_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1386</span>         <span class="nb">type</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
+<span class="ne">-&gt; </span><span class="mi">1387</span>         <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="s1">&#39;unknown url type: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1388</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1389</span> <span class="k">def</span> <span class="nf">parse_keqv_list</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+
+<span class="ne">URLError</span>: &lt;urlopen error unknown url type: https&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">a4388ef05687</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Following a manual inspection of the Excel Source, getting the start row of the data, we use Pandas take() function to extract first a row of headers (hence -axis set to 0)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">13</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">5</span><span class="n">f52bcb5c41f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">header_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">13</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>We then extract all the columns of interest (same take() function, with -axis set to 1)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_full</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># We now trim by removing the first 15 rows which contain no information</span>
+<span class="n">data_slice</span> <span class="o">=</span> <span class="n">data_full</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span>
+                             <span class="mi">39</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span>
+                             <span class="mi">62</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">76</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="n">c919ae676d6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> 
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">data_full</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># We now trim by removing the first 15 rows which contain no information</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data_slice</span> <span class="o">=</span> <span class="n">data_full</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                              <span class="mi">39</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span>
+
+<span class="ne">NameError</span>: name &#39;df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>We now rename the DataFrame automatically generated field header to something more meaningful</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_slice</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 3&quot;</span><span class="p">:</span> <span class="s2">&quot;chemical_name&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 4&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_1&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 5&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_1&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 6&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_2&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 7&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_2&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 8&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_3&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 9&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_3&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 10&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_4&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 11&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_4&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 12&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_5&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 13&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_5&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 14&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_6&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 15&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_6&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 16&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_7&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 17&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_7&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 18&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_8&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Unnamed: 19&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_8&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">b320c26194ff</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 3&quot;</span><span class="p">:</span> <span class="s2">&quot;chemical_name&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                            <span class="s2">&quot;Unnamed: 4&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_1&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>                            <span class="s2">&quot;Unnamed: 5&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_1&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                            <span class="s2">&quot;Unnamed: 6&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_mean_2&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                            <span class="s2">&quot;Unnamed: 7&quot;</span><span class="p">:</span> <span class="s2">&quot;sem_2&quot;</span><span class="p">,</span>
+
+<span class="ne">NameError</span>: name &#39;data_slice&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>inserting 2 new fields as placeholders for chemical information descriptors and we reinitialize the dataframe index so row numbering start at 0, not 16</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_slice</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">data_slice</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;chebi_identifier&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">data_slice</span> <span class="o">=</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mf">705628e05</span><span class="n">c0a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;chebi_identifier&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data_slice</span> <span class="o">=</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;data_slice&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Using LibChebi to retrieve CHEBI identifiers and InChi from a chemical name. Note: in this call, we retrieve only values for which an exact match on the chemical name is found in Chebi libchebi API does not allow easy searching on synonyms, thus we are failing to retrieve all relevant information. This is merely to showcase how to use libchebi.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">):</span>
+    <span class="n">hit</span> <span class="o">=</span> <span class="n">libchebipy</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hit</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HIT: &quot;</span><span class="p">,</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_inchi</span><span class="p">(),</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_inchi</span><span class="p">()</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nothing found: &quot;</span><span class="p">,</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">])</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">b9104522a574</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">hit</span> <span class="o">=</span> <span class="n">libchebipy</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hit</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HIT: &quot;</span><span class="p">,</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_inchi</span><span class="p">(),</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="n">data_slice</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_inchi</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;data_slice&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>The following steps are needed to perform the table transformation from a ‘wide’ layout to a ‘long table’ one. Prep stubnames - pick out all the feature_model variables and remove the model suffices ‘long table’ layout is that relied on by Frictionless Tabular Data Packages and consumed by R ggplot2 library and Python plotnine library.
+Step1: obtain all the different ‘dimension’ measured for a given condition (i.e. repeating fields with an increment suffix)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_models</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;(sample_mean|sem)_[0-9]&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;_[0-9]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">feature_model</span><span class="p">)</span> <span class="k">for</span> <span class="n">feature_model</span> <span class="ow">in</span> <span class="n">feature_models</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">66e1</span><span class="n">a519a653</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">feature_models</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;(sample_mean|sem)_[0-9]&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;_[0-9]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">feature_model</span><span class="p">)</span> <span class="k">for</span> <span class="n">feature_model</span> <span class="ow">in</span> <span class="n">feature_models</span><span class="p">]))</span>
+
+<span class="ne">NameError</span>: name &#39;data_slice&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Step2: invoke Pandas pd.wide_to_long() function to carry out the table transformation. See Pandas documentation for more information:  https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide_to_long.html and the excellent blog: https://medium.com/&#64;wangyuw/data-reshaping-with-pandas-explained-80b2f51f88d2</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">wide_to_long</span><span class="p">(</span><span class="n">data_slice</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="n">j</span><span class="o">=</span><span class="s1">&#39;treatment&#39;</span><span class="p">,</span> <span class="n">stubnames</span><span class="o">=</span><span class="n">features</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span><span class="n">ba07570d36</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">long_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">wide_to_long</span><span class="p">(</span><span class="n">data_slice</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="n">j</span><span class="o">=</span><span class="s1">&#39;treatment&#39;</span><span class="p">,</span> <span class="n">stubnames</span><span class="o">=</span><span class="n">features</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;data_slice&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Apparently a feature in Pandas DataFrame causes an mismatch in the field position. We solve this by writing the DataFrame to file and reading it back in again, not ideal but it does the trick. Writing to a temporary file &amp;  reading from that file to solve the issue.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">long_df_from_file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">6861</span><span class="n">fa522b51</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">long_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">long_df_from_file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">try</span><span class="p">:</span>
+
+<span class="ne">NameError</span>: name &#39;long_df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Insert a new field ‘unit’ in the DataFrame at position 3 and setting value to empty.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="n">edfe40666e4c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;long_df_from_file&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Adding new fields for each of the independent variable and associated URI, copying from ‘treatment field’</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="mi">3</span><span class="n">f885a86cb48</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;long_df_from_file&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># adding a new field for &#39;sample size&#39; and setting the value to n=3</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">15</span><span class="o">-</span><span class="mi">9</span><span class="n">ce48b3473ab</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># adding a new field for &#39;sample size&#39; and setting the value to n=3</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="ne">NameError</span>: name &#39;long_df_from_file&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Marking up with ontology terms and their resolvable URI for all factor values. This requires doing a manual mapping, better ways could be devised.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> sepals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74649&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sepals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009031&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> stamens&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74649&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;stamens&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009029&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74649&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. gigantea petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. gigantea&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74650&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Damascena petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Damascena&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_3765&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Gallica petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. Gallica&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74632&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. moschata petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. moschata&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74646&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. wichurana petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. wichurana&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_2094184&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;petals&#39;</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009032&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">16</span><span class="o">-</span><span class="n">a667e6e7b629</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> sepals&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/NCBITaxon_74649&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var2_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sepals&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://purl.obolibrary.org/obo/PO_0009031&#39;</span>
+
+<span class="ne">NameError</span>: name &#39;long_df_from_file&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Dealing with missing values: setting empty values to zero for sample_mean and sem to enable calculation: to do this, we rely on Pandas fillna function.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">aa682d4197dc</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;long_df_from_file&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Reorganizing Columns order in the DataFrame/File to match the Frictionless Tabular Data Package Layout. This is done very easily in Pandas by passing desired column order as an array:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;var2_levels&#39;</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_size&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_mean&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="s1">&#39;sem&#39;</span><span class="p">]]</span>
+<span class="n">long_df_from_file</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="mi">2</span><span class="n">b4b3e3381dc</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">long_df_from_file</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                                        <span class="s1">&#39;var2_levels&#39;</span><span class="p">,</span> <span class="s1">&#39;var2_uri&#39;</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_size&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_mean&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>                                        <span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="s1">&#39;sem&#39;</span><span class="p">]]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;long_df_from_file&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>We are now ready to write the file to disk as a UTF-8 encoded comma delimited file, with double quoted values and we are also dropping the dataframe index from the output.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">HOME</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="c1"># print(&quot;checking current directory #1: &quot;,HOME)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">)):</span>
+        <span class="c1"># print(&quot;checking current directory #2: &quot;, os.getcwd())</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">))</span>
+        <span class="n">long_df_from_file</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&quot;</span><span class="p">,</span>
+                         <span class="n">quoting</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                         <span class="n">doublequote</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span>
+                         <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOME</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo&#39;</span><span class="p">))</span>
+
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>        
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>The Final step is to validate the output against JSON data package specifications, which are stored in the JSON Tabular DataPackage Definition folder.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;./../../../&#39;</span><span class="p">)</span>
+<span class="n">LOCAL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;moving to directory: &quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>moving to directory:  /Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/applied-examples
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">package_definition</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">LOCAL</span><span class="p">,</span><span class="s1">&#39;./rose-metabo-JSON-DP-validated/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39;</span><span class="p">)</span>
+<span class="n">file_to_test</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">LOCAL</span><span class="p">,</span><span class="s1">&#39;../data/processed/denovo/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;JSON data package definition:&quot;</span><span class="p">,</span> <span class="n">package_definition</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;csv file to evaluate:&quot;</span><span class="p">,</span> <span class="n">file_to_test</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">pack</span> <span class="o">=</span> <span class="n">Package</span><span class="p">(</span><span class="n">package_definition</span><span class="p">)</span>
+    <span class="n">pack</span><span class="o">.</span><span class="n">valid</span>
+    <span class="n">pack</span><span class="o">.</span><span class="n">errors</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">pack</span><span class="o">.</span><span class="n">errors</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="n">report</span> <span class="o">=</span> <span class="n">validate</span><span class="p">(</span><span class="n">file_to_test</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">report</span><span class="p">[</span><span class="s1">&#39;valid&#39;</span><span class="p">]</span><span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Success! </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">file_to_test</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">+</span> <span class="s2">&quot; is a valid Frictionless Tabular Data Package</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;It complies with the &#39;rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39; definition</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hmmm, something went wrong. Please, see the validation report for tracing the fault&quot;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JSON data package definition: /Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/applied-examples/./rose-metabo-JSON-DP-validated/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json
+csv file to evaluate: /Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/applied-examples/../data/processed/denovo/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">MissingSchema</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/datapackage/helpers.py</span> in <span class="ni">retrieve_descriptor</span><span class="nt">(descriptor)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>             <span class="k">else</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">55</span>                 <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">the_descriptor</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>                 <span class="n">req</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;allow_redirects&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">75</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span> 
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">60</span>         <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span> 
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">518</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">519</span>         <span class="n">prep</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prepare_request</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span> 
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/requests/sessions.py</span> in <span class="ni">prepare_request</span><span class="nt">(self, request)</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>             <span class="n">cookies</span><span class="o">=</span><span class="n">merged_cookies</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">462</span>             <span class="n">hooks</span><span class="o">=</span><span class="n">merge_hooks</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">hooks</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hooks</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span>         <span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/requests/models.py</span> in <span class="ni">prepare</span><span class="nt">(self, method, url, headers, files, data, params, auth, cookies, hooks, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span>         <span class="bp">self</span><span class="o">.</span><span class="n">prepare_method</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">313</span>         <span class="bp">self</span><span class="o">.</span><span class="n">prepare_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">314</span>         <span class="bp">self</span><span class="o">.</span><span class="n">prepare_headers</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/requests/models.py</span> in <span class="ni">prepare_url</span><span class="nt">(self, url, params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">386</span> 
+<span class="ne">--&gt; </span><span class="mi">387</span>             <span class="k">raise</span> <span class="n">MissingSchema</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span> 
+
+<span class="ne">MissingSchema</span>: Invalid URL &#39;/Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/applied-examples/./rose-metabo-JSON-DP-validated/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&#39;: No schema supplied. Perhaps you meant http:///Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/applied-examples/./rose-metabo-JSON-DP-validated/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json?
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">DataPackageException</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="mf">2862e186806</span><span class="n">d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;csv file to evaluate:&quot;</span><span class="p">,</span> <span class="n">file_to_test</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">pack</span> <span class="o">=</span> <span class="n">Package</span><span class="p">(</span><span class="n">package_definition</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">pack</span><span class="o">.</span><span class="n">valid</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">pack</span><span class="o">.</span><span class="n">errors</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/datapackage/package.py</span> in <span class="ni">__init__</span><span class="nt">(self, descriptor, base_path, strict, storage, schema, default_base_path, **options)</span>
+<span class="g g-Whitespace">     </span><span class="mi">80</span> 
+<span class="g g-Whitespace">     </span><span class="mi">81</span>         <span class="c1"># Process descriptor</span>
+<span class="ne">---&gt; </span><span class="mi">82</span>         <span class="n">descriptor</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">retrieve_descriptor</span><span class="p">(</span><span class="n">descriptor</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span>         <span class="n">descriptor</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">dereference_package_descriptor</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">base_path</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span> 
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/datapackage/helpers.py</span> in <span class="ni">retrieve_descriptor</span><span class="nt">(descriptor)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span>         <span class="k">except</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>             <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Unable to load JSON at &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">descriptor</span>
+<span class="ne">---&gt; </span><span class="mi">62</span>             <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">exceptions</span><span class="o">.</span><span class="n">DataPackageException</span><span class="p">(</span><span class="n">message</span><span class="p">),</span> <span class="n">error</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span>             <span class="c1"># Python2 doesn&#39;t have json.JSONDecodeError (use ValueErorr)</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+
+<span class="ne">DataPackageException</span>: Unable to load JSON at &quot;/Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/applied-examples/./rose-metabo-JSON-DP-validated/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>This concludes this notebook, which showed you how to convert a metabolite profiling dataset from a publication and create a FAIR data package. The other notebooks will show you how to visualize and plot the dataset but also convert it to a semantic graph as a Linked Data representation, query it and plot from it.</p>
+<ul class="simple">
+<li><p><span class="xref myst">1-rose-metabolites-Python-analysis.ipynb</span></p></li>
+<li><p><span class="xref myst">2-rose-metabolites-Python-RDF-querying-analysis.ipynb</span></p></li>
+<li><p><span class="xref myst">3-rose-metabolites-R-analysis.ipynb</span>
+(NB: requires making an R kernel available to Jupyter)</p></li>
+</ul>
+</li>
+</ol>
+<div class="section" id="bibliographic-reference">
+<h1>Bibliographic Reference:<a class="headerlink" href="#bibliographic-reference" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://doi.org/10.1126/science.aab0696">1.Magnard JL, Roccia A, Caissard JC, Vergne P, Sun P, Hecquet R, Dubois A, Hibrand-Saint Oyant L, Jullien F, Nicolè F, Raymond O, Huguet S, Baltenweck R, Meyer S, Claudel P, Jeauffre J, Rohmer M, Foucher F, Hugueney P, Bendahmane M, Baudino S. PLANT VOLATILES. Biosynthesis of monoterpene scent compounds in roses. Science. 2015 Jul 3;349(6243):81-3.</a></p>
+<p><a class="reference external" href="https://doi.org/10.1038/s41588-018-0110-3">2.Raymond O, Gouzy J, Just J, Badouin H, Verdenaud M, Lemainque A, Vergne P, Moja S, Choisne N, Pont C, Carrère S, Caissard JC, Couloux A, Cottret L, Aury JM, Szécsi J, Latrasse D, Madoui MA, François L, Fu X, Yang SH, Dubois A, Piola F, Larrieu A, Perez M, Labadie K, Perrier L, Govetto B, Labrousse Y, Villand P, Bardoux C, Boltz V, Lopez-Roques C, Heitzler P, Vernoux T, Vandenbussche M, Quesneville H, Boualem A, Bendahmane A, Liu C, Le Bris M, Salse J, Baudino S, Benhamed M, Wincker P, Bendahmane M. The Rosa genome provides new insights into the domestication of modern roses. Nat Genet. 2018 Jun;50(6):772-777.</a></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venv372"
+        },
+        kernelOptions: {
+            kernelName: "venv372",
+            path: "./content/recipes/applied-examples/fair-data-matrix"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venv372'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../fair-data-matrix-recipe.html" title="previous page">Making a Data Matrix FAIR</a>
+    <a class='right-next' id="next-link" href="1-rose-metabolites-Python-analysis.html" title="next page">Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

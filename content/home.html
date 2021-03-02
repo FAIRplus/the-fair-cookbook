@@ -1,0 +1,1612 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>FAIR Cookbook</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mermaid.js"></script>
+    <script src="../_static/mermaid.min.js"></script>
+    <script src="../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/home.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction" href="recipes/introduction.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/home.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="FAIR Cookbook" />
+<meta property="og:description" content="FAIR Cookbook  The official site  &lt;!-- Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendl" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/infrastructure/chemical-identities.html">
+     2. Chemical Identity - InChi and SMILES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/home.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/home.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/home.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-official-site">
+   The official site
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-fair-cookbook-overview">
+   The FAIR Cookbook overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#persona-based-content-browsing">
+   Persona-based content browsing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#content-and-learning-objectives">
+   Content and learning objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-fairification-process">
+   The FAIRification Process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-fair-principles-key-recipes">
+   The FAIR principles &amp; key recipes:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-roadmap">
+   Development Roadmap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meet-the-developers">
+   Meet the developers:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#technology-stack">
+   Technology stack
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#support-or-contact">
+   Support or Contact
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="fair-cookbook">
+<h1>FAIR Cookbook<a class="headerlink" href="#fair-cookbook" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-official-site">
+<h2>The official site<a class="headerlink" href="#the-official-site" title="Permalink to this headline">¶</a></h2>
+<!-- Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
+
+🛢️🚧 **This project is still in early phase and this is work in progress** 🚧🛢️
+ -->
+</div>
+<hr class="docutils" />
+<div class="section" id="the-fair-cookbook-overview">
+<h2>The FAIR Cookbook overview<a class="headerlink" href="#the-fair-cookbook-overview" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The FAIR Cookbook is an activity of the <a class="reference external" href="https://fairplus-project.eu/">FAIRplus project</a> funded by the <a class="reference external" href="https://www.imi.europa.eu">Innovative Medicine Initiative (IMI)</a><br />
+<img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).</p></li>
+<li><p>The FAIR Cookbook is a project aiming at collating protocols for making data FAIR and provide examples of IMI dataset FAIRification.</p></li>
+<li><p>The FAIR Cookbook is open source and licensed under CC-BY-4.0</p></li>
+<li><p>The FAIR Cookbook is written using Markdown and deployed using <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></p></li>
+<li><p>the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">recipes</span></code>, and supporting code in the form of <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebooks</span></code> about <strong><code class="docutils literal notranslate"><span class="pre">FAIRification</span> <span class="pre">processes</span></code></strong> and the content will be released regularly (quarterly) in order to reflect the progress made by the project and the various working groups, which bring together <code class="docutils literal notranslate"><span class="pre">academic</span></code> and <code class="docutils literal notranslate"><span class="pre">industry</span></code> partners.</p></li>
+</ul>
+</div>
+<div class="section" id="persona-based-content-browsing">
+<h2>Persona-based content browsing<a class="headerlink" href="#persona-based-content-browsing" title="Permalink to this headline">¶</a></h2>
+<!-- 
+🚧 **This section is under development** 🚧 -->
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fab fa-github-alt fa-3x" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Helmut</b></h4>
+<p>Architect & Engineer</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fas fa-cog fa-2x" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Jean</b></h4>
+<p>Data Scientist</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Fulvia</b></h4>
+<p>Data Curator</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Wang Ju</b></h4>
+<p>Head of Clinical Research</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 
+<div class="row">
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fab fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Helmut</b></h4>
+	    <p>Architect & Engineer</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Jean</b></h4>
+	    <p>Data Scientist</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Fulvia</b></h4>
+	    <p>Data Curator</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>Wang Ju</b></h4>
+	    <p>Head of Clinical Research</p>
+	  </div>
+	</div>
+  </div>
+</div>
+ -->
+<!-- 
+<div class="cards-container">
+  <div class="card-container">
+    <div class="card">
+      <div class="front">
+	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
+	    <h4><b>Helmut Entwikgung</b></h4>
+	    <p color="#300861">Architect & Engineer</p>
+      </div>
+      <div class="back">
+	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
+	    <h4 color="white"><b>Wang Ju Fong</b></h4>
+	    <div>
+ 		<img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" />
+		</div>
+	    <p color="#300861">Head of Clinical Research</p>
+      </div>
+    </div>
+</div>
+
+<div class="cards-container">
+   <div class="card-container">
+    <div class="card">
+      <div class="front">
+	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
+	    <h4><b>Helmut Entwikgung</b></h4>
+	    <p>Architect & Engineer</p>
+      </div>
+      <div class="back">
+	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
+	    <h4 color="#300861"><b>Wang Ju Fong</b></h4>
+	    <p color="#300861">Head of Clinical Research</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+</div>
+<div class="section" id="content-and-learning-objectives">
+<h2>Content and learning objectives<a class="headerlink" href="#content-and-learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.</p>
+</div>
+<div class="section" id="the-fairification-process">
+<h2>The FAIRification Process<a class="headerlink" href="#the-fairification-process" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-body docutils">
+<div>
+ <img class="imageez" src="../_static/images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" onclick="window.open('../_static/images/userjourney.svg', '_blank');" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-fair-principles-key-recipes">
+<h2>The FAIR principles &amp; key recipes:<a class="headerlink" href="#the-fair-principles-key-recipes" title="Permalink to this headline">¶</a></h2>
+<!-- 🚧 **This section is under development** 🚧 -->
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>FINDABILITY</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Search Engine Optimitization</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Open Archive Deposition</b></h4>
+<p>TODO: add text here </p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Annotation</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>ACCESSIBILITY</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#8038d1;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Access condition</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#8038d1;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>License selection</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#8038d1;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Standards</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>INTEROPERABILITY</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#300861;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Access condition</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#300861;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>License selection</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa ffa-cog fa-lg" style="color:#300861;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Standards</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>REUSABILITY</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Access condition</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>License selection</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-cog fa-lg" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Standards</b></h4>
+<p>TODO: add text here</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 
+
+<div class="row">
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
+	    <h4><b>FINDABILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+	    <h4><b>Search Engine Optimitization</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+	  	<br/>
+	    <h4><b>Open Archive Deposition</b></h4>
+	    <p>TODO: add text here </p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+	    <h4><b>Annotation</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+ </div>
+</div>
+<div> 
+<div class="row">
+
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
+	    <h4><b>ACCESSIBILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+	    <h4><b>Access condition</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+	    <h4><b>License selection</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+	    <h4><b>Standards</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
+	    <h4><b>INTEROPERABILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+	    <h4><b>Metadata Standards</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+	    <h4><b>Open Syntax</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+	    <h4><b>Ontology</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+ </div>
+
+<div class="row">
+
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
+	    <h4><b>REUSABILITY</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	 	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+	    <h4><b>Standards</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>  
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+	    <h4><b>Ontology</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="card">
+	  <div class="container">
+	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+	    <h4><b>SMART API</b></h4>
+	    <p>TODO: add text here</p>
+	  </div>
+	</div>
+  </div>
+</div>
+ 
+ -->
+</div>
+<div class="section" id="development-roadmap">
+<h2>Development Roadmap<a class="headerlink" href="#development-roadmap" title="Permalink to this headline">¶</a></h2>
+<p>The FAIRcookbook development process currently operates on a quarterly release cycle. Each cycle sees 2 <code class="docutils literal notranslate"><span class="pre">scrums</span></code> where specific <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">cases</span></code> or <code class="docutils literal notranslate"><span class="pre">themes</span></code> are chosen and task forces assigned. The outcome of these efforts are new <code class="docutils literal notranslate"><span class="pre">FAIRification</span> <span class="pre">protocols</span></code>, or <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">recipes</span></code> which, after review, are integrated to the main FAIR Cookbook and tagged for release in the github main branch, which is used to build the web-friendly version of the book.</p>
+<p>☑️ FAIR Cookbook development roadmap Gantt chart for the year 2020</p>
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-body docutils">
+<p class="card-text"><a class="reference external" href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img alt="" src="https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" /></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>☑️  The envisioned table of content for the  FAIR Cookbook can be found <a class="reference external" href="https://docs.google.com/spreadsheets/d/13B2aLm5ZXFUwAu6DlcL7soWL8yzX6juR4ijgUpzIsv4/edit?usp=sharing">here</a>
+This Google Document is publicly available in <code class="docutils literal notranslate"><span class="pre">view</span> <span class="pre">mode</span></code>, and with <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code> for all FAIRplus members.</p>
+<hr class="docutils" />
+<!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
+</div>
+<div class="section" id="meet-the-developers">
+<h2>Meet the developers:<a class="headerlink" href="#meet-the-developers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The FAIR Cookbook development currently coordinated by:</p>
+<ul>
+<li><p><a class="reference external" href="https://orcid.org/0000-0001-9853-5668">Philippe Rocca-Serra</a> (University of Oxford)</p></li>
+<li><p><a class="reference external" href="https://orcid.org/0000-0001-5306-5690">Susanna-Assunta Sansone</a> (University of Oxford)</p></li>
+<li><p><a class="reference external" href="https://orcid.org/0000-0002-3201-9617">Andrea Splendiani</a> (Novartis)</p></li>
+<li><p><a class="reference external" href="https://orcid.org/0000-0002-0254-1500">Robert Giessman</a> (Bayer AG)</p></li>
+</ul>
+</li>
+<li><p>The FAIR Cookbook content was contributed by the following FAIRplus Consortium Members:</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:right head"><p>Affiliation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Chuang Kee Ong</p></td>
+<td class="text-align:left"><p>AZ</p></td>
+<td class="text-align:left"><p>Ibrahim Emam</p></td>
+<td class="text-align:right"><p>ICL</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Colin Wood</p></td>
+<td class="text-align:left"><p>AZ</p></td>
+<td class="text-align:left"><p>Francesco Ronzano</p></td>
+<td class="text-align:right"><p>IMIM</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Ola Engkvist</p></td>
+<td class="text-align:left"><p>AZ</p></td>
+<td class="text-align:left"><p>Laura Furlong</p></td>
+<td class="text-align:right"><p>IMIM</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Ratnesh Sahay</p></td>
+<td class="text-align:left"><p>AZ</p></td>
+<td class="text-align:left"><p>Herman Van Vlijmen</p></td>
+<td class="text-align:right"><p>Janssen</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>David Henderson</p></td>
+<td class="text-align:left"><p>Bayer</p></td>
+<td class="text-align:left"><p>Jean-Marc Neefs</p></td>
+<td class="text-align:right"><p>Janssen</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Robert Giessmann</p></td>
+<td class="text-align:left"><p>Bayer</p></td>
+<td class="text-align:left"><p>Paul Peeters</p></td>
+<td class="text-align:right"><p>Janssen</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Kurt Dauth</p></td>
+<td class="text-align:left"><p>BI</p></td>
+<td class="text-align:left"><p>Rudi Verbeeck</p></td>
+<td class="text-align:right"><p>Janssen</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Karsten Quast</p></td>
+<td class="text-align:left"><p>Boehringer</p></td>
+<td class="text-align:left"><p>Scott Lusher</p></td>
+<td class="text-align:right"><p>Janssen</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Emiliano Reynares</p></td>
+<td class="text-align:left"><p>Boehringer</p></td>
+<td class="text-align:left"><p>Derek Marren</p></td>
+<td class="text-align:right"><p>Lilly</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Eva Navarrete</p></td>
+<td class="text-align:left"><p>BSC</p></td>
+<td class="text-align:left"><p>Andrea Splendiani</p></td>
+<td class="text-align:right"><p>Novartis</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Salvador Capella Gutierrez</p></td>
+<td class="text-align:left"><p>BSC</p></td>
+<td class="text-align:left"><p>Dorothy Reilly</p></td>
+<td class="text-align:right"><p>Novartis</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Hannah Hurst</p></td>
+<td class="text-align:left"><p>EMBL-EBI</p></td>
+<td class="text-align:left"><p>Nick Lynch</p></td>
+<td class="text-align:right"><p>PHACTS</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Fuqi Xu</p></td>
+<td class="text-align:left"><p>EMBL-EBI</p></td>
+<td class="text-align:left"><p>Vitaly Sedlyarov</p></td>
+<td class="text-align:right"><p>RESOLUTE</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Melanie Courtot</p></td>
+<td class="text-align:left"><p>EMBL-EBI</p></td>
+<td class="text-align:left"><p>Ulrich Goldmann</p></td>
+<td class="text-align:right"><p>RESOLUTE</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Tony Burdett</p></td>
+<td class="text-align:left"><p>EMBL-EBI</p></td>
+<td class="text-align:left"><p>Manuela Pruess</p></td>
+<td class="text-align:right"><p>SIB</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Andrea Zaliani</p></td>
+<td class="text-align:left"><p>Fraunhofer</p></td>
+<td class="text-align:left"><p>Mark Ibberson</p></td>
+<td class="text-align:right"><p>SIB</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Andreas Pippow</p></td>
+<td class="text-align:left"><p>Fraunhofer</p></td>
+<td class="text-align:left"><p>Vassilios Ioannidis</p></td>
+<td class="text-align:right"><p>SIB</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Franziska Kroh</p></td>
+<td class="text-align:left"><p>Fraunhofer</p></td>
+<td class="text-align:left"><p>Danielle Welter</p></td>
+<td class="text-align:right"><p>UL</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Gesa Witt</p></td>
+<td class="text-align:left"><p>Fraunhofer</p></td>
+<td class="text-align:left"><p>Venkata P. Satagopam</p></td>
+<td class="text-align:right"><p>UL</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Manfred Kohler</p></td>
+<td class="text-align:left"><p>Fraunhofer</p></td>
+<td class="text-align:left"><p>Wei Gu</p></td>
+<td class="text-align:right"><p>UL</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Oya Deniz Beyan</p></td>
+<td class="text-align:left"><p>Fraunhofer</p></td>
+<td class="text-align:left"><p>Chris Evelo</p></td>
+<td class="text-align:right"><p>UM</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Philip Gribbon</p></td>
+<td class="text-align:left"><p>Fraunhofer</p></td>
+<td class="text-align:left"><p>Egon Willighagen</p></td>
+<td class="text-align:right"><p>UM</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Ashni Sedani</p></td>
+<td class="text-align:left"><p>GSK</p></td>
+<td class="text-align:left"><p>Nuno (Ryan) Silva Nunes</p></td>
+<td class="text-align:right"><p>UM</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Femi Akintobi</p></td>
+<td class="text-align:left"><p>GSK</p></td>
+<td class="text-align:left"><p>Carole Goble</p></td>
+<td class="text-align:right"><p>UNIMAN</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>George Papadotas</p></td>
+<td class="text-align:left"><p>GSK</p></td>
+<td class="text-align:left"><p>Ebtisam Alharbi</p></td>
+<td class="text-align:right"><p>UNIMAN</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Peter Woollard</p></td>
+<td class="text-align:left"><p>GSK</p></td>
+<td class="text-align:left"><p>Nick Juty</p></td>
+<td class="text-align:right"><p>UNIMAN</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Alasdair J G Gray</p></td>
+<td class="text-align:left"><p>HWU</p></td>
+<td class="text-align:left"><p>Dominique Batista</p></td>
+<td class="text-align:right"><p>UOXF</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Petros Papadopoulos</p></td>
+<td class="text-align:left"><p>HWU</p></td>
+<td class="text-align:left"><p>Philippe Rocca-Serra</p></td>
+<td class="text-align:right"><p>UOXF</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Ilaria Maresi</p></td>
+<td class="text-align:left"><p>HYVE</p></td>
+<td class="text-align:left"><p>Susanna-Assunta Sansone</p></td>
+<td class="text-align:right"><p>UOXF</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Jolanda Strubel</p></td>
+<td class="text-align:left"><p>HYVE</p></td>
+<td class="text-align:left"><p>Alejandra Delfin Rossaro</p></td>
+<td class="text-align:right"><p>UPS</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Emma Vos</p></td>
+<td class="text-align:left"><p>HYVE</p></td>
+<td class="text-align:left"><p>Anne Cambon-Thomsen</p></td>
+<td class="text-align:right"><p>UPS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="technology-stack">
+<h2>Technology stack<a class="headerlink" href="#technology-stack" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">Cookbook</span></code> is built using <a class="reference external" href="https://jupyterbook.org/intro.html">jupyter-book</a>, following the practice used by the Alan Turing’s Institute Book of Data Science.</p>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://github.com">github</a></strong> is used to version control and hosting</p></li>
+<li><p><strong><a class="reference external" href="https://guides.github.com/features/mastering-markdown/">Markdown</a></strong> is used for the write-up</p></li>
+<li><p><strong><a class="reference external" href="https://hackmd.io">HackMD</a></strong> is used as Markdown Editor thanks to its integration with <code class="docutils literal notranslate"><span class="pre">github</span></code> and its <a class="reference external" href="https://hackmd.io/s/hackmd-it"><code class="docutils literal notranslate"><span class="pre">browser</span> <span class="pre">extensions</span></code></a></p></li>
+<li><p><strong><a class="reference external" href="https://jupyter.org/">jupyter notebook</a></strong> can be used to provide executable code</p></li>
+<li><p><strong><a class="reference external" href="https://mybinder.org">binder</a></strong> is enabled which allows in web execution of any jupyter notebook distributed with the <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">Cookbook</span></code></p></li>
+<li><p><strong><a class="reference external" href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></strong> javascript library is used to produce flowcharts, Gantt charts and pie charts used in the book.</p></li>
+</ul>
+<!--* **[netlify]()** is being tested for web hosting and deployment -->
+<ul class="simple">
+<li><p><strong>Jekyll Themes</strong> provide the style for the web friendly version. The name of this theme is saved in the Jekyll <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> configuration file found in <a class="reference external" href="https://github.com/fair-cookbook/the-fair-cookbook/settings">repository settings</a>.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="support-or-contact">
+<h2>Support or Contact<a class="headerlink" href="#support-or-contact" title="Permalink to this headline">¶</a></h2>
+<p>Having troubles? Check out our <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">issue tracker</a> or <a class="reference external" href="mailto:fairplus-cookbook&#37;&#52;&#48;elixir-europe&#46;org">contact support</a> and we’ll help you sort it out.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>The FAIR Cookbook is produced thanks to <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code>.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="recipes/introduction.html" title="next page">Introduction</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

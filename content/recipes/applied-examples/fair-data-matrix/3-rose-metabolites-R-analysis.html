@@ -1,0 +1,1071 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Data normalization and integration through entity linking" href="../etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html" />
+    <link rel="prev" title="Exploring a rose garden with SPARQL" href="2-rose-metabolites-Python-RDF-querying-analysis.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library" />
+<meta property="og:description" content="Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library  &lt;i class=&#39;fa fa-qrcode fa-2x&#39; style=&#39;color:#7e0038;&#39;&gt;&lt;/i&gt;&lt;br" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="../fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/proccaserra/the-fair-cookbook-ng/main?urlpath=lab/tree/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/proccaserra/the-fair-cookbook-ng/blob/main/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliographic-reference">
+   Bibliographic Reference:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <hr class="docutils" />
+<div class="section" id="exploring-and-comparing-rose-scent-profiles-stored-as-tabular-data-packages-with-ggplot2-r-library">
+<h1>Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library<a class="headerlink" href="#exploring-and-comparing-rose-scent-profiles-stored-as-tabular-data-packages-with-ggplot2-r-library" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container-lg pb-3&lt;br&gt; docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-qrcode fa-2x' style='color:#7e0038;'></i><br></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a>
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-fire fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:lightgrey'></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fas fa-clock fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class='fa fa-clock fa-lg' style='color:#7e0038;'></i> 30 minutes
+<h4><b>Recipe Type</b></h4>
+<i class='fa fa-globe fa-lg' style='color:#7e0038;'></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class='fa fa-play-circle fa-lg' style='color:#7e0038;'></i> Yes
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-users fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<!-- <p> <i class='fa fa-user-md fa-lg' style='color:#7e0038;'></i> Principal Investigator </p> -->
+<p> <i class='fa fa-database fa-lg' style='color:#7e0038;'></i> Data Manager </p>
+<p> <i class='fa fa-wrench fa-lg' style='color:#7e0038;'></i> Data Scientist </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>title:</strong> <code class="docutils literal notranslate"> </code> <br>
+<strong>author:</strong> <code class="docutils literal notranslate"><span class="pre">philippe.rocca-serra&#64;oerc.ox.ac.uk</span></code> <br>
+<strong>date:</strong> <code class="docutils literal notranslate"><span class="pre">2020-05-11</span></code> <br>
+<strong>license:</strong> <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/"><code class="docutils literal notranslate"><span class="pre">creative-commons-by-sa-4.0</span></code></a> <br>
+<strong>keywords:</strong> <code class="docutils literal notranslate"> </code> <br>
+<strong>description:</strong> <code class="docutils literal notranslate"> </code> <br></p>
+<p>*Philippe Rocca-Serra (philippe.rocca-serra[at]oerc.ox.ac.uk), University of Oxford e-Research Centre</p>
+<p>Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using <a class="reference external" href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed into R and exploited with rich graphical libraries, such as the well know ggplot2 (https://ggplot2.tidyverse.org/). A few line of codes allow to query datasets and rapidly explore the information. Most importantly, this rapid exploration is possible because of independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package itself.</p>
+<ol class="simple">
+<li><p>Let’s begin by installing the R packages allowing easy access and use of data formatted as JSON Data Package</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;readr&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  There is a binary version available but the source version is later:
+        binary source needs_compilation
+ggplot2  3.3.0  3.3.2             FALSE
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>installing the source package ‘ggplot2’
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
+	/var/folders/5n/rl6lqnks4rqb59pbtpvvntqw0000gr/T//RtmpWmj4yM/downloaded_packages
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  There is a binary version available but the source version is later:
+         binary source needs_compilation
+devtools  2.2.2  2.3.1             FALSE
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>installing the source package ‘devtools’
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span> 
+<span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: usethis
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Here, we install an additional library, providing some additional customization of graphs and plots.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;kassambara/easyGgplot2&quot;</span><span class="p">)</span> 
+<span class="nf">library</span><span class="p">(</span><span class="n">easyGgplot2</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Skipping install of &#39;easyGgplot2&#39; from a github remote, the SHA1 (cb017c1c) has not changed since last install.
+  Use `force = TRUE` to force installation
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Reading the data:</p></li>
+</ol>
+<p>We now simply read in the comma-separated-file associated with the tabular data package (a “long” table)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># rose arome nature genetics data from 2018 and plotting for the different treatment groups:</span>
+<span class="c1"># rosedata &lt;- read_csv(&quot;../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&quot;)</span>
+<span class="n">rosedata</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;https://zenodo.org/api/files/ba3fbc84-14af-4858-a9ed-e6cfe8d4efd2/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parsed with column specification:
+cols(
+  chemical_name = col_character(),
+  inchi = col_character(),
+  chebi_identifier = col_character(),
+  var1_levels = col_character(),
+  var1_uri = col_character(),
+  var2_levels = col_character(),
+  var2_uri = col_character(),
+  treatment = col_character(),
+  sample_size = col_double(),
+  sample_mean = col_double(),
+  unit = col_logical(),
+  sem = col_double()
+)
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Plotting the data: We then generate a barplot using the ggplot2 library.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot2.barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">rosedata</span><span class="p">,</span> <span class="n">xName</span><span class="o">=</span><span class="s">&quot;chemical_name&quot;</span><span class="p">,</span> <span class="n">yName</span><span class="o">=</span><span class="s">&quot;sample_mean&quot;</span><span class="p">,</span> <span class="n">faceting</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">facetingVarNames</span><span class="o">=</span><span class="s">&quot;treatment&quot;</span><span class="p">,</span> <span class="n">facetingDirection</span><span class="o">=</span><span class="s">&quot;vertical&quot;</span><span class="p">,</span><span class="n">facetingScales</span><span class="o">=</span><span class="s">&quot;free&quot;</span><span class="p">,</span> <span class="n">groupName</span><span class="o">=</span><span class="s">&quot;treatment&quot;</span><span class="p">,</span> <span class="n">groupColors</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;#999999&#39;</span><span class="p">,</span><span class="s">&#39;#E69F00&#39;</span><span class="p">,</span><span class="s">&#39;pink&#39;</span><span class="p">,</span><span class="s">&#39;coral&#39;</span><span class="p">,</span><span class="s">&#39;grey&#39;</span><span class="p">,</span><span class="s">&#39;lightblue&#39;</span><span class="p">,</span><span class="s">&#39;aquamarine3&#39;</span><span class="p">,</span><span class="s">&#39;orange&#39;</span><span class="p">),</span> <span class="n">xtitle</span><span class="o">=</span><span class="s">&quot;chemical name&quot;</span><span class="p">,</span><span class="n">ytitle</span><span class="o">=</span><span class="s">&quot;mean concentration&quot;</span><span class="p">,</span> <span class="n">xtitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span><span class="n">ytitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span> <span class="n">xTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">yTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span><span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendPosition</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">,</span><span class="n">legendTitle</span><span class="o">=</span><span class="s">&quot;Treatment&quot;</span><span class="p">,</span> <span class="n">legendTitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="s">&quot;bold&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendTextFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="s">&quot;plain&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendBackground</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="s">&quot;solid&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span> <span class="p">))</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">1</span><span class="p">),</span><span class="n">strip.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">0</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="n">face</span><span class="o">=</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Ignoring unknown parameters: binwidth”
+</pre></div>
+</div>
+<img alt="../../../../_images/3-rose-metabolites-R-analysis_10_1.png" src="../../../../_images/3-rose-metabolites-R-analysis_10_1.png" />
+</div>
+</div>
+<ol class="simple">
+<li><p>Let’s now compare the dataset generated in 2015 and the dataset generated in 2018.</p></li>
+</ol>
+<p>Both datasets have been generated by the same team, on the same genotype (Rosa Chinensis ‘Old Blush’) and organism part (‘sepals’). Both datasets are held in a Tabular Data Package with the same structure. To perform the comparison, we have simply created another tabular data package, which retains the exact same structure and that simply holds the measurements for the relevant conditions extracted from each dataset (the function to create such file is omitted).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># rose arome nature genetics data from 2018 and plotting for the different treatment groups:</span>
+<span class="c1"># ng2018sc2015 &lt;- read_csv(&quot;../data/processed/rose-data/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&quot;)</span>
+<span class="n">ng2018sc2015</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;https://zenodo.org/api/files/268f29fc-8ead-4049-bb86-181b72073682/rose_aroma_compound_science2015_vs_NG2018_data_integration.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parsed with column specification:
+cols(
+  chemical_name = col_character(),
+  inchi = col_character(),
+  chebi_identifier = col_character(),
+  var1_levels = col_character(),
+  var1_uri = col_character(),
+  var2_levels = col_character(),
+  var2_uri = col_character(),
+  treatment = col_character(),
+  sample_size = col_character(),
+  sample_mean = col_double(),
+  normalized_to_total_sum_concentration = col_double(),
+  unit = col_logical(),
+  sem = col_double(),
+  publication_year = col_double(),
+  journal = col_character()
+)
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>We generate another barplot, which shows the concentration of the chemicals targeted by the GC-MS profiling assay.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot2.barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">ng2018sc2015</span><span class="p">,</span> <span class="n">xName</span><span class="o">=</span><span class="s">&quot;chemical_name&quot;</span><span class="p">,</span> <span class="n">yName</span><span class="o">=</span><span class="s">&quot;normalized_to_total_sum_concentration&quot;</span><span class="p">,</span> <span class="n">faceting</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">facetingVarNames</span><span class="o">=</span><span class="s">&quot;publication_year&quot;</span><span class="p">,</span> <span class="n">facetingDirection</span><span class="o">=</span><span class="s">&quot;vertical&quot;</span><span class="p">,</span><span class="n">facetingScales</span><span class="o">=</span><span class="s">&quot;free&quot;</span><span class="p">,</span> <span class="n">groupName</span><span class="o">=</span><span class="s">&quot;publication_year&quot;</span><span class="p">,</span> <span class="n">groupColors</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;aquamarine3&#39;</span><span class="p">,</span><span class="s">&#39;orange&#39;</span><span class="p">),</span> <span class="n">xtitle</span><span class="o">=</span><span class="s">&quot;chemical name&quot;</span><span class="p">,</span><span class="n">ytitle</span><span class="o">=</span><span class="s">&quot;normalizated to total sum concentration&quot;</span><span class="p">,</span> <span class="n">xtitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span><span class="n">ytitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="s">&quot;darkblue&quot;</span><span class="p">),</span> <span class="n">xTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">yTickLabelFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="s">&quot;italic&quot;</span><span class="p">,</span><span class="s">&quot;black&quot;</span><span class="p">),</span>  <span class="n">legendPosition</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">,</span> <span class="n">legendTitle</span><span class="o">=</span><span class="s">&quot;Treatment&quot;</span><span class="p">,</span> <span class="n">legendTitleFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="s">&quot;bold&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span>           <span class="n">legendTextFont</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="s">&quot;plain&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">),</span> <span class="n">legendBackground</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="s">&quot;solid&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span> <span class="p">))</span>  <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">1</span><span class="p">),</span><span class="n">strip.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">0</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="n">face</span><span class="o">=</span><span class="s">&quot;plain&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Ignoring unknown parameters: binwidth”
+</pre></div>
+</div>
+<img alt="../../../../_images/3-rose-metabolites-R-analysis_14_1.png" src="../../../../_images/3-rose-metabolites-R-analysis_14_1.png" />
+</div>
+</div>
+<p>What do we see? The figure shows how consistant the chemical profile of the scent between the 2 studies is, which prevalent compounds such as X, Y, and Z showing roughtly similar relative amount within and across studies.</p>
+<div class="section" id="bibliographic-reference">
+<h2>Bibliographic Reference:<a class="headerlink" href="#bibliographic-reference" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://doi.org/10.1126/science.aab0696">1.Magnard JL, Roccia A, Caissard JC, Vergne P, Sun P, Hecquet R, Dubois A, Hibrand-Saint Oyant L, Jullien F, Nicolè F, Raymond O, Huguet S, Baltenweck R, Meyer S, Claudel P, Jeauffre J, Rohmer M, Foucher F, Hugueney P, Bendahmane M, Baudino S. PLANT VOLATILES. Biosynthesis of monoterpene scent compounds in roses. Science. 2015 Jul 3;349(6243):81-3.</a></p>
+<p><a class="reference external" href="https://doi.org/10.1038/s41588-018-0110-3">2.Raymond O, Gouzy J, Just J, Badouin H, Verdenaud M, Lemainque A, Vergne P, Moja S, Choisne N, Pont C, Carrère S, Caissard JC, Couloux A, Cottret L, Aury JM, Szécsi J, Latrasse D, Madoui MA, François L, Fu X, Yang SH, Dubois A, Piola F, Larrieu A, Perez M, Labadie K, Perrier L, Govetto B, Labrousse Y, Villand P, Bardoux C, Boltz V, Lopez-Roques C, Heitzler P, Vernoux T, Vandenbussche M, Quesneville H, Boualem A, Bendahmane A, Liu C, Le Bris M, Salse J, Baudino S, Benhamed M, Wincker P, Bendahmane M. The Rosa genome provides new insights into the domestication of modern roses. Nat Genet. 2018 Jun;50(6):772-777.</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./content/recipes/applied-examples/fair-data-matrix"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="2-rose-metabolites-Python-RDF-querying-analysis.html" title="previous page">Exploring a rose garden with SPARQL</a>
+    <a class='right-next' id="next-link" href="../etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html" title="next page">Data normalization and integration through entity linking</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

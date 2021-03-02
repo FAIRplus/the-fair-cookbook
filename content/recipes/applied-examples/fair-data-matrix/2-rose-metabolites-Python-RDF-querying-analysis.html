@@ -1,0 +1,1264 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exploring a rose garden with SPARQL</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/proccaserra/the-fair-cookbook-ng");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library" href="3-rose-metabolites-R-analysis.html" />
+    <link rel="prev" title="Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2" href="1-rose-metabolites-Python-analysis.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://proccaserra.github.io/the-fair-cookbook-ng/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Exploring a rose garden with SPARQL" />
+<meta property="og:description" content="Exploring a rose garden with SPARQL    &lt;i class=&#39;fa fa-qrcode fa-2x&#39; style=&#39;color:#7e0038;&#39;&gt;&lt;/i&gt;&lt;br&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  identifier: &lt;a href=&#34;&#34;&gt;RX" />
+<meta property="og:image"       content="https://proccaserra.github.io/the-fair-cookbook-ng/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
+     2. Chemical Identity - Generating InChi Keys and SMILES strings:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     4. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/community-standards.html">
+     5. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="../fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="0-rose-metabolites-Python-data-handling.html">
+       Creating a FAIR Frictionless Data Package of Rose Scent profiles from a publication’s supplementary data.
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/proccaserra/the-fair-cookbook-ng/edit/main/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/proccaserra/the-fair-cookbook-ng/main?urlpath=lab/tree/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/proccaserra/the-fair-cookbook-ng/blob/main/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exploring-a-rose-garden-with-sparql">
+<h1>Exploring a rose garden with SPARQL<a class="headerlink" href="#exploring-a-rose-garden-with-sparql" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3&lt;br&gt; docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-qrcode fa-2x' style='color:#7e0038;'></i><br></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a>
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-fire fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
+<i class='fa fa-fire fa-lg' style='color:lightgrey'></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fas fa-clock fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class='fa fa-clock fa-lg' style='color:#7e0038;'></i> 30 minutes
+<h4><b>Recipe Type</b></h4>
+<i class='fa fa-globe fa-lg' style='color:#7e0038;'></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class='fa fa-play-circle fa-lg' style='color:#7e0038;'></i> Yes
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
+<div class="card w-100 rounded&lt;br&gt; docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class='fa fa-users fa-2x' style='color:#7e0038;'></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<!-- <p> <i class='fa fa-user-md fa-lg' style='color:#7e0038;'></i> Principal Investigator </p> -->
+<p> <i class='fa fa-database fa-lg' style='color:#7e0038;'></i> Data Manager </p>
+<p> <i class='fa fa-wrench fa-lg' style='color:#7e0038;'></i> Data Scientist </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>title:</strong> <code class="docutils literal notranslate"> </code> <br>
+<strong>author:</strong> <code class="docutils literal notranslate"><span class="pre">philippe.rocca-serra&#64;oerc.ox.ac.uk</span></code> <br>
+<strong>date:</strong> <code class="docutils literal notranslate"><span class="pre">2020-05-11</span></code> <br>
+<strong>license:</strong> <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/"><code class="docutils literal notranslate"><span class="pre">creative-commons-by-sa-4.0</span></code></a> <br>
+<strong>keywords:</strong> <code class="docutils literal notranslate"> </code> <br>
+<strong>description:</strong> <code class="docutils literal notranslate"> </code> <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rdflib</span>
+<span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">RDF</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="kn">from</span> <span class="nn">SPARQLWrapper</span> <span class="kn">import</span> <span class="n">SPARQLWrapper</span><span class="p">,</span> <span class="n">SPARQLWrapper2</span><span class="p">,</span> <span class="n">JSON</span><span class="p">,</span> <span class="n">JSONLD</span><span class="p">,</span> <span class="n">CSV</span><span class="p">,</span> <span class="n">TSV</span><span class="p">,</span> <span class="n">N3</span><span class="p">,</span> <span class="n">RDF</span><span class="p">,</span> <span class="n">RDFXML</span><span class="p">,</span> <span class="n">TURTLE</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pds</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">queryResultToHTMLTable</span><span class="p">(</span><span class="n">queryResult</span><span class="p">):</span>
+    
+   <span class="n">HTMLResult</span> <span class="o">=</span> <span class="s1">&#39;&lt;table&gt;&lt;tr style=&quot;color:white;background-color:#43BFC7;font-weight:bold&quot;&gt;&#39;</span>
+   <span class="c1"># print variable names and build header:</span>
+   <span class="k">for</span> <span class="n">varName</span> <span class="ow">in</span> <span class="n">queryResult</span><span class="o">.</span><span class="n">vars</span><span class="p">:</span>
+       <span class="n">HTMLResult</span> <span class="o">=</span> <span class="n">HTMLResult</span> <span class="o">+</span> <span class="s1">&#39;&lt;td&gt;&#39;</span> <span class="o">+</span> <span class="n">varName</span> <span class="o">+</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span>
+   <span class="n">HTMLResult</span> <span class="o">=</span> <span class="n">HTMLResult</span> <span class="o">+</span> <span class="s1">&#39;&lt;/tr&gt;&#39;</span>
+
+   <span class="c1"># print values from each row and build table of results</span>
+   <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">queryResult</span><span class="p">:</span>
+      <span class="n">HTMLResult</span> <span class="o">=</span> <span class="n">HTMLResult</span> <span class="o">+</span> <span class="s1">&#39;&lt;tr&gt;&#39;</span>   
+      <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+        <span class="c1">#print(&quot;COLUMN:&quot;, column)</span>
+        <span class="k">if</span> <span class="n">column</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+             <span class="n">HTMLResult</span> <span class="o">=</span> <span class="n">HTMLResult</span> <span class="o">+</span> <span class="s1">&#39;&lt;td&gt;&#39;</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">column</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+             <span class="n">HTMLResult</span> <span class="o">=</span> <span class="n">HTMLResult</span> <span class="o">+</span> <span class="s1">&#39;&lt;td&gt;&#39;</span> <span class="o">+</span> <span class="s2">&quot;N/A&quot;</span><span class="o">+</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span>
+      <span class="n">HTMLResult</span> <span class="o">=</span> <span class="n">HTMLResult</span> <span class="o">+</span> <span class="s1">&#39;&lt;/tr&gt;&#39;</span>
+   <span class="n">HTMLResult</span> <span class="o">=</span> <span class="n">HTMLResult</span> <span class="o">+</span> <span class="s1">&#39;&lt;/table&gt;&#39;</span>
+   <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">HTMLResult</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_sparql_variables</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="o">=</span><span class="s2">&quot;SPARQLWrapper2&quot;</span><span class="p">):</span>
+<span class="c1">#     return results.vars if (&quot;sparqlwrapper2&quot; == sparql_wrapper.lower()) else results[&#39;head&#39;][&#39;vars&#39;]</span>
+    <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">vars</span> <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;sparqlwrapper2&quot;</span> <span class="o">==</span> <span class="n">sparql_wrapper</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="k">else</span> <span class="n">results</span><span class="o">.</span><span class="n">vars</span>
+
+
+<span class="k">def</span> <span class="nf">get_sparql_bindings</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="o">=</span><span class="s2">&quot;SPARQLWrapper2&quot;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">bindings</span> <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;sparqlwrapper2&quot;</span> <span class="o">==</span> <span class="n">sparql_wrapper</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="k">else</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">get_sparql_binding_variable_value</span><span class="p">(</span><span class="n">binding</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="o">=</span><span class="s2">&quot;SPARQLWrapper2&quot;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">binding</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;sparqlwrapper2&quot;</span> <span class="o">==</span> <span class="n">sparql_wrapper</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="k">else</span> <span class="n">binding</span><span class="p">[</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">make_sparql_dict_list</span><span class="p">(</span><span class="n">bindings</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="o">=</span><span class="s2">&quot;SPARQLWrapper2&quot;</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">binding_value</span><span class="p">(</span><span class="n">binding</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span> <span class="c1"># helper function for returning values</span>
+        <span class="k">return</span> <span class="n">get_sparql_binding_variable_value</span><span class="p">(</span><span class="n">binding</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">var</span> <span class="ow">in</span> <span class="n">binding</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="n">dict_list</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># list to contain dictionaries</span>
+    <span class="k">for</span> <span class="n">binding</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="n">bindings</span><span class="p">):</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">binding_value</span><span class="p">(</span><span class="n">binding</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span>
+        <span class="n">dict_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">values</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">dict_list</span>
+
+
+<span class="k">def</span> <span class="nf">make_sparql_df</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="o">=</span><span class="s2">&quot;SPARQLWrapper2&quot;</span><span class="p">):</span>
+    <span class="n">variables</span> <span class="o">=</span> <span class="n">get_sparql_variables</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="p">)</span>
+    <span class="c1"># print(variables)</span>
+
+    <span class="n">cleaned_variables</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">]</span> 
+
+    <span class="c1">#print(cleaned_variables)</span>
+    <span class="n">bindings</span> <span class="o">=</span> <span class="n">get_sparql_bindings</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="p">)</span>
+    <span class="c1"># print(bindings)</span>
+    
+    <span class="c1"># create a list of dictionaries to use as data for dataframe</span>
+    <span class="n">data_list</span> <span class="o">=</span> <span class="n">make_sparql_dict_list</span><span class="p">(</span><span class="n">bindings</span><span class="p">,</span> <span class="n">cleaned_variables</span><span class="p">,</span> <span class="n">sparql_wrapper</span><span class="p">)</span>
+    
+    <span class="c1"># print(data_list)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pds</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_list</span><span class="p">)</span> <span class="c1"># create dataframe from data list</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sample_mean&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sample_mean&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+
+   <span class="c1"># print(df[&quot;sample_mean&quot;])</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">cleaned_variables</span><span class="p">]</span> <span class="c1"># return dataframe with columns reordered</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>*credits to Bob du Charme for the following function [http://www.snee.com/bobdc.blog/2016/07/sparql-in-a-jupyter-aka-ipytho.html]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s read the RDF graph generated using the rose-dtpkg2rdf.py python script and saved to disk as a turtle file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#g.parse(&quot;./../data/processed/rose-data-as-rdf/rose-aroma-ng-06-2018-subset.ttl&quot;, format=&quot;n3&quot;)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;./../data/processed/rose-data-as-rdf/rose-aroma-ng-06-2018-full.ttl&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;n3&quot;</span><span class="p">)</span>
+<span class="c1"># g.parse(&quot;./../data/processed/denovo/rdf/rose-aroma-ng-06-2018-full.ttl&quot;, format=&quot;n3&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mf">25e498617</span><span class="n">ce4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#g.parse(&quot;./../data/processed/rose-data-as-rdf/rose-aroma-ng-06-2018-subset.ttl&quot;, format=&quot;n3&quot;)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;./../data/processed/rose-data-as-rdf/rose-aroma-ng-06-2018-full.ttl&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;n3&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># g.parse(&quot;./../data/processed/denovo/rdf/rose-aroma-ng-06-2018-full.ttl&quot;, format=&quot;n3&quot;)</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/rdflib/graph.py</span> in <span class="ni">parse</span><span class="nt">(self, source, publicID, format, location, file, data, **args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1032</span>         <span class="n">source</span> <span class="o">=</span> <span class="n">create_input_source</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">publicID</span><span class="o">=</span><span class="n">publicID</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1033</span>                                      <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">1034</span>                                      <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1035</span>         <span class="k">if</span> <span class="nb">format</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1036</span>             <span class="nb">format</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">content_type</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/rdflib/parser.py</span> in <span class="ni">create_input_source</span><span class="nt">(source, publicID, location, file, data, format)</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="k">if</span> <span class="n">absolute_location</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;file:///&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span>             <span class="n">filename</span> <span class="o">=</span> <span class="n">url2pathname</span><span class="p">(</span><span class="n">absolute_location</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;file:///&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">184</span>             <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span>             <span class="n">input_source</span> <span class="o">=</span> <span class="n">URLInputSource</span><span class="p">(</span><span class="n">absolute_location</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/docs/content/recipes/applied-examples/data/processed/rose-data-as-rdf/rose-aroma-ng-06-2018-full.ttl&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s ask for the independent variables and their levels using the following SPARQL query</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_idv_and_levels</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">PREFIX stato: &lt;http://purl.obolibrary.org/obo/STATO_&gt;</span>
+<span class="s2">prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; </span>
+<span class="s2">PREFIX ncbitax: &lt;http://purl.obolibrary.org/obo/NCBITaxon_&gt;</span>
+<span class="s2">prefix has_part: &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt;</span>
+<span class="s2">            SELECT DISTINCT</span>
+<span class="s2">             ?Predictor</span>
+<span class="s2">             ?PredictorLevel</span>
+<span class="s2">             WHERE { </span>
+<span class="s2">                ?var a stato:0000087 ;</span>
+<span class="s2">                    rdfs:label ?Predictor ;</span>
+<span class="s2">                    has_part: ?value .</span>
+<span class="s2">                ?value rdfs:label ?PredictorLevel .    </span>
+<span class="s2">                 }               </span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can display the results of that query using the function declared earlier on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">queryResultToHTMLTable</span><span class="p">(</span><span class="n">get_idv_and_levels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table><tr style="color:white;background-color:#43BFC7;font-weight:bold"><td>Predictor</td><td>PredictorLevel</td></tr></table></div></div>
+</div>
+<p>Let’s now ask for the number of biological and technical replicates used to compute the mean concentration of the chemical compounds detected and forming the signature of the rose fragrance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_replication_info</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; </span>
+<span class="s2">prefix chmo:   &lt;http://purl.obolibrary.org/obo/CHMO_&gt; </span>
+<span class="s2">prefix msio:   &lt;http://purl.obolibrary.org/obo/MSIO_&gt; </span>
+<span class="s2">prefix stato: &lt;http://purl.obolibrary.org/obo/STATO_&gt; </span>
+<span class="s2">prefix obi: &lt;http://purl.obolibrary.org/obo/OBI_&gt; </span>
+<span class="s2">prefix ro: &lt;http://purl.obolibrary.org/obo/RO_&gt;</span>
+<span class="s2">prefix po: &lt;http://purl.obolibrary.org/obo/PO_&gt;</span>
+<span class="s2">prefix has_member: &lt;http://purl.obolibrary.org/obo/RO_0002351&gt;</span>
+<span class="s2">prefix has_value: &lt;http://purl.obolibrary.org/obo/STATO_0000129&gt; </span>
+<span class="s2">prefix computed_from: &lt;http://purl.obolibrary.org/obo/STATO_0000557&gt;</span>
+<span class="s2">prefix has_specified_input: &lt;http://purl.obolibrary.org/obo/OBI_0000293&gt;</span>
+<span class="s2">prefix is_specified_output_of: &lt;http://purl.obolibrary.org/obo/OBI_0000295&gt;</span>
+<span class="s2">prefix is_about: &lt;http://purl.obolibrary.org/obo/IAO_0000136&gt;</span>
+
+<span class="s2">SELECT        </span>
+<span class="s2">      ?TreatmentGroup </span>
+<span class="s2">      ?ChemicalCompound</span>
+<span class="s2">      ?MeanConcentration</span>
+<span class="s2">      (count(distinct ?member) as ?NbTechnicalReplicate) </span>
+<span class="s2">      (count(distinct ?input) as ?NbBiologicalReplicate)      </span>
+<span class="s2">      WHERE {</span>
+<span class="s2">            ?population a stato:0000193 ;</span>
+<span class="s2">                rdfs:label ?TreatmentGroup ;</span>
+<span class="s2">                has_member: ?member .      </span>
+<span class="s2">            ?member has_specified_input: ?input .              </span>
+<span class="s2">            ?mean a stato:0000402 ;</span>
+<span class="s2">                computed_from: ?population ;</span>
+<span class="s2">                has_value: ?MeanConcentration ;</span>
+<span class="s2">                is_about: ?ChemicalCompound .</span>
+<span class="s2">            ?concentration a stato:0000072;</span>
+<span class="s2">                is_about: ?ChemicalCompound .</span>
+<span class="s2">}</span>
+<span class="s2">      GROUP BY ?population </span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once more, we invoked the pretty printing function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">queryResultToHTMLTable</span><span class="p">(</span><span class="n">get_replication_info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table><tr style="color:white;background-color:#43BFC7;font-weight:bold"><td>TreatmentGroup</td><td>ChemicalCompound</td><td>MeanConcentration</td><td>NbTechnicalReplicate</td><td>NbBiologicalReplicate</td></tr></table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_all_data</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; </span>
+<span class="s2">prefix chmo:   &lt;http://purl.obolibrary.org/obo/CHMO_&gt; </span>
+<span class="s2">prefix msio:   &lt;http://purl.obolibrary.org/obo/MSIO_&gt; </span>
+<span class="s2">prefix stato: &lt;http://purl.obolibrary.org/obo/STATO_&gt; </span>
+<span class="s2">prefix obi: &lt;http://purl.obolibrary.org/obo/OBI_&gt; </span>
+<span class="s2">prefix ro: &lt;http://purl.obolibrary.org/obo/RO_&gt;</span>
+<span class="s2">prefix po: &lt;http://purl.obolibrary.org/obo/PO_&gt;</span>
+<span class="s2">prefix chebi: &lt;http://purl.obolibrary.org/obo/CHEBI_&gt;</span>
+<span class="s2">prefix has_value: &lt;http://purl.obolibrary.org/obo/STATO_0000129&gt;</span>
+<span class="s2">prefix computed_from: &lt;http://purl.obolibrary.org/obo/STATO_0000557&gt;</span>
+<span class="s2">prefix is_about: &lt;http://purl.obolibrary.org/obo/IAO_0000136&gt;</span>
+<span class="s2">prefix is_denoted_by: &lt;http://purl.obolibrary.org/obo/STATO_0000205&gt;</span>
+<span class="s2">prefix derives_from: &lt;http://purl.obolibrary.org/obo/RO_0001000&gt; </span>
+<span class="s2">prefix located_in: &lt;http://purl.obolibrary.org/obo/RO_0001025&gt;</span>
+<span class="s2">prefix denotes: &lt;http://purl.obolibrary.org/obo/IAO_0000219&gt;</span>
+<span class="s2">prefix measured_in: &lt;http://purl.obolibrary.org/obo/RO_0002351&gt; </span>
+
+<span class="s2">SELECT REDUCED  ?chemical_name ?chebi_identifier ?inchi ?sample_mean ?sem ?treatment ?genotype ?organism_part</span>
+<span class="s2">WHERE {</span>
+<span class="s2">        ?pop_mean a stato:0000402 ;</span>
+<span class="s2">         is_about: ?chebi_identifier ;</span>
+<span class="s2">         computed_from: ?population ;</span>
+<span class="s2">         has_value: ?sample_mean .</span>
+<span class="s2">     ?chem a ?chebi_identifier ;</span>
+<span class="s2">         rdfs:label ?chemical_name ;</span>
+<span class="s2">         is_denoted_by: ?inchi .</span>
+<span class="s2">     ?semv a stato:0000037 ; </span>
+<span class="s2">         denotes: ?pop_mean ;</span>
+<span class="s2">         has_value: ?sem.</span>
+<span class="s2">     ?population a stato:0000193 ;</span>
+<span class="s2">         rdfs:label ?treatment .</span>
+<span class="s2">     ?sub_conc a stato:0000072 ;</span>
+<span class="s2">         derives_from: ?genotype ;</span>
+<span class="s2">         located_in: ?organism_part;</span>
+<span class="s2">         measured_in: ?population .         </span>
+<span class="s2">}        </span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">queryResultToHTMLTable</span><span class="p">(</span><span class="n">get_all_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table><tr style="color:white;background-color:#43BFC7;font-weight:bold"><td>chemical_name</td><td>chebi_identifier</td><td>inchi</td><td>sample_mean</td><td>sem</td><td>treatment</td><td>genotype</td><td>organism_part</td></tr></table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">make_sparql_df</span><span class="p">(</span><span class="n">get_all_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2896</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2897</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2898</span>             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;sample_mean&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">74226</span><span class="n">eea9bba</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="o">=</span><span class="n">make_sparql_df</span><span class="p">(</span><span class="n">get_all_data</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-3-e97086bf9422&gt;</span> in <span class="ni">make_sparql_df</span><span class="nt">(results, sparql_wrapper)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> 
+<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">pds</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_list</span><span class="p">)</span> <span class="c1"># create dataframe from data list</span>
+<span class="ne">---&gt; </span><span class="mi">41</span>     <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sample_mean&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sample_mean&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> 
+<span class="g g-Whitespace">     </span><span class="mi">43</span>    <span class="c1"># print(df[&quot;sample_mean&quot;])</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2993</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2994</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2995</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2996</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2997</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">~/.pyenv/versions/venv372/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2897</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2898</span>             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2899</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maybe_cast_indexer</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">2900</span>         <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_indexer</span><span class="p">([</span><span class="n">key</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="n">tolerance</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2901</span>         <span class="k">if</span> <span class="n">indexer</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">indexer</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;sample_mean&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># width = figure_size[0]</span>
+<span class="c1"># height = figure_size[0] * aspect_ratio</span>
+<span class="n">gray</span> <span class="o">=</span> <span class="s1">&#39;#666666&#39;</span>
+<span class="n">orange</span> <span class="o">=</span> <span class="s1">&#39;#FF8000&#39;</span>
+<span class="n">blue</span> <span class="o">=</span> <span class="s1">&#39;#3333FF&#39;</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+ <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">,</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;factor(treatment)&#39;</span><span class="p">)</span>
+ <span class="o">+</span> <span class="n">geom_col</span><span class="p">()</span>
+<span class="o">+</span> <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;~treatment&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="n">ncol</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+ <span class="o">+</span> <span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">expand</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+ <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">axis_text_x</span><span class="o">=</span><span class="n">element_text</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">blue</span><span class="p">))</span>
+ <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">axis_text_y</span><span class="o">=</span><span class="n">element_text</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">orange</span><span class="p">))</span>
+         <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">figure_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+<span class="p">)</span>
+
+<span class="n">p1</span> <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">panel_background</span><span class="o">=</span><span class="n">element_rect</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">blue</span><span class="p">)</span>
+       <span class="p">)</span>
+
+<span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="mi">50</span><span class="n">ce0a623536</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>  <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">axis_text_x</span><span class="o">=</span><span class="n">element_text</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">blue</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>  <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">axis_text_y</span><span class="o">=</span><span class="n">element_text</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">orange</span><span class="p">))</span>
+<span class="ne">---&gt; </span><span class="mi">14</span>          <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">figure_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> 
+
+<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venv372"
+        },
+        kernelOptions: {
+            kernelName: "venv372",
+            path: "./content/recipes/applied-examples/fair-data-matrix"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venv372'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="1-rose-metabolites-Python-analysis.html" title="previous page">Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2</a>
+    <a class='right-next' id="next-link" href="3-rose-metabolites-R-analysis.html" title="next page">Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="../_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="../_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="../_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
