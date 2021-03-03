@@ -36,9 +36,9 @@ html:
     </div>
 
     <div class="row_footer">
-    <div class="column" style="center"><a href="https://europa.eu/"><img src="_build/html/_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
-    <div class="column"><a href="https://www.imi.europa.eu/"><img src="./_build/html/_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
-    <div class="column"><a href="https://efpia.eu"><img src="../_build/html/_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
+    <div class="column" style="center"><a href="https://europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
+    <div class="column"><a href="https://www.imi.europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
+    <div class="column"><a href="https://efpia.eu"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
     <br/>
     </div>
   google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
