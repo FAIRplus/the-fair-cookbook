@@ -201,9 +201,10 @@ Identifier equivalences can come about in several ways and capture different for
 Depending on the nature of the data, there are different ways that equivalences can be computed. 
 
 Some elements to take into consideration are:
-1. **An indicator of identity** (similar to what is found in the ontology world with skos:sameAs or skos:narrower)
-1. **The evidence backing up that indication** (e.g. a similarity measure, a score).
-1. **Audit and trail information** (who, what, when, e.g. agent X, mapping tools Y, DDMMYYYY).
+1. a mapping predicate taken from a well known ontology, e.g. owl:sameAs or skos:narrower
+2. the evidence behind the equivalence claims, e.g. a similarity score or the property on which the equivalence is based such as InChI Key for chemicals
+1. audit trail information, i.e. who, what, when, e.g. agent X using mapping tool Y on YYYY-MM-DD
+
 
 
 
