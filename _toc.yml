@@ -105,6 +105,7 @@
     - file: content/recipes/reusability/ATI_licensing_software
     - file: content/recipes/reusability/ATI_licensing_data
     # - file: content/recipes/reusability/license-selection
+    - file: content/recipes/reusability/expressing-data-use
     - file: content/recipes/reusability/provenance
     - file: content/recipes/reusability/community-standards
 
