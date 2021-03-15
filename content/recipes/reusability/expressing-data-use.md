@@ -478,7 +478,7 @@ A basic ODRL based pattern using a DUO term to represent a situation where Secon
         {
         "target": "https://fairplus.github.io/examples/dataset_00001",
         "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
-        "assigner": "https://ega-archive.org/",
+        "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
         "constraints":[{
               "name": "http://www.w3.org/ns/odrl/2/purpose",
               "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -526,7 +526,7 @@ Let's proceed stepwise.
                     }
                 }
             }],
-            "assigner": "https://ega-archive.org/",
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
             "constraints":[{
                 "name": "http://www.w3.org/ns/odrl/2/purpose",
                 "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -587,7 +587,7 @@ In the following example, research is only allowed in a specific country, Italy 
                     }
                 }
             }],
-            "assigner": "https://ega-archive.org/",
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
             "constraints":[{
                 "name": "http://www.w3.org/ns/odrl/2/purpose",
                 "operator": "http://www.w3.org/ns/odrl/2/eq",
