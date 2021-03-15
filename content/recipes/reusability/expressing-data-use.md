@@ -473,10 +473,10 @@ A basic ODRL based pattern using a DUO term to represent a situation where Secon
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
-        "target": "EGAD00001000039",
+        "target": "https://fairplus.github.io/examples/dataset_00001",
         "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
         "assigner": "https://ega-archive.org/",
         "constraints":[{
@@ -510,10 +510,10 @@ Let's proceed stepwise.
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
-            "target": "EGAD00001000039",
+            "target": "https://fairplus.github.io/examples/dataset_00001",
             "action": [{
                 "rdf:value": { "@id": "odrl:secondaryUse" },
                 "refinement": {
@@ -571,10 +571,10 @@ In the following example, research is only allowed in a specific country, Italy 
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
-            "target": "EGAD00001000039",
+            "target": "https://fairplus.github.io/examples/dataset_00001",
             "action": [{
            	    "rdf:value": { "@id": "odrl:secondaryUse" },
                     "refinement": {
@@ -609,18 +609,72 @@ In the following example, research is only allowed in a specific country, Italy 
 The following example shows how explicitly state in a Policy element that the data must be deleted after a defined period of time, here 3 years.
 Duration and time related value should be represented using ISO-8601 standard.
 
+```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
+    "permissions": [
+        {
+            "target": "https://fairplus.github.io/examples/dataset_00001",
+            "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
+            "action": [{
+                "rdf:value": { "@id": "odrl:secondaryUse" },
+                "refinement": {
+                    "xone": { 
+                    "@list": [ 
+                            { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001645" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001655" }  
+                        ]
+                  }
+                }
+            }],
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
+            "constraints":[{
+                    "name": "http://www.w3.org/ns/odrl/2/purpose",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "http://purl.obolibrary.org/obo/DUO_0000007"
+                },
+                {
+                "name": "http://www.w3.org/ns/odrl/2/spatial",
+                "operator": "http://www.w3.org/ns/odrl/2/eq",
+                "rightoperand": "http://www.itu.int/tML/tML-ISO-3166:it"
+            }
+            ],
+            "duties": [{
+                "action": "http://www.w3.org/ns/odrl/2/delete",
+                "target": "https://fairplus.github.io/examples/dataset_00001",
+                "constraints": [{
+                    "name": "http://www.w3.org/ns/odrl/2/dateTime",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "P36M"
+                }]
+        }]
+        }
+    ]
+}
+```
+
+
+## possible specification of EGA related information using ODRL
+
+```{warning} 
+
+This ODRL representation is **not vetted, nor endorsed by GA4GH or EGA**.
+This example is currently meant to present an example of how to use ODRL to represesent some of the information represented in EGA.
+
+```
 
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://ega-archive.org/datasets/EGAP0000000XYZ",
     "permissions": [
         {
-            "target": "EGAD00001000039",
-            "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
+            "target": "https://ega-archive.org/datasets/EGAD0000000YYY",
             "action": [{
-           	    "rdf:value": { "@id": "odrl:secondaryUse" },
-           	    "refinement": {
+                "rdf:value": { "@id": "odrl:secondaryUse" },
+                "refinement": {
                     "xone": { 
                     "@list": [ 
                             { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
@@ -644,7 +698,7 @@ Duration and time related value should be represented using ISO-8601 standard.
             ],
             "duties": [{
                 "action": "http://www.w3.org/ns/odrl/2/delete",
-                "target": "EGAD00001000039",
+                "target": "https://ega-archive.org/datasets/EGAD0000000YYY",
                 "constraints": [{
                     "name": "http://www.w3.org/ns/odrl/2/dateTime",
                     "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -655,8 +709,6 @@ Duration and time related value should be represented using ISO-8601 standard.
     ]
 }
 ```
-
-
 
 ### Indicating Prohibitions and Interdictions
 
