@@ -94,6 +94,9 @@
           - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
       - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar    
       - file: content/recipes/interoperability/fastq-file-format-validators
+      - file: content/recipes/interoperability/fair-workflows
+      - file: content/recipes/interoperability/phenotypes
+
 
 
 # -header: reusability
