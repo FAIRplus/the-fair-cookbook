@@ -155,6 +155,105 @@ classDef box5 font-family:avenir,font-size:14px,fill:#FF3371,stroke:#222,color:#
 
 TO BE MODIFIED: "The Phenopacket Schema represents an open standard for sharing disease and phenotype information to improve our ability to understand, diagnose, and treat both rare and common diseases..."
 
+### Phenopacket data model
+
+> :bulb: TBD: phenopacket ontology recommendation not included
+<table>
+  <tr>
+   <td><strong>Phenopackets blocks</strong>
+   </td>
+   <td><strong>Phenopackets attributes</strong>
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="4" >Subject
+   </td>
+   <td>Id
+   </td>
+  </tr>
+  <tr>
+   <td>Individual Id
+   </td>
+  </tr>
+  <tr>
+   <td>Age
+   </td>
+  </tr>
+  <tr>
+   <td>Sex
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="12" >Biosample
+   </td>
+   <td>Description
+   </td>
+  </tr>
+  <tr>
+   <td>sampled_tissue
+   </td>
+  </tr>
+  <tr>
+   <td>Phenotypic Features
+   </td>
+  </tr>
+  <tr>
+   <td>Age Of Individual At Collection
+   </td>
+  </tr>
+  <tr>
+   <td>Taxonomy
+   </td>
+  </tr>
+  <tr>
+   <td>Histological diagnosis
+   </td>
+  </tr>
+  <tr>
+   <td>Tumor progression
+   </td>
+  </tr>
+  <tr>
+   <td>Tumor grade
+   </td>
+  </tr>
+  <tr>
+   <td>Diagnostic marker
+   </td>
+  </tr>
+  <tr>
+   <td>Procedure
+   </td>
+  </tr>
+  <tr>
+   <td>Variants
+   </td>
+  </tr>
+  <tr>
+   <td>Is control sample (true/false)
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2" >Diseases
+   </td>
+   <td>Term
+   </td>
+  </tr>
+  <tr>
+   <td>Disease stage
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2" >External References
+   </td>
+   <td>Id
+   </td>
+  </tr>
+  <tr>
+   <td>Description
+   </td>
+  </tr>
+</table>
 ## An example of phenotypic data represented in phenopacket
 
 Example here.
@@ -165,8 +264,50 @@ Example here.
 The link
 
 ## A demo case of adopting phenopacket at BioSamples
+The [BioSamples](www.ebi.ac.uk/biosamples) database converts the sample to Phenopacket data exchange format.
 
-BioSamples 
+BioSample export as PDX file.
+```json
+{
+  "id": "SAMN15751358",
+  "subject": {
+    "id": "SAMN15751358-individual",
+    "sex": "FEMALE",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    }
+  },
+  "biosamples": [{
+    "id": "SAMN15751358",
+    "individualId": "SAMN15751358-individual",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    },
+    "ageOfIndividualAtCollection": {
+      "age": "75"
+    }
+  }],
+  "metaData": {
+    "created": "1970-01-01T00:00:00Z",
+    "createdBy": "Biosamples phenopacket exporter",
+    "resources": [{
+      "id": "pato",
+      "name": "PATO - the Phenotype And Trait Ontology",
+      "url": "http://purl.obolibrary.org/obo/pato.owl",
+      "version": "2020-08-02",
+      "namespacePrefix": "PATO"
+    }, {
+      "id": "ncbitaxon",
+      "name": "NCBI organismal classification",
+      "url": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
+      "version": "2020-04-18",
+      "namespacePrefix": "NCBITAXON"
+    }]
+  }
+}
+```
 
 
 ---
@@ -188,6 +329,8 @@ ___
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
 | Wei Gu |  LCSB, University of Luxembourg| [0000-0003-3951-6680](https://orcid.org/0000-0003-3951-6680) | Writing - Original Draft |
 | Mélanie Courtot | EMBL-EBI| [0000-0002-9551-6370](https://orcid.org/orcid.org/0000-0002-9551-6370) | Writing - Original Draft |
+| Cincia Thion | EMBL-EBI| |Writing - Original Draft |
+|Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Writing and editing|
 ___
 
 
