@@ -1,13 +1,14 @@
 # Tools for Data Extraction, transformation, and loading
 
-# Main Objectives
+
+## Main Objectives
 This recipe identifies tools for data extraction, transformation, and loading (ETL). ETL is the process of collecting data from one source to a designated system in which the data is represented differently.[1] One common use case in biological science is to build a scalable and portable ETL system to extract data from different sources, transform data into a cohesive dataset, and load data to an internal or public database to support data exchange. This recipe aims to serve as a start point for designing ETL workflows, instead of provide a comprehensive list covering all available tools.
 
 >The lists of tools are generated either by manual curation, which reflects what is being used in the industry, or automatally discovered from the bio.tools repository.
 >
 >:bulb: Contents in this table are generated in March 2021. For updated contents, please check the FAIR tooling repository. You can provide feedback or report issues in the comments section.
 
-# Graphical Overview of the FAIRification Recipe Objectives
+## Graphical Overview of the FAIRification Recipe Objectives
 The figure below shows different ETL-related operations and their relationships, together with related tools and recipes.
 
 ```mermaid
@@ -31,7 +32,9 @@ graph LR
     B3-->C
     
 ```
-The table below is an overview of ontology strategies tools identified. Details of each tools are also provided in this doc.
+The table below is an overview of ETL tools identified. Details of each tools are also provided in this doc. For ETL tools for RDF data model, please check recipe {ref}`An inventory of tools for converting your data to RDF`.
+
+
 <table>
   <tr>
    <td><strong><a href=#Data-query-and-retrieval>Data query and retrieval</a></strong>
@@ -181,6 +184,34 @@ The table below is an overview of ontology strategies tools identified. Details 
 </table>
 >Disclaimer: The tools list below aims to provide a idea of what is there on the market. It's not a formal recommendation. if you think there are tools that need to be updated, please contact us via the github issue.
 
+## Requirements
+
+* knowledge requirement:
+   * Familiar with general data ETL workflow.
+
+---
+
+## Capability & Maturity Table
+
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+| :------------- | :------------- | :------------- |
+| Interoperability | minimal | automated |
+
+
+----
+
+## FAIRification Objectives, Inputs and Outputs
+
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [Data retrival](http://edamontology.org/operation_2422)  | 
+| [validation](http://edamontology.org/operation_2428)||
+| [data deposition](http://edamontology.org/operation_3431)||
+| [Data submission, annotation and curation](http://edamontology.org/topic_0219)| |
+
+
+___
+
 ## Operations
 
 <h3 id=Data-query-and-retrieval>Data query and retrieval</h3>
@@ -268,7 +299,8 @@ __Tools discovered from [Bio.Tools](https://bio.tools).__
 ### Example use case: 
 To show how these tools can be used in real life examples, please check the related recipes.
 1. OMOP ETL [link]()
-2. FASTQ file validation [link]()
+2. RDF ETL [link]()
+3. FASTQ file validation [link]()
 
 ## Authors
 |Name|Affiliation|ORCID|Credit role|
