@@ -1,5 +1,21 @@
 # Tools for ontology strategies
 
+```{admonition} Important
+:class: tip
+
+    - Data Curator
+    - Data Manager
+    - Data Scientist
+    - Software Engineer
+    - Terminology Manager
+    - Ontologist
+
+
+For the `Recipe Type` section, the allowed values should be picked from the following list:
+    - Review 
+```
+
+
 ## Main objectives
 This recipe identifies tools for different operations regarding ontology strategies, such as ontology annotation, ontology mapping, ontology management, etc. It aims to serve as a start point for implementing ontology-related FAIRifications, instead of provide a comprehensive list covering all available tools.
 
@@ -240,6 +256,29 @@ The table below is an overview of ontology strategies tools identified. Details 
    </td>
   </tr>
 </table>
+
+## Requirements
+
+* recipe dependency:
+   * {ref}`Which vocabulary to use?`
+* knowledge requirement:
+   * be familiar with ontology and semantic annotation.
+
+---
+
+## Capability & Maturity Table
+
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+| :------------- | :------------- | :------------- |
+| Interoperability | minimal | automatable |
+----
+
+## FAIRification Objectives, Inputs and Outputs
+
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [ontology and terminology](http://edamontology.org/topic_0089)  | 
+| [text annotation](http://edamontology.org/operation_3778)  |
 
 ## Operations
 
