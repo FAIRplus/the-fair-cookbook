@@ -1,5 +1,14 @@
 # Tools for Data Extraction, transformation, and loading
+```
+:class: tip
 
+    - Data Curator
+    - Data Manager
+    - Data Scientist
+
+For the `Recipe Type` section, the allowed values should be picked from the following list:
+    - Review 
+```
 
 ## Main Objectives
 This recipe identifies tools for data extraction, transformation, and loading (ETL). ETL is the process of collecting data from one source to a designated system in which the data is represented differently.[1] One common use case in biological science is to build a scalable and portable ETL system to extract data from different sources, transform data into a cohesive dataset, and load data to an internal or public database to support data exchange. This recipe aims to serve as a start point for designing ETL workflows, instead of provide a comprehensive list covering all available tools.
