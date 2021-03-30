@@ -83,6 +83,9 @@
   numbered: false
   sections:
       # - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+      - file: content/recipes/interoperability/bridgedb-recipe
+        sections:
+          - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
       - file: content/recipes/interoperability/selecting-ontologies
       - file: content/recipes/interoperability/ontology-new-term-request-recipe
       - file: content/recipes/interoperability/ontology-robot-recipe
