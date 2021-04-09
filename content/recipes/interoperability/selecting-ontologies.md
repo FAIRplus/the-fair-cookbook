@@ -68,7 +68,7 @@ width: 800px
 name: Which ontology should be used?
 alt:  Which ontology should be used?
 ---
- hich ontology should be used?.
+ Which ontology should be used?.
 ```
 
 
@@ -85,26 +85,26 @@ ___
 
 ## Context is everything
 
-The domain of operation will somehow dictate the semantic framework that makes most sense selecting. This is simply a consequence of the fact that the advances in data standardization in specific fields is such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
+The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply a consequence of the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
 
-We will be giving two examples of such situations now:
+Here, we present the three most common scenarios in biomedical research:
 
 ### Clinical Trial Data
 
-Operating in the field of Clinical Trials means that datasets are generated during `interventional studies`, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents in order to gain insights in terms of benefits in patient outcomes.
-In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by US FDA reviewers. This means that the [CDISC standards]() are the *`de-facto standard`* in the area, which mandates the use of semantics resources such as:
+Operating in the field of Clinical Trials means that datasets are generated during `interventional studies`, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents, in order to gain insights in terms of benefits in patient outcomes.
+In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by regulators such as FDA reviewers in the US. The [CDISC standards](https://www.cdisc.org/standards) are the *`de-facto standard`* in this area, which mandates the use of semantics resources such as:
 
-| Semantic Resource|Domain |License |Format |Service|
+|Semantic Resource|Domain |License |Format |Service|
 |--|--|--|--|--|
 |CDISC vocabulary|clinical trial data|||EVS|
 |NCI Thesaurus|biomedicine|||EVS,Bioportal,OLS|
 |SNOMED-CT|pathology|||EVS,Bioportal(§)|
 |UMLS|pathology|||EVS,Bioportal(§)|
-|LOINC|laboratory tests||||
+|LOINC|laboratory tests|||Loinc|
 |RxNORM|drugs|||Bioportal|
 |GUDID|instruments|||FDA|
 
-All available from the NCBI EVS system.
+All available from the [NCBI EVS system](https://evs.nci.nih.gov/), [LOINC](https://loinc.org/), [OLS](https://www.ebi.ac.uk/ols/index) or [Bioportal](https://bioportal.bioontology.org/).
  
 
 ```{warning}
@@ -113,8 +113,8 @@ Some resources are only available under restrictive licences, which prevent deri
 
 ### Observational Health Data
 
-This context refers to data collected during observation studies, which in constrat to `interventional studies`, draws inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
-In this specific context, a model and associated set of standards has been particularly successful. With several hundred millions of patient information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (ODHSI) `open-science community` has been particularly successful. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operated in such a `data context`.
+This context refers to data collected during `observation studies`, which in contrast to `interventional studies`, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
+In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients' information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (ODHSI) `open-science community` has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a `data context`.
 
 
 | Semantic Resource|Domain |License |Format |Service|
@@ -127,35 +127,36 @@ In this specific context, a model and associated set of standards has been parti
 |RxNORM|drugs|||Bioportal|
 
 
-For a more detail view and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the [`controlled terminology` in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
+For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the [`controlled terminology` in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
 
 
 ### Basic research context
 
-This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management good practice and proper archival requirements.
-As a consequence of fewer constraints, researchers are often confronted with a sea of options. This section aims to provide some guidance when tasked with deciding on which semantic resource to use.
+This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practice and proper archival requirements.
+As a consequence of fewer constraints, researchers are often confronted with a sea of options. This and the next sections aim to provide some guidance when tasked with deciding on which semantic resource to use.
 
 ```{admonition} Tip
 :class: tip
  **An important consideration** 
-to bear in mind when writing selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no requirement but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the [Experimental Factor Ontology](https://efo.owl) could ease deposition.
+to bear in mind when selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no particular constraints on data annotations but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the [Experimental Factor Ontology](https://efo.owl) for annotating data could ease deposition.
 ```
 
 ```{admonition} Tip
 :class: tip
- **[the FAIRsharing registry](https://fairsharing.org)** is an ELIXIR resources which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
+ **[The FAIRsharing registry](https://fairsharing.org)** is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
 ````
 
 ## Selecting Terminologies 
 
 
-### Use Cases and Iterative Approach  
+### Use Cases and General Recommendations
 
+1. The use and implementation of common terminologies enables the normalisation and harmonisation of both variable labels and allowed values for each field. Implementing the use of common terminologies in the data collection or curation workflow will ensure consistency of the annotation across all data. This is particularly important if data is generated at multiple partner sites and/or by multiple individuals. 
 
+1. If data fields are annotated with terms from freely chosen ontologies (rather than those dictated by a common model such as CDSIC), care should be taken to avoid picking terms from ontologies at random. If a set of concepts are all available in one ontology, this ontology should be preferred over a set of ontologies. Mapping services such as [Oxo](https://www.ebi.ac.uk/spot/oxo/) are available to verify whether a term of interest in one ontology has an equivalent term in another ontology.
 
-1. The use and implementation of common terminologies will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying the eTRIKS database. Implementing use of common terminologies in the curation workflow will ensure consistency of the annotation across all studies.
-2. The clusters of dependent annotations (related data label) also follows the eTRIKS Minimal Information Guidelines (MIGs), a set of core descriptors ensuring that a consistent breadth and depth of information is reported.  Continuous feedback will be sought from WP2 and 4 and relevant users. The iterations will feedback into both MIGs and the terminology selections.
-3. As part of this iterative process, the eTRIKS use cases and query cases will be documented in order to evaluate, revise and refine the set of terminologies, and where relevant, the associated selection criteria.
+1. Restrictions of allowed values for a given field should ideally be limited to a single ontology and better yet, to a single branch of a chosen ontology. This will vastly improve the semantic queryability as well as the consistency and interoperability of the data. 
+
 
 
 ### Selection Criteria
@@ -921,7 +922,7 @@ Some of the resources are specialized semantic artefact developed to support the
    </td>
    <td>Creative Commons Public Domain Mark 1.0
    </td>
-   <td><a href="https://github.com/nmrML/nmrML/issues?state=open">https://github.com/nmrML/nmrML/issues?state=open</a
+   <td><a href="https://github.com/nmrML/nmrML/issues?state=open">https://github.com/nmrML/nmrML/issues?state=open</a>
    </td>
   </tr>
   <tr>
