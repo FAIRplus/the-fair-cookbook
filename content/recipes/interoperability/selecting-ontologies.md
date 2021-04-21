@@ -157,20 +157,21 @@ to bear in mind when selecting semantic resources is to assess whether or not `d
 
 1. Restrictions of allowed values for a given field should ideally be limited to a single ontology and better yet, to a single branch of a chosen ontology. This will vastly improve the semantic queryability as well as the consistency and interoperability of the data. 
 
+1. Many ontologies and vocabularies reuse concepts from other ontologies, in line with best practice in ontology design, to limit duplication of efforts and proliferation of parallel synonymous concepts. Care should however be taken to use concepts in the most appropriate environment. This is usually their original source unless they are used as part of a larger set of terms. As an example, the Experimental Factor Ontology (EFO) reuses concepts from a range of ontologies, including species from the NCBI taxonomy, assays from OBI, and diseases and phenotypes from MONDO and HPO. If annotating a dataset or resource which covers all of these concepts, it therefore makes sense to use EFO as the primary annotation source. However, if only annotations for species are required, the NCBI taxonomy should be used directly to ensure completeness, since not all species in NCBItaxon will have been imported into EFO.
+
 
 
 ### Selection Criteria
 
-A set of widely accepted criteria for selecting terminologies (or other reporting standards) do not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and BioSharing ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point top define the eTRIKS criteria for excluding and/or including a terminology resource.
-
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as ["A sea of standards for omics data: sink or swim?"](https://doi.org/10.1136/amiajnl-2013-002066) and ["Ten Simple Rules for Selection a Bio-ontology"](https://doi.org/10.1371/journal.pcbi.1004743) providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.
 
 
 *   **Exclusion criteria**:
-    * 🔸  absent licence or terms of use (_indicator of usability_)
+    * 🔸 absent licence or terms of use (_indicator of usability_)
     * 🔸 restrictive licences or terms of use with restrictions on redistribution and reuse 
     * 🔸 absence of term definitions 
     * 🔸 absence of sufficient class metadata (_indicator of quality_)
-    * 🔸  absence of sustainability indicators (_absence of funding records_) 
+    * 🔸 absence of sustainability indicators (_absence of funding records_) 
  
 *   **Inclusion criteria**:
     * 🔰  scope and coverage meets the requirements of the concept identified
@@ -179,19 +180,19 @@ A set of widely accepted criteria for selecting terminologies (or other reportin
     * 🔰  size of resource (_indicator of coverage_)
     * 🔰  number of classes and subclasses (_indicator of depth_)
     * 🔰  number of terms having definitions and synonyms (_indicator of richness_)
-    * 🔰  presence of an help desk and contact point (_indicator of community support_)
+    * 🔰  presence of a help desk and contact point (_indicator of community support_)
     * 🔰  presence of term submission tracker / issue tracker (_indicator of resource agility and capability to grow upon request_)
     * 🔰  potential integrative nature of the resource (_as indicator of translational application potential_)
     * 🔰  licensing information available (_as indicator of freedom to use_)
-    * 🔰  use of of top level ontology (_as indicator of a resource built for generic use_)
+    * 🔰  use of a top level ontology (_as indicator of a resource built for generic use_)
     * 🔰  pragmatism (_as indicator of actual, current real life practice)_
     * 🔰  possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
 
 
 ### Set of Core Terminologies 
 
-The terminologies have been organized by theme and scope. When possible, sections are organized by `granularity levels`, progressing from `macroscopic scale` (organism) to `microscopic scale` (tissue, cells) and `molecular scale` (macromolecules, proteins, small molecules, xenobiotic chemicals).
-Domains also cover `Processes` or `Action` and their `participants` or `agents` but also can be organized from `general/generic` (disease) to `specialized/specific` (infectious disease).
+The terminologies presented here have been organized by theme and scope. When possible, sections are organized by `granularity levels`, progressing from `macroscopic scale` (organism) to `microscopic scale` (tissue, cells) and `molecular scale` (macromolecules, proteins, small molecules, xenobiotic chemicals).
+Domains also cover `processes` or `actions` and their `participants` or `agents` but also can be organized from `general/generic` (disease) to `specialized/specific` (infectious disease).
 
 
 ### Organism, Organism Parts and Developmental Stages
