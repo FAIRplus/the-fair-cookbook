@@ -78,7 +78,9 @@ We have updated the scoring for the transcriptomics data to this new version (v0
         *   44% for the recommended indicators
         *   6 indicators were thought to be not applicable
 
-The FAIRness level of the transcriptomics dataset for the HUH-7 cell line (as published on SRA) was also determined using the [FAIR evaluation services](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!) (an online evaluator). The result was this dataset only passed for 3 out of the 22 indicators tested. This was mainly due to the limitations on machine readability of metadata and license details within SRA. The complete results can be viewed [here](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/evaluations/170). 
+The FAIRness level of the transcriptomics dataset for the HUH-7 cell line (as published on SRA) was also determined using the [FAIR evaluation services](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!) (an online evaluator). The result was this dataset only passed for 3 out of the 22 indicators tested. This was mainly due to the limitations on machine readability of metadata and license details within SRA. 
+
+The complete results can be viewed <a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/evaluations/170">here</a>. 
 
 
 ## Summary
