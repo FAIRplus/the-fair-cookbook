@@ -1,0 +1,42 @@
+name: build-from-migrating-branch-and-deploy-to-external-repo
+on:
+  push:
+    branches:
+      - migrating
+
+jobs:
+  build-and-deploy-to-other-repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout dev branch 🛎️
+      uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      with:
+        persist-credentials: false
+        ref: migrating
+    - name: Setup Python
+      uses: actions/setup-python@v2
+    - name: Record Python version
+      run: python -V
+    - name: Install jupyter-book 
+      run: >
+           pip install 
+           jupyter-book 
+    - name: Record used pip packages
+      run: pip freeze 
+    - name: Build jupyter-book
+      run: jupyter-book build .
+    - name: Record current directory structure
+      run: ls -alhR 
+    - name: Install SSH Client 🔑
+      uses: webfactory/ssh-agent@v0.4.1
+      with:
+        ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        SSH: true
+        BASE_BRANCH: migrating #The branch of this repository which should be transfered from.
+        REPOSITORY_NAME: FAIRplus/cookbook-dev # The repository on github.com to which will be deployed = pushed.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: docs # The folder the action should deploy.
+        
