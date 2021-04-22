@@ -58,7 +58,7 @@ launch_buttons:
 repository:
   url                       : https://github.com/FAIRplus/the-fair-cookbook  # The URL to your book's repository
   path_to_book              : ""  # A path to your book's folder, relative to the repository root.
-  branch                    : migration  # Which branch of the repository should be used when creating links
+  branch                    : migrating  # Which branch of the repository should be used when creating links
 
 #######################################################################################
 # Advanced and power-user settings  
@@ -66,6 +66,7 @@ sphinx:
   extra_extensions          :   # A list of extra extensions to load by Sphinx.
    # - sphinx_tabs.tabs
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
+    html_extra_path         : ["_inject_after_build"]
 
 bibtex_bibfiles:
    - ./_bibliography/fairbookreferences.bib
