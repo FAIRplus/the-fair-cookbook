@@ -133,13 +133,17 @@ jobs:
             zipp==3.4.1
     - name: Record used pip packages
       run: pip freeze 
-    - name: Install mermaid
+    - name: Install mermaid via npm
       run: npm install @mermaid-js/mermaid-cli
     - name: Record mermaid version 
       run: ./node_modules/.bin/mmdc -V
-    - name: Convert all mermaid files (DUMMY FOR NOW)
-      run: ./node_modules/.bin/mmdc -h
-    - name: Remove mermaid
+    - name: Convert all mermaid files to svg files
+      run: >
+           find -iname *.mmd . > all_mermaid_files &&
+           cat all_mermaid_files &&
+           cat all_mermaid_files | while read line; do./node_modules/.bin/mmdc -i $line; done &&
+           rm  all_mermaid_files
+    - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
     - name: Build jupyter-book
       run: jupyter-book build .
