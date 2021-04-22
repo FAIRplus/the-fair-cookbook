@@ -137,12 +137,12 @@ jobs:
       run: npm install @mermaid-js/mermaid-cli
     - name: Record mermaid version 
       run: ./node_modules/.bin/mmdc -V
-    - name: Convert all mermaid files to svg files
-      run: >
-           find -iname *.mmd . > all_mermaid_files &&
-           cat all_mermaid_files &&
-           cat all_mermaid_files | while read line; do./node_modules/.bin/mmdc -i $line; done &&
-           rm  all_mermaid_files
+    - name: Search all mermaid files
+      run: find -iname "*.mmd" . > all_mermaid_files && cat all_mermaid_files
+    - name: Convert all mermaid files to svg
+      run: cat all_mermaid_files | while read line; do ./node_modules/.bin/mmdc -i $line ; done
+    - name: Cleanup of intermediates
+      run: rm all_mermaid_files
     - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
     - name: Build jupyter-book
