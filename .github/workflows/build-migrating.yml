@@ -132,6 +132,10 @@ jobs:
             zipp==3.4.1
     - name: Record used pip packages
       run: pip freeze 
+    - name: Install mermaid
+      run: npm install @mermaid-js/mermaid-cli
+    - name: Record mermaid version 
+      run: ./node_modules/.bin/mmdc -h
     - name: Build jupyter-book
       run: jupyter-book build .
     - name: Record current directory structure
