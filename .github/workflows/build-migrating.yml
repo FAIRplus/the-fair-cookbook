@@ -137,8 +137,10 @@ jobs:
       run: npm install @mermaid-js/mermaid-cli
     - name: Record mermaid version 
       run: ./node_modules/.bin/mmdc -V
-    - name: Search all mermaid files
-      run: find -iname "*.mmd" . > all_mermaid_files && cat all_mermaid_files
+    - name: Search all mermaid files and record a list of them
+      run: find . -iname "*.mmd" > all_mermaid_files 
+    - name: Print the list of mermaid files 
+      run: cat all_mermaid_files
     - name: Convert all mermaid files to svg
       run: cat all_mermaid_files | while read line; do ./node_modules/.bin/mmdc -i $line ; done
     - name: Cleanup of intermediates
