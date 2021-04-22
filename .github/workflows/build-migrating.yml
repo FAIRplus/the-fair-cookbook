@@ -151,5 +151,5 @@ jobs:
         BASE_BRANCH: migrating #The branch of this repository which should be transfered from.
         REPOSITORY_NAME: FAIRplus/cookbook-dev # The repository on github.com to which will be deployed = pushed.
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: docs # The folder the action should deploy.
+        FOLDER: _build/html # The folder the action should deploy.
         
