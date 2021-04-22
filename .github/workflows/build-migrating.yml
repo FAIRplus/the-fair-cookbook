@@ -19,7 +19,7 @@ jobs:
       run: python -V
     - name: Install jupyter-book==0.10.2 and fixed dependencies
       run: >
-           pip install 
+            pip install 
             alabaster==0.7.12
             anyio==2.2.0
             argon2-cffi==20.1.0
