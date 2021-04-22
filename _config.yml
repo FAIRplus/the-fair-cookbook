@@ -67,6 +67,8 @@ sphinx:
    # - sphinx_tabs.tabs
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
     html_extra_path         : ["_inject_after_build"]
+  local_extensions:
+    panels_fairplus: _ext/
 
 bibtex_bibfiles:
    - ./_bibliography/fairbookreferences.bib
