@@ -1,10 +1,10 @@
  #######################################################################################
 # Book settings
-title                       :  # The title of the book. Will be placed in the left navbar.
+title                       : "" # The title of the book. Will be placed in the left navbar.
 author                      : The FAIRplus project members  # The author of the book
 copyright                   : "2020 (CC-BY 4.0)"  # Copyright year to be placed in the footer
 logo                        : "./_static/cookbook-logo-small.png"  # A path to the book logo
-exclude_patterns            : []  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : [.github/*, README.md ]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
