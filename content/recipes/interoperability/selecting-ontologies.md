@@ -197,95 +197,13 @@ Domains also cover `Processes` or `Action` and their `participants` or `agents` 
 
 The resources listed here focus on providing structured vocabularies to describe `taxonomic` and `anatomical` information. The table below also shows 
 
-<table>
-  <tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-   <td><strong>Comment</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Organism</strong>
-   </td>
-   <td>NCBITaxonomy
-   </td>
-   <td><a href="http://purl.obolibrary.org/obo/ncbitaxon.owl">http://purl.obolibrary.org/obo/ncbitaxon.owl</a>
-   </td>
-   <td>none specified
-   </td>
-   <td>This ontology is made available via the UMLS. Users of all UMLS ontologies must abide by the terms of the UMLS license, available at <a href="https://uts.nlm.nih.gov/license.html">https://uts.nlm.nih.gov/license.html</a>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-    <tr>
-   <td><strong>Vertebrate </strong>
-<p>
-<strong>Anatomy</strong>
-   </td>
-   <td>UBERON
-   </td>
-   <td><a href="http://purl.obolibrary.org/obo/uberon/ext.owl">http://purl.obolibrary.org/obo/uberon/ext.owl</a>
-<p>
-<a href="http://purl.obolibrary.org/obo/uberon/ext.obo">http://purl.obolibrary.org/obo/uberon/ext.obo</a>
-   </td>
-   <td>BFO
-   </td>
-   <td><a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>https://github.com/obophenotype/uberon/issues
-   </td>
-   <td><em>Integrative Resource</em>
-<p>
-<em>engineered to go across species </em>
-   </td>
-  </tr>
-<tr>
-   <td><strong>Mouse Anatomy</strong>
-   </td>
-   <td>MA
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>  
-  <tr>
-   <td><strong>Strain</strong>
-   </td>
-   <td>Rat Strain Ontology
-   </td>
-   <td>http://data.bioontology.org/ontologies/RS/submissions/46/download?apikey=4ea81d74-8960-4525-810b-fa1baab576ff
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  
-</table>
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|Comment|
+|--- |--- |--- |--- |--- |--- |--- |
+|**Organism**|NCBITaxonomy|http://purl.obolibrary.org/obo/ncbitaxon.owl|none specified|This ontology is made available via the UMLS. Users of all UMLS ontologies must abide by the terms of the [UMLS license](https://uts.nlm.nih.gov/license.html)|||
+|**Vertebrate Anatomy**|UBERON|http://purl.obolibrary.org/obo/uberon/ext.owl;http://purl.obolibrary.org/obo/uberon/ext.obo|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/obophenotype/uberon/issues|Integrative Resource engineered to go across species|
+|**Mouse Anatomy**|MA||||||
+|**Strain**|Rat Strain Ontology|http://data.bioontology.org/ontologies/RS/submissions/46/download?apikey=4ea81d74-8960-4525-810b-fa1baab576ff|||||
+
 
 
 In research, many different model organism are used (e.g. Dogs, Monkeys...) and specialized resources may be available. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.
@@ -297,307 +215,29 @@ In research, many different model organism are used (e.g. Dogs, Monkeys...) and 
 
 Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones,  biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.
 
-<table>
-  <tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Pathology/Disease (generic)</strong>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>SNOMED-CT
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>http://www.ihtsdo.org/licensing/
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>NCI thesaurus
-   </td>
-   <td><a href="http://evs.nci.nih.gov/ftp1/NCI_Thesaurus">http://evs.nci.nih.gov/ftp1/NCI_Thesaurus</a>
-   </td>
-   <td>
-   </td>
-   <td>http://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>ICD-10
-   </td>
-   <td>
-   </td>
-   <td><a href="http://apps.who.int/classifications/apps/icd/ClassificationDownloadNR/login.aspx?ReturnUrl=%2fclassifications%2fapps%2ficd%2fClassificationDownload%2fdefault.aspx">login required"</a>
-   </td>
-   <td><a href="http://www.who.int/about/copyright/en/">http://www.who.int/about/copyright/en/</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>UMLS
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>http://www.nlm.nih.gov/databases/umls.html
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>DOID
-   </td>
-   <td><a href="http://purl.obolibrary.org/obo/doid.owl">http://purl.obolibrary.org/obo/doid.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
-   </td>
-   <td>https://github.com/DiseaseOntology/HumanDiseaseOntology/issues
-   </td>
-  </tr>
-    <tr>
-   <td>
-   </td>
-   <td>MONDO
-   </td>
-   <td><a href="http://purl.obolibrary.org/obo/doid.owl">http://purl.obolibrary.org/obo/mondo.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
-   </td>
-   <td>https://github.com/monarch-initiative/mondo/issues
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>IDO
-   </td>
-   <td><a href="https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl">https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td>
-<p>
-<a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>https://code.google.com/p/infectious-disease-ontology/issues/list
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Phenotype</strong>
-   </td>
-   <td>HP
-   </td>
-   <td><a href="http://purl.obolibrary.org/obo/hp.owl">http://purl.obolibrary.org/obo/hp.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td>
-<p>
-<a href="https://hpo.jax.org/app/license">HPO Licence</a>
-   </td>
-   <td>https://github.com/obophenotype/human-phenotype-ontology/issues/
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Mouse Phenotype</strong>
-   </td>
-   <td>MPO
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>PATO
-   </td>
-   <td>
-   </td>
-   <td>BFO
-   </td>
-   <td>
-   </td>
-   <td>http://sourceforge.net/p/obo/phenotypic-quality-pato-requests/
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>MedDRA
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>This ontology is freely accessible on this site for academic and other non-commercial uses. Users anticipating any commercial use of MedDRA must contact the MSSO to obtain a license.
-   </td>
-   <td><a href="https://mssotools.com/webcr/">https://mssotools.com/webcr/</a>
-<p>
-Login required
-   </td>
-  </tr>
-</table>
 
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
+|--- |--- |--- |--- |--- |--- |
+|**Pathology/Disease (generic)**||||||
+||SNOMED-CT|||[SNOMED license](http://www.ihtsdo.org/licensing/)||
+||NCI thesaurus|http://evs.nci.nih.gov/ftp1/NCI_Thesaurus|| [NCI license](http://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm)||
+||ICD-10||login required|[WHO license](http://www.who.int/about/copyright/en/)||
+||UMLS|||[UMLS license](http://www.nlm.nih.gov/databases/umls.html)||
+||DOID|http://purl.obolibrary.org/obo/doid.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/DiseaseOntology/HumanDiseaseOntology/issues|
+||MONDO|http://purl.obolibrary.org/obo/mondo.owl|BFO| [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/monarch-initiative/mondo/issues|
+||IDO|https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/infectious-disease-ontology/issues/list|
+|**Phenotype**|HP|http://purl.obolibrary.org/obo/hp.owl|BFO| [HPO Licence](https://hpo.jax.org/app/license) |https://github.com/obophenotype/human-phenotype-ontology/issues/|
+||MedDRA|||This ontology is freely accessible on this site for academic and other non-commercial uses. Users anticipating any commercial use of MedDRA must contact the MSSO to obtain a license.|https://mssotools.com/webcr/ login required|
 
 
 ### Pathology and Disease Specific Resources
 
 
-<table>
-  <tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Influenza</strong>
-   </td>
-   <td>FLU
-   </td>
-   <td>
-   </td>
-   <td>BFO
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Malaria</strong>
-   </td>
-   <td>IDOMAL
-   </td>
-   <td>
-   </td>
-   <td>BFO
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Dengue Fever</strong>
-   </td>
-   <td>IDODEN
-   </td>
-   <td>
-   </td>
-   <td>BFO
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Alzheimer Disease</strong>
-   </td>
-   <td>
-   ADO
-   </td>
-   <td>
-      <a href="https://www.scai.fraunhofer.de/content/dam/scai/de/downloads/bioinformatik/ontologies/ADO/ADO.zip">https://www.scai.fraunhofer.de/content/dam/scai/de/downloads/bioinformatik/ontologies/ADO/ADO.zip</a>
-   </td>
-   <td>
-   BFO
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
- 
-   <td><strong>Immune disorder</strong>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Rare disorder</strong>
-   </td>
-   <td>ORDO
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
+|--- |--- |--- |--- |--- |--- |
+|**Malaria**|IDOMAL||BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  ||
+|**Alzheimer Disease**|ADO|https://www.scai.fraunhofer.de/content/dam/scai/de/downloads/bioinformatik/ontologies/ADO/ADO.zip|BFO|||
+|**Rare disorder**|ORDO|||[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)||
 
 
 
@@ -605,92 +245,14 @@ Login required
 
 Following on through our review of semantic resources by granularity levels, this section details a number of reference resources which provide coverage for the describing `cell types`, `cell lines` and `cellular phenotypes`.
 
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
+|--- |--- |--- |--- |--- |--- |
+|**Cell**|CL|http://purl.obolibrary.org/obo/cl.owl http://purl.obolibrary.org/obo/cl.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://code.google.com/p/cell-ontology/issues/list|
+|**Cell Lines**|Cellosaurus|ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo ftp://ftp.expasy.org/databases/cellosaurus|| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)||
+|**Cell Lines**|CLO|http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/clo-ontology/issues/list|
+|**Cell Molecular Phenotype Ontology**|CMPO|https://github.com/EBISPOT/CMPO/tree/master/release|BFO| [none specified]()||
 
-<table>
-  <tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-   </tr>
 
-<tr>
-   <td><strong>Cell</strong>
-   </td>
-   <td>CL
-   </td>
-   <td><a href="http://purl.obolibrary.org/obo/cl.owl">http://purl.obolibrary.org/obo/cl.owl</a>
-<p>
-<a href="http://purl.obolibrary.org/obo/cl.obo">http://purl.obolibrary.org/obo/cl.obo</a>
-   </td>
-   <td>BFO
-   </td>
-   <td>most probably:
-<p>
-<a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>https://code.google.com/p/cell-ontology/issues/list
-   </td>
-  </tr>
-  <tr>
-  <td>
-  <strong>Cell Lines</strong>
-</td>
-<td>
-Cellosaurus
-</td>
-
-<td>
-<a href="ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo">ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo</a>
-
-<a href="ftp://ftp.expasy.org/databases/cellosaurus">ftp://ftp.expasy.org/databases/cellosaurus</a>
-</td>
-<td>
-</td>
-<td><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>
-</td>
-<td>
-</td>
-</tr>  
-  <tr>
-   <td><strong>Cell Lines</strong>
-   </td>
-   <td>CLO
-   </td>
-   <td><a href="http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl">http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td>most probably:
-<p>
-<a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>https://code.google.com/p/clo-ontology/issues/list
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Cell Molecular Phenotype Ontology</strong>
-   </td>
-   <td>CMPO
-   </td>
-   <td>https://github.com/EBISPOT/CMPO/tree/master/release
-   </td>
-   <td>BFO
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
 
 
 ### Molecular Entities
@@ -698,280 +260,45 @@ Cellosaurus
 This section highlights the major and most widely used OBO Foundry resources for `molecules of biological relevance` as well as `molecular structures`, `biological processes` and `cellular components` 
 
 
-<table>
-  <tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Chemicals and Small Molecules</strong>
-   </td>
-   <td>CHEBI
-   </td>
-   <td><a href="http://ftp.ebi.ac.uk/chebi.owl">http://ftp.ebi.ac.uk/chebi.owl</a>
-<p>
-<a href="http://ftp.ebi.ac.uk/chebi.obo">http://ftp.ebi.ac.uk/chebi.obo</a>
-   </td>
-   <td>BFO
-   </td>
-   <td>most probably:
-<p>
-<a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>http://sourceforge.net/p/chebi/annotation-issues/
-   </td>
-  </tr>
- 
-  <tr>
-   <td><strong>Gene Function, Molecular Component, Biological Process</strong>
-   </td>
-   <td>GO
-   </td>
-   <td><a href="http://purl.obolibrary.org/obo/go.obo">http://purl.obolibrary.org/obo/go.obo</a>
-<p>
-<a href="http://purl.obolibrary.org/obo/go.owl">http://purl.obolibrary.org/obo/go.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td>CC-by 4.0<a href="https://creativecommons.org/licenses/by/4.0/legalcode"> Unported License</a>
-   </td>
-   <td>http://sourceforge.net/p/geneontology/ontology-requests/
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Protein/peptide</strong>
-   </td>
-   <td>PRO
-   </td>
-   <td><a href="http://ftp.pir.georgetown.edu/pro.obo">http://ftp.pir.georgetown.edu/pro.obo</a>
-   </td>
-   <td>BFO
-   </td>
-   <td><a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
+|--- |--- |--- |--- |--- |--- |
+|**Chemicals and Small Molecules**|CHEBI|http://ftp.ebi.ac.uk/chebi.owl http://ftp.ebi.ac.uk/chebi.obo| BFO|[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/chebi/annotation-issues/|
+|**Gene Function, Molecular Component, Biological Process**|GO|http://purl.obolibrary.org/obo/go.obo http://purl.obolibrary.org/obo/go.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/geneontology/ontology-requests/|
+|**Protein/peptide**|PRO|http://ftp.pir.georgetown.edu/pro.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) ||
+
 
 Besides these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resource is relevant.
 
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
+|--- |--- |--- |--- |--- |--- |
+|Drug|National Drug File|||[NIH license](https://uts.nlm.nih.gov/license.html)||
 
-<table>
-<tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-  </tr>
- <tr>
-   <td><strong>Drug</strong>
-   </td>
-   <td>National Drug File
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td><a href="https://uts.nlm.nih.gov/license.html">https://uts.nlm.nih.gov/license.html</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
+
 
 ### Assays and Technologies
 
 The resources listed in the section are providing key descriptors bridging data acquisition procedures (as used in clinical setting and wet lab work) with instruments, units of measurements, endpoints as well as sometimes the biological process or molecular entities of biological significance.
 Some of the resources are specialized semantic artefact developed to support the standardized reporting of data modalities.
 
-<table>
-<tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-  </tr>
-<tr>
-   <td><strong>Radiology</strong>
-   </td>
-   <td>RADLex
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Medical Imaging</strong>
-   </td>
-   <td>DICOM
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
+|--- |--- |--- |--- |--- |--- |
+|**Radiology**|RADLex|https://data.bioontology.org/ontologies/RADLEX/submissions/41/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb||||
+|**Medical Imaging**|DICOM|http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html||||
+|**Sample Processing/Reagents/Instruments Assay Definition**|OBI|http://svn.code.sf.net/p/obi/code/releases/2014-03-29/obi.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|http://sourceforge.net/p/obi/obi-terms/|
+|**Biological screening assays and their results including high-throughput screening (HTS)**|BAO|http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl|BFO| [CC-by-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) ||
+|**Mass Spectrometry (instrument/acquisition parameter/spectrum related information)**|PSI-MS|http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo (No OWL file)|none specified| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://lists.sourceforge.net/lists/listinfo/psidev-vocab|
+|**NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)**|NMR-CV|http://nmrml.org/cv/v1.0.rc1/nmrCV.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/nmrML/nmrML/issues?state=open|
+|**Laboratory test**|LOINC|LOINC and RELMA Complete Download File (All Formats Included)|none specified| [RELMA license](https://uts.nlm.nih.gov/license.html) ||
 
-<table>
-  <tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Sample Processing/Reagents/Instruments</strong>
-<p>
-<strong>Assay Definition</strong>
-   </td>
-   <td>OBI
-   </td>
-   <td><a href="http://svn.code.sf.net/p/obi/code/releases/2014-03-29/obi.owl">http://svn.code.sf.net/p/obi/code/releases/2014-03-29/obi.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td><a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td><a href="http://sourceforge.net/p/obi/obi-terms/">http://sourceforge.net/p/obi/obi-terms/</a>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Biological screening assays and their results including high-throughput screening (HTS) </strong>
-   </td>
-   <td>BAO
-   </td>
-   <td>http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl
-   </td>
-   <td>BFO
-   </td>
-   <td><a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-   
-  <tr>
-   <td><strong>Mass Spectrometry (instrument/acquisition parameter/spectrum related information)</strong>
-   </td>
-   <td>PSI-MS
-   </td>
-   <td><a href="http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo">http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo</a>
-<p>
-(No OWL file)
-   </td>
-   <td>none specified
-   </td>
-   <td><a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>https://lists.sourceforge.net/lists/listinfo/psidev-vocab
-   </td>
-  </tr>
-  <tr>
-   <td><strong>NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)</strong>
-   </td>
-   <td>NMR-CV
-   </td>
-   <td><a href="http://nmrml.org/cv/v1.0.rc1/nmrCV.owl">http://nmrml.org/cv/v1.0.rc1/nmrCV.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td>Creative Commons Public Domain Mark 1.0
-   </td>
-   <td><a href="https://github.com/nmrML/nmrML/issues?state=open">https://github.com/nmrML/nmrML/issues?state=open</a
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Laboratory test</strong>
-   </td>
-   <td><strong>LOINC</strong>
-   </td>
-   <td><a href="http://loinc.org/downloads/resolveuid/d5a127cbbecbd1660bb91cec9ef4a26c">LOINC and RELMA Complete Download File (All Formats Included)</a>
-   </td>
-   <td>none specified
-   </td>
-   <td><a href="https://uts.nlm.nih.gov/license.html">https://uts.nlm.nih.gov/license.html</a>
-   </td>
-   <td>wait for Bron ‘s feedback regarding CDISC lab test descriptors to handle/avoid overlap with LOINC coverage
-   </td>
-  </tr>
-</table>
 
 Finally, a resource exists that describes statistical measures, statistical tests or methods as well as statistically relevant graphical representations. It may be used for reporting results and annotating experimental results.
 
-<table>
-<tr>
-   <td><strong>Scope</strong>
-   </td>
-   <td><strong>Name</strong>
-   </td>
-   <td><strong>File location</strong>
-   </td>
-   <td><strong>Top-Level Ontology</strong>
-   </td>
-   <td><strong>Licence</strong>
-   </td>
-   <td><strong>Issue Tracker URI </strong>
-   </td>
-  </tr>
-<tr>
-   <td><strong>Experimental Design, Statistical Methods and Statistical Measures</strong>
-   </td>
-   <td>STATO
-   </td>
-   <td><a href="https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl">https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl</a>
-   </td>
-   <td>BFO
-   </td>
-   <td><a href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a>
-   </td>
-   <td>https://github.com/ISA-tools/stato/issues?state=open
-   </td>
-  </tr>
-</table>
+
+
+|Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
+|--- |--- |--- |--- |--- |--- |
+|Experimental Design, Statistical Methods and Statistical Measures|STATO|https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
+
 
 
 
@@ -991,13 +318,13 @@ In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org
 
 |Scope| File                        | Relation Ontology               | Variant                                                              | License  | 
 |---|-------------------------------|---------------------------------|--------------------------------------------------------------------------------|---|
-|**relations**| ro.owl                        | Relation Ontology               | Canonical edition                                                              | https://creativecommons.org/publicdomain/zero/1.0/  | 
-|**relations**| ro.obo                        | Relation Ontology in obo format | Has imports merged in                                                          |  https://creativecommons.org/publicdomain/zero/1.0/ |
-|**relations**| ro/core.owl                   | RO Core relations               | Minimal subset intended to work with BFO-classes [page]                        |  https://creativecommons.org/publicdomain/zero/1.0/ | 
-|**relations**| ro/ro-base.owl                | RO base ontology                | Axioms defined within RO and to be used in imports for other ontologies [page] | https://creativecommons.org/publicdomain/zero/1.0/  | 
-|**relations**| ro/subsets/ro-interaction.owl | Interaction relations           |                                   |  https://creativecommons.org/publicdomain/zero/1.0/ |
-|**relations**| ro/subsets/ro-eco.owl         | Ecology subset                  |   For use in ecology and environmental science  | https://creativecommons.org/publicdomain/zero/1.0/  | 
-|**relations**| ro/subsets/ro-neuro.owl       | Neuroscience subset             | For use in neuroscience [page]                                                 | https://creativecommons.org/publicdomain/zero/1.0/  |    
+|**relations**| ro.owl                        | Relation Ontology               | Canonical edition                                                              | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  | 
+|**relations**| ro.obo                        | Relation Ontology in obo format | Has imports merged in                                                          |  [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |
+|**relations**| ro/core.owl                   | RO Core relations               | Minimal subset intended to work with BFO-classes [page]                        |  [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) | 
+|**relations**| ro/ro-base.owl                | RO base ontology                | Axioms defined within RO and to be used in imports for other ontologies [page] | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  | 
+|**relations**| ro/subsets/ro-interaction.owl | Interaction relations           |                                   |  [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |
+|**relations**| ro/subsets/ro-eco.owl         | Ecology subset                  |   For use in ecology and environmental science  | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  | 
+|**relations**| ro/subsets/ro-neuro.owl       | Neuroscience subset             | For use in neuroscience [page]                                                 | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  |    
 
 
 As [knowledge graphs]() and [property graphs]() gain importance, we  can expect the range and depth of relations to mature and expands are more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
