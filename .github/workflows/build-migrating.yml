@@ -135,7 +135,11 @@ jobs:
     - name: Install mermaid
       run: npm install @mermaid-js/mermaid-cli
     - name: Record mermaid version 
+      run: ./node_modules/.bin/mmdc -V
+    - name: Convert all mermaid files (DUMMY FOR NOW)
       run: ./node_modules/.bin/mmdc -h
+    - name: Remove mermaid
+      run: rm -rf ./node_modules
     - name: Build jupyter-book
       run: jupyter-book build .
     - name: Record current directory structure
