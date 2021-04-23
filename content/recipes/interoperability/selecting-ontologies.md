@@ -117,17 +117,17 @@ This context refers to data collected during `observation studies`, which in con
 In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients' information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (ODHSI) `open-science community` has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a `data context`.
 
 
-|Semantic Resource|Domain |License |Format |Service|
+|Semantic Resource|Domain |Service|
 |--- |--- |--- |--- |--- |
-|CDISC vocabulary|clinical trial data|||EVS|
-|NCI Thesaurus|biomedicine|||EVS,Bioportal,OLS|
-|SNOMED-CT|pathology|||EVS,Bioportal(§)|
-|UMLS|pathology|||EVS,Bioportal(§)|
-|LOINC|laboratory tests||||
-|RxNORM|drugs|||Bioportal|
+|CDISC vocabulary|clinical trial data|EVS|
+|NCI Thesaurus|biomedicine|EVS,Bioportal,OLS|
+|SNOMED-CT|pathology|EVS,Bioportal(§)|
+|UMLS|pathology|EVS,Bioportal(§)|
+|LOINC|laboratory tests| LOINC |
+|RxNORM|drugs|Bioportal|
 
 
-For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the [`controlled terminology` in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
+For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the `controlled terminology` [in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
 
 
 ### Basic research context
@@ -362,7 +362,7 @@ equivalentClass :
 
 > Selecting semantic resources depends on many different factors. However, the most important factor remains the `context` of the data and associated landscape of data standards as well as the ultimate integration goal, which will dictate the final choice.
 > 
->The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It aslo requires a good understanding of the technical and sometimes legals implications these choice will have.    
+>The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choice will have.    
 
 > ### What should I read next?
 > * [How to build an application ontology?]()
