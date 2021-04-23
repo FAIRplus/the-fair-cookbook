@@ -82,7 +82,11 @@
   title: Improving Interoperability
   numbered: false
   sections:
+      - file: content/recipes/interoperability/identifier-mapping
       # - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+      - file: content/recipes/interoperability/bridgedb-recipe
+        sections:
+          - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
       - file: content/recipes/interoperability/selecting-ontologies
       - file: content/recipes/interoperability/ontology-new-term-request-recipe
       - file: content/recipes/interoperability/ontology-robot-recipe
@@ -94,9 +98,6 @@
           - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
       - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar    
       - file: content/recipes/interoperability/fastq-file-format-validators
-
-
-
 
 # -header: reusability
 - file: content/recipes/reusability
@@ -110,7 +111,6 @@
     - file: content/recipes/reusability/expressing-data-use
     - file: content/recipes/reusability/provenance
     - file: content/recipes/reusability/community-standards
-
  
 - file: content/recipes/applied-examples
   title: Making IMI data FAIR
@@ -128,7 +128,6 @@
     - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
     - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
 
-
 - file: content/recipes/glossary-fair-terms
   title: Glossary of FAIR things
   numbered: true
@@ -142,7 +141,6 @@
     - file: content/recipes/help/how-to-create-recipe-with-gdoc
     - file: content/recipes/help/how-to-create-recipe-with-hackmd
     - file: content/recipes/help/how-to-create-recipe-with-git
-
 
 - file: content/recipes/boilerplate
   title: Miscellaneous

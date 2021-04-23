@@ -1,0 +1,48 @@
+---
+title: "Identifier mapping using BridgeDbR"
+output: html_notebook
+---
+
+
+# Case 1 example
+
+We start by loading the required libraries
+```{r}
+library("BridgeDbR")
+library("tidyverse")
+```
+Then we load the example data and specify the source 
+```{r}
+data_df <- read_tsv('data/case1-example.tsv', col_names=c('identifier'))
+data_df$source = 'H'
+data_df
+```
+We first change the default timeout so the data can be properly downloaded and then load the data for the organism we are mapping from. 
+We then use the maps method to map our data to all possible other data sources.
+```{r}
+options(timeout=300)
+location <- getDatabase('Homo sapiens')
+mapper <- loadDatabase(location)
+maps(mapper, data_df)
+```
+If we only want to map to a specific data source we can also do that by specifying in the maps method as follows
+```{r}
+maps(mapper, data_df, target='En')
+```
+# Case 2 example
+Here we load the data specifying the column names
+```{r}
+data_df <- read_tsv('data/case2-example.tsv', col_names=c('local', 'identifier'))
+data_df$source = 'H'
+data_df
+```
+Now as before we can map either by specifying the target data source or not
+```{r}
+mapping = maps(mapper, data_df, target='En')
+mapping
+```
+And we join it with our local identifiers
+```{r}
+right_join(data_df, mapping)
+```
+

@@ -88,7 +88,8 @@ class PanelFairplus(Directive):
 
 
         # difficulty_level
-        assert self.options["difficulty_level"] in CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL, \
+        assert      self.options["difficulty_level"]  in CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL or \
+                str(self.options["difficulty_level"]) in CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL , \
             sphinx.errors.ExtensionError(
                 _make_string_red(
                     f"The value of difficulty_level has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL))} ."
