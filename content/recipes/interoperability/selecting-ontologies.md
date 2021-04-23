@@ -94,15 +94,15 @@ Here, we present the three most common scenarios in biomedical research:
 Operating in the field of Clinical Trials means that datasets are generated during `interventional studies`, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents, in order to gain insights in terms of benefits in patient outcomes.
 In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by regulators such as FDA reviewers in the US. The [CDISC standards](https://www.cdisc.org/standards) are the *`de-facto standard`* in this area, which mandates the use of semantics resources such as:
 
-| Semantic Resource | Domain | License | Format | Service |
-| -- | -- | -- | -- | -- |
-| CDISC vocabulary|clinical trial data| | | EVS |
-| NCI Thesaurus|biomedicine|||EVS,Bioportal,OLS|
-| SNOMED-CT|pathology|||EVS,Bioportal(§)|
-| UMLS|pathology|||EVS,Bioportal(§)|
-| LOINC|laboratory tests|||Loinc|
-| RxNORM|drugs|||Bioportal|
-| GUDID|instruments|||FDA|
+| Semantic Resource | Domain  | Service |
+| -- | -- | -- | 
+| CDISC vocabulary|clinical trial data| EVS |
+| NCI Thesaurus|biomedicine|EVS,Bioportal,OLS|
+| SNOMED-CT|pathology|EVS,Bioportal(§)|
+| UMLS|pathology|EVS,Bioportal(§)|
+| LOINC|laboratory tests|Loinc|
+| RxNORM|drugs|Bioportal|
+| GUDID|instruments|FDA|
 
 All available from the [NCBI EVS system](https://evs.nci.nih.gov/), [LOINC](https://loinc.org/), [OLS](https://www.ebi.ac.uk/ols/index) or [Bioportal](https://bioportal.bioontology.org/).
  
@@ -118,7 +118,7 @@ In this specific context, one model and associated set of standards has been par
 
 
 |Semantic Resource|Domain |Service|
-|--- |--- |--- |--- |--- |
+|--- |---  |--- |
 |CDISC vocabulary|clinical trial data|EVS|
 |NCI Thesaurus|biomedicine|EVS,Bioportal,OLS|
 |SNOMED-CT|pathology|EVS,Bioportal(§)|
