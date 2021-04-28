@@ -427,7 +427,7 @@ You can find ready-made methods to map using R and Python for the given use case
 ## References
 
 ---
-```{bibliography} bridgedb/BridgeDb.bib
+```{bibliography} ./bridgedb/BridgeDb.bib
 
 ```
 
