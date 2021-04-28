@@ -233,7 +233,7 @@ class PanelFairplus(Directive):
 def setup(app):
     app.setup_extension("sphinx_panels")
 
-    app.add_directive("panel_fairplus", PanelFairplus)
+    app.add_directive("panels_fairplus", PanelFairplus)
 
     return {
         'version': '0.1',
