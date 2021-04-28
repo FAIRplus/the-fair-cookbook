@@ -5,7 +5,7 @@
 
 ----
 
-````{helloworld}
+````{panel_fairplus}
 :identifier_text: http://w3id.org/faircookbook/FCB002
 :identifier_link: http://w3id.org/faircookbook/FCB002
 :difficulty_level: 2
