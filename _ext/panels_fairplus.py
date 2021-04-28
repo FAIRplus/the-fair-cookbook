@@ -164,9 +164,8 @@ class PanelFairplus(Directive):
             '',
             '<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>',
             '^^^',
-            '<h4><b>Recipe metadata</b></h4>',
-            f'identifier: <a href="{self.options["identifier_link"]}">{self.options["identifier_text"]}</a> ',
-            'version: v1.0.0',
+            '<h4><b>Identifier</b></h4>',
+            f'<i class="fa fa-map-signs fa-lg" style="color:#7e0038;"></i> <a href="{self.options["identifier_link"]}">{self.options["identifier_text"]}</a> ',
             '',
             '---',
             '<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>',
@@ -234,7 +233,7 @@ class PanelFairplus(Directive):
 def setup(app):
     app.setup_extension("sphinx_panels")
 
-    app.add_directive("helloworld", PanelFairplus)
+    app.add_directive("panel_fairplus", PanelFairplus)
 
     return {
         'version': '0.1',
