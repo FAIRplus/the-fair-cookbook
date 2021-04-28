@@ -6,8 +6,8 @@
 ----
 
 ````{helloworld}
-:identifier_text: RX.X
-:identifier_link: http://invalid
+:identifier_text: http://w3id.org/faircookbook/FCB002
+:identifier_link: http://w3id.org/faircookbook/FCB002
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 15
