@@ -49,7 +49,7 @@
 ___
 
 
-**IMI** stands for **Innovative Medicine Initiative** and is an European project. More precisely, it is a `joint initiative` (public-private partnership) of the `DG Research of the European Commission`, representing the `European Communities`, and the `European Federation of Pharmaceutical Industries and Associations` (EFPIA).
+**IMI** stands for **Innovative Medicine Initiative** and is an European project (Research Organization Registry identifier: [https://ror.org/019af4n30](https://ror.org/019af4n30)). More precisely, it is a `joint initiative` (public-private partnership) of the `DG Research of the European Commission`, representing the `European Communities`, and the `European Federation of Pharmaceutical Industries and Associations` (EFPIA).
 IMI is built as a **Joint Technology Initiative**, one of the specific project type / instrument available to the EU and  meant to be implemented as a **Joint Undertaking**. The main goal of the IMI is, to quote the IMI site, "to improve health by speeding up the development of, and patient access to, innovative medicines, particularly in areas where there is an unmet medical or social need".
 
 <!-- <div style="justify-content: center;">
