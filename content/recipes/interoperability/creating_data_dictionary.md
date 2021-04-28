@@ -182,7 +182,9 @@ classDef box5 font-family:avenir,font-size:14px,fill:#FF3371,stroke:#222,color:#
 | 3\_SampleMapping.txt | SUBJECT\_ID        | Subject number            | https://schema.org/identifier <br/> N/A, see CDISC cross-referencing approach                       | https://schema.org  <br/> CDISC:CDASHIG/SDTMIG      | ordinal variable          | integer            |               |                   |                   |            |                          |                                 |                         |                | SAMPLE\_ID             | Y        | FORM 3               |                                             |
 | 3\_SampleMapping.txt | SAMPLE\_ID         | Sample ID                 | https://schema.org/identifier <br/> N/A, see CDISC cross-referencing approach                       | https://schema.org  <br/> CDISC:CDASHIG/SDTMIG      | categorical variable      | string             |               |                   |                   |             |                          |                                 |                         |                | SUBJECT\_ID            | Y        | FORM 3               |                                             |                                          |
 
-*Here, we present two complementary options for expressing variable types. Semantic types such as schema.org or ontology terms enhance the findability of the data in repositories. Anchoring the variables in a domain-relevant data standard such as CDISC (as shown here) or the OMOP CDM helps improve interoperability with other datasets in that domain. It should be noted that CDISC-compliant datasets group variables slightly differently to the format suggested here. Records are grouped by `Domain` such as vital signs (VS) and demographics (DM). Records represent one single measurement, so rather than capturing both height and weight in one record, like in the data dictionary here, these would be separate records in the VS domain, with test name (VSTESTCD) height or weight, respectively. CDISC also has a specific way of cross-referencing records, which is not cleanly mappable to do simpler approach suggested in this sample data dictionary. For further information on the CDISC model, please visit https://www.cdisc.org/.   
+*Here, we present two complementary options for expressing variable types. Semantic types such as schema.org or ontology terms enhance the findability of the data in repositories. Anchoring the variables in a domain-relevant data standard such as CDISC (as shown here) or the OMOP CDM helps improve interoperability with other datasets in that domain. 
+
+It should be noted that CDISC-compliant datasets group variables slightly differently to the format suggested here. Records are grouped by `Domain` such as vital signs (VS) and demographics (DM). Records represent one single measurement, so rather than capturing both height and weight in one record, like in the data dictionary here, these would be separate records in the VS domain, with test name (VSTESTCD) height or weight, respectively. CDISC also has a specific way of cross-referencing records, which is not cleanly mappable to do simpler approach suggested in this sample data dictionary. For further information on the CDISC model, please visit https://www.cdisc.org/.   
 ___
 
 ## Elements that should be included when building a data dictionary
@@ -197,7 +199,6 @@ ___
 * **Field Size:** The size (length) of the variable value, e.g. 8 digits, 5,3 (for floating numbers)...
 * **Max Allowed Value:** Upper limit of the allowed value.
 * **Min Allowed Value:** Lower limit of the allowed value.
-* **Unit:** Unit of the value.
 * **Regex:** a regular expression allowing input validation in the case the value should follow a certain pattern (e.g. "\d{5}" for a 5-digit `Post Code`).
 * **Allowed Values:** Customised list of allowed values (e.g. "M" and "F" for Gender).
 * **Allowed Value Description:** Annotation of the list of allowed values (e.g.: M=male;F=female).
@@ -258,7 +259,11 @@ insert example generating a frictionless package from the example
 include RDFType
 
 ```
+---
 
+## Data Dictionary Mapping in FAIRplus
+
+While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary. The FAIRplus project is in the process of working the [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
 
 ---
 ## Conclusion:
