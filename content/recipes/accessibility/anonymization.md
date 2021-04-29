@@ -4,16 +4,16 @@
 <br/>
 
 ----
-<!-- 
+
 ````{helloworld}
 :identifier_text: RX.X
 :identifier_link: http://invalid
-:difficulty_level: 2
+:difficulty_level: "2"
 :recipe_type: background_information
 :reading_time_minutes: 15
 :intended_audience: funder, principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-```` -->
+````
 
 
         
