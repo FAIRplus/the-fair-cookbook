@@ -88,7 +88,8 @@ class PanelFairplus(Directive):
 
 
         # difficulty_level
-        assert self.options["difficulty_level"] in CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL, \
+        assert      self.options["difficulty_level"]  in CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL or \
+                str(self.options["difficulty_level"]) in CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL , \
             sphinx.errors.ExtensionError(
                 _make_string_red(
                     f"The value of difficulty_level has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL))} ."
@@ -163,9 +164,8 @@ class PanelFairplus(Directive):
             '',
             '<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>',
             '^^^',
-            '<h4><b>Recipe metadata</b></h4>',
-            f'identifier: <a href="{self.options["identifier_link"]}">{self.options["identifier_text"]}</a> ',
-            'version: v1.0.0',
+            '<h4><b>Identifier</b></h4>',
+            f'<i class="fa fa-map-signs fa-lg" style="color:#7e0038;"></i> <a href="{self.options["identifier_link"]}">{self.options["identifier_text"]}</a> ',
             '',
             '---',
             '<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>',
@@ -233,7 +233,7 @@ class PanelFairplus(Directive):
 def setup(app):
     app.setup_extension("sphinx_panels")
 
-    app.add_directive("helloworld", PanelFairplus)
+    app.add_directive("panels_fairplus", PanelFairplus)
 
     return {
         'version': '0.1',
