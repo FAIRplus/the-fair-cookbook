@@ -138,13 +138,13 @@ jobs:
     - name: Record mermaid version 
       run: ./node_modules/.bin/mmdc -V
     - name: Search all mermaid files and record a list of them
-      run: find . -iname "*.mmd" > all_mermaid_files 
+      run: find . -iname "*.mmd" > list_of_all_mermaid_files 
     - name: Print the list of mermaid files 
-      run: cat all_mermaid_files
-    - name: Convert all mermaid files to svg
-      run: cat all_mermaid_files | while read line; do ./node_modules/.bin/mmdc -i $line ; done
+      run: cat list_of_all_mermaid_files
+    - name: Convert all mermaid files to png
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.png ; done
     - name: Cleanup of intermediates
-      run: rm all_mermaid_files
+      run: rm list_of_all_mermaid_files
     - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
     - name: Build jupyter-book
@@ -160,7 +160,7 @@ jobs:
       with:
         SSH: true
         BASE_BRANCH: migrating #The branch of this repository which should be transfered from.
-        REPOSITORY_NAME: FAIRplus/cookbook-dev # The repository on github.com to which will be deployed = pushed.
+        REPOSITORY_NAME: FAIRplus/the-fair-cookbook # The repository on github.com to which will be deployed = pushed.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: _build/html # The folder the action should deploy.
         
