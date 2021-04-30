@@ -61,8 +61,6 @@ class PanelFairplus(Directive):
     }
 
     def _clean_options(self):
-        print("")
-        print(self.options)
         
         # are the options existent and non-empty?
         for option_name in self.option_spec: 
@@ -147,8 +145,6 @@ class PanelFairplus(Directive):
                 f"The value of has_executable_code has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_EXECUTABLE_CODE))} ."
                 ))
             ## no joke, because "True" and "yes" are evaluated by YAML to be "", we need "yeah" and "nope"... 
-
-        print(self.options)
 
 
     def _create_content(self):
