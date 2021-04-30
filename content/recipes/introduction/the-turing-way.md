@@ -3,24 +3,14 @@
 
 > 🚀  or How a meeting with The Turing Way bootstrapped IMI FAIRPlus Cookbook project 🚀
 
-<!-- ````{panels}
-:container: container-lg pb-3
-:column: col-lg-12 p-2
-:card: rounded
-
-![](https://i.imgur.com/3rXmOW0.png)
-````  
-[Credits to Scriberia]  -->
-
-
 
 ```{figure} https://i.imgur.com/3rXmOW0.png
 ---
 height: 450px
-name: the FAIR Cookbook
-alt: A Data Expert cooking a recipe to make a dataset or a service FAIR. https://doi.org/tbd
+name: The FAIR Cookbook.
+alt: A Data Expert cooking a recipe to make a dataset or a service FAIR.
 ---
-_The FAIR Cookbook_ A Data Expert cooking a recipe to make a dataset or a service FAIR.Credits to Scriberia. https://doi.org/tbd.
+_The FAIR Cookbook._ A Data Expert cooking a recipe to make a dataset or a service FAIR. Credits to Scriberia.
 ```
 
 

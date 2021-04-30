@@ -61,8 +61,6 @@ class PanelFairplus(Directive):
     }
 
     def _clean_options(self):
-        print("")
-        print(self.options)
         
         # are the options existent and non-empty?
         for option_name in self.option_spec: 
@@ -148,8 +146,6 @@ class PanelFairplus(Directive):
                 ))
             ## no joke, because "True" and "yes" are evaluated by YAML to be "", we need "yeah" and "nope"... 
 
-        print(self.options)
-
 
     def _create_content(self):
         content = []
@@ -157,6 +153,10 @@ class PanelFairplus(Directive):
 
         content.extend(
             [
+            '<br/>',
+            '',
+            '----',
+            '',
             '````{panels}',
             ':container: container-lg pb-3',
             ':column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1',
@@ -201,6 +201,9 @@ class PanelFairplus(Directive):
             '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Terminology Manager  </p>'                 if "terminology_manager" in self.options["intended_audience"] else "",
             '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Ontologist  </p>'                          if "ontologist" in self.options["intended_audience"] else "",
             '````',
+            '',
+            '----',
+            ''
         ])
         return content
 

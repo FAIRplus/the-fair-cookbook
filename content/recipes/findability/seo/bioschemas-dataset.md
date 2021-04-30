@@ -97,13 +97,12 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
    3.  Click on the `Show Form` button
 
-<!-- ![Bioschemas Generator start screen](BioschemasGenerator.png =450px) -->
 
 ```{figure} BioschemasGenerator.png
 ---
-height: 550px
-name: Bioschemas Generator start screen
-alt: Bioschemas Generator start screen
+name: bioschemas-generator-start-screen-3
+alt: Bioschemas Generator start screen.
+
 ---
 Bioschemas Generator start screen.
 ```
