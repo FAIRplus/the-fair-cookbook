@@ -142,7 +142,7 @@ Bioschemas Generator GeneRecord profile form.
    
 4. You should now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our Wikidata example, we get the following markup
 
-```python
+```html
 <script type="application/ld+json" >
 {
  "@context": "http://schema.org",
@@ -207,16 +207,16 @@ Bioschemas Generator GeneRecord profile form.
 
      For example, for our generated markup we would change
 
-```bash
+```
 "encodesBioChemEntity": {
      "@type": "BioChemEntity",
      "@id": "https://www.wikidata.org/wiki/Q17487737"
    },
 ```
 
-     to
+to
 
-```bash
+```
 "encodesBioChemEntity": {
      "@type": "Protein",
      "@id": "https://www.wikidata.org/wiki/Q17487737"
@@ -229,7 +229,7 @@ Bioschemas Generator GeneRecord profile form.
 
 8. Replace the values in your markup with variables that your web page templating system will replace with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
-```bash
+```html
 <script type="application/ld+json" >
 {
  "@context": "http://schema.org",

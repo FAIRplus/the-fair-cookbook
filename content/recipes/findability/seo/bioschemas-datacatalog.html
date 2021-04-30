@@ -949,123 +949,123 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <ol>
 <li><p>You will now see the generated markup in <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code> format. You can click on the <code class="docutils literal notranslate"><span class="pre">Microdata</span></code> and <code class="docutils literal notranslate"><span class="pre">RDFa</span></code> tabs to see the same content rendered in the different formats. However, we recommend the use of <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code>. For our <a class="reference external" href="http://FAIRsharing.org">FAIRsharing.org</a> example, we get the following markup</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>&lt;script type=&quot;application/ld+json&quot; &gt;
-{
-  &quot;@context&quot;: &quot;http://schema.org&quot;,
-  &quot;@id&quot;: &quot;https://fairsharing.org/&quot;,
-  &quot;@type&quot;: &quot;DataCatalog&quot;,
-  &quot;alternateName&quot;: [
-    &quot;BioSharing.org&quot;
-  ],
-  &quot;citation&quot;: [
-    {
-      &quot;@id&quot;: &quot;https://doi.org/10.1038/s41587-019-0080-8&quot;,
-      &quot;@type&quot;: &quot;CreativeWork&quot;
-    }
-  ],
-  &quot;dataset&quot;: [
-    {
-      &quot;@context&quot;: &quot;http://schema.org&quot;,
-      &quot;@type&quot;: &quot;Dataset&quot;,
-      &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14&quot;,
-      &quot;description&quot;: &quot;A manually curated registry of standards, split into three types - Terminology Artifacts (ontologies, e.g. Gene Ontology), Models and Formats (conceptual schema, formats, data models, e.g. FASTA), and Reporting Guidelines (e.g. the ARRIVE guidelines for in vivo animal testing). These are linked to the databases that implement them and the funder and journal publisher data policies that recommend or endorse their use.&quot;,
-      &quot;identifier&quot;: [
-        &quot;https://www.fairsharing.org/bsg-sXXXXXX&quot;
-      ],
-      &quot;keywords&quot;: [
-        &quot;Standards&quot;,
-        &quot;Metadata&quot;,
-        &quot;Formats&quot;,
-        &quot;Ontologies&quot;,
-        &quot;Terminology Artifacts&quot;,
-        &quot;Reporting Guidelines&quot;
-      ],
-      &quot;name&quot;: &quot;Metadata Standard&quot;,
-      &quot;url&quot;: &quot;https://fairsharing.org/standards&quot;
-    },
-    {
-      &quot;@context&quot;: &quot;http://schema.org&quot;,
-      &quot;@type&quot;: &quot;Dataset&quot;,
-      &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14&quot;,
-      &quot;description&quot;: &quot;A manually curated registry of databases/data repositories, conforming to the BioDBcore standard (from the Life Sciences). These are linked to the standards that they use and the funder and journal publisher data policies that recommend or endorse their use.&quot;,
-      &quot;identifier&quot;: [
-        &quot;https://www.fairsharing.org/bsg-dXXXXXX&quot;
-      ],
-      &quot;keywords&quot;: [
-        &quot;Database&quot;,
-        &quot;Data repository&quot;
-      ],
-      &quot;name&quot;: &quot;Database&quot;,
-      &quot;url&quot;: &quot;https://fairsharing.org/databases&quot;
-    },
-    {
-      &quot;@context&quot;: &quot;http://schema.org&quot;,
-      &quot;@type&quot;: &quot;Dataset&quot;,
-      &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14&quot;,
-      &quot;description&quot;: &quot;A manually curated registry of data policies from research funders, journal publishers, societies, and other organisations. These are linked to the databases and standards that they recommend for use&quot;,
-      &quot;identifier&quot;: [
-        &quot;https://www.fairsharing.org/bsg-pXXXXXX&quot;
-      ],
-      &quot;keywords&quot;: [
-        &quot;Data policy&quot;,
-        &quot;journal&quot;,
-        &quot;funder&quot;,
-        &quot;society&quot;
-      ],
-      &quot;name&quot;: &quot;Data Policy&quot;,
-      &quot;url&quot;: &quot;https://fairsharing.org/policies&quot;
-    }
-  ],
-  &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01&quot;,
-  &quot;description&quot;: &quot;A manually curated, informative and educational resource on data and metadata standards, inter-related to databases/data repositories and funder and journal publisher data policies from across disciplines. FAIRsharing is an ELIXIR-UK node resource and has an active role in the RDA and Force11 data initiatives.&quot;,
-  &quot;identifier&quot;: [
-    &quot;https://identifiers.org/MIR:00000364&quot;
-  ],
-  &quot;keywords&quot;: [
-    &quot;registry&quot;,
-    &quot;life science&quot;,
-    &quot;natural science&quot;,
-    &quot;social science&quot;
-  ],
-  &quot;license&quot;: {
-    &quot;@id&quot;: &quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;,
-    &quot;@type&quot;: &quot;CreativeWork&quot;
-  },
-  &quot;name&quot;: &quot;FAIRsharing.org&quot;,
-  &quot;provider&quot;: [
-    {
-      &quot;@context&quot;: &quot;http://schema.org&quot;,
-      &quot;@type&quot;: &quot;Organization&quot;,
-      &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;,
-      &quot;description&quot;: &quot;&quot;,
-      &quot;name&quot;: &quot;FAIRsharing.org Registry&quot;
-    }
-  ],
-  &quot;url&quot;: &quot;https://fairsharing.org/&quot;
-}
-&lt;/script &gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;application/ld+json&quot;</span> <span class="o">&gt;</span>
+<span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairsharing.org/&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataCatalog&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;BioSharing.org&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.1038/s41587-019-0080-8&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A manually curated registry of standards, split into three types - Terminology Artifacts (ontologies, e.g. Gene Ontology), Models and Formats (conceptual schema, formats, data models, e.g. FASTA), and Reporting Guidelines (e.g. the ARRIVE guidelines for in vivo animal testing). These are linked to the databases that implement them and the funder and journal publisher data policies that recommend or endorse their use.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;https://www.fairsharing.org/bsg-sXXXXXX&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Standards&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Metadata&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Formats&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ontologies&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Terminology Artifacts&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Reporting Guidelines&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Metadata Standard&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairsharing.org/standards&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A manually curated registry of databases/data repositories, conforming to the BioDBcore standard (from the Life Sciences). These are linked to the standards that they use and the funder and journal publisher data policies that recommend or endorse their use.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;https://www.fairsharing.org/bsg-dXXXXXX&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Database&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Data repository&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Database&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairsharing.org/databases&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A manually curated registry of data policies from research funders, journal publishers, societies, and other organisations. These are linked to the databases and standards that they recommend for use&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;https://www.fairsharing.org/bsg-pXXXXXX&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Data policy&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;journal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;funder&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;society&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data Policy&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairsharing.org/policies&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A manually curated, informative and educational resource on data and metadata standards, inter-related to databases/data repositories and funder and journal publisher data policies from across disciplines. FAIRsharing is an ELIXIR-UK node resource and has an active role in the RDA and Force11 data initiatives.&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;https://identifiers.org/MIR:00000364&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;registry&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;life science&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;natural science&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;social science&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIRsharing.org&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIRsharing.org Registry&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairsharing.org/&quot;</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">script</span> <span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
 <li><p>Download or copy and paste the generated markup</p></li>
 <li><p>Make adjustments for any bits that could not be properly entered through the form.</p>
 <p>For example, for our generated markup we would change the <code class="docutils literal notranslate"><span class="pre">provider</span></code> so that it provides a direct link rather than repeating the properties. We would replace</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIRsharing.org Registry&quot;</span>
+      <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIRsharing.org Registry&quot;</span>
     <span class="p">}</span>
   <span class="p">],</span>
 </pre></div>
 </div>
 <p>with</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairsharing.org/communities&quot;</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairsharing.org/communities&quot;</span>
     <span class="p">}</span>
   <span class="p">],</span>
 </pre></div>
