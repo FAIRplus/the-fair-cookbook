@@ -948,22 +948,22 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <hr class="docutils" />
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>recipe dependency:</p>
 <ul>
-<li><p><span class="xref std std-ref">fcb-identifiers</span></p></li>
-<li><p><span class="xref std std-ref">fcb-idmapping</span></p></li>
+<li><p>recipe dependency:</p>
+  <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
+<ul class="simple">
+<li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">How to interlink data from different sources?</span></a></p></li>
 </ul>
 </li>
 <li><p>skill dependency:</p>
-<ul>
+<ul class="simple">
 <li><p>programming knowledge</p></li>
 <li><p>R</p></li>
 <li><p>Python</p></li>
 </ul>
 </li>
 <li><p>technical dependency</p>
-<ul>
+<ul class="simple">
 <li><p>R or Python environment</p></li>
 <li><p>BridgeDB R package installed</p></li>
 </ul>
@@ -1040,7 +1040,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <hr class="docutils" />
 <div class="section" id="id1">
 <h2>Identifier mapping with BridgeDb<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><span class="xref std std-ref">fcb-idmapping</span> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.</p>
+<p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">How to interlink data from different sources?</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.</p>
 <p>BridgeDB is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:</p>
 <ul class="simple">
 <li><p>Java API</p></li>
@@ -1325,7 +1325,7 @@ This is a step that should be done manually. In this case an important decision 
 <h3>Mapping local identifier to a different global identifier<a class="headerlink" href="#mapping-local-identifier-to-a-different-global-identifier" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to <a class="reference external" href="http://www.genenames.org">HGNC</a>. One may consult the list of other potential data formats in the <span class="xref std std-ref">fcb-idmapping</span> recipe. The mapping should be <strong>one-to-one</strong> for this recipe.</p>
+<p>In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to <a class="reference external" href="http://www.genenames.org">HGNC</a>. One may consult the list of other potential data formats in the <a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">How to interlink data from different sources?</span></a> recipe. The mapping should be <strong>one-to-one</strong> for this recipe.</p>
 </div>
 <p>The TSV mapping file looks as follows:</p>
 <table class="colwidths-auto table">
