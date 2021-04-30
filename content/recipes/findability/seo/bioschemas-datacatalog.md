@@ -128,7 +128,7 @@ Bioschemas Generator DataCatalog profile form.
 
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our FAIRsharing.org example, we get the following markup
 
-   ```json
+   ```
    <script type="application/ld+json" >
    {
      "@context": "http://schema.org",
@@ -232,7 +232,7 @@ Bioschemas Generator DataCatalog profile form.
 
    For example, for our generated markup we would change the `provider` so that it provides a direct link rather than repeating the properties. We would replace
 
-   ```json
+   ```
    "provider": [
        {
          "@context": "http://schema.org",
@@ -246,7 +246,7 @@ Bioschemas Generator DataCatalog profile form.
    
    with
 
-   ```json
+   ```
    "provider": [
        {
          "@type": "Organization",

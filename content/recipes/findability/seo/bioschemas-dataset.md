@@ -127,7 +127,7 @@ Bioschemas Generator Dataset profile form.
 
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our UniProtKB example, we get the following markup
 
-   ```json
+   ```
    <script type="application/ld+json" >
    {
      "@context": "http://schema.org",
@@ -185,7 +185,7 @@ Bioschemas Generator Dataset profile form.
 
    For example, for our generated markup we would change the `includedInDataCatalog` so that it provides a direct link rather than repeating the properties. We would replace
 
-   ```json
+   ```
    "includedInDataCatalog": [
        {
          "@context": "http://schema.org",
@@ -201,7 +201,7 @@ Bioschemas Generator Dataset profile form.
 
    with
 
-   ```json
+   ```
    "includedInDataCatalog": {
       "@type": "DataCatalog",
       "@id": "https://uniprot.org"
@@ -214,7 +214,7 @@ Bioschemas Generator Dataset profile form.
 
 8. If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
-   ```json
+   ```
    <script type="application/ld+json">
    {
      "@context": "http://schema.org",

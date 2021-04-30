@@ -409,10 +409,10 @@ These are aspects of information provenance which
 * {ref}`fcb-find-identifiers`
 * {ref}`fcb-interop-idmapping`
 
+---
 
 ## References
 
----
 ```{bibliography}
 :filter: docname in docnames
 ```

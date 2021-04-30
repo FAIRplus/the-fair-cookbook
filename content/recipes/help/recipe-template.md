@@ -209,7 +209,7 @@ import holoview
 If you want to include figures, please use the following 
 
 
-
+<!-- 
 ```{figure} ./my_figure.svg
 ---
 width: 700px
@@ -218,7 +218,7 @@ alt: something to display if the link to the figure is broken
 ---
 the proper caption for the figure.
 ```
-
+-->
 
 one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
 
