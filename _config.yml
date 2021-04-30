@@ -72,3 +72,5 @@ sphinx:
 
 bibtex_bibfiles:
    - ./_bibliography/fairbookreferences.bib
+   - ./_bibliography/bibliography-bridgedb.bib
+bibtex_reference_style: author_year
