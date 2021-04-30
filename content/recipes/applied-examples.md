@@ -7,10 +7,10 @@ We will therefore cover topics such as:
 
 ## From PDF to RDF ~ From text to Linked Data Graph
 
-1. [FAIRification of Metabolomics Data: Clarifying the Semantics of Data Matrices]()
-2. [Conversion to an open format - using Frictionless Data Package]()
-3. [Building a semantic model and annotating with open ontologies]()
-4. [Conversion to RDF/Linked data and exploration with SPARQL]()
+1. [FAIRification of Metabolomics Data: Clarifying the Semantics of Data Matrices]( TODO link not here yet )
+2. [Conversion to an open format - using Frictionless Data Package]( TODO link not here yet  )
+3. [Building a semantic model and annotating with open ontologies]( TODO link not here yet  )
+4. [Conversion to RDF/Linked data and exploration with SPARQL]( TODO link not here yet  )
 
 
 ## IMI case studies

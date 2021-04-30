@@ -11,7 +11,7 @@ The purpose of this document is to formalize the governance process that the FAI
 * [Code of Conduct](code_of_conduct)
 * [Current Steering Council and Institutional Partners](people.md)
 <!-- * [New Subproject Incubation Process](newsubprojects.md) -->
-* [Process for Authoring Related Academic Papers](papers.md)
+* [ TODO Process for Authoring Related Academic Papers](papers.md TODO link does not exist yet )
 
 ## License of Governance Documents
  <p style='text-align: justify;'>
