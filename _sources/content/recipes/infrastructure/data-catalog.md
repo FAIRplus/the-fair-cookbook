@@ -156,18 +156,18 @@ ___
 
 This recipe introduced the general concept of data catalogue and why they constitute a key capability to deliver data discoverability.
 
-> ### What should I read next?
+### What should I read next?
 We encourage the readers to either delve deeper into the specific of data catalogues by consulting the following recipes
 
-> * [Building a data catalogue]() {ref}`fcb-infra-imi-cat-deploy`
-> * [Deploying the FAIRPORT data catalogue]() {ref}`fcb-infra-fairport-deploy`
-> * [Deploying the GA4GH Beacon endpoint]() {ref}`fcb-infra-beacon-deploy`
+* {ref}`fcb-infra-imi-cat-deploy`
+* TODO Deploying the FAIRPORT data catalogue {ref}` TODO fcb-infra-fairport-deploy`
+* TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`
 
 
 For the readership interesting in finding out about additional capabilities needed to enhance other aspects of FAIR such interoperability and reusability, see the following:
 
-> * [Search engine optimization]() {ref}`fcb-find-seo`
-> * [Creating a minimal information metadata profile]() {ref}`fcb-interop-metadataprofile`
+* {ref}`fcb-find-seo`
+* {ref}`fcb-interop-metadataprofile`
 
 
 ## References

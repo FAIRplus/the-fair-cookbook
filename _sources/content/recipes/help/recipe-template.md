@@ -280,7 +280,7 @@ ___
 > ### What should I read next?
 > * [Tips and Tricks](./tips-tricks.md)
 > * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
-> * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. {ref}`fcb-intro-fair-principles`
+> * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
 
 ___
 
