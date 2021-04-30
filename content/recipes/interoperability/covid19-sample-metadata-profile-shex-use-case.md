@@ -1,5 +1,5 @@
 (fcb-interop-covid-metadata)=
-# Metadata Profile Validation in RDF with Shape Expression:
+# Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case 
 
 +++
 <br/>
@@ -45,10 +45,6 @@
 <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
 <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
 ````
-
-___
-
-## The Covid-19 sample metadata use case 
 
 ___
 
