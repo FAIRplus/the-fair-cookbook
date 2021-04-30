@@ -142,4 +142,6 @@ RUN jupyter-book build /app
 
 RUN cd /app && tar -czf /out.tar.gz _build/html
 
+RUN ls /app/_build
+
 ## ... all content was converted to html now and sits in /app/_build

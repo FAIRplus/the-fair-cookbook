@@ -121,6 +121,12 @@ Example of a write edge in W3C PROV format:
 	> * [How to meet community standards for annotation](./community-standards)
 
 
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
 ___
 
 ## Authors

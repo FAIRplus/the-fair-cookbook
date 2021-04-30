@@ -76,8 +76,8 @@ ___
 ## Requirements
 
 * recipe dependency:
-    * {ref}`fcb-identifiers`
-    * {ref}`fcb-idmapping`
+    <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
+    * {ref}`fcb-interop-idmapping`
 
 * skill dependency:
     * programming knowledge
@@ -114,7 +114,7 @@ ___
 
 ## Identifier mapping with BridgeDb
 
-{ref}`fcb-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.
+{ref}`fcb-interop-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.
 
 BridgeDB is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:
 * Java API
@@ -262,7 +262,7 @@ This is a step that should be done manually. In this case an important decision 
 ### Mapping local identifier to a different global identifier
 
 ```{note} 
- In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-idmapping` recipe. The mapping should be **one-to-one** for this recipe. 
+ In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-interop-idmapping` recipe. The mapping should be **one-to-one** for this recipe. 
 ```
 
 The TSV mapping file looks as follows:
