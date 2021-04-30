@@ -961,12 +961,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
 <h2><span class="section-number">4.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="content/recipes/findability/zenodo.svg"><img alt="The process of depositing to CERN Zenodo" src="content/recipes/findability/zenodo.svg" width="500px" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">The process of depositing to CERN Zenodo.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<!--
+```{figure} ./zenodo.svg
+---
+width: 500px
+name: 
+alt: The process of depositing to CERN Zenodo
+---
+The process of depositing to CERN Zenodo.
+```
+___
+-->
+<p>TODO</p>
 </div>
-</div>
-<hr class="docutils" />
 <div class="section" id="capability-maturity-table">
 <h2><span class="section-number">4.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
@@ -1027,7 +1034,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div> -->
 <div class="figure align-default" id="uploading-files-to-zenodo">
 <a class="reference internal image-reference" href="https://i.imgur.com/TYpr8jM.png"><img alt="Uploading files to Zenodo" src="https://i.imgur.com/TYpr8jM.png" style="height: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Uploading files to Zenodo Repository.</span><a class="headerlink" href="#uploading-files-to-zenodo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Uploading files to Zenodo Repository.</span><a class="headerlink" href="#uploading-files-to-zenodo" title="Permalink to this image">¶</a></p>
 </div>
 <p>Files can be dragged and dropped, with the following limitations:</p>
 <ul class="simple">
@@ -1039,13 +1046,13 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="starting-the-file-upload-to-zenodo">
 <a class="reference internal image-reference" href="https://i.imgur.com/LwMorlw.png"><img alt="Starting the file upload  to Zenodo" src="https://i.imgur.com/LwMorlw.png" style="height: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Starting the file upload to Zenodo Repository.</span><a class="headerlink" href="#starting-the-file-upload-to-zenodo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Starting the file upload to Zenodo Repository.</span><a class="headerlink" href="#starting-the-file-upload-to-zenodo" title="Permalink to this image">¶</a></p>
 </div>
 <p>The next key step is to select the <code class="docutils literal notranslate"><span class="pre">upload</span> <span class="pre">type</span></code>. In this instance, the <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> is selected. This matters as it provide strong typing which is relied on by <code class="docutils literal notranslate"><span class="pre">search</span> <span class="pre">engine</span></code> and therefore impacts <code class="docutils literal notranslate"><span class="pre">findability</span></code>.</p>
 <!-- <img src="https://i.imgur.com/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="selecting-the-upload-type-to-zenodo">
 <a class="reference internal image-reference" href="https://i.imgur.com/OYyz4dT.png"><img alt="Selecting the upload type to Zenodo" src="https://i.imgur.com/OYyz4dT.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Selecting the upload type to Zenodo Repository.</span><a class="headerlink" href="#selecting-the-upload-type-to-zenodo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Selecting the upload type to Zenodo Repository.</span><a class="headerlink" href="#selecting-the-upload-type-to-zenodo" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1058,7 +1065,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="basic-metadata-to-report">
 <a class="reference internal image-reference" href="https://i.imgur.com/WmlqBjL.png"><img alt="Basic metadata to report" src="https://i.imgur.com/WmlqBjL.png" style="height: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Basic metadata to report .</span><a class="headerlink" href="#basic-metadata-to-report" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Basic metadata to report .</span><a class="headerlink" href="#basic-metadata-to-report" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p><strong>Reserve a Digital Object Identifier</strong>: This is a service provided natively by the Zenodo service owing the integration with Datacite services. This is quite an important point as it means the a Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information <strong>can not be changed without creating a new version of the archive and therefore minting a new doi</strong></p></li>
@@ -1067,7 +1074,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="setting-keywords-associated-with-the-zenodo-deposition">
 <a class="reference internal image-reference" href="https://i.imgur.com/9Bp91gX.png"><img alt="Setting keywords associated with the Zenodo deposition" src="https://i.imgur.com/9Bp91gX.png" style="height: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Setting keywords associated with the Zenodo deposition .</span><a class="headerlink" href="#setting-keywords-associated-with-the-zenodo-deposition" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Setting keywords associated with the Zenodo deposition .</span><a class="headerlink" href="#setting-keywords-associated-with-the-zenodo-deposition" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1080,7 +1087,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="choosing-a-license-is-essential">
 <a class="reference internal image-reference" href="https://i.imgur.com/fSxOjXe.png&quot;"><img alt="Choosing a License is essential" src="https://i.imgur.com/fSxOjXe.png&quot;" style="height: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Choosing a License is essential.</span><a class="headerlink" href="#choosing-a-license-is-essential" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Choosing a License is essential.</span><a class="headerlink" href="#choosing-a-license-is-essential" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Zenodo places to no limit when it comes to duration of the embargo period. So submitters should check EC and IMI guidelines or local institutional requirements for guidance.</p></li>
@@ -1089,7 +1096,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="setting-access-conditions">
 <a class="reference internal image-reference" href="https://i.imgur.com/ty9rpXF.png"><img alt="Setting access conditions" src="https://i.imgur.com/ty9rpXF.png" style="height: 350px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Setting access conditions.</span><a class="headerlink" href="#setting-access-conditions" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Setting access conditions.</span><a class="headerlink" href="#setting-access-conditions" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Start typing to display more licenses available from Zenodo</p></li>
@@ -1097,7 +1104,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
 <div class="figure align-default" id="autocompletion-prompts-available-licenses">
 <a class="reference internal image-reference" href="https://i.imgur.com/249GhMg.png"><img alt="Autocompletion prompts available licenses" src="https://i.imgur.com/249GhMg.png" style="height: 100px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Autocompletion prompts available licenses.</span><a class="headerlink" href="#autocompletion-prompts-available-licenses" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Autocompletion prompts available licenses.</span><a class="headerlink" href="#autocompletion-prompts-available-licenses" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1107,7 +1114,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="linking-funding-to-zenodo-submission">
 <a class="reference internal image-reference" href="https://i.imgur.com/STjyFbT.png"><img alt="Linking Funding to Zenodo Submission" src="https://i.imgur.com/STjyFbT.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Linking Funding to Zenodo Submission.</span><a class="headerlink" href="#linking-funding-to-zenodo-submission" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Linking Funding to Zenodo Submission.</span><a class="headerlink" href="#linking-funding-to-zenodo-submission" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Zenodo: openAIRE connected repository</p></li>
@@ -1123,7 +1130,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="https://i.imgur.com/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 <div class="figure align-default" id="miscellaneous-information-about-the-zenodo-submission">
 <a class="reference internal image-reference" href="https://i.imgur.com/uhGZN5t.png"><img alt="Miscellaneous Information about the Zenodo Submission" src="https://i.imgur.com/uhGZN5t.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Miscellaneous Information about the Zenodo Submission.</span><a class="headerlink" href="#miscellaneous-information-about-the-zenodo-submission" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Miscellaneous Information about the Zenodo Submission.</span><a class="headerlink" href="#miscellaneous-information-about-the-zenodo-submission" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Contributors</p></li>

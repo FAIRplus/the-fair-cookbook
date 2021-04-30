@@ -128,12 +128,6 @@ BridgeDB is an open source tool dedicated to performing identifier mapping. Brid
 
 We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers. 
 
-#### Cases:
-
-1. Connect data with global identifiers to different global identifiers
-3. Connect data with local identifiers that were mapped to a global identifier to a different global identifier
- 
-
 In this recipe, we will cover how the R package and webservices can be used to accomplish the stated objectives.
 
 ### Mapping global identifier to other global identifier
@@ -285,8 +279,7 @@ This is how the mapping will work
 
 ```{figure} bridgedb-fig1-mermaid.png
 ---
-width: 500px
-name: Overview of BridgeDB tools
+name: overview-bridgedb-universum
 alt: Overview of BridgeDB tools
 ---
 Overview of BridgeDB tools
@@ -333,16 +326,13 @@ In case we did specify the `target` argument to be `Ensembl (En)`, we would inst
 
 Here, we see a `one-to-one` relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
 
-<!--
-You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below-->
 
 ```{figure} bridgedb-fig2-mermaid.png
 ---
-width: 500px
-name: Overview of BridgeDB tools
-alt: Overview of BridgeDB tools
+name: exemplary-bridgedb-mapping
+alt: An example of a mapping via BridgeDB.
 ---
-Overview of BridgeDB tools
+An example of a mapping via BridgeDB. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
 ```
 
 
@@ -410,14 +400,14 @@ You can find ready-made methods to map using R and Python for the given use case
 
 ## Conclusion
 
-> We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset. 
-> BridgeDb provides handy functionality to make 'omics' type of data more interoperable and reusable.
-> As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
-> These are aspects of information provenance which 
-> 
-> #### What should I read next?
-> * {ref}`fcb-find-identifiers`
-> * {ref}`fcb-interop-idmapping`
+We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset. 
+BridgeDb provides handy functionality to make 'omics' type of data more interoperable and reusable.
+As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
+These are aspects of information provenance which 
+ 
+### What should I read next?
+* {ref}`fcb-find-identifiers`
+* {ref}`fcb-interop-idmapping`
 
 
 ## References

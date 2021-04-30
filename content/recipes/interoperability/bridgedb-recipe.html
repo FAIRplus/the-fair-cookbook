@@ -782,11 +782,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cases">
-     Cases:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mapping-global-identifier-to-other-global-identifier">
      Mapping global identifier to other global identifier
     </a>
@@ -1060,14 +1055,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 </ul>
 </div></blockquote>
 <p>We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers.</p>
-<div class="section" id="cases">
-<h3>Cases:<a class="headerlink" href="#cases" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>Connect data with global identifiers to different global identifiers</p></li>
-<li><p>Connect data with local identifiers that were mapped to a global identifier to a different global identifier</p></li>
-</ol>
 <p>In this recipe, we will cover how the R package and webservices can be used to accomplish the stated objectives.</p>
-</div>
 <div class="section" id="mapping-global-identifier-to-other-global-identifier">
 <h3>Mapping global identifier to other global identifier<a class="headerlink" href="#mapping-global-identifier-to-other-global-identifier" title="Permalink to this headline">¶</a></h3>
 <p>In this case, the input data is a list of elements with an identifier that is part of <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">BridgeDb’s data sources</a>. In our example, we will use a list of Homo Sapiens, Hugo Gene Nomenclature Convention (<a class="reference external" href="http://www.genenames.org">HGNC</a>) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.</p>
@@ -1360,9 +1348,9 @@ This is a step that should be done manually. In this case an important decision 
 </table>
 <p>You may notice the <code class="docutils literal notranslate"><span class="pre">source</span></code> identifiers correspond with those used in the previous example.</p>
 <p>This is how the mapping will work</p>
-<div class="figure align-default" id="overview-of-bridgedb-tools">
-<a class="reference internal image-reference" href="../../../_images/bridgedb-fig1-mermaid.png"><img alt="Overview of BridgeDB tools" src="../../../_images/bridgedb-fig1-mermaid.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Overview of BridgeDB tools</span><a class="headerlink" href="#overview-of-bridgedb-tools" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="overview-bridgedb-universum">
+<img alt="Overview of BridgeDB tools" src="../../../_images/bridgedb-fig1-mermaid.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Overview of BridgeDB tools</span><a class="headerlink" href="#overview-bridgedb-universum" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="webservices-in-python">
 <h4>Webservices in Python<a class="headerlink" href="#webservices-in-python" title="Permalink to this headline">¶</a></h4>
@@ -1483,15 +1471,13 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 </tbody>
 </table>
 <p>Here, we see a <code class="docutils literal notranslate"><span class="pre">one-to-one</span></code> relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is <code class="docutils literal notranslate"><span class="pre">one-to-many</span></code>. Depending on the identifiers and resources, the relation could also be <code class="docutils literal notranslate"><span class="pre">many-to-many</span></code> as shown below.</p>
-<!--
-You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below-->
-<div class="figure align-default" id="id2">
-<a class="reference internal image-reference" href="../../../_images/bridgedb-fig2-mermaid.png"><img alt="Overview of BridgeDB tools" src="../../../_images/bridgedb-fig2-mermaid.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Overview of BridgeDB tools</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="exemplary-bridgedb-mapping">
+<img alt="An example of a mapping via BridgeDB." src="../../../_images/bridgedb-fig2-mermaid.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">An example of a mapping via BridgeDB. You may notice that despite the 1-to-1 relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">original</span></code> we get a N-to-N relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code> due to the N-to-N relation between <code class="docutils literal notranslate"><span class="pre">original</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code>.</span><a class="headerlink" href="#exemplary-bridgedb-mapping" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <span id="id3">[<a class="reference internal" href="#id17"><span>BBC+14</span></a>]</span>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to many-to-many relationships.</p>
+<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <span id="id2">[<a class="reference internal" href="#id16"><span>BBC+14</span></a>]</span>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to many-to-many relationships.</p>
 </div>
 </div>
 <div class="section" id="r-package">
@@ -1638,12 +1624,10 @@ You may notice that despite the 1-to-1 relation between `local` and `original` w
 <hr class="docutils" />
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset.
+<p>We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset.
 BridgeDb provides handy functionality to make ‘omics’ type of data more interoperable and reusable.
 As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
 These are aspects of information provenance which</p>
-</div></blockquote>
 <div class="section" id="what-should-i-read-next">
 <h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -1655,8 +1639,8 @@ These are aspects of information provenance which</p>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
-<p id="id4"><dl class="citation">
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id3">BBC+14</a></span></dt>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id2">BBC+14</a></span></dt>
 <dd><p>Colin Batchelor, Christian Y A Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T Evelo, Anna Gaulton, Carole Goble, Alasdair J G Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, and Egon L Willighagen. Scientiﬁc Lenses to Support Multiple Views over Linked Chemistry Data. In <em>The Semantic Web – ISWC 2014. Lecture Notes in Computer Science</em>, 16. 2014. <a class="reference external" href="https://doi.org/10.1007/978-3-319-11964-9_7">doi:10.1007/978-3-319-11964-9_7</a>.</p>
 </dd>
 </dl>
