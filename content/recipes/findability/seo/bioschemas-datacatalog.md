@@ -96,13 +96,12 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
 
    3.  Click on the `Show Form` button
 
-<!--    ![Bioschemas Generator start screen](BioschemasGenerator.png) -->
 
 ```{figure} BioschemasGenerator.png
 ---
-height: 550px
-name: Bioschemas Generator start screen
-alt: Bioschemas Generator start screen
+name: bioschemas-generator-start-screen-1
+alt: Bioschemas Generator start screen.
+
 ---
 Bioschemas Generator start screen.
 ```
