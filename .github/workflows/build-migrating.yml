@@ -154,7 +154,8 @@ jobs:
     - name: Install SSH Client 🔑
       uses: webfactory/ssh-agent@v0.4.1
       with:
-        ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        # ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+        ssh-private-key: ${{ secrets.DEPLOY_GHPAGES_INTO_MAIN_REPO }}  ## for push into the-fair-cookbook
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
