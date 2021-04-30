@@ -302,7 +302,7 @@ As a minimum, you should aim to link your dataset's persistant data identifiers 
 
 * {ref}`fcb-find-identifiers`
 * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-* TODO (link not working) [Identifier Resolution Services](./findability/id-resolution.html)
+<!-- TODO (recipe not existent yet) [Identifier Resolution Services](./findability/id-resolution.html) -->
 * {ref}`fcb-bridgedb`
 * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
 

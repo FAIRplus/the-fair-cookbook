@@ -140,14 +140,14 @@ One of the biggest benefits of using BridgeDb webservices is that these can be a
 
 - We start by defining strings containing the url of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map one of them (e.g. Ensembl)  
 
-```python=3.8.5
+```python
 url = "https://webservice.bridgedb.org/"
 batch_request = url+"{org}/xrefsBatch/{source}{}"
 ```
 
 > If the aim is to only map to a specific target data source, then one can check whether the mapping is supported by invoking the following  webservices:  
 
-```python=3.8.5
+```python
 mapping_available = "{org}/isMappingSupported/{source}/{target}"
 query = url+mapping_available.format(org='Homo sapiens', source='H', target='En')
 requests.get(query).text
@@ -156,7 +156,7 @@ requests.get(query).text
 
 - We then load our data into a pandas dataframe and call the requests library using our query.
 
-```python=3.8.5
+```python
 query = batch_request.format('?dataSource=En', org='Homo sapiens', source='H')
 response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
@@ -291,7 +291,7 @@ As before, we will define variables including the `web-service's URL` and the `m
 
 We then pass the source column to the `post request` as follows
 
-```python=3.8.5
+```python
 source_data = case2.source.to_csv(index=False, header=False)
 query = batch_request.format('', org=org, source=source)
 response2 = requests.post(query, data = source_data)
@@ -299,7 +299,7 @@ response2 = requests.post(query, data = source_data)
 You may notice here that we did not pass a target source, this could be done as specified before. Then, we use `to_df` again and as expected obtain the same dataframe as before.
 To see the equivalences with our local identifiers, we can simply join the dataframes, as follows:
 
-```python=3.8.5
+```python
 local_mapping = mappings.join(case2.set_index('source'), on='original')
 ```
 which will return the following table (first 10 rows)
