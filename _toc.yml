@@ -4,7 +4,7 @@
   title: Introduction
   numbered: true
   sections:
-      - file: content/recipes/introduction/ATI-turingway
+      - file: content/recipes/introduction/the-turing-way
       - file: content/recipes/introduction/FAIR-cookbook-audience
       - file: content/recipes/introduction/brief-FAIR-principles
       - file: content/recipes/introduction/what-is-IMI
@@ -73,7 +73,7 @@
   title: Improving Accessibility
   numbered: true
   sections:
-    - file: content/recipes/accessibility/01-anonymizing-patient-data
+    - file: content/recipes/accessibility/anonymizing-patient-data
     - file: content/recipes/accessibility/how-to-use-sftp-for-transfer
     - file: content/recipes/accessibility/aspera
 
