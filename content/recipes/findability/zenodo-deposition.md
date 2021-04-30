@@ -59,6 +59,7 @@ ___
 
 ## Graphical Overview
 
+<!--
 ```{figure} ./zenodo.svg
 ---
 width: 500px
@@ -68,6 +69,10 @@ alt: The process of depositing to CERN Zenodo
 The process of depositing to CERN Zenodo.
 ```
 ___
+-->
+
+TODO
+
 
 ## Capability & Maturity Table
 
