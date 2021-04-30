@@ -1,10 +1,6 @@
 (fcb-bridgedb)=
 # Identifier mapping with BridgeDB
 
-+++
-<br/>
-
-----
 
 ````{panels}
 :container: container-lg pb-3
@@ -427,8 +423,8 @@ You can find ready-made methods to map using R and Python for the given use case
 ## References
 
 ---
-```{bibliography} ./bridgedb/BridgeDb.bib
-
+```{bibliography}
+:filter: docname in docnames
 ```
 
 ___
