@@ -1068,16 +1068,16 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <ul class="simple">
 <li><p>We start by defining strings containing the url of the webservices and the specific method from the Webservices we want to use. In our case, a <code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">cross</span> <span class="pre">reference</span></code>. When doing the query, we need to specify <strong>the organism</strong> and <strong>the source dataset</strong>. We can also <em>optionally</em> specify a <em>target data source</em> if we only want to map one of them (e.g. Ensembl)</p></li>
 </ul>
-<div class="highlight-python=3.8.5 notranslate"><div class="highlight"><pre><span></span>url = &quot;https://webservice.bridgedb.org/&quot;
-batch_request = url+&quot;{org}/xrefsBatch/{source}{}&quot;
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://webservice.bridgedb.org/&quot;</span>
+<span class="n">batch_request</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">&quot;</span><span class="si">{org}</span><span class="s2">/xrefsBatch/</span><span class="si">{source}{}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>If the aim is to only map to a specific target data source, then one can check whether the mapping is supported by invoking the following  webservices:</p>
 </div></blockquote>
-<div class="highlight-python=3.8.5 notranslate"><div class="highlight"><pre><span></span>mapping_available = &quot;{org}/isMappingSupported/{source}/{target}&quot;
-query = url+mapping_available.format(org=&#39;Homo sapiens&#39;, source=&#39;H&#39;, target=&#39;En&#39;)
-requests.get(query).text
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapping_available</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{org}</span><span class="s2">/isMappingSupported/</span><span class="si">{source}</span><span class="s2">/</span><span class="si">{target}</span><span class="s2">&quot;</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="n">mapping_available</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">org</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;En&#39;</span><span class="p">)</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
 </pre></div>
 </div>
 <blockquote>
@@ -1086,8 +1086,8 @@ requests.get(query).text
 <ul class="simple">
 <li><p>We then load our data into a pandas dataframe and call the requests library using our query.</p></li>
 </ul>
-<div class="highlight-python=3.8.5 notranslate"><div class="highlight"><pre><span></span>query = batch_request.format(&#39;?dataSource=En&#39;, org=&#39;Homo sapiens&#39;, source=&#39;H&#39;)
-response = requests.post(query, data=data.to_csv(index=False, header=False))
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">batch_request</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;?dataSource=En&#39;</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </pre></div>
 </div>
 <blockquote>
@@ -1356,14 +1356,14 @@ This is a step that should be done manually. In this case an important decision 
 <h4>Webservices in Python<a class="headerlink" href="#webservices-in-python" title="Permalink to this headline">¶</a></h4>
 <p>As before, we will define variables including the <code class="docutils literal notranslate"><span class="pre">web-service's</span> <span class="pre">URL</span></code> and the <code class="docutils literal notranslate"><span class="pre">method</span></code> that we will use, in this instance: <code class="docutils literal notranslate"><span class="pre">xRefsBatch</span></code>.</p>
 <p>We then pass the source column to the <code class="docutils literal notranslate"><span class="pre">post</span> <span class="pre">request</span></code> as follows</p>
-<div class="highlight-python=3.8.5 notranslate"><div class="highlight"><pre><span></span>source_data = case2.source.to_csv(index=False, header=False)
-query = batch_request.format(&#39;&#39;, org=org, source=source)
-response2 = requests.post(query, data = source_data)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_data</span> <span class="o">=</span> <span class="n">case2</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">batch_request</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="n">org</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+<span class="n">response2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">source_data</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>You may notice here that we did not pass a target source, this could be done as specified before. Then, we use <code class="docutils literal notranslate"><span class="pre">to_df</span></code> again and as expected obtain the same dataframe as before.
 To see the equivalences with our local identifiers, we can simply join the dataframes, as follows:</p>
-<div class="highlight-python=3.8.5 notranslate"><div class="highlight"><pre><span></span>local_mapping = mappings.join(case2.set_index(&#39;source&#39;), on=&#39;original&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">local_mapping</span> <span class="o">=</span> <span class="n">mappings</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">case2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">),</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;original&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>which will return the following table (first 10 rows)</p>
