@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>4. Provenance Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Provenance Information</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -24,8 +25,8 @@
     href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -40,7 +41,6 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -83,7 +83,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -95,8 +95,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5. Compliance with community annotation standards" href="community-standards.html" />
-    <link rel="prev" title="3. Data Licenses" href="ATI_licensing_data.html" />
+    <link rel="next" title="6. Compliance with community annotation standards" href="community-standards.html" />
+    <link rel="prev" title="4. Patterns and practice for expressing allowed data usage" href="expressing-data-use.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -402,6 +402,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
      Which vocabulary to use?
     </a>
@@ -478,14 +497,19 @@ commentsRunWhenDOMLoaded(addUtterances);
      3. Data Licenses
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     4. Provenance Information
+     5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="community-standards.html">
-     5. Compliance with community annotation standards
+     6. Compliance with community annotation standards
     </a>
    </li>
   </ul>
@@ -655,21 +679,21 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -687,7 +711,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -701,82 +725,84 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/reusability/provenance.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migration/content/recipes/reusability/provenance.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/reusability/provenance.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i>
+            Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   4.1. Main Objectives
+   5.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   4.2. Introduction
+   5.2. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prov-vocabulary">
-   4.3. PROV vocabulary
+   5.3. PROV vocabulary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#camflow">
-   4.4. CamFLow
+   5.4. CamFLow
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#workflow-information">
-   4.5. Workflow information:
+   5.5. Workflow information:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   4.6. Conclusion
+   5.6. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     4.6.1. What to read next?
+     5.6.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   4.7. Authors
+   5.7. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   4.8. License
+   5.8. License
   </a>
  </li>
 </ul>
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -785,7 +811,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="provenance-information">
-<span id="fcb-reusability-provenance"></span><h1><span class="section-number">4. </span>Provenance Information<a class="headerlink" href="#provenance-information" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-reusability-provenance"></span><h1><span class="section-number">5. </span>Provenance Information<a class="headerlink" href="#provenance-information" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
 <div class="sphinx-bs container-lg pb-3 docutils">
@@ -848,67 +874,66 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">4.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essentially. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its Provenance. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of tracability and accountability can be established. The notions of <code class="docutils literal notranslate"><span class="pre">audit</span> <span class="pre">and</span> <span class="pre">trail</span></code> as well as <code class="docutils literal notranslate"><span class="pre">versioning</span></code> and <code class="docutils literal notranslate"><span class="pre">authorshipt</span></code> are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.</p>
 </div>
 <div class="section" id="introduction">
-<h2><span class="section-number">4.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Data provenance https://en.wikipedia.org/wiki/Data_lineage</p>
+<h2><span class="section-number">5.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Data provenance <a class="reference external" href="https://en.wikipedia.org/wiki/Data_lineage">https://en.wikipedia.org/wiki/Data_lineage</a></p>
 </div>
 <div class="section" id="prov-vocabulary">
-<h2><span class="section-number">4.3. </span>PROV vocabulary<a class="headerlink" href="#prov-vocabulary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>PROV vocabulary<a class="headerlink" href="#prov-vocabulary" title="Permalink to this headline">¶</a></h2>
 <p>The W3C vetted a specification for an RDF vocabulary to express provenance information. Implementation can be made in RDF or JSON, since JSON-LD is now an official serialization of RDF.
 The <a class="reference external" href="https://www.w3.org/TR/prov-overview/">W3C PROV </a></p>
 <p><a class="reference external" href="https://www.w3.org/TR/prov-overview/">!image</a></p>
 </div>
 <div class="section" id="camflow">
-<h2><span class="section-number">4.4. </span>CamFLow<a class="headerlink" href="#camflow" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://camflow.org/#output_format">CamFlow</a> is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit <span class="bibtex" id="id1">[Pasquier2017Camflow]</span>.</p>
+<h2><span class="section-number">5.4. </span>CamFLow<a class="headerlink" href="#camflow" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://camflow.org/#output_format">CamFlow</a> is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit <span id="id1">[<span>Pasquier2017Camflow</span>]</span>.</p>
 <p>CamFlow support 2 output formats.</p>
 <p>-W3C PROV-JSON format</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>&quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;: {
-    &quot;cf:id&quot;: &quot;194334&quot;,
-    &quot;prov:type&quot;: &quot;fifo&quot;,
-    &quot;cf:boot_id&quot;: 2725894734,
-    &quot;cf:machine_id&quot;: 340646718,
-    &quot;cf:version&quot;: 0,
-    &quot;cf:date&quot;: &quot;2017:01:03T16:43:30&quot;,
-    &quot;cf:jiffies&quot;: &quot;4297436711&quot;,
-    &quot;cf:uid&quot;: 1000,
-    &quot;cf:gid&quot;: 1000,
-    &quot;cf:mode&quot;: &quot;0x1180&quot;,
-    &quot;cf:secctx&quot;: &quot;unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023&quot;,
-    &quot;cf:ino&quot;: 51964,
-    &quot;cf:uuid&quot;: &quot;32b7218a-01a0-c7c9-17b1-666f200b8912&quot;,
-    &quot;prov:label&quot;: &quot;[fifo] 0&quot;
-}
-
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;cf:id&quot;</span><span class="p">:</span> <span class="s2">&quot;194334&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;prov:type&quot;</span><span class="p">:</span> <span class="s2">&quot;fifo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:boot_id&quot;</span><span class="p">:</span> <span class="mi">2725894734</span><span class="p">,</span>
+    <span class="nt">&quot;cf:machine_id&quot;</span><span class="p">:</span> <span class="mi">340646718</span><span class="p">,</span>
+    <span class="nt">&quot;cf:version&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;cf:date&quot;</span><span class="p">:</span> <span class="s2">&quot;2017:01:03T16:43:30&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:jiffies&quot;</span><span class="p">:</span> <span class="s2">&quot;4297436711&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:uid&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="nt">&quot;cf:gid&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="nt">&quot;cf:mode&quot;</span><span class="p">:</span> <span class="s2">&quot;0x1180&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:secctx&quot;</span><span class="p">:</span> <span class="s2">&quot;unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:ino&quot;</span><span class="p">:</span> <span class="mi">51964</span><span class="p">,</span>
+    <span class="nt">&quot;cf:uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;32b7218a-01a0-c7c9-17b1-666f200b8912&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;prov:label&quot;</span><span class="p">:</span> <span class="s2">&quot;[fifo] 0&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Example of a write edge in W3C PROV format:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>&quot;QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;: {
-    &quot;cf:id&quot;: &quot;13&quot;,
-    &quot;prov:type&quot;: &quot;write&quot;,
-    &quot;cf:boot_id&quot;: 2725894734,
-    &quot;cf:machine_id&quot;: 340646718,
-    &quot;cf:date&quot;: &quot;2017:01:03T16:43:30&quot;,
-    &quot;cf:jiffies&quot;: &quot;4297436711&quot;,
-    &quot;prov:label&quot;: &quot;write&quot;,
-    &quot;cf:allowed&quot;: &quot;true&quot;,
-    &quot;prov:activity&quot;: &quot;AQAAAAAAAEAf9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;,
-    &quot;prov:entity&quot;: &quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;,
-    &quot;cf:offset&quot;: &quot;0&quot;
-}
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;cf:id&quot;</span><span class="p">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;prov:type&quot;</span><span class="p">:</span> <span class="s2">&quot;write&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:boot_id&quot;</span><span class="p">:</span> <span class="mi">2725894734</span><span class="p">,</span>
+    <span class="nt">&quot;cf:machine_id&quot;</span><span class="p">:</span> <span class="mi">340646718</span><span class="p">,</span>
+    <span class="nt">&quot;cf:date&quot;</span><span class="p">:</span> <span class="s2">&quot;2017:01:03T16:43:30&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:jiffies&quot;</span><span class="p">:</span> <span class="s2">&quot;4297436711&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;prov:label&quot;</span><span class="p">:</span> <span class="s2">&quot;write&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:allowed&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;prov:activity&quot;</span><span class="p">:</span> <span class="s2">&quot;AQAAAAAAAEAf9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;prov:entity&quot;</span><span class="p">:</span> <span class="s2">&quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cf:offset&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="workflow-information">
-<h2><span class="section-number">4.5. </span>Workflow information:<a class="headerlink" href="#workflow-information" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Workflow information:<a class="headerlink" href="#workflow-information" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">4.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">4.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; * [How to meet community standards for annotation](./community-standards)
 </pre></div>
 </div>
@@ -916,7 +941,7 @@ The <a class="reference external" href="https://www.w3.org/TR/prov-overview/">W3
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">4.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -936,7 +961,7 @@ The <a class="reference external" href="https://www.w3.org/TR/prov-overview/">W3
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">4.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -964,15 +989,15 @@ The <a class="reference external" href="https://www.w3.org/TR/prov-overview/">W3
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="ATI_licensing_data.html" title="previous page"><span class="section-number">3. </span>Data Licenses</a>
-    <a class='right-next' id="next-link" href="community-standards.html" title="next page"><span class="section-number">5. </span>Compliance with community annotation standards</a>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="expressing-data-use.html" title="previous page"><span class="section-number">4. </span>Patterns and practice for expressing allowed data usage</a>
+    <a class='right-next' id="next-link" href="community-standards.html" title="next page"><span class="section-number">6. </span>Compliance with community annotation standards</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

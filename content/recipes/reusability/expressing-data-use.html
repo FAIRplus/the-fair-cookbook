@@ -1,0 +1,1694 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Patterns and practice for expressing allowed data usage</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/reusability/expressing-data-use.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="5. Provenance Information" href="provenance.html" />
+    <link rel="prev" title="3. Data Licenses" href="ATI_licensing_data.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/reusability/expressing-data-use.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Patterns and practice for expressing allowed data usage" />
+<meta property="og:description" content="Patterns and practice for expressing allowed data usage    &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt; " />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/ATI-turingway.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. Chemical Identity - InChi and SMILES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/anonymization.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression:
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="provenance.html">
+     5. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="community-standards.html">
+     6. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/reusability/expressing-data-use.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/reusability/expressing-data-use.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/reusability/expressing-data-use.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   4.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   4.2. Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-and-maturity-table">
+   4.3. Capability and Maturity Table.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools">
+   4.4. tools
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vocabularies">
+     4.4.1. vocabularies
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#format">
+     4.4.2. format
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     4.4.3. implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   4.5. Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sra-ega-xml-schema-for-policy-dataset-and-controler">
+     4.5.1. SRA &amp; EGA XML schema for Policy, Dataset and Controler
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#odrl">
+     4.5.2. ODRL
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-different-types-of-policy">
+       4.5.2.1. The different types of Policy
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#describing-an-agreement-with-odrl">
+         4.5.2.1.1. Describing an agreement with ODRL
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encoding-research-restriction-on-type-of-disease-and-geographical-area">
+     4.5.3. Encoding research restriction on type of disease and geographical area
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indicating-prohibitions-and-interdictions">
+     4.5.4. Indicating Prohibitions and Interdictions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementing-in-datacatalogues-with-dcat-or-with-dats">
+   4.6. Implementing in Datacatalogues with DCAT or with DATS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rdf-representation-of-an-odrl-policy-from-a-dcat-dataset">
+     4.6.1. RDF representation of an ODRL Policy from a DCAT DataSet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dats-and-odrl-json">
+     4.6.2. DATS and ODRL JSON
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#odrl-validation">
+     4.6.3. ODRL Validation:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo-discuss-relation-to-rightml">
+   4.7. TODO discuss relation to RightML
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consuming-data-use-related-annotations">
+   4.8. Consuming Data Use related annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   4.9. Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     4.9.1. What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   4.10. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   4.11. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   4.12. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="patterns-and-practice-for-expressing-allowed-data-usage">
+<span id="fcb-reuse-data-use"></span><h1><span class="section-number">4. </span>Patterns and practice for expressing allowed data usage<a class="headerlink" href="#patterns-and-practice-for-expressing-allowed-data-usage" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a> 
+ version: <a href="">v1.0</a>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-fire fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fas fa-clock fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-users fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
+<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
+<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
+<p> <i class="fa fa-prompt fa-lg" style="color:#7e0038;"></i> Ontologist </p>  
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">4.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of this content is to provide guidance on how to describe permitted use of data, identify the resources that exist to do so.
+The aim is also to document equivalent representations and how bridges can be built between the distinct but equivalent implementations.</p>
+<p>Finally, the content aims to highlight key use-cases which require coverage, how to code such information, suggest patterns and demonstrate implementation patterns for Policies which can be used in data cataloguing efforts.</p>
+</div>
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">4.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../../_images/data-usage-mermaid.png"><img alt="Dealing with Policies and Data Use" src="../../../_images/data-usage-mermaid.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Data Use</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="capability-and-maturity-table">
+<h2><span class="section-number">4.3. </span>Capability and Maturity Table.<a class="headerlink" href="#capability-and-maturity-table" title="Permalink to this headline">¶</a></h2>
+<p>Capability Initial Maturity Level Final Maturity Level
+Interoperability – minimal - repeatable</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="tools">
+<h2><span class="section-number">4.4. </span>tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vocabularies">
+<h3><span class="section-number">4.4.1. </span>vocabularies<a class="headerlink" href="#vocabularies" title="Permalink to this headline">¶</a></h3>
+<p>DUO
+ODRL
+DCAT</p>
+</div>
+<div class="section" id="format">
+<h3><span class="section-number">4.4.2. </span>format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h3>
+<p>Short Read Archive XML
+Data Article Tag Suite JSON</p>
+</div>
+<div class="section" id="implementation">
+<h3><span class="section-number">4.4.3. </span>implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>DUOS:
+<a class="reference external" href="https://duos.broadinstitute.org/#/home">https://duos.broadinstitute.org/#/home</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="introduction">
+<h2><span class="section-number">4.5. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The preservation of patient privacy and the compliance with patient consent are essential considerations when managing clinically sensitive information.
+Consent forms as signed by patients define the acceptable usage of data derived from a patient for research applications.
+All major research organizations, at national and international levels, enforce strict rules for the management of such data.
+Sensitive data can not be accessed without undergoing a vetting process invovlving a data access request to a data access committee, which will decide whether or not to grant requesters access to the data.</p>
+<p>This is a time consuming process in the absence of machine readable version of data access/ data management policies.
+In turns, it can prove detrimental to research.
+Therefore, efforts to enable the provision of concise, efficient and <strong>machine processable</strong> summary of key permissions and prohibitions have been made.
+Several resources are now available for the coding and exchange of <code class="docutils literal notranslate"><span class="pre">machine-actionable</span></code>, <code class="docutils literal notranslate"><span class="pre">legally</span> <span class="pre">binding</span></code> and <code class="docutils literal notranslate"><span class="pre">explicit</span></code> information related to allowed and consented data usage.</p>
+<p>The following sections details how international sequence data archives (US NCBI’ dbGAP, SRA and EU EMBL_EBI EGA) are encoding Data Use Information  but also how a W3C specification, ODRL, can be used to represent equivalent information in a format compatible with the data cataloguing efforts relying on W3C DCAT specification.</p>
+<div class="section" id="sra-ega-xml-schema-for-policy-dataset-and-controler">
+<h3><span class="section-number">4.5.1. </span>SRA &amp; EGA XML schema for Policy, Dataset and Controler<a class="headerlink" href="#sra-ega-xml-schema-for-policy-dataset-and-controler" title="Permalink to this headline">¶</a></h3>
+<p>Next Generation Sequencing technique allow routine production of full genome data from patients. This data is highly sensitive and data repositories specialized in storing such information have developed procedures and representation models for defining the conditions of use.</p>
+<p>We summerize here the key objects used by the European Genome Archive, in compliance with INSDC and GA4GH guidelines.</p>
+<p><a class="reference external" href="https://ega-archive.org/data-use-conditions">https://ega-archive.org/data-use-conditions</a></p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../../../_images/duo-ols-view-1.png"><img alt="Data Use Ontology Overview Part 1" src="../../../_images/duo-ols-view-1.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Data Use Ontology Overview Part 1</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../../../_images/duo-ols-view-2.png"><img alt="Data Use Ontology Overview Part 2" src="../../../_images/duo-ols-view-2.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Data Use Ontology Overview Part 2</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<!-- 
+````{panels}
+:column: col-8
+:card: border-2
+DUO in OLS
+^^^
+```{figure} duo-ols-view-1.png
+width: 400px
+```
+---
+DUO in OLS
+^^^
+```{figure} duo-ols-view-2.png
+width: 400px
+```
+
+```` -->
+<p>The information presented below has been sourced from:</p>
+<ol class="simple">
+<li><p>The Data Access Committee and Contact information</p></li>
+</ol>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version = &#39;1.0&#39; encoding = &#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;DAC_SET&gt;</span>
+    <span class="nt">&lt;DAC</span> <span class="na">alias=</span><span class="s">&quot;DAC-2011-08-11T11:45:28Z-1873&quot;</span> <span class="na">accession=</span><span class="s">&quot;EGAC00000000001&quot;</span> <span class="na">center_name=</span><span class="s">&quot;EBI&quot;</span> <span class="na">broker_name=</span><span class="s">&quot;EGA&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;IDENTIFIERS&gt;</span>
+            <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAC00000000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+            <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>DAC-2011-08-11T11:45:28Z-1873<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+        <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;TITLE&gt;</span>EGA DAC TITLE<span class="nt">&lt;/TITLE&gt;</span>
+        <span class="nt">&lt;CONTACTS&gt;</span>
+            <span class="nt">&lt;CONTACT</span> <span class="na">name=</span><span class="s">&quot;Joe Bloggs&quot;</span> <span class="na">email=</span><span class="s">&quot;joe@noname.com&quot;</span> <span class="na">organisation=</span><span class="s">&quot;EBI&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/CONTACTS&gt;</span>
+    <span class="nt">&lt;/DAC&gt;</span>
+<span class="nt">&lt;/DAC_SET&gt;</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_dac/ega_dac.xml">https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_dac/ega_dac.xml</a></p>
+<ol class="simple">
+<li><p>The Data Access Policy object</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_policy/ega_policy.xml">https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_policy/ega_policy.xml</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>in the following example, the text of the policy is present in the XML representation</p>
+</div>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version = &#39;1.0&#39; encoding = &#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;POLICY_SET&gt;</span>
+    <span class="nt">&lt;POLICY</span> <span class="na">center_name=</span><span class="s">&quot;EBI&quot;</span> <span class="na">alias=</span><span class="s">&quot;Policy-2011-08-26T12:23:53Z-1868&quot;</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">broker_name=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;IDENTIFIERS&gt;</span>
+            <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAP00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+            <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;SC&quot;</span><span class="nt">&gt;</span>Policy-2011-08-26T12:23:53Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+        <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;TITLE/&gt;</span>
+        <span class="nt">&lt;DAC_REF</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">refname=</span><span class="s">&quot;DAC_-2011-08-26T12:23:49Z-1868&quot;</span> <span class="na">refcenter=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;IDENTIFIERS&gt;</span>
+                <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAC00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+                <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>DAC_-2011-08-26T12:23:49Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+            <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;/DAC_REF&gt;</span>
+        <span class="nt">&lt;POLICY_TEXT&gt;</span>https://www.sanger.ac.uk/datasharing/<span class="nt">&lt;/POLICY_TEXT&gt;</span>
+    <span class="nt">&lt;/POLICY&gt;</span>
+<span class="nt">&lt;/POLICY_SET&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>in the following example, the file address (url) to the policy is included in the XML representation.
+Ideally, the url provided should be a globally unique persistent identifier so one can be sure to obtain at least the metadata about the document.</p>
+</div>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version = &#39;1.0&#39; encoding = &#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;POLICY_SET&gt;</span>
+    <span class="nt">&lt;POLICY</span> <span class="na">center_name=</span><span class="s">&quot;EBI&quot;</span> <span class="na">alias=</span><span class="s">&quot;Policy-2011-08-26T12:23:53Z-1868&quot;</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">broker_name=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;IDENTIFIERS&gt;</span>
+            <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAP00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+            <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;SC&quot;</span><span class="nt">&gt;</span>Policy-2011-08-26T12:23:53Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+        <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;TITLE/&gt;</span>
+        <span class="nt">&lt;DAC_REF</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">refname=</span><span class="s">&quot;DAC_-2011-08-26T12:23:49Z-1868&quot;</span> <span class="na">refcenter=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;IDENTIFIERS&gt;</span>
+                <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAC00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+                <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>DAC_-2011-08-26T12:23:49Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+            <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;/DAC_REF&gt;</span>
+        <span class="nt">&lt;POLICY_FILE&gt;</span>https://www.sanger.ac.uk/datasharing/<span class="nt">&lt;/POLICY_FILE&gt;</span>
+    <span class="nt">&lt;/POLICY&gt;</span>
+<span class="nt">&lt;/POLICY_SET&gt;</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Expressing Data Use with EGA xml and Data Use Ontology codes.</p></li>
+</ol>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version = &#39;1.0&#39; encoding = &#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;POLICY_SET&gt;</span>
+    <span class="nt">&lt;POLICY</span> <span class="na">center_name=</span><span class="s">&quot;EBI&quot;</span> <span class="na">alias=</span><span class="s">&quot;Policy-2011-08-26T12:23:53Z-1868&quot;</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">broker_name=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;IDENTIFIERS&gt;</span>
+            <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAP00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+            <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;SC&quot;</span><span class="nt">&gt;</span>Policy-2011-08-26T12:23:53Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+        <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;TITLE/&gt;</span>
+        <span class="nt">&lt;DAC_REF</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">refname=</span><span class="s">&quot;DAC_-2011-08-26T12:23:49Z-1868&quot;</span> <span class="na">refcenter=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;IDENTIFIERS&gt;</span>
+                <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAC00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+                <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>DAC_-2011-08-26T12:23:49Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+            <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;/DAC_REF&gt;</span>
+        <span class="nt">&lt;POLICY_FILE&gt;</span>https://www.sanger.ac.uk/datasharing/<span class="nt">&lt;/POLICY_FILE&gt;</span>
+        <span class="nt">&lt;DATA_USES&gt;</span>
+                   	<span class="c">&lt;!-- no restriction --&gt;</span>
+   			<span class="nt">&lt;DATA_USE&gt;</span>http://purl.obolibrary.org/obo/DUO_0000004<span class="nt">&lt;/DATA_USE&gt;</span>
+
+			<span class="nt">&lt;DATA_USES&gt;</span>
+			   <span class="nt">&lt;DATA_USE</span> <span class="na">ontology=</span><span class="s">&quot;DUO&quot;</span> <span class="na">code=</span><span class="s">&quot;0000004&quot;</span> <span class="na">version=</span><span class="s">&quot;17-07-2016&quot;</span><span class="nt">/&gt;</span>
+			<span class="nt">&lt;/DATA_USES&gt;</span>
+
+        <span class="nt">&lt;/DATA_USES&gt;</span>
+    <span class="nt">&lt;/POLICY&gt;</span>
+<span class="nt">&lt;/POLICY_SET&gt;</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://ega-archive.org/dacs">https://ega-archive.org/dacs</a></p>
+<p>Indicated disease specific restriction on research with DUO and Ontologies covering the Disease and Pathology domain</p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version = &#39;1.0&#39; encoding = &#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;POLICY_SET&gt;</span>
+    <span class="nt">&lt;POLICY</span> <span class="na">center_name=</span><span class="s">&quot;EBI&quot;</span> <span class="na">alias=</span><span class="s">&quot;Policy-2011-08-26T12:23:53Z-1868&quot;</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">broker_name=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;IDENTIFIERS&gt;</span>
+            <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAP00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+            <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;SC&quot;</span><span class="nt">&gt;</span>Policy-2011-08-26T12:23:53Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+        <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;TITLE/&gt;</span>
+        <span class="nt">&lt;DAC_REF</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000001&quot;</span> <span class="na">refname=</span><span class="s">&quot;DAC_-2011-08-26T12:23:49Z-1868&quot;</span> <span class="na">refcenter=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;IDENTIFIERS&gt;</span>
+                <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAC00001000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+                <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>DAC_-2011-08-26T12:23:49Z-1868<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+            <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;/DAC_REF&gt;</span>
+        <span class="nt">&lt;POLICY_FILE&gt;</span>https://www.sanger.ac.uk/datasharing/<span class="nt">&lt;/POLICY_FILE&gt;</span>
+        <span class="nt">&lt;DATA_USES&gt;</span>
+           	<span class="c">&lt;!-- ethics approval required --&gt;</span>
+   			<span class="nt">&lt;DATA_USE&gt;</span>http://purl.obolibrary.org/obo/DUO_0000021<span class="nt">&lt;/DATA_USE&gt;</span>
+   			<span class="c">&lt;!-- geographical restriction --&gt;</span>
+   			<span class="nt">&lt;DATA_USE&gt;</span>http://purl.obolibrary.org/obo/DUO_0000022<span class="nt">&lt;/DATA_USE&gt;</span>
+   			<span class="c">&lt;!-- not-for-profit-organization-use-only --&gt;</span>
+   			<span class="nt">&lt;DATA_USE&gt;</span>http://purl.obolibrary.org/obo/DUO_0000045<span class="nt">&lt;/DATA_USE&gt;</span>
+   			<span class="c">&lt;!-- disease specific research --&gt;</span>
+   			<span class="nt">&lt;DATA_USE&gt;</span>http://purl.obolibrary.org/obo/DUO_0000007<span class="nt">&lt;/DATA_USE&gt;</span>
+        <span class="nt">&lt;/DATA_USES&gt;</span>
+    <span class="nt">&lt;/POLICY&gt;</span>
+<span class="nt">&lt;/POLICY_SET&gt;</span>
+</pre></div>
+</div>
+<p>Point to Notice : For the consent code DUO_0000007 where data is restricted to use on a specific disease, please accompany it with an appropriate ontology from MONDO e.g., If the data is restricted to the use of research into juvenile idiopathic arthritis the code should be displayed as DUO_0000007; MONDO:0011429</p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;POLICY_SET&gt;</span>
+  <span class="nt">&lt;POLICY</span> <span class="na">alias=</span><span class="s">&quot;ena-POLICY-BABRAHAM-23-03-2017-09:47:38:853-62&quot;</span> <span class="na">center_name=</span><span class="s">&quot;BABRAHAM&quot;</span> <span class="na">accession=</span><span class="s">&quot;EGAP00001000615&quot;</span> <span class="na">broker_name=</span><span class="s">&quot;EGA&quot;</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;IDENTIFIERS&gt;</span> 
+      <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAP00001000615<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+      <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;BABRAHAM&quot;</span><span class="nt">&gt;</span>ena-POLICY-BABRAHAM-23-03-2017-09:47:38:853-62<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+    <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+    <span class="nt">&lt;TITLE&gt;</span>Data Access Agreement for PCHiC, RNA-Seq, ChIP-Seq<span class="nt">&lt;/TITLE&gt;</span>
+    <span class="nt">&lt;DAC_REF</span> <span class="na">accession=</span><span class="s">&quot;EGAC00001000523&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAC00001000523<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+      <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+    <span class="nt">&lt;/DAC_REF&gt;</span>
+    <span class="nt">&lt;POLICY_FILE&gt;</span>ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx<span class="nt">&lt;/POLICY_FILE&gt;</span>
+    <span class="nt">&lt;DATA_USES&gt;</span>
+      <span class="nt">&lt;DATA_USE</span> <span class="na">ontology=</span><span class="s">&quot;DUO&quot;</span> <span class="na">code=</span><span class="s">&quot;0000007&quot;</span> <span class="na">version=</span><span class="s">&quot;17-07-2016&quot;</span><span class="nt">&gt;</span>
+      	<span class="c">&lt;!-- disease specific research --&gt;</span>
+        <span class="nt">&lt;MODIFIER&gt;</span>
+           <span class="nt">&lt;DB&gt;</span>EFO<span class="nt">&lt;/DB&gt;</span>
+           <span class="nt">&lt;ID&gt;</span>0001645<span class="nt">&lt;/ID&gt;</span>
+        <span class="nt">&lt;/MODIFIER&gt;</span> 
+        <span class="nt">&lt;MODIFIER&gt;</span>
+           <span class="nt">&lt;DB&gt;</span>EFO<span class="nt">&lt;/DB&gt;</span>
+           <span class="nt">&lt;ID&gt;</span>0001655<span class="nt">&lt;/ID&gt;</span>
+        <span class="nt">&lt;/MODIFIER&gt;</span>
+       <span class="nt">&lt;/DATA_USE&gt;</span>
+       <span class="nt">&lt;DATA_USE</span> <span class="na">ontology=</span><span class="s">&quot;DUO&quot;</span> <span class="na">code=</span><span class="s">&quot;0000014&quot;</span> <span class="na">version=</span><span class="s">&quot;17-07-2016&quot;</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/DATA_USES&gt;</span>
+   <span class="nt">&lt;/POLICY&gt;</span>
+<span class="nt">&lt;/POLICY_SET&gt;</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_dataset/ega_dataset.xml">https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_dataset/ega_dataset.xml</a></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;DATASETS&gt;</span>
+    <span class="nt">&lt;DATASET</span> <span class="na">alias=</span><span class="s">&quot;EGAS000000001-sc-20110919&quot;</span> <span class="na">center_name=</span><span class="s">&quot;SC&quot;</span> <span class="na">broker_name=</span><span class="s">&quot;EGA&quot;</span> <span class="na">accession=</span><span class="s">&quot;EGAD00001000039&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;IDENTIFIERS&gt;</span>
+            <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAD00001000039<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+            <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;SC&quot;</span><span class="nt">&gt;</span>EGAS000000001-sc-20110919<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+        <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;TITLE&gt;</span>Platelet collagen defect<span class="nt">&lt;/TITLE&gt;</span>
+        <span class="nt">&lt;RUN_REF</span> <span class="na">accession=</span><span class="s">&quot;EGAR0000000001&quot;</span> <span class="na">refname=</span><span class="s">&quot;RUN_1&quot;</span> <span class="na">refcenter=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;IDENTIFIERS&gt;</span>
+                <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAR0000000001<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+                <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>RUN_1<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+            <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;/RUN_REF&gt;</span>
+        <span class="nt">&lt;POLICY_REF</span> <span class="na">accession=</span><span class="s">&quot;EGAP00000001&quot;</span> <span class="na">refname=</span><span class="s">&quot;Policy_-2011-08-17T15:05:39Z-1888&quot;</span> <span class="na">refcenter=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;IDENTIFIERS&gt;</span>
+                <span class="nt">&lt;PRIMARY_ID&gt;</span>EGAP00001000024<span class="nt">&lt;/PRIMARY_ID&gt;</span>
+                <span class="nt">&lt;SUBMITTER_ID</span> <span class="na">namespace=</span><span class="s">&quot;EBI&quot;</span><span class="nt">&gt;</span>Policy_-2011-08-17T15:05:39Z-1888<span class="nt">&lt;/SUBMITTER_ID&gt;</span>
+            <span class="nt">&lt;/IDENTIFIERS&gt;</span>
+        <span class="nt">&lt;/POLICY_REF&gt;</span>
+    <span class="nt">&lt;/DATASET&gt;</span>
+<span class="nt">&lt;/DATASETS&gt;</span>
+</pre></div>
+</div>
+<p>Browsing Data Access Committees available from EGA:</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../../../_images/dac-ega.png"><img alt="List of Data Access Policy from EGA" src="../../../_images/dac-ega.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.17 </span><span class="caption-text">List of Data Access Policy from EGA</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="odrl">
+<h3><span class="section-number">4.5.2. </span>ODRL<a class="headerlink" href="#odrl" title="Permalink to this headline">¶</a></h3>
+<p>ODRL stands for Open Digital Rights Language, which is a set  W3C Recommendations defining a <code class="docutils literal notranslate"><span class="pre">policy</span> <span class="pre">expression</span> <span class="pre">language</span></code>.</p>
+<p>ODRL is made up of:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3.org/TR/odrl-model/">The ODRL Model</a></p></li>
+</ul>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="https://www.w3.org/TR/odrl-model/00Model.png"><img alt="Open Digital Rights Language model" src="https://www.w3.org/TR/odrl-model/00Model.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.18 </span><span class="caption-text">ODRL overview</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3.org/TR/odrl-vocab/">The ODRL Vocabulary</a></p></li>
+</ul>
+<p>The ODRL Vocabulary and Expression describes the terms used in ODRL policies and how to encode them.</p>
+<p>The ODRL Vocabulary and Expression complements the ODRL information model.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In 2015, the dedicated working group produced the following JSON schema implementation guidance
+<a class="reference external" href="https://www.w3.org/community/odrl/json/2.1/#section-Schema">https://www.w3.org/community/odrl/json/2.1/#section-Schema</a></p>
+<p>We base our representations on this specification.</p>
+<p>We are aware of a possible misalignment between the specifications of the Working Group (from 2015) and the latest specifications as to whether to use the keys “name” or “leftOperand” (<a class="reference external" href="https://www.w3.org/TR/odrl-model/#constraint-rule">https://www.w3.org/TR/odrl-model/#constraint-rule</a>, 2018).
+In the following representations, we use the key “name” to validate against the 2015 JSON-schema <a class="reference external" href="https://www.w3.org/community/odrl/json/2.1/#section-Schema">https://www.w3.org/community/odrl/json/2.1/#section-Schema</a> / <a class="reference external" href="https://github.com/iptc/rightsml-dev/blob/master/licensed/ODRL21.json">https://github.com/iptc/rightsml-dev/blob/master/licensed/ODRL21.json</a></p>
+</div>
+<div class="section" id="the-different-types-of-policy">
+<h4><span class="section-number">4.5.2.1. </span>The different types of Policy<a class="headerlink" href="#the-different-types-of-policy" title="Permalink to this headline">¶</a></h4>
+<p>The ODRL model defines several subclasses for the <code class="docutils literal notranslate"><span class="pre">Policy</span></code> entity, namely  <code class="docutils literal notranslate"><span class="pre">Agreement</span></code>,<code class="docutils literal notranslate"><span class="pre">Set</span></code>,<code class="docutils literal notranslate"><span class="pre">Offer</span></code></p>
+<div class="section" id="describing-an-agreement-with-odrl">
+<h5><span class="section-number">4.5.2.1.1. </span>Describing an agreement with ODRL<a class="headerlink" href="#describing-an-agreement-with-odrl" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Agreement&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/policy:5531&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;inheritallowed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/report:2321&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/print&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;assigner&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/pub:88&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;assignee&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/billie:888&quot;</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Agreement&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/policy:9999&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;inheritfrom&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/policy:5531&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/report:2333&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/display&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;assigner&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/pub:88&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;assignee&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/class:IT01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;assignee_scope&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/group&quot;</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="encoding-research-restriction-on-type-of-disease-and-geographical-area">
+<h3><span class="section-number">4.5.3. </span>Encoding research restriction on type of disease and geographical area<a class="headerlink" href="#encoding-research-restriction-on-type-of-disease-and-geographical-area" title="Permalink to this headline">¶</a></h3>
+<p>A basic ODRL based pattern using a DUO term to represent a situation where SecondaryUse of the data is allowed on the condition that work is restricted to <code class="docutils literal notranslate"><span class="pre">disease</span> <span class="pre">specific</span> <span class="pre">research</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Policy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;EGAD00001000039&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/secondaryUse&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;assigner&quot;</span><span class="p">:</span> <span class="s2">&quot;https://ega-archive.org/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;constraints&quot;</span><span class="p">:[{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/purpose&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/eq&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;rightoperand&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/DUO_0000007&quot;</span>
+            <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="tip admonition note">
+<p class="admonition-title">Note</p>
+<p>The main limitation of the representation is that it provides no information about which diseases are vetted for research.</p>
+</div>
+<p>The following representation is more sophisticated and includes 3 types for restrictions:</p>
+<ul class="simple">
+<li><p>restriction on specific disease (juvenile arthritis, to reuse to examplar representation in EGA/SRA XML presented in section 1)</p></li>
+<li><p>restriction on the geographical location where the research can be conducted</p></li>
+<li><p>an obligation to delete the data obtained through the agreement past a specified duration, 3 years in our example</p></li>
+</ul>
+<p>Let’s proceed stepwise.</p>
+<ul class="simple">
+<li><p>Representing Research Restriction on Specific Disease Area using DUO and MONDO ontologies</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Policy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;EGAD00001000039&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="nt">&quot;rdf:value&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;odrl:secondaryUse&quot;</span> <span class="p">},</span>
+                <span class="nt">&quot;refinement&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;xone&quot;</span><span class="p">:</span> <span class="p">{</span> 
+                        <span class="nt">&quot;@list&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                            <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/MONDO_0011429&quot;</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/EFO_0001645&quot;</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/EFO_0001655&quot;</span> <span class="p">}</span>  
+                        <span class="p">]</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}],</span>
+            <span class="nt">&quot;assigner&quot;</span><span class="p">:</span> <span class="s2">&quot;https://ega-archive.org/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;constraints&quot;</span><span class="p">:[{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/purpose&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/eq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rightoperand&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/DUO_0000007&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>when using refinements, note the difference in representation to indicate the nature of the action.
+here is uses:</p>
+<p>while the ordinary is simpler:
+“action”: “<a class="reference external" href="http://www.w3.org/ns/odrl/2/secondaryUse">http://www.w3.org/ns/odrl/2/secondaryUse</a>”,</p>
+<p>vs</p>
+<p>“action”: [{
+“rdf:value”: { “&#64;id”: “odrl:secondaryUse” },</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While DUO is unique in its coverage of data uses, various disease ontologies exist and may be used to specify the specific focus research should have.
+For instance, SNOMED-CT, Disease Ontology could also be used.
+It is worth noting that extensive cross referencing exists between resources such as DOID, MONDO and SNOMED-CT but this is something to consider when implementing brokering systems.</p>
+</div>
+<ul class="simple">
+<li><p>Representing Research Restriction based on Geographical Regions, geofencing</p></li>
+</ul>
+<p>The section step shows how to use ODRL to document a geographical restrictions. This can be to list countries where research is allowed or to exclude countries from using a given dataset.</p>
+<p>In the following example, research is only allowed in a specific country, Italy in our example, which is encoded using ISO-3166 code.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Policy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;EGAD00001000039&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+           	    <span class="nt">&quot;rdf:value&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;odrl:secondaryUse&quot;</span> <span class="p">},</span>
+                    <span class="nt">&quot;refinement&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;xone&quot;</span><span class="p">:</span> <span class="p">{</span> 
+                        <span class="nt">&quot;@list&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                        <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/MONDO_0011429&quot;</span> <span class="p">},</span>
+                        <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/EFO_0001645&quot;</span> <span class="p">},</span>
+                        <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/EFO_0001655&quot;</span> <span class="p">}</span>  
+                        <span class="p">]</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}],</span>
+            <span class="nt">&quot;assigner&quot;</span><span class="p">:</span> <span class="s2">&quot;https://ega-archive.org/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;constraints&quot;</span><span class="p">:[{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/purpose&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/eq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rightoperand&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/DUO_0000007&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/spatial&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/eq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rightoperand&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.itu.int/tML/tML-ISO-3166:it&quot;</span>
+            <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Representing Obligations regarding Data Management</p></li>
+</ul>
+<p>The following example shows how explicitly state in a Policy element that the data must be deleted after a defined period of time, here 3 years.
+Duration and time related value should be represented using ISO-8601 standard.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Policy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;EGAD00001000039&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/secondaryUse&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+           	    <span class="nt">&quot;rdf:value&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;odrl:secondaryUse&quot;</span> <span class="p">},</span>
+           	    <span class="nt">&quot;refinement&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;xone&quot;</span><span class="p">:</span> <span class="p">{</span> 
+                    <span class="nt">&quot;@list&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                            <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/MONDO_0011429&quot;</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/EFO_0001645&quot;</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/EFO_0001655&quot;</span> <span class="p">}</span>  
+                        <span class="p">]</span>
+                  <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}],</span>
+            <span class="nt">&quot;assigner&quot;</span><span class="p">:</span> <span class="s2">&quot;https://ega-archive.org/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;constraints&quot;</span><span class="p">:[{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/purpose&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/eq&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rightoperand&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/DUO_0000007&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/spatial&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/eq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rightoperand&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.itu.int/tML/tML-ISO-3166:it&quot;</span>
+            <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;duties&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/delete&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;EGAD00001000039&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;constraints&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/dateTime&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/eq&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rightoperand&quot;</span><span class="p">:</span> <span class="s2">&quot;P36M&quot;</span>
+                <span class="p">}]</span>
+        <span class="p">}]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indicating-prohibitions-and-interdictions">
+<h3><span class="section-number">4.5.4. </span>Indicating Prohibitions and Interdictions<a class="headerlink" href="#indicating-prohibitions-and-interdictions" title="Permalink to this headline">¶</a></h3>
+<p>The ODRL model provides the <code class="docutils literal notranslate"><span class="pre">prohibitions</span></code> relation, which uses similar patterns to those seen while covering  <code class="docutils literal notranslate"><span class="pre">permissions</span></code>. The ODRL vocabulary is then used to identify the <code class="docutils literal notranslate"><span class="pre">actions</span></code> which are restricted under the <code class="docutils literal notranslate"><span class="pre">prohibition</span></code> header. Complex prohibitions can be expressed using <code class="docutils literal notranslate"><span class="pre">constraints</span></code> and <code class="docutils literal notranslate"><span class="pre">refinement</span></code> elements.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Policy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/policy:0099&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/asset:9898&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/reproduce&quot;</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;prohibitions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/asset:9898&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/modify&quot;</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="implementing-in-datacatalogues-with-dcat-or-with-dats">
+<h2><span class="section-number">4.6. </span>Implementing in Datacatalogues with DCAT or with DATS<a class="headerlink" href="#implementing-in-datacatalogues-with-dcat-or-with-dats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rdf-representation-of-an-odrl-policy-from-a-dcat-dataset">
+<h3><span class="section-number">4.6.1. </span>RDF representation of an ODRL Policy from a DCAT DataSet<a class="headerlink" href="#rdf-representation-of-an-odrl-policy-from-a-dcat-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@prefix dcat:&lt;https://www.w3.org/ns/dcat&gt; .
+@prefix odrl:&lt;https://www.w3.org/ns/odrl/2/core&gt; .
+@prefix dct: &lt;http://purl.org/dc/elements/1.1/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;<span class="c1">#daa-policy-1&gt;</span>
+ a odrl:Policy .
+
+&lt;<span class="c1">#dataset-001&gt;</span>
+  a dcat:Dataset <span class="p">;</span>
+  dct:title <span class="s2">&quot;Human Patient Genomic Dataset&quot;</span>@en <span class="p">;</span>
+  dcat:keyword <span class="s2">&quot;genotype&quot;</span>@en, <span class="s2">&quot;phenotyping&quot;</span>@en, <span class="s2">&quot;IMI&quot;</span>@en <span class="p">;</span>
+  dct:creator <span class="s2">&quot;imi-consortium-XYZ&quot;</span> <span class="p">;</span>
+  dct:issued <span class="s2">&quot;2021-12-05&quot;</span>^^xsd:date <span class="p">;</span>
+  dct:modified <span class="s2">&quot;2021-12-15&quot;</span>^^xsd:date <span class="p">;</span>
+  dcat:contactPoint &lt;http://example.org/imi-project-xyz/contact1&gt; <span class="p">;</span>
+  dct:publisher <span class="s2">&quot;imi-consortium-XYZ&quot;</span><span class="p">;</span>
+  dct:language &lt;http://id.loc.gov/vocabulary/iso639-1/en&gt;  <span class="p">;</span>
+  dcat:distribution _:dataset-001-csv <span class="p">;</span>
+  odrl:hasPolicy &lt;<span class="c1">#daa-policy-1&gt;;</span>
+  .
+</pre></div>
+</div>
+<p>For more details, please see the following publication by <a class="reference external" href="https://www.specialprivacy.eu/images/documents/RuleMLRR_2019_.pdf">de Vos et al, 2019</a></p>
+</div>
+<div class="section" id="dats-and-odrl-json">
+<h3><span class="section-number">4.6.2. </span>DATS and ODRL JSON<a class="headerlink" href="#dats-and-odrl-json" title="Permalink to this headline">¶</a></h3>
+<p>An evolution of the DATS [2,3] schema is used by University of Luxembourg to build a data catalogue for IMI projects and datasets.
+The proposed patterns could be used and tested to representation DAC/DAA information as well as the allowed uses of datasets generated by the consortia funded by IMI.
+More complex use cases can be considered to assess to ability of the representations to be associated to specific datasets, for instance datasets associated with a particular data acquisition technique the access of which may require specific policies and conditions to be made machine readable.</p>
+<p>The approach is therefore to reference the  JSON representations compliant with the ODRL JSON schema 2.1 specification, as presented in earlier sections in conjunction with DATS JSON documents.</p>
+</div>
+<div class="section" id="odrl-validation">
+<h3><span class="section-number">4.6.3. </span>ODRL Validation:<a class="headerlink" href="#odrl-validation" title="Permalink to this headline">¶</a></h3>
+<p>Code exists that allows developers to validate ODRL documents <strong>expressed in legitimate RDF serializations</strong>.</p>
+<p><a class="reference external" href="http://odrlapi.appspot.com/">http://odrlapi.appspot.com/</a></p>
+<div class="figure align-default" id="odrl-validation-and-evaluation-sandbox">
+<a class="reference internal image-reference" href="../../../_images/odrl-validation-app.png"><img alt="ODRL Validation and Evaluation Sandbox" src="../../../_images/odrl-validation-app.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.19 </span><span class="caption-text">ODRL Validation and Evaluation Sandbox</span><a class="headerlink" href="#odrl-validation-and-evaluation-sandbox" title="Permalink to this image">¶</a></p>
+</div>
+<p>The webapplication is powered by a REST-API the swagger document of which is available from the following address: <a class="reference external" href="http://odrlapi.appspot.com/apidoc/index.html">http://odrlapi.appspot.com/apidoc/index.html</a></p>
+</div>
+</div>
+<div class="section" id="todo-discuss-relation-to-rightml">
+<h2><span class="section-number">4.7. </span>TODO discuss relation to RightML<a class="headerlink" href="#todo-discuss-relation-to-rightml" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html">https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html</a></p>
+</div>
+<div class="section" id="consuming-data-use-related-annotations">
+<h2><span class="section-number">4.8. </span>Consuming Data Use related annotations<a class="headerlink" href="#consuming-data-use-related-annotations" title="Permalink to this headline">¶</a></h2>
+<p>It is all good and and well to describe patterns in various formats but are there any tools or services capable exploiting these annotations?
+Well, when it comes to genomics data, the Broad Institute’s  <a class="reference external" href="https://duos.broadinstitute.org/#/home">Data Use Oversight System (DUOS)</a>.</p>
+<div class="figure align-default" id="broad-s-institute-data-use-oversight-system">
+<a class="reference internal image-reference" href="../../../_images/broads-duos.png"><img alt="Broad's Institute  Data Use Oversight System" src="../../../_images/broads-duos.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.20 </span><span class="caption-text">Broad’s Institute  Data Use Oversight System landing page</span><a class="headerlink" href="#broad-s-institute-data-use-oversight-system" title="Permalink to this image">¶</a></p>
+</div>
+<p>DUOS requires official clearance from <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Access</span> <span class="pre">Committee</span></code> representative or an <code class="docutils literal notranslate"><span class="pre">Authorized</span> <span class="pre">Submission</span> <span class="pre">Representative</span></code> to enable registration of a dataset into the DUOS.
+Once this authorization is available, the dataset has to be annotated following the patterns defined by GA4GH with Data Use Ontology and ‘SRA xml’ format.</p>
+<p>The European Genome Archive allows programmatic filtering based on the this information via the REST-API of the service.</p>
+</div>
+<div class="section" id="conclusion">
+<h2><span class="section-number">4.9. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Making sure that machine readable information about the conditions of use of dataset and data is key to enable privacy preserving and policy compliant use of information across organizations.
+This content provides an overview of the models available to do so and how it has been applied to life science data, showing the main features of the models and how to define used based on the major properties such as the type of research allowed, how to indicate disease domain or geographical restrictions as well as temporal restrictions associated to the dataset and defined by the data owners/data controlers.</p>
+<div class="section" id="what-to-read-next">
+<h3><span class="section-number">4.9.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><a class="reference internal" href="ATI_licensing_software.html#rr-licensing-software"><span class="std std-ref">Software Licenses</span></a></p>
+</div></blockquote>
+<blockquote>
+<div><p><a class="reference internal" href="ATI_licensing_data.html#rr-licensing-data"><span class="std std-ref">Data Licenses</span></a></p>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2><span class="section-number">4.10. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>[1]. Dyke et al, 2017. <a class="reference external" href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005772">http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005772</a></p>
+<p>[2]. Sansone et al, 2017: <a class="reference external" href="https://doi.org/10.1038/sdata.2017.59">https://doi.org/10.1038/sdata.2017.59</a></p>
+<p>[3]. Alter et al, 2020: <a class="reference external" href="https://doi.org/10.1093/gigascience/giz165">https://doi.org/10.1093/gigascience/giz165</a></p>
+<p>[4]. ODLR model: <a class="reference external" href="https://www.w3.org/TR/odrl-model">https://www.w3.org/TR/odrl-model</a></p>
+<p>[5]. ODRL vocabulary: <a class="reference external" href="https://www.w3.org/TR/odrl-vocab/">https://www.w3.org/TR/odrl-vocab/</a></p>
+<p>[6]. DRL JSON schema: <a class="reference external" href="https://www.w3.org/community/odrl/json/2.1/#section-Schema">https://www.w3.org/community/odrl/json/2.1/#section-Schema</a></p>
+<p>[7]. DUO: <a class="reference external" href="http://purl.obolibrary.org/obo/duo.owl">http://purl.obolibrary.org/obo/duo.owl</a></p>
+<p>[8]. RIGHTML: <a class="reference external" href="https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html">https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">4.11. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>orcid</p></th>
+<th class="text-align:left head"><p>CrediT role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Philippe Rocca-Serra</p></td>
+<td class="text-align:left"><p>University of Oxford</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>AZ</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>EMBL-EBI</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>UNI-LU</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">4.12. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/reusability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="ATI_licensing_data.html" title="previous page"><span class="section-number">3. </span>Data Licenses</a>
+    <a class='right-next' id="next-link" href="provenance.html" title="next page"><span class="section-number">5. </span>Provenance Information</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3. What are the FAIR Principles?</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -24,8 +25,8 @@
     href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -40,7 +41,6 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -83,7 +83,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -402,6 +402,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
      Which vocabulary to use?
     </a>
@@ -479,13 +498,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
-     4. Provenance Information
+     5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/community-standards.html">
-     5. Compliance with community annotation standards
+     6. Compliance with community annotation standards
     </a>
    </li>
   </ul>
@@ -655,21 +679,21 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -687,7 +711,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -701,28 +725,29 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/introduction/brief-FAIR-principles.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migration/content/recipes/introduction/brief-FAIR-principles.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/introduction/brief-FAIR-principles.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i>
+            Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -777,6 +802,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -865,7 +891,7 @@ doi: 10.1038/sdata.2016.18
  -->
 <div class="figure align-default" id="the-fair-principles">
 <a class="reference internal image-reference" href="https://i.imgur.com/RxkoNed.png"><img alt="the cover page for the FAIR principle article as published in Scientific Data. https://doi.org/10.1038/sdata.2016.18" src="https://i.imgur.com/RxkoNed.png" style="height: 650px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text"><em>The FAIR Principles</em> the cover pages for the FAIR principle articles as published in Scientific Data. https://doi.org/10.1038/sdata.2016.18.</span><a class="headerlink" href="#the-fair-principles" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text"><em>The FAIR Principles</em> the cover pages for the FAIR principle articles as published in Scientific Data. <a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.</span><a class="headerlink" href="#the-fair-principles" title="Permalink to this image">¶</a></p>
 </div>
 <div class="sphinx-bs container-lg pb-3 docutils">
 <div class="row docutils">
@@ -873,8 +899,8 @@ doi: 10.1038/sdata.2016.18
 <div class="card w-100 rounded docutils">
 <div class="card-body docutils">
 <div class="tabbed-set docutils">
-<input checked="checked" id="002e94b7-b82a-427f-95ca-7bb2a6dd5023" name="0d12e7de-d4cf-427e-b458-bd814d6ad705" type="radio">
-</input><label class="tabbed-label" for="002e94b7-b82a-427f-95ca-7bb2a6dd5023">
+<input checked="checked" id="0fdd163a-d18c-4998-bf31-356c5130df2c" name="bda2ad8d-a3d4-424e-84f0-40668bdedd33" type="radio">
+</input><label class="tabbed-label" for="0fdd163a-d18c-4998-bf31-356c5130df2c">
 F.</label><div class="tabbed-content docutils">
 <blockquote>
 <div><p class="card-text">To be Findable:
@@ -884,8 +910,8 @@ F1. (meta)data are assigned a <strong>globally unique and persistent identifier<
 <p class="card-text">F4. (meta)data are registered or <strong>indexed in a searchable resource</strong></p>
 </div></blockquote>
 </div>
-<input id="7c1e78e2-0192-446e-9126-d74a82fa3343" name="0d12e7de-d4cf-427e-b458-bd814d6ad705" type="radio">
-</input><label class="tabbed-label" for="7c1e78e2-0192-446e-9126-d74a82fa3343">
+<input id="d6d52e67-0d62-42d0-b254-73a07597a66f" name="bda2ad8d-a3d4-424e-84f0-40668bdedd33" type="radio">
+</input><label class="tabbed-label" for="d6d52e67-0d62-42d0-b254-73a07597a66f">
 A.</label><div class="tabbed-content docutils">
 <blockquote>
 <div><p class="card-text">To be Accessible:
@@ -895,8 +921,8 @@ A1. (meta)data are retrievable by their identifier using <strong>a standardized 
 <p class="card-text">A2. <strong>metadata are accessible</strong>, even when the data are no longer available</p>
 </div></blockquote>
 </div>
-<input id="13ea0fa9-2be8-4d62-a3bb-da63ae56ae6a" name="0d12e7de-d4cf-427e-b458-bd814d6ad705" type="radio">
-</input><label class="tabbed-label" for="13ea0fa9-2be8-4d62-a3bb-da63ae56ae6a">
+<input id="09a9254e-a236-4be6-9671-667b1d754512" name="bda2ad8d-a3d4-424e-84f0-40668bdedd33" type="radio">
+</input><label class="tabbed-label" for="09a9254e-a236-4be6-9671-667b1d754512">
 I.</label><div class="tabbed-content docutils">
 <blockquote>
 <div><p class="card-text">To be Interoperable:
@@ -905,8 +931,8 @@ I1. (meta)data use a <strong>formal, accessible, shared, and broadly applicable 
 <p class="card-text">I3. (meta)data include <strong>qualified references</strong> to other (meta)data</p>
 </div></blockquote>
 </div>
-<input id="9f655368-469c-4f46-97bb-0bf4ec196b6e" name="0d12e7de-d4cf-427e-b458-bd814d6ad705" type="radio">
-</input><label class="tabbed-label" for="9f655368-469c-4f46-97bb-0bf4ec196b6e">
+<input id="627b2db7-2f0e-40ee-bcdf-1435a52199bb" name="bda2ad8d-a3d4-424e-84f0-40668bdedd33" type="radio">
+</input><label class="tabbed-label" for="627b2db7-2f0e-40ee-bcdf-1435a52199bb">
 R.</label><div class="tabbed-content docutils">
 <blockquote>
 <div><p class="card-text">To be Reusable:
@@ -1209,15 +1235,15 @@ R1. meta(data) are richly described with a <strong>plurality of accurate and rel
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="FAIR-cookbook-audience.html" title="previous page"><span class="section-number">2. </span>Who should read the FAIR Cookbook?</a>
     <a class='right-next' id="next-link" href="what-is-IMI.html" title="next page"><span class="section-number">4. </span>What is IMI?</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

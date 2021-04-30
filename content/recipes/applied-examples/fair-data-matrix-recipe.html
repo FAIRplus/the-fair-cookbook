@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Making a Data Matrix FAIR</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -24,8 +25,8 @@
     href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -40,7 +41,6 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -83,7 +83,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -402,6 +402,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
      Which vocabulary to use?
     </a>
@@ -479,13 +498,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
-     4. Provenance Information
+     5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/community-standards.html">
-     5. Compliance with community annotation standards
+     6. Compliance with community annotation standards
     </a>
    </li>
   </ul>
@@ -655,21 +679,21 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -687,7 +711,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -701,28 +725,29 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/fair-data-matrix-recipe.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migration/content/recipes/applied-examples/fair-data-matrix-recipe.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/applied-examples/fair-data-matrix-recipe.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i>
+            Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -829,6 +854,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -930,7 +956,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="overview-of-the-fairification-process-of-a-data-matrix">
 <a class="reference internal image-reference" href="../../../_images/fair-data-matrix.png"><img alt="Overview of the FAIRification process of a data matrix" src="../../../_images/fair-data-matrix.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Overview of the FAIRification process of a data matrix.</span><a class="headerlink" href="#overview-of-the-fairification-process-of-a-data-matrix" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Overview of the FAIRification process of a data matrix.</span><a class="headerlink" href="#overview-of-the-fairification-process-of-a-data-matrix" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1055,7 +1081,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>uploading it to Zenodo.</p></li>
 <li><p>assigning an open license (CC-BY 4.0)</p></li>
-<li><p>obtaining a persistent unique identifier in the form of a DOI: https://doi.org/10.5281/zenodo.2598799</p></li>
+<li><p>obtaining a persistent unique identifier in the form of a DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.2598799">https://doi.org/10.5281/zenodo.2598799</a></p></li>
 </ul>
 </div>
 <div class="section" id="step2-address-interoperability">
@@ -1063,15 +1089,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>We regularized the three dimensions of the matrix (data cube), which represent: i) the metabolites (molecular entities), ii) the treatments (experimental conditions and corresponding biomaterials and bioassays), and iii) the quantitation type (measurements).</p>
 <div class="section" id="step-2a-semantic-anchoring">
 <h4>Step 2A: semantic anchoring<a class="headerlink" href="#step-2a-semantic-anchoring" title="Permalink to this headline">¶</a></h4>
-<p>Metabolites (free text) names were augmented with unambiguous InChI codes, assigned by accessing CHEBI (https://doi.org/10.25504/FAIRsharing.62qk8w) programmatically via its LibChebi library (https://github.com/libChEBI/libChEBIpy).<br />
+<p>Metabolites (free text) names were augmented with unambiguous InChI codes, assigned by accessing CHEBI (<a class="reference external" href="https://doi.org/10.25504/FAIRsharing.62qk8w">https://doi.org/10.25504/FAIRsharing.62qk8w</a>) programmatically via its LibChebi library (<a class="reference external" href="https://github.com/libChEBI/libChEBIpy">https://github.com/libChEBI/libChEBIpy</a>).<br />
 We unpacked the information held in the column header, identifying the main types of tabulated entities and their relationships, and replacing free text with ontology term.
-For example, we disambiguated the taxonomic name of the cultivar from the anatomical part using terms and identifiers from the NCBI Taxonomy (https://doi.org/10.25504/FAIRsharing.fj07xj) and Plant Ontology (https://doi.org/10.25504/FAIRsharing.3ngg40) respectively.</p>
+For example, we disambiguated the taxonomic name of the cultivar from the anatomical part using terms and identifiers from the NCBI Taxonomy (<a class="reference external" href="https://doi.org/10.25504/FAIRsharing.fj07xj">https://doi.org/10.25504/FAIRsharing.fj07xj</a>) and Plant Ontology (<a class="reference external" href="https://doi.org/10.25504/FAIRsharing.3ngg40">https://doi.org/10.25504/FAIRsharing.3ngg40</a>) respectively.</p>
 </div>
 <div class="section" id="step-2b-disambiguation-of-the-experimental-design">
 <h4>Step 2B: disambiguation of the experimental design<a class="headerlink" href="#step-2b-disambiguation-of-the-experimental-design" title="Permalink to this headline">¶</a></h4>
 <p>We clarified the intent of the experimentalist, which is a comparison between two independent variables identified (the rose variety and the organism part), which are both categorical variables with six and three discrete factor levels, respectively. Since only eight factor combinations are reported, we concluded that this is a fractional factorial design (rather than a  factorial design, where eighteen theoretical factor combinations are possible)
 We disambiguated among the attributes of the samples those that are study factors and their values, to explicitly enable queries on treatment groups and their sizes.
-We used the STATistics Ontology (STATO; https://doi.org/10.25504/FAIRsharing.na5xp) to unambiguously express and semantically type these notions.</p>
+We used the STATistics Ontology (STATO; <a class="reference external" href="https://doi.org/10.25504/FAIRsharing.na5xp">https://doi.org/10.25504/FAIRsharing.na5xp</a>) to unambiguously express and semantically type these notions.</p>
 </div>
 <div class="section" id="step-2c-clarification-of-the-measurement-performed">
 <h4>Step 2C: clarification of the measurement performed<a class="headerlink" href="#step-2c-clarification-of-the-measurement-performed" title="Permalink to this headline">¶</a></h4>
@@ -1082,25 +1108,25 @@ We marked-up all entities with persistent resolvable identifiers to enhance data
 </div>
 <div class="section" id="step3-preservation-of-the-data-matrices-in-an-open-syntax">
 <h3>Step3: Preservation of the data matrices in an open syntax<a class="headerlink" href="#step3-preservation-of-the-data-matrices-in-an-open-syntax" title="Permalink to this headline">¶</a></h3>
-<p>We used the Frictionless Tabular Data Package (https://frictionlessdata.io/data-packages) to describe the table headers in JSON format.
-The transformation is documented in a jupyter notebook (https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb).</p>
+<p>We used the Frictionless Tabular Data Package (<a class="reference external" href="https://frictionlessdata.io/data-packages">https://frictionlessdata.io/data-packages</a>) to describe the table headers in JSON format.
+The transformation is documented in a jupyter notebook (<a class="reference external" href="https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb">https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb</a>).</p>
 </div>
 <div class="section" id="step4-address-reusability">
 <h3>Step4: Address Reusability<a class="headerlink" href="#step4-address-reusability" title="Permalink to this headline">¶</a></h3>
-<p>We performed a conversion to Linked Data, using terms from OBO Foundry Ontologies (https://fairsharing.org/collection/OBOFoundry)
+<p>We performed a conversion to Linked Data, using terms from OBO Foundry Ontologies (<a class="reference external" href="https://fairsharing.org/collection/OBOFoundry">https://fairsharing.org/collection/OBOFoundry</a>)
 As a result, the metabolite measurements can be plotted using popular visualization libraries (Python plotnine or R ggplot2) from either a SPARQL query over the RDF representation or from the data package directly.</p>
 </div>
 <div class="section" id="step5-address-findability-and-accessibility">
 <h3>Step5: address Findability and Accessibility<a class="headerlink" href="#step5-address-findability-and-accessibility" title="Permalink to this headline">¶</a></h3>
 <p>We made the FAIRified outputs discoverable and citable by uploading them to Zenodo, assigning an open license (CC-BY 4.0), and obtaining persistent unique identifiers:</p>
 <ul class="simple">
-<li><p>GC-MS data from the ‘Rose Genome’ available as Frictionless Tabular Data Package: https://doi.org/10.5281/zenodo.2640873</p></li>
-<li><p>RDF Linked Data representation of GC-MS data from the ‘Rose Genome’ article: https://doi.org/10.5281/zenodo.2598812</p></li>
-<li><p>Comparison of GC-MS datasets available as Frictionless Tabular Data Package: https://doi.org/10.5281/zenodo.2640919</p></li>
-<li><p>Rose scent FAIRification project code release: https://doi.org/10.5281/zenodo.2641109</p></li>
+<li><p>GC-MS data from the ‘Rose Genome’ available as Frictionless Tabular Data Package: <a class="reference external" href="https://doi.org/10.5281/zenodo.2640873">https://doi.org/10.5281/zenodo.2640873</a></p></li>
+<li><p>RDF Linked Data representation of GC-MS data from the ‘Rose Genome’ article: <a class="reference external" href="https://doi.org/10.5281/zenodo.2598812">https://doi.org/10.5281/zenodo.2598812</a></p></li>
+<li><p>Comparison of GC-MS datasets available as Frictionless Tabular Data Package: <a class="reference external" href="https://doi.org/10.5281/zenodo.2640919">https://doi.org/10.5281/zenodo.2640919</a></p></li>
+<li><p>Rose scent FAIRification project code release: <a class="reference external" href="https://doi.org/10.5281/zenodo.2641109">https://doi.org/10.5281/zenodo.2641109</a></p></li>
 </ul>
-<p>To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison, also released via Zenodo (https://doi.org/10.5281/zenodo.2640919).
-Lastly, we produced a study description file, in ISA-Tab format (https://doi.org/10.25504/FAIRsharing.53gp75), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (https://doi.org/10.25504/FAIRsharing.kkdpxe).</p>
+<p>To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison, also released via Zenodo (<a class="reference external" href="https://doi.org/10.5281/zenodo.2640919">https://doi.org/10.5281/zenodo.2640919</a>).
+Lastly, we produced a study description file, in ISA-Tab format (<a class="reference external" href="https://doi.org/10.25504/FAIRsharing.53gp75">https://doi.org/10.25504/FAIRsharing.53gp75</a>), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (<a class="reference external" href="https://doi.org/10.25504/FAIRsharing.kkdpxe">https://doi.org/10.25504/FAIRsharing.kkdpxe</a>).</p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1165,15 +1191,15 @@ Lastly, we produced a study description file, in ISA-Tab format (https://doi.org
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="../applied-examples.html" title="previous page">Applied Examples</a>
     <a class='right-next' id="next-link" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html" title="next page">Bibliographic Reference:</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

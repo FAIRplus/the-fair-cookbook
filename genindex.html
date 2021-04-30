@@ -1,10 +1,10 @@
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,7 +41,6 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -84,7 +83,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -401,6 +400,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="content/recipes/interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="content/recipes/interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="content/recipes/interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="content/recipes/interoperability/selecting-ontologies.html">
      Which vocabulary to use?
     </a>
@@ -478,13 +496,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="content/recipes/reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="content/recipes/reusability/provenance.html">
-     4. Provenance Information
+     5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/recipes/reusability/community-standards.html">
-     5. Compliance with community annotation standards
+     6. Compliance with community annotation standards
     </a>
    </li>
   </ul>
@@ -654,22 +677,22 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-        <!-- Source interaction buttons -->
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -688,19 +711,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -743,11 +767,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-access-rights"><strong>Access Rights</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Access-Rights"><strong>Access Rights</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-accessibility"><strong>Accessibility</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Accessibility"><strong>Accessibility</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -755,7 +779,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-byod"><strong>BYOD</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-BYOD"><strong>BYOD</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -763,15 +787,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-cde"><strong>CDE</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-CDE"><strong>CDE</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-cdisc"><strong>CDISC</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-CDISC"><strong>CDISC</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-cmmi"><strong>CMMI</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-CMMI"><strong>CMMI</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-controlled-terminology"><strong>Controlled Terminology</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Controlled-Terminology"><strong>Controlled Terminology</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -779,21 +803,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-daa"><strong>DAA</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-DAA"><strong>DAA</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-dag"><strong>DAG</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-DAG"><strong>DAG</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-data-catalogue"><strong>Data Catalogue</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Data-Catalogue"><strong>Data Catalogue</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-data-dictionary"><strong>Data Dictionary</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Data-Dictionary"><strong>Data Dictionary</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-data-enclave"><strong>Data Enclave</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Data-Enclave"><strong>Data Enclave</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-dcat"><strong>DCAT</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-DCAT"><strong>DCAT</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-descriptive-metadata"><strong>Descriptive Metadata</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Descriptive-Metadata"><strong>Descriptive Metadata</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -801,13 +825,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-echa"><strong>ECHA</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-ECHA"><strong>ECHA</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-ema"><strong>EMA</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-EMA"><strong>EMA</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-etl"><strong>ETL</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-ETL"><strong>ETL</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -815,17 +839,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-fair"><strong>FAIR</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-FAIR"><strong>FAIR</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-fair-assessment"><strong>FAIR assessment</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-FAIR-assessment"><strong>FAIR assessment</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-fda"><strong>FDA</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-FDA"><strong>FDA</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-fhir"><strong>FHIR</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-FHIR"><strong>FHIR</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-fip"><strong>FIP</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-FIP"><strong>FIP</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -833,17 +857,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-gdpr"><strong>GDPR</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-GDPR"><strong>GDPR</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-go-fair"><strong>GO-FAIR</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-GO-FAIR"><strong>GO-FAIR</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-graphql"><strong>GraphQL</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-GraphQL"><strong>GraphQL</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-gremlin"><strong>Gremlin</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Gremlin"><strong>Gremlin</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-guprid"><strong>GUPRID</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-GUPRID"><strong>GUPRID</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -851,13 +875,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-hipaa"><strong>HIPAA</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-HIPAA"><strong>HIPAA</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-hl7-fhir"><strong>HL7 FHIR</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-HL7-FHIR"><strong>HL7 FHIR</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-http"><strong>HTTP</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-HTTP"><strong>HTTP</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -865,13 +889,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-id"><strong>ID</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-ID"><strong>ID</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-imi"><strong>IMI</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-IMI"><strong>IMI</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-interoperability"><strong>Interoperability</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Interoperability"><strong>Interoperability</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -879,7 +903,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="J">J</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-json"><strong>JSON</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-JSON"><strong>JSON</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -887,11 +911,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="K">K</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-kg"><strong>KG</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-KG"><strong>KG</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-kpi"><strong>KPI</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-KPI"><strong>KPI</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -899,11 +923,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-ld-linked-data"><strong>LD Linked Data</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-LD-Linked-Data"><strong>LD Linked Data</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-licensing"><strong>Licensing</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Licensing"><strong>Licensing</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -911,15 +935,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-mdr"><strong>MDR</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-MDR"><strong>MDR</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-metadata"><strong>Metadata</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Metadata"><strong>Metadata</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-mic"><strong>MIC</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-MIC"><strong>MIC</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-mta"><strong>MTA</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-MTA"><strong>MTA</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -927,11 +951,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-neo4j"><strong>Neo4J</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Neo4J"><strong>Neo4J</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-no-sql"><strong>NO-SQL</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-NO-SQL"><strong>NO-SQL</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -939,15 +963,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-odrl"><strong>ODRL</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-ODRL"><strong>ODRL</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-omop-cdm"><strong>OMOP-CDM</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-OMOP-CDM"><strong>OMOP-CDM</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-ontology"><strong>Ontology</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Ontology"><strong>Ontology</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-openapi"><strong>OpenAPI</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-OpenAPI"><strong>OpenAPI</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -955,15 +979,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-pid"><strong>PID</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-PID"><strong>PID</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-property-graph"><strong>Property Graph</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Property-Graph"><strong>Property Graph</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-prov-a-w3c-rdf-vocabulary-for-representing-and-expressing-provenance-information"><strong>PROV a W3C RDF vocabulary for representing and expressing provenance information</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-PROV-a-W3C-RDF-vocabulary-for-representing-and-expressing-provenance-information"><strong>PROV a W3C RDF vocabulary for representing and expressing provenance information</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-provenance-metadata"><strong>Provenance Metadata</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Provenance-Metadata"><strong>Provenance Metadata</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -971,11 +995,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="Q">Q</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-qms"><strong>QMS</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-QMS"><strong>QMS</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-qudt"><strong>QUDT</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-QUDT"><strong>QUDT</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -983,27 +1007,27 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-rda"><strong>RDA</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-RDA"><strong>RDA</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-rdbms"><strong>RDBMS</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-RDBMS"><strong>RDBMS</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-rdf"><strong>RDF</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-RDF"><strong>RDF</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-reification"><strong>Reification</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Reification"><strong>Reification</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-reusability"><strong>Reusability</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Reusability"><strong>Reusability</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-ro"><strong>RO</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-RO"><strong>RO</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-roi"><strong>ROI</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-ROI"><strong>ROI</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-rrid"><strong>RRID</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-RRID"><strong>RRID</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-rwd"><strong>RWD</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-RWD"><strong>RWD</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-rwe"><strong>RWE</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-RWE"><strong>RWE</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1011,19 +1035,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-seo"><strong>SEO</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-SEO"><strong>SEO</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-shacl"><strong>SHACL</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-SHACL"><strong>SHACL</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-shex"><strong>ShEX</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-ShEX"><strong>ShEX</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-sparql"><strong>SPARQL</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-SPARQL"><strong>SPARQL</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-structural-metadata"><strong>Structural Metadata</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Structural-Metadata"><strong>Structural Metadata</strong></a>
 </li>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-swagger-api"><strong>Swagger API</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Swagger-API"><strong>Swagger API</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1031,7 +1055,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-turtle"><strong>Turtle</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Turtle"><strong>Turtle</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1039,7 +1063,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-uri"><strong>URI</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-URI"><strong>URI</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1047,7 +1071,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-valueset"><strong>ValueSet</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-ValueSet"><strong>ValueSet</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1055,7 +1079,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-wikidata"><strong>Wikidata</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Wikidata"><strong>Wikidata</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1063,7 +1087,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="X">X</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-xml"><strong>XML</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-XML"><strong>XML</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1071,11 +1095,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="Y">Y</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-yml"><strong>YML</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-YML"><strong>YML</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-yummydata"><strong>Yummydata</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Yummydata"><strong>Yummydata</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1083,11 +1107,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="Z">Z</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-zombie"><strong>Zombie</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Zombie"><strong>Zombie</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="content/recipes/glossary-fair-terms.html#term-zoombie"><strong>Zoombie</strong></a>
+      <li><a href="content/recipes/glossary-fair-terms.html#term-Zoombie"><strong>Zoombie</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -1096,13 +1120,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

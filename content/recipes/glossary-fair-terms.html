@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glossary of FAIR Things</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -24,8 +25,8 @@
     href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -40,7 +41,6 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -83,7 +83,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -402,6 +402,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="interoperability/selecting-ontologies.html">
      Which vocabulary to use?
     </a>
@@ -479,13 +498,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="reusability/provenance.html">
-     4. Provenance Information
+     5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="reusability/community-standards.html">
-     5. Compliance with community annotation standards
+     6. Compliance with community annotation standards
     </a>
    </li>
   </ul>
@@ -655,21 +679,21 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -687,7 +711,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -701,28 +725,29 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/glossary-fair-terms.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migration/content/recipes/glossary-fair-terms.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/glossary-fair-terms.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i>
+            Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -865,6 +890,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -877,9 +903,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="a">
 <h2>A<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-accessibility">Accessibility</dt><dd><p>A quality denoting the ease of access of a resources. Accessibility can be measured according to a number of <code class="docutils literal notranslate"><span class="pre">metrics</span></code> or <code class="docutils literal notranslate"><span class="pre">indicators</span></code>.</p>
+<dt id="term-Accessibility">Accessibility<a class="headerlink" href="#term-Accessibility" title="Permalink to this term">¶</a></dt><dd><p>A quality denoting the ease of access of a resources. Accessibility can be measured according to a number of <code class="docutils literal notranslate"><span class="pre">metrics</span></code> or <code class="docutils literal notranslate"><span class="pre">indicators</span></code>.</p>
 </dd>
-<dt id="term-access-rights">Access Rights</dt><dd><p>a legal document stipulating who can access a dataset and under which conditions as well as for which purpose.</p>
+<dt id="term-Access-Rights">Access Rights<a class="headerlink" href="#term-Access-Rights" title="Permalink to this term">¶</a></dt><dd><p>a legal document stipulating who can access a dataset and under which conditions as well as for which purpose.</p>
 </dd>
 </dl>
 </div>
@@ -887,7 +913,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="b">
 <h2>B<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-byod">BYOD</dt><dd><p>Bring Your Own Data. a type of hackathon were the participants are requested to bring to the table datasets they would like to see worked on. In the context of FAIRplus, events organized quarterly with participating IMI projects to carry out tasks improving the level of FAIRness of said datasets.</p>
+<dt id="term-BYOD">BYOD<a class="headerlink" href="#term-BYOD" title="Permalink to this term">¶</a></dt><dd><p>Bring Your Own Data. a type of hackathon were the participants are requested to bring to the table datasets they would like to see worked on. In the context of FAIRplus, events organized quarterly with participating IMI projects to carry out tasks improving the level of FAIRness of said datasets.</p>
 </dd>
 </dl>
 </div>
@@ -895,13 +921,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="c">
 <h2>C<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-cdisc">CDISC</dt><dd><p>a Standard Development Organization developing data standards for reporting clinical trial data.</p>
+<dt id="term-CDISC">CDISC<a class="headerlink" href="#term-CDISC" title="Permalink to this term">¶</a></dt><dd><p>a Standard Development Organization developing data standards for reporting clinical trial data.</p>
 </dd>
-<dt id="term-cde">CDE</dt><dd><p>Common Data Element. As defined by the NIH, a common data element that is common to multiple data sets across different studies. CDEs can be defined using metadata standardization specification such as ISO11179 and persisted in a standard compliant metadata registry (see [MDR](## M))</p>
+<dt id="term-CDE">CDE<a class="headerlink" href="#term-CDE" title="Permalink to this term">¶</a></dt><dd><p>Common Data Element. As defined by the NIH, a common data element that is common to multiple data sets across different studies. CDEs can be defined using metadata standardization specification such as ISO11179 and persisted in a standard compliant metadata registry (see [MDR](## M))</p>
 </dd>
-<dt id="term-cmmi">CMMI</dt><dd><p>Capability &amp; Maturity Model Indicator is a process level improvement training and appraisal program. Administered by the CMMI Institute, a subsidiary of ISACA, it was developed at Carnegie Mellon University (CMU). (source: wikipedia)</p>
+<dt id="term-CMMI">CMMI<a class="headerlink" href="#term-CMMI" title="Permalink to this term">¶</a></dt><dd><p>Capability &amp; Maturity Model Indicator is a process level improvement training and appraisal program. Administered by the CMMI Institute, a subsidiary of ISACA, it was developed at Carnegie Mellon University (CMU). (source: wikipedia)</p>
 </dd>
-<dt id="term-controlled-terminology">Controlled Terminology</dt><dd><p>a list of vetted concepts used by a computer system or a database for marking content to ensure annotation consistence and query recall.</p>
+<dt id="term-Controlled-Terminology">Controlled Terminology<a class="headerlink" href="#term-Controlled-Terminology" title="Permalink to this term">¶</a></dt><dd><p>a list of vetted concepts used by a computer system or a database for marking content to ensure annotation consistence and query recall.</p>
 </dd>
 </dl>
 </div>
@@ -909,19 +935,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="d">
 <h2>D<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-daa">DAA</dt><dd><p>Data Access Agreement, a legally binding document articulating the conditions of access to data generated by an organization or consortium with other organizations or partners. The DAA document usually identifies the different parties involved, the contractual obligations binding the partners, the modalities of data access and transfers as well as the allowed uses of the data being transfered.</p>
+<dt id="term-DAA">DAA<a class="headerlink" href="#term-DAA" title="Permalink to this term">¶</a></dt><dd><p>Data Access Agreement, a legally binding document articulating the conditions of access to data generated by an organization or consortium with other organizations or partners. The DAA document usually identifies the different parties involved, the contractual obligations binding the partners, the modalities of data access and transfers as well as the allowed uses of the data being transfered.</p>
 </dd>
-<dt id="term-dag">DAG</dt><dd><p>Directed Acyclic Graph is a type of directed graph (ie the vertices between nodes have a direction) where cycles are not allowed.</p>
+<dt id="term-DAG">DAG<a class="headerlink" href="#term-DAG" title="Permalink to this term">¶</a></dt><dd><p>Directed Acyclic Graph is a type of directed graph (ie the vertices between nodes have a direction) where cycles are not allowed.</p>
 </dd>
-<dt id="term-data-catalogue">Data Catalogue</dt><dd><p>a metadata database meant to allow registration of datasets to increase their findability in an organization.</p>
+<dt id="term-Data-Catalogue">Data Catalogue<a class="headerlink" href="#term-Data-Catalogue" title="Permalink to this term">¶</a></dt><dd><p>a metadata database meant to allow registration of datasets to increase their findability in an organization.</p>
 </dd>
-<dt id="term-data-dictionary">Data Dictionary</dt><dd><p>a data management document which lists all the variables and data types collected in a project.</p>
+<dt id="term-Data-Dictionary">Data Dictionary<a class="headerlink" href="#term-Data-Dictionary" title="Permalink to this term">¶</a></dt><dd><p>a data management document which lists all the variables and data types collected in a project.</p>
 </dd>
-<dt id="term-data-enclave">Data Enclave</dt><dd><p>a data resource the content of which can only be accessed by being physically present on the site where the data is held and no connection to the outside world and the web is possible. This model is used to safeguard extremely sensitive data by drastically controling who accesses the information.</p>
+<dt id="term-Data-Enclave">Data Enclave<a class="headerlink" href="#term-Data-Enclave" title="Permalink to this term">¶</a></dt><dd><p>a data resource the content of which can only be accessed by being physically present on the site where the data is held and no connection to the outside world and the web is possible. This model is used to safeguard extremely sensitive data by drastically controling who accesses the information.</p>
 </dd>
-<dt id="term-dcat">DCAT</dt><dd><p>a W3C specification in the form of an RDF vocabulary for describing datasets. DCAT enables a publisher to describe datasets and data services in a catalog using a standard model and vocabulary that facilitates the consumption and aggregation of metadata from multiple catalogs. DCAT is the foundation for open dataset descriptions in the European Union public sector and was adapted by the ISA programme of the European Commission.</p>
+<dt id="term-DCAT">DCAT<a class="headerlink" href="#term-DCAT" title="Permalink to this term">¶</a></dt><dd><p>a W3C specification in the form of an RDF vocabulary for describing datasets. DCAT enables a publisher to describe datasets and data services in a catalog using a standard model and vocabulary that facilitates the consumption and aggregation of metadata from multiple catalogs. DCAT is the foundation for open dataset descriptions in the European Union public sector and was adapted by the ISA programme of the European Commission.</p>
 </dd>
-<dt id="term-descriptive-metadata">Descriptive Metadata</dt><dd><p>metadata the aim of which is to allow provision of domain sepcific content to make is available to agents, human or machines.</p>
+<dt id="term-Descriptive-Metadata">Descriptive Metadata<a class="headerlink" href="#term-Descriptive-Metadata" title="Permalink to this term">¶</a></dt><dd><p>metadata the aim of which is to allow provision of domain sepcific content to make is available to agents, human or machines.</p>
 </dd>
 </dl>
 </div>
@@ -929,11 +955,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="e">
 <h2>E<a class="headerlink" href="#e" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-echa">ECHA</dt><dd><p>European Chemicals Agency, an agency of the European Union which manages the technical and administrative aspects of the implementation of the European Union regulation called Registration, Evaluation, Authorisation and Restriction of Chemicals. (source: wikipedia)</p>
+<dt id="term-ECHA">ECHA<a class="headerlink" href="#term-ECHA" title="Permalink to this term">¶</a></dt><dd><p>European Chemicals Agency, an agency of the European Union which manages the technical and administrative aspects of the implementation of the European Union regulation called Registration, Evaluation, Authorisation and Restriction of Chemicals. (source: wikipedia)</p>
 </dd>
-<dt id="term-ema">EMA</dt><dd><p>Eurepean Medicines Agency, is an agency of the European Union in charge of the evaluation and supervision of medicinal products.</p>
+<dt id="term-EMA">EMA<a class="headerlink" href="#term-EMA" title="Permalink to this term">¶</a></dt><dd><p>Eurepean Medicines Agency, is an agency of the European Union in charge of the evaluation and supervision of medicinal products.</p>
 </dd>
-<dt id="term-etl">ETL</dt><dd><p>Extract Transform Load is the general procedure of copying data from one or more sources into a destination system which represents the data differently from the source(s) or in a different context than the source(s). (source: wikipedia)</p>
+<dt id="term-ETL">ETL<a class="headerlink" href="#term-ETL" title="Permalink to this term">¶</a></dt><dd><p>Extract Transform Load is the general procedure of copying data from one or more sources into a destination system which represents the data differently from the source(s) or in a different context than the source(s). (source: wikipedia)</p>
 </dd>
 </dl>
 </div>
@@ -941,15 +967,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="f">
 <h2>F<a class="headerlink" href="#f" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-fair">FAIR</dt><dd><p>the acronynom for Findable, Accessible, Interoperable and Reusable data as defined by Wilkinson et al, 2016.</p>
+<dt id="term-FAIR">FAIR<a class="headerlink" href="#term-FAIR" title="Permalink to this term">¶</a></dt><dd><p>the acronynom for Findable, Accessible, Interoperable and Reusable data as defined by Wilkinson et al, 2016.</p>
 </dd>
-<dt id="term-fair-assessment">FAIR assessment</dt><dd><p>the process of rating a dataset or service along the 4 dimensions of Findability, Accessibility, Interoperability and Reusability.</p>
+<dt id="term-FAIR-assessment">FAIR assessment<a class="headerlink" href="#term-FAIR-assessment" title="Permalink to this term">¶</a></dt><dd><p>the process of rating a dataset or service along the 4 dimensions of Findability, Accessibility, Interoperability and Reusability.</p>
 </dd>
-<dt id="term-fda">FDA</dt><dd><p>United States <code class="docutils literal notranslate"><span class="pre">Food</span> <span class="pre">and</span> <span class="pre">Drug</span> <span class="pre">Agency</span></code> is a regulatory agency of the United States government in charge of the evaluation and supervision of food products and medicines.</p>
+<dt id="term-FDA">FDA<a class="headerlink" href="#term-FDA" title="Permalink to this term">¶</a></dt><dd><p>United States <code class="docutils literal notranslate"><span class="pre">Food</span> <span class="pre">and</span> <span class="pre">Drug</span> <span class="pre">Agency</span></code> is a regulatory agency of the United States government in charge of the evaluation and supervision of food products and medicines.</p>
 </dd>
-<dt id="term-fip">FIP </dt><dd><p>a FAIR implementation Profile, which can be understood as the set of metadata element and their value sets, semantic resources and constraints to capture information in a domain of interest.</p>
+<dt id="term-FIP">FIP <a class="headerlink" href="#term-FIP" title="Permalink to this term">¶</a></dt><dd><p>a FAIR implementation Profile, which can be understood as the set of metadata element and their value sets, semantic resources and constraints to capture information in a domain of interest.</p>
 </dd>
-<dt id="term-fhir">FHIR</dt><dd><p>see HL7 FHIR</p>
+<dt id="term-FHIR">FHIR<a class="headerlink" href="#term-FHIR" title="Permalink to this term">¶</a></dt><dd><p>see HL7 FHIR</p>
 </dd>
 </dl>
 </div>
@@ -957,15 +983,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="g">
 <h2>G<a class="headerlink" href="#g" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-go-fair">GO-FAIR</dt><dd><p>GO FAIR is a bottom-up, stakeholder-driven and self-governed initiative that aims to implement the FAIR data principles, making data Findable, Accessible, Interoperable and Reusable (FAIR). It offers an open and inclusive ecosystem for individuals, institutions and organisations working together through Implementation Networks (INs). The INs are active in three activity pillars: GO CHANGE, GO TRAIN and GO BUILD. (source:https://www.go-fair.org/go-fair-initiative/)</p>
+<dt id="term-GO-FAIR">GO-FAIR<a class="headerlink" href="#term-GO-FAIR" title="Permalink to this term">¶</a></dt><dd><p>GO FAIR is a bottom-up, stakeholder-driven and self-governed initiative that aims to implement the FAIR data principles, making data Findable, Accessible, Interoperable and Reusable (FAIR). It offers an open and inclusive ecosystem for individuals, institutions and organisations working together through Implementation Networks (INs). The INs are active in three activity pillars: GO CHANGE, GO TRAIN and GO BUILD. (source:<a class="reference external" href="https://www.go-fair.org/go-fair-initiative/">https://www.go-fair.org/go-fair-initiative/</a>)</p>
 </dd>
-<dt id="term-gdpr">GDPR</dt><dd><p>General Data Protection Regulation 2016/679 is a regulation in EU law on data protection and privacy in the European Union and the European Economic Area. It also addresses the transfer of personal data outside the EU and EEA areas. (source: wikipedia)</p>
+<dt id="term-GDPR">GDPR<a class="headerlink" href="#term-GDPR" title="Permalink to this term">¶</a></dt><dd><p>General Data Protection Regulation 2016/679 is a regulation in EU law on data protection and privacy in the European Union and the European Economic Area. It also addresses the transfer of personal data outside the EU and EEA areas. (source: wikipedia)</p>
 </dd>
-<dt id="term-graphql">GraphQL</dt><dd><p>GraphQL is a query language for APIs, which uses the HTTP protocol and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools (source:https://graphql.org/)</p>
+<dt id="term-GraphQL">GraphQL<a class="headerlink" href="#term-GraphQL" title="Permalink to this term">¶</a></dt><dd><p>GraphQL is a query language for APIs, which uses the HTTP protocol and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools (source:<a class="reference external" href="https://graphql.org/">https://graphql.org/</a>)</p>
 </dd>
-<dt id="term-gremlin">Gremlin</dt><dd><p>a graph traversal and query language developed as part of the Apache Tinkerpop project.</p>
+<dt id="term-Gremlin">Gremlin<a class="headerlink" href="#term-Gremlin" title="Permalink to this term">¶</a></dt><dd><p>a graph traversal and query language developed as part of the Apache Tinkerpop project.</p>
 </dd>
-<dt id="term-guprid">GUPRID</dt><dd><p>Globally Unique Persistent Resolvable Identifier, a type of persistent identifier with added properties such as guaranted uniqueness and accessibility via HTTP protocol</p>
+<dt id="term-GUPRID">GUPRID<a class="headerlink" href="#term-GUPRID" title="Permalink to this term">¶</a></dt><dd><p>Globally Unique Persistent Resolvable Identifier, a type of persistent identifier with added properties such as guaranted uniqueness and accessibility via HTTP protocol</p>
 </dd>
 </dl>
 </div>
@@ -973,11 +999,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="h">
 <h2>H<a class="headerlink" href="#h" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-hipaa">HIPAA</dt><dd><p>An Act by the United States of American to amend the Internal Revenue Code of 1996 to improve portability and continuity of health insurance coverage in the group and individual markets, to combat waste, fraud, and abuse in health insurance and health care delivery, to promote the use of medical savings accounts, to improve access to long-term care services and coverage, to simplify the administration of health insurance, and for other purposes.</p>
+<dt id="term-HIPAA">HIPAA<a class="headerlink" href="#term-HIPAA" title="Permalink to this term">¶</a></dt><dd><p>An Act by the United States of American to amend the Internal Revenue Code of 1996 to improve portability and continuity of health insurance coverage in the group and individual markets, to combat waste, fraud, and abuse in health insurance and health care delivery, to promote the use of medical savings accounts, to improve access to long-term care services and coverage, to simplify the administration of health insurance, and for other purposes.</p>
 </dd>
-<dt id="term-hl7-fhir">HL7 FHIR</dt><dd><p>Health Level 7 Fast Healthcare Interoperability Resources is a standard describing data formats and elements and an application programming interface for exchanging electronic health records. The standard was created by the Health Level Seven International health-care standards organization. (source: wikipedia)</p>
+<dt id="term-HL7-FHIR">HL7 FHIR<a class="headerlink" href="#term-HL7-FHIR" title="Permalink to this term">¶</a></dt><dd><p>Health Level 7 Fast Healthcare Interoperability Resources is a standard describing data formats and elements and an application programming interface for exchanging electronic health records. The standard was created by the Health Level Seven International health-care standards organization. (source: wikipedia)</p>
 </dd>
-<dt id="term-http">HTTP</dt><dd><p>Hypertext Transfer Protocol is a communication protocol used by the internet.</p>
+<dt id="term-HTTP">HTTP<a class="headerlink" href="#term-HTTP" title="Permalink to this term">¶</a></dt><dd><p>Hypertext Transfer Protocol is a communication protocol used by the internet.</p>
 </dd>
 </dl>
 </div>
@@ -985,11 +1011,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="i">
 <h2>I<a class="headerlink" href="#i" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-id">ID</dt><dd><p>Identifier, a sequence of character associated to an entity to track or retrieve it.</p>
+<dt id="term-ID">ID<a class="headerlink" href="#term-ID" title="Permalink to this term">¶</a></dt><dd><p>Identifier, a sequence of character associated to an entity to track or retrieve it.</p>
 </dd>
-<dt id="term-imi">IMI</dt><dd><p>Innovative Medicine Initiative, a European Union public-private partnership funding program bringing together academic and industrial stakeholders on the theme of developing new therapeutic solutions.</p>
+<dt id="term-IMI">IMI<a class="headerlink" href="#term-IMI" title="Permalink to this term">¶</a></dt><dd><p>Innovative Medicine Initiative, a European Union public-private partnership funding program bringing together academic and industrial stakeholders on the theme of developing new therapeutic solutions.</p>
 </dd>
-<dt id="term-interoperability">Interoperability</dt><dd><p>The property of a resource to work together with other software agents without</p>
+<dt id="term-Interoperability">Interoperability<a class="headerlink" href="#term-Interoperability" title="Permalink to this term">¶</a></dt><dd><p>The property of a resource to work together with other software agents without</p>
 </dd>
 </dl>
 </div>
@@ -997,7 +1023,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="j">
 <h2>J<a class="headerlink" href="#j" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-json">JSON</dt><dd><p>Javascript Online Notation a syntax for data structures and used to transmit data objects consisting of attribute–value pairs.</p>
+<dt id="term-JSON">JSON<a class="headerlink" href="#term-JSON" title="Permalink to this term">¶</a></dt><dd><p>Javascript Online Notation a syntax for data structures and used to transmit data objects consisting of attribute–value pairs.</p>
 </dd>
 </dl>
 </div>
@@ -1005,9 +1031,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="k">
 <h2>K<a class="headerlink" href="#k" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-kg">KG</dt><dd><p>Knowledge graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge graphs are often used to store interlinked descriptions of entities – objects, events, situations or abstract concepts – with free-form semantics. (source: wikipedia)</p>
+<dt id="term-KG">KG<a class="headerlink" href="#term-KG" title="Permalink to this term">¶</a></dt><dd><p>Knowledge graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge graphs are often used to store interlinked descriptions of entities – objects, events, situations or abstract concepts – with free-form semantics. (source: wikipedia)</p>
 </dd>
-<dt id="term-kpi">KPI</dt><dd><p>Key Performance Indicator. a generic term to cover any metric  or indicator use to gauge efficiency.</p>
+<dt id="term-KPI">KPI<a class="headerlink" href="#term-KPI" title="Permalink to this term">¶</a></dt><dd><p>Key Performance Indicator. a generic term to cover any metric  or indicator use to gauge efficiency.</p>
 </dd>
 </dl>
 </div>
@@ -1015,9 +1041,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="l">
 <h2>L<a class="headerlink" href="#l" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-licensing">Licensing</dt><dd><p>the process of assigning a license, i.e a formal, legally binding document which articulates the condition of use of an entity.</p>
+<dt id="term-Licensing">Licensing<a class="headerlink" href="#term-Licensing" title="Permalink to this term">¶</a></dt><dd><p>the process of assigning a license, i.e a formal, legally binding document which articulates the condition of use of an entity.</p>
 </dd>
-<dt id="term-ld-linked-data">LD Linked Data</dt><dd><p>linked data is structured data which is interlinked with other data so it becomes more useful through semantic queries. (source: wikipedia)</p>
+<dt id="term-LD-Linked-Data">LD Linked Data<a class="headerlink" href="#term-LD-Linked-Data" title="Permalink to this term">¶</a></dt><dd><p>linked data is structured data which is interlinked with other data so it becomes more useful through semantic queries. (source: wikipedia)</p>
 </dd>
 </dl>
 </div>
@@ -1025,13 +1051,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="m">
 <h2>M<a class="headerlink" href="#m" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-mta">MTA</dt><dd><p>a Material Transfer Agreement is a legal document stipulating the conditions under which physical entities / properties may be transfered between organizations signatories of the agreement.</p>
+<dt id="term-MTA">MTA<a class="headerlink" href="#term-MTA" title="Permalink to this term">¶</a></dt><dd><p>a Material Transfer Agreement is a legal document stipulating the conditions under which physical entities / properties may be transfered between organizations signatories of the agreement.</p>
 </dd>
-<dt id="term-mdr">MDR</dt><dd><p>Metadata Registry, a database storing individual definition of metadata element and data elements.</p>
+<dt id="term-MDR">MDR<a class="headerlink" href="#term-MDR" title="Permalink to this term">¶</a></dt><dd><p>Metadata Registry, a database storing individual definition of metadata element and data elements.</p>
 </dd>
-<dt id="term-metadata">Metadata</dt><dd><p>annotation about the data. Different types of metadata exit depending on their function.</p>
+<dt id="term-Metadata">Metadata<a class="headerlink" href="#term-Metadata" title="Permalink to this term">¶</a></dt><dd><p>annotation about the data. Different types of metadata exit depending on their function.</p>
 </dd>
-<dt id="term-mic">MIC</dt><dd><p>Minimal Information Checklist, which is a document formal or not definig annotation requirements from a domain.</p>
+<dt id="term-MIC">MIC<a class="headerlink" href="#term-MIC" title="Permalink to this term">¶</a></dt><dd><p>Minimal Information Checklist, which is a document formal or not definig annotation requirements from a domain.</p>
 </dd>
 </dl>
 </div>
@@ -1039,9 +1065,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="n">
 <h2>N<a class="headerlink" href="#n" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-no-sql">NO-SQL </dt><dd><p><code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">Only</span> <span class="pre">SQL</span> <span class="pre">database</span></code> is a type of database which persists information in structures other than tables as classically used by <a class="reference internal" href="#term-rdbms"><span class="xref myst std std-term">RDBMS</span></a></p>
+<dt id="term-NO-SQL">NO-SQL <a class="headerlink" href="#term-NO-SQL" title="Permalink to this term">¶</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">Only</span> <span class="pre">SQL</span> <span class="pre">database</span></code> is a type of database which persists information in structures other than tables as classically used by <span class="xref myst">RDBMS</span></p>
 </dd>
-<dt id="term-neo4j">Neo4J</dt><dd><p>a graph database and a company marking the system. see https://neo4j.com/.</p>
+<dt id="term-Neo4J">Neo4J<a class="headerlink" href="#term-Neo4J" title="Permalink to this term">¶</a></dt><dd><p>a graph database and a company marking the system. see <a class="reference external" href="https://neo4j.com/">https://neo4j.com/</a>.</p>
 </dd>
 </dl>
 </div>
@@ -1049,13 +1075,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="o">
 <h2>O<a class="headerlink" href="#o" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-odrl">ODRL</dt><dd><p>Open Digital Rights Language (ODRL) is a W3C specification for policy expression language that provides a flexible and interoperable information model, vocabulary. (source: wikipedia)</p>
+<dt id="term-ODRL">ODRL<a class="headerlink" href="#term-ODRL" title="Permalink to this term">¶</a></dt><dd><p>Open Digital Rights Language (ODRL) is a W3C specification for policy expression language that provides a flexible and interoperable information model, vocabulary. (source: wikipedia)</p>
 </dd>
-<dt id="term-omop-cdm">OMOP-CDM</dt><dd><p>Observational Medical Outcomes Partnership (OMOP) Common Data Model is  a data model developed by the OHDSI consortium to support the capture and reporting of observational data  but which can be used to capture clinical trial data.</p>
+<dt id="term-OMOP-CDM">OMOP-CDM<a class="headerlink" href="#term-OMOP-CDM" title="Permalink to this term">¶</a></dt><dd><p>Observational Medical Outcomes Partnership (OMOP) Common Data Model is  a data model developed by the OHDSI consortium to support the capture and reporting of observational data  but which can be used to capture clinical trial data.</p>
 </dd>
-<dt id="term-ontology">Ontology</dt><dd><p>a formal representation of a domain of knowledge. A more advanced artefact than a simple controled terminology as relations between entities are captures, concepts can be defined axiomatically and inferences can be made automatically by specialized tools such as reasoners. Ontologies can be used to accomplish tasks such as data entry validation or query expansion.</p>
+<dt id="term-Ontology">Ontology<a class="headerlink" href="#term-Ontology" title="Permalink to this term">¶</a></dt><dd><p>a formal representation of a domain of knowledge. A more advanced artefact than a simple controled terminology as relations between entities are captures, concepts can be defined axiomatically and inferences can be made automatically by specialized tools such as reasoners. Ontologies can be used to accomplish tasks such as data entry validation or query expansion.</p>
 </dd>
-<dt id="term-openapi">OpenAPI</dt><dd><p>The OpenAPI Specification, originally known as the Swagger Specification, is a specification for machine-readable interface files for describing, producing, consuming, and visualizing RESTful web services.
+<dt id="term-OpenAPI">OpenAPI<a class="headerlink" href="#term-OpenAPI" title="Permalink to this term">¶</a></dt><dd><p>The OpenAPI Specification, originally known as the Swagger Specification, is a specification for machine-readable interface files for describing, producing, consuming, and visualizing RESTful web services.
 (souce: wikipedia)</p>
 </dd>
 </dl>
@@ -1064,22 +1090,22 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="p">
 <h2>P<a class="headerlink" href="#p" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-pid">PID</dt><dd><p>Persistent Identifier, a long-lasting reference to a document, file, web page, or other object. The term “persistent identifier” is usually used in the context of digital objects that are accessible over the Internet. (source: wikipedia)</p>
+<dt id="term-PID">PID<a class="headerlink" href="#term-PID" title="Permalink to this term">¶</a></dt><dd><p>Persistent Identifier, a long-lasting reference to a document, file, web page, or other object. The term “persistent identifier” is usually used in the context of digital objects that are accessible over the Internet. (source: wikipedia)</p>
 </dd>
-<dt id="term-property-graph">Property Graph</dt><dd><p>a type of knowledge graph which</p>
+<dt id="term-Property-Graph">Property Graph<a class="headerlink" href="#term-Property-Graph" title="Permalink to this term">¶</a></dt><dd><p>a type of knowledge graph which</p>
 </dd>
-<dt id="term-provenance-metadata">Provenance Metadata</dt><dd><p>metadata the aim of which is to provide traceability, audit and trail capability allowing consumers to understand its origin.</p>
+<dt id="term-Provenance-Metadata">Provenance Metadata<a class="headerlink" href="#term-Provenance-Metadata" title="Permalink to this term">¶</a></dt><dd><p>metadata the aim of which is to provide traceability, audit and trail capability allowing consumers to understand its origin.</p>
 </dd>
-<dt id="term-prov-a-w3c-rdf-vocabulary-for-representing-and-expressing-provenance-information">PROV a W3C RDF vocabulary for representing and expressing provenance information 	</dt><dd></dd>
+<dt id="term-PROV-a-W3C-RDF-vocabulary-for-representing-and-expressing-provenance-information">PROV a W3C RDF vocabulary for representing and expressing provenance information 	<a class="headerlink" href="#term-PROV-a-W3C-RDF-vocabulary-for-representing-and-expressing-provenance-information" title="Permalink to this term">¶</a></dt><dd></dd>
 </dl>
 </div>
 <hr class="docutils" />
 <div class="section" id="q">
 <h2>Q<a class="headerlink" href="#q" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-qms">QMS</dt><dd><p>Quality Management Systems are a set of practices and tools used to manage and control quality in production lines. QMS uses tools such as Capability, Maturity Model Integration (see CMMI) approach.</p>
+<dt id="term-QMS">QMS<a class="headerlink" href="#term-QMS" title="Permalink to this term">¶</a></dt><dd><p>Quality Management Systems are a set of practices and tools used to manage and control quality in production lines. QMS uses tools such as Capability, Maturity Model Integration (see CMMI) approach.</p>
 </dd>
-<dt id="term-qudt">QUDT</dt><dd><p>Quantities, Units, Dimensions and dataTypes vocabulary specifications produced by the qudt.org consortium.</p>
+<dt id="term-QUDT">QUDT<a class="headerlink" href="#term-QUDT" title="Permalink to this term">¶</a></dt><dd><p>Quantities, Units, Dimensions and dataTypes vocabulary specifications produced by the <a class="reference external" href="http://qudt.org">qudt.org</a> consortium.</p>
 </dd>
 </dl>
 </div>
@@ -1087,25 +1113,25 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="r">
 <h2>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-rdbms">RDBMS</dt><dd><p>Relational Database Management System. A type of information persistence and storage software which uses tables related to each other by linking tables storing primary keys and foreign keys to allow queries across tables. Ideally, model normalization is sought to avoid duplication of information within and between tables. Examples of relational database management systems are mySQL,MariaDB, postgreSQL or ORACLE. RDBMS contrast with NO-SQL and graph database systems which stored information as graphs instead of tables, claiming gains in query efficiencies owing to fast traversal algorithms.</p>
+<dt id="term-RDBMS">RDBMS<a class="headerlink" href="#term-RDBMS" title="Permalink to this term">¶</a></dt><dd><p>Relational Database Management System. A type of information persistence and storage software which uses tables related to each other by linking tables storing primary keys and foreign keys to allow queries across tables. Ideally, model normalization is sought to avoid duplication of information within and between tables. Examples of relational database management systems are mySQL,MariaDB, postgreSQL or ORACLE. RDBMS contrast with NO-SQL and graph database systems which stored information as graphs instead of tables, claiming gains in query efficiencies owing to fast traversal algorithms.</p>
 </dd>
-<dt id="term-rdf">RDF</dt><dd><p>Resource Description Framework a W3C standard specification for representing information in the form of <code class="docutils literal notranslate"><span class="pre">subject</span> <span class="pre">/</span> <span class="pre">predicate</span> <span class="pre">/</span> <span class="pre">object</span></code> statements known as triples.</p>
+<dt id="term-RDF">RDF<a class="headerlink" href="#term-RDF" title="Permalink to this term">¶</a></dt><dd><p>Resource Description Framework a W3C standard specification for representing information in the form of <code class="docutils literal notranslate"><span class="pre">subject</span> <span class="pre">/</span> <span class="pre">predicate</span> <span class="pre">/</span> <span class="pre">object</span></code> statements known as triples.</p>
 </dd>
-<dt id="term-rda">RDA</dt><dd><p>The Research Data Alliance is a research community organization started in 2013 by the European Commission, the American National Science Foundation and National Institute of Standards and Technology, and the Australian Department of Innovation. (source: wikipedia)</p>
+<dt id="term-RDA">RDA<a class="headerlink" href="#term-RDA" title="Permalink to this term">¶</a></dt><dd><p>The Research Data Alliance is a research community organization started in 2013 by the European Commission, the American National Science Foundation and National Institute of Standards and Technology, and the Australian Department of Innovation. (source: wikipedia)</p>
 </dd>
-<dt id="term-reification">Reification</dt><dd><p>Reification is the process by which an abstract idea about a computer program is turned into an explicit data model or other object created in a programming language. (source: wikipedia)</p>
+<dt id="term-Reification">Reification<a class="headerlink" href="#term-Reification" title="Permalink to this term">¶</a></dt><dd><p>Reification is the process by which an abstract idea about a computer program is turned into an explicit data model or other object created in a programming language. (source: wikipedia)</p>
 </dd>
-<dt id="term-reusability">Reusability</dt><dd><p>a property of an entity to be data entity to be consumed, integrated or repurposed, ideally with as low as possible transformation requirements.</p>
+<dt id="term-Reusability">Reusability<a class="headerlink" href="#term-Reusability" title="Permalink to this term">¶</a></dt><dd><p>a property of an entity to be data entity to be consumed, integrated or repurposed, ideally with as low as possible transformation requirements.</p>
 </dd>
-<dt id="term-ro">RO</dt><dd><p>a Research Object is a method for the identification, aggregation and exchange of scholarly information on the Web. The primary goal of the research object approach is to provide a mechanism to associate related resources about a scientific investigation so that they can be shared using a single identifier. (source: wikipedia)</p>
+<dt id="term-RO">RO<a class="headerlink" href="#term-RO" title="Permalink to this term">¶</a></dt><dd><p>a Research Object is a method for the identification, aggregation and exchange of scholarly information on the Web. The primary goal of the research object approach is to provide a mechanism to associate related resources about a scientific investigation so that they can be shared using a single identifier. (source: wikipedia)</p>
 </dd>
-<dt id="term-roi">ROI </dt><dd><p>Return on Investment. This is measure of how value has been added or lost by a financial or technical commitment. This is often used to gauge the gain deploying a new technology in terms of cost savings versus cost of deployment.</p>
+<dt id="term-ROI">ROI <a class="headerlink" href="#term-ROI" title="Permalink to this term">¶</a></dt><dd><p>Return on Investment. This is measure of how value has been added or lost by a financial or technical commitment. This is often used to gauge the gain deploying a new technology in terms of cost savings versus cost of deployment.</p>
 </dd>
-<dt id="term-rrid">RRID</dt><dd><p>Research Resource Identifiers (RRID) are supposed to be resource identifiers which are globally unique and persistent. RRID are endorsed by a number of scientific publications listed at <a class="reference external" href="https://www.rrids.org/journals">https://www.rrids.org/journals</a> and are supported by UC San Diego Scicrunch knowledge base.</p>
+<dt id="term-RRID">RRID<a class="headerlink" href="#term-RRID" title="Permalink to this term">¶</a></dt><dd><p>Research Resource Identifiers (RRID) are supposed to be resource identifiers which are globally unique and persistent. RRID are endorsed by a number of scientific publications listed at <a class="reference external" href="https://www.rrids.org/journals">https://www.rrids.org/journals</a> and are supported by UC San Diego Scicrunch knowledge base.</p>
 </dd>
-<dt id="term-rwd">RWD</dt><dd><p>RWD stands for <code class="docutils literal notranslate"><span class="pre">Real</span> <span class="pre">World</span> <span class="pre">Data</span></code> n medicine is data derived from a number of sources that are associated with outcomes in a heterogeneous patient population in real-world settings, such as patient surveys, clinical trials, and observational cohort studies. (source:wikipedia)</p>
+<dt id="term-RWD">RWD<a class="headerlink" href="#term-RWD" title="Permalink to this term">¶</a></dt><dd><p>RWD stands for <code class="docutils literal notranslate"><span class="pre">Real</span> <span class="pre">World</span> <span class="pre">Data</span></code> n medicine is data derived from a number of sources that are associated with outcomes in a heterogeneous patient population in real-world settings, such as patient surveys, clinical trials, and observational cohort studies. (source:wikipedia)</p>
 </dd>
-<dt id="term-rwe">RWE	</dt><dd><p>RWE stands for <code class="docutils literal notranslate"><span class="pre">Real</span> <span class="pre">World</span> <span class="pre">Evidence</span></code> is defined by FDA as “clinical evidence regarding the usage and potential benefits or risks of a medical product derived from analysis of RWD”.</p>
+<dt id="term-RWE">RWE	<a class="headerlink" href="#term-RWE" title="Permalink to this term">¶</a></dt><dd><p>RWE stands for <code class="docutils literal notranslate"><span class="pre">Real</span> <span class="pre">World</span> <span class="pre">Evidence</span></code> is defined by FDA as “clinical evidence regarding the usage and potential benefits or risks of a medical product derived from analysis of RWD”.</p>
 </dd>
 </dl>
 </div>
@@ -1113,17 +1139,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="s">
 <h2>S<a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-seo">SEO</dt><dd><p>Search Engine Optimization is the process of improving the quality and quantity of website traffic to a website or a web page from search engines. (source:wikipedia)</p>
+<dt id="term-SEO">SEO<a class="headerlink" href="#term-SEO" title="Permalink to this term">¶</a></dt><dd><p>Search Engine Optimization is the process of improving the quality and quantity of website traffic to a website or a web page from search engines. (source:wikipedia)</p>
 </dd>
-<dt id="term-shacl">SHACL</dt><dd><p>Shape Constraint Language, a W3C standard for expressing constraints over RDF data to enable validation.</p>
+<dt id="term-SHACL">SHACL<a class="headerlink" href="#term-SHACL" title="Permalink to this term">¶</a></dt><dd><p>Shape Constraint Language, a W3C standard for expressing constraints over RDF data to enable validation.</p>
 </dd>
-<dt id="term-shex">ShEX</dt><dd><p>Shape Expression, a specification for expressing constraints over RDF data to enable validation. an technical alternative to SHACL.</p>
+<dt id="term-ShEX">ShEX<a class="headerlink" href="#term-ShEX" title="Permalink to this term">¶</a></dt><dd><p>Shape Expression, a specification for expressing constraints over RDF data to enable validation. an technical alternative to SHACL.</p>
 </dd>
-<dt id="term-sparql">SPARQL</dt><dd><p>SPARQL Query Language, a W3C standard for querying RDF graphs.</p>
+<dt id="term-SPARQL">SPARQL<a class="headerlink" href="#term-SPARQL" title="Permalink to this term">¶</a></dt><dd><p>SPARQL Query Language, a W3C standard for querying RDF graphs.</p>
 </dd>
-<dt id="term-structural-metadata">Structural Metadata</dt><dd><p>metadata the aim of which is to define data structure and content organization.</p>
+<dt id="term-Structural-Metadata">Structural Metadata<a class="headerlink" href="#term-Structural-Metadata" title="Permalink to this term">¶</a></dt><dd><p>metadata the aim of which is to define data structure and content organization.</p>
 </dd>
-<dt id="term-swagger-api">Swagger API</dt><dd><p>see openAPI</p>
+<dt id="term-Swagger-API">Swagger API<a class="headerlink" href="#term-Swagger-API" title="Permalink to this term">¶</a></dt><dd><p>see openAPI</p>
 </dd>
 </dl>
 </div>
@@ -1131,7 +1157,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="t">
 <h2>T<a class="headerlink" href="#t" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-turtle">Turtle</dt><dd><p>Terse RDF Triple Language (Turtle) is a syntax and file format for expressing data in the Resource Description Framework (RDF) data model. Turtle syntax is similar to that of SPARQL, an RDF query language. It is a common data format for storing RDF data, along with N-Triples, JSON-LD and RDF/XML. (source:wikipedia)</p>
+<dt id="term-Turtle">Turtle<a class="headerlink" href="#term-Turtle" title="Permalink to this term">¶</a></dt><dd><p>Terse RDF Triple Language (Turtle) is a syntax and file format for expressing data in the Resource Description Framework (RDF) data model. Turtle syntax is similar to that of SPARQL, an RDF query language. It is a common data format for storing RDF data, along with N-Triples, JSON-LD and RDF/XML. (source:wikipedia)</p>
 </dd>
 </dl>
 </div>
@@ -1139,7 +1165,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="u">
 <h2>U<a class="headerlink" href="#u" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-uri">URI</dt><dd><p>A Uniform Resource Identifier (URI) is a unique sequence of characters that identifies a logical or physical resource used by web technologies.(source:wikipedia)</p>
+<dt id="term-URI">URI<a class="headerlink" href="#term-URI" title="Permalink to this term">¶</a></dt><dd><p>A Uniform Resource Identifier (URI) is a unique sequence of characters that identifies a logical or physical resource used by web technologies.(source:wikipedia)</p>
 </dd>
 </dl>
 </div>
@@ -1147,7 +1173,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="v">
 <h2>V<a class="headerlink" href="#v" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-valueset">ValueSet</dt><dd><p>the range of discrete values allowed for a categorical variable</p>
+<dt id="term-ValueSet">ValueSet<a class="headerlink" href="#term-ValueSet" title="Permalink to this term">¶</a></dt><dd><p>the range of discrete values allowed for a categorical variable</p>
 </dd>
 </dl>
 </div>
@@ -1155,7 +1181,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="w">
 <h2>W<a class="headerlink" href="#w" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-wikidata">Wikidata</dt><dd><p>Wikidata is a collaboratively edited multilingual knowledge graph hosted by the Wikimedia Foundation. It is a common source of open data that Wikimedia projects such as Wikipedia, and anyone else, can use under the CC0 public domain license. Wikidata is powered by the software Wikibase.</p>
+<dt id="term-Wikidata">Wikidata<a class="headerlink" href="#term-Wikidata" title="Permalink to this term">¶</a></dt><dd><p>Wikidata is a collaboratively edited multilingual knowledge graph hosted by the Wikimedia Foundation. It is a common source of open data that Wikimedia projects such as Wikipedia, and anyone else, can use under the CC0 public domain license. Wikidata is powered by the software Wikibase.</p>
 </dd>
 </dl>
 </div>
@@ -1163,7 +1189,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="x">
 <h2>X<a class="headerlink" href="#x" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-xml">XML</dt><dd><p>Extensible Markup Language</p>
+<dt id="term-XML">XML<a class="headerlink" href="#term-XML" title="Permalink to this term">¶</a></dt><dd><p>Extensible Markup Language</p>
 </dd>
 </dl>
 </div>
@@ -1171,9 +1197,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="y">
 <h2>Y<a class="headerlink" href="#y" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-yml">YML</dt><dd><p>Yet Another Markup Language</p>
+<dt id="term-YML">YML<a class="headerlink" href="#term-YML" title="Permalink to this term">¶</a></dt><dd><p>Yet Another Markup Language</p>
 </dd>
-<dt id="term-yummydata">Yummydata</dt><dd><p>Yummydata is a site that lists and monitors SPARQL endpoints that provide data of interest to the biomedical community.</p>
+<dt id="term-Yummydata">Yummydata<a class="headerlink" href="#term-Yummydata" title="Permalink to this term">¶</a></dt><dd><p>Yummydata is a site that lists and monitors SPARQL endpoints that provide data of interest to the biomedical community.</p>
 </dd>
 </dl>
 </div>
@@ -1181,9 +1207,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="z">
 <h2>Z<a class="headerlink" href="#z" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-zombie">Zombie</dt><dd><p>A zombie (Haitian French: zombi, Haitian Creole: zonbi) is a mythological undead corporeal revenant created through the reanimation of a corpse. (source: wikipedia)</p>
+<dt id="term-Zombie">Zombie<a class="headerlink" href="#term-Zombie" title="Permalink to this term">¶</a></dt><dd><p>A zombie (Haitian French: zombi, Haitian Creole: zonbi) is a mythological undead corporeal revenant created through the reanimation of a corpse. (source: wikipedia)</p>
 </dd>
-<dt id="term-zoombie">Zoombie</dt><dd><p>a type of zombie obtained by exposing humans to too many online meetings (the first case was apparently reported to have happened during the 2020-2021 SARS-Covid2 pandemic in a Zoom session attended by Pr Barend Mons, but later cases where reported when teleconferencing on other platforms, and is now widely believed to be vendor agnostic). (source: ikke wikipedia)</p>
+<dt id="term-Zoombie">Zoombie<a class="headerlink" href="#term-Zoombie" title="Permalink to this term">¶</a></dt><dd><p>a type of zombie obtained by exposing humans to too many online meetings (the first case was apparently reported to have happened during the 2020-2021 SARS-Covid2 pandemic in a Zoom session attended by Pr Barend Mons, but later cases where reported when teleconferencing on other platforms, and is now widely believed to be vendor agnostic). (source: ikke wikipedia)</p>
 </dd>
 </dl>
 </div>
@@ -1217,15 +1243,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="applied-examples/resolute_raw/rawRecipe_resolute.html" title="previous page">RESOLUTE FAIRification Recipe</a>
     <a class='right-next' id="next-link" href="help.html" title="next page">Getting help and helping</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

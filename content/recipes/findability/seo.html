@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5. Findability: Search Engine Optimization</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -24,8 +25,8 @@
     href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -40,7 +41,6 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -83,7 +83,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -402,6 +402,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
      Which vocabulary to use?
     </a>
@@ -479,13 +498,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
-     4. Provenance Information
+     5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/community-standards.html">
-     5. Compliance with community annotation standards
+     6. Compliance with community annotation standards
     </a>
    </li>
   </ul>
@@ -655,21 +679,21 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -687,7 +711,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -701,28 +725,29 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/findability/seo.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migration/content/recipes/findability/seo.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/findability/seo.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i>
+            Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -810,6 +835,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -939,12 +965,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Search engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search results. As ranking in search results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, <code class="docutils literal notranslate"><span class="pre">search</span> <span class="pre">engine</span> <span class="pre">optimization</span></code> covers any of the practices which aim at improving the position of a web page in a search result.</p>
 </div>
 <div class="section" id="schema-org-vocabulary">
-<h3><span class="section-number">5.4.3. </span>Schema.org Vocabulary<a class="headerlink" href="#schema-org-vocabulary" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.3. </span><a class="reference external" href="http://Schema.org">Schema.org</a> Vocabulary<a class="headerlink" href="#schema-org-vocabulary" title="Permalink to this headline">¶</a></h3>
 <p>A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
 Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation</p>
 </div>
 <div class="section" id="how-does-schema-org-work-in-practice">
-<h3><span class="section-number">5.4.4. </span>How does Schema.org work in practice:<a class="headerlink" href="#how-does-schema-org-work-in-practice" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.4. </span>How does <a class="reference external" href="http://Schema.org">Schema.org</a> work in practice:<a class="headerlink" href="#how-does-schema-org-work-in-practice" title="Permalink to this headline">¶</a></h3>
 <p>The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code> is widely recommended as the most suitable approach.</p>
 <p>Below is a regular plain vanilla HTML page providing information about an scientific joournal article.</p>
 <div class="highlight-HTML notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- A list of the issues for a single volume of a given periodical. --&gt;</span>
@@ -963,7 +989,7 @@ Compared to plain keyword based indexing, annotation with structured vocabulary 
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>Now, we are presenting the same information augmented with the JSON-LD file using Schema.org <code class="docutils literal notranslate"><span class="pre">ScholarlyArticle</span></code> profile. Note how the file is provided with the HTML <code class="docutils literal notranslate"><span class="pre">script</span></code> tag</p>
+<p>Now, we are presenting the same information augmented with the JSON-LD file using <a class="reference external" href="http://Schema.org">Schema.org</a> <code class="docutils literal notranslate"><span class="pre">ScholarlyArticle</span></code> profile. Note how the file is provided with the HTML <code class="docutils literal notranslate"><span class="pre">script</span></code> tag</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;script <span class="nv">type</span><span class="o">=</span><span class="s2">&quot;application/ld+json&quot;</span>&gt;
 <span class="o">{</span>
   <span class="s2">&quot;@context&quot;</span>: <span class="s2">&quot;http://schema.org&quot;</span>,
@@ -1026,7 +1052,7 @@ The tool is known as the <a class="reference external" href="https://search.goog
 </div>
 <div class="section" id="bioschemas-trying-to-address-the-coverage-gap">
 <h3><span class="section-number">5.4.6. </span>Bioschemas: trying to address the coverage gap<a class="headerlink" href="#bioschemas-trying-to-address-the-coverage-gap" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">Schema.org</span></code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a class="reference external" href="https://bioschemas.org/"><code class="docutils literal notranslate"><span class="pre">Bioschemas</span> <span class="pre">project</span></code></a>, which has been running for a few years with the support of the <a class="reference external" href="https://elixir-europe.org/"><code class="docutils literal notranslate"><span class="pre">EU-Elixir</span> <span class="pre">organization</span></code></a>. <code class="docutils literal notranslate"><span class="pre">Bioschemas</span></code> focuses on making Schema.org more relevant for the life sciences community by providing:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Schema.org</span></code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a class="reference external" href="https://bioschemas.org/"><code class="docutils literal notranslate"><span class="pre">Bioschemas</span> <span class="pre">project</span></code></a>, which has been running for a few years with the support of the <a class="reference external" href="https://elixir-europe.org/"><code class="docutils literal notranslate"><span class="pre">EU-Elixir</span> <span class="pre">organization</span></code></a>. <code class="docutils literal notranslate"><span class="pre">Bioschemas</span></code> focuses on making <a class="reference external" href="http://Schema.org">Schema.org</a> more relevant for the life sciences community by providing:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> for life sciences entities such as chemicals, genes, and proteins.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">profiles</span></code> that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable</p></li>
@@ -1149,15 +1175,15 @@ The tool is known as the <a class="reference external" href="https://search.goog
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="zenodo-deposition.html" title="previous page"><span class="section-number">4. </span>Deposition to Zenodo Archive</a>
     <a class='right-next' id="next-link" href="seo/bioschemas-data-page.html" title="next page"><span class="section-number">5.8.1. </span>Findability: Data Page Markup with Bioschemas</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

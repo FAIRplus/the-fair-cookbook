@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4. How to use HackMD to write a FAIR Cookbook Recipe</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -24,8 +25,8 @@
     href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -40,7 +41,6 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -83,7 +83,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -402,6 +402,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
      Which vocabulary to use?
     </a>
@@ -479,13 +498,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
-     4. Provenance Information
+     5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/community-standards.html">
-     5. Compliance with community annotation standards
+     6. Compliance with community annotation standards
     </a>
    </li>
   </ul>
@@ -655,21 +679,21 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -687,7 +711,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -701,28 +725,29 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/help/how-to-create-recipe-with-hackmd.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migration/content/recipes/help/how-to-create-recipe-with-hackmd.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/help/how-to-create-recipe-with-hackmd.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i>
+            Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -809,6 +834,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -848,7 +874,7 @@ ___
 <div class="section" id="main-objectives">
 <h2><span class="section-number">4.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><strong>This document aims to guide users through the process of getting set up to contribute content to the <a class="reference external" href="https://fairplus.github.io/the-fair-cookbook/intro">the FAIR cookbok</a> using HackMD.io online editor.
+<div><p><strong>This document aims to guide users through the process of getting set up to contribute content to the <a class="reference external" href="https://fairplus.github.io/the-fair-cookbook/intro">the FAIR cookbok</a> using <a class="reference external" href="http://HackMD.io">HackMD.io</a> online editor.
 The document contains a checklist taking you point by point through the installation process and through the 2 main ways of using HackMD.</strong></p>
 </div></blockquote>
 <div class="admonition warning">
@@ -923,29 +949,29 @@ Once you’ve carried the extension installation, any github repository for whic
 <p><a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/edit/dev/docs/content/recipes/help/recipe-template.md">recipe template</a></p>
 </div>
 <div class="section" id="writing-notes-with-hackmd-io">
-<h2><span class="section-number">4.10. </span>10. Writing notes with HackMD.io:<a class="headerlink" href="#writing-notes-with-hackmd-io" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.10. </span>10. Writing notes with <a class="reference external" href="http://HackMD.io">HackMD.io</a>:<a class="headerlink" href="#writing-notes-with-hackmd-io" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>From a Github repository, by editing an existing Markdown</p></li>
 </ol>
-<p>⚡  In order to be able to <code class="docutils literal notranslate"><span class="pre">push</span></code> a change to github from HackMD.io, it is <strong>required</strong> to first create a placeholder <code class="docutils literal notranslate"><span class="pre">markdown</span></code> file in the targeted github repository.</p>
+<p>⚡  In order to be able to <code class="docutils literal notranslate"><span class="pre">push</span></code> a change to github from <a class="reference external" href="http://HackMD.io">HackMD.io</a>, it is <strong>required</strong> to first create a placeholder <code class="docutils literal notranslate"><span class="pre">markdown</span></code> file in the targeted github repository.</p>
 <p>For instance, you want to create an new recipe, you first need to create <code class="docutils literal notranslate"><span class="pre">my_new_recipe.md</span></code> file under a branch of the FAIRcookbook repository.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch my_new_recipe.md
 git add my_new_recipe.md
 git push origin my_recipe_branch
 </pre></div>
 </div>
-<p>In a browser (one with the hackMD browser extension enabled), navigate to the recipe page on the github repository and click on the <code class="docutils literal notranslate"><span class="pre">hackMD</span></code> button ![](https://i.imgur.com/k79IQUA.png =145x)</p>
-<p>This will launch the HackMD.io editor in a separate tab.</p>
+<p>In a browser (one with the hackMD browser extension enabled), navigate to the recipe page on the github repository and click on the <code class="docutils literal notranslate"><span class="pre">hackMD</span></code> button ![](<a class="reference external" href="https://i.imgur.com/k79IQUA.png">https://i.imgur.com/k79IQUA.png</a> =145x)</p>
+<p>This will launch the <a class="reference external" href="http://HackMD.io">HackMD.io</a> editor in a separate tab.</p>
 <p>⚡  Toggling back to the github page, notice the following message, which highlights 2 options, one allowing to switch back to the editor view, one allowing to end it.</p>
 <p><img alt="" src="https://i.imgur.com/3uqMaT3.png" /></p>
-<p>By pressing <code class="docutils literal notranslate"><span class="pre">Stop</span> <span class="pre">Editing</span></code>, HackMD.io tab closes and the user is taken back to Github page. The user is now offered to either <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">changes</span></code> or <code class="docutils literal notranslate"><span class="pre">cancel</span></code></p>
+<p>By pressing <code class="docutils literal notranslate"><span class="pre">Stop</span> <span class="pre">Editing</span></code>, <a class="reference external" href="http://HackMD.io">HackMD.io</a> tab closes and the user is taken back to Github page. The user is now offered to either <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">changes</span></code> or <code class="docutils literal notranslate"><span class="pre">cancel</span></code></p>
 <p>☢️ Pressing <code class="docutils literal notranslate"><span class="pre">cancel</span></code> will lose any changes made during the editing phase.</p>
 <p>ℹ️  Pressing <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">change</span></code> offers two options. We <strong>strongly recommend</strong> using the <code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">branch</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">commit</span> <span class="pre">and</span> <span class="pre">start</span> <span class="pre">a</span> <span class="pre">pull</span> <span class="pre">request</span></code> option when choosing to commit changes. This is good practice and always remember to assign a reviewer and set a milestone when sending the <code class="docutils literal notranslate"><span class="pre">pull</span> <span class="pre">request</span></code></p>
 <ol class="simple">
 <li><p>Directly from HackMD by creating a new note from the tool itself</p></li>
 </ol>
 <p>To do so, open HackMD and go the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Note</span></code>
-![](https://i.imgur.com/KMsANJL.png =345x)</p>
+![](<a class="reference external" href="https://i.imgur.com/KMsANJL.png">https://i.imgur.com/KMsANJL.png</a> =345x)</p>
 <p>This will open a empty HackMD page and if one presses <code class="docutils literal notranslate"><span class="pre">pull</span> <span class="pre">from</span> <span class="pre">Github</span></code>, a pop-up will open and allow users to select:</p>
 <ul class="simple">
 <li><p>a github repository</p></li>
@@ -956,7 +982,7 @@ git push origin my_recipe_branch
 <p><img alt="" src="https://i.imgur.com/Bccq6OD.png" /></p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">pull</span></code> is successful, the user can now edit the document.</p>
 <p>When the edits are completed, the user can push the file back to github. To do so, one needs to hit the ‘…’ icon in the top right-hand corner of the HackMD menu bar, as show below:</p>
-<p>![](https://i.imgur.com/0TdXGl0.png =400x)</p>
+<p>![](<a class="reference external" href="https://i.imgur.com/0TdXGl0.png">https://i.imgur.com/0TdXGl0.png</a> =400x)</p>
 <p>Navigate to <code class="docutils literal notranslate"><span class="pre">Versions</span></code>. This will bring the following window:</p>
 <p><img alt="" src="https://i.imgur.com/6AUdRLo.png" /></p>
 <p>Press the blue ‘Push to Github’ button to bring up the following menu:</p>
@@ -1035,15 +1061,15 @@ git push origin my_recipe_branch
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="how-to-create-recipe-with-gdoc.html" title="previous page"><span class="section-number">3. </span>Using GoogleDocs to contribute a FAIR Cookbook Recipe</a>
     <a class='right-next' id="next-link" href="how-to-create-recipe-with-git.html" title="next page"><span class="section-number">5. </span>How to create a FAIRPlus Coobook Recipe ?</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
