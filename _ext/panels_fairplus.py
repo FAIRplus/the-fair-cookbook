@@ -157,6 +157,10 @@ class PanelFairplus(Directive):
 
         content.extend(
             [
+            '<br/>',
+            '',
+            '----',
+            '',
             '````{panels}',
             ':container: container-lg pb-3',
             ':column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1',
@@ -201,6 +205,9 @@ class PanelFairplus(Directive):
             '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Terminology Manager  </p>'                 if "terminology_manager" in self.options["intended_audience"] else "",
             '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Ontologist  </p>'                          if "ontologist" in self.options["intended_audience"] else "",
             '````',
+            '',
+            '----',
+            ''
         ])
         return content
 
