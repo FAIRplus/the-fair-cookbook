@@ -112,9 +112,9 @@ We will outline the steps for marking up a page in your site. As a specific exam
 
 ```{figure} BioschemasGenerator.png
 ---
-height: 550px
-name: Bioschemas Generator start screen
-alt: Bioschemas Generator start screen
+name: bioschemas-generator-start-screen-2
+alt: Bioschemas Generator start screen.
+
 ---
 Bioschemas Generator start screen.
 ```
