@@ -64,7 +64,7 @@ This recipe will cover the highlighted topics
 ```{figure} id-map-service-mermaid.png
 ---
 width: 800px
-name: Overview of key aspects in  Identifier Mapping
+name: overview-identifier-mapping-1
 alt: Overview of key aspects in  Identifier Mapping
 ---
 Overview of key aspects in  Identifier Mapping
