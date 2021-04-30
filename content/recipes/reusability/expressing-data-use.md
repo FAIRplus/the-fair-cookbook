@@ -774,11 +774,10 @@ This content provides an overview of the models available to do so and how it ha
 
 
 
-#### What to read next?
+### What to read next?
 
->{ref}`rr-licensing-software`
-
->{ref}`rr-licensing-data`
+* {ref}`rr-licensing-software`
+* {ref}`rr-licensing-data`
 
 
 
