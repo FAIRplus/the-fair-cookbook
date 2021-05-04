@@ -64,7 +64,7 @@ This recipe will cover the highlighted topics
 ```{figure} id-map-service-mermaid.png
 ---
 width: 800px
-name: Overview of key aspects in  Identifier Mapping
+name: overview-identifier-mapping-1
 alt: Overview of key aspects in  Identifier Mapping
 ---
 Overview of key aspects in  Identifier Mapping
@@ -76,8 +76,8 @@ ___
 ## Requirements
 
 * recipe dependency:
-    * {ref}`fcb-identifiers`
-    * {ref}`fcb-idmapping`
+    <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
+    * {ref}`fcb-interop-idmapping`
 
 * skill dependency:
     * programming knowledge
@@ -114,7 +114,7 @@ ___
 
 ## Identifier mapping with BridgeDb
 
-{ref}`fcb-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.
+{ref}`fcb-interop-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.
 
 BridgeDB is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:
 * Java API
@@ -128,12 +128,6 @@ BridgeDB is an open source tool dedicated to performing identifier mapping. Brid
 
 We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers. 
 
-#### Cases:
-
-1. Connect data with global identifiers to different global identifiers
-3. Connect data with local identifiers that were mapped to a global identifier to a different global identifier
- 
-
 In this recipe, we will cover how the R package and webservices can be used to accomplish the stated objectives.
 
 ### Mapping global identifier to other global identifier
@@ -146,14 +140,14 @@ One of the biggest benefits of using BridgeDb webservices is that these can be a
 
 - We start by defining strings containing the url of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map one of them (e.g. Ensembl)  
 
-```python=3.8.5
+```python
 url = "https://webservice.bridgedb.org/"
 batch_request = url+"{org}/xrefsBatch/{source}{}"
 ```
 
 > If the aim is to only map to a specific target data source, then one can check whether the mapping is supported by invoking the following  webservices:  
 
-```python=3.8.5
+```python
 mapping_available = "{org}/isMappingSupported/{source}/{target}"
 query = url+mapping_available.format(org='Homo sapiens', source='H', target='En')
 requests.get(query).text
@@ -162,7 +156,7 @@ requests.get(query).text
 
 - We then load our data into a pandas dataframe and call the requests library using our query.
 
-```python=3.8.5
+```python
 query = batch_request.format('?dataSource=En', org='Homo sapiens', source='H')
 response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
@@ -268,7 +262,7 @@ This is a step that should be done manually. In this case an important decision 
 ### Mapping local identifier to a different global identifier
 
 ```{note} 
- In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-idmapping` recipe. The mapping should be **one-to-one** for this recipe. 
+ In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-interop-idmapping` recipe. The mapping should be **one-to-one** for this recipe. 
 ```
 
 The TSV mapping file looks as follows:
@@ -285,8 +279,7 @@ This is how the mapping will work
 
 ```{figure} bridgedb-fig1-mermaid.png
 ---
-width: 500px
-name: Overview of BridgeDB tools
+name: overview-bridgedb-universum
 alt: Overview of BridgeDB tools
 ---
 Overview of BridgeDB tools
@@ -298,7 +291,7 @@ As before, we will define variables including the `web-service's URL` and the `m
 
 We then pass the source column to the `post request` as follows
 
-```python=3.8.5
+```python
 source_data = case2.source.to_csv(index=False, header=False)
 query = batch_request.format('', org=org, source=source)
 response2 = requests.post(query, data = source_data)
@@ -306,7 +299,7 @@ response2 = requests.post(query, data = source_data)
 You may notice here that we did not pass a target source, this could be done as specified before. Then, we use `to_df` again and as expected obtain the same dataframe as before.
 To see the equivalences with our local identifiers, we can simply join the dataframes, as follows:
 
-```python=3.8.5
+```python
 local_mapping = mappings.join(case2.set_index('source'), on='original')
 ```
 which will return the following table (first 10 rows)
@@ -333,16 +326,13 @@ In case we did specify the `target` argument to be `Ensembl (En)`, we would inst
 
 Here, we see a `one-to-one` relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
 
-<!--
-You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`. This can be easily understood with the diagram below-->
 
 ```{figure} bridgedb-fig2-mermaid.png
 ---
-width: 500px
-name: Overview of BridgeDB tools
-alt: Overview of BridgeDB tools
+name: exemplary-bridgedb-mapping
+alt: An example of a mapping via BridgeDB.
 ---
-Overview of BridgeDB tools
+An example of a mapping via BridgeDB. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
 ```
 
 
@@ -410,19 +400,19 @@ You can find ready-made methods to map using R and Python for the given use case
 
 ## Conclusion
 
-> We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset. 
-> BridgeDb provides handy functionality to make 'omics' type of data more interoperable and reusable.
-> As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
-> These are aspects of information provenance which 
-> 
-> #### What should I read next?
-> * {ref}`fcb-find-identifiers`
-> * {ref}`fcb-interop-idmapping`
+We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset. 
+BridgeDb provides handy functionality to make 'omics' type of data more interoperable and reusable.
+As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
+These are aspects of information provenance which 
+ 
+### What should I read next?
+* {ref}`fcb-find-identifiers`
+* {ref}`fcb-interop-idmapping`
 
+---
 
 ## References
 
----
 ```{bibliography}
 :filter: docname in docnames
 ```

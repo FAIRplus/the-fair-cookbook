@@ -114,7 +114,8 @@ RUN pip install                                          \
             wcwidth==0.2.5                              \
             webencodings==0.5.1                             \
             widgetsnbextension==3.5.1                               \
-            zipp==3.4.1                             
+            zipp==3.4.1                             \
+            pygments-csv-lexer==0.1.3
 
 # Document
 RUN pip freeze > /pip_freeze_actual.txt
@@ -140,5 +141,7 @@ RUN jupyter-book build /app
 #RUN cp /app/Dockerfile /app/_build/html/Dockerfile  
 
 RUN cd /app && tar -czf /out.tar.gz _build/html
+
+RUN ls /app/_build
 
 ## ... all content was converted to html now and sits in /app/_build
