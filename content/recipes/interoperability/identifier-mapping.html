@@ -1027,7 +1027,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
 <p>Before diving into identifier mapping, it is important to understand the possible types of mappings that can be performed between entities.
 While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest.
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as “scientific lenses” (see <span id="id1">[<a class="reference internal" href="#id19"><span>BBC+14</span></a>]</span>).
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as “scientific lenses” (see <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id1">1</a>).
 These lenses allow us to dynamically select which mappings to consider relevant and which to ignore.
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.</p>
 <p>Examples of types of mappings are:</p>
@@ -1036,7 +1036,7 @@ For example allowing or disallowing mappings between stereoisomers or between ge
 <li><p><strong>Ontology mapping</strong>: this can either be</p>
 <ul>
 <li><p>As a direct 1-to-1 mapping between equivalent terms in different ontologies</p></li>
-<li><p>As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see <span id="id2">[<a class="reference internal" href="#id111"><span>WLB10</span></a>]</span>.</p></li>
+<li><p>As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see <a class="footnote-reference brackets" href="#wang-concept-2010" id="id2">2</a>.</p></li>
 </ul>
 </li>
 <li><p><strong>Identifier mapping</strong>: The focus of this recipe. This can either be:</p>
@@ -1058,7 +1058,7 @@ For example allowing or disallowing mappings between stereoisomers or between ge
 </div>
 <p>To satisfy the Findability criteria F1, organisations must create identifiers for the concepts within their database. This generates locally unique identifiers which can in turn be transformed into globally unique identifiers using namespaces for which the database organisation are the <code class="docutils literal notranslate"><span class="pre">authority</span></code>.</p>
 <p>Databases often contain data that exists in, or is closely related to, the content of other databases. For example, the genome database <a class="reference external" href="http://ensembl.org/">Ensembl</a> contains data about genes that are related to entries in databases such as HUGO Gene Nomenclature Committee (<a class="reference external" href="https://www.genenames.org/">https://www.genenames.org/</a>) or <a class="reference external" href="https://www.ncbi.nlm.nih.gov/gene/">NCBI Gene</a>; or a database about drugs, e.g. <a class="reference external" href="https://drugbank.com/">DrugBank</a>, often contains details of the chemical substance that forms the drug which are also contained in chemical databases such as <a class="reference external" href="https://www.ebi.ac.uk/chebi/">ChEBI</a> or <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>. This results in a large number of unique identifiers notionally for the same concept. This large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. However, the databases often contain <code class="docutils literal notranslate"><span class="pre">cross-reference</span></code> links to other databases to represent these <code class="docutils literal notranslate"><span class="pre">equivalences</span></code>.</p>
-<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <span id="id3">[<a class="reference internal" href="#id19"><span>BBC+14</span></a>]</span> for more details).</p>
+<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id3">1</a> for more details).</p>
 <p>While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the <a class="reference external" href="https://www.proteinatlas.org/">Human Protein Atlas</a> database reuses <a class="reference external" href="https://www.ensembl.org/">Ensembl</a> identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data is already connected through the common identifier. However, this means that the Human Protein Atlas must ensure that their definition of the concept is exactly aligned with the Ensembl identifier for <strong>all</strong> application uses.</p>
 </div>
 <div class="section" id="identifier-equivalences">
@@ -1147,7 +1147,7 @@ The above has shown that the two formats can represent the same information. Bot
 <ul>
 <li><p><a class="reference external" href="https://bridgedb.github.io/">bridgedb.org</a></p>
 <blockquote>
-<div><p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> <span id="id4">[<a class="reference internal" href="#id21"><span>vIPK+10</span></a>]</span> is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.</p>
+<div><p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> <a class="footnote-reference brackets" href="#van-iersel-bridgedb-2010" id="id4">3</a> is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.</p>
 <p>It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following <code class="docutils literal notranslate"><span class="pre">curl</span></code> command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) <code class="docutils literal notranslate"><span class="pre">L</span></code> identifier <code class="docutils literal notranslate"><span class="pre">1234</span></code> for the <code class="docutils literal notranslate"><span class="pre">Human</span></code> gene <a class="reference external" href="https://www.ncbi.nlm.nih.gov/gene/1234">CCR5</a> as a TSV file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://webservice.bridgedb.org/Human/xrefs/L/1234&quot;</span> -H <span class="s2">&quot;accept: */*&quot;</span>
 </pre></div>
@@ -1159,7 +1159,7 @@ The above has shown that the two formats can represent the same information. Bot
 </li>
 <li><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a></p>
 <blockquote>
-<div><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a> <span id="id5">[<a class="reference internal" href="#id22"><span>CDG+13</span></a>]</span> is a specialised identifier mapping service for chemical structures. For a chemical structure – specified as an identifier, InChI, or InChI Key – it will equivalent structures found in the <a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a> chemistry resources.</p>
+<div><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a> <a class="footnote-reference brackets" href="#chambers-unichem-2013" id="id5">4</a> is a specialised identifier mapping service for chemical structures. For a chemical structure – specified as an identifier, InChI, or InChI Key – it will equivalent structures found in the <a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a> chemistry resources.</p>
 <p>The following <code class="docutils literal notranslate"><span class="pre">curl</span></code> command retrieves the equivalent database identifiers for the ChEMBL identifier <code class="docutils literal notranslate"><span class="pre">CHEMBL12</span></code> <a class="reference external" href="https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/">DIAZEPAM</a> and returns the result as a JSON object.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://www.ebi.ac.uk/unichem/rest/src_compound_id/CHEMBL12/1&quot;</span> -H <span class="s2">&quot;accept: */*&quot;</span>
 </pre></div>
@@ -1213,18 +1213,18 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="id6"><dl class="citation">
-<dt class="label" id="id19"><span class="brackets">BBC+14</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<p><dl class="footnote brackets">
+<dt class="label" id="batchelor-scientific-nodate"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
 <dd><p>Colin Batchelor, Christian Y A Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T Evelo, Anna Gaulton, Carole Goble, Alasdair J G Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, and Egon L Willighagen. Scientiﬁc Lenses to Support Multiple Views over Linked Chemistry Data. In <em>The Semantic Web – ISWC 2014. Lecture Notes in Computer Science</em>, 16. 2014. <a class="reference external" href="https://doi.org/10.1007/978-3-319-11964-9_7">doi:10.1007/978-3-319-11964-9_7</a>.</p>
 </dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id5">CDG+13</a></span></dt>
-<dd><p>Jon Chambers, Mark Davies, Anna Gaulton, Anne Hersey, Sameer Velankar, Robert Petryszak, Janna Hastings, Louisa Bellis, Shaun McGlinchey, and John P. Overington. UniChem: a unified chemical structure cross-referencing and identifier tracking system. <em>Journal of Cheminformatics</em>, 5(1):3, January 2013. <a class="reference external" href="https://doi.org/10.1186/1758-2946-5-3">doi:10.1186/1758-2946-5-3</a>.</p>
+<dt class="label" id="wang-concept-2010"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Ying Wang, Weiru Liu, and David Bell. A Concept Hierarchy Based Ontology Mapping Approach. In Yaxin Bi and Mary-Anne Williams, editors, <em>Knowledge Science, Engineering and Management</em>, Lecture Notes in Computer Science, 101–113. Berlin, Heidelberg, 2010. Springer. <a class="reference external" href="https://doi.org/10.1007/978-3-642-15280-1_12">doi:10.1007/978-3-642-15280-1_12</a>.</p>
 </dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id4">vIPK+10</a></span></dt>
+<dt class="label" id="van-iersel-bridgedb-2010"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
 <dd><p>Martijn P. van Iersel, Alexander R. Pico, Thomas Kelder, Jianjiong Gao, Isaac Ho, Kristina Hanspers, Bruce R. Conklin, and Chris T. Evelo. The BridgeDb framework: standardized access to gene, protein and metabolite identifier mapping services. <em>BMC Bioinformatics</em>, 11(1):5, January 2010. URL: <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">https://doi.org/10.1186/1471-2105-11-5</a> (visited on 2021-02-05), <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">doi:10.1186/1471-2105-11-5</a>.</p>
 </dd>
-<dt class="label" id="id111"><span class="brackets"><a class="fn-backref" href="#id2">WLB10</a></span></dt>
-<dd><p>Ying Wang, Weiru Liu, and David Bell. A Concept Hierarchy Based Ontology Mapping Approach. In Yaxin Bi and Mary-Anne Williams, editors, <em>Knowledge Science, Engineering and Management</em>, Lecture Notes in Computer Science, 101–113. Berlin, Heidelberg, 2010. Springer. <a class="reference external" href="https://doi.org/10.1007/978-3-642-15280-1_12">doi:10.1007/978-3-642-15280-1_12</a>.</p>
+<dt class="label" id="chambers-unichem-2013"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>Jon Chambers, Mark Davies, Anna Gaulton, Anne Hersey, Sameer Velankar, Robert Petryszak, Janna Hastings, Louisa Bellis, Shaun McGlinchey, and John P. Overington. UniChem: a unified chemical structure cross-referencing and identifier tracking system. <em>Journal of Cheminformatics</em>, 5(1):3, January 2013. <a class="reference external" href="https://doi.org/10.1186/1758-2946-5-3">doi:10.1186/1758-2946-5-3</a>.</p>
 </dd>
 </dl>
 </p>
@@ -1274,6 +1274,7 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+<hr class="footnotes docutils" />
 </div>
 </div>
 
