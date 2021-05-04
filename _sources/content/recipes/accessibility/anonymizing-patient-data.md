@@ -13,6 +13,8 @@
 
 ## Objectives
 
+This is a placeholder 
+
 ## Step by Step Process
 
      ### Step1:
@@ -24,6 +26,10 @@
      ### Step4:
      
      ### Step5:
+
+## Conclusion
+### what to read next
+
 
 ## License
 

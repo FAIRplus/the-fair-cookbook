@@ -1,5 +1,7 @@
 /* Put your custom CSS here */
 
+
+
 .mermaidClass > rect{
         fill:#FF0000;
         stroke:#FFFF00;
@@ -402,3 +404,5 @@ div.col-12.col-md-3.bd-sidebar.site-navigation.show {
 div.col-12.col-md-9.pl-md-3.pr-md-0{
   width: 130%;
 }
+
+/

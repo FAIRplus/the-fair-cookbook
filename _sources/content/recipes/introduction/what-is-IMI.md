@@ -1,4 +1,6 @@
 (fcb-intro-imi)=
+
+
 # What is IMI?
 
 +++
@@ -73,6 +75,7 @@ IMI has been running since 2008, with  a first round covering the years 2008 –
 - €1.638 billion (half the budget) comes from the Health, Demographic Change and Wellbeing Societal Challenge of Horizon 2020, the EU's framework programme for research and innovation;
 - €1.425 billion is committed to the programme by EFPIA companies;
 - up to €213 million can be committed by other life science industries or organisations that decide to contribute to IMI2 as members or Associated Partners in individual projects.
+
 
 ## What are IMI main priorities?
 
