@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Chemical Identity - InChi and SMILES</title>
+    <title>2. Chemical Identity - InChI and SMILES</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -105,8 +105,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/chemical-identities.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Chemical Identity - InChi and SMILES" />
-<meta property="og:description" content="Chemical Identity - InChi and SMILES    &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  identifier: &lt;a hre" />
+<meta property="og:title"       content="Chemical Identity - InChI and SMILES" />
+<meta property="og:description" content="Chemical Identity - InChI and SMILES    &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  identifier: &lt;a hre" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -331,7 +331,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2. Chemical Identity - InChi and SMILES
+     2. Chemical Identity - InChI and SMILES
     </a>
    </li>
    <li class="toctree-l2">
@@ -816,7 +816,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="chemical-identity-inchi-and-smiles">
-<span id="fcb-infra-chemid"></span><h1><span class="section-number">2. </span>Chemical Identity - InChi and SMILES<a class="headerlink" href="#chemical-identity-inchi-and-smiles" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-infra-chemid"></span><h1><span class="section-number">2. </span>Chemical Identity - InChI and SMILES<a class="headerlink" href="#chemical-identity-inchi-and-smiles" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
 <div class="sphinx-bs container-lg pb-3 docutils">
@@ -828,8 +828,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="card-body docutils">
 <h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
+ identifier: <a href="">F1</a> 
+ version: <a href="">v1.1</a>
 </div>
 </div>
 </div>
@@ -884,19 +884,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="standards">
 <h2><span class="section-number">2.1. </span>Standards:<a class="headerlink" href="#standards" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>SDFile (FairSharing doi:<a class="reference external" href="https://doi.org/10.25504/fairsharing.ew26v7">10.25504/fairsharing.ew26v7</a>)</p></li>
+<li><p>SDF file (FairSharing doi:<a class="reference external" href="https://doi.org/10.25504/fairsharing.ew26v7">10.25504/fairsharing.ew26v7</a>)</p></li>
 <li><p>SMILES (FairSharing doi:<a class="reference external" href="https://doi.org/10.25504/fairsharing.qv4b3c">10.25504/fairsharing.qv4b3c</a>)</p></li>
 <li><p>InChI (FairSharing doi:<a class="reference external" href="https://doi.org/10.25504/fairsharing.ddk9t9">10.25504/fairsharing.ddk9t9</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="databases">
 <h2><span class="section-number">2.2. </span>Databases:<a class="headerlink" href="#databases" title="Permalink to this headline">¶</a></h2>
-<p>Not applicable.</p>
+<ul class="simple">
+<li><p>PubChem (FairSharing doi:<a class="reference external" href="https://doi.org/10.25504/fairsharing.qt3w7z">10.25504/fairsharing.qt3w7z</a>)</p></li>
+<li><p>ChemSpider (FairSharing doi:<a class="reference external" href="https://doi.org/10.25504/fairsharing.96f3gm">10.25504/fairsharing.96f3gm</a>)</p></li>
+<li><p>Wikidata (FairSharing doi:<a class="reference external" href="https://doi.org/10.25504/fairsharing.6s749p">10.25504/fairsharing.6s749p</a>)</p></li>
+</ul>
 </div>
 <div class="section" id="identifiers">
 <h2><span class="section-number">2.3. </span>Identifiers:<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>InChI</p></li>
+<li><p>International Chemical Identifier (InChI)</p></li>
 </ul>
 </div>
 <div class="section" id="tools">
@@ -913,17 +917,18 @@ The Groovy scripts use version 2.3 of the <a class="reference external" href="ht
 (see also doi:<a class="reference external" href="https://doi.org/10.1186/s13321-017-0220-4">10.1186/s13321-017-0220-4</a>).
 This library and its use in Groovy is further explain in
 the book <a class="reference external" href="https://egonw.github.io/cdkbook/">Groovy Cheminformatics with the Chemistry Development Kit</a>.</p>
-<p><a class="reference external" href="https://github.com/FAIRplus/fairplus-sdf">Click here on how to use:</a></p>
+<p>Click here for more detailed use instructions and where to find the tools:
+<a class="reference external" href="https://github.com/FAIRplus/fairplus-sdf">https://github.com/FAIRplus/fairplus-sdf</a></p>
 </div>
 <div class="section" id="record-validation">
 <h3><span class="section-number">2.4.2. </span>Record validation<a class="headerlink" href="#record-validation" title="Permalink to this headline">¶</a></h3>
 <p>When generating InChIs, the InChI library may return two success states reflecting issues with
-the compound record in the SD file: WARNING and ERROR. This first script reports such issues:</p>
+the compound record in the SDF file: WARNING and ERROR. This first script reports such issues:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>groovy badRecords.groovy -f foo.sdf
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Input: SD file</p></li>
+<li><p>Input: SDF file</p></li>
 <li><p>Output: Reports validation issues</p></li>
 </ul>
 </div>
@@ -934,14 +939,14 @@ the compound record in the SD file: WARNING and ERROR. This first script reports
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Input: SD file</p></li>
+<li><p>Input: SDF file</p></li>
 <li><p>Output: list of InChIs</p></li>
 </ul>
 <p>When the success state is ERROR, nothing is outputted.</p>
 </div>
 <div class="section" id="calculate-smiles-strings">
 <h3><span class="section-number">2.4.4. </span>Calculate SMILES strings<a class="headerlink" href="#calculate-smiles-strings" title="Permalink to this headline">¶</a></h3>
-<p>The last script calculates a SMILES for each entry in the SD file:</p>
+<p>The last script calculates a SMILES for each entry in the SDF file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>groovy smiles.groovy -f foo.sdf
 </pre></div>
 </div>
@@ -963,7 +968,7 @@ the compound record in the SD file: WARNING and ERROR. This first script reports
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-align:left"><p>Egon Willighagen</p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://www.maastrichtuniversity.nl/egon.willighagen">Maastricht University,Department of Bioinformatics NUTRIM School of Nutrition and Translational Research in Metabolism Faculty of Health, Medicine and Life Sciences</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://www.maastrichtuniversity.nl/egon.willighagen">Maastricht University, Department of Bioinformatics - BIGCaT, NUTRIM School of Nutrition and Translational Research in Metabolism Faculty of Health, Medicine and Life Sciences</a></p></td>
 <td class="text-align:left"><p><a class="reference external" href="http://orcid.org/0000-0001-7542-0286">0000-0001-7542-0286</a></p></td>
 <td class="text-align:left"><p>Writing - Original Draft</p></td>
 </tr>
