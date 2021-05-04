@@ -1,76 +1,16 @@
+(fcb-interop-datadictionary)=
 # How to create a FAIR Data/Variable Dictionary
 
 
-**identifier:** [TBA](TBA)
-**version:** [v0.1](v0.1)
-
-___
-
-
-**_Difficulty level:_** : TBD
-
-**_Reading time:_** 15 minutes
-
-**_Intended Audience:_** Data Scientist, Data Manager
-
-**_Recipe Type_**: TBA 
-
-**_Executable code_**: No
-
-___
-
-<div class="row">
-
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-        <h4><b>Recipe metadata</b></h4>
-        <p> identifier: <a href="">TBA</a> </p>
-        <p> version: <a href="">v0.1</a> </p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-        <h4><b>Difficulty level</b></h4>
-        <i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-        <i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-  <!--       <p><span data-v-013baba1="" title="" class=""><svg data-v-013baba1="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-bar-chart-fill b-icon bi medium-level"><g data-v-013baba1=""><rect width="4" height="5" x="1" y="10" rx="1"></rect><rect width="4" height="9" x="6" y="6" rx="1"></rect><rect width="4" height="14" x="11" y="1" rx="1"></rect></g></svg> Medium </span></p> -->
-      </div>
-    </div>
-  </div>  
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <i class="fa fa-clock-o fa-2x" style="color:#7e0038;"></i>
-        <h4><b>Reading Time</b></h4>
-        <p><i class="fa fa-clock-o fa-lg" style="color:#7e0038;"></i> 15 minutes</p>
-        <h4><b>Recipe Type</b></h4>
-        <p><i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance</p>
-        <h4><b>Executable Code</b></h4>
-        <p><i class="fa fa-play-circle" style="color:#fc7a4a;"></i> No</p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <i class="fa fa-group fa-2x" style="color:#7e0038;"></i>
-        <h4><b>Intended Audience</b></h4>
-        <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Managers </p>
-        <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientists </p>
-<!--         <p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrators</p>  -->       
-      </div>
-    </div>
-  </div>
-</div>
-
+````{panels_fairplus}
+:identifier_text: http://w3id.org/faircookbook/FCB_TBA
+:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:difficulty_level: 3
+:recipe_type: How To
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:has_executable_code: no
+```` 
 ___
 
 
@@ -85,7 +25,7 @@ ___
 
 ## Main FAIRification Objectives
 
-Scope: Based on prior experience with other IMI projects, it is essential to ensure the provision of a comprehensive project specific `data dictionary`. 
+**Scope**: Based on prior experience with other IMI projects, it is essential to ensure the provision of a comprehensive project specific `data dictionary`. 
 
 A `data dictionary` is a file (or collection of files) which unambiguously declares, defines and annotates all the variables collected in a project and associated to a dataset.
 
@@ -107,6 +47,17 @@ When working on data from previous IMI projects, it became apparent that a well 
 ---
 
 ## Graphical overview
+
+```{figure} datadictionary-mermaid.png
+---
+height: 1050px
+name: Data Dictionary
+alt: Data Dictionary
+---
+Data Dictionary.
+```
+
+<!-- CREATE A file with a .mmd extension and copy the graph definition in it -->
 ```mermaid
 graph LR
   A(project):::box -->|data collection| B(Data Management Plan):::box
@@ -155,6 +106,20 @@ classDef box5 font-family:avenir,font-size:14px,fill:#FF3371,stroke:#222,color:#
 | :------------- | :------------- | :------------- |
 | [text annotation](http://edamontology.org/operation_3778) | list of variables | machine-actionable list of annotated variables |
 
+## Table of Data Standards
+
+
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [CDISC SDTM](https://fairsharing.org/FAIRsharing.s51qk5)  | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)  |  [OMOP](https://fairsharing.org/FAIRsharing.qk984b) |
+| [CDISC CDASH](https://fairsharing.org/FAIRsharing.r87bgr)  | [bioschema](https://fairsharing.org/FAIRsharing.20sbr9)  ||
+||[EFO](https://fairsharing.org/FAIRsharing.1gr4tz)||
+||[UO](https://fairsharing.org/FAIRsharing.mjnypw)||
+||[EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)||
+
+
+
+
 ## An Example of Data Dictionary
 
 | File Name            | Variable Name      | Variable Label            | Variable Ontology ID or RDFtype*                       | Variable ID Source                        | Variable Statistical Type | Variable Data Type | Variable Size | Max Allowed Value | Min Allowed Value |  Regex      | Allowed Value Shorthands | Allowed Value Descriptions      | Computed Value          | Unique (alone) | Unique (Combined with) | Required | Collection Form Name | Comments                                    |
@@ -182,9 +147,11 @@ classDef box5 font-family:avenir,font-size:14px,fill:#FF3371,stroke:#222,color:#
 | 3\_SampleMapping.txt | SUBJECT\_ID        | Subject number            | https://schema.org/identifier <br/> N/A, see CDISC cross-referencing approach                       | https://schema.org  <br/> CDISC:CDASHIG/SDTMIG      | ordinal variable          | integer            |               |                   |                   |            |                          |                                 |                         |                | SAMPLE\_ID             | Y        | FORM 3               |                                             |
 | 3\_SampleMapping.txt | SAMPLE\_ID         | Sample ID                 | https://schema.org/identifier <br/> N/A, see CDISC cross-referencing approach                       | https://schema.org  <br/> CDISC:CDASHIG/SDTMIG      | categorical variable      | string             |               |                   |                   |             |                          |                                 |                         |                | SUBJECT\_ID            | Y        | FORM 3               |                                             |                                          |
 
-*Here, we present two complementary options for expressing variable types. Semantic types such as schema.org or ontology terms enhance the findability of the data in repositories. Anchoring the variables in a domain-relevant data standard such as CDISC (as shown here) or the OMOP CDM helps improve interoperability with other datasets in that domain. 
+* Here, we present two complementary options for expressing variable types. 
+    * Semantic types such as schema.org or ontology terms enhance the findability of the data in repositories. 
+    * Anchoring the variables in a domain-relevant data standard such as [CDISC STDM](https://www.cdisc.org/standards/foundational/sdtm) (as shown here) or the [OMOP CDM](https://www.ohdsi.org/data-standardization/the-common-data-model/) helps improve interoperability with other datasets in that domain. 
 
-It should be noted that CDISC-compliant datasets group variables slightly differently to the format suggested here. Records are grouped by `Domain` such as vital signs (VS) and demographics (DM). Records represent one single measurement, so rather than capturing both height and weight in one record, like in the data dictionary here, these would be separate records in the VS domain, with test name (VSTESTCD) height or weight, respectively. CDISC also has a specific way of cross-referencing records, which is not cleanly mappable to do simpler approach suggested in this sample data dictionary. For further information on the CDISC model, please visit https://www.cdisc.org/.   
+* It should be noted that CDISC-compliant datasets group variables slightly differently to the format suggested here. Records are grouped by `Domain` such as vital signs (VS) and demographics (DM). Records represent one single measurement, so rather than capturing both height and weight in one record, like in the data dictionary here, these would be separate records in the VS domain, with test name (VSTESTCD) height or weight, respectively. CDISC also has a specific way of cross-referencing records, which is not cleanly mappable to do simpler approach suggested in this sample data dictionary. For further information on the CDISC model, please visit https://www.cdisc.org/.   
 ___
 
 ## Elements that should be included when building a data dictionary
@@ -220,15 +187,15 @@ The right fields to include in a data dictionary are strongly dependent on the n
 
 - Make sure you capture all relevant variables for your planned analyses, in particular if you plan any non-standard or novel analyses. Also, ensure that variables are captured in the correct format (standardised if appropriate) **in order to minimise the need for transformations later**.
 - Capture variables in the **most atomic form possible** as it is easier to aggregate separate fields into a new, combined value than to extract values from a larger field.
-- Reduce free text use to a minimum for value-sets associated with qualitative or ordinal variables by providing list of controlled values from standardised vocabularies (e.g. using NCI Thesaurus or CDISC vocabulary) suited for the context you operated in (e.g. LOINC, SNOMED-CT in clinical context).
-- Provide unambiguous textual definitions for each of the variables so third party users can understand what the variable represents, instead of second-guessed obscure variable shorthands.
-- Provide units, and where possible, acceptable ranges for continuous variables.
-- Provide regular expressions for input validation where needed (e.g. expecting an identifier or a particular reporting pattern)
-- Provide formula if `derived variables` are computed from `primary variables`
+- **Reduce free text use to a minimum** for value-sets associated with qualitative or ordinal variables by providing list of controlled values from standardised vocabularies (e.g. using NCI Thesaurus or CDISC vocabulary) suited for the context you operated in (e.g. LOINC, SNOMED-CT in clinical context).
+- **Provide unambiguous textual definitions** for each of the variables so third party users can understand what the variable represents, instead of second-guessed obscure variable shorthands.
+- **Provide units**, and where possible, acceptable ranges for continuous variables.
+- **Provide regular expressions for input validation** where needed (e.g. expecting an identifier or a particular reporting pattern)
+- **Provide formula** if `derived variables` are computed from `primary variables`
 
-#### Indicate how missing values are dealt with:
+### Indicate how missing values are dealt with:
 
-Data collection is never plain sailing. Patients drop out from studies, animals die, cell cultures or laboratory tests can fail. This results in holes in the datasets. However, without a clear plan to record missing data point unambiguously, empty cells in a record can be the cause of analysis pain.
+Data collection is never plain sailing. Patients drop out from studies, animals die, cell cultures or laboratory tests  fail. This results in holes in the datasets. However, without a clear plan to record missing data point unambiguously, empty cells in a record can be the cause of analysis pains.
 It is therefore important and good practice to detail in a `data dictionary` what is a legimitate form to indicate a `missing value`, which should be interpreted as `null`.
 
 Depending on the persistence system, how this needs to be specified varies. We provide an example on how to do so in the context of a Frictionless Tabular package. The specifications provide more information about how to specify how missing values should look like:
@@ -252,34 +219,30 @@ Depending on the persistence system, how this needs to be specified varies. We p
 
 #### Remember to provide the data dictionary in an open syntax
 
-```python=
-TODO:
-insert example generating a frictionless package from the example
 
-include RDFType
-
-```
 ---
 
 ## Data Dictionary Mapping in FAIRplus
 
-While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary. The FAIRplus project is in the process of working the [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
+While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary.
+The [FAIRplus project](https://fairplus-project.eu/) is in the process of working the [Innovative Medicine Initiative](https://www.imi.europa.eu/) [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
 
 ---
 ## Conclusion:
 
-This recipe covered an essential output of any research program, namely the documentation of all variables recorded about study subjects and key metadata descriptors used in subsequence analysis in the form of a `data dictionary`
-The creation and provision of such a `data dictionary` should be an central component of any `data management plan` and should be one of the key deliverable of any IMI project.
-Why? simply because if affords several key data management process to take place
+This recipe covered an essential output of any research program, **namely the documentation of all variables recorded about study subjects and key metadata descriptors used in subsequence analysis in the form of a `data dictionary`**.
+The creation and provision of such a `data dictionary` should be a central component of any `data management plan` and should be one of the key deliverable of any IMI project.
+Why? Simply because if affords several key data management processes to take place
 - First, it forces `data owners` to carefully structure core metadata and annotation requirements, by spelling out the nature, purpose and constraints on the data collection.
-- Second, it provides `data owners` the means to communicate about their scientific outputs, without necessarily disclosing the actual data collected over the course of the projects. It simply brings clarity and removes ambiguity about collected metadata and data. This clarify helps gauge `reusability potential` as well as `interoperability potential` of datasets.
-- Thirdly, the availability of the `data dictionary` prove extremely useful for any curatorial works, from gearing for an `ETL process`, to planning for mapping across ontological framework. This is especially facilitated if the `data dictionaries` have clearly identified the semantic resources relied upon in a project.
-- Finally, in the context of the Innovative Medicine Initiatives, delivering `Data Dictionaries` contributes to making research output more FAIR.
+- Second, it provides `data owners` the means to communicate about their scientific outputs, without necessarily disclosing the actual data collected over the course of the projects. It simply brings clarity and removes ambiguity about collected metadata and data. This clarity helps gauge `reusability potential` as well as `interoperability potential` of datasets.
+- Thirdly, the availability of the `data dictionary` proves extremely useful for any curatorial works, from gearing for an `ETL process`, to planning for mapping across ontological frameworks. This is especially facilitated if the `data dictionaries` have clearly identified the semantic resources relied upon in a project.
+- Finally, in the context of the [Innovative Medicine Initiative](https://www.imi.europa.eu/), delivering `Data Dictionaries` contributes to making research output more FAIR.
 
 ### What to read next:
 
-> - [How to select ontologies]()
-> - [Ontology Mapping]()
+> - {ref}`fcb-interop-selectonto`
+> - {ref}`fcb-interop-ontomapping` TODO
+> - {ref}`fcb-interop-etl` TODO
 > - [Key issues to be aware of when planning [Extract-Transform-Load processes]()
 
 
