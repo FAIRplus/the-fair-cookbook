@@ -28,3 +28,7 @@ Having trouble with the page? Want to give feedback?
 - Option 1: Drop us a line at: FAIRplus-cookbook@elixir-europe.org 
 - Option 2:file an Issue here on [GitHub tracker](https://github.com/FAIRplus/the-fair-cookbook/issues). Looking forward to hear from you!
 
+
+## Deploy locally:
+- From outside the project:
+`jupyter-book build -W -n --keep-going the-fair-cookbook`
