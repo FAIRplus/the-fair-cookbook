@@ -1,4 +1,4 @@
-(fcb-reuse-data_use)=
+(fcb-reusability-data_use)=
 # Patterns and practice for expressing allowed data usage
 
 +++
