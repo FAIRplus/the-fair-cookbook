@@ -237,7 +237,7 @@ h1  {
 h2 {
 	/*background-color:#f1f1f1;*/
     /*f#ont-style: italic;*/
-    font-weight: 40;
+    font-weight: 100;
     margin-top: 2.1rem;
     margin-bottom: 1.4rem;
     font-size: 2.2rem;
@@ -286,7 +286,7 @@ li.c-sidebar__divider{
 ul.toc__menu a {
     display: block;
     padding: 0.25rem .75rem;
-    color:  #8038d1;#300861; #898c8f;
+    color:  #8038d1;
     font-size: 0.8em;
     font-weight: bold;
     line-height: 1.5;
@@ -307,8 +307,8 @@ li.active {
     margin-left: -1px;
 }
 /*li.active {
-	*/color: #fc7a4a;
-/* } */
+	color: #fc7a4a;
+ } */
 li.toc-list-itme-active {
 	color: #300861;
 }
@@ -317,7 +317,7 @@ li.toc-list-itme-active {
 ul.c-sidebar__chapters {
 	font-size: 13px;
 	font-family: "Avenir", Avenir, serif;
-	color: #fc7a4a; lightgray;
+	color: #fc7a4a;
 	font-weight: bold;
 }
 
@@ -401,8 +401,44 @@ div.col-12.col-md-3.bd-sidebar.site-navigation.show {
     background-image: linear-gradient(#f1f1f1, #f1f1f1);
 }
 
-div.col-12.col-md-9.pl-md-3.pr-md-0{
+div.col-12.col-md-9.pl-md-3.pr-md-0 {
   width: 130%;
 }
 
-/
+
+main.overflow-auto {
+    overflow: initial !important;
+}
+
+@media (min-width: 1405px) {
+    div.container-xl {
+        max-width: 100% !important;
+    }
+    div#site-navigation {
+        max-width: 300px;
+    }
+    button#navbar-toggler {
+        margin-left: 10px !important;
+    }
+    footer {
+        width: 100% !important;
+    }
+}
+
+div#site-navigation img.logo{
+    width: 260px !important;
+    margin: 0 !important;
+}
+
+div#site-navigation a.navbar-brand,
+div#site-navigation .navbar-brand-box {
+    width: auto;
+}
+
+html, html *:not(i) {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+li.active {
+    border-left: 0 !important
+}
