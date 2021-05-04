@@ -10,7 +10,7 @@ CONTROLLED_VOCABULARY_RECIPE_TYPE = {
     "survey_review"             : "Survey / Review",
     "guidance"                  : "Guidance",    
     "technical_guidance"        : "Technical Guidance",
-    "handson"                   : "Hands-on",
+    "hands_on"                   : "Hands-on",
 }
 
 CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
