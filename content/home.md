@@ -161,26 +161,27 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 :card: rounded
 
 <i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
-^^^
 <h4><b>FINDABILITY</b></h4>
-<p>TODO: add text here</p>
+^^^
+{ref}`fcb-find`
+
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-^^^
 <h4><b>Search Engine Optimitization</b></h4>
-<p>TODO: add text here</p>
+^^^
+{ref}`fcb-find-seo`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-^^^
 <h4><b>Open Archive Deposition</b></h4>
-<p>TODO: add text here </p>
+^^^
+{ref}`fcb-find-zenodo`
 ---
 <i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+<h4><b>Identifiers</b></h4>
 ^^^
-<h4><b>Annotation</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-find-identifiers`
 ````
 
 ````{panels}
@@ -189,27 +190,27 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 :card: rounded
 
 <i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
-^^^
 <h4><b>ACCESSIBILITY</b></h4>
-<p>TODO: add text here</p>
+^^^
+{ref}`fcb-access`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+<h4><b>Data Access Agreements</b></h4>
 ^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-access-data`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+<h4><b>Access Protocols: sftp</b></h4>
 ^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-access-sftp`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+<h4><b>Access Protocols: Aspera</b></h4>
 ^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-access-aspera`
 ````
 
 
@@ -220,27 +221,27 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 ---
 
 <i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
-^^^
 <h4><b>INTEROPERABILITY</b></h4>
-<p>TODO: add text here</p>
+^^^
+{ref}`fcb-interoperability`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+<h4><b>Metadata profile</b></h4>
 ^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-interop-metadataprofile`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+<h4><b>Ontology building</b></h4>
 ^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-interop-ontorobot`
 ---
 
 <i class="fa ffa-cog fa-lg" style="color:#300861;"></i>
+<h4><b>Vocabular selection</b></h4>
 ^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-interop-selectonto`
 ````
 
 ````{panels}
@@ -250,27 +251,27 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 ---
 
 <i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
-^^^
 <h4><b>REUSABILITY</b></h4>
-<p>TODO: add text here</p>
+^^^
+{ref}`fcb-reusability`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+<h4><b>Data use conditions</b></h4>
 ^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-reusability-data_use`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-^^^
 <h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
+^^^
+{ref}`rr-licensing-data`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+<h4><b>Community Standards</b></h4>
 ^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
+{ref}`fcb-reusability-community-std`
 ````
 
 
