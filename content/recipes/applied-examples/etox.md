@@ -1,4 +1,4 @@
-(fcb-fairify-examples-etox)=
+(fcb-etox)=
 # Data normalization and integration through entity linking
 
 ## _The eTox Sampler Dataset applied scenario_
@@ -65,37 +65,29 @@ These heuristics will be refined and extended iteratively by exploring term to c
 
 * if no **exact** matches are present, the term to concept match is described as a **partial** match. If there is more than one label of the matching concept that generated a **partial** match we consider the concept labels that has the higher number of shared lemmas with the original term.
 
-<!-- ![overview](image_0.png) -->
-
-```{figure} image_0.png
+```{figure} etox.md-figure1.png
 ---
-width: 650px
-name: Overview of the automatic ontology coverage evaluation strategy
+name: etox-figure1
 alt: Overview of the automatic ontology coverage evaluation strategy
 ---
 Overview of the automatic ontology coverage evaluation strategy.
 ```
 
-<!-- _Figure 1 - Overview of the automatic ontology coverage evaluation strategy_ -->
 
-<!-- ![example](image_1.png) -->
-```{figure} image_1.png
+```{figure} etox.md-figure2.png
 ---
-width: 500px
-name: Example of textual analyses of terms / concept labels
+name: etox-figure2
 alt: Example of textual analyses of terms / concept labels
 ---
 Example of textual analyses of terms / concept labels.
 ```
-
-<!-- _Figure 2 - Example of textual analyses of terms / concept labels_ -->
 
 ---
 ## Authors
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
-|  |  | [0000-0000-0000-0000](https://orcid.org/orcid.org/0000-0000-0000-0000) | Writing - Original Draft |
+<!-- TODO (who are the authors of this recipe?) |  |  | [0000-0000-0000-0000](https://orcid.org/orcid.org/0000-0000-0000-0000) | Writing - Original Draft | -->
 
 
 ---
