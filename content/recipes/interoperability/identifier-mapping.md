@@ -120,7 +120,7 @@ Overview of key aspects in  Identifier Mapping
 
 Before diving into identifier mapping, it is important to understand the possible types of mappings that can be performed between entities.
 While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest. 
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see {cite}`batchelor_scientific_nodate`). 
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see {footcite}`batchelor_scientific_nodate`). 
 These lenses allow us to dynamically select which mappings to consider relevant and which to ignore.
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.
 
@@ -128,7 +128,7 @@ Examples of types of mappings are:
 * **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds
 * **Ontology mapping**: this can either be 
     * As a direct 1-to-1 mapping between equivalent terms in different ontologies
-    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {cite}`wang_concept_2010`.
+    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {footcite}`wang_concept_2010`.
 * **Identifier mapping**: The focus of this recipe. This can either be:
     * Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl)
     * Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different)
@@ -148,7 +148,7 @@ To satisfy the Findability criteria F1, organisations must create identifiers fo
 
 Databases often contain data that exists in, or is closely related to, the content of other databases. For example, the genome database [Ensembl](http://ensembl.org/) contains data about genes that are related to entries in databases such as HUGO Gene Nomenclature Committee (https://www.genenames.org/) or [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/); or a database about drugs, e.g. [DrugBank](https://drugbank.com/), often contains details of the chemical substance that forms the drug which are also contained in chemical databases such as [ChEBI](https://www.ebi.ac.uk/chebi/) or [PubChem](https://pubchem.ncbi.nlm.nih.gov/). This results in a large number of unique identifiers notionally for the same concept. This large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. However, the databases often contain `cross-reference` links to other databases to represent these `equivalences`.
 
-The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see {cite}`batchelor_scientific_nodate` for more details).
+The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see {footcite}`batchelor_scientific_nodate` for more details).
 
 While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the [Human Protein Atlas](https://www.proteinatlas.org/) database reuses [Ensembl](https://www.ensembl.org/) identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data is already connected through the common identifier. However, this means that the Human Protein Atlas must ensure that their definition of the concept is exactly aligned with the Ensembl identifier for **all** application uses.
 
@@ -249,7 +249,7 @@ The following is an incomplete list of identifier mapping services.
 
 * [bridgedb.org](https://bridgedb.github.io/) 
 
-    > [BridgeDb](https://bridgedb.github.io/) {cite}`van_iersel_bridgedb_2010` is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
+    > [BridgeDb](https://bridgedb.github.io/) {footcite}`van_iersel_bridgedb_2010` is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
     > 
     > It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following `curl` command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) `L` identifier `1234` for the `Human` gene [CCR5](https://www.ncbi.nlm.nih.gov/gene/1234) as a TSV file.
     >```bash
@@ -258,7 +258,7 @@ The following is an incomplete list of identifier mapping services.
     > * [BridgeDbR Tutorial](https://bioconductor.org/packages/release/bioc/vignettes/BridgeDbR/inst/doc/tutorial.html)
 
 * [UniChem](https://www.ebi.ac.uk/unichem/)
-    > [UniChem](https://www.ebi.ac.uk/unichem/) {cite}`chambers_unichem_2013` is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
+    > [UniChem](https://www.ebi.ac.uk/unichem/) {footcite}`chambers_unichem_2013` is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
     > 
     > The following `curl` command retrieves the equivalent database identifiers for the ChEMBL identifier `CHEMBL12` [DIAZEPAM](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/) and returns the result as a JSON object.
     > ```bash
@@ -310,8 +310,7 @@ ___
 
 ## References
 
-```{bibliography} 
-:filter: docname in docnames
+```{footbibliography} 
 ```
 
 
