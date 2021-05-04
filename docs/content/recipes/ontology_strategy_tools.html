@@ -1,0 +1,1752 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools for ontology strategies</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/docs/content/recipes/ontology_strategy_tools.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/docs/content/recipes/ontology_strategy_tools.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Tools for ontology strategies" />
+<meta property="og:description" content="Tools for ontology strategies  Important  - Data Curator - Data Manager - Data Scientist - Software Engineer - Terminology Manager - Ontologist   For the Recipe" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/FAIR-cookbook-audience.html">
+     2. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/brief-FAIR-principles.html">
+     3. What are the FAIR Principles?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/what-is-IMI.html">
+     4. What is IMI?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/FAIR-in-IMI-context.html">
+     5. FAIR in the context of IMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/IMI-Data-Access-Request-Process.html">
+     6. Engaging with IMI Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/FAIRplus-values.html">
+     7. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/introduction/data-sharing-models.html">
+     8. High level data sharing models
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+     1. Data Management Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+     2. FAIRplus Datasets Maturity Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/Data-Usage-Areas.html">
+     3. Data Usage Areas
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/assessing-fairness/fair-indicators.html">
+     4. FAIR Indicators
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/RDA-Indicators.html">
+       4.4.1. RDA Indicators
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+       4.4.2. IMI FAIRPlus Indicators
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/assessing-fairness/manual-fair-assessment.html">
+     5. FAIR assessment by hand
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/evaluation-method.html">
+       5.4.1. Evaluation Method
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/rda-evaluation.html">
+       5.4.2. RDA Evaluation Methods
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/assessing-fairness/automatic-fair-assessment.html">
+     6. FAIR assessment by software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/assessing-fairness/fair-assessment-fairevaluator.html">
+       6.4.1. Assessing FAIRness with FAIREvaluator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/assessing-fairness/fair-assessment-fairshake.html">
+       6.4.2. FAIR assessment with FAIRShake
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/findability.html">
+   Improving Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/infrastructure/chemical-identities.html">
+     2. Chemical Identity - InChi and SMILES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/accessibility.html">
+   Improving Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/accessibility/anonymizing-patient-data.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/accessibility/how-to-use-sftp-for-transfer.html">
+     2. How to use SFTP to transfer data files between institutions.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/accessibility/aspera.html">
+     3. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/interoperability.html">
+   Improving Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/interoperability/identifier-mapping.html">
+     How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/interoperability/bridgedb-recipe.html">
+     Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/interoperability/bridgedb/bridgedb-example.html">
+       Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/interoperability/selecting-ontologies.html">
+     Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/interoperability/ontology-new-term-request-recipe.html">
+     Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/interoperability/ontology-robot-recipe.html">
+     Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html">
+       MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/interoperability/creating-minimal-metadata-profiles.html">
+     Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/interoperability/transcriptomics-metadata.html">
+       Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/interoperability/fastq-file-format-validators.html">
+     File format validation, an example with FASTQ files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/reusability.html">
+   Improving Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/reusability/provenance.html">
+     5. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/reusability/community-standards.html">
+     6. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/applied-examples.html">
+   Making IMI data FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix-recipe.html">
+     Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario.html">
+     Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html">
+     RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/recipes/glossary-fair-terms.html">
+   Glossary of FAIR things
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/help.html">
+   Help
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/help/tips-tricks.html">
+     1. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/help/recipe-template.html">
+     2. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/help/how-to-create-recipe-with-gdoc.html">
+     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/help/how-to-create-recipe-with-hackmd.html">
+     4. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/help/how-to-create-recipe-with-git.html">
+     5. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../content/recipes/boilerplate.html">
+   Miscellaneous
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/license.html">
+     1. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/governance.html">
+     3. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/code_of_conduct.html">
+     4. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/project_information.html">
+     5. FAIR CookBook BoilerPlate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/roadmap.html">
+     6. FAIR cookbook development roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/contributing.html">
+     7. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../content/recipes/boilerplate/disclaimer.html">
+     8. Disclaimer
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/docs/content/recipes/ontology_strategy_tools.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fdocs/content/recipes/ontology_strategy_tools.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/docs/content/recipes/ontology_strategy_tools.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations">
+   Operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation-examples">
+   Implementation examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tools-for-ontology-strategies">
+<h1>Tools for ontology strategies<a class="headerlink" href="#tools-for-ontology-strategies" title="Permalink to this headline">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Important</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Data Curator
+- Data Manager
+- Data Scientist
+- Software Engineer
+- Terminology Manager
+- Ontologist
+</pre></div>
+</div>
+<p>For the <code class="docutils literal notranslate"><span class="pre">Recipe</span> <span class="pre">Type</span></code> section, the allowed values should be picked from the following list:
+- Review</p>
+</div>
+<div class="section" id="main-objectives">
+<h2>Main objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>This recipe identifies tools for different operations regarding ontology strategies, such as ontology annotation, ontology mapping, ontology management, etc. It aims to serve as a start point for implementing ontology-related FAIRifications, instead of provide a comprehensive list covering all available tools.</p>
+<blockquote>
+<div><p>The lists of tools  are generated either by manual curation, which reflects what is being used in the industry, or automatally discovered from the <a class="reference external" href="https://bio.tools/">bio.tools</a> repository.</p>
+<p>:bulb: <em>Contents in this table are generated in March 2021.
+For updated contents, please check the <span class="xref myst">FAIR tooling repository</span>.</em> You can provide feedback or report issues in the <code class="docutils literal notranslate"><span class="pre">comments</span></code> section.</p>
+</div></blockquote>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The figure below shows different ontology-related operations and their relationships, together with related tools and recipes.</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TB
+    subgraph Ontology strategies&lt;br&gt;
+    
+        subgraph Metadata enrichment
+            A[Ontology recommendation]
+            B[Ontology annotation]
+            C[Ontology mapping]
+        end
+        
+        subgraph Ontology life cycle
+            D[Ontology engineering]
+            E[Ontology management]
+        end
+        
+        A--&gt;B
+        B--&gt;C
+        
+        E-.-A
+        E-.-C
+        
+        
+    end
+    
+    classDef className fill:#f9f,stroke:#333,stroke-width:2px
+
+</pre></div>
+</div>
+<p>The table below is an overview of ontology strategies tools identified. Details of each tools are provided below.</p>
+<table>
+  <tr>
+   <td>Topic
+   </td>
+   <td><a href="https://hackmd.io/d_8tCiFYQkSl6tT7NP-1_Q#Ontology-annotation">Ontology annotation</a>
+   </td>
+   <td><a href="https://hackmd.io/d_8tCiFYQkSl6tT7NP-1_Q#Ontology-mapping">Ontology mapping</a>
+   </td>
+   <td><a href="https://hackmd.io/d_8tCiFYQkSl6tT7NP-1_Q#Ontology-management">Ontology management</a>
+   </td>
+   <td><a href="https://hackmd.io/d_8tCiFYQkSl6tT7NP-1_Q#Ontology-engineering">Ontology engineering</a>
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="8" >Manual selected tools
+   </td>
+   <td><a href="https://github.com/dmis-lab/biobert">BioBert</a>
+   </td>
+   <td><a href="https://www.ebi.ac.uk/spot/oxo/index">OxO</a>
+   </td>
+   <td><a href="http://www.aber-owl.net/">AberOWL</a>
+   </td>
+   <td><a href="https://github.com/enanomapper/slimmer">eNanoMapper Slimmer</a>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bioportal.bioontology.org/annotatorplus">NCBI BioPortal Annotator</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://bioportal.bioontology.org/">BioPortal</a>
+   </td>
+   <td><a href="http://owlcs.github.io/owlapi/">OWLAPI</a>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://github.com/ISA-tools/OntoMaton">OntoMaton</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://www.scibite.com/platform/centree/">Centree Ontology Manager</a>
+   </td>
+   <td><a href="https://protege.stanford.edu/">Protégé</a>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.ontotext.com/products/ontotext-platform/">OntoText</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://www.ebi.ac.uk/ols/index">OLS</a>
+   </td>
+   <td><a href="http://robot.obolibrary.org/">ROBOT</a>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://semantic-web.com/poolparty-semantic-suite/">PoolParty Semantic Suite</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="http://www.ontobee.org/">Ontobee</a>
+   </td>
+   <td><a href="https://www.topquadrant.com/products/topbraid-composer/">TopBraid Composer</a>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://prodi.gy/">Prodigy</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://www.poolparty.biz/">PoolParty</a>
+   </td>
+   <td><a href="http://vocbench.uniroma2.it/">VocBench</a>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.scibite.com/platform/termite/">Termite</a>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.ebi.ac.uk/spot/zooma/">ZOOMA</a>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="11" >Tools found in Bio.toools
+   </td>
+   <td><a href="https://bio.tools/biobert">biobert</a>
+   </td>
+   <td><a href="https://bio.tools/meshr">meshr</a>
+   </td>
+   <td><a href="https://bio.tools/ngly1">ngly1</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/ppr-ssm">ppr-ssm</a>
+   </td>
+   <td><a href="https://bio.tools/locdb">locdb</a>
+   </td>
+   <td><a href="https://bio.tools/doc2hpo">doc2hpo</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/hpo2go">hpo2go</a>
+   </td>
+   <td><a href="https://bio.tools/zooma">zooma</a>
+   </td>
+   <td><a href="https://bio.tools/amigo%202">amigo 2</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/vapur">vapur</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://bio.tools/plangexq">plangexq</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/belief">belief</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://bio.tools/gocats">gocats</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/matscholar">matscholar</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://bio.tools/rdfscape">rdfscape</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/collabonet">collabonet</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://bio.tools/ontobrowser">ontobrowser</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/calchas">calchas</a>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://bio.tools/quickgo">quickgo</a>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/qtl%20tableminer%EF%BF%BD(qtm)">qtl tableminer(qtm)</a>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/thbp">thbp</a>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+</table>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>recipe dependency:</p>
+<ul>
+<li><p><span class="xref std std-ref">Which vocabulary to use?</span></p></li>
+</ul>
+</li>
+<li><p>knowledge requirement:</p>
+<ul>
+<li><p>be familiar with ontology and semantic annotation.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="capability-maturity-table">
+<h2>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>minimal</p></td>
+<td class="text-align:left"><p>automatable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/topic_0089">ontology and terminology</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_3778">text annotation</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="operations">
+<h2>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<h3 id="Ontology-annotationr">Ontology annotation</h3>
+<p>The process of linking free text or data items to ‘tokens’(defined terms from a lexicon) which provide semantic value. For example, free text “type 2 diabetes” can be be annotated with <a class="reference external" href="http://purl.obolibrary.org/obo/MONDO_0005148">terms</a> in the MONDO disease ontology.</p>
+<p><strong>Manually curated tools</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ebi.ac.uk/spot/zooma/">ZOOMA</a></p></td>
+<td><p>A tool for mapping free text annotations to ontology term based on a curated repository of annotation knowledge</p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/about/terms-of-use/">EMBL-EBI Terms of Use</a></p></td>
+<td><p>Ontology and terminology,<br>Systems biology,<br>Data identity and mapping</p></td>
+<td><p>Web application,<br> API</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bioportal.bioontology.org/annotatorplus">NCBI BioPortal Annotator</a></p></td>
+<td><p>Get annotations for biomedical text with classes from the ontologies.</p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/about/terms-of-use/">NioPortal Terms of Use</a></p></td>
+<td><p>Ontology and terminology,<br>Systems biology,<br>Data identity and mapping</p></td>
+<td><p>Web application,<br> API</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/dmis-lab/biobert">BioBert</a></p></td>
+<td><p>A biomedical language representation model designed for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, question answering.</p></td>
+<td><p><a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></p></td>
+<td><p>text mining,<br> named-entity recognition,<br> natural language processing</p></td>
+<td><p>Python</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.scibite.com/platform/termite/">Termite</a></p></td>
+<td><p>Semantic enrichment to unlock the value of unstructured text and simplify the identification of new potential biomarker leads from scientific text.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Ontology and terminology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://semantic-web.com/poolparty-semantic-suite/">PoolParty Semantic Suite</a></p></td>
+<td><p>Automate the handling of heterogeneous metadata systems and the creation of enterprise knowledge graphs.design knowledge graphs at your own pace and with speed. Create your own ontologies and custom schemes by reusing already existing ontologies such as FOAF, FIBO, <a class="reference external" href="http://schema.org">schema.org</a> and CHEBI, among others. Apply them to your existing taxonomies with ease.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Content enrichment,<br>Data integration</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/ISA-tools/OntoMaton">OntoMaton</a></p></td>
+<td><p>A tool facilitating ontology search and tagging functionalities within Google Spreadsheets.</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/CPAL-1.0">CPAL license</a></p></td>
+<td><p></p></td>
+<td><p>Google Add-ons</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://prodi.gy/">Prodigy</a></p></td>
+<td><p>A modern annotation tool for creating training and evaluation data for machine learning models. You can also use Prodigy to help you inspect and clean your data, do error analysis and develop rule-based systems to use in combination with your statistical models.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Data annotation</p></td>
+<td><p>Python, Web application,API</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ontotext.com/products/ontotext-platform/">OntoText</a></p></td>
+<td><p>Connect and publish complex enterprise knowledge with standard-compliant semantic graph database;Customize and apply analytics to link documents to graphs, extract new facts, classify and recommend content…</p></td>
+<td><p>Commercial license</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools discovered from <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<table>
+  <tr>
+   <td>Tool
+   </td>
+   <td>Description
+   </td>
+   <td>License
+   </td>
+   <td>Topics
+   </td>
+   <td>Resource Type
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/biobert">biobert</a>
+   </td>
+   <td>A pre-trained biomedical language representation model for biomedical text mining | BioBERT: a pre-trained biomedical language representation model | This repository provides pre-trained weights of BioBERT, a language representation model for biomedical domain, especially designed for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, question answering, etc. Please refer to our paper BioBERT: a pre-trained biomedical language representation model for biomedical text mining for more details | This repository provides fine-tuning codes of BioBERT, a language representation model for biomedical domain, especially designed for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, question answering, etc. Please refer to our paper BioBERT: a pre-trained biomedical language representation model for biomedical text mining for more details. This project is done by DMIS-Lab
+   </td>
+   <td>
+   </td>
+   <td>Medicine, Ontology and terminology, Natural language processing
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/ppr-ssm">ppr-ssm</a>
+   </td>
+   <td>personalized PageRank and semantic similarity measures for entity linking.
+<p>
+BACKGROUND:Biomedical literature concerns a wide range of concepts, requiring controlled vocabularies to maintain a consistent terminology across different research groups. However, as new concepts are introduced, biomedical literature is prone to ambiguity, specifically in fields that are advancing more rapidly, for example, drug design and development. Entity linking is a text mining task that aims at linking entities mentioned in the literature to concepts in a knowledge base. For example, entity linking can help finding all documents that mention the same concept and improve relation extraction methods. Existing approaches focus on the local similarity of each entity and the global coherence of all entities in a document, but do not take into account the semantics of the domain. RESULTS:We propose a method, PPR-SSM, to link entities found in documents to concepts from domain-specific ontologies
+   </td>
+   <td>
+   </td>
+   <td>Imaging, Natural language processing, Data mining, Genotype and phenotype, Ontology and terminology
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/hpo2go">hpo2go</a>
+   </td>
+   <td>Prediction of human phenotype ontology term associations using cross ontology annotation co-occurrences.
+<p>
+Mapping between HPO and GO terms.
+<p>
+If you find HPO2GO useful, please consider citing this publication:.
+<p>
+Mapping between Human Phenotype Ontology (HPO) and Gene Ontology (GO) terms for the prediction of gene/protein - function - phenotype - disease associations.
+<p>
+In this study, a novel approach is proposed for the identification of relationships between biomedical entities by automatically mapping phenotypic abnormality defining HPO terms with biomolecular function defining GO terms, where each association indicates the occurrence of the abnormality due to the loss of the biomolecular function expressed by the corresponding GO term
+   </td>
+   <td>
+   </td>
+   <td>Pathology, Protein interactions, Genotype and phenotype, Ontology and terminology, Gene expression
+   </td>
+   <td>Command-line tool
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/vapur">vapur</a>
+   </td>
+   <td>A Search Engine to Find Related Protein.
+<p>
+Vapur is an online entity-oriented search engine for the COVID-19 anthology. Vapur is empowered with a semantic inverted index that is created through named entity recognition and relation extraction on CORD-19 abstracts.
+<p>
+In order to run scripts from scratch, please follow these:.
+<p>
+Enter a chemical or protein/gene and let Vapur find related bio-molecules in 150,000 COVID-19 publications!.
+   </td>
+   <td>
+   </td>
+   <td>Pathology, Ontology and terminology, Natural language processing, Enzymes
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/belief">belief</a>
+   </td>
+   <td>BELIEF (Biological Expression Language Information Extraction WorkFlow) is a semi-automated workflow for BEL network creation. It embeds an information extraction workflow with state-of-the-art named entity recognition (NER) and relation extraction (RE) methods.
+   </td>
+   <td>
+   </td>
+   <td>Natural language processing, Machine learning, Workflows, Genotype and phenotype, Ontology and terminology
+   </td>
+   <td>Web application
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/matscholar">matscholar</a>
+   </td>
+   <td>Named Entity Recognition and Normalization Applied to Large-Scale Information Extraction from the Materials Science Literature | Public API for the Materials Scholar database | matscholar (Materials Scholar) is a Python library for materials-focused natural language processing (NLP). It is maintained by a team of researchers at UC Berkeley and Lawrence Berkeley National Laboratory as part of a project funded by the Toyota Research Institute
+   </td>
+   <td>
+   </td>
+   <td>Chemistry, Ontology and terminology, Natural language processing
+   </td>
+   <td>Command-line tool
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/collabonet">collabonet</a>
+   </td>
+   <td>Collaboration of deep neural networks for biomedical named entity recognition.
+   </td>
+   <td>
+   </td>
+   <td>Ontology and terminology, Natural language processing, Machine learning
+   </td>
+   <td>Command-line tool
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/calchas">calchas</a>
+   </td>
+   <td>A web based framework that takes advantage of domain specific ontologies, and Natural Language Processing, aiming to empower exploration of biomedical resources via semantic-based querying and search. The NLP engine analyzes the input free-text query and translates it into targeted queries with terms from the underlying ontology. Each query is passed to the semantically-annotated tools repository, and based on similarity matches, it ranks the available resources.
+   </td>
+   <td>
+   </td>
+   <td>Medical informatics, Ontology and terminology, Natural language processing, Bioinformatics
+   </td>
+   <td>Web application
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/qtl%20tableminer%EF%BF%BD(qtm)">qtl tableminer(qtm)</a>
+   </td>
+   <td>It is a command-line tool to retrieve and semantically annotate results obtained from QTL mapping experiments. It takes full-text articles from the Europe PMC repository as input and outputs the extracted QTLs into a relational database (SQLite) and text file (CSV).
+   </td>
+   <td>
+   </td>
+   <td>Ontology and terminology
+   </td>
+   <td>Command-line tool
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/thbp">thbp</a>
+   </td>
+   <td>Mapping anatomical related entities to human body parts based on wikipedia in discharge summaries | *: Background Consisting of dictated free-text documents such as discharge summaries, medical narratives are widely used in medical natural language processing. Relationships between anatomical entities and human body parts are crucial for building medical text mining applications. To achieve this, we establish a mapping system consisting of a Wikipedia-based scoring algorithm and a named entity normalization method (NEN). The mapping system makes full use of information available on Wikipedia, which is a comprehensive Internet medical knowledge base
+   </td>
+   <td>
+   </td>
+   <td>Anatomy, Ontology and terminology, Natural language processing
+   </td>
+   <td>
+   </td>
+  </tr>
+</table>
+<h3 id="Ontology mapping">Ontology mapping</h3>
+<p>The process of determining correspondences between equivalent concepts in alternative ontologies, and other vocabularies. This may include mapping to convey different levels of granularity.</p>
+<p><strong>Manually curated tools</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ebi.ac.uk/spot/oxo/index">OxO</a></p></td>
+<td><p>a service for finding mappings (or cross-references) between terms from ontologies, vocabularies and coding standards. OxO imports mappings from a variety of sources including the Ontology Lookup Service and a subset of mappings provided by the UMLS. We’re still developing the service so please get in touch if you have any feedback.</p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/about/terms-of-use/">EMBL-EBI Terms of Use</a></p></td>
+<td><p>GUI and API</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools discovered from <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<table>
+  <tr>
+   <td>Tool
+   </td>
+   <td>Description
+   </td>
+   <td>License
+   </td>
+   <td>Topics
+   </td>
+   <td>Type
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+<a href="https://bio.tools/meshr">meshr</a></p>
+   </td>
+   <td>A set of annotation maps describing the entire MeSH assembled using data from MeSH.
+   </td>
+   <td>
+   </td>
+   <td>Medical informatics, Data quality management
+   </td>
+   <td>Command-line tool, Library
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+<a href="https://bio.tools/locdb">locdb</a></p>
+   </td>
+   <td>Manually curated database with experimental annotations for the subcellular localizations of proteins in Homo sapiens (HS, human) and Arabidopsis thaliana (AT, thale cress). Each database entry contains the experimentally derived localization in Gene Ontology (GO) terminology, the experimental annotation of localization, localization predictions by state-of-the-art methods and, where available, the type of experimental information.
+   </td>
+   <td>
+   </td>
+   <td>Ontology and terminology, Data submission, annotation and curation, Proteins
+   </td>
+   <td>Database portal
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+<a href="https://bio.tools/zooma">zooma</a></p>
+   </td>
+   <td>ZOOMA 2 is a search engine for automatic curation and a repository of annotation knowledge. It facilitates automated data annotation against a variety of ontologies by exploring context and previous annotation efforts as well as lexical matching
+   </td>
+   <td>
+   </td>
+   <td>Systems biology, Ontology and terminology, Data identity and mapping
+   </td>
+   <td>Web application
+   </td>
+  </tr>
+  <tr>
+</table>
+<h3 id="Ontology management">Ontology management</h3>
+The process of managing ontologies and other vocabularies in semantic web-linked data environments.This includes policies for update and maintenance of constituent and new terms.
+<p><strong>Manually curated tools</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ebi.ac.uk/ols/index">OLS</a></p></td>
+<td><p>a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions.</p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/about/terms-of-use/">EMBL-EBI Terms of Use</a></p></td>
+<td><p></p></td>
+<td><p>Web Application, API</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bioportal.bioontology.org/">BioPortal</a></p></td>
+<td><p>A repository of biomedical ontologies</p></td>
+<td><p><a class="reference external" href="https://www.bioontology.org/terms/">BioPortal Terms of Use</a></p></td>
+<td><p></p></td>
+<td><p>Web Application, API</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.poolparty.biz/">PoolParty</a></p></td>
+<td><p>Knowledge Engineering &amp; Knowledge Graph Management. Taxonomy, ontology and linked dataset management</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Ontology and terminology</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.scibite.com/platform/centree/">Centree Ontology Manager</a></p></td>
+<td><p>a centralised, enterprise-ready resource for ontology management and transforms the experience of maintaining and releasing ontologies for research-led businesses.</p></td>
+<td><p>Commercial license</p></td>
+<td><p></p></td>
+<td><p>Web application, API</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.ontobee.org/">Ontobee</a></p></td>
+<td><p>A linked data server designed for ontologies. Ontobee is aimed to facilitate ontology data sharing, visualization, query, integration, and analysis.</p></td>
+<td><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a></p></td>
+<td><p></p></td>
+<td><p>Web application</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.aber-owl.net/">AberOWL</a></p></td>
+<td><p>A framework for ontology-based access to biological data. It consists of a repository of bio-ontologies, a set of webservices which provide access to OWL(-EL) reasoning over the ontologies, and several frontends which utilise the ontology repository and reasoning services.</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Web application, API</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools discovered from <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<table>
+  <tr>
+   <td>Tool
+   </td>
+   <td>Description
+   </td>
+   <td>License
+   </td>
+   <td>Topics
+   </td>
+   <td>Type
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/ngly1">ngly1</a>
+   </td>
+   <td>Structured Reviews for Data and Knowledge Driven Research | The NGLY1 Deficiency Knowledge Graph | This is the repository for the NGLY1 Deficiency Knowledge Graph, the reasoning context to support hypothesis discovery for NGLY1 Deficiency-CDDG (DOID:0060728) research. The user can navigate the knowledge in the graph in the Neo4j Browser website. This knowledge graph is a structured review around the research question what is the mechanism underpinning the NGLY1-AQP1 regulation association and explaining the reduced transcriptomic expression of multiple Aquaporins in NGLY1 deficient cells?. The graph v3.2 is the first deployed in the Wikibase application for community contribution and curation
+   </td>
+   <td>
+   </td>
+   <td>Molecular interactions, pathways and networks, Ontology and terminology, Machine learning
+   </td>
+   <td>Command-line tool
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/doc2hpo">doc2hpo</a>
+   </td>
+   <td>Web application for efficient and accurate Human Phenotype Ontology (HPO) concept curation.
+   </td>
+   <td>
+   </td>
+   <td>Genotype and phenotype, Ontology and terminology, Natural language processing
+   </td>
+   <td>Web application
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/amigo 2">amigo 2</a>
+   </td>
+   <td>The GO Consortium GO browser and search engine.
+   </td>
+   <td>
+   </td>
+   <td>Ontology and terminology
+   </td>
+   <td>Web application
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/plangexq">plangexq</a>
+   </td>
+   <td>PlanGexQ is a user-friendly interactive tool for the curation and annotation of planarian morphologies and gene expression patterns in a centralized database. PlanGexQ allows any user to define reference morphologies using mathematical graphs and a drag-and-drop interface. Gene expression pattern images can be uploaded to the program and then registered into the reference morphologies. Annotations with terms from the planarian anatomy ontology are autommatically created by analyzing the gene expression patterns and their textual descriptions. PlanGexQ represents a complete methodology for centralizing with formal and annotated descriptions the morphologies and gene expression patterns of planarian worms.
+   </td>
+   <td>
+   </td>
+   <td>Mathematics, Genotype and phenotype, Model organisms, Ontology and terminology, Gene expression
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/gocats">gocats</a>
+   </td>
+   <td>Advances in gene ontology utilization improve statistical power of annotation enrichment | Welcome to GOcats�â�� documentation! �â�� GOcats 1.1.5 documentation
+   </td>
+   <td>
+   </td>
+   <td>Mapping, Ontology and terminology, Microarray experiment
+   </td>
+   <td>Command-line tool
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/rdfscape">rdfscape</a>
+   </td>
+   <td>This is a project that brings Semantic Web features to the popular Systems Biology software Cytoscape. It allows to query, visualize and reason on ontologies represented in OWL or RDF within Cytoscape.
+   </td>
+   <td>
+   </td>
+   <td>Systems biology, Ontology and terminology, Biology
+   </td>
+   <td>Desktop application
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/ontobrowser">ontobrowser</a>
+   </td>
+   <td>The tool was developed to manage ontologies (and controlled terminologies e.g. CDISC SEND). The primary goal of the tool is to provide an online collaborative solution for expert curators to map code list terms (sourced from multiple systems/databases) to preferred ontology terms. Other key features include visualisation of ontologies in hierarchical/graph format, advanced search capabilities, peer review/approval workflow and web service access to data.
+   </td>
+   <td>
+   </td>
+   <td>Ontology and terminology, Data identity and mapping
+   </td>
+   <td>Web API, Web application
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/quickgo">quickgo</a>
+   </td>
+   <td>A fast browser for Gene Ontology terms and annotations.
+   </td>
+   <td>
+   </td>
+   <td>Ontology and terminology
+   </td>
+   <td>Web application
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://bio.tools/circular gene ontology (cirgo)">circular gene ontology (cirgo)</a>
+   </td>
+   <td>Visualises non-redundant two-level hierarchically structured ontology terms from gene expression data in a 2D space.
+   </td>
+   <td>
+   </td>
+   <td>Ontology and terminology, Data visualisation, Gene expression
+   </td>
+   <td>Command-line tool, Desktop application
+   </td>
+  </tr>
+</table>
+<h3 id="Ontology engineering">Ontology engineering</h3>
+<p>The process of developing and maintaining ontologies during the ontology life cycle.</p>
+<p><strong>Manually curated tools</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://protege.stanford.edu/">Protégé</a></p></td>
+<td><p>A free, open source ontology editor and a knowledge management system</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/BSD-2-Clause">2-Clause BSD</a></p></td>
+<td><p></p></td>
+<td><p>Web application, Desktop application</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://robot.obolibrary.org/">ROBOT</a></p></td>
+<td><p>An open source library and command-line tool for automating ontology development tasks. ROBOT provides ontology processing commands for a variety of tasks, including commands for converting formats, running a reasoner, creating import modules, running reports, and various other tasks.</p></td>
+<td><p><a class="reference external" href="https://raw.githubusercontent.com/ontodev/robot/master/LICENSE.txt">BSD 3-Clause License</a></p></td>
+<td><p></p></td>
+<td><p>Command-line tool</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://owlcs.github.io/owlapi/">OWLAPI</a></p></td>
+<td><p>A Java API and reference implmentation for creating, manipulating and serialising OWL Ontologies</p></td>
+<td><p>LGPL and Apache</p></td>
+<td><p></p></td>
+<td><p>API</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/enanomapper/slimmer">eNanoMapper Slimmer</a></p></td>
+<td><p>A slim tool to slim ontologies as part of ontology integration. It allows users to provide configuration files that specify which parts of an ontology should be kept and/or removed, allowing to just select parts of the ontology you like.</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/MIT">MIT license</a></p></td>
+<td><p></p></td>
+<td><p>Java</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.topquadrant.com/products/topbraid-composer/">TopBraid Composer</a></p></td>
+<td><p>TopBraid Composer Maestro Edition is used to develop ontology models, configure data source integration, and create semantic services and user interfaces.</p></td>
+<td><p><a class="reference external" href="https://www.topquadrant.com/legal/">Commercial license</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://vocbench.uniroma2.it/">VocBench</a></p></td>
+<td><p>a web-based, multilingual, collaborative development platform for managing OWL ontologies, SKOS(/XL) thesauri, Ontolex-lemon lexicons and generic RDF datasets.</p></td>
+<td><p><a class="reference external" href="https://bitbucket.org/art-uniroma2/vocbench3/src/master/LICENSE">License</a></p></td>
+<td><p></p></td>
+<td><p>Desktop application</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="implementation-examples">
+<h2>Implementation examples<a class="headerlink" href="#implementation-examples" title="Permalink to this headline">¶</a></h2>
+<p>To show how these tools can be used in real life examples, please check the related recipes.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html">Which vocabulary to use?</a></p></li>
+<li><p><a class="reference external" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html">Building an application ontology with Robot</a></p></li>
+</ul>
+</div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Credit role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fuqi Xu</p></td>
+<td><p>EMBL-EBI</p></td>
+<td><p>0000-0002-5923-3859</p></td>
+<td><p>Original draft</p></td>
+</tr>
+<tr class="row-odd"><td><p>Eva</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Original draft</p></td>
+</tr>
+<tr class="row-even"><td><p>Sukhi</p></td>
+<td><p></p></td>
+<td><p>Tool curation</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Nick</p></td>
+<td><p></p></td>
+<td><p>Reviewing</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Peter</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Reviewing</p></td>
+</tr>
+<tr class="row-odd"><td><p>Philippe</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/content/recipes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div>
+<div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div>
+<div class="row_footer"> <div class="column" style="center"><a href="https://europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div> <div class="column"><a href="https://www.imi.europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div> <div class="column"><a href="https://efpia.eu"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div> <br/> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
