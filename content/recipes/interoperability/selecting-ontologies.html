@@ -789,8 +789,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-cases-and-iterative-approach">
-     Use Cases and Iterative Approach
+    <a class="reference internal nav-link" href="#use-cases-and-general-recommendations">
+     Use Cases and General Recommendations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -954,7 +954,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <!-- [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSB3aGF0IGlzIHRoZSBjb250ZXh0Pyk6Ojpib3ggLS0-fGZyYW1ld29ya3wgTTEoZmE6ZmEtY3ViZSBjbGluaWNhbCB0cmlhbCBjb250ZXh0KTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMihmYTpmYS1jdWJlIG9ic2VydmF0aW9uYWwgcGF0aWVudCBvdXRjb21lKTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMyhmYTpmYS1jdWJlIGJhc2ljIHJlc2VhcmNoKTo6OmJveFxuXG4gIE0xIC0tPiB8Y29uc2lkZXJ8IFIxKGZhOmZhLWN1YmVzIENESVNDIFZvY2FidWxhcnkpOjo6Ym94XG4gIE0yIC0tPiB8Y29uc2lkZXJ8IFIyKGZhOmZhLWN1YmVzIE9IRFNJIEF0aGVuYSB0ZXJtaW5vbG9naWVzKTo6OmJveFxuICBNMyAtLT4gfGNvbnNpZGVyfCBSMyhmYTpmYS1jdWJlcyBPQk8gRm91bmRyeSByZXNvdXJjZXMpOjo6Ym94XG4gIFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH06Ojpib3ggLS0-fE5vIHxSMzo6OmJveFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH0gLS0-fFllc3xNNChjb25zdWx0IEZBSVJzaGFyaW5nKTo6OmJveFxuXG4gIE00IC0tPiB8RUJJIHJlc291cmNlc3xNNShFRk8pOjo6Ym94XG5cbiAgbGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4IHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7XG4gIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgSTEoZmE6ZmEtdW5pdmVyc2l0eSB3aGF0IGlzIHRoZSBjb250ZXh0Pyk6Ojpib3ggLS0-fGZyYW1ld29ya3wgTTEoZmE6ZmEtY3ViZSBjbGluaWNhbCB0cmlhbCBjb250ZXh0KTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMihmYTpmYS1jdWJlIG9ic2VydmF0aW9uYWwgcGF0aWVudCBvdXRjb21lKTo6OmJveFxuICBJMShmYTpmYS11bml2ZXJzaXR5IHdoYXQgaXMgdGhlIGNvbnRleHQ_KSAtLT58ZnJhbWV3b3JrfCBNMyhmYTpmYS1jdWJlIGJhc2ljIHJlc2VhcmNoKTo6OmJveFxuXG4gIE0xIC0tPiB8Y29uc2lkZXJ8IFIxKGZhOmZhLWN1YmVzIENESVNDIFZvY2FidWxhcnkpOjo6Ym94XG4gIE0yIC0tPiB8Y29uc2lkZXJ8IFIyKGZhOmZhLWN1YmVzIE9IRFNJIEF0aGVuYSB0ZXJtaW5vbG9naWVzKTo6OmJveFxuICBNMyAtLT4gfGNvbnNpZGVyfCBSMyhmYTpmYS1jdWJlcyBPQk8gRm91bmRyeSByZXNvdXJjZXMpOjo6Ym94XG4gIFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH06Ojpib3ggLS0-fE5vIHxSMzo6OmJveFxuICBJMntmYTpmYS11bml2ZXJzaXR5IGlzIHB1YmxpYzxicj4gYXJjaGl2ZTxicj4gZGVwb3NpdGlvbiA8YnI-cmVxdWlyZWQ_IH0gLS0-fFllc3xNNChjb25zdWx0IEZBSVJzaGFyaW5nKTo6OmJveFxuXG4gIE00IC0tPiB8RUJJIHJlc291cmNlc3xNNShFRk8pOjo6Ym94XG5cbiAgbGlua1N0eWxlIDAsMSwyLDMsNCw1LDYsNyw4IHN0cm9rZTojMmE5ZmM5LHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzJhOWZjOSxmb250LWZhbWlseTphdmVuaXI7XG4gIGNsYXNzRGVmIGJveCBmb250LWZhbWlseTphdmVuaXIsZm9udC1zaXplOjE0cHgsZmlsbDojMmE5ZmM5LHN0cm9rZTojMjIyLGNvbG9yOiNmZmYsc3Ryb2tlLXdpZHRoOjFweFxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9) -->
 <div class="figure align-default" id="which-ontology-should-be-used">
 <a class="reference internal image-reference" href="../../../_images/select-onto.png"><img alt="Which ontology should be used?" src="../../../_images/select-onto.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">hich ontology should be used?.</span><a class="headerlink" href="#which-ontology-should-be-used" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Which ontology should be used?.</span><a class="headerlink" href="#which-ontology-should-be-used" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -978,67 +978,51 @@ commentsRunWhenDOMLoaded(addUtterances);
 <hr class="docutils" />
 <div class="section" id="context-is-everything">
 <h2>Context is everything<a class="headerlink" href="#context-is-everything" title="Permalink to this headline">¶</a></h2>
-<p>The domain of operation will somehow dictate the semantic framework that makes most sense selecting. This is simply a consequence of the fact that the advances in data standardization in specific fields is such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.</p>
-<p>We will be giving two examples of such situations now:</p>
+<p>The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply a consequence of the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.</p>
+<p>Here, we present the three most common scenarios in biomedical research:</p>
 <div class="section" id="clinical-trial-data">
 <h3>Clinical Trial Data<a class="headerlink" href="#clinical-trial-data" title="Permalink to this headline">¶</a></h3>
-<p>Operating in the field of Clinical Trials means that datasets are generated during <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents in order to gain insights in terms of benefits in patient outcomes.
-In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by US FDA reviewers. This means that the <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">CDISC standards</span></a> are the <em><code class="docutils literal notranslate"><span class="pre">de-facto</span> <span class="pre">standard</span></code></em> in the area, which mandates the use of semantics resources such as:</p>
+<p>Operating in the field of Clinical Trials means that datasets are generated during <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents, in order to gain insights in terms of benefits in patient outcomes.
+In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by regulators such as FDA reviewers in the US. The <a class="reference external" href="https://www.cdisc.org/standards">CDISC standards</a> are the <em><code class="docutils literal notranslate"><span class="pre">de-facto</span> <span class="pre">standard</span></code></em> in this area, which mandates the use of semantics resources such as:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Semantic Resource</p></th>
 <th class="head"><p>Domain</p></th>
-<th class="head"><p>License</p></th>
-<th class="head"><p>Format</p></th>
 <th class="head"><p>Service</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>CDISC vocabulary</p></td>
 <td><p>clinical trial data</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS</p></td>
 </tr>
 <tr class="row-odd"><td><p>NCI Thesaurus</p></td>
 <td><p>biomedicine</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS,Bioportal,OLS</p></td>
 </tr>
 <tr class="row-even"><td><p>SNOMED-CT</p></td>
 <td><p>pathology</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS,Bioportal(§)</p></td>
 </tr>
 <tr class="row-odd"><td><p>UMLS</p></td>
 <td><p>pathology</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS,Bioportal(§)</p></td>
 </tr>
 <tr class="row-even"><td><p>LOINC</p></td>
 <td><p>laboratory tests</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
+<td><p>Loinc</p></td>
 </tr>
 <tr class="row-odd"><td><p>RxNORM</p></td>
 <td><p>drugs</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>Bioportal</p></td>
 </tr>
 <tr class="row-even"><td><p>GUDID</p></td>
 <td><p>instruments</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>FDA</p></td>
 </tr>
 </tbody>
 </table>
-<p>All available from the NCBI EVS system.</p>
+<p>All available from the <a class="reference external" href="https://evs.nci.nih.gov/">NCBI EVS system</a>, <a class="reference external" href="https://loinc.org/">LOINC</a>, <a class="reference external" href="https://www.ebi.ac.uk/ols/index">OLS</a> or <a class="reference external" href="https://bioportal.bioontology.org/">Bioportal</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Some resources are only available under restrictive licences, which prevent derivative work, which may limit access and use. Furthermore, some licenses are expensive.</p>
@@ -1046,94 +1030,81 @@ In this context, regulatory requirements make it so that data must be recorded i
 </div>
 <div class="section" id="observational-health-data">
 <h3>Observational Health Data<a class="headerlink" href="#observational-health-data" title="Permalink to this headline">¶</a></h3>
-<p>This context refers to data collected during observation studies, which in constrat to <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, draws inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. <code class="docutils literal notranslate"><span class="pre">Observational</span> <span class="pre">health</span> <span class="pre">data</span></code> can also include <code class="docutils literal notranslate"><span class="pre">electronic</span> <span class="pre">health</span> <span class="pre">records</span> <span class="pre">(EHR)</span></code> or <code class="docutils literal notranslate"> <span class="pre">administrative</span> <span class="pre">insurance</span> <span class="pre">claims</span></code> and allow research around acquiring <em><code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">world</span> <span class="pre">evidence</span></code></em> from large corpora of data.
-In this specific context, a model and associated set of standards has been particularly successful. With several hundred millions of patient information structured using the <strong>Observational Medical Outcomes Partnership (OMOP)</strong>, the Observational Health Data Sciences and Informatics (ODHSI) <code class="docutils literal notranslate"><span class="pre">open-science</span> <span class="pre">community</span></code> has been particularly successful. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operated in such a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">context</span></code>.</p>
+<p>This context refers to data collected during <code class="docutils literal notranslate"><span class="pre">observation</span> <span class="pre">studies</span></code>, which in contrast to <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. <code class="docutils literal notranslate"><span class="pre">Observational</span> <span class="pre">health</span> <span class="pre">data</span></code> can also include <code class="docutils literal notranslate"><span class="pre">electronic</span> <span class="pre">health</span> <span class="pre">records</span> <span class="pre">(EHR)</span></code> or <code class="docutils literal notranslate"> <span class="pre">administrative</span> <span class="pre">insurance</span> <span class="pre">claims</span></code> and allow research around acquiring <em><code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">world</span> <span class="pre">evidence</span></code></em> from large corpora of data.
+In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients’ information structured using the <strong>Observational Medical Outcomes Partnership (OMOP)</strong>, the Observational Health Data Sciences and Informatics (ODHSI) <code class="docutils literal notranslate"><span class="pre">open-science</span> <span class="pre">community</span></code> has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">context</span></code>.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Semantic Resource</p></th>
 <th class="head"><p>Domain</p></th>
-<th class="head"><p>License</p></th>
-<th class="head"><p>Format</p></th>
 <th class="head"><p>Service</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>CDISC vocabulary</p></td>
 <td><p>clinical trial data</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS</p></td>
 </tr>
 <tr class="row-odd"><td><p>NCI Thesaurus</p></td>
 <td><p>biomedicine</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS,Bioportal,OLS</p></td>
 </tr>
 <tr class="row-even"><td><p>SNOMED-CT</p></td>
 <td><p>pathology</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS,Bioportal(§)</p></td>
 </tr>
 <tr class="row-odd"><td><p>UMLS</p></td>
 <td><p>pathology</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>EVS,Bioportal(§)</p></td>
 </tr>
 <tr class="row-even"><td><p>LOINC</p></td>
 <td><p>laboratory tests</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
+<td><p>LOINC</p></td>
 </tr>
 <tr class="row-odd"><td><p>RxNORM</p></td>
 <td><p>drugs</p></td>
-<td><p></p></td>
-<td><p></p></td>
 <td><p>Bioportal</p></td>
 </tr>
 </tbody>
 </table>
-<p>For a more detail view and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the <a class="reference external" href="https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html"><code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> in the <strong><code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">of</span> <span class="pre">OHDSI</span></code></strong></a></p>
+<p>For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> <a class="reference external" href="https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html">in the <strong><code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">of</span> <span class="pre">OHDSI</span></code></strong></a></p>
 </div>
 <div class="section" id="basic-research-context">
 <h3>Basic research context<a class="headerlink" href="#basic-research-context" title="Permalink to this headline">¶</a></h3>
-<p>This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management good practice and proper archival requirements.
-As a consequence of fewer constraints, researchers are often confronted with a sea of options. This section aims to provide some guidance when tasked with deciding on which semantic resource to use.</p>
+<p>This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practice and proper archival requirements.
+As a consequence of fewer constraints, researchers are often confronted with a sea of options. This and the next sections aim to provide some guidance when tasked with deciding on which semantic resource to use.</p>
 <div class="tip admonition">
 <p class="admonition-title">Tip</p>
 <p><strong>An important consideration</strong>
-to bear in mind when writing selecting semantic resources is to assess whether or not <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">archival</span> <span class="pre">in</span> <span class="pre">public</span> <span class="pre">repositories</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">required</span></code>. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no requirement but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the <a class="reference external" href="https://efo.owl">Experimental Factor Ontology</a> could ease deposition.</p>
+to bear in mind when selecting semantic resources is to assess whether or not <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">archival</span> <span class="pre">in</span> <span class="pre">public</span> <span class="pre">repositories</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">required</span></code>. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no particular constraints on data annotations but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the <a class="reference external" href="https://efo.owl">Experimental Factor Ontology</a> for annotating data could ease deposition.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Tip</p>
-<p><strong><a class="reference external" href="https://fairsharing.org">the FAIRsharing registry</a></strong> is an ELIXIR resources which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.</p>
+<p><strong><a class="reference external" href="https://fairsharing.org">The FAIRsharing registry</a></strong> is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.</p>
 </div>
 </div>
 </div>
 <div class="section" id="selecting-terminologies">
 <h2>Selecting Terminologies<a class="headerlink" href="#selecting-terminologies" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="use-cases-and-iterative-approach">
-<h3>Use Cases and Iterative Approach<a class="headerlink" href="#use-cases-and-iterative-approach" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="use-cases-and-general-recommendations">
+<h3>Use Cases and General Recommendations<a class="headerlink" href="#use-cases-and-general-recommendations" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>The use and implementation of common terminologies will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying the eTRIKS database. Implementing use of common terminologies in the curation workflow will ensure consistency of the annotation across all studies.</p></li>
-<li><p>The clusters of dependent annotations (related data label) also follows the eTRIKS Minimal Information Guidelines (MIGs), a set of core descriptors ensuring that a consistent breadth and depth of information is reported.  Continuous feedback will be sought from WP2 and 4 and relevant users. The iterations will feedback into both MIGs and the terminology selections.</p></li>
-<li><p>As part of this iterative process, the eTRIKS use cases and query cases will be documented in order to evaluate, revise and refine the set of terminologies, and where relevant, the associated selection criteria.</p></li>
+<li><p>The use and implementation of common terminologies enables the normalisation and harmonisation of both variable labels and allowed values for each field. Implementing the use of common terminologies in the data collection or curation workflow will ensure consistency of the annotation across all data. This is particularly important if data is generated at multiple partner sites and/or by multiple individuals.</p></li>
+<li><p>If data fields are annotated with terms from freely chosen ontologies (rather than those dictated by a common model such as CDSIC), care should be taken to avoid picking terms from ontologies at random. If a set of concepts are all available in one ontology, this ontology should be preferred over a set of ontologies. Mapping services such as <a class="reference external" href="https://www.ebi.ac.uk/spot/oxo/">Oxo</a> are available to verify whether a term of interest in one ontology has an equivalent term in another ontology.</p></li>
+<li><p>Restrictions of allowed values for a given field should ideally be limited to a single ontology and better yet, to a single branch of a chosen ontology. This will vastly improve the semantic queryability as well as the consistency and interoperability of the data.</p></li>
+<li><p>Many ontologies and vocabularies reuse concepts from other ontologies, in line with best practice in ontology design, to limit duplication of efforts and proliferation of parallel synonymous concepts. Care should however be taken to use concepts in the most appropriate environment. This is usually their original source unless they are used as part of a larger set of terms. As an example, the Experimental Factor Ontology (EFO) reuses concepts from a range of ontologies, including species from the NCBI taxonomy, assays from OBI, and diseases and phenotypes from MONDO and HPO. If annotating a dataset or resource which covers all of these concepts, it therefore makes sense to use EFO as the primary annotation source. However, if only annotations for species are required, the NCBI taxonomy should be used directly to ensure completeness, since not all species in NCBItaxon will have been imported into EFO.</p></li>
 </ol>
 </div>
 <div class="section" id="selection-criteria">
 <h3>Selection Criteria<a class="headerlink" href="#selection-criteria" title="Permalink to this headline">¶</a></h3>
-<p>A set of widely accepted criteria for selecting terminologies (or other reporting standards) do not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and BioSharing (<a class="reference external" href="http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long">http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long</a>) has been used as starting point top define the eTRIKS criteria for excluding and/or including a terminology resource.</p>
+<p>A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as <a class="reference external" href="https://doi.org/10.1136/amiajnl-2013-002066">“A sea of standards for omics data: sink or swim?”</a> and <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1004743">“Ten Simple Rules for Selection a Bio-ontology”</a> providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.</p>
 <ul class="simple">
 <li><p><strong>Exclusion criteria</strong>:</p>
 <ul>
-<li><p>🔸  absent licence or terms of use (<em>indicator of usability</em>)</p></li>
+<li><p>🔸 absent licence or terms of use (<em>indicator of usability</em>)</p></li>
 <li><p>🔸 restrictive licences or terms of use with restrictions on redistribution and reuse</p></li>
 <li><p>🔸 absence of term definitions</p></li>
 <li><p>🔸 absence of sufficient class metadata (<em>indicator of quality</em>)</p></li>
-<li><p>🔸  absence of sustainability indicators (<em>absence of funding records</em>)</p></li>
+<li><p>🔸 absence of sustainability indicators (<em>absence of funding records</em>)</p></li>
 </ul>
 </li>
 <li><p><strong>Inclusion criteria</strong>:</p>
@@ -1144,11 +1115,11 @@ to bear in mind when writing selecting semantic resources is to assess whether o
 <li><p>🔰  size of resource (<em>indicator of coverage</em>)</p></li>
 <li><p>🔰  number of classes and subclasses (<em>indicator of depth</em>)</p></li>
 <li><p>🔰  number of terms having definitions and synonyms (<em>indicator of richness</em>)</p></li>
-<li><p>🔰  presence of an help desk and contact point (<em>indicator of community support</em>)</p></li>
+<li><p>🔰  presence of a help desk and contact point (<em>indicator of community support</em>)</p></li>
 <li><p>🔰  presence of term submission tracker / issue tracker (<em>indicator of resource agility and capability to grow upon request</em>)</p></li>
 <li><p>🔰  potential integrative nature of the resource (<em>as indicator of translational application potential</em>)</p></li>
 <li><p>🔰  licensing information available (<em>as indicator of freedom to use</em>)</p></li>
-<li><p>🔰  use of of top level ontology (<em>as indicator of a resource built for generic use</em>)</p></li>
+<li><p>🔰  use of a top level ontology (<em>as indicator of a resource built for generic use</em>)</p></li>
 <li><p>🔰  pragmatism (<em>as indicator of actual, current real life practice)</em></p></li>
 <li><p>🔰  possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)</p></li>
 </ul>
@@ -1157,8 +1128,8 @@ to bear in mind when writing selecting semantic resources is to assess whether o
 </div>
 <div class="section" id="set-of-core-terminologies">
 <h3>Set of Core Terminologies<a class="headerlink" href="#set-of-core-terminologies" title="Permalink to this headline">¶</a></h3>
-<p>The terminologies have been organized by theme and scope. When possible, sections are organized by <code class="docutils literal notranslate"><span class="pre">granularity</span> <span class="pre">levels</span></code>, progressing from <code class="docutils literal notranslate"><span class="pre">macroscopic</span> <span class="pre">scale</span></code> (organism) to <code class="docutils literal notranslate"><span class="pre">microscopic</span> <span class="pre">scale</span></code> (tissue, cells) and <code class="docutils literal notranslate"><span class="pre">molecular</span> <span class="pre">scale</span></code> (macromolecules, proteins, small molecules, xenobiotic chemicals).
-Domains also cover <code class="docutils literal notranslate"><span class="pre">Processes</span></code> or <code class="docutils literal notranslate"><span class="pre">Action</span></code> and their <code class="docutils literal notranslate"><span class="pre">participants</span></code> or <code class="docutils literal notranslate"><span class="pre">agents</span></code> but also can be organized from <code class="docutils literal notranslate"><span class="pre">general/generic</span></code> (disease) to <code class="docutils literal notranslate"><span class="pre">specialized/specific</span></code> (infectious disease).</p>
+<p>The terminologies presented here have been organized by theme and scope. When possible, sections are organized by <code class="docutils literal notranslate"><span class="pre">granularity</span> <span class="pre">levels</span></code>, progressing from <code class="docutils literal notranslate"><span class="pre">macroscopic</span> <span class="pre">scale</span></code> (organism) to <code class="docutils literal notranslate"><span class="pre">microscopic</span> <span class="pre">scale</span></code> (tissue, cells) and <code class="docutils literal notranslate"><span class="pre">molecular</span> <span class="pre">scale</span></code> (macromolecules, proteins, small molecules, xenobiotic chemicals).
+Domains also cover <code class="docutils literal notranslate"><span class="pre">processes</span></code> or <code class="docutils literal notranslate"><span class="pre">actions</span></code> and their <code class="docutils literal notranslate"><span class="pre">participants</span></code> or <code class="docutils literal notranslate"><span class="pre">agents</span></code> but also can be organized from <code class="docutils literal notranslate"><span class="pre">general/generic</span></code> (disease) to <code class="docutils literal notranslate"><span class="pre">specialized/specific</span></code> (infectious disease).</p>
 </div>
 <div class="section" id="organism-organism-parts-and-developmental-stages">
 <h3>Organism, Organism Parts and Developmental Stages<a class="headerlink" href="#organism-organism-parts-and-developmental-stages" title="Permalink to this headline">¶</a></h3>
@@ -1191,29 +1162,45 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 <td><p><a class="reference external" href="https://github.com/obophenotype/uberon/issues">https://github.com/obophenotype/uberon/issues</a></p></td>
 <td><p>Integrative Resource engineered to go across species</p></td>
 </tr>
+<tr class="row-even"><td><p><strong>Human Anatomy</strong></p></td>
+<td><p>FMA</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/fma.owl">http://purl.obolibrary.org/obo/fma.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/">https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/</a></p></td>
+<td><p>Excellent cross-referencing with Uberon</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Human Developmental Stages</strong></p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/hsapdv.owl">http://purl.obolibrary.org/obo/hsapdv.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
 <tr class="row-even"><td><p><strong>Mouse Anatomy</strong></p></td>
 <td><p>MA</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ma.owl">http://purl.obolibrary.org/obo/ma.owl</a></p></td>
 <td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obophenotype/mouse-anatomy-ontology/issues">https://github.com/obophenotype/mouse-anatomy-ontology/issues</a></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Strain</strong></p></td>
 <td><p>Rat Strain Ontology</p></td>
-<td><p><a class="reference external" href="http://data.bioontology.org/ontologies/RS/submissions/46/download?apikey=4ea81d74-8960-4525-810b-fa1baab576ff">http://data.bioontology.org/ontologies/RS/submissions/46/download?apikey=4ea81d74-8960-4525-810b-fa1baab576ff</a></p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/rs.owl">http://purl.obolibrary.org/obo/rs.owl</a></p></td>
 <td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/rat-genome-database/RS-Rat-Strain-Ontology/issues">https://github.com/rat-genome-database/RS-Rat-Strain-Ontology/issues</a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-<p>In research, many different model organism are used (e.g. Dogs, Monkeys…) and specialized resources may be available. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.</p>
+<p>In research, many different model organism are used (e.g. Dogs, Monkeys…) and specialized resources are available for many model organisms, including C. elegans, Drosophila, Xenopus, Zebrafish, plants and fungi. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.</p>
 </div>
 <div class="section" id="diseases-and-phenotype">
 <h3>Diseases and Phenotype<a class="headerlink" href="#diseases-and-phenotype" title="Permalink to this headline">¶</a></h3>
-<p>Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones,  biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.</p>
+<p>Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones, biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Scope</p></th>
@@ -1234,9 +1221,9 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </tr>
 <tr class="row-odd"><td><p></p></td>
 <td><p>SNOMED-CT</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/SNOMEDCT?p=summary">Bioportal</a></p></td>
 <td><p></p></td>
-<td><p></p></td>
-<td><p><a class="reference external" href="http://www.ihtsdo.org/licensing/">SNOMED license</a></p></td>
+<td><p><a class="reference external" href="http://www.nlm.nih.gov/databases/umls.html">SNOMED license</a> - part of the UMLS license</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p></p></td>
@@ -1248,14 +1235,14 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </tr>
 <tr class="row-odd"><td><p></p></td>
 <td><p>ICD-10</p></td>
-<td><p></p></td>
 <td><p>login required</p></td>
+<td><p></p></td>
 <td><p><a class="reference external" href="http://www.who.int/about/copyright/en/">WHO license</a></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p></p></td>
 <td><p>UMLS</p></td>
-<td><p></p></td>
+<td><p><a class="reference external" href="https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html">https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html</a></p></td>
 <td><p></p></td>
 <td><p><a class="reference external" href="http://www.nlm.nih.gov/databases/umls.html">UMLS license</a></p></td>
 <td><p></p></td>
@@ -1268,7 +1255,7 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 <td><p><a class="reference external" href="https://github.com/DiseaseOntology/HumanDiseaseOntology/issues">https://github.com/DiseaseOntology/HumanDiseaseOntology/issues</a></p></td>
 </tr>
 <tr class="row-even"><td><p></p></td>
-<td><p>MONDO</p></td>
+<td><p>MONDO*</p></td>
 <td><p><a class="reference external" href="http://purl.obolibrary.org/obo/mondo.owl">http://purl.obolibrary.org/obo/mondo.owl</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p></td>
@@ -1282,24 +1269,41 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 <td><p><a class="reference external" href="https://code.google.com/p/infectious-disease-ontology/issues/list">https://code.google.com/p/infectious-disease-ontology/issues/list</a></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Phenotype</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
 <td><p>HP</p></td>
 <td><p><a class="reference external" href="http://purl.obolibrary.org/obo/hp.owl">http://purl.obolibrary.org/obo/hp.owl</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://hpo.jax.org/app/license">HPO Licence</a></p></td>
 <td><p><a class="reference external" href="https://github.com/obophenotype/human-phenotype-ontology/issues/">https://github.com/obophenotype/human-phenotype-ontology/issues/</a></p></td>
 </tr>
-<tr class="row-odd"><td><p></p></td>
+<tr class="row-even"><td><p></p></td>
 <td><p>MedDRA</p></td>
 <td><p></p></td>
 <td><p></p></td>
-<td><p>This ontology is freely accessible on this site for academic and other non-commercial uses. Users anticipating any commercial use of MedDRA must contact the MSSO to obtain a license.</p></td>
+<td><p>This ontology is freely accessible on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/MEDDRA">Bioportal</a> for academic and other non-commercial uses. Users anticipating any commercial use of MedDRA must contact the MSSO to obtain a license.</p></td>
 <td><p><a class="reference external" href="https://mssotools.com/webcr/">https://mssotools.com/webcr/</a> login required</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>MP</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/mp.owl">http://purl.obolibrary.org/obo/mp.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obophenotype/mammalian-phenotype-ontology/issues">https://github.com/obophenotype/mammalian-phenotype-ontology/issues</a></p></td>
 </tr>
 </tbody>
 </table>
+<p>*MONDO was born of an effort to harmonise disease definitions from a number sources, includig OMIM, Orphanet, EFO and DOID, with work in progress to include NCIt. The OWL version includes axiomatisation using CL, Uberon, GO, HP, RO &amp; NCBITaxon. The ontology is under active development by a range of ontology and domain experts. If no other limiting requirements dictate the use of an alternative ontology (eg use of NCIt as part of a CDISC-compliant dataset), it is therefore the most recommended open source ontology from the above list.</p>
+<p>As with anatomy in the previous section, there is a growing body of organism-specific phenotype resources, such as C. elegans, Drosophila, Fission Yeast, Xenopus and Zebrafish.</p>
 </div>
 <div class="section" id="pathology-and-disease-specific-resources">
 <h3>Pathology and Disease Specific Resources<a class="headerlink" href="#pathology-and-disease-specific-resources" title="Permalink to this headline">¶</a></h3>
+<p>There is a wide range of ontologies available for specific diseases or disease types. Some examples are given below but this list is by no means exhaustive. Check ontology repositories such as <a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies">OLS</a>, <a class="reference external" href="https://bioportal.bioontology.org/ontologies">Bioportal</a> or the <a class="reference external" href="http://obofoundry.org/">OBO Foundry</a> for up-to-date lists of available ontologies</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Scope</p></th>
@@ -1357,25 +1361,32 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 <td><p><a class="reference external" href="https://code.google.com/p/cell-ontology/issues/list">https://code.google.com/p/cell-ontology/issues/list</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Cell Lines</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
 <td><p>Cellosaurus</p></td>
 <td><p><a class="reference external" href="ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo">ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo</a> <a class="reference external" href="ftp://ftp.expasy.org/databases/cellosaurus">ftp://ftp.expasy.org/databases/cellosaurus</a></p></td>
 <td><p></p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Cell Lines</strong></p></td>
+<tr class="row-odd"><td><p></p></td>
 <td><p>CLO</p></td>
 <td><p><a class="reference external" href="http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl">http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
 <td><p><a class="reference external" href="https://code.google.com/p/clo-ontology/issues/list">https://code.google.com/p/clo-ontology/issues/list</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Cell Molecular Phenotype Ontology</strong></p></td>
+<tr class="row-even"><td><p><strong>Cell Molecular Phenotype Ontology</strong></p></td>
 <td><p>CMPO</p></td>
 <td><p><a class="reference external" href="https://github.com/EBISPOT/CMPO/tree/master/release">https://github.com/EBISPOT/CMPO/tree/master/release</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">none specified</span></a></p></td>
-<td><p></p></td>
+<td><p><a class="reference external" href="https://github.com/EBISPOT/CMPO/issues">https://github.com/EBISPOT/CMPO/issues</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1429,11 +1440,32 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Drug</p></td>
+<tr class="row-even"><td><p><strong>Drug</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
 <td><p>National Drug File</p></td>
 <td><p></p></td>
 <td><p></p></td>
 <td><p><a class="reference external" href="https://uts.nlm.nih.gov/license.html">NIH license</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>DRON</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/dron.owl">http://purl.obolibrary.org/obo/dron.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://ontology.atlassian.net/browse/DRON">https://ontology.atlassian.net/browse/DRON</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>RxNORM</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/RXNORM">Bioportal</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://www.nlm.nih.gov/databases/umls.html">RxNORM license</a> - part of the UMLS license</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -1441,8 +1473,8 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </div>
 <div class="section" id="assays-and-technologies">
 <h3>Assays and Technologies<a class="headerlink" href="#assays-and-technologies" title="Permalink to this headline">¶</a></h3>
-<p>The resources listed in the section are providing key descriptors bridging data acquisition procedures (as used in clinical setting and wet lab work) with instruments, units of measurements, endpoints as well as sometimes the biological process or molecular entities of biological significance.
-Some of the resources are specialized semantic artefact developed to support the standardized reporting of data modalities.</p>
+<p>The resources listed in this section are providing key descriptors bridging data acquisition procedures (as used in a clinical setting and wet lab work) with instruments, units of measurements, endpoints as well as sometimes the biological process or molecular entities of biological significance.
+Some of the resources are specialized semantic artefacts developed to support the standardized reporting of data modalities.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Scope</p></th>
@@ -1503,8 +1535,16 @@ Some of the resources are specialized semantic artefact developed to support the
 <td><p><a class="reference external" href="https://uts.nlm.nih.gov/license.html">RELMA license</a></p></td>
 <td><p></p></td>
 </tr>
+<tr class="row-odd"><td><p><strong>Units</strong></p></td>
+<td><p>UO</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/uo.owl">http://purl.obolibrary.org/obo/uo.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-ontology-research-group/unit-ontology/issues">https://github.com/bio-ontology-research-group/unit-ontology/issues</a></p></td>
+</tr>
 </tbody>
 </table>
+<p>Some multi-domain ontologies such as the NCI Thesaurus (NCIt) and the Experimental Factor Ontology (EFO) cover also aspects of the above domains such as assays and sample collection and processing. Depending on the overall context of a resource selection process, it can make more sense to use a multi-domain ontology with suitable coverage to improve consistency and interoperability within a resource or dataset.</p>
 <p>Finally, a resource exists that describes statistical measures, statistical tests or methods as well as statistically relevant graphical representations. It may be used for reporting results and annotating experimental results.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1517,7 +1557,7 @@ Some of the resources are specialized semantic artefact developed to support the
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Experimental Design, Statistical Methods and Statistical Measures</p></td>
+<tr class="row-even"><td><p><strong>Experimental Design, Statistical Methods and Statistical Measures</strong></p></td>
 <td><p>STATO</p></td>
 <td><p><a class="reference external" href="https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl">https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl</a></p></td>
 <td><p>BFO</p></td>
@@ -1529,14 +1569,14 @@ Some of the resources are specialized semantic artefact developed to support the
 </div>
 <div class="section" id="relations">
 <h3>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">¶</a></h3>
-<p>Also known as OWL.Properties, their importance may be overlooked by <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">scientists</span></code> who are not <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">engineers</span></code> or <code class="docutils literal notranslate"><span class="pre">ontologists</span></code>  but these are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic language such as OWL, are exploited by <code class="docutils literal notranslate"><span class="pre">automatic</span> <span class="pre">reasoners</span></code> to carry the following key tasks:</p>
+<p>Also known as OWL.Properties, their importance may be overlooked by <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">scientists</span></code> who are not <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">engineers</span></code> or <code class="docutils literal notranslate"><span class="pre">ontologists</span></code>  but these are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by <code class="docutils literal notranslate"><span class="pre">automatic</span> <span class="pre">reasoners</span></code> to carry the following key tasks:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">logical</span> <span class="pre">consistency</span></code> checks</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">automatic</span> <span class="pre">classification</span></code> and <code class="docutils literal notranslate"><span class="pre">inference</span></code> tasks</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">entailments</span></code>, i.e. detection of logical consequences resulting from axiomatic</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entailments</span></code>, i.e. detection of logical consequences resulting from axiomatics</p></li>
 </ul>
 <p>This is particularly important when processing billions of facts expressed as RDF statements.</p>
-<p>One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more <em>in-depth</em> review of such topics, the reader is invited to consults the following work [ref].</p>
+<p>One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more <em>in-depth</em> review of such topics, the reader is invited to consults the following work <a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46">by Smith et al</a>.</p>
 <p>In the field of Biology and Biomedicine, the <a class="reference external" href="http://obofoundry.org">OBO Foundry</a> coordinates the development of interoperable ontologies. At the core of this interoperation lies the <strong><a class="reference external" href="http://www.obofoundry.org/ontology/ro.html">Relation Ontology</a></strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -1592,7 +1632,7 @@ Some of the resources are specialized semantic artefact developed to support the
 </tr>
 </tbody>
 </table>
-<p>As <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">knowledge graphs</span></a> and <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">property graphs</span></a> gain importance, we  can expect the range and depth of relations to mature and expands are more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
+<p>As <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> and <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> gain importance, we can expect the range and depth of relations to mature and expands as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
 This would also have to placed in the context of advances in <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Mining</span></code> and <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>, where unsupervised methods start to demonstrate strong potential to detecting relations between entities.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>B cell, CD19-positive
 equivalentClass :
@@ -1609,7 +1649,7 @@ equivalentClass :
 <h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Selecting semantic resources depends on many different factors. However, the most important factor remains the <code class="docutils literal notranslate"><span class="pre">context</span></code> of the data and associated landscape of data standards as well as the ultimate integration goal, which will dictate the final choice.</p>
-<p>The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It aslo requires a good understanding of the technical and sometimes legals implications these choice will have.</p>
+<p>The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choice will have.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
 <h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
@@ -1653,6 +1693,11 @@ equivalentClass :
 <td class="text-align:left"><p>University of Oxford, Data Readiness Group</p></td>
 <td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>Writing - Review &amp; Editing, Funding acquisition</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Danielle Welter</p></td>
+<td class="text-align:left"><p>LCSB, University of Luxembourg</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0003-1058-2668">0000-0003-1058-2668</a></p></td>
+<td class="text-align:left"><p>Writing - Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>

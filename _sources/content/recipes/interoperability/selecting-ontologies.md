@@ -68,7 +68,7 @@ width: 800px
 name: Which ontology should be used?
 alt:  Which ontology should be used?
 ---
- hich ontology should be used?.
+ Which ontology should be used?.
 ```
 
 
@@ -85,26 +85,26 @@ ___
 
 ## Context is everything
 
-The domain of operation will somehow dictate the semantic framework that makes most sense selecting. This is simply a consequence of the fact that the advances in data standardization in specific fields is such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
+The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply a consequence of the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
 
-We will be giving two examples of such situations now:
+Here, we present the three most common scenarios in biomedical research:
 
 ### Clinical Trial Data
 
-Operating in the field of Clinical Trials means that datasets are generated during `interventional studies`, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents in order to gain insights in terms of benefits in patient outcomes.
-In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by US FDA reviewers. This means that the [CDISC standards]() are the *`de-facto standard`* in the area, which mandates the use of semantics resources such as:
+Operating in the field of Clinical Trials means that datasets are generated during `interventional studies`, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents, in order to gain insights in terms of benefits in patient outcomes.
+In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by regulators such as FDA reviewers in the US. The [CDISC standards](https://www.cdisc.org/standards) are the *`de-facto standard`* in this area, which mandates the use of semantics resources such as:
 
-| Semantic Resource|Domain |License |Format |Service|
-|--|--|--|--|--|
-|CDISC vocabulary|clinical trial data|||EVS|
-|NCI Thesaurus|biomedicine|||EVS,Bioportal,OLS|
-|SNOMED-CT|pathology|||EVS,Bioportal(§)|
-|UMLS|pathology|||EVS,Bioportal(§)|
-|LOINC|laboratory tests||||
-|RxNORM|drugs|||Bioportal|
-|GUDID|instruments|||FDA|
+| Semantic Resource | Domain  | Service |
+| -- | -- | -- | 
+| CDISC vocabulary|clinical trial data| EVS |
+| NCI Thesaurus|biomedicine|EVS,Bioportal,OLS|
+| SNOMED-CT|pathology|EVS,Bioportal(§)|
+| UMLS|pathology|EVS,Bioportal(§)|
+| LOINC|laboratory tests|Loinc|
+| RxNORM|drugs|Bioportal|
+| GUDID|instruments|FDA|
 
-All available from the NCBI EVS system.
+All available from the [NCBI EVS system](https://evs.nci.nih.gov/), [LOINC](https://loinc.org/), [OLS](https://www.ebi.ac.uk/ols/index) or [Bioportal](https://bioportal.bioontology.org/).
  
 
 ```{warning}
@@ -113,63 +113,65 @@ Some resources are only available under restrictive licences, which prevent deri
 
 ### Observational Health Data
 
-This context refers to data collected during observation studies, which in constrat to `interventional studies`, draws inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
-In this specific context, a model and associated set of standards has been particularly successful. With several hundred millions of patient information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (ODHSI) `open-science community` has been particularly successful. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operated in such a `data context`.
+This context refers to data collected during `observation studies`, which in contrast to `interventional studies`, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
+In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients' information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (ODHSI) `open-science community` has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a `data context`.
 
 
-| Semantic Resource|Domain |License |Format |Service|
-|--|--|--|--|--|
-|CDISC vocabulary|clinical trial data|||EVS|
-|NCI Thesaurus|biomedicine|||EVS,Bioportal,OLS|
-|SNOMED-CT|pathology|||EVS,Bioportal(§)|
-|UMLS|pathology|||EVS,Bioportal(§)|
-|LOINC|laboratory tests||||
-|RxNORM|drugs|||Bioportal|
+|Semantic Resource|Domain |Service|
+|--- |---  |--- |
+|CDISC vocabulary|clinical trial data|EVS|
+|NCI Thesaurus|biomedicine|EVS,Bioportal,OLS|
+|SNOMED-CT|pathology|EVS,Bioportal(§)|
+|UMLS|pathology|EVS,Bioportal(§)|
+|LOINC|laboratory tests| LOINC |
+|RxNORM|drugs|Bioportal|
 
 
-For a more detail view and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the [`controlled terminology` in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
+For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the `controlled terminology` [in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
 
 
 ### Basic research context
 
-This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management good practice and proper archival requirements.
-As a consequence of fewer constraints, researchers are often confronted with a sea of options. This section aims to provide some guidance when tasked with deciding on which semantic resource to use.
+This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practice and proper archival requirements.
+As a consequence of fewer constraints, researchers are often confronted with a sea of options. This and the next sections aim to provide some guidance when tasked with deciding on which semantic resource to use.
 
 ```{admonition} Tip
 :class: tip
  **An important consideration** 
-to bear in mind when writing selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no requirement but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the [Experimental Factor Ontology](https://efo.owl) could ease deposition.
+to bear in mind when selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no particular constraints on data annotations but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the [Experimental Factor Ontology](https://efo.owl) for annotating data could ease deposition.
 ```
 
 ```{admonition} Tip
 :class: tip
- **[the FAIRsharing registry](https://fairsharing.org)** is an ELIXIR resources which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
+ **[The FAIRsharing registry](https://fairsharing.org)** is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
 ````
 
 ## Selecting Terminologies 
 
 
-### Use Cases and Iterative Approach  
+### Use Cases and General Recommendations
 
+1. The use and implementation of common terminologies enables the normalisation and harmonisation of both variable labels and allowed values for each field. Implementing the use of common terminologies in the data collection or curation workflow will ensure consistency of the annotation across all data. This is particularly important if data is generated at multiple partner sites and/or by multiple individuals. 
 
+1. If data fields are annotated with terms from freely chosen ontologies (rather than those dictated by a common model such as CDSIC), care should be taken to avoid picking terms from ontologies at random. If a set of concepts are all available in one ontology, this ontology should be preferred over a set of ontologies. Mapping services such as [Oxo](https://www.ebi.ac.uk/spot/oxo/) are available to verify whether a term of interest in one ontology has an equivalent term in another ontology.
 
-1. The use and implementation of common terminologies will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying the eTRIKS database. Implementing use of common terminologies in the curation workflow will ensure consistency of the annotation across all studies.
-2. The clusters of dependent annotations (related data label) also follows the eTRIKS Minimal Information Guidelines (MIGs), a set of core descriptors ensuring that a consistent breadth and depth of information is reported.  Continuous feedback will be sought from WP2 and 4 and relevant users. The iterations will feedback into both MIGs and the terminology selections.
-3. As part of this iterative process, the eTRIKS use cases and query cases will be documented in order to evaluate, revise and refine the set of terminologies, and where relevant, the associated selection criteria.
+1. Restrictions of allowed values for a given field should ideally be limited to a single ontology and better yet, to a single branch of a chosen ontology. This will vastly improve the semantic queryability as well as the consistency and interoperability of the data. 
+
+1. Many ontologies and vocabularies reuse concepts from other ontologies, in line with best practice in ontology design, to limit duplication of efforts and proliferation of parallel synonymous concepts. Care should however be taken to use concepts in the most appropriate environment. This is usually their original source unless they are used as part of a larger set of terms. As an example, the Experimental Factor Ontology (EFO) reuses concepts from a range of ontologies, including species from the NCBI taxonomy, assays from OBI, and diseases and phenotypes from MONDO and HPO. If annotating a dataset or resource which covers all of these concepts, it therefore makes sense to use EFO as the primary annotation source. However, if only annotations for species are required, the NCBI taxonomy should be used directly to ensure completeness, since not all species in NCBItaxon will have been imported into EFO.
+
 
 
 ### Selection Criteria
 
-A set of widely accepted criteria for selecting terminologies (or other reporting standards) do not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and BioSharing ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point top define the eTRIKS criteria for excluding and/or including a terminology resource.
-
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as ["A sea of standards for omics data: sink or swim?"](https://doi.org/10.1136/amiajnl-2013-002066) and ["Ten Simple Rules for Selection a Bio-ontology"](https://doi.org/10.1371/journal.pcbi.1004743) providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.
 
 
 *   **Exclusion criteria**:
-    * 🔸  absent licence or terms of use (_indicator of usability_)
+    * 🔸 absent licence or terms of use (_indicator of usability_)
     * 🔸 restrictive licences or terms of use with restrictions on redistribution and reuse 
     * 🔸 absence of term definitions 
     * 🔸 absence of sufficient class metadata (_indicator of quality_)
-    * 🔸  absence of sustainability indicators (_absence of funding records_) 
+    * 🔸 absence of sustainability indicators (_absence of funding records_) 
  
 *   **Inclusion criteria**:
     * 🔰  scope and coverage meets the requirements of the concept identified
@@ -178,19 +180,19 @@ A set of widely accepted criteria for selecting terminologies (or other reportin
     * 🔰  size of resource (_indicator of coverage_)
     * 🔰  number of classes and subclasses (_indicator of depth_)
     * 🔰  number of terms having definitions and synonyms (_indicator of richness_)
-    * 🔰  presence of an help desk and contact point (_indicator of community support_)
+    * 🔰  presence of a help desk and contact point (_indicator of community support_)
     * 🔰  presence of term submission tracker / issue tracker (_indicator of resource agility and capability to grow upon request_)
     * 🔰  potential integrative nature of the resource (_as indicator of translational application potential_)
     * 🔰  licensing information available (_as indicator of freedom to use_)
-    * 🔰  use of of top level ontology (_as indicator of a resource built for generic use_)
+    * 🔰  use of a top level ontology (_as indicator of a resource built for generic use_)
     * 🔰  pragmatism (_as indicator of actual, current real life practice)_
     * 🔰  possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
 
 
 ### Set of Core Terminologies 
 
-The terminologies have been organized by theme and scope. When possible, sections are organized by `granularity levels`, progressing from `macroscopic scale` (organism) to `microscopic scale` (tissue, cells) and `molecular scale` (macromolecules, proteins, small molecules, xenobiotic chemicals).
-Domains also cover `Processes` or `Action` and their `participants` or `agents` but also can be organized from `general/generic` (disease) to `specialized/specific` (infectious disease).
+The terminologies presented here have been organized by theme and scope. When possible, sections are organized by `granularity levels`, progressing from `macroscopic scale` (organism) to `microscopic scale` (tissue, cells) and `molecular scale` (macromolecules, proteins, small molecules, xenobiotic chemicals).
+Domains also cover `processes` or `actions` and their `participants` or `agents` but also can be organized from `general/generic` (disease) to `specialized/specific` (infectious disease).
 
 
 ### Organism, Organism Parts and Developmental Stages
@@ -201,37 +203,46 @@ The resources listed here focus on providing structured vocabularies to describe
 |--- |--- |--- |--- |--- |--- |--- |
 |**Organism**|NCBITaxonomy|http://purl.obolibrary.org/obo/ncbitaxon.owl|none specified|This ontology is made available via the UMLS. Users of all UMLS ontologies must abide by the terms of the [UMLS license](https://uts.nlm.nih.gov/license.html)|||
 |**Vertebrate Anatomy**|UBERON|http://purl.obolibrary.org/obo/uberon/ext.owl;http://purl.obolibrary.org/obo/uberon/ext.obo|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/obophenotype/uberon/issues|Integrative Resource engineered to go across species|
-|**Mouse Anatomy**|MA||||||
-|**Strain**|Rat Strain Ontology|http://data.bioontology.org/ontologies/RS/submissions/46/download?apikey=4ea81d74-8960-4525-810b-fa1baab576ff|||||
+|**Human Anatomy**|FMA| http://purl.obolibrary.org/obo/fma.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/| Excellent cross-referencing with Uberon|
+| **Human Developmental Stages** | http://purl.obolibrary.org/obo/hsapdv.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | |
+|**Mouse Anatomy**|MA| http://purl.obolibrary.org/obo/ma.owl| |[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)| https://github.com/obophenotype/mouse-anatomy-ontology/issues ||
+|**Strain**|Rat Strain Ontology|http://purl.obolibrary.org/obo/rs.owl| | [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) | https://github.com/rat-genome-database/RS-Rat-Strain-Ontology/issues ||
 
 
-
-In research, many different model organism are used (e.g. Dogs, Monkeys...) and specialized resources may be available. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.
+In research, many different model organism are used (e.g. Dogs, Monkeys...) and specialized resources are available for many model organisms, including C. elegans, Drosophila, Xenopus, Zebrafish, plants and fungi. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.
 
 
 
 
 ### Diseases and Phenotype
 
-Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones,  biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.
+Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones, biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.
 
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
-|--- |--- |--- |--- |--- |--- |
-|**Pathology/Disease (generic)**||||||
-||SNOMED-CT|||[SNOMED license](http://www.ihtsdo.org/licensing/)||
-||NCI thesaurus|http://evs.nci.nih.gov/ftp1/NCI_Thesaurus|| [NCI license](http://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm)||
-||ICD-10||login required|[WHO license](http://www.who.int/about/copyright/en/)||
-||UMLS|||[UMLS license](http://www.nlm.nih.gov/databases/umls.html)||
-||DOID|http://purl.obolibrary.org/obo/doid.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/DiseaseOntology/HumanDiseaseOntology/issues|
-||MONDO|http://purl.obolibrary.org/obo/mondo.owl|BFO| [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/monarch-initiative/mondo/issues|
-||IDO|https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/infectious-disease-ontology/issues/list|
-|**Phenotype**|HP|http://purl.obolibrary.org/obo/hp.owl|BFO| [HPO Licence](https://hpo.jax.org/app/license) |https://github.com/obophenotype/human-phenotype-ontology/issues/|
-||MedDRA|||This ontology is freely accessible on this site for academic and other non-commercial uses. Users anticipating any commercial use of MedDRA must contact the MSSO to obtain a license.|https://mssotools.com/webcr/ login required|
+|--- |--- |--- |--- |--- |--- | 
+|**Pathology/Disease (generic)**|||||
+| |SNOMED-CT| View on [Bioportal](https://bioportal.bioontology.org/ontologies/SNOMEDCT?p=summary) | |[SNOMED license](http://www.nlm.nih.gov/databases/umls.html) - part of the UMLS license|| |
+| |NCI thesaurus|http://evs.nci.nih.gov/ftp1/NCI_Thesaurus| | [NCI license](http://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm)|| |
+| |ICD-10| login required| | [WHO license](http://www.who.int/about/copyright/en/)|||
+| |UMLS| https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html | |[UMLS license](http://www.nlm.nih.gov/databases/umls.html)|||
+| |DOID|http://purl.obolibrary.org/obo/doid.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/DiseaseOntology/HumanDiseaseOntology/issues| | 
+| |MONDO*|http://purl.obolibrary.org/obo/mondo.owl|BFO| [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/monarch-initiative/mondo/issues| 
+| |IDO|https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/infectious-disease-ontology/issues/list| |
+|**Phenotype**|||||
+| | HP|http://purl.obolibrary.org/obo/hp.owl|BFO| [HPO Licence](https://hpo.jax.org/app/license) |https://github.com/obophenotype/human-phenotype-ontology/issues/|
+| |MedDRA|||This ontology is freely accessible on [Bioportal](https://bioportal.bioontology.org/ontologies/MEDDRA) for academic and other non-commercial uses. Users anticipating any commercial use of MedDRA must contact the MSSO to obtain a license.|https://mssotools.com/webcr/ login required|
+| | MP | http://purl.obolibrary.org/obo/mp.owl | | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | https://github.com/obophenotype/mammalian-phenotype-ontology/issues | 
+
+
+*MONDO was born of an effort to harmonise disease definitions from a number sources, includig OMIM, Orphanet, EFO and DOID, with work in progress to include NCIt. The OWL version includes axiomatisation using CL, Uberon, GO, HP, RO & NCBITaxon. The ontology is under active development by a range of ontology and domain experts. If no other limiting requirements dictate the use of an alternative ontology (eg use of NCIt as part of a CDISC-compliant dataset), it is therefore the most recommended open source ontology from the above list.
+
+As with anatomy in the previous section, there is a growing body of organism-specific phenotype resources, such as C. elegans, Drosophila, Fission Yeast, Xenopus and Zebrafish. 
 
 
 ### Pathology and Disease Specific Resources
 
+There is a wide range of ontologies available for specific diseases or disease types. Some examples are given below but this list is by no means exhaustive. Check ontology repositories such as [OLS](https://www.ebi.ac.uk/ols/ontologies), [Bioportal](https://bioportal.bioontology.org/ontologies) or the [OBO Foundry](http://obofoundry.org/) for up-to-date lists of available ontologies
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
@@ -248,9 +259,10 @@ Following on through our review of semantic resources by granularity levels, thi
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
 |**Cell**|CL|http://purl.obolibrary.org/obo/cl.owl http://purl.obolibrary.org/obo/cl.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://code.google.com/p/cell-ontology/issues/list|
-|**Cell Lines**|Cellosaurus|ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo ftp://ftp.expasy.org/databases/cellosaurus|| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)||
-|**Cell Lines**|CLO|http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/clo-ontology/issues/list|
-|**Cell Molecular Phenotype Ontology**|CMPO|https://github.com/EBISPOT/CMPO/tree/master/release|BFO| [none specified]()||
+|**Cell Lines**| 
+| | Cellosaurus|ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo ftp://ftp.expasy.org/databases/cellosaurus|| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)||
+| |CLO|http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/clo-ontology/issues/list|
+|**Cell Molecular Phenotype Ontology**|CMPO|https://github.com/EBISPOT/CMPO/tree/master/release|BFO| [none specified]()| https://github.com/EBISPOT/CMPO/issues |
 
 
 
@@ -271,14 +283,16 @@ Besides these open ontologies, in the context of clinically relevant work where 
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|Drug|National Drug File|||[NIH license](https://uts.nlm.nih.gov/license.html)||
-
+| **Drug** |
+| | National Drug File|||[NIH license](https://uts.nlm.nih.gov/license.html)||
+| | DRON |  http://purl.obolibrary.org/obo/dron.owl | BFO | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | https://ontology.atlassian.net/browse/DRON |
+| | RxNORM |View on [Bioportal](https://bioportal.bioontology.org/ontologies/RXNORM) | |[RxNORM license](http://www.nlm.nih.gov/databases/umls.html) - part of the UMLS license||
 
 
 ### Assays and Technologies
 
-The resources listed in the section are providing key descriptors bridging data acquisition procedures (as used in clinical setting and wet lab work) with instruments, units of measurements, endpoints as well as sometimes the biological process or molecular entities of biological significance.
-Some of the resources are specialized semantic artefact developed to support the standardized reporting of data modalities.
+The resources listed in this section are providing key descriptors bridging data acquisition procedures (as used in a clinical setting and wet lab work) with instruments, units of measurements, endpoints as well as sometimes the biological process or molecular entities of biological significance.
+Some of the resources are specialized semantic artefacts developed to support the standardized reporting of data modalities.
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
@@ -289,6 +303,9 @@ Some of the resources are specialized semantic artefact developed to support the
 |**Mass Spectrometry (instrument/acquisition parameter/spectrum related information)**|PSI-MS|http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo (No OWL file)|none specified| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://lists.sourceforge.net/lists/listinfo/psidev-vocab|
 |**NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)**|NMR-CV|http://nmrml.org/cv/v1.0.rc1/nmrCV.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/nmrML/nmrML/issues?state=open|
 |**Laboratory test**|LOINC|LOINC and RELMA Complete Download File (All Formats Included)|none specified| [RELMA license](https://uts.nlm.nih.gov/license.html) ||
+|**Units** | UO | http://purl.obolibrary.org/obo/uo.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | https://github.com/bio-ontology-research-group/unit-ontology/issues |
+
+Some multi-domain ontologies such as the NCI Thesaurus (NCIt) and the Experimental Factor Ontology (EFO) cover also aspects of the above domains such as assays and sample collection and processing. Depending on the overall context of a resource selection process, it can make more sense to use a multi-domain ontology with suitable coverage to improve consistency and interoperability within a resource or dataset.
 
 
 Finally, a resource exists that describes statistical measures, statistical tests or methods as well as statistically relevant graphical representations. It may be used for reporting results and annotating experimental results.
@@ -297,22 +314,22 @@ Finally, a resource exists that describes statistical measures, statistical test
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|Experimental Design, Statistical Methods and Statistical Measures|STATO|https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
+| **Experimental Design, Statistical Methods and Statistical Measures**|STATO|https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
 
 
 
 
 ### Relations
 
-Also known as OWL.Properties, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`  but these are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic language such as OWL, are exploited by `automatic reasoners` to carry the following key tasks:
+Also known as OWL.Properties, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`  but these are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by `automatic reasoners` to carry the following key tasks:
 
 * `ontology logical consistency` checks
 * `automatic classification` and `inference` tasks
-* `entailments`, i.e. detection of logical consequences resulting from axiomatic
+* `entailments`, i.e. detection of logical consequences resulting from axiomatics
 
 This is particularly important when processing billions of facts expressed as RDF statements. 
 
-One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more *in-depth* review of such topics, the reader is invited to consults the following work [ref].
+One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more *in-depth* review of such topics, the reader is invited to consults the following work [by Smith et al](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46).
 
 In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org) coordinates the development of interoperable ontologies. At the core of this interoperation lies the **[Relation Ontology](http://www.obofoundry.org/ontology/ro.html)**
 
@@ -327,7 +344,7 @@ In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org
 |**relations**| ro/subsets/ro-neuro.owl       | Neuroscience subset             | For use in neuroscience [page]                                                 | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  |    
 
 
-As [knowledge graphs]() and [property graphs]() gain importance, we  can expect the range and depth of relations to mature and expands are more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
+As `knowledge graphs` and `property graphs` gain importance, we can expect the range and depth of relations to mature and expands as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
 This would also have to placed in the context of advances in `Text Mining` and `Machine Learning`, where unsupervised methods start to demonstrate strong potential to detecting relations between entities.
 
 ```bash
@@ -345,7 +362,7 @@ equivalentClass :
 
 > Selecting semantic resources depends on many different factors. However, the most important factor remains the `context` of the data and associated landscape of data standards as well as the ultimate integration goal, which will dictate the final choice.
 > 
->The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It aslo requires a good understanding of the technical and sometimes legals implications these choice will have.    
+>The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choice will have.    
 
 > ### What should I read next?
 > * [How to build an application ontology?]()
@@ -381,6 +398,7 @@ ___
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
 | Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group | | Writing - Review & Editing, Funding acquisition | 
+| Danielle Welter | LCSB, University of Luxembourg |  [0000-0003-1058-2668](https://orcid.org/orcid.org/0000-0003-1058-2668) | Writing - Review & Editing |
 
 ___
 
