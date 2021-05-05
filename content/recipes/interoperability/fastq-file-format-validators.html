@@ -95,7 +95,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Reusability" href="../reusability.html" />
+    <link rel="next" title="Tools for Data Extraction, Transformation, and Loading (ETL)" href="ETL-tools.html" />
     <link rel="prev" title="From proprietary to open standard data format" href="from-proprietary-to-open-standard-mzml-exemplar.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -425,6 +425,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      Requesting terms addition to terminology artefacts
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     Tools for ontology-associated operations
+    </a>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="ontology-robot-recipe.html">
      Building an application ontology with Robot
@@ -466,6 +471,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      File format validation, an example with FASTQ files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ETL-tools.html">
+     Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -927,7 +937,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="validating-fastq-open-standard-file-format">
 <a class="reference internal image-reference" href="../../../_images/fastq-validation.png"><img alt="Validating FASTQ open standard file format" src="../../../_images/fastq-validation.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Validating FASTQ open standard file format.</span><a class="headerlink" href="#validating-fastq-open-standard-file-format" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Validating FASTQ open standard file format.</span><a class="headerlink" href="#validating-fastq-open-standard-file-format" title="Permalink to this image">¶</a></p>
 </div>
 <!-- [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDxicj4gLSBEYXRhIHNoYXJpbmcgPGJyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQ7XG4gICAgQVtEYXRhIEFjcXVpc2l0aW9uXSAtLT5CKFJhdyBEYXRhKVxuICAgIEIgLS0-IEN7SXMgc3RhbmRhcmQgZm9ybWF0P31cbiAgICBDIC0tPnxZZXN8IER7RmlsZSBmb3JtYXQgdmFsaWQ_fVxuICAgIEMgLS0-fE5vfCBFW0NvbnZlcnQgdG8gc3RhbmRhcmQgZmlsZSBmb3JtYXRdXG4gICAgRCAtLT4gfFllc3xGWy0gRGF0YSBkZXBvc2l0aW9uIDxicj4gLSBEYXRhIHNoYXJpbmcgPGJyPiAgLSBEb3duc3RyZWFtIGFuYWx5c2lzIF1cbiAgICBEIC0tPiB8Tm98R1tSZXZpc2UgZmlsZV1cbiAgICBFIC0tPiAgRFxuICAgIEcgLS0-IHxyZXZpc2V8RCIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIn19) -->
 </div>
@@ -1028,7 +1038,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <!-- ![](https://i.imgur.com/jOYK2ZM.jpg) -->
 <div class="figure align-default" id="fastqutils-library">
 <a class="reference internal image-reference" href="https://i.imgur.com/jOYK2ZM.jpg"><img alt="FASTQutils library" src="https://i.imgur.com/jOYK2ZM.jpg" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">the FASTQutils library.</span><a class="headerlink" href="#fastqutils-library" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">the FASTQutils library.</span><a class="headerlink" href="#fastqutils-library" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="requirements">
 <h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
@@ -1379,7 +1389,7 @@ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_2.fastq.gz
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="from-proprietary-to-open-standard-mzml-exemplar.html" title="previous page">From proprietary to open standard data format</a>
-    <a class='right-next' id="next-link" href="../reusability.html" title="next page">Reusability</a>
+    <a class='right-next' id="next-link" href="ETL-tools.html" title="next page">Tools for Data Extraction, Transformation, and Loading (ETL)</a>
 
         </div>
         

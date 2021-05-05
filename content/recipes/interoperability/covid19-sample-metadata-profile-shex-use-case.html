@@ -425,6 +425,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      Requesting terms addition to terminology artefacts
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     Tools for ontology-associated operations
+    </a>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="ontology-robot-recipe.html">
      Building an application ontology with Robot
@@ -466,6 +471,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
      File format validation, an example with FASTQ files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ETL-tools.html">
+     Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -955,7 +965,7 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 <h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="building-a-commmunity-compliant-metadata-profile">
 <a class="reference internal image-reference" href="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png"><img alt="building a commmunity compliant metadata profile" src="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="introduction">
@@ -989,11 +999,11 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 <div><img src="https://i.imgur.com/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="https://i.imgur.com/lwV1cPd.png"><img alt="Defining the metadata fields" src="https://i.imgur.com/lwV1cPd.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Defining the metadata fields</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Defining the metadata fields</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="defining-the-metadata-fields-1">
 <a class="reference internal image-reference" href="https://i.imgur.com/1ahQLjy.png"><img alt="Defining the metadata fields-1" src="https://i.imgur.com/1ahQLjy.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Defining the metadata fields-1</span><a class="headerlink" href="#defining-the-metadata-fields-1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Defining the metadata fields-1</span><a class="headerlink" href="#defining-the-metadata-fields-1" title="Permalink to this image">¶</a></p>
 </div>
 <p><br>Based on the <a class="reference external" href="https://gensc.org/">Genome Standards Consortium</a> metadata requirement profile for uncultivated viral sample, also known as the <a class="reference external" href="https://github.com/GenomicsStandardsConsortium/mixs/blob/master/UViGs_MIxS.xlsx">Minimum Information About an Uncultivated Virus Genome (MIUViG)</a>, the first step is to anchor the tags defined by GSC and approved by the those <strong>International Nucleotide Sequence Database Collaboration</strong> (<a class="reference external" href="http://www.insdc.org/">INSDC</a>) tags to one (or more) semantic framework(s).</p>
 </div>
@@ -1009,7 +1019,7 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 <!-- <div><img src="https://i.imgur.com/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="https://i.imgur.com/Ro92a7D.png"><img alt="Semantic anchoring of metadata element" src="https://i.imgur.com/Ro92a7D.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Semantic anchoring of metadata element</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Semantic anchoring of metadata element</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <br>
 <p>However, for the final implementation, only the OBO related mappings have been used as show in the following figure.</p>
@@ -1017,7 +1027,7 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 <!-- ![](https://i.imgur.com/Lc7FcPs.png) -->
 <div class="figure align-default" id="semantic-anchoring-of-metadata-element-final">
 <a class="reference internal image-reference" href="https://i.imgur.com/Lc7FcPs.png"><img alt="Semantic anchoring of metadata element - final" src="https://i.imgur.com/Lc7FcPs.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Semantic anchoring of metadata element - final</span><a class="headerlink" href="#semantic-anchoring-of-metadata-element-final" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Semantic anchoring of metadata element - final</span><a class="headerlink" href="#semantic-anchoring-of-metadata-element-final" title="Permalink to this image">¶</a></p>
 </div>
 <br>
 </div>
@@ -1101,7 +1111,7 @@ But in this example, we are using the SALAD schema to capture the annotation req
 <!-- ![](https://i.imgur.com/RR5GSgi.png) -->
 <div class="figure align-default" id="the-corresponding-metadata-acquisition-web-form-2">
 <a class="reference internal image-reference" href="https://i.imgur.com/RR5GSgi.png"><img alt="The corresponding metadata acquisition web form 2" src="https://i.imgur.com/RR5GSgi.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">The corresponding metadata acquisition web form</span><a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">The corresponding metadata acquisition web form</span><a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form-2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -1260,7 +1270,7 @@ PREFIX wikidata: &lt;http://www.wikidata.org/entity/&gt;
  -->
 <div class="figure align-default" id="weso-shape-expression-viewer">
 <a class="reference internal image-reference" href="https://i.imgur.com/z2rriQu.png"><img alt="WESO SHape Expression Viewer" src="https://i.imgur.com/z2rriQu.png" style="width: 1200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">WESO SHape Expression Viewer</span><a class="headerlink" href="#weso-shape-expression-viewer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">WESO SHape Expression Viewer</span><a class="headerlink" href="#weso-shape-expression-viewer" title="Permalink to this image">¶</a></p>
 </div>
 <!-- ![](https://i.imgur.com/z2rriQu.png) -->
 <p>There is a blog focusing mainly on the sequence analysis but there is a section on metadata validation.</p>

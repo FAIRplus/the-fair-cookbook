@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tools for Data Extraction, transformation, and loading</title>
+    <title>Tools for Data Extraction, Transformation, and Loading (ETL)</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -91,20 +91,22 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/docs/content/recipes/ETL_tools.html" />
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ETL-tools.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Reusability" href="../reusability.html" />
+    <link rel="prev" title="File format validation, an example with FASTQ files" href="fastq-file-format-validators.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/docs/content/recipes/ETL_tools.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ETL-tools.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Tools for Data Extraction, transformation, and loading" />
-<meta property="og:description" content="Tools for Data Extraction, transformation, and loading  :class: tip      - Data Curator     - Data Manager     - Data Scientist  For the `Recipe Type` section, " />
+<meta property="og:title"       content="Tools for Data Extraction, Transformation, and Loading (ETL)" />
+<meta property="og:description" content="Tools for Data Extraction, Transformation, and Loading (ETL)  &lt;br/&gt;     &lt;i class=&#34;fa fa-qrcode fa-2x&#34; style=&#34;color:#7e0038;&#34;&gt;&lt;/i&gt;  &lt;h4&gt;&lt;b&gt;Identifier&lt;/b&gt;&lt;/h4&gt; &lt;i" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -133,54 +135,54 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../content/home.html">
+  <a class="reference internal" href="../../home.html">
    FAIR Cookbook
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/introduction.html">
+  <a class="reference internal" href="../introduction.html">
    Introduction
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/the-turing-way.html">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
      1. The Turing Way Book of Data Science
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/FAIR-cookbook-audience.html">
+    <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
      2. Who should read the FAIR Cookbook?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/brief-FAIR-principles.html">
+    <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
      3. What are the FAIR Principles?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/what-is-IMI.html">
+    <a class="reference internal" href="../introduction/what-is-IMI.html">
      4. What is IMI?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/FAIR-in-IMI-context.html">
+    <a class="reference internal" href="../introduction/FAIR-in-IMI-context.html">
      5. FAIR in the context of IMI
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/IMI-Data-Access-Request-Process.html">
+    <a class="reference internal" href="../introduction/IMI-Data-Access-Request-Process.html">
      6. Engaging with IMI Projects
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/FAIRplus-values.html">
+    <a class="reference internal" href="../introduction/FAIRplus-values.html">
      7. The Ethical Values behind FAIR and the FAIRPlus project
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/introduction/data-sharing-models.html">
+    <a class="reference internal" href="../introduction/data-sharing-models.html">
      8. High level data sharing models
     </a>
    </li>
@@ -189,37 +191,37 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/assessing-fairness.html">
+  <a class="reference internal" href="../assessing-fairness.html">
    Assessing FAIR
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
      1. Data Management Maturity Model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model.html">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
      2. FAIRplus Datasets Maturity Model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/Data-Usage-Areas.html">
+    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
      3. Data Usage Areas
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/assessing-fairness/fair-indicators.html">
+    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
      4. FAIR Indicators
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/RDA-Indicators.html">
+      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
        4.4.1. RDA Indicators
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/FAIRPlus-Indicators.html">
+      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
        4.4.2. IMI FAIRPlus Indicators
       </a>
      </li>
@@ -228,17 +230,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     </i>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/assessing-fairness/manual-fair-assessment.html">
+    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
      5. FAIR assessment by hand
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/evaluation-method.html">
+      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
        5.4.1. Evaluation Method
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/assessing-fairness/cmmi/rda-evaluation.html">
+      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
        5.4.2. RDA Evaluation Methods
       </a>
      </li>
@@ -247,17 +249,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     </i>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/assessing-fairness/automatic-fair-assessment.html">
+    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
      6. FAIR assessment by software
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/assessing-fairness/fair-assessment-fairevaluator.html">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
        6.4.1. Assessing FAIRness with FAIREvaluator
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/assessing-fairness/fair-assessment-fairshake.html">
+      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
        6.4.2. FAIR assessment with FAIRShake
       </a>
      </li>
@@ -270,42 +272,42 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/infrastructure.html">
+  <a class="reference internal" href="../infrastructure.html">
    Infrastructure for FAIR
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/infrastructure/id-resolution.html">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
      1. Identifier resolution services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/infrastructure/data-catalog.html">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
      2. Building a Dataset Catalogue
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/infrastructure/data-catalog-deployment.html">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
      3. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies.html">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
      4. Vocabularies and Terminology Infrastructure
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
        4.1. Technical &amp; architectural selection criteria of ontology lookup services
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
        4.2. Selection and exploitation of Ontology Lookup Services
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
        4.3. How to deploy a terminology service - EBI Ontology Lookup Service
       </a>
      </li>
@@ -318,47 +320,47 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/findability.html">
+  <a class="reference internal" href="../findability.html">
    Improving Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/findability/identifiers.html">
+    <a class="reference internal" href="../findability/identifiers.html">
      1. How to generate globally unique, resolvable and persistent identifiers
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/infrastructure/chemical-identities.html">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
      2. Chemical Identity - InChI and SMILES
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/findability/identifiers-minids.html">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
      3. Identifier Minting Service with Minid Client
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/findability/zenodo-deposition.html">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
      4. Deposition to Zenodo Archive
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/findability/seo.html">
+    <a class="reference internal" href="../findability/seo.html">
      5. Findability: Search Engine Optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/findability/seo/bioschemas-data-page.html">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
        5.8.1. Findability: Data Page Markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/findability/seo/bioschemas-dataset.html">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
        5.8.2. Findability: Dataset Markup
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/findability/seo/bioschemas-datacatalog.html">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
        5.8.3. Findability: Data Catalog Markup
       </a>
      </li>
@@ -371,17 +373,17 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/accessibility.html">
+  <a class="reference internal" href="../accessibility.html">
    Improving Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/accessibility/anonymizing-patient-data.html">
+    <a class="reference internal" href="../accessibility/anonymizing-patient-data.html">
      1. Anonymizing Patient Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/accessibility/aspera.html">
+    <a class="reference internal" href="../accessibility/aspera.html">
      2. How to download files with Aspera
     </a>
    </li>
@@ -389,23 +391,23 @@ commentsRunWhenDOMLoaded(addUtterances);
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/interoperability.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
    Improving Interoperability
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/interoperability/identifier-mapping.html">
+    <a class="reference internal" href="identifier-mapping.html">
      How to interlink data from different sources?
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/interoperability/bridgedb-recipe.html">
+    <a class="reference internal" href="bridgedb-recipe.html">
      Identifier mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/interoperability/bridgedb/bridgedb-example.html">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
        Identifier mapping using BridgeDb WS
       </a>
      </li>
@@ -414,22 +416,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/interoperability/selecting-ontologies.html">
+    <a class="reference internal" href="selecting-ontologies.html">
      Which vocabulary to use?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/interoperability/ontology-new-term-request-recipe.html">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
      Requesting terms addition to terminology artefacts
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     Tools for ontology-associated operations
+    </a>
+   </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/interoperability/ontology-robot-recipe.html">
+    <a class="reference internal" href="ontology-robot-recipe.html">
      Building an application ontology with Robot
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.html">
+      <a class="reference internal" href="ontology-robot/MSIO-robot-build-process.html">
        MSIO, an application ontology for Metabolomics
       </a>
      </li>
@@ -438,17 +445,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     </i>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/interoperability/creating-minimal-metadata-profiles.html">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
      Creating a Metadata Profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/interoperability/transcriptomics-metadata.html">
+      <a class="reference internal" href="transcriptomics-metadata.html">
        Establishing a Metadata Profile for Transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
        Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
       </a>
      </li>
@@ -457,13 +464,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
      From proprietary to open standard data format
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/interoperability/fastq-file-format-validators.html">
+    <a class="reference internal" href="fastq-file-format-validators.html">
      File format validation, an example with FASTQ files
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -471,37 +483,37 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/reusability.html">
+  <a class="reference internal" href="../reusability.html">
    Improving Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/reusability/ATI-licensing.html">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
      1. Licensing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/reusability/ATI_licensing_software.html">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
      2. Software Licenses
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/reusability/ATI_licensing_data.html">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
      3. Data Licenses
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/reusability/expressing-data-use.html">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
      4. Patterns and practice for expressing allowed data usage
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/reusability/provenance.html">
+    <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance Information
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/reusability/community-standards.html">
+    <a class="reference internal" href="../reusability/community-standards.html">
      6. Compliance with community annotation standards
     </a>
    </li>
@@ -510,32 +522,32 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/applied-examples.html">
+  <a class="reference internal" href="../applied-examples.html">
    Making IMI data FAIR
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix-recipe.html">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
      Making a Data Matrix FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
        Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
        Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
        Exploring a rose garden with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
        Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
       </a>
      </li>
@@ -544,22 +556,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/applied-examples/etox.html">
+    <a class="reference internal" href="../applied-examples/etox.html">
      eTox: Data normalization and integration through entity linking
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+    <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
      ND4BB dataset FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
      Oncotrack FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html">
+    <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
      RESOLUTE FAIRification Recipe
     </a>
    </li>
@@ -568,37 +580,37 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../content/recipes/glossary-fair-terms.html">
+  <a class="reference internal" href="../glossary-fair-terms.html">
    Glossary of FAIR things
   </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/help.html">
+  <a class="reference internal" href="../help.html">
    Help
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/help/tips-tricks.html">
+    <a class="reference internal" href="../help/tips-tricks.html">
      1. Recipe Tips and Tricks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/help/recipe-template.html">
+    <a class="reference internal" href="../help/recipe-template.html">
      2. Recipe Template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/help/how-to-create-recipe-with-gdoc.html">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
      3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/help/how-to-create-recipe-with-hackmd.html">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
      4. How to use HackMD to write a FAIR Cookbook Recipe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/help/how-to-create-recipe-with-git.html">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
      5. How to create a FAIRPlus Coobook Recipe ?
     </a>
    </li>
@@ -607,47 +619,47 @@ commentsRunWhenDOMLoaded(addUtterances);
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../../content/recipes/boilerplate.html">
+  <a class="reference internal" href="../boilerplate.html">
    Miscellaneous
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/license.html">
+    <a class="reference internal" href="../boilerplate/license.html">
      1. License for this book
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/people.html">
+    <a class="reference internal" href="../boilerplate/people.html">
      2. FAIR Cookbook Steering Council and Institutional Partners
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/governance.html">
+    <a class="reference internal" href="../boilerplate/governance.html">
      3. FAIR Cookbook Governance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/code_of_conduct.html">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
      4. FAIR Cookbook Code of Conduct
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/project_information.html">
+    <a class="reference internal" href="../boilerplate/project_information.html">
      5. FAIR CookBook BoilerPlate
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/roadmap.html">
+    <a class="reference internal" href="../boilerplate/roadmap.html">
      6. FAIR cookbook development roadmap
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/contributing.html">
+    <a class="reference internal" href="../boilerplate/contributing.html">
      7. Contributing to the FAIR cookbook
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../content/recipes/boilerplate/disclaimer.html">
+    <a class="reference internal" href="../boilerplate/disclaimer.html">
      8. Disclaimer
     </a>
    </li>
@@ -695,7 +707,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/docs/content/recipes/ETL_tools.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/ETL-tools.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -715,10 +727,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fdocs/content/recipes/ETL_tools.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/ETL-tools.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/docs/content/recipes/ETL_tools.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/ETL-tools.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -744,58 +756,66 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Tools for Data Extraction, transformation, and loading
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations">
+   Operations
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#main-objectives">
-     Main Objectives
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-transformation">
+     Data transformation
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#graphical-overview-of-the-fairification-recipe-objectives">
-     Graphical Overview of the FAIRification Recipe Objectives
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-deposition">
+     Data Deposition
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#requirements">
-     Requirements
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#capability-maturity-table">
-     Capability &amp; Maturity Table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-     FAIRification Objectives, Inputs and Outputs
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations">
-     Operations
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-use-case">
-       Example use case:
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#authors">
-     Authors
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-use-case">
+     Example use case:
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   References:
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
   </a>
  </li>
 </ul>
@@ -810,51 +830,95 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="tools-for-data-extraction-transformation-and-loading">
-<h1>Tools for Data Extraction, transformation, and loading<a class="headerlink" href="#tools-for-data-extraction-transformation-and-loading" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:class: tip
-
-    - Data Curator
-    - Data Manager
-    - Data Scientist
-
-For the `Recipe Type` section, the allowed values should be picked from the following list:
-    - Review 
-</pre></div>
+  <div class="section" id="tools-for-data-extraction-transformation-and-loading-etl">
+<span id="fcb-interop-etl"></span><h1>Tools for Data Extraction, Transformation, and Loading (ETL)<a class="headerlink" href="#tools-for-data-extraction-transformation-and-loading-etl" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i></p>
 </div>
+<div class="card-body docutils">
+<h4><b>Identifier</b></h4>
+<i class="fa fa-map-signs fa-lg" style="color:#7e0038;"></i> <a href="http://w3id.org/faircookbook/FCB_TBA">http://w3id.org/faircookbook/FCB_TBA</a> 
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-fire fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fas fa-clock fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Survey / Review
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1 docutils">
+<div class="card w-100 rounded docutils">
+<div class="card-header docutils">
+<p class="card-text"><i class="fa fa-users fa-2x" style="color:#7e0038;"></i></p>
+</div>
+<div class="card-body docutils">
+<h4><b>Intended Audience</b></h4>
+<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Data Curator  </p>
+<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i>   Data Manager</p>
+<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i>     Data Scientist</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
 <div class="section" id="main-objectives">
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>This recipe identifies tools for data extraction, transformation, and loading (ETL). ETL is the process of collecting data from one source to a designated system in which the data is represented differently.[1] One common use case in biological science is to build a scalable and portable ETL system to extract data from different sources, transform data into a cohesive dataset, and load data to an internal or public database to support data exchange. This recipe aims to serve as a start point for designing ETL workflows, instead of provide a comprehensive list covering all available tools.</p>
+<p>This recipe identifies tools for <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">extraction</span></code>, <code class="docutils literal notranslate"><span class="pre">transformation</span></code>, and <code class="docutils literal notranslate"><span class="pre">loading</span></code> (ETL).
+ETL is the process of collecting data from one source to persist it in another designated system in which the data is represented differently [1].
+A common use case in data science is to build a scalable and portable ETL system to extract data from various sources, transform said-data into a cohesive dataset, and load the data to an internal or public database to support data exploration.</p>
+<p>This recipe aims to serve as a start point for designing ETL workflows, rather than provide a comprehensive list covering all available tools.</p>
 <blockquote>
 <div><p>The lists of tools are generated either by manual curation, which reflects what is being used in the industry, or automatally discovered from the bio.tools repository.</p>
-<p>:bulb: Contents in this table are generated in March 2021. For updated contents, please check the FAIR tooling repository. You can provide feedback or report issues in the comments section.</p>
 </div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The content in these tables was generated in March 2021.
+For an updated contents, please check the <a class="reference external" href="https://github.com/FAIRplus/WP3_FAIR_tooling">FAIR tooling repository</a>.
+To provide feedback on this content or report issues, please do so via the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">FAIR Cookbook github issue tracker</a></p>
 </div>
-<div class="section" id="graphical-overview-of-the-fairification-recipe-objectives">
-<h2>Graphical Overview of the FAIRification Recipe Objectives<a class="headerlink" href="#graphical-overview-of-the-fairification-recipe-objectives" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="graphical-overview">
+<h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <p>The figure below shows different ETL-related operations and their relationships, together with related tools and recipes.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
-    subgraph Data extraction
-        
-        A1[Data query snd retrieval]
-    end
-    
-    subgraph Data transform
-        B1[Data annotation]
-        B2[Data validation]
-        B3[Data aggregation]
-    end
-    
-    C[Data deposition]
-    
-    A1--&gt;B1
-    B1--&gt;B2
-    B2--&gt;B3
-    B3--&gt;C
-    
-</pre></div>
+<div class="figure align-default" id="overview-of-key-aspects-in-etl-process">
+<a class="reference internal image-reference" href="content/recipes/interoperability/ETL-tools-mermaid.png"><img alt="Overview of key aspects in ETL process" src="content/recipes/interoperability/ETL-tools-mermaid.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Overview of key aspects in ETL process</span><a class="headerlink" href="#overview-of-key-aspects-in-etl-process" title="Permalink to this image">¶</a></p>
 </div>
-<p>The table below is an overview of ETL tools identified. Details of each tools are also provided in this doc. For ETL tools for RDF data model, please check recipe <span class="xref std std-ref">An inventory of tools for converting your data to RDF</span>.</p>
+<p>The table below is an overview of ETL tools identified.
+Details of each tools are also provided in this doc.
+For ETL tools for RDF data model, please check recipe <span class="xref std std-ref">fcb-interop-etl2rdf-tools</span></p>
 <table>
   <tr>
    <td><strong><a href=#Data-query-and-retrieval>Data query and retrieval</a></strong>
@@ -1001,14 +1065,17 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
    </td>
   </tr>
 </table>
->Disclaimer: The tools list below aims to provide a idea of what is there on the market. It's not a formal recommendation. if you think there are tools that need to be updated, please contact us via the github issue.
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The tools list below aims to provide an basic overview of what is there on the market. It is <em>not</em> a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">github issue tracker</a>.</p>
+</div>
 </div>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>knowledge requirement:</p>
+<li><p>Knowledge requirement:</p>
 <ul>
-<li><p>Familiar with general data ETL workflow.</p></li>
+<li><p>General familiarity with data cleaning, data loading tasks.</p></li>
 </ul>
 </li>
 </ul>
@@ -1042,7 +1109,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_2422">Data retrival</a></p></td>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_2422">data retrieval</a></p></td>
 <td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p></p></td>
 </tr>
@@ -1054,7 +1121,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 <td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/topic_0219">Data submission, annotation and curation</a></p></td>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/topic_0219">data submission, annotation and curation</a></p></td>
 <td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p></p></td>
 </tr>
@@ -1064,9 +1131,9 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 <hr class="docutils" />
 <div class="section" id="operations">
 <h2>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
-<h3 id=Data-query-and-retrieval>Data query and retrieval</h3>
-The process of extracting structured or unstructured data from different sources. The process of identifying and obtaining data from data management systems.
-<p><strong>Manually curated tools</strong></p>
+<!-- <h3 id=Data-query-and-retrieval>Data query and retrieval</h3> -->
+<p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">query</span> <span class="pre">and</span> <span class="pre">retrieval</span></code> is the process of extracting structured or unstructured data from different sources. The process of identifying and obtaining data from data management systems.</p>
+<p><strong>Manually curated list of tools</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tool</p></th>
@@ -1103,7 +1170,7 @@ The process of extracting structured or unstructured data from different sources
 </tr>
 </tbody>
 </table>
-<p><strong>Tools discovered from <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<p><strong>Automatically created list of tools by querying <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tool</p></th>
@@ -1207,16 +1274,20 @@ The process of extracting structured or unstructured data from different sources
 </tr>
 </tbody>
 </table>
-<h3 id=Data-transformation>Data transformation</h3>
-### Data transformation
-The process of converting the data format, structure, and value to meet specific data standards. Below are some common operations in data transformation.
-- Data annotation
-    The process of labeling data or metadata.
-- Data validation
-    The process of ensuring data has met data standards both in terms of data content and data format.
-- Data aggregation
-    The process of gathering data and presenting it, usually,  in a summarized format.
-<p><strong>Manually curated tools</strong></p>
+<!-- <h3 id=Data-transformation>Data transformation</h3> -->
+<div class="section" id="data-transformation">
+<h3>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">transformation</span></code> is the process of converting the data format, structure, and value for a specific goal, which may include meeting a specific data standards.</p>
+<p>Below are listed common operations in data transformation:</p>
+<ul class="simple">
+<li><p>Data annotation
+The process of labeling data or metadata.</p></li>
+<li><p>Data validation
+The process of ensuring data has met data standards both in terms of data content and data format.</p></li>
+<li><p>Data aggregation
+The process of gathering data and presenting it, usually, in a summarized format.</p></li>
+</ul>
+<p><strong>Manually curated list of tools</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tool</p></th>
@@ -1271,7 +1342,7 @@ The process of converting the data format, structure, and value to meet specific
 </tr>
 </tbody>
 </table>
-<p><strong>Tools discovered from <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<p><strong>Automatically created list of tools by querying <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tool</p></th>
@@ -1314,9 +1385,12 @@ The process of converting the data format, structure, and value to meet specific
 </tr>
 </tbody>
 </table>
-<h3 id=Data-deposition>Data deposition</h3>
-<p>The process of loading data to hosting (end) destinations, such as public data archives and data warehouses.</p>
-<p><strong>Manually curated tools</strong></p>
+<!-- <h3 id=Data-deposition>Data deposition</h3> -->
+</div>
+<div class="section" id="data-deposition">
+<h3>Data Deposition<a class="headerlink" href="#data-deposition" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">deposition</span></code> is the process of loading data to hosting (end) destinations, such as public data archives and data warehouses.</p>
+<p><strong>Manually curated list of tools</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tool</p></th>
@@ -1353,7 +1427,7 @@ The process of converting the data format, structure, and value to meet specific
 </tr>
 </tbody>
 </table>
-<p><strong>Tools discovered from <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<p><strong>Automatically created list of tools by querying <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tool</p></th>
@@ -1372,16 +1446,25 @@ The process of converting the data format, structure, and value to meet specific
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="example-use-case">
 <h3>Example use case:<a class="headerlink" href="#example-use-case" title="Permalink to this headline">¶</a></h3>
-<p>To show how these tools can be used in real life examples, please check the related recipes.</p>
+<p>To show how some of these tools may be used, the following related recipes provide further guidance with real life examples.</p>
 <ol class="simple">
-<li><p>OMOP ETL <span class="xref myst">link</span></p></li>
-<li><p>RDF ETL <span class="xref myst">link</span></p></li>
-<li><p>FASTQ file validation <span class="xref myst">link</span></p></li>
+<li><p><a class="reference internal" href="fastq-file-format-validators.html#fcb-interop-fastqval"><span class="std std-ref">File format validation, an example with FASTQ files</span></a></p></li>
+<li><p>TODO: OMOP ETL <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">link</span></a></p></li>
+<li><p>TODO: RDF ETL <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">link</span></a></p></li>
 </ol>
 </div>
 </div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Extract,_transform,_load">https://en.wikipedia.org/wiki/Extract,_transform,_load</a></p></li>
+</ol>
+</div>
+<hr class="docutils" />
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
@@ -1395,28 +1478,33 @@ The process of converting the data format, structure, and value to meet specific
 <tbody>
 <tr class="row-even"><td><p>Fuqi Xu</p></td>
 <td><p>EMBL-EBI</p></td>
-<td><p>0000-0002-5923-3859</p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0002-5923-3859">0000-0002-5923-3859</a></p></td>
 <td><p>Original draft</p></td>
 </tr>
 <tr class="row-odd"><td><p>Eva Martin</p></td>
 <td><p>BSC</p></td>
-<td><p>0000-0001-8324-2897</p></td>
+<td><p><a class="reference external" href="https://orcid.org/0000-0001-8324-2897">0000-0001-8324-2897</a></p></td>
 <td><p>Original draft</p></td>
 </tr>
 <tr class="row-even"><td><p>Sukhi Singh</p></td>
-<td><p></p></td>
-<td><p></p></td>
+<td><p>the Hyve</p></td>
+<td><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">interoperability</span></a></p></td>
 <td><p>Tool curation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Philippe Rocca-Serra</p></td>
+<td><p>Data Readiness Group, University of Oxford, UK</p></td>
+<td><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></p></td>
+<td><p>Review</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
 </div>
-<div class="section" id="references">
-<h1>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Extract,_transform,_load">https://en.wikipedia.org/wiki/Extract,_transform,_load</a></p></li>
-</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1432,7 +1520,7 @@ The process of converting the data format, structure, and value to meet specific
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/content/recipes"
+            path: "./content/recipes/interoperability"
         },
         predefinedOutput: true
     }
@@ -1444,6 +1532,8 @@ The process of converting the data format, structure, and value to meet specific
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="fastq-file-format-validators.html" title="previous page">File format validation, an example with FASTQ files</a>
+    <a class='right-next' id="next-link" href="../reusability.html" title="next page">Reusability</a>
 
         </div>
         

@@ -425,6 +425,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      Requesting terms addition to terminology artefacts
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ontology-operations-tools.html">
+     Tools for ontology-associated operations
+    </a>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
      Building an application ontology with Robot
@@ -466,6 +471,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
      File format validation, an example with FASTQ files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interoperability/ETL-tools.html">
+     Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -887,7 +897,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 _Figure 1:  Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows)._  -->
 <div class="figure align-default" id="schematic-workflow-of-the-general-fairification-pipeline-some-steps-need-repetitions-yellow-arrows">
 <a class="reference internal image-reference" href="../../../../_images/image_0.png"><img alt="Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows)." src="../../../../_images/image_0.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows).</span><a class="headerlink" href="#schematic-workflow-of-the-general-fairification-pipeline-some-steps-need-repetitions-yellow-arrows" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows).</span><a class="headerlink" href="#schematic-workflow-of-the-general-fairification-pipeline-some-steps-need-repetitions-yellow-arrows" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="data-extraction">
@@ -899,14 +909,14 @@ _Figure 2: Snapshot of AMR compound database home page. The blue area listed all
  -->
 <div class="figure align-default" id="snapshot-of-amr-compound-database-home-page-the-blue-area-listed-all-compound-data-to-be-extracted">
 <a class="reference internal image-reference" href="../../../../_images/image_1.jpg"><img alt="Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted." src="../../../../_images/image_1.jpg" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span><a class="headerlink" href="#snapshot-of-amr-compound-database-home-page-the-blue-area-listed-all-compound-data-to-be-extracted" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span><a class="headerlink" href="#snapshot-of-amr-compound-database-home-page-the-blue-area-listed-all-compound-data-to-be-extracted" title="Permalink to this image">¶</a></p>
 </div>
 <!-- ![alt_text](image_2.jpg "image_tooltip")
 _Figure 3: Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound._
  -->
 <div class="figure align-default" id="snapshot-of-the-amr-compound-database-home-page-source-code-the-red-box-shows-the-compound-class-header-the-yellow-box-lists-one-compound">
 <a class="reference internal image-reference" href="../../../../_images/image_2.jpg"><img alt="Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound." src="../../../../_images/image_2.jpg" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.</span><a class="headerlink" href="#snapshot-of-the-amr-compound-database-home-page-source-code-the-red-box-shows-the-compound-class-header-the-yellow-box-lists-one-compound" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.</span><a class="headerlink" href="#snapshot-of-the-amr-compound-database-home-page-source-code-the-red-box-shows-the-compound-class-header-the-yellow-box-lists-one-compound" title="Permalink to this image">¶</a></p>
 </div>
 <p>We first identified all websites that contain the project data. The homepage (Figure 2) describes the compound names, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in Figure 4.</p>
 <p>Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by <td>…</td>, chemical “Oxazolidinones” and “Tetracyclines” uses different data structure. Therefore the extracted XML document was updated before applying further nodes to the XML document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. The green boxes in Figure 4 highlighted the discrepancies we found in the original dataset.</p>
@@ -915,7 +925,7 @@ _Figure 3: Snapshot of the AMR compound database home page source code. The red 
 _Figure 4: Workflow to extract antimicrobial classes and compound with their corresponding subpages_ -->
 <div class="figure align-default" id="workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages">
 <a class="reference internal image-reference" href="../../../../_images/image_3.png"><img alt="Workflow to extract antimicrobial classes and compound with their corresponding subpages." src="../../../../_images/image_3.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Workflow to extract antimicrobial classes and compound with their corresponding subpages.</span><a class="headerlink" href="#workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Workflow to extract antimicrobial classes and compound with their corresponding subpages.</span><a class="headerlink" href="#workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages" title="Permalink to this image">¶</a></p>
 </div>
 <p>Links to all content in the sub-page are also extracted. Figure 5 is an example of the subpage of one compound, which consists of table selection with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources. (See the green boxes in Figure 5). External links were excluded from current data extraction.</p>
 <p>The complete workflow to extract the data from the compound/charge webpage is provided in <a class="reference external" href="#heading=h.q7ozvs96azbw">supplementary figure 1</a>.</p>
@@ -924,7 +934,7 @@ _Figure 4: Workflow to extract antimicrobial classes and compound with their cor
 _Figure 5: Example of one ND4BB raw data_ -->
 <div class="figure align-default" id="example-of-one-nd4bb-raw-data">
 <a class="reference internal image-reference" href="../../../../_images/image_4.jpg"><img alt="Example of one ND4BB raw data." src="../../../../_images/image_4.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Example of one ND4BB raw data.</span><a class="headerlink" href="#example-of-one-nd4bb-raw-data" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Example of one ND4BB raw data.</span><a class="headerlink" href="#example-of-one-nd4bb-raw-data" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="data-transform">
@@ -935,7 +945,7 @@ _Figure 5: Example of one ND4BB raw data_ -->
 _Figure 6: Example data set for +3 charged Amikacin_ -->
 <div class="figure align-default" id="example-data-set-for-3-charged-amikacin">
 <a class="reference internal image-reference" href="../../../../_images/image_5.png"><img alt="Example data set for +3 charged Amikacin." src="../../../../_images/image_5.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Example data set for +3 charged Amikacin.</span><a class="headerlink" href="#example-data-set-for-3-charged-amikacin" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Example data set for +3 charged Amikacin.</span><a class="headerlink" href="#example-data-set-for-3-charged-amikacin" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="extract-and-annotate-structural-metadata">
@@ -1239,7 +1249,7 @@ _Supplement figure 1: Workflow to extract the data from compound/charge webpage_
  -->
 <div class="figure align-default" id="workflow-to-extract-the-data-from-compound-charge-webpage">
 <a class="reference internal image-reference" href="../../../../_images/image_6.png"><img alt="Workflow to extract the data from compound/charge webpage." src="../../../../_images/image_6.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Workflow to extract the data from compound/charge webpage.</span><a class="headerlink" href="#workflow-to-extract-the-data-from-compound-charge-webpage" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Workflow to extract the data from compound/charge webpage.</span><a class="headerlink" href="#workflow-to-extract-the-data-from-compound-charge-webpage" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />

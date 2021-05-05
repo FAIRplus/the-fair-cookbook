@@ -425,6 +425,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      Requesting terms addition to terminology artefacts
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     Tools for ontology-associated operations
+    </a>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
      Building an application ontology with Robot
@@ -466,6 +471,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
      File format validation, an example with FASTQ files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -892,38 +902,38 @@ The <a class="reference external" href="https://www.w3.org/TR/prov-overview/">W3
 <p><a class="reference external" href="https://camflow.org/#output_format">CamFlow</a> is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit <span id="id1">[<a class="reference internal" href="#id13"><span>PHG+17</span></a>]</span>.</p>
 <p>CamFlow support 2 output formats.</p>
 <p>-W3C PROV-JSON format</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;cf:id&quot;</span><span class="p">:</span> <span class="s2">&quot;194334&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;prov:type&quot;</span><span class="p">:</span> <span class="s2">&quot;fifo&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:boot_id&quot;</span><span class="p">:</span> <span class="mi">2725894734</span><span class="p">,</span>
-    <span class="nt">&quot;cf:machine_id&quot;</span><span class="p">:</span> <span class="mi">340646718</span><span class="p">,</span>
-    <span class="nt">&quot;cf:version&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="nt">&quot;cf:date&quot;</span><span class="p">:</span> <span class="s2">&quot;2017:01:03T16:43:30&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:jiffies&quot;</span><span class="p">:</span> <span class="s2">&quot;4297436711&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:uid&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
-    <span class="nt">&quot;cf:gid&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
-    <span class="nt">&quot;cf:mode&quot;</span><span class="p">:</span> <span class="s2">&quot;0x1180&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:secctx&quot;</span><span class="p">:</span> <span class="s2">&quot;unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:ino&quot;</span><span class="p">:</span> <span class="mi">51964</span><span class="p">,</span>
-    <span class="nt">&quot;cf:uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;32b7218a-01a0-c7c9-17b1-666f200b8912&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;prov:label&quot;</span><span class="p">:</span> <span class="s2">&quot;[fifo] 0&quot;</span>
-<span class="p">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;cf:id&quot;</span>: <span class="s2">&quot;194334&quot;</span>,
+    <span class="s2">&quot;prov:type&quot;</span>: <span class="s2">&quot;fifo&quot;</span>,
+    <span class="s2">&quot;cf:boot_id&quot;</span>: <span class="m">2725894734</span>,
+    <span class="s2">&quot;cf:machine_id&quot;</span>: <span class="m">340646718</span>,
+    <span class="s2">&quot;cf:version&quot;</span>: <span class="m">0</span>,
+    <span class="s2">&quot;cf:date&quot;</span>: <span class="s2">&quot;2017:01:03T16:43:30&quot;</span>,
+    <span class="s2">&quot;cf:jiffies&quot;</span>: <span class="s2">&quot;4297436711&quot;</span>,
+    <span class="s2">&quot;cf:uid&quot;</span>: <span class="m">1000</span>,
+    <span class="s2">&quot;cf:gid&quot;</span>: <span class="m">1000</span>,
+    <span class="s2">&quot;cf:mode&quot;</span>: <span class="s2">&quot;0x1180&quot;</span>,
+    <span class="s2">&quot;cf:secctx&quot;</span>: <span class="s2">&quot;unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023&quot;</span>,
+    <span class="s2">&quot;cf:ino&quot;</span>: <span class="m">51964</span>,
+    <span class="s2">&quot;cf:uuid&quot;</span>: <span class="s2">&quot;32b7218a-01a0-c7c9-17b1-666f200b8912&quot;</span>,
+    <span class="s2">&quot;prov:label&quot;</span>: <span class="s2">&quot;[fifo] 0&quot;</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 <p>Example of a write edge in W3C PROV format:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;cf:id&quot;</span><span class="p">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;prov:type&quot;</span><span class="p">:</span> <span class="s2">&quot;write&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:boot_id&quot;</span><span class="p">:</span> <span class="mi">2725894734</span><span class="p">,</span>
-    <span class="nt">&quot;cf:machine_id&quot;</span><span class="p">:</span> <span class="mi">340646718</span><span class="p">,</span>
-    <span class="nt">&quot;cf:date&quot;</span><span class="p">:</span> <span class="s2">&quot;2017:01:03T16:43:30&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:jiffies&quot;</span><span class="p">:</span> <span class="s2">&quot;4297436711&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;prov:label&quot;</span><span class="p">:</span> <span class="s2">&quot;write&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:allowed&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;prov:activity&quot;</span><span class="p">:</span> <span class="s2">&quot;AQAAAAAAAEAf9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;prov:entity&quot;</span><span class="p">:</span> <span class="s2">&quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cf:offset&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
-<span class="p">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;cf:id&quot;</span>: <span class="s2">&quot;13&quot;</span>,
+    <span class="s2">&quot;prov:type&quot;</span>: <span class="s2">&quot;write&quot;</span>,
+    <span class="s2">&quot;cf:boot_id&quot;</span>: <span class="m">2725894734</span>,
+    <span class="s2">&quot;cf:machine_id&quot;</span>: <span class="m">340646718</span>,
+    <span class="s2">&quot;cf:date&quot;</span>: <span class="s2">&quot;2017:01:03T16:43:30&quot;</span>,
+    <span class="s2">&quot;cf:jiffies&quot;</span>: <span class="s2">&quot;4297436711&quot;</span>,
+    <span class="s2">&quot;prov:label&quot;</span>: <span class="s2">&quot;write&quot;</span>,
+    <span class="s2">&quot;cf:allowed&quot;</span>: <span class="s2">&quot;true&quot;</span>,
+    <span class="s2">&quot;prov:activity&quot;</span>: <span class="s2">&quot;AQAAAAAAAEAf9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;</span>,
+    <span class="s2">&quot;prov:entity&quot;</span>: <span class="s2">&quot;ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=&quot;</span>,
+    <span class="s2">&quot;cf:offset&quot;</span>: <span class="s2">&quot;0&quot;</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 </div>

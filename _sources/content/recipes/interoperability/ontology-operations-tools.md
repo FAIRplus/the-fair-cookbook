@@ -1,61 +1,49 @@
-# Tools for ontology strategies
-
-```{admonition} Important
-:class: tip
-
-    - Data Curator
-    - Data Manager
-    - Data Scientist
-    - Software Engineer
-    - Terminology Manager
-    - Ontologist
+# Tools for ontology-associated operations
 
 
-For the `Recipe Type` section, the allowed values should be picked from the following list:
-    - Review 
-```
+````{panels_fairplus}
+:identifier_text: http://w3id.org/faircookbook/FCB_TBA
+:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:difficulty_level: 5
+:recipe_type: survey_review
+:reading_time_minutes: 15
+:intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager  
+:has_executable_code: nope
+```` 
 
 
 ## Main objectives
-This recipe identifies tools for different operations regarding ontology strategies, such as ontology annotation, ontology mapping, ontology management, etc. It aims to serve as a start point for implementing ontology-related FAIRifications, instead of provide a comprehensive list covering all available tools.
 
->The lists of tools  are generated either by manual curation, which reflects what is being used in the industry, or automatally discovered from the [bio.tools](https://bio.tools/) repository. 
->
->:bulb: _Contents in this table are generated in March 2021. 
->For updated contents, please check the [FAIR tooling repository]()._ You can provide feedback or report issues in the `comments` section.
+This recipe aims to provide `an overview of tools available` to perform a number of key operations using ontologies and relevant to FAIR processes: from `ontology management` to using `ontology for annotation` or `performing ontology mapping`.
 
+It aims to serve as a starting point to identify tools for FAIRifications tasks where ontologies and semantic frameworks are needed. 
+
+```{admonition}
+It is not intended to provide a comprehensive list covering all possible tools.
+```
+
+>The lists of tools are generated either automatically by querying the [bio.tools](https://bio.tools/) repository, or through manual curation. In this last instance, the list produced reflects what is being used in the industry and is influenced by the FAIRplus project partners that have been surveyed for the purpose of this work.
+
+```{warning} 
+The content in these tables was generated in March 2021.
+For an updated contents, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
+To provide feedback on this content or report issues, please do so via the [FAIR Cookbook github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
+```
 
 ## Overview
 
 The figure below shows different ontology-related operations and their relationships, together with related tools and recipes.
 
-```mermaid
-graph TB
-    subgraph Ontology strategies<br>
-    
-        subgraph Metadata enrichment
-            A[Ontology recommendation]
-            B[Ontology annotation]
-            C[Ontology mapping]
-        end
-        
-        subgraph Ontology life cycle
-            D[Ontology engineering]
-            E[Ontology management]
-        end
-        
-        A-->B
-        B-->C
-        
-        E-.-A
-        E-.-C
-        
-        
-    end
-    
-    classDef className fill:#f9f,stroke:#333,stroke-width:2px
-
+ 
+```{figure} ontology-operations-mermaid.png
+---
+width: 800px
+name: Overview of key aspects in ontology associated processes
+alt: Overview of key aspects in ontology associated processes
+---
+Overview of key aspects in ontology associated processes
 ```
+
 The table below is an overview of ontology strategies tools identified. Details of each tools are provided below.
 
 <table>
@@ -257,12 +245,14 @@ The table below is an overview of ontology strategies tools identified. Details 
   </tr>
 </table>
 
+---
+
 ## Requirements
 
 * recipe dependency:
-   * {ref}`Which vocabulary to use?`
+   * {ref}`fcb-interop-selectonto`
 * knowledge requirement:
-   * be familiar with ontology and semantic annotation.
+   * be familiar with ontologies and semantic annotation.
 
 ---
 
@@ -280,13 +270,18 @@ The table below is an overview of ontology strategies tools identified. Details 
 | [ontology and terminology](http://edamontology.org/topic_0089)  | 
 | [text annotation](http://edamontology.org/operation_3778)  |
 
+---
+
 ## Operations
 
-<h3 id="Ontology-annotationr">Ontology annotation</h3>
+### Ontology annotation
 
-The process of linking free text or data items to 'tokens'(defined terms from a lexicon) which provide semantic value. For example, free text "type 2 diabetes" can be be annotated with [terms](http://purl.obolibrary.org/obo/MONDO_0005148) in the MONDO disease ontology. 
+<!-- <h3 id="Ontology-annotationr">Ontology annotation</h3> -->
 
-__Manually curated tools__ 
+Ontoloy Annotation is the process of linking free text or data items to 'tokens' (defined terms from a lexicon) which provide semantic value. For example, free text "type 2 diabetes" can be annotated with [term](http://purl.obolibrary.org/obo/MONDO_0005148) in the MONDO disease ontology. 
+
+__Manually curated list of tools__
+
 |Tool|Description|License|Topics|Resource Type|
 |---|--|--|--|--|
 |[ZOOMA](https://www.ebi.ac.uk/spot/zooma/)|A tool for mapping free text annotations to ontology term based on a curated repository of annotation knowledge|[EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use/)|Ontology and terminology,<br>Systems biology,<br>Data identity and mapping|Web application,<br> API|
@@ -298,7 +293,7 @@ __Manually curated tools__
 |[Prodigy](https://prodi.gy/)|A modern annotation tool for creating training and evaluation data for machine learning models. You can also use Prodigy to help you inspect and clean your data, do error analysis and develop rule-based systems to use in combination with your statistical models.|Commercial license|Data annotation|Python, Web application,API|
 |[OntoText](https://www.ontotext.com/products/ontotext-platform/)|Connect and publish complex enterprise knowledge with standard-compliant semantic graph database;Customize and apply analytics to link documents to graphs, extract new facts, classify and recommend content...|Commercial license|
 
-__Tools discovered from [Bio.Tools](https://bio.tools).__
+__Automatically created list of tools by querying [Bio.Tools](https://bio.tools).__
 
 <table>
   <tr>
@@ -451,16 +446,20 @@ Enter a chemical or protein/gene and let Vapur find related bio-molecules in 150
   </tr>
 </table>
 
-<h3 id="Ontology mapping">Ontology mapping</h3>
+<!-- <h3 id="Ontology mapping">Ontology mapping</h3> -->
+
+### Ontology mapping
 
 The process of determining correspondences between equivalent concepts in alternative ontologies, and other vocabularies. This may include mapping to convey different levels of granularity.
 
-__Manually curated tools__ 
+__Manually curated list of tools__
+
 |Tool|Description|License|Topics|Resource Type|
 |---|--|--|--|--|
 |[OxO](https://www.ebi.ac.uk/spot/oxo/index)|a service for finding mappings (or cross-references) between terms from ontologies, vocabularies and coding standards. OxO imports mappings from a variety of sources including the Ontology Lookup Service and a subset of mappings provided by the UMLS. We're still developing the service so please get in touch if you have any feedback.|[EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use/)|GUI and API|
 
-__Tools discovered from [Bio.Tools](https://bio.tools).__
+__Automatically created list of tools by querying [Bio.Tools](https://bio.tools).__
+
 <table>
   <tr>
    <td>Tool
@@ -522,10 +521,14 @@ __Tools discovered from [Bio.Tools](https://bio.tools).__
 </table>
 
 
-<h3 id="Ontology management">Ontology management</h3>
+<!-- <h3 id="Ontology management">Ontology management</h3>
+ -->
+### Ontology management
+
 The process of managing ontologies and other vocabularies in semantic web-linked data environments.This includes policies for update and maintenance of constituent and new terms.
 
-__Manually curated tools__ 
+__Manually curated list of tools__
+
 |Tool|Description|License|Topics|Resource Type|
 |---|--|--|--|--|
 |[OLS](https://www.ebi.ac.uk/ols/index)|a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions.|[EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use/)||Web Application, API|
@@ -536,7 +539,8 @@ __Manually curated tools__
 |[AberOWL](http://www.aber-owl.net/)|A framework for ontology-based access to biological data. It consists of a repository of bio-ontologies, a set of webservices which provide access to OWL(-EL) reasoning over the ontologies, and several frontends which utilise the ontology repository and reasoning services.|||Web application, API|
 
 
-__Tools discovered from [Bio.Tools](https://bio.tools).__
+__Automatically created list of tools by querying [Bio.Tools](https://bio.tools).__
+
 <table>
   <tr>
    <td>Tool
@@ -659,11 +663,15 @@ __Tools discovered from [Bio.Tools](https://bio.tools).__
    </td>
   </tr>
 </table>
-<h3 id="Ontology engineering">Ontology engineering</h3>
 
-The process of developing and maintaining ontologies during the ontology life cycle.
+<!-- <h3 id="Ontology engineering">Ontology engineering</h3>
+ -->
+### Ontology engineering
 
-__Manually curated tools__ 
+Ontology engineering is the process of developing and maintaining ontologies during the ontology life cycle.
+
+__Manually curated list of tools__
+
 |Tool|Description|License|Topics|Resource Type|
 |---|--|--|--|--|
 |[Protégé](https://protege.stanford.edu/)|A free, open source ontology editor and a knowledge management system|[2-Clause BSD](https://opensource.org/licenses/BSD-2-Clause)||Web application, Desktop application|
@@ -675,18 +683,38 @@ __Manually curated tools__
 
 
 ## Implementation examples
+
 To show how these tools can be used in real life examples, please check the related recipes.
-- [Which vocabulary to use?](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html)
-- [Building an application ontology with Robot](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html)
+- {ref}`fcb-interop-selectonto`
+- {ref}`fcb-interop-ontorobot`
+<!-- - [Which vocabulary to use?](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html)
+- [Building an application ontology with Robot](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html) -->
+
+___
+
 
 ## Authors
+
 |Name|Affiliation|ORCID|Credit role|
 |---|--|--|--|
-|Fuqi Xu|EMBL-EBI|0000-0002-5923-3859|Original draft|
-|Eva|||Original draft
-|Sukhi||Tool curation|
-|Nick||Reviewing|
-|Peter|||Reviewing |
-|Philippe||
+|Fuqi Xu|EMBL-EBI, UK|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Original draft|
+|Eva Martin|Barcelone SuperComputing Centre, SP|[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Original draft|
+|Sukhi Singh|The Hyve, NL|[]()|Tool curation|
+| Philippe Rocca-Serra |  Data Readiness Group, University of Oxford, UK| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Review|
+
+<!-- 
+|Nick Juty||[]()|Reviewing|
+|Peter Woolard|||[]()|Reviewing | -->
+
+
+___
+
+## License
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+
+
 
 
