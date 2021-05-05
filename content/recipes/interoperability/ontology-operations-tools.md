@@ -1,4 +1,4 @@
-# Tools for ontology associated operations
+# Tools for ontology-associated operations
 
 
 ````{panels_fairplus}
@@ -10,8 +10,6 @@
 :intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager  
 :has_executable_code: nope
 ```` 
-
-___
 
 
 ## Main objectives
@@ -254,7 +252,7 @@ The table below is an overview of ontology strategies tools identified. Details 
 * recipe dependency:
    * {ref}`fcb-interop-selectonto`
 * knowledge requirement:
-   * be familiar with ontology and semantic annotation.
+   * be familiar with ontologies and semantic annotation.
 
 ---
 
@@ -699,12 +697,15 @@ ___
 
 |Name|Affiliation|ORCID|Credit role|
 |---|--|--|--|
-|Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Original draft|
-|Eva Martin|BSC|[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Original draft
-|Sukhi|The Hybve||Tool curation|
-|Nick|||Reviewing|
-|Peter||||Reviewing |
-|Philippe Rocca-Serra|||
+|Fuqi Xu|EMBL-EBI, UK|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Original draft|
+|Eva Martin|Barcelone SuperComputing Centre, SP|[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Original draft|
+|Sukhi Singh|The Hyve, NL|[]()|Tool curation|
+| Philippe Rocca-Serra |  Data Readiness Group, University of Oxford, UK| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Review|
+
+<!-- 
+|Nick Juty||[]()|Reviewing|
+|Peter Woolard|||[]()|Reviewing | -->
+
 
 ___
 

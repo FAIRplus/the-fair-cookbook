@@ -198,7 +198,7 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
 <h4><b>Data Access Agreements</b></h4>
 ^^^
-{ref}`fcb-access-data`
+{ref}`fcb-access-anonymizing`
 ---
 
 <i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>

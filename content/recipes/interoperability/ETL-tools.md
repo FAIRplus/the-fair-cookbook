@@ -12,14 +12,12 @@
 :has_executable_code: nope
 ```` 
 
-___
-
 
 ## Main Objectives
 
 This recipe identifies tools for `data extraction`, `transformation`, and `loading` (ETL). 
-ETL is the process of collecting data from one source to a designated system in which the data is represented differently [1].
-One common use case in biological science is to build a scalable and portable ETL system to extract data from various sources, transform said data into a cohesive dataset, and load the data to an internal or public database to support data exploration.
+ETL is the process of collecting data from one source to persist it in another designated system in which the data is represented differently [1].
+A common use case in data science is to build a scalable and portable ETL system to extract data from various sources, transform said-data into a cohesive dataset, and load the data to an internal or public database to support data exploration.
 
 This recipe aims to serve as a start point for designing ETL workflows, rather than provide a comprehensive list covering all available tools.
 
@@ -208,7 +206,7 @@ The tools list below aims to provide an basic overview of what is there on the m
 
 * Knowledge requirement:
 
-   * Familiar with general data ETL workflow.
+   * General familiarity with data cleaning, data loading tasks.
 
 ---
 
@@ -333,11 +331,12 @@ __Automatically created list of tools by querying [Bio.Tools](https://bio.tools)
 
 ### Example use case: 
 
-To show how these tools can be used in real life examples, please check the related recipes.
+To show how some of these tools may be used, the following related recipes provide further guidance with real life examples.
 
-1. OMOP ETL [link]()
-2. RDF ETL [link]()
-3. FASTQ file validation [link]()
+
+1. {ref}`fcb-interop-fastqval`
+2. TODO: OMOP ETL [link]()
+3. TODO: RDF ETL [link]()
 
 ___
 
@@ -356,6 +355,7 @@ ___
 |Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Original draft|
 |Eva Martin|BSC|[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Original draft
 |Sukhi Singh|the Hyve|[]()|Tool curation|
+|Philippe Rocca-Serra |  Data Readiness Group, University of Oxford, UK| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Review|
 
 ___
 

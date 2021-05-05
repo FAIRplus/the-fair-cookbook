@@ -77,7 +77,7 @@ This recipe will cover the topics highlighted in orange:
 ```{figure} id-map-service-mermaid.png
 ---
 width: 800px
-name: overview-identifier-mapping-2
+name: Overview of key aspects in  Identifier Mapping
 alt: Overview of key aspects in  Identifier Mapping
 ---
 Overview of key aspects in  Identifier Mapping
@@ -116,11 +116,12 @@ Overview of key aspects in  Identifier Mapping
 | [VoID Linkset](https://www.w3.org/TR/void/) |  |  |
 
 ---
+
 ## Mappings
 
 Before diving into identifier mapping, it is important to understand the possible types of mappings that can be performed between entities.
 While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest. 
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see {footcite}`batchelor_scientific_nodate`). 
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see {cite}`batchelor_scientic_nodate`). 
 These lenses allow us to dynamically select which mappings to consider relevant and which to ignore.
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.
 
@@ -128,7 +129,7 @@ Examples of types of mappings are:
 * **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds
 * **Ontology mapping**: this can either be 
     * As a direct 1-to-1 mapping between equivalent terms in different ontologies
-    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {footcite}`wang_concept_2010`.
+    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {cite}`wang_concept_2010`.
 * **Identifier mapping**: The focus of this recipe. This can either be:
     * Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl)
     * Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different)
@@ -148,7 +149,7 @@ To satisfy the Findability criteria F1, organisations must create identifiers fo
 
 Databases often contain data that exists in, or is closely related to, the content of other databases. For example, the genome database [Ensembl](http://ensembl.org/) contains data about genes that are related to entries in databases such as HUGO Gene Nomenclature Committee (https://www.genenames.org/) or [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/); or a database about drugs, e.g. [DrugBank](https://drugbank.com/), often contains details of the chemical substance that forms the drug which are also contained in chemical databases such as [ChEBI](https://www.ebi.ac.uk/chebi/) or [PubChem](https://pubchem.ncbi.nlm.nih.gov/). This results in a large number of unique identifiers notionally for the same concept. This large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. However, the databases often contain `cross-reference` links to other databases to represent these `equivalences`.
 
-The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see {footcite}`batchelor_scientific_nodate` for more details).
+The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see {cite}`batchelor_scientic_nodate` for more details).
 
 While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the [Human Protein Atlas](https://www.proteinatlas.org/) database reuses [Ensembl](https://www.ensembl.org/) identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data is already connected through the common identifier. However, this means that the Human Protein Atlas must ensure that their definition of the concept is exactly aligned with the Ensembl identifier for **all** application uses.
 
@@ -179,7 +180,7 @@ The simplest way to exchange equivalences is in a simple text file, which could 
 
 The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.
 
-```
+```tsv
 ChEMBL_Target_Component	UniProt
 CHEMBL_TC_4803	A0ZX81
 CHEMBL_TC_2584	A1ZA98 
@@ -192,7 +193,7 @@ The OBOFoundry Simple Standard for Sharing Ontology Mappings ([SSSOM](https://gi
 
 The following TSV shows our example data as a mapping file using the minimal columns (correct as of November 2020). The information provided is less than the minimal VoID model above.
 
-```
+```tsv
 subject_id  predicate_id  object_id match_type
 chembl:CHEMBL_TC_4803 skos:exactMatch uniprot:A0ZX81  sio:database-cross-reference
 chembl:CHEMBL_TC_2584 skos:exactMatch uniprot:A1ZA98  sio:database-cross-reference
@@ -207,7 +208,7 @@ A `linkset` contains the identifier mappings together with either the metadata a
 
 The following example shows a VoID Linkset in turtle notation with the minimum metadata given in the header. The metadata block links to the ChEMBL 17 RDF description and the UniProt March 2015 release. The `linkPredicate` tells us that the link is an exact match, i.e. the linked instances can be deemed equivalent for most applications, and the `linksetJustification` property states that the link is declared as a Database Cross Reference assertion, rather than being computed based on an equivalent protein sequence. These properties allow consuming applications to make more informed choices about their reuse of the data.
 
-```
+```bash
 @prefix bdb: <http://vocabularies.bridgedb.org/ops#> .
 @prefix chembl: <http://rdf.ebi.ac.uk/resource/chembl/> .
 @prefix chembl_target_cmpt: <http://rdf.ebi.ac.uk/resource/chembl/targetcomponent/> .
@@ -249,7 +250,7 @@ The following is an incomplete list of identifier mapping services.
 
 * [bridgedb.org](https://bridgedb.github.io/) 
 
-    > [BridgeDb](https://bridgedb.github.io/) {footcite}`van_iersel_bridgedb_2010` is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
+    > [BridgeDb](https://bridgedb.github.io/) {cite}`van_iersel_bridgedb_2010` is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
     > 
     > It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following `curl` command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) `L` identifier `1234` for the `Human` gene [CCR5](https://www.ncbi.nlm.nih.gov/gene/1234) as a TSV file.
     >```bash
@@ -258,7 +259,7 @@ The following is an incomplete list of identifier mapping services.
     > * [BridgeDbR Tutorial](https://bioconductor.org/packages/release/bioc/vignettes/BridgeDbR/inst/doc/tutorial.html)
 
 * [UniChem](https://www.ebi.ac.uk/unichem/)
-    > [UniChem](https://www.ebi.ac.uk/unichem/) {footcite}`chambers_unichem_2013` is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
+    > [UniChem](https://www.ebi.ac.uk/unichem/) {cite}`chambers_unichem_2013` is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
     > 
     > The following `curl` command retrieves the equivalent database identifiers for the ChEMBL identifier `CHEMBL12` [DIAZEPAM](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/) and returns the result as a JSON object.
     > ```bash
@@ -289,28 +290,31 @@ ___
 
 ## Conclusion
 
-In this recipe, we have given an overview of the need to map between globally unique and persistent identifier from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
+> In this recipe, we have given an overview of the need to map between globally unique and persistent identifier from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
+>
+> - The idea of data identifier equivalence;
+> - How to publish and exchange data identifier equivalences;
+> - Data identifier mapping services which can be queried to find equivalences for a given identifier.
+>
+> Data identifier equivalences increase the interoperability between data sources since it allows data about an individual to be integrated together. 
+> As a minimum, you should aim to link your dataset's persistant data identifiers to one major dataset within the community. The [ELIXIR Core Data Resources](https://elixir-europe.org/platforms/data/core-data-resources) provide a useful list of major datasets within the life sciences.
+>
+> #### What should I read next?
+> * {ref}`fcb-find-identifiers`
+> * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+> * [Identifier Resolution Services](./findability/id-resolution.html)
+> * {ref}`fcb-interop-bridgedb`
+> * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
 
-- The idea of data identifier equivalence;
-- How to publish and exchange data identifier equivalences;
-- Data identifier mapping services which can be queried to find equivalences for a given identifier.
 
-Data identifier equivalences increase the interoperability between data sources since it allows data about an individual to be integrated together. 
-As a minimum, you should aim to link your dataset's persistant data identifiers to one major dataset within the community. The [ELIXIR Core Data Resources](https://elixir-europe.org/platforms/data/core-data-resources) provide a useful list of major datasets within the life sciences.
 
-### What should I read next?
-
-* {ref}`fcb-find-identifiers`
-* [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-<!-- TODO (recipe not existent yet) [Identifier Resolution Services](./findability/id-resolution.html) -->
-* {ref}`fcb-bridgedb`
-* [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
 
 ___
 
 ## References
 
-```{footbibliography} 
+```{bibliography} idmapping/idmapping.bib
+
 ```
 
 
