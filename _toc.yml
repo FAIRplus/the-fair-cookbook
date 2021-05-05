@@ -85,21 +85,23 @@
   numbered: false
   sections:
       - file: content/recipes/interoperability/identifier-mapping
-      # - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
       - file: content/recipes/interoperability/bridgedb-recipe
         sections:
           - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
       - file: content/recipes/interoperability/selecting-ontologies
       - file: content/recipes/interoperability/ontology-new-term-request-recipe
+      - file: content/recipes/interoperability/ontology-operations-tools
       - file: content/recipes/interoperability/ontology-robot-recipe
         sections:
           - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+
       - file: content/recipes/interoperability/creating-minimal-metadata-profiles
         sections:
           - file: content/recipes/interoperability/transcriptomics-metadata
           - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
       - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar    
       - file: content/recipes/interoperability/fastq-file-format-validators
+      - file: content/recipes/interoperability/ETL-tools
 
 # -header: reusability
 - file: content/recipes/reusability

@@ -70,7 +70,7 @@ CamFlow support 2 output formats.
 
 -W3C PROV-JSON format
 
-```json
+```bash
 "ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
     "cf:id": "194334",
     "prov:type": "fifo",
@@ -93,7 +93,7 @@ CamFlow support 2 output formats.
 
 
 Example of a write edge in W3C PROV format:
-```json
+```bash
 "QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
     "cf:id": "13",
     "prov:type": "write",

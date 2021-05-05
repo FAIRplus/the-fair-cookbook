@@ -1,47 +1,54 @@
-# Tools for Data Extraction, transformation, and loading
-```
-:class: tip
+(fcb-interop-etl)=
 
-    - Data Curator
-    - Data Manager
-    - Data Scientist
+# Tools for Data Extraction, Transformation, and Loading (ETL)
 
-For the `Recipe Type` section, the allowed values should be picked from the following list:
-    - Review 
-```
+````{panels_fairplus}
+:identifier_text: http://w3id.org/faircookbook/FCB_TBA
+:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:difficulty_level: 5
+:recipe_type: survey_review
+:reading_time_minutes: 15
+:intended_audience: data_curator, data_manager, data_scientist  
+:has_executable_code: nope
+```` 
+
+___
+
 
 ## Main Objectives
-This recipe identifies tools for data extraction, transformation, and loading (ETL). ETL is the process of collecting data from one source to a designated system in which the data is represented differently.[1] One common use case in biological science is to build a scalable and portable ETL system to extract data from different sources, transform data into a cohesive dataset, and load data to an internal or public database to support data exchange. This recipe aims to serve as a start point for designing ETL workflows, instead of provide a comprehensive list covering all available tools.
+
+This recipe identifies tools for `data extraction`, `transformation`, and `loading` (ETL). 
+ETL is the process of collecting data from one source to a designated system in which the data is represented differently [1].
+One common use case in biological science is to build a scalable and portable ETL system to extract data from various sources, transform said data into a cohesive dataset, and load the data to an internal or public database to support data exploration.
+
+This recipe aims to serve as a start point for designing ETL workflows, rather than provide a comprehensive list covering all available tools.
 
 >The lists of tools are generated either by manual curation, which reflects what is being used in the industry, or automatally discovered from the bio.tools repository.
->
->:bulb: Contents in this table are generated in March 2021. For updated contents, please check the FAIR tooling repository. You can provide feedback or report issues in the comments section.
 
-## Graphical Overview of the FAIRification Recipe Objectives
+```{warning} 
+The content in these tables was generated in March 2021.
+For an updated contents, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
+To provide feedback on this content or report issues, please do so via the [FAIR Cookbook github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
+```
+
+## Graphical Overview
+
 The figure below shows different ETL-related operations and their relationships, together with related tools and recipes.
 
-```mermaid
-graph LR
-    subgraph Data extraction
-        
-        A1[Data query snd retrieval]
-    end
-    
-    subgraph Data transform
-        B1[Data annotation]
-        B2[Data validation]
-        B3[Data aggregation]
-    end
-    
-    C[Data deposition]
-    
-    A1-->B1
-    B1-->B2
-    B2-->B3
-    B3-->C
-    
+ 
+```{figure} ETL-tools-mermaid.png
+---
+width: 800px
+name: Overview of key aspects in ETL process
+alt: Overview of key aspects in ETL process
+---
+Overview of key aspects in ETL process
 ```
-The table below is an overview of ETL tools identified. Details of each tools are also provided in this doc. For ETL tools for RDF data model, please check recipe {ref}`An inventory of tools for converting your data to RDF`.
+
+
+The table below is an overview of ETL tools identified.
+Details of each tools are also provided in this doc.
+For ETL tools for RDF data model, please check recipe {ref}`fcb-interop-etl2rdf-tools` 
 
 
 <table>
@@ -191,11 +198,16 @@ The table below is an overview of ETL tools identified. Details of each tools ar
   </tr>
   
 </table>
->Disclaimer: The tools list below aims to provide a idea of what is there on the market. It's not a formal recommendation. if you think there are tools that need to be updated, please contact us via the github issue.
+
+```{warning} 
+The tools list below aims to provide an basic overview of what is there on the market. It is *not* a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+```
+
 
 ## Requirements
 
-* knowledge requirement:
+* Knowledge requirement:
+
    * Familiar with general data ETL workflow.
 
 ---
@@ -213,20 +225,22 @@ The table below is an overview of ETL tools identified. Details of each tools ar
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [Data retrival](http://edamontology.org/operation_2422)  | 
+| [data retrieval](http://edamontology.org/operation_2422)  | 
 | [validation](http://edamontology.org/operation_2428)||
 | [data deposition](http://edamontology.org/operation_3431)||
-| [Data submission, annotation and curation](http://edamontology.org/topic_0219)| |
+| [data submission, annotation and curation](http://edamontology.org/topic_0219)| |
 
 
 ___
 
 ## Operations
 
-<h3 id=Data-query-and-retrieval>Data query and retrieval</h3>
-The process of extracting structured or unstructured data from different sources. The process of identifying and obtaining data from data management systems.
+<!-- <h3 id=Data-query-and-retrieval>Data query and retrieval</h3> -->
 
-__Manually curated tools__ 
+`Data query and retrieval` is the process of extracting structured or unstructured data from different sources. The process of identifying and obtaining data from data management systems.
+
+__Manually curated list of tools__
+
 |Tool|Description|License|Topics|Resource type|
 |---|--|--|--|--|
 |[TAMR](https://www.tamr.com/)|A cloud-native data mastering solution (cloud MDM) accelerate analytics through machine learning (ML), available on Google Cloud, Azure and AWS.|Commercial license|information integration, data unification|
@@ -234,7 +248,7 @@ __Manually curated tools__
 |[Termite](https://www.scibite.com/platform/termite/)|TERMite (TERM identification, tagging & extraction) is a fast named entity recognition (NER) and extraction engine for semantic analytics.|Commercial license|information extraction|
 |[Oracle clinical](https://www.oracle.com/uk/industries/life-sciences/clinical-research/)|a single application and infrastructure for electronic data capture and clinical data management, while leveraging the renowned Oracle database. Oracle Clinical enables management of all clinical trial data in a single system, improving accuracy, visibility, and data integrity.|Commercial license|Clinical data|
 
-__Tools discovered from [Bio.Tools](https://bio.tools).__
+__Automatically created list of tools by querying [Bio.Tools](https://bio.tools).__
 
 |Tool|Description|License|Topics|Resource type|
 |---|--|--|--|--|
@@ -247,6 +261,7 @@ __Tools discovered from [Bio.Tools](https://bio.tools).__
 |[PyGMQL](https://bio.tools/PyGMQL)|Scalable data extraction and analysis for heterogeneous genomic datasets. Based on GMQL.|Apache-2.0|Imaging, Workflows, Database management|Python Library|
 
 __Data portals with extraction functionalities discovered from [Bio.Tools](https://bio.tools).__
+
 |Tool|Description|License|Topics|Resource type|
 |---|--|--|--|--|
 |[PlantPIs](https://bio.tools/plantpis)|Web querying system for a database collecting plant protease inhibitors data.|Plant biology, Gene and protein families|Database Portal|
@@ -256,17 +271,25 @@ __Data portals with extraction functionalities discovered from [Bio.Tools](https
 |[GenomicsDB](https://bio.tools/GenomicsDB)|Advancing clinical cohort selection with genomics analysis on a distributed platform. Highly performant data storage in C++ for importing, querying and transforming variant data with Java/Spark. Used in gatk4.|MIT License|Exome sequencing, Systems medicine, Personalised medicine, Complementary medicine, Biobank|Command-line|
 |[Epiviz File Server](https://bio.tools/epivizFileServer)|A library to query and transform genomic data from indexed files|MIT License|Oncology,Workflows, DNA|Python Library|
 
-<h3 id=Data-transformation>Data transformation</h3>
+<!-- <h3 id=Data-transformation>Data transformation</h3> -->
+
 ### Data transformation
-The process of converting the data format, structure, and value to meet specific data standards. Below are some common operations in data transformation.
+
+`Data transformation` is the process of converting the data format, structure, and value for a specific goal, which may include meeting a specific data standards.
+
+Below are listed common operations in data transformation:
+
 - Data annotation
     The process of labeling data or metadata.
 - Data validation
     The process of ensuring data has met data standards both in terms of data content and data format.
 - Data aggregation
-    The process of gathering data and presenting it, usually,  in a summarized format.
+    The process of gathering data and presenting it, usually, in a summarized format.
 
-__Manually curated tools__ 
+
+
+**Manually curated list of tools**
+
 |Tool|Description|License|Topics|Resource type|
 |---|--|--|--|--|
 |[SDTM](https://www.cdisc.org/standards/foundational/sdtm)|SDTM provides a standard for organizing and formatting data to streamline processes in collection management analysis and reporting.|N/A|data aggregation, data warehousing, Standard for Exchange of Non-clinical Data|Data standard
@@ -277,7 +300,7 @@ __Manually curated tools__
 |[Talend](https://www.talend.com/products/integrate-data/)|A unified approach that combines rapid data integration, transformation, and mapping with automated quality checks to ensure trustworthy data in every step.|Commercial license|Data integration|
 |[Informatica](https://www.informatica.com/)|Connect & fetch data from different heterogeneous source and processing of data.|Commercial license|Data integration|
 
-__Tools discovered from [Bio.Tools](https://bio.tools).__
+__Automatically created list of tools by querying [Bio.Tools](https://bio.tools).__
 
 |Tool|Description|License|Topics|Resource type|
 |---|--|--|--|--|
@@ -287,11 +310,14 @@ __Tools discovered from [Bio.Tools](https://bio.tools).__
 |[Query Tabular](https://bio.tools/Query_Tabular)|Galaxy-based tool which manipulates tabular files. Query Tabular automatically creates a SQLite database directly from a tabular file within a Galaxy workflow. The SQLite database can be saved to the Galaxy history, and further process to generate tabular outputs containing desired information and formatting.|CC-BY-4.0|Bioinformatics,Workflows|Galaxy-based|
 |[ms-data-core-api](https://bio.tools/ms-data-core-api)|The primary purpose of ms-data-core-api library is to provide commonly used classes and Object Model for Proteomics Experiments. You may also find it useful for your own computational proteomics projects.|Apache-2.0|Proteomics, Proteomics experiment, Software engineering|Java Library|
 
-<h3 id=Data-deposition>Data deposition</h3>
+<!-- <h3 id=Data-deposition>Data deposition</h3> -->
 
-The process of loading data to hosting (end) destinations, such as public data archives and data warehouses.
+### Data Deposition
 
-__Manually curated tools__ 
+`Data deposition` is the process of loading data to hosting (end) destinations, such as public data archives and data warehouses.
+
+__Manually curated list of tools__
+
 |Tool|Description|License|Topics|Resource type|
 |---|--|--|--|--|
 |[REDCap](https://www.project-redcap.org/)|REDCap is a secure web application for building and managing online surveys and databases. While REDCap can be used to collect virtually any type of data in any environment|[REDCap License Terms](https://projectredcap.org/partners/termsofuse/)|Cloud migration|Web application|
@@ -299,26 +325,45 @@ __Manually curated tools__
 |[Stardog](https://www.stardog.com/)|Triple Store Database, Provide an enterprise knowledge graph as FAIR+ data catalogue|Commercial license|Data integration,data catalog|
 |[Postgresql](https://www.postgresql.org/)|A free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance.|[The PostgreSQL Licence](https://www.postgresql.org/about/licence/)|Relational database|
 
-__Tools discovered from [Bio.Tools](https://bio.tools).__
+__Automatically created list of tools by querying [Bio.Tools](https://bio.tools).__
 
 |Tool|Description|License|Topics|Resource type|
 |---|--|--|--|--|
 |[Chemotion](https://bio.tools/chemotion)|Repository for chemistry research data that provides solutions for current challenges to store research data in a feasible manner, allowing the conservation of domain specific information in a machine readable format. |CC-BY-4.0|Data submission, annotation and curation, Workflows, Chemistry|Data repository|
 
 ### Example use case: 
+
 To show how these tools can be used in real life examples, please check the related recipes.
+
 1. OMOP ETL [link]()
 2. RDF ETL [link]()
 3. FASTQ file validation [link]()
 
+___
+
+
+## References
+
+1. https://en.wikipedia.org/wiki/Extract,_transform,_load
+
+___
+
+
 ## Authors
+
 |Name|Affiliation|ORCID|Credit role|
 |---|--|--|--|
-|Fuqi Xu|EMBL-EBI|0000-0002-5923-3859|Original draft|
-|Eva Martin|BSC|0000-0001-8324-2897|Original draft
-|Sukhi Singh|||Tool curation|
+|Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Original draft|
+|Eva Martin|BSC|[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Original draft
+|Sukhi Singh|the Hyve|[]()|Tool curation|
+
+___
+
+## License
+
+This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
 
 
-# References: 
-1. https://en.wikipedia.org/wiki/Extract,_transform,_load
 
