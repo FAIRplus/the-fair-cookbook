@@ -127,7 +127,7 @@
         - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
         - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
         - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
-    - file: content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
+    - file: content/recipes/applied-examples/etox
     - file: content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
     - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
     - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
