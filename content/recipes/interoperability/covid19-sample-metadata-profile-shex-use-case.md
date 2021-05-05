@@ -553,7 +553,7 @@ ___
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft, Shex expression, ontology mapping |
-| Danielle Welter |  University of Luxembourg | [0000-0003-1058-2668](https://orcid.org/orcid.org/0000-0003-1058-2668)| Review, ontology mapping| 
+| Danielle Welter | LCSB, University of Luxembourg | [0000-0003-1058-2668](https://orcid.org/orcid.org/0000-0003-1058-2668)| Review, ontology mapping| 
 | Jose Emilio Labra Gayo |  University of Oviedo | [0000-0001-8907-5348](https://orcid.org/orcid.org/0000-0001-8907-5348)|	Shex Expression 
 |Robert Giessmann|Bayer AG|[0000-0002-0254-1500](https://orcid.org/orcid.org/0000-0002-0254-1500)|Reviewer|
 
