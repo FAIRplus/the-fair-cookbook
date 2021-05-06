@@ -136,120 +136,152 @@ The principles will be the organizing principle for the FAIRplus Cookbook. While
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
 
-<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-search fa-2x mr-3"></i>
+    <b class="cardLabel"> FINDABILITY </b>
+</h4>
 ^^^
-<h4><b>FINDABILITY</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Search Engine Optimitization</b>
+</h4>
 ^^^
-<h4><b>Search Engine Optimitization</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Open Archive Deposition</b>
+</h4>
 ^^^
-<h4><b>Open Archive Deposition</b></h4>
-<p>TODO: add text here </p>
+TODO: add text here
 ---
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
+
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Annotation</b>
+</h4>
 ^^^
-<h4><b>Annotation</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ````
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
 
-<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cloud fa-2x mr-3"></i>
+    <b class="cardLabel">ACCESSIBILITY</b>
+</h4>
 ^^^
-<h4><b>ACCESSIBILITY</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Access condition</b>
+</h4>
 ^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">License selection</b>
+</h4>
 ^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Standards</b>
+</h4>
 ^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
-````
-
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
----
-
-<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
-^^^
-<h4><b>INTEROPERABILITY</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
-^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
-^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa ffa-cog fa-lg" style="color:#300861;"></i>
-^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ````
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
 ---
 
-<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-puzzle-piece fa-2x mr-3"></i>
+    <b class="cardLabel">INTEROPERABILITY</b>
+</h4>
 ^^^
-<h4><b>REUSABILITY</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3 "></i>
+    <b class="cardLabel">Access condition</b>
+</h4>
 ^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3 "></i>
+    <b class="cardLabel">License selection</b>
+</h4>
 ^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Standards</b>
+</h4>
 ^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
+````
+
+````{panels}
+:container: container-lg pb-3
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-recycle fa-2x mr-3"></i>
+    <b class="cardLabel">REUSABILITY</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Access condition</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">License selection</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Standards</b>
+</h4>
+^^^
+TODO: add text here
 ````
 
 ___
