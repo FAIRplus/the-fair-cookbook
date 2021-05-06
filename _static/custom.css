@@ -245,6 +245,11 @@ main.overflow-auto {
     overflow: initial !important;
 }
 
+img.imageez {
+    display: block;
+    margin: auto;
+}
+
 
 /* ################################################## */
 /**           MEDIA QUERY WIDTH > 1405px             **/
