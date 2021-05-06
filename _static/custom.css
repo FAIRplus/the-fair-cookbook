@@ -411,17 +411,76 @@ main.overflow-auto {
 }
 
 @media (min-width: 1405px) {
-    div.container-xl {
+    div.container-xl, footer .container {
         max-width: 100% !important;
+        padding-left: 0 !important;
     }
     div#site-navigation {
         max-width: 300px;
+        padding: 40px 20px;
+    }
+    div#main-content {
+        padding-top: 25px;
+        min-height: 97vh;
     }
     button#navbar-toggler {
         margin-left: 10px !important;
     }
+    div.topbar {
+        position: fixed;
+        background: #421C6E;
+        z-index: 2001;
+    }
+    div.topbar div.tocsection {
+        color:white;
+        min-height: 50px;
+        border: 0 !important;
+    }
+    div.topbar-contents div.site-navigation {
+        display: none;
+    }
+    div.topbar .topbar-main {
+        padding-right: 10px;
+    }
+    div.topbar div.bd-toc {
+        border-left: 1px solid #fc7a4a !important;
+    }
+    nav#bd-toc-nav li.active, nav#bd-toc-nav a.active {
+        border-left: 1px solid #421C6E !important;
+    }
     footer {
+        width: 98.5vw !important;
+        position: absolute;
+        left: -295px;
+    }
+    footer *:not(img) {
         width: 100% !important;
+    }
+    footer .column {
+      float: initial !important;
+    }
+    footer, footer * {
+        background: #421C6E;
+        color: white;
+    }
+    footer .container p, footer .container div.extra_footer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .container .extra_footer * {
+        max-width: 900px;
+    }
+    footer .row_footer {
+        display: block;
+        margin: auto;
+    }
+    #site-navigation {
+        display: flex;
+        flex-direction: column;
+    }
+    #site-navigation nav#bd-docs-nav {
+        flex-grow: 1;
     }
 }
 
@@ -439,6 +498,34 @@ html, html *:not(i) {
     font-family: 'Roboto', sans-serif !important;
 }
 
-li.active {
+div#site-navigation li.active {
     border-left: 0 !important
+}
+
+#prev-link, #next-link {
+    border-radius: 20px;
+    background: #421C6E;
+    border: 0;
+    padding: 10px 20px;
+    color: white !important;
+}
+
+#prev-link:hover, #next-link:hover {
+    text-decoration: none;
+    box-shadow: 3px 3px 11px #421C6E;
+}
+
+main.bd-content #main-content h1 {
+    color: #421C6E !important;
+    font-weight: bold;
+}
+main.bd-content #main-content h2 {
+    color: #421C6E !important;
+}
+main.bd-content #main-content h3, main.bd-content #main-content h3 * {
+    color: #fc7a4a !important;
+}
+
+footer.footer p:not(:first-child) {
+    display: none;
 }
