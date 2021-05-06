@@ -529,3 +529,29 @@ main.bd-content #main-content h3, main.bd-content #main-content h3 * {
 footer.footer p:not(:first-child) {
     display: none;
 }
+
+.card .cardLabel {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.text--orange {
+    color: #fc7a4a !important;
+}
+
+.text--purple-light {
+    color: #8038d1 !important
+}
+
+.text--purple-dark {
+    color: #300861 !important
+}
+
+.text--red {
+    color: #7e0038; !important
+}
+
+.setHeight {
+    min-height: 145px;
+}

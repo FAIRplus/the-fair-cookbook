@@ -157,119 +157,150 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
 
-<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
-<h4><b>FINDABILITY</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-search fa-2x mr-3 text--orange"></i>
+    <b class="cardLabel"> FINDABILITY </b>
+</h4>
 ^^^
 {ref}`fcb-find`
-
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-<h4><b>Search Engine Optimitization</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--orange"></i>
+    <b class="cardLabel">Search Engine Optimitization</b>
+</h4>
 ^^^
 {ref}`fcb-find-seo`
----
 
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-<h4><b>Open Archive Deposition</b></h4>
+---
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--orange"></i>
+    <b class="cardLabel">Open Archive Deposition</b>
+</h4>
 ^^^
 {ref}`fcb-find-zenodo`
+
 ---
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-<h4><b>Identifiers</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--orange"></i>
+    <b class="cardLabel">Identifiers</b>
+</h4>
 ^^^
 {ref}`fcb-find-identifiers`
 ````
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
 
-<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
-<h4><b>ACCESSIBILITY</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cloud fa-2x mr-3 text--purple-light"></i>
+    <b class="cardLabel">ACCESSIBILITY</b>
+</h4>
 ^^^
 {ref}`fcb-access`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-<h4><b>Data Access Agreements</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--purple-light"></i>
+    <b class="cardLabel">Data Access Agreements</b>
+</h4>
 ^^^
 {ref}`fcb-access-data`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-<h4><b>Access Protocols: sftp</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--purple-light"></i>
+    <b class="cardLabel">Access Protocols: sftp</b>
+</h4>
 ^^^
 {ref}`fcb-access-sftp`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-<h4><b>Access Protocols: Aspera</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--purple-light"></i>
+    <b class="cardLabel">Access Protocols: Aspera</b>
+</h4>
 ^^^
 {ref}`fcb-access-aspera`
 ````
 
-
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
 ---
 
-<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
-<h4><b>INTEROPERABILITY</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-puzzle-piece fa-2x mr-3 text--purple-dark"></i>
+    <b class="cardLabel">INTEROPERABILITY</b>
+</h4>
 ^^^
 {ref}`fcb-interoperability`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
-<h4><b>Metadata profile</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--purple-dark"></i>
+    <b class="cardLabel">Metadata profile</b>
+</h4>
 ^^^
 {ref}`fcb-interop-metadataprofile`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
-<h4><b>Ontology building</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--purple-dark"></i>
+    <b class="cardLabel" >Ontology building</b>
+</h4>
 ^^^
 {ref}`fcb-interop-ontorobot`
 ---
 
-<i class="fa ffa-cog fa-lg" style="color:#300861;"></i>
-<h4><b>Vocabular selection</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--purple-dark"></i>
+    <b class="cardLabel">Vocabular selection</b>
+</h4>
 ^^^
 {ref}`fcb-interop-selectonto`
 ````
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
 ---
 
-<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
-<h4><b>REUSABILITY</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-recycle fa-2x mr-3 text--red"></i>
+    <b class="cardLabel">REUSABILITY</b>
+</h4>
 ^^^
 {ref}`fcb-reusability`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-<h4><b>Data use conditions</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--red"></i>
+    <b class="cardLabel">Data use conditions</b>
+</h4>
 ^^^
 {ref}`fcb-reusability-data_use`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-<h4><b>License selection</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--red"></i>
+    <b class="cardLabel">License selection</b>
+</h4>
 ^^^
 {ref}`rr-licensing-data`
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-<h4><b>Community Standards</b></h4>
+<h4 class="my-0 d-table">
+    <i class="fa fa-cog fa-2x mr-3 text--red"></i>
+    <b class="cardLabel">Community Standards</b>
+</h4>
 ^^^
 {ref}`fcb-reusability-community-std`
 ````
