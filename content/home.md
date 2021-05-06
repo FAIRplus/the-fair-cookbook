@@ -160,32 +160,32 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 :column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
 :card: rounded d-flex setHeight
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-search fa-2x mr-3 text--orange"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-search fa-2x mr-3"></i>
     <b class="cardLabel"> FINDABILITY </b>
 </h4>
 ^^^
 {ref}`fcb-find`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--orange"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Search Engine Optimitization</b>
 </h4>
 ^^^
 {ref}`fcb-find-seo`
 
 ---
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--orange"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Open Archive Deposition</b>
 </h4>
 ^^^
 {ref}`fcb-find-zenodo`
 
 ---
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--orange"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Identifiers</b>
 </h4>
 ^^^
@@ -197,32 +197,32 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 :column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
 :card: rounded d-flex setHeight
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cloud fa-2x mr-3 text--purple-light"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cloud fa-2x mr-3"></i>
     <b class="cardLabel">ACCESSIBILITY</b>
 </h4>
 ^^^
 {ref}`fcb-access`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--purple-light"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Data Access Agreements</b>
 </h4>
 ^^^
 {ref}`fcb-access-data`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--purple-light"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Access Protocols: sftp</b>
 </h4>
 ^^^
 {ref}`fcb-access-sftp`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--purple-light"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Access Protocols: Aspera</b>
 </h4>
 ^^^
@@ -235,32 +235,32 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 :card: rounded d-flex setHeight
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-puzzle-piece fa-2x mr-3 text--purple-dark"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-puzzle-piece fa-2x mr-3"></i>
     <b class="cardLabel">INTEROPERABILITY</b>
 </h4>
 ^^^
 {ref}`fcb-interoperability`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--purple-dark"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3 "></i>
     <b class="cardLabel">Metadata profile</b>
 </h4>
 ^^^
 {ref}`fcb-interop-metadataprofile`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--purple-dark"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3 "></i>
     <b class="cardLabel">Ontology building</b>
 </h4>
 ^^^
 {ref}`fcb-interop-ontorobot`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--purple-dark"></i>
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Vocabular selection</b>
 </h4>
 ^^^
@@ -273,32 +273,32 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 :card: rounded d-flex setHeight
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-recycle fa-2x mr-3 text--red"></i>
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-recycle fa-2x mr-3"></i>
     <b class="cardLabel">REUSABILITY</b>
 </h4>
 ^^^
 {ref}`fcb-reusability`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--red"></i>
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Data use conditions</b>
 </h4>
 ^^^
 {ref}`fcb-reusability-data_use`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--red"></i>
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">License selection</b>
 </h4>
 ^^^
 {ref}`rr-licensing-data`
 ---
 
-<h4 class="my-0 d-table">
-    <i class="fa fa-cog fa-2x mr-3 text--red"></i>
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
     <b class="cardLabel">Community Standards</b>
 </h4>
 ^^^
