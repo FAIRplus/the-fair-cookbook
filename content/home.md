@@ -253,7 +253,7 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 
 <h4 class="my-0 d-table">
     <i class="fa fa-cog fa-2x mr-3 text--purple-dark"></i>
-    <b class="cardLabel" >Ontology building</b>
+    <b class="cardLabel">Ontology building</b>
 </h4>
 ^^^
 {ref}`fcb-interop-ontorobot`

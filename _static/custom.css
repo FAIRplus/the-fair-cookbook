@@ -1,27 +1,7 @@
-/* Put your custom CSS here */
-
-
-
-.mermaidClass > rect{
-        fill:#FF0000;
-        stroke:#FFFF00;
-        stroke-width:4px;
-   }
-
-
-i.fab.fa-github,.fas.fa-download,.fas.fa-expand,.fas.fa-arrow-left,.fas.far-arrow-up,.fas.fa-bars,.fas.fa-lightbulb,.fas.fa-pencil-alt,.fas.fa-list{
-  color: #fc7a4a;
-}
-i.fas.fa-download{
-  color: #fc7a4a;
-}
-
-button.btn.btn-secondary.topbarbtn{
-  color: #fc7a4a;
-}
-
-button.btn.btn-secondary{
-  color: #fc7a4a;
+.mermaidClass > rect {
+    fill:#FF0000;
+    stroke:#FFFF00;
+    stroke-width:4px;
 }
 
 img.emoji {
@@ -31,79 +11,52 @@ img.emoji {
     margin-bottom: 0.25em;
 }
 
-img.imageez {
-	border: 1px;
-	border-color: black!important;
+/** FONT FAMILIES **/
+nav.c-textbook__sidebar,
+a,
+a.reference.external,
+a:visited,
+a.anchorjs-link,
+a.anchor-link,
+a.nav-link,
+.c-sidebar__title,
+h1,
+h2,
+h3,
+h4,
+h2.c-sidebar__title,
+ul.c-sidebar__chapters,
+div.navbar-brand-box,
+div,
+div.cell,
+div.c-textbook__content,
+div.c-topbar,
+aside.sidebar__right,
+main.jupyter-page,
+main.c-textbook__page,
+div.col-12.col-md-3.bd-sidebar.site-navigation.show
+{
+    font-family: "Avenir", Avenir, serif;
+}
+
+body {
+    font-family: Courier, Helvetica, sans-serif;
+}
+
+html, html *:not(i) {
+    font-family: 'Roboto', sans-serif !important;
 }
 
 nav.c-textbook__sidebar {
-	font-family: "Avenir", Avenir, serif;
-	color:lightgray;
 	font-weight: bold;
     opacity: 0.95;
-    /*background-color: */
-    /*background-image: linear-gradient(#a4682140, lightgray);*/
-    background-image: linear-gradient(#f1f1f1, #f1f1f1);
-
-    /*background-image: linear-gradient(#3f51b5,#3f51b5);*/
 }
 
-li.toc-list-item__active {
-	color: #8038d1;
-}
-
-a.toc-linknode-name--H2 {
-	color: #8038d1;
-}
-
-main.bd-content #main-content a, main.bd-content #main-content a:visited {
-    color: #fc7a4a;
-}
-
-bd-toc nav a:hover, .bd-toc nav li.active > a.active {
-    color: #fc7a4a;
-}
-
-a, a.reference.external,a:visited{
-	color: #fc7a4a;
-	font-family: "Avenir", Avenir, serif;
-}
-a.anchorjs-link {
-		color: #fc7a4a;
-	font-family: "Avenir", Avenir, serif;
-}
-a.anchor-link {
-		color: #fc7a4a;
-	font-family: "Avenir", Avenir, serif;
-}
-
-a.nav-link {
-    color: #fc7a4a;
-  font-family: "Avenir", Avenir, serif;
-}
-
-.prev-next-bottom a.right-next{
-   color: #fc7a4a;
-}
-
-.prev-next-bottom a.left-prev{
-  color: #fc7a4a;
-}
-
-.bd-sidebar nav ul.nav a:hover, .bd-sidebar nav ul.nav li.active > a, .bd-sidebar nav ul.nav li.active > a:hover {
-    color: #fc7a4a;
+.bd-sidebar nav ul.nav a:hover,
+.bd-sidebar nav ul.nav li.active > a,
+.bd-sidebar nav ul.nav li.active > a:hover {
     max-width: 350px;
 }
-
-hr {
-  border-top: 1px solid #fc7a4a;
-}
-
-
-code {
-  color: #8038d1;
-}
-
 
 section > p,
 section > footer,
@@ -115,51 +68,45 @@ section > table {
 /*-------DEFINING CSS CARD AND TABLE LAYOUT---------*/
 /*--------------------------------------------------*/
 .card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 /* Add some padding inside the card container */
 .container {
-  padding: 2px 16px;
+    padding: 2px 16px;
 }
 
 .card-container:hover .card{
     -webkit-transform: rotateY( 180deg );
-            transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
 }
 .card {
     -webkit-transition: -webkit-transform 2.7s;
-            transition: transform 2.7s;
+    transition: transform 2.7s;
     -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .front, .back {
     -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .back {
     -webkit-transform: rotateY( 180deg );
-            transform: rotateY( 180deg );
-
+    transform: rotateY( 180deg );
 }
-
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: Courier, Helvetica, sans-serif;
-}
 
 /* Float four columns side by side */
 .column {
@@ -169,26 +116,27 @@ body {
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row {
+    margin: 0 -5px;
+}
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
 }
 /*---------------------------------------------------------*/
 /*-------END OF DEFINING CSS CARD AND TABLE LAAOUT---------*/
-
 
 
 .footer {
@@ -197,169 +145,73 @@ body {
 	text-align: center;
 }
 
-
-::-webkit-scrollbar{
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
 	width:0;
-	background: #fc7a4a;
 }
-
-::-webkit-scrollbar-thumb{
-	width:0;
-	background: #300861;
-}
-
-
-
-.c-sidebar__entry--active.c-sidebar__entry--active {
-    color: #8038d1;
-}
-
-/*h1,h2,h3 {
-	    font-family: "Avenir", Avenir, serif;
-    font-size: 2.0em;
-
-}*/
 
 h1  {
-	/*background-color:#f1f1f1;*/
  	display: inline;
     font-weight: 400;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-size: 3.2rem;
     line-height: 1;
-    font-family: "Avenir", Avenir, serif!important;
-
 }
 
-/**/
-
 h2 {
-	/*background-color:#f1f1f1;*/
-    /*f#ont-style: italic;*/
     font-weight: 100;
     margin-top: 2.1rem;
     margin-bottom: 1.4rem;
     font-size: 2.2rem;
     line-height: 1;
-    font-family: "Avenir", Avenir, serif!important;;
 }
 
 h3 {
-    /*font-style: italic;*/
-    /*background-color:#f1f1f1;*/
     font-weight: 400;
     font-size: 1.7rem;
     margin-top: 2rem;
     margin-bottom: 1.4rem;
     line-height: 1;
-    font-family: "Avenir", Avenir, serif!important;;
 }
 
 h4 {
-    /*font-style: italic;*/
-    /*background-color:#f1f1f1;*/
     font-weight: 400;
     font-size: 1.0rem;
     margin-top: 2rem;
     margin-bottom: 1.4rem;
     line-height: 1;
-    font-family: "Avenir", Avenir, serif!important;;
 }
-
-.c-sidebar__title{
-    font-family: "Avenir", Avenir, serif;
-    color: #fc7a4a;
-}
-
 
 h2.c-sidebar__title{
-	font-family: "Avenir", Avenir, serif;
     font-size: 2.0em;
-}
-
-li.c-sidebar__divider{
-	border-top: 1px solid #fc7a4a;
-
 }
 
 ul.toc__menu a {
     display: block;
     padding: 0.25rem .75rem;
-    color:  #8038d1;
     font-size: 0.8em;
     font-weight: bold;
     line-height: 1.5;
 }
 
-nav.onthispage li.active a {
-    color: #fc7a4a;
-}
-li.toc-list-item {
-	color: #fc7a4a;
-}
-li.toc-list-item-active {
-	color: #300861;
-}
-
 li.active {
-    border-left: 1px solid #fc7a4a;
     margin-left: -1px;
 }
-/*li.active {
-	color: #fc7a4a;
- } */
-li.toc-list-itme-active {
-	color: #300861;
-}
-
 
 ul.c-sidebar__chapters {
 	font-size: 13px;
-	font-family: "Avenir", Avenir, serif;
-	color: #fc7a4a;
 	font-weight: bold;
 }
 
-.c-page__nav{
-	width:  120%;
-	border-color: darkgrey;
-}
-
+.c-page__nav,
+.c-page__nav__next,
 .c-page__nav__prev{
 	width:  120%;
-	border-color: darkgrey;
 }
-
-.c-page__nav__next{
-	width:  120%;
-	border-color: darkgrey;
-}
-
 
 div.navbar-brand-box {
-  font-family: "Avenir", Avenir, serif;
   width: 120%;
-}
-
-div {
-/*	background-color: orange;*/
-		font-family: "Avenir", Avenir, serif;
-}
-
-div.cell {
-/*	background-color: orange;*/
-		font-family: "Avenir", Avenir, serif;
-}
-
-div.c-textbook__content{
-	/*background-color: orange;*/
-		font-family: "Avenir", Avenir, serif;
-}
-
-div.c-topbar{
-	/*background-color: orange;*/
-		font-family: "Avenir", Avenir, serif;
 }
 
 div.text_cell_render{
@@ -371,44 +223,32 @@ div.jb_cell{
 	width: 130%;
 }
 
-aside.sidebar__right{
-	background-color: white;
-		font-family: "Avenir", Avenir, serif;
-}
-
 main.jupyter-page{
-	/*background-color: orange;*/
-	font-family: "Avenir", Avenir, serif;
 	text-align: justify;
-
 	width: 100%;
 }
 
 main.c-textbook__page{
-/*	background-color: orange;*/
-	font-family: "Avenir", Avenir, serif;
-	color:black;
 	font-size: 16px;
 }
 
 div.col-12.col-md-3.bd-sidebar.site-navigation.show {
-  font-family: "Avenir", Avenir, serif;
-  color:lightgray;
-  font-weight: bold;
+    font-weight: bold;
     opacity: 0.95;
-    /*background-color: */
-    /*background-image: linear-gradient(#a4682140, lightgray);*/
-    background-image: linear-gradient(#f1f1f1, #f1f1f1);
 }
 
 div.col-12.col-md-9.pl-md-3.pr-md-0 {
   width: 130%;
 }
 
-
 main.overflow-auto {
     overflow: initial !important;
 }
+
+
+/* ################################################## */
+/**           MEDIA QUERY WIDTH > 1405px             **/
+/* ################################################## */
 
 @media (min-width: 1405px) {
     div.container-xl, footer .container {
@@ -426,27 +266,11 @@ main.overflow-auto {
     button#navbar-toggler {
         margin-left: 10px !important;
     }
-    div.topbar {
-        position: fixed;
-        background: #421C6E;
-        z-index: 2001;
-    }
-    div.topbar div.tocsection {
-        color:white;
-        min-height: 50px;
-        border: 0 !important;
-    }
     div.topbar-contents div.site-navigation {
         display: none;
     }
     div.topbar .topbar-main {
         padding-right: 10px;
-    }
-    div.topbar div.bd-toc {
-        border-left: 1px solid #fc7a4a !important;
-    }
-    nav#bd-toc-nav li.active, nav#bd-toc-nav a.active {
-        border-left: 1px solid #421C6E !important;
     }
     footer {
         width: 98.5vw !important;
@@ -458,10 +282,6 @@ main.overflow-auto {
     }
     footer .column {
       float: initial !important;
-    }
-    footer, footer * {
-        background: #421C6E;
-        color: white;
     }
     footer .container p, footer .container div.extra_footer {
         display: block;
@@ -482,6 +302,30 @@ main.overflow-auto {
     #site-navigation nav#bd-docs-nav {
         flex-grow: 1;
     }
+
+    /*COLORS */
+    div.topbar div.bd-toc {
+        border-left: 1px solid #fc7a4a !important;
+    }
+    nav#bd-toc-nav li.active,
+    nav#bd-toc-nav a.active {
+        border-left: 1px solid #421C6E !important;
+    }
+    div.topbar {
+        position: fixed;
+        background: #421C6E;
+        z-index: 2001;
+    }
+    div.topbar div.tocsection {
+        color:white;
+        min-height: 50px;
+        border: 0 !important;
+    }
+    footer,
+    footer * {
+        background: #421C6E;
+        color: white;
+    }
 }
 
 div#site-navigation img.logo{
@@ -494,20 +338,14 @@ div#site-navigation .navbar-brand-box {
     width: auto;
 }
 
-html, html *:not(i) {
-    font-family: 'Roboto', sans-serif !important;
-}
-
 div#site-navigation li.active {
     border-left: 0 !important
 }
 
 #prev-link, #next-link {
     border-radius: 20px;
-    background: #421C6E;
     border: 0;
     padding: 10px 20px;
-    color: white !important;
 }
 
 #prev-link:hover, #next-link:hover {
@@ -516,14 +354,7 @@ div#site-navigation li.active {
 }
 
 main.bd-content #main-content h1 {
-    color: #421C6E !important;
     font-weight: bold;
-}
-main.bd-content #main-content h2 {
-    color: #421C6E !important;
-}
-main.bd-content #main-content h3, main.bd-content #main-content h3 * {
-    color: #fc7a4a !important;
 }
 
 footer.footer p:not(:first-child) {
@@ -534,6 +365,110 @@ footer.footer p:not(:first-child) {
     display: table-cell;
     vertical-align: middle;
     line-height: 1;
+}
+
+.setHeight {
+    min-height: 145px;
+}
+
+
+/* ################################################## */
+/**                   EASY COLORS                    **/
+/* ################################################## */
+
+/** BORDERS **/
+hr,
+li.c-sidebar__divider {
+  border-top: 1px solid #fc7a4a;
+}
+
+li.active {
+    border-left: 1px solid #fc7a4a;
+}
+
+img.imageez {
+	border: 1px solid black !important;
+}
+
+.c-page__nav,
+.c-page__nav__next,
+.c-page__nav__prev{
+	border-color: darkgrey;
+}
+
+/** TEXT COLORS **/
+li.toc-list-item__active,
+a.toc-linknode-name--H2,
+code,
+.c-sidebar__entry--active.c-sidebar__entry--active,
+ul.toc__menu a {
+	color: #8038d1;
+}
+
+main.bd-content #main-content h2,
+main.bd-content #main-content h1{
+    color: #421C6E !important;
+}
+
+li.toc-list-item-active, li.toc-list-itme-active {
+	color: #300861;
+}
+
+.fab.fa-github,
+.fas.fa-download,
+.fas.fa-expand,
+.fas.fa-arrow-left,
+.fas.far-arrow-up,
+.fas.fa-bars,
+.fas.fa-lightbulb,
+.fas.fa-pencil-alt,
+.fas.fa-list,
+.fas.fa-download,
+main.bd-content #main-content a,
+main.bd-content #main-content a:visited,
+main.bd-content #main-content h3,
+main.bd-content #main-content h3 *,
+.bd-toc nav a:hover,
+.bd-toc nav li.active > a.active,
+nav.onthispage li.active a,
+a,
+a.reference.external,
+a:visited,
+a.anchorjs-link,
+a.anchor-link,
+a.nav-link,
+li.toc-list-item,
+button.btn.btn-secondary.topbarbtn,
+button.btn.btn-secondary,
+.prev-next-bottom a.right-next,
+.prev-next-bottom a.left-prev,
+.bd-sidebar nav ul.nav a:hover,
+.bd-sidebar nav ul.nav li.active > a,
+.bd-sidebar nav ul.nav li.active > a:hover,
+.c-sidebar__title,
+ul.c-sidebar__chapters{
+  color: #fc7a4a;
+}
+
+main.c-textbook__page {
+   color:black;
+}
+
+div.col-12.col-md-3.bd-sidebar.site-navigation.show,
+nav.c-textbook__sidebar {
+    color:lightgray;
+}
+
+#prev-link, #next-link {
+    color: white !important;
+}
+
+.text--primary {
+    color: #421C6E !important
+}
+
+.text--secondary {
+    color: #fc7a4a !important;
 }
 
 .text--orange {
@@ -552,6 +487,25 @@ footer.footer p:not(:first-child) {
     color: #7e0038; !important
 }
 
-.setHeight {
-    min-height: 145px;
+
+/** BACKGROUND COLORS **/
+nav.c-textbook__sidebar,
+div.col-12.col-md-3.bd-sidebar.site-navigation.show {
+  background-image: linear-gradient(#f1f1f1, #f1f1f1);
+}
+
+#prev-link, #next-link {
+    background: #421C6E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #300861;
+}
+
+::-webkit-scrollbar{
+	background: #fc7a4a;
+}
+
+aside.sidebar__right{
+	background-color: white;
 }
