@@ -152,9 +152,9 @@ class PanelFairplus(Directive):
                 ))
             ## no joke, because "True" and "yes" are evaluated by YAML to be "", we need "yeah" and "nope"...
 
-        assert isinstance(self.options["recipe_name"], str), \
+        assert ',' not in self.options["recipe_name"], \
             sphinx.errors.ExtensionError(
-                _make_string_red("The value of recipe_name %s should be a string" % (self.options["recipe_name"])))
+                _make_string_red("Do not use semicolon in recipe names %s" % (self.options["recipe_name"])))
 
     def _create_content(self):
         content = []
