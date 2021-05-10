@@ -12,6 +12,7 @@ CONTROLLED_VOCABULARY_RECIPE_TYPE = {
     "technical_guidance"        : "Technical Guidance",
     "hands_on"                  : "Hands-on",
     "applied_example"           : "Experience Report / Applied Example",
+    "perspective"               : "Perspective"
 
 }
 
@@ -28,6 +29,7 @@ CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
     "system_administrator"      : "System Administrator",
     "terminology_manager"       : "Terminology Manager",
     "ontologist"                : "Ontologist",
+    "everyone"                  : "Everyone",
 }
 
 CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL = {
