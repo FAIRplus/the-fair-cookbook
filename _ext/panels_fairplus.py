@@ -26,8 +26,9 @@ CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
     "chemoinformatician"        : "Chemoinformatician",
     "bioinformatician"          : "Bioinformatician",
     "software_engineer"         : "Software Engineer",
+    "software_developer"        : "Software Developer",
     "system_administrator"      : "System Administrator",
-    "terminology_manager"       : "Terminology Manager",
+    "technical_guidance"        : "Terminology Manager",
     "ontologist"                : "Ontologist",
     "everyone"                  : "Everyone",
 }
@@ -193,8 +194,8 @@ class PanelFairplus(Directive):
                 '</div>',
                 '<div class="card-body text--purple-dark">',
                     '<div class="title">',
-                        f'<div style="flex-grow:1">{self.options["recipe_name"]}</div>',
-                        '<img src="../../../_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>',
+                        f'<div style="flex-grow:1; margin-right:5px">{self.options["recipe_name"]}</div>',
+                        '<img src="/the-fair-cookbook/_build/html/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>',
                     '</div>',
                     '<div class="section">',
                         '<i class="sectionIcon fa fa-laptop fa-2x"></i>'
@@ -226,10 +227,8 @@ class PanelFairplus(Directive):
         Gets the list of audience targets properly formatted as a string
         :return str: a string properly formatted containing the list of audience targets
         """
-        audience = []
-        for target in self.options["intended_audience"]:
-            audience.append(" ".join([x.capitalize() for x in target.split("_")]))
-        return ", ".join(audience)
+        return ", ".join([CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
+                          for target in self.options["intended_audience"]])
 
     def run(self):
 
