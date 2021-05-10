@@ -9,7 +9,7 @@
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator  
 :has_executable_code: nope
-:recipe_name: eTox: Data normalization and integration through entity linking
+:recipe_name: eTox, Data normalization and integration through entity linking
 ```` 
 
 ## _The eTox Sampler Dataset applied scenario_

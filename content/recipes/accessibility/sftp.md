@@ -9,7 +9,7 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Using SFTP to transfer data files between institutions
+:recipe_name: Using SFTP to transfer data files between institutions 
 ```` 
 
 ## Abstract

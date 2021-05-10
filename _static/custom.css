@@ -684,13 +684,24 @@ aside.sidebar__right {
         width: 100%;
     }
     .recipe .overview .item {
-        margin: 5px 0;
+        margin: 5px 10px;
+        display: inline-block
     }
     .recipe .itemContainer {
-        width: 163px;
+        width: auto;
         padding-left: 0;
+        min-width: 165px;
+    }
+    .recipe .title img {
+        margin: 0;
     }
     .recipe .overviewLabel {
         margin-bottom: 15px;
+    }
+    .recipe .title {
+        padding: 10px 10px 0 20px;
+    }
+    .recipe .card-footer {
+        margin-top: 20px;
     }
 }

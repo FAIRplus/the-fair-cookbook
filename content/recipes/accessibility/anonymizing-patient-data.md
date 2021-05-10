@@ -9,7 +9,7 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: Anonymizing Patient Data
+:recipe_name: Anonymizing Patient Data 
 ```` 
 
 ## Objectives
