@@ -2,13 +2,14 @@
 # How to download files with Aspera
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB003
+:identifier_text: FCB003
 :identifier_link: http://w3id.org/faircookbook/FCB003
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
+:recipe_name: Downloading Files with Aspera
 ```` 
 
 ## Main Objectives

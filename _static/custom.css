@@ -557,3 +557,140 @@ aside.sidebar__right {
 .red {
     background: #7e0038 !important;
 }
+
+
+/* ################################################## */
+/**                  RECIPE CARDS                    **/
+/* ################################################## */
+
+.recipe {
+    flex-direction:row;
+    width: 700px;
+    border-radius: 0 !important;
+    border: 1px solid #300861 !important;
+}
+
+.recipe .card-header {
+    flex-grow: 1;
+    padding: 0;
+    border-radius: 0 !important;
+}
+
+.recipe .card-body {
+    flex-grow: 6;
+    padding: 0;
+}
+
+.recipe .overview,
+.recipe .label {
+    width: 100%;
+    text-align: center;
+}
+
+.recipe .label,
+.recipe .overviewLabel {
+    color: grey;
+}
+
+.recipe .overview{
+    padding: 10px 0;
+}
+
+.recipe .title {
+    font-size: 25px;
+    padding-left: 15px;
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recipe .title img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.recipe .overview .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.recipe .overview .itemIcon {
+    font-size: 40px;
+}
+
+.recipe .overview .itemContent {
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+    line-height: 1.3;
+}
+
+.recipe .itemContainer {
+    width: 205px;
+    text-align: left;
+    padding-left: 22px;
+}
+
+.recipe .itemContent .fa-fire {
+    font-size: 15px;
+}
+
+.recipe .section {
+    padding: 10px 40px;
+    display: flex;
+}
+
+.recipe .card-body {
+    background: rgba(0,0,0,.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe .section .sectionContent {
+    display: inline-block;
+    line-height: 1.2;
+    margin-left: 10px;
+}
+
+.recipe .section .label {
+    text-align: left;
+}
+
+.recipe .section .sectionValue {
+    font-size: 20px;
+}
+
+.recipe .section .sectionIcon {
+    font-size: 42px;
+}
+
+.recipe .card-footer {
+    padding: 0 10px;
+    text-align: right;
+    border: 0 !important;
+    color: grey;
+    background: transparent !important;
+}
+
+
+
+@media (max-width: 1220px) {
+    .recipe {
+        flex-direction: column;
+        width: 100%;
+    }
+    .recipe .overview .item {
+        margin: 5px 0;
+    }
+    .recipe .itemContainer {
+        width: 163px;
+        padding-left: 0;
+    }
+    .recipe .overviewLabel {
+        margin-bottom: 15px;
+    }
+}

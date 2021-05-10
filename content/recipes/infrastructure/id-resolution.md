@@ -1,12 +1,11 @@
 (fcb-infra-idres)=
 # Identifier resolution services
 
-+++
-<br/>
+<div>
+ <img class="mt-3" src="../../../_static/images/IRS_test.png" alt="drawing" style="display:block; margin:auto"/>
+</div>
 
-----
-
-
+<!--
 ````{panels}
 :container: container-lg pb-3
 :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
@@ -47,7 +46,7 @@
 <p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
 <p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p>
 ````
-
+-->
 ----
 
 ## Main Objective
