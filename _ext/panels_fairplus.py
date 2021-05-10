@@ -152,7 +152,7 @@ class PanelFairplus(Directive):
                 ))
             ## no joke, because "True" and "yes" are evaluated by YAML to be "", we need "yeah" and "nope"...
 
-        assert ',' not in self.options["recipe_name"], \
+        assert ':' not in self.options["recipe_name"], \
             sphinx.errors.ExtensionError(
                 _make_string_red("Do not use semicolon in recipe names %s" % (self.options["recipe_name"])))
 
