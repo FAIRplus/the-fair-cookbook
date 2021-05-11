@@ -154,7 +154,7 @@ class PanelFairplus(Directive):
 
         assert ':' not in self.options["recipe_name"], \
             sphinx.errors.ExtensionError(
-                _make_string_red("The colon (i.e. the character ":") is not allowed in recipe_name: %s" % (self.options["recipe_name"])))
+                _make_string_red("The colon (i.e. the character ':') is not allowed in recipe_name: %s" % (self.options["recipe_name"])))
 
     def _create_content(self):
         content = []
