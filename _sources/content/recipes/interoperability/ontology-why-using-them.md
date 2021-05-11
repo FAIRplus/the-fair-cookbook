@@ -11,6 +11,7 @@
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist  
 :has_executable_code: nope
+:recipe_name: Why use Terminologies & Ontologies?
 ```` 
 
 ## Main Objectives

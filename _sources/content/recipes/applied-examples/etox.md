@@ -2,13 +2,14 @@
 # eTox: Data normalization and integration through entity linking
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB005
+:identifier_text: FCB005
 :identifier_link: http://w3id.org/faircookbook/FCB005
 :difficulty_level: 4
 :recipe_type: applied_example
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator  
 :has_executable_code: nope
+:recipe_name: eTox, Data normalization and integration through entity linking
 ```` 
 
 ## _The eTox Sampler Dataset applied scenario_

@@ -5,51 +5,16 @@
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Perspective
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-group fa-lg" style="color:#7e0038;"></i> Everyone </p>
-<!-- <p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
-<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
-<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
-<p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p> -->
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 1
+:recipe_type: perspective
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:has_executable_code: nope
+:recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
 ````
-
-___
 
 ## Table of Contents
 <!-- 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
