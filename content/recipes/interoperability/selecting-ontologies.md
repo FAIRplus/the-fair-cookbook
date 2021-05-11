@@ -10,7 +10,7 @@
 :difficulty_level: 1
 :recipe_type: guidance
 :reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, technical_guidance, data_scientist, ontologist  
+:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist  
 :has_executable_code: nope
 :recipe_name: Which vocabulary to use?
 ```` 

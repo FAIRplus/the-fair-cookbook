@@ -28,7 +28,7 @@ CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
     "software_engineer"         : "Software Engineer",
     "software_developer"        : "Software Developer",
     "system_administrator"      : "System Administrator",
-    "technical_guidance"        : "Terminology Manager",
+    "terminology_manager"       : "Terminology Manager",
     "ontologist"                : "Ontologist",
     "everyone"                  : "Everyone",
 }
@@ -154,7 +154,7 @@ class PanelFairplus(Directive):
 
         assert ':' not in self.options["recipe_name"], \
             sphinx.errors.ExtensionError(
-                _make_string_red("Do not use semicolon in recipe names %s" % (self.options["recipe_name"])))
+                _make_string_red("The colon (i.e. the character ":") is not allowed in recipe_name: %s" % (self.options["recipe_name"])))
 
     def _create_content(self):
         content = []

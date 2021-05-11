@@ -9,7 +9,7 @@
 :difficulty_level: 1
 :recipe_type: survey_review
 :reading_time_minutes: 20
-:intended_audience: data_manager, data_scientist, technical_guidance, system_administrator, procurement_officer
+:intended_audience: data_manager, data_scientist, terminology_manager, system_administrator, procurement_officer
 :has_executable_code: nope
 :recipe_name: Selection and exploitation of Ontology Lookup Services
 ````

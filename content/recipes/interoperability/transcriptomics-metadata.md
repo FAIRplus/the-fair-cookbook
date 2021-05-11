@@ -10,7 +10,7 @@
 :difficulty_level: 3
 :recipe_type: guidance
 :reading_time_minutes: 30
-:intended_audience: principal_investigator, data_manager, technical_guidance, data_scientist, ontologist  
+:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist  
 :has_executable_code: nope
 :recipe_name: Establishing a Metadata Profile for Transcriptomics
 ```` 

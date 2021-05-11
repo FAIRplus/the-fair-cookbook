@@ -9,7 +9,7 @@
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 20
-:intended_audience: data_manager, data_scientist, technical_guidance, system_administrator
+:intended_audience: data_manager, data_scientist, terminology_manager, system_administrator
 :has_executable_code: yeah
 :recipe_name: How to deploy a terminology service - EBI Ontology Lookup Service 
 ````

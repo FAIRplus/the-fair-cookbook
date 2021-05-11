@@ -10,7 +10,7 @@
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 60
-:intended_audience: technical_guidance, data_manager, data_scientist, ontologist
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist
 :has_executable_code: yeah
 :recipe_name: Identifier resolution services
 ```` 
