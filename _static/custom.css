@@ -1,8 +1,56 @@
+/** FRONT PAGE TABLE **/
+
 img.avatar-style {
-  object-fit: cover;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 4px solid #421C6E;
+    box-shadow: 3px 3px 11px rgba(66, 28, 100, 0.36);
+    margin-right: 20px;
+}
+
+#meet-the-developers table tr p:not(:first-child) {
+    text-align: center;
+}
+
+#meet-the-developers table tr td:not(:first-child) p {
+    display: flex;
+    flex-direction: column;
+    min-height: 51px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#meet-the-developers table tr td:first-child p {
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+#meet-the-developers table tr th {
+    color: #421C6E;
+}
+
+#meet-the-developers table tr td,
+#meet-the-developers table tr th {
+    border-top: 1px solid #421C6E;
+    font-size: 1.2rem;
+}
+#meet-the-developers table tr th {
+    border-bottom: 1px solid #421C6E;
+}
+
+#meet-the-developers table tr th p {
+    text-align: center;
+}
+
+@media (min-width: 1220px) {
+    #meet-the-developers table tr th:nth-child(2) {
+        min-width: 275px;
+    }
 }
 
 .mermaidClass > rect{
