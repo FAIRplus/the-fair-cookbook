@@ -64,12 +64,19 @@ repository:
   branch                    : migrating  # Which branch of the repository should be used when creating links
 
 #######################################################################################
-# Advanced and power-user settings  
+# Advanced and power-user settings 
+# sphinx:
+#   config:
+#     html_baseurl: 'https://path_to_book/'
+#   extra_extensions:
+#     - sphinx_sitemap 
 sphinx:
-  extra_extensions          :   # A list of extra extensions to load by Sphinx.
    # - sphinx_tabs.tabs
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
     html_extra_path         : ["_inject_after_build"]
+    html_baseurl            : 'https://fairplus.github.io/the-fair-cookbook'
+  extra_extensions:   # A list of extra extensions to load by Sphinx.
+    - sphinx_sitemap
   local_extensions:
     panels_fairplus: _ext/
 

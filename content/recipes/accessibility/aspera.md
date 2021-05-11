@@ -1,4 +1,4 @@
-(fcb-aspera)=
+(fcb-access-aspera)=
 # How to download files with Aspera
 
 ````{panels_fairplus}

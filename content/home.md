@@ -210,7 +210,7 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
     <b class="cardLabel">Data Access Agreements</b>
 </h4>
 ^^^
-{ref}`fcb-access-data`
+{ref}`fcb-access-anonymizing`
 ---
 
 <h4 class="my-0 d-table text--white purple-light">
@@ -500,54 +500,89 @@ ___
 
 ## Meet the developers:
 
-* The FAIR Cookbook development currently coordinated by: 
- 
-   - [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668) (University of Oxford)
-   - [Susanna-Assunta Sansone](https://orcid.org/0000-0001-5306-5690) (University of Oxford)
-   - [Andrea Splendiani](https://orcid.org/0000-0002-3201-9617) (Novartis)
-   - [Robert Giessman](https://orcid.org/0000-0002-0254-1500) (Bayer AG)
+
+### Editorial Board:
+
+| Name                                                                                                                       | Affiliation      | Type     | github handle                                                            | orcid                                                        | Name                    |   |   |   |   |
+|----------------------------------------------------------------------------------------------------------------------------|------------------|----------|--------------------------------------------------------------------------|--------------------------------------------------------------|-------------------------|---|---|---|---|
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'><div>Philippe Rocca-Serra</div></img>       | UOXF, UK         | Academic | [https://github.com/proccaserra](https://github.com/proccaserra)         | [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) | Philippe Rocca-Serra    |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><div>Susanna-Assunta Sansone</div></img> | UOXF, UK         | Academic | [https://github.com/susannasansone](https://github.com/susannasansone)   | [0000-0001-5306-5690](https://orcid.org/0000-0001-5306-5690) | Susanna-Assunta Sansone |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/tburdett'><div>Tony Burdett</div></img>                  | EMBL-EBI, UK     | Academic | [https://github.com/tburdett](https://github.com/tburdett)               | [0000-0002-2513-5396](https://orcid.org/0000-0002-2513-5396) | Tony Burdett            |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'><div>Wei Gu</div></img>                         | ULuxembourg, LUX | Academic | [https://github.com/weiguUL](https://github.com/weiguUL)                 | [0000-0002-0853-1215](https://orcid.org/0000-0002-0853-1215) | Wei Gu                  |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'><div>Andrea Splendiani</div></img>                 | Novartis AG, CH  | EFPIA    | [https://github.com/sgtp](https://github.com/sgtp)                       | [0000-0002-3201-9617](https://orcid.org/0000-0002-3201-9617) | Andrea Splendiani       |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'><div>Robert Giessmann</div></img>       | Bayer AG, GER    | EFPIA    | [https://github.com/robertgiessmann](https://github.com/robertgiessmann) | [0000-0002-0254-1500](https://orcid.org/0000-0002-0254-1500) | Robert Giessmann        |   |   |   |   |
 
 
+
+
+### Table of Contributors:
 
 * The FAIR Cookbook content was contributed by the following FAIRplus Consortium Members:
 
-| Name                       | Affiliation | Name                           | Affiliation |
-|:----------------------------|:-------------|:--------------------------------|-------------:|
-| Chuang Kee Ong             | AZ          | Ibrahim Emam                   | ICL         |
-| Colin Wood                 | AZ          | Francesco Ronzano              | IMIM        |
-| Ola Engkvist               | AZ          | Laura Furlong                  | IMIM        |
-| Ratnesh Sahay              | AZ          | Herman Van Vlijmen             | Janssen     |
-| David Henderson            | Bayer       | Jean-Marc Neefs                | Janssen     |
-| Robert Giessmann           | Bayer       | Paul Peeters                   | Janssen     |
-| Kurt Dauth                 | BI          | Rudi Verbeeck                  | Janssen     |
-| Karsten Quast              | Boehringer  | Scott Lusher                   | Janssen     |
-| Emiliano Reynares          | Boehringer  | Derek Marren                   | Lilly       |
-| Eva Navarrete              | BSC         | Andrea Splendiani              | Novartis    |
-| Salvador Capella Gutierrez | BSC	       | Dorothy Reilly                 | Novartis    |
-| Hannah Hurst               | EMBL-EBI    | Nick Lynch                     | PHACTS      |
-| Fuqi Xu                    | EMBL-EBI    | Vitaly Sedlyarov               | RESOLUTE    |
-| Melanie Courtot            | EMBL-EBI    | Ulrich Goldmann                | RESOLUTE    |
-| Tony Burdett               | EMBL-EBI    | Manuela Pruess                 | SIB         |
-| Andrea Zaliani             | Fraunhofer  | Mark Ibberson                  | SIB         |
-| Andreas Pippow             | Fraunhofer  | Vassilios Ioannidis            | SIB         |
-| Franziska Kroh             | Fraunhofer  | Danielle Welter                | UL          |
-| Gesa Witt                  | Fraunhofer  | Venkata P. Satagopam           | UL          |
-| Manfred Kohler             | Fraunhofer  | Wei Gu                         | UL          |
-| Oya Deniz Beyan            | Fraunhofer  | Chris Evelo                    | UM          |
-| Philip Gribbon             | Fraunhofer  | Egon Willighagen               | UM          |
-| Ashni Sedani               | GSK         | Nuno (Ryan) Silva Nunes        | UM          |
-| Femi Akintobi              | GSK         | Carole Goble                   | UNIMAN      |
-| George Papadotas           | GSK         | Ebtisam Alharbi                | UNIMAN      |
-| Peter Woollard             | GSK         | Nick Juty                      | UNIMAN      |
-| Alasdair J G Gray          | HWU         | Dominique Batista              | UOXF        |
-| Petros Papadopoulos        | HWU         | Philippe Rocca-Serra           | UOXF        |
-| Ilaria Maresi              | HYVE        | Susanna-Assunta Sansone        | UOXF        |
-| Jolanda Strubel            | HYVE        | Alejandra Delfin Rossaro       | UPS         |
-| Emma Vos                   | HYVE        | Anne Cambon-Thomsen            | UPS         |
-
-
-
-
+| Name                                                                                                                       | Affiliation               | Type     | github handle                                                              | orcid                                                        |   |   |   |   |   |
+|----------------------------------------------------------------------------------------------------------------------------|---------------------------|----------|----------------------------------------------------------------------------|--------------------------------------------------------------|---|---|---|---|---|
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Chuang Kee Ong</div></img>               | Astra-Zeneca, UK          | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Colin Wood</div></img>                   | Astra-Zeneca, UK          | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Ola Engkvist</div></img>                 | Astra-Zeneca, UK          | EFPIA    |                                                                            | [0000-0003-4970-6461](https://orcid.org/0000-0003-4970-6461) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Ratnesh Sahay</div></img>                | Astra-Zeneca, UK          | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Tom Plasterer</div></img>                | Astra-Zeneca, UK          | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>David Henderson</div></img>              | Bayer AG, GER             | EFPIA    |                                                                            | [0000-0002-6433-200X](https://orcid.org/0000-0002-6433-200X) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'><div>Robert Giessmann</div></img>       | Bayer AG, GER             | EFPIA    | [https://github.com/robertgiessmann](https://github.com/robertgiessmann)   | [0000-0002-0254-1500](https://orcid.org/0000-0002-0254-1500) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/kdauth'><div>Kurt Dauth</div></img>                      | Boehringer-Ingelheim, GER | EFPIA    | [https://github.com/kdauth](https://github.com/kdauth)                     |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Karsten Quast</div></img>                | Boehringer-Ingelheim, GER | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'><div>Emiliano Reynares</div></img>              | Boehringer-Ingelheim, GER | EFPIA    | [https://github.com/ereynrs](https://github.com/ereynrs)                   | [0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/sedlyarov'><div>Vitaly Sedlyarov</div></img>             | Boehringer-Ingelheim, GER | EFPIA    | [https://github.com/sedlyarov](https://github.com/sedlyarov)               | [0000-0002-9872-3535](https://orcid.org/0000-0002-9872-3535) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/EvaMart'><div>Eva Marin del Pico</div></img>             | BSC, SP                   | Academic | [https://github.com/EvaMart](https://github.com/EvaMart)                   | [0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/scapella'><div>Salvador Capella Gutierrez</div></img>    | BSC, SP                   | Academic | [https://github.com/scapella](https://github.com/scapella)                 | [0000-0002-0309-604X](https://orcid.org/0000-0002-0309-604X) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/HEHurst'><div>Hannah Hurst</div></img>                   | EMBL-EBI, UK              | Academic | [https://github.com/HEHurst](https://github.com/HEHurst)                   |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'><div>Fuqi Xu</div></img>                          | EMBL-EBI, UK              | Academic | [https://github.com/fuqix](https://github.com/fuqix)                       | [0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/mcourtot'><div>Melanie Courtot</div></img>               | EMBL-EBI, UK              | Academic | [https://github.com/mcourtot](https://github.com/mcourtot)                 | [0000-0002-9551-6370](https://orcid.org/0000-0002-9551-6370) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/tburdett'><div>Tony Burdett</div></img>                  | EMBL-EBI, UK              | Academic | [https://github.com/tburdett](https://github.com/tburdett)                 | [0000-0002-2513-5396](https://orcid.org/0000-0002-2513-5396) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/agiani99'><div>Andrea Zaliani</div></img>                | Fraunhofer Institute, GER | Academic | [https://github.com/agiani99](https://github.com/agiani99)                 | [0000-0002-1740-8390](https://orcid.org/0000-0002-1740-8390) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Andreas Pippow</div></img>               | Fraunhofer Institute, GER | Academic |                                                                            | [0000-0003-1301-2580](https://orcid.org/0000-0003-1301-2580) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Franziska Kroh</div></img>               | Fraunhofer Institute, GER | Academic |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Gesa Witt</div></img>                    | Fraunhofer Institute, GER | Academic |                                                                            | [0000-0003-2344-706X](https://orcid.org/0000-0003-2344-706X) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Manfred Kohler</div></img>               | Fraunhofer Institute, GER | Academic |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/oyadenizbeyan'><div>Oya Deniz Beyan</div></img>          | Fraunhofer Institute, GER | Academic | [https://github.com/oyadenizbeyan](https://github.com/oyadenizbeyan)       | [0000-0001-7611-3501](https://orcid.org/0000-0001-7611-3501) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Philip Gribbon</div></img>               | Fraunhofer Institute, GER | Academic |                                                                            | [0000-0001-7655-2459](https://orcid.org/0000-0001-7655-2459) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Ashni Sedani</div></img>                 | GSK, UK                   | EFPIA    |                                                                            | [0000-0002-2424-3483](https://orcid.org/0000-0002-2424-3483) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>George Papadotas</div></img>             | GSK, UK                   | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'><div>Peter Woollard</div></img>           | GSK, UK                   | EFPIA    | [https://github.com/PeterWoollard](https://github.com/PeterWoollard)       | [0000-0002-7654-6902](https://orcid.org/0000-0002-7654-6902) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'><div>Alasdair J G Gray</div></img>         | HWU, UK                   | Academic | [https://github.com/AlasdairGray](https://github.com/AlasdairGray)         | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'><div>Petros Papadopoulos</div></img>         | HWU, UK                   | Academic | [https://github.com/petrospaps](https://github.com/petrospaps)             |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'><div>Jolanda Strubel</div></img>               | The HYVE, NL              | SME      | [https://github.com/JolandaS](https://github.com/JolandaS)                 |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Emma Vos</div></img>                     | The HYVE, NL              | SME      |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'><div>Eelke van den Horst</div></img>   | The HYVE, NL              | SME      | [https://github.com/eelkevanderhorst](https://github.com/eelkevanderhorst) | [0000-0002-8777-5612](https://orcid.org/0000-0002-8777-5612) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/keesvanbochove'><div>Kees van Bochove</div></img>        | The HYVE, NL              | SME      | [https://github.com/keesvanbochove](https://github.com/keesvanbochove)     | [0000-0002-8589-0609](https://orcid.org/0000-0002-8589-0609) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/iemam'><div>Ibrahim Emam</div></img>                     | ICL, UK                   | Academic | [https://github.com/iemam](https://github.com/iemam)                       | [0000-0002-7561-2787](https://orcid.org/0000-0002-7561-2787) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'><div>Francesco Ronzano</div></img>                | IMIM, SP                  | Academic | [https://github.com/fra82](https://github.com/fra82)                       | [0000-0001-5037-9061](https://orcid.org/0000-0001-5037-9061) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Laura Furlong</div></img>                | IMIM, SP                  | Academic |                                                                            | [0000-0002-9383-528X](https://orcid.org/0000-0002-9383-528X) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Herman Van Vlijmen</div></img>           | Janssen, B                | EFPIA    |                                                                            | [0000-0002-1915-3141](https://orcid.org/0000-0002-1915-3141) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Jean-Marc Neefs</div></img>              | Janssen, B                | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Paul Peeters</div></img>                 | Janssen, B                | EFPIA    |                                                                            | [0000-0001-9915-2933](https://orcid.org/0000-0001-9915-2933) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/rverbeec'><div>Rudi Verbeeck</div></img>                 | Janssen, B                | EFPIA    | [https://github.com/rverbeec](https://github.com/rverbeec)                 | [0000-0001-5445-6095](https://orcid.org/0000-0001-5445-6095) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Scott Lusher</div></img>                 | Janssen, B                | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'><div>Andrea Splendiani</div></img>                 | Novartis AG, CH           | EFPIA    | [https://github.com/sgtp](https://github.com/sgtp)                         | [0000-0002-3201-9617](https://orcid.org/0000-0002-3201-9617) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Dorothy Reilly</div></img>               | Novartis AG, CH           | EFPIA    |                                                                            |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/nicklynch'><div>Nick Lynch</div></img>                   | PHACTS, UK                | SME      | [https://github.com/nicklynch](https://github.com/nicklynch)               | [0000-0002-8997-5298](https://orcid.org/0000-0002-8997-5298) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'><div>Ulrich Goldmann</div></img>                    | CEMM, AT                  | Academic | [https://github.com/ulo](https://github.com/ulo)                           | [0000-0003-1120-6912](https://orcid.org/0000-0003-1120-6912) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Manuela Pruess</div></img>               | SIB, CH                   | Academic |                                                                            | [0000-0002-6857-5543](https://orcid.org/0000-0002-6857-5543) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Mark Ibberson</div></img>                | SIB, CH                   | Academic |                                                                            | [0000-0003-3152-5670](https://orcid.org/0000-0003-3152-5670) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/vioannid'><div>Vassilios Ioannidis</div></img>           | SIB, CH                   | Academic | [https://github.com/vioannid](https://github.com/vioannid)                 | [0000-0002-4209-2578](https://orcid.org/0000-0002-4209-2578) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'><div>Danielle Welter</div></img>             | ULuxembourg, LUX          | Academic | [https://github.com/daniwelter](https://github.com/daniwelter)             | [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/satagopam7'><div>Venkata P. Satagopam</div></img>        | ULuxembourg, LUX          | Academic | [https://github.com/satagopam7](https://github.com/satagopam7)             | [0000-0002-6532-5880](https://orcid.org/0000-0002-6532-5880) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'><div>Wei Gu</div></img>                         | ULuxembourg, LUX          | Academic | [https://github.com/weiguUL](https://github.com/weiguUL)                   | [0000-0002-0853-1215](https://orcid.org/0000-0002-0853-1215) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/Chris-Evelo'><div>Chris Evelo</div></img>                | UMaastricht, NL           | Academic | [https://github.com/Chris-Evelo](https://github.com/Chris-Evelo)           | [0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'><div>Egon Willighagen</div></img>                 | UMaastricht, NL           | Academic | [https://github.com/egonw](https://github.com/egonw)                       | [0000-0001-7542-0286](https://orcid.org/0000-0001-7542-0286) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'><div>Lucas Giovanni </div></img>              | UMaastricht, NL           | Academic | [https://github.com/lucas-ubm](https://github.com/lucas-ubm)               | [0000-0001-6518-9535](https://orcid.org/0000-0001-6518-9535) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/carolegoble'><div>Carole Goble</div></img>               | UNIMAN, UK                | Academic | [https://github.com/carolegoble](https://github.com/carolegoble)           | [0000-0003-1219-2137](https://orcid.org/0000-0003-1219-2137) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/mfby4ea3'><div>Ebtisam Alharbi</div></img>               | UNIMAN, UK                | Academic | [https://github.com/mfby4ea3](https://github.com/mfby4ea3)                 |                                                              |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/nsjuty'><div>Nick Juty</div></img>                       | UNIMAN, UK                | Academic | [https://github.com/nsjuty](https://github.com/nsjuty)                     | [0000-0002-2036-8350](https://orcid.org/0000-0002-2036-8350) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/terazus'><div>Dominique Batista</div></img>              | UOXF, UK                  | Academic | [https://github.com/terazus](https://github.com/terazus)                   | [0000-0002-2109-489X](https://orcid.org/0000-0002-2109-489X) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'><div>Philippe Rocca-Serra</div></img>       | UOXF, UK                  | Academic | [https://github.com/proccaserra](https://github.com/proccaserra)           | [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><div>Susanna-Assunta Sansone</div></img> | UOXF, UK                  | Academic | [https://github.com/susannasansone](https://github.com/susannasansone)     | [0000-0001-5306-5690](https://orcid.org/0000-0001-5306-5690) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Alejandra Delfin Rossaro</div></img>     | UPS, FR                   | Academic |                                                                            | [0000-0002-5423-4203](https://orcid.org/0000-0002-5423-4203) |   |   |   |   |   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><div>Anne Cambon-Thomsen</div></img>          | UPS, FR                   | Academic |                                                                            | [0000-0001-8793-3644](https://orcid.org/0000-0001-8793-3644) |   |   |   |   |   |
 ---
 
 ## Technology stack

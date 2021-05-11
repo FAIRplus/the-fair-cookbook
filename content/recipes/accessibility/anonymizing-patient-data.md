@@ -1,4 +1,4 @@
-(fcb-anonymizing-patient-data)=
+(fcb-access-anonymizing)=
 # Anonymizing Patient Data
 
 ````{panels_fairplus}

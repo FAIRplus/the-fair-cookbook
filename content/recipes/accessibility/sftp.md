@@ -1,4 +1,4 @@
-(fcb-sftp)=
+(fcb-access-sftp)=
 # How to use SFTP to transfer data files between institutions.
 
 ````{panels_fairplus}

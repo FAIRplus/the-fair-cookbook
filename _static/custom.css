@@ -1,7 +1,29 @@
-.mermaidClass > rect {
+img.avatar-style {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.mermaidClass > rect{
     fill:#FF0000;
     stroke:#FFFF00;
     stroke-width:4px;
+}
+
+i.fab.fa-github,.fas.fa-download,.fas.fa-expand,.fas.fa-arrow-left,.fas.far-arrow-up,.fas.fa-bars,.fas.fa-lightbulb,.fas.fa-pencil-alt,.fas.fa-list{
+  color: #fc7a4a;
+}
+i.fas.fa-download{
+  color: #fc7a4a;
+}
+
+button.btn.btn-secondary.topbarbtn{
+  color: #fc7a4a;
+}
+
+button.btn.btn-secondary{
+  color: #fc7a4a;
 }
 
 img.emoji {
