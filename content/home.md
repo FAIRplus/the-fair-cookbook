@@ -1,5 +1,8 @@
 # FAIR Cookbook
 
+**Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and Reusable (FAIR).**
+
+
 <!-- ## The official site -->
 
 <!-- Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
@@ -8,6 +11,7 @@
  -->
 ---
 
+<!--
 ## The FAIR Cookbook overview
 
 * The FAIR Cookbook is an activity of the [FAIRplus project](https://fairplus-project.eu/) funded by the [Innovative Medicine Initiative (IMI)](https://www.imi.europa.eu)  
@@ -16,11 +20,16 @@
 * The FAIR Cookbook is open source and licensed under CC-BY-4.0
 * The FAIR Cookbook is written using Markdown and deployed using `jupyter-book`
 * the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as `FAIR recipes`, and supporting code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly (quarterly) in order to reflect the progress made by the project and the various working groups, which bring together `academic` and `industry` partners.
+-->
 
+## Turning FAIR into practice
 
-## Persona-based content browsing
+The [FAIR Principles](https://doi.org/10.1038/sdata.2016.18) put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are aspirational and generic. The FAIR Cookbook guides *`researchers`* and *`data stewards`* in their FAIRification journey; and also provides *`policy makers`* and *`trainers`* with practical examples to recommend in their guidance and use in their educational material. 
+
 <!-- 
-🚧 **This section is under development** 🚧 -->
+## Persona-based content browsing
+
+🚧 **This section is under development** 🚧 
 
 
 ````{panels}
@@ -51,6 +60,8 @@
 <p>Head of Clinical Research</p>
 
 ````
+-->
+
 
 <!-- 
 <div class="row">
@@ -132,12 +143,14 @@
 
 
 
-## Content and learning objectives
+## Learning objectives
 
-Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges. 
+The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and indicators of FAIRness, the maturity model, the technologies, the tools and the standards available, as well as the skills required, and the challenges, to achieve and improve FAIRness.
+
+<!-- Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.  -->
 
 
-## The FAIRification Process
+<!-- ## The FAIRification Process
 
 ````{panels}
 :container: container-lg pb-3
@@ -147,12 +160,15 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
  <img class="imageez" src="../_static/images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" onclick="window.open('../_static/images/userjourney.svg', '_blank');" />
 </span>
 ````
+ -->
 
 
+## The recipes: 
 
-## The FAIR principles & key recipes: 
 
-<!-- 🚧 **This section is under development** 🚧 -->
+The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and level of difficulty. The FAIR Cookbook is a ‘live resource’; recipes are added and improved, iteratively, in an open manner, therefore bear with us if several sections are work in progress!
+Below there are links to some key recipes, click on them to explore their content; otherwise use the main menu on the left hand side to browse all the current recipes. 
+
 
 ````{panels}
 :container: container-xl
@@ -407,35 +423,21 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 
 
 
-## Development Roadmap
-
-The FAIRcookbook development process currently operates on a quarterly release cycle. Each cycle sees 2 `scrums` where specific `use cases` or `themes` are chosen and task forces assigned. The outcome of these efforts are new `FAIRification protocols`, or `FAIR recipes` which, after review, are integrated to the main FAIR Cookbook and tagged for release in the github main branch, which is used to build the web-friendly version of the book.
-
-
-☑️ FAIR Cookbook development roadmap Gantt chart for the year 2020
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-12 p-2
-:card: rounded
-
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
-````
-
-
-☑️  The envisioned table of content for the  FAIR Cookbook can be found [here](https://docs.google.com/spreadsheets/d/13B2aLm5ZXFUwAu6DlcL7soWL8yzX6juR4ijgUpzIsv4/edit?usp=sharing) 
-This Google Document is publicly available in `view mode`, and with `edit mode` for all FAIRplus members.
 
 ___
 
 <!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
 
 
-## Meet the developers:
+## Contributors:
+
+The FAIR Cookbook is developed by a thriving community of life sciences professionals, in the academia and the industry sectors, including members of the ELIXIR community. Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, join us, or contact us at [fairplus-cookbook@elixir-europe.org](fairplus-cookbook@elixir-europe.org)
+
 
 
 ### Editorial Board:
 
+```{dropdown} See the Board
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|
 | <a href='https://github.com/sgtp'><img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'><span>Andrea Splendiani</span></img></a>                           | <a href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Novartis AG              | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                       |
@@ -446,11 +448,13 @@ ___
 | <a href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><span>Susanna-Assunta Sansone</span></img></a> | <a href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> | <img class='elixir-style' src='https://elixir-europe.org/sites/default/files/images/white-orange-logo.png' width="25%" height="25%"/> |
 
 
+```
+
 
 
 ### Table of Contributors:
 
-
+```{dropdown} See the Cookbook Contributors
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation                     | Type                                                                              |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------|-----------------------------------------------------------------------------------|
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Chuang Kee Ong</span></img>                                                               |                                                                                                               | Astra-Zeneca                    | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
@@ -515,7 +519,7 @@ ___
 | <a href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><span>Susanna-Assunta Sansone</span></img></a> | <a href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Oxford            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Alejandra Delfin Rossaro</span></img>                                                     | <a href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Universite Paul Sabatier        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Anne Cambon-Thomsen</span></img>                                                          | <a href='https://orcid.org/0000-0001-8793-3644'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Universite Paul Sabatier        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
-
+```
 
 
 
@@ -660,29 +664,14 @@ ___
 
 ---
 
-## Technology stack
+## Licence
 
-The `FAIR Cookbook` is built using [jupyter-book](https://jupyterbook.org/intro.html), following the practice used by the Alan Turing's Institute Book of Data Science.
+All content of the FAIR Cookbook is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. 
 
-* **[github](https://github.com)** is used to version control and hosting
-* **[Markdown](https://guides.github.com/features/mastering-markdown/)** is used for the write-up
-* **[HackMD](https://hackmd.io)** is used as Markdown Editor thanks to its integration with `github` and its [`browser extensions`](https://hackmd.io/s/hackmd-it)
-* **[jupyter notebook](https://jupyter.org/)** can be used to provide executable code
-* **[binder](https://mybinder.org)** is enabled which allows in web execution of any jupyter notebook distributed with the `FAIR Cookbook`
-* **[mermaid](https://mermaid-js.github.io/mermaid/#/)** javascript library is used to produce flowcharts, Gantt charts and pie charts used in the book.
-<!--* **[netlify]()** is being tested for web hosting and deployment -->
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
 
-* **Jekyll Themes** provide the style for the web friendly version. The name of this theme is saved in the Jekyll `_config.yml` configuration file found in [repository settings](https://github.com/fair-cookbook/the-fair-cookbook/settings).
+## How to cite it
 
-___
+The FAIR Cookbook: a deliverable of the [FAIRplus project](https://fairplus-project.eu/) (grant agreement 802750), funded by the [IMI programme](https://www.imi.europa.eu), a private-public partnership that receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. 
 
-## Support or Contact
-
-Having troubles? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or [contact support](mailto:fairplus-cookbook@elixir-europe.org) and we’ll help you sort it out.
-
-___
-
-## Acknowledgements
-
-The FAIR Cookbook is produced thanks to `Jupyter Book`.
 
