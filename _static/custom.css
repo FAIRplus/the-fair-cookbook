@@ -1,5 +1,10 @@
 /** FRONT PAGE TABLE **/
 
+span.caption-text{ 
+/*color: #fc7a4a;*/
+color: #300861;
+}
+
 img.avatar-style {
     object-fit: cover;
     border-radius: 50%;

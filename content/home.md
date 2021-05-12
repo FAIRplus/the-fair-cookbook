@@ -1,6 +1,6 @@
 # FAIR Cookbook
 
-## The official site
+<!-- ## The official site -->
 
 <!-- Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
 
@@ -60,37 +60,37 @@
 	  	<i class="fab fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Helmut</b></h4>
 	    <p>Architect & Engineer</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Jean</b></h4>
 	    <p>Data Scientist</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Fulvia</b></h4>
 	    <p>Data Curator</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Wang Ju</b></h4>
 	    <p>Head of Clinical Research</p>
-	  </div>
-	</div>
-  </div>
-</div>
+	  </span>
+	</span>
+  </span>
+</span>
  -->
 <!-- 
 <div class="cards-container">
@@ -100,17 +100,17 @@
 	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
 	    <h4><b>Helmut Entwikgung</b></h4>
 	    <p color="#300861">Architect & Engineer</p>
-      </div>
+      </span>
       <div class="back">
 	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
 	    <h4 color="white"><b>Wang Ju Fong</b></h4>
-	    <div>
+	    <span>
  		<img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" />
-		</div>
+		</span>
 	    <p color="#300861">Head of Clinical Research</p>
-      </div>
-    </div>
-</div>
+      </span>
+    </span>
+</span>
 
 <div class="cards-container">
    <div class="card-container">
@@ -119,15 +119,15 @@
 	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
 	    <h4><b>Helmut Entwikgung</b></h4>
 	    <p>Architect & Engineer</p>
-      </div>
+      </span>
       <div class="back">
 	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
 	    <h4 color="#300861"><b>Wang Ju Fong</b></h4>
 	    <p color="#300861">Head of Clinical Research</p>
-      </div>
-    </div>
-  </div>
-</div> -->
+      </span>
+    </span>
+  </span>
+</span> -->
 
 
 
@@ -143,9 +143,9 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 :container: container-lg pb-3
 :column: col-lg-12 p-2
 :card: rounded
-<div>
+<span>
  <img class="imageez" src="../_static/images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" onclick="window.open('../_static/images/userjourney.svg', '_blank');" />
-</div>
+</span>
 ````
 
 
@@ -315,18 +315,18 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>FINDABILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
 	    <h4><b>Search Engine Optimitization</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
@@ -334,20 +334,20 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<br/>
 	    <h4><b>Open Archive Deposition</b></h4>
 	    <p>TODO: add text here </p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
 	    <h4><b>Annotation</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
- </div>
-</div>
-<div> 
+	  </span>
+	</span>
+ </span>
+</span>
+<span> 
 <div class="row">
 
   <div class="column">
@@ -356,37 +356,37 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
 	    <h4><b>ACCESSIBILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
 	    <h4><b>Access condition</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
 	    <h4><b>License selection</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
 	    <h4><b>Standards</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
-</div>
+	  </span>
+	</span>
+  </span>
+</span>
 
 <div class="row">
 
@@ -396,37 +396,37 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
 	    <h4><b>INTEROPERABILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
 	    <h4><b>Metadata Standards</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
 	    <h4><b>Open Syntax</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
 	    <h4><b>Ontology</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
- </div>
+	  </span>
+	</span>
+  </span>
+ </span>
 
 <div class="row">
 
@@ -436,37 +436,37 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
 	    <h4><b>REUSABILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
 	    <h4><b>Standards</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
 	    <h4><b>Ontology</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
 	    <h4><b>SMART API</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
-</div>
+	  </span>
+	</span>
+  </span>
+</span>
  
  -->
 
@@ -503,22 +503,161 @@ ___
 
 ### Editorial Board:
 
-| Name                                                                                                                            | Affiliation      | Type     | github handle                                                            | orcid                                                        |
-|---------------------------------------------------------------------------------------------------------------------------------|------------------|----------|--------------------------------------------------------------------------|--------------------------------------------------------------|
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><span>Philippe Rocca-Serra</span>       | UOXF, UK         | Academic | [https://github.com/proccaserra](https://github.com/proccaserra)         | [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) |
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/tburdett'></img><span>Tony Burdett</span>                  | EMBL-EBI, UK     | Academic | [https://github.com/tburdett](https://github.com/tburdett)               | [0000-0002-2513-5396](https://orcid.org/0000-0002-2513-5396) |
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><span>Wei Gu</span>                         | ULuxembourg, LUX | Academic | [https://github.com/weiguUL](https://github.com/weiguUL)                 | [0000-0002-0853-1215](https://orcid.org/0000-0002-0853-1215) |
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'></img><span>Andrea Splendiani</span>                 | Novartis AG, CH  | EFPIA    | [https://github.com/sgtp](https://github.com/sgtp)                       | [0000-0002-3201-9617](https://orcid.org/0000-0002-3201-9617) |
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><span>Robert Giessmann</span>       | Bayer AG, GER    | EFPIA    | [https://github.com/robertgiessmann](https://github.com/robertgiessmann) | [0000-0002-0254-1500](https://orcid.org/0000-0002-0254-1500) |
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><span>Susanna-Assunta Sansone</span> | UOXF, UK         | Academic | [https://github.com/susannasansone](https://github.com/susannasansone)   | [0000-0001-5306-5690](https://orcid.org/0000-0001-5306-5690) |
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|
+| <a href='https://github.com/sgtp'><img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'><span>Andrea Splendiani</span></img></a>                           | <a href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Novartis AG              | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                       |
+| <a href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'><span>Robert Giessmann</span></img></a>      | <a href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Bayer AG                 | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                       |
+| <a href='https://github.com/tburdett'><img class='avatar-style' src='https://avatars.githubusercontent.com/tburdett'><span>Tony Burdett</span></img></a>                        | <a href='https://orcid.org/0000-0002-2513-5396'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | EMBL-EBI                 | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> | <img class='elixir-style' src='https://elixir-europe.org/sites/default/files/images/white-orange-logo.png' width="25%" height="25%"/> |
+| <a href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'><span>Wei Gu</span></img></a>                                | <a href='https://orcid.org/0000-0002-0853-1215'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Luxembourg | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> | <img class='elixir-style' src='https://elixir-europe.org/sites/default/files/images/white-orange-logo.png' width="25%" height="25%"/> |
+| <a href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'><span>Philippe Rocca-Serra</span></img></a>          | <a href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> | <img class='elixir-style' src='https://elixir-europe.org/sites/default/files/images/white-orange-logo.png' width="25%" height="25%"/> |
+| <a href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><span>Susanna-Assunta Sansone</span></img></a> | <a href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> | <img class='elixir-style' src='https://elixir-europe.org/sites/default/files/images/white-orange-logo.png' width="25%" height="25%"/> |
+
 
 
 
 ### Table of Contributors:
 
+
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation                     | Type                                                                              |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------|-----------------------------------------------------------------------------------|
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Chuang Kee Ong</span></img>                                                               |                                                                                                               | Astra-Zeneca                    | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Colin Wood</span></img>                                                                   |                                                                                                               | Astra-Zeneca                    | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Ola Engkvist</span></img>                                                                 | <a href='https://orcid.org/0000-0003-4970-6461'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Astra-Zeneca                    | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Ratnesh Sahay</span></img>                                                                |                                                                                                               | Astra-Zeneca                    | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Tom Plasterer</span></img>                                                                |                                                                                                               | Astra-Zeneca                    | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>David Henderson</span></img>                                                              | <a href='https://orcid.org/0000-0002-6433-200X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Bayer AG                        | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'><span>Robert Giessmann</span></img></a>      | <a href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Bayer AG                        | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/kdauth'><img class='avatar-style' src='https://avatars.githubusercontent.com/kdauth'><span>Kurt Dauth</span></img></a>                              |                                                                                                               | Boehringer-Ingelheim AG         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Karsten Quast</span></img>                                                                |                                                                                                               | Boehringer-Ingelheim AG         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'><span>Emiliano Reynares</span></img></a>                     | <a href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Boehringer-Ingelheim AG         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/sedlyarov'><img class='avatar-style' src='https://avatars.githubusercontent.com/sedlyarov'><span>Vitaly Sedlyarov</span></img></a>                  | <a href='https://orcid.org/0000-0002-9872-3535'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Boehringer-Ingelheim AG         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/evaMart'><img class='avatar-style' src='https://avatars.githubusercontent.com/EvaMart'><span>Eva Marin del Pico</span></img></a>                    | <a href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Barcelona Supercomputing Centre | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/scapella'><img class='avatar-style' src='https://avatars.githubusercontent.com/scapella'><span>Salvador Capella Gutierrez</span></img></a>           | <a href='https://orcid.org/0000-0002-0309-604X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Barcelona Supercomputing Centre | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/HEHurst'><img class='avatar-style' src='https://avatars.githubusercontent.com/HEHurst'><span>Hannah Hurst</span></img></a>                          |                                                                                                               | EMBL-EBI                        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'><span>Fuqi Xu</span></img></a>                                   | <a href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | EMBL-EBI                        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/mcourtot'><img class='avatar-style' src='https://avatars.githubusercontent.com/mcourtot'><span>Melanie Courtot</span></img></a>                     | <a href='https://orcid.org/0000-0002-9551-6370'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | EMBL-EBI                        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/tburdett'><img class='avatar-style' src='https://avatars.githubusercontent.com/tburdett'><span>Tony Burdett</span></img></a>                        | <a href='https://orcid.org/0000-0002-2513-5396'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | EMBL-EBI                        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/agiani99'><img class='avatar-style' src='https://avatars.githubusercontent.com/agiani99'><span>Andrea Zaliani</span></img></a>                      | <a href='https://orcid.org/0000-0002-1740-8390'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Fraunhofer Institute            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Andreas Pippow</span></img>                                                               | <a href='https://orcid.org/0000-0003-1301-2580'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Fraunhofer Institute            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Franziska Kroh</span></img>                                                               |                                                                                                               | Fraunhofer Institute            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Gesa Witt</span></img>                                                                    | <a href='https://orcid.org/0000-0003-2344-706X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Fraunhofer Institute            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Manfred Kohler</span></img>                                                               |                                                                                                               | Fraunhofer Institute            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/oyadenizbeyan'><img class='avatar-style' src='https://avatars.githubusercontent.com/oyadenizbeyan'><span>Oya Deniz Beyan</span></img></a>           | <a href='https://orcid.org/0000-0001-7611-3501'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Fraunhofer Institute            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Philip Gribbon</span></img>                                                               | <a href='https://orcid.org/0000-0001-7655-2459'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Fraunhofer Institute            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Ashni Sedani</span></img>                                                                 | <a href='https://orcid.org/0000-0002-2424-3483'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | GSK                             | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>George Papadotas</span></img>                                                             |                                                                                                               | GSK                             | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'><span>Peter Woollard</span></img></a>            | <a href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | GSK                             | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'><span>Alasdair J G Gray</span></img></a>           | <a href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Heriot Watt University          | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/petrospaps'><img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'><span>Petros Papadopoulos</span></img></a>             |                                                                                                               | Heriot Watt University          | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/JolandaS'><img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'><span>Jolanda Strubel</span></img></a>                     |                                                                                                               | The Hyve                        | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Emma Vos</span></img>                                                                     | <a href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | The Hyve                        | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |
+| <a href='https://github.com/eelkevanderhorst'><img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'><span>Eelke van den Horst</span></img></a> | <a href='https://orcid.org/0000-0002-8777-5612'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | The Hyve                        | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |
+| <a href='https://github.com/keesvanbochove'><img class='avatar-style' src='https://avatars.githubusercontent.com/keesvanbochove'><span>Kees van Bochove</span></img></a>        |                                                                                                               | The Hyve                        | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |
+| <a href='https://github.com/iemam'><img class='avatar-style' src='https://avatars.githubusercontent.com/iemam'><span>Ibrahim Emam</span></img></a>                              | <a href='https://orcid.org/0000-0002-7561-2787'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Imperial College London         | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/fra82'><img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'><span>Francesco Ronzano</span></img></a>                         | <a href='https://orcid.org/0000-0001-5037-9061'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | IMIM                            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Laura Furlong</span></img>                                                                | <a href='https://orcid.org/0000-0002-9383-528X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | IMIM                            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Herman Van Vlijmen</span></img>                                                           | <a href='https://orcid.org/0000-0002-1915-3141'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Janssen                         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Jean-Marc Neefs</span></img>                                                              |                                                                                                               | Janssen                         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Paul Peeters</span></img>                                                                 | <a href='https://orcid.org/0000-0001-9915-2933'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Janssen                         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/rverbeec'><img class='avatar-style' src='https://avatars.githubusercontent.com/rverbeec'><span>Rudi Verbeeck</span></img></a>                       | <a href='https://orcid.org/0000-0001-5445-6095'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Janssen                         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Scott Lusher</span></img>                                                                 |                                                                                                               | Janssen                         | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/sgtp'><img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'><span>Andrea Splendiani</span></img></a>                           | <a href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Novartis AG                     | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Dorothy Reilly</span></img>                                                               |                                                                                                               | Novartis AG                     | <i class="fas fa-industry fa-1x" style="color:#8038d1;" alt="EFPIA"></i>          |
+| <a href='https://github.com/nicklynch'><img class='avatar-style' src='https://avatars.githubusercontent.com/nicklynch'><span>Nick Lynch</span></img></a>                        | <a href='https://orcid.org/0000-0002-8997-5298'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | OpenPhacts                      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |
+| <a href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'><span>Ulrich Goldmann</span></img></a>                               | <a href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | CEMM                            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Manuela Pruess</span></img>                                                               | <a href='https://orcid.org/0000-0002-6857-5543'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | SIB                             | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Mark Ibberson</span></img>                                                                | <a href='https://orcid.org/0000-0003-3152-5670'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | SIB                             | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/vioannid'><img class='avatar-style' src='https://avatars.githubusercontent.com/vioannid'><span>Vassilios Ioannidis</span></img></a>                 | <a href='https://orcid.org/0000-0002-4209-2578'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | SIB                             | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'><span>Danielle Welter</span></img></a>                 | <a href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/satagopam7'><img class='avatar-style' src='https://avatars.githubusercontent.com/satagopam7'><span>Venkata P. Satagopam</span></img></a>             | <a href='https://orcid.org/0000-0002-6532-5880'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'><span>Wei Gu</span></img></a>                                | <a href='https://orcid.org/0000-0002-0853-1215'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/Chris-Evelo'><img class='avatar-style' src='https://avatars.githubusercontent.com/Chris-Evelo'><span>Chris Evelo</span></img></a>                   | <a href='https://orcid.org/0000-0002-5301-3142'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/egonw'><img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'><span>Egon Willighagen</span></img></a>                           | <a href='https://orcid.org/0000-0001-7542-0286'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/lucas-ubm'><img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'><span>Lucas Giovanni </span></img></a>                   | <a href='https://orcid.org/0000-0001-6518-9535'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/carolegoble'><img class='avatar-style' src='https://avatars.githubusercontent.com/carolegoble'><span>Carole Goble</span></img></a>                  | <a href='https://orcid.org/0000-0003-1219-2137'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Manchester        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/mfby4ea3'><img class='avatar-style' src='https://avatars.githubusercontent.com/mfby4ea3'><span>Ebtisam Alharbi</span></img></a>                     |                                                                                                               | University of Manchester        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/nsjuty'><img class='avatar-style' src='https://avatars.githubusercontent.com/nsjuty'><span>Nick Juty</span></img></a>                               | <a href='https://orcid.org/0000-0002-2036-8350'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Manchester        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/terazus'><img class='avatar-style' src='https://avatars.githubusercontent.com/terazus'><span>Dominique Batista</span></img></a>                     | <a href='https://orcid.org/0000-0002-2109-489X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Oxford            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'><span>Philippe Rocca-Serra</span></img></a>          | <a href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Oxford            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <a href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><span>Susanna-Assunta Sansone</span></img></a> | <a href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | University of Oxford            | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Alejandra Delfin Rossaro</span></img>                                                     | <a href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Universite Paul Sabatier        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Anne Cambon-Thomsen</span></img>                                                          | <a href='https://orcid.org/0000-0001-8793-3644'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Universite Paul Sabatier        | <i class="fas fa-graduation-cap fa-1x" style="color:#fc7a4a;" alt="Academic"></i> |
+
+
+
+
+
+
+<!-- 
+
+ | Name                                                                                                                            | Affiliation               | Type     | Github handle                                                              | Orcid                                                        |
+|---------------------------------------------------------------------------------------------------------------------------------|---------------------------|----------|----------------------------------------------------------------------------|--------------------------------------------------------------|
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Chuang Kee Ong</span></img>               | Astra-Zeneca, UK          | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Colin Wood</span></img>                   | Astra-Zeneca, UK          | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Ola Engkvist</span></img>                 | Astra-Zeneca, UK          | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://github.com/https://orcid.org/0000-0003-4970-6461'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Ratnesh Sahay</span></img>                | Astra-Zeneca, UK          | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Tom Plasterer</span></img>                | Astra-Zeneca, UK          | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>David Henderson</span></img>              | Bayer AG, GER             | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-6433-200X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'><span>Robert Giessmann</span></img>       | Bayer AG, GER             | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/robertgiessmann'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>  |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/kdauth'><span>Kurt Dauth</span></img>                      | Boehringer-Ingelheim, GER | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  | <a href='https://github.com/kdauth'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>           |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Karsten Quast</span></img>                | Boehringer-Ingelheim, GER | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'><span>Emiliano Reynares</span></img>              | Boehringer-Ingelheim, GER | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/ereynrs'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/sedlyarov'><span>Vitaly Sedlyarov</span></img>             | Boehringer-Ingelheim, GER | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-9872-3535'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/sedlyarov'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>        |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/EvaMart'><span>Eva Marin del Pico</span></img>             | BSC, SP                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/EvaMart'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/scapella'><span>Salvador Capella Gutierrez</span></img>    | BSC, SP                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-0309-604X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/scapella'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/HEHurst'><span>Hannah Hurst</span></img>                   | EMBL-EBI, UK              | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> |                                                                                                                                  | <a href='https://github.com/HEHurst'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'><span>Fuqi Xu</span></img>                          | EMBL-EBI, UK              | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/fuqix'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>            |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/mcourtot'><span>Melanie Courtot</span></img>               | EMBL-EBI, UK              | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-9551-6370'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/mcourtot'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/tburdett'><span>Tony Burdett</span></img>                  | EMBL-EBI, UK              | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-2513-5396'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/tburdett'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/agiani99'><span>Andrea Zaliani</span></img>                | Fraunhofer Institute, GER | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-1740-8390'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/agiani99'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Andreas Pippow</span></img>               | Fraunhofer Institute, GER | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0003-1301-2580'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Franziska Kroh</span></img>               | Fraunhofer Institute, GER | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Gesa Witt</span></img>                    | Fraunhofer Institute, GER | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0003-2344-706X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Manfred Kohler</span></img>               | Fraunhofer Institute, GER | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/oyadenizbeyan'><span>Oya Deniz Beyan</span></img>          | Fraunhofer Institute, GER | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-7611-3501'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/oyadenizbeyan'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>    |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Philip Gribbon</span></img>               | Fraunhofer Institute, GER | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-7655-2459'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Ashni Sedani</span></img>                 | GSK, UK                   | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-2424-3483'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>George Papadotas</span></img>             | GSK, UK                   | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'><span>Peter Woollard</span></img>           | GSK, UK                   | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/PeterWoollard'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>    |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'><span>Alasdair J G Gray</span></img>         | HWU, UK                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/AlasdairGray'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>     |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'><span>Petros Papadopoulos</span></img>         | HWU, UK                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> |                                                                                                                                  | <a href='https://github.com/petrospaps'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>       |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'><span>Jolanda Strubel</span></img>               | The HYVE, NL              | <i class="fas fa-project-diagram fa-2x" style="color:#300861;" alt="SME"></i>     |                                                                                                                                  | <a href='https://github.com/JolandaS'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Emma Vos</span></img>                     | The HYVE, NL              | <i class="fas fa-project-diagram fa-2x" style="color:#300861;" alt="SME"></i>     | <a href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'><span>Eelke van den Horst</span></img>   | The HYVE, NL              | <i class="fas fa-project-diagram fa-2x" style="color:#300861;" alt="SME"></i>     | <a href='https://orcid.org/0000-0002-8777-5612'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/eelkevanderhorst'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a> |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/keesvanbochove'><span>Kees van Bochove</span></img>        | The HYVE, NL              | <i class="fas fa-project-diagram fa-2x" style="color:#300861;" alt="SME"></i>     |                                                                                                                                  | <a href='https://github.com/keesvanbochove'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>   |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/iemam'><span>Ibrahim Emam</span></img>                     | ICL, UK                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-7561-2787'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/iemam'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>            |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'><span>Francesco Ronzano</span></img>                | IMIM, SP                  | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-5037-9061'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/fra82'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>            |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Laura Furlong</span></img>                | IMIM, SP                  | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-9383-528X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Herman Van Vlijmen</span></img>           | Janssen, B                | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-1915-3141'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Jean-Marc Neefs</span></img>              | Janssen, B                | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Paul Peeters</span></img>                 | Janssen, B                | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0001-9915-2933'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/rverbeec'><span>Rudi Verbeeck</span></img>                 | Janssen, B                | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0001-5445-6095'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/rverbeec'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Scott Lusher</span></img>                 | Janssen, B                | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'><span>Andrea Splendiani</span></img>                 | Novartis AG, CH           | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          | <a href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/sgtp'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>             |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Dorothy Reilly</span></img>               | Novartis AG, CH           | <i class="fas fa-industry fa-2x" style="color:#8038d1;" alt="EFPIA"></i>          |                                                                                                                                  |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/nicklynch'><span>Nick Lynch</span></img>                   | PHACTS, UK                | <i class="fas fa-project-diagram fa-2x" style="color:#300861;" alt="SME"></i>     | <a href='https://orcid.org/0000-0002-8997-5298'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/nicklynch'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>        |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'><span>Ulrich Goldmann</span></img>                    | CEMM, AT                  | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/ulo'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Manuela Pruess</span></img>               | SIB, CH                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-6857-5543'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Mark Ibberson</span></img>                | SIB, CH                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0003-3152-5670'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    |                                                                                                              |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/vioannid'><span>Vassilios Ioannidis</span></img>           | SIB, CH                   | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-4209-2578'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/vioannid'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'><span>Danielle Welter</span></img>             | ULuxembourg, LUX          | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/daniwelter'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>       |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/satagopam7'><span>Venkata P. Satagopam</span></img>        | ULuxembourg, LUX          | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-6532-5880'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/satagopam7'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>       |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'><span>Wei Gu</span></img>                         | ULuxembourg, LUX          | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-0853-1215'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/weiguUL'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/Chris-Evelo'><span>Chris Evelo</span></img>                | UMaastricht, NL           | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-5301-3142'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/Chris-Evelo'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>      |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'><span>Egon Willighagen</span></img>                 | UMaastricht, NL           | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-7542-0286'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/egonw'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>            |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'><span>Lucas Giovanni </span></img>              | UMaastricht, NL           | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-6518-9535'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/lucas-ubm'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>        |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/carolegoble'><span>Carole Goble</span></img>               | UNIMAN, UK                | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0003-1219-2137'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/carolegoble'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>      |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/mfby4ea3'><span>Ebtisam Alharbi</span></img>               | UNIMAN, UK                | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> |                                                                                                                                  | <a href='https://github.com/mfby4ea3'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>         |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/nsjuty'><span>Nick Juty</span></img>                       | UNIMAN, UK                | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-2036-8350'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/nsjuty'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>           |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/terazus'><span>Dominique Batista</span></img>              | UOXF, UK                  | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0002-2109-489X'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/terazus'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>          |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'><span>Philippe Rocca-Serra</span></img>       | UOXF, UK                  | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/proccaserra'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>      |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><span>Susanna-Assunta Sansone</span></img> | UOXF, UK                  | <i class="fas fa-graduation-cap fa-2x" style="color:#fc7a4a;" alt="Academic"></i> | <a href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>                    | <a href='https://github.com/susannasansone'><i class='fab fa-github fa-2x' style='color:#fc7a4a;'></i></a>   |
+ -->
+
 * The FAIR Cookbook content was contributed by the following FAIRplus Consortium Members:
 
-| Name                                                                                                                            | Affiliation               | Type     | github handle                                                              | orcid                                                        |
+<!--
+ | Name                                                                                                                            | Affiliation               | Type     | github handle                                                              | orcid                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------|---------------------------|----------|----------------------------------------------------------------------------|--------------------------------------------------------------|
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><span>Chuang Kee Ong</span>               | Astra-Zeneca, UK          | EFPIA    |                                                                            |                                                              |
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><span>Colin Wood</span>                   | Astra-Zeneca, UK          | EFPIA    |                                                                            |                                                              |
@@ -581,7 +720,11 @@ ___
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><span>Philippe Rocca-Serra</span>       | UOXF, UK                  | Academic | [https://github.com/proccaserra](https://github.com/proccaserra)           | [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) |
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><span>Susanna-Assunta Sansone</span> | UOXF, UK                  | Academic | [https://github.com/susannasansone](https://github.com/susannasansone)     | [0000-0001-5306-5690](https://orcid.org/0000-0001-5306-5690) |
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><span>Alejandra Delfin Rossaro</span>     | UPS, FR                   | Academic |                                                                            | [0000-0002-5423-4203](https://orcid.org/0000-0002-5423-4203) |
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><span>Anne Cambon-Thomsen</div></img>     | UPS, FR                   | Academic |                                                                            | [0000-0001-8793-3644](https://orcid.org/0000-0001-8793-3644) |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><span>Anne Cambon-Thomsen</span></img>     | UPS, FR                   | Academic |                                                                            | [0000-0001-8793-3644](https://orcid.org/0000-0001-8793-3644) |
+
+ -->
+
+
 ---
 
 ## Technology stack
