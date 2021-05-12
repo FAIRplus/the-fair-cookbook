@@ -118,6 +118,7 @@ jobs:
             sphinxcontrib-jsmath==1.0.1
             sphinxcontrib-qthelp==1.0.3
             sphinxcontrib-serializinghtml==1.1.4
+            sphinx-sitemap==2.2.0
             SQLAlchemy==1.3.24
             terminado==0.9.4
             testpath==0.4.4
@@ -138,13 +139,13 @@ jobs:
     - name: Record mermaid version 
       run: ./node_modules/.bin/mmdc -V
     - name: Search all mermaid files and record a list of them
-      run: find . -iname "*.mmd" > all_mermaid_files 
+      run: find . -iname "*.mmd" > list_of_all_mermaid_files 
     - name: Print the list of mermaid files 
-      run: cat all_mermaid_files
-    - name: Convert all mermaid files to svg
-      run: cat all_mermaid_files | while read line; do ./node_modules/.bin/mmdc -i $line ; done
+      run: cat list_of_all_mermaid_files
+    - name: Convert all mermaid files to png
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.png ; done
     - name: Cleanup of intermediates
-      run: rm all_mermaid_files
+      run: rm list_of_all_mermaid_files
     - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
     - name: Build jupyter-book
@@ -154,13 +155,14 @@ jobs:
     - name: Install SSH Client 🔑
       uses: webfactory/ssh-agent@v0.4.1
       with:
-        ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        # ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+        ssh-private-key: ${{ secrets.DEPLOY_GHPAGES_INTO_MAIN_REPO }}  ## for push into the-fair-cookbook
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         SSH: true
         BASE_BRANCH: migrating #The branch of this repository which should be transfered from.
-        REPOSITORY_NAME: FAIRplus/cookbook-dev # The repository on github.com to which will be deployed = pushed.
+        REPOSITORY_NAME: FAIRplus/the-fair-cookbook # The repository on github.com to which will be deployed = pushed.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: _build/html # The folder the action should deploy.
         

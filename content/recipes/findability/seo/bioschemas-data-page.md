@@ -4,49 +4,16 @@
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">R X.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 10 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
-````
-
-___
-
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 2
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist  
+:has_executable_code: nope
+:recipe_name: Findability, Data Page Markup with Bioschemas
+```` 
 
 ## Main Objectives
 
@@ -112,9 +79,9 @@ We will outline the steps for marking up a page in your site. As a specific exam
 
 ```{figure} BioschemasGenerator.png
 ---
-height: 550px
-name: Bioschemas Generator start screen
-alt: Bioschemas Generator start screen
+name: bioschemas-generator-start-screen-2
+alt: Bioschemas Generator start screen.
+
 ---
 Bioschemas Generator start screen.
 ```
@@ -142,7 +109,7 @@ Bioschemas Generator GeneRecord profile form.
    
 4. You should now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our Wikidata example, we get the following markup
 
-```python
+```html
 <script type="application/ld+json" >
 {
  "@context": "http://schema.org",
@@ -207,16 +174,16 @@ Bioschemas Generator GeneRecord profile form.
 
      For example, for our generated markup we would change
 
-```bash
+```
 "encodesBioChemEntity": {
      "@type": "BioChemEntity",
      "@id": "https://www.wikidata.org/wiki/Q17487737"
    },
 ```
 
-     to
+to
 
-```bash
+```
 "encodesBioChemEntity": {
      "@type": "Protein",
      "@id": "https://www.wikidata.org/wiki/Q17487737"
@@ -229,7 +196,7 @@ Bioschemas Generator GeneRecord profile form.
 
 8. Replace the values in your markup with variables that your web page templating system will replace with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
-```bash
+```html
 <script type="application/ld+json" >
 {
  "@context": "http://schema.org",

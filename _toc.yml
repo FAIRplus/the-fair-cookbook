@@ -4,7 +4,8 @@
   title: Introduction
   numbered: true
   sections:
-      - file: content/recipes/introduction/ATI-turingway
+      # - file: content/recipes/introduction/test-css
+      - file: content/recipes/introduction/the-turing-way
       - file: content/recipes/introduction/FAIR-cookbook-audience
       - file: content/recipes/introduction/brief-FAIR-principles
       - file: content/recipes/introduction/what-is-IMI
@@ -13,6 +14,7 @@
       - file: content/recipes/introduction/IMI-Data-Access-Request-Process
       - file: content/recipes/introduction/FAIRplus-values
       - file: content/recipes/introduction/data-sharing-models
+
 
 # - file: content/recipes/cmmi
 #   title: Maturity models
@@ -73,7 +75,7 @@
   title: Improving Accessibility
   numbered: true
   sections:
-    - file: content/recipes/accessibility/anonymization
+    - file: content/recipes/accessibility/anonymizing-patient-data
     - file: content/recipes/accessibility/how-to-use-sftp-for-transfer
     - file: content/recipes/accessibility/aspera
 
@@ -83,21 +85,24 @@
   numbered: false
   sections:
       - file: content/recipes/interoperability/identifier-mapping
-      # - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
       - file: content/recipes/interoperability/bridgedb-recipe
         sections:
           - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
+      - file: content/recipes/interoperability/ontology-why-using-them    
       - file: content/recipes/interoperability/selecting-ontologies
       - file: content/recipes/interoperability/ontology-new-term-request-recipe
+      - file: content/recipes/interoperability/ontology-operations-tools
       - file: content/recipes/interoperability/ontology-robot-recipe
         sections:
           - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+
       - file: content/recipes/interoperability/creating-minimal-metadata-profiles
         sections:
           - file: content/recipes/interoperability/transcriptomics-metadata
           - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
       - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar    
       - file: content/recipes/interoperability/fastq-file-format-validators
+      - file: content/recipes/interoperability/ETL-tools
 
 # -header: reusability
 - file: content/recipes/reusability
@@ -123,7 +128,7 @@
         - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
         - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
         - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
-    - file: content/recipes/applied-examples/etox_raw/FAIRplus_Recipe_Ontology_mapping_the_eTox_dataset_scenario
+    - file: content/recipes/applied-examples/etox
     - file: content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
     - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
     - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute

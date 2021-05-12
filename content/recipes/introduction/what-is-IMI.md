@@ -1,55 +1,23 @@
 (fcb-intro-imi)=
+
+
 # What is IMI?
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 10 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Background Information
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
-<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
-<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 1
+:recipe_type: background_information
+:reading_time_minutes: 10
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:has_executable_code: nope
+:recipe_name: What is IMI?
 ````
 
-___
-
-
-**IMI** stands for **Innovative Medicine Initiative** and is an European project. More precisely, it is a `joint initiative` (public-private partnership) of the `DG Research of the European Commission`, representing the `European Communities`, and the `European Federation of Pharmaceutical Industries and Associations` (EFPIA).
+**IMI** stands for **Innovative Medicine Initiative** and is an European project (Research Organization Registry identifier: [https://ror.org/019af4n30](https://ror.org/019af4n30)). More precisely, it is a `joint initiative` (public-private partnership) of the `DG Research of the European Commission`, representing the `European Communities`, and the `European Federation of Pharmaceutical Industries and Associations` (EFPIA).
 IMI is built as a **Joint Technology Initiative**, one of the specific project type / instrument available to the EU and  meant to be implemented as a **Joint Undertaking**. The main goal of the IMI is, to quote the IMI site, "to improve health by speeding up the development of, and patient access to, innovative medicines, particularly in areas where there is an unmet medical or social need".
 
 <!-- <div style="justify-content: center;">
@@ -73,6 +41,7 @@ IMI has been running since 2008, with  a first round covering the years 2008 –
 - €1.638 billion (half the budget) comes from the Health, Demographic Change and Wellbeing Societal Challenge of Horizon 2020, the EU's framework programme for research and innovation;
 - €1.425 billion is committed to the programme by EFPIA companies;
 - up to €213 million can be committed by other life science industries or organisations that decide to contribute to IMI2 as members or Associated Partners in individual projects.
+
 
 ## What are IMI main priorities?
 

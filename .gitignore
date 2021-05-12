@@ -1,3 +1,4 @@
+todo.md
 .DS_Store
 docs/_site/
 docs/.sass-cache
@@ -10,3 +11,4 @@ pip-environment-cookbook-jb06.txt
 __pycache__
 .github/workflows/build-master.yml
 _build/
+venv/

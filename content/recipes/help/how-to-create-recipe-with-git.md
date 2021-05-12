@@ -127,8 +127,8 @@ pyenv activate faircb375
 pip install jupyter-book
 ```
 
-		NOTE: you may have to update `pip` if the system complains, sending. amessage looking like this ''
-```bash
+		NOTE: you may have to update `pip` if the system complains, sending. amessage looking like this 
+```
 to update pip, issue `pip install pip --upgrade'
 ```
 		**Huzza!** You are now reading te test if yuor recipe can be built in the jupyter-book. To just do this, you need to run the following command from the root of the github branch.
