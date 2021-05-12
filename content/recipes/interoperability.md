@@ -1,5 +1,5 @@
 (fcb-interoperability)=
-# interoperability
+# Interoperability
 
 This Chapter is dedicated to FAIRification processes which focus on improving the Dataset Reusability.
 
