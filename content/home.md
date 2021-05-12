@@ -154,155 +154,88 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 
 <!-- 🚧 **This section is under development** 🚧 -->
 
-
 ````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
+:container: container-xl
+:column: col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12
+:card: FAIRcard
 
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-search fa-2x mr-3"></i>
-    <b class="cardLabel"> FINDABILITY </b>
+<h4 class="my-0 d-table text--primary" id="findablePrinciple">
+    <span class="bigLetter"> F </span> 
+    <span class="cardTitle"> Findability: examplar recipes </span>
 </h4>
 ^^^
-{ref}`fcb-find`
----
+<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Search Engine Optimitization</b>
-</h4>
-^^^
-{ref}`fcb-find-seo`
+{ref}`fcb-find-seo` 
+</div>
+<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
 
----
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Open Archive Deposition</b>
-</h4>
-^^^
-{ref}`fcb-find-zenodo`
+{ref}`fcb-find-zenodo` 
+</div>
+<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
 
----
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Identifiers</b>
-</h4>
-^^^
 {ref}`fcb-find-identifiers`
-````
+</div>
 
-````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
-
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cloud fa-2x mr-3"></i>
-    <b class="cardLabel">ACCESSIBILITY</b>
-</h4>
-^^^
-{ref}`fcb-access`
 ---
 
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Data Access Agreements</b>
+<h4 class="my-0 d-table text--primary" id="accessiblePrinciple">
+    <span class="bigLetter"> A </span> 
+    <span class="cardTitle"> Accessibility: examplar recipes </span>
 </h4>
 ^^^
+<div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
+
 {ref}`fcb-access-anonymizing`
----
+</div>
+<div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Access Protocols: sftp</b>
-</h4>
-^^^
 {ref}`fcb-access-sftp`
----
+</div>
+<div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Access Protocols: Aspera</b>
-</h4>
-^^^
 {ref}`fcb-access-aspera`
-````
+</div>
 
-````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
 ---
 
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-puzzle-piece fa-2x mr-3"></i>
-    <b class="cardLabel">INTEROPERABILITY</b>
+<h4 class="my-0 d-table text--primary" id="interoperablePrinciple">
+    <span class="bigLetter"> I </span> 
+    <span class="cardTitle"> Interoperability: examplar recipes </span>
 </h4>
 ^^^
-{ref}`fcb-interoperability`
----
+<div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-cog fa-2x mr-3 "></i>
-    <b class="cardLabel">Metadata profile</b>
-</h4>
-^^^
 {ref}`fcb-interop-metadataprofile`
----
+</div>
+<div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-cog fa-2x mr-3 "></i>
-    <b class="cardLabel">Ontology building</b>
-</h4>
-^^^
 {ref}`fcb-interop-ontorobot`
----
+</div>
+<div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Vocabular selection</b>
-</h4>
-^^^
 {ref}`fcb-interop-selectonto`
-````
+</div>
 
-````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
 ---
 
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-recycle fa-2x mr-3"></i>
-    <b class="cardLabel">REUSABILITY</b>
+<h4 class="my-0 d-table text--primary" id="reusablePrinciple">
+    <span class="bigLetter"> R </span> 
+    <span class="cardTitle"> Reusability: examplar recipes </span>
 </h4>
 ^^^
-{ref}`fcb-reusability`
----
+<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Data use conditions</b>
-</h4>
-^^^
 {ref}`fcb-reusability-data_use`
----
+</div>
+<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">License selection</b>
-</h4>
-^^^
 {ref}`rr-licensing-data`
----
+</div>
+<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Community Standards</b>
-</h4>
-^^^
 {ref}`fcb-reusability-community-std`
+</div>
 ````
 
 
