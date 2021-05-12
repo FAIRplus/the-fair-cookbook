@@ -466,6 +466,107 @@ footer.footer p:not(:first-child) {
     text-align: center;
 }
 
+.card.FAIRcard {
+    margin-bottom: 20px;
+}
+
+.card.FAIRcard .card-header {
+    padding: 10px 25px;
+    border: 0 !important;
+    background: #f7f7f7 !important;
+}
+
+.card.FAIRcard .card-body {
+    padding: 0 10px 10px 10px;
+    border: 0 !important;
+    background: #f7f7f7 !important;
+}
+
+@media (min-width: 1405px) {
+   .card.FAIRcard .card-body {
+       padding: 0 105px 10px 105px;
+       min-height: 135px;
+   }
+    .card.FAIRcard #findablePrinciple span,
+    .card.FAIRcard #accessiblePrinciple span,
+    .card.FAIRcard #interoperablePrinciple span,
+    .card.FAIRcard #reusablePrinciple span {
+        padding-top: 15px;
+    }
+}
+
+.card.FAIRcard .bigLetter {
+    font-size: 30px;
+    border: 4px solid;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 55px;
+    display: inline-block;
+    height: 55px;
+    box-shadow: 3px 3px 11px #ccc;
+}
+
+.card.FAIRcard .cardTitle {
+    font-size: 24px;
+}
+
+.card.FAIRcard .recipeItem p {
+    display: inline-block;
+}
+
+.card.FAIRcard .recipeItem {
+    font-size: 18px;
+    display: flex;
+}
+
+.card.FAIRcard .recipeItem i {
+    margin-top: 5px;
+}
+
+.card.FAIRcard #findablePrinciple .bigLetter {
+    padding-left: 15px;
+    padding-top: 8px;
+    color: #fc7a4a;
+    border-color: #fc7a4a;
+}
+
+.card.FAIRcard #accessiblePrinciple .bigLetter {
+    padding-left: 14px;
+    padding-top: 8px;
+    color: #8038D1;
+    border-color: #8038D1;
+}
+
+.card.FAIRcard #interoperablePrinciple .bigLetter {
+    padding-left: 19px;
+    padding-top: 9px;
+    color: #300861;
+    border-color: #300861;
+}
+
+.card.FAIRcard #reusablePrinciple .bigLetter {
+    padding-left: 13px;
+    padding-top: 8px;
+    color: #7E0038;
+    border-color: #7E0038;
+}
+
+.card.FAIRcard #findablePrinciple,
+.card.FAIRcard #accessiblePrinciple,
+.card.FAIRcard #interoperablePrinciple,
+.card.FAIRcard #reusablePrinciple {
+    display: flex !important
+}
+
+@media (max-width: 1404px) {
+   .card.FAIRcard #accessiblePrinciple .bigLetter {
+       padding-left: 12px;
+    }
+    .card.FAIRcard #interoperablePrinciple .bigLetter {
+        padding-left: 17px;
+    }
+}
 
 /* ################################################## */
 /**                   EASY COLORS                    **/
