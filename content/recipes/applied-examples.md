@@ -1,14 +1,19 @@
 (fcb-fairify-examples)=
-# Applied Examples
+# Applied examples
 
+<<<<<<< HEAD
 ---
 
 This Chapter is dedicated to a complete FAIRification example, as applied by FAIR+ developers to public dataset. The content of the chapter documents all critical steps and learnings resulting from these efforts.
+=======
+This chapter is dedicated to FAIRification examples, using publicly available datasets. These include data from published articles, as well as data from multi-omics, observational and clinical trial projects.
+>>>>>>> 3478102f8e49b908979d6a30cbd0ef4f3915a43f
 
-We will therefore cover topics such as:
+Browse existing recipes, but bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner.
 
-## From PDF to RDF ~ From text to Linked Data Graph
+If you want to contribute follow the [instruction][link_contribute] provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
+<<<<<<< HEAD
 1. [FAIRification of Metabolomics Data: Clarifying the Semantics of Data Matrices](TODO:link/not/here/yet)
 2. [Conversion to an open format - using Frictionless Data Package](TODO:link/not/here/yet)
 3. [Building a semantic model and annotating with open ontologies](TODO:link/not/here/yet)
@@ -23,6 +28,9 @@ We will therefore cover topics such as:
 4. IMI Oncotrack -  the clinical context {ref}`fcb-fairify-examples-oncotrack`
 
 ---
+=======
+--
+>>>>>>> 3478102f8e49b908979d6a30cbd0ef4f3915a43f
 
 
 
