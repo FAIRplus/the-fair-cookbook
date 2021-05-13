@@ -562,10 +562,19 @@ img.imageez {
 
 #contributors table tr td,
 #contributors table tr th {
-    border-top: 1px solid #421C6E;
+    border-top: 1px solid #fc7a4a;
 }
 #contributors table tr th {
-    border-bottom: 1px solid #421C6E;
+    border-bottom: 1px solid #fc7a4a;
+}
+
+#contributors table tbody {
+    border-right: 1px solid #fc7a4a;
+    border-bottom: 1px solid #fc7a4a;
+}
+
+#contributors table{
+    border-left: 1px solid #fc7a4a;
 }
 
 div.topbar div.bd-toc {
@@ -605,7 +614,7 @@ div.topbar div.tocsection {
 }
 
 img.avatar-style {
-    border: 4px solid #421C6E;
+    border: 4px solid #fc7a4a;
     display: block;
     margin: auto;
 }
@@ -693,7 +702,8 @@ nav.c-textbook__sidebar {
 }
 
 #contributors table tr th {
-    color: #421C6E;
+    color: white;
+    background: #fc7a4a;
 }
 
 .text--primary {
