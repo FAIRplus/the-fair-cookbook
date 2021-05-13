@@ -3,13 +3,11 @@
 
 ---
 
-This Chapter is dedicated to FAIRification processes which focus on improving the Dataset discovery.
 
-We will therefore cover topics such as:
+This chapter is dedicated to the `identifiers`, `standards`, and `services`, and other `resources` necessary to enable and improve data discoverability.
 
+Browse existing recipes, and bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner. 
 
-1. Using and Building Data Catalogues
-2. Search Engine Optimization Strategies
-3. Semantic Markup and Semantic Mashups
+If you want to contribute follow the [instruction][link_contribute] provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
 ---
