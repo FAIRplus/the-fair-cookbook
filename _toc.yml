@@ -1,5 +1,6 @@
 - file: content/home
 
+
 - part: FOREWORD
   chapters:
     - file: content/recipes/introduction
@@ -10,13 +11,18 @@
 
           - file: content/recipes/introduction/FAIR-cookbook-audience
           - file: content/recipes/introduction/FAIRplus-values
-          - file: content/recipes/glossary-fair-terms
+          # - file: content/recipes/glossary-fair-terms
           # - file: content/recipes/introduction/brief-FAIR-principles
           # - file: content/recipes/introduction/what-is-IMI
           # - file: content/recipes/introduction/FAIR-in-IMI-context
           # - file: content/recipes/introduction/IMI-and-data-management-plans
           # - file: content/recipes/introduction/IMI-Data-Access-Request-Process
           # - file: content/recipes/introduction/data-sharing-models
+
+
+- part: GLOSSARY
+  chapters:
+    - file: content/recipes/glossary-fair-terms
 
 # - file: content/recipes/cmmi
 #   title: Maturity models
@@ -118,26 +124,26 @@
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
         - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
 
-    # -header: assessment
-    - file: content/recipes/assessing-fairness
-    # title: Assessing FAIR 
-      numbered: true
-      sections:
-        - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
-        - file: content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model
-        - file: content/recipes/assessing-fairness/cmmi/Data-Usage-Areas
-        - file: content/recipes/assessing-fairness/fair-indicators
-          sections:
-            - file: content/recipes/assessing-fairness/cmmi/RDA-Indicators
-            - file: content/recipes/assessing-fairness/cmmi/FAIRPlus-Indicators
-        - file: content/recipes/assessing-fairness/manual-fair-assessment 
-          sections:
-            - file: content/recipes/assessing-fairness/cmmi/evaluation-method
-            - file: content/recipes/assessing-fairness/cmmi/rda-evaluation
-        - file: content/recipes/assessing-fairness/automatic-fair-assessment
-          sections:
-            - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
-            - file: content/recipes/assessing-fairness/fair-assessment-fairshake
+    # # -header: assessment
+    # - file: content/recipes/assessing-fairness
+    # # title: Assessing FAIR 
+    #   numbered: true
+    #   sections:
+    #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
+    #     - file: content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model
+    #     - file: content/recipes/assessing-fairness/cmmi/Data-Usage-Areas
+    #     - file: content/recipes/assessing-fairness/fair-indicators
+    #       sections:
+    #         - file: content/recipes/assessing-fairness/cmmi/RDA-Indicators
+    #         - file: content/recipes/assessing-fairness/cmmi/FAIRPlus-Indicators
+    #     - file: content/recipes/assessing-fairness/manual-fair-assessment 
+    #       sections:
+    #         - file: content/recipes/assessing-fairness/cmmi/evaluation-method
+    #         - file: content/recipes/assessing-fairness/cmmi/rda-evaluation
+    #     - file: content/recipes/assessing-fairness/automatic-fair-assessment
+    #       sections:
+    #         - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
+    #         - file: content/recipes/assessing-fairness/fair-assessment-fairshake
 
 
 - part: ABOUT THE FAIR COOKBOOK

@@ -166,7 +166,7 @@ The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, th
  -->
 
 
-## The recipes: 
+## The recipes
 
 
 The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and level of difficulty. The FAIR Cookbook is a ‘live resource’; recipes are added and improved, iteratively, in an open manner, therefore bear with us if several sections are work in progress!
@@ -432,13 +432,13 @@ ___
 <!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
 
 
-## Contributors:
+## Contributors
 
 The FAIR Cookbook is developed by a thriving community of life sciences professionals, in the academia and the industry sectors, including members of the ELIXIR community. Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, join us, or contact us at [fairplus-cookbook@elixir-europe.org](fairplus-cookbook@elixir-europe.org)
 
 
 
-### Editorial Board:
+### Editorial Board
 
 ```{dropdown} See the Board
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              |
@@ -455,7 +455,7 @@ The FAIR Cookbook is developed by a thriving community of life sciences professi
 
 
 
-### Table of Contributors:
+### Table of Contributors
 
 ```{dropdown} See the Cookbook Contributors
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation                     | Type                                                                              |
