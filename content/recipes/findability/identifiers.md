@@ -468,13 +468,14 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  | specific contribution |
-| :------------- | :------------- | :------------- |:------------- |:------------- |
-| Alasdair Gray | Heriot-Watt University / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft | Original format<br />Converting to online format |
-| Chris Evelo | Maastricht University | [0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) | Writing - Original Draft | Original format |
-| Egon Willighagen | Maastricht University | [0000-0001-7542-0286](https://orcid.org/0000-0001-7542-0286) | Writing - Original Draft | Original format |
-| Philippe Rocca-Serra| University of Oxford |[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing – Review & Editing, Conceptualization|Markdown|
-| Andrea Splendiani |Novartis AG|[0000-0002-3201-9617](https://orcid.org/0000-0002-3201-9617) |Conceptualization ||
+ Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
+| :------------- | :------------- | :------------- |:------------- |
+| <div class="firstCol"><a target="_blank" href='https://github.com/sgtp'><img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'></img><div class="d-block">Andrea Splendiani</div></a>       </div>|Novartis AG| <a target="_blank" href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x text--orange'></i></a> |Conceptualization |
+| <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div>| Heriot-Watt University / ELIXIR-UK | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/Chris-Evelo'><img class='avatar-style' src='https://avatars.githubusercontent.com/Chris-Evelo'></img><div class="d-block">Chris Evelo</div></a>      </div> | Maastricht University | <a target="_blank" href='https://orcid.org/0000-0002-5301-3142'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft | 
+|  <div class="firstCol"><a target="_blank" href='https://github.com/egonw'><img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'></img><div class="d-block">Egon Willighagen</div></a>           </div> | Maastricht University | <a target="_blank" href='https://orcid.org/0000-0001-7542-0286'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft | 
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>   </div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing, Conceptualization|
+
 
 ___
 
