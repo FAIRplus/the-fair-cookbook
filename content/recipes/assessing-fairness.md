@@ -1,6 +1,8 @@
 (fcb-assess)=
 # Assessing FAIRness and FAIR compliance
 
+---
+
 This Chapter is dedicated to FAIR Evaluation and FAIR assessment processes.
 
 We will therefore cover topics such as:
@@ -14,3 +16,4 @@ We will therefore cover topics such as:
 5. FAIRNess and Data Readiness
 6. Maintaining and Improving FAIRness
 
+---

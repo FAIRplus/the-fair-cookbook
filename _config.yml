@@ -47,8 +47,8 @@ html:
   google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
   comments:
     hypothesis: true
-    utterances:
-      repo: "FAIRplus/the-fair-cookbook"
+    # utterances:
+    #   repo: "FAIRplus/the-fair-cookbook"
 #######################################################################################
 # Launch button settings
 launch_buttons:

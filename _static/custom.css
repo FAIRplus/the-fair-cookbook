@@ -1,29 +1,7 @@
-img.avatar-style {
-  object-fit: cover;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-}
-
 .mermaidClass > rect{
     fill:#FF0000;
     stroke:#FFFF00;
     stroke-width:4px;
-}
-
-i.fab.fa-github,.fas.fa-download,.fas.fa-expand,.fas.fa-arrow-left,.fas.far-arrow-up,.fas.fa-bars,.fas.fa-lightbulb,.fas.fa-pencil-alt,.fas.fa-list{
-  color: #fc7a4a;
-}
-i.fas.fa-download{
-  color: #fc7a4a;
-}
-
-button.btn.btn-secondary.topbarbtn{
-  color: #fc7a4a;
-}
-
-button.btn.btn-secondary{
-  color: #fc7a4a;
 }
 
 img.emoji {
@@ -274,6 +252,77 @@ img.imageez {
 
 
 /* ################################################## */
+/**                   FRONT PAGE TABLE               **/
+/* ################################################## */
+.summary-content {
+    padding-bottom: 0 !important;
+}
+
+img.avatar-style {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 3px 3px 11px rgba(66, 28, 100, 0.36);
+    margin-right: 20px;
+}
+
+#contributors table tr p:not(:first-child) {
+    text-align: center;
+}
+
+#contributors table tr td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#contributors table tr td:not(:first-child) p {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#contributors table tr td:first-child p {
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+#contributors table tr td,
+#contributors table tr th {
+    font-size: 1.2rem;
+}
+
+#contributors table tr th p {
+    text-align: center;
+}
+
+@media (min-width: 1220px) {
+    #contributors table tr th:nth-child(3) {
+        min-width: 330px;
+    }
+}
+
+#contributors img.elixir-style {
+    margin: auto;
+    display: block;
+    width: 100px;
+    height: auto;
+    max-width: none;
+}
+
+#contributors table .fa,
+#contributors table .fas,
+#contributors table .fab {
+    font-size: 25px;
+}
+
+
+/* ################################################## */
 /**           MEDIA QUERY WIDTH > 1405px             **/
 /* ################################################## */
 
@@ -284,7 +333,11 @@ img.imageez {
     }
     div#site-navigation {
         max-width: 300px;
-        padding: 40px 20px;
+        padding: 40px 20px 20px 20px;
+    }
+    div#site-navigation .navbar_extra_footer {
+        margin-bottom: 0 !important;
+        margin-top: 20px;
     }
     div#main-content {
         padding-top: 25px;
@@ -298,6 +351,11 @@ img.imageez {
     }
     div.topbar .topbar-main {
         padding-right: 10px;
+    }
+    footer,
+    footer * {
+        background: #421C6E;
+        color: white;
     }
     footer {
         width: 98.5vw !important;
@@ -328,30 +386,6 @@ img.imageez {
     }
     #site-navigation nav#bd-docs-nav {
         flex-grow: 1;
-    }
-
-    /*COLORS */
-    div.topbar div.bd-toc {
-        border-left: 1px solid #fc7a4a !important;
-    }
-    nav#bd-toc-nav li.active,
-    nav#bd-toc-nav a.active {
-        border-left: 1px solid #421C6E !important;
-    }
-    div.topbar {
-        position: fixed;
-        background: #421C6E;
-        z-index: 2001;
-    }
-    div.topbar div.tocsection {
-        color:white;
-        min-height: 50px;
-        border: 0 !important;
-    }
-    footer,
-    footer * {
-        background: #421C6E;
-        color: white;
     }
 }
 
@@ -413,6 +447,85 @@ footer.footer p:not(:first-child) {
     text-align: center;
 }
 
+.card.FAIRcard {
+    margin-bottom: 20px;
+}
+
+.card.FAIRcard .card-header {
+    padding: 10px 25px;
+    border: 0 !important;
+    background: #f7f7f7 !important;
+}
+
+.card.FAIRcard .card-body {
+    padding: 0 10px 10px 10px;
+    border: 0 !important;
+    background: #f7f7f7 !important;
+}
+
+@media (min-width: 1405px) {
+   .card.FAIRcard .card-body {
+       padding: 0 105px 10px 105px;
+       min-height: 135px;
+   }
+    .card.FAIRcard #findablePrinciple span,
+    .card.FAIRcard #accessiblePrinciple span,
+    .card.FAIRcard #interoperablePrinciple span,
+    .card.FAIRcard #reusablePrinciple span {
+        padding-top: 15px;
+    }
+}
+
+.card.FAIRcard .bigLetter {
+    font-size: 30px;
+    border: 4px solid;
+    padding: 10px 15px !important;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: inline-block;
+    box-shadow: 3px 3px 11px #ccc;
+    height: 60px;
+}
+
+.card.FAIRcard .cardTitle {
+    font-size: 24px;
+}
+
+.card.FAIRcard .recipeItem p {
+    display: inline-block;
+}
+
+.card.FAIRcard .recipeItem {
+    font-size: 18px;
+    display: flex;
+}
+
+.card.FAIRcard .recipeItem i {
+    margin-top: 5px;
+}
+
+
+.card.FAIRcard #interoperablePrinciple .bigLetter {
+    padding-left: 23px !important;
+    padding-right: 23px !important;
+}
+
+
+.card.FAIRcard #findablePrinciple,
+.card.FAIRcard #accessiblePrinciple,
+.card.FAIRcard #interoperablePrinciple,
+.card.FAIRcard #reusablePrinciple {
+    display: flex !important
+}
+
+@media (max-width: 1404px) {
+   .card.FAIRcard #accessiblePrinciple .bigLetter {
+       padding-left: 12px;
+    }
+    .card.FAIRcard #interoperablePrinciple .bigLetter {
+        padding-left: 17px;
+    }
+}
 
 /* ################################################## */
 /**                   EASY COLORS                    **/
@@ -432,11 +545,54 @@ img.imageez {
 	border: 1px solid black !important;
 }
 
+#contributors table tr td,
+#contributors table tr th {
+    border-top: 1px solid #421C6E;
+}
+#contributors table tr th {
+    border-bottom: 1px solid #421C6E;
+}
+
+div.topbar div.bd-toc {
+    border-left: 1px solid #fc7a4a !important;
+}
+nav#bd-toc-nav li.active,
+nav#bd-toc-nav a.active {
+    border-left: 1px solid #421C6E !important;
+}
+
+div.topbar div.tocsection {
+    color:white;
+    min-height: 50px;
+    border: 0 !important;
+}
+
 .c-page__nav,
 .c-page__nav__next,
 .c-page__nav__prev{
 	border-color: darkgrey;
 }
+
+.card.FAIRcard #findablePrinciple .bigLetter {
+    border-color: #fc7a4a;
+}
+
+.card.FAIRcard #accessiblePrinciple .bigLetter {
+    border-color: #8038D1;
+}
+
+.card.FAIRcard #interoperablePrinciple .bigLetter {
+    border-color: #300861;
+}
+
+.card.FAIRcard #reusablePrinciple .bigLetter {
+    border-color: #7E0038;
+}
+
+img.avatar-style {
+     border: 4px solid #421C6E;
+}
+
 
 /** TEXT COLORS **/
 li.toc-list-item__active,
@@ -452,7 +608,9 @@ main.bd-content #main-content h1{
     color: #421C6E !important;
 }
 
-li.toc-list-item-active, li.toc-list-itme-active {
+li.toc-list-item-active,
+li.toc-list-itme-active,
+span.caption-text {
 	color: #300861;
 }
 
@@ -466,6 +624,16 @@ li.toc-list-item-active, li.toc-list-itme-active {
 .fas.fa-pencil-alt,
 .fas.fa-list,
 .fas.fa-download,
+i.fab.fa-github,
+.fas.fa-download,
+.fas.fa-expand,
+.fas.fa-arrow-left,
+.fas.far-arrow-up,
+.fas.fa-bars,
+.fas.fa-lightbulb,
+.fas.fa-pencil-alt,
+.fas.fa-list,
+i.fas.fa-download,
 main.bd-content #main-content a,
 main.bd-content #main-content a:visited,
 main.bd-content #main-content h3,
@@ -488,7 +656,9 @@ button.btn.btn-secondary,
 .bd-sidebar nav ul.nav li.active > a,
 .bd-sidebar nav ul.nav li.active > a:hover,
 .c-sidebar__title,
-ul.c-sidebar__chapters{
+ul.c-sidebar__chapters,
+button.btn.btn-secondary.topbarbtn,
+button.btn.btn-secondary {
   color: #fc7a4a;
 }
 
@@ -503,6 +673,10 @@ nav.c-textbook__sidebar {
 
 #prev-link, #next-link {
     color: white !important;
+}
+
+#contributors table tr th {
+    color: #421C6E;
 }
 
 .text--primary {
@@ -560,6 +734,12 @@ aside.sidebar__right {
     background: #F1F1F1;
 }
 
+div.topbar {
+    position: fixed;
+    background: #421C6E;
+    z-index: 2001;
+}
+
 .primary {
     background: #421C6E !important;
 }
@@ -588,14 +768,15 @@ aside.sidebar__right {
 .recipe {
     flex-direction:row;
     width: 733px;
-    border-radius: 0 !important;
+    border-radius: 8px !important;
     border: 1px solid #300861 !important;
 }
 
 .recipe .card-header {
     flex-grow: 1;
     padding: 0;
-    border-radius: 0 !important;
+    border-top-left-radius: 7px !important;
+    border-bottom-left-radius: 7px !important;
 }
 
 .recipe .card-body {
@@ -726,4 +907,13 @@ aside.sidebar__right {
     .recipe .card-footer {
         margin-top: 20px;
     }
+    .recipe .card-header {
+        border-radius: 0 !important;
+        border-top-left-radius: 7px !important;
+        border-top-right-radius: 7px !important;
+    }
+}
+
+.bd-topbar-whitespace {
+    max-height:45px;
 }
