@@ -1,10 +1,10 @@
 (fcb-intro-audience)=
-# Who should read the FAIR Cookbook?
+# Who should read it?
 
 +++
 <br/>
 
-````{panels_fairplus}
+<!-- ````{panels_fairplus}
 :identifier_text: RX.X
 :identifier_link: 'https://example.com'
 :difficulty_level: 1
@@ -13,7 +13,7 @@
 :intended_audience: principal_investigator, data_manager, data_scientist, funder  
 :has_executable_code: nope
 :recipe_name: Who should read the FAIR Cookbook?
-```` 
+````  -->
 
 ## The FAIR Cookbook for IMI participants
 

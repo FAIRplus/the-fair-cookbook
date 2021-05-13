@@ -2,15 +2,18 @@
 
 
 - part: FOREWORD
+  numbered: false
   chapters:
-    - file: content/recipes/introduction
+    # - file: content/recipes/introduction
+    - file: content/recipes/introduction/FAIR-cookbook-audience
+    - file: content/recipes/introduction/FAIRplus-values
+    - file: content/recipes/glossary-fair-terms
       # title: Introduction
-      numbered: true
-      sections:
+      # numbered: true
+      # sections:
           # - file: content/recipes/introduction/test-css
 
-          - file: content/recipes/introduction/FAIR-cookbook-audience
-          - file: content/recipes/introduction/FAIRplus-values
+
           # - file: content/recipes/glossary-fair-terms
           # - file: content/recipes/introduction/brief-FAIR-principles
           # - file: content/recipes/introduction/what-is-IMI
@@ -20,38 +23,35 @@
           # - file: content/recipes/introduction/data-sharing-models
 
 
-- part: GLOSSARY
-  chapters:
-    - file: content/recipes/glossary-fair-terms
-
 # - file: content/recipes/cmmi
 #   title: Maturity models
 #   numbered: false
-
-- part: INFRASTRUCTURE
-  chapters:
-  - file: content/recipes/infrastructure
-    # title: Infrastructure for FAIR
-    numbered: true
-    sections:
-        - file: content/recipes/infrastructure/id-resolution
-        - file: content/recipes/infrastructure/data-catalog
-        - file: content/recipes/infrastructure/data-catalog-deployment
-        - file: content/recipes/infrastructure/vocabularies
-          sections:      
-            - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
-            - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
-            - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
+  
 
 - part: RECIPES
+
   chapters:
-# - header: findability
-    - file: content/recipes/findability
-  # title: Improving Findability 
+    - file: content/recipes/infrastructure
+      # title: Infrastructure for FAIR
+      numbered: true
+      sections:
+          - file: content/recipes/infrastructure/id-resolution
+          - file: content/recipes/infrastructure/data-catalog
+          - file: content/recipes/infrastructure/data-catalog-deployment
+          - file: content/recipes/infrastructure/vocabularies
+            sections:      
+              - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
+              - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
+              - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
+
+    - file: content/recipes/findability 
+      #title: Improving Findability
       numbered: true
       sections:
       - file: content/recipes/findability/identifiers
+        #title: TEST1
       - file: content/recipes/infrastructure/chemical-identities
+        #title: TEST2
       - file: content/recipes/findability/identifiers-minids
       - file: content/recipes/findability/zenodo-deposition
       - file: content/recipes/findability/seo
@@ -60,10 +60,8 @@
           - file: content/recipes/findability/seo/bioschemas-dataset
           - file: content/recipes/findability/seo/bioschemas-datacatalog
 
-
-# - header: accessibility
     - file: content/recipes/accessibility
-      # title: Improving Accessibility
+      #title: Improving Accessibility
       numbered: true
       sections:
         - file: content/recipes/accessibility/anonymizing-patient-data
@@ -73,7 +71,7 @@
 
     - file: content/recipes/interoperability
       # title: Improving Interoperability
-      numbered: true
+      numbered: 1
       sections:
           - file: content/recipes/interoperability/identifier-mapping
           - file: content/recipes/interoperability/bridgedb-recipe
@@ -95,7 +93,6 @@
           - file: content/recipes/interoperability/fastq-file-format-validators
           - file: content/recipes/interoperability/ETL-tools
 
-    # -header: reusability
     - file: content/recipes/reusability
       # title: Improving Reusability
       numbered: true
@@ -106,20 +103,25 @@
         # - file: content/recipes/reusability/license-selection
         - file: content/recipes/reusability/expressing-data-use
         - file: content/recipes/reusability/provenance
-        - file: content/recipes/reusability/community-standards
+        # - file: content/recipes/reusability/community-standards
      
     - file: content/recipes/applied-examples
       # title: Making IMI data FAIR
-      numbered: true
+      numbered: 1
       sections:
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
-          numbered: false
+          # numbered: false
           sections:
             - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
+              title: TEST!
             - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
+              title: TEST!
             - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
+              title: TEST!
             - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
+              title: TEST!
         - file: content/recipes/applied-examples/etox
+          title: TEST!!
         - file: content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
         - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
@@ -146,9 +148,10 @@
     #         - file: content/recipes/assessing-fairness/fair-assessment-fairshake
 
 
-- part: ABOUT THE FAIR COOKBOOK
+- part: ABOUT
   chapters:
     - file: content/recipes/community
+      title: Community
       numbered: true
       sections:
         - file: content/recipes/boilerplate/governance
@@ -156,22 +159,33 @@
         - file: content/recipes/boilerplate/code_of_conduct
 
     - file: content/recipes/help
+      title: Contribute
       numbered: true
       sections:
         - file: content/recipes/boilerplate/contributing
+          title: How to contribute
         - file: content/recipes/help/how-to-create-recipe-with-gdoc
+          title: Add via GoogleDoc
         - file: content/recipes/help/how-to-create-recipe-with-hackmd
+          title: Add via HackMD
         - file: content/recipes/help/how-to-create-recipe-with-git
-        - file: content/recipes/help/tips-tricks
+          title: Add via Git
         - file: content/recipes/help/recipe-template
+          title: Git recipe template
+        - file: content/recipes/help/tips-tricks
+          title: Tips and tricks
         - file: content/recipes/help/myst
+          title: Markdown cheatsheet
 
     - file: content/recipes/boilerplate
+      title: Platform
       numbered: true
       sections:
           - file: content/recipes/introduction/the-turing-way
-          - file: content/recipes/boilerplate/license
+            title: Leveraging the Turing Way Book
           - file: content/recipes/boilerplate/technology_stack
+            title: Technology stack
+          # - file: content/recipes/boilerplate/license
           # - file: content/recipes/boilerplate/project_information
           # - file: content/recipes/boilerplate/roadmap
           # - file: content/recipes/boilerplate/disclaimer

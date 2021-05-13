@@ -1,11 +1,10 @@
 (fcb-intro-fair-values)=
-# The Ethical Values behind FAIR and the FAIRPlus project
-
+# Ethical values of FAIR
 
 +++
 <br/>
 
-````{panels_fairplus}
+<!-- ````{panels_fairplus}
 :identifier_text: RX.X
 :identifier_link: 'https://example.com'
 :difficulty_level: 1
@@ -14,7 +13,7 @@
 :intended_audience: everyone  
 :has_executable_code: nope
 :recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
-````
+```` -->
 
 ## Table of Contents
 <!-- 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)

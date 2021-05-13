@@ -3,7 +3,7 @@
 
 ---
 
-This Chapter is dedicated to FAIRification processes which focus on improving the Dataset Reusability.
+This Chapter is dedicated to FAIRification processes which focus on improving the dataset interoperability.
 
 We will therefore cover topics such as
 
