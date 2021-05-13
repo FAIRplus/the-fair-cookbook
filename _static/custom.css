@@ -275,16 +275,19 @@ img.avatar-style {
     margin-right: 20px;
 }
 
-details table tr p:not(:first-child) {
+details table tr p:not(:first-child),
+#authors table tr p:not(:first-child){
     text-align: center;
 }
 
-details table tr td {
+details table tr td,
+#authors table tr td{
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-#contributors table tr td:not(:first-child) p {
+#contributors table tr td:not(:first-child) p,
+#authors table tr p:not(:first-child){
     display: flex;
     flex-direction: column;
     min-height: 100px;
@@ -295,11 +298,14 @@ details table tr td {
     padding: 0 10px;
 }
 
+#authors table tr td,
+#authors table tr th,
 details table tr td,
-details table tr th {
+details table tr th{
     font-size: 1.2rem;
 }
 
+#authors table tr th p,
 details table tr th p {
     text-align: center;
 }
@@ -308,6 +314,7 @@ details table tr th p {
     display: none;
 }
 
+#authors table tr td:first-child div.firstCol,
 details table tr td:first-child div.firstCol {
     display: flex;
     flex-direction: column;
@@ -319,17 +326,20 @@ details table tr td:first-child div.firstCol {
     padding: 0 10px;
 }
 
+#authors table tr td:first-child div.firstCol div.d-block,
 details table tr td:first-child div.firstCol div.d-block {
     margin: auto;
     text-align: center;
 }
 
 @media (min-width: 1220px) {
+    #authors table tr th:nth-child(3)
     details table tr th:nth-child(3) {
         min-width: 330px;
     }
 }
 
+#authors img.elixir-style,
 details img.elixir-style {
     margin: auto;
     display: block;
@@ -338,10 +348,18 @@ details img.elixir-style {
     max-width: none;
 }
 
+#authors table .fa,
+#authors table .fas,
+#authors table .fab,
 details table .fa,
 details table .fas,
 details table .fab {
     font-size: 25px;
+}
+
+#authors table th a,
+details table th a {
+    color: white
 }
 
 
@@ -569,18 +587,24 @@ img.imageez {
 }
 
 details table tr td,
-details table tr th {
+details table tr th,
+#authors table tr td,
+#authors table tr th{
     border-top: 1px solid #fc7a4a;
 }
+
+#authors table tr th,
 details table tr th {
     border-bottom: 1px solid #fc7a4a;
 }
 
+#authors table tbody,
 details table tbody {
     border-right: 1px solid #fc7a4a;
     border-bottom: 1px solid #fc7a4a;
 }
 
+#authors table,
 details table{
     border-left: 1px solid #fc7a4a;
 }
@@ -709,6 +733,7 @@ nav.c-textbook__sidebar {
     color: white !important;
 }
 
+#authors table tr th,
 details table tr th {
     color: white;
     background: #fc7a4a;
