@@ -332,7 +332,11 @@ img.avatar-style {
     }
     div#site-navigation {
         max-width: 300px;
-        padding: 40px 20px;
+        padding: 40px 20px 20px 20px;
+    }
+    div#site-navigation .navbar_extra_footer {
+        margin-bottom: 0 !important;
+        margin-top: 20px;
     }
     div#main-content {
         padding-top: 25px;
