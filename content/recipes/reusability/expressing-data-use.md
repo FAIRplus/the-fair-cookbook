@@ -709,9 +709,9 @@ ODRL Validation and Evaluation Sandbox
 
 The webapplication is powered by a REST-API the swagger document of which is available from the following address: http://odrlapi.appspot.com/apidoc/index.html
 
-## TODO discuss relation to RightML
+<!-- ## TODO discuss relation to RightML
 
-https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html
+https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html -->
 
 ## Consuming Data Use related annotations
 

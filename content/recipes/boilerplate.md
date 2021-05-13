@@ -33,6 +33,7 @@
 <i class="fas fa-cog fa-2x" style="color:#fc7a4a;"></i>
 ^^^
 <h4><b>Syntax</b></h4>
+
 {ref}`fcb-myst-cheatsheet`
 <p>ipython notebooks</p>
 ---
@@ -55,18 +56,32 @@
 <p><a href="mailto:fairplus-cookbook@elixir-europe.org">Elixir-europe FAIRcookbook</a></p>
 ---
 
-<i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
+<i class="fa fa-check-circle fa-2x text--orange"></i>
 ^^^
 <h4><b>Feature Requests</b></h4>
 <p><a href="https://github.com/FAIRplus/the-fair-cookbook/issues">Issue tracker</a></p>
----
-
 ````
 
 
 ---
 
-## Miscellaneous
+
+## Support or Contact
+
+Having troubles? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or [contact support](mailto:fairplus-cookbook@elixir-europe.org) and we’ll help you sort it out.
+
+___
+
+## Acknowledgements
+
+### Alan Turing Institute and the Turing Way Book 
+
+- The FAIR Cookbook is built using to `Jupyter Book`
+
+- The FAIR Cookbook Team thanks Malvia Sharan and Kirstie Whittaker.
+
+
+### Funding
 
 
 Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) 
@@ -77,15 +92,4 @@ Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/
 
 
 
-___
-
-## Support or Contact
-
-Having troubles? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or [contact support](mailto:fairplus-cookbook@elixir-europe.org) and we’ll help you sort it out.
-
-___
-
-## Acknowledgements
-
-The FAIR Cookbook is produced thanks to `Jupyter Book`
 

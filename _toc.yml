@@ -65,7 +65,7 @@
       numbered: true
       sections:
         # - file: content/recipes/accessibility/anonymizing-patient-data
-        - file: content/recipes/accessibility/how-to-use-sftp-for-transfer
+        - file: content/recipes/accessibility/sftp
         - file: content/recipes/accessibility/aspera
 
 
@@ -84,7 +84,7 @@
           - file: content/recipes/interoperability/ontology-robot-recipe
             sections:
               - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
-
+          - file: content/recipes/interoperability/creating_data_dictionary 
           - file: content/recipes/interoperability/creating-minimal-metadata-profiles
             sections:
               - file: content/recipes/interoperability/transcriptomics-metadata
