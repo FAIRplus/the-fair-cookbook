@@ -312,6 +312,7 @@ img.avatar-style {
     display: block;
     width: 100px;
     height: auto;
+    max-width: none;
 }
 
 #contributors table .fa,
