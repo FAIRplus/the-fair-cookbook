@@ -145,6 +145,14 @@ section > table {
 	text-align: center;
 }
 
+footer div.container p:first-child {
+    display: none !important;
+}
+
+footer li {
+    text-align: left;
+}
+
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-thumb {
 	width:0;
@@ -267,11 +275,11 @@ img.avatar-style {
     margin-right: 20px;
 }
 
-#contributors table tr p:not(:first-child) {
+details table tr p:not(:first-child) {
     text-align: center;
 }
 
-#contributors table tr td {
+details table tr td {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -287,20 +295,20 @@ img.avatar-style {
     padding: 0 10px;
 }
 
-#contributors table tr td,
-#contributors table tr th {
+details table tr td,
+details table tr th {
     font-size: 1.2rem;
 }
 
-#contributors table tr th p {
+details table tr th p {
     text-align: center;
 }
 
-#contributors table tr td p {
+#contributors table tr td:first-child p {
     display: none;
 }
 
-#contributors table tr td:first-child div.firstCol {
+details table tr td:first-child div.firstCol {
     display: flex;
     flex-direction: column;
     min-height: 100px;
@@ -311,18 +319,18 @@ img.avatar-style {
     padding: 0 10px;
 }
 
-#contributors table tr td:first-child div.firstCol div.d-block {
+details table tr td:first-child div.firstCol div.d-block {
     margin: auto;
     text-align: center;
 }
 
 @media (min-width: 1220px) {
-    #contributors table tr th:nth-child(3) {
+    details table tr th:nth-child(3) {
         min-width: 330px;
     }
 }
 
-#contributors img.elixir-style {
+details img.elixir-style {
     margin: auto;
     display: block;
     width: 100px;
@@ -330,9 +338,9 @@ img.avatar-style {
     max-width: none;
 }
 
-#contributors table .fa,
-#contributors table .fas,
-#contributors table .fab {
+details table .fa,
+details table .fas,
+details table .fab {
     font-size: 25px;
 }
 
@@ -560,20 +568,20 @@ img.imageez {
 	border: 1px solid black !important;
 }
 
-#contributors table tr td,
-#contributors table tr th {
+details table tr td,
+details table tr th {
     border-top: 1px solid #fc7a4a;
 }
-#contributors table tr th {
+details table tr th {
     border-bottom: 1px solid #fc7a4a;
 }
 
-#contributors table tbody {
+details table tbody {
     border-right: 1px solid #fc7a4a;
     border-bottom: 1px solid #fc7a4a;
 }
 
-#contributors table{
+details table{
     border-left: 1px solid #fc7a4a;
 }
 
@@ -701,7 +709,7 @@ nav.c-textbook__sidebar {
     color: white !important;
 }
 
-#contributors table tr th {
+details table tr th {
     color: white;
     background: #fc7a4a;
 }
