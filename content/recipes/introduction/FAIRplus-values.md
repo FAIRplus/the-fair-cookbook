@@ -106,7 +106,7 @@ A lot has been written about the values underpinning data sharing but little has
 | Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
 | <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Anne Cambon-Thomsen</span></img> |  CNRS, Toulouse, France; Joint research unit on epidemiology and public health, Inserm (National Institute for Health and Medical Research) and University Toulouse III Paul Sabatier, Toulouse, France| <a href='https://orcid.org/0000-0001-8793-3644'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Writing - Original Draft |
-| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Alejandra Delfin Rossaro</span></img> |  University of Toulouse III Paul Sabatier, Toulouse, France| <a href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>| Writing - Review & Editing, Funding acquisition | 
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Alejandra Delfin Rossaro</span></img> |  University of Toulouse III Paul Sabatier, Toulouse, France| <a href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>| Writing - Original Draft | 
 
 ___
 

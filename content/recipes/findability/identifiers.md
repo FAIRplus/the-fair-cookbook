@@ -468,7 +468,7 @@ ___
 
 ## Authors
 
- Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
 | <div class="firstCol"><a target="_blank" href='https://github.com/sgtp'><img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'></img><div class="d-block">Andrea Splendiani</div></a>       </div>|Novartis AG| <a target="_blank" href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x text--orange'></i></a> |Conceptualization |
 | <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div>| Heriot-Watt University / ELIXIR-UK | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft |

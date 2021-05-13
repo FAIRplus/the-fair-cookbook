@@ -23,7 +23,7 @@ The recipe will therefore also cover some of the implications of using a `closed
 
 ## Graphical overview
 
-```{figure} aspera.md-figure1.mmd.png
+```{figure} aspera-figure1.png
 ---
 name: aspera-data-transfer-process
 alt: Aspera Data Transfer Process
@@ -126,7 +126,8 @@ ascp version 3.9.6.176292
 
 ## Authors
 
-| Name           | Affiliation    | orcid          | CrediT role   |
+
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
 | <div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div>  | GSK, metadata group in R&D Data and Computational Sciences  | <a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a> |  Writing - Original Draft |
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>   </div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing, Conceptualization|

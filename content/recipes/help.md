@@ -5,10 +5,10 @@ This section is meant to provide basic information to users looking to contribut
 
 To provide content, users have 3 options depending on the familiarity with git command and github environment.
 
-It always start by getting in touch with the group by simply logging an issue in our [repository issue tracker](https://github.com/proccaserra/the-fair-cookbook-ng/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/help.html&body=Your%20issue%20content%20here.)
+It always start by getting in touch with the group by simply logging an issue in our [repository issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
 
 
-* Provide content using the `Google doc template`
+* Provide content using the `Google doc template` 
 
 * Provide content using `HackMD`
 

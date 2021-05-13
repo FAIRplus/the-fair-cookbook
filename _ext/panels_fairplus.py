@@ -213,7 +213,7 @@ class PanelFairplus(Directive):
                     '</div>',
                     '<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with ',
                         f'<a href="{self.options["identifier_link"]}" class="text--purple-dark">{self.options["identifier_text"]}',
-                    '</a>I am stable!</div>',
+                    '</a></div>',
                 '</div>',
             '</div>',
             '',
