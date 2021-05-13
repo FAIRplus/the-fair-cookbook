@@ -6,10 +6,11 @@
 :identifier_text: http://w3id.org/faircookbook/FCB_TBA
 :identifier_link: http://w3id.org/faircookbook/FCB_TBA
 :difficulty_level: 3
-:recipe_type: How To
+:recipe_type: technical_guidance
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
-:has_executable_code: no
+:has_executable_code: nope
+:recipe_name: How to create a FAIR Data/Variable Dictionary
 ```` 
 ___
 
