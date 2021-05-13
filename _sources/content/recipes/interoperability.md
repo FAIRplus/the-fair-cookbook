@@ -3,16 +3,18 @@
 
 ---
 
-This Chapter is dedicated to FAIRification processes which focus on improving the Dataset Reusability.
+The data usually need to be integrated with other data, and be interoperate with applications or workflows for analysis, storage, and processing.
 
-We will therefore cover topics such as
+Data objects can be interoperable only if:
+- (Meta) data is machine-actionable
+- (Meta) data formats utilize shared vocabularies and/or ontologies
+- (Meta) data within the Data Object should thus be both syntactically parseable and semantically machine-accessible.
 
+This chapter is dedicated to the `standards`, `tools`, `services` and other `resources` necessary to make data interoperable.
 
-1. Competency questions
-2. Data key organising principles 
-3. Data integration: Mash up challenges
-4. Meta Analysis
-5. Data Readiness and Machine Learning
+Browse existing recipes, but bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner.
+
+If you want to contribute follow the [instruction][link_contribute] provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
 ---
 
