@@ -480,7 +480,7 @@ footer.footer p:not(:first-child) {
 
 @media (min-width: 1405px) {
    .card.FAIRcard .card-body {
-       padding: 0 105px 10px 105px;
+       padding: 0 45px 10px 45px;
        min-height: 135px;
    }
 }
@@ -500,6 +500,8 @@ footer.footer p:not(:first-child) {
 
 .card.FAIRcard .cardTitle {
     font-size: 24px;
+    display: table-cell !important;
+    vertical-align: middle !important;
 }
 
 .card.FAIRcard .recipeItem p {
