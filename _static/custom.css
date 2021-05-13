@@ -272,8 +272,8 @@ img.avatar-style {
 }
 
 #contributors table tr td {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #contributors table tr td:not(:first-child) p {
@@ -287,17 +287,32 @@ img.avatar-style {
     padding: 0 10px;
 }
 
-#contributors table tr td:first-child p {
-    margin-top: 25px;
-    margin-bottom: 0;
-}
-
 #contributors table tr td,
 #contributors table tr th {
     font-size: 1.2rem;
 }
 
 #contributors table tr th p {
+    text-align: center;
+}
+
+#contributors table tr td p {
+    display: none;
+}
+
+#contributors table tr td:first-child div.firstCol {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#contributors table tr td:first-child div.firstCol div.d-block {
+    margin: auto;
     text-align: center;
 }
 
@@ -465,30 +480,28 @@ footer.footer p:not(:first-child) {
 
 @media (min-width: 1405px) {
    .card.FAIRcard .card-body {
-       padding: 0 105px 10px 105px;
+       padding: 0 45px 10px 45px;
        min-height: 135px;
    }
-    .card.FAIRcard #findablePrinciple span,
-    .card.FAIRcard #accessiblePrinciple span,
-    .card.FAIRcard #interoperablePrinciple span,
-    .card.FAIRcard #reusablePrinciple span {
-        padding-top: 15px;
-    }
 }
 
 .card.FAIRcard .bigLetter {
     font-size: 30px;
     border: 4px solid;
-    padding: 10px 15px !important;
+    padding: 10px 0;
     border-radius: 50%;
     margin-right: 20px;
     display: inline-block;
     box-shadow: 3px 3px 11px #ccc;
     height: 60px;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
 }
 
 .card.FAIRcard .cardTitle {
     font-size: 24px;
+    display: table-cell !important;
+    vertical-align: middle !important;
 }
 
 .card.FAIRcard .recipeItem p {
@@ -510,12 +523,14 @@ footer.footer p:not(:first-child) {
     padding-right: 23px !important;
 }
 
+.card.FAIRcard #accessiblePrinciple .bigLetter {
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+}
 
-.card.FAIRcard #findablePrinciple,
-.card.FAIRcard #accessiblePrinciple,
-.card.FAIRcard #interoperablePrinciple,
-.card.FAIRcard #reusablePrinciple {
-    display: flex !important
+.card.FAIRcard #reusablePrinciple .bigLetter {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
 }
 
 @media (max-width: 1404px) {
@@ -590,7 +605,9 @@ div.topbar div.tocsection {
 }
 
 img.avatar-style {
-     border: 4px solid #421C6E;
+    border: 4px solid #421C6E;
+    display: block;
+    margin: auto;
 }
 
 
