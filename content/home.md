@@ -1,7 +1,10 @@
 # FAIR Cookbook
 
+---
+
 **Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and Reusable (FAIR).**
 
+---
 
 <!-- ## The official site -->
 
@@ -9,7 +12,7 @@
 
 🛢️🚧 **This project is still in early phase and this is work in progress** 🚧🛢️
  -->
----
+
 
 <!--
 ## The FAIR Cookbook overview
@@ -200,10 +203,10 @@ Below there are links to some key recipes, click on them to explore their conten
     <span class="cardTitle"> Accessibility: examplar recipes </span>
 </h4>
 ^^^
-<div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
+<!-- <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
 {ref}`fcb-access-anonymizing`
-</div>
+</div> -->
 <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
 {ref}`fcb-access-sftp`

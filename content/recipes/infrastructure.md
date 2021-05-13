@@ -1,6 +1,8 @@
 (fcb-infrastructure)=
 # Infrastructure for FAIR
 
+---
+
 This Chapter is dedicated to the infrastructure requirement for delivering FAIR Data and Services.
 
 We will therefore cover topics such as:
@@ -12,6 +14,6 @@ We will therefore cover topics such as:
 4. Vocabulary Services:
 5. Endpoints for Linked Data
 
-
+---
 
 

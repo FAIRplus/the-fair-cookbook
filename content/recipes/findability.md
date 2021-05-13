@@ -1,6 +1,7 @@
 (fcb-find)=
 # Findability
 
+---
 
 This Chapter is dedicated to FAIRification processes which focus on improving the Dataset discovery.
 
@@ -11,4 +12,4 @@ We will therefore cover topics such as:
 2. Search Engine Optimization Strategies
 3. Semantic Markup and Semantic Mashups
 
-
+---

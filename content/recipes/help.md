@@ -1,5 +1,5 @@
 (fcb-help)=
-# Getting help and helping
+# Contribute
 
 This section is meant to provide basic information to users looking to contribute content to the `FAIR Cookbook`
 

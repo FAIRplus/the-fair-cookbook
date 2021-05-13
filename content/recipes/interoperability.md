@@ -1,5 +1,7 @@
 (fcb-interoperability)=
-# interoperability
+# Interoperability
+
+---
 
 This Chapter is dedicated to FAIRification processes which focus on improving the Dataset Reusability.
 
@@ -12,5 +14,6 @@ We will therefore cover topics such as
 4. Meta Analysis
 5. Data Readiness and Machine Learning
 
+---
 
 
