@@ -1,3 +1,7 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
 .mermaidClass > rect{
     fill:#FF0000;
     stroke:#FFFF00;
