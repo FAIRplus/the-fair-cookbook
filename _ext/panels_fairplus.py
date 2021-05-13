@@ -195,7 +195,7 @@ class PanelFairplus(Directive):
                 '<div class="card-body text--purple-dark">',
                     '<div class="title">',
                         f'<div style="flex-grow:1; margin-right:5px">{self.options["recipe_name"]}</div>',
-                        '<img src="/the-fair-cookbook/_build/html/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>',
+                        '<img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>',
                     '</div>',
                     '<div class="section">',
                         '<i class="sectionIcon fa fa-laptop fa-2x"></i>'
