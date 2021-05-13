@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.4.1. Evaluation Method</title>
+    <title>Evaluation Method</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -48,40 +48,6 @@
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -95,8 +61,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5.4.2. RDA Evaluation Methods" href="rda-evaluation.html" />
-    <link rel="prev" title="5. FAIR assessment by hand" href="../manual-fair-assessment.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -140,137 +104,50 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../introduction.html">
    Introduction
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/the-turing-way.html">
-     1. The Turing Way Book of Data Science
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
-     2. Who should read the FAIR Cookbook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
-     3. What are the FAIR Principles?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/what-is-IMI.html">
-     4. What is IMI?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
-     5. FAIR in the context of IMI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
-     6. Engaging with IMI Projects
+     1. Who should read the FAIR Cookbook?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/FAIRplus-values.html">
-     7. The Ethical Values behind FAIR and the FAIRPlus project
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/data-sharing-models.html">
-     8. High level data sharing models
+     2. The Ethical Values behind FAIR and the FAIRPlus project
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../../assessing-fairness.html">
-   Assessing FAIR
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR Things
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Data-Management-Maturity-Model.html">
-     1. Data Management Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Datasets-Maturity-Model.html">
-     2. FAIRplus Datasets Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Data-Usage-Areas.html">
-     3. Data Usage Areas
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../fair-indicators.html">
-     4. FAIR Indicators
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="RDA-Indicators.html">
-       4.4.1. RDA Indicators
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="FAIRPlus-Indicators.html">
-       4.4.2. IMI FAIRPlus Indicators
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 current active collapsible-parent">
-    <a class="reference internal" href="../manual-fair-assessment.html">
-     5. FAIR assessment by hand
-    </a>
-    <ul class="current collapse-ul">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       5.4.1. Evaluation Method
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="rda-evaluation.html">
-       5.4.2. RDA Evaluation Methods
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../automatic-fair-assessment.html">
-     6. FAIR assessment by software
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../fair-assessment-fairevaluator.html">
-       6.4.1. Assessing FAIRness with FAIREvaluator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../fair-assessment-fairshake.html">
-       6.4.2. FAIR assessment with FAIRShake
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  INFRASTRUCTURE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../infrastructure.html">
    Infrastructure for FAIR
@@ -319,9 +196,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../findability.html">
-   Improving Findability
+   Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -374,7 +258,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../accessibility.html">
-   Improving Accessibility
+   Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -393,22 +277,22 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../interoperability.html">
-   Improving Interoperability
+   Interoperability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/identifier-mapping.html">
-     How to interlink data from different sources?
+     1. How to interlink data from different sources?
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/bridgedb-recipe.html">
-     Identifier mapping with BridgeDB
+     2. Identifier mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       Identifier mapping using BridgeDb WS
+       2.12.1. Identifier mapping using BridgeDb WS
       </a>
      </li>
     </ul>
@@ -417,32 +301,32 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-why-using-them.html">
-     Why use Terminologies &amp; Ontologies?
+     3. Why use Terminologies &amp; Ontologies?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
-     Which vocabulary to use?
+     4. Which vocabulary to use?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
-     Requesting terms addition to terminology artefacts
+     5. Requesting terms addition to terminology artefacts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-operations-tools.html">
-     Tools for ontology-associated operations
+     6. Tools for ontology-associated operations
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
-     Building an application ontology with Robot
+     7. Building an application ontology with Robot
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
-       MSIO, an application ontology for Metabolomics
+       7.12.1. MSIO, an application ontology for Metabolomics
       </a>
      </li>
     </ul>
@@ -451,17 +335,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
-     Creating a Metadata Profile
+     8. Creating a Metadata Profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
-       Establishing a Metadata Profile for Transcriptomics
+       8.4.1. Establishing a Metadata Profile for Transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
-       Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
       </a>
      </li>
     </ul>
@@ -470,17 +354,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
-     From proprietary to open standard data format
+     9. From proprietary to open standard data format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
-     File format validation, an example with FASTQ files
+     10. File format validation, an example with FASTQ files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ETL-tools.html">
-     Tools for Data Extraction, Transformation, and Loading (ETL)
+     11. Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -489,7 +373,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../reusability.html">
-   Improving Reusability
+   Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -528,32 +412,32 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../applied-examples.html">
-   Making IMI data FAIR
+   Applied Examples
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../applied-examples/fair-data-matrix-recipe.html">
-     Making a Data Matrix FAIR
+     1. Making a Data Matrix FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Bibliographic Reference:
+       1.11.1. Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring a rose garden with SPARQL
+       1.11.3. Exploring a rose garden with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
       </a>
      </li>
     </ul>
@@ -562,75 +446,43 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/etox.html">
-     eTox: Data normalization and integration through entity linking
+     2. eTox: Data normalization and integration through entity linking
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
-     ND4BB dataset FAIRification recipe
+     3. ND4BB dataset FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     Oncotrack FAIRification recipe
+     4. Oncotrack FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/resolute_raw/rawRecipe_resolute.html">
-     RESOLUTE FAIRification Recipe
+     5. RESOLUTE FAIRification Recipe
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../glossary-fair-terms.html">
-   Glossary of FAIR things
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT THE FAIR COOKBOOK
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../help.html">
-   Help
+  <a class="reference internal" href="../../community.html">
+   Community
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../help/tips-tricks.html">
-     1. Recipe Tips and Tricks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/recipe-template.html">
-     2. Recipe Template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
-     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
-     4. How to use HackMD to write a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
-     5. How to create a FAIRPlus Coobook Recipe ?
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../boilerplate.html">
-   Miscellaneous
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/license.html">
-     1. License for this book
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     1. FAIR Cookbook Governance
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,33 +491,76 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/governance.html">
-     3. FAIR Cookbook Governance
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
-     4. FAIR Cookbook Code of Conduct
+     3. FAIR Cookbook Code of Conduct
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/project_information.html">
-     5. FAIR CookBook BoilerPlate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/roadmap.html">
-     6. FAIR cookbook development roadmap
-    </a>
-   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../../boilerplate/contributing.html">
-     7. Contributing to the FAIR cookbook
+     1. Contributing to the FAIR cookbook
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/disclaimer.html">
-     8. Disclaimer
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     3. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     4. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     5. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     6. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/myst.html">
+     7. MyST syntax cheat sheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     2. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/technology_stack.html">
+     3. Technology stack
     </a>
    </li>
   </ul>
@@ -763,17 +658,17 @@ commentsRunWhenDOMLoaded(addUtterances);
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-use-fairplus-indicators">
-   5.4.1.1. How to use FAIRplus Indicators:
+   How to use FAIRplus Indicators:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   5.4.1.2. Authors
+   Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   5.4.1.3. License
+   License
   </a>
  </li>
 </ul>
@@ -789,13 +684,13 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="evaluation-method">
-<h1><span class="section-number">5.4.1. </span>Evaluation Method<a class="headerlink" href="#evaluation-method" title="Permalink to this headline">¶</a></h1>
+<h1>Evaluation Method<a class="headerlink" href="#evaluation-method" title="Permalink to this headline">¶</a></h1>
 <p>The FAIRplus maturity model is still under development. 🚧</p>
 <p>We are investigating existing evaluation methods, such as RDA Data Maturity Model.</p>
 <p>FAIRplus project targets developing a maturity model based on Data Usage areas.</p>
 <p>Current FAIRplus indicators measure compliance of data sets to given Data Usage areas, but do not provide a maturation path yet.</p>
 <div class="section" id="how-to-use-fairplus-indicators">
-<h2><span class="section-number">5.4.1.1. </span>How to use FAIRplus Indicators:<a class="headerlink" href="#how-to-use-fairplus-indicators" title="Permalink to this headline">¶</a></h2>
+<h2>How to use FAIRplus Indicators:<a class="headerlink" href="#how-to-use-fairplus-indicators" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Download Evaluation form <a href="https://github.com/FAIRplus/CMM/raw/master/docs/Data%20FAIRness%20Assessment.xlsx">here</a>.</p></li>
 <li><p>Read the detailed descriptions of <a class="reference internal" href="FAIRPlus-Indicators.html"><span class="doc std std-doc">FAIRplus Indicators</span></a>.</p></li>
@@ -820,7 +715,7 @@ As the FAIRplus process maturity model develops, a new data maturity evaluation 
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">5.4.1.2. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -845,7 +740,7 @@ As the FAIRplus process maturity model develops, a new data maturity evaluation 
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">5.4.1.3. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -876,8 +771,6 @@ As the FAIRplus process maturity model develops, a new data maturity evaluation 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../manual-fair-assessment.html" title="previous page"><span class="section-number">5. </span>FAIR assessment by hand</a>
-    <a class='right-next' id="next-link" href="rda-evaluation.html" title="next page"><span class="section-number">5.4.2. </span>RDA Evaluation Methods</a>
 
         </div>
         

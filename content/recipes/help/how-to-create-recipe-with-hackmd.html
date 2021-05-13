@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. How to use HackMD to write a FAIR Cookbook Recipe</title>
+    <title>3. How to use HackMD to write a FAIR Cookbook Recipe</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -48,40 +48,6 @@
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -95,8 +61,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5. How to create a FAIRPlus Coobook Recipe ?" href="how-to-create-recipe-with-git.html" />
-    <link rel="prev" title="3. Using GoogleDocs to contribute a FAIR Cookbook Recipe" href="how-to-create-recipe-with-gdoc.html" />
+    <link rel="next" title="4. How to create a FAIRPlus Coobook Recipe ?" href="how-to-create-recipe-with-git.html" />
+    <link rel="prev" title="2. Using GoogleDocs to contribute a FAIR Cookbook Recipe" href="how-to-create-recipe-with-gdoc.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -140,137 +106,50 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../introduction.html">
    Introduction
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. The Turing Way Book of Data Science
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-     2. Who should read the FAIR Cookbook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
-     3. What are the FAIR Principles?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/what-is-IMI.html">
-     4. What is IMI?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/FAIR-in-IMI-context.html">
-     5. FAIR in the context of IMI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/IMI-Data-Access-Request-Process.html">
-     6. Engaging with IMI Projects
+     1. Who should read the FAIR Cookbook?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../introduction/FAIRplus-values.html">
-     7. The Ethical Values behind FAIR and the FAIRPlus project
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/data-sharing-models.html">
-     8. High level data sharing models
+     2. The Ethical Values behind FAIR and the FAIRPlus project
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../assessing-fairness.html">
-   Assessing FAIR
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR Things
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
-     1. Data Management Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
-     2. FAIRplus Datasets Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
-     3. Data Usage Areas
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
-     4. FAIR Indicators
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
-       4.4.1. RDA Indicators
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
-       4.4.2. IMI FAIRPlus Indicators
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
-     5. FAIR assessment by hand
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
-       5.4.1. Evaluation Method
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
-       5.4.2. RDA Evaluation Methods
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
-     6. FAIR assessment by software
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
-       6.4.1. Assessing FAIRness with FAIREvaluator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
-       6.4.2. FAIR assessment with FAIRShake
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  INFRASTRUCTURE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../infrastructure.html">
    Infrastructure for FAIR
@@ -319,9 +198,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
-   Improving Findability
+   Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -374,7 +260,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../accessibility.html">
-   Improving Accessibility
+   Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -393,22 +279,22 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../interoperability.html">
-   Improving Interoperability
+   Interoperability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/identifier-mapping.html">
-     How to interlink data from different sources?
+     1. How to interlink data from different sources?
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     Identifier mapping with BridgeDB
+     2. Identifier mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       Identifier mapping using BridgeDb WS
+       2.12.1. Identifier mapping using BridgeDb WS
       </a>
      </li>
     </ul>
@@ -417,32 +303,32 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-why-using-them.html">
-     Why use Terminologies &amp; Ontologies?
+     3. Why use Terminologies &amp; Ontologies?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
-     Which vocabulary to use?
+     4. Which vocabulary to use?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
-     Requesting terms addition to terminology artefacts
+     5. Requesting terms addition to terminology artefacts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
-     Tools for ontology-associated operations
+     6. Tools for ontology-associated operations
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
-     Building an application ontology with Robot
+     7. Building an application ontology with Robot
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
-       MSIO, an application ontology for Metabolomics
+       7.12.1. MSIO, an application ontology for Metabolomics
       </a>
      </li>
     </ul>
@@ -451,17 +337,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
-     Creating a Metadata Profile
+     8. Creating a Metadata Profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
-       Establishing a Metadata Profile for Transcriptomics
+       8.4.1. Establishing a Metadata Profile for Transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
-       Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
       </a>
      </li>
     </ul>
@@ -470,17 +356,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
-     From proprietary to open standard data format
+     9. From proprietary to open standard data format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
-     File format validation, an example with FASTQ files
+     10. File format validation, an example with FASTQ files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ETL-tools.html">
-     Tools for Data Extraction, Transformation, and Loading (ETL)
+     11. Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -489,7 +375,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../reusability.html">
-   Improving Reusability
+   Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -528,32 +414,32 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../applied-examples.html">
-   Making IMI data FAIR
+   Applied Examples
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     Making a Data Matrix FAIR
+     1. Making a Data Matrix FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Bibliographic Reference:
+       1.11.1. Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring a rose garden with SPARQL
+       1.11.3. Exploring a rose garden with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
       </a>
      </li>
     </ul>
@@ -562,75 +448,43 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/etox.html">
-     eTox: Data normalization and integration through entity linking
+     2. eTox: Data normalization and integration through entity linking
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
-     ND4BB dataset FAIRification recipe
+     3. ND4BB dataset FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     Oncotrack FAIRification recipe
+     4. Oncotrack FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
-     RESOLUTE FAIRification Recipe
+     5. RESOLUTE FAIRification Recipe
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
-   Glossary of FAIR things
-  </a>
- </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../help.html">
-   Help
-  </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="tips-tricks.html">
-     1. Recipe Tips and Tricks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="recipe-template.html">
-     2. Recipe Template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="how-to-create-recipe-with-gdoc.html">
-     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     4. How to use HackMD to write a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="how-to-create-recipe-with-git.html">
-     5. How to create a FAIRPlus Coobook Recipe ?
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT THE FAIR COOKBOOK
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Miscellaneous
+  <a class="reference internal" href="../community.html">
+   Community
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/license.html">
-     1. License for this book
+    <a class="reference internal" href="../boilerplate/governance.html">
+     1. FAIR Cookbook Governance
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,33 +493,76 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/governance.html">
-     3. FAIR Cookbook Governance
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     4. FAIR Cookbook Code of Conduct
+     3. FAIR Cookbook Code of Conduct
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/project_information.html">
-     5. FAIR CookBook BoilerPlate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/roadmap.html">
-     6. FAIR cookbook development roadmap
-    </a>
-   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/contributing.html">
-     7. Contributing to the FAIR cookbook
+     1. Contributing to the FAIR cookbook
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/disclaimer.html">
-     8. Disclaimer
+    <a class="reference internal" href="how-to-create-recipe-with-gdoc.html">
+     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="how-to-create-recipe-with-git.html">
+     4. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tips-tricks.html">
+     5. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipe-template.html">
+     6. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="myst.html">
+     7. MyST syntax cheat sheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     2. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/technology_stack.html">
+     3. Technology stack
     </a>
    </li>
   </ul>
@@ -763,81 +660,81 @@ commentsRunWhenDOMLoaded(addUtterances);
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   4.1. Main Objectives
+   3.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-github-account-and-obtain-your-github-handle">
-   4.2. 2. Create a github account and obtain your github handle
+   3.2. 2. Create a github account and obtain your github handle
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation">
-   4.3. 3. Request to be added to the FAIR Cookbook github repository and accept the invitation.
+   3.3. 3. Request to be added to the FAIR Cookbook github repository and accept the invitation.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-a-new-recipe">
-   4.4. 4. Creating a new recipe:
+   3.4. 4. Creating a new recipe:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-new-issue-in-the-issue-tracker">
-     4.4.1. 4.1 Create a new issue in the issue tracker.
+     3.4.1. 4.1 Create a new issue in the issue tracker.
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command">
-   4.5. 4.2. create a new branch under the FAIR Cookbook github repository using the following command:
+   3.5. 4.2. create a new branch under the FAIR Cookbook github repository using the following command:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-hackmd-io-account-simply-using-your-github-credentials">
-   4.6. 6. create a HackMD.io account, simply using your github credentials
+   3.6. 6. create a HackMD.io account, simply using your github credentials
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#getting-familiar-with-markdown">
-   4.7. 7. Getting familiar with MarkDown:
+   3.7. 7. Getting familiar with MarkDown:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#build-confidence-using-hackmd">
-   4.8. 8. Build confidence using HackMD
+   3.8. 8. Build confidence using HackMD
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#use-the-fairplus-recipe-template-as-guide">
-   4.9. 9. Use the FAIRplus Recipe Template as guide
+   3.9. 9. Use the FAIRplus Recipe Template as guide
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#writing-notes-with-hackmd-io">
-   4.10. 10. Writing notes with HackMD.io:
+   3.10. 10. Writing notes with HackMD.io:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   4.11. Conclusion:
+   3.11. Conclusion:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-read-next">
-     4.11.1. What should I read next?
+     3.11.1. What should I read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   4.12. Authors:
+   3.12. Authors:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   4.13. License:
+   3.13. License:
   </a>
  </li>
 </ul>
@@ -853,7 +750,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="how-to-use-hackmd-to-write-a-fair-cookbook-recipe">
-<span id="fcb-help-recipe-hackmd"></span><h1><span class="section-number">4. </span>How to use HackMD to write a FAIR Cookbook Recipe<a class="headerlink" href="#how-to-use-hackmd-to-write-a-fair-cookbook-recipe" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-help-recipe-hackmd"></span><h1><span class="section-number">3. </span>How to use HackMD to write a FAIR Cookbook Recipe<a class="headerlink" href="#how-to-use-hackmd-to-write-a-fair-cookbook-recipe" title="Permalink to this headline">¶</a></h1>
 <!-- **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
 
 **identifier:** [RX.X](RX.X)
@@ -882,7 +779,7 @@ ___
 
 --- -->
 <div class="section" id="main-objectives">
-<h2><span class="section-number">4.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p><strong>This document aims to guide users through the process of getting set up to contribute content to the <a class="reference external" href="https://fairplus.github.io/the-fair-cookbook/intro">the FAIR cookbok</a> using <a class="reference external" href="http://HackMD.io">HackMD.io</a> online editor.
 The document contains a checklist taking you point by point through the installation process and through the 2 main ways of using HackMD.</strong></p>
@@ -908,18 +805,18 @@ Once you’ve carried the extension installation, any github repository for whic
 <p>🐙 This will not be visible from Safari, Brave or Internet Explorer browsers <em>even if</em> you have HackMD activated for your repository.</p>
 </div>
 <div class="section" id="create-a-github-account-and-obtain-your-github-handle">
-<h2><span class="section-number">4.2. </span>2. Create a github account and obtain your github handle<a class="headerlink" href="#create-a-github-account-and-obtain-your-github-handle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>2. Create a github account and obtain your github handle<a class="headerlink" href="#create-a-github-account-and-obtain-your-github-handle" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation">
-<h2><span class="section-number">4.3. </span>3. Request to be added to the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook">FAIR Cookbook github repository</a> and accept the invitation.<a class="headerlink" href="#request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>3. Request to be added to the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook">FAIR Cookbook github repository</a> and accept the invitation.<a class="headerlink" href="#request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation" title="Permalink to this headline">¶</a></h2>
 <!-- ![](https://i.imgur.com/wyTn5aS.png) -->
 <div> <img src="https://i.imgur.com/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
 </div>
 </div>
 <div class="section" id="creating-a-new-recipe">
-<h2><span class="section-number">4.4. </span>4. Creating a new recipe:<a class="headerlink" href="#creating-a-new-recipe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>4. Creating a new recipe:<a class="headerlink" href="#creating-a-new-recipe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="create-a-new-issue-in-the-issue-tracker">
-<h3><span class="section-number">4.4.1. </span>4.1 Create a new issue in the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">issue tracker</a>.<a class="headerlink" href="#create-a-new-issue-in-the-issue-tracker" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.1. </span>4.1 Create a new issue in the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">issue tracker</a>.<a class="headerlink" href="#create-a-new-issue-in-the-issue-tracker" title="Permalink to this headline">¶</a></h3>
 <!-- ![](https://i.imgur.com/frsBwqc.png =750x) -->
 <div> <img src="https://i.imgur.com/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
 </div>
@@ -932,34 +829,34 @@ Once you’ve carried the extension installation, any github repository for whic
 </div>
 </div>
 <div class="section" id="create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command">
-<h2><span class="section-number">4.5. </span>4.2. create a new branch under the FAIR Cookbook github repository using the following command:<a class="headerlink" href="#create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>4.2. create a new branch under the FAIR Cookbook github repository using the following command:<a class="headerlink" href="#create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>git checkout -b recipe_xx master</p>
 </div></blockquote>
 </div>
 <div class="section" id="create-a-hackmd-io-account-simply-using-your-github-credentials">
-<h2><span class="section-number">4.6. </span>6. create a <a class="reference external" href="https://hackmd.io">HackMD.io</a> account, simply using your github credentials<a class="headerlink" href="#create-a-hackmd-io-account-simply-using-your-github-credentials" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>6. create a <a class="reference external" href="https://hackmd.io">HackMD.io</a> account, simply using your github credentials<a class="headerlink" href="#create-a-hackmd-io-account-simply-using-your-github-credentials" title="Permalink to this headline">¶</a></h2>
 <!-- ![](https://i.imgur.com/E2ok5ni.png =450x) -->
 <div> <img src="https://i.imgur.com/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" />
 </div>
 </div>
 <div class="section" id="getting-familiar-with-markdown">
-<h2><span class="section-number">4.7. </span>7. Getting familiar with MarkDown:<a class="headerlink" href="#getting-familiar-with-markdown" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7. </span>7. Getting familiar with MarkDown:<a class="headerlink" href="#getting-familiar-with-markdown" title="Permalink to this headline">¶</a></h2>
 <p>Here is a <a class="reference external" href="https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/">good tutorial provided by Gitlab</a>
 <img alt="" src="https://i.imgur.com/Kt3d9eo.png" /></p>
 </div>
 <div class="section" id="build-confidence-using-hackmd">
-<h2><span class="section-number">4.8. </span>8. Build confidence using HackMD<a class="headerlink" href="#build-confidence-using-hackmd" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.8. </span>8. Build confidence using HackMD<a class="headerlink" href="#build-confidence-using-hackmd" title="Permalink to this headline">¶</a></h2>
 <p><img alt="" src="https://i.imgur.com/bt012cm.png" /></p>
 <p>use the split view to have what you type immediately rendered.</p>
 </div>
 <div class="section" id="use-the-fairplus-recipe-template-as-guide">
-<h2><span class="section-number">4.9. </span>9. Use the FAIRplus Recipe Template as guide<a class="headerlink" href="#use-the-fairplus-recipe-template-as-guide" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.9. </span>9. Use the FAIRplus Recipe Template as guide<a class="headerlink" href="#use-the-fairplus-recipe-template-as-guide" title="Permalink to this headline">¶</a></h2>
 <p>FAIRPlus Cookbook Team is working at establishing a standard layout for easing the creation of a new recipe. The template contains key sections and outlines, which will help boostrap the process.</p>
 <p><a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/edit/dev/docs/content/recipes/help/recipe-template.md">recipe template</a></p>
 </div>
 <div class="section" id="writing-notes-with-hackmd-io">
-<h2><span class="section-number">4.10. </span>10. Writing notes with <a class="reference external" href="http://HackMD.io">HackMD.io</a>:<a class="headerlink" href="#writing-notes-with-hackmd-io" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.10. </span>10. Writing notes with <a class="reference external" href="http://HackMD.io">HackMD.io</a>:<a class="headerlink" href="#writing-notes-with-hackmd-io" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>From a Github repository, by editing an existing Markdown</p></li>
 </ol>
@@ -1002,13 +899,13 @@ git push origin my_recipe_branch
 <p>Fill all the necessary information and press the blue <code class="docutils literal notranslate"><span class="pre">Push</span></code> button.</p>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">4.11. </span>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.11. </span>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>This recipe should get you started to contribute content, writing markdown documents, following the FAIRplus guidance and FAIRplus recipe template.</p>
 <p>:radioactive_sign: If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the <a class="reference external" href="mailto:FAIRplus-cookbook&#37;&#52;&#48;elixir-europe&#46;org">dedicated email</a> or via our <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">github issue tracker</a>.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
-<h3><span class="section-number">4.11.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.11.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.TODO.org">HackMD &amp; MarkDown Tips and Tricks</a></p></li>
 <li><p><a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/">How to create jupyter notebook?</a></p></li>
@@ -1018,7 +915,7 @@ git push origin my_recipe_branch
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">4.12. </span>Authors:<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.12. </span>Authors:<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -1043,7 +940,7 @@ git push origin my_recipe_branch
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">4.13. </span>License:<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.13. </span>License:<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -1074,8 +971,8 @@ git push origin my_recipe_branch
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="how-to-create-recipe-with-gdoc.html" title="previous page"><span class="section-number">3. </span>Using GoogleDocs to contribute a FAIR Cookbook Recipe</a>
-    <a class='right-next' id="next-link" href="how-to-create-recipe-with-git.html" title="next page"><span class="section-number">5. </span>How to create a FAIRPlus Coobook Recipe ?</a>
+    <a class='left-prev' id="prev-link" href="how-to-create-recipe-with-gdoc.html" title="previous page"><span class="section-number">2. </span>Using GoogleDocs to contribute a FAIR Cookbook Recipe</a>
+    <a class='right-next' id="next-link" href="how-to-create-recipe-with-git.html" title="next page"><span class="section-number">4. </span>How to create a FAIRPlus Coobook Recipe ?</a>
 
         </div>
         

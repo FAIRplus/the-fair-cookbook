@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.4.2. IMI FAIRPlus Indicators</title>
+    <title>IMI FAIRPlus Indicators</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -48,40 +48,6 @@
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -95,8 +61,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5. FAIR assessment by hand" href="../manual-fair-assessment.html" />
-    <link rel="prev" title="4.4.1. RDA Indicators" href="RDA-Indicators.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -140,137 +104,50 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../introduction.html">
    Introduction
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/the-turing-way.html">
-     1. The Turing Way Book of Data Science
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
-     2. Who should read the FAIR Cookbook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
-     3. What are the FAIR Principles?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/what-is-IMI.html">
-     4. What is IMI?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
-     5. FAIR in the context of IMI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
-     6. Engaging with IMI Projects
+     1. Who should read the FAIR Cookbook?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/FAIRplus-values.html">
-     7. The Ethical Values behind FAIR and the FAIRPlus project
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/data-sharing-models.html">
-     8. High level data sharing models
+     2. The Ethical Values behind FAIR and the FAIRPlus project
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../../assessing-fairness.html">
-   Assessing FAIR
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR Things
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Data-Management-Maturity-Model.html">
-     1. Data Management Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Datasets-Maturity-Model.html">
-     2. FAIRplus Datasets Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Data-Usage-Areas.html">
-     3. Data Usage Areas
-    </a>
-   </li>
-   <li class="toctree-l2 current active collapsible-parent">
-    <a class="reference internal" href="../fair-indicators.html">
-     4. FAIR Indicators
-    </a>
-    <ul class="current collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="RDA-Indicators.html">
-       4.4.1. RDA Indicators
-      </a>
-     </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       4.4.2. IMI FAIRPlus Indicators
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../manual-fair-assessment.html">
-     5. FAIR assessment by hand
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="evaluation-method.html">
-       5.4.1. Evaluation Method
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="rda-evaluation.html">
-       5.4.2. RDA Evaluation Methods
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../automatic-fair-assessment.html">
-     6. FAIR assessment by software
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../fair-assessment-fairevaluator.html">
-       6.4.1. Assessing FAIRness with FAIREvaluator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../fair-assessment-fairshake.html">
-       6.4.2. FAIR assessment with FAIRShake
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  INFRASTRUCTURE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../infrastructure.html">
    Infrastructure for FAIR
@@ -319,9 +196,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../findability.html">
-   Improving Findability
+   Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -374,7 +258,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../accessibility.html">
-   Improving Accessibility
+   Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -393,22 +277,22 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../interoperability.html">
-   Improving Interoperability
+   Interoperability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/identifier-mapping.html">
-     How to interlink data from different sources?
+     1. How to interlink data from different sources?
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/bridgedb-recipe.html">
-     Identifier mapping with BridgeDB
+     2. Identifier mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       Identifier mapping using BridgeDb WS
+       2.12.1. Identifier mapping using BridgeDb WS
       </a>
      </li>
     </ul>
@@ -417,32 +301,32 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-why-using-them.html">
-     Why use Terminologies &amp; Ontologies?
+     3. Why use Terminologies &amp; Ontologies?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
-     Which vocabulary to use?
+     4. Which vocabulary to use?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
-     Requesting terms addition to terminology artefacts
+     5. Requesting terms addition to terminology artefacts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-operations-tools.html">
-     Tools for ontology-associated operations
+     6. Tools for ontology-associated operations
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
-     Building an application ontology with Robot
+     7. Building an application ontology with Robot
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
-       MSIO, an application ontology for Metabolomics
+       7.12.1. MSIO, an application ontology for Metabolomics
       </a>
      </li>
     </ul>
@@ -451,17 +335,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
-     Creating a Metadata Profile
+     8. Creating a Metadata Profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
-       Establishing a Metadata Profile for Transcriptomics
+       8.4.1. Establishing a Metadata Profile for Transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
-       Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
       </a>
      </li>
     </ul>
@@ -470,17 +354,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
-     From proprietary to open standard data format
+     9. From proprietary to open standard data format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
-     File format validation, an example with FASTQ files
+     10. File format validation, an example with FASTQ files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ETL-tools.html">
-     Tools for Data Extraction, Transformation, and Loading (ETL)
+     11. Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -489,7 +373,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../reusability.html">
-   Improving Reusability
+   Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -528,32 +412,32 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../applied-examples.html">
-   Making IMI data FAIR
+   Applied Examples
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../applied-examples/fair-data-matrix-recipe.html">
-     Making a Data Matrix FAIR
+     1. Making a Data Matrix FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Bibliographic Reference:
+       1.11.1. Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring a rose garden with SPARQL
+       1.11.3. Exploring a rose garden with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
       </a>
      </li>
     </ul>
@@ -562,75 +446,43 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/etox.html">
-     eTox: Data normalization and integration through entity linking
+     2. eTox: Data normalization and integration through entity linking
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
-     ND4BB dataset FAIRification recipe
+     3. ND4BB dataset FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     Oncotrack FAIRification recipe
+     4. Oncotrack FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../applied-examples/resolute_raw/rawRecipe_resolute.html">
-     RESOLUTE FAIRification Recipe
+     5. RESOLUTE FAIRification Recipe
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../glossary-fair-terms.html">
-   Glossary of FAIR things
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT THE FAIR COOKBOOK
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../help.html">
-   Help
+  <a class="reference internal" href="../../community.html">
+   Community
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../help/tips-tricks.html">
-     1. Recipe Tips and Tricks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/recipe-template.html">
-     2. Recipe Template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
-     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
-     4. How to use HackMD to write a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
-     5. How to create a FAIRPlus Coobook Recipe ?
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../boilerplate.html">
-   Miscellaneous
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/license.html">
-     1. License for this book
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     1. FAIR Cookbook Governance
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,33 +491,76 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/governance.html">
-     3. FAIR Cookbook Governance
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
-     4. FAIR Cookbook Code of Conduct
+     3. FAIR Cookbook Code of Conduct
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/project_information.html">
-     5. FAIR CookBook BoilerPlate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/roadmap.html">
-     6. FAIR cookbook development roadmap
-    </a>
-   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../../boilerplate/contributing.html">
-     7. Contributing to the FAIR cookbook
+     1. Contributing to the FAIR cookbook
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/disclaimer.html">
-     8. Disclaimer
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     3. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     4. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     5. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     6. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/myst.html">
+     7. MyST syntax cheat sheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     2. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/technology_stack.html">
+     3. Technology stack
     </a>
    </li>
   </ul>
@@ -763,17 +658,16 @@ commentsRunWhenDOMLoaded(addUtterances);
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#index">
-   4.4.2.1. Index
+   Index
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#study-level">
-     4.4.2.1.1. Study Level
+     Study Level
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s01-f-s01-a-study-level-documentation-is-available-in-a-human-readable-format">
-       4.4.2.1.1.1.
        <a name="F+S01">
         F+S01
        </a>
@@ -782,7 +676,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s02-f-s02-a-data-is-reported-by-following-community-specific-minimum-information-guidelines">
-       4.4.2.1.1.2.
        <a name="F+S02">
         F+S02
        </a>
@@ -794,7 +687,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s03-f-s03-a-metadata-documents-and-provides-references-about-all-data-biological-data-types-and-formats-in-data-is-expressed">
-       4.4.2.1.1.3.
        <a name="F+S03">
         F+S03
        </a>
@@ -806,7 +698,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s04-f-s04-a-relationships-between-different-data-sets-in-a-study-is-well-defined">
-       4.4.2.1.1.4.
        <a name="F+S04">
         F+S04
        </a>
@@ -818,7 +709,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s05-f-s05-a-a-versioning-policy-is-applied-to-uniquely-identify-a-particular-form-of-a-dataset-from-an-earlier-form-or-other-forms-of-itself">
-       4.4.2.1.1.5.
        <a name="F+S05">
         F+S05
        </a>
@@ -830,7 +720,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s06-f-s06-a-share-not-only-derived-and-publication-related-data-but-data-generated-in-early-phases-of-research-data-workflow-such-as-primary-data-and-analyzed-data">
-       4.4.2.1.1.6.
        <a name="F+S06">
         F+S06
        </a>
@@ -842,7 +731,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s07-f-s07-a-negative-results-are-shared">
-       4.4.2.1.1.7.
        <a name="F+S07">
         F+S07
        </a>
@@ -854,7 +742,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s08-f-s08-a-the-study-is-described-with-metadata-including-context-samples-and-data-acquisition-methods-for-analyzing-and-processing-data-quality-control-and-restriction-for-reuse">
-       4.4.2.1.1.8.
        <a name="F+S08">
         F+S08
        </a>
@@ -866,7 +753,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s08a-f-s08a-a-metadata-includes-information-about-the-study-design-protocols-and-data-collection-methods">
-       4.4.2.1.1.9.
        <a name="F+S08a">
         F+S08a
        </a>
@@ -878,7 +764,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s08b-f-s08b-a-metadata-includes-explicit-references-to-research-resources-such-as-samples-cell-lines">
-       4.4.2.1.1.10.
        <a name="F+S08b">
         F+S08b
        </a>
@@ -890,7 +775,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s08c-f-s08c-a-metadata-contains-information-about-data-processing-methods-data-analysis-and-quality-assurance-metrics">
-       4.4.2.1.1.11.
        <a name="F+S08c">
         F+S08c
        </a>
@@ -902,7 +786,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-s08d-f-s08d-a-metadata-includes-information-about-data-ownership-license-and-reuse-constraints-for-sensitive-data">
-       4.4.2.1.1.12.
        <a name="F+S08d">
         F+S08d
        </a>
@@ -916,12 +799,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assays-data-set-level">
-     4.4.2.1.2. Assays / Data Set Level:
+     Assays / Data Set Level:
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-a01-f-a01-a-data-is-organized-and-documented-in-a-human-understandable-way">
-       4.4.2.1.2.1.
        <a name="F+A01">
         F+A01
        </a>
@@ -933,7 +815,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-a02-f-a02-a-data-is-encoded-in-a-community-specific-exchange-standard">
-       4.4.2.1.2.2.
        <a name="F+A02">
         F+A02
        </a>
@@ -945,7 +826,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-a03-f-a03-a-a-machine-and-human-readable-formal-description-of-the-structure-of-data-is-available-including-types-properties">
-       4.4.2.1.2.3.
        <a name="F+A03">
         F+A03
        </a>
@@ -957,7 +837,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-a04-f-a04-a-data-is-structured-by-following-a-life-sciences-domain-model-core-classes-and-their-semantic-relations-refers-to-a-common-data-model">
-       4.4.2.1.2.4.
        <a name="F+A04">
         F+A04
        </a>
@@ -969,7 +848,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-a05-f-a05-a-data-is-described-with-terminology-standards">
-       4.4.2.1.2.5.
        <a name="F+A05">
         F+A05
        </a>
@@ -978,7 +856,6 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-name-f-a06-f-a06-a-core-data-classes-important-data-elements-follows-a-common-master-and-reference-data-entity">
-       4.4.2.1.2.6.
        <a name="F+A06">
         F+A06
        </a>
@@ -994,12 +871,12 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   4.4.2.2. Authors
+   Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   4.4.2.3. License
+   License
   </a>
  </li>
 </ul>
@@ -1015,7 +892,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="imi-fairplus-indicators">
-<h1><span class="section-number">4.4.2. </span>IMI FAIRPlus Indicators<a class="headerlink" href="#imi-fairplus-indicators" title="Permalink to this headline">¶</a></h1>
+<h1>IMI FAIRPlus Indicators<a class="headerlink" href="#imi-fairplus-indicators" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>version : v0.01</p>
 </div></blockquote>
@@ -1023,7 +900,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="ISA" src="../../../../_images/isa-structure.png" /></p>
 <p>Image Reference : <a class="reference external" href="https://www.researchgate.net/publication/333163209_Design_and_Development_of_a_Phenotypic_Data_Model_PDM">Khan</a></p>
 <div class="section" id="index">
-<h2><span class="section-number">4.4.2.1. </span>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>ID</p></th>
@@ -1088,9 +965,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tbody>
 </table>
 <div class="section" id="study-level">
-<h3><span class="section-number">4.4.2.1.1. </span>Study Level<a class="headerlink" href="#study-level" title="Permalink to this headline">¶</a></h3>
+<h3>Study Level<a class="headerlink" href="#study-level" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="a-name-f-s01-f-s01-a-study-level-documentation-is-available-in-a-human-readable-format">
-<h4><span class="section-number">4.4.2.1.1.1. </span><a name="F+S01"> F+S01 </a> : Study level documentation is available in a human readable format.<a class="headerlink" href="#a-name-f-s01-f-s01-a-study-level-documentation-is-available-in-a-human-readable-format" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S01"> F+S01 </a> : Study level documentation is available in a human readable format.<a class="headerlink" href="#a-name-f-s01-f-s01-a-study-level-documentation-is-available-in-a-human-readable-format" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1108,7 +985,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s02-f-s02-a-data-is-reported-by-following-community-specific-minimum-information-guidelines">
-<h4><span class="section-number">4.4.2.1.1.2. </span><a name="F+S02"> F+S02 </a> : <strong>Data is reported by following community specific minimum information guidelines</strong><a class="headerlink" href="#a-name-f-s02-f-s02-a-data-is-reported-by-following-community-specific-minimum-information-guidelines" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S02"> F+S02 </a> : <strong>Data is reported by following community specific minimum information guidelines</strong><a class="headerlink" href="#a-name-f-s02-f-s02-a-data-is-reported-by-following-community-specific-minimum-information-guidelines" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1126,7 +1003,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s03-f-s03-a-metadata-documents-and-provides-references-about-all-data-biological-data-types-and-formats-in-data-is-expressed">
-<h4><span class="section-number">4.4.2.1.1.3. </span><a name="F+S03"> F+S03 </a> :  <strong>Metadata documents and provides references about all data biological data types and formats in data is expressed.</strong><a class="headerlink" href="#a-name-f-s03-f-s03-a-metadata-documents-and-provides-references-about-all-data-biological-data-types-and-formats-in-data-is-expressed" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S03"> F+S03 </a> :  <strong>Metadata documents and provides references about all data biological data types and formats in data is expressed.</strong><a class="headerlink" href="#a-name-f-s03-f-s03-a-metadata-documents-and-provides-references-about-all-data-biological-data-types-and-formats-in-data-is-expressed" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1144,7 +1021,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s04-f-s04-a-relationships-between-different-data-sets-in-a-study-is-well-defined">
-<h4><span class="section-number">4.4.2.1.1.4. </span><a name="F+S04"> F+S04</a> : <strong>Relationships between different data sets in a study is well defined.</strong><a class="headerlink" href="#a-name-f-s04-f-s04-a-relationships-between-different-data-sets-in-a-study-is-well-defined" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S04"> F+S04</a> : <strong>Relationships between different data sets in a study is well defined.</strong><a class="headerlink" href="#a-name-f-s04-f-s04-a-relationships-between-different-data-sets-in-a-study-is-well-defined" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1162,7 +1039,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s05-f-s05-a-a-versioning-policy-is-applied-to-uniquely-identify-a-particular-form-of-a-dataset-from-an-earlier-form-or-other-forms-of-itself">
-<h4><span class="section-number">4.4.2.1.1.5. </span><a name="F+S05"> F+S05 </a> : <strong>A versioning policy is applied to uniquely identify a particular form of a dataset from an earlier form or other forms of itself.</strong><a class="headerlink" href="#a-name-f-s05-f-s05-a-a-versioning-policy-is-applied-to-uniquely-identify-a-particular-form-of-a-dataset-from-an-earlier-form-or-other-forms-of-itself" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S05"> F+S05 </a> : <strong>A versioning policy is applied to uniquely identify a particular form of a dataset from an earlier form or other forms of itself.</strong><a class="headerlink" href="#a-name-f-s05-f-s05-a-a-versioning-policy-is-applied-to-uniquely-identify-a-particular-form-of-a-dataset-from-an-earlier-form-or-other-forms-of-itself" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1180,7 +1057,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s06-f-s06-a-share-not-only-derived-and-publication-related-data-but-data-generated-in-early-phases-of-research-data-workflow-such-as-primary-data-and-analyzed-data">
-<h4><span class="section-number">4.4.2.1.1.6. </span><a name="F+S06"> F+S06 </a> : <strong>Share not only derived and publication related data but data generated in early phases of research data workflow such as primary data and analyzed data.</strong><a class="headerlink" href="#a-name-f-s06-f-s06-a-share-not-only-derived-and-publication-related-data-but-data-generated-in-early-phases-of-research-data-workflow-such-as-primary-data-and-analyzed-data" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S06"> F+S06 </a> : <strong>Share not only derived and publication related data but data generated in early phases of research data workflow such as primary data and analyzed data.</strong><a class="headerlink" href="#a-name-f-s06-f-s06-a-share-not-only-derived-and-publication-related-data-but-data-generated-in-early-phases-of-research-data-workflow-such-as-primary-data-and-analyzed-data" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1198,7 +1075,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s07-f-s07-a-negative-results-are-shared">
-<h4><span class="section-number">4.4.2.1.1.7. </span><a name="F+S07"> F+S07 </a> : <strong>Negative results are shared.</strong><a class="headerlink" href="#a-name-f-s07-f-s07-a-negative-results-are-shared" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S07"> F+S07 </a> : <strong>Negative results are shared.</strong><a class="headerlink" href="#a-name-f-s07-f-s07-a-negative-results-are-shared" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1216,7 +1093,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s08-f-s08-a-the-study-is-described-with-metadata-including-context-samples-and-data-acquisition-methods-for-analyzing-and-processing-data-quality-control-and-restriction-for-reuse">
-<h4><span class="section-number">4.4.2.1.1.8. </span><a name="F+S08"> F+S08 </a> : <strong>The study is described with metadata including context, samples and data acquisition, methods for analyzing and processing data, quality control, and restriction for reuse.</strong><a class="headerlink" href="#a-name-f-s08-f-s08-a-the-study-is-described-with-metadata-including-context-samples-and-data-acquisition-methods-for-analyzing-and-processing-data-quality-control-and-restriction-for-reuse" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S08"> F+S08 </a> : <strong>The study is described with metadata including context, samples and data acquisition, methods for analyzing and processing data, quality control, and restriction for reuse.</strong><a class="headerlink" href="#a-name-f-s08-f-s08-a-the-study-is-described-with-metadata-including-context-samples-and-data-acquisition-methods-for-analyzing-and-processing-data-quality-control-and-restriction-for-reuse" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1231,7 +1108,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s08a-f-s08a-a-metadata-includes-information-about-the-study-design-protocols-and-data-collection-methods">
-<h4><span class="section-number">4.4.2.1.1.9. </span><a name="F+S08a"> F+S08a </a> : <strong>Metadata includes information about the study design, protocols and data collection methods.</strong><a class="headerlink" href="#a-name-f-s08a-f-s08a-a-metadata-includes-information-about-the-study-design-protocols-and-data-collection-methods" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S08a"> F+S08a </a> : <strong>Metadata includes information about the study design, protocols and data collection methods.</strong><a class="headerlink" href="#a-name-f-s08a-f-s08a-a-metadata-includes-information-about-the-study-design-protocols-and-data-collection-methods" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1249,7 +1126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s08b-f-s08b-a-metadata-includes-explicit-references-to-research-resources-such-as-samples-cell-lines">
-<h4><span class="section-number">4.4.2.1.1.10. </span><a name="F+S08b"> F+S08b</a> : <strong>Metadata includes explicit references to research resources such as samples, cell lines</strong><a class="headerlink" href="#a-name-f-s08b-f-s08b-a-metadata-includes-explicit-references-to-research-resources-such-as-samples-cell-lines" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S08b"> F+S08b</a> : <strong>Metadata includes explicit references to research resources such as samples, cell lines</strong><a class="headerlink" href="#a-name-f-s08b-f-s08b-a-metadata-includes-explicit-references-to-research-resources-such-as-samples-cell-lines" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1267,7 +1144,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s08c-f-s08c-a-metadata-contains-information-about-data-processing-methods-data-analysis-and-quality-assurance-metrics">
-<h4><span class="section-number">4.4.2.1.1.11. </span><a name="F+S08c"> F+S08c</a> : <strong>Metadata contains information about data processing methods, data analysis and quality assurance metrics.</strong><a class="headerlink" href="#a-name-f-s08c-f-s08c-a-metadata-contains-information-about-data-processing-methods-data-analysis-and-quality-assurance-metrics" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S08c"> F+S08c</a> : <strong>Metadata contains information about data processing methods, data analysis and quality assurance metrics.</strong><a class="headerlink" href="#a-name-f-s08c-f-s08c-a-metadata-contains-information-about-data-processing-methods-data-analysis-and-quality-assurance-metrics" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1285,7 +1162,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-s08d-f-s08d-a-metadata-includes-information-about-data-ownership-license-and-reuse-constraints-for-sensitive-data">
-<h4><span class="section-number">4.4.2.1.1.12. </span><a name="F+S08d"> F+S08d </a> :<strong>Metadata includes information about data ownership, license and reuse constraints for sensitive data.</strong><a class="headerlink" href="#a-name-f-s08d-f-s08d-a-metadata-includes-information-about-data-ownership-license-and-reuse-constraints-for-sensitive-data" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+S08d"> F+S08d </a> :<strong>Metadata includes information about data ownership, license and reuse constraints for sensitive data.</strong><a class="headerlink" href="#a-name-f-s08d-f-s08d-a-metadata-includes-information-about-data-ownership-license-and-reuse-constraints-for-sensitive-data" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1305,9 +1182,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="assays-data-set-level">
-<h3><span class="section-number">4.4.2.1.2. </span>Assays / Data Set Level:<a class="headerlink" href="#assays-data-set-level" title="Permalink to this headline">¶</a></h3>
+<h3>Assays / Data Set Level:<a class="headerlink" href="#assays-data-set-level" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="a-name-f-a01-f-a01-a-data-is-organized-and-documented-in-a-human-understandable-way">
-<h4><span class="section-number">4.4.2.1.2.1. </span><a name="F+A01"> F+A01 </a> : <strong>Data is organized and documented in a human understandable way</strong><a class="headerlink" href="#a-name-f-a01-f-a01-a-data-is-organized-and-documented-in-a-human-understandable-way" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+A01"> F+A01 </a> : <strong>Data is organized and documented in a human understandable way</strong><a class="headerlink" href="#a-name-f-a01-f-a01-a-data-is-organized-and-documented-in-a-human-understandable-way" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1325,7 +1202,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-a02-f-a02-a-data-is-encoded-in-a-community-specific-exchange-standard">
-<h4><span class="section-number">4.4.2.1.2.2. </span><a name="F+A02"> F+A02 </a> : <strong>Data is encoded in a community specific exchange standard.</strong><a class="headerlink" href="#a-name-f-a02-f-a02-a-data-is-encoded-in-a-community-specific-exchange-standard" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+A02"> F+A02 </a> : <strong>Data is encoded in a community specific exchange standard.</strong><a class="headerlink" href="#a-name-f-a02-f-a02-a-data-is-encoded-in-a-community-specific-exchange-standard" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1343,7 +1220,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-a03-f-a03-a-a-machine-and-human-readable-formal-description-of-the-structure-of-data-is-available-including-types-properties">
-<h4><span class="section-number">4.4.2.1.2.3. </span><a name="F+A03"> F+A03 </a> : <strong>A machine and human readable formal description of the structure of data is available including types, properties.</strong><a class="headerlink" href="#a-name-f-a03-f-a03-a-a-machine-and-human-readable-formal-description-of-the-structure-of-data-is-available-including-types-properties" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+A03"> F+A03 </a> : <strong>A machine and human readable formal description of the structure of data is available including types, properties.</strong><a class="headerlink" href="#a-name-f-a03-f-a03-a-a-machine-and-human-readable-formal-description-of-the-structure-of-data-is-available-including-types-properties" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1361,7 +1238,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-a04-f-a04-a-data-is-structured-by-following-a-life-sciences-domain-model-core-classes-and-their-semantic-relations-refers-to-a-common-data-model">
-<h4><span class="section-number">4.4.2.1.2.4. </span><a name="F+A04"> F+A04 </a> : <strong>Data is structured by following a life sciences domain model, core classes and their semantic relations refers to a common data model.</strong><a class="headerlink" href="#a-name-f-a04-f-a04-a-data-is-structured-by-following-a-life-sciences-domain-model-core-classes-and-their-semantic-relations-refers-to-a-common-data-model" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+A04"> F+A04 </a> : <strong>Data is structured by following a life sciences domain model, core classes and their semantic relations refers to a common data model.</strong><a class="headerlink" href="#a-name-f-a04-f-a04-a-data-is-structured-by-following-a-life-sciences-domain-model-core-classes-and-their-semantic-relations-refers-to-a-common-data-model" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1379,7 +1256,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-a05-f-a05-a-data-is-described-with-terminology-standards">
-<h4><span class="section-number">4.4.2.1.2.5. </span><a name="F+A05">F+A05 </a> : Data is described with terminology standards.<a class="headerlink" href="#a-name-f-a05-f-a05-a-data-is-described-with-terminology-standards" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+A05">F+A05 </a> : Data is described with terminology standards.<a class="headerlink" href="#a-name-f-a05-f-a05-a-data-is-described-with-terminology-standards" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1397,7 +1274,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="a-name-f-a06-f-a06-a-core-data-classes-important-data-elements-follows-a-common-master-and-reference-data-entity">
-<h4><span class="section-number">4.4.2.1.2.6. </span><a name="F+A06">F+A06  </a> : <strong>Core data classes (important data elements) follows a common master and reference data entity.</strong><a class="headerlink" href="#a-name-f-a06-f-a06-a-core-data-classes-important-data-elements-follows-a-common-master-and-reference-data-entity" title="Permalink to this headline">¶</a></h4>
+<h4><a name="F+A06">F+A06  </a> : <strong>Core data classes (important data elements) follows a common master and reference data entity.</strong><a class="headerlink" href="#a-name-f-a06-f-a06-a-core-data-classes-important-data-elements-follows-a-common-master-and-reference-data-entity" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1418,7 +1295,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">4.4.2.2. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -1443,7 +1320,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">4.4.2.3. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -1474,8 +1351,6 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="RDA-Indicators.html" title="previous page"><span class="section-number">4.4.1. </span>RDA Indicators</a>
-    <a class='right-next' id="next-link" href="../manual-fair-assessment.html" title="next page"><span class="section-number">5. </span>FAIR assessment by hand</a>
 
         </div>
         

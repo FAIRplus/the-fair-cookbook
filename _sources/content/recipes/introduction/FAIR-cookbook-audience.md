@@ -97,27 +97,27 @@ The FAIR Cookbook will appeal to diverse audiences. While the FAIR Cookbook auth
 
 By identifying a number of functions as personas, the aim is also to engage with the community and seek feedback, contributions and comments. The authors therefore encourage readers to send requests and feedback using the following means:
 
-* log a recipe request using the [FAIR Cookbook issue tracker]()
+* log a recipe request using the [FAIR Cookbook issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/home.html&body=Your%20issue%20content%20here.)
 * rate the FAIR Cookbook and each of its recipes
 * contribute content by sending a recipe
-* contact us using FAIRcookbook@elixir.org
+* contact us using [faircookbook@elixir-europe.org](mailto:faircookbook@elixir-europe.org)
 
 
 
 ## Reference
 
 1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18.
-3. The FAIR Cookbook. []()
+3. The FAIR Cookbook. [The FAIR Cookbook](https://fairplus.github.io/the-fair-cookbook/content/home.html)
 4. https://www.imi.europa.eu 
 
 
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft|
-|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)|Writing - Original Draft|
+| <a href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'><span>Philippe Rocca-Serra</span></img></a> |  University of Oxford, Data Readiness Group| <a href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Writing - Original Draft|
+|<a href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'><span>Susanna-Assunta Sansone</span></img></a>|University of Oxford, Data Readiness Group| <a href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>|Writing - Original Draft|
 ||||Review|
 ||||Review|
 

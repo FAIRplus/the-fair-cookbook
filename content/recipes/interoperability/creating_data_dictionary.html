@@ -1,0 +1,1609 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to create a FAIR Data/Variable Dictionary</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating_data_dictionary.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating_data_dictionary.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="How to create a FAIR Data/Variable Dictionary" />
+<meta property="og:description" content="How to create a FAIR Data/Variable Dictionary  &lt;br/&gt;     &lt;div class=&#34;card recipe d-flex&#34;&gt; &lt;div class=&#34;card-header purple-dark text--white&#34;&gt; &lt;div class=&#34;overview" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+     1. Who should read the FAIR Cookbook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/FAIRplus-values.html">
+     2. The Ethical Values behind FAIR and the FAIRPlus project
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR Things
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  INFRASTRUCTURE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a Dataset Catalogue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabularies and Terminology Infrastructure
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selection and exploitation of Ontology Lookup Services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. How to generate globally unique, resolvable and persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. Chemical Identity - InChI and SMILES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Identifier Minting Service with Minid Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Deposition to Zenodo Archive
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     5. Findability: Search Engine Optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       5.8.1. Findability: Data Page Markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       5.8.2. Findability: Dataset Markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Findability: Data Catalog Markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/anonymizing-patient-data.html">
+     1. Anonymizing Patient Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. How to download files with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="identifier-mapping.html">
+     1. How to interlink data from different sources?
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       2.12.1. Identifier mapping using BridgeDb WS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-why-using-them.html">
+     3. Why use Terminologies &amp; Ontologies?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selecting-ontologies.html">
+     4. Which vocabulary to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     5. Requesting terms addition to terminology artefacts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     6. Tools for ontology-associated operations
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="ontology-robot-recipe.html">
+     7. Building an application ontology with Robot
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot/MSIO-robot-build-process.html">
+       7.12.1. MSIO, an application ontology for Metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     8. Creating a Metadata Profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="transcriptomics-metadata.html">
+       8.4.1. Establishing a Metadata Profile for Transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     9. From proprietary to open standard data format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fastq-file-format-validators.html">
+     10. File format validation, an example with FASTQ files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ETL-tools.html">
+     11. Tools for Data Extraction, Transformation, and Loading (ETL)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data Licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Patterns and practice for expressing allowed data usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/community-standards.html">
+     6. Compliance with community annotation standards
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied Examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making a Data Matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring a rose garden with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox: Data normalization and integration through entity linking
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
+     3. ND4BB dataset FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack FAIRification recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
+     5. RESOLUTE FAIRification Recipe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT THE FAIR COOKBOOK
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/governance.html">
+     1. FAIR Cookbook Governance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     2. FAIR Cookbook Steering Council and Institutional Partners
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     3. FAIR Cookbook Code of Conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. Contributing to the FAIR cookbook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     5. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     6. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. MyST syntax cheat sheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     2. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/technology_stack.html">
+     3. Technology stack
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/creating_data_dictionary.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/creating_data_dictionary.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/creating_data_dictionary.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-fairification-objectives">
+   Main FAIRification Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-stories">
+   User Stories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   Graphical overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example-of-data-dictionary">
+   An Example of Data Dictionary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elements-that-should-be-included-when-building-a-data-dictionary">
+   Elements that should be included when building a data dictionary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-fields-to-include-in-a-data-dictionary">
+     What fields to include in a data dictionary?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-using-standards-such-as-cdisc">
+     A note on using standards such as CDISC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indicate-how-missing-values-are-dealt-with">
+     Indicate how missing values are dealt with:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#remember-to-provide-descriptive-metadata-for-the-data-dictionary-itself">
+       Remember to provide descriptive metadata for the data dictionary itself
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#remember-to-provide-the-data-dictionary-in-an-open-syntax">
+       Remember to provide the data dictionary in an open syntax
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-dictionary-mapping-in-fairplus">
+   Data Dictionary Mapping in FAIRplus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="how-to-create-a-fair-data-variable-dictionary">
+<span id="fcb-interop-datadictionary"></span><h1>How to create a FAIR Data/Variable Dictionary<a class="headerlink" href="#how-to-create-a-fair-data-variable-dictionary" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+15 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">How to create a FAIR Data/Variable Dictionary</div>
+<img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Technical Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist</div>
+</div>
+</div>
+<div class="card-footer"> Identifier:
+<a href="http://w3id.org/faircookbook/FCB_TBA" class="text--orange">http://w3id.org/faircookbook/FCB_TBA
+</a> </div>
+</div>
+</div>
+<hr class="docutils" />
+<hr class="docutils" />
+<!-- # Table of Contents
+1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
+2. [User Stories](#User%20Stories)
+3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
+4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
+5. [An Example of Data Dictionary](#An%20Example%20of%20Data%20Dictionary)
+6. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary) -->
+<div class="section" id="main-fairification-objectives">
+<h2>Main FAIRification Objectives<a class="headerlink" href="#main-fairification-objectives" title="Permalink to this headline">¶</a></h2>
+<p><strong>Scope</strong>: Based on prior experience with other IMI projects, it is essential to ensure the provision of a comprehensive project specific <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code>.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> is a file (or collection of files) which unambiguously declares, defines and annotates all the variables collected in a project and associated to a dataset.</p>
+<p>Building a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span></code> means delivering a machine-actionable list of variables, thus greatly helping in assessing the <strong>interoperability potential</strong> of a dataset.</p>
+<p>Presenting a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span> <span class="pre">template</span></code> is also meant to be useful to deal with current IMI projects as well as guide future ones.</p>
+<p>The main purpose of this recipe is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Provide a guide on what factors should be considered when building a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> for data collection, data processing and analysis.</p></li>
+<li><p>Give an example of a data dictionary</p></li>
+<li><p>Provide an example of machine-actionable data dictionary template.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="user-stories">
+<h2>User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
+<p>When working on data from previous IMI projects, it became apparent that a well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="graphical-overview">
+<h2>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="data-dictionary">
+<a class="reference internal image-reference" href="content/recipes/interoperability/creating_data_dictionary-mermaid.png"><img alt="Data Dictionary" src="content/recipes/interoperability/creating_data_dictionary-mermaid.png" style="height: 1050px;" /></a>
+<p class="caption"><span class="caption-text">Data Dictionary.</span><a class="headerlink" href="#data-dictionary" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="capability-maturity-table">
+<h2>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>minimal</p></td>
+<td class="text-align:left"><p>repeatable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_3778">text annotation</a></p></td>
+<td class="text-align:left"><p>list of variables</p></td>
+<td class="text-align:left"><p>machine-actionable list of annotated variables</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-data-standards">
+<h2>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.s51qk5">CDISC SDTM</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.qk984b">OMOP</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.r87bgr">CDISC CDASH</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.20sbr9">bioschema</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.1gr4tz">EFO</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.mjnypw">UO</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.a6r7zs">EDAM</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="an-example-of-data-dictionary">
+<h2>An Example of Data Dictionary<a class="headerlink" href="#an-example-of-data-dictionary" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>File Name</p></th>
+<th class="head"><p>Variable Name</p></th>
+<th class="head"><p>Variable Label</p></th>
+<th class="head"><p>Variable Ontology ID or RDFtype</p></th>
+<th class="head"><p>Variable ID Source</p></th>
+<th class="head"><p>Variable Statistical Type</p></th>
+<th class="head"><p>Variable Data Type</p></th>
+<th class="head"><p>Variable Size</p></th>
+<th class="head"><p>Max Allowed Value</p></th>
+<th class="head"><p>Min Allowed Value</p></th>
+<th class="head"><p>Regex</p></th>
+<th class="head"><p>Allowed Value Shorthands</p></th>
+<th class="head"><p>Allowed Value Descriptions</p></th>
+<th class="head"><p>Computed Value</p></th>
+<th class="head"><p>Unique (alone)</p></th>
+<th class="head"><p>Unique (Combined with)</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Collection Form Name</p></th>
+<th class="head"><p>Comments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>SUBJECT_ID</p></td>
+<td><p>Subject number</p></td>
+<td><p><a class="reference external" href="https://schema.org/identifier">https://schema.org/identifier</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>integer</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1_Subjects.txt</p></td>
+<td><p>SPECIES</p></td>
+<td><p>Species name</p></td>
+<td><p><a class="reference external" href="https://schema.org/name">https://schema.org/name</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>STRAIN</p></td>
+<td><p>Strain</p></td>
+<td><p><a class="reference external" href="https://bioschemas.org/profiles/Taxon/0.6-RELEASE/identifier">https://bioschemas.org/profiles/Taxon/0.6-RELEASE/identifier</a></p></td>
+<td><p><a class="reference external" href="https://bioschemas.org/">https://bioschemas.org/</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/NCBITaxon_40674">http://purl.obolibrary.org/obo/NCBITaxon_40674</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1_Subjects.txt</p></td>
+<td><p>AGE</p></td>
+<td><p>Age at study initiation</p></td>
+<td><p><a class="reference external" href="https://bioschemas.org/types/BioSample/0.1-RELEASE-2019_06_19/samplingAge">https://bioschemas.org/types/BioSample/0.1-RELEASE-2019_06_19/samplingAge</a></p></td>
+<td><p><a class="reference external" href="https://bioschemas.org/">https://bioschemas.org/</a></p></td>
+<td><p>continuous variable</p></td>
+<td><p>integer</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>AGE_UNIT</p></td>
+<td><p>Age unit</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/UO_0000003">http://purl.obolibrary.org/obo/UO_0000003</a></p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/uo">http://purl.obolibrary.org/obo/uo</a></p></td>
+<td><p>categorial variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1_Subjects.txt</p></td>
+<td><p>SEX</p></td>
+<td><p>Sex</p></td>
+<td><p><a class="reference external" href="https://schema.org/gender">https://schema.org/gender</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>enum</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>M;F</p></td>
+<td><p>M=male;F=female</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>SOMEDATE</p></td>
+<td><p>Date of acquiring subject</p></td>
+<td><p><a class="reference external" href="https://schema.org/dateCreated">https://schema.org/dateCreated</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>ordinal variable</p></td>
+<td><p>date</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>YYYY-MM-DD</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1_Subjects.txt</p></td>
+<td><p>HEMOGLOBIN</p></td>
+<td><p>Hematology: Hemoglobin</p></td>
+<td><p><a class="reference external" href="http://www.ebi.ac.uk/efo/EFO_0004509">http://www.ebi.ac.uk/efo/EFO_0004509</a></p></td>
+<td><p><a class="reference external" href="http://www.ebi.ac.uk/efo">http://www.ebi.ac.uk/efo</a></p></td>
+<td><p>continuous variable</p></td>
+<td><p>float</p></td>
+<td><p>2,1</p></td>
+<td><p>15.0</p></td>
+<td><p>4.0</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 1</p></td>
+<td><p>Field size denotes “places, decimal places”</p></td>
+</tr>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>HEMOGLOBIN_UNIT</p></td>
+<td><p>Hemoglobin unit</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/UO_0000003">http://purl.obolibrary.org/obo/UO_0000003</a></p></td>
+<td><p><a class="reference external" href="http://www.ebi.ac.uk/efo">http://www.ebi.ac.uk/efo</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 1</p></td>
+<td><p>Field size denotes “places, decimal places”</p></td>
+</tr>
+<tr class="row-odd"><td><p>1_Subjects.txt</p></td>
+<td><p>HEIGHT</p></td>
+<td><p>Body size</p></td>
+<td><p><a class="reference external" href="https://schema.org/height">https://schema.org/height</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>continuous variable</p></td>
+<td><p>float</p></td>
+<td><p></p></td>
+<td><p>2,5</p></td>
+<td><p>0,5</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>HEIGHT_UNIT</p></td>
+<td><p>Body size unit</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/UO_0000003">http://purl.obolibrary.org/obo/UO_0000003</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1_Subjects.txt</p></td>
+<td><p>WEIGHT</p></td>
+<td><p>Body weight</p></td>
+<td><p><a class="reference external" href="https://schema.org/weight">https://schema.org/weight</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>continuous variable</p></td>
+<td><p>float</p></td>
+<td><p></p></td>
+<td><p>300</p></td>
+<td><p>25</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>WEIGHT_UNIT</p></td>
+<td><p>Body weight unit</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/UO_0000003">http://purl.obolibrary.org/obo/UO_0000003</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1_Subjects.txt</p></td>
+<td><p>BMI</p></td>
+<td><p>Body mass index</p></td>
+<td><p><a class="reference external" href="http://www.ebi.ac.uk/efo/EFO_0004340">http://www.ebi.ac.uk/efo/EFO_0004340</a></p></td>
+<td><p><a class="reference external" href="http://www.ebi.ac.uk/efo">http://www.ebi.ac.uk/efo</a></p></td>
+<td><p>continuous variable</p></td>
+<td><p>float</p></td>
+<td><p></p></td>
+<td><p>100</p></td>
+<td><p>10</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>WEIGHT/(HEIGHT*HEIGHT)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1_Subjects.txt</p></td>
+<td><p>LAB</p></td>
+<td><p>Laboratory</p></td>
+<td><p><a class="reference external" href="https://schema.org/identifier">https://schema.org/identifier</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>integer</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1;2;3</p></td>
+<td><p>1=LabA;2=UniversityB;3=CompanyC</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2_Samples.txt</p></td>
+<td><p>SAMPLE_ID</p></td>
+<td><p>Sample ID</p></td>
+<td><p><a class="reference external" href="https://schema.org/identifier">https://schema.org/identifier</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p>FORM 2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2_Samples.txt</p></td>
+<td><p>SAMPLE_SITE</p></td>
+<td><p>Sample collection site</p></td>
+<td><p><a class="reference external" href="https://bioschemas.org/types/BioSample/0.1-RELEASE-2019_06_19">https://bioschemas.org/types/BioSample/0.1-RELEASE-2019_06_19</a></p></td>
+<td><p><a class="reference external" href="https://bioschemas.org/">https://bioschemas.org/</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p>FORM 2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2_Samples.txt</p></td>
+<td><p>ANALYTE_TYPE</p></td>
+<td><p>Type of analysis</p></td>
+<td><p><a class="reference external" href="http://edamontology.org/operation_2945">http://edamontology.org/operation_2945</a></p></td>
+<td><p><a class="reference external" href="http://edamontology.org">http://edamontology.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://edamontology.org/operation_2945">http://edamontology.org/operation_2945</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Y</p></td>
+<td><p>FORM 2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2_Samples.txt</p></td>
+<td><p>GENOTYPING_CENTER</p></td>
+<td><p>GENOTYPING_CENTER</p></td>
+<td><p><a class="reference external" href="https://schema.org/identifier">https://schema.org/identifier</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2_Samples.txt</p></td>
+<td><p>SEQUENCING_CENTER</p></td>
+<td><p>SEQUENCING_CENTER</p></td>
+<td><p><a class="reference external" href="https://schema.org/identifier">https://schema.org/identifier</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>FORM 2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>3_SampleMapping.txt</p></td>
+<td><p>SUBJECT_ID</p></td>
+<td><p>Subject number</p></td>
+<td><p><a class="reference external" href="https://schema.org/identifier">https://schema.org/identifier</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>ordinal variable</p></td>
+<td><p>integer</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>SAMPLE_ID</p></td>
+<td><p>Y</p></td>
+<td><p>FORM 3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>3_SampleMapping.txt</p></td>
+<td><p>SAMPLE_ID</p></td>
+<td><p>Sample ID</p></td>
+<td><p><a class="reference external" href="https://schema.org/identifier">https://schema.org/identifier</a></p></td>
+<td><p><a class="reference external" href="https://schema.org">https://schema.org</a></p></td>
+<td><p>categorical variable</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>SUBJECT_ID</p></td>
+<td><p>Y</p></td>
+<td><p>FORM 3</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="elements-that-should-be-included-when-building-a-data-dictionary">
+<h2>Elements that should be included when building a data dictionary<a class="headerlink" href="#elements-that-should-be-included-when-building-a-data-dictionary" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>File Name:</strong> The file that contains the annotated variable(s).</p></li>
+<li><p><strong>Variable Name:</strong> Name of the variable (field).</p></li>
+<li><p><strong>Variable Label:</strong> A self explanatory annotation of the variable.</p></li>
+<li><p><strong>Ontology or RDF type ID:</strong> A unique identifier that captures the type of the variable. Semantic types such as <a class="reference external" href="http://schema.org">schema.org</a> or ontology terms enhance the findability of the data in repositories.</p></li>
+<li><p><strong>ID Source:</strong> The source of the identifier for the variable.</p></li>
+<li><p><strong>Variable Data Type:</strong> The type of the variable. It is recommended to use the same type definition as it will be implemented in the data capturing system (e.g. an <code class="docutils literal notranslate"><span class="pre">xsd:datatype</span></code> such as <code class="docutils literal notranslate"><span class="pre">{date,</span> <span class="pre">integer,</span> <span class="pre">float,</span> <span class="pre">date,</span> <span class="pre">string}</span></code>).</p></li>
+<li><p><strong>Variable Type:</strong> To unambiguously specify if the data associated with the variable being defined should be treated as a <code class="docutils literal notranslate"><span class="pre">continuous</span> <span class="pre">variable</span></code>, <code class="docutils literal notranslate"> <span class="pre">discrete/polychotomous</span> <span class="pre">variable</span></code> or an <code class="docutils literal notranslate"><span class="pre">ordinal</span> <span class="pre">variable</span></code>.</p></li>
+<li><p><strong>Field Size:</strong> The size (length) of the variable value, e.g. 8 digits, 5,3 (for floating numbers)…</p></li>
+<li><p><strong>Max Allowed Value:</strong> Upper limit of the allowed value.</p></li>
+<li><p><strong>Min Allowed Value:</strong> Lower limit of the allowed value.</p></li>
+<li><p><strong>Regex:</strong> a regular expression allowing input validation in the case the value should follow a certain pattern (e.g. “\d{5}” for a 5-digit <code class="docutils literal notranslate"><span class="pre">Post</span> <span class="pre">Code</span></code>).</p></li>
+<li><p><strong>Allowed Values:</strong> Customised list of allowed values (e.g. “M” and “F” for Gender).</p></li>
+<li><p><strong>Allowed Value Description:</strong> Annotation of the list of allowed values (e.g.: M=male;F=female).</p></li>
+<li><p><strong>Computed Value:</strong> If a field is computed based on values from other fields, annotate the calculation rule (e.g BMI=	WEIGHT/(HEIGHT*HEIGHT) ).</p></li>
+<li><p><strong>Unique (alone):</strong> If the value of in a field should be unique (e.g. Subject ID).</p></li>
+<li><p><strong>Unique (combined with):</strong> If the combination of several fields should be unique (e.g. Sample ID and Visit Number).</p></li>
+<li><p><strong>Required:</strong> If the field should NOT allow empty value.</p></li>
+<li><p><strong>Collection Form Name:</strong> Optional, if the field is collected in certain forms (e.g. in Case Report Forms from a clinical trial).</p></li>
+<li><p><strong>Comments:</strong> Optional, for futher information.</p></li>
+</ul>
+<div class="section" id="what-fields-to-include-in-a-data-dictionary">
+<h3>What fields to include in a data dictionary?<a class="headerlink" href="#what-fields-to-include-in-a-data-dictionary" title="Permalink to this headline">¶</a></h3>
+<p>The right fields to include in a data dictionary are strongly dependent on the needs of the project and its context.</p>
+<ul class="simple">
+<li><p>As a starting point, review existing community standards or minimum information checklists for your subject area to identify recommended fields (see for example recipes on <a class="reference internal" href="transcriptomics-metadata.html"><span class="doc std std-doc">minimal metadata profiles for transcriptomics metadata</span></a> and <a class="reference internal" href="creating-minimal-metadata-profiles.html"><span class="doc std std-doc">guidance on creating minimal metadata profiles</span></a>). We recommend consulting three key resources:</p>
+<ul>
+<li><p><a class="reference external" href="https://fairsharing.org">FAIRsharing</a> and in particular the <a class="reference external" href="https://fairsharing.org/standards/?q=&amp;selected_facets=type_exact:reporting%20guideline&amp;selected_facets=has_publication:false">Minimal Checklists</a> section</p></li>
+<li><p>In the context of clinical trial data, get familiar with <a class="reference external" href="https://www.cdisc.org/standards/therapeutic-areas">CDISC Therapeutic Area</a> annotation profiles</p></li>
+<li><p>the <a class="reference external" href="https://www.ohdsi.org/resources/tutorials/">OHDSI OMOP guidelines</a> to bootstrap efforts and ensure interoperability.</p></li>
+</ul>
+</li>
+<li><p>Make sure you capture all relevant variables for your planned analyses, in particular if you plan any non-standard or novel analyses. Also, ensure that variables are captured in the correct format (standardised if appropriate) <strong>in order to minimise the need for transformations later</strong>.</p></li>
+<li><p>Capture variables in the <strong>most atomic form possible</strong> as it is easier to aggregate separate fields into a new, combined value than to extract values from a larger field.</p></li>
+<li><p><strong>Reduce free text use to a minimum</strong> for value-sets associated with qualitative or ordinal variables by providing list of controlled values from standardised vocabularies (e.g. using NCI Thesaurus or CDISC vocabulary) suited for the context you operated in (e.g. LOINC, SNOMED-CT in clinical context).</p></li>
+<li><p><strong>Provide unambiguous textual definitions</strong>, ideally through anchoring in semantic markup, for each of the variables so third party users can understand what the variable represents, instead of second-guessed obscure variable shorthands.</p></li>
+<li><p><strong>Provide units</strong>, and where possible, acceptable ranges for continuous variables.</p></li>
+<li><p><strong>Provide regular expressions for input validation</strong> where needed (e.g. expecting an identifier or a particular reporting pattern)</p></li>
+<li><p><strong>Provide formula</strong> if <code class="docutils literal notranslate"><span class="pre">derived</span> <span class="pre">variables</span></code> are computed from <code class="docutils literal notranslate"><span class="pre">primary</span> <span class="pre">variables</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="a-note-on-using-standards-such-as-cdisc">
+<h3>A note on using standards such as CDISC<a class="headerlink" href="#a-note-on-using-standards-such-as-cdisc" title="Permalink to this headline">¶</a></h3>
+<p>Comprehensive standards such as CDISC offer a complete tabulation model for data capture, consolidation and analysis. CDISC should not be used in a cherrypicking fashion to map variables but rather full compliance with the standard should be ensured, both structurally and in terms of what data is collected.</p>
+<p>CDISC-compliant datasets group variables slightly differently to the format suggested here. Records are grouped by <code class="docutils literal notranslate"><span class="pre">Domain</span></code> such as vital signs (VS) and demographics (DM). Records represent one single measurement, so rather than capturing both height and weight in one record, like in the data dictionary here, these would be separate records in the VS domain, with test name (VSTESTCD) height or weight, respectively. CDISC also has a specific way of cross-referencing records, which is not cleanly mappable to do simpler approach suggested in this sample data dictionary. For further information on the CDISC model, please visit <a class="reference external" href="https://www.cdisc.org/">https://www.cdisc.org/</a>.</p>
+</div>
+<div class="section" id="indicate-how-missing-values-are-dealt-with">
+<h3>Indicate how missing values are dealt with:<a class="headerlink" href="#indicate-how-missing-values-are-dealt-with" title="Permalink to this headline">¶</a></h3>
+<p>Data collection is never plain sailing. Patients drop out from studies, animals die, cell cultures or laboratory tests  fail. This results in holes in the datasets. However, without a clear plan to record missing data point unambiguously, empty cells in a record can be the cause of analysis pains.
+It is therefore important and good practice to detail in a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> what is a legimitate form to indicate a <code class="docutils literal notranslate"><span class="pre">missing</span> <span class="pre">value</span></code>, which should be interpreted as <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<p>Depending on the persistence system, how this needs to be specified varies. We provide an example on how to do so in the context of a Frictionless Tabular package. The specifications provide more information about how to specify how missing values should look like:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://specs.frictionlessdata.io/table-schema/#missing-values">https://specs.frictionlessdata.io/table-schema/#missing-values</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;missingValues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span>
+<span class="s2">&quot;missingValues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;-&quot;</span><span class="p">]</span>
+<span class="s2">&quot;missingValues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;NaN&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="section" id="remember-to-provide-descriptive-metadata-for-the-data-dictionary-itself">
+<h4>Remember to provide descriptive metadata for the data dictionary itself<a class="headerlink" href="#remember-to-provide-descriptive-metadata-for-the-data-dictionary-itself" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>filename (with extension)</p></li>
+<li><p>checksum (preferably a SHA2 checksum)</p></li>
+<li><p>authors orcid (<a class="reference external" href="https://orcid.org/0000-0000-0000-00001">https://orcid.org/0000-0000-0000-00001</a>)</p></li>
+<li><p>license url (e.g.)</p></li>
+<li><p>version number (semantic version as in <code class="docutils literal notranslate"><span class="pre">1.0.1</span></code>)</p></li>
+</ul>
+</div>
+<div class="section" id="remember-to-provide-the-data-dictionary-in-an-open-syntax">
+<h4>Remember to provide the data dictionary in an open syntax<a class="headerlink" href="#remember-to-provide-the-data-dictionary-in-an-open-syntax" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="data-dictionary-mapping-in-fairplus">
+<h2>Data Dictionary Mapping in FAIRplus<a class="headerlink" href="#data-dictionary-mapping-in-fairplus" title="Permalink to this headline">¶</a></h2>
+<p>While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary.
+The <a class="reference external" href="https://fairplus-project.eu/">FAIRplus project</a> is in the process of working the <a class="reference external" href="https://www.imi.europa.eu/">Innovative Medicine Initiative</a> <a class="reference external" href="https://www.approachproject.eu/">APPROACH</a> and <a class="reference external" href="http://www.abirisk.eu/">ABIRISK</a> projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusion">
+<h2>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This recipe covered an essential output of any research program, <strong>namely the documentation of all variables recorded about study subjects and key metadata descriptors used in subsequence analysis in the form of a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code></strong>.
+The creation and provision of such a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> should be a central component of any <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">management</span> <span class="pre">plan</span></code> and should be one of the key deliverable of any IMI project.
+Why? Simply because if affords several key data management processes to take place</p>
+<ul class="simple">
+<li><p>First, it forces <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">owners</span></code> to carefully structure core metadata and annotation requirements, by spelling out the nature, purpose and constraints on the data collection.</p></li>
+<li><p>Second, it provides <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">owners</span></code> the means to communicate about their scientific outputs, without necessarily disclosing the actual data collected over the course of the projects. It simply brings clarity and removes ambiguity about collected metadata and data. This clarity helps gauge <code class="docutils literal notranslate"><span class="pre">reusability</span> <span class="pre">potential</span></code> as well as <code class="docutils literal notranslate"><span class="pre">interoperability</span> <span class="pre">potential</span></code> of datasets.</p></li>
+<li><p>Thirdly, the availability of the <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> proves extremely useful for any curatorial works, from gearing for an <code class="docutils literal notranslate"><span class="pre">ETL</span> <span class="pre">process</span></code>, to planning for mapping across ontological frameworks. This is especially facilitated if the <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionaries</span></code> have clearly identified the semantic resources relied upon in a project.</p></li>
+<li><p>Finally, in the context of the <a class="reference external" href="https://www.imi.europa.eu/">Innovative Medicine Initiative</a>, delivering <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Dictionaries</span></code> contributes to making research output more FAIR.</p></li>
+</ul>
+<div class="section" id="what-to-read-next">
+<h3>What to read next:<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="selecting-ontologies.html#fcb-interop-selectonto"><span class="std std-ref">Which vocabulary to use?</span></a></p></li>
+<li><p><span class="xref std std-ref">fcb-interop-ontomapping</span> TODO</p></li>
+<li><p><a class="reference internal" href="ETL-tools.html#fcb-interop-etl"><span class="std std-ref">Tools for Data Extraction, Transformation, and Loading (ETL)</span></a> TODO</p></li>
+<li><p>[Key issues to be aware of when planning <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">Extract-Transform-Load processes</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2>Authors:<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>orcid</p></th>
+<th class="text-align:left head"><p>CrediT role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Wei Gu</p></td>
+<td class="text-align:left"><p>LCSB, University of Luxembourg</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/0000-0003-3951-6680">0000-0003-3951-6680</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Danielle Welter</p></td>
+<td class="text-align:left"><p>LCSB, University of Luxembourg</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/0000-0003-1058-2668">0000-0003-1058-2668</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Philippe Rocca-Serra</p></td>
+<td class="text-align:left"><p>University of Oxford, Data Readiness Group</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2>License:<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The FAIRplus project members<br/>
+        
+            &copy; Copyright 2020 (CC-BY 4.0).<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="row_footer"> This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein. </div> <div class="row_footer"> This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a> </div> <div class="row_footer footer_flags"> <div class="column" style="center"> <a href="https://europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a> </div> <div class="column"> <a href="https://www.imi.europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a> </div> <div class="column"> <a href="https://efpia.eu"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

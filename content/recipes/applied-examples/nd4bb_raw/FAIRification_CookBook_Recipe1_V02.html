@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ND4BB dataset FAIRification recipe</title>
+    <title>3. ND4BB dataset FAIRification recipe</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -48,40 +48,6 @@
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -95,8 +61,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Oncotrack FAIRification recipe" href="../oncotrack_raw/rawRecipe-oncotrack.html" />
-    <link rel="prev" title="eTox: Data normalization and integration through entity linking" href="../etox.html" />
+    <link rel="next" title="4. Oncotrack FAIRification recipe" href="../oncotrack_raw/rawRecipe-oncotrack.html" />
+    <link rel="prev" title="2. eTox: Data normalization and integration through entity linking" href="../etox.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -140,137 +106,50 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../introduction.html">
    Introduction
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/the-turing-way.html">
-     1. The Turing Way Book of Data Science
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
-     2. Who should read the FAIR Cookbook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
-     3. What are the FAIR Principles?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/what-is-IMI.html">
-     4. What is IMI?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/FAIR-in-IMI-context.html">
-     5. FAIR in the context of IMI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/IMI-Data-Access-Request-Process.html">
-     6. Engaging with IMI Projects
+     1. Who should read the FAIR Cookbook?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/FAIRplus-values.html">
-     7. The Ethical Values behind FAIR and the FAIRPlus project
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/data-sharing-models.html">
-     8. High level data sharing models
+     2. The Ethical Values behind FAIR and the FAIRPlus project
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../assessing-fairness.html">
-   Assessing FAIR
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary of FAIR Things
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
-     1. Data Management Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
-     2. FAIRplus Datasets Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../assessing-fairness/cmmi/Data-Usage-Areas.html">
-     3. Data Usage Areas
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../assessing-fairness/fair-indicators.html">
-     4. FAIR Indicators
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../assessing-fairness/cmmi/RDA-Indicators.html">
-       4.4.1. RDA Indicators
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
-       4.4.2. IMI FAIRPlus Indicators
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../assessing-fairness/manual-fair-assessment.html">
-     5. FAIR assessment by hand
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../assessing-fairness/cmmi/evaluation-method.html">
-       5.4.1. Evaluation Method
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../assessing-fairness/cmmi/rda-evaluation.html">
-       5.4.2. RDA Evaluation Methods
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../../assessing-fairness/automatic-fair-assessment.html">
-     6. FAIR assessment by software
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
-       6.4.1. Assessing FAIRness with FAIREvaluator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
-       6.4.2. FAIR assessment with FAIRShake
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  INFRASTRUCTURE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../infrastructure.html">
    Infrastructure for FAIR
@@ -319,9 +198,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../findability.html">
-   Improving Findability
+   Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -374,7 +260,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../accessibility.html">
-   Improving Accessibility
+   Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -393,22 +279,22 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../interoperability.html">
-   Improving Interoperability
+   Interoperability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/identifier-mapping.html">
-     How to interlink data from different sources?
+     1. How to interlink data from different sources?
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/bridgedb-recipe.html">
-     Identifier mapping with BridgeDB
+     2. Identifier mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       Identifier mapping using BridgeDb WS
+       2.12.1. Identifier mapping using BridgeDb WS
       </a>
      </li>
     </ul>
@@ -417,32 +303,32 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-why-using-them.html">
-     Why use Terminologies &amp; Ontologies?
+     3. Why use Terminologies &amp; Ontologies?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/selecting-ontologies.html">
-     Which vocabulary to use?
+     4. Which vocabulary to use?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-new-term-request-recipe.html">
-     Requesting terms addition to terminology artefacts
+     5. Requesting terms addition to terminology artefacts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ontology-operations-tools.html">
-     Tools for ontology-associated operations
+     6. Tools for ontology-associated operations
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/ontology-robot-recipe.html">
-     Building an application ontology with Robot
+     7. Building an application ontology with Robot
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot/MSIO-robot-build-process.html">
-       MSIO, an application ontology for Metabolomics
+       7.12.1. MSIO, an application ontology for Metabolomics
       </a>
      </li>
     </ul>
@@ -451,17 +337,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../interoperability/creating-minimal-metadata-profiles.html">
-     Creating a Metadata Profile
+     8. Creating a Metadata Profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/transcriptomics-metadata.html">
-       Establishing a Metadata Profile for Transcriptomics
+       8.4.1. Establishing a Metadata Profile for Transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
-       Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
       </a>
      </li>
     </ul>
@@ -470,17 +356,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
-     From proprietary to open standard data format
+     9. From proprietary to open standard data format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/fastq-file-format-validators.html">
-     File format validation, an example with FASTQ files
+     10. File format validation, an example with FASTQ files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../interoperability/ETL-tools.html">
-     Tools for Data Extraction, Transformation, and Loading (ETL)
+     11. Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -489,7 +375,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../reusability.html">
-   Improving Reusability
+   Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -528,32 +414,32 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../../applied-examples.html">
-   Making IMI data FAIR
+   Applied Examples
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../fair-data-matrix-recipe.html">
-     Making a Data Matrix FAIR
+     1. Making a Data Matrix FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Bibliographic Reference:
+       1.11.1. Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring a rose garden with SPARQL
+       1.11.3. Exploring a rose garden with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
       </a>
      </li>
     </ul>
@@ -562,75 +448,43 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../etox.html">
-     eTox: Data normalization and integration through entity linking
+     2. eTox: Data normalization and integration through entity linking
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     ND4BB dataset FAIRification recipe
+     3. ND4BB dataset FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
-     Oncotrack FAIRification recipe
+     4. Oncotrack FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../resolute_raw/rawRecipe_resolute.html">
-     RESOLUTE FAIRification Recipe
+     5. RESOLUTE FAIRification Recipe
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../glossary-fair-terms.html">
-   Glossary of FAIR things
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT THE FAIR COOKBOOK
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../help.html">
-   Help
+  <a class="reference internal" href="../../community.html">
+   Community
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../help/tips-tricks.html">
-     1. Recipe Tips and Tricks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/recipe-template.html">
-     2. Recipe Template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
-     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
-     4. How to use HackMD to write a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
-     5. How to create a FAIRPlus Coobook Recipe ?
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../boilerplate.html">
-   Miscellaneous
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/license.html">
-     1. License for this book
+    <a class="reference internal" href="../../boilerplate/governance.html">
+     1. FAIR Cookbook Governance
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,33 +493,76 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/governance.html">
-     3. FAIR Cookbook Governance
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
-     4. FAIR Cookbook Code of Conduct
+     3. FAIR Cookbook Code of Conduct
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/project_information.html">
-     5. FAIR CookBook BoilerPlate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/roadmap.html">
-     6. FAIR cookbook development roadmap
-    </a>
-   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../../boilerplate/contributing.html">
-     7. Contributing to the FAIR cookbook
+     1. Contributing to the FAIR cookbook
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/disclaimer.html">
-     8. Disclaimer
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     3. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     4. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     5. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     6. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/myst.html">
+     7. MyST syntax cheat sheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/license.html">
+     2. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/technology_stack.html">
+     3. Technology stack
     </a>
    </li>
   </ul>
@@ -763,79 +660,79 @@ commentsRunWhenDOMLoaded(addUtterances);
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ingredients">
-   Ingredients
+   3.1. Ingredients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objectives">
-   Objectives
+   3.2. Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#step-by-step-process">
-   Step by Step Process
+   3.3. Step by Step Process
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-description">
-     Dataset description
+     3.3.1. Dataset description
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-extraction">
-     Data extraction
+     3.3.2. Data extraction
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-transform">
-     Data transform
+     3.3.3. Data transform
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#extract-and-annotate-structural-metadata">
-     Extract and annotate structural metadata
+     3.3.4. Extract and annotate structural metadata
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#results">
-   Results
+   3.4. Results
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fair-assessment">
-   FAIR assessment
+   3.5. FAIR assessment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#future-plan">
-   Future plan
+   3.6. Future plan
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
+   3.7. Summary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fairification-process-summary-table">
-   FAIRification process summary table
+   3.8. FAIRification process summary table
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#supplementary-information">
-   Supplementary information
+   3.9. Supplementary information
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   Authors
+   3.10. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   License
+   3.11. License
   </a>
  </li>
 </ul>
@@ -851,11 +748,11 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="nd4bb-dataset-fairification-recipe">
-<span id="fcb-fairify-examples-nd4bb"></span><h1>ND4BB dataset FAIRification recipe<a class="headerlink" href="#nd4bb-dataset-fairification-recipe" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-fairify-examples-nd4bb"></span><h1><span class="section-number">3. </span>ND4BB dataset FAIRification recipe<a class="headerlink" href="#nd4bb-dataset-fairification-recipe" title="Permalink to this headline">¶</a></h1>
 <!-- __Version:__ 2, this recipe is extracted from [Version 1](https://docs.google.com/document/d/1LOQAkDZY91Y-5aFCDSlwP-PUeufFavx4Jprnbnl1Hi4/edit)
  -->
 <div class="section" id="ingredients">
-<h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Raw Data: <a class="reference external" href="https://www.dsf.unica.it/translocation/abdb/">AMR Compounds Database</a></p></li>
 <li><p>Metadata Model</p></li>
@@ -888,13 +785,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </div>
 <div class="section" id="objectives">
-<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
 <p>The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data to a public repository using machine readable format. Also generic improvement of the FAIR parameters.</p>
 </div>
 <div class="section" id="step-by-step-process">
-<h2>Step by Step Process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Step by Step Process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="dataset-description">
-<h3>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.1. </span>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h3>
 <p>The AMR database consists of several nested static HTML pages. The information is well structured, results are mainly quantitative numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>) and a machine-readable data set should be easily created.</p>
 <p>To get a good understanding of the AMR dataset, the AMR metadata shall be extracted. The AMR metadata includes four types of metadata: structural metadata, administrative metadata, and descriptive metadata. The structural metadata describes the structure of the dataset, for examples, column names and/or IDs. Administrative metadata contains the author, organization, and other provenance information. The descriptive metadata includes the procedure, usually protocols, in generating the experimental results. The descriptive metadata is always stored in a free-text format without data structure.</p>
 <p>Figure 1 is an example of the simplified schematic workflow of FAIRification, which includes the extraction, transform, annotation, licensing and identifier assigning process. Due to the limit of time, we ere, we focus on the extraction and annotation of structural metadata, the administrative metadata, descriptive metadata will be added in the future.</p>
@@ -902,11 +799,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 _Figure 1:  Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows)._  -->
 <div class="figure align-default" id="schematic-workflow-of-the-general-fairification-pipeline-some-steps-need-repetitions-yellow-arrows">
 <a class="reference internal image-reference" href="../../../../_images/image_0.png"><img alt="Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows)." src="../../../../_images/image_0.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows).</span><a class="headerlink" href="#schematic-workflow-of-the-general-fairification-pipeline-some-steps-need-repetitions-yellow-arrows" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Schematic workflow of the general FAIRification pipeline. some steps need repetitions (yellow arrows).</span><a class="headerlink" href="#schematic-workflow-of-the-general-fairification-pipeline-some-steps-need-repetitions-yellow-arrows" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="data-extraction">
-<h3>Data extraction<a class="headerlink" href="#data-extraction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.2. </span>Data extraction<a class="headerlink" href="#data-extraction" title="Permalink to this headline">¶</a></h3>
 <p>Data are extracted using a<a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf"> KNIME workflow</a>, which can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced.</p>
 <p>Figure 2 is a snapshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (&lt;h3&gt;, shown in the red box in Figure 3) and compounds as an unsorted list (&lt;ul&gt;, shown in the yellow box in Figure 3).</p>
 <!-- ![alt_text](image_1.jpg "image_tooltip")
@@ -914,14 +811,14 @@ _Figure 2: Snapshot of AMR compound database home page. The blue area listed all
  -->
 <div class="figure align-default" id="snapshot-of-amr-compound-database-home-page-the-blue-area-listed-all-compound-data-to-be-extracted">
 <a class="reference internal image-reference" href="../../../../_images/image_1.jpg"><img alt="Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted." src="../../../../_images/image_1.jpg" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span><a class="headerlink" href="#snapshot-of-amr-compound-database-home-page-the-blue-area-listed-all-compound-data-to-be-extracted" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span><a class="headerlink" href="#snapshot-of-amr-compound-database-home-page-the-blue-area-listed-all-compound-data-to-be-extracted" title="Permalink to this image">¶</a></p>
 </div>
 <!-- ![alt_text](image_2.jpg "image_tooltip")
 _Figure 3: Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound._
  -->
 <div class="figure align-default" id="snapshot-of-the-amr-compound-database-home-page-source-code-the-red-box-shows-the-compound-class-header-the-yellow-box-lists-one-compound">
 <a class="reference internal image-reference" href="../../../../_images/image_2.jpg"><img alt="Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound." src="../../../../_images/image_2.jpg" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.</span><a class="headerlink" href="#snapshot-of-the-amr-compound-database-home-page-source-code-the-red-box-shows-the-compound-class-header-the-yellow-box-lists-one-compound" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.</span><a class="headerlink" href="#snapshot-of-the-amr-compound-database-home-page-source-code-the-red-box-shows-the-compound-class-header-the-yellow-box-lists-one-compound" title="Permalink to this image">¶</a></p>
 </div>
 <p>We first identified all websites that contain the project data. The homepage (Figure 2) describes the compound names, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in Figure 4.</p>
 <p>Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by <td>…</td>, chemical “Oxazolidinones” and “Tetracyclines” uses different data structure. Therefore the extracted XML document was updated before applying further nodes to the XML document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. The green boxes in Figure 4 highlighted the discrepancies we found in the original dataset.</p>
@@ -930,7 +827,7 @@ _Figure 3: Snapshot of the AMR compound database home page source code. The red 
 _Figure 4: Workflow to extract antimicrobial classes and compound with their corresponding subpages_ -->
 <div class="figure align-default" id="workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages">
 <a class="reference internal image-reference" href="../../../../_images/image_3.png"><img alt="Workflow to extract antimicrobial classes and compound with their corresponding subpages." src="../../../../_images/image_3.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Workflow to extract antimicrobial classes and compound with their corresponding subpages.</span><a class="headerlink" href="#workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Workflow to extract antimicrobial classes and compound with their corresponding subpages.</span><a class="headerlink" href="#workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages" title="Permalink to this image">¶</a></p>
 </div>
 <p>Links to all content in the sub-page are also extracted. Figure 5 is an example of the subpage of one compound, which consists of table selection with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources. (See the green boxes in Figure 5). External links were excluded from current data extraction.</p>
 <p>The complete workflow to extract the data from the compound/charge webpage is provided in <a class="reference external" href="#heading=h.q7ozvs96azbw">supplementary figure 1</a>.</p>
@@ -939,22 +836,22 @@ _Figure 4: Workflow to extract antimicrobial classes and compound with their cor
 _Figure 5: Example of one ND4BB raw data_ -->
 <div class="figure align-default" id="example-of-one-nd4bb-raw-data">
 <a class="reference internal image-reference" href="../../../../_images/image_4.jpg"><img alt="Example of one ND4BB raw data." src="../../../../_images/image_4.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Example of one ND4BB raw data.</span><a class="headerlink" href="#example-of-one-nd4bb-raw-data" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Example of one ND4BB raw data.</span><a class="headerlink" href="#example-of-one-nd4bb-raw-data" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="data-transform">
-<h3>Data transform<a class="headerlink" href="#data-transform" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.3. </span>Data transform<a class="headerlink" href="#data-transform" title="Permalink to this headline">¶</a></h3>
 <p>The data were extracted following the schema to facilitate future data annotation: PropertyGroup – Property – Value where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the propert is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in Figure 6. For each property, the corresponding values in a controlled vocabulary list are collected into a<a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx"> spreadsheet</a>. Missing values were fixed in this transform as well.</p>
 <p>One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup).</p>
 <!-- ![alt_text](image_5.png "image_tooltip")
 _Figure 6: Example data set for +3 charged Amikacin_ -->
 <div class="figure align-default" id="example-data-set-for-3-charged-amikacin">
 <a class="reference internal image-reference" href="../../../../_images/image_5.png"><img alt="Example data set for +3 charged Amikacin." src="../../../../_images/image_5.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Example data set for +3 charged Amikacin.</span><a class="headerlink" href="#example-data-set-for-3-charged-amikacin" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Example data set for +3 charged Amikacin.</span><a class="headerlink" href="#example-data-set-for-3-charged-amikacin" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="extract-and-annotate-structural-metadata">
-<h3>Extract and annotate structural metadata<a class="headerlink" href="#extract-and-annotate-structural-metadata" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.4. </span>Extract and annotate structural metadata<a class="headerlink" href="#extract-and-annotate-structural-metadata" title="Permalink to this headline">¶</a></h3>
 <p>To prepare for the ontology annotation, we first generated lists of different types of attributes, which include “AMRclass”, “AMR compound”, “PropertyGroup”, etc. In each spreadsheet, the values are listed as separate rows for ontology annotation.</p>
 <p>The strings went through additional parsing to improve mapping confidence. Duplicated or missing attributes were removed. Stemming and lemmatization were implemented to map the keyword to its root form to avoid mismatch because of spelling/form variations.</p>
 <p>all the strings were sent through ZOOMA/NCBO API to search for ontology annotation. The ontology annotation results are listed here (<a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BZOOMA_1019.xlsx">ZOOMA</a>, <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BNCBOREC_1021.xlsx">NCBO</a>). The ontology annotations were ranked and selected based on its confidence. For strings that didn’t find proper ontology mapping, the original values were kept. The ontology annotation preparation workflow is <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_EBI_ZOOMA_requests_V5.knwf">here</a>.</p>
@@ -964,16 +861,16 @@ _Figure 6: Example data set for +3 charged Amikacin_ -->
 </div>
 </div>
 <div class="section" id="results">
-<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
 <p>Both generated files ‘ExtractedMetadata_20190124_ZOOMA_0329.xlsx’ and ‘ExtractedMetadata_20190124_NCBOREC_0347.xlsx’ show nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only few cases the NCBO Recommender showed results (e.g. BAL29880 and MBX2319) were ZOOMA did not find a corresponding ontology.</p>
 <p>The proposed workflow is insufficient to extract adequate and consistent semantic annotations for the structural metadata. In addition the retrieved links do not reflect the used version of the ontology.</p>
 </div>
 <div class="section" id="fair-assessment">
-<h2>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
 <p>The FAIRness of the ND4BB was also assessed based on the <a class="reference external" href="https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit#gid=1320380260">RDA indicators (v0.03)</a>. Although there are a few indicators that are not applicable to the ND4BB dataset because of data type limitations, and some indicators are too ambiguous to provide a objective assessment. We got different data curators evaluating the FAIRness seperately and compared and discussed the conflicting assessment. In general, the FAIRness score against RDA FAIR indicator is 36%, of which the mandatory indicator score is 47% and the recommended indicator score is 32%.</p>
 </div>
 <div class="section" id="future-plan">
-<h2>Future plan<a class="headerlink" href="#future-plan" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>Future plan<a class="headerlink" href="#future-plan" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Extract administrative metadata, provenance information, e.g. owner, date of creation</p></li>
 <li><p>Add license to data set</p></li>
@@ -986,14 +883,14 @@ _Figure 6: Example data set for +3 charged Amikacin_ -->
 </ol>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>The AMR dataset was provided as a first example as it was immediately available. A generic FAIRification workflow was also provided. We reviewed the workflow and derived general principles for the cookbook. However (as for the principles we learnt) the lack of a context for the data, and of goals for the FAIRification process made the actual action of FAIRification not valuable.</p>
 <p>As a result or our work on the AMR dataset, we  identified useful general principles, including the need for license, availability of the data, the importance of context (e.g.: what ontologies to map to) and other details included in our report.</p>
 <p>We also identified key FAIRification steps in the proposed process, some of which non obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow.</p>
 <p>Overall this dataset has been very useful to start our overall process and team activities.</p>
 </div>
 <div class="section" id="fairification-process-summary-table">
-<h2>FAIRification process summary table<a class="headerlink" href="#fairification-process-summary-table" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.8. </span>FAIRification process summary table<a class="headerlink" href="#fairification-process-summary-table" title="Permalink to this headline">¶</a></h2>
 <table>
   <tr>
     <td>Defined FAIRification Steps</td>
@@ -1248,18 +1145,18 @@ e.g. python hashlib  </td>
 </table>
 </div>
 <div class="section" id="supplementary-information">
-<h2>Supplementary information<a class="headerlink" href="#supplementary-information" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.9. </span>Supplementary information<a class="headerlink" href="#supplementary-information" title="Permalink to this headline">¶</a></h2>
 <!-- ![alt_text](image_6.png "image_tooltip")
 _Supplement figure 1: Workflow to extract the data from compound/charge webpage_
  -->
 <div class="figure align-default" id="workflow-to-extract-the-data-from-compound-charge-webpage">
 <a class="reference internal image-reference" href="../../../../_images/image_6.png"><img alt="Workflow to extract the data from compound/charge webpage." src="../../../../_images/image_6.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Workflow to extract the data from compound/charge webpage.</span><a class="headerlink" href="#workflow-to-extract-the-data-from-compound-charge-webpage" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Workflow to extract the data from compound/charge webpage.</span><a class="headerlink" href="#workflow-to-extract-the-data-from-compound-charge-webpage" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.10. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -1284,7 +1181,7 @@ _Supplement figure 1: Workflow to extract the data from compound/charge webpage_
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.11. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -1315,8 +1212,8 @@ _Supplement figure 1: Workflow to extract the data from compound/charge webpage_
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../etox.html" title="previous page">eTox: Data normalization and integration through entity linking</a>
-    <a class='right-next' id="next-link" href="../oncotrack_raw/rawRecipe-oncotrack.html" title="next page">Oncotrack FAIRification recipe</a>
+    <a class='left-prev' id="prev-link" href="../etox.html" title="previous page"><span class="section-number">2. </span>eTox: Data normalization and integration through entity linking</a>
+    <a class='right-next' id="next-link" href="../oncotrack_raw/rawRecipe-oncotrack.html" title="next page"><span class="section-number">4. </span>Oncotrack FAIRification recipe</a>
 
         </div>
         

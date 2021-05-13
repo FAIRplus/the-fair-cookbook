@@ -1,14 +1,13 @@
 (fcb-misc)=
-# Miscellaneous
+# Platform
 
+---
 
-## Quick Links to 
 
 ````{panels}
 :container: container-lg pb-3
 :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
 :card: rounded
-
 
 <i class="fas fa-broadcast-tower fa-2x" style="color:#fc7a4a;"></i>
 ^^^
@@ -28,20 +27,20 @@
 <i class="fas fa-cog fa-2x" style="color:#fc7a4a;"></i>
 ^^^
 <h4><b>Technical Stack</b></h4>
-<p>JupyterBook 0.9.1</p>
+<p><a href="https://jupyterbook.org/intro.html">JupyterBook 0.9.1</a></p>
 ---
 
 <i class="fas fa-cog fa-2x" style="color:#fc7a4a;"></i>
 ^^^
 <h4><b>Syntax</b></h4>
-<p>Myst Markdown </p>
+{ref}`fcb-myst-cheatsheet`
 <p>ipython notebooks</p>
 ---
 
 <i class="fab fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
 ^^^
 <h4><b>Hosting Platform</b></h4>
-<p>Github</p>
+<p><a href="https://github.com/FAIRplus/the-fair-cookbook/">Github</a></p>
 ---
 
 <i class="fab fa-docker fa-2x" style="color:#fc7a4a;"></i>
@@ -53,18 +52,20 @@
 <i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
 ^^^
 <h4><b>Support</b></h4>
-<p><a href="mailto:fairplus-cookbook@elixir-europe.org">contact support</a</p>
+<p><a href="mailto:fairplus-cookbook@elixir-europe.org">Elixir-europe FAIRcookbook</a></p>
 ---
 
 <i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
 ^^^
 <h4><b>Feature Requests</b></h4>
-<p><a href="https://github.com/FAIRplus/the-fair-cookbook/issues">issue tracker</a</p>
+<p><a href="https://github.com/FAIRplus/the-fair-cookbook/issues">Issue tracker</a></p>
 ---
 
 ````
 
+
 ---
+
 ## Miscellaneous
 
 

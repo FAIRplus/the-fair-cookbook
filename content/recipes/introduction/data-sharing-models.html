@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. High level data sharing models</title>
+    <title>High level data sharing models</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -48,40 +48,6 @@
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -95,8 +61,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Assessing FAIRness and FAIR compliance" href="../assessing-fairness.html" />
-    <link rel="prev" title="7. The Ethical Values behind FAIR and the FAIRPlus project" href="FAIRplus-values.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -140,137 +104,50 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../introduction.html">
    Introduction
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="the-turing-way.html">
-     1. The Turing Way Book of Data Science
-    </a>
-   </li>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="FAIR-cookbook-audience.html">
-     2. Who should read the FAIR Cookbook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="brief-FAIR-principles.html">
-     3. What are the FAIR Principles?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="what-is-IMI.html">
-     4. What is IMI?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="FAIR-in-IMI-context.html">
-     5. FAIR in the context of IMI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="IMI-Data-Access-Request-Process.html">
-     6. Engaging with IMI Projects
+     1. Who should read the FAIR Cookbook?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="FAIRplus-values.html">
-     7. The Ethical Values behind FAIR and the FAIRPlus project
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     8. High level data sharing models
+     2. The Ethical Values behind FAIR and the FAIRPlus project
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../assessing-fairness.html">
-   Assessing FAIR
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR Things
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
-     1. Data Management Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
-     2. FAIRplus Datasets Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
-     3. Data Usage Areas
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
-     4. FAIR Indicators
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
-       4.4.1. RDA Indicators
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
-       4.4.2. IMI FAIRPlus Indicators
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
-     5. FAIR assessment by hand
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
-       5.4.1. Evaluation Method
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
-       5.4.2. RDA Evaluation Methods
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
-     6. FAIR assessment by software
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
-       6.4.1. Assessing FAIRness with FAIREvaluator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
-       6.4.2. FAIR assessment with FAIRShake
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  INFRASTRUCTURE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../infrastructure.html">
    Infrastructure for FAIR
@@ -319,9 +196,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
-   Improving Findability
+   Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -374,7 +258,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../accessibility.html">
-   Improving Accessibility
+   Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -393,22 +277,22 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../interoperability.html">
-   Improving Interoperability
+   Interoperability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/identifier-mapping.html">
-     How to interlink data from different sources?
+     1. How to interlink data from different sources?
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     Identifier mapping with BridgeDB
+     2. Identifier mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       Identifier mapping using BridgeDb WS
+       2.12.1. Identifier mapping using BridgeDb WS
       </a>
      </li>
     </ul>
@@ -417,32 +301,32 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-why-using-them.html">
-     Why use Terminologies &amp; Ontologies?
+     3. Why use Terminologies &amp; Ontologies?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
-     Which vocabulary to use?
+     4. Which vocabulary to use?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
-     Requesting terms addition to terminology artefacts
+     5. Requesting terms addition to terminology artefacts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
-     Tools for ontology-associated operations
+     6. Tools for ontology-associated operations
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
-     Building an application ontology with Robot
+     7. Building an application ontology with Robot
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
-       MSIO, an application ontology for Metabolomics
+       7.12.1. MSIO, an application ontology for Metabolomics
       </a>
      </li>
     </ul>
@@ -451,17 +335,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
-     Creating a Metadata Profile
+     8. Creating a Metadata Profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
-       Establishing a Metadata Profile for Transcriptomics
+       8.4.1. Establishing a Metadata Profile for Transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
-       Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
       </a>
      </li>
     </ul>
@@ -470,17 +354,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
-     From proprietary to open standard data format
+     9. From proprietary to open standard data format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
-     File format validation, an example with FASTQ files
+     10. File format validation, an example with FASTQ files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ETL-tools.html">
-     Tools for Data Extraction, Transformation, and Loading (ETL)
+     11. Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -489,7 +373,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../reusability.html">
-   Improving Reusability
+   Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -528,32 +412,32 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../applied-examples.html">
-   Making IMI data FAIR
+   Applied Examples
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     Making a Data Matrix FAIR
+     1. Making a Data Matrix FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Bibliographic Reference:
+       1.11.1. Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring a rose garden with SPARQL
+       1.11.3. Exploring a rose garden with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
       </a>
      </li>
     </ul>
@@ -562,75 +446,43 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/etox.html">
-     eTox: Data normalization and integration through entity linking
+     2. eTox: Data normalization and integration through entity linking
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
-     ND4BB dataset FAIRification recipe
+     3. ND4BB dataset FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     Oncotrack FAIRification recipe
+     4. Oncotrack FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
-     RESOLUTE FAIRification Recipe
+     5. RESOLUTE FAIRification Recipe
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
-   Glossary of FAIR things
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT THE FAIR COOKBOOK
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../help.html">
-   Help
+  <a class="reference internal" href="../community.html">
+   Community
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/tips-tricks.html">
-     1. Recipe Tips and Tricks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/recipe-template.html">
-     2. Recipe Template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
-     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
-     4. How to use HackMD to write a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
-     5. How to create a FAIRPlus Coobook Recipe ?
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Miscellaneous
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/license.html">
-     1. License for this book
+    <a class="reference internal" href="../boilerplate/governance.html">
+     1. FAIR Cookbook Governance
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,33 +491,76 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/governance.html">
-     3. FAIR Cookbook Governance
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     4. FAIR Cookbook Code of Conduct
+     3. FAIR Cookbook Code of Conduct
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/project_information.html">
-     5. FAIR CookBook BoilerPlate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/roadmap.html">
-     6. FAIR cookbook development roadmap
-    </a>
-   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/contributing.html">
-     7. Contributing to the FAIR cookbook
+     1. Contributing to the FAIR cookbook
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/disclaimer.html">
-     8. Disclaimer
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     5. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     6. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. MyST syntax cheat sheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     2. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/technology_stack.html">
+     3. Technology stack
     </a>
    </li>
   </ul>
@@ -763,59 +658,59 @@ commentsRunWhenDOMLoaded(addUtterances);
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   8.1. Main Objectives
+   Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#capability-maturity-table">
-   8.2. Capability &amp; Maturity Table
+   Capability &amp; Maturity Table
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-sharing">
-   8.3. Data Sharing
+   Data Sharing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-sharing-process-evaluation-criteria">
-   8.4. Data Sharing Process Evaluation Criteria
+   Data Sharing Process Evaluation Criteria
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generic-criteria">
-     8.4.1. Generic criteria
+     Generic criteria
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#platform-criteria">
-     8.4.2. Platform criteria
+     Platform criteria
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-sharing-process-evaluation-workflow">
-   8.5. Data Sharing Process Evaluation Workflow
+   Data Sharing Process Evaluation Workflow
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#evaluation-of-lcsb-data-sharing-procedure">
-   8.6. Evaluation of LCSB Data Sharing Procedure
+   Evaluation of LCSB Data Sharing Procedure
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recommendations-for-lcsb-data-sharing-procedure-improvement">
-   8.7. Recommendations for LCSB Data Sharing Procedure Improvement
+   Recommendations for LCSB Data Sharing Procedure Improvement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   8.8. Authors
+   Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   8.9. License
+   License
   </a>
  </li>
 </ul>
@@ -831,7 +726,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="high-level-data-sharing-models">
-<span id="fcb-intro-model-sharing"></span><h1><span class="section-number">8. </span>High level data sharing models<a class="headerlink" href="#high-level-data-sharing-models" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-intro-model-sharing"></span><h1>High level data sharing models<a class="headerlink" href="#high-level-data-sharing-models" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <hr class="docutils" />
@@ -891,7 +786,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="main-objectives">
-<h2><span class="section-number">8.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is to evaluate the current Data Sharing procedure offered by the Luxembourg Centre for Systems Biomedicine (<a class="reference external" href="https://www.uni.lu/lcsb">LCSB</a>) of the University of Luxembourg as found <a class="reference external" href="https://r3.pages.uni.lu/howto-cards/stable/">here</a>.</p>
 <p>To provide a transparent Evaluation the recipe will:</p>
 <ul class="simple">
@@ -903,7 +798,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="capability-maturity-table">
-<h2><span class="section-number">8.2. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<h2>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
 <!-- TO DO -->
 <table class="colwidths-auto table">
 <thead>
@@ -922,7 +817,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="data-sharing">
-<h2><span class="section-number">8.3. </span>Data Sharing<a class="headerlink" href="#data-sharing" title="Permalink to this headline">¶</a></h2>
+<h2>Data Sharing<a class="headerlink" href="#data-sharing" title="Permalink to this headline">¶</a></h2>
 <p>This chapter explains what data sharing is. It defines a high-level logical data sharing model, to help a user who is not familiar with data sharing get an overview of the major components. Please note that in the real world the defined components are not always explicitly defined. Often implicit concept definitions are used and people are not always aware of the implicit definitions. Sometimes some of the components may even not exist, because for the given data sharing use case they might not be needed.</p>
 <!-- 
 ````{panels} 
@@ -947,7 +842,7 @@ classDiagram
  -->
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../../_images/data-sharing-fig1.svg"><img alt="Data Sharing Model 1" height="200px" src="../../../_images/data-sharing-fig1.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text"><em>data sharing</em> Data Sharing Model 1.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>data sharing</em> Data Sharing Model 1.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Figure 1 depicts the three roles that can be distinguished in a data sharing context: <em><strong>DataOwner</strong></em>, <em><strong>DataConsumer</strong></em>, and <em><strong>DataProvider</strong></em>. The roles are typically played by different entities, which can be both organizations or persons. Then, a brief description of the roles is presented.</p>
 <p>The <em><strong>DataOwner</strong></em> role is played by the entity that has legal ownership of the data being shared.</p>
@@ -984,7 +879,7 @@ class ProvenanceMetadata
 <!-- *Figure 2: The SharedData entity components* -->
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../../../_images/data-sharing-fig2.svg"><img alt="Data Sharing Model 2" height="300px" src="../../../_images/data-sharing-fig2.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text"><em>data sharing</em> Data Sharing Model 2.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>data sharing</em> Data Sharing Model 2.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Figure 2 depicts the structure of the bundle of the data being shared, represented by the <em><strong>SharedData</strong></em> entity. It has a complex structure, as depicted following.</p>
 <p>The <em><strong>DataSet</strong></em> entity is the main component of the SharedData entity, and it comprises the <em><strong>Data</strong></em>, <em><strong>DatasetProfile</strong></em>, and <em><strong>DatasetMetadata</strong></em> entities.</p>
@@ -1027,7 +922,7 @@ class ConsumerLicenceDefinition
 <!-- *Figure 3: The data sharing agreements* -->
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../../../_images/data-sharing-fig3.svg"><img alt="Data Sharing Model 3" height="400px" src="../../../_images/data-sharing-fig3.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text"><em>data sharing</em> Data Sharing Model 3.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>data sharing</em> Data Sharing Model 3.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Figure 3 depicts the agreements that must be reached for the sharing of data, and the artifacts generated as results of the commitment signed by the involved roles. The sharing of data implies the definition of two different agreements formally established through specific licenses.</p>
 <p>The <em><strong>ConsumerLicenseDefinition</strong></em> establishes the terms under which the data being shared can be used by the DataConsumer. These terms are agreed upon by the DataOwner and the DataConsumer by signing the <em><strong>DataSharingAgreement</strong></em>.
@@ -1035,7 +930,7 @@ This agreement can be negotiated and signed on a per sharing basis, i.e. the Dat
 <p>The <em><strong>ProviderLicenseDefinition</strong></em> establishes the terms under which the data being shared can be made available on the DataProvider infrastructure. These terms are agreed by the DataOwner and the DataProvider by signing the <em><strong>DataProvisioningAgreement</strong></em>.</p>
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../../../_images/data-sharing-fig4.svg"><img alt="Data Sharing Model 4" height="600px" src="../../../_images/data-sharing-fig4.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text"><em>data sharing</em> Data Sharing Model 4.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>data sharing</em> Data Sharing Model 4.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Figure 4 depicts the <em><strong>DataSharingPlatform</strong></em> components, which is hosted by the  <em><strong>DataProvider</strong></em> role as the technical infrastructure aimed to support the sharing of data. The platform components are depicted following.</p>
 <p>The <em><strong>DataCatalog</strong></em> provides a way to register the SharedData.</p>
@@ -1081,7 +976,7 @@ class DataSharingPlatform
  -->
 <div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="../../../_images/data-sharing-fig5.svg"><img alt="Data Sharing Model 5" height="400px" src="../../../_images/data-sharing-fig5.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text"><em>data sharing</em> Data Sharing Model 5.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>data sharing</em> Data Sharing Model 5.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Figure 5 depicts the <em><strong>DataOwnerInterface</strong></em> components, which provides the DataOwner a unified interface to interact with the DataSharingPlatform. The interface components are depicted following.</p>
 <p>The <em><strong>Connect</strong></em> module allows the DataOwner to initiate an authenticated session on the DataSharingPlatform.</p>
@@ -1126,7 +1021,7 @@ class DataSharingPlatform
 <!-- *Figure 6: The DataConsumerInterface components* -->
 <div class="figure align-default" id="id6">
 <a class="reference internal image-reference" href="../../../_images/data-sharing-fig6.svg"><img alt="Data Sharing Model 6" height="600px" src="../../../_images/data-sharing-fig6.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text"><em>data sharing</em> Data Sharing Model 6.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>data sharing</em> Data Sharing Model 6.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Figure 6 depicts the <em><strong>DataConsumerInterface</strong></em> components, which provides the DataConsumer a unified interface to interact with the DataSharingPlatform. The interface components are depicted following.</p>
 <p>The <em><strong>Connect</strong></em> module allows the DataConsumer to initiate an authenticated session on the DataSharingPlatform.</p>
@@ -1136,7 +1031,7 @@ class DataSharingPlatform
 </div>
 <hr class="docutils" />
 <div class="section" id="data-sharing-process-evaluation-criteria">
-<h2><span class="section-number">8.4. </span>Data Sharing Process Evaluation Criteria<a class="headerlink" href="#data-sharing-process-evaluation-criteria" title="Permalink to this headline">¶</a></h2>
+<h2>Data Sharing Process Evaluation Criteria<a class="headerlink" href="#data-sharing-process-evaluation-criteria" title="Permalink to this headline">¶</a></h2>
 <p>This chapter will define the main criteria for evaluating the given data sharing processes.
 Because there is a wide range of different data sharing solutions driven by a broad range of different use cases, the goal is to define those characteristics that are common for all data sharing processes.
 For a specific data sharing process evaluation, the classification criteria might be further refined and weighted according to the specific patterns of the use case.</p>
@@ -1160,7 +1055,7 @@ These are criteria that are given by the inherent structure of the shared data a
 These criteria define how optimal the given platform supports the data sharing workflows.</p></li>
 </ul>
 <div class="section" id="generic-criteria">
-<h3><span class="section-number">8.4.1. </span>Generic criteria<a class="headerlink" href="#generic-criteria" title="Permalink to this headline">¶</a></h3>
+<h3>Generic criteria<a class="headerlink" href="#generic-criteria" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p><strong>Role Perspective</strong>
 The data sharing workflows have to be evaluated from a data sharing role perspective because they might be very different per role. The  DataPlatformOwner role is seen only as a role that finally enables data sharing and will be ignored. The evaluation will only be done for the DataOwner and DataConsumer perspectives.</p></li>
@@ -1191,7 +1086,7 @@ Evaluates how easy the overall approach of the workflows is understood.</p></li>
 </ol>
 </div>
 <div class="section" id="platform-criteria">
-<h3><span class="section-number">8.4.2. </span>Platform criteria<a class="headerlink" href="#platform-criteria" title="Permalink to this headline">¶</a></h3>
+<h3>Platform criteria<a class="headerlink" href="#platform-criteria" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p><strong>Speed</strong>
 Evaluates how fast a workflow is processed on the platform</p></li>
@@ -1210,10 +1105,10 @@ Evaluates how secure the platform workflows are implemented</p></li>
 </div>
 <hr class="docutils" />
 <div class="section" id="data-sharing-process-evaluation-workflow">
-<h2><span class="section-number">8.5. </span>Data Sharing Process Evaluation Workflow<a class="headerlink" href="#data-sharing-process-evaluation-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>Data Sharing Process Evaluation Workflow<a class="headerlink" href="#data-sharing-process-evaluation-workflow" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id7">
 <a class="reference internal image-reference" href="../../../_images/data-sharing-fig7.svg"><img alt="Data Sharing Model 7" height="950px" src="../../../_images/data-sharing-fig7.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text"><em>data sharing</em> Data Sharing Model 7.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>data sharing</em> Data Sharing Model 7.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <p>The figure shows the proposed evaluation steps group into the following major steps:</p>
 <ol class="simple">
@@ -1228,7 +1123,7 @@ Finally, you look with an overall perspective to the data sharing solution and e
 </ol>
 </div>
 <div class="section" id="evaluation-of-lcsb-data-sharing-procedure">
-<h2><span class="section-number">8.6. </span>Evaluation of LCSB Data Sharing Procedure<a class="headerlink" href="#evaluation-of-lcsb-data-sharing-procedure" title="Permalink to this headline">¶</a></h2>
+<h2>Evaluation of LCSB Data Sharing Procedure<a class="headerlink" href="#evaluation-of-lcsb-data-sharing-procedure" title="Permalink to this headline">¶</a></h2>
 <p>This chapter assesses the LSCB Data Sharing Procedure according to the previously depicted criteria. The evaluation is performed in terms of the generic, data profile, and platform criteria. These outcomes have to be further refined and weighted according to the specific characteristics of the use case being addressed.</p>
 <ol class="simple">
 <li><p><strong>Analyse Use Cases</strong></p></li>
@@ -1403,7 +1298,7 @@ The data sharing agreement workflow is implicitly done by the push of the data o
 </div>
 <hr class="docutils" />
 <div class="section" id="recommendations-for-lcsb-data-sharing-procedure-improvement">
-<h2><span class="section-number">8.7. </span>Recommendations for LCSB Data Sharing Procedure Improvement<a class="headerlink" href="#recommendations-for-lcsb-data-sharing-procedure-improvement" title="Permalink to this headline">¶</a></h2>
+<h2>Recommendations for LCSB Data Sharing Procedure Improvement<a class="headerlink" href="#recommendations-for-lcsb-data-sharing-procedure-improvement" title="Permalink to this headline">¶</a></h2>
 <p>The offered data sharing workflows can be seen as a kind of providing core IT infrastructure components for offering:</p>
 <ul class="simple">
 <li><p>Data space.</p></li>
@@ -1437,7 +1332,7 @@ Depending on the number of shared How-To cards we could imagine that introductio
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">8.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -1462,7 +1357,7 @@ Depending on the number of shared How-To cards we could imagine that introductio
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">8.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
 </div>
 </div>
@@ -1492,8 +1387,6 @@ Depending on the number of shared How-To cards we could imagine that introductio
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="FAIRplus-values.html" title="previous page"><span class="section-number">7. </span>The Ethical Values behind FAIR and the FAIRPlus project</a>
-    <a class='right-next' id="next-link" href="../assessing-fairness.html" title="next page">Assessing FAIRness and FAIR compliance</a>
 
         </div>
         

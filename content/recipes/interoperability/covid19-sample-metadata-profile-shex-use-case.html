@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case</title>
+    <title>8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -48,40 +48,6 @@
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "FAIRplus/the-fair-cookbook");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -95,8 +61,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="From proprietary to open standard data format" href="from-proprietary-to-open-standard-mzml-exemplar.html" />
-    <link rel="prev" title="Establishing a Metadata Profile for Transcriptomics" href="transcriptomics-metadata.html" />
+    <link rel="next" title="9. From proprietary to open standard data format" href="from-proprietary-to-open-standard-mzml-exemplar.html" />
+    <link rel="prev" title="8.4.1. Establishing a Metadata Profile for Transcriptomics" href="transcriptomics-metadata.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -140,137 +106,50 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../introduction.html">
    Introduction
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. The Turing Way Book of Data Science
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-     2. Who should read the FAIR Cookbook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
-     3. What are the FAIR Principles?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/what-is-IMI.html">
-     4. What is IMI?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/FAIR-in-IMI-context.html">
-     5. FAIR in the context of IMI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/IMI-Data-Access-Request-Process.html">
-     6. Engaging with IMI Projects
+     1. Who should read the FAIR Cookbook?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../introduction/FAIRplus-values.html">
-     7. The Ethical Values behind FAIR and the FAIRPlus project
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/data-sharing-models.html">
-     8. High level data sharing models
+     2. The Ethical Values behind FAIR and the FAIRPlus project
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../assessing-fairness.html">
-   Assessing FAIR
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary of FAIR Things
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Management-Maturity-Model.html">
-     1. Data Management Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Datasets-Maturity-Model.html">
-     2. FAIRplus Datasets Maturity Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/cmmi/Data-Usage-Areas.html">
-     3. Data Usage Areas
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/fair-indicators.html">
-     4. FAIR Indicators
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/RDA-Indicators.html">
-       4.4.1. RDA Indicators
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/FAIRPlus-Indicators.html">
-       4.4.2. IMI FAIRPlus Indicators
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/manual-fair-assessment.html">
-     5. FAIR assessment by hand
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/evaluation-method.html">
-       5.4.1. Evaluation Method
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/cmmi/rda-evaluation.html">
-       5.4.2. RDA Evaluation Methods
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../assessing-fairness/automatic-fair-assessment.html">
-     6. FAIR assessment by software
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
-       6.4.1. Assessing FAIRness with FAIREvaluator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
-       6.4.2. FAIR assessment with FAIRShake
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  INFRASTRUCTURE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../infrastructure.html">
    Infrastructure for FAIR
@@ -319,9 +198,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
-   Improving Findability
+   Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -374,7 +260,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../accessibility.html">
-   Improving Accessibility
+   Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -393,22 +279,22 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../interoperability.html">
-   Improving Interoperability
+   Interoperability
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="identifier-mapping.html">
-     How to interlink data from different sources?
+     1. How to interlink data from different sources?
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="bridgedb-recipe.html">
-     Identifier mapping with BridgeDB
+     2. Identifier mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="bridgedb/bridgedb-example.html">
-       Identifier mapping using BridgeDb WS
+       2.12.1. Identifier mapping using BridgeDb WS
       </a>
      </li>
     </ul>
@@ -417,32 +303,32 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-why-using-them.html">
-     Why use Terminologies &amp; Ontologies?
+     3. Why use Terminologies &amp; Ontologies?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="selecting-ontologies.html">
-     Which vocabulary to use?
+     4. Which vocabulary to use?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-new-term-request-recipe.html">
-     Requesting terms addition to terminology artefacts
+     5. Requesting terms addition to terminology artefacts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-operations-tools.html">
-     Tools for ontology-associated operations
+     6. Tools for ontology-associated operations
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="ontology-robot-recipe.html">
-     Building an application ontology with Robot
+     7. Building an application ontology with Robot
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot/MSIO-robot-build-process.html">
-       MSIO, an application ontology for Metabolomics
+       7.12.1. MSIO, an application ontology for Metabolomics
       </a>
      </li>
     </ul>
@@ -451,17 +337,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="creating-minimal-metadata-profiles.html">
-     Creating a Metadata Profile
+     8. Creating a Metadata Profile
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="transcriptomics-metadata.html">
-       Establishing a Metadata Profile for Transcriptomics
+       8.4.1. Establishing a Metadata Profile for Transcriptomics
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
       </a>
      </li>
     </ul>
@@ -470,17 +356,17 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
-     From proprietary to open standard data format
+     9. From proprietary to open standard data format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     File format validation, an example with FASTQ files
+     10. File format validation, an example with FASTQ files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ETL-tools.html">
-     Tools for Data Extraction, Transformation, and Loading (ETL)
+     11. Tools for Data Extraction, Transformation, and Loading (ETL)
     </a>
    </li>
   </ul>
@@ -489,7 +375,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../reusability.html">
-   Improving Reusability
+   Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -528,32 +414,32 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../applied-examples.html">
-   Making IMI data FAIR
+   Applied Examples
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     Making a Data Matrix FAIR
+     1. Making a Data Matrix FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Bibliographic Reference:
+       1.11.1. Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring a rose garden with SPARQL
+       1.11.3. Exploring a rose garden with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
       </a>
      </li>
     </ul>
@@ -562,75 +448,43 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/etox.html">
-     eTox: Data normalization and integration through entity linking
+     2. eTox: Data normalization and integration through entity linking
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
-     ND4BB dataset FAIRification recipe
+     3. ND4BB dataset FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     Oncotrack FAIRification recipe
+     4. Oncotrack FAIRification recipe
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/resolute_raw/rawRecipe_resolute.html">
-     RESOLUTE FAIRification Recipe
+     5. RESOLUTE FAIRification Recipe
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
-   Glossary of FAIR things
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT THE FAIR COOKBOOK
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../help.html">
-   Help
+  <a class="reference internal" href="../community.html">
+   Community
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/tips-tricks.html">
-     1. Recipe Tips and Tricks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/recipe-template.html">
-     2. Recipe Template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
-     3. Using GoogleDocs to contribute a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
-     4. How to use HackMD to write a FAIR Cookbook Recipe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
-     5. How to create a FAIRPlus Coobook Recipe ?
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Miscellaneous
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/license.html">
-     1. License for this book
+    <a class="reference internal" href="../boilerplate/governance.html">
+     1. FAIR Cookbook Governance
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,33 +493,76 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/governance.html">
-     3. FAIR Cookbook Governance
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     4. FAIR Cookbook Code of Conduct
+     3. FAIR Cookbook Code of Conduct
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/project_information.html">
-     5. FAIR CookBook BoilerPlate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/roadmap.html">
-     6. FAIR cookbook development roadmap
-    </a>
-   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/contributing.html">
-     7. Contributing to the FAIR cookbook
+     1. Contributing to the FAIR cookbook
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/disclaimer.html">
-     8. Disclaimer
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. How to use HackMD to write a FAIR Cookbook Recipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. How to create a FAIRPlus Coobook Recipe ?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     5. Recipe Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     6. Recipe Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. MyST syntax cheat sheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. The Turing Way Book of Data Science
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/license.html">
+     2. License for this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/technology_stack.html">
+     3. Technology stack
     </a>
    </li>
   </ul>
@@ -763,125 +660,125 @@ commentsRunWhenDOMLoaded(addUtterances);
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   Main Objectives
+   8.4.2.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   Graphical Overview
+   8.4.2.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   8.4.2.3. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defining-the-metadata-fields">
-   Defining the metadata fields
+   8.4.2.4. Defining the metadata fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#semantic-anchoring-of-metadata-element">
-   Semantic anchoring of metadata element:
+   8.4.2.5. Semantic anchoring of metadata element:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#metadata-schema-definition-using-salad-schema-language">
-   1. metadata schema definition using SALAD schema language:
+   8.4.2.6. 1. metadata schema definition using SALAD schema language:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-corresponding-metadata-acquisition-web-form">
-     The corresponding metadata acquisition web form:
+     8.4.2.6.1. The corresponding metadata acquisition web form:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exemplar-instance-data">
-   2. Exemplar instance data:
+   8.4.2.7. 2. Exemplar instance data:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion-from-yaml-to-rdf">
-   3. Conversion from YAML to RDF:
+   8.4.2.8. 3. Conversion from YAML to RDF:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rdf-graph-validation-with-shex-expression">
-   4. RDF graph validation with ShEx expression:
+   8.4.2.9. 4. RDF graph validation with ShEx expression:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-is-shex">
-     4.1 What is ShEx?
+     8.4.2.9.1. 4.1 What is ShEx?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#why-is-this-needed">
-     4.2 Why is this needed?
+     8.4.2.9.2. 4.2 Why is this needed?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sparql-queries-available-here">
-   5. SPARQL queries available here:
+   8.4.2.10. 5. SPARQL queries available here:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-sparql-endpoint">
-     5.1. The SPARQL endpoint
+     8.4.2.10.1. 5.1. The SPARQL endpoint
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exploring-the-metadata-described-the-fastq-sequence-files">
-     5.2. Exploring the metadata described the FASTQ sequence files
+     8.4.2.10.2. 5.2. Exploring the metadata described the FASTQ sequence files
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusions">
-   Conclusions
+   8.4.2.11. Conclusions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-read-next">
-     What should I read next?
+     8.4.2.11.1. What should I read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   FAIRification Objectives, Inputs and Outputs
+   8.4.2.12. FAIRification Objectives, Inputs and Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#table-of-data-standards">
-   Table of Data Standards
+   8.4.2.13. Table of Data Standards
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tools">
-   Tools
+   8.4.2.14. Tools
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliographic-reference">
-   Bibliographic reference
+   8.4.2.15. Bibliographic reference
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   Authors
+   8.4.2.16. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   License
+   8.4.2.17. License
   </a>
  </li>
 </ul>
@@ -897,7 +794,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="metadata-profile-validation-in-rdf-with-shape-expression-the-covid-19-sample-metadata-use-case">
-<span id="fcb-interop-covid-metadata"></span><h1>Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case<a class="headerlink" href="#metadata-profile-validation-in-rdf-with-shape-expression-the-covid-19-sample-metadata-use-case" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-interop-covid-metadata"></span><h1><span class="section-number">8.4.2. </span>Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case<a class="headerlink" href="#metadata-profile-validation-in-rdf-with-shape-expression-the-covid-19-sample-metadata-use-case" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <hr class="docutils" />
@@ -957,20 +854,20 @@ Yes
 </div>
 <hr class="docutils" />
 <div class="section" id="main-objectives">
-<h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of this recipe is to show how to create a metadata collection form complying with a community minimal information checklist (MIUViG), in the context of Covid-19 strain sequencing assays carried on patient collected samples.
 In addition, the recipe includes the conversion of sample metadata to an RDF/Linked Data graph and checks its structure for conformance to requirement using the ShapeExpression specifications.
 Finally, use queries expressed in SPARQL are shown to demonstrate potential data integration scenarios.</p>
 </div>
 <div class="section" id="graphical-overview">
-<h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="building-a-commmunity-compliant-metadata-profile">
 <a class="reference internal image-reference" href="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png"><img alt="building a commmunity compliant metadata profile" src="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.3. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>:information_source:
 This recipe is adapted from work carried during the Elixir Covid-19 biohackathon, by the ontology and workflow tracks and presented <a class="reference external" href="http://covid19.genenetwork.org/">here</a> and detailed in the <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/paper/paper.md">following manuscript</a> while all the code and associated material is hosted on this <a class="reference external" href="https://github.com/arvados/bh20-seq-resource">github repository</a>.</p>
@@ -995,21 +892,21 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 <p>The following sections detail each of these steps</p>
 </div>
 <div class="section" id="defining-the-metadata-fields">
-<h2>Defining the metadata fields<a class="headerlink" href="#defining-the-metadata-fields" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.4. </span>Defining the metadata fields<a class="headerlink" href="#defining-the-metadata-fields" title="Permalink to this headline">¶</a></h2>
 <!-- <div><img src="https://i.imgur.com/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
 <div><img src="https://i.imgur.com/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="https://i.imgur.com/lwV1cPd.png"><img alt="Defining the metadata fields" src="https://i.imgur.com/lwV1cPd.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Defining the metadata fields</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text">Defining the metadata fields</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="defining-the-metadata-fields-1">
 <a class="reference internal image-reference" href="https://i.imgur.com/1ahQLjy.png"><img alt="Defining the metadata fields-1" src="https://i.imgur.com/1ahQLjy.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Defining the metadata fields-1</span><a class="headerlink" href="#defining-the-metadata-fields-1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text">Defining the metadata fields-1</span><a class="headerlink" href="#defining-the-metadata-fields-1" title="Permalink to this image">¶</a></p>
 </div>
 <p><br>Based on the <a class="reference external" href="https://gensc.org/">Genome Standards Consortium</a> metadata requirement profile for uncultivated viral sample, also known as the <a class="reference external" href="https://github.com/GenomicsStandardsConsortium/mixs/blob/master/UViGs_MIxS.xlsx">Minimum Information About an Uncultivated Virus Genome (MIUViG)</a>, the first step is to anchor the tags defined by GSC and approved by the those <strong>International Nucleotide Sequence Database Collaboration</strong> (<a class="reference external" href="http://www.insdc.org/">INSDC</a>) tags to one (or more) semantic framework(s).</p>
 </div>
 <div class="section" id="semantic-anchoring-of-metadata-element">
-<h2>Semantic anchoring of metadata element:<a class="headerlink" href="#semantic-anchoring-of-metadata-element" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.5. </span>Semantic anchoring of metadata element:<a class="headerlink" href="#semantic-anchoring-of-metadata-element" title="Permalink to this headline">¶</a></h2>
 <p>Several distinct to the following resources mappings have been made by the developers :</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://obofoundry.org">OBO Foundry</a></p></li>
@@ -1020,7 +917,7 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 <!-- <div><img src="https://i.imgur.com/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="https://i.imgur.com/Ro92a7D.png"><img alt="Semantic anchoring of metadata element" src="https://i.imgur.com/Ro92a7D.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Semantic anchoring of metadata element</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text">Semantic anchoring of metadata element</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <br>
 <p>However, for the final implementation, only the OBO related mappings have been used as show in the following figure.</p>
@@ -1028,12 +925,12 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 <!-- ![](https://i.imgur.com/Lc7FcPs.png) -->
 <div class="figure align-default" id="semantic-anchoring-of-metadata-element-final">
 <a class="reference internal image-reference" href="https://i.imgur.com/Lc7FcPs.png"><img alt="Semantic anchoring of metadata element - final" src="https://i.imgur.com/Lc7FcPs.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Semantic anchoring of metadata element - final</span><a class="headerlink" href="#semantic-anchoring-of-metadata-element-final" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text">Semantic anchoring of metadata element - final</span><a class="headerlink" href="#semantic-anchoring-of-metadata-element-final" title="Permalink to this image">¶</a></p>
 </div>
 <br>
 </div>
 <div class="section" id="metadata-schema-definition-using-salad-schema-language">
-<h2>1. metadata schema definition using SALAD schema language:<a class="headerlink" href="#metadata-schema-definition-using-salad-schema-language" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.6. </span>1. metadata schema definition using SALAD schema language:<a class="headerlink" href="#metadata-schema-definition-using-salad-schema-language" title="Permalink to this headline">¶</a></h2>
 <p>Quoting the project’s documentation, “<em><a class="reference external" href="https://github.com/common-workflow-language/schema_salad">the Semantic Annotations for Linked Avro Data (SALAD)</a> is a schema language for describing JSON or YAML structured linked data documents. <code class="docutils literal notranslate"><span class="pre">SALAD</span> <span class="pre">schema</span></code> describes rules for preprocessing, structural validation, and hyperlink checking for documents described by a Salad schema. Salad supports rich data modeling with inheritance, template specialization, object identifiers, object references, documentation generation, code generation, and transformation to RDF. SALAD provides a bridge between document and record oriented data modeling and the Semantic Web.”</em></p>
 <p>The SALAD schema is used extensively by the <a class="reference external" href="https://github.com/common-workflow-language">Common Workflow Language(CWL)</a> for defining and specifying computational workflows.
 But in this example, we are using the SALAD schema to capture the annotation requirements in a <a class="reference external" href="https://yaml.org">YAML</a> document, while also embedding the semantics constraints, which can then be used to  to build a web form (see below) but also support conversion to RDF/LinkedData.</p>
@@ -1102,7 +999,7 @@ But in this example, we are using the SALAD schema to capture the annotation req
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">source</span></code>: <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml">https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml</a></p>
 <div class="section" id="the-corresponding-metadata-acquisition-web-form">
-<h3>The corresponding metadata acquisition web form:<a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.2.6.1. </span>The corresponding metadata acquisition web form:<a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form" title="Permalink to this headline">¶</a></h3>
 <!-- <div><img src="https://i.imgur.com/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="https://i.imgur.com/5eQN9hw.png"><img alt="The corresponding metadata acquisition web form" src="https://i.imgur.com/5eQN9hw.png" style="width: 800px;" /></a>
@@ -1112,12 +1009,12 @@ But in this example, we are using the SALAD schema to capture the annotation req
 <!-- ![](https://i.imgur.com/RR5GSgi.png) -->
 <div class="figure align-default" id="the-corresponding-metadata-acquisition-web-form-2">
 <a class="reference internal image-reference" href="https://i.imgur.com/RR5GSgi.png"><img alt="The corresponding metadata acquisition web form 2" src="https://i.imgur.com/RR5GSgi.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">The corresponding metadata acquisition web form</span><a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text">The corresponding metadata acquisition web form</span><a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form-2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="exemplar-instance-data">
-<h2>2. Exemplar instance data:<a class="headerlink" href="#exemplar-instance-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.7. </span>2. Exemplar instance data:<a class="headerlink" href="#exemplar-instance-data" title="Permalink to this headline">¶</a></h2>
 <p>When users submit information via the form (or by other programatic means), a instance YAML file is generated, which looks like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>id: placeholder
 
@@ -1170,7 +1067,7 @@ submitter:
 <p><code class="docutils literal notranslate"><span class="pre">source</span></code>: <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml">https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml</a></p>
 </div>
 <div class="section" id="conversion-from-yaml-to-rdf">
-<h2>3. Conversion from YAML to RDF:<a class="headerlink" href="#conversion-from-yaml-to-rdf" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.8. </span>3. Conversion from YAML to RDF:<a class="headerlink" href="#conversion-from-yaml-to-rdf" title="Permalink to this headline">¶</a></h2>
 <p>Using the schema SALAD python package, the YAML instance file can be easily converted to RDF as shown in the code snippet below:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install schema_salad
 </pre></div>
@@ -1185,15 +1082,15 @@ submitter:
 </div>
 </div>
 <div class="section" id="rdf-graph-validation-with-shex-expression">
-<h2>4. RDF graph validation with ShEx expression:<a class="headerlink" href="#rdf-graph-validation-with-shex-expression" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.9. </span>4. RDF graph validation with ShEx expression:<a class="headerlink" href="#rdf-graph-validation-with-shex-expression" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what-is-shex">
-<h3>4.1 What is ShEx?<a class="headerlink" href="#what-is-shex" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.2.9.1. </span>4.1 What is ShEx?<a class="headerlink" href="#what-is-shex" title="Permalink to this headline">¶</a></h3>
 <p>ShEx stands for <code class="docutils literal notranslate"><span class="pre">Shape</span> <span class="pre">Expression</span></code> and is a syntax for validating and describing RDF graphs. ShEx expressions can be used both to describe RDF and check the conformance of RDF data. The ShEx language  specification was published by the W3C Shape Expressions Community Group but it is not a W3C Standard nor is it on the W3C Standards Track.</p>
 <p>It should be noted that the current W3C Technical Recommendations for RDF shape validation is the <a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL specification</a>.</p>
 <p>ShEx was selected owing to its simplicity, ease of use and availability of experts.</p>
 </div>
 <div class="section" id="why-is-this-needed">
-<h3>4.2 Why is this needed?<a class="headerlink" href="#why-is-this-needed" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.2.9.2. </span>4.2 Why is this needed?<a class="headerlink" href="#why-is-this-needed" title="Permalink to this headline">¶</a></h3>
 <p>While defining a SALAD schema using YAML allows to list key entities and their attributes, it does not allow to check constraints. This has to be done on the RDF which needs to be checks for compliancee against a set of constraints which can be expressed using ShEx. Working with a ShEx expert (<a class="reference external" href="http://di002.edv.uniovi.es/~labra/">Dr Jose Emilio Labra Gayo - (Oviedo Uni)</a>, the following <a class="reference external" href="https://shex.io/shex-semantics/">Shape Expression syntax</a> profile was developed and used to validate the RDF before persistence to the SPARQL endpoint.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX : &lt;https://raw.githubusercontent.com/arvados/bh20-seq-resource/master/bh20sequploader/bh20seq-shex.rdf#&gt;
 PREFIX MainSchema: &lt;http://biohackathon.org/bh20-seq-schema#MainSchema/&gt;
@@ -1271,23 +1168,23 @@ PREFIX wikidata: &lt;http://www.wikidata.org/entity/&gt;
  -->
 <div class="figure align-default" id="weso-shape-expression-viewer">
 <a class="reference internal image-reference" href="https://i.imgur.com/z2rriQu.png"><img alt="WESO SHape Expression Viewer" src="https://i.imgur.com/z2rriQu.png" style="width: 1200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">WESO SHape Expression Viewer</span><a class="headerlink" href="#weso-shape-expression-viewer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text">WESO SHape Expression Viewer</span><a class="headerlink" href="#weso-shape-expression-viewer" title="Permalink to this image">¶</a></p>
 </div>
 <!-- ![](https://i.imgur.com/z2rriQu.png) -->
 <p>There is a blog focusing mainly on the sequence analysis but there is a section on metadata validation.</p>
 </div>
 </div>
 <div class="section" id="sparql-queries-available-here">
-<h2>5. SPARQL queries available here:<a class="headerlink" href="#sparql-queries-available-here" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.10. </span>5. SPARQL queries available here:<a class="headerlink" href="#sparql-queries-available-here" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://covid19.genenetwork.org/blog?id=using-covid-19-pubseq-part1">http://covid19.genenetwork.org/blog?id=using-covid-19-pubseq-part1</a></p>
 <div class="section" id="the-sparql-endpoint">
-<h3>5.1. The SPARQL endpoint<a class="headerlink" href="#the-sparql-endpoint" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.2.10.1. </span>5.1. The SPARQL endpoint<a class="headerlink" href="#the-sparql-endpoint" title="Permalink to this headline">¶</a></h3>
 <p>The following endpoint during the Elixir Covid-19 Biohackthon and metadata information converted from the YAML definition to RDF turtle format was loaded in the following SPARQL Endpoint.</p>
 <p><a class="reference external" href="http://sparql.genenetwork.org/sparql/">http://sparql.genenetwork.org/sparql/</a></p>
 <p>The collection of metadata in rdf format is available for download: <a class="reference external" href="https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl">https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl</a></p>
 </div>
 <div class="section" id="exploring-the-metadata-described-the-fastq-sequence-files">
-<h3>5.2. Exploring the metadata described the FASTQ sequence files<a class="headerlink" href="#exploring-the-metadata-described-the-fastq-sequence-files" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.2.10.2. </span>5.2. Exploring the metadata described the FASTQ sequence files<a class="headerlink" href="#exploring-the-metadata-described-the-fastq-sequence-files" title="Permalink to this headline">¶</a></h3>
 <p>Limiting search to metadata add <a class="reference external" href="http://covid-19.genenetwork.org/graph/metadata.ttl">http://covid-19.genenetwork.org/graph/metadata.ttl</a> in the top input box. Now you can find a predicate for submitter that looks like <a class="reference external" href="http://biohackathon.org/bh20-seq-schema#MainSchema/submitter">http://biohackathon.org/bh20-seq-schema#MainSchema/submitter</a>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX pubseq: &lt;http://biohackathon.org/bh20-seq-schema#MainSchema/&gt;
 PREFIX sio: &lt;http://semanticscience.org/resource/&gt;
@@ -1302,7 +1199,7 @@ PREFIX sio: &lt;http://semanticscience.org/resource/&gt;
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusions">
-<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.11. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF and Shape Express standard.
 Other approaches are possible and we provide details in a dedicated recipe where <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">JSON schema</span></a> and <a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">JSON-LD</span></a> technologies are used.
@@ -1312,7 +1209,7 @@ There are some caveats or improvements which could be made. For instance, the de
 Another improvement could be a better integration with repositories such FAIRsharing or the main sequence data submission systems such as INSDC deposition pipelines.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
-<h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.2.11.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">How to validate a FASTQ sequencing file?</span></a></p></li>
 <li><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">How to express Minimal Metadata checklist in machine readable format</span></a></p></li>
@@ -1322,7 +1219,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </div>
 </div>
 <div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.12. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
@@ -1347,7 +1244,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </table>
 </div>
 <div class="section" id="table-of-data-standards">
-<h2>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.13. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
@@ -1384,7 +1281,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </table>
 </div>
 <div class="section" id="tools">
-<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.14. </span>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Tool Name</p></th>
@@ -1406,7 +1303,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </div>
 <hr class="docutils" />
 <div class="section" id="bibliographic-reference">
-<h2>Bibliographic reference<a class="headerlink" href="#bibliographic-reference" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.15. </span>Bibliographic reference<a class="headerlink" href="#bibliographic-reference" title="Permalink to this headline">¶</a></h2>
 <p>[1]. Avro - <a class="reference external" href="http://avro.apache.org">http://avro.apache.org</a>
 [2]. metaschema - <a class="reference external" href="https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml">https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml</a>
 [3]. schema salad - <a class="reference external" href="http://www.commonwl.org/v1.0/SchemaSalad.html">http://www.commonwl.org/v1.0/SchemaSalad.html</a>
@@ -1415,7 +1312,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.16. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -1450,7 +1347,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4.2.17. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -1481,8 +1378,8 @@ Another improvement could be a better integration with repositories such FAIRsha
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="transcriptomics-metadata.html" title="previous page">Establishing a Metadata Profile for Transcriptomics</a>
-    <a class='right-next' id="next-link" href="from-proprietary-to-open-standard-mzml-exemplar.html" title="next page">From proprietary to open standard data format</a>
+    <a class='left-prev' id="prev-link" href="transcriptomics-metadata.html" title="previous page"><span class="section-number">8.4.1. </span>Establishing a Metadata Profile for Transcriptomics</a>
+    <a class='right-next' id="next-link" href="from-proprietary-to-open-standard-mzml-exemplar.html" title="next page"><span class="section-number">9. </span>From proprietary to open standard data format</a>
 
         </div>
         
