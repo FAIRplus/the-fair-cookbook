@@ -533,14 +533,6 @@ footer.footer p:not(:first-child) {
     padding-right: 16px !important;
 }
 
-
-.card.FAIRcard #findablePrinciple,
-.card.FAIRcard #accessiblePrinciple,
-.card.FAIRcard #interoperablePrinciple,
-.card.FAIRcard #reusablePrinciple {
-    display: flex !important
-}
-
 @media (max-width: 1404px) {
    .card.FAIRcard #accessiblePrinciple .bigLetter {
        padding-left: 12px;
