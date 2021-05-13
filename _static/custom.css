@@ -359,7 +359,7 @@ details table .fab {
 
 #authors table th a,
 details table th a {
-    color: white
+    color: white !important;
 }
 
 
