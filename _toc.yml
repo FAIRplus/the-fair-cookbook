@@ -64,7 +64,7 @@
       #title: Improving Accessibility
       numbered: true
       sections:
-        - file: content/recipes/accessibility/anonymizing-patient-data
+        # - file: content/recipes/accessibility/anonymizing-patient-data
         - file: content/recipes/accessibility/how-to-use-sftp-for-transfer
         - file: content/recipes/accessibility/aspera
 
