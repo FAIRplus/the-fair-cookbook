@@ -102,17 +102,17 @@ As there will be projects related to different subjects and/or with different ki
 A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR principles. This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
 
 
-## Authors:
+## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Anne Cambon-Thomsen |  CNRS, Toulouse, France; Joint research unit on epidemiology and public health, Inserm (National Institute for Health and Medical Research) and University Toulouse III Paul Sabatier, Toulouse, France| [0000-0001-8793-3644](https://orcid.org/orcid.org/0000-0001-8793-3644) | Writing - Original Draft |
-| Alejandra Delfin |  University of Toulouse | | Writing - Review & Editing, Funding acquisition | 
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Anne Cambon-Thomsen</span></img> |  CNRS, Toulouse, France; Joint research unit on epidemiology and public health, Inserm (National Institute for Health and Medical Research) and University Toulouse III Paul Sabatier, Toulouse, France| <a href='https://orcid.org/0000-0001-8793-3644'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a> | Writing - Original Draft |
+| <img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'><span>Alejandra Delfin Rossaro</span></img> |  University of Toulouse III Paul Sabatier, Toulouse, France| <a href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x' style='color:#fc7a4a;'></i></a>| Writing - Review & Editing, Funding acquisition | 
 
 ___
 
 
-## License:
+## License
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
 
