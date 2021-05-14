@@ -43,7 +43,7 @@ html:
         </div>
         <div class="col-xl-3">
         <ul>
-          <li> <a href="/the-fair-cookbook/_build/html/content/home.html#contributors"> Contributors </a> </li>
+          <li> <a href="/the-fair-cookbook/_build/html/content/recipes/boilerplate/people.html"> Contributors </a> </li>
           <li> <a href="/the-fair-cookbook/_build/html/content/recipes/help.html"> How to contribute </a> </li>
         </ul>
 
