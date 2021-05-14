@@ -82,8 +82,9 @@
       sections:
         # - file: content/recipes/accessibility/anonymizing-patient-data
         - file: content/recipes/accessibility/sftp
+          title: Transfering data with SFTP
         - file: content/recipes/accessibility/aspera
-          title: Downloading files with Aspera
+          title: Downloading data with Aspera
 
 
     - file: content/recipes/interoperability
@@ -111,6 +112,7 @@
               - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
                 title: Application ontology for metabolomics 
           - file: content/recipes/interoperability/creating_data_dictionary 
+            title: Creating a data/variable dictionary
           - file: content/recipes/interoperability/creating-minimal-metadata-profiles
             title: Creating a metadata profile
             sections:
