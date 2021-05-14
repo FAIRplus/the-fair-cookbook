@@ -1,4 +1,4 @@
-# Vocabularies management
+# Vocabulary management
 
 ---
 
