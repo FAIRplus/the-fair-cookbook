@@ -434,7 +434,7 @@ ___
 
 ## Contributors
 
-The FAIR Cookbook is developed by a thriving {ref}`fcb-community` of life sciences professionals, in the academia and the industry sectors, including members of the ELIXIR community. Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, join us, or contact us at [fairplus-cookbook@elixir-europe.org](fairplus-cookbook@elixir-europe.org)
+The FAIR Cookbook is developed by a thriving {ref}`fcb-community` of life sciences professionals, in the academia and the industry sectors, including members of the ELIXIR community. Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, join us and {ref}`fcb-help`, or contact us at [fairplus-cookbook@elixir-europe.org](fairplus-cookbook@elixir-europe.org)
 
 
 <!-- 

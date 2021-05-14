@@ -15,6 +15,8 @@
 :recipe_name: Who should read the FAIR Cookbook?
 ````  -->
 
+---
+
 ## The FAIR Cookbook for IMI participants
 
 The aim of the FAIR Cookbook is to reach as wide an audience as possible to improve the understanding of the FAIR principles, explain how to implement them and evaluate FAIR levels but also to provide practical guidance and hands-on, practical examples.

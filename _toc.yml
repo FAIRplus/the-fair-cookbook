@@ -196,9 +196,11 @@
       title: Community
       numbered: true
       sections:
-        - file: content/recipes/boilerplate/governance
+        # - file: content/recipes/boilerplate/governance
         - file: content/recipes/boilerplate/people
+          title: Boards and contributors
         - file: content/recipes/boilerplate/code_of_conduct
+          title: Code of conduct
 
     - file: content/recipes/help
       title: Contribute
