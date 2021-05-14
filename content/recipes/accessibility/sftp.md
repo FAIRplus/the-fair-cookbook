@@ -227,12 +227,11 @@ ___
 
 ## Authors
 
-
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-| :------------- | :------------- | :------------- |:------------- |
-|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Dorothy Reilly</div>                                          </div> | Novartis AG | | Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/sedlyarov'><img class='avatar-style' src='https://avatars.githubusercontent.com/sedlyarov'></img><div class="d-block">Vitaly Sedlyarov</div></a>       </div>   |<div class="d-block"> CeMM     </div>| <a target="_blank" href='https://orcid.org/0000-0002-9872-3535'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>             </div>   | CeMM     | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a>| Writing - Original Draft |
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Dorothy Reilly</div>      </div>    |   | Novartis AG   | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> || Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/sedlyarov'><img class='avatar-style' src='https://avatars.githubusercontent.com/sedlyarov'></img><div class="d-block">Vitaly Sedlyarov</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0002-9872-3535'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>    </div> | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a> | CEMM | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> || Writing - Original Draft
 
 ___
 
