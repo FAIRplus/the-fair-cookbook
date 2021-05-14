@@ -1,5 +1,5 @@
 (fcb-reusability-data_use)=
-# Patterns and practice for expressing allowed data usage
+# Declaring data's permitted uses
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, ontologist  
 :has_executable_code: yeah
-:recipe_name: Patterns and practice for expressing allowed data usage
+:recipe_name: Declaring data's permitted uses
 ```` 
 
 ## Main Objectives
