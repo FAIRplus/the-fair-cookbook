@@ -1,6 +1,8 @@
 (fcb-misc-coc)=
 # FAIR Cookbook Code of Conduct
 
+---
+
 FAIR Cookbook  is an engaged and respectful community made up of people
 from all over the world. Your involvement helps us to further our
 mission and to create an open platform that serves a broad range of
@@ -102,6 +104,7 @@ free to contact the Code of Conduct Committee at
    and telling someone that you are sorry is an act of empathy that doesn’t
    automatically imply an admission of guilt.
 
+---
 
 ## Reporting
 

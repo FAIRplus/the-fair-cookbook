@@ -1,5 +1,13 @@
 # FAIR Cookbook Steering Council and Institutional Partners
 
+----
+
+ <p style='text-align: justify;'>
+The purpose of this document is to formalize the governance process that the FAIR Cookbook project will be relying on. This document clarifies how decisions are made and how the various elements of our community interact, including the relationship between open source collaborative development and work that may be funded by for-profit or non-profit entities.
+ </p>
+ 
+----
+
 
 ### Editorial Board:
 

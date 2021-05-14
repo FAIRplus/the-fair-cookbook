@@ -15,6 +15,8 @@
 :recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
 ```` -->
 
+---
+
 ## Table of Contents
 <!-- 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 
