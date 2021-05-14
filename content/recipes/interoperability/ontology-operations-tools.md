@@ -1,5 +1,5 @@
 (fcb-interop-onto-op)=
-# Tools for ontology-associated operations
+# Ontology-related tools and services
 
 
 ````{panels_fairplus}
@@ -10,11 +10,11 @@
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager  
 :has_executable_code: nope
-:recipe_name: Tools for ontology-associated operations
+:recipe_name: Ontology-related tools and services
 ```` 
 
 
-## Main objectives
+## Main Objectives
 
 This recipe aims to provide `an overview of tools available` to perform a number of key operations using ontologies and relevant to FAIR processes: from `ontology management` to using `ontology for annotation` or `performing ontology mapping`.
 
