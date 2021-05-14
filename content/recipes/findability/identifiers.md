@@ -1,5 +1,5 @@
 (fcb-find-identifiers)=
-# How to generate globally unique, resolvable and persistent identifiers
+# Unique, persistent identifiers
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: How to generate globally unique, resolvable and persistent identifiers
+:recipe_name: Unique, persistent identifiers
 ```` 
 
 
