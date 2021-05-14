@@ -1,11 +1,19 @@
 (fcb-help)=
 # Contribute
 
+<<<<<<< HEAD
+This section is meant to provide basic information to users looking to contribute content to the `FAIR Cookbook`
+
+To provide content, users have 3 options depending on the familiarity with git command and github environment.
+
+It always start by getting in touch with the group by simply logging an issue in our [repository issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
+=======
 The FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. This section is meant to provide basic information to users looking to contribute content to the `FAIR Cookbook`.
+>>>>>>> 3478102f8e49b908979d6a30cbd0ef4f3915a43f
 
 To provide content, you have the three follow options, which are detailed in their respective sections:
 
-* Provide content using the `Google doc template`
+* Provide content using the `Google doc template` 
 
 * Provide content using `HackMD`
 

@@ -3,7 +3,9 @@
 
 ---
 
-The data usually need to be integrated with other data, and be interoperate with applications or workflows for analysis, storage, and processing.
+This chapter is dedicated to FAIRification processes which focus on improving interoperability.
+
+Data usually need to be integrated with other data, and be interoperable with applications or workflows for analysis, storage, and processing.
 
 Data objects can be interoperable only if:
 - (Meta) data is machine-actionable

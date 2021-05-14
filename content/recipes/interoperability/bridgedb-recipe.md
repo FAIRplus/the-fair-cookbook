@@ -388,9 +388,12 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | Credit role  | specific contribution |
-| :------------- | :------------- | :------------- |:------------- |:------------- |
-| Lucas Giovanni Uberti-Bona Marin |  Maastricht University| [0000-0001-6518-9535](https://orcid.org/0000-0001-6518-9535)| Writing - Original Draft | Original format |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
+| :------------- | :------------- | :------------- |:------------- |
+| <div class="firstCol"><a target="_blank" href='https://github.com/lucas-ubm'><img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'></img><div class="d-block">Lucas Giovanni </div></a>    </div> |  Maastricht University| <a target="_blank" href='https://orcid.org/0000-0001-6518-9535'><i class='fab fa-orcid fa-2x text--orange'></i></a>| Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>   </div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
+
+
 
 ___
 

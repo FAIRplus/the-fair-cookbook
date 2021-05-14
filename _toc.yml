@@ -2,15 +2,21 @@
 
 
 - part: FOREWORD
+  numbered: false
   chapters:
-    - file: content/recipes/introduction
+    # - file: content/recipes/introduction
+    - file: content/recipes/introduction/FAIR-cookbook-audience
+      title: Who should read it
+    - file: content/recipes/introduction/FAIRplus-values
+      title: Ethical values of FAIR
+    - file: content/recipes/glossary-fair-terms
+      title: Glossary
       # title: Introduction
-      numbered: true
-      sections:
+      # numbered: true
+      # sections:
           # - file: content/recipes/introduction/test-css
 
-          - file: content/recipes/introduction/FAIR-cookbook-audience
-          - file: content/recipes/introduction/FAIRplus-values
+
           # - file: content/recipes/glossary-fair-terms
           # - file: content/recipes/introduction/brief-FAIR-principles
           # - file: content/recipes/introduction/what-is-IMI
@@ -20,109 +26,146 @@
           # - file: content/recipes/introduction/data-sharing-models
 
 
-- part: GLOSSARY
-  chapters:
-    - file: content/recipes/glossary-fair-terms
-
 # - file: content/recipes/cmmi
 #   title: Maturity models
 #   numbered: false
-
-- part: INFRASTRUCTURE
-  chapters:
-  - file: content/recipes/infrastructure
-    # title: Infrastructure for FAIR
-    numbered: true
-    sections:
-        - file: content/recipes/infrastructure/id-resolution
-        - file: content/recipes/infrastructure/data-catalog
-        - file: content/recipes/infrastructure/data-catalog-deployment
-        - file: content/recipes/infrastructure/vocabularies
-          sections:      
-            - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
-            - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
-            - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
+  
 
 - part: RECIPES
+
   chapters:
-# - header: findability
-    - file: content/recipes/findability
-  # title: Improving Findability 
+    - file: content/recipes/infrastructure
+      title: Infrastructure for FAIR
+      numbered: true
+      sections:
+          - file: content/recipes/infrastructure/id-resolution
+            title: Identifier resolution services
+          - file: content/recipes/infrastructure/data-catalog
+            title: Building a catalogue of datasets
+          - file: content/recipes/infrastructure/data-catalog-deployment
+            title: Deploying the IMI data catalogue
+          - file: content/recipes/infrastructure/vocabularies
+            title: Vocabularies management
+            sections:      
+              - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
+                title: Portals and look-up services
+              - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
+                title: Selecting a look-up service
+              - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
+                title: Deploying the EBI OLS
+
+    - file: content/recipes/findability 
+      title: Findability
       numbered: true
       sections:
       - file: content/recipes/findability/identifiers
+        title: Unique, persistent identifiers
       - file: content/recipes/infrastructure/chemical-identities
+        title: InChI and SMILES identifiers for chemical structures
       - file: content/recipes/findability/identifiers-minids
+        title: Minting identifiers
       - file: content/recipes/findability/zenodo-deposition
+        title: Zenodo as generic repository system
       - file: content/recipes/findability/seo
+        title: Search engine optimization
         sections:
           - file: content/recipes/findability/seo/bioschemas-data-page
+            title: Data page markup with Bioschemas
           - file: content/recipes/findability/seo/bioschemas-dataset
+            title: Data page markup with Schema.org
           - file: content/recipes/findability/seo/bioschemas-datacatalog
+            title: Data catalogue markup
 
-
-# - header: accessibility
     - file: content/recipes/accessibility
-      # title: Improving Accessibility
+      title: Accessibility
       numbered: true
       sections:
-        - file: content/recipes/accessibility/anonymizing-patient-data
-        - file: content/recipes/accessibility/how-to-use-sftp-for-transfer
+        # - file: content/recipes/accessibility/anonymizing-patient-data
+        - file: content/recipes/accessibility/sftp
         - file: content/recipes/accessibility/aspera
+          title: Downloading files with Aspera
 
 
     - file: content/recipes/interoperability
-      # title: Improving Interoperability
-      numbered: true
+      title: Interoperability
+      numbered: 1
       sections:
           - file: content/recipes/interoperability/identifier-mapping
+            title: Interlinking data from different sources
           - file: content/recipes/interoperability/bridgedb-recipe
+            title: Identifiers mapping with BridgeDB
             sections:
               - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
+                title: Using BridgeDB web services
           - file: content/recipes/interoperability/ontology-why-using-them    
+            title: Introduction to terminologies and ontologies
           - file: content/recipes/interoperability/selecting-ontologies
+            title: Selecting terminologies
           - file: content/recipes/interoperability/ontology-new-term-request-recipe
+            title: Requesting new terms
           - file: content/recipes/interoperability/ontology-operations-tools
+            title: Ontology-related tools and services
           - file: content/recipes/interoperability/ontology-robot-recipe
+            title: Building an application ontology with ROBOT
             sections:
               - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
-
+                title: Application ontology for metabolomics 
+          - file: content/recipes/interoperability/creating_data_dictionary 
           - file: content/recipes/interoperability/creating-minimal-metadata-profiles
+            title: Creating a metadata profile
             sections:
               - file: content/recipes/interoperability/transcriptomics-metadata
+                title: Metadata profile for transcriptomics
               - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
-          - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar    
+                title: Metadata profile validation in RDF
+          - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar  
+            title: Converting from proprietary to open format
           - file: content/recipes/interoperability/fastq-file-format-validators
+            title: File format validation, FASTQ example
           - file: content/recipes/interoperability/ETL-tools
+            title: Extraction, transformation, and loading process
 
-    # -header: reusability
     - file: content/recipes/reusability
-      # title: Improving Reusability
+      title: Reusability
       numbered: true
       sections:
         - file: content/recipes/reusability/ATI-licensing
+          title: Licensing
         - file: content/recipes/reusability/ATI_licensing_software
+          title: Software license
         - file: content/recipes/reusability/ATI_licensing_data
+          title: Data licenses
         # - file: content/recipes/reusability/license-selection
         - file: content/recipes/reusability/expressing-data-use
+          title: Declaring data's permitted uses
         - file: content/recipes/reusability/provenance
-        - file: content/recipes/reusability/community-standards
+          title: Provenance information
+        # - file: content/recipes/reusability/community-standards
      
     - file: content/recipes/applied-examples
-      # title: Making IMI data FAIR
-      numbered: true
+      title: Applied examples
+      numbered: 1
       sections:
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
-          numbered: false
+          title: Making omics data matrices FAIRer
+          # numbered: false
           sections:
             - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
+              title: Starting material
             - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
+              title: Structuring data
             - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
+              title: Exploring data with SPARQL
             - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
+              title: Integrating data
         - file: content/recipes/applied-examples/etox
+          title: eTox - omics datasets
         - file: content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
+          title: ND4BB - clinical trial datasets
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
+          title: Oncotrack - observational clinical cohort dataset
         - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
+          title: RESOLUTE - transcriptomics datasets
 
     # # -header: assessment
     # - file: content/recipes/assessing-fairness
@@ -146,9 +189,10 @@
     #         - file: content/recipes/assessing-fairness/fair-assessment-fairshake
 
 
-- part: ABOUT THE FAIR COOKBOOK
+- part: ABOUT
   chapters:
     - file: content/recipes/community
+      title: Community
       numbered: true
       sections:
         - file: content/recipes/boilerplate/governance
@@ -156,22 +200,33 @@
         - file: content/recipes/boilerplate/code_of_conduct
 
     - file: content/recipes/help
+      title: Contribute
       numbered: true
       sections:
         - file: content/recipes/boilerplate/contributing
+          title: How to contribute
         - file: content/recipes/help/how-to-create-recipe-with-gdoc
+          title: Add via GoogleDoc
         - file: content/recipes/help/how-to-create-recipe-with-hackmd
+          title: Add via HackMD
         - file: content/recipes/help/how-to-create-recipe-with-git
-        - file: content/recipes/help/tips-tricks
+          title: Add via Git
         - file: content/recipes/help/recipe-template
+          title: Git recipe template
+        - file: content/recipes/help/tips-tricks
+          title: Tips and tricks
         - file: content/recipes/help/myst
+          title: Markdown cheatsheet
 
     - file: content/recipes/boilerplate
+      title: Platform
       numbered: true
       sections:
           - file: content/recipes/introduction/the-turing-way
-          - file: content/recipes/boilerplate/license
+            title: Leveraging the Turing Way Book
           - file: content/recipes/boilerplate/technology_stack
+            title: Technology stack
+          # - file: content/recipes/boilerplate/license
           # - file: content/recipes/boilerplate/project_information
           # - file: content/recipes/boilerplate/roadmap
           # - file: content/recipes/boilerplate/disclaimer

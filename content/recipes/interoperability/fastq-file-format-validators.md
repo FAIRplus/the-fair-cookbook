@@ -295,11 +295,12 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 
 ## Authors
 
-|Name|Institute|ORCID|Contributions|
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 |--|--|--|--|
-|Fuqi Xu|[EMBL-EBI](https://www.ebi.ac.uk/)|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Writing - Original Draft|
-|Eva Martin | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Reviewing and editing |
-|Peter Woollard|[GSK](https://www.gsk.com/en-gb/)|[0000-0002-7654-6902](https://orcid.org/0000-0002-7654-6902)|Reviewing|
+|<div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>                     </div>|[EMBL-EBI]<a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a>|Writing - Original Draft|
+|<div class="firstCol"><a target="_blank" href='https://github.com/evaMart'><img class='avatar-style' src='https://avatars.githubusercontent.com/EvaMart'></img><div class="d-block">Eva Marin del Pico</div></a>         </div>  | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |<a target="_blank" href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x text--orange'></i></a>|Writing – Review & Editing |
+|Sukhi Singh|the Hyve|[]()|Tool curation|
+| <div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div>  | GSK, metadata group in R&D Data and Computational Sciences  | <a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a> |  Writing – Review & Editing|
 
 ---
 

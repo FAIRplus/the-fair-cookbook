@@ -196,10 +196,11 @@ If you would prefer not to use Docker and compile and run the data catalogue man
 This recipe provides a step-by-step guide to deploying the `IMI data catalogue` developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb), as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
 > ### What should I read next?
-> * [How to build a data catalogue?]()
-> * [How to deploy the FAIRPORT data catalogue?]()
-> * [What is search engine optimization?]()
-> * [How to create a minimal information metadata profile?]()
+> * {ref}`fcb-infra-build-catalog`
+> * [How to deploy the FAIRPORT data catalogue?]() (*in preparation*)
+> * {ref}`fcb-find-seo`
+> * {ref}`fcb-interop-metadataprofile`
+> * {ref}`fcb-interop-txmetadata`
 
  
 ---
@@ -207,13 +208,13 @@ This recipe provides a step-by-step guide to deploying the `IMI data catalogue` 
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft |
-| Valentin Grouès | LCSB, University of Luxembourg |[0000-0001-6501-0806 ](https://orcid.org/0000-0001-6501-0806 )|Writing - Original Draft|
-| Wei Gu | LCSB, University of Luxembourg |[0000-0003-3951-6680](https://orcid.org/0000-0003-3951-6680)|Writing - Review|
-| Venkata Satagopam | LCSB, University of Luxembourg |[0000-0002-6532-5880](https://orcid.org/0000-0002-6532-5880)|Writing - Review|
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) | Writing - Review |
+| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Wei Gu</div></a></div>| LCSB, University of Luxembourg|<a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft|
+| <div class="firstCol"><a target="_blank" href='https://github.com/neoflex'><img class='avatar-style' src='https://avatars.githubusercontent.com/neoflex'></img><div class="d-block">Valentin Grouès</div></a></div>| LCSB, University of Luxembourg|<a target="_blank" href='https://orcid.org/0000-0001-6501-0806'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft|
+| <div class="firstCol"><a target="_blank" href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><div class="d-block">Wei Gu</div></a></div>| LCSB, University of Luxembourg|<a target="_blank" href='https://orcid.org/0000-0003-3951-6680'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
+| <div class="firstCol"><a target="_blank" href='https://github.com/satagopam7'><img class='avatar-style' src='https://avatars.githubusercontent.com/satagopam7'></img><div class="d-block">Venkata Satagopam</div></a></div>| LCSB, University of Luxembourg|<a target="_blank" href='https://orcid.org/0000-0002-6532-5880'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
 
 
 ___

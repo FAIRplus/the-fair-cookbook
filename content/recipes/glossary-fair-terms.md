@@ -1,5 +1,5 @@
 (fcb-glossary)=
-#  Glossary of FAIR Things
+#  Glossary
 
 
 ## A

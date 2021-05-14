@@ -762,12 +762,12 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Francesco Ronzano| [UPF]() |[]() | Writing - Original Draft|
-| Ashni Sedani| [GSK]() |[]() | Writing - Original Draft|
-| Kurt Dauth|[Boehringer Ingelheim](https://www.boehringer-ingelheim.com/) | | Writing - Original Draft|
-| Philippe Rocca-Serra |  [University of Oxford, Data Readiness Group](https://datareadiness.eng.ox.ac.uk/)| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Reviewer |
+|<div class="firstCol"><a target="_blank" href='https://github.com/fra82'><img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'></img><div class="d-block">Francesco Ronzano</div> </div> | [UPF]()   | | Writing – Original Draft|
+|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Ashni Sedani</div> </div> | [GSK]()   | | Writing – Original Draft|
+|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Kurt Dauth</div> </div> | [Boehringer Ingelheim](https://www.boehringer-ingelheim.com/)   | | Writing – Original Draft|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
 
 
 ___
