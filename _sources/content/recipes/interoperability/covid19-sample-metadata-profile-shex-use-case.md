@@ -1,5 +1,5 @@
 (fcb-interop-covid-metadata)=
-# Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case 
+# Metadata profile validation in RDF 
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Metadata Profile Validation in RDF with Shape Expression, The Covid-19 sample metadata use case
+:recipe_name: Metadata profile validation in RDF
 ```` 
 
 ## Main Objectives
