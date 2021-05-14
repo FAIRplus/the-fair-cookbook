@@ -1,5 +1,5 @@
 (fcb-interop-ontorequest)=
-# Requesting terms addition to terminology artefacts
+# Requesting new terms
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 15
 :intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
 :has_executable_code: nope
-:recipe_name: Requesting terms addition to terminology artefacts
+:recipe_name: Requesting new terms
 ```` 
 
 ## Main Objective
