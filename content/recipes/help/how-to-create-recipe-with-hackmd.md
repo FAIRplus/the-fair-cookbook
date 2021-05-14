@@ -1,5 +1,5 @@
 (fcb-help-recipe-hackmd)=
-# How to use HackMD to write a FAIR Cookbook Recipe 
+# Add via HackMD 
 
 <!-- **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
 
