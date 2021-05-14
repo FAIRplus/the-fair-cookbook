@@ -1,5 +1,5 @@
 (rr-licensing-software)=
-# Software Licenses
+# Software licenses
 
 ````{panels_fairplus}
 :identifier_text: RX.X
@@ -9,7 +9,7 @@
 :reading_time_minutes: 15
 :intended_audience: everyone  
 :has_executable_code: nope
-:recipe_name: Software Licenses
+:recipe_name: Software licenses
 ```` 
 
 
