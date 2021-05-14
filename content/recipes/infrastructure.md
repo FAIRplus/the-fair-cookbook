@@ -1,6 +1,7 @@
 (fcb-infrastructure)=
 # Infrastructure for FAIR
 
++++
 ---
 
 This chapter is dedicated to the `services`, `tools`, `registries` and other `resources` necessary to make and keep data FAIR.

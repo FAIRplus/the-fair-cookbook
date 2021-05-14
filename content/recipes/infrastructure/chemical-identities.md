@@ -15,19 +15,19 @@
 :recipe_name: InChI and SMILES identifiers for chemical structures
 ```` 
 
-## Standards:
+## Standards
 
 * SDF file (FairSharing doi:[10.25504/fairsharing.ew26v7](https://doi.org/10.25504/fairsharing.ew26v7))
 * SMILES (FairSharing doi:[10.25504/fairsharing.qv4b3c](https://doi.org/10.25504/fairsharing.qv4b3c))
 * InChI (FairSharing doi:[10.25504/fairsharing.ddk9t9](https://doi.org/10.25504/fairsharing.ddk9t9))
 
-## Databases:
+## Databases
 
 * PubChem (FairSharing doi:[10.25504/fairsharing.qt3w7z](https://doi.org/10.25504/fairsharing.qt3w7z))
 * ChemSpider (FairSharing doi:[10.25504/fairsharing.96f3gm](https://doi.org/10.25504/fairsharing.96f3gm))
 * Wikidata (FairSharing doi:[10.25504/fairsharing.6s749p](https://doi.org/10.25504/fairsharing.6s749p))
 
-## Identifiers:
+## Identifiers
 
 * International Chemical Identifier (InChI)
 
@@ -86,9 +86,9 @@ groovy smiles.groovy -f foo.sdf
 * Input: SD file
 * Output: list of SMILES strings
 
+---
 
-
-## Authors:
+## Authors
 
 | Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
@@ -97,7 +97,7 @@ groovy smiles.groovy -f foo.sdf
 
 ___
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

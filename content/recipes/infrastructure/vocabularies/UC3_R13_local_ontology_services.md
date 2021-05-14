@@ -70,7 +70,7 @@ graph LR
 - [OLS Docker image](https://github.com/EBISPOT/OLS-docker) 
 - [Ontology metadata in OBO foundry](https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config)
 
-## Step-by-step guide:
+## Step-by-step guide
 
 ### 1. Install dependencies
 
@@ -151,6 +151,7 @@ wget -O - https://www.ebi.ac.uk/ols/api/ols-config\?ids\=efo,aero >> ols-config.
 For ontologies that are in the OBO foundry, the metadata can also be downloaded from the [OBO Foundry GitHub repository](https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config). Additional formatting is required for metadata downloaded from the OBO foundry.
 
 ### 3. Set up OLS in the local environment 
+
 >For Windows machines, run the Docker Desktop app to start the Docker daemon.
 
 ```shell
@@ -211,6 +212,7 @@ sudo docker run -d -p 8080:8080 --name=OLS -t ols
 ```
 
 ### Troubleshooting
+
 - Loading multiple ontologies from disk
     
 If more than one ontologies are going to be loaded into OLS from disk, the `Dockerfile` needs modifications before building the Docker container:
@@ -258,7 +260,7 @@ To customize the local OLS user interface, for example, adding corporate logos, 
 
 ---
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

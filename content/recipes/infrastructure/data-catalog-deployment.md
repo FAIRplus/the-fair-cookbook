@@ -43,7 +43,7 @@ $ git clone git@github.com:FAIRplus/imi-data-catalogue.git
 Thanks to `docker-compose`, it is possible to easily manage all the components (solr and web server) required to run the application.
 
 
-## Step-by-step guide:
+## Step-by-step guide
 
 Unless otherwise specified, all the following commands should be run in a terminal *from the base directory of the data catalogue code*.
 

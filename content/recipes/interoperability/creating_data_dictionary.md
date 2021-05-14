@@ -13,10 +13,6 @@
 :recipe_name: Creating data/variable dictionary
 ```` 
 
-___
-
-
-
 <!-- # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [User Stories](#User%20Stories)
@@ -194,7 +190,7 @@ While the most desirable approach is of course to design a fully FAIR data dicti
 The [FAIRplus project](https://fairplus-project.eu/) is in the process of working the [Innovative Medicine Initiative](https://www.imi.europa.eu/) [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
 
 ---
-## Conclusion:
+## Conclusion
 
 This recipe covered an essential output of any research program, **namely the documentation of all variables recorded about study subjects and key metadata descriptors used in subsequence analysis in the form of a `data dictionary`**.
 The creation and provision of such a `data dictionary` should be a central component of any `data management plan` and should be one of the key deliverable of any IMI project.

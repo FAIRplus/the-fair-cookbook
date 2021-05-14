@@ -1,6 +1,7 @@
 (fcb-tech)=
 # Technology stack
 
++++
 ---
 
 The `FAIR Cookbook` is built using [jupyter-book](https://jupyterbook.org/intro.html), following the practice used by the [Alan Turing's Institute Book of Data Science](https://the-turing-way.netlify.app/welcome).

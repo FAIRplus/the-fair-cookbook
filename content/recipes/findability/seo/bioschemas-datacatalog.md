@@ -1,5 +1,6 @@
 (fcb-find-bs-catalog)=
 # Data catalogue markup
+
 +++
 <br/>
 
@@ -13,9 +14,6 @@
 :has_executable_code: nope
 :recipe_name: Data catalogue markup
 ```` 
-
-___
-
 
 ## Main Objectives
 
