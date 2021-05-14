@@ -1,5 +1,5 @@
 (fcb-infra-chemid)=
-# Chemical Identity - InChI and SMILES
+# InChI and SMILES identifiers for chemical structures
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 15
 :intended_audience: chemoinformatician, data_curator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Chemical Identity - InChI and SMILES
+:recipe_name: InChI and SMILES identifiers for chemical structures
 ```` 
 
 ## Standards:
