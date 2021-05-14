@@ -1,4 +1,4 @@
-# How to deploy a terminology service - EBI Ontology Lookup Service
+# Deploying the EBI OLS
 
 +++
 <br/>
@@ -11,12 +11,12 @@
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator
 :has_executable_code: yeah
-:recipe_name: How to deploy a terminology service - EBI Ontology Lookup Service 
+:recipe_name: Deploying the EBI OLS 
 ````
 
 ## Main Objectives
 
-This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service(OLS) on local machines. This demonstrates the workflow for deploying open source ontology service softwares in-house. 
+This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service (OLS) on local machines. This demonstrates the workflow for deploying open source ontology service softwares in-house. 
 
 ## Introduction
 With an increasing need for ontology infrastructure to improve the interoperability of information-based R&D activities, many pharmaceutical companies seek ontology management solutions and ontology services. Compared with developing local ontology services from scratch, reusing and redeveloping open-source ontology services save the time and cost. __Recipe 3.1__ identifies public open-source ontology services. In this recipe, we use the [Ontology Lookup Service](https://www.ebi.ac.uk/ols/index) to demonstrate the workflow of deploying public ontology services in-house.
