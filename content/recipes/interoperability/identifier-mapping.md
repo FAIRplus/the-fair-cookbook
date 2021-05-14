@@ -1,6 +1,6 @@
 (fcb-interop-idmapping)=
 
-# How to interlink data from different sources?
+# Interlink data from different sources
 
 +++
 <br/>
@@ -13,7 +13,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: How to interlink data from different sources?
+:recipe_name: Interlink data from different sources
 ```` 
 
 
