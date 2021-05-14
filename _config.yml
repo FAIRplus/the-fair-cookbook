@@ -3,7 +3,7 @@
 title                       : "" # The title of the book. Will be placed in the left navbar.
 author                      : ""  # The author of the book
 logo                        : "./_static/cookbook-logo-small.png"  # A path to the book logo
-exclude_patterns            : [.github/*, README.md, venv/*, node_modules/* ]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : [.github/*, README.md, venv/*, node_modules/*, _content_not_in_toc/* ]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings

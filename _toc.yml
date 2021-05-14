@@ -162,7 +162,7 @@
               title: Integrating data
         - file: content/recipes/applied-examples/etox
           title: eTox - omics datasets
-        - file: content/recipes/applied-examples/nd4bb_raw/FAIRification_CookBook_Recipe1_V02
+        - file: content/recipes/applied-examples/nd4bb_raw/nd4bb
           title: ND4BB - clinical trial datasets
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
           title: Oncotrack - observational clinical cohort dataset
