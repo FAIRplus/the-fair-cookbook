@@ -102,7 +102,7 @@ RUN pip install                                          \
             sphinxcontrib-jsmath==1.0.1                             \
             sphinxcontrib-qthelp==1.0.3                             \
             sphinxcontrib-serializinghtml==1.1.4                                \
-            sphinx-sitemap>=2.2.0                                \            
+            sphinx-sitemap>=2.2.0                              \
             SQLAlchemy==1.3.24                              \
             terminado==0.9.4                                \
             testpath==0.4.4                             \
