@@ -1,5 +1,5 @@
 (fcb-interop-ontorobot)=
-# Building an application ontology with Robot
+# Building an application ontology with ROBOT
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 60
 :intended_audience: terminology_manager, data_manager, data_scientist, ontologist
 :has_executable_code: yeah
-:recipe_name: Identifier resolution services
+:recipe_name: Building an application ontology with ROBOT
 ```` 
 
 ## Main Objectives
