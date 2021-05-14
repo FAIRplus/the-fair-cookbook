@@ -1,6 +1,6 @@
 (fcb-myst-cheatsheet)=
 
-# Markdown cheatsheet
+# MyST Markdown cheatsheet
 
 ---
 
