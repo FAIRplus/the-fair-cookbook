@@ -1,5 +1,5 @@
 (fcb-help-recipe-git)=
-# How to create a FAIRPlus Coobook Recipe ?
+# Add via Git
 
 ## Main Objectives <a name="Main%20Objectives"></a>
 
