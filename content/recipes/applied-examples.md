@@ -1,5 +1,5 @@
-(fcb-fairify-examples)=
-# Applied examples
+ (fcb-applied-examples)=
+# Applied Examples
 
 ---
 
@@ -23,8 +23,4 @@ If you want to contribute follow the {ref}`fcb-help` provided, or contact us at 
 4. IMI Oncotrack -  the clinical context {ref}`fcb-fairify-examples-oncotrack` -->
 
 ---
-
-
-
-
 
