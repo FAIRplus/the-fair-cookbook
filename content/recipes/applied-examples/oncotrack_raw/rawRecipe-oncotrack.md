@@ -1,5 +1,5 @@
 (fcb-fairify-examples-oncotrack)=
-# Oncotrack FAIRification recipe
+# Oncotrack - observational clinical cohort datasets
 
 
 ## Ingredients

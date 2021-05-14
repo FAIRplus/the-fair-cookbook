@@ -1,5 +1,5 @@
 (fcb-interop-onto-op)=
-# Tools for ontology-associated operations
+# Ontology-related tools and services
 
 
 ````{panels_fairplus}
@@ -10,11 +10,11 @@
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager  
 :has_executable_code: nope
-:recipe_name: Tools for ontology-associated operations
+:recipe_name: Ontology-related tools and services
 ```` 
 
 
-## Main objectives
+## Main Objectives
 
 This recipe aims to provide `an overview of tools available` to perform a number of key operations using ontologies and relevant to FAIR processes: from `ontology management` to using `ontology for annotation` or `performing ontology mapping`.
 
@@ -697,13 +697,12 @@ ___
 
 ## Authors
 
-
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-|--|--|--|--|
-|<div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>                     </div>|[EMBL-EBI]<a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a>|Writing - Original Draft|
-|<div class="firstCol"><a target="_blank" href='https://github.com/evaMart'><img class='avatar-style' src='https://avatars.githubusercontent.com/EvaMart'></img><div class="d-block">Eva Marin del Pico</div></a>         </div>  | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |<a target="_blank" href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x text--orange'></i></a>|Writing - Original Draft |
-|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no-github'></img><div class="d-block">Sukhi Singh</div></a>         </div>|the Hyve|[]()|Tool curation|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | |  Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/evaMart'><img class='avatar-style' src='https://avatars.githubusercontent.com/EvaMart'></img><div class="d-block">Eva Marin del Pico</div></a></div>   | <a target="_blank" href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Barcelona Supercomputing Centre | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-ES.svg' ></img> | Writing - Original Draft
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no-github'></img><div class="d-block">Sukhi Singh</div>        </div> |  <a target="_blank" href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>   |  | Tool curation
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
 
 
 <!-- 

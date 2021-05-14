@@ -1,4 +1,4 @@
-# Technical & architectural selection criteria of ontology lookup services
+# Portals and lookup services
 
 +++
 <br/>
@@ -11,7 +11,7 @@
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator  
 :has_executable_code: nope
-:recipe_name: Technical & architectural selection criteria of ontology lookup services
+:recipe_name: Portals and lookup services
 ```` 
 
 ## Main Objective
@@ -601,14 +601,13 @@ To complement this recipe, reading the following chapter is highly encouraged.
 ---
 
 ### Authors
-
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-|--------------------|------------------------|------------------:|--------------:|
-|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Kurt Dauth</div> </div> | [Boehringer Ingelheim](https://www.boehringer-ingelheim.com/)   | | Writing – Original Draft|
-| <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>| [Boehringer Ingelheim](https://www.boehringer-ingelheim.com/) |<a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Original Draft|
-| <div class="firstCol"><a target="_blank" href='https://github.com/petrospaps'><img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'></img><div class="d-block">Petros Papadopoulos</div></a></div>| Heriot-Watt University |<a target="_blank" href='https://orcid.org/0000-0002-8110-7576'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Original Draft|
-|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div> </div> | [Boehringer Ingelheim](https://www.boehringer-ingelheim.com/)   | | Writing – Review & Editing|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/kdauth'><img class='avatar-style' src='https://avatars.githubusercontent.com/kdauth'></img><div class="d-block">Kurt Dauth</div></a> </div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  |  |
+| <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/petrospaps'><img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'></img><div class="d-block">Petros Papadopoulos</div></a>     </div>| <a target="_blank" href='https://orcid.org/0000-0002-8110-7576'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
 
 ---
 ### Licence

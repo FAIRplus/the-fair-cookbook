@@ -1,5 +1,5 @@
 (fcb-interop-datadictionary)=
-# How to create a FAIR Data/Variable Dictionary
+# Creating data/variable dictionary
 
 
 ````{panels_fairplus}
@@ -10,7 +10,7 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: How to create a FAIR Data/Variable Dictionary
+:recipe_name: Creating data/variable dictionary
 ```` 
 ___
 
@@ -25,8 +25,6 @@ ___
 6. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary) -->
 
 ## Main FAIRification Objectives
-
-**Scope**: Based on prior experience with other IMI projects, it is essential to ensure the provision of a comprehensive project specific `data dictionary`. 
 
 A `data dictionary` is a file (or collection of files) which unambiguously declares, defines and annotates all the variables collected in a project and associated to a dataset.
 
@@ -43,7 +41,7 @@ ___
 
 ## User Stories
 
-When working on data from previous IMI projects, it became apparent that a well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.
+A well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.
 
 ---
 
@@ -220,11 +218,11 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-| :------------- | :------------- | :------------- |:------------- |
-| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Wei Gu</div></a></div>| LCSB, University of Luxembourg|<a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft|
-| <div class="firstCol"><a target="_blank" href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><div class="d-block">Wei Gu</div></a></div>| LCSB, University of Luxembourg|<a target="_blank" href='https://orcid.org/0000-0003-3951-6680'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft|
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><div class="d-block">Wei Gu</div></a>  </div>    | <a target="_blank" href='https://orcid.org/0000-0003-3951-6680'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 
 
 ___

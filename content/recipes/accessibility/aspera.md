@@ -1,5 +1,5 @@
 (fcb-access-aspera)=
-# How to download files with Aspera
+# Downloading data with Aspera
 
 ````{panels_fairplus}
 :identifier_text: FCB003
@@ -9,7 +9,7 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Downloading Files with Aspera 
+:recipe_name: Downloading data with Aspera 
 ```` 
 
 ## Main Objectives
@@ -126,12 +126,10 @@ ascp version 3.9.6.176292
 
 ## Authors
 
-
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-| :------------- | :------------- | :------------- |:------------- |
-| <div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div>  | GSK, metadata group in R&D Data and Computational Sciences  | <a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a> |  Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>   </div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing, Conceptualization|
-
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div>  | <a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a> | GSK  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> | | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization |
 
 
 --- 

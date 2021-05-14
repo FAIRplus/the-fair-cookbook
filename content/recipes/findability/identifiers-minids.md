@@ -1,5 +1,5 @@
 (fcb-find-id-minid)=
-# Identifier Minting Service with Minid Client
+# Minting identifiers with Minid
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Identifier Minting Service with Minid Client
+:recipe_name: Minting identifiers with Minid
 ```` 
 
 
@@ -312,12 +312,10 @@ ____
 
 ## Authors
 
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-| :------------- | :------------- | :------------- |:------------- |
-| <div class="firstCol"><a target="_blank" href='https://github.com/mikedarcy'><img class='avatar-style' src='https://avatars.githubusercontent.com/mikedarcy'></img><div class="d-block">Mike d'Arcy</div></a>   </div>  |   |  <a target="_blank" href='http://orcid.org/0000-0003-2280-917X'><i class='fab fa-orcid fa-2x text--orange'></i></a> |  Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>   </div> | Oxford University| <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a>| Writing – Review & Editing |
-
-
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/mikedarcy'><img class='avatar-style' src='https://avatars.githubusercontent.com/mikedarcy'></img><div class="d-block">Mike d'Arcy</div></a>   </div>  | <a target="_blank" href='http://orcid.org/0000-0003-2280-917X'><i class='fab fa-orcid fa-2x text--orange'></i></a>  |  |  |  |  Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
 
 
 --- 

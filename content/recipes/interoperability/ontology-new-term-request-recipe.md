@@ -1,5 +1,5 @@
 (fcb-interop-ontorequest)=
-# Requesting terms addition to terminology artefacts
+# Requesting new terms
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 15
 :intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
 :has_executable_code: nope
-:recipe_name: Requesting terms addition to terminology artefacts
+:recipe_name: Requesting new terms
 ```` 
 
 ## Main Objective
@@ -157,11 +157,11 @@ UMLS is updated in May and November of each year.
 
 ## Authors
 
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-| :------------- | :------------- | :------------- |:------------- |
-| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>             </div>   | CeMM     | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a>| Writing - Original Draft |
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Emma Vos</div></div>|  The Hyve | <a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing |
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>    </div> | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a> | CEMM | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> || Writing - Original Draft
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Emma Vos</div>   </div>    | <a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |  | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization | Writing – Review & Editing
 
 
 ---

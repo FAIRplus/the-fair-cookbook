@@ -1,4 +1,4 @@
-# Selection and exploitation of Ontology Lookup Services
+# Selecting an ontology lookup service
 
 +++
 <br/>
@@ -11,7 +11,7 @@
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator, procurement_officer
 :has_executable_code: nope
-:recipe_name: Selection and exploitation of Ontology Lookup Services
+:recipe_name: Selecting an ontology lookup service
 ````
 
 ## Table of Contents
@@ -762,13 +762,12 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
-| :------------- | :------------- | :------------- |:------------- |
-|<div class="firstCol"><a target="_blank" href='https://github.com/fra82'><img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'></img><div class="d-block">Francesco Ronzano</div> </div> | [UPF]()   | | Writing – Original Draft|
-|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Ashni Sedani</div> </div> | [GSK]()   | | Writing – Original Draft|
-|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Kurt Dauth</div> </div> | [Boehringer Ingelheim](https://www.boehringer-ingelheim.com/)   | | Writing – Original Draft|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing|
-
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/fra82'><img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'></img><div class="d-block">Francesco Ronzano</div></a>  </div>      | <a target="_blank" href='https://orcid.org/0000-0001-5037-9061'><i class='fab fa-orcid fa-2x text--orange'></i></a> | IMIM | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |  <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-ES.svg' ></img> | Writing – Original Draft
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Ashni Sedani</div>        </div>    | <a target="_blank" href='https://orcid.org/0000-0002-2424-3483'><i class='fab fa-orcid fa-2x text--orange'></i></a> | GSK  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> | | Writing – Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/kdauth'><img class='avatar-style' src='https://avatars.githubusercontent.com/kdauth'></img><div class="d-block">Kurt Dauth</div></a> </div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  |Writing – Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
 
 ___
 

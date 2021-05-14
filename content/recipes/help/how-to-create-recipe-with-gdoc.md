@@ -1,5 +1,5 @@
 (fcb-help-recipe-gdocs)=
-# Using GoogleDocs to contribute a FAIR Cookbook Recipe 
+# Add via GoogleDocs 
 
 
 The FAIR cookbook content can be expanded by adding a recipe. We present here the easiest way to do so. Simply create content by using the [Google document Recipe template](https://docs.google.com/document/d/1C-cg1StazvPujky2SDatvMi26y7tzrbuT6xFQFS-6pw/edit#heading=h.7oww2z5yx16m)
@@ -44,9 +44,9 @@ ___
     
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 
 ___
 

@@ -1,5 +1,5 @@
 (fcb-intro-ati-twb)=
-# The Turing Way Book of Data Science
+# Leveraging the Turing Way Book
 
 > 🚀  or How a meeting with The Turing Way bootstrapped IMI FAIRPlus Cookbook project 🚀
 
