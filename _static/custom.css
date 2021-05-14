@@ -279,6 +279,12 @@ img.avatar-style {
     margin-right: 20px;
 }
 
+#authors table,
+#contributors table ,
+details table {
+    display: block !important
+}
+
 details table tr p:not(:first-child),
 #authors table tr p:not(:first-child){
     text-align: center;
@@ -314,12 +320,16 @@ details table tr th p {
     text-align: center;
 }
 
-#contributors table tr td:first-child p {
+#authors table tr td:first-child p,
+#contributors table tr td:first-child p,
+details table tr td:first-child p{
     display: none;
 }
 
 #authors table tr td:first-child div.firstCol,
-details table tr td:first-child div.firstCol {
+details table tr td:first-child div.firstCol,
+#authors table tr td:not(:first-child) p,
+details table tr td:not(:first-child) p{
     display: flex;
     flex-direction: column;
     min-height: 100px;
@@ -337,7 +347,7 @@ details table tr td:first-child div.firstCol div.d-block {
 }
 
 @media (min-width: 1220px) {
-    #authors table tr th:nth-child(3)
+    #authors table tr th:nth-child(3),
     details table tr th:nth-child(3) {
         min-width: 330px;
     }
@@ -742,6 +752,7 @@ nav.c-textbook__sidebar {
 details table tr th {
     color: white;
     background: #fc7a4a;
+    border-bottom: 0 !important;
 }
 
 .text--primary {
