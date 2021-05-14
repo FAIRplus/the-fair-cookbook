@@ -1,5 +1,5 @@
 (fcb-find-bs-dataset)=
-# Findability: Dataset Markup
+# Dataset page markup with Schema.org
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
 :has_executable_code: nope
-:recipe_name: Findability, Dataset Markup
+:recipe_name: Dataset page markup with Schema.org
 ```` 
 
 
