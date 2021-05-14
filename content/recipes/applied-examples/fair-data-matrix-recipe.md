@@ -1,5 +1,5 @@
 (fcb-fairify-examples-datamatrix)=
-# Making a Data Matrix FAIR
+# Making omics data matrix FAIR
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 30
 :intended_audience: data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Making a Data Matrix FAIR
+:recipe_name: Making omics data matrix FAIR
 ```` 
 
 ___
