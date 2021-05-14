@@ -1,5 +1,5 @@
 (fcb-find-bs-data)=
-# Findability: Data Page Markup with Bioschemas 
+# Data page markup with Bioschemas 
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
 :has_executable_code: nope
-:recipe_name: Findability, Data Page Markup with Bioschemas
+:recipe_name: Data page markup with Bioschemas
 ```` 
 
 ## Main Objectives
