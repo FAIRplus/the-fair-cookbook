@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Oncotrack FAIRification recipe</title>
+    <title>4. Oncotrack FAIRification recipe</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -61,8 +61,8 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4. RESOLUTE FAIRification Recipe" href="../resolute_raw/rawRecipe_resolute.html" />
-    <link rel="prev" title="2. eTox: Data normalization and integration through entity linking" href="../etox.html" />
+    <link rel="next" title="5. RESOLUTE FAIRification Recipe" href="../resolute_raw/rawRecipe_resolute.html" />
+    <link rel="prev" title="3. ND4BB dataset FAIRification recipe" href="../nd4bb_raw/nd4bb.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -428,14 +428,19 @@
      2. eTox - omics datasets
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nd4bb_raw/nd4bb.html">
+     3. ND4BB - clinical trial datasets
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     3. Oncotrack - observational clinical cohort dataset
+     4. Oncotrack - observational clinical cohort dataset
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../resolute_raw/rawRecipe_resolute.html">
-     4. RESOLUTE - transcriptomics datasets
+     5. RESOLUTE - transcriptomics datasets
     </a>
    </li>
   </ul>
@@ -717,7 +722,7 @@
               <div>
                 
   <div class="section" id="oncotrack-fairification-recipe">
-<span id="fcb-fairify-examples-oncotrack"></span><h1><span class="section-number">3. </span>Oncotrack FAIRification recipe<a class="headerlink" href="#oncotrack-fairification-recipe" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-fairify-examples-oncotrack"></span><h1><span class="section-number">4. </span>Oncotrack FAIRification recipe<a class="headerlink" href="#oncotrack-fairification-recipe" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="ingredients">
 <h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -773,7 +778,7 @@
 _Figure 1: OncoTrack metadata FAIRification pipeline_ -->	
 <div class="figure align-default" id="oncotrack-metadata-fairification-pipeline">
 <a class="reference internal image-reference" href="../../../../_images/image_0.png"><img alt="OncoTrack metadata FAIRification pipeline." src="../../../../_images/image_0.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">OncoTrack metadata FAIRification pipeline.</span><a class="headerlink" href="#oncotrack-metadata-fairification-pipeline" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.19 </span><span class="caption-text">OncoTrack metadata FAIRification pipeline.</span><a class="headerlink" href="#oncotrack-metadata-fairification-pipeline" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="data-description">
 <h3>Data Description<a class="headerlink" href="#data-description" title="Permalink to this headline">¶</a></h3>
@@ -784,7 +789,7 @@ _Figure 1: OncoTrack metadata FAIRification pipeline_ -->
 _Figure 2: Example of OncoTrack public cohort metadata -->_
 <div class="figure align-default" id="example-of-oncotrack-public-cohort-metadata">
 <a class="reference internal image-reference" href="../../../../_images/image_1.png"><img alt="Example of OncoTrack public cohort metadata." src="../../../../_images/image_1.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Example of OncoTrack public cohort metadata.</span><a class="headerlink" href="#example-of-oncotrack-public-cohort-metadata" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.20 </span><span class="caption-text">Example of OncoTrack public cohort metadata.</span><a class="headerlink" href="#example-of-oncotrack-public-cohort-metadata" title="Permalink to this image">¶</a></p>
 </div>
 <p>The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drugs are tested on patient-derived organoid(PDO) and patient-derived xenografts(PDX) models in five sets of experiments. Different sets have their unique measurement methods, drug response scales. For example, in <em>Sheet 1: PDO drug response</em> experiment, IC50 value is measured and defines the drug <em>response category</em> (Figure 3a). In <em>Sheet 2: PDX drug response test</em>, the <em>response evaluation criteria in solid tumours (<strong>RECIST</strong>)</em> scales defines the_ drug response category_ (Figure 3b). In both examples, the _drug response category _is marked by colour codes.</p>
 <!-- ![alt_text](image_2.png "image_tooltip") -->
@@ -795,7 +800,7 @@ _Figure 2: Example of OncoTrack public cohort metadata -->_
 _Figure 3: Example of Oncotrack drug response data_ -->
 <div class="figure align-default" id="example-of-oncotrack-drug-response-data">
 <a class="reference internal image-reference" href="../../../../_images/image_3.png"><img alt="Example of Oncotrack drug response data." src="../../../../_images/image_3.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Example of Oncotrack drug response data.</span><a class="headerlink" href="#example-of-oncotrack-drug-response-data" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.21 </span><span class="caption-text">Example of Oncotrack drug response data.</span><a class="headerlink" href="#example-of-oncotrack-drug-response-data" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="metadata-etl-pipeline">
@@ -807,14 +812,14 @@ _Figure 3: Example of Oncotrack drug response data_ -->
 _Figure 4: Example of the extracted cohort metadata_ -->
 <div class="figure align-default" id="example-of-the-extracted-cohort-metadata">
 <a class="reference internal image-reference" href="../../../../_images/image_4.png"><img alt="Example of the extracted cohort metadata." src="../../../../_images/image_4.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Example of the extracted cohort metadata.</span><a class="headerlink" href="#example-of-the-extracted-cohort-metadata" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.22 </span><span class="caption-text">Example of the extracted cohort metadata.</span><a class="headerlink" href="#example-of-the-extracted-cohort-metadata" title="Permalink to this image">¶</a></p>
 </div>
 <p>Drug sensitivity data were also extracted from the original spreadsheets. Each drug test per sample was listed as one entry. To coordinate different measurement approaches and response category scales, all drug sensitivity data were converted to a unified representation. All the measurement results were stored in Attribute <em>“Value”</em>, the drug response categorizes criteria were stored in Attribute <em>“Unit”,</em> and the _drug response category _was recalculated and stored in Attribute <em>“Response”.</em> Figure 5 is an example of the extracted drug sensitivity data. 1829 drug tests were extracted in total. The drug response summary is <a class="reference external" href="https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing">here</a>.</p>
 <!-- ![alt_text](image_5.png "image_tooltip")
 _Figure 5: Example of extracted drug sensitivity data_	 -->
 <div class="figure align-default" id="example-of-extracted-drug-sensitivity-data">
 <a class="reference internal image-reference" href="../../../../_images/image_51.png"><img alt="Example of extracted drug sensitivity data." src="../../../../_images/image_51.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Example of extracted drug sensitivity data.</span><a class="headerlink" href="#example-of-extracted-drug-sensitivity-data" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.23 </span><span class="caption-text">Example of extracted drug sensitivity data.</span><a class="headerlink" href="#example-of-extracted-drug-sensitivity-data" title="Permalink to this image">¶</a></p>
 </div>
 <p>To associate drug sensitivity data with related sample cohort metadata and convert them to machine-readable formats, we combined cohort metadata and drug sensitivity data to JSON files. The<a class="reference external" href="https://drive.google.com/file/d/1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY/view"> BioSamples JSON schema</a><span style="text-decoration:underline;"> </span>was used as the sample metadata template, allowing direct submissions to<a class="reference external" href="https://www.ebi.ac.uk/biosamples/"> BioSamples database</a> and can be easily converted to other formats, like XML, spreadsheets, etc.</p>
 <p>The BioSamples JSON schema includes four blocks, submission metadata( e.g. submission domain, release date, update date), administrative metadata, (e.g. contacts, affiliations), general sample metadata (sample names, species, etc) and sample characteristics. All information is stored in key: value pairs. In sample characteristics, only data with flatten structure is accepted.</p>
@@ -837,7 +842,7 @@ _Figure 6: Example of  ZOOMA ontology mapping results_
  -->
 <div class="figure align-default" id="example-of-zooma-ontology-mapping-results">
 <a class="reference internal image-reference" href="../../../../_images/image_6.jpg"><img alt="Example of ZOOMA ontology mapping results." src="../../../../_images/image_6.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Example of ZOOMA ontology mapping results.</span><a class="headerlink" href="#example-of-zooma-ontology-mapping-results" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.24 </span><span class="caption-text">Example of ZOOMA ontology mapping results.</span><a class="headerlink" href="#example-of-zooma-ontology-mapping-results" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="data-discrepancy">
@@ -927,8 +932,8 @@ _Figure 6: Example of  ZOOMA ontology mapping results_
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../etox.html" title="previous page"><span class="section-number">2. </span>eTox: Data normalization and integration through entity linking</a>
-    <a class='right-next' id="next-link" href="../resolute_raw/rawRecipe_resolute.html" title="next page"><span class="section-number">4. </span>RESOLUTE FAIRification Recipe</a>
+    <a class='left-prev' id="prev-link" href="../nd4bb_raw/nd4bb.html" title="previous page"><span class="section-number">3. </span>ND4BB dataset FAIRification recipe</a>
+    <a class='right-next' id="next-link" href="../resolute_raw/rawRecipe_resolute.html" title="next page"><span class="section-number">5. </span>RESOLUTE FAIRification Recipe</a>
 
         </div>
         
