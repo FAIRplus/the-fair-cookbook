@@ -1,5 +1,5 @@
 (fcb-find-id-minid)=
-# Identifier Minting Service with Minid Client
+# Minting identifiers with Minid
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Identifier Minting Service with Minid Client
+:recipe_name: Minting identifiers with Minid
 ```` 
 
 
