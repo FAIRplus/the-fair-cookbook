@@ -1,5 +1,5 @@
 (fcb-access-sftp)=
-# How to use SFTP to transfer data files between institutions.
+# Transferring data with SFTP
 
 ````{panels_fairplus}
 :identifier_text: FCB004
@@ -9,7 +9,7 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Using SFTP to transfer data files between institutions 
+:recipe_name: Transferring data with SFTP
 ```` 
 
 ## Abstract
