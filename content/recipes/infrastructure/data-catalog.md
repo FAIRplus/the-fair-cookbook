@@ -1,5 +1,5 @@
 (fcb-infra-build-catalog)=
-# Building a Dataset Catalogue
+# Building a catalogue of datasets
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 60
 :intended_audience: data_manager, data_scientist, software_developer, system_administrator  
 :has_executable_code: yeah
-:recipe_name: Building a Dataset Catalogue 
+:recipe_name: Building a catalogue of datasets 
 ```` 
 
 ## Main Objectives
