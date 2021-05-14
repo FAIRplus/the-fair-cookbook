@@ -1,0 +1,35 @@
+{
+  "abstract": "$abstract",
+  "version": "$version",
+  "keywords": "$keywords",
+  "author" : [{
+    "@type": "Person",
+    "name": "$Name",
+    "orcid": "$orcid"
+  },
+  {
+    "@type": "Organization",
+    "name": "$affiliation"
+  }],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "zooma"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "ols"
+    }
+  ],
+  "mentions": [
+  {
+    "@type": "SoftwareApplication",
+    "name": "$tool",
+    "url": "$biotool_id"
+  },
+  {
+    "@type": "CreativeWorks",
+    "name": "$standard",
+    "url": "$fairsharing_id"
+  }]
+}

@@ -1,6 +1,7 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
+from json import dumps
 import sphinx_panels.panels
 import sphinx.errors
 
@@ -162,6 +163,7 @@ class PanelFairplus(Directive):
             '<br/>',
             '',
             '----',
+            f'{self.get_ld()}',
             '<div class="card recipe d-flex">',
                 '<div class="card-header purple-dark text--white">',
                     '<div class="overview">',
@@ -229,6 +231,40 @@ class PanelFairplus(Directive):
         """
         return ", ".join([CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
                           for target in self.options["intended_audience"]])
+
+    def get_ld(self):
+        """
+        Parses the class attributes to build the corresponding JSON-LD markup.
+        :return: a json-ld representation of the recipe
+        """
+        json_ld = {
+            "@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"},
+            "@type": ["sdo:HowTo", "bs:TrainingMaterial"],
+            "name": self.options["recipe_name"],
+            "audience": [CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
+                         for target in self.options["intended_audience"]],
+            "isPartOf": [
+                {
+                    "@type": "CreativeWork",
+                    "url": "https://fairplus.github.io/the-fair-cookbook/",
+                    "name": "The FAIR Cookbook"
+                }
+            ],
+            "learningResourceType": CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": self.options["identifier_text"],
+                "url": self.options["identifier_link"]
+            },
+            "license": {
+                "@type": "CreativeWork",
+                "url": "https://creativecommons.org/licenses/by/4.0/",
+                "name": "CC-BY-4.0"
+            },
+            "timeRequired": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
+            "totalTime": "PT0H%sM0S" % str(self.options["reading_time_minutes"])
+        }
+        return '<script type="application/ld+json"> %s </script>' % dumps(json_ld)
 
     def run(self):
 
