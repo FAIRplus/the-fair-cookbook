@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. ND4BB dataset FAIRification recipe</title>
+    <title>3. ND4BB - clinical trial datasets</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -71,8 +71,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/nd4bb_raw/nd4bb.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="ND4BB dataset FAIRification recipe" />
-<meta property="og:description" content="ND4BB dataset FAIRification recipe  &lt;br/&gt;     &lt;div class=&#34;card recipe d-flex&#34;&gt; &lt;div class=&#34;card-header purple-dark text--white&#34;&gt; &lt;div class=&#34;overview&#34;&gt; &lt;div cla" />
+<meta property="og:title"       content="ND4BB - clinical trial datasets" />
+<meta property="og:description" content="ND4BB - clinical trial datasets  &lt;br/&gt;     &lt;div class=&#34;card recipe d-flex&#34;&gt; &lt;div class=&#34;card-header purple-dark text--white&#34;&gt; &lt;div class=&#34;overview&#34;&gt; &lt;div class=" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -719,8 +719,8 @@
         
               <div>
                 
-  <div class="section" id="nd4bb-dataset-fairification-recipe">
-<span id="fcb-nd4bb"></span><h1><span class="section-number">3. </span>ND4BB dataset FAIRification recipe<a class="headerlink" href="#nd4bb-dataset-fairification-recipe" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="nd4bb-clinical-trial-datasets">
+<span id="fcb-nd4bb"></span><h1><span class="section-number">3. </span>ND4BB - clinical trial datasets<a class="headerlink" href="#nd4bb-clinical-trial-datasets" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
 <div class="card recipe d-flex">
@@ -811,7 +811,7 @@ No
 <h3>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h3>
 <p>The AMR database consists of several nested static HTML pages. The information is well structured, results are mainly quantitative numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>) and a machine-readable data set should be easily created.</p>
 <p>To get a good understanding of the AMR dataset, the AMR metadata shall be extracted. The AMR metadata includes four types of metadata: structural metadata, administrative metadata, and descriptive metadata. The structural metadata describes the structure of the dataset, for examples, column names and/or IDs. Administrative metadata contains the author, organization, and other provenance information. The descriptive metadata includes the procedure, usually protocols, in generating the experimental results. The descriptive metadata is always stored in a free-text format without data structure.</p>
-<p><a class="reference internal" href="#nd4bb-figure1"><span class="std std-ref">Schematic workflow of the general FAIRification pipeline. Some steps need repetitions (yellow arrows).</span></a> is an example of the simplified schematic workflow of FAIRification, which includes the extraction, transform, annotation, licensing and identifier assigning process. Due to the limit of time, we ere, we focus on the extraction and annotation of structural metadata, the administrative metadata, descriptive metadata will be added in the future.</p>
+<p><a class="reference internal" href="#nd4bb-figure1"><span class="std std-numref">Fig. 3.6</span></a> is an example of the simplified schematic workflow of FAIRification, which includes the extraction, transform, annotation, licensing and identifier assigning process. Due to the limit of time, we ere, we focus on the extraction and annotation of structural metadata, the administrative metadata, descriptive metadata will be added in the future.</p>
 <div class="figure align-default" id="nd4bb-figure1">
 <img alt="Schematic workflow of the general FAIRification pipeline. Some steps need repetitions (yellow arrows)." src="../../../../_images/nd4bb.md-figure1.png" />
 <p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Schematic workflow of the general FAIRification pipeline. Some steps need repetitions (yellow arrows).</span><a class="headerlink" href="#nd4bb-figure1" title="Permalink to this image">¶</a></p>
@@ -820,7 +820,7 @@ No
 <div class="section" id="data-extraction">
 <h3>Data extraction<a class="headerlink" href="#data-extraction" title="Permalink to this headline">¶</a></h3>
 <p>Data are extracted using a <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf">KNIME workflow</a>, which can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced.</p>
-<p><a class="reference internal" href="#nd4bb-figure2"><span class="std std-ref">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span></a> is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (&lt;h3&gt;, shown in the red box in Figure 3) and compounds as an unsorted list (&lt;ul&gt;, shown in the yellow box in Figure 3).</p>
+<p><a class="reference internal" href="#nd4bb-figure2"><span class="std std-numref">Fig. 3.7</span></a> is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (&lt;h3&gt;, shown in the red box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 3.8</span></a>) and compounds as an unsorted list (&lt;ul&gt;, shown in the yellow box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 3.8</span></a>).</p>
 <div class="figure align-default" id="nd4bb-figure2">
 <img alt="Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted." src="../../../../_images/nd4bb.md-figure2.jpg" />
 <p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span><a class="headerlink" href="#nd4bb-figure2" title="Permalink to this image">¶</a></p>
@@ -829,24 +829,17 @@ No
 <img alt="Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound." src="../../../../_images/nd4bb.md-figure3.jpg" />
 <p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.</span><a class="headerlink" href="#nd4bb-figure3" title="Permalink to this image">¶</a></p>
 </div>
-<!-- TODO -->
-<p>We first identified all websites that contain the project data. The homepage (<a class="reference internal" href="#nd4bb-figure2"><span class="std std-ref">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span></a>) describes the compound names, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in Figure 4.</p>
-<p>Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by <td>…</td>, chemical “Oxazolidinones” and “Tetracyclines” uses different data structure. Therefore the extracted XML document was updated before applying further nodes to the XML document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. The green boxes in Figure 4 highlighted the discrepancies we found in the original dataset.</p>
-<!-- 
-![alt_text](image_3.png "image_tooltip")
-_Figure 4: Workflow to extract antimicrobial classes and compound with their corresponding subpages_ -->
-<div class="figure align-default" id="workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages">
-<a class="reference internal image-reference" href="content/recipes/applied-examples/nd4bb_raw/image_3.png"><img alt="Workflow to extract antimicrobial classes and compound with their corresponding subpages." src="content/recipes/applied-examples/nd4bb_raw/image_3.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Workflow to extract antimicrobial classes and compound with their corresponding subpages.</span><a class="headerlink" href="#workflow-to-extract-antimicrobial-classes-and-compound-with-their-corresponding-subpages" title="Permalink to this image">¶</a></p>
+<p>We first identified all websites that contain the project data. The homepage (<a class="reference internal" href="#nd4bb-figure2"><span class="std std-numref">Fig. 3.7</span></a>) describes the compound names, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in <a class="reference internal" href="#nd4bb-figure4"><span class="std std-numref">Fig. 3.9</span></a>.</p>
+<p>Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by &lt;td&gt;…&lt;/td&gt;, chemical “Oxazolidinones” and “Tetracyclines” uses different data structure. Therefore the extracted XML document was updated before applying further nodes to the XML document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules.</p>
+<div class="figure align-default" id="nd4bb-figure4">
+<img alt="Workflow to extract antimicrobial classes and compound with their corresponding subpages." src="../../../../_images/nd4bb.md-figure4.png" />
+<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Workflow to extract antimicrobial classes and compound with their corresponding subpages.</span><a class="headerlink" href="#nd4bb-figure4" title="Permalink to this image">¶</a></p>
 </div>
-<p>Links to all content in the sub-page are also extracted. Figure 5 is an example of the subpage of one compound, which consists of table selection with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources. (See the green boxes in Figure 5). External links were excluded from current data extraction.</p>
+<p>Links to all content in the sub-page are also extracted. <a class="reference internal" href="#nd4bb-figure5"><span class="std std-numref">Fig. 3.10</span></a> is an example of the subpage of one compound, which consists of table section with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources. External links were excluded from current data extraction.</p>
 <p>The complete workflow to extract the data from the compound/charge webpage is provided in <a class="reference external" href="#heading=h.q7ozvs96azbw">supplementary figure 1</a>.</p>
-<!-- 
-![alt_text](image_4.jpg "image_tooltip")
-_Figure 5: Example of one ND4BB raw data_ -->
-<div class="figure align-default" id="example-of-one-nd4bb-raw-data">
-<a class="reference internal image-reference" href="../../../../_images/image_4.jpg"><img alt="Example of one ND4BB raw data." src="../../../../_images/image_4.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Example of one ND4BB raw data.</span><a class="headerlink" href="#example-of-one-nd4bb-raw-data" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="nd4bb-figure5">
+<img alt="Example of one ND4BB raw data." src="content/recipes/applied-examples/nd4bb_raw/nd4bb.md-figure5.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Example of one ND4BB raw data. Marked in green boxes are a table section with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources.</span><a class="headerlink" href="#nd4bb-figure5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="data-transform">
