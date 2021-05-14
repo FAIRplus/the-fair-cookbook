@@ -1,6 +1,6 @@
 (fcb-interop-whyonto)=
 
-# Why use Terminologies & Ontologies?
+# Introduction to terminologies and ontologies
 
 
 ````{panels_fairplus}
@@ -11,15 +11,15 @@
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: Why use Terminologies & Ontologies?
+:recipe_name: Introduction to terminologies and ontologies
 ```` 
 
-## Main Objectives
+## Main objectives
 
 The aim of this recipe is to provide a compact introduction about `controled terminologies` and `ontologies`, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.
 
 
-## Controlled terminology or Ontology: what's the difference?
+## Controlled terminology or ontology: what's the difference?
 
 The need for `controled vocabulary` often arises in situation where validation of textual information is necessary for operational requirements. 
 The main initial driver for data entry harmonization is to increase query recall. It is most basic form, `keywords` may be used to perform indexation. However, if relying on user input alone, the chances of typographic errors increases with the number of users. These unavoidable events accumulate over time and end up  hurting the accuracy of search results and this is the reason for offering sets of predefined values. It reduces the noise. 
@@ -107,14 +107,14 @@ This point becomes particularly important when considering the role of `reasoner
 * **In the context of Clinical Data collections**, the CDISC models work tightly with CDISC Terminology, National Cancer Institute's Enterprise Vocabulary Services (EVS) and also recommend use of SNOMED-CT and terminologies such as LOINC, both of which come with specific licensing terms users need to get familiar with.
 
 
-### Use Cases and Iterative Approach  
+### Use cases and iterative approach  
 
 
 The use and implementation of common terminologies will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying a database. Implementing the use of common terminologies in the curation workflow will ensure consistency of the annotation across all studies.
 
 
 
-### Selection Criteria
+### Selection cMatched title to card and TOCriteria
 
 A set of widely accepted criteria for selecting terminologies (or other reporting standards) do not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and FAIRSharing ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point top define possible criteria for excluding and/or including a terminology resource.
 
