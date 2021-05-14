@@ -283,8 +283,9 @@ ___
 ## References
 
 <!-- idmapping/idmapping.bib -->
-```{bibliography} bibliography-identifier-mapping.bib
+```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
+:style: alpha
 ```
 
 
