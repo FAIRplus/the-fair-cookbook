@@ -110,10 +110,9 @@ Example of textual analyses of terms / concept labels.
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-|<div class="firstCol"><a target="_blank" href='https://github.com/fra82'><img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'></img><div class="d-block">Francesco Ronzano</div></a></div>|IMIM|<a target="_blank" href='https://orcid.org/0000-0001-5037-9061'><i class='fab fa-orcid fa-2x text--orange'></i></a>|Writing - Original Draft|
-
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/fra82'><img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'></img><div class="d-block">Francesco Ronzano</div></a>  </div>      | <a target="_blank" href='https://orcid.org/0000-0001-5037-9061'><i class='fab fa-orcid fa-2x text--orange'></i></a> | IMIM | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |  <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-ES.svg' ></img> | Writing - Original Draft
 
 ---
 
