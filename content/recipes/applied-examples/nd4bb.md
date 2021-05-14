@@ -1,6 +1,11 @@
 (fcb-nd4bb)=
 # ND4BB - clinical trial datasets
 
+<!-- 
+TODO: check whether all files can be put on Zenodo
+TODO: clarify authors
+-->
+
 ````{panels_fairplus}
 :identifier_text: http://w3id.org/faircookbook/FCB006
 :identifier_link: http://w3id.org/faircookbook/FCB006
@@ -127,7 +132,7 @@ Workflow to extract the data from compound/charge webpage.
 ```
 
 
-### Data transform
+### Data transformation
 
 The data were extracted following the schema to facilitate future data annotation: "PropertyGroup – Property – Value" where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in {numref}`nd4bb-figure6`. For each property, the corresponding values in a controlled vocabulary list are collected into a [spreadsheet](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx). Missing values were fixed in this transform as well. 
 
@@ -142,7 +147,7 @@ Example data set for +3 charged Amikacin.
 ```
 
 
-### Extract and annotate structural metadata
+### Extraction and annotation of structural metadata
 
 To prepare for the ontology annotation, we first generated lists of different types of attributes, which include “AMRclass”, “AMR compound”, “PropertyGroup”, etc. In each spreadsheet, the values are listed as separate rows for ontology annotation. 
 
@@ -157,7 +162,7 @@ One difference between these two ontology mappers is they process special charac
 Provenance metadata about the ontology annotation pipeline implementation are stored here in the same file. 
 
 
-## Results
+### Evaluation of the ontology annotation
 
 Both generated files ‘ExtractedMetadata_20190124_ZOOMA_0329.xlsx’ and ‘ExtractedMetadata_20190124_NCBOREC_0347.xlsx’ show nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only few cases the NCBO Recommender showed results (e.g. BAL29880 and MBX2319) were ZOOMA did not find a corresponding ontology. 
 
