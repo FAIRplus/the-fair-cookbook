@@ -163,7 +163,6 @@
         - file: content/recipes/applied-examples/etox
           title: eTox - omics datasets
         - file: content/recipes/applied-examples/nd4bb_raw/nd4bb
-          title: ND4BB - clinical trial datasets
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
           title: Oncotrack - observational clinical cohort dataset
         - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
