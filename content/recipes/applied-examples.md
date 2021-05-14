@@ -1,6 +1,6 @@
  (fcb-applied-examples)=
 # Applied examples
-
++++
 ---
 
 This chapter is dedicated to FAIRification examples, using publicly available datasets. These include data from published articles, as well as data from multi-omics, observational and clinical trial projects.

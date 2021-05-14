@@ -47,7 +47,7 @@ Overview of key aspects in ETL process
 
 The table below is an overview of ETL tools identified.
 Details of each tools are also provided in this doc.
-For ETL tools for RDF data model, please check recipe {ref}`fcb-interop-etl2rdf-tools` 
+For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fcb-interop-etl2rdf-tools` -->.
 
 
 <table>

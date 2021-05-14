@@ -12,6 +12,7 @@
 :has_executable_code: nope
 :recipe_name: Creating data/variable dictionary
 ```` 
+
 ___
 
 
@@ -176,7 +177,6 @@ Depending on the persistence system, how this needs to be specified varies. We p
 "missingValues": ["NaN", "-"]
 ```
 
-
 #### Remember to provide descriptive metadata for the data dictionary itself
 
 - filename (with extension)
@@ -187,8 +187,6 @@ Depending on the persistence system, how this needs to be specified varies. We p
 
 #### Remember to provide the data dictionary in an open syntax
 
-
----
 
 ## Data Dictionary Mapping in FAIRplus
 
@@ -209,9 +207,12 @@ Why? Simply because if affords several key data management processes to take pla
 ### What to read next?
 
 > - {ref}`fcb-interop-selectonto`
-> - {ref}`fcb-interop-ontomapping` (*in preparation*)
 > - {ref}`fcb-interop-etl` (*in preparation*)
 > - [Key issues to be aware of when planning [Extract-Transform-Load processes]()
+
+<!--
+ >- {ref}`fcb-interop-ontomapping` (*in preparation*)
+  -->
 
 
 ___

@@ -20,7 +20,7 @@ This recipe aims to provide `an overview of tools available` to perform a number
 
 It aims to serve as a starting point to identify tools for FAIRifications tasks where ontologies and semantic frameworks are needed. 
 
-```{admonition}
+```{admonition} disclaimer
 It is not intended to provide a comprehensive list covering all possible tools.
 ```
 

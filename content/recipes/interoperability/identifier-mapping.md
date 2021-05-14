@@ -146,7 +146,7 @@ The simplest way to exchange equivalences is in a simple text file, which could 
 
 The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.
 
-```tsv
+```bash
 ChEMBL_Target_Component	UniProt
 CHEMBL_TC_4803	A0ZX81
 CHEMBL_TC_2584	A1ZA98 
@@ -159,7 +159,7 @@ The OBOFoundry Simple Standard for Sharing Ontology Mappings ([SSSOM](https://gi
 
 The following TSV shows our example data as a mapping file using the minimal columns (correct as of November 2020). The information provided is less than the minimal VoID model above.
 
-```tsv
+```bash
 subject_id  predicate_id  object_id match_type
 chembl:CHEMBL_TC_4803 skos:exactMatch uniprot:A0ZX81  sio:database-cross-reference
 chembl:CHEMBL_TC_2584 skos:exactMatch uniprot:A1ZA98  sio:database-cross-reference
@@ -268,9 +268,12 @@ ___
 > #### What should I read next?
 > * {ref}`fcb-find-identifiers`
 > * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> * [Identifier Resolution Services](./findability/id-resolution.html)
 > * {ref}`fcb-interop-bridgedb`
 > * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
+
+<!-- 
+    > * [Identifier Resolution Services](./findability/id-resolution.html) 
+-->
 
 
 
@@ -279,8 +282,9 @@ ___
 
 ## References
 
-```{bibliography} idmapping/idmapping.bib
-
+<!-- idmapping/idmapping.bib -->
+```{bibliography} 
+:filter: docname in docnames
 ```
 
 

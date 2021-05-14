@@ -155,7 +155,8 @@ Clearly declaring the semantic resources used to annotate a dataset also influen
 > * {ref}`fcb-interop-ontorequest`
 > * {ref}`fcb-interop-ontorobot`
 > * {ref}`fcb-interop-onto-op`
-> * TODO: {ref}`fcb-find-biosolr`
+
+<!-- > * TODO: {ref}`fcb-find-biosolr` -->
 
 ___
 

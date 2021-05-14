@@ -165,7 +165,7 @@
         - file: content/recipes/applied-examples/nd4bb
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
           title: Oncotrack - observational clinical cohort datasets
-        - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
+        - file: content/recipes/applied-examples/resolute_raw/resolute
           title: RESOLUTE - transcriptomics datasets
 
     # # -header: assessment

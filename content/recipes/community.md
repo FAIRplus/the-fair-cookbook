@@ -1,6 +1,6 @@
 (fcb-community)=
 # Community
-
++++
 ---
 
 The FAIR Cookbook is developed and maintained by a thriving community of life sciences professionals, in the academia and the industry sectors, including members of the ELIXIR community. 

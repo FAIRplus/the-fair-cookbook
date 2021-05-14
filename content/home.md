@@ -1,5 +1,5 @@
 # FAIR Cookbook
-
++++
 ---
 
 **Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and Reusable (FAIR).**
@@ -253,7 +253,7 @@ Below there are links to some key recipes, click on them to explore their conten
 </div>
 <div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
-{ref}`fcb-reusability-community-std`
+<!-- {ref}`fcb-reusability-community-std` -->
 </div>
 ````
 
@@ -434,7 +434,7 @@ ___
 
 ## Contributors
 
-The FAIR Cookbook is developed by a thriving {ref}`fcb-community` of life sciences professionals, in the academia and the industry sectors, including members of the ELIXIR community. Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, join us and {ref}`fcb-help`, or contact us at [fairplus-cookbook@elixir-europe.org](fairplus-cookbook@elixir-europe.org)
+The FAIR Cookbook is developed by a thriving {ref}`fcb-community` of life sciences professionals, in the academia and the industry sectors, including members of the ELIXIR community. Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, join us and {ref}`fcb-help`, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org)
 
 
 <!-- 
