@@ -72,7 +72,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/nd4bb.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="ND4BB - clinical trial datasets" />
-<meta property="og:description" content="ND4BB - clinical trial datasets  &lt;br/&gt;     &lt;div class=&#34;card recipe d-flex&#34;&gt; &lt;div class=&#34;card-header purple-dark text--white&#34;&gt; &lt;div class=&#34;overview&#34;&gt; &lt;div class=" />
+<meta property="og:description" content="ND4BB - clinical trial datasets  &lt;!--  TODO: check whether all files can be put on Zenodo TODO: clarify authors --&gt;   &lt;br/&gt;     &lt;div class=&#34;card recipe d-flex&#34;&gt;" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -651,21 +651,21 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-transform">
-     Data transform
+    <a class="reference internal nav-link" href="#data-transformation">
+     Data transformation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extract-and-annotate-structural-metadata">
-     Extract and annotate structural metadata
+    <a class="reference internal nav-link" href="#extraction-and-annotation-of-structural-metadata">
+     Extraction and annotation of structural metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation-of-the-ontology-annotation">
+     Evaluation of the ontology annotation
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#results">
-   Results
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fair-assessment">
@@ -706,6 +706,10 @@
                 
   <div class="section" id="nd4bb-clinical-trial-datasets">
 <span id="fcb-nd4bb"></span><h1><span class="section-number">3. </span>ND4BB - clinical trial datasets<a class="headerlink" href="#nd4bb-clinical-trial-datasets" title="Permalink to this headline">¶</a></h1>
+<!-- 
+TODO: check whether all files can be put on Zenodo
+TODO: clarify authors
+-->
 <br/>
 <hr class="docutils" />
 <div class="card recipe d-flex">
@@ -835,8 +839,8 @@ No
 <p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Workflow to extract the data from compound/charge webpage.</span><a class="headerlink" href="#nd4bb-figure7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="data-transform">
-<h3>Data transform<a class="headerlink" href="#data-transform" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="data-transformation">
+<h3>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
 <p>The data were extracted following the schema to facilitate future data annotation: “PropertyGroup – Property – Value” where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in <a class="reference internal" href="#nd4bb-figure6"><span class="std std-numref">Fig. 3.12</span></a>. For each property, the corresponding values in a controlled vocabulary list are collected into a <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx">spreadsheet</a>. Missing values were fixed in this transform as well.</p>
 <p>One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup).</p>
 <div class="figure align-default" id="nd4bb-figure6">
@@ -844,8 +848,8 @@ No
 <p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Example data set for +3 charged Amikacin.</span><a class="headerlink" href="#nd4bb-figure6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="extract-and-annotate-structural-metadata">
-<h3>Extract and annotate structural metadata<a class="headerlink" href="#extract-and-annotate-structural-metadata" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="extraction-and-annotation-of-structural-metadata">
+<h3>Extraction and annotation of structural metadata<a class="headerlink" href="#extraction-and-annotation-of-structural-metadata" title="Permalink to this headline">¶</a></h3>
 <p>To prepare for the ontology annotation, we first generated lists of different types of attributes, which include “AMRclass”, “AMR compound”, “PropertyGroup”, etc. In each spreadsheet, the values are listed as separate rows for ontology annotation.</p>
 <p>The strings went through additional parsing to improve mapping confidence. Duplicated or missing attributes were removed. Stemming and lemmatization were implemented to map the keyword to its root form to avoid mismatch because of spelling/form variations.</p>
 <p>All the strings were sent through ZOOMA/NCBO API to search for ontology annotation. The ontology annotation results are listed here (<a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BZOOMA_1019.xlsx">result Excel file for querying ZOOMA</a>, <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BNCBOREC_1021.xlsx">result Excel file for querying NCBO</a>). The ontology annotations were ranked and selected based on its confidence. For strings that didn’t find proper ontology mapping, the original values were kept. The ontology annotation preparation workflow is <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_EBI_ZOOMA_requests_V5.knwf">here</a>.</p>
@@ -853,11 +857,11 @@ No
 <p>One difference between these two ontology mappers is they process special characters (e.g. -_#) and spaces differently. For example, in NCBO, among “ ‘beta-lactamase inhibitors’, ‘beta lactamase inhibitors’ and ‘betalactamase inhibitors’ only the ontology annotation of the first item was found. While ZOOMA returned ontology annotation results for all three descriptions. Another example would be Aminonucleosides, Aminonucleoside, Amino nucleoside. While NCBO Recommender found no result, ZOOMA found at least a result for the terms ‘Aminonucleoside’, ‘Amino nucleoside’. This proves the necessity of running stemming or lemmatizing prior to ontology mapping service.</p>
 <p>Provenance metadata about the ontology annotation pipeline implementation are stored here in the same file.</p>
 </div>
-</div>
-<div class="section" id="results">
-<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="evaluation-of-the-ontology-annotation">
+<h3>Evaluation of the ontology annotation<a class="headerlink" href="#evaluation-of-the-ontology-annotation" title="Permalink to this headline">¶</a></h3>
 <p>Both generated files ‘ExtractedMetadata_20190124_ZOOMA_0329.xlsx’ and ‘ExtractedMetadata_20190124_NCBOREC_0347.xlsx’ show nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only few cases the NCBO Recommender showed results (e.g. BAL29880 and MBX2319) were ZOOMA did not find a corresponding ontology.</p>
 <p>The proposed workflow is insufficient to extract adequate and consistent semantic annotations for the structural metadata. In addition the retrieved links do not reflect the used version of the ontology.</p>
+</div>
 </div>
 <div class="section" id="fair-assessment">
 <h2>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
