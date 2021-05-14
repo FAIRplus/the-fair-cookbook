@@ -1,5 +1,5 @@
 (fcb-find-seo)=
-# Findability: Search Engine Optimization
+# Search engine optimization
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
 :has_executable_code: nope
-:recipe_name: Findability, Search Engine Optimization
+:recipe_name: Search engine optimization
 ```` 
 
 ## Main Objectives
