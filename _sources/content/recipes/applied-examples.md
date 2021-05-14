@@ -17,9 +17,9 @@ If you want to contribute follow the {ref}`fcb-help` provided, or contact us at 
 
 ## IMI case studies
 
-1. IMI eTOX - the safety context {ref}`fcb-fairify-examples-etox`
-2. IMI ND4BB - the target identification context {ref}`fcb-fairify-examples-nd4bb`
-3. IMI Resolute - the target identification context {ref}`fcb-fairify-examples-resolute`
+1. IMI eTOX - the safety context {ref}`fcb-etox`
+2. IMI ND4BB - the target identification context {ref}`fcb-nd4bb`
+3. IMI Resolute - the target identification context {ref}`fcb-resolute`
 4. IMI Oncotrack -  the clinical context {ref}`fcb-fairify-examples-oncotrack` -->
 
 ---

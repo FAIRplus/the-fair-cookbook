@@ -1,6 +1,10 @@
 (fcb-etox)=
 # eTox - omics datasets
 
+<!-- 
+TODO: clarify authors
+-->
+
 ````{panels_fairplus}
 :identifier_text: http://w3id.org/faircookbook/FCB005
 :identifier_link: http://w3id.org/faircookbook/FCB005
