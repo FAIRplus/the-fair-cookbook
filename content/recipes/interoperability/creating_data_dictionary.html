@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. How to create a FAIR Data/Variable Dictionary</title>
+    <title>8. Creating data/variable dictionary</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -71,8 +71,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating_data_dictionary.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="How to create a FAIR Data/Variable Dictionary" />
-<meta property="og:description" content="How to create a FAIR Data/Variable Dictionary  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschem" />
+<meta property="og:title"       content="Creating data/variable dictionary" />
+<meta property="og:description" content="Creating data/variable dictionary  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -728,11 +728,11 @@
         
               <div>
                 
-  <div class="section" id="how-to-create-a-fair-data-variable-dictionary">
-<span id="fcb-interop-datadictionary"></span><h1><span class="section-number">8. </span>How to create a FAIR Data/Variable Dictionary<a class="headerlink" href="#how-to-create-a-fair-data-variable-dictionary" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="creating-data-variable-dictionary">
+<span id="fcb-interop-datadictionary"></span><h1><span class="section-number">8. </span>Creating data/variable dictionary<a class="headerlink" href="#creating-data-variable-dictionary" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "How to create a FAIR Data/Variable Dictionary", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Technical Guidance", "identifier": {"@type": "PropertyValue", "name": "http://w3id.org/faircookbook/FCB_TBA", "url": "http://w3id.org/faircookbook/FCB_TBA"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Creating data/variable dictionary", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Technical Guidance", "identifier": {"@type": "PropertyValue", "name": "http://w3id.org/faircookbook/FCB_TBA", "url": "http://w3id.org/faircookbook/FCB_TBA"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -767,7 +767,7 @@ No
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">How to create a FAIR Data/Variable Dictionary</div>
+<div style="flex-grow:1; margin-right:5px">Creating data/variable dictionary</div>
 <img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
@@ -798,7 +798,6 @@ No
 6. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary) -->
 <div class="section" id="main-fairification-objectives">
 <h2>Main FAIRification Objectives<a class="headerlink" href="#main-fairification-objectives" title="Permalink to this headline">¶</a></h2>
-<p><strong>Scope</strong>: Based on prior experience with other IMI projects, it is essential to ensure the provision of a comprehensive project specific <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code>.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> is a file (or collection of files) which unambiguously declares, defines and annotates all the variables collected in a project and associated to a dataset.</p>
 <p>Building a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span></code> means delivering a machine-actionable list of variables, thus greatly helping in assessing the <strong>interoperability potential</strong> of a dataset.</p>
 <p>Presenting a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span> <span class="pre">template</span></code> is also meant to be useful to deal with current IMI projects as well as guide future ones.</p>
@@ -814,7 +813,7 @@ No
 <hr class="docutils" />
 <div class="section" id="user-stories">
 <h2>User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
-<p>When working on data from previous IMI projects, it became apparent that a well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.</p>
+<p>A well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
