@@ -610,6 +610,7 @@ details table tbody {
 
 #authors table,
 details table{
+    display: table;
     border-left: 1px solid #fc7a4a;
 }
 
