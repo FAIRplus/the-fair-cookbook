@@ -1,5 +1,5 @@
 (fcb-interop-selectonto)=
-# Which vocabulary to use? 
+# Selecting termonologies and ontologies
 
 +++
 <br/>
@@ -12,13 +12,13 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist  
 :has_executable_code: nope
-:recipe_name: Which vocabulary to use?
+:recipe_name: Selecting terminologies and ontologies
 ```` 
 
 
 ## Main Objectives
 
-The main purpose of this recipe to provide guidances on how to select the most suitable semantic artefacts given a specific research context in general, and when it comes to IMI projects, their main themes, i.e. *risk assessment*, *clinical trial*, *drug discovery* or *fundamental research*.
+The main purpose of this recipe to provide guidances on how to select the most suitable semantic artefacts given a specific research context in general, and when it comes to life and biomedical sciences projects, their main themes, i.e. *risk assessment*, *clinical trial*, *drug discovery* or *fundamental research*.
 
 
 ## Graphical Overview
