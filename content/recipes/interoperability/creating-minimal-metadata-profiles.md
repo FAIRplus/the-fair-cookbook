@@ -1,5 +1,5 @@
 (fcb-interop-metadataprofile)=
-# Creating a Metadata Profile
+# Creating a metadata profile
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 20
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Creating a Metadata Profile
+:recipe_name: Creating a metadata profile
 ```` 
 
 
