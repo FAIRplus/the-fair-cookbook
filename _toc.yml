@@ -45,7 +45,7 @@
           - file: content/recipes/infrastructure/data-catalog-deployment
             title: Deploying the IMI data catalogue
           - file: content/recipes/infrastructure/vocabularies
-            title: Vocabularies management
+            title: Vocabulary management
             sections:      
               - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
                 title: Portals and look-up services
@@ -72,7 +72,7 @@
           - file: content/recipes/findability/seo/bioschemas-data-page
             title: Data page markup with Bioschemas
           - file: content/recipes/findability/seo/bioschemas-dataset
-            title: Data page markup with Schema.org
+            title: Dataset page markup with Schema.org
           - file: content/recipes/findability/seo/bioschemas-datacatalog
             title: Data catalogue markup
 
