@@ -1,5 +1,5 @@
 (fcb-help-tips)=
-# Recipe Tips and Tricks 
+# Tips and tricks 
 
 
 ## Main Objectives
