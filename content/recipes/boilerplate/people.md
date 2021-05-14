@@ -1,9 +1,9 @@
-# FAIR Cookbook Steering Council and Institutional Partners
+# Boards and contributors
 
 ----
 
  <p style='text-align: justify;'>
-The purpose of this document is to formalize the governance process that the FAIR Cookbook project will be relying on. This document clarifies how decisions are made and how the various elements of our community interact, including the relationship between open source collaborative development and work that may be funded by for-profit or non-profit entities.
+The work is coordinated by an Editorial Board, with Section Editors and a number of Contributors, who write and review recipes, or contribute to the work the recipes describe.
  </p>
  
 ----
@@ -22,7 +22,7 @@ The purpose of this document is to formalize the governance process that the FAI
 | <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> |
 
 
-### Table of Contributors:
+### Contributors:
 
 ```{dropdown} <div class="text--purple-dark" style="font-size:1.3rem">See the Cookbook Contributors</h4>
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation                     | Type                                                                              |                                                              Elixir Node                                                              |
