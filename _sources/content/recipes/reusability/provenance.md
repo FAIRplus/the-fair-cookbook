@@ -130,7 +130,7 @@ Example of a write edge in W3C PROV format:
 
 ## References
 
-```{bibliography}
+```{bibliography} ../interoperability/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 

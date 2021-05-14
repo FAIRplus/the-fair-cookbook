@@ -104,7 +104,7 @@ job done!
 
 When using HackMD, images can be inserting using the common toolbar and these are uploaded to imgur and the markdown looks like this:
 
-```Markdown
+```bash
 ![](https://i.imgur.com/yI8TRNM.png)
 ```
 

@@ -438,6 +438,11 @@
      4. Oncotrack - observational clinical cohort datasets
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. RESOLUTE - transcriptomics datasets
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -893,7 +898,7 @@ No
 <h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
 <p>Before diving into identifier mapping, it is important to understand the possible types of mappings that can be performed between entities.
 While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest.
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as “scientific lenses” (see <span id="id1">[<span>batchelor_scientic_nodate</span>]</span>).
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as “scientific lenses” (see <span id="id1">[<span>batchelor_scientific_nodate</span>]</span>).
 These lenses allow us to dynamically select which mappings to consider relevant and which to ignore.
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.</p>
 <p>Examples of types of mappings are:</p>
@@ -924,7 +929,7 @@ For example allowing or disallowing mappings between stereoisomers or between ge
 </div>
 <p>To satisfy the Findability criteria F1, organisations must create identifiers for the concepts within their database. This generates locally unique identifiers which can in turn be transformed into globally unique identifiers using namespaces for which the database organisation are the <code class="docutils literal notranslate"><span class="pre">authority</span></code>.</p>
 <p>Databases often contain data that exists in, or is closely related to, the content of other databases. For example, the genome database <a class="reference external" href="http://ensembl.org/">Ensembl</a> contains data about genes that are related to entries in databases such as HUGO Gene Nomenclature Committee (<a class="reference external" href="https://www.genenames.org/">https://www.genenames.org/</a>) or <a class="reference external" href="https://www.ncbi.nlm.nih.gov/gene/">NCBI Gene</a>; or a database about drugs, e.g. <a class="reference external" href="https://drugbank.com/">DrugBank</a>, often contains details of the chemical substance that forms the drug which are also contained in chemical databases such as <a class="reference external" href="https://www.ebi.ac.uk/chebi/">ChEBI</a> or <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>. This results in a large number of unique identifiers notionally for the same concept. This large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. However, the databases often contain <code class="docutils literal notranslate"><span class="pre">cross-reference</span></code> links to other databases to represent these <code class="docutils literal notranslate"><span class="pre">equivalences</span></code>.</p>
-<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <span id="id3">[<span>batchelor_scientic_nodate</span>]</span> for more details).</p>
+<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <span id="id3">[<span>batchelor_scientific_nodate</span>]</span> for more details).</p>
 <p>While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the <a class="reference external" href="https://www.proteinatlas.org/">Human Protein Atlas</a> database reuses <a class="reference external" href="https://www.ensembl.org/">Ensembl</a> identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data is already connected through the common identifier. However, this means that the Human Protein Atlas must ensure that their definition of the concept is exactly aligned with the Ensembl identifier for <strong>all</strong> application uses.</p>
 </div>
 <div class="section" id="identifier-equivalences">
@@ -948,7 +953,7 @@ We will discuss the most widely used formats and demonstrate them with a sample 
 <h3>Using Text File<a class="headerlink" href="#using-text-file" title="Permalink to this headline">¶</a></h3>
 <p>The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the verison of the datasets that were linked.</p>
 <p>The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.</p>
-<div class="highlight-tsv notranslate"><div class="highlight"><pre><span></span>ChEMBL_Target_Component	UniProt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ChEMBL_Target_Component	UniProt
 CHEMBL_TC_4803	A0ZX81
 CHEMBL_TC_2584	A1ZA98 
 </pre></div>
@@ -958,7 +963,7 @@ CHEMBL_TC_2584	A1ZA98
 <h3>Using Simple Standard for Sharing Ontology Mappings (SSSOM) formatted text files<a class="headerlink" href="#using-simple-standard-for-sharing-ontology-mappings-sssom-formatted-text-files" title="Permalink to this headline">¶</a></h3>
 <p>The OBOFoundry Simple Standard for Sharing Ontology Mappings (<a class="reference external" href="https://github.com/OBOFoundry/SSSOM">SSSOM</a>) is a newly emerging standard for exchanging mapping information with minimal metadata, although the minimal model is extensible. It consists of a tab-separated-value file (TSV) with each row representing a mapping. The columns in the file have been defined by the community (<a class="reference external" href="https://github.com/OBOFoundry/SSSOM/blob/master/SSSOM.md">latest version</a>) and provide the mapping together with its provenance. At present, four columns are required (<code class="docutils literal notranslate"><span class="pre">subject_id</span></code>, <code class="docutils literal notranslate"><span class="pre">predicate_id</span></code>, <code class="docutils literal notranslate"><span class="pre">object_id</span></code>, <code class="docutils literal notranslate"><span class="pre">match_type</span></code>) with optional columns to provide more provenance to support the mapping, e.g. licensing information, author information, creation method. The use of CURIEs within the TSV is strongly encouraged.</p>
 <p>The following TSV shows our example data as a mapping file using the minimal columns (correct as of November 2020). The information provided is less than the minimal VoID model above.</p>
-<div class="highlight-tsv notranslate"><div class="highlight"><pre><span></span>subject_id  predicate_id  object_id match_type
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>subject_id  predicate_id  object_id match_type
 chembl:CHEMBL_TC_4803 skos:exactMatch uniprot:A0ZX81  sio:database-cross-reference
 chembl:CHEMBL_TC_2584 skos:exactMatch uniprot:A1ZA98  sio:database-cross-reference
 </pre></div>
@@ -1070,15 +1075,18 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
 <ul class="simple">
 <li><p><a class="reference internal" href="../findability/identifiers.html#fcb-find-identifiers"><span class="std std-ref">Unique, persistent identifiers</span></a></p></li>
 <li><p><a class="reference external" href="https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/">The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca</a></p></li>
-<li><p><span class="xref myst">Identifier Resolution Services</span></p></li>
-<li><p><span class="xref std std-ref">fcb-interop-bridgedb</span></p></li>
+<li><p><a class="reference internal" href="bridgedb-recipe.html#fcb-bridgedb"><span class="std std-ref">Identifier mapping with BridgeDB</span></a></p></li>
 <li><p><a class="reference external" href="http://www.openphacts.org/specs/datadesc/">Dataset Descriptions for the Open Pharmacological Space</a></p></li>
 </ul>
 </div>
+<!-- 
+    > * [Identifier Resolution Services](./findability/id-resolution.html) 
+-->
 </div>
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<!-- idmapping/idmapping.bib -->
 <span class="target" id="id6"></span></div>
 <hr class="docutils" />
 <div class="section" id="authors">

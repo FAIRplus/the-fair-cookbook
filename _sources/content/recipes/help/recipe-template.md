@@ -50,8 +50,6 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 ```` 
 
 
----
-
 ## Main Objectives
 
 The main purpose of this recipe is:

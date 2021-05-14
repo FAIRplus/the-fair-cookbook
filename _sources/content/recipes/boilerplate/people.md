@@ -1,5 +1,6 @@
 # Boards and contributors
 
++++
 ----
 
  <p style='text-align: justify;'>
@@ -9,7 +10,7 @@ The work is coordinated by an Editorial Board, with Section Editors and a number
 ----
 
 
-### Editorial Board:
+## Editorial Board:
 
 ```{dropdown} <div class="text--purple-dark" style="font-size:1.3rem">See the Board</h4>
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              |
@@ -22,7 +23,7 @@ The work is coordinated by an Editorial Board, with Section Editors and a number
 | <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> |
 
 
-### Contributors:
+## Contributors:
 
 ```{dropdown} <div class="text--purple-dark" style="font-size:1.3rem">See the Cookbook Contributors</h4>
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation                     | Type                                                                              |                                                              Elixir Node                                                              |

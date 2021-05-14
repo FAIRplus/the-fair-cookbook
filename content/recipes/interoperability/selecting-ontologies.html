@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Selecting termonologies and ontologies</title>
+    <title>4. Selecting terminologies and ontologies</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -71,8 +71,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Selecting termonologies and ontologies" />
-<meta property="og:description" content="Selecting termonologies and ontologies    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://biosc" />
+<meta property="og:title"       content="Selecting terminologies and ontologies" />
+<meta property="og:description" content="Selecting terminologies and ontologies    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://biosc" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -438,6 +438,11 @@
      4. Oncotrack - observational clinical cohort datasets
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. RESOLUTE - transcriptomics datasets
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -753,8 +758,8 @@
         
               <div>
                 
-  <div class="section" id="selecting-termonologies-and-ontologies">
-<span id="fcb-interop-selectonto"></span><h1><span class="section-number">4. </span>Selecting termonologies and ontologies<a class="headerlink" href="#selecting-termonologies-and-ontologies" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="selecting-terminologies-and-ontologies">
+<span id="fcb-interop-selectonto"></span><h1><span class="section-number">4. </span>Selecting terminologies and ontologies<a class="headerlink" href="#selecting-terminologies-and-ontologies" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <hr class="docutils" />
@@ -848,7 +853,7 @@ No
 <div class="section" id="context-is-everything">
 <h2>Context is everything<a class="headerlink" href="#context-is-everything" title="Permalink to this headline">¶</a></h2>
 <p>The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply a consequence of the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.</p>
-<p>Here, we present the three most common scenarios in biomedical research:</p>
+<p>Here, we present the three most common scenarios in biomedical research, based on experience garnered during IMI eTRIKS <span id="id1">[<span>philippe_rocca_serra_2016_50825</span>]</span> :</p>
 <div class="section" id="clinical-trial-data">
 <h3>Clinical Trial Data<a class="headerlink" href="#clinical-trial-data" title="Permalink to this headline">¶</a></h3>
 <p>Operating in the field of Clinical Trials means that datasets are generated during <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents, in order to gain insights in terms of benefits in patient outcomes.
@@ -935,7 +940,7 @@ In this specific context, one model and associated set of standards has been par
 </tr>
 </tbody>
 </table>
-<p>For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> <a class="reference external" href="https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html">in the <strong><code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">of</span> <span class="pre">OHDSI</span></code></strong></a></p>
+<p>For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> <a class="reference external" href="https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html">in the <strong><code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">of</span> <span class="pre">OHDSI</span></code></strong></a> <span id="id2">[<span>pmid27274072</span>]</span></p>
 </div>
 <div class="section" id="basic-research-context">
 <h3>Basic research context<a class="headerlink" href="#basic-research-context" title="Permalink to this headline">¶</a></h3>
@@ -948,7 +953,7 @@ to bear in mind when selecting semantic resources is to assess whether or not <c
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Tip</p>
-<p><strong><a class="reference external" href="https://fairsharing.org">The FAIRsharing registry</a></strong> is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.</p>
+<p><strong><a class="reference external" href="https://fairsharing.org">The FAIRsharing registry</a></strong> <span id="id3">[<span>pmid30940948</span>]</span> is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.</p>
 </div>
 </div>
 </div>
@@ -965,7 +970,7 @@ to bear in mind when selecting semantic resources is to assess whether or not <c
 </div>
 <div class="section" id="selection-criteria">
 <h3>Selection Criteria<a class="headerlink" href="#selection-criteria" title="Permalink to this headline">¶</a></h3>
-<p>A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as <a class="reference external" href="https://doi.org/10.1136/amiajnl-2013-002066">“A sea of standards for omics data: sink or swim?”</a> and <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1004743">“Ten Simple Rules for Selection a Bio-ontology”</a> providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.</p>
+<p>A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as <a class="reference external" href="https://doi.org/10.1136/amiajnl-2013-002066">“A sea of standards for omics data: sink or swim?”</a> <span id="id4">[<span>pmid24076747</span>]</span> and <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1004743">“Ten Simple Rules for Selection a Bio-ontology”</a> } <span id="id5">[<span>pmid26867217</span>]</span> providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.</p>
 <ul class="simple">
 <li><p><strong>Exclusion criteria</strong>:</p>
 <ul>
@@ -1210,7 +1215,7 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </div>
 <div class="section" id="cellular-entities">
 <h3>Cellular entities<a class="headerlink" href="#cellular-entities" title="Permalink to this headline">¶</a></h3>
-<p>Following on through our review of semantic resources by granularity levels, this section details a number of reference resources which provide coverage for the describing <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">types</span></code>, <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">lines</span></code> and <code class="docutils literal notranslate"><span class="pre">cellular</span> <span class="pre">phenotypes</span></code>.</p>
+<p>Following on through our review of semantic resources by granularity levels, this section details a number of reference resources which provide coverage for the describing <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">types</span></code>, <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">lines</span></code> <span id="id6">[<span>pmid29805321</span>]</span> and <code class="docutils literal notranslate"><span class="pre">cellular</span> <span class="pre">phenotypes</span></code>.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Scope</p></th>
@@ -1445,7 +1450,7 @@ Some of the resources are specialized semantic artefacts developed to support th
 <li><p><code class="docutils literal notranslate"><span class="pre">entailments</span></code>, i.e. detection of logical consequences resulting from axiomatics</p></li>
 </ul>
 <p>This is particularly important when processing billions of facts expressed as RDF statements.</p>
-<p>One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more <em>in-depth</em> review of such topics, the reader is invited to consults the following work <a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46">by Smith et al</a>.</p>
+<p>One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more <em>in-depth</em> review of such topics, the reader is invited to consults the following work <span id="id7">[<span>pmid15892874</span>]</span> <!--[by Smith et al](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46)-->.</p>
 <p>In the field of Biology and Biomedicine, the <a class="reference external" href="http://obofoundry.org">OBO Foundry</a> coordinates the development of interoperable ontologies. At the core of this interoperation lies the <strong><a class="reference external" href="http://www.obofoundry.org/ontology/ro.html">Relation Ontology</a></strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -1533,13 +1538,20 @@ equivalentClass :
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p>Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). <a class="reference external" href="https://doi.org/10.1186/gb-2005-6-5-r46">https://doi.org/10.1186/gb-2005-6-5-r46</a></p>
-<p>Rocca-Serra P, Bratfalean D, Richard F, Marshall C, Romacker M., Auffray C, ., … on the behalf of the eTRIKS consortium, . (2016, April 25). eTRIKS Standards Starter Pack Release 1.1 April 2016. Zenodo. <a class="reference external" href="http://doi.org/10.5281/zenodo.50825">http://doi.org/10.5281/zenodo.50825</a></p>
-<p>Malone J, Stevens R, Jupp S, Hancocks T, Parkinson H, Brooksbank C. Ten Simple Rules for Selecting a Bio-ontology. PLoS Comput Biol. 2016;12(2):e1004743. Published 2016 Feb 11. <a class="reference external" href="http://doi.org/10.1371/journal.pcbi.1004743">http://doi.org/10.1371/journal.pcbi.1004743</a></p>
-<p>Bairoch A. The Cellosaurus, a cell line knowledge resource. J. Biomol. Tech. (2018) 29:25-38. <a class="reference external" href="http://doi.org/10.7171/jbt.18-2902-002">http://doi.org/10.7171/jbt.18-2902-002</a>.</p>
-<p>Sansone, S.-A., McQuilton, P., Rocca-Serra, P., Gonzalez-Beltran, A., Izzo, M., Lister, A.L. and Thurston, M. (2019) FAIRsharing as a community approach to standards, repositories and policies. Nature biotechnology, 37, 358: <a class="reference external" href="http://doi.org/10.1038/s41587-019-0080-8">http://doi.org/10.1038/s41587-019-0080-8</a>.</p>
-<p>Hripcsak, G., Ryan, P. B., Duke, J. D., Shah, N. H., Park, R. W., Huser, V., Suchard, M. A., Schuemie, M. J., DeFalco, F. J., Perotte, A., Banda, J. M., Reich, C. G., Schilling, L. M., Matheny, M. E., Meeker, D., Pratt, N., &amp; Madigan, D. (2016). Characterizing treatment pathways at scale using the OHDSI network. Proceedings of the National Academy of Sciences of the United States of America, 113(27), 7329–7336. <a class="reference external" href="https://doi.org/10.1073/pnas.1510502113">https://doi.org/10.1073/pnas.1510502113</a></p>
-<p>Hripcsak, George et al. “Observational Health Data Sciences and Informatics (OHDSI): Opportunities for Observational Researchers.” Studies in health technology and informatics vol. 216 (2015): 574-8.</p>
+<span class="target" id="id8"></span><!-- Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). https://doi.org/10.1186/gb-2005-6-5-r46
+
+Rocca-Serra P, Bratfalean D, Richard F, Marshall C, Romacker M., Auffray C, ., … on the behalf of the eTRIKS consortium, . (2016, April 25). eTRIKS Standards Starter Pack Release 1.1 April 2016. Zenodo. http://doi.org/10.5281/zenodo.50825
+
+Malone J, Stevens R, Jupp S, Hancocks T, Parkinson H, Brooksbank C. Ten Simple Rules for Selecting a Bio-ontology. PLoS Comput Biol. 2016;12(2):e1004743. Published 2016 Feb 11. http://doi.org/10.1371/journal.pcbi.1004743
+
+Bairoch A. The Cellosaurus, a cell line knowledge resource. J. Biomol. Tech. (2018) 29:25-38. http://doi.org/10.7171/jbt.18-2902-002.
+
+Sansone, S.-A., McQuilton, P., Rocca-Serra, P., Gonzalez-Beltran, A., Izzo, M., Lister, A.L. and Thurston, M. (2019) FAIRsharing as a community approach to standards, repositories and policies. Nature biotechnology, 37, 358: http://doi.org/10.1038/s41587-019-0080-8.
+
+Hripcsak, G., Ryan, P. B., Duke, J. D., Shah, N. H., Park, R. W., Huser, V., Suchard, M. A., Schuemie, M. J., DeFalco, F. J., Perotte, A., Banda, J. M., Reich, C. G., Schilling, L. M., Matheny, M. E., Meeker, D., Pratt, N., & Madigan, D. (2016). Characterizing treatment pathways at scale using the OHDSI network. Proceedings of the National Academy of Sciences of the United States of America, 113(27), 7329–7336. https://doi.org/10.1073/pnas.1510502113
+
+Hripcsak, George et al. “Observational Health Data Sciences and Informatics (OHDSI): Opportunities for Observational Researchers.” Studies in health technology and informatics vol. 216 (2015): 574-8.
+ -->
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">

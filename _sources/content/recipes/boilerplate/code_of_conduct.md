@@ -1,6 +1,6 @@
 (fcb-misc-coc)=
 # Code of conduct
-
++++
 ---
 
 FAIR Cookbook is an engaged and respectful community made up of people

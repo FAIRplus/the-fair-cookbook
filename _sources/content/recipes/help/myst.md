@@ -1,7 +1,6 @@
 (fcb-myst-cheatsheet)=
-
 # MyST Markdown cheatsheet
-
++++
 ---
 
 Credits: This page is copied from the [Jupyterbook Myst Cheatsheet](https://jupyterbook.org/reference/cheatsheet.html)
@@ -191,9 +190,9 @@ Another alternative is to use Markdown syntax:
     [text](relative_path)
     ```
   - ```md
-    [PDF documentation](../advanced/pdf)
+    [PDF documentation](./images/C-3PO_droid.png)
     ```
-  - [PDF documentation](../advanced/pdf)
+  - [PDF documentation](./images/C-3PO_droid.png)
 * - ```md
     [text](target "title")
     ```
@@ -1154,8 +1153,8 @@ See [Footnotes](https://myst-parser.readthedocs.io/en/latest/using/syntax.html#s
 ## Citations
 
 ```{note}
-Make sure you have a reference bibtex file. You can create one by running `touch references.bib`
-or view a {download}`references.bib <../references.bib>` example.
+Make sure you have a reference bibtex file. You can create one by running `touch fairbookreferences.bib`
+or view a {download}`references.bib <./bibref/fairbookreferences.bib>` example.
 ```
 
 ``````{list-table}
@@ -1170,10 +1169,10 @@ or view a {download}`references.bib <../references.bib>` example.
     ```
   - ```md
     This example generates the following
-    citation {cite}`perez2011python`.
+    citation {cite}`Gu2020`.
     ```
   - This example generates the following
-    citation {cite}`perez2011python`.
+    citation {cite}`Gu2020`.
 ``````
 
 To include a list of citations mentioned in the document, introduce the `bibliography` directive

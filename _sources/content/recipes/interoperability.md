@@ -1,6 +1,7 @@
 (fcb-interoperability)=
 # Interoperability
 
++++
 ---
 
 This chapter is dedicated to FAIRification processes which focus on improving interoperability.

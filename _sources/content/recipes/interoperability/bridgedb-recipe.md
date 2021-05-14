@@ -305,7 +305,7 @@ An example of a mapping via BridgeDB. You may notice that despite the 1-to-1 rel
 
 
 ```{note} 
-This many-to-many relationship stems from different *scientific lenses* in the data sources. You can read more about these in {footcite}`batchelor_scientific_nodate`. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to many-to-many relationships.
+This many-to-many relationship stems from different *scientific lenses* in the data sources. You can read more about these in {cite}`batchelor_scientific_nodate`. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to many-to-many relationships.
 ```
 
 #### R Package
@@ -381,9 +381,12 @@ These are aspects of information provenance which
 
 ## References
 
-```{footbibliography} 
-```
+<!-- ```{footbibliography} 
+``` -->
 
+```{bibliography} bibliography-identifier-mapping.bib
+:filter: docname in docnames
+```
 ___
 
 ## Authors

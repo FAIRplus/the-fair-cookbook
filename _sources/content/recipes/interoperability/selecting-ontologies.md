@@ -1,5 +1,5 @@
 (fcb-interop-selectonto)=
-# Selecting termonologies and ontologies
+# Selecting terminologies and ontologies
 
 +++
 <br/>
@@ -52,7 +52,7 @@ ___
 
 The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply a consequence of the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
 
-Here, we present the three most common scenarios in biomedical research:
+Here, we present the three most common scenarios in biomedical research, based on experience garnered during IMI eTRIKS {cite}`philippe_rocca_serra_2016_50825` :
 
 ### Clinical Trial Data
 
@@ -92,7 +92,7 @@ In this specific context, one model and associated set of standards has been par
 |RxNORM|drugs|Bioportal|
 
 
-For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the `controlled terminology` [in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
+For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the `controlled terminology` [in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html) {cite}`pmid27274072`
 
 
 ### Basic research context
@@ -108,7 +108,7 @@ to bear in mind when selecting semantic resources is to assess whether or not `d
 
 ```{admonition} Tip
 :class: tip
- **[The FAIRsharing registry](https://fairsharing.org)** is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
+ **[The FAIRsharing registry](https://fairsharing.org)** {cite}`pmid30940948` is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
 ````
 
 ## Selecting Terminologies 
@@ -128,7 +128,7 @@ to bear in mind when selecting semantic resources is to assess whether or not `d
 
 ### Selection Criteria
 
-A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as ["A sea of standards for omics data: sink or swim?"](https://doi.org/10.1136/amiajnl-2013-002066) and ["Ten Simple Rules for Selection a Bio-ontology"](https://doi.org/10.1371/journal.pcbi.1004743) providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as ["A sea of standards for omics data: sink or swim?"](https://doi.org/10.1136/amiajnl-2013-002066) {cite}`pmid24076747` and ["Ten Simple Rules for Selection a Bio-ontology"](https://doi.org/10.1371/journal.pcbi.1004743) } {cite}`pmid26867217` providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.
 
 
 *   **Exclusion criteria**:
@@ -219,7 +219,7 @@ There is a wide range of ontologies available for specific diseases or disease t
 
 ### Cellular entities
 
-Following on through our review of semantic resources by granularity levels, this section details a number of reference resources which provide coverage for the describing `cell types`, `cell lines` and `cellular phenotypes`.
+Following on through our review of semantic resources by granularity levels, this section details a number of reference resources which provide coverage for the describing `cell types`, `cell lines` {cite}`pmid29805321` and `cellular phenotypes`.
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
@@ -294,7 +294,7 @@ Also known as OWL.Properties, their importance may be overlooked by `data scient
 
 This is particularly important when processing billions of facts expressed as RDF statements. 
 
-One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more *in-depth* review of such topics, the reader is invited to consults the following work [by Smith et al](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46).
+One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more *in-depth* review of such topics, the reader is invited to consults the following work {cite}`pmid15892874` <!--[by Smith et al](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46)-->.
 
 In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org) coordinates the development of interoperable ontologies. At the core of this interoperation lies the **[Relation Ontology](http://www.obofoundry.org/ontology/ro.html)**
 
@@ -339,7 +339,11 @@ ___
 
 ## References
 
-Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). https://doi.org/10.1186/gb-2005-6-5-r46
+```{bibliography} bibliography-identifier-mapping.bib
+:filter: docname in docnames
+```
+
+<!-- Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). https://doi.org/10.1186/gb-2005-6-5-r46
 
 Rocca-Serra P, Bratfalean D, Richard F, Marshall C, Romacker M., Auffray C, ., … on the behalf of the eTRIKS consortium, . (2016, April 25). eTRIKS Standards Starter Pack Release 1.1 April 2016. Zenodo. http://doi.org/10.5281/zenodo.50825
 
@@ -352,7 +356,7 @@ Sansone, S.-A., McQuilton, P., Rocca-Serra, P., Gonzalez-Beltran, A., Izzo, M., 
 Hripcsak, G., Ryan, P. B., Duke, J. D., Shah, N. H., Park, R. W., Huser, V., Suchard, M. A., Schuemie, M. J., DeFalco, F. J., Perotte, A., Banda, J. M., Reich, C. G., Schilling, L. M., Matheny, M. E., Meeker, D., Pratt, N., & Madigan, D. (2016). Characterizing treatment pathways at scale using the OHDSI network. Proceedings of the National Academy of Sciences of the United States of America, 113(27), 7329–7336. https://doi.org/10.1073/pnas.1510502113
 
 Hripcsak, George et al. “Observational Health Data Sciences and Informatics (OHDSI): Opportunities for Observational Researchers.” Studies in health technology and informatics vol. 216 (2015): 574-8.
-
+ -->
 
 
 ___

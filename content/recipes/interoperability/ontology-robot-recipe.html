@@ -438,6 +438,11 @@
      4. Oncotrack - observational clinical cohort datasets
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. RESOLUTE - transcriptomics datasets
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -871,7 +876,7 @@ Yes
 <div class="section" id="main-objectives">
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The main purpose of this recipe is building an application ontology from source ontologies using <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> via a sustainable dynamic pipeline to allow seamless integration of source ontology updates.</p>
+<div><p>The main purpose of this recipe is building an application ontology from source ontologies using <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> <span id="id1">[<span>pmid31357927</span>]</span> via a sustainable dynamic pipeline to allow seamless integration of source ontology updates <span id="id2">[<span>Arp2015</span>]</span>.</p>
 </div></blockquote>
 <p>An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> synchronized with the <code class="docutils literal notranslate"><span class="pre">reference</span> <span class="pre">ontologies</span></code> that imports are made from.  We aim to document how a certain level of automation can be achieved.</p>
 <p><a class="reference external" href="http://robot.obolibrary.org/">ROBOT</a> is an open source tool for ontology development. It supports ontology editing, ontology annotation, ontology format conversion, and other functions. It runs on the Java Virtual Machine (JVM) and can be used through command line tools on Windows, macOS and Linux.</p>
@@ -1546,18 +1551,16 @@ robot convert <span class="se">\</span>
 </div>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">How to establish a minimal metadata profile?</span></a></p></li>
-<li><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">How to submit/request terms to an ontology ?</span></a></p></li>
+<li><p><a class="reference internal" href="creating-minimal-metadata-profiles.html#fcb-interop-metadataprofile"><span class="std std-ref">Creating a metadata profile</span></a>  <!-- [How to establish a minimal metadata profile?]() --></p></li>
+<li><p><a class="reference internal" href="ontology-new-term-request-recipe.html#fcb-interop-ontorequest"><span class="std std-ref">Requesting new terms</span></a> <!-- [How to submit/request terms to an ontology ?]() --></p></li>
 </ul>
 </div></blockquote>
 </div>
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. <a class="reference external" href="https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D"><em>ROBOT: A tool for automating ontology workflows</em></a>. BMC Bioinformatics, vol. 20, July 2019</p></li>
-<li><p>Arp, Robert, Barry Smith, and Andrew D. Spear. <em>Building ontologies with basic formal ontology</em>. Mit Press, 2015.</p></li>
-</ul>
+<span class="target" id="id3"></span><!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
+- Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
 </div>
 <hr class="docutils" />
 <div class="section" id="supplementary-material">

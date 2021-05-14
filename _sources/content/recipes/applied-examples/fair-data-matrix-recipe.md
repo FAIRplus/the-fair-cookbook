@@ -15,7 +15,6 @@
 :recipe_name: Making omics data matrix FAIR
 ```` 
 
-___
 
 ## Main Objectives
 

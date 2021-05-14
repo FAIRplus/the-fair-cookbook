@@ -12,9 +12,6 @@
 :has_executable_code: nope
 :recipe_name: Creating data/variable dictionary
 ```` 
-___
-
-
 
 <!-- # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
@@ -176,7 +173,6 @@ Depending on the persistence system, how this needs to be specified varies. We p
 "missingValues": ["NaN", "-"]
 ```
 
-
 #### Remember to provide descriptive metadata for the data dictionary itself
 
 - filename (with extension)
@@ -188,15 +184,13 @@ Depending on the persistence system, how this needs to be specified varies. We p
 #### Remember to provide the data dictionary in an open syntax
 
 
----
-
 ## Data Dictionary Mapping in FAIRplus
 
 While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary.
 The [FAIRplus project](https://fairplus-project.eu/) is in the process of working the [Innovative Medicine Initiative](https://www.imi.europa.eu/) [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
 
 ---
-## Conclusion:
+## Conclusion
 
 This recipe covered an essential output of any research program, **namely the documentation of all variables recorded about study subjects and key metadata descriptors used in subsequence analysis in the form of a `data dictionary`**.
 The creation and provision of such a `data dictionary` should be a central component of any `data management plan` and should be one of the key deliverable of any IMI project.
@@ -209,9 +203,12 @@ Why? Simply because if affords several key data management processes to take pla
 ### What to read next?
 
 > - {ref}`fcb-interop-selectonto`
-> - {ref}`fcb-interop-ontomapping` (*in preparation*)
 > - {ref}`fcb-interop-etl` (*in preparation*)
 > - [Key issues to be aware of when planning [Extract-Transform-Load processes]()
+
+<!--
+ >- {ref}`fcb-interop-ontomapping` (*in preparation*)
+  -->
 
 
 ___

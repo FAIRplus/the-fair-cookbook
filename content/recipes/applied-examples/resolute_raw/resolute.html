@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReSOLUTE - transcriptomics datasets</title>
+    <title>5. ReSOLUTE - transcriptomics datasets</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -61,6 +61,8 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Community" href="../../community.html" />
+    <link rel="prev" title="4. Oncotrack - observational clinical cohort datasets" href="../oncotrack_raw/rawRecipe-oncotrack.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -131,7 +133,7 @@
   RECIPES
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../infrastructure.html">
    Infrastructure for FAIR
@@ -387,11 +389,11 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../../applied-examples.html">
    Applied examples
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../fair-data-matrix-recipe.html">
      1. Making omics data matrices FAIR
@@ -434,6 +436,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
      4. Oncotrack - observational clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     5. RESOLUTE - transcriptomics datasets
     </a>
    </li>
   </ul>
@@ -666,7 +673,7 @@
               <div>
                 
   <div class="section" id="resolute-transcriptomics-datasets">
-<span id="fcb-resolute"></span><h1>ReSOLUTE - transcriptomics datasets<a class="headerlink" href="#resolute-transcriptomics-datasets" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-resolute"></span><h1><span class="section-number">5. </span>ReSOLUTE - transcriptomics datasets<a class="headerlink" href="#resolute-transcriptomics-datasets" title="Permalink to this headline">¶</a></h1>
 <!--
 TODO clarify authors
 TODO make referenced Google Drive documents available
@@ -779,7 +786,7 @@ No
 <p>One limitation of the FAIRsharing MINSEQE schema is that it is incompatible to the submission standards of popular transcriptomics database, like the European Nucleotide Archive (ENA). Transcriptomics data following the FAIRsharing MINSEQE standard must be modified to be submitted.</p>
 <div class="figure align-default" id="resolute-figure1">
 <img alt="A visualization of the entities within the proposed transcriptomics schema." src="../../../../_images/resolute.md-figure1.png" />
-<p class="caption"><span class="caption-text">A visualization of the entities within the proposed transcriptomics schema.</span><a class="headerlink" href="#resolute-figure1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">A visualization of the entities within the proposed transcriptomics schema.</span><a class="headerlink" href="#resolute-figure1" title="Permalink to this image">¶</a></p>
 </div>
 <p>To solve this problem, we proposed a <a class="reference external" href="https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema">transcriptomics schema</a> which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks ({numref}´resolute-figure1´). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. <em>(Note: This schema is still actively updated. Feedback welcomed)</em></p>
 </div>
@@ -879,6 +886,8 @@ We have updated the scoring for the transcriptomics data to this new version (v0
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="../oncotrack_raw/rawRecipe-oncotrack.html" title="previous page"><span class="section-number">4. </span>Oncotrack - observational clinical cohort datasets</a>
+    <a class='right-next' id="next-link" href="../../community.html" title="next page">Community</a>
 
         </div>
         

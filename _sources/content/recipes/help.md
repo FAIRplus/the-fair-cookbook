@@ -1,6 +1,7 @@
 (fcb-help)=
 # Contribute
 
++++
 ---
 
 The FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. This section is meant to provide basic information to users looking to contribute content to the `FAIR Cookbook`.

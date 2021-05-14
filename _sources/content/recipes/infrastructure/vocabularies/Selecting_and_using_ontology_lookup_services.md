@@ -76,7 +76,7 @@ This section provides guidelines and suggestions on how to select and leverage a
 
     The support of an active community of developers and users is a key aspect to take into account when choosing an ontology lookup service. This could be quantified by evaluating several factors of an ontology lookup service including: (i) availability of mailing or support lists; (ii) for open-source projects, using metrics such as the star-rating, the number of forks and followers and the frequency of commits of the project on the code-sharing platform used (e.g. GitHub); (iii) size of the community of users of the ontology lookup service (e.g. how many followers on social media accounts, how many clients advertised on the Website).
 
-## 3. **Key Selection Criteria**
+## 3. Key Selection Criteria
 
 The above questions have highlighted 20 factors which should be taken into account when choosing a service. These factors can be categorised into 3 groups; **ontology information, functionality** and **interfaces**, and include;
 
