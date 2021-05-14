@@ -1,6 +1,6 @@
 (fcb-interop-etl)=
 
-# Tools for Data Extraction, Transformation, and Loading (ETL)
+# Extraction, transformation, and loading process
 
 ````{panels_fairplus}
 :identifier_text: http://w3id.org/faircookbook/FCB_TBA
@@ -10,7 +10,7 @@
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: Tools for Data Extraction, Transformation, and Loading (ETL)
+:recipe_name: Extraction, transformation, and loading process
 ```` 
 
 
