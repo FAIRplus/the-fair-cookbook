@@ -1,5 +1,5 @@
 (fcb-find-bs-catalog)=
-# Findability: Data Catalog Markup
+# Data catalogue markup
 +++
 <br/>
 
@@ -11,7 +11,7 @@
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist 
 :has_executable_code: nope
-:recipe_name: Findability, Data Catalog Markup
+:recipe_name: Data catalogue markup
 ```` 
 
 ___
