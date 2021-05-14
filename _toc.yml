@@ -63,9 +63,9 @@
       - file: content/recipes/infrastructure/chemical-identities
         title: InChI and SMILES identifiers for chemical structures
       - file: content/recipes/findability/identifiers-minids
-        title: Minting identifiers
+        title: Minting identifiers with Minid
       - file: content/recipes/findability/zenodo-deposition
-        title: Zenodo as generic repository system
+        title: Depositing in Zenodo generic repository
       - file: content/recipes/findability/seo
         title: Search engine optimization
         sections:
@@ -82,7 +82,7 @@
       sections:
         # - file: content/recipes/accessibility/anonymizing-patient-data
         - file: content/recipes/accessibility/sftp
-          title: Transfering data with SFTP
+          title: Transferring data with SFTP
         - file: content/recipes/accessibility/aspera
           title: Downloading data with Aspera
 
@@ -101,7 +101,7 @@
           - file: content/recipes/interoperability/ontology-why-using-them    
             title: Introduction to terminologies and ontologies
           - file: content/recipes/interoperability/selecting-ontologies
-            title: Selecting terminologies
+            title: Selecting terminologies and ontologies
           - file: content/recipes/interoperability/ontology-new-term-request-recipe
             title: Requesting new terms
           - file: content/recipes/interoperability/ontology-operations-tools
@@ -134,7 +134,7 @@
         - file: content/recipes/reusability/ATI-licensing
           title: Licensing
         - file: content/recipes/reusability/ATI_licensing_software
-          title: Software license
+          title: Software licenses
         - file: content/recipes/reusability/ATI_licensing_data
           title: Data licenses
         # - file: content/recipes/reusability/license-selection
@@ -149,7 +149,7 @@
       numbered: 1
       sections:
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
-          title: Making omics data matrices FAIRer
+          title: Making omics data matrices FAIR
           # numbered: false
           sections:
             - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
@@ -164,7 +164,7 @@
           title: eTox - omics datasets
         - file: content/recipes/applied-examples/nd4bb
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
-          title: Oncotrack - observational clinical cohort dataset
+          title: Oncotrack - observational clinical cohort datasets
         - file: content/recipes/applied-examples/resolute_raw/rawRecipe_resolute
           title: RESOLUTE - transcriptomics datasets
 
