@@ -282,7 +282,7 @@ img.avatar-style {
 #authors table,
 #contributors table ,
 details table {
-    display: block !important
+    display: table !important
 }
 
 details table tr p:not(:first-child),
@@ -374,6 +374,10 @@ details table .fab {
 #authors table th a,
 details table th a {
     color: white !important;
+}
+
+div.firstCol div.d-block {
+    text-align: center;
 }
 
 
@@ -753,6 +757,7 @@ details table tr th {
     color: white;
     background: #fc7a4a;
     border-bottom: 0 !important;
+    min-width: 100px;
 }
 
 .text--primary {
