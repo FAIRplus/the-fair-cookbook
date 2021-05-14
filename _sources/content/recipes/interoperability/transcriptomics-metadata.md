@@ -1,5 +1,5 @@
 (fcb-interop-txmetadata)=
-# Establishing a Metadata Profile for Transcriptomics
+# Metadata profile for transcriptomics
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist  
 :has_executable_code: nope
-:recipe_name: Establishing a Metadata Profile for Transcriptomics
+:recipe_name: Metadata profile for transcriptomics
 ```` 
 
 ## Main Objectives:
