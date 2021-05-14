@@ -3,22 +3,18 @@
 
 ---
 
-This chapter is dedicated to FAIRification activities which focus on improving the reusability of dataset and services.
+Optimise the reuse of data is the ultimate goal, and to achieve this, metadata and data should be well-described so that they can be used, replicated and combined in different settings.
 
-We will therefore cover the following topics, which are copied verbatim from the Turing way Book of Data Science
+For data objects to be reusable additional criteria are:
+- Data objects should be compliant with principles of findability, accessibility and interoperability.
+- (Meta) data should be sufficiently well-described and rich that it can be automatically (with minimal human effort) linked or integrated, with relevant data sources.
+- Published data objects should refer to their sources with rich enough metadata and provenance to enable proper citation.
 
-1. General aspects about licensing
-2. Licensing of software
-3. Licensing of data
-4. Condition of Access and Condition of Use
-5. Expression of Consent information
+This chapter is dedicated to the `standards`, `licenses`, `practices` and other `resources` necessary to improving the reusability of data.
 
-In addition, specific to the FAIR cookbook, 
+Browse existing recipes, but bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner.
 
-4. Provenance Information
-5. Key data organising principles 
-6. Data integration: Mash up challenges *(in preparation)*
-7. Data Readiness and Machine Learning *(in preparation)*
+If you want to contribute follow the {ref}`fcb-help` provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
 ---
 

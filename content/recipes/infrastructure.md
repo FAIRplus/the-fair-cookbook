@@ -3,16 +3,11 @@
 
 ---
 
-This Chapter is dedicated to the infrastructure requirement for delivering FAIR Data and Services.
+This chapter is dedicated to the `services`, `tools`, `registries` and other `resources` necessary to make and keep data FAIR.
 
-We will therefore cover topics such as:
+Browse existing recipes, and bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner. 
 
-
-1. Data Management Plans
-2. Identifier Resolution Services:
-3. Registry of Standards: The FAIRSharing example
-4. Vocabulary Services:
-5. Endpoints for Linked Data
+If you want to contribute follow the {ref}`fcb-help` provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
 ---
 

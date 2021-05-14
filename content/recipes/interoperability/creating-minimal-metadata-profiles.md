@@ -71,10 +71,9 @@ Without a set of a competency questions, important variables may easily be forgo
 
 ## Authors
 
-| Name | Affiliation  | ORCID | CRediT role  |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) |Writing - Original Draft|
-| <name> | <institution> | [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft|
 |  | | | Writing - Original Draft | 
 
 ## License
