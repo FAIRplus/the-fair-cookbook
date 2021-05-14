@@ -1,6 +1,18 @@
 (rr-licensing-software)=
 # Software Licenses
 
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:has_executable_code: nope
+:recipe_name: Software Licenses
+```` 
+
+
 ````{note} 
 <!-- 
 <a href="https://the-turing-way.netlify.app/welcome"><img src="../../../_images/turing-way-logo.jpg" alt="ati" width="60px"></a> -->

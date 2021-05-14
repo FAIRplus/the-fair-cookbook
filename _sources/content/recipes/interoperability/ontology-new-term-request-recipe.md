@@ -157,10 +157,11 @@ UMLS is updated in May and November of each year.
 
 ## Authors
 
-| Name | Affiliation  | ORCID | CRediT role  |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Ulrich Goldmann | CeMM - Research Center for Molecular Medicine of the Austrian Academy of Sciences | [0000-0003-1120-6912](https://orcid.org/0000-0003-1120-6912) | Writing - Original Draft |
-| Emma Vos |  The Hyve | [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) | Writing - Original Draft | 
+| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>             </div>   | CeMM     | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a>| Writing - Original Draft |
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Emma Vos</div></div>|  The Hyve | <a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing – Review & Editing |
 
 
 ---

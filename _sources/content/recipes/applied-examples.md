@@ -1,13 +1,36 @@
 (fcb-fairify-examples)=
 # Applied examples
 
+<<<<<<< HEAD
+---
+
+This Chapter is dedicated to a complete FAIRification example, as applied by FAIR+ developers to public dataset. The content of the chapter documents all critical steps and learnings resulting from these efforts.
+=======
 This chapter is dedicated to FAIRification examples, using publicly available datasets. These include data from published articles, as well as data from multi-omics, observational and clinical trial projects.
+>>>>>>> 3478102f8e49b908979d6a30cbd0ef4f3915a43f
 
 Browse existing recipes, but bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner.
 
 If you want to contribute follow the [instruction][link_contribute] provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
+<<<<<<< HEAD
+1. [FAIRification of Metabolomics Data: Clarifying the Semantics of Data Matrices](TODO:link/not/here/yet)
+2. [Conversion to an open format - using Frictionless Data Package](TODO:link/not/here/yet)
+3. [Building a semantic model and annotating with open ontologies](TODO:link/not/here/yet)
+4. [Conversion to RDF/Linked data and exploration with SPARQL](TODO:link/not/here/yet)
+
+
+## IMI case studies
+
+1. IMI eTOX - the safety context {ref}`fcb-fairify-examples-etox`
+2. IMI ND4BB - the target identification context {ref}`fcb-fairify-examples-nd4bb`
+3. IMI Resolute - the target identification context {ref}`fcb-fairify-examples-resolute`
+4. IMI Oncotrack -  the clinical context {ref}`fcb-fairify-examples-oncotrack`
+
+---
+=======
 --
+>>>>>>> 3478102f8e49b908979d6a30cbd0ef4f3915a43f
 
 
 

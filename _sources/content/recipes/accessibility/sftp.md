@@ -227,11 +227,12 @@ ___
 
 ## Authors
 
-| Name           | Affiliation    | orcid          | CrediT role   |
+
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Dorothy S. Reilly | Novartis | | Writing - Original Draft |
-| Vitaly Sedlyarov  | CeMM     | | Writing - Original Draft |
-| Ulrich Goldmann   | CeMM     | | Writing - Original Draft |
+|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Dorothy Reilly</div>                                          </div> | Novartis AG | | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/sedlyarov'><img class='avatar-style' src='https://avatars.githubusercontent.com/sedlyarov'></img><div class="d-block">Vitaly Sedlyarov</div></a>       </div>   |<div class="d-block"> CeMM     </div>| <a target="_blank" href='https://orcid.org/0000-0002-9872-3535'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>             </div>   | CeMM     | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a>| Writing - Original Draft |
 
 ___
 

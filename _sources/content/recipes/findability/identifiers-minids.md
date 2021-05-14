@@ -312,11 +312,11 @@ ____
 
 ## Authors
 
-| Name           | Affiliation    | orcid          | CrediT role   |
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 | :------------- | :------------- | :------------- |:------------- |
-| Mike d'Arcy  |   |  [0000-0003-2280-917X](http://orcid.org/0000-0003-2280-917X) |  Writing - Original Draft |
-| Philippe Rocca-Sera | Oxford University| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| reviewer |
-| | | | |
+| <div class="firstCol"><a target="_blank" href='https://github.com/mikedarcy'><img class='avatar-style' src='https://avatars.githubusercontent.com/mikedarcy'></img><div class="d-block">Mike d'Arcy</div></a>   </div>  |   |  <a target="_blank" href='http://orcid.org/0000-0003-2280-917X'><i class='fab fa-orcid fa-2x text--orange'></i></a> |  Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>   </div> | Oxford University| <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a>| Writing – Review & Editing |
+
 
 
 

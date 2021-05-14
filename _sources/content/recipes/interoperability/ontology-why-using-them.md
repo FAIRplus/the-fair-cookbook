@@ -180,10 +180,10 @@ ___
 
 ## Authors
 
-|Name|Affiliation|ORCID|Credit role|
+| Name | Affiliation  | [Orcid](https://orcid.org) | [CrediT role](https://casrai.org/credit/)  |
 |---|--|--|--|
-|Philippe Rocca-Serra |  Data Readiness Group, University of Oxford, UK| [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) | Writing - Original draft|
-|||[](https://orcid.org/)|Review|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a></div>| University of Oxford |<a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Writing - Original draft|
+
 
 ___
 

@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3. ND4BB dataset FAIRification recipe" href="nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html" />
-    <link rel="prev" title="1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" />
+    <link rel="prev" title="Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -112,44 +112,28 @@
  </span>
 </p>
 <ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../introduction.html">
-   Introduction
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Who should read it
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-     1. Who should read the FAIR Cookbook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/FAIRplus-values.html">
-     2. The Ethical Values behind FAIR and the FAIRPlus project
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  GLOSSARY
- </span>
-</p>
-<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../glossary-fair-terms.html">
-   Glossary of FAIR Things
+   Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  INFRASTRUCTURE
+  RECIPES
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../infrastructure.html">
    Infrastructure for FAIR
@@ -162,7 +146,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a Dataset Catalogue
+     2. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
@@ -172,22 +156,22 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabularies and Terminology Infrastructure
+     4. Vocabularies management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Technical &amp; architectural selection criteria of ontology lookup services
+       4.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selection and exploitation of Ontology Lookup Services
+       4.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. How to deploy a terminology service - EBI Ontology Lookup Service
+       4.3. Deploying the EBI OLS
       </a>
      </li>
     </ul>
@@ -198,13 +182,6 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  RECIPES
- </span>
-</p>
-<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -212,42 +189,42 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/identifiers.html">
-     1. How to generate globally unique, resolvable and persistent identifiers
+     1. Unique, persistent identifiers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/chemical-identities.html">
-     2. Chemical Identity - InChI and SMILES
+     2. InChI and SMILES identifiers for chemical structures
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/identifiers-minids.html">
-     3. Identifier Minting Service with Minid Client
+     3. Minting identifiers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/zenodo-deposition.html">
-     4. Deposition to Zenodo Archive
+     4. Zenodo as generic repository system
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../findability/seo.html">
-     5. Findability: Search Engine Optimization
+     5. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       5.8.1. Findability: Data Page Markup with Bioschemas
+       5.8.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       5.8.2. Findability: Dataset Markup
+       5.8.2. Data page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       5.8.3. Findability: Data Catalog Markup
+       5.8.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -264,13 +241,13 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../accessibility/anonymizing-patient-data.html">
-     1. Anonymizing Patient Data
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. How to use SFTP to transfer data files between institutions.
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../accessibility/aspera.html">
-     2. How to download files with Aspera
+     2. Downloading files with Aspera
     </a>
    </li>
   </ul>
@@ -284,17 +261,17 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/identifier-mapping.html">
-     1. How to interlink data from different sources?
+     1. Interlinking data from different sources
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifier mapping with BridgeDB
+     2. Identifiers mapping with BridgeDB
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Identifier mapping using BridgeDb WS
+       Using BridgeDB web services
       </a>
      </li>
     </ul>
@@ -303,51 +280,56 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-why-using-them.html">
-     3. Why use Terminologies &amp; Ontologies?
+     3. Introduction to terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/selecting-ontologies.html">
-     4. Which vocabulary to use?
+     4. Selecting terminologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
-     5. Requesting terms addition to terminology artefacts
+     5. Requesting new terms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
-     6. Tools for ontology-associated operations
+     6. Ontology-related tools and services
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
-     7. Building an application ontology with Robot
+     7. Building an application ontology with ROBOT
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
-       7.12.1. MSIO, an application ontology for Metabolomics
+       Application ontology for metabolomics
       </a>
      </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating_data_dictionary.html">
+     8. How to create a FAIR Data/Variable Dictionary
+    </a>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
-     8. Creating a Metadata Profile
+     9. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
-       8.4.1. Establishing a Metadata Profile for Transcriptomics
+       Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
-       8.4.2. Metadata Profile Validation in RDF with Shape Expression: The Covid-19 sample metadata use case
+       Metadata profile validation in RDF
       </a>
      </li>
     </ul>
@@ -356,17 +338,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
-     9. From proprietary to open standard data format
+     10. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
-     10. File format validation, an example with FASTQ files
+     11. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interoperability/ETL-tools.html">
-     11. Tools for Data Extraction, Transformation, and Loading (ETL)
+     12. Extraction, transformation, and loading process
     </a>
    </li>
   </ul>
@@ -385,61 +367,61 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/ATI_licensing_software.html">
-     2. Software Licenses
+     2. Software license
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/ATI_licensing_data.html">
-     3. Data Licenses
+     3. Data licenses
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/expressing-data-use.html">
-     4. Patterns and practice for expressing allowed data usage
+     4. Declaring data's permitted uses
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
-     5. Provenance Information
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reusability/community-standards.html">
-     6. Compliance with community annotation standards
+     5. Provenance information
     </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1">
   <a class="reference internal" href="../applied-examples.html">
    Applied examples
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html#this-chapter-is-dedicated-to-a-complete-fairification-example-as-applied-by-fair-developers-to-public-dataset-the-content-of-the-chapter-documents-all-critical-steps-and-learnings-resulting-from-these-efforts">
+   This Chapter is dedicated to a complete FAIRification example, as applied by FAIR+ developers to public dataset. The content of the chapter documents all critical steps and learnings resulting from these efforts.
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="fair-data-matrix-recipe.html">
-     1. Making a Data Matrix FAIR
+     1. Making omics data matrices FAIRer
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Bibliographic Reference:
+       Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Exploring and comparing Rose Scent profiles stored as tabular data packages with plotnine, a python port of R ggplot2
+       Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring a rose garden with SPARQL
+       Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library
+       Integrating data
       </a>
      </li>
     </ul>
@@ -448,22 +430,22 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2. eTox: Data normalization and integration through entity linking
+     2. eTox - omics datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html">
-     3. ND4BB dataset FAIRification recipe
+     3. ND4BB - clinical trial datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack FAIRification recipe
+     4. Oncotrack - observational clinical cohort dataset
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="resolute_raw/rawRecipe_resolute.html">
-     5. RESOLUTE FAIRification Recipe
+     5. RESOLUTE - transcriptomics datasets
     </a>
    </li>
   </ul>
@@ -473,7 +455,7 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT THE FAIR COOKBOOK
+  ABOUT
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -501,44 +483,49 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1">
   <a class="reference internal" href="../help.html">
    Contribute
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html#it-always-start-by-getting-in-touch-with-the-group-by-simply-logging-an-issue-in-our-repository-issue-tracker">
+   It always start by getting in touch with the group by simply logging an issue in our repository issue tracker
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/contributing.html">
-     1. Contributing to the FAIR cookbook
+     1. How to contribute
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
-     2. Using GoogleDocs to contribute a FAIR Cookbook Recipe
+     2. Add via GoogleDoc
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
-     3. How to use HackMD to write a FAIR Cookbook Recipe
+     3. Add via HackMD
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
-     4. How to create a FAIRPlus Coobook Recipe ?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/tips-tricks.html">
-     5. Recipe Tips and Tricks
+     4. Add via Git
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../help/recipe-template.html">
-     6. Recipe Template
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../help/myst.html">
-     7. MyST syntax cheat sheet
+     7. Markdown cheatsheet
     </a>
    </li>
   </ul>
@@ -552,17 +539,12 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. The Turing Way Book of Data Science
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/license.html">
-     2. License for this book
+     1. Leveraging the Turing Way Book
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../boilerplate/technology_stack.html">
-     3. Technology stack
+     2. Technology stack
     </a>
    </li>
   </ul>
@@ -660,7 +642,6 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-etox-sampler-dataset-applied-scenario">
-   2.1.
    <em>
     The eTox Sampler Dataset applied scenario
    </em>
@@ -668,24 +649,24 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation-and-aim-of-the-fairification-recipe">
-     2.1.1. Motivation and aim of the FAIRification Recipe
+     Motivation and aim of the FAIRification Recipe
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#procedural-description">
-     2.1.2. Procedural description
+     Procedural description
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   2.2. Authors
+   Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   2.3. License
+   License
   </a>
  </li>
 </ul>
@@ -753,16 +734,16 @@ No
 <div class="sectionValue">Data Manager, Data Curator</div>
 </div>
 </div>
-<div class="card-footer"> Identifier:
-<a href="http://w3id.org/faircookbook/FCB005" class="text--orange">FCB005
-</a> </div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="http://w3id.org/faircookbook/FCB005" class="text--purple-dark">FCB005
+</a></div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="the-etox-sampler-dataset-applied-scenario">
-<h2><span class="section-number">2.1. </span><em>The eTox Sampler Dataset applied scenario</em><a class="headerlink" href="#the-etox-sampler-dataset-applied-scenario" title="Permalink to this headline">¶</a></h2>
+<h2><em>The eTox Sampler Dataset applied scenario</em><a class="headerlink" href="#the-etox-sampler-dataset-applied-scenario" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="motivation-and-aim-of-the-fairification-recipe">
-<h3><span class="section-number">2.1.1. </span>Motivation and aim of the FAIRification Recipe<a class="headerlink" href="#motivation-and-aim-of-the-fairification-recipe" title="Permalink to this headline">¶</a></h3>
+<h3>Motivation and aim of the FAIRification Recipe<a class="headerlink" href="#motivation-and-aim-of-the-fairification-recipe" title="Permalink to this headline">¶</a></h3>
 <p>The description of the metadata as well as the characterization of the actual content of a dataset often rely on short free-text excerpts. As an example, we can consider the names of the columns of a table (e.g. “laboratory tests”) or the different values of the cells belonging to a specific table column (e.g. “cholesterol”, “blood sugar”, “liver function”, etc.). Often such free-text excerpts are not rigorously characterized inside and across datasets, thus leading to situations in which it is difficult to unambiguously describe the semantics of each excerpt due to polysemy (i.e. several meanings can be associated to the same excerpt) and synonymy (i.e. a specific meaning can be expressed by more than one excerpt).</p>
 <p>In this regard, the possibility to describe both the structure (i.e. metadata) and content of a dataset by relying on the concepts formalized by widely-adopted knowledge resources (i.e. ontologies, thesauri, etc.) plays a key role in substantially improving the level of FAIRness of the same data: the identification of the concepts that better describe each piece of information included in a dataset is usually referred to as <strong>entity linking</strong>. The use of standardized, shared, consistent identifiers to unambiguously characterize the semantics of data fosters <em>Interoperability</em> and <em>Reusability</em>: indeed, the fact that distinct datasets rely on the same, shared set of concepts to describe (part of) their content makes their integration significantly easier, thus opening up novel possibilities for cross-fertilization. Also the <em>Findability</em> and <em>Accessibility</em> of information significantly benefit from the availability of descriptions of datasets based on standard vocabularies: information from distinct datasets can be seamlessly indexed and searched and data consumers, both humans and machines, can easily interpret, validate and summarize their content.</p>
 <p>Given a  dataset, this FAIRification Recipe focuses on (semi-)automated approaches and best practices to:</p>
@@ -780,7 +761,7 @@ No
 <p>Hereinafter this FAIRification Recipe, by relying on the OLS API, given an input dataset, presents into detail an automated ontology coverage evaluation strategy. Such strategy aims at: (i) identifying the knowledge resources that better describe the structure (i.e. metadata) and content of the dataset under consideration, in terms of semantic coverage; (ii) gathering the most relevant concepts useful to characterize each piece of knowledge that belongs to the input dataset (i.e. each text excerpt that describes a specific aspect of the input dataset). In particular, basic linguistic analyses are performed on both the descriptive text excerpts provided as input to the OLS API and the labels of the corresponding related concepts that are retrieved by the same API. By pre-processing each input text excerpt we intend to perform <em>basic query expansion procedures with the aim of increasing the recall of relevant concepts when querying the OLS knowledge resource indexer</em>. By analyzing the labels of the list of matching concepts retrieved by the OLS API, we intend to <em>refine such concept list by relying on rules and heuristics based on linguistic analyses</em>. When we deal with the evaluation of the semantic coverage of knowledge resources, it is not uncommon that the indexers we have at our disposal (e.g. the OLS) do not include all the knowledge resources we would like to consider as potential sources of useful concepts. To mitigate this issue, we rely on <em>OntoIndex</em>, a knowledge resource indexer based on Elasticsearch and developed by the Hospital del Mar Medical Research Institute (IMIM), Barcelona. The current version of <em>OntoIndex</em> supports the import, indexing and search for concepts that belong to ontologies formalized by means of the Ontology Web Language (OWL) or the Open Biological and Biomedical Ontology (OBO) format, the latter widely adopted to describe biomedical knowledge resources.</p>
 </div>
 <div class="section" id="procedural-description">
-<h3><span class="section-number">2.1.2. </span>Procedural description<a class="headerlink" href="#procedural-description" title="Permalink to this headline">¶</a></h3>
+<h3>Procedural description<a class="headerlink" href="#procedural-description" title="Permalink to this headline">¶</a></h3>
 <p>The exploitation of the concepts formalized by widely-adopted knowledge resources (i.e. ontologies, thesauri, etc.) to semantically describe the structure (i.e. metadata) and content of a dataset is a key aspect to foster the FAIRness of the same data. With this regard, here we present an approach whose ultimate objective is easing and automating the choice and usage of a consistent and informed set of knowledge resources to describe a dataset under consideration. In particular, the proposed strategy <strong>automatically evaluates the suitability of a set of knowledge resources  (i.e. ontologies, thesauri, etc.) with respect to the semantic characterization of a list of terms that occur in an input dataset</strong> (i.e. the presence inside the considered knowledge resources, of concepts that properly describe the terms belonging to the input list).</p>
 <p>The input of our approach is represented by a list of terms (i.e. short free-text excerpts, see Figure 1) that are used to describe a varied set of aspects of a dataset under analysis (e.g. the names of the columns of the tables of the dataset - i.e. cell headers). By considering the knowledge resources stored in as index (namely the OLS, eventually complemented by <em>OntoIndex</em>) we intend to generate as final outputs:</p>
 <ul class="simple">
@@ -818,7 +799,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">2.2. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -838,7 +819,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">2.3. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -869,7 +850,7 @@ No
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" title="previous page"><span class="section-number">1.11.4. </span>Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library</a>
+    <a class='left-prev' id="prev-link" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" title="previous page">Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library</a>
     <a class='right-next' id="next-link" href="nd4bb_raw/FAIRification_CookBook_Recipe1_V02.html" title="next page"><span class="section-number">3. </span>ND4BB dataset FAIRification recipe</a>
 
         </div>
