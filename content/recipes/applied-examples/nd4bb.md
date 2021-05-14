@@ -203,7 +203,7 @@ Overall this dataset has been very useful to start our overall process and team 
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
-|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img>|<div class="d-block">Manfred Kohler</div></div>|Fraunhofer Institute|Writing - Original Draft|
+|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Manfred Kohler</div></div>|Fraunhofer Institute||Writing - Original Draft|
 
 ---
 
