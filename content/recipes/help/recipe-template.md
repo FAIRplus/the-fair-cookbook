@@ -1,5 +1,5 @@
 (fcb-help-recipe-template)=
-# Recipe Template
+# Git recipe template
 
 +++
 <br/>
