@@ -6,6 +6,7 @@
 :identifier_link: http://w3id.org/faircookbook/FCB006
 :difficulty_level: 4
 :recipe_type: applied_example
+:recipe_name: ND4BB - clinical trial datasets
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator  
 :has_executable_code: nope
@@ -28,13 +29,12 @@
 
 * Tools and  Software:
 
-	* Data curation tools: Excel, JAVA
+	* Data curation tools: Excel, Java
 	* FAIRification pipeline tools: KNIME workflow
 	* Ontology recommender: ZOOMA, NCBO
 	* FAIR assessment: [RDA indicator V0.03](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit?dls=true#gid=1320380260)
 
 
-    		
 ## Objectives
 
 The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data to a public repository using machine readable format. Also generic improvement of the FAIR parameters.
@@ -64,7 +64,7 @@ Schematic workflow of the general FAIRification pipeline. Some steps need repeti
 
 Data are extracted using a [KNIME workflow](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf), which can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced. 
 
-Figure 2 is a snapshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (\<h3\>, shown in the red box in Figure 3) and compounds as an unsorted list (\<ul\>, shown in the yellow box in Figure 3).  
+{ref}`nd4bb-figure2` is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as heading level 3 (\<h3\>, shown in the red box in Figure 3) and compounds as an unsorted list (\<ul\>, shown in the yellow box in Figure 3).  
 
 
 
@@ -88,7 +88,7 @@ Snapshot of the AMR compound database home page source code. The red box shows t
 ```
 
 <!-- TODO -->
-We first identified all websites that contain the project data. The homepage (Figure 2) describes the compound names, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in Figure 4. 
+We first identified all websites that contain the project data. The homepage ({ref}`nd4bb-figure2`) describes the compound names, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in Figure 4. 
 
 Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by <td>…</td>, chemical “Oxazolidinones” and “Tetracyclines” uses different data structure. Therefore the extracted XML document was updated before applying further nodes to the XML document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. The green boxes in Figure 4 highlighted the discrepancies we found in the original dataset.
 
@@ -469,10 +469,9 @@ Workflow to extract the data from compound/charge webpage.
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
+|| Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
-|  |  | [0000-0000-0000-0000](https://orcid.org/orcid.org/0000-0000-0000-0000) | Writing - Original Draft |
-|  |  | | Writing - Review & Editing, Funding acquisition | 
+|<div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img>|<div class="d-block">Manfred Kohler</div></div>|Fraunhofer Institute|Writing - Original Draft  |
 
 ---
 
