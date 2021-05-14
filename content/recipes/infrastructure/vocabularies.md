@@ -1,4 +1,4 @@
-# Vocabularies and Terminology Infrastructure
+# Vocabulary management
 
 ---
 
