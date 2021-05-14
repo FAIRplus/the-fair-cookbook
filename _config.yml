@@ -96,9 +96,9 @@ parse:
   myst_url_schemes: [ mailto, http, https, ftp ]
 
 bibtex_bibfiles:
-   - ./_bibliography/fairbookreferences.bib
-   - ./_bibliography/bibliography-bridgedb.bib
+   # - ./_bibliography/fairbookreferences.bib
+   # - ./_bibliography/bibliography-bridgedb.bib
    - bibliography-identifier-mapping.bib
-   - ./_bibliography/bibliography-identifier-mapping2.bib
+   # - ./_bibliography/bibliography-identifier-mapping2.bib
 
 bibtex_reference_style: author_year
