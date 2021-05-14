@@ -1,5 +1,5 @@
 (fcb-interop-convertopen)=
-# From proprietary to open standard data format
+# Converting from proprietary to open format
 
 +++
 <br/>
@@ -12,14 +12,14 @@
 :reading_time_minutes: 20
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: From proprietary to open standard data format
+:recipe_name: Converting from proprietary to open format
 ```` 
 
 
 ## Main Objectives
 
 - Document how to convert raw data from a propriatory, vendor specific format to an open standard format.
-- Apply the approach to an IMI dataset, more specifically  a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project.
+- Apply the approach to a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project.
 
 
 ___
