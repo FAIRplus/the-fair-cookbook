@@ -12,8 +12,7 @@
 :has_executable_code: nope
 ```` 
 
-````{note}
-Editor's summary:
+````{admonition} Editor's summary
 
 The authors of this recipe start with data spread over well structured web pages. They use a KNIME workflow to extract the data into an Excel spreadsheet. The authors encounter inconsistencies in the web pages, and fix them. 
 
