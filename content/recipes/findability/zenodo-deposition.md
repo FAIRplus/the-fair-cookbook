@@ -1,5 +1,5 @@
 (fcb-find-zenodo)=
-# Deposition to Zenodo Archive
+# Depositing in Zenodo generic repository
 
 +++
 <br/>
@@ -12,7 +12,7 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, funder  
 :has_executable_code: yeah
-:recipe_name: Deposition to Zenodo Archive
+:recipe_name: Depositing in Zenodo generic repository
 ```` 
 
 ## Main Objectives
