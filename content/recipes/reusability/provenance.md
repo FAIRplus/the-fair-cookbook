@@ -1,5 +1,5 @@
 (fcb-reusability-provenance)=
-# Provenance Information
+# Provenance information
 
 ````{panels_fairplus}
 :identifier_text: RX.X
@@ -9,7 +9,7 @@
 :reading_time_minutes: 20
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: Provenance Information
+:recipe_name: Provenance information
 ```` 
 
 <!-- 
