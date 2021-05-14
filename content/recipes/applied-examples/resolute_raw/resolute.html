@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. RESOLUTE FAIRification Recipe</title>
+    <title>ReSOLUTE - transcriptomics datasets</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,22 +57,20 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html" />
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/resolute_raw/resolute.html" />
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Community" href="../../community.html" />
-    <link rel="prev" title="4. Oncotrack FAIRification recipe" href="../oncotrack_raw/rawRecipe-oncotrack.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/resolute_raw/resolute.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="RESOLUTE FAIRification Recipe" />
-<meta property="og:description" content="RESOLUTE FAIRification Recipe  Ingredients  Data transfer tools:  SFTP server  OneDrive  Amazon S3 Buckets  Data hosting platform:  raw data: SRA [Transcriptomi" />
+<meta property="og:title"       content="ReSOLUTE - transcriptomics datasets" />
+<meta property="og:description" content="ReSOLUTE - transcriptomics datasets  &lt;!-- TODO clarify authors TODO make referenced Google Drive documents available --&gt;   &lt;br/&gt;     &lt;div class=&#34;card recipe d-f" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -133,7 +131,7 @@
   RECIPES
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../infrastructure.html">
    Infrastructure for FAIR
@@ -389,11 +387,11 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../applied-examples.html">
    Applied examples
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../fair-data-matrix-recipe.html">
      1. Making omics data matrices FAIRer
@@ -436,11 +434,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
      4. Oncotrack - observational clinical cohort dataset
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     5. RESOLUTE - transcriptomics datasets
     </a>
    </li>
   </ul>
@@ -576,7 +569,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/applied-examples/resolute_raw/resolute.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -596,10 +589,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/resolute_raw/rawRecipe_resolute.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/resolute_raw/resolute.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/applied-examples/resolute_raw/rawRecipe_resolute.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/applied-examples/resolute_raw/resolute.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -672,8 +665,73 @@
         
               <div>
                 
-  <div class="section" id="resolute-fairification-recipe">
-<span id="fcb-fairify-examples-resolute"></span><h1><span class="section-number">5. </span>RESOLUTE FAIRification Recipe<a class="headerlink" href="#resolute-fairification-recipe" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="resolute-transcriptomics-datasets">
+<span id="fcb-resolute"></span><h1>ReSOLUTE - transcriptomics datasets<a class="headerlink" href="#resolute-transcriptomics-datasets" title="Permalink to this headline">¶</a></h1>
+<!--
+TODO clarify authors
+TODO make referenced Google Drive documents available
+-->
+<br/>
+<hr class="docutils" />
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+10 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">ReSOLUTE - transcriptomics datasets</div>
+<img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Experience Report / Applied Example</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Data Manager, Data Curator, Ontologist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="http://w3id.org/faircookbook/FCB007" class="text--purple-dark">http://w3id.org/faircookbook/FCB007
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition-editor-s-summary admonition">
+<p class="admonition-title">Editor’s summary</p>
+<p>The authors of this recipe delivered a set of JSON schemas for describing Transcriptomics experiments.</p>
+</div>
 <div class="section" id="ingredients">
 <h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -708,29 +766,25 @@
 </div>
 <div class="section" id="sample-metadata-etl-pipeline">
 <h2>Sample metadata ETL pipeline<a class="headerlink" href="#sample-metadata-etl-pipeline" title="Permalink to this headline">¶</a></h2>
-<p>The RESOLUTE datasets include 21 samples of seven cell lines. Each cell line has three replicates. The first draft of cell line metadata was first submitted to the NCBI SRA database and stored in the NCBI BioSample database. The raw sample metadata includes cell line name, provider and other administrative information.</p>
-<p>To avoid ambiguity and provide detailed cell line information, the RESOLUTE cell lines were linked to cell lines in the Cellosaurus databases by the Cellosaurus accession ID, for example, cell line “HCT 116” was linked to accession “CVCL_0291”. Cellosaurus also provided enriched cell line information, including disease, species of origin, cell line category. Such information was fetched from the Cellosaurus website and mapped to corresponding samples.</p>
-<p>Besides the cell line enriched cell line annotation, the RESOLUTE Data Release Plan also specified the cell line provider, culturing conditions and quality control information. Such information is also added to the cell line. License information was also mapped to the metadata.</p>
+<p>The ReSOLUTE datasets include 21 samples of seven cell lines. Each cell line has three replicates. The first draft of cell line metadata was first submitted to the NCBI SRA database and stored in the NCBI BioSample database. The raw sample metadata includes cell line name, provider and other administrative information.</p>
+<p>To avoid ambiguity and provide detailed cell line information, the ReSOLUTE cell lines were linked to cell lines in the Cellosaurus databases by the Cellosaurus accession ID, for example, cell line “HCT 116” was linked to accession “CVCL_0291”. Cellosaurus also provided enriched cell line information, including disease, species of origin, cell line category. Such information was fetched from the Cellosaurus website and mapped to corresponding samples.</p>
+<p>Besides the cell line enriched cell line annotation, the ReSOLUTE Data Release Plan also specified the cell line provider, culturing conditions and quality control information. Such information is also added to the cell line. License information was also mapped to the metadata.</p>
 <p>The sample metadata can be found in the EBI Biosamples database with additional curation. For example, in sample <a class="reference external" href="https://www.ebi.ac.uk/biosamples/samples/SAMN11893688">SAMN11893688</a>, all missing values were omitted. Attribute cell line, organism, sex and tissue were mapped to ontologies in the OLS database. All curations can record can be found <a class="reference external" href="https://www.ebi.ac.uk/biosamples/samples/SAMN11893688/curationlinks">here</a>.</p>
 </div>
 <div class="section" id="transcriptomics-data-community-standard">
 <h2>Transcriptomics data community standard<a class="headerlink" href="#transcriptomics-data-community-standard" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://fged.org/projects/minseqe/">Minimum Information about a high-throughput SEQuencing Experiment (MINSEQE)</a> is a recommended community standard of transcriptomics data. It defined five elements of transcriptomics data that shall be harvested, including metadata, sequence read data, final processed data and experimental protocols.</p>
-<p>FAIRsharing organization interpreted the MINSEQE guidelines and translated them into a machine-readable <a class="reference external" href="https://github.com/FAIRsharing/mircat/tree/master/minseqe">MINSEQE recommended JSON schema</a>. The FAIRsharing MINSEQE JSON schema provided a framework of transcriptomics data. When it comes to different experiments, the actual data be extended. <a class="reference external" href="https://raw.githubusercontent.com/ebi-ait/FAIRPlus/master/RESOLUTE/transcriptomics/data/RESOLUTE_transcriptomics_metadata_MINSEQE.json">Here</a> is an example of RESOLUTE transcriptomics data following this schema</p>
-<p>One limitation of the FAIRsharing MINSEQE schema is that it is incompatible to the submission standards of popular transcriptomics database, like the European Nucleotide Archive(ENA). Transcriptomics data following the FAIRsharing MINSEQE standard must be modified to be submitted.</p>
-<!-- 
-![Transcriptomics schema](image_0.png)
-_Figure 1: Transcriptomics schema_
- -->
-<div class="figure align-default" id="transcriptomics-schema">
-<a class="reference internal image-reference" href="../../../../_images/image_01.png"><img alt="Transcriptomics schema." src="../../../../_images/image_01.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Transcriptomics schema.</span><a class="headerlink" href="#transcriptomics-schema" title="Permalink to this image">¶</a></p>
+<p>FAIRsharing organization interpreted the MINSEQE guidelines and translated them into a machine-readable <a class="reference external" href="https://github.com/FAIRsharing/mircat/tree/master/minseqe">MINSEQE recommended JSON schema</a>. The FAIRsharing MINSEQE JSON schema provided a framework of transcriptomics data. When it comes to different experiments, the actual data be extended. <a class="reference external" href="https://raw.githubusercontent.com/ebi-ait/FAIRPlus/master/RESOLUTE/transcriptomics/data/RESOLUTE_transcriptomics_metadata_MINSEQE.json">Here</a> is an example of ReSOLUTE transcriptomics data following this schema</p>
+<p>One limitation of the FAIRsharing MINSEQE schema is that it is incompatible to the submission standards of popular transcriptomics database, like the European Nucleotide Archive (ENA). Transcriptomics data following the FAIRsharing MINSEQE standard must be modified to be submitted.</p>
+<div class="figure align-default" id="resolute-figure1">
+<img alt="A visualization of the entities within the proposed transcriptomics schema." src="../../../../_images/resolute.md-figure1.png" />
+<p class="caption"><span class="caption-text">A visualization of the entities within the proposed transcriptomics schema.</span><a class="headerlink" href="#resolute-figure1" title="Permalink to this image">¶</a></p>
 </div>
-<p>To solve this problem, we proposed a <a class="reference external" href="https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema">transcriptomics schema</a> which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks (Figure 1). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. <em>(Note: This schema is still actively updated. Feedback welcomed)</em></p>
+<p>To solve this problem, we proposed a <a class="reference external" href="https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema">transcriptomics schema</a> which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks ({numref}´resolute-figure1´). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. <em>(Note: This schema is still actively updated. Feedback welcomed)</em></p>
 </div>
 <div class="section" id="fair-assessment">
 <h2>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
-<p>The level of “FAIRness” of the RESOLUTE transcriptomics was first determined using the CMMI maturity model described <a class="reference external" href="https://docs.google.com/document/d/1URLfNpBYkCrICpizKZJ7NE29FddNNcoR0T0o_SQza7U/edit#heading=h.w0g0276fq5i6">in this document.</a> The results of this first assessment can be found <a class="reference external" href="https://docs.google.com/document/d/1Q_Su8kY9uNYfCV30jSIoWNdeV8GxA_DTGAcGOSZscQM/edit?usp=sharing">here</a>. In a follow-up meeting, we defined actions that could be taken to increase the level for certain indicators (see <a class="reference external" href="https://docs.google.com/document/d/1yYDcUvyXzYLfq9NZX23tbgIjCSOenSURjcRj61FMdzQ/edit?usp=sharing">this document</a>). These actions were defined within Github.</p>
+<p>The level of “FAIRness” of the ReSOLUTE transcriptomics was first determined using the CMMI maturity model described <a class="reference external" href="https://docs.google.com/document/d/1URLfNpBYkCrICpizKZJ7NE29FddNNcoR0T0o_SQza7U/edit#heading=h.w0g0276fq5i6">in this document.</a> The results of this first assessment can be found <a class="reference external" href="https://docs.google.com/document/d/1Q_Su8kY9uNYfCV30jSIoWNdeV8GxA_DTGAcGOSZscQM/edit?usp=sharing">here</a>. In a follow-up meeting, we defined actions that could be taken to increase the level for certain indicators (see <a class="reference external" href="https://docs.google.com/document/d/1yYDcUvyXzYLfq9NZX23tbgIjCSOenSURjcRj61FMdzQ/edit?usp=sharing">this document</a>). These actions were defined within Github.</p>
 <p>A <a class="reference external" href="https://docs.google.com/spreadsheets/d/11-jDoMbuxw8Nreurk7yKzk3EHJ54APAQnBl6VTKZPBk/edit#gid=1559176954">new FAIRplus maturity model</a> was set up, based on the RDA indicators. The focus was only on the indicators regarding Findability/Discoverability at that point. Before we could use this model however, the indicators were updated within the RDA initiative. We used their <a class="reference external" href="https://docs.google.com/spreadsheets/d/1mkjElFrTBPBH0QViODexNur0xNGhJqau0zkL4w8RRAw/edit?usp=sharing">new indicators</a>) (for findability, v0.01) and their level definition to determine the levels for both the transcriptomics and proteomics datasets. The result can be found <a class="reference external" href="https://docs.google.com/spreadsheets/d/1abQ5_sOmBWbxAZhQVEUxQ_ybI1yTi0t-tJAVY5J5VY8/edit?usp=sharing">here</a>.</p>
 <p>In the meantime, an improved version of the RDA indicators was released (v0.02). In the results document a comparison/mapping is made between v0.02 and v0.01 for possible future reference. <br />
 We have updated the scoring for the transcriptomics data to this new version (v0.02).</p>
@@ -824,8 +878,6 @@ We have updated the scoring for the transcriptomics data to this new version (v0
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../oncotrack_raw/rawRecipe-oncotrack.html" title="previous page"><span class="section-number">4. </span>Oncotrack FAIRification recipe</a>
-    <a class='right-next' id="next-link" href="../../community.html" title="next page">Community</a>
 
         </div>
         
