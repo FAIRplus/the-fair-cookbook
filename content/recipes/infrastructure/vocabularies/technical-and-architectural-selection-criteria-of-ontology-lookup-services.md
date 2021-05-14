@@ -1,4 +1,4 @@
-# Technical & architectural selection criteria of ontology lookup services
+# Portals and lookup services
 
 +++
 <br/>
@@ -11,7 +11,7 @@
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator  
 :has_executable_code: nope
-:recipe_name: Technical & architectural selection criteria of ontology lookup services
+:recipe_name: Portals and lookup services
 ```` 
 
 ## Main Objective
