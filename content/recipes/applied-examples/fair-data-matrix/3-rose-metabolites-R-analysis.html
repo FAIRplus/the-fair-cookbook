@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library</title>
+    <title>Integrating data````{panels}</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -71,8 +71,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library" />
-<meta property="og:description" content="Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library  &lt;i class=&#39;fa fa-qrcode fa-2x&#39; style=&#39;color:#7e0038;&#39;&gt;&lt;/i&gt;&lt;br" />
+<meta property="og:title"       content="Integrating data````{panels}" />
+<meta property="og:description" content="Integrating data````{panels}  :container: container-lg pb-3&lt;br&gt; :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; :card: rounded&lt;br&gt;  &lt;i class=&#39;fa fa-qrcode" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -660,68 +660,43 @@
               <div>
                 
   <hr class="docutils" />
-<div class="section" id="exploring-and-comparing-rose-scent-profiles-stored-as-tabular-data-packages-with-ggplot2-r-library">
-<h1>Exploring and comparing Rose Scent profiles stored as tabular data packages with ggplot2 R library<a class="headerlink" href="#exploring-and-comparing-rose-scent-profiles-stored-as-tabular-data-packages-with-ggplot2-r-library" title="Permalink to this headline">¶</a></h1>
-<div class="sphinx-bs container-lg pb-3&lt;br&gt; docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fa fa-qrcode fa-2x' style='color:#7e0038;'></i><br></p>
-</div>
-<div class="card-body docutils">
+<div class="section" id="integrating-data-panels">
+<h1>Integrating data````{panels}<a class="headerlink" href="#integrating-data-panels" title="Permalink to this headline">¶</a></h1>
+<p>:container: container-lg pb-3<br>
+:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1<br>
+:card: rounded<br></p>
+<p><i class='fa fa-qrcode fa-2x' style='color:#7e0038;'></i><br>
+^^^</p>
 <h4><b>Recipe metadata</b></h4>
  identifier: <a href="">RX.X</a>
  version: <a href="">v1.0</a>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fa fa-fire fa-2x' style='color:#7e0038;'></i></p>
-</div>
-<div class="card-body docutils">
+<hr class="docutils" />
+<p><i class='fa fa-fire fa-2x' style='color:#7e0038;'></i>
+^^^</p>
 <h4><b>Difficulty level</b></h4>
 <i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
 <i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
 <i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
 <i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
 <i class='fa fa-fire fa-lg' style='color:lightgrey'></i>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fas fa-clock fa-2x' style='color:#7e0038;'></i></p>
-</div>
-<div class="card-body docutils">
+<hr class="docutils" />
+<p><i class='fas fa-clock fa-2x' style='color:#7e0038;'></i>
+^^^</p>
 <h4><b>Reading Time</b></h4>
 <i class='fa fa-clock fa-lg' style='color:#7e0038;'></i> 30 minutes
 <h4><b>Recipe Type</b></h4>
 <i class='fa fa-globe fa-lg' style='color:#7e0038;'></i> Hands-on
 <h4><b>Executable Code</b></h4>
 <i class='fa fa-play-circle fa-lg' style='color:#7e0038;'></i> Yes
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fa fa-users fa-2x' style='color:#7e0038;'></i></p>
-</div>
-<div class="card-body docutils">
+<hr class="docutils" />
+<p><i class='fa fa-users fa-2x' style='color:#7e0038;'></i>
+^^^</p>
 <h4><b>Intended Audience</b></h4>
 <!-- <p> <i class='fa fa-user-md fa-lg' style='color:#7e0038;'></i> Principal Investigator </p> -->
 <p> <i class='fa fa-database fa-lg' style='color:#7e0038;'></i> Data Manager </p>
 <p> <i class='fa fa-wrench fa-lg' style='color:#7e0038;'></i> Data Scientist </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<hr class="docutils" />
+````
+---
 <p><strong>title:</strong> <code class="docutils literal notranslate"> </code> <br>
 <strong>author:</strong> <code class="docutils literal notranslate"><span class="pre">philippe.rocca-serra&#64;oerc.ox.ac.uk</span></code> <br>
 <strong>date:</strong> <code class="docutils literal notranslate"><span class="pre">2020-05-11</span></code> <br>
