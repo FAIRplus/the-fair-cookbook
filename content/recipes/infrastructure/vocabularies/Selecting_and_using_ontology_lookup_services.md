@@ -1,4 +1,4 @@
-# Selection and exploitation of Ontology Lookup Services
+# Selecting an ontology lookup service
 
 +++
 <br/>
@@ -11,7 +11,7 @@
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator, procurement_officer
 :has_executable_code: nope
-:recipe_name: Selection and exploitation of Ontology Lookup Services
+:recipe_name: Selecting an ontology lookup service
 ````
 
 ## Table of Contents
