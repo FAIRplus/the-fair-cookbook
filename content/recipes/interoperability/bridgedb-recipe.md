@@ -1,5 +1,5 @@
 (fcb-bridgedb)=
-# Identifier mapping with BridgeDB
+# Identifiers mapping with BridgeDB
 
 
 ````{panels_fairplus}
@@ -10,7 +10,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Identifier mapping with BridgeDB
+:recipe_name: Identifiers mapping with BridgeDB
 ```` 
 
 
