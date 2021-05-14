@@ -1,5 +1,5 @@
  (fcb-applied-examples)=
-# Applied Examples
+# Applied examples
 
 ---
 
