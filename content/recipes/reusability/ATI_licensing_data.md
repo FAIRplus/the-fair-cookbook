@@ -122,10 +122,7 @@ If you would like to read more about the challenges and finer points of licensin
 
 ## References
 
-```{bibliography} ../interoperability/bibref/bibliography-identifier-mapping.bib
+```{bibliography} ../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 
-```{bibliography} ../interoperability/bibliography-identifier-mapping.bib
-:filter: docname in docnames
-```

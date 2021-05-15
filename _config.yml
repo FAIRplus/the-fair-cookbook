@@ -96,7 +96,8 @@ parse:
   myst_url_schemes: [ mailto, http, https, ftp ]
 
 bibtex_bibfiles:
-    - ./_bibliography/bibliography-identifier-mapping.bib
+   - ./recipes/_bibliography/bibliography-identifier-mapping.bib
+   # - ./interoperability/bibref/bibliography-identifier-mapping.bib
    # - ./_bibliography/fairbookreferences.bib
    # - ./_bibliography/bibliography-bridgedb.bib
    # - ./_bibliography/bibliography-identifier-mapping2.bib

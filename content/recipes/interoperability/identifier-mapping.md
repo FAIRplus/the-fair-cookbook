@@ -281,15 +281,10 @@ ___
 
 ## References
 
-```{bibliography} ./bibref/bibliography-identifier-mapping.bib
-:filter: docname in docnames
-```
-
-<!-- ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography} ../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 :style: alpha
-``` -->
-
+```
 
 ___
 

@@ -1157,7 +1157,7 @@ Make sure you have a reference bibtex file.
 You can create one by:
 - running `touch fairbookreferences.bib`
 or
-- view a {download}`fairbookreferences.bib <./bibref/fairbookreferences.bib>` example.
+- view a {download}`bibliography-identifier-mapping.bib <../_bibliography/bibliography-identifier-mapping.bib>` example.
 ```
 
 ``````{list-table}
@@ -1186,7 +1186,7 @@ To include a list of citations mentioned in the document, introduce the `bibliog
 ```
 ``````
 
-```{bibliography} ./bibref/fairbookreferences.bib
+```{bibliography} ../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 
