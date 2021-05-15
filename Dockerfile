@@ -96,7 +96,7 @@ RUN pip install                                          \
             sphinx-thebe==0.0.8                             \
             sphinx-togglebutton==0.2.3                              \
             sphinxcontrib-applehelp==1.0.2                              \
-            sphinxcontrib-bibtex==1.0.0                             \
+            sphinxcontrib-bibtex==2.1.0                             \
             sphinxcontrib-devhelp==1.0.2                                \
             sphinxcontrib-htmlhelp==1.0.3                               \
             sphinxcontrib-jsmath==1.0.1                             \
