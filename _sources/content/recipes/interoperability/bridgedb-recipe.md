@@ -379,11 +379,11 @@ These are aspects of information provenance which
 
 ---
 
-{download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>`
+{download}`bibliography-identifier-mapping.bib <../_bibliography/bibliography-identifier-mapping.bib>`
 
 ## References
 
-```{bibliography} ./bibref/bibliography-identifier-mapping.bib
+```{bibliography} ../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 ___
