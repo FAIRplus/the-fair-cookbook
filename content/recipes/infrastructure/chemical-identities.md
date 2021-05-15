@@ -31,7 +31,7 @@
 
 * International Chemical Identifier (InChI)
 
-## Tools:
+## Tools
 
 * Programming Language: Groovy
 * Dependencies: CDK 2.3

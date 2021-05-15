@@ -71,7 +71,7 @@ Refer to the community page for a complete guidance on how to create new identif
 
 ----
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

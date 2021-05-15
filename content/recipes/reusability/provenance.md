@@ -128,9 +128,17 @@ Example of a write edge in W3C PROV format:
 	> * [How to meet community standards for annotation](./community-standards)
 
 
+<!--## References
+
+``{bibliography} ./../../_bibliography/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+``` -->
+
+<!-- {download}`bibliography-identifier-mapping.bib <../interoperability/bibref/bibliography-identifier-mapping.bib>` -->
+
 ## References
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography} ../interoperability/bibref/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 

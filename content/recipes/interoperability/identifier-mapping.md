@@ -275,18 +275,20 @@ ___
     > * [Identifier Resolution Services](./findability/id-resolution.html) 
 -->
 
-
-
-
 ___
+
+
 
 ## References
 
-<!-- idmapping/idmapping.bib -->
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography} ./bibref/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+```
+
+<!-- ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 :style: alpha
-```
+``` -->
 
 
 ___
