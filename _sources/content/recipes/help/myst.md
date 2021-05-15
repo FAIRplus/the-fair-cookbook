@@ -1153,8 +1153,11 @@ See [Footnotes](https://myst-parser.readthedocs.io/en/latest/using/syntax.html#s
 ## Citations
 
 ```{note}
-Make sure you have a reference bibtex file. You can create one by running `touch fairbookreferences.bib`
-or view a {download}`references.bib <./bibref/fairbookreferences.bib>` example.
+Make sure you have a reference bibtex file. 
+You can create one by:
+- running `touch fairbookreferences.bib`
+or
+- view a {download}`fairbookreferences.bib <./bibref/fairbookreferences.bib>` example.
 ```
 
 ``````{list-table}
@@ -1182,3 +1185,8 @@ To include a list of citations mentioned in the document, introduce the `bibliog
 :filter: docname in docnames
 ```
 ``````
+
+```{bibliography} ./bibref/fairbookreferences.bib
+:filter: docname in docnames
+```
+

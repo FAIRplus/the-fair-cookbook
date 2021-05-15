@@ -538,7 +538,7 @@ robot query --input <input_ontology_file> \
 ```
 
 ---
-## Conclusionss
+## Conclusions
 
 > Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. This more advanced recipe has identified and described all the different steps that one needs to consider to build such a resource. While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date. It is therefore also critical to understand the benefits of contributing to existing open efforts.    
 
@@ -550,11 +550,9 @@ ___
 
 
 
-
 ## References
 
-
-```{bibliography} bibliography-identifier-mapping.bib
+```{bibliography} ./bibref/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 

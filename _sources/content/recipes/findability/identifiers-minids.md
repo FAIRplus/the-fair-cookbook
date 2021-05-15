@@ -320,7 +320,7 @@ ____
 
 --- 
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

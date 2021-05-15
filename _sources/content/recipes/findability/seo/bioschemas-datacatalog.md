@@ -250,7 +250,7 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 
 ___
 
-## Authors:
+## Authors
 
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
@@ -260,13 +260,13 @@ ___
 
 ___
 
-## Footnotes:
+## Footnotes
 
 <a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
 
 ___
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

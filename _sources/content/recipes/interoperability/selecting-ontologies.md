@@ -336,10 +336,11 @@ equivalentClass :
 > * [How to establish a minimal metadata profile?]()
 ___
 
+{download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>`
 
 ## References
 
-```{bibliography} bibliography-identifier-mapping.bib
+```{bibliography} ./bibref/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 

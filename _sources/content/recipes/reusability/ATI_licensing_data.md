@@ -119,7 +119,12 @@ The [Data Curation Center (DCC) guide](https://www.dcc.ac.uk/guidance/how-guides
 If you would like to read more about the challenges and finer points of licensing, [this article](https://research.okfn.org/avoiding-data-use-silos/) is a great resource to get you started.
 
 
+
 ## References
+
+```{bibliography} ../interoperability/bibref/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+```
 
 ```{bibliography} ../interoperability/bibliography-identifier-mapping.bib
 :filter: docname in docnames

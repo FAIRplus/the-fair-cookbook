@@ -106,20 +106,15 @@ ascp version 3.9.6.176292
   * 
   -->
 
-## Discussion
+## Conclusion
 
 * Aspera is commercial software
-* Is this still okay as part of FAIR principles? As long as the instution with the server has paid for the licence
-<!--TODO (internal comments:)
-* Action : ask EBI e.g. Tony or Fuqi (in the presentation)
-* Action Philippe: will ask Mark Wilkinson if Aspera is compliant? and how it would work with his evaluator?
-* Look at the dockerised version of the client?
-* write a new recipe for uploading - probably update this.
--->
+* Is this still okay as part of FAIR principles? As long as the instution with the server has paid for the licence, clients for the protocol are available at no fee.
+
 
 ### What to read next?
 
-  - <!-- TODO (recipe does not exist yet) --> File transfer with FTP
+  - {ref}`fcb-access-sftp` 
   - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
 
 ---
