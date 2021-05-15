@@ -383,7 +383,7 @@ These are aspects of information provenance which
 
 ## References
 
-```{bibliography} ../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ```
 ___
