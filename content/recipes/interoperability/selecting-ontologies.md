@@ -18,7 +18,7 @@
 
 ## Main Objectives
 
-The main purpose of this recipe to provide guidances on how to select the most suitable semantic artefacts given a specific research context in general, and when it comes to life and biomedical sciences projects, their main themes, i.e. *risk assessment*, *clinical trial*, *drug discovery* or *fundamental research*.
+The main purpose of this recipe is to provide guidance on how to select the most suitable semantic artefacts given a specific research context in general, and when it comes to life and biomedical sciences projects, their main themes, i.e. *risk assessment*, *clinical trial*, *drug discovery* or *fundamental research*.
 
 
 ## Graphical Overview
@@ -50,7 +50,7 @@ ___
 
 ## Context is everything
 
-The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply a consequence of the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
+The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply due to the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
 
 Here, we present the three most common scenarios in biomedical research, based on experience garnered during IMI eTRIKS {cite}`philippe_rocca_serra_2016_50825` :
 
@@ -78,7 +78,7 @@ Some resources are only available under restrictive licences, which prevent deri
 
 ### Observational Health Data
 
-This context refers to data collected during `observation studies`, which in contrast to `interventional studies`, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
+This context refers to data collected during `observational studies`, which in contrast to `interventional studies`, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
 In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients' information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (ODHSI) `open-science community` has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a `data context`.
 
 
@@ -92,14 +92,15 @@ In this specific context, one model and associated set of standards has been par
 |RxNORM|drugs|Bioportal|
 
 
-For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the `controlled terminology` [in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html) {cite}`pmid27274072`
+For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, we recommend the reading of the chapter dedicated to the `controlled terminology` [in the **`Book of OHDSI`**](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html) {cite}`pmid27274072`
 
 
 ### Basic research context
 
-This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practice and proper archival requirements.
+This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practices and proper archival requirements.
 As a consequence of fewer constraints, researchers are often confronted with a sea of options. This and the next sections aim to provide some guidance when tasked with deciding on which semantic resource to use.
 
+<!-- Dead link -->
 ```{admonition} Tip
 :class: tip
  **An important consideration** 
@@ -167,7 +168,7 @@ The resources listed here focus on providing structured vocabularies to describe
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|Comment|
 |--- |--- |--- |--- |--- |--- |--- |
 |**Organism**|NCBITaxonomy|http://purl.obolibrary.org/obo/ncbitaxon.owl|none specified|This ontology is made available via the UMLS. Users of all UMLS ontologies must abide by the terms of the [UMLS license](https://uts.nlm.nih.gov/license.html)|||
-|**Vertebrate Anatomy**|UBERON|http://purl.obolibrary.org/obo/uberon/ext.owl;http://purl.obolibrary.org/obo/uberon/ext.obo|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/obophenotype/uberon/issues|Integrative Resource engineered to go across species|
+|**Vertebrate Anatomy**|UBERON|http://purl.obolibrary.org/obo/uberon/ext.owl http://purl.obolibrary.org/obo/uberon/ext.obo|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/obophenotype/uberon/issues|Integrative Resource engineered to go across species|
 |**Human Anatomy**|FMA| http://purl.obolibrary.org/obo/fma.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/| Excellent cross-referencing with Uberon|
 | **Human Developmental Stages** | http://purl.obolibrary.org/obo/hsapdv.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | |
 |**Mouse Anatomy**|MA| http://purl.obolibrary.org/obo/ma.owl| |[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)| https://github.com/obophenotype/mouse-anatomy-ontology/issues ||
@@ -226,8 +227,8 @@ Following on through our review of semantic resources by granularity levels, thi
 |**Cell**|CL|http://purl.obolibrary.org/obo/cl.owl http://purl.obolibrary.org/obo/cl.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://code.google.com/p/cell-ontology/issues/list|
 |**Cell Lines**| 
 | | Cellosaurus|ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo ftp://ftp.expasy.org/databases/cellosaurus|| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)||
-| |CLO|http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/clo-ontology/issues/list|
-|**Cell Molecular Phenotype Ontology**|CMPO|https://github.com/EBISPOT/CMPO/tree/master/release|BFO| [none specified]()| https://github.com/EBISPOT/CMPO/issues |
+| |CLO|Broken link|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/CLO-ontology/CLO/issues|
+|**Cell Molecular Phenotype Ontology**|CMPO|Broken link| https://github.com/EBISPOT/CMPO/issues |
 
 
 
@@ -239,9 +240,9 @@ This section highlights the major and most widely used OBO Foundry resources for
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|**Chemicals and Small Molecules**|CHEBI|http://ftp.ebi.ac.uk/chebi.owl http://ftp.ebi.ac.uk/chebi.obo| BFO|[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/chebi/annotation-issues/|
+|**Chemicals and Small Molecules**|CHEBI|Broken links| BFO|[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/chebi/annotation-issues/|
 |**Gene Function, Molecular Component, Biological Process**|GO|http://purl.obolibrary.org/obo/go.obo http://purl.obolibrary.org/obo/go.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/geneontology/ontology-requests/|
-|**Protein/peptide**|PRO|http://ftp.pir.georgetown.edu/pro.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) ||
+|**Protein/peptide**|PRO|Broken link|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) ||
 
 
 Besides these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resource is relevant.
@@ -279,7 +280,7 @@ Finally, a resource exists that describes statistical measures, statistical test
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-| **Experimental Design, Statistical Methods and Statistical Measures**|STATO|https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
+| **Experimental Design, Statistical Methods and Statistical Measures**|STATO|Broken link|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
 
 
 
@@ -310,7 +311,7 @@ In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org
 
 
 As `knowledge graphs` and `property graphs` gain importance, we can expect the range and depth of relations to mature and expands as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
-This would also have to placed in the context of advances in `Text Mining` and `Machine Learning`, where unsupervised methods start to demonstrate strong potential to detecting relations between entities.
+This would also have to be placed in the context of advances in `Text Mining` and `Machine Learning`, where unsupervised methods start to demonstrate strong potential to detect relations between entities.
 
 ```bash
 B cell, CD19-positive
