@@ -54,6 +54,14 @@ Process for requesting an new term to a terminology.
 | :------------- | :------------- | :------------- |
 | [text annotation](http://edamontology.org/operation_3778)  | new term(s), [ontology](http://edamontology.org/data_0582) | [ontology term](http://edamontology.org/data_0966), [annotated text](http://edamontology.org/data_3779)  |
 
+## Table of Data Standards
+
+| Data Formats  | Ontologies |
+| :------------- | :------------- |
+| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)|
+| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)  |
+| Release Format 2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
+| Rich Release Format |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
 
 ## Step-by-Step process
 
@@ -143,15 +151,6 @@ Changes or additions to UMLS can be requested by contacting [NLM Customer Suppor
 
 UMLS is updated in May and November of each year.
 
-
-## Table of Data Standards
-
-| Data Formats  | Ontologies |
-| :------------- | :------------- |
-| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)|
-| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)  |
-| Release Format 2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
-| Rich Release Format |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
 
 ---
 
