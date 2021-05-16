@@ -170,7 +170,7 @@ The table below is an overview of ontology strategies tools identified. Details 
    </td>
    <td><a href="https://bio.tools/zooma">zooma</a>
    </td>
-   <td><a href="https://bio.tools/amigo%202">amigo 2</a>
+   <td><a href="https://bio.tools/amigo%202">amigo 2 Broken Link</a>
    </td>
    <td>
    </td>
@@ -226,7 +226,7 @@ The table below is an overview of ontology strategies tools identified. Details 
    </td>
   </tr>
   <tr>
-   <td><a href="https://bio.tools/qtl%20tableminer%EF%BF%BD(qtm)">qtl tableminer(qtm)</a>
+   <td><a href="https://bio.tools/qtl%20tableminer%EF%BF%BD(qtm)">qtl tableminer(qtm) Broken Link</a>
    </td>
    <td>
    </td>
@@ -313,7 +313,7 @@ __Automatically created list of tools by querying [Bio.Tools](https://bio.tools)
   <tr>
    <td><a href="https://bio.tools/biobert">biobert</a>
    </td>
-   <td>A pre-trained biomedical language representation model for biomedical text mining | BioBERT: a pre-trained biomedical language representation model | This repository provides pre-trained weights of BioBERT, a language representation model for biomedical domain, especially designed for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, question answering, etc. Please refer to our paper BioBERT: a pre-trained biomedical language representation model for biomedical text mining for more details | This repository provides fine-tuning codes of BioBERT, a language representation model for biomedical domain, especially designed for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, question answering, etc. Please refer to our paper BioBERT: a pre-trained biomedical language representation model for biomedical text mining for more details. This project is done by DMIS-Lab
+   <td>A pre-trained biomedical language representation model for biomedical text mining | BioBERT: a pre-trained biomedical language representation model | This repository provides pre-trained weights of BioBERT, a language representation model for biomedical domain, especially designed for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, question answering, etc. Please refer to our paper BioBERT: a pre-trained biomedical language representation model for biomedical text mining for more details | This repository provides fine-tuning codes of BioBERT, a language representation model for biomedical domain, especially designed for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, question answering, etc. Please refer to our paper BioBERT: a pre-trained biomedical language representation model for biomedical text mining for more details. This project is done by DMIS-Lab.
    </td>
    <td>
    </td>
@@ -325,9 +325,9 @@ __Automatically created list of tools by querying [Bio.Tools](https://bio.tools)
   <tr>
    <td><a href="https://bio.tools/ppr-ssm">ppr-ssm</a>
    </td>
-   <td>personalized PageRank and semantic similarity measures for entity linking.
+   <td>Personalized PageRank and semantic similarity measures for entity linking.
 <p>
-BACKGROUND:Biomedical literature concerns a wide range of concepts, requiring controlled vocabularies to maintain a consistent terminology across different research groups. However, as new concepts are introduced, biomedical literature is prone to ambiguity, specifically in fields that are advancing more rapidly, for example, drug design and development. Entity linking is a text mining task that aims at linking entities mentioned in the literature to concepts in a knowledge base. For example, entity linking can help finding all documents that mention the same concept and improve relation extraction methods. Existing approaches focus on the local similarity of each entity and the global coherence of all entities in a document, but do not take into account the semantics of the domain. RESULTS:We propose a method, PPR-SSM, to link entities found in documents to concepts from domain-specific ontologies
+BACKGROUND: Biomedical literature concerns a wide range of concepts, requiring controlled vocabularies to maintain a consistent terminology across different research groups. However, as new concepts are introduced, biomedical literature is prone to ambiguity, specifically in fields that are advancing more rapidly, for example, drug design and development. Entity linking is a text mining task that aims at linking entities mentioned in the literature to concepts in a knowledge base. For example, entity linking can help finding all documents that mention the same concept and improve relation extraction methods. Existing approaches focus on the local similarity of each entity and the global coherence of all entities in a document, but do not take into account the semantics of the domain. RESULTS: We propose a method, PPR-SSM, to link entities found in documents to concepts from domain-specific ontologies
    </td>
    <td>
    </td>
@@ -581,7 +581,7 @@ __Automatically created list of tools by querying [Bio.Tools](https://bio.tools)
    </td>
   </tr>
   <tr>
-   <td><a href="https://bio.tools/amigo 2">amigo 2</a>
+   <td><a href="https://bio.tools/amigo 2">amigo 2 Broken link</a>
    </td>
    <td>The GO Consortium GO browser and search engine.
    </td>
@@ -607,7 +607,7 @@ __Automatically created list of tools by querying [Bio.Tools](https://bio.tools)
   <tr>
    <td><a href="https://bio.tools/gocats">gocats</a>
    </td>
-   <td>Advances in gene ontology utilization improve statistical power of annotation enrichment | Welcome to GOcats�â�� documentation! �â�� GOcats 1.1.5 documentation
+   <td>Advances in gene ontology utilization improve statistical power of annotation enrichment | Welcome to GOcats documentation! GOcats 1.1.5 documentation
    </td>
    <td>
    </td>
@@ -653,7 +653,7 @@ __Automatically created list of tools by querying [Bio.Tools](https://bio.tools)
    </td>
   </tr>
   <tr>
-   <td><a href="https://bio.tools/circular gene ontology (cirgo)">circular gene ontology (cirgo)</a>
+   <td><a href="https://bio.tools/cirgo">circular gene ontology (cirgo)</a>
    </td>
    <td>Visualises non-redundant two-level hierarchically structured ontology terms from gene expression data in a 2D space.
    </td>
