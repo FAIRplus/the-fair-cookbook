@@ -51,7 +51,7 @@ Building an ontology with Robot tool.
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [ontology building Broken link](http://edamontology.org/operation_XXXX)  | [tsv,OWL]|OWL|
+| [Ontology and terminology](http://edamontology.org/topic_0089)  | [tsv,OWL]|OWL|
 
 
 ## Table of Data Standards
@@ -104,7 +104,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 |                                                       | :heavy_plus_sign: How to remove terms from the resulting ontology that are not needed?                                               |
 |                                                       | :heavy_plus_sign: How to guarantee consistency of the final ontology?                                                                |
 |                                                       | :heavy_plus_sign: How to identify differences in comparison to a previous version of the resulting ontology?                         |
-| **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx) Broken link**   |                                                                                                                                       |
+| **Questions without specifying compounds or genes for the [example dataset](ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
 |                                                       | :heavy_plus_sign: Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
 |                                                       | :heavy_plus_sign: Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
 |                                                       | :heavy_plus_sign: Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
@@ -122,7 +122,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 
 
 
-_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx) Broken link.
+_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](ExternalStudiesKQ.xlsx).
 
 
 
@@ -437,13 +437,13 @@ And a template sample is presented following:
 ```{admonition} Tip
 :class: tip
 
-⚡ The generated ontology can be visualized by using the [Protégé tool](https://protege.stanford.edu/) or a [local deployment of OLS Change link to recipe](https://hackmd.io/@FAIRcookbook/H1axYY3wU). 
-The `OLS local deployment` option is recommended by this recipe, given that `Protégé` may crash when loading medium or large size ontologies.
+⚡ The generated ontology can be visualized by using the [Protégé tool](https://protege.stanford.edu/) or local deployment of OLS. 
+The {ref}`fcb-infra-localols` option is recommended by this recipe, given that `Protégé` may crash when loading medium or large size ontologies.
 ```
     
 ### Step 5: Merge ontology modules and umbrella ontology
 
-Merging the ontology modules previuosly extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
+Merging the ontology modules previously extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
 
 The `merge` ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the `ROBOT` command merging the umbrella ontology and the modules is shown:
 
@@ -550,7 +550,6 @@ robot query --input <input_ontology_file> \
 ___
 
 
-
 ## References
 
 ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
@@ -567,10 +566,9 @@ ___
 
 ## Supplementary material
 
-All broken links
-- [Example Dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)
-- [Competency questions](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md)
-- [Scripts and intermediate artifacts](https://github.com/FAIRplus/the-fair-cookbook/tree/ontology_robot_recipe/docs/content/recipes/ontology-robot)
+- [Example Dataset](ExternalStudiesKQ.xlsx)
+- [Competency questions](competency_questions.md)
+- [Scripts and intermediate artifacts](ontology-robot)
 
 ___
 
