@@ -144,8 +144,7 @@ section > table {
 
 
 .footer {
-	height: 80px;
-	width: 815px;
+	width: auto;
 	text-align: center;
 }
 
@@ -412,10 +411,6 @@ div.firstCol div.d-block {
         padding-right: 10px;
     }
     footer,
-    footer * {
-        background: #421C6E;
-        color: white;
-    }
     footer {
         width: 98.5vw !important;
         position: absolute;
@@ -445,6 +440,12 @@ div.firstCol div.d-block {
     }
     #site-navigation nav#bd-docs-nav {
         flex-grow: 1;
+    }
+}
+
+@media (max-width: 1404px) {
+    .footer {
+        margin-right: 20px;
     }
 }
 
@@ -517,7 +518,7 @@ footer.footer p:not(:first-child) {
 }
 
 .card.FAIRcard .card-body {
-    padding: 0 10px 10px 10px;
+    padding: 0 20px 10px 20px;
     border: 0 !important;
     background: #f7f7f7 !important;
 }
@@ -762,6 +763,12 @@ details table tr th {
     background: #fc7a4a;
     border-bottom: 0 !important;
     min-width: 100px;
+}
+
+footer,
+footer *:not(a) {
+    background: #421C6E;
+    color: white;
 }
 
 .text--primary {
