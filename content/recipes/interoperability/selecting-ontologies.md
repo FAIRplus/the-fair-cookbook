@@ -227,8 +227,8 @@ Following on through our review of semantic resources by granularity levels, thi
 |**Cell**|CL|http://purl.obolibrary.org/obo/cl.owl http://purl.obolibrary.org/obo/cl.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://code.google.com/p/cell-ontology/issues/list|
 |**Cell Lines**| 
 | | Cellosaurus|ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo ftp://ftp.expasy.org/databases/cellosaurus|| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)||
-| |CLO|Broken link|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/CLO-ontology/CLO/issues|
-|**Cell Molecular Phenotype Ontology**|CMPO|Broken link| https://github.com/EBISPOT/CMPO/issues |
+| |CLO|[https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl](https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl)|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/CLO-ontology/CLO/issues|
+|**Cell Molecular Phenotype Ontology**|CMPO|[last release](https://github.com/EBISPOT/CMPO/releases/tag/2017-12-19)| https://github.com/EBISPOT/CMPO/issues |
 
 
 
@@ -240,9 +240,9 @@ This section highlights the major and most widely used OBO Foundry resources for
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|**Chemicals and Small Molecules**|CHEBI|Broken links| BFO|[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/chebi/annotation-issues/|
+|**Chemicals and Small Molecules**|CHEBI|[CHEBI](https://www.ebi.ac.uk/chebi/)| BFO|[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/ebi-chebi/ChEBI/issues|
 |**Gene Function, Molecular Component, Biological Process**|GO|http://purl.obolibrary.org/obo/go.obo http://purl.obolibrary.org/obo/go.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/geneontology/ontology-requests/|
-|**Protein/peptide**|PRO|Broken link|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) ||
+|**Protein/peptide**|PRO|[Protein Ontology](https://proconsortium.org)|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/PROconsortium/PRoteinOntology/issues|
 
 
 Besides these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resource is relevant.
@@ -280,7 +280,7 @@ Finally, a resource exists that describes statistical measures, statistical test
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-| **Experimental Design, Statistical Methods and Statistical Measures**|STATO|Broken link|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
+| **Experimental Design, Statistical Methods and Statistical Measures**|STATO|[http://stato-ontology.org](http://stato-ontology.org)|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
 
 
 
