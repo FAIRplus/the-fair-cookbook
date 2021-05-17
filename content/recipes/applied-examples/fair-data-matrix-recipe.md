@@ -140,7 +140,7 @@ We marked-up all entities with persistent resolvable identifiers to enhance data
     
 ### Step3: Preservation of the data matrices in an open syntax
 
-We used the Frictionless Tabular Data Package (https://specs.frictionlessdata.io//data-package/) to describe the table headers in JSON format.
+We used the Frictionless Tabular Data Package (https://specs.frictionlessdata.io/data-package/) to describe the table headers in JSON format.
 The transformation is documented in a jupyter notebook (https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb).
      
 ### Step4: Address Reusability
