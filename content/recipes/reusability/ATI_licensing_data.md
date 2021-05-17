@@ -64,7 +64,7 @@ This means that anyone can modify, redistribute or build on your work.
 Further, by using CC0, you forfeit the right to attribution.
 Instead, you have to rely on norms such as good citation practices in academic communities to be recognized as the creator.
 Several organizations, such as museums, governmental bodies and scientific publishers, have chosen CC0 for access to at least part of their data.
-In many instances, data repositories maintained by universities recommend CC0 as the default option, such as the [4TU.Centre for Research Data](https://researchdata.4tu.nl/en/use-4turesearchdata/archive-research-data/upload-your-data-in-our-data-archive/licencing/).
+In many instances, data repositories maintained by universities recommend CC0 as the default option, such as the [4TU.Centre for Research Data](https://data.4tu.nl/info/fileadmin/user_upload/Documenten/Data_collection_policy_2020.pdf).
 
 (rr-licensing-data-odc)=
 ## Open Data Commons
@@ -76,7 +76,7 @@ The [webpages](https://opendatacommons.org/licenses/index.html) {cite}`odk2020od
 ### The Public Domain Dedication and License or PDDL
 
 The PDDL is analogous to CC0, where you waive all your rights to the data you are putting into the public domain.
-It comes with a [set of recommended community norms](https://opendatacommons.org/licenses/pddl/norms.html), which are not mandatory to include and do not form a legal contract but can be useful to have as a guide to encourage fair, open sharing of data.
+It comes with a [set of recommended community norms](https://opendatacommons.org/norms/odc-by-sa/), which are not mandatory to include and do not form a legal contract but can be useful to have as a guide to encourage fair, open sharing of data.
 It is also possible to put together a customized set of norms that serve your data-sharing community better.
 
 (rr-licensing-data-odc-odc-by)=
@@ -104,7 +104,7 @@ CC licenses also cover copyrights and other neighbouring rights.
 
 Another difference is the availability of a standardised Community Norms document with the PDDL.
 The lack of such a document with CC0 means that you have to rely on community norms, which may often be unspoken or unwritten and can vary from community to community, to ensure fair attribution.
-A comparison between the PDDL and CC0 is provided [here](https://opendatacommons.org/faq.1.html).
+A comparison between the PDDL and CC0 is provided [here](https://opendatacommons.org/faq/).
 
 (rr-licensing-data-options)=
 ## Other Licensing Options
