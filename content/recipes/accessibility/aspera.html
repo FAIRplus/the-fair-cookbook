@@ -268,12 +268,7 @@
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
      2. Identifiers mapping with BridgeDB
     </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       Using BridgeDB web services
-      </a>
-     </li>
+    <ul class="simple collapse-ul">
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -425,48 +420,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/etox.html">
-     2. eTox - omics datasets
+     2. eTox - toxicity datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/nd4bb.html">
-     3. ND4BB - clinical trial datasets
+     3. nd4bb - chemical activities datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - observational clinical cohort datasets
+     4. Oncotrack - clinical cohort datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
      5. RESOLUTE - transcriptomics datasets
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  FAIR COMPLIANCE
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../assessing-fairness.html">
-   Assessing FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
-     1. Evaluating FAIRness with FAIREvaluator
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
-     2. Evaluating FAIRness with FAIRshake
     </a>
    </li>
   </ul>
@@ -551,11 +520,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../introduction/the-turing-way.html">
      1. Leveraging the Turing Way Book
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/technology_stack.html">
-     2. Technology stack
     </a>
    </li>
   </ul>
@@ -753,7 +717,7 @@
 <span id="fcb-access-aspera"></span><h1><span class="section-number">2. </span>Downloading data with Aspera<a class="headerlink" href="#downloading-data-with-aspera" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Downloading data with Aspera", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB003", "url": "http://w3id.org/faircookbook/FCB003"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Downloading data with Aspera", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB015", "url": "http://w3id.org/faircookbook/FCB015"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -804,17 +768,14 @@ Yes
 </div>
 </div>
 <div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="http://w3id.org/faircookbook/FCB003" class="text--purple-dark">FCB003
+<a href="http://w3id.org/faircookbook/FCB015" class="text--purple-dark">FCB015
 </a></div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="main-objectives">
 <h2><span class="section-number">2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>This recipe is about documenting how to use the popular Aspera Fast Transfer Protocol.
-This is part of a group of other related recipes about efficient files uploads and downloads .
-While the Aspera protocol is used by major public repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is <strong>proprietary</strong>.
-The recipe will therefore also cover some of the implications of using a <code class="docutils literal notranslate"><span class="pre">closed</span> <span class="pre">protocol</span></code> in terms of FAIR compliance.</p>
+<p>This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads . While the Aspera protocol is used by major public scientific data repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is <strong>proprietary</strong>. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR compliance.</p>
 </div>
 <div class="section" id="graphical-overview">
 <h2><span class="section-number">2.2. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>

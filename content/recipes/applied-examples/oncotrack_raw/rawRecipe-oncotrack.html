@@ -72,7 +72,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Oncotrack - observational clinical cohort datasets" />
-<meta property="og:description" content="Oncotrack - observational clinical cohort datasets  Ingredients  Metadata model  Oncotrack cohort metadata  Oncotrack drug sensitivity data  Oncotrack metadata " />
+<meta property="og:description" content="Oncotrack - observational clinical cohort datasets  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bio" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -268,12 +268,7 @@
     <a class="reference internal" href="../../interoperability/bridgedb-recipe.html">
      2. Identifiers mapping with BridgeDB
     </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       Using BridgeDB web services
-      </a>
-     </li>
+    <ul class="simple collapse-ul">
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -425,48 +420,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../etox.html">
-     2. eTox - omics datasets
+     2. eTox - toxicity datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../nd4bb.html">
-     3. ND4BB - clinical trial datasets
+     3. nd4bb - chemical activities datasets
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     4. Oncotrack - observational clinical cohort datasets
+     4. Oncotrack - clinical cohort datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../resolute_raw/resolute.html">
      5. RESOLUTE - transcriptomics datasets
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  FAIR COMPLIANCE
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../assessing-fairness.html">
-   Assessing FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
-     1. Evaluating FAIRness with FAIREvaluator
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
-     2. Evaluating FAIRness with FAIRshake
     </a>
    </li>
   </ul>
@@ -551,11 +520,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/the-turing-way.html">
      1. Leveraging the Turing Way Book
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/technology_stack.html">
-     2. Technology stack
     </a>
    </li>
   </ul>
@@ -744,6 +708,64 @@
                 
   <div class="section" id="oncotrack-observational-clinical-cohort-datasets">
 <span id="fcb-fairify-examples-oncotrack"></span><h1><span class="section-number">4. </span>Oncotrack - observational clinical cohort datasets<a class="headerlink" href="#oncotrack-observational-clinical-cohort-datasets" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Oncotrack - clinical cohort datasets", "audience": ["Data Manager", "Data Curator", "Ontologist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Experience Report / Applied Example", "identifier": {"@type": "PropertyValue", "name": "FCB044", "url": "http://w3id.org/faircookbook/FCB044"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+10 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Oncotrack - clinical cohort datasets</div>
+<img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Experience Report / Applied Example</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Data Manager, Data Curator, Ontologist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="http://w3id.org/faircookbook/FCB044" class="text--purple-dark">FCB044
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
 <div class="section" id="ingredients">
 <h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">

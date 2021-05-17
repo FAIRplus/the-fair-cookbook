@@ -3,8 +3,8 @@
 
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB_TBA
-:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:identifier_text: FCB025
+:identifier_link: https://w3id.org/faircookbook/FCB025
 :difficulty_level: 3
 :recipe_type: technical_guidance
 :reading_time_minutes: 15
