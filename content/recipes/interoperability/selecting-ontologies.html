@@ -821,7 +821,7 @@ No
 <hr class="docutils" />
 <div class="section" id="main-objectives">
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>The main purpose of this recipe to provide guidances on how to select the most suitable semantic artefacts given a specific research context in general, and when it comes to life and biomedical sciences projects, their main themes, i.e. <em>risk assessment</em>, <em>clinical trial</em>, <em>drug discovery</em> or <em>fundamental research</em>.</p>
+<p>The main purpose of this recipe is to provide guidance on how to select the most suitable semantic artefacts given a specific research context in general, and when it comes to life and biomedical sciences projects, their main themes, i.e. <em>risk assessment</em>, <em>clinical trial</em>, <em>drug discovery</em> or <em>fundamental research</em>.</p>
 </div>
 <div class="section" id="graphical-overview">
 <h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
@@ -852,7 +852,7 @@ No
 <hr class="docutils" />
 <div class="section" id="context-is-everything">
 <h2>Context is everything<a class="headerlink" href="#context-is-everything" title="Permalink to this headline">¶</a></h2>
-<p>The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply a consequence of the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.</p>
+<p>The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply due to the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.</p>
 <p>Here, we present the three most common scenarios in biomedical research, based on experience garnered during IMI eTRIKS <span id="id1">[<span>philippe_rocca_serra_2016_50825</span>]</span> :</p>
 <div class="section" id="clinical-trial-data">
 <h3>Clinical Trial Data<a class="headerlink" href="#clinical-trial-data" title="Permalink to this headline">¶</a></h3>
@@ -904,7 +904,7 @@ In this context, regulatory requirements make it so that data must be recorded i
 </div>
 <div class="section" id="observational-health-data">
 <h3>Observational Health Data<a class="headerlink" href="#observational-health-data" title="Permalink to this headline">¶</a></h3>
-<p>This context refers to data collected during <code class="docutils literal notranslate"><span class="pre">observation</span> <span class="pre">studies</span></code>, which in contrast to <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in the context of epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. <code class="docutils literal notranslate"><span class="pre">Observational</span> <span class="pre">health</span> <span class="pre">data</span></code> can also include <code class="docutils literal notranslate"><span class="pre">electronic</span> <span class="pre">health</span> <span class="pre">records</span> <span class="pre">(EHR)</span></code> or <code class="docutils literal notranslate"> <span class="pre">administrative</span> <span class="pre">insurance</span> <span class="pre">claims</span></code> and allow research around acquiring <em><code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">world</span> <span class="pre">evidence</span></code></em> from large corpora of data.
+<p>This context refers to data collected during <code class="docutils literal notranslate"><span class="pre">observational</span> <span class="pre">studies</span></code>, which in contrast to <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. <code class="docutils literal notranslate"><span class="pre">Observational</span> <span class="pre">health</span> <span class="pre">data</span></code> can also include <code class="docutils literal notranslate"><span class="pre">electronic</span> <span class="pre">health</span> <span class="pre">records</span> <span class="pre">(EHR)</span></code> or <code class="docutils literal notranslate"> <span class="pre">administrative</span> <span class="pre">insurance</span> <span class="pre">claims</span></code> and allow research around acquiring <em><code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">world</span> <span class="pre">evidence</span></code></em> from large corpora of data.
 In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients’ information structured using the <strong>Observational Medical Outcomes Partnership (OMOP)</strong>, the Observational Health Data Sciences and Informatics (ODHSI) <code class="docutils literal notranslate"><span class="pre">open-science</span> <span class="pre">community</span></code> has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">context</span></code>.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -940,12 +940,13 @@ In this specific context, one model and associated set of standards has been par
 </tr>
 </tbody>
 </table>
-<p>For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, the reading the chapter dedicated to the <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> <a class="reference external" href="https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html">in the <strong><code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">of</span> <span class="pre">OHDSI</span></code></strong></a> <span id="id2">[<span>pmid27274072</span>]</span></p>
+<p>For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, we recommend the reading of the chapter dedicated to the <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> <a class="reference external" href="https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html">in the <strong><code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">of</span> <span class="pre">OHDSI</span></code></strong></a> <span id="id2">[<span>pmid27274072</span>]</span></p>
 </div>
 <div class="section" id="basic-research-context">
 <h3>Basic research context<a class="headerlink" href="#basic-research-context" title="Permalink to this headline">¶</a></h3>
-<p>This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practice and proper archival requirements.
+<p>This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practices and proper archival requirements.
 As a consequence of fewer constraints, researchers are often confronted with a sea of options. This and the next sections aim to provide some guidance when tasked with deciding on which semantic resource to use.</p>
+<!-- Dead link -->
 <div class="tip admonition">
 <p class="admonition-title">Tip</p>
 <p><strong>An important consideration</strong>
@@ -1030,7 +1031,7 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </tr>
 <tr class="row-odd"><td><p><strong>Vertebrate Anatomy</strong></p></td>
 <td><p>UBERON</p></td>
-<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/uberon/ext.owl%3Bhttp://purl.obolibrary.org/obo/uberon/ext.obo">http://purl.obolibrary.org/obo/uberon/ext.owl;http://purl.obolibrary.org/obo/uberon/ext.obo</a></p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/uberon/ext.owl">http://purl.obolibrary.org/obo/uberon/ext.owl</a> <a class="reference external" href="http://purl.obolibrary.org/obo/uberon/ext.obo">http://purl.obolibrary.org/obo/uberon/ext.obo</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
 <td><p><a class="reference external" href="https://github.com/obophenotype/uberon/issues">https://github.com/obophenotype/uberon/issues</a></p></td>
@@ -1250,17 +1251,17 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </tr>
 <tr class="row-odd"><td><p></p></td>
 <td><p>CLO</p></td>
-<td><p><a class="reference external" href="http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl">http://clo-ontology.googlecode.com/svn/trunk/src/ontology/clo.owl</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl">https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
-<td><p><a class="reference external" href="https://code.google.com/p/clo-ontology/issues/list">https://code.google.com/p/clo-ontology/issues/list</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CLO-ontology/CLO/issues">https://github.com/CLO-ontology/CLO/issues</a></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Cell Molecular Phenotype Ontology</strong></p></td>
 <td><p>CMPO</p></td>
-<td><p><a class="reference external" href="https://github.com/EBISPOT/CMPO/tree/master/release">https://github.com/EBISPOT/CMPO/tree/master/release</a></p></td>
-<td><p>BFO</p></td>
-<td><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">none specified</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/EBISPOT/CMPO/releases/tag/2017-12-19">last release</a></p></td>
 <td><p><a class="reference external" href="https://github.com/EBISPOT/CMPO/issues">https://github.com/EBISPOT/CMPO/issues</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
@@ -1281,10 +1282,10 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 <tbody>
 <tr class="row-even"><td><p><strong>Chemicals and Small Molecules</strong></p></td>
 <td><p>CHEBI</p></td>
-<td><p><a class="reference external" href="http://ftp.ebi.ac.uk/chebi.owl">http://ftp.ebi.ac.uk/chebi.owl</a> <a class="reference external" href="http://ftp.ebi.ac.uk/chebi.obo">http://ftp.ebi.ac.uk/chebi.obo</a></p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/chebi/">CHEBI</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
-<td><p><a class="reference external" href="http://sourceforge.net/p/chebi/annotation-issues/">http://sourceforge.net/p/chebi/annotation-issues/</a></p></td>
+<td><p><a class="reference external" href="https://github.com/ebi-chebi/ChEBI/issues">https://github.com/ebi-chebi/ChEBI/issues</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Gene Function, Molecular Component, Biological Process</strong></p></td>
 <td><p>GO</p></td>
@@ -1295,10 +1296,10 @@ Domains also cover <code class="docutils literal notranslate"><span class="pre">
 </tr>
 <tr class="row-even"><td><p><strong>Protein/peptide</strong></p></td>
 <td><p>PRO</p></td>
-<td><p><a class="reference external" href="http://ftp.pir.georgetown.edu/pro.obo">http://ftp.pir.georgetown.edu/pro.obo</a></p></td>
+<td><p><a class="reference external" href="https://proconsortium.org">Protein Ontology</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
-<td><p></p></td>
+<td><p><a class="reference external" href="https://github.com/PROconsortium/PRoteinOntology/issues">https://github.com/PROconsortium/PRoteinOntology/issues</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1376,10 +1377,10 @@ Some of the resources are specialized semantic artefacts developed to support th
 </tr>
 <tr class="row-even"><td><p><strong>Sample Processing/Reagents/Instruments Assay Definition</strong></p></td>
 <td><p>OBI</p></td>
-<td><p><a class="reference external" href="http://svn.code.sf.net/p/obi/code/releases/2014-03-29/obi.owl">http://svn.code.sf.net/p/obi/code/releases/2014-03-29/obi.owl</a></p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/obi.owl">http://purl.obolibrary.org/obo/obi.owl</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
-<td><p><a class="reference external" href="http://sourceforge.net/p/obi/obi-terms/">http://sourceforge.net/p/obi/obi-terms/</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obi-ontology/obi/issues">https://github.com/obi-ontology/obi/issues</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Biological screening assays and their results including high-throughput screening (HTS)</strong></p></td>
 <td><p>BAO</p></td>
@@ -1390,10 +1391,10 @@ Some of the resources are specialized semantic artefacts developed to support th
 </tr>
 <tr class="row-even"><td><p><strong>Mass Spectrometry (instrument/acquisition parameter/spectrum related information)</strong></p></td>
 <td><p>PSI-MS</p></td>
-<td><p><a class="reference external" href="http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo">http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo</a> (No OWL file)</p></td>
+<td><p><a class="reference external" href="https://github.com/HUPO-PSI/psi-ms-CV">https://github.com/HUPO-PSI/psi-ms-CV</a></p></td>
 <td><p>none specified</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
-<td><p><a class="reference external" href="https://lists.sourceforge.net/lists/listinfo/psidev-vocab">https://lists.sourceforge.net/lists/listinfo/psidev-vocab</a></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/HUPO-PSI/psi-ms-CV/issues">https://github.com/HUPO-PSI/psi-ms-CV/issues</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)</strong></p></td>
 <td><p>NMR-CV</p></td>
@@ -1433,7 +1434,7 @@ Some of the resources are specialized semantic artefacts developed to support th
 <tbody>
 <tr class="row-even"><td><p><strong>Experimental Design, Statistical Methods and Statistical Measures</strong></p></td>
 <td><p>STATO</p></td>
-<td><p><a class="reference external" href="https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl">https://raw.githubusercontent.com/ISA-tools/stato/dev/src/ontology/stato.owl</a></p></td>
+<td><p><a class="reference external" href="http://stato-ontology.org">http://stato-ontology.org</a></p></td>
 <td><p>BFO</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
 <td><p><a class="reference external" href="https://github.com/ISA-tools/stato/issues?state=open">https://github.com/ISA-tools/stato/issues?state=open</a></p></td>
@@ -1507,7 +1508,7 @@ Some of the resources are specialized semantic artefacts developed to support th
 </tbody>
 </table>
 <p>As <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> and <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> gain importance, we can expect the range and depth of relations to mature and expands as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
-This would also have to placed in the context of advances in <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Mining</span></code> and <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>, where unsupervised methods start to demonstrate strong potential to detecting relations between entities.</p>
+This would also have to be placed in the context of advances in <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Mining</span></code> and <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>, where unsupervised methods start to demonstrate strong potential to detect relations between entities.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>B cell, CD19-positive
 equivalentClass :
     lymphocyte of B lineage, CD19-positive 
