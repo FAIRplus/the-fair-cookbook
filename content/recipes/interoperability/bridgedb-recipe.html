@@ -656,8 +656,8 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mapping-global-identifier-to-other-global-identifier">
-     Mapping global identifier to other global identifier
+    <a class="reference internal nav-link" href="#mapping-a-global-identifier-to-other-global-identifiers">
+     Mapping a global identifier to other global identifiers
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -804,7 +804,7 @@ Yes
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is to:</p>
 <blockquote>
-<div><p>Provide practical examples on how to map <strong>identifiers for molecular entities</strong> (<code class="docutils literal notranslate"><span class="pre">such</span> <span class="pre">as</span> <span class="pre">Genes,</span> <span class="pre">Proteins,</span> <span class="pre">Metabolites</span> <span class="pre">and</span> <span class="pre">Pathways</span></code>) between resources using a purpose built tool, namely <a class="reference external" href="https://bio.tools/bridgedb">BridgeDB</a>.
+<div><p>Provide practical examples on how to <strong>map identifiers for Genes, Proteins, Metabolites and Pathways</strong> between resources using a purpose built tool, namely <a class="reference external" href="https://bio.tools/bridgedb">BridgeDB</a>.
 Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by <a class="reference external" href="https://bio.tools/bridgedb">BridgeDB</a>.</p>
 </div></blockquote>
 </div>
@@ -820,21 +820,22 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <hr class="docutils" />
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This recipe has the following requirements:</p>
 <ul>
-<li><p>recipe dependency:</p>
+<li><p>Recipe dependency:</p>
   <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
 <ul class="simple">
 <li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlink data from different sources</span></a></p></li>
 </ul>
 </li>
-<li><p>skill dependency:</p>
+<li><p>Skill dependency:</p>
 <ul class="simple">
-<li><p>programming knowledge</p></li>
+<li><p>Programming knowledge</p></li>
 <li><p>R</p></li>
 <li><p>Python</p></li>
 </ul>
 </li>
-<li><p>technical dependency</p>
+<li><p>Technical dependency</p>
 <ul class="simple">
 <li><p>R or Python environment</p></li>
 <li><p>BridgeDB R package installed</p></li>
@@ -854,12 +855,12 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
+<td class="text-align:left"><p>Minimal</p></td>
+<td class="text-align:left"><p>Repeatable</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>Reusability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>reusable</p></td>
+<td class="text-align:left"><p>Minimal</p></td>
+<td class="text-align:left"><p>Reusable</p></td>
 </tr>
 </tbody>
 </table>
@@ -867,6 +868,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <hr class="docutils" />
 <div class="section" id="tools">
 <h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>The table below lists the software that is used to execute the examples in this recipe.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Software</p></th>
@@ -882,12 +884,12 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <td><p><a class="reference external" href="https://bio.tools/bridgedb">https://bio.tools/bridgedb</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Python</p></td>
-<td><p>an interpreted, high-level and general-purpose programming language</p></td>
+<td><p>An interpreted, high-level and general-purpose programming language.</p></td>
 <td><p>3.8.5</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://pandas.pydata.org/">Pandas</a></p></td>
-<td><p>pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,built on top of the Python programming language.</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://pandas.pydata.org/">pandas</a></p></td>
+<td><p>pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.</p></td>
 <td><p>1.1.3</p></td>
 <td><p></p></td>
 </tr>
@@ -896,13 +898,13 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <td><p>v4.0.3</p></td>
 <td><p><a class="reference external" href="https://bio.tools/r">https://bio.tools/r</a></p></td>
 </tr>
-<tr class="row-even"><td><p>tidyverse</p></td>
-<td><p>The tidyverse is an opinionated collection of R packages designed for data science.</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.tidyverse.org/">tidyverse</a></p></td>
+<td><p>tidyverse is an opinionated collection of R packages designed for data science.</p></td>
 <td><p>1.3.0</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p>BridgeDbR</p></td>
-<td><p>an R package for BridgeDb</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/bridgedb/BridgeDbR">BridgeDbR</a></p></td>
+<td><p>An R package for BridgeDb</p></td>
 <td><p>2.0.0</p></td>
 <td><p></p></td>
 </tr>
@@ -912,8 +914,8 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <hr class="docutils" />
 <div class="section" id="id1">
 <h2>Identifier mapping with BridgeDb<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlink data from different sources</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.</p>
-<p>BridgeDB is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:</p>
+<p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlink data from different sources</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use <a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> to carry out  this process.</p>
+<p><a class="reference external" href="https://bridgedb.github.io/">BridgeDB</a> is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:</p>
 <ul class="simple">
 <li><p>Java API</p></li>
 <li><p>R package</p></li>
@@ -922,59 +924,47 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <blockquote>
 <div><p>:book: In the context of this recipe, we distinguish between two types of identifiers:</p>
 <ul class="simple">
-<li><p><em>Local identifiers</em>, which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization)</p></li>
-<li><p><em>Global identifiers</em>, which refer to identifiers which globally unique and uniquely point to an entity, as available from BridgeDb’s <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">data sources file</a></p></li>
+<li><p><em>Local identifiers</em> which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization).</p></li>
+<li><p><em>Global identifiers</em> which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb’s <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">data sources file</a></p></li>
 </ul>
 </div></blockquote>
 <p>We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers.</p>
-<p>In this recipe, we will cover how the R package and webservices can be used to accomplish the stated objectives.</p>
-<div class="section" id="mapping-global-identifier-to-other-global-identifier">
-<h3>Mapping global identifier to other global identifier<a class="headerlink" href="#mapping-global-identifier-to-other-global-identifier" title="Permalink to this headline">¶</a></h3>
-<p>In this case, the input data is a list of elements with an identifier that is part of <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">BridgeDb’s data sources</a>. In our example, we will use a list of Homo Sapiens, Hugo Gene Nomenclature Convention (<a class="reference external" href="http://www.genenames.org">HGNC</a>) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.</p>
+<p>In this recipe, we will cover how BridgeDb’s R package and webservices can be used to map between resource identifiers.</p>
+<div class="section" id="mapping-a-global-identifier-to-other-global-identifiers">
+<h3>Mapping a global identifier to other global identifiers<a class="headerlink" href="#mapping-a-global-identifier-to-other-global-identifiers" title="Permalink to this headline">¶</a></h3>
+<p>In this case, the input data is a list of elements with an identifier that is part of <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">BridgeDb’s data sources</a>. In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention (<a class="reference external" href="http://www.genenames.org">HGNC</a>) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.</p>
 <div class="section" id="bridgedb-via-webservices-using-python">
 <h4>BridgeDb via Webservices using Python<a class="headerlink" href="#bridgedb-via-webservices-using-python" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>:exclamation: For this tutorial Python v3.8.5, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> v1.1.3 and BridgeDb Webservices v0.9.0 were used.</p>
+<div><p>:exclamation: For this tutorial Python v3.8.5, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> v1.1.3, and BridgeDb Webservices v0.9.0 were used.</p>
 </div></blockquote>
-<p>One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform the mappings suggested under <a class="reference external" href="#Cases">Cases</a></p>
-<ul class="simple">
-<li><p>We start by defining strings containing the url of the webservices and the specific method from the Webservices we want to use. In our case, a <code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">cross</span> <span class="pre">reference</span></code>. When doing the query, we need to specify <strong>the organism</strong> and <strong>the source dataset</strong>. We can also <em>optionally</em> specify a <em>target data source</em> if we only want to map one of them (e.g. Ensembl)</p></li>
-</ul>
+<p>One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform the mappings suggested under <a class="reference external" href="#Cases">Cases</a>.</p>
+<p>We start by defining strings containing the URL of the webservices and the specific method from the Webservices we want to use. In our case, a <code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">cross</span> <span class="pre">reference</span></code>. When doing the query, we need to specify <strong>the organism</strong> and <strong>the source dataset</strong>. We can also <em>optionally</em> specify a <em>target data source</em> if we only want to map to a specific data source, e.g. Ensembl.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://webservice.bridgedb.org/&quot;</span>
 <span class="n">batch_request</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">&quot;</span><span class="si">{org}</span><span class="s2">/xrefsBatch/</span><span class="si">{source}{}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>If the aim is to only map to a specific target data source, then one can check whether the mapping is supported by invoking the following  webservices:</p>
-</div></blockquote>
+<p>If the aim is to map only to a specific target data source, then one can check whether the mapping is supported by invoking the following webservice call:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapping_available</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{org}</span><span class="s2">/isMappingSupported/</span><span class="si">{source}</span><span class="s2">/</span><span class="si">{target}</span><span class="s2">&quot;</span>
 <span class="n">query</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="n">mapping_available</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">org</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;En&#39;</span><span class="p">)</span>
 <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This will return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the mapping between the given source and target is supported for the given organism or <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>We then load our data into a pandas dataframe and call the requests library using our query.</p></li>
-</ul>
+<p>This will return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the mapping between the given source and target is supported for the given organism or <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<p>We then load our data into a pandas dataframe and call the requests library using our query.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">batch_request</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;?dataSource=En&#39;</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>The webservice response is now stored in the <code class="docutils literal notranslate"><span class="pre">response</span></code> variable. We can then simply pass this variable to the <code class="docutils literal notranslate"><span class="pre">to_df</span></code> method provided in the <code class="docutils literal notranslate"><span class="pre">bridgedb_script.py</span></code> module (see <a class="reference external" href="#Code">Code</a>). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.</p>
-</div></blockquote>
-<p>The output table will contain:</p>
+<p>The webservice response is now stored in the <code class="docutils literal notranslate"><span class="pre">response</span></code> variable. We can then simply pass this variable to the <code class="docutils literal notranslate"><span class="pre">to_df</span></code> method provided in the <code class="docutils literal notranslate"><span class="pre">bridgedb_script.py</span></code> module (see <a class="reference external" href="#Code">Code</a>). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.</p>
+<p>The output table will contain the:</p>
 <ul class="simple">
-<li><p>The original identifier</p></li>
-<li><p>The data source that the identifier is part of</p></li>
-<li><p>The mapped identifier</p></li>
-<li><p>The data source for the mapped identifier</p></li>
+<li><p>Original identifier</p></li>
+<li><p>Data source that the identifier is part of</p></li>
+<li><p>Mapped identifier</p></li>
+<li><p>Data source for the mapped identifier</p></li>
 </ul>
-<blockquote>
-<div><p>In our case the output of <code class="docutils literal notranslate"><span class="pre">to_df</span></code> is:</p>
-</div></blockquote>
+<p>In our case the output of <code class="docutils literal notranslate"><span class="pre">to_df</span></code> is:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>original</p></th>
@@ -1001,9 +991,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 </tr>
 </tbody>
 </table>
-<blockquote>
-<div><p>If we were to not specify the target data source (by passing an empty string as the parameter), we would get all the potential mappings for the given identifiers. In our case (top 10 rows):</p>
-</div></blockquote>
+<p>If we were to not specify the target data source (by passing an empty string as the parameter), we would get all the potential mappings for the given identifiers. In our case (top 10 rows):</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>original</p></th>
@@ -1065,13 +1053,13 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 </tr>
 </tbody>
 </table>
-<p>As one can see, using BridgeDb service via Python is extremely simple and can be easily integrated in an annotation pipeline.</p>
+<p>As one can see, using the BridgeDb webservice via Python is extremely simple and can be easily integrated in an annotation pipeline.</p>
 </div>
 <div class="section" id="bridgedb-via-the-dedicated-r-package">
 <h4>BridgeDb via the dedicated R package<a class="headerlink" href="#bridgedb-via-the-dedicated-r-package" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For this tutorial R v4.0.3, <a class="reference external" href="https://www.tidyverse.org/">tidyverse</a> v1.3.0 and <a class="reference external" href="https://www.bioconductor.org/packages/release/bioc/html/BridgeDbR.html">BridgeDbR</a> v2.0.0 were used.</p>
+<p>For this tutorial R v4.0.3, <a class="reference external" href="https://www.tidyverse.org/">tidyverse</a> v1.3.0, and <a class="reference external" href="https://www.bioconductor.org/packages/release/bioc/html/BridgeDbR.html">BridgeDbR</a> v2.0.0 were used.</p>
 </div>
 <p>After having loaded the required R libraries, we read the data and create a new column to include the source of the identifier.</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">data_df</span> <span class="o">&lt;-</span> <span class="nf">read_tsv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;identifier&#39;</span><span class="p">))</span>
@@ -1178,7 +1166,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>An error message indicating “Error in download.file” may be thrown. If the case, it may be caused by <code class="docutils literal notranslate"><span class="pre">timeout</span></code> variable being set to too small a value. To remediate the issue, try increasing the timeout variable value by calling <code class="docutils literal notranslate"><span class="pre">options(timeout=300)</span></code></p>
+<p>An error message indicating “Error in download.file” may be thrown. This may be caused by the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> variable being set to too small a value. To remediate the issue, try increasing the timeout variable value by calling <code class="docutils literal notranslate"><span class="pre">options(timeout=300)</span></code>.</p>
 </div>
 <!--
 This will maybe link to the identifier mapping recipe in the future, where there will be a specific section detailing identifier equivalence files taking into account scientific lenses, as discussed with Egon. 
@@ -1186,7 +1174,7 @@ This will maybe link to the identifier mapping recipe in the future, where there
 --------------------------------
 
 
-### Mapping local identifier to global identifier
+### Mapping a local identifier to global identifier
 [NEED HELP HERE]
 This is a step that should be done manually. In this case an important decision should be made, which identifiers to map to. To decide this you should look for the data source that contains the closest definition of the concepts to the one you used for your local identifiers.
 
@@ -1226,8 +1214,8 @@ This is a step that should be done manually. In this case an important decision 
 </div>
 <div class="section" id="webservices-in-python">
 <h4>Webservices in Python<a class="headerlink" href="#webservices-in-python" title="Permalink to this headline">¶</a></h4>
-<p>As before, we will define variables including the <code class="docutils literal notranslate"><span class="pre">web-service's</span> <span class="pre">URL</span></code> and the <code class="docutils literal notranslate"><span class="pre">method</span></code> that we will use, in this instance: <code class="docutils literal notranslate"><span class="pre">xRefsBatch</span></code>.</p>
-<p>We then pass the source column to the <code class="docutils literal notranslate"><span class="pre">post</span> <span class="pre">request</span></code> as follows</p>
+<p>As before, we will define variables including the <code class="docutils literal notranslate"><span class="pre">web-service's</span> <span class="pre">URL</span></code> and the <code class="docutils literal notranslate"><span class="pre">method</span></code> that we will use, in this instance: <code class="docutils literal notranslate"><span class="pre">xRefsBatch</span></code>.
+We then pass the source column to the <code class="docutils literal notranslate"><span class="pre">post</span> <span class="pre">request</span></code> as follows</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_data</span> <span class="o">=</span> <span class="n">case2</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">query</span> <span class="o">=</span> <span class="n">batch_request</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="n">org</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
 <span class="n">response2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">source_data</span><span class="p">)</span>
@@ -1349,7 +1337,7 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <span id="id2">[<span>batchelor_scientific_nodate</span>]</span>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to many-to-many relationships.</p>
+<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <span id="id2">[<span>batchelor_scientific_nodate</span>]</span>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.</p>
 </div>
 </div>
 <div class="section" id="r-package">
@@ -1474,7 +1462,7 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 <h2>Provenance<a class="headerlink" href="#provenance" title="Permalink to this headline">¶</a></h2>
 <p>BridgeDb provides provenance information through:</p>
 <ul class="simple">
-<li><p>A call to /properties/ in the Webservices</p></li>
+<li><p>A call to <code class="docutils literal notranslate"><span class="pre">/properties/</span></code> method of the Webservice</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">getProperties()</span></code> in BridgeDbR (passing the mapper as a parameter)</p></li>
 </ul>
 <p>This returns the following information for each of the data sources for a given organism:</p>
@@ -1486,7 +1474,7 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 <li><p>Data source version</p></li>
 <li><p>Schema version</p></li>
 </ul>
-<p>Improvements on provenance are under way (see <a class="reference external" href="https://github.com/bridgedb/BridgeDb/issues/164">here</a>)</p>
+<p>Improvements on provenance are under way (see <a class="reference external" href="https://github.com/bridgedb/BridgeDb/issues/164">here</a>).</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="code">
@@ -1496,10 +1484,10 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 <hr class="docutils" />
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<p>We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset.
-BridgeDb provides handy functionality to make ‘omics’ type of data more interoperable and reusable.
+<p>We showed how to use BridgeDb’s webservices and R package to map identifiers from different data sources using a minimal dataset.
+BridgeDb provides handy functionality to make ‘omics’ data more interoperable and reusable.
 As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
-These are aspects of information provenance which</p>
+These are aspects of information provenance which we plan to provide in the future.</p>
 <div class="section" id="what-should-i-read-next">
 <h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -1538,6 +1526,13 @@ These are aspects of information provenance which</p>
 <tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div></p></td>
 <td><p><a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
+<td class="text-align:center"><p>Writing – Review &amp; Editing</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/alasdairgray'><img class='avatar-style' src='https://avatars.githubusercontent.com/alasdairgray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div></p></td>
+<td><p><a target="_blank" href='http://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p>Heriot-Watt University</p></td>
 <td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
 <td class="text-align:center"><p>Writing – Review &amp; Editing</p></td>
