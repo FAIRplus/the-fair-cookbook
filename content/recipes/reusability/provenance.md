@@ -1,11 +1,18 @@
 (fcb-reusability-provenance)=
-# Provenance Information
+# Provenance information
 
-+++
-<br/>
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 20
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:has_executable_code: nope
+:recipe_name: Provenance information
+```` 
 
-----
-
+<!-- 
 ````{panels}
 :container: container-lg pb-3
 :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
@@ -45,11 +52,11 @@
 <p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
 <p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
 ````
-
+ -->
 
 ## Main Objectives
 
-In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essentially. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its Provenance. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of tracability and accountability can be established. The notions of `audit and trail` as well as `versioning` and `authorshipt` are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
+In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essentially. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its `Provenance`. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of tracability and accountability can be established. The notions of `audit and trail` as well as `versioning` and `authorship` are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
 
 ## Introduction
 
@@ -57,10 +64,8 @@ Data provenance https://en.wikipedia.org/wiki/Data_lineage
 
 ## PROV vocabulary
 
-The W3C vetted a specification for an RDF vocabulary to express provenance information. Implementation can be made in RDF or JSON, since JSON-LD is now an official serialization of RDF.
-The [W3C PROV ](https://www.w3.org/TR/prov-overview/)
+The W3C vetted a specification for an RDF vocabulary to express provenance information, the [W3C PROV](https://www.w3.org/TR/prov-overview/). Implementation can be made in RDF or JSON, since JSON-LD is now an official serialization of RDF.
 
-[!image](https://www.w3.org/TR/prov-overview/)
 
 ## CamFLow
 
@@ -68,9 +73,9 @@ The [W3C PROV ](https://www.w3.org/TR/prov-overview/)
 
 CamFlow support 2 output formats.
 
--W3C PROV-JSON format
+- W3C PROV-JSON format
 
-```json
+```bash
 "ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
     "cf:id": "194334",
     "prov:type": "fifo",
@@ -93,7 +98,7 @@ CamFlow support 2 output formats.
 
 
 Example of a write edge in W3C PROV format:
-```json
+```bash
 "QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
     "cf:id": "13",
     "prov:type": "write",
@@ -108,8 +113,8 @@ Example of a write edge in W3C PROV format:
     "cf:offset": "0"
 }
 ```
-
-## Workflow information:
+<!-- 
+## Workflow information: -->
 
 
 
@@ -121,14 +126,28 @@ Example of a write edge in W3C PROV format:
 	> * [How to meet community standards for annotation](./community-standards)
 
 
+<!--## References
+
+``{bibliography} ./../../_bibliography/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+``` -->
+
+<!-- {download}`bibliography-identifier-mapping.bib <../interoperability/bibref/bibliography-identifier-mapping.bib>` -->
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
 ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft, Shex expression, ontology mapping |
 
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 
 ___
 

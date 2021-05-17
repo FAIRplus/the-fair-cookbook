@@ -1,51 +1,19 @@
 (fcb-find-bs-dataset)=
-# Findability: Dataset Markup
+# Dataset page markup with Schema.org
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">R X.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 10 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
-````
-
-___
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 2
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist  
+:has_executable_code: nope
+:recipe_name: Dataset page markup with Schema.org
+```` 
 
 
 ## Main Objectives
@@ -97,13 +65,12 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
    3.  Click on the `Show Form` button
 
-<!-- ![Bioschemas Generator start screen](BioschemasGenerator.png =450px) -->
 
 ```{figure} BioschemasGenerator.png
 ---
-height: 550px
-name: Bioschemas Generator start screen
-alt: Bioschemas Generator start screen
+name: bioschemas-generator-start-screen-3
+alt: Bioschemas Generator start screen.
+
 ---
 Bioschemas Generator start screen.
 ```
@@ -128,7 +95,7 @@ Bioschemas Generator Dataset profile form.
 
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our UniProtKB example, we get the following markup
 
-   ```json
+   ```
    <script type="application/ld+json" >
    {
      "@context": "http://schema.org",
@@ -186,7 +153,7 @@ Bioschemas Generator Dataset profile form.
 
    For example, for our generated markup we would change the `includedInDataCatalog` so that it provides a direct link rather than repeating the properties. We would replace
 
-   ```json
+   ```
    "includedInDataCatalog": [
        {
          "@context": "http://schema.org",
@@ -202,7 +169,7 @@ Bioschemas Generator Dataset profile form.
 
    with
 
-   ```json
+   ```
    "includedInDataCatalog": {
       "@type": "DataCatalog",
       "@id": "https://uniprot.org"
@@ -215,7 +182,7 @@ Bioschemas Generator Dataset profile form.
 
 8. If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
-   ```json
+   ```
    <script type="application/ld+json">
    {
      "@context": "http://schema.org",
@@ -264,22 +231,23 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 
 ___
 
-## Authors:
+## Authors
 
-| Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
-| :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
-| Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
-| Leyla Garcia | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div> | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/ljgarcia'><img class='avatar-style' src='https://avatars.githubusercontent.com/ljgarcia'></img><div class="d-block"> Leyla Garcia | <a target="_blank" href='https://orcid.org/0000-0003-3986-0510'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | | | Writing – Review & Editing |
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
 
 ___
 
-## Footnotes:
+## Footnotes
 
 <a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
 
 ___
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

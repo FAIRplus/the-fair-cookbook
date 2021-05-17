@@ -1,55 +1,21 @@
 (fcb-intro-fair-values)=
-# The Ethical Values behind FAIR and the FAIRPlus project
-
+# Ethical values of FAIR
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
+<!-- ````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 1
+:recipe_type: perspective
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:has_executable_code: nope
+:recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
+```` -->
 
 ---
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Perspective
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-group fa-lg" style="color:#7e0038;"></i> Everyone </p>
-<!-- <p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
-<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
-<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
-<p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p> -->
-````
-
-___
 
 ## Table of Contents
 <!-- 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
@@ -137,17 +103,17 @@ As there will be projects related to different subjects and/or with different ki
 A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR principles. This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
 
 
-## Authors:
+## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Anne Cambon-Thomsen |  CNRS, Toulouse, France; Joint research unit on epidemiology and public health, Inserm (National Institute for Health and Medical Research) and University Toulouse III Paul Sabatier, Toulouse, France| [0000-0001-8793-3644](https://orcid.org/orcid.org/0000-0001-8793-3644) | Writing - Original Draft |
-| Alejandra Delfin |  University of Toulouse | | Writing - Review & Editing, Funding acquisition | 
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Alejandra Delfin Rossaro</div>      </div>   | <a target="_blank" href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x text--orange'></i></a> | CNRS, Toulouse, France; Joint research unit on epidemiology and public health, Inserm (National Institute for Health and Medical Research) and University Toulouse III Paul Sabatier, Toulouse, France        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing - Original Draft |
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Anne Cambon-Thomsen</div>        </div>      | <a target="_blank" href='https://orcid.org/0000-0001-8793-3644'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Toulouse III Paul Sabatier, Toulouse, France        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing - Original Draft |
 
 ___
 
 
-## License:
+## License
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
 

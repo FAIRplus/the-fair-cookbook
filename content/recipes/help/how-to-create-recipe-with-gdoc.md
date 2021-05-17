@@ -1,5 +1,5 @@
 (fcb-help-recipe-gdocs)=
-# Using GoogleDocs to contribute a FAIR Cookbook Recipe 
+# Add via GoogleDocs 
 
 
 The FAIR cookbook content can be expanded by adding a recipe. We present here the easiest way to do so. Simply create content by using the [Google document Recipe template](https://docs.google.com/document/d/1C-cg1StazvPujky2SDatvMi26y7tzrbuT6xFQFS-6pw/edit#heading=h.7oww2z5yx16m)
@@ -16,7 +16,7 @@ The reason for this `Google Document template` is mainly to allow for rapid onbo
 Once you feel your edits are complete and think your recipe is ready for release, you can choose between the following 2 approaches:
 
 1. **Direct handover to an FAIR Cookbook Editor**:
-If you are not comfortable with `Markdown` and `git`, this is the easiest route and this is what we recommend. Simply drop an email to [fairplus-cookbook@elixirhub.org](fairplus-cookbook@elixir-europe.org) stating the **recipe github issue** identifier.
+If you are not comfortable with `Markdown` and `git`, this is the easiest route and this is what we recommend. Simply drop an email to [fairplus-cookbook@elixirhub.org](mailto:fairplus-cookbook@elixir-europe.org) stating the **recipe github issue** identifier.
 
 2. **Convert to Markdown before handing over**:
 If you wish to go a bit further and help the editors, you can convert the gdoc to markdown using an add-on to the Google document
@@ -44,9 +44,9 @@ ___
     
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 
 ___
 

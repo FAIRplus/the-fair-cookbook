@@ -1,5 +1,17 @@
 (rr-licensing-data)=
-# Data Licenses
+# Data licenses
+
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:has_executable_code: nope
+:recipe_name: Data licenses
+```` 
+
 
 ````{note} 
 <!-- 
@@ -11,6 +23,7 @@
 [The sections about licensing are original content from The Turing Way](https://the-turing-way.netlify.app/welcome) and are included in the FAIRCookbook for convenience. Please cite keeping this in mind.
 > The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. [http://doi.org/10.5281/zenodo.3233986](http://doi.org/10.5281/zenodo.3233986)
 ````
+
 
 Like a software license, a data license governs what someone else can do with data that you create or own and that you make accessible to others through, for example, a data repository.
 Data licenses vary based on different criteria, such as:
@@ -104,3 +117,12 @@ Another example is the [Open Government Licence](http://www.nationalarchives.gov
 The [Data Curation Center (DCC) guide](https://www.dcc.ac.uk/guidance/how-guides/license-research-data) {cite}`ball2011license` on how to license research data expatiates on the licenses discussed in this chapter, and gives more information about [Prepared Licenses](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-6000), [Bespoke Licenses](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-7000), [Multiple Licensing](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-13000) and [Mechanisms for Licensing Data](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-14000).
 
 If you would like to read more about the challenges and finer points of licensing, [this article](https://research.okfn.org/avoiding-data-use-silos/) is a great resource to get you started.
+
+
+
+## References
+
+```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+```
+

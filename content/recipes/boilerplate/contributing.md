@@ -1,5 +1,5 @@
 (fcb-misc-contribute)=
-# Contributing to the FAIR cookbook
+# How to contribute
 
 Welcome to the `FAIR cookbook` repository! We're excited you're here and want to contribute.
 

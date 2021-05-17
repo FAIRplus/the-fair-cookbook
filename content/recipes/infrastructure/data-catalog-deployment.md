@@ -4,49 +4,16 @@
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 20 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrator</p>
-````
-
-___
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 20
+:intended_audience: software_developer, data_manager, system_administrator  
+:has_executable_code: yeah
+:recipe_name: Deploying the IMI data catalogue
+```` 
 
 
 ## Main Objectives
@@ -76,7 +43,7 @@ $ git clone git@github.com:FAIRplus/imi-data-catalogue.git
 Thanks to `docker-compose`, it is possible to easily manage all the components (solr and web server) required to run the application.
 
 
-## Step-by-step guide:
+## Step-by-step guide
 
 Unless otherwise specified, all the following commands should be run in a terminal *from the base directory of the data catalogue code*.
 
@@ -229,10 +196,11 @@ If you would prefer not to use Docker and compile and run the data catalogue man
 This recipe provides a step-by-step guide to deploying the `IMI data catalogue` developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb), as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
 > ### What should I read next?
-> * [How to build a data catalogue?]()
-> * [How to deploy the FAIRPORT data catalogue?]()
-> * [What is search engine optimization?]()
-> * [How to create a minimal information metadata profile?]()
+> * {ref}`fcb-infra-build-catalog`
+> * [How to deploy the FAIRPORT data catalogue?]() (*in preparation*)
+> * {ref}`fcb-find-seo`
+> * {ref}`fcb-interop-metadataprofile`
+> * {ref}`fcb-interop-txmetadata`
 
  
 ---
@@ -240,14 +208,13 @@ This recipe provides a step-by-step guide to deploying the `IMI data catalogue` 
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft |
-| Valentin Grouès | LCSB, University of Luxembourg |[0000-0001-6501-0806 ](https://orcid.org/0000-0001-6501-0806 )|Writing - Original Draft|
-| Wei Gu | LCSB, University of Luxembourg |[0000-0003-3951-6680](https://orcid.org/0000-0003-3951-6680)|Writing - Review|
-| Venkata Satagopam | LCSB, University of Luxembourg |[0000-0002-6532-5880](https://orcid.org/0000-0002-6532-5880)|Writing - Review|
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) | Writing - Review |
-
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>               | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a>          | LCSB, University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/neoflex'><img class='avatar-style' src='https://avatars.githubusercontent.com/neoflex'></img><div class="d-block">Valentin Grouès</div></a></div>                        | <a target="_blank" href='https://orcid.org/0000-0001-6501-0806'><i class='fab fa-orcid fa-2x text--orange'></i></a>          | LCSB, University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><div class="d-block">Wei Gu</div></a>          </div>                       | <a target="_blank" href='https://orcid.org/0000-0003-3951-6680'><i class='fab fa-orcid fa-2x text--orange'></i></a>          | LCSB, University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing – Review & Editing |
+| <div class="firstCol"><a target="_blank" href='https://github.com/satagopam7'><img class='avatar-style' src='https://avatars.githubusercontent.com/satagopam7'></img><div class="d-block">Venkata P. Satagopam</div></a>     </div>        | <a target="_blank" href='https://orcid.org/0000-0002-6532-5880'><i class='fab fa-orcid fa-2x text--orange'></i></a>          | LCSB, University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing – Review & Editing |
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a>          | University of Oxford                  | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
 
 ___
 

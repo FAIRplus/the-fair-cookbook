@@ -1,57 +1,23 @@
 (fcb-interop-ontorobot)=
-# Building an application ontology with Robot
+# Building an application ontology with ROBOT
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 60 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p> 
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Ontologist </p>
-````
-
----
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 60
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist
+:has_executable_code: yeah
+:recipe_name: Building an application ontology with ROBOT
+```` 
 
 ## Main Objectives
 
-> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates. 
+> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {cite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {cite}`Arp2015`. 
 
 An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
@@ -133,26 +99,26 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 | **Theme**                                             | **Competency Questions**                                                                                                              |
 |:------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
 | **General Questions**                                 |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs?             |
-|                                                       | :heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?
-|                                                       | :heavy_plus_sign: How to remove terms from the resulting ontology that are not needed?                                               |
-|                                                       | :heavy_plus_sign: How to guarantee consistency of the final ontology?                                                                |
-|                                                       | :heavy_plus_sign: How to identify differences in comparison to a previous version of the resulting ontology?                         |
+|                                                       | ➕ How to identify relevant public domain ontologies suiting our needs?             |
+|                                                       | ➕ How to establish an ontology covering all terms that are included in the actual data to be represented?
+|                                                       | ➕ How to remove terms from the resulting ontology that are not needed?                                               |
+|                                                       | ➕ How to guarantee consistency of the final ontology?                                                                |
+|                                                       | ➕ How to identify differences in comparison to a previous version of the resulting ontology?                         |
 | **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
-|                                                       | :heavy_plus_sign: Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
-|                                                       | :heavy_plus_sign: Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
-|                                                       | :heavy_plus_sign: Identify all data generated from primary cells whose origin is the lung.                                                            |
-|                                                       | :heavy_plus_sign: Identify all data generated from celllines whose origin is the lung.                                                                |
+|                                                       | ➕ Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
+|                                                       | ➕ Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
+|                                                       | ➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
+|                                                       | ➕ Identify all data generated from primary cells whose origin is the lung.                                                            |
+|                                                       | ➕ Identify all data generated from celllines whose origin is the lung.                                                                |
 | **Questions including single genes or gene sets**     |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?                          |
+|                                                       | ➕ What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
+|                                                       | ➕ What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
+|                                                       | ➕ What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?                          |
 | **Questions including compound or treatment information** |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
-|                                                       | :heavy_plus_sign: Identify all data from patients treated with a specific medication.                                                                 |
-|                                                       | :heavy_plus_sign: Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
+|                                                       | ➕ Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
+|                                                       | ➕ Identify all data from patients treated with a specific medication.                                                                 |
+|                                                       | ➕ Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
+|                                                       | ➕ What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
 
 
 
@@ -175,9 +141,9 @@ _Table 1: Patient metadata example_
 
 To build an `application ontology` that supports communication between different data resources, it is recommended to reuse existing terms from existing reference ontologies instead of creating new terms.
 
->:bulb: _Reference ontology:_ a semantic artifact with a canonical and comprehensive representation of the entities in a specific domain.
+>⚡ _Reference ontology:_ a semantic artifact with a canonical and comprehensive representation of the entities in a specific domain.
 >
->:bulb: _Source ontology:_ An ontology to be integrated into the application ontology, usually a reference ontology. 
+>⚡ _Source ontology:_ An ontology to be integrated into the application ontology, usually a reference ontology. 
 
 When selecting reference ontologies as source ontologies, the reusability and sustainability of the source ontology need to be considered. Many ontologies in [the OBO foundry](http://www.obofoundry.org/) use the [CC-BY](https://creativecommons.org/licenses/by/2.0/) licence, allowing sharing and adaptation. Such ontologies can be directly used as source ontology. Reference ontologies with similar umbrella structures can be conveniently combined in the application ontology. The format and maintenance of the reference ontology shall also be considered.
 
@@ -200,7 +166,7 @@ _Table 2: Available reference ontologies in selected domains_
 
 #### Step 2.2 Select seed ontology terms
 
-> :bulb: _Seed ontology terms_: A set of entities extracted from reference ontologies for the application ontology.
+> ⚡ _Seed ontology terms_: A set of entities extracted from reference ontologies for the application ontology.
 > 
 
 This step identifies the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology. Ontology Developer can provide the tools to ease and to scale the identification of the seeds. Domain experts can identify the right seeds for a given application ontology.
@@ -572,22 +538,29 @@ robot query --input <input_ontology_file> \
 ```
 
 ---
-## Conclusionss
+## Conclusions
 
 > Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. This more advanced recipe has identified and described all the different steps that one needs to consider to build such a resource. While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date. It is therefore also critical to understand the benefits of contributing to existing open efforts.    
 
 > ### What should I read next?
 
-> * [How to establish a minimal metadata profile?]()
-> * [How to submit/request terms to an ontology ?]()
+> * {ref}`fcb-interop-metadataprofile`  <!-- [How to establish a minimal metadata profile?]() -->
+> * {ref}`fcb-interop-ontorequest` <!-- [How to submit/request terms to an ontology ?]() -->
 ___
 
 
 
-
 ## References
-- R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
-- Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015.
+
+```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+```
+<!-- ```{bibliography} ./bibref/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+``` -->
+
+<!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
+- Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
 
 ___
 
@@ -600,14 +573,13 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-|Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/0000-0003-1058-2668) | Writing - Original Draft, Code |
-|Philippe Rocca-Serra| UOXF|[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| Writing - Review, Code|
-|Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/orcid.org/0000-XXXX-XXXX-XXXX)|Writing - Draft, Review|
-|Emiliano Reynares| Boehringer Ingelheim|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Writing - Review,  Code |
-|Karsten Quast|Boehringer Ingelheim|[0000-0003-3922-5701](https://orcid.org/0000-0003-3922-5701)| Writing|
-
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft, Code
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |  | Writing - Draft, Review
+| <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
 
 ___
 

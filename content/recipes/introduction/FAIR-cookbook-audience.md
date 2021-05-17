@@ -1,55 +1,21 @@
 (fcb-intro-audience)=
-# Who should read the FAIR Cookbook?
+# Who should read it?
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
+<!-- ````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 1
+:recipe_type: background_information
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist, funder  
+:has_executable_code: nope
+:recipe_name: Who should read the FAIR Cookbook?
+````  -->
 
 ---
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Background Information
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
-<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
-<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
-<p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p>
-````
-
-___
-
-
 
 ## The FAIR Cookbook for IMI participants
 
@@ -88,7 +54,7 @@ As a data producer, you may find yourself with a new sets of data management req
 * [How to package datasets for transfer]()
 * [How to provide sufficient metadata]() 
 * [How to make dataset findable]()
-* [How to make a FAIR API]
+* [How to make a FAIR API]()
 * [Did you know: Scientists sharing their data are more cited]().
 
 ### If you are a data controler
@@ -133,29 +99,28 @@ The FAIR Cookbook will appeal to diverse audiences. While the FAIR Cookbook auth
 
 By identifying a number of functions as personas, the aim is also to engage with the community and seek feedback, contributions and comments. The authors therefore encourage readers to send requests and feedback using the following means:
 
-* log a recipe request using the [FAIR Cookbook issue tracker]()
+* log a recipe request using the [FAIR Cookbook issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/home.html&body=Your%20issue%20content%20here.)
 * rate the FAIR Cookbook and each of its recipes
 * contribute content by sending a recipe
-* contact us using FAIRcookbook@elixir.org
+* contact us using [faircookbook@elixir-europe.org](mailto:faircookbook@elixir-europe.org)
 
 
 
 ## Reference
 
 1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18.
-3. The FAIR Cookbook. []()
+3. The FAIR Cookbook. [The FAIR Cookbook](https://fairplus.github.io/the-fair-cookbook/content/home.html)
 4. https://www.imi.europa.eu 
 
 
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft|
-|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)|Writing - Original Draft|
-||||Review|
-||||Review|
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
+
 
 ___
 

@@ -1,53 +1,19 @@
 (fcb-find-identifiers)=
-# How to generate globally unique, resolvable and persistent identifiers
+# Unique, persistent identifiers
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="http://hdl.handle.net/21.11101/0000-0007-EA08-9">21.11101/0000-0007-EA08-9</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Background Information<
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-````
-
-___
-
+````{panels_fairplus}
+:identifier_text: 21.11101/0000-0007-EA08-9
+:identifier_link: http://hdl.handle.net/21.11101/0000-0007-EA08-9
+:difficulty_level: 3
+:recipe_type: background_information
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:has_executable_code: nope
+:recipe_name: Unique, persistent identifiers
+```` 
 
 
 The **FAIR principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
@@ -502,13 +468,14 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  | specific contribution |
-| :------------- | :------------- | :------------- |:------------- |:------------- |
-| Alasdair Gray | Heriot-Watt University / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft | Original format<br />Converting to online format |
-| Chris Evelo | Maastricht University | [0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) | Writing - Original Draft | Original format |
-| Egon Willighagen | Maastricht University | [0000-0001-7542-0286](https://orcid.org/0000-0001-7542-0286) | Writing - Original Draft | Original format |
-| Philippe Rocca-Serra| University of Oxford |[0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing – Review & Editing, Conceptualization|Markdown|
-| Andrea Splendiani |Novartis AG|[0000-0002-3201-9617](https://orcid.org/0000-0002-3201-9617) |Conceptualization ||
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/sgtp'><img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'></img><div class="d-block">Andrea Splendiani</div></a>       </div>   | <a target="_blank" href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Novartis AG   | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Conceptualization
+| <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div> | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/Chris-Evelo'><img class='avatar-style' src='https://avatars.githubusercontent.com/Chris-Evelo'></img><div class="d-block">Chris Evelo</div></a>      </div>    | <a target="_blank" href='https://orcid.org/0000-0002-5301-3142'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/egonw'><img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'></img><div class="d-block">Egon Willighagen</div></a>  </div>        | <a target="_blank" href='https://orcid.org/0000-0001-7542-0286'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization
+
 
 ___
 

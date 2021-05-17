@@ -1,5 +1,5 @@
 (fcb-glossary)=
-#  Glossary of FAIR Things
+#  Glossary
 
 
 ## A
@@ -199,7 +199,7 @@ MIC
 ## N
 ```{glossary}
 NO-SQL 
-	`Not Only SQL database` is a type of database which persists information in structures other than tables as classically used by [RDBMS](RDBMS)
+	`Not Only SQL database` is a type of database which persists information in structures other than tables as classically used by [RDBMS](#term-RDBMS)
 
 Neo4J
 	a graph database and a company marking the system. see https://neo4j.com/.

@@ -1,52 +1,18 @@
-# Technical & architectural selection criteria of ontology lookup services
+# Portals and lookup services
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 20 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Technical Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p>
-<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrator</p>
-````
-
-___
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 2
+:recipe_type: technical_guidance
+:reading_time_minutes: 20
+:intended_audience: data_manager, data_scientist, terminology_manager, system_administrator  
+:has_executable_code: nope
+:recipe_name: Portals and lookup services
+```` 
 
 ## Main Objective
 
@@ -635,14 +601,13 @@ To complement this recipe, reading the following chapter is highly encouraged.
 ---
 
 ### Authors
-
-| Name               | Affiliation            | ORCID             | CRediT Role          |
-|--------------------|------------------------|------------------:|--------------:|
-|Kurt Dauth          | Boehringer Ingelheim   |[]() |Original Author|
-|Emiliano Reynares   | Boehringer Ingelheim   |[0000-0002-5109-3716](https://orcid.org/orcid.org/0000-0002-5109-3716) | Author|
-|Petros Papadopoulos | Heriot-Watt University |[0000-0002-8110-7576](https://orcid.org/orcid.org/0000-0002-8110-7576) | Author|
-|Karsten Quast       | Boehringer Ingelheim   |[0000-0003-3922-5701](https://orcid.org/orcid.org/0000-0003-3922-5701) | Reviewer|
-|Philippe Rocca-Serra      | University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Reviewer|
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/kdauth'><img class='avatar-style' src='https://avatars.githubusercontent.com/kdauth'></img><div class="d-block">Kurt Dauth</div></a> </div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  |  |
+| <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Original Draft |
+| <div class="firstCol"><a target="_blank" href='https://github.com/petrospaps'><img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'></img><div class="d-block">Petros Papadopoulos</div></a>     </div>| <a target="_blank" href='https://orcid.org/0000-0002-8110-7576'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
 
 ---
 ### Licence

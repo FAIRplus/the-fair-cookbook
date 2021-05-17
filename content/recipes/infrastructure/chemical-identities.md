@@ -1,70 +1,37 @@
 (fcb-infra-chemid)=
-# Chemical Identity - InChi and SMILES
+# InChI and SMILES identifiers for chemical structures
 
 +++
 <br/>
 
-----
+````{panels_fairplus}
+:identifier_text: F1
+:identifier_link: 'https://example.com'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: chemoinformatician, data_curator, data_manager, data_scientist  
+:has_executable_code: yeah
+:recipe_name: InChI and SMILES identifiers for chemical structures
+```` 
 
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+## Standards
 
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p><i class="fa fa-flask fa-lg" style="color:#7e0038;"></i> Chemoinformatician</p>
-<p> <i class="fa fa-diamond fa-lg" style="color:#7e0038;"></i> Data Curator</p>
-<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
-<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
-<!-- <p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p> -->
-````
-
-___
-
-## Standards:
-
-* SDFile (FairSharing doi:[10.25504/fairsharing.ew26v7](https://doi.org/10.25504/fairsharing.ew26v7))
+* SDF file (FairSharing doi:[10.25504/fairsharing.ew26v7](https://doi.org/10.25504/fairsharing.ew26v7))
 * SMILES (FairSharing doi:[10.25504/fairsharing.qv4b3c](https://doi.org/10.25504/fairsharing.qv4b3c))
 * InChI (FairSharing doi:[10.25504/fairsharing.ddk9t9](https://doi.org/10.25504/fairsharing.ddk9t9))
 
-## Databases:
+## Databases
 
-Not applicable.
+* PubChem (FairSharing doi:[10.25504/fairsharing.qt3w7z](https://doi.org/10.25504/fairsharing.qt3w7z))
+* ChemSpider (FairSharing doi:[10.25504/fairsharing.96f3gm](https://doi.org/10.25504/fairsharing.96f3gm))
+* Wikidata (FairSharing doi:[10.25504/fairsharing.6s749p](https://doi.org/10.25504/fairsharing.6s749p))
 
-## Identifiers:
+## Identifiers
 
-* InChI
+* International Chemical Identifier (InChI)
 
-## Tools:
+## Tools
 
 * Programming Language: Groovy
 * Dependencies: CDK 2.3
@@ -79,18 +46,19 @@ This library and its use in Groovy is further explain in
 the book [Groovy Cheminformatics with the Chemistry Development Kit](https://egonw.github.io/cdkbook/).
 
 
-[Click here on how to use:](https://github.com/FAIRplus/fairplus-sdf)
+Click here for more detailed use instructions and where to find the tools:
+[https://github.com/FAIRplus/fairplus-sdf](https://github.com/FAIRplus/fairplus-sdf)
 
 ### Record validation
 
 When generating InChIs, the InChI library may return two success states reflecting issues with
-the compound record in the SD file: WARNING and ERROR. This first script reports such issues:
+the compound record in the SDF file: WARNING and ERROR. This first script reports such issues:
 
 ```bash
 groovy badRecords.groovy -f foo.sdf
 ```
 
-* Input: SD file
+* Input: SDF file
 * Output: Reports validation issues
 
 
@@ -102,14 +70,14 @@ Similarly, InChIKeys can be generated:
 groovy inchikeys.groovy -f foo.sdf
 ```
 
-* Input: SD file
+* Input: SDF file
 * Output: list of InChIs
 
 When the success state is ERROR, nothing is outputted.
 
 ### Calculate SMILES strings
 
-The last script calculates a SMILES for each entry in the SD file:
+The last script calculates a SMILES for each entry in the SDF file:
 
 ```bash
 groovy smiles.groovy -f foo.sdf
@@ -118,18 +86,18 @@ groovy smiles.groovy -f foo.sdf
 * Input: SD file
 * Output: list of SMILES strings
 
+---
 
+## Authors
 
-## Authors:
-
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Egon Willighagen|  [Maastricht University,Department of Bioinformatics NUTRIM School of Nutrition and Translational Research in Metabolism Faculty of Health, Medicine and Life Sciences](https://www.maastrichtuniversity.nl/egon.willighagen)| [0000-0001-7542-0286](http://orcid.org/0000-0001-7542-0286) | Writing - Original Draft |
-|  |   | | Reviewer | 
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/egonw'><img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'></img><div class="d-block">Egon Willighagen</div></a>  </div>        | <a target="_blank" href='https://orcid.org/0000-0001-7542-0286'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft, Conceptualization
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
 
 ___
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

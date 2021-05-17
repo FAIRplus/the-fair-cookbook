@@ -1,54 +1,19 @@
 (fcb-interop-txmetadata)=
-# Establishing a Metadata Profile for Transcriptomics
+# Metadata profile for transcriptomics
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p> 
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Ontologist </p>
-````
-
----
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist  
+:has_executable_code: nope
+:recipe_name: Metadata profile for transcriptomics
+```` 
 
 ## Main Objectives:
 
@@ -232,12 +197,12 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | Orcid | Credit role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/orcid.org/0000-0003-1058-2668) | Writing - Original Draft |
-|Karsten Quast|||
-|Peter Woollard|||
 
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing – Review & Editing
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  |
+| <div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div>  | <a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a> | GSK  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |
 
 ___
 

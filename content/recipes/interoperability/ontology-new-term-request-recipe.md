@@ -1,53 +1,19 @@
 (fcb-interop-ontorequest)=
-# Requesting terms addition to terminology artefacts
+# Requesting new terms
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p> 
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Ontologist </p>
-````
-
----
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 1
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
+:has_executable_code: nope
+:recipe_name: Requesting new terms
+```` 
 
 ## Main Objective
 
@@ -88,6 +54,14 @@ Process for requesting an new term to a terminology.
 | :------------- | :------------- | :------------- |
 | [text annotation](http://edamontology.org/operation_3778)  | new term(s), [ontology](http://edamontology.org/data_0582) | [ontology term](http://edamontology.org/data_0966), [annotated text](http://edamontology.org/data_3779)  |
 
+## Table of Data Standards
+
+| Data Formats  | Ontologies |
+| :------------- | :------------- |
+| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)|
+| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)  |
+| Release Format 2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
+| Rich Release Format |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
 
 ## Step-by-Step process
 
@@ -178,23 +152,15 @@ Changes or additions to UMLS can be requested by contacting [NLM Customer Suppor
 UMLS is updated in May and November of each year.
 
 
-## Table of Data Standards
-
-| Data Formats  | Ontologies |
-| :------------- | :------------- |
-| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)|
-| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology](https://fairsharing.org/FAIRsharing.j9y503)  |
-| Release Format 2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
-| Rich Release Format |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
-
 ---
 
 ## Authors
 
-| Name | Affiliation  | ORCID | CRediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Ulrich Goldmann | CeMM - Research Center for Molecular Medicine of the Austrian Academy of Sciences | [0000-0003-1120-6912](https://orcid.org/0000-0003-1120-6912) | Writing - Original Draft |
-| Emma Vos |  The Hyve | [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) | Writing - Original Draft | 
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>    </div> | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a> | CEMM | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> || Writing - Original Draft
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Emma Vos</div>   </div>    | <a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |  | Writing - Original Draft
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization | Writing – Review & Editing
 
 
 ---

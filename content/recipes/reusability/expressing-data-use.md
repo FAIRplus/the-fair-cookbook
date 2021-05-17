@@ -1,53 +1,19 @@
-(fcb-reuse-data_use)=
-# Patterns and practice for expressing allowed data usage
+(fcb-reusability-data_use)=
+# Declaring data's permitted uses
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
-<p> <i class="fa fa-prompt fa-lg" style="color:#7e0038;"></i> Ontologist </p>  
-````
-
----
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist, ontologist  
+:has_executable_code: yeah
+:recipe_name: Declaring data's permitted uses
+```` 
 
 ## Main Objectives
 
@@ -65,7 +31,7 @@ Finally, the content aims to highlight key use-cases which require coverage, how
 ```{figure} data-usage-mermaid.png
 ---
 width: 700px
-name: 
+name: expressing-data-use-figure1
 alt: Dealing with Policies and Data Use
 ---
 Data Use
@@ -76,14 +42,15 @@ Data Use
 
 ## Capability and Maturity Table.
 
-Capability Initial Maturity Level Final Maturity Level
-Interoperability – minimal - repeatable
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+ | :------------- | :------------- | :------------- |
+ | Interoperability | minimal | repeatable |
 
 ---
 
-## tools
+## Tools
 
-### vocabularies
+### Standards
 
  Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
@@ -96,7 +63,7 @@ Interoperability – minimal - repeatable
 
 
 
-### implementation
+### Implementation
 
 DUOS:
 https://duos.broadinstitute.org/#/home
@@ -108,14 +75,14 @@ https://duos.broadinstitute.org/#/home
 The preservation of patient privacy and the compliance with patient consent are essential considerations when managing sensitive information such as clinical and patient data.
 Consent forms, as signed by patients, define the acceptable usage of data derived from a patient for research applications.
 All major research organizations, at national and international levels, enforce strict rules for the management of such data.
-Sensitive data can not be accessed without undergoing a vetting process involving a `data access request` to a `data access committee`, which will decide whether or not to grant requesters access to the data.
+Sensitive data cannot be accessed without undergoing a vetting process involving a `data access request` to a `data access committee`, which will decide whether or not to grant requesters access to the data.
 
 This is a time consuming process in the absence of machine readable version of data access/ data management policies.
 In turns, it can prove detrimental to research.
 Therefore, efforts to enable the provision of concise, efficient and **machine processable** summary of key permissions and prohibitions have been made. 
 Several resources are now available for the coding and exchange of `machine-actionable`, `legally binding` and `explicit` information related to allowed and consented data usage.
 
-The following sections detail how the international sequence data archives (US NCBI's dbGAP, SRA and EU EMBL_EBI EGA) are encoding `Data Use Information`  but also how ODRL,a W3C specification,can be used to represent equivalent information in a format compatible with the data cataloguing efforts relying on W3C DCAT specifications.
+The following sections detail how the international sequence data archives (US NCBI's dbGAP, SRA and EU EMBL_EBI EGA) are encoding `Data Use Information`  but also how ODRL, a W3C specification, can be used to represent equivalent information in a format compatible with the data cataloguing efforts relying on W3C DCAT specifications.
 
 
 
@@ -131,7 +98,7 @@ https://ega-archive.org/data-use-conditions
 ```{figure} duo-ols-view-1.png
 ---
 width: 700px
-name: 
+name: expressing-data-use-figure2
 alt: Data Use Ontology Overview Part 1
 ---
 Data Use Ontology Overview Part 1
@@ -140,7 +107,7 @@ Data Use Ontology Overview Part 1
 ```{figure} duo-ols-view-2.png
 ---
 width: 700px
-name: 
+name: expressing-data-use-figure3
 alt: Data Use Ontology Overview Part 2
 ---
 Data Use Ontology Overview Part 2
@@ -165,7 +132,7 @@ width: 400px
 ```` -->
 
 
-The information presented below has been sourced from:
+The information presented below has been sourced from the ENA Github repo.
 
 
 
@@ -222,7 +189,7 @@ in the following example, the text of the policy is present in the XML represent
 
 
 ```{note}
-in the following example, the file address (url) to the policy is included in the XML representation.
+In the following example, the file address (url) to the policy is included in the XML representation.
 Ideally, the url provided should be a globally unique persistent identifier so one can be sure to obtain at least the metadata about the document.
 ```
 
@@ -247,7 +214,7 @@ Ideally, the url provided should be a globally unique persistent identifier so o
 ```
 
 
-3. Expressing Data Use with EGA xml and `Data Use Ontology` codes.
+3. Expressing Data Use with EGA XML and `Data Use Ontology` codes.
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
@@ -282,7 +249,7 @@ Ideally, the url provided should be a globally unique persistent identifier so o
 
 https://ega-archive.org/dacs
 
-Indicating disease specific restriction on research with DUO and Ontologies covering the Disease and Pathology domain
+Indicating disease specific restriction on research with DUO and ontologies covering the Disease and Pathology domain
 
 
 ```XML
@@ -739,7 +706,7 @@ The ODRL model provides the `prohibitions` relation, which uses similar patterns
 
 
 
-## Implementing in Data Catalogues built with DCAT or DATS
+## Implementatino in Data Catalogues built with DCAT or DATS
 
 
 ### Referring to an ODRL Policy from a DCAT DataSet
@@ -809,7 +776,7 @@ https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html -->
 ## Consuming Data Use related annotations
 
 It is all good and and well to describe patterns in various formats but are there any tools or services capable exploiting these annotations?
-Well, when it comes to genomics data, the Broad Institute's  [Data Use Oversight System (DUOS)](https://duos.broadinstitute.org/#/home) is one such tool.
+Well, when it comes to genomics data, there is the Broad Institute's  [Data Use Oversight System (DUOS)](https://duos.broadinstitute.org/#/home) is one such tool.
 
 
 ```{figure} ./broads-duos.png
@@ -821,25 +788,30 @@ name: Broad's Institute  Data Use Oversight System
 Broad's Institute  Data Use Oversight System landing page
 ```
 
-DUOS requires official clearance from `Data Access Committee` representative or an `Authorized Submission Representative` to enable registration of a dataset into the DUOS.
-Once this authorization is available, the dataset has to be annotated following the patterns defined by GA4GH with Data Use Ontology and 'SRA xml' format.
+DUOS requires official clearance from a `Data Access Committee` representative or an `Authorized Submission Representative` to enable registration of a dataset into the DUOS.
+Once this authorization is available, the dataset has to be annotated following the patterns defined by GA4GH with Data Use Ontology and 'SRA XML' format.
 
 The European Genome Archive allows programmatic filtering based on the this information via the REST-API of the service.
 
 ## Conclusion
 
-Making sure that machine readable information about the conditions of use of dataset and data is key to enable privacy preserving and policy compliant use of information across organizations.
-This content provides an overview of the models available to do so and how it has been applied to life science data, showing the main features of the models and how to define used based on the major properties such as the type of research allowed, how to indicate disease domain or geographical restrictions as well as temporal restrictions associated to the dataset and defined by the data owners/data controlers.
+Making sure that machine readable information about the conditions of use of datasets and data is available is key to enable privacy preserving and policy compliant use of information across organizations.
+This content provides an overview of the models available to do so and how it has been applied to life science data, showing the main features of the models and how to define use based on the major properties such as the type of research allowed, how to indicate disease domain or geographical restrictions as well as temporal restrictions associated to the dataset and defined by the data owners/data controlers.
 
 
 
-#### What to read next?
+### What to read next?
 
+<<<<<<< HEAD
 >{ref}`rr-informed-consent-evolution-prov`
 
 >{ref}`rr-licensing-software`
 
 >{ref}`rr-licensing-data`
+=======
+* {ref}`rr-licensing-software`
+* {ref}`rr-licensing-data`
+>>>>>>> d5a45be479c0a78a9f965b75ca38435cf241225b
 
 
 
@@ -870,6 +842,7 @@ ___
 
 ## Authors
 
+<<<<<<< HEAD
 | Name           | Affiliation    | orcid          | CrediT role   |
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra | University of Oxford |https://orcid.org/0000-0001-9853-5668 |Conceptualization, Writing - Original Draft |
@@ -877,6 +850,15 @@ ___
 |Melanie Courtot| EMBL-EBI|https://orcid.org/0000-0002-9551-6370|Review, Writing|
 |Danielle Welter| UNI-LU|https://orcid.org/0000-0003-1058-2668|Review, Writing|
 
+=======
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft, Conceptualization |
+| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Tom Plasterer</div></div>    |   | Astra-Zeneca  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i>       |  |Writing - Original Draft, Conceptualization
+| <div class="firstCol"><a target="_blank" href='https://github.com/mcourtot'><img class='avatar-style' src='https://avatars.githubusercontent.com/mcourtot'></img><div class="d-block">Melanie Courtot</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-9551-6370'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><div class="d-block">Wei Gu</div></a>  </div>    | <a target="_blank" href='https://orcid.org/0000-0003-3951-6680'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing – Review & Editing
+>>>>>>> d5a45be479c0a78a9f965b75ca38435cf241225b
 
 ___
 

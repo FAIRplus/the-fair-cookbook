@@ -1,53 +1,19 @@
 (fcb-infra-build-catalog)=
-# Building a Dataset Catalogue
+# Building a catalogue of datasets
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 60 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrator</p>
-````
-
-___
+````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 60
+:intended_audience: data_manager, data_scientist, software_developer, system_administrator  
+:has_executable_code: yeah
+:recipe_name: Building a catalogue of datasets 
+```` 
 
 ## Main Objectives
 
@@ -156,30 +122,31 @@ ___
 
 This recipe introduced the general concept of data catalogue and why they constitute a key capability to deliver data discoverability.
 
-> ### What should I read next?
+### What should I read next?
 We encourage the readers to either delve deeper into the specific of data catalogues by consulting the following recipes
 
-> * [Building a data catalogue]() {ref}`fcb-infra-imi-cat-deploy`
-> * [Deploying the FAIRPORT data catalogue]() {ref}`fcb-infra-fairport-deploy`
-> * [Deploying the GA4GH Beacon endpoint]() {ref}`fcb-infra-beacon-deploy`
+* {ref}`fcb-infra-imi-cat-deploy`
+<!-- * TODO Deploying the FAIRPORT data catalogue {ref}` TODO fcb-infra-fairport-deploy` --> 
+<!-- * TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`     -->
 
 
 For the readership interesting in finding out about additional capabilities needed to enhance other aspects of FAIR such interoperability and reusability, see the following:
 
-> * [Search engine optimization]() {ref}`fcb-find-seo`
-> * [Creating a minimal information metadata profile]() {ref}`fcb-interop-metadataprofile`
+* {ref}`fcb-find-seo`
+* {ref}`fcb-interop-metadataprofile`
 
 
 ## References
 
-
+---
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
 
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization |
+| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition |
 
 ___
 
