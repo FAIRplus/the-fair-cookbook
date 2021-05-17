@@ -52,7 +52,10 @@ ___
 
 The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply due to the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.
 
-Here, we present the three most common scenarios in biomedical research, based on experience garnered during IMI eTRIKS {cite}`philippe_rocca_serra_2016_50825` :
+Here, we present the three most common scenarios in biomedical research, based on experience garnered during IMI eTRIKS {cite}`philippe_rocca_serra_2016_50825`:
+- [Clinical Trial Data](#clinical-trial-data)
+- [Observational Health Data](#observational-health-data)
+- [Basic research context](#basic-research-context)
 
 ### Clinical Trial Data
 
@@ -79,7 +82,7 @@ Some resources are only available under restrictive licences, which prevent deri
 ### Observational Health Data
 
 This context refers to data collected during `observational studies`, which in contrast to `interventional studies`, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. `Observational health data` can also include `electronic health records (EHR)` or ` administrative insurance claims` and allow research around acquiring *`real world evidence`* from large corpora of data.
-In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients' information structured using the **Observational Medical Outcomes Partnership (OMOP)**, the Observational Health Data Sciences and Informatics (ODHSI) `open-science community` has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a `data context`.
+In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients' information structured using the **Observational Medical Outcomes Partnership ([OMOP](https://ohdsi.org/omop/))**, the Observational Health Data Sciences and Informatics ([ODHSI](https://ohdsi.org/)) `open-science community` has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a `data context`.
 
 
 |Semantic Resource|Domain |Service|
@@ -104,12 +107,12 @@ As a consequence of fewer constraints, researchers are often confronted with a s
 ```{admonition} Tip
 :class: tip
  **An important consideration** 
-to bear in mind when selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no particular constraints on data annotations but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the [Experimental Factor Ontology](https://efo.owl) for annotating data could ease deposition.
+to bear in mind when selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no particular constraints on data annotations but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the Experimental Factor Ontology ([EFO](https://www.ebi.ac.uk/efo/)) for annotating data could ease deposition.
 ```
 
 ```{admonition} Tip
 :class: tip
- **[The FAIRsharing registry](https://fairsharing.org)** {cite}`pmid30940948` is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefacts used by public data repositories.
+ **[The FAIRsharing registry](https://fairsharing.org)** {cite}`pmid30940948` is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefact used by public data repositories.
 ````
 
 ## Selecting Terminologies 
@@ -119,7 +122,7 @@ to bear in mind when selecting semantic resources is to assess whether or not `d
 
 1. The use and implementation of common terminologies enables the normalisation and harmonisation of both variable labels and allowed values for each field. Implementing the use of common terminologies in the data collection or curation workflow will ensure consistency of the annotation across all data. This is particularly important if data is generated at multiple partner sites and/or by multiple individuals. 
 
-1. If data fields are annotated with terms from freely chosen ontologies (rather than those dictated by a common model such as CDSIC), care should be taken to avoid picking terms from ontologies at random. If a set of concepts are all available in one ontology, this ontology should be preferred over a set of ontologies. Mapping services such as [Oxo](https://www.ebi.ac.uk/spot/oxo/) are available to verify whether a term of interest in one ontology has an equivalent term in another ontology.
+1. If data fields are annotated with terms from freely chosen ontologies (rather than those dictated by a common model such as CDSIC), care should be taken to avoid picking terms from ontologies at random. If a set of concepts are all available in one ontology, this ontology should be preferred over a set of ontologies. Mapping services such as [OxO](https://www.ebi.ac.uk/spot/oxo/) are available to verify whether a term of interest in one ontology has an equivalent term in another ontology.
 
 1. Restrictions of allowed values for a given field should ideally be limited to a single ontology and better yet, to a single branch of a chosen ontology. This will vastly improve the semantic queryability as well as the consistency and interoperability of the data. 
 
@@ -129,30 +132,30 @@ to bear in mind when selecting semantic resources is to assess whether or not `d
 
 ### Selection Criteria
 
-A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as ["A sea of standards for omics data: sink or swim?"](https://doi.org/10.1136/amiajnl-2013-002066) {cite}`pmid24076747` and ["Ten Simple Rules for Selection a Bio-ontology"](https://doi.org/10.1371/journal.pcbi.1004743) } {cite}`pmid26867217` providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as ["A sea of standards for omics data: sink or swim?"](https://doi.org/10.1136/amiajnl-2013-002066) {cite}`pmid24076747` and ["Ten Simple Rules for Selection a Bio-ontology"](https://doi.org/10.1371/journal.pcbi.1004743) {cite}`pmid26867217` providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.
 
 
 *   **Exclusion criteria**:
-    * 🔸 absent licence or terms of use (_indicator of usability_)
-    * 🔸 restrictive licences or terms of use with restrictions on redistribution and reuse 
-    * 🔸 absence of term definitions 
-    * 🔸 absence of sufficient class metadata (_indicator of quality_)
-    * 🔸 absence of sustainability indicators (_absence of funding records_) 
+    * 🔸 Absent licence or terms of use (_indicator of usability_)
+    * 🔸 Restrictive licences or terms of use with restrictions on redistribution and reuse 
+    * 🔸 Absence of term definitions 
+    * 🔸 Absence of sufficient class metadata (_indicator of quality_)
+    * 🔸 Absence of sustainability indicators (_absence of funding records_) 
  
 *   **Inclusion criteria**:
-    * 🔰  scope and coverage meets the requirements of the concept identified
-    * 🔰  unique URI, textual definition and IDs for each term
-    * 🔰  resource releases are versioned
-    * 🔰  size of resource (_indicator of coverage_)
-    * 🔰  number of classes and subclasses (_indicator of depth_)
-    * 🔰  number of terms having definitions and synonyms (_indicator of richness_)
-    * 🔰  presence of a help desk and contact point (_indicator of community support_)
-    * 🔰  presence of term submission tracker / issue tracker (_indicator of resource agility and capability to grow upon request_)
-    * 🔰  potential integrative nature of the resource (_as indicator of translational application potential_)
-    * 🔰  licensing information available (_as indicator of freedom to use_)
-    * 🔰  use of a top level ontology (_as indicator of a resource built for generic use_)
-    * 🔰  pragmatism (_as indicator of actual, current real life practice)_
-    * 🔰  possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
+    * 🔰  Scope and coverage meets the requirements of the concept identified
+    * 🔰  Unique URI, textual definition and IDs for each term
+    * 🔰  Resource releases are versioned
+    * 🔰  Size of resource (_indicator of coverage_)
+    * 🔰  Number of classes and subclasses (_indicator of depth_)
+    * 🔰  Number of terms having definitions and synonyms (_indicator of richness_)
+    * 🔰  Presence of a help desk and contact point (_indicator of community support_)
+    * 🔰  Presence of term submission tracker/issue tracker (_indicator of resource agility and capability to grow upon request_)
+    * 🔰  Potential integrative nature of the resource (_as indicator of translational application potential_)
+    * 🔰  Licensing information available (_as indicator of freedom to use_)
+    * 🔰  Use of a top level ontology (_as indicator of a resource built for generic use_)
+    * 🔰  Pragmatism (_as indicator of actual, current real life practice)_
+    * 🔰  Possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
 
 
 ### Set of Core Terminologies 
@@ -161,17 +164,17 @@ The terminologies presented here have been organized by theme and scope. When po
 Domains also cover `processes` or `actions` and their `participants` or `agents` but also can be organized from `general/generic` (disease) to `specialized/specific` (infectious disease).
 
 
-### Organism, Organism Parts and Developmental Stages
+#### Organism, Organism Parts and Developmental Stages
 
-The resources listed here focus on providing structured vocabularies to describe `taxonomic` and `anatomical` information. The table below also shows 
+The resources listed here focus on providing structured vocabularies to describe `taxonomic` and `anatomical` information. 
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|Comment|
 |--- |--- |--- |--- |--- |--- |--- |
-|**Organism**|NCBITaxonomy|http://purl.obolibrary.org/obo/ncbitaxon.owl|none specified|This ontology is made available via the UMLS. Users of all UMLS ontologies must abide by the terms of the [UMLS license](https://uts.nlm.nih.gov/license.html)|||
+|**Organism**|NCBITaxonomy|http://purl.obolibrary.org/obo/ncbitaxon.owl|none specified| [UMLS license](https://uts.nlm.nih.gov/license.html)|||
 |**Vertebrate Anatomy**|UBERON|http://purl.obolibrary.org/obo/uberon/ext.owl http://purl.obolibrary.org/obo/uberon/ext.obo|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/obophenotype/uberon/issues|Integrative Resource engineered to go across species|
-|**Human Anatomy**|FMA| http://purl.obolibrary.org/obo/fma.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/| Excellent cross-referencing with Uberon|
-| **Human Developmental Stages** | http://purl.obolibrary.org/obo/hsapdv.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | |
-|**Mouse Anatomy**|MA| http://purl.obolibrary.org/obo/ma.owl| |[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)| https://github.com/obophenotype/mouse-anatomy-ontology/issues ||
+|**Human Anatomy**| Foundational Model of Anatomy (FMA) | http://purl.obolibrary.org/obo/fma.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/| Excellent cross-referencing with Uberon|
+| **Human Developmental Stages** | Human Developmental Stages | http://purl.obolibrary.org/obo/hsapdv.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |
+|**Mouse Anatomy**| Mouse Anatomy (MA)| http://purl.obolibrary.org/obo/ma.owl| |[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)| https://github.com/obophenotype/mouse-anatomy-ontology/issues ||
 |**Strain**|Rat Strain Ontology|http://purl.obolibrary.org/obo/rs.owl| | [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) | https://github.com/rat-genome-database/RS-Rat-Strain-Ontology/issues ||
 
 
@@ -180,7 +183,7 @@ In research, many different model organism are used (e.g. Dogs, Monkeys...) and 
 
 
 
-### Diseases and Phenotype
+#### Diseases and Phenotype
 
 Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones, biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.
 
@@ -206,7 +209,7 @@ Biology is a complex field and observable manifestations of biological processes
 As with anatomy in the previous section, there is a growing body of organism-specific phenotype resources, such as C. elegans, Drosophila, Fission Yeast, Xenopus and Zebrafish. 
 
 
-### Pathology and Disease Specific Resources
+#### Pathology and Disease Specific Resources
 
 There is a wide range of ontologies available for specific diseases or disease types. Some examples are given below but this list is by no means exhaustive. Check ontology repositories such as [OLS](https://www.ebi.ac.uk/ols/ontologies), [Bioportal](https://bioportal.bioontology.org/ontologies) or the [OBO Foundry](http://obofoundry.org/) for up-to-date lists of available ontologies
 
@@ -218,7 +221,7 @@ There is a wide range of ontologies available for specific diseases or disease t
 
 
 
-### Cellular entities
+#### Cellular entities
 
 Following on through our review of semantic resources by granularity levels, this section details a number of reference resources which provide coverage for the describing `cell types`, `cell lines` {cite}`pmid29805321` and `cellular phenotypes`.
 
@@ -233,7 +236,7 @@ Following on through our review of semantic resources by granularity levels, thi
 
 
 
-### Molecular Entities
+#### Molecular Entities
 
 This section highlights the major and most widely used OBO Foundry resources for `molecules of biological relevance` as well as `molecular structures`, `biological processes` and `cellular components` 
 
@@ -255,7 +258,7 @@ Besides these open ontologies, in the context of clinically relevant work where 
 | | RxNORM |View on [Bioportal](https://bioportal.bioontology.org/ontologies/RXNORM) | |[RxNORM license](http://www.nlm.nih.gov/databases/umls.html) - part of the UMLS license||
 
 
-### Assays and Technologies
+#### Assays and Technologies
 
 The resources listed in this section are providing key descriptors bridging data acquisition procedures (as used in a clinical setting and wet lab work) with instruments, units of measurements, endpoints as well as sometimes the biological process or molecular entities of biological significance.
 Some of the resources are specialized semantic artefacts developed to support the standardized reporting of data modalities.
