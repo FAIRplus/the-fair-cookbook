@@ -180,29 +180,37 @@ Below there are links to some key recipes, click on them to explore their conten
 
 <h4 class="my-0 d-table text--primary" id="findablePrinciple">
     <span class="bigLetter text--orange"> F </span> 
-    <span class="cardTitle"> Findability: examplar recipes </span>
+    <span class="cardTitle"> Findability </span>
 </h4>
 ^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
+
 <div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
 
 {ref}`fcb-find-seo` 
 </div>
-<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
-
-{ref}`fcb-find-zenodo` 
-</div>
+ 
 <div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
 
 {ref}`fcb-find-identifiers`
+</div>
+
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Findability](fcb-find)    
 </div>
 
 ---
 
 <h4 class="my-0 d-table text--primary" id="accessiblePrinciple">
     <span class="bigLetter text--purple-light"> A </span> 
-    <span class="cardTitle"> Accessibility: examplar recipes </span>
+    <span class="cardTitle"> Accessibility </span>
 </h4>
 ^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
+
 <!-- <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
 {ref}`fcb-access-anonymizing`
@@ -216,33 +224,46 @@ Below there are links to some key recipes, click on them to explore their conten
 {ref}`fcb-access-aspera`
 </div>
 
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Accessibility](fcb-access)    
+</div>
+
 ---
 
 <h4 class="my-0 d-table text--primary" id="interoperablePrinciple">
     <span class="bigLetter text--purple-dark"> I </span> 
-    <span class="cardTitle"> Interoperability: examplar recipes </span>
+    <span class="cardTitle"> Interoperability </span>
 </h4>
 ^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
 <div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
 {ref}`fcb-interop-metadataprofile`
 </div>
-<div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
-{ref}`fcb-interop-ontorobot`
-</div>
 <div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
 {ref}`fcb-interop-selectonto`
+</div>
+
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Interoperability](fcb-interoperability)    
 </div>
 
 ---
 
 <h4 class="my-0 d-table text--primary" id="reusablePrinciple">
     <span class="bigLetter text--red"> R </span> 
-    <span class="cardTitle"> Reusability: examplar recipes </span>
+    <span class="cardTitle"> Reusability </span>
 </h4>
 ^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
 <div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
 {ref}`fcb-reusability-data_use`
@@ -251,9 +272,12 @@ Below there are links to some key recipes, click on them to explore their conten
 
 {ref}`rr-licensing-data`
 </div>
-<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
-<!-- {ref}`fcb-reusability-community-std` -->
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Reusability](fcb-reusability)    
 </div>
 ````
 
