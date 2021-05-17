@@ -1,6 +1,17 @@
 (fcb-fairify-examples-oncotrack)=
 # Oncotrack - observational clinical cohort datasets
 
+````{panels_fairplus}
+:identifier_text: FCB044
+:identifier_link: http://w3id.org/faircookbook/FCB044
+:difficulty_level: 4
+:recipe_type: applied_example
+:reading_time_minutes: 10
+:intended_audience: data_manager, data_curator, ontologist
+:has_executable_code: nope
+:recipe_name: Oncotrack - clinical cohort datasets
+```` 
+
 
 ## Ingredients
 

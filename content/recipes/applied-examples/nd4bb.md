@@ -7,8 +7,8 @@ TODO: clarify authors
 -->
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB006
-:identifier_link: http://w3id.org/faircookbook/FCB006
+:identifier_text: FCB043
+:identifier_link: http://w3id.org/faircookbook/FCB043
 :difficulty_level: 4
 :recipe_type: applied_example
 :recipe_name: ND4BB - clinical trial datasets

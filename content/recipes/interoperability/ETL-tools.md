@@ -3,8 +3,8 @@
 # Extraction, transformation, and loading process
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB_TBA
-:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:identifier_text: FCB031
+:identifier_link: 'https://w3id.org/faircookbook/FCB031'
 :difficulty_level: 5
 :recipe_type: survey_review
 :reading_time_minutes: 15

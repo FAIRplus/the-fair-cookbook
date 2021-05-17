@@ -2,8 +2,8 @@
 # Transferring data with SFTP
 
 ````{panels_fairplus}
-:identifier_text: FCB004
-:identifier_link: http://w3id.org/faircookbook/FCB004
+:identifier_text: FCB014
+:identifier_link: http://w3id.org/faircookbook/FCB014
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15

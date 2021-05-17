@@ -7,8 +7,8 @@ TODO make referenced Google Drive documents available
 -->
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB007
-:identifier_link: http://w3id.org/faircookbook/FCB007
+:identifier_text: FCB045
+:identifier_link: http://w3id.org/faircookbook/FCB045
 :difficulty_level: 4
 :recipe_type: applied_example
 :reading_time_minutes: 10

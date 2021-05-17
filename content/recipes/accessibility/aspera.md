@@ -2,8 +2,8 @@
 # Downloading data with Aspera
 
 ````{panels_fairplus}
-:identifier_text: FCB003
-:identifier_link: http://w3id.org/faircookbook/FCB003
+:identifier_text: FCB015
+:identifier_link: http://w3id.org/faircookbook/FCB015
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
