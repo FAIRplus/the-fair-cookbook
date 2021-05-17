@@ -718,6 +718,8 @@
 <strong>license:</strong> <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/"><code class="docutils literal notranslate"><span class="pre">creative-commons-by-sa-4.0</span></code></a> <br>
 <strong>keywords:</strong> <code class="docutils literal notranslate"> </code> <br>
 <strong>description:</strong> <code class="docutils literal notranslate"> </code> <br></p>
+<p>Background:</p>
+<p>Here, we show how to query the LinkedData graph using SPARQL to retrieve information about key study design design descriptors such as study group size and treatment groups.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rdflib</span>
@@ -854,7 +856,7 @@
 </div>
 </div>
 </div>
-<p>We can display the results of that query using the function declared earlier on.</p>
+<p>We can display the results of that query using the function declared earlier on</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">queryResultToHTMLTable</span><span class="p">(</span><span class="n">get_idv_and_levels</span><span class="p">)</span>
@@ -862,7 +864,7 @@
 </div>
 </div>
 </div>
-<p>Let’s now ask for the number of biological and technical replicates used to compute the mean concentration of the chemical compounds detected and forming the signature of the rose fragrance.</p>
+<p>Let’s now ask for the number of biological and technical replicates used to compute the mean concentration of the chemical compounds detected and forming the signature of the rose fragrance</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_replication_info</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -904,7 +906,7 @@
 </div>
 </div>
 </div>
-<p>Once more, we invoked the pretty printing function:</p>
+<p>Once more, we invoke the pretty printing function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">queryResultToHTMLTable</span><span class="p">(</span><span class="n">get_replication_info</span><span class="p">)</span>
