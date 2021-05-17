@@ -119,26 +119,26 @@ A set of widely accepted criteria for selecting terminologies (or other reportin
 
 
 *   **Exclusion criteria**:
-    * :x: absent licence or terms of use (_indicator of usability_)
-    * :x: restrictive licences or terms of use with restrictions on redistribution and reuse 
-    * :x: absence of term definitions 
-    * :x: absence of sufficient class metadata (_indicator of quality_)
-    * :x: absence of sustainability indicators (_absence of funding records_) 
+    * 🔸 absent licence or terms of use (_indicator of usability_)
+    * 🔸 restrictive licences or terms of use with restrictions on redistribution and reuse 
+    * 🔸 absence of term definitions 
+    * 🔸 absence of sufficient class metadata (_indicator of quality_)
+    * 🔸 absence of sustainability indicators (_absence of funding records_) 
  
 *   **Inclusion criteria**:
-    * :heavy_check_mark:  scope and coverage meets the requirements of the concept identified
-    * :heavy_check_mark:  unique URI, textual definition and IDs for each term
-    * :heavy_check_mark:  resource releases are versioned
-    * :heavy_check_mark:  size of resource (_indicator of coverage_)
-    * :heavy_check_mark:  number of classes and subclasses (_indicator of depth_)
-    * :heavy_check_mark:  number of terms having definitions and synonyms (_indicator of richness_)
-    * :heavy_check_mark:  presence of an help desk and contact point (_indicator of community support_)
-    * :heavy_check_mark:  presence of term submission tracker / issue tracker (_indicator of resource agility and capability to grow upon request_)
-    * :heavy_check_mark:  potential integrative nature of the resource (_as indicator of translational application potential_)
-    * :heavy_check_mark:  licensing information available (_as indicator of freedom to use_)
-    * :heavy_check_mark:  use of of top level ontology (_as indicator of a resource built for generic use_)
-    * :heavy_check_mark:  pragmatism (_as indicator of actual, current real life practice)_
-    * :heavy_check_mark:  possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
+    * 🔰  scope and coverage meets the requirements of the concept identified
+    * 🔰  unique URI, textual definition and IDs for each term
+    * 🔰  resource releases are versioned
+    * 🔰  size of resource (_indicator of coverage_)
+    * 🔰  number of classes and subclasses (_indicator of depth_)
+    * 🔰  number of terms having definitions and synonyms (_indicator of richness_)
+    * 🔰  presence of a help desk and contact point (_indicator of community support_)
+    * 🔰  presence of term submission tracker / issue tracker (_indicator of resource agility and capability to grow upon request_)
+    * 🔰  potential integrative nature of the resource (_as indicator of translational application potential_)
+    * 🔰  licensing information available (_as indicator of freedom to use_)
+    * 🔰  use of a top level ontology (_as indicator of a resource built for generic use_)
+    * 🔰  pragmatism (_as indicator of actual, current real life practice)_
+    * 🔰  possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
 
 These criteria are simply indicative and need to be modulated depending on the `contexts` described in the introduction, as specific constraints (e.g. regulatory requirements) may take precedence over some of the criteria listed here. 
 
