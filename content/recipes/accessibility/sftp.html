@@ -450,6 +450,32 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  FAIR COMPLIANCE
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. Evaluating FAIRness with FAIREvaluator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   ABOUT
  </span>
 </p>
@@ -636,89 +662,69 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#graphical-overview">
-   1.3. Graphical Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capability-and-maturity-table">
-   1.4. Capability and Maturity Table.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   1.5. FAIRification Objectives, Inputs and Outputs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-data-standards">
-   1.6. Table of Data Standards
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#requirements">
-   1.7. Requirements
+   1.3. Requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recipe-instructions">
-   1.8. Recipe instructions
+   1.4. Recipe instructions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#setting-up-a-sftp-server">
-     1.8.1. Setting up a SFTP server
+     1.4.1. Setting up a SFTP server
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-upload-and-download">
-     1.8.2. Data upload and download
+     1.4.2. Data upload and download
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#manual-i-e-drag-n-drop">
-       1.8.2.1. Manual, i.e. drag’n’drop
+       1.4.2.1. Manual, i.e. drag’n’drop
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#automatic">
-       1.8.2.2. Automatic
+       1.4.2.2. Automatic
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#correctness-and-completeness-of-transfer">
-     1.8.3. Correctness and completeness of transfer
+     1.4.3. Correctness and completeness of transfer
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#possible-improvements-from-the-state-of-this-recipe">
-   1.9. Possible improvements from the state of this recipe:
+   1.5. Possible improvements from the state of this recipe:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   1.10. Conclusion
+   1.6. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     1.10.1. What to read next?
+     1.6.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   1.11. Authors
+   1.7. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   1.12. License
+   1.8. License
   </a>
  </li>
 </ul>
@@ -808,28 +814,32 @@ One common method for transferring files is SFTP or scp (secure copy).
 <li><p>In order to upload and download files, the client needs to communicate with the server over port 22 (which is the default port for SFTP) and the network configurations on the sender as well as the recipient side need to allow this traffic. If network restrictions block this communication, one might try to run the SFTP server on a different port (e.g. 443).</p></li>
 <li><p>In this scenario, a SFTP server is a pure file transfer server, i.e. it lives outside of any sensitive network area and both parties (the sender and recipient) need to use a SFTP client to upload from and download to their internal storage systems. After transfer and integrity check, files would be typically removed by the receiver.</p></li>
 </ul>
-</div>
-<div class="section" id="graphical-overview">
-<h2><span class="section-number">1.3. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<p>not existent</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="capability-and-maturity-table">
-<h2><span class="section-number">1.4. </span>Capability and Maturity Table.<a class="headerlink" href="#capability-and-maturity-table" title="Permalink to this headline">¶</a></h2>
-<p>Capability Initial Maturity Level Final Maturity Level
-Interoperability – minimal - repeatable</p>
-</div>
-<div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">1.5. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
-<p>COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="table-of-data-standards">
-<h2><span class="section-number">1.6. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
-<p>COMMENT: the concepts in this recipe did not map to any terms from the <a class="reference external" href="http://FAIRsharing.org">FAIRsharing.org</a> database.</p>
+<!-- ## Graphical Overview
+
+not existent
+
+---
+
+## Capability and Maturity Table.
+
+
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+| :------------- | :------------- | :------------- |
+| Interoperability | minimal | repeatable |
+
+
+## FAIRification Objectives, Inputs and Outputs
+
+COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology. 
+
+---
+
+## Table of Data Standards
+
+COMMENT: the concepts in this recipe did not map to any terms from the FAIRsharing.org database.-->
 </div>
 <div class="section" id="requirements">
-<h2><span class="section-number">1.7. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>For client (receiver/sender):</p>
 <ul class="simple">
 <li><p>Basic understanding of SFTP client configurations</p></li>
@@ -843,7 +853,7 @@ Interoperability – minimal - repeatable</p>
 </ul>
 </div>
 <div class="section" id="recipe-instructions">
-<h2><span class="section-number">1.8. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
 <p>Overview:</p>
 <ul class="simple">
 <li><p>(1)	Setting up SFTP server</p>
@@ -861,7 +871,7 @@ Interoperability – minimal - repeatable</p>
 <li><p>(3) Correctness and completeness of transfer</p></li>
 </ul>
 <div class="section" id="setting-up-a-sftp-server">
-<h3><span class="section-number">1.8.1. </span>Setting up a SFTP server<a class="headerlink" href="#setting-up-a-sftp-server" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>Setting up a SFTP server<a class="headerlink" href="#setting-up-a-sftp-server" title="Permalink to this headline">¶</a></h3>
 <p>While you can run an SFTP server also in a Windows environment (e.g. using the open source software FileZilla Server), a Linux server is certainly recommended. Most Linux distributions come with all required libraries (libssh2, OpenSSH) pre-installed. Following is a step-by-step summary for a CentOS server:</p>
 <p>a.	Create a dedicated group for all future SFTP users:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ groupadd sftpusers
@@ -897,9 +907,9 @@ ForceCommand internal-sftp
 <p>h.	Now you have to make sure you open port 22 in your network to the outside world under a specific domain name or static IP address.</p>
 </div>
 <div class="section" id="data-upload-and-download">
-<h3><span class="section-number">1.8.2. </span>Data upload and download<a class="headerlink" href="#data-upload-and-download" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.2. </span>Data upload and download<a class="headerlink" href="#data-upload-and-download" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="manual-i-e-drag-n-drop">
-<h4><span class="section-number">1.8.2.1. </span>Manual, i.e. drag’n’drop<a class="headerlink" href="#manual-i-e-drag-n-drop" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.4.2.1. </span>Manual, i.e. drag’n’drop<a class="headerlink" href="#manual-i-e-drag-n-drop" title="Permalink to this headline">¶</a></h4>
 <p>Data could be transferred to/from SFTP server using multiple clients. Here there are some examples:</p>
 <p>FileZilla</p>
 <p>OS: Windows, Mac OS, Linux</p>
@@ -934,7 +944,7 @@ The portable version of WinSCP can be preconfigured so that a user only needs to
 </div>
 </div>
 <div class="section" id="automatic">
-<h4><span class="section-number">1.8.2.2. </span>Automatic<a class="headerlink" href="#automatic" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.4.2.2. </span>Automatic<a class="headerlink" href="#automatic" title="Permalink to this headline">¶</a></h4>
 <p>Libraries implementing SFTP are available for different programming languages.</p>
 <ul class="simple">
 <li><p>Python – pysftp (<a class="reference external" href="https://pysftp.readthedocs.io/en/release_0.2.8/index.html">https://pysftp.readthedocs.io/en/release_0.2.8/index.html</a>)</p></li>
@@ -945,7 +955,7 @@ The portable version of WinSCP can be preconfigured so that a user only needs to
 </div>
 </div>
 <div class="section" id="correctness-and-completeness-of-transfer">
-<h3><span class="section-number">1.8.3. </span>Correctness and completeness of transfer<a class="headerlink" href="#correctness-and-completeness-of-transfer" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.3. </span>Correctness and completeness of transfer<a class="headerlink" href="#correctness-and-completeness-of-transfer" title="Permalink to this headline">¶</a></h3>
 <p>It is a good practice to ensure that file transfer is correct and complete.</p>
 <p>Sender should calculate checksum (md5, sha512, etc) for every file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash: md5sum * &gt; md5sum.txt
@@ -984,18 +994,18 @@ The process involved copying the files over to a secure FTP server, the receivin
 </div>
 </div>
 <div class="section" id="possible-improvements-from-the-state-of-this-recipe">
-<h2><span class="section-number">1.9. </span>Possible improvements from the state of this recipe:<a class="headerlink" href="#possible-improvements-from-the-state-of-this-recipe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Possible improvements from the state of this recipe:<a class="headerlink" href="#possible-improvements-from-the-state-of-this-recipe" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>One could provide for increased automation by writing a small script to iterate through each directory when one is transferring a set of directories, each containing a number of data files.</p></li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusion">
-<h2><span class="section-number">1.10. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>This content is a simple guideline for using a well known secure file transfer protocol.
 More modern solutions and tools exist for fast transfer or mounting of remote drive. For example <a class="reference external" href="https://rclone.org">Rclone</a> is one such tool, allowing interaction with cloud storage solutions from a wide array of providers.</p>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">1.10.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p><a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol">Wikipedia article on SFTP</a>
 <a class="reference external" href="https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/">The Geek Stuff, FTP and SFTP Beginners guide with 10 examples</a>
@@ -1008,7 +1018,7 @@ More modern solutions and tools exist for fast transfer or mounting of remote dr
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">1.11. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -1053,7 +1063,7 @@ More modern solutions and tools exist for fast transfer or mounting of remote dr
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">1.12. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>

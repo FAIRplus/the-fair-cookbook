@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Evaluating FAIRness with FAIREvaluator</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/assessing-fairness/fair-assessment-fairevaluator.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2. Evaluating FAIRness with FAIRshake" href="fair-assessment-fairshake.html" />
+    <link rel="prev" title="Assessing FAIRness and FAIR compliance" href="../assessing-fairness.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/assessing-fairness/fair-assessment-fairevaluator.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Evaluating FAIRness with FAIREvaluator" />
+<meta property="og:description" content="Evaluating FAIRness with FAIREvaluator  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Who should read it
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure for FAIR
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     5. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       5.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       5.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       5.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifiers mapping with BridgeDB
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDB web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-why-using-them.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
+       Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating_data_dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     11. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     12. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox - omics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     3. ND4BB - clinical trial datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - observational clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. RESOLUTE - transcriptomics datasets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR COMPLIANCE
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessing FAIR
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. Evaluating FAIRness with FAIREvaluator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fair-assessment-fairshake.html">
+     2. Evaluating FAIRness with FAIRshake
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/technology_stack.html">
+     2. Technology stack
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/assessing-fairness/fair-assessment-fairevaluator.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/assessing-fairness/fair-assessment-fairevaluator.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/assessing-fairness/fair-assessment-fairevaluator.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingredients">
+   1.1. Ingredients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   1.2. Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-process">
+   1.3. Step by Step Process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loading-fairevaluator-web-application">
+     1.3.1. Loading FAIREvaluator web application
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-the-fair-indicators">
+     1.3.2. Understanding the FAIR indicators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparing-the-input-information">
+     1.3.3. Preparing the input information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-the-fairevaluator">
+     1.3.4. Running the FAIREvaluator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysing-the-fairevaluator-report">
+     1.3.5. Analysing the FAIREvaluator report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   1.4. Conclusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   1.5. Reference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   1.6. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   1.7. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="evaluating-fairness-with-fairevaluator">
+<span id="fcb-assess-fair-automatic-evaluator"></span><h1><span class="section-number">1. </span>Evaluating FAIRness with FAIREvaluator<a class="headerlink" href="#evaluating-fairness-with-fairevaluator" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Evaluating FAIRness with FAIREvaluator", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "RX.X", "url": "https://example.com"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+30 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+Yes
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Evaluating FAIRness with FAIREvaluator</div>
+<img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Hands-on</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://example.com" class="text--purple-dark">RX.X
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<!-- ----
+
+````{panels}
+:container: container-lg pb-3
+:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
+:card: rounded
+
+<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a> 
+ version: <a href="">v1.0</a>
+
+---
+<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+
+---
+<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
+
+---
+<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Intended Audience</b></h4>
+<p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
+<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
+<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
+````
+ -->
+<hr class="docutils" />
+<div class="section" id="ingredients">
+<h2><span class="section-number">1.1. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Ingredient</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://tools.ietf.org/html/rfc2616">HTTP1.1 protocol</a></p></td>
+<td class="text-align:left"><p>data communication protocol</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers">guidance on persistent resolvable identifiers</a></p></td>
+<td class="text-align:left"><p>policy</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://archive.org/services/purl/">Persistent Uniform Resource Locators - PURL</a></p></td>
+<td class="text-align:left"><p>redirection service</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://n2t.net/e/ark_ids.html">Archival Resource Key</a></p></td>
+<td class="text-align:left"><p>identifier minting service; identifier resolution service</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://www.rfc-editor.org/rfc/rfc3650.txt">Handle system</a></p></td>
+<td class="text-align:left"><p>identifier minting service; identifier resolution service</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://doi.org/">DOI</a></p></td>
+<td class="text-align:left"><p>identifier minting service</p></td>
+<td class="text-align:left"><p>based on Handle system</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://identifiers.org/">identifiers.org</a></p></td>
+<td class="text-align:left"><p>identifier resolution service</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://ezid.cdlib.org/">EZID resolution service</a></p></td>
+<td class="text-align:left"><p>identifier resolution service</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://n2t.net/">name2things rsolution service</a></p></td>
+<td class="text-align:left"><p>identifier resolution service</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://W3id.org/AmIFAIR">FAIREvaluator</a></p></td>
+<td class="text-align:left"><p>FAIR assessment</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://fairshake.cloud/">FAIRShake</a></p></td>
+<td class="text-align:left"><p>FAIR assessment</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/standards/semanticweb/data">RDF/Linked Data</a></p></td>
+<td class="text-align:left"><p>model</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectives">
+<h2><span class="section-number">1.2. </span>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<p>Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
+Obtain human and machine readable reports highlighting the main</p>
+</div>
+<div class="section" id="step-by-step-process">
+<h2><span class="section-number">1.3. </span>Step by Step Process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="loading-fairevaluator-web-application">
+<h3><span class="section-number">1.3.1. </span>Loading FAIREvaluator web application<a class="headerlink" href="#loading-fairevaluator-web-application" title="Permalink to this headline">¶</a></h3>
+<p>Navigate the FAIREvaluator tool, which can be accessed via the following 2 addresses:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/AmIFAIR">https://w3id.org/AmIFAIR</a></p></li>
+<li><p><a class="reference external" href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#%21/#%2F%21">https://fairsharing.github.io/FAIR-Evaluator-FrontEnd</a></p></li>
+</ul>
+<!-- ![the FAIREvaluator Home page](./assets/fair-eval-img1.png) -->
+<div class="figure align-default" id="the-fairevaluator-home-page">
+<a class="reference internal image-reference" href="../../../_images/fair-eval-img1.png"><img alt="the FAIREvaluator Home page" src="../../../_images/fair-eval-img1.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">the <a class="reference external" href="https://w3id.org/AmIFAIR">FAIREvaluator</a> Home page</span><a class="headerlink" href="#the-fairevaluator-home-page" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="understanding-the-fair-indicators">
+<h3><span class="section-number">1.3.2. </span>Understanding the FAIR indicators<a class="headerlink" href="#understanding-the-fair-indicators" title="Permalink to this headline">¶</a></h3>
+<p>In order the run the FAIREvaluator, it is important to understand to notion of FAIR indicators (formerly referred to as FAIR metrics).
+One may browse the list of currently community defined indicators from the <code class="docutils literal notranslate"><span class="pre">Collections</span></code> page</p>
+<!-- ![Select a 'FAIR Maturity Indicator - Collections'](./assets/fair-eval-img2.png)  -->
+<div class="figure align-default" id="select-a-fair-maturity-indicator-collections">
+<a class="reference internal image-reference" href="../../../_images/fair-eval-img2.png"><img alt="Select a 'FAIR Maturity Indicator - Collections'" src="../../../_images/fair-eval-img2.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Select a ‘FAIR Maturity Indicator - Collections’</span><a class="headerlink" href="#select-a-fair-maturity-indicator-collections" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="preparing-the-input-information">
+<h3><span class="section-number">1.3.3. </span>Preparing the input information<a class="headerlink" href="#preparing-the-input-information" title="Permalink to this headline">¶</a></h3>
+<p>To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:</p>
+<ol class="simple">
+<li><p>a collection of FAIR indicators, selected from the list described above.</p></li>
+<li><p>a globally unique, persistent, resolveable identifier for the resource to be evaluated.</p></li>
+<li><p>a title for the evaluation. Enforce a naming convention to make future searches easiers as these evaluations are saved.</p></li>
+<li><p>a person identifier in the form of an ORCID</p></li>
+</ol>
+<!-- ![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
+<div class="figure align-default" id="running-the-fairevaluator-part-1-setting-the-input">
+<a class="reference internal image-reference" href="../../../_images/fair-eval-img4.png"><img alt="Running the FAIREvaluator - part 1 - setting the input" src="../../../_images/fair-eval-img4.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">Running the FAIREvaluator - part 1: setting the input</span><a class="headerlink" href="#running-the-fairevaluator-part-1-setting-the-input" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="running-the-fairevaluator">
+<h3><span class="section-number">1.3.4. </span>Running the FAIREvaluator<a class="headerlink" href="#running-the-fairevaluator" title="Permalink to this headline">¶</a></h3>
+<p>Hit the ‘Run Evaluation’ button from ‘<a class="reference external" href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#%21/collections/new/evaluate">https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate</a>’ page</p>
+<!-- ![Running the FAIREvaluator - part 2: execution ](./assets/fair-eval-img5.png) -->
+<div class="figure align-default" id="running-the-fairevaluator-part-2-execution">
+<a class="reference internal image-reference" href="../../../_images/fair-eval-img5.png"><img alt="Running the FAIREvaluator - part 2 - execution" src="../../../_images/fair-eval-img5.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Running the FAIREvaluator - part 2: execution</span><a class="headerlink" href="#running-the-fairevaluator-part-2-execution" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="analysing-the-fairevaluator-report">
+<h3><span class="section-number">1.3.5. </span>Analysing the FAIREvaluator report<a class="headerlink" href="#analysing-the-fairevaluator-report" title="Permalink to this headline">¶</a></h3>
+<p>Following execution of the FAIREvaluator, a detail report is generated.</p>
+<!-- ![FAIREvaluator report - overall report ](./assets/fair-eval-img6.png) -->
+<div class="figure align-default" id="fairevaluator-report-overall-report">
+<a class="reference internal image-reference" href="../../../_images/fair-eval-img6.png"><img alt="FAIREvaluator report - overall report" src="../../../_images/fair-eval-img6.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">FAIREvaluator report - overall report</span><a class="headerlink" href="#fairevaluator-report-overall-report" title="Permalink to this image">¶</a></p>
+</div>
+<p>Time to dig into the details and figure out the reasons why some indicators are reporting a failure:</p>
+<!-- ![apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*](./assets/fair-eval-img7.png) -->
+<div class="figure align-default" id="fairevaluator-error-report">
+<a class="reference internal image-reference" href="../../../_images/fair-eval-img7.png"><img alt="FAIREvaluator error report" src="../../../_images/fair-eval-img7.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">apparently a problem with identifier persistence if using DOI, which are URN rather than URL <em>stricto-sensu</em></span><a class="headerlink" href="#fairevaluator-error-report" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2><span class="section-number">1.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Using software tool to assess FAIR maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
+Furthermore, only automation is able to cope with the scale and volumes of assets to evaluate.
+The software-based evaluations are repeatable, reproducible and free of bias (other than those that may be related to definitions of the FAIR indicators themselves).
+These are also more demanding in terms of technical implementation and knowledge.
+Services such as the FAIRevaluator are essential to gauge improvements of data management services and for helping developers build FAIR services and data.</p>
+</div>
+<div class="section" id="reference">
+<h2><span class="section-number">1.5. </span>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<p>Wilkinson, M.D., Dumontier, M., Sansone, S. et al. Evaluating FAIR maturity through a scalable, automated, community-governed framework. Sci Data 6, 174 (2019). <a class="reference external" href="https://doi.org/10.1038/s41597-019-0184-5">doi:10.1038/s41597-019-0184-5</a></p>
+<p>Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Resources, Cell Systems (2019),<a class="reference external" href="https://doi.org/10.1016/j.cels.2019.09.011">doi:10.1016/j.cels.2019.09.011</a></p>
+</div>
+<div class="section" id="authors">
+<h2><span class="section-number">1.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Affiliation</p></th>
+<th class="text-align:left head"><p>orcid</p></th>
+<th class="text-align:left head"><p>CrediT role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Philippe Rocca-Serra</p></td>
+<td class="text-align:left"><p>University of Oxford, Data Readiness Group</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/orcid.org/0000-0001-9853-5668">0000-0001-9853-5668</a></p></td>
+<td class="text-align:left"><p>Writing - Original Draft</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">1.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/assessing-fairness"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../assessing-fairness.html" title="previous page">Assessing FAIRness and FAIR compliance</a>
+    <a class='right-next' id="next-link" href="fair-assessment-fairshake.html" title="next page"><span class="section-number">2. </span>Evaluating FAIRness with FAIRshake</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div> Grant agreement 802750 </div> </div> <div class="col-xl-3"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-xl-3"> <ul> <li> <a href="/the-fair-cookbook/_build/html/content/recipes/boilerplate/people.html"> Contributors </a> </li> <li> <a href="/the-fair-cookbook/_build/html/content/recipes/help.html"> How to contribute </a> </li> </ul>
+</div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="EFPIA logo" style="float:center""></a> </div> </div> </div> <div class="row_footer mb-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

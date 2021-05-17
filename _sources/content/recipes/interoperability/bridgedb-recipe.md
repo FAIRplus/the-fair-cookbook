@@ -363,7 +363,7 @@ Improvements on provenance are under way (see [here](https://github.com/bridgedb
 ___
 
 ## Code 
-You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/bridgedb/docs/content/recipes/interoperability/bridgedb). These assume the data has the structure described in this recipe.
+You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/bridgedb/docs/content/recipes/interoperability/bridgedb/). These assume the data has the structure described in this recipe.
 
 ---
 
