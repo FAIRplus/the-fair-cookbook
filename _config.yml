@@ -35,10 +35,10 @@ html:
             </div>
             <div class="mb-3"> Grant agreement 802750 </div>
         </div>
-        <div class="col-xl-6 d-flex pt-2">
+        <div class="col-xl-6 d-flex pt-3">
           <div class="container">
             <div class="row">
-              <div class="col-6 d-flex pt-2" style="justify-content:center">
+              <div class="col-6 d-flex" style="justify-content:center">
                 <ul>
                   <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
                   <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
@@ -53,13 +53,13 @@ html:
             </div>
           </div>
         </div>
-        <div class="col-xl-3 pt-2">
+        <div class="col-xl-3">
           <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="EFPIA logo" style="float:center""></a>
           <a href="https://elixir.eu"><img src="/the-fair-cookbook/_static/images/fairplus-mini.png" height="80" alt="Elixir logo" style="float:center""></a>
         </div>
       </div>
     </div>
-    <div class="row_footer mb-3">
+    <div class="row_footer my-3">
       The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license.
     </div>
   google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
