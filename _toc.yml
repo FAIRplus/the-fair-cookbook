@@ -14,9 +14,6 @@
       # title: Introduction
       # numbered: true
       # sections:
-          # - file: content/recipes/introduction/test-css
-
-
           # - file: content/recipes/glossary-fair-terms
           # - file: content/recipes/introduction/brief-FAIR-principles
           # - file: content/recipes/introduction/what-is-IMI
@@ -24,11 +21,6 @@
           # - file: content/recipes/introduction/IMI-and-data-management-plans
           # - file: content/recipes/introduction/IMI-Data-Access-Request-Process
           # - file: content/recipes/introduction/data-sharing-models
-
-
-# - file: content/recipes/cmmi
-#   title: Maturity models
-#   numbered: false
   
 
 - part: RECIPES
@@ -168,10 +160,16 @@
         - file: content/recipes/applied-examples/resolute_raw/resolute
           title: RESOLUTE - transcriptomics datasets
 
-    # # -header: assessment
-    # - file: content/recipes/assessing-fairness
-    # # title: Assessing FAIR 
-    #   numbered: true
+- part: FAIR COMPLIANCE
+  chapters:
+    - file: content/recipes/assessing-fairness
+      title: Assessing FAIR 
+      numbered: true
+      sections:
+            # - file: content/recipes/assessing-fairness/automatic-fair-assessment
+            - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
+            - file: content/recipes/assessing-fairness/fair-assessment-fairshake
+
     #   sections:
     #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
     #     - file: content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model
@@ -184,10 +182,7 @@
     #       sections:
     #         - file: content/recipes/assessing-fairness/cmmi/evaluation-method
     #         - file: content/recipes/assessing-fairness/cmmi/rda-evaluation
-    #     - file: content/recipes/assessing-fairness/automatic-fair-assessment
-    #       sections:
-    #         - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
-    #         - file: content/recipes/assessing-fairness/fair-assessment-fairshake
+
 
 
 - part: ABOUT

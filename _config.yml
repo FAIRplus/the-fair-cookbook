@@ -97,9 +97,6 @@ parse:
 
 bibtex_bibfiles:
    - ./_bibliography/bibliography-identifier-mapping.bib
-   # - ./interoperability/bibref/bibliography-identifier-mapping.bib
-   # - ./_bibliography/fairbookreferences.bib
-   # - ./_bibliography/bibliography-bridgedb.bib
-   # - ./_bibliography/bibliography-identifier-mapping2.bib
+
 
 bibtex_reference_style: author_year
