@@ -183,7 +183,7 @@ Below there are links to some key recipes, click on them to explore their conten
     <span class="cardTitle"> Findability </span>
 </h4>
 ^^^
-<div class="recipeLabel"> Examplar recipes: </div>
+<div class="recipeLabel"> Exemplar recipes: </div>
 
 <div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
 
@@ -209,7 +209,7 @@ Below there are links to some key recipes, click on them to explore their conten
     <span class="cardTitle"> Accessibility </span>
 </h4>
 ^^^
-<div class="recipeLabel"> Examplar recipes: </div>
+<div class="recipeLabel"> Exemplar recipes: </div>
 
 <!-- <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
@@ -238,7 +238,7 @@ Below there are links to some key recipes, click on them to explore their conten
     <span class="cardTitle"> Interoperability </span>
 </h4>
 ^^^
-<div class="recipeLabel"> Examplar recipes: </div>
+<div class="recipeLabel"> Exemplar recipes: </div>
 <div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
 {ref}`fcb-interop-metadataprofile`
@@ -263,7 +263,7 @@ Below there are links to some key recipes, click on them to explore their conten
     <span class="cardTitle"> Reusability </span>
 </h4>
 ^^^
-<div class="recipeLabel"> Examplar recipes: </div>
+<div class="recipeLabel"> Exemplar recipes: </div>
 <div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
 {ref}`fcb-reusability-data_use`
