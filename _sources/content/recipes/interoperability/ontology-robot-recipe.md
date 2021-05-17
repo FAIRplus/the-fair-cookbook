@@ -99,26 +99,26 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 | **Theme**                                             | **Competency Questions**                                                                                                              |
 |:------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
 | **General Questions**                                 |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs?             |
-|                                                       | :heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?
-|                                                       | :heavy_plus_sign: How to remove terms from the resulting ontology that are not needed?                                               |
-|                                                       | :heavy_plus_sign: How to guarantee consistency of the final ontology?                                                                |
-|                                                       | :heavy_plus_sign: How to identify differences in comparison to a previous version of the resulting ontology?                         |
+|                                                       | ➕ How to identify relevant public domain ontologies suiting our needs?             |
+|                                                       | ➕ How to establish an ontology covering all terms that are included in the actual data to be represented?
+|                                                       | ➕ How to remove terms from the resulting ontology that are not needed?                                               |
+|                                                       | ➕ How to guarantee consistency of the final ontology?                                                                |
+|                                                       | ➕ How to identify differences in comparison to a previous version of the resulting ontology?                         |
 | **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
-|                                                       | :heavy_plus_sign: Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
-|                                                       | :heavy_plus_sign: Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
-|                                                       | :heavy_plus_sign: Identify all data generated from primary cells whose origin is the lung.                                                            |
-|                                                       | :heavy_plus_sign: Identify all data generated from celllines whose origin is the lung.                                                                |
+|                                                       | ➕ Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
+|                                                       | ➕ Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
+|                                                       | ➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
+|                                                       | ➕ Identify all data generated from primary cells whose origin is the lung.                                                            |
+|                                                       | ➕ Identify all data generated from celllines whose origin is the lung.                                                                |
 | **Questions including single genes or gene sets**     |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?                          |
+|                                                       | ➕ What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
+|                                                       | ➕ What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
+|                                                       | ➕ What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?                          |
 | **Questions including compound or treatment information** |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
-|                                                       | :heavy_plus_sign: Identify all data from patients treated with a specific medication.                                                                 |
-|                                                       | :heavy_plus_sign: Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
+|                                                       | ➕ Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
+|                                                       | ➕ Identify all data from patients treated with a specific medication.                                                                 |
+|                                                       | ➕ Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
+|                                                       | ➕ What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
 
 
 
@@ -141,9 +141,9 @@ _Table 1: Patient metadata example_
 
 To build an `application ontology` that supports communication between different data resources, it is recommended to reuse existing terms from existing reference ontologies instead of creating new terms.
 
->:bulb: _Reference ontology:_ a semantic artifact with a canonical and comprehensive representation of the entities in a specific domain.
+>⚡ _Reference ontology:_ a semantic artifact with a canonical and comprehensive representation of the entities in a specific domain.
 >
->:bulb: _Source ontology:_ An ontology to be integrated into the application ontology, usually a reference ontology. 
+>⚡ _Source ontology:_ An ontology to be integrated into the application ontology, usually a reference ontology. 
 
 When selecting reference ontologies as source ontologies, the reusability and sustainability of the source ontology need to be considered. Many ontologies in [the OBO foundry](http://www.obofoundry.org/) use the [CC-BY](https://creativecommons.org/licenses/by/2.0/) licence, allowing sharing and adaptation. Such ontologies can be directly used as source ontology. Reference ontologies with similar umbrella structures can be conveniently combined in the application ontology. The format and maintenance of the reference ontology shall also be considered.
 
@@ -166,7 +166,7 @@ _Table 2: Available reference ontologies in selected domains_
 
 #### Step 2.2 Select seed ontology terms
 
-> :bulb: _Seed ontology terms_: A set of entities extracted from reference ontologies for the application ontology.
+> ⚡ _Seed ontology terms_: A set of entities extracted from reference ontologies for the application ontology.
 > 
 
 This step identifies the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology. Ontology Developer can provide the tools to ease and to scale the identification of the seeds. Domain experts can identify the right seeds for a given application ontology.

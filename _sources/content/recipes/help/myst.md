@@ -1155,9 +1155,9 @@ See [Footnotes](https://myst-parser.readthedocs.io/en/latest/using/syntax.html#s
 ```{note}
 Make sure you have a reference bibtex file. 
 You can create one by:
-- running `touch fairbookreferences.bib`
+- running `touch faircookbookreferences.bib`
 or
-- view a {download}`../../../bibliography-identifier-mapping.bib <../../../_bibliography/bibliography-identifier-mapping.bib>` example.
+- view a {download}`./faircookbookreferences.bib <./_bibliography/faircookbookreferences.bib>` example.
 ```
 
 ``````{list-table}
@@ -1186,7 +1186,7 @@ To include a list of citations mentioned in the document, introduce the `bibliog
 ```
 ``````
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography}
 :filter: docname in docnames
 ```
 

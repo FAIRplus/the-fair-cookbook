@@ -1,6 +1,6 @@
 (fcb-interop-idmapping)=
 
-# Interlink data from different sources
+# Interlinking data from different sources
 
 +++
 <br/>
@@ -281,7 +281,7 @@ ___
 
 ## References
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography}
 :filter: docname in docnames
 :style: alpha
 ```

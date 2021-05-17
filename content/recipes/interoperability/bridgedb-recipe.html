@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Using BridgeDb web services" href="bridgedb/bridgedb-example.html" />
-    <link rel="prev" title="1. Interlink data from different sources" href="identifier-mapping.html" />
+    <link rel="prev" title="1. Interlinking data from different sources" href="identifier-mapping.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -825,7 +825,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <li><p>Recipe dependency:</p>
   <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
 <ul class="simple">
-<li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlink data from different sources</span></a></p></li>
+<li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
 </ul>
 </li>
 <li><p>Skill dependency:</p>
@@ -914,7 +914,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <hr class="docutils" />
 <div class="section" id="id1">
 <h2>Identifier mapping with BridgeDb<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlink data from different sources</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use <a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> to carry out  this process.</p>
+<p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use <a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> to carry out  this process.</p>
 <p><a class="reference external" href="https://bridgedb.github.io/">BridgeDB</a> is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:</p>
 <ul class="simple">
 <li><p>Java API</p></li>
@@ -1185,7 +1185,7 @@ This is a step that should be done manually. In this case an important decision 
 <h3>Mapping local identifier to a different global identifier<a class="headerlink" href="#mapping-local-identifier-to-a-different-global-identifier" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to <a class="reference external" href="http://www.genenames.org">HGNC</a>. One may consult the list of other potential data formats in the <a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlink data from different sources</span></a> recipe. The mapping should be <strong>one-to-one</strong> for this recipe.</p>
+<p>In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to <a class="reference external" href="http://www.genenames.org">HGNC</a>. One may consult the list of other potential data formats in the <a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a> recipe. The mapping should be <strong>one-to-one</strong> for this recipe.</p>
 </div>
 <p>The TSV mapping file looks as follows:</p>
 <table class="colwidths-auto table">
@@ -1337,7 +1337,7 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <span id="id2">[<span>batchelor_scientific_nodate</span>]</span>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.</p>
+<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <span id="id2">[<a class="reference internal" href="identifier-mapping.html"><span>BBC+14</span></a>]</span>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.</p>
 </div>
 </div>
 <div class="section" id="r-package">
@@ -1492,15 +1492,19 @@ These are aspects of information provenance which we plan to provide in the futu
 <h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../findability/identifiers.html#fcb-find-identifiers"><span class="std std-ref">Unique, persistent identifiers</span></a></p></li>
-<li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlink data from different sources</span></a></p></li>
+<li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
 </ul>
+</div>
+</div>
 <hr class="docutils" />
-<p><code class="xref download docutils literal notranslate"><span class="pre">bibliography-identifier-mapping.bib</span></code></p>
-</div>
-</div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="id3"></p>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id2">BBC+14</a></span></dt>
+<dd><p>Colin Batchelor, Christian Y A Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T Evelo, Anna Gaulton, Carole Goble, Alasdair J G Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, and Egon L Willighagen. Scientiﬁc Lenses to Support Multiple Views over Linked Chemistry Data. In <em>The Semantic Web – ISWC 2014. Lecture Notes in Computer Science</em>, 16. 2014. <a class="reference external" href="https://doi.org/10.1007/978-3-319-11964-9_7">doi:10.1007/978-3-319-11964-9_7</a>.</p>
+</dd>
+</dl>
+</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
@@ -1575,7 +1579,7 @@ These are aspects of information provenance which we plan to provide in the futu
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="identifier-mapping.html" title="previous page"><span class="section-number">1. </span>Interlink data from different sources</a>
+    <a class='left-prev' id="prev-link" href="identifier-mapping.html" title="previous page"><span class="section-number">1. </span>Interlinking data from different sources</a>
     <a class='right-next' id="next-link" href="bridgedb/bridgedb-example.html" title="next page">Using BridgeDb web services</a>
 
         </div>
