@@ -14,10 +14,7 @@
 
 ## Main Objectives
 
-This recipe is about documenting how to use the popular Aspera Fast Transfer Protocol.
-This is part of a group of other related recipes about efficient files uploads and downloads .
-While the Aspera protocol is used by major public repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is **proprietary**.
-The recipe will therefore also cover some of the implications of using a `closed protocol` in terms of FAIR compliance.
+This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads . While the Aspera protocol is used by major public scientific data repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR compliance.
 
 
 
