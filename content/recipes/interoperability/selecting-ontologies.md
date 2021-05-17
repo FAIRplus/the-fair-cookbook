@@ -264,9 +264,9 @@ Some of the resources are specialized semantic artefacts developed to support th
 |--- |--- |--- |--- |--- |--- |
 |**Radiology**|RADLex|https://data.bioontology.org/ontologies/RADLEX/submissions/41/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb||||
 |**Medical Imaging**|DICOM|http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html||||
-|**Sample Processing/Reagents/Instruments Assay Definition**|OBI|http://svn.code.sf.net/p/obi/code/releases/2014-03-29/obi.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|http://sourceforge.net/p/obi/obi-terms/|
+|**Sample Processing/Reagents/Instruments Assay Definition**|OBI|http://purl.obolibrary.org/obo/obi.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://github.com/obi-ontology/obi/issues|
 |**Biological screening assays and their results including high-throughput screening (HTS)**|BAO|http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl|BFO| [CC-by-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) ||
-|**Mass Spectrometry (instrument/acquisition parameter/spectrum related information)**|PSI-MS|http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo (No OWL file)|none specified| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://lists.sourceforge.net/lists/listinfo/psidev-vocab|
+|**Mass Spectrometry (instrument/acquisition parameter/spectrum related information)**|PSI-MS|https://github.com/HUPO-PSI/psi-ms-CV |none specified| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://github.com/HUPO-PSI/psi-ms-CV/issues |
 |**NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)**|NMR-CV|http://nmrml.org/cv/v1.0.rc1/nmrCV.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/nmrML/nmrML/issues?state=open|
 |**Laboratory test**|LOINC|LOINC and RELMA Complete Download File (All Formats Included)|none specified| [RELMA license](https://uts.nlm.nih.gov/license.html) ||
 |**Units** | UO | http://purl.obolibrary.org/obo/uo.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | https://github.com/bio-ontology-research-group/unit-ontology/issues |
