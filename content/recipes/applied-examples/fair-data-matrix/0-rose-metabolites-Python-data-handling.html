@@ -734,8 +734,9 @@
 <strong>keywords:</strong> <code class="docutils literal notranslate"> </code> <br>
 <strong>description:</strong> <code class="docutils literal notranslate"> </code> <br></p>
 <p>Background:</p>
-<p>Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using <a class="reference external" href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts. Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of the data table.
-A few line of codes allow structure information aound key study design descriptors: the independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package itself.</p>
+<p>Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using <a class="reference external" href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts.
+Here, we show how to use a set of python libraries to create a tabular data package from an excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of the data table.
+A few line of codes allow structure information around key study design descriptors: the independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package itself.</p>
 <ol class="simple">
 <li><p>Let’s begin by installing the Python packages allowing easy access and use of data formatted as JSON Data Package</p></li>
 </ol>
@@ -752,7 +753,7 @@ A few line of codes allow structure information aound key study design descripto
 </div>
 </div>
 <ol class="simple">
-<li><p>Reading the data:</p></li>
+<li><p>Reading the data</p></li>
 </ol>
 <p>We now simply read in the Excel file corresponding to the Nature Genetics Supplementary Table from the Zenodo archive</p>
 <p>(DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.2598799">https://doi.org/10.5281/zenodo.2598799</a>)</p>
@@ -828,7 +829,7 @@ A few line of codes allow structure information aound key study design descripto
 </div>
 </div>
 <ol class="simple">
-<li><p>inserting 2 new fields as placeholders for chemical information descriptors and we reinitialize the dataframe index so row numbering start at 0, not 16</p></li>
+<li><p>We insert 2 new fields as placeholders for chemical information descriptors and reinitialize the dataframe index so row numbering start at 0, not 16</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -840,7 +841,8 @@ A few line of codes allow structure information aound key study design descripto
 </div>
 </div>
 <ol class="simple">
-<li><p>Using LibChebi to retrieve CHEBI identifiers and InChi from a chemical name. Note: in this call, we retrieve only values for which an exact match on the chemical name is found in Chebi libchebi API does not allow easy searching on synonyms, thus we are failing to retrieve all relevant information. This is merely to showcase how to use libchebi.</p></li>
+<li><p>We use LibChebi to retrieve CHEBI identifiers and InChi from a chemical name.
+Note: in this call, we retrieve only values for which an exact match on the chemical name is found in Chebi libchebi API does not allow easy searching on synonyms, thus we are failing to retrieve all relevant information. This is merely to showcase how to use libchebi.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -859,8 +861,8 @@ A few line of codes allow structure information aound key study design descripto
 </div>
 </div>
 <ol class="simple">
-<li><p>The following steps are needed to perform the table transformation from a ‘wide’ layout to a ‘long table’ one. Prep stubnames - pick out all the feature_model variables and remove the model suffices ‘long table’ layout is that relied on by Frictionless Tabular Data Packages and consumed by R ggplot2 library and Python plotnine library.
-Step1: obtain all the different ‘dimension’ measured for a given condition (i.e. repeating fields with an increment suffix)</p></li>
+<li><p>The following steps are needed to perform the table transformation from a ‘wide’ layout to a ‘long table’ one. Prep stubnames - pick out all the feature_model variables and remove the model suffices ‘long table’. The layout is that relied on by Frictionless Tabular Data Packages and consumed by R ggplot2 library and Python plotnine library.
+Step1: obtain all the different ‘dimensions’ measured for a given condition (i.e. repeating fields with an increment suffix).</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -881,7 +883,7 @@ Step1: obtain all the different ‘dimension’ measured for a given condition (
 </div>
 </div>
 <ol class="simple">
-<li><p>Apparently a feature in Pandas DataFrame causes an mismatch in the field position. We solve this by writing the DataFrame to file and reading it back in again, not ideal but it does the trick. Writing to a temporary file &amp;  reading from that file to solve the issue.</p></li>
+<li><p>Apparently a feature in Pandas DataFrame causes a mismatch in the field position. We solve this by writing the DataFrame to file and reading it back in again, not ideal but it does the trick. So writing to a temporary file &amp;  reading from that file to solve the issue.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -908,7 +910,7 @@ Step1: obtain all the different ‘dimension’ measured for a given condition (
 </div>
 </div>
 <ol class="simple">
-<li><p>Adding new fields for each of the independent variable and associated URI, copying from ‘treatment field’</p></li>
+<li><p>Adding new fields for each of the independent variable and associated URI, copying from ‘treatment field’.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -996,7 +998,7 @@ Step1: obtain all the different ‘dimension’ measured for a given condition (
 </div>
 </div>
 <ol class="simple">
-<li><p>Reorganizing Columns order in the DataFrame/File to match the Frictionless Tabular Data Package Layout. This is done very easily in Pandas by passing desired column order as an array:</p></li>
+<li><p>Reorganizing columns order in the DataFrame/File to match the Frictionless Tabular Data Package Layout. This is done very easily in Pandas by passing desired column order as an array.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1074,7 +1076,7 @@ Step1: obtain all the different ‘dimension’ measured for a given condition (
 </div>
 </div>
 <ol class="simple">
-<li><p>This concludes this notebook, which showed you how to convert a metabolite profiling dataset from a publication and create a FAIR data package. The other notebooks will show you how to visualize and plot the dataset but also convert it to a semantic graph as a Linked Data representation, query it and plot from it.</p>
+<li><p>This concludes this notebook, which shows how to convert a metabolite profiling dataset from a publication and create a FAIR data package. The other notebooks show you how to visualize and plot the dataset but also convert it to a semantic graph as a Linked Data representation, query it and plot from it.</p>
 <ul class="simple">
 <li><p><span class="xref myst">1-rose-metabolites-Python-analysis.ipynb</span></p></li>
 <li><p><span class="xref myst">2-rose-metabolites-Python-RDF-querying-analysis.ipynb</span></p></li>
