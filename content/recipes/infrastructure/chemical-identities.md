@@ -46,7 +46,7 @@ ___
 ___
 
 
-## The requirements
+## Creating InChI and SMILES identifiers for chemical structures
 
 To run the below scripts, you need a [Groovy](https://groovy.apache.org/download.html) installation.
 The Groovy scripts use version 2.5 of the [Chemistry Development Kit](https://cdk.github.io/)
