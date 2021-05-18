@@ -26,26 +26,6 @@
 - part: RECIPES
 
   chapters:
-    - file: content/recipes/infrastructure
-      title: Infrastructure
-      numbered: true
-      sections:
-          - file: content/recipes/infrastructure/id-resolution
-            title: Identifier resolution services #FCB046
-          - file: content/recipes/infrastructure/data-catalog
-            title: Building a catalogue of datasets #FCB047
-          - file: content/recipes/infrastructure/data-catalog-deployment
-            title: Deploying the IMI data catalogue #FCB048
-          - file: content/recipes/infrastructure/vocabularies
-            title: Vocabulary management
-            sections:      
-              - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
-                title: Portals and look-up services #FCB003
-              - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
-                title: Selecting a look-up service #FCB004
-              - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
-                title: Deploying the EBI OLS #FCB005
-
     - file: content/recipes/findability 
       title: Findability
       numbered: true
@@ -77,8 +57,6 @@
           title: Transferring data with SFTP #FCB014
         - file: content/recipes/accessibility/aspera
           title: Downloading data with Aspera #FCB015
-
-
 
     - file: content/recipes/interoperability
       title: Interoperability
@@ -136,6 +114,36 @@
         - file: content/recipes/reusability/provenance
           title: Provenance information #FCB036
         # - file: content/recipes/reusability/community-standards
+
+    - file: content/recipes/infrastructure
+      title: Infrastructure
+      numbered: true
+      sections:
+          - file: content/recipes/infrastructure/id-resolution
+            title: Identifier resolution services #FCB046
+          - file: content/recipes/infrastructure/data-catalog
+            title: Building a catalogue of datasets #FCB047
+          - file: content/recipes/infrastructure/data-catalog-deployment
+            title: Deploying the IMI data catalogue #FCB048
+          - file: content/recipes/infrastructure/vocabularies
+            title: Vocabulary management
+            sections:      
+              - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
+                title: Portals and look-up services #FCB003
+              - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
+                title: Selecting a look-up service #FCB004
+              - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
+                title: Deploying the EBI OLS #FCB005
+
+    - file: content/recipes/assessing-fairness
+      title: Assessment
+      numbered: true
+      sections:
+            # - file: content/recipes/assessing-fairness/automatic-fair-assessment
+            - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
+              title: with FAIREvaluator #FCB049
+            - file: content/recipes/assessing-fairness/fair-assessment-fairshake
+              title: with FAIRshake #FCB050
      
     - file: content/recipes/applied-examples
       title: Applied examples
@@ -161,17 +169,6 @@
           title: Oncotrack - clinical cohort datasets #FCB044
         - file: content/recipes/applied-examples/resolute_raw/resolute
           title: RESOLUTE - transcriptomics datasets #FCB045
-
-
-    - file: content/recipes/assessing-fairness
-      title: Assessment
-      numbered: true
-      sections:
-            # - file: content/recipes/assessing-fairness/automatic-fair-assessment
-            - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
-              title: with FAIREvaluator #FCB049
-            - file: content/recipes/assessing-fairness/fair-assessment-fairshake
-              title: with FAIRshake #FCB050
 
     #   sections:
     #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
