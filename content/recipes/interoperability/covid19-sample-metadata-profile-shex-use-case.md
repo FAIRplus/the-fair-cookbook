@@ -503,7 +503,7 @@ select distinct ?sample ?p ?o
 
 ___ 
 
-## Bibliographic reference
+## References
 
 
 [1]. Avro - http://avro.apache.org

@@ -69,7 +69,7 @@ The W3C vetted a specification for an RDF vocabulary to express provenance infor
 
 ## CamFLow
 
-[CamFlow](https://camflow.org/#output_format) is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit {cite}`Pasquier2017Camflow`.
+[CamFlow](https://camflow.org/#output_format) is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit {footcite}`Pasquier2017Camflow`.
 
 CamFlow support 2 output formats.
 
@@ -136,8 +136,7 @@ Example of a write edge in W3C PROV format:
 
 ## References
 
-```{bibliography}
-:filter: docname in docnames
+```{footbibliography}
 ```
 
 ___

@@ -17,7 +17,7 @@
 
 ## Main Objectives
 
-> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {cite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {cite}`Arp2015`. 
+> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {footcite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {footcite}`Arp2015`. 
 
 An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
@@ -547,12 +547,13 @@ ___
 
 ## References
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
-:filter: docname in docnames
+```{footbibliography}
 ```
-<!-- ```{bibliography} ./bibref/bibliography-identifier-mapping.bib
+
+<!-- ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ``` -->
+
 
 <!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
 - Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
