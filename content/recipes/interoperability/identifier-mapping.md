@@ -9,7 +9,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: Interlink data from different sources
+:recipe_name: Interlinking data from different sources
 ```` 
 
 
