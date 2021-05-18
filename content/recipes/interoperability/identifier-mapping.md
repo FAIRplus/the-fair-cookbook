@@ -1,9 +1,5 @@
-(fcb-interop-idmapping)=
-
+(fcb-identifier-mapping)=
 # Interlinking data from different sources
-
-+++
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB016
@@ -13,7 +9,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
-:recipe_name: Interlink data from different sources
+:recipe_name: Interlinking data from different sources
 ```` 
 
 
@@ -40,13 +36,12 @@ This recipe assumes that you are already familiar with identifiers and the minti
 This recipe will cover the topics highlighted in orange:
 
 
-```{figure} id-map-service-mermaid.png
+```{figure} identifier-mapping.md-figure1.mmd.png
 ---
-width: 800px
-name: Overview of key aspects in  Identifier Mapping
-alt: Overview of key aspects in  Identifier Mapping
+name: identifier-mapping-figure1
+alt: Overview of key aspects in Identifier Mapping
 ---
-Overview of key aspects in  Identifier Mapping
+Overview of key aspects in Identifier Mapping
 ```
 
 ---
@@ -268,7 +263,7 @@ ___
 > ### What should I read next?
 > * {ref}`fcb-find-identifiers`
 > * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> * {ref}`fcb-bridgedb`
+> * {ref}`fcb-bridgedb-recipe`
 > * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
 
 <!-- 

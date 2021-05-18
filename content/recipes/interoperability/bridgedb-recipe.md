@@ -1,6 +1,9 @@
-(fcb-bridgedb)=
+(fcb-bridgedb-recipe)=
 # Identifier mapping with BridgeDb
 
+<!--
+TODO : the recipe does not reference its figures
+-->
 
 ````{panels_fairplus}
 :identifier_text: FCB017
@@ -29,13 +32,12 @@ ___
 
 This recipe will cover the highlighted topics
 
-```{figure} id-map-service-mermaid.png
+```{figure} identifier-mapping.md-figure1.mmd.png
 ---
-width: 800px
-name: overview-identifier-mapping-1
-alt: Overview of key aspects in  Identifier Mapping
+name: bridgedb-recipe-figure0
+alt: Overview of key aspects in Identifier Mapping
 ---
-Overview of key aspects in  Identifier Mapping
+Overview of key aspects in Identifier Mapping
 ```
 
 ___
@@ -47,7 +49,7 @@ This recipe has the following requirements:
 
 * Recipe dependency:
     <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
-    * {ref}`fcb-interop-idmapping`
+    * {ref}`fcb-identifier-mapping`
 
 * Skill dependency:
     * Programming knowledge
@@ -85,7 +87,7 @@ ___
 
 ## Identifier mapping with BridgeDb
 
-{ref}`fcb-interop-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use [BridgeDb](https://bridgedb.github.io/) to carry out this process.
+{ref}`Interlinking data from different sources <fcb-identifier-mapping>` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use [BridgeDb](https://bridgedb.github.io/) to carry out this process.
 
 [BridgeDb](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping {footcite}`van_iersel_bridgedb_2010`. BridgeDb offers three different interfaces:
 * Java API
@@ -107,7 +109,7 @@ In this case, the input data is a list of elements with an identifier that is pa
 #### BridgeDb via Webservices using Python
 > :exclamation: For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3, and BridgeDb Webservices v0.9.0 were used.
 
-One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform the mappings suggested under [Cases](#Cases).
+One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform exemplary mappings.
 
 We start by defining strings containing the URL of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map to a specific data source, e.g. Ensembl.
 
@@ -232,7 +234,7 @@ This is a step that should be done manually. In this case an important decision 
 ### Mapping local identifier to a different global identifier
 
 ```{note} 
- In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-interop-idmapping` recipe. The mapping should be **one-to-one** for this recipe. 
+ In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-identifier-mapping` recipe. The mapping should be **one-to-one** for this recipe. 
 ```
 
 The TSV mapping file looks as follows:
@@ -247,7 +249,7 @@ You may notice the `source` identifiers correspond with those used in the previo
 
 This is how the mapping will work
 
-```{figure} bridgedb-recipe.md-figure1.png
+```{figure} bridgedb-recipe.md-figure1.mmd.png
 ---
 name: bridgedb-recipe-figure1
 alt: Overview of BridgeDb tools
@@ -296,7 +298,7 @@ In case we did specify the `target` argument to be `Ensembl (En)`, we would inst
 Here, we see a `one-to-one` relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
 
 
-```{figure} bridgedb-recipe.md-figure2.png
+```{figure} bridgedb-recipe.md-figure2.mmd.png
 ---
 name: bridgedb-recipe-figure2
 alt: An example of a mapping via BridgeDb.
@@ -363,7 +365,7 @@ Improvements on provenance are under way (see [here](https://github.com/bridgedb
 ___
 
 ## Code 
-You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/bridgedb/docs/content/recipes/interoperability/bridgedb/). These assume the data has the structure described in this recipe.
+You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/9ad9481be32812b2565f9f9f1897642ae26eddff/content/recipes/interoperability/bridgedb/data). These assume the data has the structure described in this recipe.
 
 ---
 
@@ -376,7 +378,7 @@ These are aspects of information provenance which we plan to provide in the futu
  
 ### What should I read next?
 * {ref}`fcb-find-identifiers`
-* {ref}`fcb-interop-idmapping`
+* {ref}`fcb-identifier-mapping`
 
 ---
 
