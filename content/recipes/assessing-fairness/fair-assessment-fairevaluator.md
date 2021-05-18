@@ -3,8 +3,8 @@
 
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FBC049
+:identifier_link: 'https://w3id.org/faircookbook/FBC049'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
