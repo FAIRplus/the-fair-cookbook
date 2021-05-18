@@ -64,7 +64,7 @@ html:
     </div>
   google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
   comments:
-    hypothesis: true
+    hypothesis: false
     # utterances:
     #   repo: "FAIRplus/the-fair-cookbook"
 #######################################################################################
