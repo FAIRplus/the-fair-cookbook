@@ -27,15 +27,15 @@
 
   chapters:
     - file: content/recipes/infrastructure
-      title: Infrastructure for FAIR
+      title: Infrastructure
       numbered: true
       sections:
           - file: content/recipes/infrastructure/id-resolution
-            title: Identifier resolution services #FCB000
+            title: Identifier resolution services #FCB046
           - file: content/recipes/infrastructure/data-catalog
-            title: Building a catalogue of datasets #FCB001
+            title: Building a catalogue of datasets #FCB047
           - file: content/recipes/infrastructure/data-catalog-deployment
-            title: Deploying the IMI data catalogue #FCB002
+            title: Deploying the IMI data catalogue #FCB048
           - file: content/recipes/infrastructure/vocabularies
             title: Vocabulary management
             sections:      
@@ -57,16 +57,16 @@
       - file: content/recipes/findability/identifiers-minids
         title: Minting identifiers with Minid #FCB008
       - file: content/recipes/findability/zenodo-deposition
-        title: Depositing in Zenodo generic repository #FCB008
+        title: Depositing in Zenodo generic repository #FCB009
       - file: content/recipes/findability/seo
-        title: Search engine optimization #FCB009
+        title: Search engine optimization #FCB010
         sections:
           - file: content/recipes/findability/seo/bioschemas-data-page
-            title: Data page markup with Bioschemas #FCB010
+            title: Data page markup with Bioschemas #FCB011
           - file: content/recipes/findability/seo/bioschemas-dataset
-            title: Dataset page markup with Schema.org #FCB011
+            title: Dataset page markup with Schema.org #FCB012
           - file: content/recipes/findability/seo/bioschemas-datacatalog
-            title: Data catalogue markup #FCB012
+            title: Data catalogue markup #FCB013
 
     - file: content/recipes/accessibility
       title: Accessibility
@@ -74,9 +74,9 @@
       sections:
         # - file: content/recipes/accessibility/anonymizing-patient-data
         - file: content/recipes/accessibility/sftp
-          title: Transferring data with SFTP #FCB013
+          title: Transferring data with SFTP #FCB014
         - file: content/recipes/accessibility/aspera
-          title: Downloading data with Aspera #FCB014
+          title: Downloading data with Aspera #FCB015
 
 
 
@@ -163,13 +163,15 @@
           title: RESOLUTE - transcriptomics datasets #FCB045
 
 
-    # - file: content/recipes/assessing-fairness
-    #   title: Assessing FAIR 
-    #   numbered: true
-    #   sections:
-    #         # - file: content/recipes/assessing-fairness/automatic-fair-assessment
-    #         - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
-    #         - file: content/recipes/assessing-fairness/fair-assessment-fairshake
+    - file: content/recipes/assessing-fairness
+      title: Assessment
+      numbered: true
+      sections:
+            # - file: content/recipes/assessing-fairness/automatic-fair-assessment
+            - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
+              title: with FAIREvaluator #FCB049
+            - file: content/recipes/assessing-fairness/fair-assessment-fairshake
+              title: with FAIRshake #FCB050
 
     #   sections:
     #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model

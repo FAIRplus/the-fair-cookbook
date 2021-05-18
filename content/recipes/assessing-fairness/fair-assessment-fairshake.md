@@ -13,8 +13,8 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 ````
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB050
+:identifier_link: 'https://w3id.org/faircookbook/FBC050'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
