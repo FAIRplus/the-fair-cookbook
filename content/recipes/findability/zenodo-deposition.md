@@ -19,7 +19,7 @@
 
 The main purpose of this recipe is:
 
-> To show how to take advantage of CERN Zenodo repository to document the existence of datasets, thus increasing its findeability. This is of particular relevant for IMI projects since Zenodo is aimed to support the European Commission (EC) nascent Open Data policy and is commissioned by the EC.
+> To show how to take advantage of CERN Zenodo repository to document the existence of datasets, thus increasing its findability. This is of particular relevant for IMI projects since Zenodo is aimed to support the European Commission (EC) nascent Open Data policy and is commissioned by the EC.
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 ### What is Zenodo?
 
-Zenodo is a repository developed by [CERN](https://home.cern/), under the [OpenAire](https://www.openaire.eu/) program which focus is on **open data**. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the `Innovative Medicine Initiative (IMI)`.
+Zenodo is a repository developed by [CERN](https://home.cern/), under the [OpenAire](https://www.openaire.eu/) program the focus of which is on **open data**. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the `Innovative Medicine Initiative (IMI)`.
 
 ### Why use Zenodo?
 
@@ -141,7 +141,7 @@ Selecting the upload type to Zenodo Repository.
 ### Zenodo Compatible Data Collection - Providing Metadata
 
 * Basic metadata such as. `title`, `description`, at minima should be provided.
-* Authors should be identified, ideally using their `orcid`, so linking can be performed. This impacts authors citation and impact evaluation. For IMI FAIRplus participants, since all have now such an identifier, the link should be made systematically.
+* Authors should be identified, ideally using their `orcid`, so linking can be performed. This affects authors citation and impact evaluation. For IMI FAIRplus participants, since all have now such an identifier, the link should be made systematically.
 
 <!-- <img src="https://i.imgur.com/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
@@ -156,7 +156,7 @@ Basic metadata to report .
 ```
 
 
-* **Reserve a Digital Object Identifier**: This is a service provided natively by the Zenodo service owing the integration with Datacite services. This is quite an important point as it means the a Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information **can not be changed without creating a new version of the archive and therefore minting a new doi**
+* **Reserve a Digital Object Identifier**: This is a service provided natively by the Zenodo service, by virtue of its integration with Datacite services. This is quite an important point as it means the a Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information **can not be changed without creating a new version of the archive and therefore minting a new doi**
  
 
 
@@ -229,7 +229,7 @@ Autocompletion prompts available licenses.
 ---
 ### Zenodo Compatible Data Collection - Funding Information
 
-Since Zenodo mission is to collect EC funded data, the repository provides the means to lookup `Grant Information`:
+Since the Zenodo mission is to collect EC funded data, the repository provides the means to lookup `Grant Information`:
 
 <!-- <img src="https://i.imgur.com/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
  
@@ -340,7 +340,7 @@ Miscellaneous Information about the Zenodo Submission.
               https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip \
               and published alongside the Nature Genetics manuscript identified by the following doi: \
               https://doi.org/10.1038/s41588-018-0110-3, published in June 2018. \
-              This dataset is used to demonstrate how to make data Findeable, Accessible, Discoverable and Interoperable" \
+              This dataset is used to demonstrate how to make data Findable, Accessible, Discoverable and Interoperable" \
               "(FAIR) and how Tabular Data Package representations can be easily mobilized for re-analysis and data science. \
               It is associated to the following project available from github at: \
               'https://github.com/proccaserra/rose2018ng-notebook' with all necessary information and Jupyter notebooks.",
@@ -426,8 +426,8 @@ r.status_code
 
 ## Conclusions
 
-> Relying on CERN Zenodo repository using any of the submission mechanisms (either web component or API) is one the simplest yet highly effective ways to deliver **dataset findeability** for assets generated by publicly funded resources. 
-> The integration with [ORCID]() makes it very easy to obtain an account on the CERN's service. 
+> Relying on CERN Zenodo repository using any of the submission mechanisms (either web component or API) is one the simplest yet highly effective ways to deliver **dataset findability** for assets generated by publicly funded resources. 
+> The integration with [ORCID]() makes it very easy to obtain an account on CERN's service. 
 > The integration with [Datacite]() means that submitters can reserve and obtain Digital Object Identifiers (DOI) very simply. These can then be cited and used as references to the datasets.
 > The integration with [Crossref]() means that funding information case be easily looked up, thus reducing data entry burden in most conditions but especially for EU funded projects such as IMI.
 > Licensing information can also be easily supplied
@@ -436,15 +436,15 @@ r.status_code
 > Users should however be reminded of the following limitations of the service:
     > - absence of contraints on the nature of the datafiles being uploaded
     > - no domain specific awareness and domain specific metadata
-    > - absent of connection with specialized repositories
+    > - absence of connection with specialized repositories
     > - size limitation for a given datasets.
     
     
 
 > ### What should I read next?
-> * [How to build a data catalogue?]()
+> * [How to build a data catalogue?](fcb-infra-build-catalog)
 > * [How to deploy the FAIRPORT data catalogue?]()
-> * [What is search engine optimization?]()
+> * [What is search engine optimization?](fcb-find-seo)
 
 
 ## FAIRification Objectives, Inputs and Outputs
