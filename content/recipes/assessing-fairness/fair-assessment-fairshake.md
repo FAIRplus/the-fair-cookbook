@@ -64,8 +64,6 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 <p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
 ````
  -->
-___
-
 
 
 ## Background
