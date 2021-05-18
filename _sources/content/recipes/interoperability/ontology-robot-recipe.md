@@ -51,7 +51,7 @@ Building an ontology with Robot tool.
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [ontology building](http://edamontology.org/operation_XXXX)  | [tsv,OWL]|OWL|
+| [Ontology and terminology](http://edamontology.org/topic_0089)  | [tsv,OWL]|OWL|
 
 
 ## Table of Data Standards
@@ -122,7 +122,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 
 
 
-_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx).
+_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](ExternalStudiesKQ.xlsx).
 
 
 
@@ -173,6 +173,7 @@ This step identifies the seeds needed to perform the knowledge extraction from e
 
 Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
+Figure not showing
 <div class="mermaid">
 graph LR
   A(fa:fa-file-text-o Select seed terms):::box -->B1(fa:fa-user-o Manual selection):::box
@@ -383,7 +384,7 @@ The `robot` extract command takes several arguments:
 
 * *method*: `ROBOT` uses 4 different algorithms to generate a module.  `TOP`, `BOT`, `STAR` (all from the SLME method), and `MIREOT`. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The `STAR` method creates a module by pulling all the properties and axioms of the seed classes but nothing else. `MIREOT` uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
 * *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
-* *imports*: this argument allows to specific whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
+* *imports*: this argument allows to specify whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
 * *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex)
 * *intermediates*: specific to the `MIREOT` method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (`all`,`minimal`, `none`).
 * *output*: the path to the owl file holding the results of the module extraction
@@ -436,13 +437,13 @@ And a template sample is presented following:
 ```{admonition} Tip
 :class: tip
 
-⚡ The generated ontology can be visualized by using the [Protégé tool](https://protege.stanford.edu/) or a [local deployment of OLS](https://hackmd.io/@FAIRcookbook/H1axYY3wU). 
-The `OLS local deployment` option is recommended by this recipe, given that `Protégé` may crash when loading medium or large size ontologies.
+⚡ The generated ontology can be visualized by using the [Protégé tool](https://protege.stanford.edu/) or local deployment of OLS. 
+The {ref}`fcb-infra-localols` option is recommended by this recipe, given that `Protégé` may crash when loading medium or large size ontologies.
 ```
     
 ### Step 5: Merge ontology modules and umbrella ontology
 
-Merging the ontology modules previuosly extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
+Merging the ontology modules previously extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
 
 The `merge` ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the `ROBOT` command merging the umbrella ontology and the modules is shown:
 
@@ -549,7 +550,6 @@ robot query --input <input_ontology_file> \
 ___
 
 
-
 ## References
 
 ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
@@ -565,9 +565,10 @@ ___
 ___
 
 ## Supplementary material
-- [Example Dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)
-- [Competency questions](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md)
-- [Scripts and intermediate artifacts](https://github.com/FAIRplus/the-fair-cookbook/tree/ontology_robot_recipe/docs/content/recipes/ontology-robot)
+
+- [Example Dataset](ExternalStudiesKQ.xlsx)
+- [Competency questions](competency_questions.md)
+- [Scripts and intermediate artifacts](ontology-robot)
 
 ___
 

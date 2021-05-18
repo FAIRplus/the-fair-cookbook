@@ -907,7 +907,7 @@ Yes
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_XXXX">ontology building</a></p></td>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/topic_0089">Ontology and terminology</a></p></td>
 <td class="text-align:left"><p>[tsv,OWL]</p></td>
 <td class="text-align:left"><p>OWL</p></td>
 </tr>
@@ -1056,7 +1056,7 @@ Yes
 </tr>
 </tbody>
 </table>
-<p><em>Table 1</em> is a snapshot of the example dataset. The complete patient metadata example dataset is <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx">here</a>.</p>
+<p><em>Table 1</em> is a snapshot of the example dataset. The complete patient metadata example dataset is <span class="xref myst">here</span>.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Study</p></th>
@@ -1154,6 +1154,7 @@ Yes
 </div></blockquote>
 <p>This step identifies the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology. Ontology Developer can provide the tools to ease and to scale the identification of the seeds. Domain experts can identify the right seeds for a given application ontology.</p>
 <p>Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - <a class="reference external" href="https://www.ebi.ac.uk/spot/zooma/">Zooma</a> and <a class="reference external" href="https://bioportal.bioontology.org/annotator">NCBO Annotator</a> - are depicted.</p>
+<p>Figure not showing</p>
 <div class="mermaid">
 graph LR
   A(fa:fa-file-text-o Select seed terms):::box -->B1(fa:fa-user-o Manual selection):::box
@@ -1353,7 +1354,7 @@ FILTER regex<span class="o">(</span> ?xref, <span class="s2">&quot;^FMA|^MA:&quo
 <ul class="simple">
 <li><p><em>method</em>: <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> uses 4 different algorithms to generate a module.  <code class="docutils literal notranslate"><span class="pre">TOP</span></code>, <code class="docutils literal notranslate"><span class="pre">BOT</span></code>, <code class="docutils literal notranslate"><span class="pre">STAR</span></code> (all from the SLME method), and <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code>. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The <code class="docutils literal notranslate"><span class="pre">STAR</span></code> method creates a module by pulling all the properties and axioms of the seed classes but nothing else. <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code> uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.</p></li>
 <li><p><em>input</em>: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.</p></li>
-<li><p><em>imports</em>: this argument allows to specific whether or not to include imported ontologies. Note that the default is to do so using the value <code class="docutils literal notranslate"><span class="pre">include</span></code>. Choose <code class="docutils literal notranslate"><span class="pre">exclude</span></code> otherwise.</p></li>
+<li><p><em>imports</em>: this argument allows to specify whether or not to include imported ontologies. Note that the default is to do so using the value <code class="docutils literal notranslate"><span class="pre">include</span></code>. Choose <code class="docutils literal notranslate"><span class="pre">exclude</span></code> otherwise.</p></li>
 <li><p><em>term-file</em>: the text file holding the list of classes of interested identified by their iri (e.g. <a class="reference external" href="http://purl.obolibrary.org/obo/UBERON_0001235">http://purl.obolibrary.org/obo/UBERON_0001235</a> # adrenal cortex)</p></li>
 <li><p><em>intermediates</em>: specific to the <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code> method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (<code class="docutils literal notranslate"><span class="pre">all</span></code>,<code class="docutils literal notranslate"><span class="pre">minimal</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>).</p></li>
 <li><p><em>output</em>: the path to the owl file holding the results of the module extraction</p></li>
@@ -1442,13 +1443,13 @@ After the <em>Domain Expert</em> and the <em>Use Case/Scenario Owner</em> specif
 </table>
 <div class="tip admonition">
 <p class="admonition-title">Tip</p>
-<p>⚡ The generated ontology can be visualized by using the <a class="reference external" href="https://protege.stanford.edu/">Protégé tool</a> or a <a class="reference external" href="https://hackmd.io/&#64;FAIRcookbook/H1axYY3wU">local deployment of OLS</a>.
-The <code class="docutils literal notranslate"><span class="pre">OLS</span> <span class="pre">local</span> <span class="pre">deployment</span></code> option is recommended by this recipe, given that <code class="docutils literal notranslate"><span class="pre">Protégé</span></code> may crash when loading medium or large size ontologies.</p>
+<p>⚡ The generated ontology can be visualized by using the <a class="reference external" href="https://protege.stanford.edu/">Protégé tool</a> or local deployment of OLS.
+The <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html#fcb-infra-localols"><span class="std std-ref">Deploying the EBI OLS</span></a> option is recommended by this recipe, given that <code class="docutils literal notranslate"><span class="pre">Protégé</span></code> may crash when loading medium or large size ontologies.</p>
 </div>
 </div>
 <div class="section" id="step-5-merge-ontology-modules-and-umbrella-ontology">
 <h3>Step 5: Merge ontology modules and umbrella ontology<a class="headerlink" href="#step-5-merge-ontology-modules-and-umbrella-ontology" title="Permalink to this headline">¶</a></h3>
-<p>Merging the ontology modules previuosly extracted and the umbrella ontology locally built produces a first draft of the application ontology.</p>
+<p>Merging the ontology modules previously extracted and the umbrella ontology locally built produces a first draft of the application ontology.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">merge</span></code> ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> command merging the umbrella ontology and the modules is shown:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -jar robot.jar merge <span class="se">\</span>
     --input ./ontology_modules/iao_mireot_robot_module_1.owl <span class="se">\</span>
@@ -1568,9 +1569,9 @@ robot convert <span class="se">\</span>
 <div class="section" id="supplementary-material">
 <h2>Supplementary material<a class="headerlink" href="#supplementary-material" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx">Example Dataset</a></p></li>
-<li><p><a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md">Competency questions</a></p></li>
-<li><p><a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/tree/ontology_robot_recipe/docs/content/recipes/ontology-robot">Scripts and intermediate artifacts</a></p></li>
+<li><p><span class="xref myst">Example Dataset</span></p></li>
+<li><p><a class="reference internal" href="competency_questions.html"><span class="doc std std-doc">Competency questions</span></a></p></li>
+<li><p><span class="xref myst">Scripts and intermediate artifacts</span></p></li>
 </ul>
 </div>
 <hr class="docutils" />
