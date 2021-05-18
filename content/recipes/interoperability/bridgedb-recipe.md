@@ -87,7 +87,7 @@ ___
 
 {ref}`fcb-interop-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use [BridgeDb](https://bridgedb.github.io/) to carry out this process.
 
-[BridgeDb](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping. BridgeDb offers three different interfaces:
+[BridgeDb](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping {footcite}`van_iersel_bridgedb_2010`. BridgeDb offers three different interfaces:
 * Java API
 * R package
 * REST Web-services
