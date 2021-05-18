@@ -27,10 +27,9 @@ An application ontology is a semantic artefact which is developed to answer the 
 ## Graphical Overview
 
 
-```{figure} onto-robot.png
+```{figure} ontology-robot-recipe.md-figure1.png
 ---
-width: 500px
-name: Building an ontology with Robot tool
+name: ontology-robot-recipe-figure1
 alt: Building an ontology with Robot tool
 ---
 Building an ontology with Robot tool.
@@ -173,19 +172,15 @@ This step identifies the seeds needed to perform the knowledge extraction from e
 
 Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
-Figure not showing
-<div class="mermaid">
-graph LR
-  A(fa:fa-file-text-o Select seed terms):::box -->B1(fa:fa-user-o Manual selection):::box
-  A -->B2(fa:fa-database Selection with ZOOMA):::box
-  A -->B3(fa:fa-database Selection with NCBO Annotator):::box
-  A -->B4(fa:fa-cogs Selection with SPARQL):::box
 
-  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+```{figure} ontology-robot-recipe.md-figure2.png
+---
+name: ontology-robot-recipe-figure2
+alt: Ontology seed term selection approaches.
+---
+Ontology seed term selection approaches.
+```
 
-</div>
-
-_Figure 1: Ontology seed term selection approaches_
 
 [ZOOMA](https://www.ebi.ac.uk/spot/zooma/) is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the [European Bioinformatics Institute (EMBL-EBI)](https://www.ebi.ac.uk)
 . It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/index). Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
