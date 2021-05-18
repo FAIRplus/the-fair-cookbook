@@ -187,14 +187,14 @@ Below there are links to some key recipes, click on them to explore their conten
 
 <div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
 
-{ref}`fcb-find-seo` 
-</div>
- 
-<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
-
 {ref}`fcb-find-identifiers`
 </div>
 
+<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
+
+{ref}`fcb-find-seo` 
+</div>
+ 
 <hr>
 <div class="recipeItem mb-2">
     <i class="fa fa-arrow-right mr-2 text--primary"></i>
@@ -211,10 +211,6 @@ Below there are links to some key recipes, click on them to explore their conten
 ^^^
 <div class="recipeLabel"> Exemplar recipes: </div>
 
-<!-- <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
-
-{ref}`fcb-access-anonymizing`
-</div> -->
 <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
 {ref}`fcb-access-sftp`
@@ -241,12 +237,12 @@ Below there are links to some key recipes, click on them to explore their conten
 <div class="recipeLabel"> Exemplar recipes: </div>
 <div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
-{ref}`fcb-interop-metadataprofile`
+{ref}`fcb-interop-selectonto`
 </div>
 
 <div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
-{ref}`fcb-interop-selectonto`
+{ref}`fcb-interop-metadataprofile`
 </div>
 
 <hr>
@@ -264,13 +260,15 @@ Below there are links to some key recipes, click on them to explore their conten
 </h4>
 ^^^
 <div class="recipeLabel"> Exemplar recipes: </div>
-<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
-{ref}`fcb-reusability-data_use`
-</div>
 <div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
 
 {ref}`rr-licensing-data`
+</div>
+
+<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
+
+{ref}`fcb-reusability-data_use`
 </div>
 
 <hr>
