@@ -212,11 +212,11 @@ Below there are links to some key recipes, click on them to explore their conten
 
 <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
-{ref}`fcb-access-sftp`
+{ref}`fcb-sftp`
 </div>
 <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
-{ref}`fcb-access-aspera`
+{ref}`fcb-aspera`
 </div>
 
 <hr>

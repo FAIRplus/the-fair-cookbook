@@ -20,19 +20,13 @@ This recipe covers documentation of the popular Aspera Fast Transfer Protocol an
 
 ## Graphical overview
 
-```{figure} aspera-figure1.png
+```{figure} aspera.md-figure1.mmd.png
 ---
-name: aspera-data-transfer-process
+name: aspera-figure1
 alt: Aspera Data Transfer Process
 ---
 Aspera Data Transfer Process.
 ```
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
 
 ----
 ## Obtain Aspera services
