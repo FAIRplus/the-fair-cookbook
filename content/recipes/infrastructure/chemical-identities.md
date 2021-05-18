@@ -92,6 +92,13 @@ groovy smiles.groovy -f foo.sdf
 
 ---
 
+## References
+
+```{footbibliography}
+```
+___
+
+
 ## Authors
 
 | Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
