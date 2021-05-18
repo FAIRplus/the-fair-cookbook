@@ -65,7 +65,7 @@
           - file: content/recipes/interoperability/identifier-mapping
             title: Interlinking data from different sources #FCB016
           - file: content/recipes/interoperability/bridgedb-recipe
-            title: Identifiers mapping with BridgeDB #FCB017
+            title: Identifier mapping with BridgeDB #FCB017
             sections:
               - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
                 title: Using BridgeDB web services #FCB018
