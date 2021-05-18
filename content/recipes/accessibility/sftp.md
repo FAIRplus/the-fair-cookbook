@@ -78,7 +78,7 @@ Overview:
 
 ### Setting up a SFTP server
 
-While you can run an SFTP server also in a Windows environment (e.g. using the open source software FileZilla Server), a Linux server is certainly recommended. Most Linux distributions come with all required libraries (libssh2, OpenSSH) pre-installed. Following is a step-by-step summary for a CentOS server:
+You can run an SFTP server in a Windows environment, e.g. using the open source software FileZilla Server. A Linux server can be set-up  after installing the required libraries (libssh2, OpenSSH). Following is a step-by-step summary for a CentOS server:
 
 a.	Create a dedicated group for all future SFTP users:
 
