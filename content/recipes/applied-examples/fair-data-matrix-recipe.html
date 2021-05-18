@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -817,7 +840,7 @@ Yes
 <h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="overview-of-the-fairification-process-of-a-data-matrix">
 <a class="reference internal image-reference" href="../../../_images/fair-data-matrix.png"><img alt="Overview of the FAIRification process of a data matrix" src="../../../_images/fair-data-matrix.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Overview of the FAIRification process of a data matrix.</span><a class="headerlink" href="#overview-of-the-fairification-process-of-a-data-matrix" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">Overview of the FAIRification process of a data matrix.</span><a class="headerlink" href="#overview-of-the-fairification-process-of-a-data-matrix" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />

@@ -1,5 +1,5 @@
 (fcb-assess-fair-fairshake)=
-# Evaluating FAIRness with FAIRshake
+# FAIRshake tool
 
 A tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.
 
@@ -13,14 +13,14 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 ````
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB050
+:identifier_link: 'https://w3id.org/faircookbook/FBC050'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Evaluating FAIRness with FAIRshake
+:recipe_name: FAIRshake tool
 ```` 
 
 
@@ -64,17 +64,15 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 <p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
 ````
  -->
-___
-
 
 
 ## Background
 
-Adhering to [FAIRness](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) is somewhat abstract. While all of the components of becoming FAIR can be addressed at some level, it remains difficult to provide a concrete answer about whether something is indeed FAIR or not. In general, improvement is only real if it can be measured. To address this limitation of the FAIR guidelines, [FAIRshake](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fairshake) was created with the basic goal of making FAIR more concrete and measurable. While FAIRshake provides a catalog of community-contributed ways to characterize FAIRness, it is still up to a given project to decide which of these criteria they will adopt and/or create.
+Adhering to [FAIRness](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) is somewhat abstract. While all of the components of becoming FAIR can be addressed at some level, it remains difficult to provide a concrete answer about whether something is indeed FAIR or not. In general, improvement is only real if it can be measured. To address this limitation of the FAIR guidelines, [FAIRshake](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fairshake) was created with the basic goal of making FAIR more concrete and measurable. While FAIRshake provides a catalog of community-contributed ways to characterize FAIRness, it is still up to a given project to decide which of these criteria they will adopt and/or create {footcite}`Clarke2019`.
 
 FAIRshake provides:
 
-- A catalog of digital objects: these can be, for example,  datasets, APIs, workflows, each having their own unique identity and is the target of a FAIR assessment. That-is whatever the digital object is, you want to assess how much it is Findable, Accessible, Interoperable and Reusable.
+- A catalog of digital objects: these can be, for example,  datasets, APIs, workflows, each having their own unique identity and is the target of a FAIR assessment. That-is whatever the digital object is, you want to assess how much it is Findable, Accessible, Interoperable and Reusable {footcite}`pmid26978244`.
 - A catalog of projects: where a project contains any set of digital objects grouped for the purpose of analytic and findability, e.g., all digital objects that belong to a specific NIH Common Fund program could be bundled into one project. If you plan on automating FAIR assessments, it makes sense to do it as part of a project so that assessments can be compared only against other assessments within your project.
 - A catalog of metrics: these are any singular FAIR criterion, or a FAIR compliance question, that can often be answered with yes/no/percentage of compliance. It is often the case that manual assessments are qualitative yes (1) / no (0) while automated assessments can often be more granular.
 - A catalog of rubrics: these are sets/bundles of FAIR metrics meant to be answered together, e.g., a "FAIR" API should satisfy several independent metrics already registered in FAIRshake, these can be a part of one or more rubrics.
@@ -730,7 +728,10 @@ Each bar is hoverable on FAIRshake indicating which metric is receiving that whi
 In this recipe, we have detailed and described the manual and automatic process of FAIRification with FAIRshake for a CFDE case study. While the assessment described here was for the CFDE DATS serialized assets, the same process is applicable to any standard and any type of digital object. Examples exist for assessing APIs, GitHub repositories, and tools, among other case studies using standards applicable to each. As more standards become codified and accessible through FAIRshake, they will become simpler to evaluate, ultimately increasing the FAIRness of the standard itself and anything using that standard. It should be noted that the process of using FAIRshake for performing assessments is mainly designed to increase awareness about standards that digital object producers can apply to improve the FAIRness of the digital assets they produce and publish.
 
 
-## Reference
+## References
+
+```{footbibliography}
+```
 
 ### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo
 
@@ -748,9 +749,9 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-|<div class="firstCol"><a target="_blank" href='https://github.com/u8sand'><img class='avatar-style' src='https://avatars.githubusercontent.com/u8sand'></img><div class="d-block">Daniel J. B. Clarke</div></a>  </div>[]()|  Icahn School of Medicine at Mount Sinai| [0000-0003-3471-7416](https://orcid.org/0000-0003-3471-7416) | Writing - Original Draft, Code |
+| Name                                                                                                                                                                                                                   | Orcid                                                                                                               | Affiliation                                    | Type                                                                    | Elixir Node | Credit role  |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------|-------------------------------------------------------------------------|:------------|:-------------|
+| <div class="firstCol"><a target="_blank" href='https://github.com/u8sand'><img class='avatar-style' src='https://avatars.githubusercontent.com/u8sand'></img><div class="d-block">Daniel J. B. Clarke</div></a>  </div>| <a target="_blank" href='https://orcid.org/0000-0003-3471-7416'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Icahn School of Medicine at Mount Sinai        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |             | Writing - Original Draft, Code
 
 ---
 

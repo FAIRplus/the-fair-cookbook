@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evaluating FAIRness with FAIRshake</title>
+    <title>2. FAIRshake tool</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -61,6 +60,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Applied examples" href="../applied-examples.html" />
+    <link rel="prev" title="1. FAIR Evaluator tool" href="fair-assessment-fairevaluator.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -69,8 +70,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/assessing-fairness/fair-assessment-fairshake.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Evaluating FAIRness with FAIRshake" />
-<meta property="og:description" content="Evaluating FAIRness with FAIRshake  A tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of " />
+<meta property="og:title"       content="FAIRshake tool" />
+<meta property="og:description" content="FAIRshake tool  A tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.  Note    T" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -112,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -131,55 +132,7 @@
   RECIPES
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -264,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -376,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -615,87 +640,88 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#background">
-   Background
+   2.1. Background
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
-   Motivation
+   2.2. Motivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ingredients">
-   Ingredients
+   2.3. Ingredients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objectives">
-   Objectives
+   2.4. Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recipe">
-   Recipe
+   2.5. Recipe
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#scenario">
-     Scenario
+     2.5.1. Scenario
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-fairshake">
-     Using FAIRshake
+     2.5.2. Using FAIRshake
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Scenario
+      <a class="reference internal nav-link" href="#id3">
+       2.5.2.1. Scenario
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assess-a-digital-object-manually">
-     Assess a digital object manually
+     2.5.3. Assess a digital object manually
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Scenario
+      <a class="reference internal nav-link" href="#id4">
+       2.5.3.1. Scenario
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#perform-automated-assessments">
-     Perform automated assessments
+     2.5.4. Perform automated assessments
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#building-your-own-automated-assessment">
-     Building your own Automated Assessment
+     2.5.5. Building your own Automated Assessment
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#preparing-to-build-an-automated-assessment">
-       Preparing to Build an Automated Assessment
+       2.5.5.1. Preparing to Build an Automated Assessment
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#case-study-performing-an-automated-assessment-on-dats">
-       Case Study: Performing an Automated Assessment on DATS
+       2.5.5.2. Case Study: Performing an Automated Assessment on DATS
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#publishing-codified-fairshake-metrics-and-resolvers-for-assessment-reproducibility">
-     Publishing codified FAIRshake metrics and resolvers for assessment reproducibility
+     2.5.6. Publishing codified FAIRshake metrics and resolvers for assessment reproducibility
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-name-registering-assessments-on-fairshake-a-registering-assessments-on-fairshake">
+     2.5.7.
      <a name="Registering-assessments-on-FAIRshake">
      </a>
      Registering assessments on FAIRshake
@@ -703,23 +729,24 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reviewing-the-state-of-fairness-in-a-project">
-     Reviewing the state of FAIRness in a project
+     2.5.8. Reviewing the state of FAIRness in a project
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
+   2.6. Conclusion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
+  <a class="reference internal nav-link" href="#references">
+   2.7. References
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo">
+     2.7.1.
      <a name="fair-repo">
      </a>
      <a name="fair-repo-report">
@@ -733,12 +760,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   Authors
+   2.8. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   License
+   2.9. License
   </a>
  </li>
 </ul>
@@ -753,8 +780,8 @@
         
               <div>
                 
-  <div class="section" id="evaluating-fairness-with-fairshake">
-<span id="fcb-assess-fair-fairshake"></span><h1>Evaluating FAIRness with FAIRshake<a class="headerlink" href="#evaluating-fairness-with-fairshake" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="fairshake-tool">
+<span id="fcb-assess-fair-fairshake"></span><h1><span class="section-number">2. </span>FAIRshake tool<a class="headerlink" href="#fairshake-tool" title="Permalink to this headline">¶</a></h1>
 <p>A tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -763,7 +790,7 @@
 </div>
 <br/>
 <hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Evaluating FAIRness with FAIRshake", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "RX.X", "url": "https://example.com"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "FAIRshake tool", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB050", "url": "https://w3id.org/faircookbook/FBC050"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -798,7 +825,7 @@ Yes
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Evaluating FAIRness with FAIRshake</div>
+<div style="flex-grow:1; margin-right:5px">FAIRshake tool</div>
 <img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
@@ -814,7 +841,7 @@ Yes
 </div>
 </div>
 <div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://example.com" class="text--purple-dark">RX.X
+<a href="https://w3id.org/faircookbook/FBC050" class="text--purple-dark">FCB050
 </a></div>
 </div>
 </div>
@@ -859,13 +886,12 @@ Yes
 <p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
 ````
  -->
-<hr class="docutils" />
 <div class="section" id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
-<p>Adhering to <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair">FAIRness</a> is somewhat abstract. While all of the components of becoming FAIR can be addressed at some level, it remains difficult to provide a concrete answer about whether something is indeed FAIR or not. In general, improvement is only real if it can be measured. To address this limitation of the FAIR guidelines, <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fairshake">FAIRshake</a> was created with the basic goal of making FAIR more concrete and measurable. While FAIRshake provides a catalog of community-contributed ways to characterize FAIRness, it is still up to a given project to decide which of these criteria they will adopt and/or create.</p>
+<h2><span class="section-number">2.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Adhering to <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair">FAIRness</a> is somewhat abstract. While all of the components of becoming FAIR can be addressed at some level, it remains difficult to provide a concrete answer about whether something is indeed FAIR or not. In general, improvement is only real if it can be measured. To address this limitation of the FAIR guidelines, <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fairshake">FAIRshake</a> was created with the basic goal of making FAIR more concrete and measurable. While FAIRshake provides a catalog of community-contributed ways to characterize FAIRness, it is still up to a given project to decide which of these criteria they will adopt and/or create <a class="footnote-reference brackets" href="#clarke2019" id="id1">1</a>.</p>
 <p>FAIRshake provides:</p>
 <ul class="simple">
-<li><p>A catalog of digital objects: these can be, for example,  datasets, APIs, workflows, each having their own unique identity and is the target of a FAIR assessment. That-is whatever the digital object is, you want to assess how much it is Findable, Accessible, Interoperable and Reusable.</p></li>
+<li><p>A catalog of digital objects: these can be, for example,  datasets, APIs, workflows, each having their own unique identity and is the target of a FAIR assessment. That-is whatever the digital object is, you want to assess how much it is Findable, Accessible, Interoperable and Reusable <a class="footnote-reference brackets" href="#pmid26978244" id="id2">2</a>.</p></li>
 <li><p>A catalog of projects: where a project contains any set of digital objects grouped for the purpose of analytic and findability, e.g., all digital objects that belong to a specific NIH Common Fund program could be bundled into one project. If you plan on automating FAIR assessments, it makes sense to do it as part of a project so that assessments can be compared only against other assessments within your project.</p></li>
 <li><p>A catalog of metrics: these are any singular FAIR criterion, or a FAIR compliance question, that can often be answered with yes/no/percentage of compliance. It is often the case that manual assessments are qualitative yes (1) / no (0) while automated assessments can often be more granular.</p></li>
 <li><p>A catalog of rubrics: these are sets/bundles of FAIR metrics meant to be answered together, e.g., a “FAIR” API should satisfy several independent metrics already registered in FAIRshake, these can be a part of one or more rubrics.</p></li>
@@ -874,14 +900,14 @@ Yes
 </ul>
 </div>
 <div class="section" id="motivation">
-<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
 <p>By selecting and adhering to a rubric or set of metrics shared by other projects, a resource can independently assert metric conformance thus improving interoperability between resources that share those metrics. Each metric defines a concrete ideal criterion that is desired and satisfaction of that metric can be represented as a percentage or a number between 0 and 1. Some metrics may be categorical, in which case their contribution can be defined as discrete scores from 0 (least desirable) to 1 (most desirable). Given these normalized bounds, we can always compute a single scalar within the same range by finding the mean value of scores.</p>
 <p>The FAIR insignia aggregates each metric separately to inform someone where they can do better (metrics that have a low percentage) and where they are already doing well (metrics that have a high percentage). Digital objects may be assessed by different rubrics (sets of metrics), which are often made up of different metrics.</p>
 <!-- ![Anatomy of a FAIR Insignia](./images/insignia-anatomy) -->
 <!-- <div><img src="https://fairshake.cloud/static/image/insignia-anatomy.png"  style="padding:1px;"/></div> -->
 <div class="figure align-default" id="fairshare-insignia-explained">
 <a class="reference internal image-reference" href="https://fairshake.cloud/static/image/insignia-anatomy.png"><img alt="FAIRshare insignia explained" src="https://fairshake.cloud/static/image/insignia-anatomy.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">FAIRshare insignia explained</span><a class="headerlink" href="#fairshare-insignia-explained" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">FAIRshare insignia explained</span><a class="headerlink" href="#fairshare-insignia-explained" title="Permalink to this image">¶</a></p>
 </div>
 <p>These insignias capture a visual snapshot of a resources’ aggregated assessments at a glance. Interactive tooltips shown by hovering over a particular square reveal which metric is represented by that square. Clicking a given box will bring you to a landing page with detailed information about the metric.</p>
 <p>It’s important to note that these insignias can only represent knowledge that is reported and as such, a “low score” should be interpreted as something to look into and not something to be accused of. It’s also important to note that FAIR in general <strong>does not represent quality of data but rather an expectation of how easy it might be to find, access, interoperate with and reuse that data</strong>. By using automated mechanisms or strict clear-cut guidelines we can determine a score for this expectation.</p>
@@ -889,7 +915,7 @@ Yes
 <p>To increase your FAIR score, you should identify which metrics may need improvement, learn more about what that metric covers both theoretically (what the metric says) and concretely (how it was actually assessed). It is important to make sure that you are improving the overall FAIRness of your resource, and not just “hacking the FAIR metrics.” In the context of the CFDE, periodic FAIR assessments are performed using a <a class="reference external" href="https://fairshake.cloud/rubric/36/">common rubric based on compliance with the C2M2</a> which is also detailed in another FAIR recipe dedicated to the CFDE rubric but is also addressed later in this recipe in the context of automated FAIR assessments. We encourage you to question when scores for certain metrics do not reflect what you feel is correct; it will take investigation of the metric itself, your own resource, and the C2M2 metadata models capturing of your resource. We encourage you to re-purpose the rubric we’re using along with any additional metrics you hope to satisfy and assess your own resources. Comparing the assessments on your actual data and the assessment on your C2M2 converted data may reveal areas for improvement.</p>
 </div>
 <div class="section" id="ingredients">
-<h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>A digital object or set of digital objects to assess for FAIRness</p></li>
 <li><p>A rubric from FAIRshake encapsulating the FAIR metrics you wish to use to perform the FAIR assessments</p></li>
@@ -897,7 +923,7 @@ Yes
 </ol>
 </div>
 <div class="section" id="objectives">
-<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
 <p>In this recipe we’ll look at the process of performing a FAIR evaluation using FAIRshake starting from scratch and covering various decisions that must be made along the way. We’ll use the CFDE DCC resources already <a class="reference external" href="#fair-repo">transformed to the C2M2</a> as the target of our assessment. This is because an automated assessment that is common across all CF DCCs is not possible without a common machine-readable metadata standard.</p>
 <ol class="simple">
 <li><p>Use FAIRshake to facilitate FAIR Rubric discovery and development</p></li>
@@ -909,124 +935,124 @@ Yes
 </ol>
 </div>
 <div class="section" id="recipe">
-<h2>Recipe<a class="headerlink" href="#recipe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Recipe<a class="headerlink" href="#recipe" title="Permalink to this headline">¶</a></h2>
 <p>Because these ingredients are generic, we’ll scope the recipe by considering a concrete scenario for each part of the recipe.</p>
 <div class="section" id="scenario">
-<h3>Scenario<a class="headerlink" href="#scenario" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.1. </span>Scenario<a class="headerlink" href="#scenario" title="Permalink to this headline">¶</a></h3>
 <p>Janice is a researcher at a Common Fund program who wants to assess her dataset using the CFDE rubric on FAIRshake that was used for the CFDE resources. After performing this assessment, she hopes to discover ways to improve her score. She has a resource in mind but would first like to get familiarized and set up with FAIRshake which she understands might be helpful.</p>
 </div>
 <div class="section" id="using-fairshake">
-<h3>Using FAIRshake<a class="headerlink" href="#using-fairshake" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.2. </span>Using FAIRshake<a class="headerlink" href="#using-fairshake" title="Permalink to this headline">¶</a></h3>
 <p>FAIRshake can be accessed at <a class="reference external" href="https://fairshake.cloud">fairshake.cloud</a>. There are several YouTube tutorials and some general and technical documentation accessible <a class="reference external" href="https://fairshake.cloud/documentation/">on the website</a>.</p>
 <p>After <a class="reference external" href="https://fairshake.cloud/accounts/login/">logging in to the website</a>, you will be able to create content on the site including registering a project, digital object, rubric, metric, or performing a FAIR assessment.</p>
 <p>After logging in:</p>
 <!-- ![FAIRshake login page](./images/ss8.png) -->
 <div class="figure align-default" id="fairshake-login-page">
 <a class="reference internal image-reference" href="../../../_images/ss8.png"><img alt="FAIRshake login page" src="../../../_images/ss8.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">FAIRshake login page</span><a class="headerlink" href="#fairshake-login-page" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">FAIRshake login page</span><a class="headerlink" href="#fairshake-login-page" title="Permalink to this image">¶</a></p>
 </div>
 <p>You’re brought back to <a class="reference external" href="https://fairshake.cloud/?q=lincs&amp;projects=1&amp;digitalobjects=1&amp;rubrics=1&amp;metrics=1">the home page</a> where you can perform searches to locate projects, digital objects, rubrics or metrics by name, perform assessments or add new elements.</p>
 <!-- ![FAIRshake performing a search](./images/ss9.png) -->
 <div class="figure align-default" id="fairshake-performing-a-search">
 <a class="reference internal image-reference" href="../../../_images/ss9.png"><img alt="FAIRshake performing a search" src="../../../_images/ss9.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">FAIRshake performing a search</span><a class="headerlink" href="#fairshake-performing-a-search" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">FAIRshake performing a search</span><a class="headerlink" href="#fairshake-performing-a-search" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id1">
-<h4>Scenario<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id3">
+<h4><span class="section-number">2.5.2.1. </span>Scenario<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p>Janice is interested in a resource she contributed to: <a class="reference external" href="http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293">L1000 dataset of CRISPR perturbagens</a>. She had a hard time finding it in the search so she decided to try the <a class="reference external" href="https://fairshake.cloud/chrome_extension/">FAIRshake Chrome extension</a>.</p>
 <!-- ![FAIRshake Chrome Extension install](./images/ss10.png) -->
 <div class="figure align-default" id="fairshake-chrome-extension-install">
 <a class="reference internal image-reference" href="../../../_images/ss10.png"><img alt="FAIRshake Chrome Extension install" src="../../../_images/ss10.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">FAIRshake Chrome Extension install</span><a class="headerlink" href="#fairshake-chrome-extension-install" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">FAIRshake Chrome Extension install</span><a class="headerlink" href="#fairshake-chrome-extension-install" title="Permalink to this image">¶</a></p>
 </div>
 <p>After installing the extension she went to the <a class="reference external" href="http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293">resource’s own landing page</a> (not the one on FAIRshake!) and activated the extension to find that, in fact, an assessment already exists for her already-C2M2 cataloged resource.</p>
 <!-- ![Screenshot showing the FAIRshake chrome extension assessment summary](./images/ss6.png) -->
 <div class="figure align-default" id="screenshot-showing-the-fairshake-chrome-extension-assessment-summary">
 <a class="reference internal image-reference" href="../../../_images/ss6.png"><img alt="Screenshot showing the FAIRshake chrome extension assessment summary" src="../../../_images/ss6.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Screenshot showing the FAIRshake chrome extension assessment summary</span><a class="headerlink" href="#screenshot-showing-the-fairshake-chrome-extension-assessment-summary" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Screenshot showing the FAIRshake chrome extension assessment summary</span><a class="headerlink" href="#screenshot-showing-the-fairshake-chrome-extension-assessment-summary" title="Permalink to this image">¶</a></p>
 </div>
 <p>She points her mouse over some of the red squares revealing information she doesn’t quite understand.</p>
 <!-- ![Screenshot showing the FAIRshake chrome extension assessment summary tooltip](./images/ss7.png) -->
 <div class="figure align-default" id="screenshot-showing-the-fairshake-chrome-extension-assessment-summary-tooltip">
 <a class="reference internal image-reference" href="../../../_images/ss7.png"><img alt="Screenshot showing the FAIRshake chrome extension assessment summary tooltip" src="../../../_images/ss7.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Screenshot showing the FAIRshake chrome extension assessment summary tooltip</span><a class="headerlink" href="#screenshot-showing-the-fairshake-chrome-extension-assessment-summary-tooltip" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Screenshot showing the FAIRshake chrome extension assessment summary tooltip</span><a class="headerlink" href="#screenshot-showing-the-fairshake-chrome-extension-assessment-summary-tooltip" title="Permalink to this image">¶</a></p>
 </div>
 <p>Though an assay is listed and described accurately on the page, there is no OBI term available on the page. She hopes to understand how this answer came to be and learn how the detailed and valuable assay information shown on the landing page can be made more FAIR.</p>
 </div>
 </div>
 <div class="section" id="assess-a-digital-object-manually">
-<h3>Assess a digital object manually<a class="headerlink" href="#assess-a-digital-object-manually" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.3. </span>Assess a digital object manually<a class="headerlink" href="#assess-a-digital-object-manually" title="Permalink to this headline">¶</a></h3>
 <p>The C2M2 rubric was developed by the CFDE team to represent the concrete areas of FAIRness that the CFDE plans to focus on and ideally satisfy in order to accomplish several use-cases determined at the beginning of the project. The metrics chosen represent some broad subset of FAIR but don’t necessarily cover all aspects necessary to make digital objects FAIR in <em>your</em> community.</p>
 <p>To that end, and to get a better sense of the scope of the FAIR metrics that could be developed to better serve your community, let’s take a look at the <a class="reference external" href="https://fairshake.cloud/rubric/25/">FAIR metrics by fairmetrics.org Rubric</a>. This rubric is a FAIRshake entry for the universal FAIR metrics published in <a class="reference external" href="https://www.nature.com/articles/sdata2018118">this paper</a>, representing a universal set of broad criteria that should apply to all digital objects.</p>
 <!-- ![FAIR metrics Rubric on FAIRshake](./images/ss1.png)] -->
 <div class="figure align-default" id="fair-metrics-rubric-on-fairshake">
 <a class="reference internal image-reference" href="../../../_images/ss1.png"><img alt="FAIR metrics Rubric on FAIRshake" src="../../../_images/ss1.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">FAIR metrics Rubric on FAIRshake</span><a class="headerlink" href="#fair-metrics-rubric-on-fairshake" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.12 </span><span class="caption-text">FAIR metrics Rubric on FAIRshake</span><a class="headerlink" href="#fair-metrics-rubric-on-fairshake" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you’re following along, feel free to pick a digital object of your own that you know well and see if you can complete and publish a manual assessment with it! You can always find and delete it from your account if you choose not to keep it, just be sure not to publish it unless you’re happy with it.</p>
-<div class="section" id="id2">
-<h4>Scenario<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id4">
+<h4><span class="section-number">2.5.3.1. </span>Scenario<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p>Janice decides to perform a manual assessment of her resource using the FAIRmetrics rubric before digging into the specifics of the CFDE assessment.</p>
 <!-- ![View on FAIRshake with extension](./images/ss11.png) -->
 <div class="figure align-default" id="view-on-fairshake-with-extension">
 <a class="reference internal image-reference" href="../../../_images/ss11.png"><img alt="View on FAIRshake with extension" src="../../../_images/ss11.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">View on FAIRshake with extension</span><a class="headerlink" href="#view-on-fairshake-with-extension" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.13 </span><span class="caption-text">View on FAIRshake with extension</span><a class="headerlink" href="#view-on-fairshake-with-extension" title="Permalink to this image">¶</a></p>
 </div>
 <p>Which brings her to FAIRshake to see the <a class="reference external" href="https://fairshake.cloud/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&amp;projects=1&amp;digitalobjects=1&amp;rubrics=1&amp;metrics=1">relevant information available on FAIRshake</a> related to the page she was on.</p>
 <!-- ![View on FAIRshake link location](./images/ss12.png) -->
 <div class="figure align-default" id="view-on-fairshake-link-location">
 <a class="reference internal image-reference" href="../../../_images/ss12.png"><img alt="View on FAIRshake link location" src="../../../_images/ss12.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">View on FAIRshake link location</span><a class="headerlink" href="#view-on-fairshake-link-location" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.14 </span><span class="caption-text">View on FAIRshake link location</span><a class="headerlink" href="#view-on-fairshake-link-location" title="Permalink to this image">¶</a></p>
 </div>
 <p>Alternatively, she could have found or registered her digital object directly on the FAIRshake website with the ‘Create New Digital Object’ button.</p>
 <p>Clicking the assess button, she ends up at <a class="reference external" href="https://fairshake.cloud/assessment/prepare/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&amp;projects=1&amp;digitalobjects=1&amp;rubrics=1&amp;metrics=1&amp;target=8901">the assessment preparation page</a>.</p>
 <!-- ![Preparing an assessment on FAIRshake](./images/ss13.png) -->
 <div class="figure align-default" id="preparing-an-assessment-on-fairshake">
 <a class="reference internal image-reference" href="../../../_images/ss13.png"><img alt="Preparing an assessment on FAIRshake" src="../../../_images/ss13.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Preparing an assessment on FAIRshake</span><a class="headerlink" href="#preparing-an-assessment-on-fairshake" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.15 </span><span class="caption-text">Preparing an assessment on FAIRshake</span><a class="headerlink" href="#preparing-an-assessment-on-fairshake" title="Permalink to this image">¶</a></p>
 </div>
 <p>The digital object and its only rubric were selected automatically, but she ends up instead <a class="reference external" href="https://fairshake.cloud/assessment/prepare/?target=8901&amp;rubric=25">select the fairmetrics rubric</a>.</p>
 <!-- ![Selecting the FAIRmetrics rubric](./images/ss14.png) -->
 <div class="figure align-default" id="selecting-the-fairmetrics-rubric">
 <a class="reference internal image-reference" href="../../../_images/ss14.png"><img alt="Selecting the FAIRmetrics rubric" src="../../../_images/ss14.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Selecting the FAIRmetrics rubric</span><a class="headerlink" href="#selecting-the-fairmetrics-rubric" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.16 </span><span class="caption-text">Selecting the FAIRmetrics rubric</span><a class="headerlink" href="#selecting-the-fairmetrics-rubric" title="Permalink to this image">¶</a></p>
 </div>
 <p>Instead of using the CFDE project, she will perform this assessment as part of the FAIRshake testing project. It will likely make sense to create our own project if we expect to do a bunch of related assessments.</p>
 <!-- ![Selecting the FAIRmetrics project](./images/ss15.png) -->
 <div class="figure align-default" id="selecting-the-fairmetrics-project">
 <a class="reference internal image-reference" href="../../../_images/ss15.png"><img alt="Selecting the FAIRmetrics project" src="../../../_images/ss15.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Selecting the FAIRmetrics project</span><a class="headerlink" href="#selecting-the-fairmetrics-project" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.17 </span><span class="caption-text">Selecting the FAIRmetrics project</span><a class="headerlink" href="#selecting-the-fairmetrics-project" title="Permalink to this image">¶</a></p>
 </div>
 <p>It’s also important to note that project here can be left blank if our assessment isn’t for any project.</p>
 <!-- ![Preparing the FAIRshake Assessment](./images/ss16.png) -->
 <div class="figure align-default" id="preparing-the-fairshake-assessment">
 <a class="reference internal image-reference" href="../../../_images/ss16.png"><img alt="Preparing the FAIRshake Assessment" src="../../../_images/ss16.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Preparing the FAIRshake Assessment</span><a class="headerlink" href="#preparing-the-fairshake-assessment" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.18 </span><span class="caption-text">Preparing the FAIRshake Assessment</span><a class="headerlink" href="#preparing-the-fairshake-assessment" title="Permalink to this image">¶</a></p>
 </div>
 <p>Confirming this, Janice <a class="reference external" href="https://fairshake.cloud/assessment/prepare/?target=8901&amp;rubric=25&amp;project=55">begins a manual assessment</a>.</p>
 <!-- ![Performing a Manual Assessment with FAIRshake](./images/ss17.png) -->
 <div class="figure align-default" id="performing-a-manual-assessment-with-fairshake">
 <a class="reference internal image-reference" href="../../../_images/ss17.png"><img alt="Performing a Manual Assessment with FAIRshake" src="../../../_images/ss17.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Performing a Manual Assessment with FAIRshake</span><a class="headerlink" href="#performing-a-manual-assessment-with-fairshake" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.19 </span><span class="caption-text">Performing a Manual Assessment with FAIRshake</span><a class="headerlink" href="#performing-a-manual-assessment-with-fairshake" title="Permalink to this image">¶</a></p>
 </div>
 <p>Each metric represents a concept pertinent to FAIRness which is described shortly before each prompt but potentially in more depth on the metrics’ landing page. Clicking on the metric “card” to the left of the question she gets <a class="reference external" href="https://fairshake.cloud/metric/104/">much more information in a new tab</a>.</p>
 <!-- ![Global unique identifier metric on FAIRshake](./images/ss18.png) -->
 <div class="figure align-default" id="global-unique-identifier-metric-on-fairshake">
 <a class="reference internal image-reference" href="../../../_images/ss18.png"><img alt="Global unique identifier metric on FAIRshake" src="../../../_images/ss18.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Global unique identifier metric on FAIRshake</span><a class="headerlink" href="#global-unique-identifier-metric-on-fairshake" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.20 </span><span class="caption-text">Global unique identifier metric on FAIRshake</span><a class="headerlink" href="#global-unique-identifier-metric-on-fairshake" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference external" href="https://fairshake.cloud/metric/104/assessments/">Clicking ‘View assessments’</a> she can even see what other digital objects in the database got as an answer during an assessment through a tabular view.</p>
 <!-- ![Assessments for Global unique identifier](./images/ss19.png) -->
 <div class="figure align-default" id="assessments-for-global-unique-identifier">
 <a class="reference internal image-reference" href="../../../_images/ss19.png"><img alt="Assessments for Global unique identifier" src="../../../_images/ss19.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Assessments for Global unique identifier</span><a class="headerlink" href="#assessments-for-global-unique-identifier" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.21 </span><span class="caption-text">Assessments for Global unique identifier</span><a class="headerlink" href="#assessments-for-global-unique-identifier" title="Permalink to this image">¶</a></p>
 </div>
 <p>Clicking on any of these links will allow you to explore the projects, rubrics, or digital objects that were assessed to provide a more elaborate sense of why a particular score was received and in what context, we can see, for example, that these top entries refer to assessments made during an EBI workshop.</p>
 <p>Getting back to the assessment, Janice must determine whether the digital object satisfies the criterion at hand. This one asks us to provide a standard that defines the globally-unique structure of the identifier used for the resource.</p>
 <!-- ![Identifying identifiers](./images/ss20.png) -->
 <div class="figure align-default" id="identifying-identifiers">
 <a class="reference internal image-reference" href="../../../_images/ss20.png"><img alt="Identifying identifiers" src="../../../_images/ss20.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Identifying identifiers</span><a class="headerlink" href="#identifying-identifiers" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.22 </span><span class="caption-text">Identifying identifiers</span><a class="headerlink" href="#identifying-identifiers" title="Permalink to this image">¶</a></p>
 </div>
 <p>She finds out quite quickly that there are several identifiers:</p>
 <ul class="simple">
@@ -1042,7 +1068,7 @@ Yes
 <!-- ![FAIRsharing identifiers](./images/ss21.png) -->
 <div class="figure align-default" id="fairsharing-identifiers">
 <a class="reference internal image-reference" href="../../../_images/ss21.png"><img alt="FAIRsharing identifiers" src="../../../_images/ss21.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">FAIRsharing identifiers</span><a class="headerlink" href="#fairsharing-identifiers" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.23 </span><span class="caption-text">FAIRsharing identifiers</span><a class="headerlink" href="#fairsharing-identifiers" title="Permalink to this image">¶</a></p>
 </div>
 <p>A <strong>URL</strong> provides some level of standardization more than, say, a digital object that <em>doesn’t have a resolvable URL</em>. But other identifier schemes may carry with them even more information, like a <strong>DOI</strong> which adds additional semantic interoperability conditions not present on URLs. Thus in certain circumstances, a URL might be good enough, but in others, a more specific standardized identifier might be more pertinent.</p>
 <p>While a DOI guarantees authorship information associated with it, a URL may very well contain absolutely anything. Furthermore, many organizations have come together to try to guarantee that DOIs will not change, while URLs can be changed or removed by the owner of the resource.</p>
@@ -1050,13 +1076,13 @@ Yes
 <!-- ![Answer to question 1](./images/ss22.png) -->
 <div class="figure align-default" id="answer-to-question-1">
 <a class="reference internal image-reference" href="../../../_images/ss22.png"><img alt="Answer to question 1" src="../../../_images/ss22.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Answer to question 1</span><a class="headerlink" href="#answer-to-question-1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.24 </span><span class="caption-text">Answer to question 1</span><a class="headerlink" href="#answer-to-question-1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The next metric, persistent identifier, addresses persistence specifically and asks for a document describing the persistent identifier strategy. There is no obvious identifier type that guarantees this so she chooses to investigate further. After some digging she finds information about citation <a class="reference external" href="http://lincsportal.ccs.miami.edu/datasets/terms">in the terms</a>:</p>
 <!-- ![LINCS dataset terms](./images/ss23.png) -->
 <div class="figure align-default" id="lincs-dataset-terms">
 <a class="reference internal image-reference" href="../../../_images/ss23.png"><img alt="LINCS dataset terms" src="../../../_images/ss23.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">LINCS dataset terms</span><a class="headerlink" href="#lincs-dataset-terms" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.25 </span><span class="caption-text">LINCS dataset terms</span><a class="headerlink" href="#lincs-dataset-terms" title="Permalink to this image">¶</a></p>
 </div>
 <p>This reveals that our local identifiers are registered in <a class="reference external" href="http://identifiers.org/">identifiers.org</a>, also recognized as <a class="reference external" href="https://fairsharing.org/FAIRsharing.nknzhj">a standard in FAIRsharing</a>. In fact she could create a few more identifiers with this knowledge:</p>
 <ul class="simple">
@@ -1068,7 +1094,7 @@ Yes
 <!-- ![Answer to question 2](./images/ss24.png) -->
 <div class="figure align-default" id="answer-to-question-2">
 <a class="reference internal image-reference" href="../../../_images/ss24.png"><img alt="Answer to question 2" src="../../../_images/ss24.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Answer to question 2</span><a class="headerlink" href="#answer-to-question-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.26 </span><span class="caption-text">Answer to question 2</span><a class="headerlink" href="#answer-to-question-2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Lastly we’ll look at the machine readable metadata before discussing automated assessments.</p>
 <p>FAIR strives to make things more Findable, Accessible, Interoperable, and Reusable, not just from a human perspective but also for a machine. With the massive amounts of data available in the public domain, many researchers conduct research by automatically locating data and operating with it without ever directly picking and choosing data sets. To this end it’s important that the FAIR principles also be considered from a machine perspective. For example, though the assay is well described on our page, would someone be able to automatically identify datasets on our page with certain criteria such as data or assay-type?</p>
@@ -1077,7 +1103,7 @@ Yes
 <!-- ![Answer to question 3](./images/ss25.png) -->
 <div class="figure align-default" id="answer-to-question-3">
 <a class="reference internal image-reference" href="../../../_images/ss25.png"><img alt="Answer to question 3" src="../../../_images/ss25.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Answer to question 3</span><a class="headerlink" href="#answer-to-question-3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.27 </span><span class="caption-text">Answer to question 3</span><a class="headerlink" href="#answer-to-question-3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Hopefully it is clear that the FAIR metrics are broad ideas of things to think about when it comes to FAIR, but we’ll likely need some more strict and concrete criterion if we’re to measure FAIRness with precision. Furthermore, finding this information is a time consuming process and would be intractable with a large enough set of digital objects.</p>
 <p>This is where automated assessments and quantifiable metrics come in to help measure the moving target that is FAIRness. It is important to recognize at this point that a “good” or “bad” score produced by manual assessment does little more than prompt discussion. Can someone who <em>doesn’t</em> know your resource well come up with the same FAIR assessment as you? If your information isn’t blatantly obvious the answer will probably be <strong>no</strong>, and this is still valueable even if it’s not the precise situation.</p>
@@ -1085,19 +1111,19 @@ Yes
 <!-- ![Save publish or delete assessment](./images/ss26.png) -->
 <div class="figure align-default" id="save-publish-or-delete-assessment">
 <a class="reference internal image-reference" href="../../../_images/ss26.png"><img alt="Save publish or delete assessment" src="../../../_images/ss26.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Save publish or delete assessment</span><a class="headerlink" href="#save-publish-or-delete-assessment" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.28 </span><span class="caption-text">Save publish or delete assessment</span><a class="headerlink" href="#save-publish-or-delete-assessment" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and performing the analytics for that digital object.</p>
 <!-- ![Assessment shown on FAIRshake](./images/ss27.png) -->
 <div class="figure align-default" id="assessment-shown-on-fairshake">
 <a class="reference internal image-reference" href="../../../_images/ss27.png"><img alt="Assessment shown on FAIRshake" src="../../../_images/ss27.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-text">Assessment shown on FAIRshake</span><a class="headerlink" href="#assessment-shown-on-fairshake" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.29 </span><span class="caption-text">Assessment shown on FAIRshake</span><a class="headerlink" href="#assessment-shown-on-fairshake" title="Permalink to this image">¶</a></p>
 </div>
 <p>Though the assessments seem to agree that the digital object has machine readable metadata, it’s unclear from an outsider’s perspective whether or not a globally unique identifier is present. Next, we’ll find out exactly why, since those were reported by an automated assessment.</p>
 </div>
 </div>
 <div class="section" id="perform-automated-assessments">
-<h3>Perform automated assessments<a class="headerlink" href="#perform-automated-assessments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.4. </span>Perform automated assessments<a class="headerlink" href="#perform-automated-assessments" title="Permalink to this headline">¶</a></h3>
 <p>The C2M2 Metadata model defines a unified structure which all DCCs will be converting their own metadata to. With this machine-readable metadata, we can assess FAIRness in an automatic fashion based on the fields available to us. Scripts which demonstrate the conversion of several DCC metadata into the C2M2 are available <a class="reference external" href="#fair-repo">here</a>, and scripts to assess that unified metadata for its compliance with the CFDE Rubric are <a class="reference external" href="#fair-repo-assessments">here</a>.</p>
 <p>We produced reports over time on the assessments that were executed on the CFDE portal and will continue to do so. This report is summarized <a class="reference external" href="#fair-repo-report">here</a>. The assessment script can be executed once you have generated C2M2 converted data; documentation for this is out of the scope of this recipe.</p>
 <p>If you have a frictionless datapackage containing your data, you can perform a FAIR assessment on that datapackage to identify gaps in your metadata. The script is also capable of performing FAIR assessments on the public repository via the DERIVA API.</p>
@@ -1116,16 +1142,16 @@ python3 assess.py --offline-package<span class="o">=</span>/your/datapackage.jso
 <p>The resulting file, results.tsv, contains a table with the results of the assessment which include answers to each metric for each file in your <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#frictionless-data-package">Frictionless Datapackage</a>. These results should be inspected to determine areas which can be improved. They can be interrogated offline with your favorite spreadsheet program or in the context of the other data <a class="reference external" href="#fair-repo-report">using the same report we produce</a>, or they can be published onto FAIRshake directly see <a class="reference external" href="#Registering-assessments-on-FAIRshake">Registering assessments on FAIRshake</a>.</p>
 </div>
 <div class="section" id="building-your-own-automated-assessment">
-<h3>Building your own Automated Assessment<a class="headerlink" href="#building-your-own-automated-assessment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.5. </span>Building your own Automated Assessment<a class="headerlink" href="#building-your-own-automated-assessment" title="Permalink to this headline">¶</a></h3>
 <p>For assessments on completely new sets of digital objects with a completely new rubric, you need to build your own automated assessments. We’ll walk through how one might go about doing this.</p>
 <div class="section" id="preparing-to-build-an-automated-assessment">
-<h4>Preparing to Build an Automated Assessment<a class="headerlink" href="#preparing-to-build-an-automated-assessment" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.5.5.1. </span>Preparing to Build an Automated Assessment<a class="headerlink" href="#preparing-to-build-an-automated-assessment" title="Permalink to this headline">¶</a></h4>
 <p>Certain standards are well-defined and designed in a way that makes it possible to computationally verify whether a digital object is complying with the standard. In an ideal world, all standards should be made in this way, such that an automated mechanism exists for confirming compliance. In reality, however, many standards are not–ultimately necessitating harmonization before datasets, APIs, or anything to be used together.</p>
 <p>Some examples of well-defined standards are TCP/IP and HTTP. The effectiveness of these standards and their adoption enables the internet to function and grow as it does. Another, more relevant standard is <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#rdf">RDF</a>. RDF defines a way to serialize metadata and permits harmonization via ontologies or shape constraint languages (such as <a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a>). Another standard that is not explicitly based on RDF is <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json-schema">JSON Schema</a>. JSON Schema builds off of <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json">JSON</a> and allows one to use json itself to define what is a valid JSON instance of some metadata. A JSON Schema document can effectively become its own standard given that it is well described and validatable using a JSON Schema validator.</p>
 <p>In the case of assessing digital objects that comply with standards that are defined using mechanisms easily validated, automated assessments become simple and in many cases involve simply taking advantage of already constructed mechanisms for asserting compliance with those standards. In the case that those standards are not well-defined; the best course of action would be to convert those digital objects to an alternative and validatable standard, or alternatively formally codify the standard. In either case, you’re doing some FAIRification in an effort to even begin the assessment. We have to do this step because we can’t measure compliance with a standard if we don’t have a quantifiable standard in the first place! Well we could do it but only manually.</p>
 </div>
 <div class="section" id="case-study-performing-an-automated-assessment-on-dats">
-<h4>Case Study: Performing an Automated Assessment on DATS<a class="headerlink" href="#case-study-performing-an-automated-assessment-on-dats" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.5.5.2. </span>Case Study: Performing an Automated Assessment on DATS<a class="headerlink" href="#case-study-performing-an-automated-assessment-on-dats" title="Permalink to this headline">¶</a></h4>
 <p>One can think of an automated assessment as a unit/integration test for compliance with a standard. Ideally, this test will reveal issues with integration at the digital object provider level at the benefit of the consumer of those digital objects. Automated assessments are only possible on existing machine-readable metadata and validatable standards, such as <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#dats">DATS</a>. As such we’ll utilize DATS for our assessment; not only will we assess compliance with DATS itself, we’ll go further with several additional ‘optional’ parts of DATS including ontological term verification and other sanity checks.</p>
 <p>While there are several ways one can go about making an assessment, one way is to construct the rubric and metrics metadata while you construct the code to assert that metric.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rubric</span> <span class="o">=</span> <span class="p">{</span>
@@ -1236,7 +1262,7 @@ python3 assess.py --offline-package<span class="o">=</span>/your/datapackage.jso
 </div>
 </div>
 <div class="section" id="publishing-codified-fairshake-metrics-and-resolvers-for-assessment-reproducibility">
-<h3>Publishing codified FAIRshake metrics and resolvers for assessment reproducibility<a class="headerlink" href="#publishing-codified-fairshake-metrics-and-resolvers-for-assessment-reproducibility" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.6. </span>Publishing codified FAIRshake metrics and resolvers for assessment reproducibility<a class="headerlink" href="#publishing-codified-fairshake-metrics-and-resolvers-for-assessment-reproducibility" title="Permalink to this headline">¶</a></h3>
 <p>It is useful for reproducibility purposes but also for reusability purposes for automated FAIR assessment code to be shared publicly. To that end, a repository for storing that code and its association with the FAIRshake metrics was developed and can be found <a class="reference external" href="https://github.com/MaayanLab/fairshake-assessments">here</a>. This catalog and the code in it can also be used to perform future FAIR assessments that use the same metrics, rubrics, or resolvers. Pull requests are welcome but existing automated mechanisms can immediately be used by installing the package and using some of the core functions. Performing this assessment with that repository works like so:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/python</span>
 <span class="c1"># assumption: DATS objects are generated line by line</span>
@@ -1253,7 +1279,7 @@ python3 assess.py --offline-package<span class="o">=</span>/your/datapackage.jso
 <p>Note that other rubrics, metrics, and resolvers (e.g. ways of finding DATS from a <code class="docutils literal notranslate"><span class="pre">url</span></code>) are available in the <code class="docutils literal notranslate"><span class="pre">fairshake-assessments</span></code> and are associated with some of the FAIRshake metrics.</p>
 </div>
 <div class="section" id="a-name-registering-assessments-on-fairshake-a-registering-assessments-on-fairshake">
-<h3><a name="Registering-assessments-on-FAIRshake"></a>Registering assessments on FAIRshake<a class="headerlink" href="#a-name-registering-assessments-on-fairshake-a-registering-assessments-on-fairshake" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.7. </span><a name="Registering-assessments-on-FAIRshake"></a>Registering assessments on FAIRshake<a class="headerlink" href="#a-name-registering-assessments-on-fairshake-a-registering-assessments-on-fairshake" title="Permalink to this headline">¶</a></h3>
 <p>Now that we’ve performed our assessment, we should publish these results on FAIRshake for us and the world to see where improvements can be made. It is important to note that the assessment results are a function of all parties (the digital object, the standard, the underlying repository or system that serves the digital object) and as such must be compared relative to the same baseline.</p>
 <p>The <a class="reference external" href="https://github.com/maayanLab/fairshake-assessments">fairshake-assessments</a> library can also help with this.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/python</span>
@@ -1283,26 +1309,35 @@ python3 assess.py --offline-package<span class="o">=</span>/your/datapackage.jso
 </div>
 </div>
 <div class="section" id="reviewing-the-state-of-fairness-in-a-project">
-<h3>Reviewing the state of FAIRness in a project<a class="headerlink" href="#reviewing-the-state-of-fairness-in-a-project" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.8. </span>Reviewing the state of FAIRness in a project<a class="headerlink" href="#reviewing-the-state-of-fairness-in-a-project" title="Permalink to this headline">¶</a></h3>
 <p>Once an assessment has been published on FAIRshake, it becomes possible to browse those assessments both via a high level summary page and via a more granular tabular view.</p>
 <p>The rubric we used for the CFDE is available from <a class="reference external" href="https://fairshake.cloud/rubric/36">here</a>. It includes most of the universal FAIR metrics but also some metrics that address specific CFDE use-cases such as ‘A relevant file type is present and resolvable with EDAM’. This rubric was used to assess the metadata produced by the CFDE for several DCCs as part of <a class="reference external" href="https://fairshake.cloud/project/87">this project</a>, you can also see statistics for those assessments there.</p>
 <!-- ![Reviewing FAIR assessment breakdown on FAIRshake](./images/ss5.png) -->
 <!-- <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/04/images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div> -->
 <div class="figure align-default" id="reviewing-fair-assessment-breakdown-on-fairshake">
 <a class="reference internal image-reference" href="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/04/images/ss5.png?raw=true"><img alt="Reviewing FAIR assessment breakdown on FAIRshake" src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/04/images/ss5.png?raw=true" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Reviewing FAIR assessment breakdown on FAIRshake</span><a class="headerlink" href="#reviewing-fair-assessment-breakdown-on-fairshake" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.30 </span><span class="caption-text">Reviewing FAIR assessment breakdown on FAIRshake</span><a class="headerlink" href="#reviewing-fair-assessment-breakdown-on-fairshake" title="Permalink to this image">¶</a></p>
 </div>
 <p>Each bar is hoverable on FAIRshake indicating which metric is receiving that which particular score. The score itself is quantified between 0 and 1 much like the scores used to color the FAIR insignia, 0 representing little to no digital objects satisfy that particular metric and 1 meaning that the majority of digital objects satisfy the metric.</p>
 </div>
 </div>
 <div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>In this recipe, we have detailed and described the manual and automatic process of FAIRification with FAIRshake for a CFDE case study. While the assessment described here was for the CFDE DATS serialized assets, the same process is applicable to any standard and any type of digital object. Examples exist for assessing APIs, GitHub repositories, and tools, among other case studies using standards applicable to each. As more standards become codified and accessible through FAIRshake, they will become simpler to evaluate, ultimately increasing the FAIRness of the standard itself and anything using that standard. It should be noted that the process of using FAIRshake for performing assessments is mainly designed to increase awareness about standards that digital object producers can apply to improve the FAIRness of the digital assets they produce and publish.</p>
 </div>
-<div class="section" id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="references">
+<h2><span class="section-number">2.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-footbibliography-content/recipes/assessing-fairness/fair-assessment-fairshake-0"><dl class="footnote brackets">
+<dt class="label" id="clarke2019"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>D. J. B. Clarke, L. Wang, A. Jones, M. L. Wojciechowicz, D. Torre, K. M. Jagodnik, S. L. Jenkins, P. McQuilton, Z. Flamholz, M. C. Silverstein, B. M. Schilder, K. Robasky, C. Castillo, R. Idaszak, S. C. Ahalt, J. Williams, S. Schurer, D. J. Cooper, R. de Miranda Azevedo, J. A. Klenk, M. A. Haendel, J. Nedzel, P. Avillach, M. E. Shimoyama, R. M. Harris, M. Gamble, R. Poten, A. L. Charbonneau, J. Larkin, C. T. Brown, V. R. Bonazzi, M. J. Dumontier, S. A. Sansone, and A. Ma’ayan. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Resources. <em>Cell Syst</em>, 9(5):417–421, 11 2019.</p>
+</dd>
+<dt class="label" id="pmid26978244"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>M. D. Wilkinson, M. Dumontier, I. J. Aalbersberg, G. Appleton, M. Axton, A. Baak, N. Blomberg, J. W. Boiten, L. B. da Silva Santos, P. E. Bourne, J. Bouwman, A. J. Brookes, T. Clark, M. Crosas, I. Dillo, O. Dumon, S. Edmunds, C. T. Evelo, R. Finkers, A. Gonzalez-Beltran, A. J. Gray, P. Groth, C. Goble, J. S. Grethe, J. Heringa, P. A. ‘t Hoen, R. Hooft, T. Kuhn, R. Kok, J. Kok, S. J. Lusher, M. E. Martone, A. Mons, A. L. Packer, B. Persson, P. Rocca-Serra, M. Roos, R. van Schaik, S. A. Sansone, E. Schultes, T. Sengstag, T. Slater, G. Strawn, M. A. Swertz, M. Thompson, J. van der Lei, E. van Mulligen, J. Velterop, A. Waagmeester, P. Wittenburg, K. Wolstencroft, J. Zhao, and B. Mons. The FAIR Guiding Principles for scientific data management and stewardship. <em>Sci Data</em>, 3:160018, Mar 2016.</p>
+</dd>
+</dl>
+</p>
 <div class="section" id="a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo">
-<h3><a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo<a class="headerlink" href="#a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.1. </span><a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo<a class="headerlink" href="#a-name-fair-repo-a-a-name-fair-repo-report-a-a-name-fair-repo-assessments-a-fair-repo" title="Permalink to this headline">¶</a></h3>
 <p>The CFDE FAIR repository is currently private given that it contains details about DCCs that have not yet been verified.
 Please submit a request to <a class="reference external" href="https://www.nih-cfde.org/contact/">https://www.nih-cfde.org/contact/</a> if you need access to the repository.</p>
 <p>If you have access to the repository, you can access information in it about:</p>
@@ -1315,19 +1350,23 @@ Please submit a request to <a class="reference external" href="https://www.nih-c
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
-<th class="text-align:left head"><p>Affiliation</p></th>
-<th class="text-align:left head"><p>orcid</p></th>
-<th class="text-align:left head"><p>CrediT role</p></th>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Orcid</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="text-align:left head"><p>Elixir Node</p></th>
+<th class="text-align:left head"><p>Credit role</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><div class="firstCol"><a target="_blank" href='https://github.com/u8sand'><img class='avatar-style' src='https://avatars.githubusercontent.com/u8sand'></img><div class="d-block">Daniel J. B. Clarke</div></a>  </div><a class="reference internal" href="../assessing-fairness.html"><span class="doc std std-doc">Assessing FAIRness and FAIR compliance</span></a></p></td>
-<td class="text-align:left"><p>Icahn School of Medicine at Mount Sinai</p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/0000-0003-3471-7416">0000-0003-3471-7416</a></p></td>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/u8sand'><img class='avatar-style' src='https://avatars.githubusercontent.com/u8sand'></img><div class="d-block">Daniel J. B. Clarke</div></a>  </div></p></td>
+<td><p><a target="_blank" href='https://orcid.org/0000-0003-3471-7416'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p>Icahn School of Medicine at Mount Sinai</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>Writing - Original Draft, Code</p></td>
 </tr>
 </tbody>
@@ -1335,9 +1374,10 @@ Please submit a request to <a class="reference external" href="https://www.nih-c
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.</p>
 <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"><img src="[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)" height="20"/></a></p>
+<hr class="footnotes docutils" />
 </div>
 </div>
 
@@ -1366,6 +1406,8 @@ Please submit a request to <a class="reference external" href="https://www.nih-c
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="fair-assessment-fairevaluator.html" title="previous page"><span class="section-number">1. </span>FAIR Evaluator tool</a>
+    <a class='right-next' id="next-link" href="../applied-examples.html" title="next page">Applied examples</a>
 
         </div>
         

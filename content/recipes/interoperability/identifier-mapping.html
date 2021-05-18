@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -61,7 +60,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2. Identifier mapping with BridgeDB" href="bridgedb-recipe.html" />
+    <link rel="next" title="2. Identifier mapping with BridgeDb" href="bridgedb-recipe.html" />
     <link rel="prev" title="Interoperability" href="../interoperability.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -72,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/identifier-mapping.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Interlinking data from different sources" />
-<meta property="og:description" content="Interlinking data from different sources    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bio" />
+<meta property="og:description" content="Interlinking data from different sources  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -722,11 +745,10 @@
               <div>
                 
   <div class="section" id="interlinking-data-from-different-sources">
-<span id="fcb-interop-idmapping"></span><h1><span class="section-number">1. </span>Interlinking data from different sources<a class="headerlink" href="#interlinking-data-from-different-sources" title="Permalink to this headline">¶</a></h1>
-<br/>
+<span id="fcb-identifier-mapping"></span><h1><span class="section-number">1. </span>Interlinking data from different sources<a class="headerlink" href="#interlinking-data-from-different-sources" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Interlink data from different sources", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Background information", "identifier": {"@type": "PropertyValue", "name": "FCB016", "url": "https://w3id.org/faircookbook/FCB016"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Interlinking data from different sources", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Background information", "identifier": {"@type": "PropertyValue", "name": "FCB016", "url": "https://w3id.org/faircookbook/FCB016"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -761,7 +783,7 @@ No
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Interlink data from different sources</div>
+<div style="flex-grow:1; margin-right:5px">Interlinking data from different sources</div>
 <img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
@@ -803,9 +825,9 @@ No
 <div class="section" id="graphical-overview">
 <h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <p>This recipe will cover the topics highlighted in orange:</p>
-<div class="figure align-default" id="overview-of-key-aspects-in-identifier-mapping">
-<a class="reference internal image-reference" href="../../../_images/id-map-service-mermaid.png"><img alt="Overview of key aspects in  Identifier Mapping" src="../../../_images/id-map-service-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Overview of key aspects in  Identifier Mapping</span><a class="headerlink" href="#overview-of-key-aspects-in-identifier-mapping" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="identifier-mapping-figure1">
+<img alt="Overview of key aspects in Identifier Mapping" src="../../../_images/identifier-mapping.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Overview of key aspects in Identifier Mapping</span><a class="headerlink" href="#identifier-mapping-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -888,7 +910,7 @@ No
 <h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
 <p>Before diving into identifier mapping, it is important to understand the possible types of mappings that can be performed between entities.
 While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest.
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as “scientific lenses” (see <span id="id1">[<a class="reference internal" href="#id18"><span>BBC+14</span></a>]</span>).
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as “scientific lenses” (see <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id1">1</a>).
 These lenses allow us to dynamically select which mappings to consider relevant and which to ignore.
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.</p>
 <p>Examples of types of mappings are:</p>
@@ -897,7 +919,7 @@ For example allowing or disallowing mappings between stereoisomers or between ge
 <li><p><strong>Ontology mapping</strong>: this can either be</p>
 <ul>
 <li><p>As a direct 1-to-1 mapping between equivalent terms in different ontologies</p></li>
-<li><p>As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see <span id="id2">[<a class="reference internal" href="#id19"><span>WLB10</span></a>]</span>.</p></li>
+<li><p>As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see <a class="footnote-reference brackets" href="#wang-concept-2010" id="id2">4</a>.</p></li>
 </ul>
 </li>
 <li><p><strong>Identifier mapping</strong>: The focus of this recipe. This can either be:</p>
@@ -919,7 +941,7 @@ For example allowing or disallowing mappings between stereoisomers or between ge
 </div>
 <p>To satisfy the Findability criteria F1, organisations must create identifiers for the concepts within their database. This generates locally unique identifiers which can in turn be transformed into globally unique identifiers using namespaces for which the database organisation are the <code class="docutils literal notranslate"><span class="pre">authority</span></code>.</p>
 <p>Databases often contain data that exists in, or is closely related to, the content of other databases. For example, the genome database <a class="reference external" href="http://ensembl.org/">Ensembl</a> contains data about genes that are related to entries in databases such as HUGO Gene Nomenclature Committee (<a class="reference external" href="https://www.genenames.org/">https://www.genenames.org/</a>) or <a class="reference external" href="https://www.ncbi.nlm.nih.gov/gene/">NCBI Gene</a>; or a database about drugs, e.g. <a class="reference external" href="https://drugbank.com/">DrugBank</a>, often contains details of the chemical substance that forms the drug which are also contained in chemical databases such as <a class="reference external" href="https://www.ebi.ac.uk/chebi/">ChEBI</a> or <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>. This results in a large number of unique identifiers notionally for the same concept. This large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. However, the databases often contain <code class="docutils literal notranslate"><span class="pre">cross-reference</span></code> links to other databases to represent these <code class="docutils literal notranslate"><span class="pre">equivalences</span></code>.</p>
-<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <span id="id3">[<a class="reference internal" href="#id18"><span>BBC+14</span></a>]</span> for more details).</p>
+<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id3">1</a> for more details).</p>
 <p>While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the <a class="reference external" href="https://www.proteinatlas.org/">Human Protein Atlas</a> database reuses <a class="reference external" href="https://www.ensembl.org/">Ensembl</a> identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data is already connected through the common identifier. However, this means that the Human Protein Atlas must ensure that their definition of the concept is exactly aligned with the Ensembl identifier for <strong>all</strong> application uses.</p>
 </div>
 <div class="section" id="identifier-equivalences">
@@ -1008,7 +1030,7 @@ The above has shown that the two formats can represent the same information. Bot
 <ul>
 <li><p><a class="reference external" href="https://bridgedb.github.io/">bridgedb.org</a></p>
 <blockquote>
-<div><p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> <span id="id4">[<a class="reference internal" href="#id20"><span>vIPK+10</span></a>]</span> is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.</p>
+<div><p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> <a class="footnote-reference brackets" href="#van-iersel-bridgedb-2010" id="id4">3</a> is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.</p>
 <p>It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following <code class="docutils literal notranslate"><span class="pre">curl</span></code> command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) <code class="docutils literal notranslate"><span class="pre">L</span></code> identifier <code class="docutils literal notranslate"><span class="pre">1234</span></code> for the <code class="docutils literal notranslate"><span class="pre">Human</span></code> gene <a class="reference external" href="https://www.ncbi.nlm.nih.gov/gene/1234">CCR5</a> as a TSV file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://webservice.bridgedb.org/Human/xrefs/L/1234&quot;</span> -H <span class="s2">&quot;accept: */*&quot;</span>
 </pre></div>
@@ -1020,7 +1042,7 @@ The above has shown that the two formats can represent the same information. Bot
 </li>
 <li><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a></p>
 <blockquote>
-<div><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a> <span id="id5">[<a class="reference internal" href="#id21"><span>CDG+13</span></a>]</span> is a specialised identifier mapping service for chemical structures. For a chemical structure – specified as an identifier, InChI, or InChI Key – it will equivalent structures found in the <a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a> chemistry resources.</p>
+<div><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a> <a class="footnote-reference brackets" href="#chambers-unichem-2013" id="id5">2</a> is a specialised identifier mapping service for chemical structures. For a chemical structure – specified as an identifier, InChI, or InChI Key – it will equivalent structures found in the <a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a> chemistry resources.</p>
 <p>The following <code class="docutils literal notranslate"><span class="pre">curl</span></code> command retrieves the equivalent database identifiers for the ChEMBL identifier <code class="docutils literal notranslate"><span class="pre">CHEMBL12</span></code> <a class="reference external" href="https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/">DIAZEPAM</a> and returns the result as a JSON object.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://www.ebi.ac.uk/unichem/rest/src_compound_id/CHEMBL12/1&quot;</span> -H <span class="s2">&quot;accept: */*&quot;</span>
 </pre></div>
@@ -1065,7 +1087,7 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
 <ul class="simple">
 <li><p><a class="reference internal" href="../findability/identifiers.html#fcb-find-identifiers"><span class="std std-ref">Unique, persistent identifiers</span></a></p></li>
 <li><p><a class="reference external" href="https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/">The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca</a></p></li>
-<li><p><a class="reference internal" href="bridgedb-recipe.html#fcb-bridgedb"><span class="std std-ref">Identifier mapping with BridgeDB</span></a></p></li>
+<li><p><a class="reference internal" href="bridgedb-recipe.html#fcb-bridgedb-recipe"><span class="std std-ref">Identifier mapping with BridgeDb</span></a></p></li>
 <li><p><a class="reference external" href="http://www.openphacts.org/specs/datadesc/">Dataset Descriptions for the Open Pharmacological Space</a></p></li>
 </ul>
 </div>
@@ -1076,21 +1098,25 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="id6"><dl class="citation">
-<dt class="label" id="id18"><span class="brackets">BBC+14</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<p id="bibtex-footbibliography-content/recipes/interoperability/identifier-mapping-0"><dl class="footnote brackets">
+<dt class="label" id="batchelor-scientific-nodate"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
 <dd><p>Colin Batchelor, Christian Y A Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T Evelo, Anna Gaulton, Carole Goble, Alasdair J G Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, and Egon L Willighagen. Scientiﬁc Lenses to Support Multiple Views over Linked Chemistry Data. In <em>The Semantic Web – ISWC 2014. Lecture Notes in Computer Science</em>, 16. 2014. <a class="reference external" href="https://doi.org/10.1007/978-3-319-11964-9_7">doi:10.1007/978-3-319-11964-9_7</a>.</p>
 </dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id5">CDG+13</a></span></dt>
+<dt class="label" id="chambers-unichem-2013"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
 <dd><p>Jon Chambers, Mark Davies, Anna Gaulton, Anne Hersey, Sameer Velankar, Robert Petryszak, Janna Hastings, Louisa Bellis, Shaun McGlinchey, and John P. Overington. UniChem: a unified chemical structure cross-referencing and identifier tracking system. <em>Journal of Cheminformatics</em>, 5(1):3, January 2013. <a class="reference external" href="https://doi.org/10.1186/1758-2946-5-3">doi:10.1186/1758-2946-5-3</a>.</p>
 </dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id4">vIPK+10</a></span></dt>
+<dt class="label" id="van-iersel-bridgedb-2010"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
 <dd><p>Martijn P. van Iersel, Alexander R. Pico, Thomas Kelder, Jianjiong Gao, Isaac Ho, Kristina Hanspers, Bruce R. Conklin, and Chris T. Evelo. The BridgeDb framework: standardized access to gene, protein and metabolite identifier mapping services. <em>BMC Bioinformatics</em>, 11(1):5, January 2010. URL: <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">https://doi.org/10.1186/1471-2105-11-5</a> (visited on 2021-02-05), <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">doi:10.1186/1471-2105-11-5</a>.</p>
 </dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id2">WLB10</a></span></dt>
+<dt class="label" id="wang-concept-2010"><span class="brackets"><a class="fn-backref" href="#id2">4</a></span></dt>
 <dd><p>Ying Wang, Weiru Liu, and David Bell. A Concept Hierarchy Based Ontology Mapping Approach. In Yaxin Bi and Mary-Anne Williams, editors, <em>Knowledge Science, Engineering and Management</em>, Lecture Notes in Computer Science, 101–113. Berlin, Heidelberg, 2010. Springer. <a class="reference external" href="https://doi.org/10.1007/978-3-642-15280-1_12">doi:10.1007/978-3-642-15280-1_12</a>.</p>
 </dd>
 </dl>
 </p>
+<!-- ```{bibliography}
+:filter: docname in docnames
+:style: alpha
+``` -->
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
@@ -1149,6 +1175,7 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
+<hr class="footnotes docutils" />
 </div>
 </div>
 
@@ -1178,7 +1205,7 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../interoperability.html" title="previous page">Interoperability</a>
-    <a class='right-next' id="next-link" href="bridgedb-recipe.html" title="next page"><span class="section-number">2. </span>Identifier mapping with BridgeDB</a>
+    <a class='right-next' id="next-link" href="bridgedb-recipe.html" title="next page"><span class="section-number">2. </span>Identifier mapping with BridgeDb</a>
 
         </div>
         

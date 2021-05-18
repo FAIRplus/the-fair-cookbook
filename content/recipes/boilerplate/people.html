@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -72,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/boilerplate/people.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Boards and contributors" />
-<meta property="og:description" content="Boards and contributors       &lt;p style=&#39;text-align: justify;&#39;&gt; The work is coordinated by an Editorial Board, with Section Editors and a number of Contributors," />
+<meta property="og:description" content="Boards and contributors       &lt;p style=&#39;text-align: justify;&#39;&gt; The FAIR Cookbook is coordinated by an Editorial Board, assisted by Section Editors; a growing nu" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -621,8 +644,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-editors">
+   1.2. Section Editors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#contributors">
-   1.2. Contributors:
+   1.3. Contributors:
   </a>
  </li>
 </ul>
@@ -641,7 +669,8 @@
 <h1><span class="section-number">1. </span>Boards and contributors<a class="headerlink" href="#boards-and-contributors" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
  <p style='text-align: justify;'>
-The work is coordinated by an Editorial Board, with Section Editors and a number of Contributors, who write and review recipes, or contribute to the work the recipes describe.
+The FAIR Cookbook is coordinated by an Editorial Board, assisted by Section Editors; a growing number of Contributors write and review recipes, or contribute to the work the recipes describe. 
+<p>If you are a researcher or a data managers professional, with expertise and experience in FAIR data management, and you want to <a class="reference internal" href="contributing.html#fcb-misc-contribute"><span class="std std-ref">contribute, see how to,</span></a> or contact us at <a class="reference external" href="mailto:fairplus-cookbook&#37;&#52;&#48;elixir-europe&#46;org">fairplus-cookbook<span>&#64;</span>elixir-europe<span>&#46;</span>org</a></p>
  </p>
 <hr class="docutils" />
 <div class="section" id="editorial-board">
@@ -702,64 +731,74 @@ The work is coordinated by an Editorial Board, with Section Editors and a number
 </tbody>
 </table>
 </div>
-</details><!-- Names are followed by GitHub usernames.
-
-## FAIR Cookbook Benevolent Dictator for Life
-
-- [Philippe Rocca-Serra](https://github.com/proccaserra) is the Benevolent Dictator for Life (BDFL).
-
-## FAIR Cookbook Steering Council
-
-- [Andrea Splendiani](https://github.com/sfcs)
-- [Susanna Sansone](https://github.com/susannasansone)
-- [Robert Giessmann](https://github.com/robertgiessmann)
-
-
-### Identifier Subcommittee
-
-- [Chris Evelo](https://github.com/Chris-Evelo)
-- [Alasdair Gray](https://github.com/AlasdairGray)
-
-### Ontology Subcommittee
-
-- [Tony Burdett](https://github.com/tburdett)
-
-### CMMI Subcommittee
-
-- [Oya Beyan](https://github.com/oyabeyan)
-
-### Data Hosting Subcommittee
-- [Wei Gu](https://github.com/)
-- [Venkata ](https://github.com/)
-
-## Institutional Partners
-
-### Tier 1
-
-Institutional Council members are noted with each institution.
-
-- [IMI](https://www.imi.com/) (grant officer)
-- [FAIRplus](https://fairplus-project.eu/) [Herman Van Vlijmen](https://orcid.org/0000-0002-1915-3141)
-- [FAIRplus](https://fairplus-project.eu/) [Serena Scollen(https://orcid.org/0000-0002-9311-1337)
-- [FAIRplus](https://fairplus-project.eu/) [Hanna Hurst](https://orcid.org/0000-0002-1119-9321)
-
-
-### Tier 2
-
-- [github](https://www.github.com/)
-
-## New Steering Council Members
-
-When a new member joins the steering council, the following things are done:
-- Announce the new member on the FAIR Cookbook mailing list
-- Make the new member an org owner for FAIR Cookbook  Github organization
-- Add the new member to the list in the governance repo, and if appropriate, add their affiliation to the institutional partner list (https://github.com/fair-cookbook/the-fair-cookbook/people.md)
-- Add the new member to the list of steering council members on the website (https://github.com/proccaserra/proccaserra.github.io/blob/master/about.html)
-
- -->
+</details></div>
+<div class="section" id="section-editors">
+<h2><span class="section-number">1.2. </span>Section Editors<a class="headerlink" href="#section-editors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<div class="text--purple-dark" style="font-size:1.3rem">See the Section Editors</h4><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">Orcid</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="text-align:center head"><p class="card-text">Elixir Node</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/nsjuty'><img class='avatar-style' src='https://avatars.githubusercontent.com/nsjuty'></img><div class="d-block">Nick Juty</div></a>       </div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-2036-8350'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">University of Manchester</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Philip Gribbon</div></div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0001-7655-2459'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">Fraunhofer Institute</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/YojanaGadiya'><img class='avatar-style' src='https://avatars.githubusercontent.com/YojanaGadiya'></img><div class="d-block">Yojana Gaidya</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-7683-0452'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">Fraunhofer Institute</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/lucas-ubm'><img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'></img><div class="d-block">Lucas Giovanni </div></a>    </div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0001-6518-9535'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">University of Maastricht</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">Heriot Watt University</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">University of Luxembourg</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/vioannid'><img class='avatar-style' src='https://avatars.githubusercontent.com/vioannid'></img><div class="d-block">Vassilios Ioannidis</div></a>   </div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-4209-2578'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">SIB</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-CH.svg' ></img></p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</details></div>
 <div class="section" id="contributors">
-<h2><span class="section-number">1.2. </span>Contributors:<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Contributors:<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <div class="text--purple-dark" style="font-size:1.3rem">See the Cookbook Contributors</h4><div class="summary-down docutils">
@@ -921,64 +960,76 @@ When a new member joins the steering council, the following things are done:
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-even"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Ashni Sedani</div>        </div></p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/YojanaGadiya'><img class='avatar-style' src='https://avatars.githubusercontent.com/YojanaGadiya'></img><div class="d-block">Yojana Gaidya</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-7683-0452'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">Fraunhofer Institute</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Ashni Sedani</div>        </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-2424-3483'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">GSK</p></td>
 <td><p class="card-text"><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">George Papadotas</div>     </div></p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">George Papadotas</div>     </div></p></td>
 <td><p class="card-text"></p></td>
 <td><p class="card-text">GSK</p></td>
 <td><p class="card-text"><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div></p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">GSK</p></td>
 <td><p class="card-text"><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div></p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">Heriot Watt University</p></td>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
 </tr>
-<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/petrospaps'><img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'></img><div class="d-block">Petros Papadopoulos</div></a>     </div></p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/petrospaps'><img class='avatar-style' src='https://avatars.githubusercontent.com/petrospaps'></img><div class="d-block">Petros Papadopoulos</div></a>     </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-8110-7576'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">Heriot Watt University</p></td>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
 </tr>
-<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/JolandaS'><img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'></img><div class="d-block">Jolanda Strubel</div></a>  </div></p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/JolandaS'><img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'></img><div class="d-block">Jolanda Strubel</div></a>  </div></p></td>
 <td><p class="card-text"></p></td>
 <td><p class="card-text">The Hyve</p></td>
 <td><p class="card-text"><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-even"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Emma Vos</div>   </div></p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Emma Vos</div>   </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">The Hyve</p></td>
 <td><p class="card-text"><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/eelkevanderhorst'><img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'></img><div class="d-block">Eelke van den Horst</div></a> </div></p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/eelkevanderhorst'><img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'></img><div class="d-block">Eelke van den Horst</div></a> </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-8777-5612'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">The Hyve</p></td>
 <td><p class="card-text"><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/keesvanbochove'><img class='avatar-style' src='https://avatars.githubusercontent.com/keesvanbochove'></img><div class="d-block">Kees van Bochove</div></a>        </div></p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/keesvanbochove'><img class='avatar-style' src='https://avatars.githubusercontent.com/keesvanbochove'></img><div class="d-block">Kees van Bochove</div></a>        </div></p></td>
 <td><p class="card-text"></p></td>
 <td><p class="card-text">The Hyve</p></td>
 <td><p class="card-text"><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no-github'></img><div class="d-block">Sukhi Singh</div>        </div></p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no-github'></img><div class="d-block">Sukhi Singh</div>        </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">The Hyve</p></td>
 <td><p class="card-text"><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
+<td class="text-align:center"><p class="card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/u8sand'><img class='avatar-style' src='https://avatars.githubusercontent.com/u8sand'></img><div class="d-block">Daniel J. B. Clarke</div></a>  </div></p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0003-3471-7416'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">Icahn School of Medicine at Mount Sinai</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
 <tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/iemam'><img class='avatar-style' src='https://avatars.githubusercontent.com/iemam'></img><div class="d-block">Ibrahim Emam</div></a>       </div></p></td>
@@ -1149,22 +1200,83 @@ When a new member joins the steering council, the following things are done:
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p class="card-text"><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
 </tr>
-<tr class="row-even"><td><p class="card-text"><div><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Alejandra Delfin Rossaro</div>      </div></p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Alejandra Delfin Rossaro</div>      </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">Universite Paul Sabatier</p></td>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
-<tr class="row-odd"><td><p class="card-text"><div><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Anne Cambon-Thomsen</div>        </div></p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Anne Cambon-Thomsen</div>        </div></p></td>
 <td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0001-8793-3644'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
 <td><p class="card-text">Universite Paul Sabatier</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td class="text-align:center"><p class="card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href='https://github.com/ljgarcia'><img class='avatar-style' src='https://avatars.githubusercontent.com/ljgarcia'></img><div class="d-block"> Leyla Garcia</p></td>
+<td><p class="card-text"><a target="_blank" href='https://orcid.org/0000-0003-3986-0510'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p class="card-text">ZB MED Information Centre for life sciences</p></td>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td class="text-align:center"><p class="card-text"></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</details></div>
+</details><!-- Names are followed by GitHub usernames.
+
+## FAIR Cookbook Benevolent Dictator for Life
+
+- [Philippe Rocca-Serra](https://github.com/proccaserra) is the Benevolent Dictator for Life (BDFL).
+
+## FAIR Cookbook Steering Council
+
+- [Andrea Splendiani](https://github.com/sfcs)
+- [Susanna Sansone](https://github.com/susannasansone)
+- [Robert Giessmann](https://github.com/robertgiessmann)
+
+
+### Identifier Subcommittee
+
+- [Chris Evelo](https://github.com/Chris-Evelo)
+- [Alasdair Gray](https://github.com/AlasdairGray)
+
+### Ontology Subcommittee
+
+- [Tony Burdett](https://github.com/tburdett)
+
+### CMMI Subcommittee
+
+- [Oya Beyan](https://github.com/oyabeyan)
+
+### Data Hosting Subcommittee
+- [Wei Gu](https://github.com/)
+- [Venkata ](https://github.com/)
+
+## Institutional Partners
+
+### Tier 1
+
+Institutional Council members are noted with each institution.
+
+- [IMI](https://www.imi.com/) (grant officer)
+- [FAIRplus](https://fairplus-project.eu/) [Herman Van Vlijmen](https://orcid.org/0000-0002-1915-3141)
+- [FAIRplus](https://fairplus-project.eu/) [Serena Scollen(https://orcid.org/0000-0002-9311-1337)
+- [FAIRplus](https://fairplus-project.eu/) [Hanna Hurst](https://orcid.org/0000-0002-1119-9321)
+
+
+### Tier 2
+
+- [github](https://www.github.com/)
+
+## New Steering Council Members
+
+When a new member joins the steering council, the following things are done:
+- Announce the new member on the FAIR Cookbook mailing list
+- Make the new member an org owner for FAIR Cookbook  Github organization
+- Add the new member to the list in the governance repo, and if appropriate, add their affiliation to the institutional partner list (https://github.com/fair-cookbook/the-fair-cookbook/people.md)
+- Add the new member to the list of steering council members on the website (https://github.com/proccaserra/proccaserra.github.io/blob/master/about.html)
+
+ -->
+</div>
 </div>
 
     <script type="text/x-thebe-config">

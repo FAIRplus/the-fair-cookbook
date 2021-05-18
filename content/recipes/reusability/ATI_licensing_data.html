@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -763,7 +786,7 @@ Data licenses vary based on different criteria, such as:</p>
 <span id="rr-licensing-data-cc"></span><h2><span class="section-number">3.1. </span>Creative Commons Licenses<a class="headerlink" href="#creative-commons-licenses" title="Permalink to this headline">¶</a></h2>
 <p>Creative Commons or CC provides a number of licenses that can be used with a wide variety of creations that might otherwise fall under copyright restrictions, including music, art, books and photographs.
 Although not tailored for data, CC licenses can be used as data licenses because they are easy to understand.
-Its website includes a <a class="reference external" href="https://creativecommons.org/about/cclicenses/">summary page</a><span id="id1">[<a class="reference internal" href="#id107"><span>cre20</span></a>]</span> outlining all the available licenses, explained with simple visual symbols.</p>
+Its website includes a <a class="reference external" href="https://creativecommons.org/about/cclicenses/">summary page</a><span id="id1">[<a class="reference internal" href="#id125"><span>cre20</span></a>]</span> outlining all the available licenses, explained with simple visual symbols.</p>
 <div class="section" id="permission-levels">
 <span id="rr-licensing-data-cc-permissions"></span><h3><span class="section-number">3.1.1. </span>Permission Levels<a class="headerlink" href="#permission-levels" title="Permalink to this headline">¶</a></h3>
 <p>The permission level provided by a Creative Commons data license can be understood from its name, which is a combination of two-letter “permission marks”.
@@ -804,7 +827,7 @@ In many instances, data repositories maintained by universities recommend CC0 as
 <div class="section" id="open-data-commons">
 <span id="rr-licensing-data-odc"></span><h2><span class="section-number">3.2. </span>Open Data Commons<a class="headerlink" href="#open-data-commons" title="Permalink to this headline">¶</a></h2>
 <p>Open Data Commons provides three licenses that can be applied specifically to data.
-The <a class="reference external" href="https://opendatacommons.org/licenses/index.html">webpages</a> <span id="id2">[<a class="reference internal" href="#id108"><span>odk20</span></a>]</span> of each of these licenses include human-readable summaries, with the ramifications of the legalese explained in a concise format.</p>
+The <a class="reference external" href="https://opendatacommons.org/licenses/index.html">webpages</a> <span id="id2">[<a class="reference internal" href="#id126"><span>odk20</span></a>]</span> of each of these licenses include human-readable summaries, with the ramifications of the legalese explained in a concise format.</p>
 <div class="section" id="the-public-domain-dedication-and-license-or-pddl">
 <span id="rr-licensing-data-odc-pddl"></span><h3><span class="section-number">3.2.1. </span>The Public Domain Dedication and License or PDDL<a class="headerlink" href="#the-public-domain-dedication-and-license-or-pddl" title="Permalink to this headline">¶</a></h3>
 <p>The PDDL is analogous to CC0, where you waive all your rights to the data you are putting into the public domain.
@@ -837,25 +860,25 @@ A comparison between the PDDL and CC0 is provided <a class="reference external" 
 <div class="section" id="other-licensing-options">
 <span id="rr-licensing-data-options"></span><h2><span class="section-number">3.4. </span>Other Licensing Options<a class="headerlink" href="#other-licensing-options" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to choose other data licenses that may have been developed with a specific use case or community in mind or that are not in widespread global use.
-These include licenses that were developed by national governments, such as the <a class="reference external" href="https://data.norge.no/nlod/en/">Norwegian License for Open Government Data</a> <span id="id3">[<a class="reference internal" href="#id109"><span>Age20</span></a>]</span>.
+These include licenses that were developed by national governments, such as the <a class="reference external" href="https://data.norge.no/nlod/en/">Norwegian License for Open Government Data</a> <span id="id3">[<a class="reference internal" href="#id127"><span>Age20</span></a>]</span>.
 Often, such licenses are the recommended data licensing option within the corresponding country, especially for data created or owned by their public bodies.
 Another example is the <a class="reference external" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a> or OGL, which was developed by The National Archives, UK.</p>
-<p>The <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data">Data Curation Center (DCC) guide</a> <span id="id4">[<a class="reference internal" href="#id110"><span>Bal20</span></a>]</span> on how to license research data expatiates on the licenses discussed in this chapter, and gives more information about <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-6000">Prepared Licenses</a>, <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-7000">Bespoke Licenses</a>, <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-13000">Multiple Licensing</a> and <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-14000">Mechanisms for Licensing Data</a>.</p>
+<p>The <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data">Data Curation Center (DCC) guide</a> <span id="id4">[<a class="reference internal" href="#id128"><span>Bal20</span></a>]</span> on how to license research data expatiates on the licenses discussed in this chapter, and gives more information about <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-6000">Prepared Licenses</a>, <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-7000">Bespoke Licenses</a>, <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-13000">Multiple Licensing</a> and <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-14000">Mechanisms for Licensing Data</a>.</p>
 <p>If you would like to read more about the challenges and finer points of licensing, <a class="reference external" href="https://research.okfn.org/avoiding-data-use-silos/">this article</a> is a great resource to get you started.</p>
 </div>
 <div class="section" id="references">
 <h2><span class="section-number">3.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p id="id5"><dl class="citation">
-<dt class="label" id="id107"><span class="brackets"><a class="fn-backref" href="#id1">cre20</a></span></dt>
+<dt class="label" id="id125"><span class="brackets"><a class="fn-backref" href="#id1">cre20</a></span></dt>
 <dd><p>About CC Licenses - Creative Commons. May 2020. [Online; accessed 19. Nov. 2020]. URL: <a class="reference external" href="https://creativecommons.org/about/cclicenses">https://creativecommons.org/about/cclicenses</a>.</p>
 </dd>
-<dt class="label" id="id108"><span class="brackets"><a class="fn-backref" href="#id2">odk20</a></span></dt>
+<dt class="label" id="id126"><span class="brackets"><a class="fn-backref" href="#id2">odk20</a></span></dt>
 <dd><p>Licenses - Open Data Commons: legal tools for open data. Oct 2020. [Online; accessed 19. Nov. 2020]. URL: <a class="reference external" href="https://opendatacommons.org/licenses/index.html">https://opendatacommons.org/licenses/index.html</a>.</p>
 </dd>
-<dt class="label" id="id109"><span class="brackets"><a class="fn-backref" href="#id3">Age20</a></span></dt>
+<dt class="label" id="id127"><span class="brackets"><a class="fn-backref" href="#id3">Age20</a></span></dt>
 <dd><p>Norwegian Digitalisation Agency. Norwegian Licence for Open Government Data (NLOD) 2.0. Aug 2020. [Online; accessed 19. Nov. 2020]. URL: <a class="reference external" href="https://data.norge.no/nlod/en/2.0">https://data.norge.no/nlod/en/2.0</a>.</p>
 </dd>
-<dt class="label" id="id110"><span class="brackets"><a class="fn-backref" href="#id4">Bal20</a></span></dt>
+<dt class="label" id="id128"><span class="brackets"><a class="fn-backref" href="#id4">Bal20</a></span></dt>
 <dd><p>Alex Ball. How to License Research Data - DCC. Nov 2020. [Online; accessed 19. Nov. 2020]. URL: <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/license-research-data">https://www.dcc.ac.uk/guidance/how-guides/license-research-data</a>.</p>
 </dd>
 </dl>

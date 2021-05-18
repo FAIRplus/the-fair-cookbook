@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -626,6 +649,21 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools">
+   Tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
@@ -709,23 +747,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   FAIRification Objectives, Inputs and Outputs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-data-standards">
-   Table of Data Standards
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tools">
-   Tools
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliographic-reference">
-   Bibliographic reference
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -823,6 +846,89 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 <a class="reference internal image-reference" href="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png"><img alt="building a commmunity compliant metadata profile" src="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">semantic markup</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">text</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">URI</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">constraint validation</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">text</span></a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">DOI</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>file</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-data-standards">
+<h2>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://yaml.org">YAML</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.1gr4tz">EFO</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/bsg-s000518/">MIxS</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">RDF</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.dpkb5f">SIO</a></p></td>
+<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">MIUVIG</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://shex.io/shex-semantics/">Shape Expression Syntax (SHEX)</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.a6r7zs">EDAM</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/biodbcore-001083/">OBO foundry</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.PB6595">Wikidata</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Tool Name</p></th>
+<th class="text-align:left head"><p>capability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.commonwl.org/draft-3/SchemaSalad.html">Semantic Annotation for Linked Arvado Data (SALAD)</a></p></td>
+<td class="text-align:left"><p>conversion from  YAML to RDF</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://rdfshape.weso.es/shExVisualize">WESO shExVisualize</a></p></td>
+<td class="text-align:left"><p>Shape expression syntax visualization</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://virtuoso.openlinksw.com/">Virtuoso</a></p></td>
+<td class="text-align:left"><p>RDF triple store</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
@@ -973,7 +1079,7 @@ But in this example, we are using the SALAD schema to capture the annotation req
 </div>
 <div class="section" id="exemplar-instance-data">
 <h2>2. Exemplar instance data:<a class="headerlink" href="#exemplar-instance-data" title="Permalink to this headline">¶</a></h2>
-<p>When users submit information via the form (or by other programatic means), a instance YAML file is generated, which looks like this:</p>
+<p>When users submit information via the form (or by other programatic means), an instance YAML file is generated, which looks like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>id: placeholder
 
 host:
@@ -1176,92 +1282,9 @@ Another improvement could be a better integration with repositories such FAIRsha
 </ul>
 </div>
 </div>
-<div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
-<th class="text-align:left head"><p>Input</p></th>
-<th class="text-align:left head"><p>Output</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">semantic markup</span></a></p></td>
-<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">text</span></a></p></td>
-<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">URI</span></a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">constraint validation</span></a></p></td>
-<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">text</span></a></p></td>
-<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">DOI</span></a></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>file</p></td>
-<td class="text-align:left"><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="table-of-data-standards">
-<h2>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
-<th class="text-align:left head"><p>Terminologies</p></th>
-<th class="text-align:left head"><p>Models</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://yaml.org">YAML</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.1gr4tz">EFO</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/bsg-s000518/">MIxS</a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">RDF</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.dpkb5f">SIO</a></p></td>
-<td class="text-align:left"><p><a class="reference internal" href="../interoperability.html"><span class="doc std std-doc">MIUVIG</span></a></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></p></td>
-<td class="text-align:left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://shex.io/shex-semantics/">Shape Expression Syntax (SHEX)</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.a6r7zs">EDAM</a></p></td>
-<td class="text-align:left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/biodbcore-001083/">OBO foundry</a></p></td>
-<td class="text-align:left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.PB6595">Wikidata</a></p></td>
-<td class="text-align:left"><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="tools">
-<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Tool Name</p></th>
-<th class="text-align:left head"><p>capability</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.commonwl.org/draft-3/SchemaSalad.html">Semantic Annotation for Linked Arvado Data (SALAD)</a></p></td>
-<td class="text-align:left"><p>conversion from  YAML to RDF</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://rdfshape.weso.es/shExVisualize">WESO shExVisualize</a></p></td>
-<td class="text-align:left"><p>Shape expression syntax visualization</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://virtuoso.openlinksw.com/">Virtuoso</a></p></td>
-<td class="text-align:left"><p>RDF triple store</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <hr class="docutils" />
-<div class="section" id="bibliographic-reference">
-<h2>Bibliographic reference<a class="headerlink" href="#bibliographic-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p>[1]. Avro - <a class="reference external" href="http://avro.apache.org">http://avro.apache.org</a>
 [2]. metaschema - <a class="reference external" href="https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml">https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml</a>
 [3]. schema salad - <a class="reference external" href="http://www.commonwl.org/v1.0/SchemaSalad.html">http://www.commonwl.org/v1.0/SchemaSalad.html</a>

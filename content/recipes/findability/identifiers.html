@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -898,9 +921,9 @@ or
 <p>The standard approach would be resolving a <code class="docutils literal notranslate"><span class="pre">HTTP</span> <span class="pre">GET</span></code> request using content negotiation to choose between different representations of the resource.</p>
 <p>All these key points will be developed in this recipe.</p>
 <hr class="docutils" />
-<div class="figure align-default" id="id2">
+<div class="figure align-default" id="id13">
 <a class="reference internal image-reference" href="../../../_images/identifiers-fig1.svg"><img alt="identifier services" src="../../../_images/identifiers-fig1.svg" width="700px" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -985,9 +1008,10 @@ or
 <hr class="docutils" />
 <div class="section" id="minting-identifiers">
 <h2><span class="section-number">1.4. </span>Minting identifiers<a class="headerlink" href="#minting-identifiers" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>:notebook_with_decorative_cover: <strong>“Identifier minting is fundamentally about the <em>authority deciding identity</em></strong>.”</p>
-</div></blockquote>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>*<em>Identifier minting is fundamentally about the <em>authority deciding identity.</em></em></p>
+</div>
 <p>Identifiers are used to tag, identify, find and retrieve entities which are part of a collection or a resource maintained by some organization. This organization is the <code class="docutils literal notranslate"><span class="pre">authority</span></code> which rules over that area of knowledge. The core assumption is that identifiers must be unique, that is they can not be shared and there is a 1 to 1 relation between the ‘identifier’ and the entity it identifies.</p>
 <p>With isolated systems, disconnected from any other system, the risk of identifier collision is null but two isolated systems can create local identifiers which could be completely identical but which denote completely different entities. In fact, this happens all the time.</p>
 <p>So these identifiers are said to be locally unique, as there is no guarantee these are unique to all other systems that exist, in other words, that they are globally unique.</p>
@@ -1033,8 +1057,8 @@ The following code snippet shows the generation of a UUID using the Python uuid 
 <li><p>a cryptographic hashing algorithm implemented as a software function</p></li>
 <li><p>a digital resource (e.g. a file)</p></li>
 </ul>
-<p>Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource.
-A number of algorithms can be used and some are already widely used such as <code class="docutils literal notranslate"><span class="pre">Message</span> <span class="pre">Digest</span> <span class="pre">algorithm</span> <span class="pre">MD5</span></code> specified by the RFC1321[1], the <code class="docutils literal notranslate"><span class="pre">Secure</span> <span class="pre">Hash</span> <span class="pre">Algorithm</span> <span class="pre">(SHA1)</span></code>,  <code class="docutils literal notranslate"><span class="pre">Secure</span> <span class="pre">Hash</span> <span class="pre">Algorithm</span> <span class="pre">2</span> <span class="pre">(SHA256)</span></code>, <code class="docutils literal notranslate"><span class="pre">Secure</span> <span class="pre">Hash</span> <span class="pre">Algorithm</span> <span class="pre">3</span> <span class="pre">(SHA3)</span></code> or <code class="docutils literal notranslate"><span class="pre">BLAKE2b-256</span></code> (RFC 7693).
+<p>Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource <a class="footnote-reference brackets" href="#retter-1" id="id1">10</a>, <a class="footnote-reference brackets" href="#retter-2" id="id2">11</a>.
+A number of algorithms can be used and some are already widely used such as <code class="docutils literal notranslate"><span class="pre">Message</span> <span class="pre">Digest</span> <span class="pre">algorithm</span> <span class="pre">MD5</span></code> specified by the RFC1321[1]<a class="footnote-reference brackets" href="#md5" id="id3">4</a>, the <code class="docutils literal notranslate"><span class="pre">Secure</span> <span class="pre">Hash</span> <span class="pre">Algorithm</span> <span class="pre">(SHA1)</span></code>,  <code class="docutils literal notranslate"><span class="pre">Secure</span> <span class="pre">Hash</span> <span class="pre">Algorithm</span> <span class="pre">2</span> <span class="pre">(SHA256)</span></code>, <code class="docutils literal notranslate"><span class="pre">Secure</span> <span class="pre">Hash</span> <span class="pre">Algorithm</span> <span class="pre">3</span> <span class="pre">(SHA3)</span></code> or <code class="docutils literal notranslate"><span class="pre">BLAKE2b-256</span></code> (RFC 7693) <a class="footnote-reference brackets" href="#blake2" id="id4">2</a>.
 The first two are considered obsolete, while the latter two are most advanced and approved by NIST.</p>
 <hr class="docutils" />
 <div class="admonition note">
@@ -1220,7 +1244,7 @@ When an author needs to move a page, they can update the PURL to point to the ne
 <h3><span class="section-number">1.8.1. </span>Introducing CURIES or Compact URIs<a class="headerlink" href="#introducing-curies-or-compact-uris" title="Permalink to this headline">¶</a></h3>
 <p>CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Working Group Note <a class="reference external" href="https://www.w3.org/TR/2010/NOTE-curie-20101216/">CURIE Syntax 1.0</a>, and provide a human readable shortening of IRIs.</p>
 <p>The CURIE consists of a <strong><code class="docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">prefix</span></code></strong> followed by the <strong><code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">identifier</span></code></strong>.</p>
-<p>There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI <code class="docutils literal notranslate"><span class="pre">[doi:10.1038/sdata.2016.18]</span></code> refers to the FAIR Principles paper<a class="footnote-reference brackets" href="#safe-curie" id="id1">1</a>. The Digital Object Identifier System web site (<a class="reference external" href="https://www.doi.org/">https://www.doi.org/</a>) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL <a class="reference external" href="https://www.doi.org/10.1038/sdata.2016.18">https://www.doi.org/10.1038/sdata.2016.18</a> to resolve the paper’s DOI. This results in the client being taken to the page at <a class="reference external" href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a>.</p>
+<p>There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI <code class="docutils literal notranslate"><span class="pre">[doi:10.1038/sdata.2016.18]</span></code> refers to the FAIR Principles paper<a class="footnote-reference brackets" href="#safe-curie" id="id5">1</a>. The Digital Object Identifier System web site (<a class="reference external" href="https://www.doi.org/">https://www.doi.org/</a>) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL <a class="reference external" href="https://www.doi.org/10.1038/sdata.2016.18">https://www.doi.org/10.1038/sdata.2016.18</a> to resolve the paper’s DOI. This results in the client being taken to the page at <a class="reference external" href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Namespaces</span></code> can be defined <em>by convention</em>, such as the case with <code class="docutils literal notranslate"><span class="pre">doi</span></code>, and registered with services to allow for the resolution of CURIEs (see <a class="reference external" href="##identifier-resolution-services">Identifier Resolution Services</a> below). These are extensively used to map CURIEs to URLs that can be resolved.</p>
 <p>Going back to our <em>Life Science context</em>, we can use the following CURIE <code class="docutils literal notranslate"><span class="pre">[uniprot:P38398]</span></code> to refer to the UniProt record for the protein.</p>
 <p>This is very useful for including unambiguous, global identifiers in scientific articles.</p>
@@ -1246,7 +1270,7 @@ When an author needs to move a page, they can update the PURL to point to the ne
 </li>
 <li><p><a class="reference external" href="http://identifiers.org/">Identifiers.org</a></p>
 <blockquote>
-<div><p><a class="reference external" href="https://identifiers.org">Identifiers.org</a> is a <strong>Resolution Service</strong> provides consistent access to life science data using <a class="reference external" href="https://www.w3.org/TR/2010/NOTE-curie-20101216/"><code class="docutils literal notranslate"><span class="pre">Compact</span> <span class="pre">Uniform</span> <span class="pre">Resource</span> <span class="pre">Identifiers</span></code></a>, hosted by the EBI provides a resolution service, both as a web form and through the URL pattern.
+<div><p><a class="reference external" href="https://identifiers.org">Identifiers.org</a> is a <strong>Resolution Service</strong> provides consistent access to life science data using <a class="reference external" href="https://www.w3.org/TR/2010/NOTE-curie-20101216/"><code class="docutils literal notranslate"><span class="pre">Compact</span> <span class="pre">Uniform</span> <span class="pre">Resource</span> <span class="pre">Identifiers</span></code></a>, hosted by the EBI provides a resolution service, both as a web form and through the URL pattern <a class="footnote-reference brackets" href="#juty2012" id="id6">8</a>.
 <code class="docutils literal notranslate"><span class="pre">Compact</span> <span class="pre">Identifiers</span></code> consist of an <code class="docutils literal notranslate"><span class="pre">assigned</span></code>, <code class="docutils literal notranslate"><span class="pre">unique</span></code> <code class="docutils literal notranslate"><span class="pre">prefix</span></code> and a <code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">provider</span> <span class="pre">designated</span></code> <strong><code class="docutils literal notranslate"><span class="pre">accession</span> <span class="pre">number</span></code></strong> (prefix:accession).
 The resolving location of <code class="docutils literal notranslate"><span class="pre">Compact</span> <span class="pre">Identifiers</span></code> is determined using information that is stored in the <a class="reference external" href="http://identifiers.org/">Identifiers.org Registry</a>.
 Datasets can register their <em>namespace <code class="docutils literal notranslate"><span class="pre">prefix</span></code></em> together with their <code class="docutils literal notranslate"><span class="pre">identifier</span> <span class="pre">pattern</span></code>. The service can then be used in the same way as the DOI resolution service. So for the UniProt page about BRCA1, we can resolve the CURIE <code class="docutils literal notranslate"><span class="pre">[uniprot:P38938]</span></code> using <a class="reference external" href="http://Identifiers.org">Identifiers.org</a>. This means that the URL <a class="reference external" href="https://identifiers.org/uniprot:P38938">https://identifiers.org/uniprot:P38938</a> resolves to the UniProt page <a class="reference external" href="https://www.uniprot.org/uniprot/P38938">https://www.uniprot.org/uniprot/P38938</a>.</p>
@@ -1260,52 +1284,76 @@ N2T can store more than one “target” (forwarding link) for an identifier, as
 </div></blockquote>
 </li>
 </ul>
-<p><em>For more details, see the <a class="reference external" href="https://www.TODO.org/identifier-services/id-resolution.html">Identifier Resolution Services recipe</a>.</em></p>
+<p><em>For more details, see the <a class="reference internal" href="../infrastructure/id-resolution.html#fcb-infra-idres"><span class="std std-ref">Identifier Resolution Services recipe</span></a>.</em></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusion">
 <h2><span class="section-number">1.9. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>In this recipe, we have given an overview of globally unique and persistent identifier, i.e. FAIR principle F1. We have covered:</p>
+<div><p>In this recipe, we have given an overview of globally unique and persistent identifier <a class="footnote-reference brackets" href="#mcmurry2017" id="id7">9</a>, <a class="footnote-reference brackets" href="#ananthakrishnan2020" id="id8">7</a>, i.e. FAIR principle F1. We have covered:</p>
 <ul class="simple">
 <li><p>The difference between global and local identifiers;</p></li>
 <li><p>How to convert a local identifier into a global one;</p></li>
 <li><p>Opaque and transparent identifiers</p></li>
 </ul>
 <p>We have given an overview of the different services available for handling identifiers.</p>
-<p>But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI, RDF and HTTP.</p>
+<p>But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI<a class="footnote-reference brackets" href="#url" id="id9">6</a>,<a class="footnote-reference brackets" href="#cool-uri" id="id10">3</a>,<a class="footnote-reference brackets" href="#cool-urisemweb" id="id11">12</a>, RDF<a class="footnote-reference brackets" href="#rdfconcepts" id="id12">5</a> and HTTP.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
 <h3><span class="section-number">1.9.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/">The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca</a></p></li>
-<li><p><a class="reference external" href="https://www.TODO.org/infrastructure/minids.html">Identifier Minting with Minid Client</a></p></li>
-<li><p><a class="reference external" href="https://www.TODO.org/findability/why-identifiers.html">Why resolvable identifiers matter?</a></p></li>
-<li><p><a class="reference external" href="https://www.TODO.org/identifier-services/id-resolution.html">Identifier Resolution Services</a></p></li>
-<li><p><a class="reference external" href="https://www.TODO.org/identifier-services/identifier-mapping.html">Identifier Mapping Services</a></p></li>
+<li><p><a class="reference internal" href="identifiers-minids.html#fcb-find-id-minid"><span class="std std-ref">Identifier Minting with Minid Client</span></a></p></li>
 </ul>
 </div>
+<!-- > * [Why resolvable identifiers matter?](https://www.TODO.org/findability/why-identifiers.html) -->
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../infrastructure/id-resolution.html#fcb-infra-idres"><span class="std std-ref">Identifier Resolution Services</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Identifier Mapping Services</span></a></p></li>
+</ul>
+</div></blockquote>
 </div>
 <hr class="docutils" />
 <div class="section" id="references">
 <h2><span class="section-number">1.10. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>IRI. <a class="reference external" href="https://tools.ietf.org/html/rfc3987">https://tools.ietf.org/html/rfc3987</a></p></li>
-<li><p>CURIE. <a class="reference external" href="https://www.w3.org/TR/2010/NOTE-curie-20101216/">https://www.w3.org/TR/2010/NOTE-curie-20101216/</a></p></li>
-<li><p>URL. <a class="reference external" href="https://tools.ietf.org/html/rfc1738">https://tools.ietf.org/html/rfc1738</a></p></li>
-<li><p>RDF concepts. <a class="reference external" href="https://www.w3.org/TR/rdf-concepts/">https://www.w3.org/TR/rdf-concepts/</a></p></li>
-<li><p>MD5 specifications. <a class="reference external" href="https://tools.ietf.org/html/rfc1321">https://tools.ietf.org/html/rfc1321</a></p></li>
-<li><p>Blake2 specifications. <a class="reference external" href="https://tools.ietf.org/html/rfc7693">https://tools.ietf.org/html/rfc7693</a></p></li>
-<li><p>Cool URIs don’t change. <a class="reference external" href="https://www.w3.org/Provider/Style/URI">https://www.w3.org/Provider/Style/URI</a></p></li>
-<li><p>Leo Sauermann and Richard Cyganiak (eds.) (2008 December 3). Cool URIs for the Semantic Web, W3C Semantic Web Education and Outreach Interest Group Note, <a class="reference external" href="http://w3.org/TR/cooluris/">http://w3.org/TR/cooluris/</a></p></li>
-<li><p><a class="reference external" href="https://blog.adamretter.org.uk/archival-identifiers-for-digital-files/">https://blog.adamretter.org.uk/archival-identifiers-for-digital-files/</a></p></li>
-<li><p><a class="reference external" href="https://blog.adamretter.org.uk/archival-catalog-identifiers/">https://blog.adamretter.org.uk/archival-catalog-identifiers/</a></p></li>
-<li><p>Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data. <a class="reference external" href="https://doi.org/10.1371/journal.pbio.2001414">https://doi.org/10.1371/journal.pbio.2001414</a></p></li>
-<li><p>Nick Juty, Sarala M Wimalaratne, Stian Soiland-Reyes, John Kunze, Carole A Goble, and Tim Clark. 2020. Unique, persistent, resolvable: Identifiers as the foundation of FAIR. Data Intelligence (2020), 30–39. <a class="reference external" href="https://doi.org/10.1162/dint_a_00025">https://doi.org/10.1162/dint_a_00025</a></p></li>
-<li><p>Nick Juty, Nicolas Le Novere, and Camille Laibe. 2012. <a class="reference external" href="http://Identifiers.org">Identifiers.org</a> and MIRIAM Registry: Community resources to provide persistent identification. Nucleic Acids Research 40, D1 (2012), D580–D586. <a class="reference external" href="https://doi.org/10.1093/nar/gkr1097">https://doi.org/10.1093/nar/gkr1097</a></p></li>
-<li><p>Rachana Ananthakrishnan, Kyle  Chard, Mike  D’Arcy, Ian T Foster, Carl F Kesselman , Brendan  McCollam , Jim Christopher Pruyne , Philippe  Rocca-Serra, Robert E Schuler, Rick P Wagner. An Open Ecosystem for Pervasive Use of Persistent Identifiers. <a class="reference external" href="https://doi.org/10.1145/3311790.3396660">https://doi.org/10.1145/3311790.3396660</a></p></li>
-</ol>
+<p id="bibtex-footbibliography-content/recipes/findability/identifiers-0"><dl class="footnote brackets">
+<dt class="label" id="blake2"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p>Blake2 specifications. URL: <a class="reference external" href="https://tools.ietf.org/html/rfc7693">https://tools.ietf.org/html/rfc7693</a>.</p>
+</dd>
+<dt class="label" id="cool-uri"><span class="brackets"><a class="fn-backref" href="#id10">3</a></span></dt>
+<dd><p>Cool uris don’t change. URL: <a class="reference external" href="https://www.w3.org/Provider/Style/URI">https://www.w3.org/Provider/Style/URI</a>.</p>
+</dd>
+<dt class="label" id="md5"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dd><p>Md5 specifications. URL: <a class="reference external" href="https://tools.ietf.org/html/rfc1321">https://tools.ietf.org/html/rfc1321</a>.</p>
+</dd>
+<dt class="label" id="rdfconcepts"><span class="brackets"><a class="fn-backref" href="#id12">5</a></span></dt>
+<dd><p>Rdf concepts. URL: <a class="reference external" href="https://www.w3.org/TR/rdf-concepts/">https://www.w3.org/TR/rdf-concepts/</a>.</p>
+</dd>
+<dt class="label" id="url"><span class="brackets"><a class="fn-backref" href="#id9">6</a></span></dt>
+<dd><p>Url. URL: <a class="reference external" href="https://tools.ietf.org/html/rfc1738">https://tools.ietf.org/html/rfc1738</a>.</p>
+</dd>
+<dt class="label" id="ananthakrishnan2020"><span class="brackets"><a class="fn-backref" href="#id8">7</a></span></dt>
+<dd><p>Rachana Ananthakrishnan, Kyle Chard, Mike D’Arcy, Ian Foster, Carl Kesselman, Brendan McCollam, Jim Pruyne, Philippe Rocca-Serra, Robert Schuler, and Rick Wagner. An open ecosystem for pervasive use of persistent identifiers. In <em>Practice and Experience in Advanced Research Computing</em>, PEARC ‘20, 99–105. New York, NY, USA, 2020. Association for Computing Machinery. URL: <a class="reference external" href="https://doi.org/10.1145/3311790.3396660">https://doi.org/10.1145/3311790.3396660</a>, <a class="reference external" href="https://doi.org/10.1145/3311790.3396660">doi:10.1145/3311790.3396660</a>.</p>
+</dd>
+<dt class="label" id="juty2012"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dd><p>N. Juty, N. Le Novère, and C. Laibe. Identifiers.org and MIRIAM Registry: community resources to provide persistent identification. <em>Nucleic Acids Res</em>, 40(Database issue):D580–586, Jan 2012.</p>
+</dd>
+<dt class="label" id="mcmurry2017"><span class="brackets"><a class="fn-backref" href="#id7">9</a></span></dt>
+<dd><p>J. A. McMurry, N. Juty, N. Blomberg, T. Burdett, T. Conlin, N. Conte, M. Courtot, J. Deck, M. Dumontier, D. K. Fellows, A. Gonzalez-Beltran, P. Gormanns, J. Grethe, J. Hastings, J. K. Hériché, H. Hermjakob, J. C. Ison, R. C. Jimenez, S. Jupp, J. Kunze, C. Laibe, N. Le Novère, J. Malone, M. J. Martin, J. R. McEntyre, C. Morris, J. Muilu, W. Müller, P. Rocca-Serra, S. A. Sansone, M. Sariyar, J. L. Snoep, S. Soiland-Reyes, N. J. Stanford, N. Swainston, N. Washington, A. R. Williams, S. M. Wimalaratne, L. M. Winfree, K. Wolstencroft, C. Goble, C. J. Mungall, M. A. Haendel, and H. Parkinson. Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data. <em>PLoS Biol</em>, 15(6):e2001414, Jun 2017.</p>
+</dd>
+<dt class="label" id="retter-1"><span class="brackets"><a class="fn-backref" href="#id1">10</a></span></dt>
+<dd><p>Adam Retter. Archival catalogue record identifiers. URL: <a class="reference external" href="https://blog.adamretter.org.uk/archival-catalog-identifiers/">https://blog.adamretter.org.uk/archival-catalog-identifiers/</a>.</p>
+</dd>
+<dt class="label" id="retter-2"><span class="brackets"><a class="fn-backref" href="#id2">11</a></span></dt>
+<dd><p>Adam Retter. Archival identifiers for digital files. URL: <a class="reference external" href="https://blog.adamretter.org.uk/archival-identifiers-for-digital-files/">https://blog.adamretter.org.uk/archival-identifiers-for-digital-files/</a>.</p>
+</dd>
+<dt class="label" id="cool-urisemweb"><span class="brackets"><a class="fn-backref" href="#id11">12</a></span></dt>
+<dd><p>Leo Sauermann and Richard Cyganiak. Cool uris for the semantic web, w3c semantic web education and outreach interest group note. 2008. URL: <a class="reference external" href="https://www.w3.org/TR/cooluris/">https://www.w3.org/TR/cooluris/</a>.</p>
+</dd>
+</dl>
+</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
@@ -1366,7 +1414,7 @@ N2T can store more than one “target” (forwarding link) for an identifier, as
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="safe-curie"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="safe-curie"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
 <dd><p>The CURIES are included in square brackets to make them <em>safe CURIEs</em>, meaning that they should not be confused for URIs.</p>
 </dd>
 </dl>

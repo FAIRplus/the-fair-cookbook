@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -61,7 +60,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Applied examples" href="../applied-examples.html" />
+    <link rel="next" title="Infrastructure" href="../infrastructure.html" />
     <link rel="prev" title="4. Declaring data’s permitted uses" href="expressing-data-use.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -789,7 +812,7 @@ No
 </div>
 <div class="section" id="camflow">
 <h2><span class="section-number">5.4. </span>CamFLow<a class="headerlink" href="#camflow" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://camflow.org/#output_format">CamFlow</a> is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit <span id="id1">[<a class="reference internal" href="#id13"><span>PHG+17</span></a>]</span>.</p>
+<p><a class="reference external" href="https://camflow.org/#output_format">CamFlow</a> is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit <a class="footnote-reference brackets" href="#pasquier2017camflow" id="id1">1</a>.</p>
 <p>CamFlow support 2 output formats.</p>
 <ul class="simple">
 <li><p>W3C PROV-JSON format</p></li>
@@ -848,8 +871,8 @@ No
 </div>
 <div class="section" id="references">
 <h2><span class="section-number">5.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id1">PHG+17</a></span></dt>
+<p id="bibtex-footbibliography-content/recipes/reusability/provenance-0"><dl class="footnote brackets">
+<dt class="label" id="pasquier2017camflow"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Thomas F. J.-M. Pasquier, Xueyuan Han, Mark Goldstein, Thomas Moyer, David M. Eyers, Margo I. Seltzer, and Jean Bacon. Practical whole-system provenance capture. <em>CoRR</em>, 2017. URL: <a class="reference external" href="http://arxiv.org/abs/1711.05296">http://arxiv.org/abs/1711.05296</a>, <a class="reference external" href="https://arxiv.org/abs/1711.05296">arXiv:1711.05296</a>.</p>
 </dd>
 </dl>
@@ -884,6 +907,7 @@ No
 <h2><span class="section-number">5.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<hr class="footnotes docutils" />
 </div>
 </div>
 
@@ -913,7 +937,7 @@ No
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="expressing-data-use.html" title="previous page"><span class="section-number">4. </span>Declaring data’s permitted uses</a>
-    <a class='right-next' id="next-link" href="../applied-examples.html" title="next page">Applied examples</a>
+    <a class='right-next' id="next-link" href="../infrastructure.html" title="next page">Infrastructure</a>
 
         </div>
         

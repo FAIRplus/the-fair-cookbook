@@ -1,16 +1,16 @@
 (fcb-assess-fair-automatic-evaluator)=
-# Evaluating FAIRness with FAIREvaluator
+# FAIR Evaluator tool
 
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FBC049
+:identifier_link: 'https://w3id.org/faircookbook/FBC049'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Evaluating FAIRness with FAIREvaluator
+:recipe_name: FAIR Evaluator tool
 ```` 
 
 <!-- ----
@@ -56,8 +56,6 @@
 ````
  -->
 
-___
-
 
 ## Ingredients
 	
@@ -91,8 +89,8 @@ ___
 
 ## Objectives
 
-Perform an automatic assessment of the status of a dataset with respect to the FAIR principles.
-Obtain human and machine readable reports highlighting the main 
+- Perform an automatic assessment of a dataset against the FAIR principles {footcite}`pmid26978244` expressed as nanopublications using the [FAIREvaluator](https://w3id.org/AmIFAIR) {footcite}`pmid31541130`.
+- Obtain human and machine readable reports highlighting strengths and weaknesses with respect to FAIR.
 
 ## Step by Step Process
 
@@ -214,17 +212,23 @@ Services such as the FAIRevaluator are essential to gauge improvements of data m
 
 ## Reference
 
-Wilkinson, M.D., Dumontier, M., Sansone, S. et al. Evaluating FAIR maturity through a scalable, automated, community-governed framework. Sci Data 6, 174 (2019). [doi:10.1038/s41597-019-0184-5](https://doi.org/10.1038/s41597-019-0184-5)
+```{footbibliography}
+```
+
+<!-- Wilkinson, M.D., Dumontier, M., Sansone, S. et al. Evaluating FAIR maturity through a scalable, automated, community-governed framework. Sci Data 6, 174 (2019). [doi:10.1038/s41597-019-0184-5](https://doi.org/10.1038/s41597-019-0184-5)
 
 Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Resources, Cell Systems (2019),[doi:10.1016/j.cels.2019.09.011](https://doi.org/10.1016/j.cels.2019.09.011)
-
+ -->
 
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | 
+| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/terazus'><img class='avatar-style' src='https://avatars.githubusercontent.com/terazus'></img><div class="d-block">Dominique Batista</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0002-2109-489X'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
+
+
 
 ___
 

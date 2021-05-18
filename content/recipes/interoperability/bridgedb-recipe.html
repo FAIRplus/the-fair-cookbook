@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Identifier mapping with BridgeDB</title>
+    <title>2. Identifier mapping with BridgeDb</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -61,7 +60,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="bridgedb/bridgedb-example.html" />
+    <link rel="next" title="Using BridgeDb web services" href="bridgedb/bridgedb-example.html" />
     <link rel="prev" title="1. Interlinking data from different sources" href="identifier-mapping.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,8 +70,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/bridgedb-recipe.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Identifier mapping with BridgeDB" />
-<meta property="og:description" content="Identifier mapping with BridgeDB  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@t" />
+<meta property="og:title"       content="Identifier mapping with BridgeDb" />
+<meta property="og:description" content="Identifier mapping with BridgeDb  &lt;!-- TODO : the recipe does not reference its figures --&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;:" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="current reference internal" href="#">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -730,11 +753,14 @@
         
               <div>
                 
-  <div class="section" id="fcb-bridgedb">
-<span id="identifier-mapping-with-bridgedb"></span><h1><span class="section-number">2. </span>Identifier mapping with BridgeDB<a class="headerlink" href="#fcb-bridgedb" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="fcb-bridgedb-recipe">
+<span id="identifier-mapping-with-bridgedb"></span><h1><span class="section-number">2. </span>Identifier mapping with BridgeDb<a class="headerlink" href="#fcb-bridgedb-recipe" title="Permalink to this headline">¶</a></h1>
+<!--
+TODO : the recipe does not reference its figures
+-->
 <br/>
 <hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Identifier mapping with BridgeDB", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB017", "url": "https://w3id.org/faircookbook/FCB017"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Identifier mapping with BridgeDb", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB017", "url": "https://w3id.org/faircookbook/FCB017"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -769,7 +795,7 @@ Yes
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Identifier mapping with BridgeDB</div>
+<div style="flex-grow:1; margin-right:5px">Identifier mapping with BridgeDb</div>
 <img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
@@ -794,17 +820,17 @@ Yes
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is to:</p>
 <blockquote>
-<div><p>Provide practical examples on how to <strong>map identifiers for Genes, Proteins, Metabolites and Pathways</strong> between resources using a purpose built tool, namely <a class="reference external" href="https://bio.tools/bridgedb">BridgeDB</a>.
-Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by <a class="reference external" href="https://bio.tools/bridgedb">BridgeDB</a>.</p>
+<div><p>Provide practical examples on how to <strong>map identifiers for Genes, Proteins, Metabolites and Pathways</strong> between resources using a purpose built tool, namely <a class="reference external" href="https://bio.tools/bridgedb">BridgeDb</a>.
+Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by <a class="reference external" href="https://bio.tools/bridgedb">BridgeDb</a>.</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
 <h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <p>This recipe will cover the highlighted topics</p>
-<div class="figure align-default" id="overview-identifier-mapping-1">
-<a class="reference internal image-reference" href="../../../_images/id-map-service-mermaid.png"><img alt="Overview of key aspects in  Identifier Mapping" src="../../../_images/id-map-service-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Overview of key aspects in  Identifier Mapping</span><a class="headerlink" href="#overview-identifier-mapping-1" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="bridgedb-recipe-figure0">
+<img alt="Overview of key aspects in Identifier Mapping" src="../../../_images/identifier-mapping.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Overview of key aspects in Identifier Mapping</span><a class="headerlink" href="#bridgedb-recipe-figure0" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -815,7 +841,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <li><p>Recipe dependency:</p>
   <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
 <ul class="simple">
-<li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
+<li><p><a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
 </ul>
 </li>
 <li><p>Skill dependency:</p>
@@ -828,7 +854,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <li><p>Technical dependency</p>
 <ul class="simple">
 <li><p>R or Python environment</p></li>
-<li><p>BridgeDB R package installed</p></li>
+<li><p>BridgeDb R package installed</p></li>
 </ul>
 </li>
 </ul>
@@ -893,7 +919,7 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <td><p>1.3.0</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/bridgedb/BridgeDbR">BridgeDbR</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://doi.org/doi:10.18129/B9.bioc.BridgeDbR">BridgeDbR</a></p></td>
 <td><p>An R package for BridgeDb</p></td>
 <td><p>2.0.0</p></td>
 <td><p></p></td>
@@ -904,15 +930,15 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <hr class="docutils" />
 <div class="section" id="id1">
 <h2>Identifier mapping with BridgeDb<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use <a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> to carry out  this process.</p>
-<p><a class="reference external" href="https://bridgedb.github.io/">BridgeDB</a> is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:</p>
+<p><a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use <a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> to carry out this process.</p>
+<p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> is an open source tool dedicated to performing identifier mapping <a class="footnote-reference brackets" href="#van-iersel-bridgedb-2010" id="id2">2</a>. BridgeDb offers three different interfaces:</p>
 <ul class="simple">
 <li><p>Java API</p></li>
 <li><p>R package</p></li>
 <li><p>REST Web-services</p></li>
 </ul>
 <blockquote>
-<div><p>:book: In the context of this recipe, we distinguish between two types of identifiers:</p>
+<div><p>📖 In the context of this recipe, we distinguish between two types of identifiers:</p>
 <ul class="simple">
 <li><p><em>Local identifiers</em> which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization).</p></li>
 <li><p><em>Global identifiers</em> which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb’s <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">data sources file</a></p></li>
@@ -926,9 +952,9 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <div class="section" id="bridgedb-via-webservices-using-python">
 <h4>BridgeDb via Webservices using Python<a class="headerlink" href="#bridgedb-via-webservices-using-python" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>:exclamation: For this tutorial Python v3.8.5, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> v1.1.3, and BridgeDb Webservices v0.9.0 were used.</p>
+<div><p>❗ For this tutorial Python v3.8.5, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> v1.1.3, and BridgeDb Webservices v0.9.0 were used.</p>
 </div></blockquote>
-<p>One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform the mappings suggested under <a class="reference external" href="#Cases">Cases</a>.</p>
+<p>One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform exemplary mappings.</p>
 <p>We start by defining strings containing the URL of the webservices and the specific method from the Webservices we want to use. In our case, a <code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">cross</span> <span class="pre">reference</span></code>. When doing the query, we need to specify <strong>the organism</strong> and <strong>the source dataset</strong>. We can also <em>optionally</em> specify a <em>target data source</em> if we only want to map to a specific data source, e.g. Ensembl.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://webservice.bridgedb.org/&quot;</span>
 <span class="n">batch_request</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">&quot;</span><span class="si">{org}</span><span class="s2">/xrefsBatch/</span><span class="si">{source}{}</span><span class="s2">&quot;</span>
@@ -1175,7 +1201,7 @@ This is a step that should be done manually. In this case an important decision 
 <h3>Mapping local identifier to a different global identifier<a class="headerlink" href="#mapping-local-identifier-to-a-different-global-identifier" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to <a class="reference external" href="http://www.genenames.org">HGNC</a>. One may consult the list of other potential data formats in the <a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a> recipe. The mapping should be <strong>one-to-one</strong> for this recipe.</p>
+<p>In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to <a class="reference external" href="http://www.genenames.org">HGNC</a>. One may consult the list of other potential data formats in the <a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a> recipe. The mapping should be <strong>one-to-one</strong> for this recipe.</p>
 </div>
 <p>The TSV mapping file looks as follows:</p>
 <table class="colwidths-auto table">
@@ -1199,8 +1225,8 @@ This is a step that should be done manually. In this case an important decision 
 <p>You may notice the <code class="docutils literal notranslate"><span class="pre">source</span></code> identifiers correspond with those used in the previous example.</p>
 <p>This is how the mapping will work</p>
 <div class="figure align-default" id="bridgedb-recipe-figure1">
-<img alt="Overview of BridgeDB tools" src="content/recipes/interoperability/bridgedb-recipe.md-figure1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Overview of BridgeDB tools</span><a class="headerlink" href="#bridgedb-recipe-figure1" title="Permalink to this image">¶</a></p>
+<img alt="Overview of BridgeDb tools" src="../../../_images/bridgedb-recipe.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Overview of BridgeDb tools</span><a class="headerlink" href="#bridgedb-recipe-figure1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="webservices-in-python">
 <h4>Webservices in Python<a class="headerlink" href="#webservices-in-python" title="Permalink to this headline">¶</a></h4>
@@ -1322,12 +1348,12 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 </table>
 <p>Here, we see a <code class="docutils literal notranslate"><span class="pre">one-to-one</span></code> relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is <code class="docutils literal notranslate"><span class="pre">one-to-many</span></code>. Depending on the identifiers and resources, the relation could also be <code class="docutils literal notranslate"><span class="pre">many-to-many</span></code> as shown below.</p>
 <div class="figure align-default" id="bridgedb-recipe-figure2">
-<img alt="An example of a mapping via BridgeDB." src="content/recipes/interoperability/bridgedb-recipe.md-figure2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">An example of a mapping via BridgeDB. You may notice that despite the 1-to-1 relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">original</span></code> we get a N-to-N relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code> due to the N-to-N relation between <code class="docutils literal notranslate"><span class="pre">original</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code>.</span><a class="headerlink" href="#bridgedb-recipe-figure2" title="Permalink to this image">¶</a></p>
+<img alt="An example of a mapping via BridgeDb." src="../../../_images/bridgedb-recipe.md-figure2.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">An example of a mapping via BridgeDb. You may notice that despite the 1-to-1 relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">original</span></code> we get a N-to-N relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code> due to the N-to-N relation between <code class="docutils literal notranslate"><span class="pre">original</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code>.</span><a class="headerlink" href="#bridgedb-recipe-figure2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id2">1</a>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.</p>
+<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id3">1</a>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.</p>
 </div>
 </div>
 <div class="section" id="r-package">
@@ -1469,7 +1495,7 @@ To see the equivalences with our local identifiers, we can simply join the dataf
 <hr class="docutils" />
 <div class="section" id="code">
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
-<p>You can find ready-made methods to map using R and Python for the given use cases <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/tree/bridgedb/docs/content/recipes/interoperability/bridgedb/">here</a>. These assume the data has the structure described in this recipe.</p>
+<p>You can find ready-made methods to map using R and Python for the given use cases <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/tree/9ad9481be32812b2565f9f9f1897642ae26eddff/content/recipes/interoperability/bridgedb/data">here</a>. These assume the data has the structure described in this recipe.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusion">
@@ -1482,7 +1508,7 @@ These are aspects of information provenance which we plan to provide in the futu
 <h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../findability/identifiers.html#fcb-find-identifiers"><span class="std std-ref">Unique, persistent identifiers</span></a></p></li>
-<li><p><a class="reference internal" href="identifier-mapping.html#fcb-interop-idmapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
+<li><p><a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -1490,8 +1516,11 @@ These are aspects of information provenance which we plan to provide in the futu
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p id="bibtex-footbibliography-content/recipes/interoperability/bridgedb-recipe-0"><dl class="footnote brackets">
-<dt class="label" id="batchelor-scientific-nodate"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="batchelor-scientific-nodate"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
 <dd><p>Colin Batchelor, Christian Y A Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T Evelo, Anna Gaulton, Carole Goble, Alasdair J G Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, and Egon L Willighagen. Scientiﬁc Lenses to Support Multiple Views over Linked Chemistry Data. In <em>The Semantic Web – ISWC 2014. Lecture Notes in Computer Science</em>, 16. 2014. <a class="reference external" href="https://doi.org/10.1007/978-3-319-11964-9_7">doi:10.1007/978-3-319-11964-9_7</a>.</p>
+</dd>
+<dt class="label" id="van-iersel-bridgedb-2010"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Martijn P. van Iersel, Alexander R. Pico, Thomas Kelder, Jianjiong Gao, Isaac Ho, Kristina Hanspers, Bruce R. Conklin, and Chris T. Evelo. The BridgeDb framework: standardized access to gene, protein and metabolite identifier mapping services. <em>BMC Bioinformatics</em>, 11(1):5, January 2010. URL: <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">https://doi.org/10.1186/1471-2105-11-5</a> (visited on 2021-02-05), <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">doi:10.1186/1471-2105-11-5</a>.</p>
 </dd>
 </dl>
 </p>
@@ -1571,7 +1600,7 @@ These are aspects of information provenance which we plan to provide in the futu
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="identifier-mapping.html" title="previous page"><span class="section-number">1. </span>Interlinking data from different sources</a>
-    <a class='right-next' id="next-link" href="bridgedb/bridgedb-example.html" title="next page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="bridgedb/bridgedb-example.html" title="next page">Using BridgeDb web services</a>
 
         </div>
         

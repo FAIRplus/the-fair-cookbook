@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -699,12 +722,12 @@
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#pull-the-docker-container-for-proteowizard">
-       4. pull the docker container for ProteoWizard:
+       4. pull the docker container for ProteoWizard
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#testing-and-processing-the-resulting-mzml-files">
-       5. Testing and processing the resulting mzML files:
+       5. Testing and processing the resulting mzML files
       </a>
      </li>
     </ul>
@@ -964,7 +987,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 <a class="reference internal image-reference" href="https://i.imgur.com/AWOWTbr.png"><img alt="A Standard Record in the FAIRsharing catalog of resources" src="https://i.imgur.com/AWOWTbr.png" style="width: 750px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 10.2 </span><span class="caption-text">The <a class="reference external" href="https://fairsharing.org/FAIRsharing.26dmba">HUPI-PSI mzML Standard Record</a> in the <a class="reference external" href="https://fairsharing.org/">Elixir FAIRsharing catalog</a> of resources.</span><a class="headerlink" href="#a-standard-record-in-the-fairsharing-catalog-of-resources" title="Permalink to this image">¶</a></p>
 </div>
-<p>The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a <code class="docutils literal notranslate"><span class="pre">containerized</span></code> version of the <a class="reference external" href="https://github.com/ProteoWizard/pwiz">Proteowizard</a>.</p>
+<p>The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a <code class="docutils literal notranslate"><span class="pre">containerized</span></code> version of the <a class="reference external" href="https://github.com/ProteoWizard/pwiz">Proteowizard</a> <a class="footnote-reference brackets" href="#chambers2012" id="id1">2</a>.</p>
 <blockquote>
 <div><p><strong>requirements</strong>:</p>
 </div></blockquote>
@@ -987,7 +1010,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 <h4>3. sign-up and/or login to <a class="reference external" href="https://hub.docker.com/">https://hub.docker.com/</a><a class="headerlink" href="#sign-up-and-or-login-to-https-hub-docker-com" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="pull-the-docker-container-for-proteowizard">
-<h4>4. pull the docker container for ProteoWizard:<a class="headerlink" href="#pull-the-docker-container-for-proteowizard" title="Permalink to this headline">¶</a></h4>
+<h4>4. pull the docker container for ProteoWizard<a class="headerlink" href="#pull-the-docker-container-for-proteowizard" title="Permalink to this headline">¶</a></h4>
 <p>:warning: be sure to sign-up and login to <a class="reference external" href="https://hub.docker.com/">https://hub.docker.com/</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;docker pull chambm/pwiz-i-agree-to-the-vendor-licenses
 </pre></div>
@@ -1010,7 +1033,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 <li><p>unsupported vendor format</p></li>
 </ul>
 <p>To address the former, it is good practice to compute a hash (md5, sha2) checksum fingerprinting each of the files. This allows to ensure that no file corruption has occurred during transfer and copy.</p>
-<p>To address the latter, one should consult to table of compatibility:</p>
+<p>To address the latter, one should consult the table of compatibility:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Format</p></th>
@@ -1061,9 +1084,9 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 </table>
 </div>
 <div class="section" id="testing-and-processing-the-resulting-mzml-files">
-<h4>5. Testing and processing the resulting mzML files:<a class="headerlink" href="#testing-and-processing-the-resulting-mzml-files" title="Permalink to this headline">¶</a></h4>
-<p>for users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.</p>
-<p>A number of libraries are available for parsing (reading and writing) <code class="docutils literal notranslate"><span class="pre">mzML</span></code> document. <code class="docutils literal notranslate"><span class="pre">mzML</span></code> is a king of <code class="docutils literal notranslate"><span class="pre">XML</span></code> format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library.</p>
+<h4>5. Testing and processing the resulting mzML files<a class="headerlink" href="#testing-and-processing-the-resulting-mzml-files" title="Permalink to this headline">¶</a></h4>
+<p>For users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.</p>
+<p>A number of libraries are available for parsing (reading and writing) <code class="docutils literal notranslate"><span class="pre">mzML</span></code> document. <code class="docutils literal notranslate"><span class="pre">mzML</span></code> is a king of <code class="docutils literal notranslate"><span class="pre">XML</span></code> format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library <a class="footnote-reference brackets" href="#bald2012" id="id2">1</a>.</p>
 <!-- <div>
 <img src="https://i.imgur.com/BTs0GUS.png" width="750" border="1"/>
 </div> -->
@@ -1117,10 +1140,17 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918–920 (2012). <a class="reference external" href="https://doi.org/10.1038/nbt.237">https://doi.org/10.1038/nbt.237</a></p></li>
-<li><p>Bald T, Barth J, Niehues A, et al. pymzML–Python module for high-throughput bioinformatics on mass spectrometry data. Bioinformatics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI: 10.1093/bioinformatics/bts066.</p></li>
-</ol>
+<p id="bibtex-footbibliography-content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar-0"><dl class="footnote brackets">
+<dt class="label" id="bald2012"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>T. Bald, J. Barth, A. Niehues, M. Specht, M. Hippler, and C. Fufezan. pymzML–Python module for high-throughput bioinformatics on mass spectrometry data. <em>Bioinformatics</em>, 28(7):1052–1053, Apr 2012.</p>
+</dd>
+<dt class="label" id="chambers2012"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>M. C. Chambers, B. Maclean, R. Burke, D. Amodei, D. L. Ruderman, S. Neumann, L. Gatto, B. Fischer, B. Pratt, J. Egertson, K. Hoff, D. Kessner, N. Tasman, N. Shulman, B. Frewen, T. A. Baker, M. Y. Brusniak, C. Paulse, D. Creasy, L. Flashner, K. Kani, C. Moulding, S. L. Seymour, L. M. Nuwaysir, B. Lefebvre, F. Kuhlmann, J. Roark, P. Rainer, S. Detlev, T. Hemenway, A. Huhmer, J. Langridge, B. Connolly, T. Chadick, K. Holly, J. Eckels, E. W. Deutsch, R. L. Moritz, J. E. Katz, D. B. Agus, M. MacCoss, D. L. Tabb, and P. Mallick. A cross-platform toolkit for mass spectrometry and proteomics. <em>Nat Biotechnol</em>, 30(10):918–920, Oct 2012.</p>
+</dd>
+</dl>
+</p>
+<!-- 1. Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918–920 (2012). https://doi.org/10.1038/nbt.237
+2. Bald T, Barth J, Niehues A, et al. pymzML--Python module for high-throughput bioinformatics on mass spectrometry data. Bioinformatics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI: 10.1093/bioinformatics/bts066. -->
 </div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
@@ -1164,6 +1194,7 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<hr class="footnotes docutils" />
 </div>
 </div>
 

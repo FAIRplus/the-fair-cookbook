@@ -47,7 +47,6 @@
     <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -114,7 +113,7 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
-   Who should read it
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,54 +133,6 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
-   Infrastructure for FAIR
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
-     1. Identifier resolution services
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
-    </a>
-   </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
@@ -266,9 +217,14 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
-     2. Identifiers mapping with BridgeDB
+     2. Identifier mapping with BridgeDb
     </a>
-    <ul class="simple collapse-ul">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       Using BridgeDb web services
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -378,6 +334,73 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../reusability/provenance.html">
      5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool#FCB050
     </a>
    </li>
   </ul>
@@ -626,79 +649,74 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capability-maturity-table">
-   2.3. Capability &amp; Maturity Table
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#obtain-aspera-services">
-   2.4. Obtain Aspera services
+   2.3. Obtain Aspera services
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#get-accounts-permissions">
-     2.4.1. Get Accounts Permissions:
+     2.3.1. Get Accounts Permissions:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#decide-how-you-are-going-to-access-the-data">
-     2.4.2. Decide how you are going to access the data:
+     2.3.2. Decide how you are going to access the data:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#decide-on-software-needed-and-get-it-installed">
-     2.4.3. Decide on Software needed and get it installed:
+     2.3.3. Decide on Software needed and get it installed:
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#get-the-firewall-configured-as-required-to-allow-downloading-and-or-uploading">
-       2.4.3.1. Get the Firewall Configured as required to allow downloading and or uploading:
+       2.3.3.1. Get the Firewall Configured as required to allow downloading and or uploading:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#work-out-the-appropriate-command-line-options">
-       2.4.3.2. Work out the appropriate command line options:
+       2.3.3.2. Work out the appropriate command line options:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#download-example-command-line">
-       2.4.3.3. Download Example command line:
+       2.3.3.3. Download Example command line:
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#monitoring-connections-and-file-transfers">
-     2.4.4. Monitoring connections and file transfers
+     2.3.4. Monitoring connections and file transfers
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#considerations-for-uploading">
-     2.4.5. Considerations for uploading
+     2.3.5. Considerations for uploading
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   2.5. Conclusion
+   2.4. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     2.5.1. What to read next?
+     2.4.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   2.6. Authors
+   2.5. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   2.7. License
+   2.6. License
   </a>
  </li>
 </ul>
@@ -779,50 +797,33 @@ Yes
 </div>
 <div class="section" id="graphical-overview">
 <h2><span class="section-number">2.2. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="aspera-data-transfer-process">
-<img alt="Aspera Data Transfer Process" src="../../../_images/aspera-figure1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Aspera Data Transfer Process.</span><a class="headerlink" href="#aspera-data-transfer-process" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="aspera-figure1">
+<img alt="Aspera Data Transfer Process" src="../../../_images/aspera.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Aspera Data Transfer Process.</span><a class="headerlink" href="#aspera-figure1" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="capability-maturity-table">
-<h2><span class="section-number">2.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
-<th class="text-align:left head"><p>Initial Maturity Level</p></th>
-<th class="text-align:left head"><p>Final Maturity Level</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 <hr class="docutils" />
 <div class="section" id="obtain-aspera-services">
-<h2><span class="section-number">2.4. </span>Obtain Aspera services<a class="headerlink" href="#obtain-aspera-services" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Obtain Aspera services<a class="headerlink" href="#obtain-aspera-services" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="get-accounts-permissions">
-<h3><span class="section-number">2.4.1. </span>Get Accounts Permissions:<a class="headerlink" href="#get-accounts-permissions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.1. </span>Get Accounts Permissions:<a class="headerlink" href="#get-accounts-permissions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Apply for access</p></li>
 <li><p>Pay attention to the conditions</p></li>
 <li><p>Sign up if you are the appropriate person for this download/upload</p></li>
 <li><p>Typically Aspera sites are locked down and need a username and password.</p></li>
-<li><p>For some sites, only one username is allowed per organisation, so it is worth making sure that that person is technically capable of uploading or downloading data, and also understands the data a little.</p></li>
+<li><p>For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.</p></li>
 </ul>
 </div>
 <div class="section" id="decide-how-you-are-going-to-access-the-data">
-<h3><span class="section-number">2.4.2. </span>Decide how you are going to access the data:<a class="headerlink" href="#decide-how-you-are-going-to-access-the-data" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2. </span>Decide how you are going to access the data:<a class="headerlink" href="#decide-how-you-are-going-to-access-the-data" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>A Web browser is great for initial browsing and downloading of small occasional files. It will automatically prompt you to download the Aspera broswer plugin to be able to do download any files.</p></li>
 <li><p>For heavy duty downloading an Aspera command line client is needed. e.g. to download gigabytes or even terabytes of data.</p></li>
 </ul>
 </div>
 <div class="section" id="decide-on-software-needed-and-get-it-installed">
-<h3><span class="section-number">2.4.3. </span>Decide on Software needed and get it installed:<a class="headerlink" href="#decide-on-software-needed-and-get-it-installed" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.3. </span>Decide on Software needed and get it installed:<a class="headerlink" href="#decide-on-software-needed-and-get-it-installed" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>For linux:</p>
 <ul>
@@ -837,14 +838,14 @@ Yes
 </li>
 </ul>
 <div class="section" id="get-the-firewall-configured-as-required-to-allow-downloading-and-or-uploading">
-<h4><span class="section-number">2.4.3.1. </span>Get the Firewall Configured as required to allow downloading and or uploading:<a class="headerlink" href="#get-the-firewall-configured-as-required-to-allow-downloading-and-or-uploading" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.3.3.1. </span>Get the Firewall Configured as required to allow downloading and or uploading:<a class="headerlink" href="#get-the-firewall-configured-as-required-to-allow-downloading-and-or-uploading" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>You may need to have firewall exceptions raised to unblock ports 3301 and 22, with your organisation IT’s network perimeter team.</p></li>
 <li><p>Try connecting first in case they are already not blocked</p></li>
 </ul>
 </div>
 <div class="section" id="work-out-the-appropriate-command-line-options">
-<h4><span class="section-number">2.4.3.2. </span>Work out the appropriate command line options:<a class="headerlink" href="#work-out-the-appropriate-command-line-options" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.3.3.2. </span>Work out the appropriate command line options:<a class="headerlink" href="#work-out-the-appropriate-command-line-options" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>For the Aspera command line, there are a large variety of options for downloading and uploading. See the download documentation above.</p></li>
 <li><p>Considerations:</p>
@@ -857,7 +858,7 @@ Yes
 </ul>
 </div>
 <div class="section" id="download-example-command-line">
-<h4><span class="section-number">2.4.3.3. </span>Download Example command line:<a class="headerlink" href="#download-example-command-line" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.3.3.3. </span>Download Example command line:<a class="headerlink" href="#download-example-command-line" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>These are the download command options we used. (and both ports 3301 and 22 were unblocked)</p></li>
 </ul>
@@ -880,7 +881,7 @@ ascp version <span class="m">3</span>.9.6.176292
 </div>
 </div>
 <div class="section" id="monitoring-connections-and-file-transfers">
-<h3><span class="section-number">2.4.4. </span>Monitoring connections and file transfers<a class="headerlink" href="#monitoring-connections-and-file-transfers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.4. </span>Monitoring connections and file transfers<a class="headerlink" href="#monitoring-connections-and-file-transfers" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Observe the  download/upload speed e.g. 100Mbs and then you can estimate the finish time</p></li>
 <li><p>Have some automated monitoring on the download process to  notify you if it  stops/finishes.  Even an hourly <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-sh</span></code> from a cron job</p></li>
@@ -888,7 +889,7 @@ ascp version <span class="m">3</span>.9.6.176292
 </ul>
 </div>
 <div class="section" id="considerations-for-uploading">
-<h3><span class="section-number">2.4.5. </span>Considerations for uploading<a class="headerlink" href="#considerations-for-uploading" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.5. </span>Considerations for uploading<a class="headerlink" href="#considerations-for-uploading" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>For uploading much of the above applies. The main differences are:</p>
 <ul>
@@ -904,15 +905,15 @@ ascp version <span class="m">3</span>.9.6.176292
 </div>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">2.5. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Aspera is commercial software</p></li>
 <li><p>Is this still okay as part of FAIR principles? As long as the instution with the server has paid for the licence, clients for the protocol are available at no fee.</p></li>
 </ul>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">2.5.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p><a class="reference internal" href="sftp.html#fcb-access-sftp"><span class="std std-ref">Transferring data with SFTP</span></a></p></li>
+<li><p><span class="xref std std-ref">fcb-access-sftp</span></p></li>
 <li><!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
 </li>
 </ul>
@@ -920,7 +921,7 @@ ascp version <span class="m">3</span>.9.6.176292
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">2.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -951,7 +952,7 @@ ascp version <span class="m">3</span>.9.6.176292
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">2.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>

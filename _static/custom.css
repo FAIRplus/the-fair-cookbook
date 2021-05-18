@@ -669,6 +669,34 @@ div.topbar div.tocsection {
     border-color: #7E0038;
 }
 
+.card.FAIRcard .cardTitle p {
+    margin-bottom: 0;
+}
+
+.miniCards .FAIRcard .bigLetter {
+    padding: 10px 0 0 0 !important;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    margin-right: 0;
+}
+
+.miniCards .FAIRcard .cardTitle {
+    padding-left: 15px;
+}
+
+.miniCards .FAIRcard .card-header {
+    overflow: hidden;
+    word-break: break-word;
+    padding: 10px;
+}
+
+@media (max-width: 1481px) {
+    .miniCards .FAIRcard .cardTitle * {
+        font-size: 1.2rem;
+    }
+}
+
 img.avatar-style {
     border: 4px solid #fc7a4a;
     display: block;

@@ -3,7 +3,7 @@
 # Licensing
 
 ````{panels_fairplus}
-:identifier_text: FCB032	
+:identifier_text: FCB032
 :identifier_link: 'https://w3id.org/faircookbook/FCB032'
 :difficulty_level: 3
 :recipe_type: guidance
