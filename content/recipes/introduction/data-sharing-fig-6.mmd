@@ -1,0 +1,25 @@
+classDiagram
+DataSharingPlatform *-- DataCatalogue: provides
+DataSharingPlatform *-- DataProcessingPlatform: provides
+DataSharingPlatform *-- DataQueryInterface: provides
+DataSharingPlatform *-- DataSharingWorkflow: provides
+DataSharingPlatform *-- DataSharingCommunication: provides
+DataSharingPlatform *-- DataConsumerInterface: provides
+DataConsumerInterface *-- GetAccessWorkflow: provides
+DataConsumerInterface *-- Connect: provides
+DataConsumerInterface *-- Download: provides
+DataConsumerInterface *-- DataSharingConsumptionReport: provides
+GetAccessWorkflow --* FirstAccessWorkflow: provides
+GetAccessWorkflow --* SecurityUpdateWorkflow: provides 
+class GetAccessWorkflow
+class SecurityUpdateWorkflow
+class FirstAccessWorkflow
+class DataSharingConsumptionReport
+class DataSharingCommunication
+class Download
+class Connect
+class DataCatalogue
+class DataProcessingPlatform
+class DataQueryInterface
+class DataConsumerInterface
+class DataSharingPlatform

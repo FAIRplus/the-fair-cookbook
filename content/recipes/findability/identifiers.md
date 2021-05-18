@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: 21.11101/0000-0007-EA08-9
-:identifier_link: http://hdl.handle.net/21.11101/0000-0007-EA08-9
+:identifier_text: FCB006
+:identifier_link: https://w3id.org/faircookbook/FCB006
 :difficulty_level: 3
 :recipe_type: background_information
 :reading_time_minutes: 30

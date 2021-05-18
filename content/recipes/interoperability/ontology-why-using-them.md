@@ -3,8 +3,8 @@
 
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB_TBA
-:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:identifier_text: FCB019
+:identifier_link: https://w3id.org/faircookbook/FCB019
 :difficulty_level: 2
 :recipe_type: survey_review
 :reading_time_minutes: 15

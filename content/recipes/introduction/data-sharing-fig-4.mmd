@@ -1,0 +1,24 @@
+classDiagram
+DataCatalogue --> SharedData: registers
+DataSharingPlatform *-- DataCatalogue: provides
+DataSharingPlatform *-- DataProcessingPlatform: provides
+DataSharingPlatform *-- DataQueryInterface: provides
+DataSharingPlatform *-- DataSharingCommunication: provides
+DataSharingPlatform *-- DataSharingWorkflow: provides
+DataSharingPlatform *-- DataConsumerInterface: provides
+DataSharingPlatform *-- DataOwnerInterface: provides
+DataProvider --> DataSharingPlatform: provides
+DataOwner --> DataOwnerInterface: uses
+DataConsumer --> DataConsumerInterface: uses  
+class SharedData
+class DataCatalogue
+class DataProcessingPlatform
+class DataQueryInterface
+class DataSharingCommunication
+class DataSharingWorkflow
+class DataConsumerInterface
+class DataOwnerInterface
+class DataSharingPlatform
+class DataOwner
+class DataConsumer
+class DataProvider
