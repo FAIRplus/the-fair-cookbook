@@ -1,5 +1,5 @@
 (fcb-bridgedb)=
-# Identifier mapping with BridgeDB
+# Identifier mapping with BridgeDb
 
 
 ````{panels_fairplus}
@@ -10,7 +10,7 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: yeah
-:recipe_name: Identifier mapping with BridgeDB
+:recipe_name: Identifier mapping with BridgeDb
 ```` 
 
 
@@ -18,8 +18,8 @@
 
 The main purpose of this recipe is to:
 
-> Provide practical examples on how to **map identifiers for Genes, Proteins, Metabolites and Pathways** between resources using a purpose built tool, namely [BridgeDB](https://bio.tools/bridgedb).
-> Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by [BridgeDB](https://bio.tools/bridgedb).
+> Provide practical examples on how to **map identifiers for Genes, Proteins, Metabolites and Pathways** between resources using a purpose built tool, namely [BridgeDb](https://bio.tools/bridgedb).
+> Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by [BridgeDb](https://bio.tools/bridgedb).
 
 
 ___
@@ -56,7 +56,7 @@ This recipe has the following requirements:
 
 * Technical dependency
     * R or Python environment
-    * BridgeDB R package installed
+    * BridgeDb R package installed
 ---
 
 ## Capability & Maturity Table
@@ -79,15 +79,15 @@ The table below lists the software that is used to execute the examples in this 
 | [pandas](https://pandas.pydata.org/)                | pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.                                     | 1.1.3   |                                                          |
 | R                                                   | R is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing.                                 | v4.0.3  | https://bio.tools/r                                      |
 | [tidyverse](https://www.tidyverse.org/)                                           | tidyverse is an opinionated collection of R packages designed for data science.  | 1.3.0||
-|[BridgeDbR](https://github.com/bridgedb/BridgeDbR)|An R package for BridgeDb| 2.0.0||
+|[BridgeDbR](https://doi.org/doi:10.18129/B9.bioc.BridgeDbR)|An R package for BridgeDb| 2.0.0||
 
 ___
 
 ## Identifier mapping with BridgeDb
 
-{ref}`fcb-interop-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use [BridgeDb](https://bridgedb.github.io/) to carry out  this process.
+{ref}`fcb-interop-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use [BridgeDb](https://bridgedb.github.io/) to carry out this process.
 
-[BridgeDB](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:
+[BridgeDb](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping. BridgeDb offers three different interfaces:
 * Java API
 * R package
 * REST Web-services
@@ -250,7 +250,7 @@ This is how the mapping will work
 ```{figure} bridgedb-recipe.md-figure1.png
 ---
 name: bridgedb-recipe-figure1
-alt: Overview of BridgeDB tools
+alt: Overview of BridgeDb tools
 ---
 Overview of BridgeDB tools
 ```
