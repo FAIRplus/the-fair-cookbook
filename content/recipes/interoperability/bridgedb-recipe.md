@@ -252,7 +252,7 @@ This is how the mapping will work
 name: bridgedb-recipe-figure1
 alt: Overview of BridgeDb tools
 ---
-Overview of BridgeDB tools
+Overview of BridgeDb tools
 ```
 
 #### Webservices in Python
@@ -299,9 +299,9 @@ Here, we see a `one-to-one` relation between the identifiers in HGNC and En whil
 ```{figure} bridgedb-recipe.md-figure2.png
 ---
 name: bridgedb-recipe-figure2
-alt: An example of a mapping via BridgeDB.
+alt: An example of a mapping via BridgeDb.
 ---
-An example of a mapping via BridgeDB. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
+An example of a mapping via BridgeDb. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
 ```
 
 
