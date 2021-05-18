@@ -34,6 +34,32 @@ alt: building a commmunity compliant metadata profile
 Building a commmunity compliant metadata profile.
 ```
 
+## FAIRification Objectives, Inputs and Outputs
+
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [semantic markup]()|[text]()  | [URI]()|
+| [constraint validation]()  | [text]()  | [DOI]()  |
+||file||
+
+## Table of Data Standards
+
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [YAML](https://yaml.org)  | [EFO](https://fairsharing.org/FAIRsharing.1gr4tz)  |  [MIxS](https://fairsharing.org/bsg-s000518/) |
+| [RDF](https://www.w3.org/TR/rdf11-concepts/)|[SIO](https://fairsharing.org/FAIRsharing.dpkb5f)|[MIUVIG]()|
+| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)||
+| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)||
+| |[OBO foundry](https://fairsharing.org/biodbcore-001083/)||
+| |[Wikidata](https://fairsharing.org/FAIRsharing.PB6595)||
+
+## Tools
+| Tool Name| capability|
+|:--|:--|
+| [Semantic Annotation for Linked Arvado Data (SALAD)](https://www.commonwl.org/draft-3/SchemaSalad.html)  | conversion from  YAML to RDF |
+|[WESO shExVisualize](http://rdfshape.weso.es/shExVisualize) | Shape expression syntax visualization |
+| [Virtuoso](https://virtuoso.openlinksw.com/) | RDF triple store |
+
 
 
 ## Introduction
@@ -243,7 +269,7 @@ The corresponding metadata acquisition web form
 ## 2. Exemplar instance data:
 
 
-When users submit information via the form (or by other programatic means), a instance YAML file is generated, which looks like this:
+When users submit information via the form (or by other programatic means), an instance YAML file is generated, which looks like this:
 
 
 ```bash
@@ -471,32 +497,6 @@ select distinct ?sample ?p ?o
 > * [How to validate metadata with JSON Schema?]()
 > * [How to perform data integration with SPARQL?]()
 
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [semantic markup]()|[text]()  | [URI]()|
-| [constraint validation]()  | [text]()  | [DOI]()  |
-||file||
-
-## Table of Data Standards
-
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [YAML](https://yaml.org)  | [EFO](https://fairsharing.org/FAIRsharing.1gr4tz)  |  [MIxS](https://fairsharing.org/bsg-s000518/) |
-| [RDF](https://www.w3.org/TR/rdf11-concepts/)|[SIO](https://fairsharing.org/FAIRsharing.dpkb5f)|[MIUVIG]()|
-| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)||
-| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)||
-| |[OBO foundry](https://fairsharing.org/biodbcore-001083/)||
-| |[Wikidata](https://fairsharing.org/FAIRsharing.PB6595)||
-
-## Tools
-| Tool Name| capability|
-|:--|:--|
-| [Semantic Annotation for Linked Arvado Data (SALAD)](https://www.commonwl.org/draft-3/SchemaSalad.html)  | conversion from  YAML to RDF |
-|[WESO shExVisualize](http://rdfshape.weso.es/shExVisualize) | Shape expression syntax visualization |
-| [Virtuoso](https://virtuoso.openlinksw.com/) | RDF triple store |
 
 
 
