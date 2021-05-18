@@ -1,4 +1,4 @@
-""" Code for the FAIRplus cookbook identifier mapping with BridgeDB recipe
+""" Code for the FAIRplus cookbook identifier mapping with BridgeDb recipe
 
 """
 
@@ -12,7 +12,7 @@ batch_request = url+"{org}/xrefsBatch/{source}{}"
 def to_df(response, batch=False):
     """ Using a request object generates a pandas dataframe from the text response.
     
-    Using the given response from BridgeDB's webservices we retrieve the data and split it into
+    Using the given response from BridgeDb's webservices we retrieve the data and split it into
     4 columns. 
     
     Parameters
