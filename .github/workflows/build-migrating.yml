@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - migrating
+      - testing
 
 jobs:
   build-and-deploy-to-other-repo:
@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
       with:
         persist-credentials: false
-        ref: migrating
+        ref: testing
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
@@ -157,14 +157,14 @@ jobs:
     - name: Install SSH Client 🔑
       uses: webfactory/ssh-agent@v0.4.1
       with:
-        # ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
-        ssh-private-key: ${{ secrets.DEPLOY_GHPAGES_INTO_MAIN_REPO }}  ## for push into the-fair-cookbook
+        ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+        # ssh-private-key: ${{ secrets.DEPLOY_GHPAGES_INTO_MAIN_REPO }}  ## for push into the-fair-cookbook
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         SSH: true
-        BASE_BRANCH: migrating #The branch of this repository which should be transfered from.
-        REPOSITORY_NAME: FAIRplus/the-fair-cookbook # The repository on github.com to which will be deployed = pushed.
+        BASE_BRANCH: testing #The branch of this repository which should be transfered from.
+        REPOSITORY_NAME: egonw/cookbook-dev # The repository on github.com to which will be deployed = pushed.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: _build/html # The folder the action should deploy.
     - name: Record important warnings
