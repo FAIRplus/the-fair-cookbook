@@ -33,7 +33,7 @@ width: 800px
 name: Which ontology should be used?
 alt:  Which ontology should be used?
 ---
- Which ontology should be used?.
+ Which ontology should be used? Depending on dataset context, domain specific resources may be mandated, such as Clinical Data Interchange Standards Consortium (CDISC), Observational Health Data Sciences and Informatics (OHDSI) or Open Biomedical Ontologies (OBO). The Experimantal Factor Ontology (EFO) is specifically used by EMBL-EBI ArrayExpress to annotated dataset.
 ```
 
 
