@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - migrating
+      #- migrating
 
 jobs:
   build-and-deploy-to-other-repo:
