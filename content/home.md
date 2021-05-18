@@ -172,7 +172,6 @@ The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, th
 The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and level of difficulty. The FAIR Cookbook is a ‘live resource’; recipes are added and improved, iteratively, in an open manner, therefore bear with us if several sections are work in progress!
 Below there are links to some key recipes, click on them to explore their content; otherwise use the main menu on the left hand side to browse all the current recipes. 
 
-
 ````{panels}
 :container: container-xl
 :column: col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12
@@ -279,6 +278,56 @@ Below there are links to some key recipes, click on them to explore their conten
 </div>
 ````
 
+<hr>
+<div class="container-lg miniCards">
+    <div class="row">
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="infrastructure">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-toolbox text--purple-dark"></i> 
+                        </span> 
+                        <span class="cardTitle">
+                      
+[Infrastructure](fcb-infrastructure)
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="examples">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-book text--purple-dark"></i> 
+                        </span> 
+                        <span class="cardTitle">
+                      
+[Applied Examples](fcb-applied-examples)
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="assessments">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-tasks text--purple-dark"></i> 
+                        </span> 
+                        <span class="cardTitle">
+                      
+[Assessment](fcb-assess)
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- 
 
