@@ -2,8 +2,8 @@
 # Transferring data with SFTP
 
 ````{panels_fairplus}
-:identifier_text: FCB004
-:identifier_link: http://w3id.org/faircookbook/FCB004
+:identifier_text: FCB014
+:identifier_link: http://w3id.org/faircookbook/FCB014
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
@@ -27,7 +27,7 @@ One common method for transferring files is SFTP or scp (secure copy).
 - In this scenario, a SFTP server is a pure file transfer server, i.e. it lives outside of any sensitive network area and both parties (the sender and recipient) need to use a SFTP client to upload from and download to their internal storage systems. After transfer and integrity check, files would be typically removed by the receiver.
 
 
-## Graphical Overview
+<!-- ## Graphical Overview
 
 not existent
 
@@ -35,19 +35,21 @@ not existent
 
 ## Capability and Maturity Table.
 
-Capability Initial Maturity Level Final Maturity Level
-Interoperability – minimal - repeatable
+
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+| :------------- | :------------- | :------------- |
+| Interoperability | minimal | repeatable |
 
 
 ## FAIRification Objectives, Inputs and Outputs
 
-COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology.
+COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology. 
 
 ---
 
 ## Table of Data Standards
 
-COMMENT: the concepts in this recipe did not map to any terms from the FAIRsharing.org database.
+COMMENT: the concepts in this recipe did not map to any terms from the FAIRsharing.org database.-->
 
 
 ## Requirements

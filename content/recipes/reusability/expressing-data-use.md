@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB035
+:identifier_link: 'https://w3id.org/faircookbook/FCB0035'
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 15
@@ -17,10 +17,11 @@
 
 ## Main Objectives
 
-The purpose of this content is to provide guidance on how to describe permitted use of data, identify the resources that exist to do so.
+The purpose of this content is to provide guidance on how to describe **permitted use of data** and identify the **resources** that exist to do so.
+
 The aim is also to document equivalent representations and how bridges can be built between the distinct but equivalent implementations.
 
-Finally, the content aims to highlight key use-cases which require coverage, how to code such information, suggest patterns and demonstrate implementation patterns for Policies which can be used in data cataloguing efforts.
+Finally, the content aims to highlight key use-cases which require coverage, how to code such information, documenting implementation patterns in the context of `data cataloguing efforts`, for instance by expressing `Data Access Policies`.
 
 
 ## Graphical Overview
@@ -30,7 +31,7 @@ Finally, the content aims to highlight key use-cases which require coverage, how
 ```{figure} data-usage-mermaid.png
 ---
 width: 700px
-name: 
+name: expressing-data-use-figure1
 alt: Dealing with Policies and Data Use
 ---
 Data Use
@@ -41,25 +42,28 @@ Data Use
 
 ## Capability and Maturity Table.
 
-Capability Initial Maturity Level Final Maturity Level
-Interoperability – minimal - repeatable
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+ | :------------- | :------------- | :------------- |
+ | Interoperability | minimal | repeatable |
 
 ---
 
-## tools
+## Tools
 
-### vocabularies
-DUO
-ODRL
-DCAT
+### Standards
 
-### format
+ Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [JSON-LD]() | []()  |   |
+| [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html)  | [DCAT v2](https://www.w3.org/TR/vocab-dcat-2/)  |   |
+| [ISO-3066](https://www.iso.org/iso-3166-country-codes.html)  | [ODRL](https://www.w3.org/TR/odrl-vocab/)  |   |
+| [EGA XML]()   | [DUO](http://www.obofoundry.org/ontology/duo.html)  |   |
+| [Data Article Tag Suite (DATS)](https://datatagsuite.github.io/schema/)  | [MONDO](http://www.obofoundry.org/ontology/mondo.html)  |   |
 
-Short Read Archive XML
-Data Article Tag Suite JSON
 
 
-### implementation
+
+### Implementation
 
 DUOS:
 https://duos.broadinstitute.org/#/home
@@ -68,33 +72,33 @@ https://duos.broadinstitute.org/#/home
 
 ## Introduction
 
-The preservation of patient privacy and the compliance with patient consent are essential considerations when managing clinically sensitive information.
-Consent forms as signed by patients define the acceptable usage of data derived from a patient for research applications.
+The preservation of patient privacy and the compliance with patient consent are essential considerations when managing sensitive information such as clinical and patient data.
+Consent forms, as signed by patients, define the acceptable usage of data derived from a patient for research applications.
 All major research organizations, at national and international levels, enforce strict rules for the management of such data.
-Sensitive data can not be accessed without undergoing a vetting process invovlving a data access request to a data access committee, which will decide whether or not to grant requesters access to the data.
+Sensitive data cannot be accessed without undergoing a vetting process involving a `data access request` to a `data access committee`, which will decide whether or not to grant requesters access to the data.
 
 This is a time consuming process in the absence of machine readable version of data access/ data management policies.
 In turns, it can prove detrimental to research.
 Therefore, efforts to enable the provision of concise, efficient and **machine processable** summary of key permissions and prohibitions have been made. 
 Several resources are now available for the coding and exchange of `machine-actionable`, `legally binding` and `explicit` information related to allowed and consented data usage.
 
-The following sections details how international sequence data archives (US NCBI' dbGAP, SRA and EU EMBL_EBI EGA) are encoding Data Use Information  but also how a W3C specification, ODRL, can be used to represent equivalent information in a format compatible with the data cataloguing efforts relying on W3C DCAT specification.
+The following sections detail how the international sequence data archives (US NCBI's dbGAP, SRA and EU EMBL_EBI EGA) are encoding `Data Use Information`  but also how ODRL, a W3C specification, can be used to represent equivalent information in a format compatible with the data cataloguing efforts relying on W3C DCAT specifications.
 
 
 
 
 ### SRA & EGA XML schema for Policy, Dataset and Controler
 
-Next Generation Sequencing technique allow routine production of full genome data from patients. This data is highly sensitive and data repositories specialized in storing such information have developed procedures and representation models for defining the conditions of use.
+Next Generation Sequencing (NGS) techniques allow routine production of full genome data from patients. This data is highly sensitive and data repositories specialized in storing such information have developed procedures and representation models for defining the conditions of use.
 
-We summerize here the key objects used by the European Genome Archive, in compliance with INSDC and GA4GH guidelines.
+We summarize here the key objects used by the European Genome Archive, in compliance with INSDC and GA4GH guidelines.
 
 https://ega-archive.org/data-use-conditions
 
 ```{figure} duo-ols-view-1.png
 ---
 width: 700px
-name: 
+name: expressing-data-use-figure2
 alt: Data Use Ontology Overview Part 1
 ---
 Data Use Ontology Overview Part 1
@@ -103,7 +107,7 @@ Data Use Ontology Overview Part 1
 ```{figure} duo-ols-view-2.png
 ---
 width: 700px
-name: 
+name: expressing-data-use-figure3
 alt: Data Use Ontology Overview Part 2
 ---
 Data Use Ontology Overview Part 2
@@ -128,11 +132,11 @@ width: 400px
 ```` -->
 
 
-The information presented below has been sourced from:
+The information presented below has been sourced from the ENA Github repo.
 
 
 
-1. The Data Access Committee and Contact information
+1. The `Data Access Committee` and Contact information
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
@@ -153,7 +157,7 @@ The information presented below has been sourced from:
 
 https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_dac/ega_dac.xml
 
-2. The Data Access Policy object
+2. The `Data Access Policy` object
 
 
 https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_policy/ega_policy.xml
@@ -185,7 +189,7 @@ in the following example, the text of the policy is present in the XML represent
 
 
 ```{note}
-in the following example, the file address (url) to the policy is included in the XML representation.
+In the following example, the file address (url) to the policy is included in the XML representation.
 Ideally, the url provided should be a globally unique persistent identifier so one can be sure to obtain at least the metadata about the document.
 ```
 
@@ -210,7 +214,7 @@ Ideally, the url provided should be a globally unique persistent identifier so o
 ```
 
 
-3. Expressing Data Use with EGA xml and Data Use Ontology codes.
+3. Expressing Data Use with EGA XML and `Data Use Ontology` codes.
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
@@ -245,7 +249,7 @@ Ideally, the url provided should be a globally unique persistent identifier so o
 
 https://ega-archive.org/dacs
 
-Indicated disease specific restriction on research with DUO and Ontologies covering the Disease and Pathology domain
+Indicating disease specific restriction on research with DUO and ontologies covering the Disease and Pathology domain
 
 
 ```XML
@@ -279,7 +283,11 @@ Indicated disease specific restriction on research with DUO and Ontologies cover
 ```
 
 
-Point to Notice : For the consent code DUO_0000007 where data is restricted to use on a specific disease, please accompany it with an appropriate ontology from MONDO e.g., If the data is restricted to the use of research into juvenile idiopathic arthritis the code should be displayed as DUO_0000007; MONDO:0011429
+```{note}
+When using the consent code DUO_0000007 where data is restricted for use on a specific disease area, it is necessary to explicitly indicate which disease area is allowed. This can be done by associating codes/identifiers from well established disease terminologies such as MONDO, DOID, SNOMED-CT.
+For instance, if data reuse is restricted to research into `juvenile idiopathic arthritis`, the code should be displayed as DUO_0000007; MONDO:0011429
+```
+
 
 
 ```XML
@@ -361,11 +369,11 @@ List of Data Access Policy from EGA
 
 
 
-### ODRL
+### ODRL, Open Digital Rights Language
 
-ODRL stands for Open Digital Rights Language, which is a set  W3C Recommendations defining a `policy expression language`. 
+ODRL stands for Open Digital Rights Language and is a set  W3C Recommendations defining a `policy expression language`. 
 
-ODRL is made up of:
+ODRL is made up of several components:
 
 - [The ODRL Model](https://www.w3.org/TR/odrl-model/)
 
@@ -381,9 +389,9 @@ ODRL overview
 
 - [The ODRL Vocabulary](https://www.w3.org/TR/odrl-vocab/)
 
-The ODRL Vocabulary and Expression describes the terms used in ODRL policies and how to encode them.
+The `ODRL Vocabulary and Expression` provides the terms to express policies in RDF language.
 
-The ODRL Vocabulary and Expression complements the ODRL information model.
+The ODRL Vocabulary and Expression complements the ODRL information model, which allows expressing similar information in JSON language.
 
 
 
@@ -398,7 +406,7 @@ In the following representations, we use the key "name" to validate against the 
 
 ```
 
-#### The different types of Policy
+#### The different types of Policies
 
 The ODRL model defines several subclasses for the `Policy` entity, namely  `Agreement`,`Set`,`Offer`
 
@@ -431,20 +439,20 @@ The ODRL model defines several subclasses for the `Policy` entity, namely  `Agre
 ```
 
 
-### Encoding research restriction on type of disease and geographical area
+### Encoding Research Restriction on disease and geographical area using ODRL and DUO
 
-A basic ODRL based pattern using a DUO term to represent a situation where SecondaryUse of the data is allowed on the condition that work is restricted to `disease specific research`
+In this section, we document how to rely on a basic ODRL-based pattern using a DUO term to represent a situation where SecondaryUse of the data is allowed on the condition that work is restricted to `disease specific research`
 
 
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
-        "target": "EGAD00001000039",
+        "target": "https://fairplus.github.io/examples/dataset_00001",
         "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
-        "assigner": "https://ega-archive.org/",
+        "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
         "constraints":[{
               "name": "http://www.w3.org/ns/odrl/2/purpose",
               "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -461,11 +469,11 @@ A basic ODRL based pattern using a DUO term to represent a situation where Secon
 The main limitation of the representation is that it provides no information about which diseases are vetted for research.
 ```
 
-The following representation is more sophisticated and includes 3 types for restrictions:
+The following representation is more sophisticated and includes 3 types of restrictions:
 
-- restriction on specific disease (juvenile arthritis, to reuse to examplar representation in EGA/SRA XML presented in section 1)
+- restriction on specific disease (juvenile arthritis, to reuse the examplar representation in EGA/SRA XML presented in section 1)
 - restriction on the geographical location where the research can be conducted
-- an obligation to delete the data obtained through the agreement past a specified duration, 3 years in our example
+- an obligation to delete the data obtained through the access agreement past a specified duration, 3 years in our example
 
 Let's proceed stepwise.
 
@@ -476,10 +484,10 @@ Let's proceed stepwise.
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
-            "target": "EGAD00001000039",
+            "target": "https://fairplus.github.io/examples/dataset_00001",
             "action": [{
                 "rdf:value": { "@id": "odrl:secondaryUse" },
                 "refinement": {
@@ -492,7 +500,7 @@ Let's proceed stepwise.
                     }
                 }
             }],
-            "assigner": "https://ega-archive.org/",
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
             "constraints":[{
                 "name": "http://www.w3.org/ns/odrl/2/purpose",
                 "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -506,8 +514,8 @@ Let's proceed stepwise.
 
 ```{note}
 
-when using refinements, note the difference in representation to indicate the nature of the action.
-here is uses:
+When using refinements, note the difference in representation to indicate the nature of the action.
+here it uses:
 
 while the ordinary is simpler: 
 "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
@@ -527,20 +535,20 @@ It is worth noting that extensive cross referencing exists between resources suc
 
 
 
-* Representing Research Restriction based on Geographical Regions, geofencing
+* Representing Research Restriction based on Geographical Regions
 
-The section step shows how to use ODRL to document a geographical restrictions. This can be to list countries where research is allowed or to exclude countries from using a given dataset.
+The section shows how to use ODRL to document geographical restrictions, either by listing countries where research is allowed or by listing those countries excluded from doing so.
 
-In the following example, research is only allowed in a specific country, Italy in our example, which is encoded using ISO-3166 code.
+In the following example, research is only allowed in a specific country, `Italy` in this case, which is encoded using the `ISO-3166 code`.
 
 
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
-            "target": "EGAD00001000039",
+            "target": "https://fairplus.github.io/examples/dataset_00001",
             "action": [{
            	    "rdf:value": { "@id": "odrl:secondaryUse" },
                     "refinement": {
@@ -553,7 +561,7 @@ In the following example, research is only allowed in a specific country, Italy 
                     }
                 }
             }],
-            "assigner": "https://ega-archive.org/",
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
             "constraints":[{
                 "name": "http://www.w3.org/ns/odrl/2/purpose",
                 "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -572,21 +580,75 @@ In the following example, research is only allowed in a specific country, Italy 
 
 * Representing Obligations regarding Data Management
 
-The following example shows how explicitly state in a Policy element that the data must be deleted after a defined period of time, here 3 years.
-Duration and time related value should be represented using ISO-8601 standard.
-
+The following example shows how to explicitly state in a Policy element that the data must be deleted after a defined period of time (3 years in this example).
+Duration and time related value should be represented using `ISO-8601 standard`.
 
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
-            "target": "EGAD00001000039",
+            "target": "https://fairplus.github.io/examples/dataset_00001",
             "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
             "action": [{
-           	    "rdf:value": { "@id": "odrl:secondaryUse" },
-           	    "refinement": {
+                "rdf:value": { "@id": "odrl:secondaryUse" },
+                "refinement": {
+                    "xone": { 
+                    "@list": [ 
+                            { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001645" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001655" }  
+                        ]
+                  }
+                }
+            }],
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
+            "constraints":[{
+                    "name": "http://www.w3.org/ns/odrl/2/purpose",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "http://purl.obolibrary.org/obo/DUO_0000007"
+                },
+                {
+                "name": "http://www.w3.org/ns/odrl/2/spatial",
+                "operator": "http://www.w3.org/ns/odrl/2/eq",
+                "rightoperand": "http://www.itu.int/tML/tML-ISO-3166:it"
+            }
+            ],
+            "duties": [{
+                "action": "http://www.w3.org/ns/odrl/2/delete",
+                "target": "https://fairplus.github.io/examples/dataset_00001",
+                "constraints": [{
+                    "name": "http://www.w3.org/ns/odrl/2/dateTime",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "P36M"
+                }]
+        }]
+        }
+    ]
+}
+```
+
+
+## Possible specifications of EGA related information using ODRL
+
+```{warning} 
+
+This ODRL representation is **not vetted, nor endorsed by GA4GH or EGA**.
+This example is currently meant to present an example of how to use ODRL to represesent some of the information represented in EGA.
+
+```
+
+```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "https://ega-archive.org/datasets/EGAP0000000XYZ",
+    "permissions": [
+        {
+            "target": "https://ega-archive.org/datasets/EGAD0000000YYY",
+            "action": [{
+                "rdf:value": { "@id": "odrl:secondaryUse" },
+                "refinement": {
                     "xone": { 
                     "@list": [ 
                             { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
@@ -610,7 +672,7 @@ Duration and time related value should be represented using ISO-8601 standard.
             ],
             "duties": [{
                 "action": "http://www.w3.org/ns/odrl/2/delete",
-                "target": "EGAD00001000039",
+                "target": "https://ega-archive.org/datasets/EGAD0000000YYY",
                 "constraints": [{
                     "name": "http://www.w3.org/ns/odrl/2/dateTime",
                     "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -621,8 +683,6 @@ Duration and time related value should be represented using ISO-8601 standard.
     ]
 }
 ```
-
-
 
 ### Indicating Prohibitions and Interdictions
 
@@ -646,10 +706,10 @@ The ODRL model provides the `prohibitions` relation, which uses similar patterns
 
 
 
-## Implementing in Datacatalogues with DCAT or with DATS
+## Implementatino in Data Catalogues built with DCAT or DATS
 
 
-### RDF representation of an ODRL Policy from a DCAT DataSet
+### Referring to an ODRL Policy from a DCAT DataSet
 
 ```bash
 @prefix dcat:<https://www.w3.org/ns/dcat> .
@@ -688,7 +748,7 @@ The approach is therefore to reference the  JSON representations compliant with 
 
 
 
-### ODRL Validation:
+### Validating ODRL RDF documents
 
 Code exists that allows developers to validate ODRL documents **expressed in legitimate RDF serializations**.
 
@@ -716,7 +776,7 @@ https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html -->
 ## Consuming Data Use related annotations
 
 It is all good and and well to describe patterns in various formats but are there any tools or services capable exploiting these annotations?
-Well, when it comes to genomics data, the Broad Institute's  [Data Use Oversight System (DUOS)](https://duos.broadinstitute.org/#/home).
+Well, when it comes to genomics data, there is the Broad Institute's  [Data Use Oversight System (DUOS)](https://duos.broadinstitute.org/#/home) is one such tool.
 
 
 ```{figure} ./broads-duos.png
@@ -728,22 +788,30 @@ name: Broad's Institute  Data Use Oversight System
 Broad's Institute  Data Use Oversight System landing page
 ```
 
-DUOS requires official clearance from `Data Access Committee` representative or an `Authorized Submission Representative` to enable registration of a dataset into the DUOS.
-Once this authorization is available, the dataset has to be annotated following the patterns defined by GA4GH with Data Use Ontology and 'SRA xml' format.
+DUOS requires official clearance from a `Data Access Committee` representative or an `Authorized Submission Representative` to enable registration of a dataset into the DUOS.
+Once this authorization is available, the dataset has to be annotated following the patterns defined by GA4GH with Data Use Ontology and 'SRA XML' format.
 
 The European Genome Archive allows programmatic filtering based on the this information via the REST-API of the service.
 
 ## Conclusion
 
-Making sure that machine readable information about the conditions of use of dataset and data is key to enable privacy preserving and policy compliant use of information across organizations.
-This content provides an overview of the models available to do so and how it has been applied to life science data, showing the main features of the models and how to define used based on the major properties such as the type of research allowed, how to indicate disease domain or geographical restrictions as well as temporal restrictions associated to the dataset and defined by the data owners/data controlers.
+Making sure that machine readable information about the conditions of use of datasets and data is available is key to enable privacy preserving and policy compliant use of information across organizations.
+This content provides an overview of the models available to do so and how it has been applied to life science data, showing the main features of the models and how to define use based on the major properties such as the type of research allowed, how to indicate disease domain or geographical restrictions as well as temporal restrictions associated to the dataset and defined by the data owners/data controlers.
 
 
 
 ### What to read next?
 
+<<<<<<< HEAD
+>{ref}`rr-informed-consent-evolution-prov`
+
+>{ref}`rr-licensing-software`
+
+>{ref}`rr-licensing-data`
+=======
 * {ref}`rr-licensing-software`
 * {ref}`rr-licensing-data`
+>>>>>>> d5a45be479c0a78a9f965b75ca38435cf241225b
 
 
 
@@ -774,6 +842,15 @@ ___
 
 ## Authors
 
+<<<<<<< HEAD
+| Name           | Affiliation    | orcid          | CrediT role   |
+| :------------- | :------------- | :------------- |:------------- |
+| Philippe Rocca-Serra | University of Oxford |https://orcid.org/0000-0001-9853-5668 |Conceptualization, Writing - Original Draft |
+|Tom Plasterer| Astra-Zeneca|https://orcid.org/|Conceptualization|
+|Melanie Courtot| EMBL-EBI|https://orcid.org/0000-0002-9551-6370|Review, Writing|
+|Danielle Welter| UNI-LU|https://orcid.org/0000-0003-1058-2668|Review, Writing|
+
+=======
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft, Conceptualization |
@@ -781,6 +858,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/mcourtot'><img class='avatar-style' src='https://avatars.githubusercontent.com/mcourtot'></img><div class="d-block">Melanie Courtot</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-9551-6370'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing – Review & Editing
 | <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing – Review & Editing
 | <div class="firstCol"><a target="_blank" href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><div class="d-block">Wei Gu</div></a>  </div>    | <a target="_blank" href='https://orcid.org/0000-0003-3951-6680'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing – Review & Editing
+>>>>>>> d5a45be479c0a78a9f965b75ca38435cf241225b
 
 ___
 

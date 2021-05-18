@@ -7,8 +7,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB005
+:identifier_link: 'https://w3id.org/faircookbook/FCB005'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 20

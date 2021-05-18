@@ -1,13 +1,13 @@
 (fcb-interop-idmapping)=
 
-# Interlink data from different sources
+# Interlinking data from different sources
 
 +++
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB016
+:identifier_link: 'https://w3id.org/faircookbook/FCB016'
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 30
@@ -281,7 +281,7 @@ ___
 
 ## References
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography}
 :filter: docname in docnames
 :style: alpha
 ```

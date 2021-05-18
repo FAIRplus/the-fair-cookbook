@@ -3,8 +3,8 @@
 
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB_TBA
-:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:identifier_text: FCB025
+:identifier_link: https://w3id.org/faircookbook/FCB025
 :difficulty_level: 3
 :recipe_type: technical_guidance
 :reading_time_minutes: 15
@@ -27,7 +27,7 @@ A `data dictionary` is a file (or collection of files) which unambiguously decla
 
 Building a `FAIR data dictionary` means delivering a machine-actionable list of variables, thus greatly helping in assessing the **interoperability potential** of a dataset.
 
-Presenting a `FAIR data dictionary template` is also meant to be useful to deal with current IMI projects as well as guide future ones.
+Presenting a `FAIR data dictionary template` is also meant to be useful to deal with current [IMI]((https://www.imi.europa.eu/)) projects as well as guide future ones.
 
 The main purpose of this recipe is:
 
@@ -89,8 +89,8 @@ Data Dictionary.
 |----------------------|--------------------|---------------------------|-------------------------------------------------------|--------------------------------------------|---------------------------|--------------------|---------------|-------------------|-------------------| ------------|--------------------------|---------------------------------|-------------------------|----------------|------------------------|----------|----------------------|---------------------------------------------|
 | 1\_Subjects.txt      | SUBJECT\_ID        | Subject number            | https://schema.org/identifier | https://schema.org    | categorical variable      | integer            |               |                   |                   |             |                          |                                 |                         | Y              |                        | Y        | FORM 1               |                                             |
 | 1\_Subjects.txt      | SPECIES            | Species name              | https://schema.org/name      | https://schema.org      | categorical variable      | string             |               |                   |                   |            |                          |                                 |                         |                |                        |          | FORM 1               |                                             |
-| 1\_Subjects.txt      | STRAIN             | Strain                    | https://bioschemas.org/profiles/Taxon/0.6-RELEASE/identifier | https://bioschemas.org/  | categorical variable | string            |               |                   |                   |            |                          | http://purl.obolibrary.org/obo/NCBITaxon_40674 |          |                |                        |          | FORM 1               |                                             |
-| 1\_Subjects.txt      | AGE                | Age at study initiation   | https://bioschemas.org/types/BioSample/0.1-RELEASE-2019_06_19/samplingAge | https://bioschemas.org/   | continuous variable | integer |             |                   |                   |             |                          |                                 |                         |                |                        | Y        | FORM 1               |                                             |
+| 1\_Subjects.txt      | STRAIN             | Strain                    | TODO substitute broken link https://bioschemas.org/profiles/Taxon/0.6-RELEASE/identifier | https://bioschemas.org/  | categorical variable | string            |               |                   |                   |            |                          | http://purl.obolibrary.org/obo/NCBITaxon_40674 |          |                |                        |          | FORM 1               |                                             |
+| 1\_Subjects.txt      | AGE                | Age at study initiation   | TODO substitute broken link https://bioschemas.org/types/BioSample/0.1-RELEASE-2019_06_19/samplingAge | https://bioschemas.org/   | continuous variable | integer |             |                   |                   |             |                          |                                 |                         |                |                        | Y        | FORM 1               |                                             |
 | 1\_Subjects.txt      | AGE\_UNIT          | Age unit                  | http://purl.obolibrary.org/obo/UO_0000003 | http://purl.obolibrary.org/obo/uo   | categorial variable | string |             |                   |                   |             |                          |                                 |                         |                |                        | Y        | FORM 1               |                                             |
 | 1\_Subjects.txt      | SEX                | Sex                       | https://schema.org/gender              | https://schema.org    | categorical variable      | enum               |               |                   |                   |             | M;F                      | M=male;F=female                 |                         |                |                        |          | FORM 1               |                                             |
 | 1\_Subjects.txt      | SOMEDATE           | Date of acquiring subject | https://schema.org/dateCreated       | https://schema.org     | ordinal variable          | date               |               |                   |                   | YYYY-MM-DD |                          |                                 |                         |                |                        |          | FORM 1               |                                             |
@@ -187,7 +187,7 @@ Depending on the persistence system, how this needs to be specified varies. We p
 ## Data Dictionary Mapping in FAIRplus
 
 While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary.
-The [FAIRplus project](https://fairplus-project.eu/) is in the process of working the [Innovative Medicine Initiative](https://www.imi.europa.eu/) [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
+The [FAIRplus project](https://fairplus-project.eu/) is in the process of working with the [Innovative Medicine Initiative](https://www.imi.europa.eu/) [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
 
 ---
 ## Conclusion
@@ -204,7 +204,7 @@ Why? Simply because if affords several key data management processes to take pla
 
 > - {ref}`fcb-interop-selectonto`
 > - {ref}`fcb-interop-etl` (*in preparation*)
-> - [Key issues to be aware of when planning [Extract-Transform-Load processes]()
+> - Key issues to be aware of when planning [Extract-Transform-Load processes]( TODO add link)
 
 <!--
  >- {ref}`fcb-interop-ontomapping` (*in preparation*)

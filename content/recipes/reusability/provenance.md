@@ -2,8 +2,8 @@
 # Provenance information
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB036
+:identifier_link: 'https://w3id.org/faircookbook/FCB036'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 20
@@ -56,7 +56,7 @@
 
 ## Main Objectives
 
-In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essentially. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its Provenance. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of tracability and accountability can be established. The notions of `audit and trail` as well as `versioning` and `authorshipt` are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
+In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essentially. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its `Provenance`. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of tracability and accountability can be established. The notions of `audit and trail` as well as `versioning` and `authorship` are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
 
 ## Introduction
 
@@ -64,10 +64,8 @@ Data provenance https://en.wikipedia.org/wiki/Data_lineage
 
 ## PROV vocabulary
 
-The W3C vetted a specification for an RDF vocabulary to express provenance information. Implementation can be made in RDF or JSON, since JSON-LD is now an official serialization of RDF.
-The [W3C PROV ](https://www.w3.org/TR/prov-overview/)
+The W3C vetted a specification for an RDF vocabulary to express provenance information, the [W3C PROV](https://www.w3.org/TR/prov-overview/). Implementation can be made in RDF or JSON, since JSON-LD is now an official serialization of RDF.
 
-[!image](https://www.w3.org/TR/prov-overview/)
 
 ## CamFLow
 
@@ -75,7 +73,7 @@ The [W3C PROV ](https://www.w3.org/TR/prov-overview/)
 
 CamFlow support 2 output formats.
 
--W3C PROV-JSON format
+- W3C PROV-JSON format
 
 ```bash
 "ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
@@ -138,7 +136,7 @@ Example of a write edge in W3C PROV format:
 
 ## References
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+```{bibliography}
 :filter: docname in docnames
 ```
 
