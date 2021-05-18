@@ -188,7 +188,7 @@ h3 {
 
 h4 {
     font-weight: 400;
-    font-size: 1.0rem;
+    font-size: 1.4rem;
     margin-top: 2rem;
     margin-bottom: 1.4rem;
     line-height: 1;
@@ -720,6 +720,8 @@ main.bd-content #main-content a,
 main.bd-content #main-content a:visited,
 main.bd-content #main-content h3,
 main.bd-content #main-content h3 *,
+main.bd-content #main-content h4,
+main.bd-content #main-content h4 *,
 .bd-toc nav a:hover,
 .bd-toc nav li.active > a.active,
 nav.onthispage li.active a,
