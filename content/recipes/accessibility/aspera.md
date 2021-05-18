@@ -20,19 +20,13 @@ This recipe covers documentation of the popular Aspera Fast Transfer Protocol an
 
 ## Graphical overview
 
-```{figure} aspera-figure1.png
+```{figure} aspera.md-figure1.mmd.png
 ---
-name: aspera-data-transfer-process
+name: aspera-figure1
 alt: Aspera Data Transfer Process
 ---
 Aspera Data Transfer Process.
 ```
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
 
 ----
 ## Obtain Aspera services
@@ -42,7 +36,7 @@ Aspera Data Transfer Process.
 * Pay attention to the conditions
 * Sign up if you are the appropriate person for this download/upload 
 * Typically Aspera sites are locked down and need a username and password.
-* For some sites, only one username is allowed per organisation, so it is worth making sure that that person is technically capable of uploading or downloading data, and also understands the data a little.
+* For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.
  
 ### Decide how you are going to access the data:
 * A Web browser is great for initial browsing and downloading of small occasional files. It will automatically prompt you to download the Aspera broswer plugin to be able to do download any files.
