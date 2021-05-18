@@ -159,7 +159,7 @@ The objective here is to conversion raw data in manufacturer format to an open f
 
 > **requirements**:
 
-#### 1. install docker: 
+#### 1. install docker:
 
 on a MacOS system, invoke the following:
 
@@ -177,7 +177,7 @@ on a MacOS system, invoke the following:
 
 #### 3. sign-up and/or login to https://hub.docker.com/
 
-#### 4. pull the docker container for ProteoWizard:
+#### 4. pull the docker container for ProteoWizard
 
 :warning: be sure to sign-up and login to https://hub.docker.com/
 
@@ -207,7 +207,7 @@ In some situations, the conversion will fails and no mzML output will be generat
 
 To address the former, it is good practice to compute a hash (md5, sha2) checksum fingerprinting each of the files. This allows to ensure that no file corruption has occurred during transfer and copy.
 
-To address the latter, one should consult to table of compatibility:
+To address the latter, one should consult the table of compatibility:
 
 
 |          Format         |    Status   |
@@ -228,9 +228,9 @@ To address the latter, one should consult to table of compatibility:
 
 
 
-#### 5. Testing and processing the resulting mzML files:
+#### 5. Testing and processing the resulting mzML files
 
-for users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
+For users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
 
 A number of libraries are available for parsing (reading and writing) `mzML` document. `mzML` is a king of `XML` format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library.
 
