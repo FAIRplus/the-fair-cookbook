@@ -748,9 +748,9 @@ ___
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-|<div class="firstCol"><a target="_blank" href='https://github.com/u8sand'><img class='avatar-style' src='https://avatars.githubusercontent.com/u8sand'></img><div class="d-block">Daniel J. B. Clarke</div></a>  </div>[]()|  Icahn School of Medicine at Mount Sinai| [0000-0003-3471-7416](https://orcid.org/0000-0003-3471-7416) | Writing - Original Draft, Code |
+| Name                                                                                                                                                                                                                   | Orcid                                                                                                               | Affiliation                                    | Type                                                                    | Elixir Node | Credit role  |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------|-------------------------------------------------------------------------|:------------|:-------------|
+| <div class="firstCol"><a target="_blank" href='https://github.com/u8sand'><img class='avatar-style' src='https://avatars.githubusercontent.com/u8sand'></img><div class="d-block">Daniel J. B. Clarke</div></a>  </div>| <a target="_blank" href='https://orcid.org/0000-0003-3471-7416'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Icahn School of Medicine at Mount Sinai        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |             | Writing - Original Draft, Code
 
 ---
 
