@@ -192,19 +192,19 @@ Biology is a complex field and observable manifestations of biological processes
 |--- |--- |--- |--- |--- |--- | 
 |**Pathology/Disease (generic)**|||||
 | |SNOMED-CT| View on [Bioportal](https://bioportal.bioontology.org/ontologies/SNOMEDCT?p=summary) | |[SNOMED license](http://www.nlm.nih.gov/databases/umls.html) - part of the UMLS license|| |
-| |NCI thesaurus|http://evs.nci.nih.gov/ftp1/NCI_Thesaurus| | [NCI license](http://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm)|| |
-| |ICD-10| login required| | [WHO license](http://www.who.int/about/copyright/en/)|||
-| |UMLS| https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html | |[UMLS license](http://www.nlm.nih.gov/databases/umls.html)|||
-| |DOID|http://purl.obolibrary.org/obo/doid.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/DiseaseOntology/HumanDiseaseOntology/issues| | 
-| |MONDO*|http://purl.obolibrary.org/obo/mondo.owl|BFO| [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/monarch-initiative/mondo/issues| 
-| |IDO|https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/infectious-disease-ontology/issues/list| |
+| |NCI Thesaurus|http://evs.nci.nih.gov/ftp1/NCI_Thesaurus| | [NCI license](http://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm)|| |
+| |International Classification of Diseases (ICD-10)| View on [WHO site](https://icd.who.int/browse10/2010/en)| | [WHO license](http://www.who.int/about/copyright/en/)|||
+| | Unified Medical Language System (UMLS) | https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html | |[UMLS license](http://www.nlm.nih.gov/databases/umls.html)|||
+| | Disease Ontology Identifiers (DOID) |http://purl.obolibrary.org/obo/doid.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/DiseaseOntology/HumanDiseaseOntology/issues| | 
+| |MONDO Disease Ontology<sup>*</sup> |http://purl.obolibrary.org/obo/mondo.owl|BFO| [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/monarch-initiative/mondo/issues| 
+| |Infectious Disease Ontology (IDO) |https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://code.google.com/p/infectious-disease-ontology/issues/list| |
 |**Phenotype**|||||
-| | HP|http://purl.obolibrary.org/obo/hp.owl|BFO| [HPO Licence](https://hpo.jax.org/app/license) |https://github.com/obophenotype/human-phenotype-ontology/issues/|
-| |MedDRA|||This ontology is freely accessible on [Bioportal](https://bioportal.bioontology.org/ontologies/MEDDRA) for academic and other non-commercial uses. Users anticipating any commercial use of MedDRA must contact the MSSO to obtain a license.|https://mssotools.com/webcr/ login required|
-| | MP | http://purl.obolibrary.org/obo/mp.owl | | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | https://github.com/obophenotype/mammalian-phenotype-ontology/issues | 
+| | Human Phenotype (HP) |http://purl.obolibrary.org/obo/hp.owl|BFO| [HPO Licence](https://hpo.jax.org/app/license) |https://github.com/obophenotype/human-phenotype-ontology/issues/|
+| |Medical Dictionary for Regulatory Activities Terminology (MedDRA)| View on [Bioportal](https://bioportal.bioontology.org/ontologies/MEDDRA) || Academic: Free accessible <br/> Commercial contact MSSO|https://mssotools.com/webcr/ login required|
+| | Mammalian Phenotype (MP) | http://purl.obolibrary.org/obo/mp.owl | | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | https://github.com/obophenotype/mammalian-phenotype-ontology/issues | 
 
 
-*MONDO was born of an effort to harmonise disease definitions from a number sources, includig OMIM, Orphanet, EFO and DOID, with work in progress to include NCIt. The OWL version includes axiomatisation using CL, Uberon, GO, HP, RO & NCBITaxon. The ontology is under active development by a range of ontology and domain experts. If no other limiting requirements dictate the use of an alternative ontology (eg use of NCIt as part of a CDISC-compliant dataset), it is therefore the most recommended open source ontology from the above list.
+> _<sup>*</sup>MONDO was born of an effort to harmonise disease definitions from a number sources, includig [OMIM](https://www.omim.org/) (Online Mendelian Inheritance in Man), [Orphanet](https://www.orpha.net/), EFO and DOID, with work in progress to include NCIt. The OWL version includes axiomatisation using CL, Uberon, GO, HP, RO & NCBITaxon. The ontology is under active development by a range of ontology and domain experts. If no other limiting requirements dictate the use of an alternative ontology (e.g. use of NCItaxon as part of a CDISC-compliant dataset), it is therefore the most recommended open source ontology from the above list._
 
 As with anatomy in the previous section, there is a growing body of organism-specific phenotype resources, such as C. elegans, Drosophila, Fission Yeast, Xenopus and Zebrafish. 
 
@@ -215,9 +215,9 @@ There is a wide range of ontologies available for specific diseases or disease t
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|**Malaria**|IDOMAL||BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  ||
-|**Alzheimer Disease**|ADO|https://www.scai.fraunhofer.de/content/dam/scai/de/downloads/bioinformatik/ontologies/ADO/ADO.zip|BFO|||
-|**Rare disorder**|ORDO|||[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)||
+|**Malaria**|Malaria Ontology (IDOMAL)||BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  ||
+|**Alzheimer Disease**| Alzheimer's Disease Ontology (ADO) |https://www.scai.fraunhofer.de/content/dam/scai/de/downloads/bioinformatik/ontologies/ADO/ADO.zip|BFO|||
+|**Rare disorder**| Orphanet Rare Disease Ontology (ORDO) | View on [Bioportal](https://bioportal.bioontology.org/ontologies/ORDO)||[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)||
 
 
 
@@ -227,11 +227,11 @@ Following on through our review of semantic resources by granularity levels, thi
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|**Cell**|CL|http://purl.obolibrary.org/obo/cl.owl http://purl.obolibrary.org/obo/cl.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://code.google.com/p/cell-ontology/issues/list|
+|**Cell**| Cell Ontology (CL) |http://purl.obolibrary.org/obo/cl.owl http://purl.obolibrary.org/obo/cl.obo|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://code.google.com/p/cell-ontology/issues/list|
 |**Cell Lines**| 
 | | Cellosaurus|ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo ftp://ftp.expasy.org/databases/cellosaurus|| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)||
-| |CLO|[https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl](https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl)|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/CLO-ontology/CLO/issues|
-|**Cell Molecular Phenotype Ontology**|CMPO|[last release](https://github.com/EBISPOT/CMPO/releases/tag/2017-12-19)| https://github.com/EBISPOT/CMPO/issues |
+| | Cell Line Ontology (CLO) |[https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl](https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl)|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) |https://github.com/CLO-ontology/CLO/issues|
+|**Cell Molecular Phenotype**|Cell Molecular Phenotype Ontology (CMPO) |https://github.com/EBISPOT/CMPO/releases/| | | https://github.com/EBISPOT/CMPO/issues |
 
 
 
@@ -243,18 +243,18 @@ This section highlights the major and most widely used OBO Foundry resources for
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|**Chemicals and Small Molecules**|CHEBI|[CHEBI](https://www.ebi.ac.uk/chebi/)| BFO|[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/ebi-chebi/ChEBI/issues|
-|**Gene Function, Molecular Component, Biological Process**|GO|http://purl.obolibrary.org/obo/go.obo http://purl.obolibrary.org/obo/go.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/geneontology/ontology-requests/|
-|**Protein/peptide**|PRO|[Protein Ontology](https://proconsortium.org)|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/PROconsortium/PRoteinOntology/issues|
+|**Chemicals and Small Molecules**| Chemical Entities of Biological Interest (ChEBI)|[ChEBI](https://www.ebi.ac.uk/chebi/)| BFO|[CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/ebi-chebi/ChEBI/issues|
+|**Gene Function, Molecular Component, Biological Process**| Gene Ontology (GO) |http://purl.obolibrary.org/obo/go.obo http://purl.obolibrary.org/obo/go.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |http://sourceforge.net/p/geneontology/ontology-requests/|
+|**Protein/peptide**| Protein Ontology (PRO) |https://proconsortium.org |BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/PROconsortium/PRoteinOntology/issues|
 
 
-Besides these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resource is relevant.
+Besides these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resources are relevant.
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
 | **Drug** |
-| | National Drug File|||[NIH license](https://uts.nlm.nih.gov/license.html)||
-| | DRON |  http://purl.obolibrary.org/obo/dron.owl | BFO | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | https://ontology.atlassian.net/browse/DRON |
+| | National Drug File| View on [Bioportal](https://bioportal.bioontology.org/ontologies/NDFRT) ||[NIH license](https://uts.nlm.nih.gov/license.html)||
+| | The Drug Ontology (DRON) |  http://purl.obolibrary.org/obo/dron.owl | BFO | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | https://ontology.atlassian.net/browse/DRON |
 | | RxNORM |View on [Bioportal](https://bioportal.bioontology.org/ontologies/RXNORM) | |[RxNORM license](http://www.nlm.nih.gov/databases/umls.html) - part of the UMLS license||
 
 
@@ -265,16 +265,16 @@ Some of the resources are specialized semantic artefacts developed to support th
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-|**Radiology**|RADLex|https://data.bioontology.org/ontologies/RADLEX/submissions/41/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb||||
+|**Radiology**| Radiology Lexicon (RADLex) | View on [Bioportal](https://bioportal.bioontology.org/ontologies/RADLEX) ||||
 |**Medical Imaging**|DICOM|http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html||||
-|**Sample Processing/Reagents/Instruments Assay Definition**|OBI|http://purl.obolibrary.org/obo/obi.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://github.com/obi-ontology/obi/issues|
-|**Biological screening assays and their results including high-throughput screening (HTS)**|BAO|http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl|BFO| [CC-by-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) ||
-|**Mass Spectrometry (instrument/acquisition parameter/spectrum related information)**|PSI-MS|https://github.com/HUPO-PSI/psi-ms-CV |none specified| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://github.com/HUPO-PSI/psi-ms-CV/issues |
-|**NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)**|NMR-CV|http://nmrml.org/cv/v1.0.rc1/nmrCV.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/nmrML/nmrML/issues?state=open|
-|**Laboratory test**|LOINC|LOINC and RELMA Complete Download File (All Formats Included)|none specified| [RELMA license](https://uts.nlm.nih.gov/license.html) ||
-|**Units** | UO | http://purl.obolibrary.org/obo/uo.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | https://github.com/bio-ontology-research-group/unit-ontology/issues |
+|**Sample Processing/Reagents/Instruments Assay Definition**| Ontology for Biomedical Investigations (OBI) |http://purl.obolibrary.org/obo/obi.owl|BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://github.com/obi-ontology/obi/issues|
+|**Biological screening assays and their results including high-throughput screening (HTS)**| BioAssay Ontology (BAO) |http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl|BFO| [CC-by-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) ||
+|**Mass Spectrometry (instrument/acquisition parameter/spectrum related information)**| HUPO Proteomics Standards Initiative-Mass Spectrometry controlled vocabulary (PSI-MS) |https://github.com/HUPO-PSI/psi-ms-CV |none specified| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/)|https://github.com/HUPO-PSI/psi-ms-CV/issues |
+|**NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)**| Nuclear Magnetic Resonance Controlled Vocabulary (NMR-CV) |http://nmrml.org/cv/v1.0.rc1/nmrCV.owl|BFO| [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |https://github.com/nmrML/nmrML/issues?state=open|
+|**Laboratory test**| Logical Observation Identifier Names and Codes (LOINC) | LOINC and RELMA Complete Download File https://loinc.org/downloads/ |none specified| [RELMA license](https://uts.nlm.nih.gov/license.html) ||
+|**Units** | Units Ontology (UO) | http://purl.obolibrary.org/obo/uo.owl | | [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/) | https://github.com/bio-ontology-research-group/unit-ontology/issues |
 
-Some multi-domain ontologies such as the NCI Thesaurus (NCIt) and the Experimental Factor Ontology (EFO) cover also aspects of the above domains such as assays and sample collection and processing. Depending on the overall context of a resource selection process, it can make more sense to use a multi-domain ontology with suitable coverage to improve consistency and interoperability within a resource or dataset.
+Some multi-domain ontologies such as the NCI Thesaurus (NCIt) and the Experimental Factor Ontology (EFO) also cover aspects of the above domains such as assays and sample collection and processing. Depending on the overall context of a resource selection process, it can make more sense to use a multi-domain ontology with suitable coverage to improve consistency and interoperability within a resource or dataset.
 
 
 Finally, a resource exists that describes statistical measures, statistical tests or methods as well as statistically relevant graphical representations. It may be used for reporting results and annotating experimental results.
@@ -283,37 +283,36 @@ Finally, a resource exists that describes statistical measures, statistical test
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
-| **Experimental Design, Statistical Methods and Statistical Measures**|STATO|[http://stato-ontology.org](http://stato-ontology.org)|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
+| **Experimental Design, Statistical Methods and Statistical Measures**| Statistical Methods Ontology (STATO) |[http://stato-ontology.org](http://stato-ontology.org)|BFO| [CC-by 3.0 Unported Licence](https://creativecommons.org/licenses/by/3.0/)|https://github.com/ISA-tools/stato/issues?state=open|
 
 
 
 
 ### Relations
 
-Also known as OWL.Properties, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`  but these are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by `automatic reasoners` to carry the following key tasks:
+Also known as `OWL.Properties`, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by `reasoners` to carry the following key tasks:
 
-* `ontology logical consistency` checks
-* `automatic classification` and `inference` tasks
-* `entailments`, i.e. detection of logical consequences resulting from axiomatics
+* `Ontology logical consistency` checks
+* `Automatic classification` and `inference` tasks
+* `Entailments`, i.e. detection of logical consequences resulting from axiomatics
 
 This is particularly important when processing billions of facts expressed as RDF statements. 
 
 One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more *in-depth* review of such topics, the reader is invited to consults the following work {cite}`pmid15892874` <!--[by Smith et al](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46)-->.
 
-In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org) coordinates the development of interoperable ontologies. At the core of this interoperation lies the **[Relation Ontology](http://www.obofoundry.org/ontology/ro.html)**
+In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org) coordinates the development of interoperable ontologies. At the core of this interoperation lies the **[Relation Ontology](http://www.obofoundry.org/ontology/ro.html)** released under the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) license.
 
-|Scope| File                        | Relation Ontology               | Variant                                                              | License  | 
-|---|-------------------------------|---------------------------------|--------------------------------------------------------------------------------|---|
-|**relations**| ro.owl                        | Relation Ontology               | Canonical edition                                                              | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  | 
-|**relations**| ro.obo                        | Relation Ontology in obo format | Has imports merged in                                                          |  [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |
-|**relations**| ro/core.owl                   | RO Core relations               | Minimal subset intended to work with BFO-classes [page]                        |  [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) | 
-|**relations**| ro/ro-base.owl                | RO base ontology                | Axioms defined within RO and to be used in imports for other ontologies [page] | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  | 
-|**relations**| ro/subsets/ro-interaction.owl | Interaction relations           |                                   |  [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |
-|**relations**| ro/subsets/ro-eco.owl         | Ecology subset                  |   For use in ecology and environmental science  | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  | 
-|**relations**| ro/subsets/ro-neuro.owl       | Neuroscience subset             | For use in neuroscience [page]                                                 | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)  |    
+| Relation Ontology               | File  | Variant                                                                        |
+|---------------------------------|---|--------------------------------------------------------------------------------|
+| Relation Ontology               | [ro.owl](http://purl.obolibrary.org/obo/ro.owl)  | Canonical edition                                                              |
+| Relation Ontology in obo format | [ro.obo](http://purl.obolibrary.org/obo/ro.obo)  | Has imports merged in                                                          |
+| RO Core relations               | [ro/core.owl](http://purl.obolibrary.org/obo/ro/core.owl)  | Minimal subset intended to work with BFO-classes [page](https://github.com/oborel/obo-relations/wiki/ROCore)                        |
+| RO base ontology                | [ro/ro-base.owl](http://purl.obolibrary.org/obo/ro/ro-base.owl)  | Axioms defined within RO and to be used in imports for other ontologies [page](https://github.com/INCATools/ontology-development-kit/issues/50) |
+| Interaction relations           | [ro/subsets/ro-interaction.owl](http://purl.obolibrary.org/obo/ro/subsets/ro-interaction.owl)  |                                                                                |
+| Ecology subset                  | [ro/subsets/ro-eco.owl](http://purl.obolibrary.org/obo/ro/subsets/ro-eco.owl)  | For use in ecology and environmental science                                   |
+| Neuroscience subset             | [ro/subsets/ro-neuro.owl](http://purl.obolibrary.org/obo/ro/subsets/ro-neuro.owl)  | For use in neuroscience [page](http://bioinformatics.oxfordjournals.org/content/28/9/1262.long) 
 
-
-As `knowledge graphs` and `property graphs` gain importance, we can expect the range and depth of relations to mature and expands as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
+As `knowledge graphs` and `property graphs` gain importance, we can expect the range and depth of relations to mature and expand as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
 This would also have to be placed in the context of advances in `Text Mining` and `Machine Learning`, where unsupervised methods start to demonstrate strong potential to detect relations between entities.
 
 ```bash
@@ -331,7 +330,7 @@ equivalentClass :
 
 > Selecting semantic resources depends on many different factors. However, the most important factor remains the `context` of the data and associated landscape of data standards as well as the ultimate integration goal, which will dictate the final choice.
 > 
->The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choice will have.    
+>The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choices will have.
 
 > ### What should I read next?
 > * [How to build an application ontology?]()
@@ -373,6 +372,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 | <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition
 | <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/alasdairgray'><img class='avatar-style' src='https://avatars.githubusercontent.com/alasdairgray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div>         | <a target="_blank" href='http://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot-Watt University     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing â€“ Review & Editing |
 
 
 ___
