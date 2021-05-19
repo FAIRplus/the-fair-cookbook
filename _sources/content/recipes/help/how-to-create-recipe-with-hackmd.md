@@ -31,30 +31,23 @@ ___
 
 ## Main Objectives
 
->**This document aims to guide users through the process of getting set up to contribute content to the [the FAIR cookbok](https://fairplus.github.io/the-fair-cookbook/intro) using HackMD.io online editor.
+>**This document aims to guide users through the process of getting set up to contribute content to [the FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro) using HackMD.io online editor.
 The document contains a checklist taking you point by point through the installation process and through the 2 main ways of using HackMD.**
 
 
-```{warning} Important
- ⚡ **IMPORTANT: Install HackMD browser extension ([Chrome](https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search))**.
+```{warning}
+ ⚡ **IMPORTANT: Install the HackMD browser extension ([Chrome](https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search))!**
 ```
 
 At the current time, the `HackMD-it` browser extension is only available for Chrome and Firefox and [this tutorial](https://hackmd.io/s/hackmd-it) details the installation procedure. 
 Once you've carried the extension installation, any github repository for which you have access and for which HackMD app has been authorized (which is already the case for all FAIRplus github repositories), any `Markdown` document will be readily editable using 'HackMD' and you should see the following *icon* 
 
-<!-- ![](https://i.imgur.com/k79IQUA.png =145x) -->
-<div> <img src="https://i.imgur.com/k79IQUA.png" alt="drawing" style="width:145px;" border="1px solid black" align="top" />
-</div>
+<div> <img src="https://i.imgur.com/k79IQUA.png" alt="drawing" style="width:145px;" border="1px solid black" align="top" /></div>
 
 in the github repository bar as shown in the figure below:
 
-<div> <img src="https://i.imgur.com/yI8TRNM.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
-</div>
-<!-- ![](https://i.imgur.com/yI8TRNM.png) -->
+<div> <img src="https://i.imgur.com/yI8TRNM.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
 
-<!-- ![yI8TRNM] -->
-
-<!-- [yI8TRNM]: https://i.imgur.com/yI8TRNM.png -->
 
 </br>
 
@@ -64,56 +57,50 @@ in the github repository bar as shown in the figure below:
 
 
 
-## 2. Create a github account and obtain your github handle
+## Create a github account and obtain your github handle
 
-## 3. Request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
-<!-- ![](https://i.imgur.com/wyTn5aS.png) -->
-<div> <img src="https://i.imgur.com/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
-</div>
+## Request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
+<div> <img src="https://i.imgur.com/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
 
-## 4. Creating a new recipe:
-### 4.1 Create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+## Create a new recipe
+### Create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
 
-<!-- ![](https://i.imgur.com/frsBwqc.png =750x) -->
-<div> <img src="https://i.imgur.com/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" />
-</div>
+<div> <img src="https://i.imgur.com/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
 
 </br>
 
->ℹ️  remember to assign yourself or a team member to the issue
+ℹ️  remember to assign yourself or a team member to the issue
 ℹ️  remember to assign the issue to a milestone
 ℹ️ remember to tag the issue with relevant label
 
-## 4.2. create a new branch under the FAIR Cookbook github repository using the following command:
+## Create a new branch under the FAIR Cookbook github repository using the following command:
 > git checkout -b recipe_xx master
 
-## 6. create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
-<!-- ![](https://i.imgur.com/E2ok5ni.png =450x) -->
-<div> <img src="https://i.imgur.com/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" />
-</div>
+## Create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
+<div> <img src="https://i.imgur.com/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" /></div>
 
 
 
-## 7. Getting familiar with MarkDown:
+## Getting familiar with MarkDown
 
 Here is a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
 ![](https://i.imgur.com/Kt3d9eo.png)
 
 
-## 8. Build confidence using HackMD
+## Build confidence using HackMD
 
 ![](https://i.imgur.com/bt012cm.png)
 
 use the split view to have what you type immediately rendered.
 
-## 9. Use the FAIRplus Recipe Template as guide
+## Use the FAIRplus Recipe Template as guide
 
 FAIRPlus Cookbook Team is working at establishing a standard layout for easing the creation of a new recipe. The template contains key sections and outlines, which will help boostrap the process.
 
 [recipe template](https://github.com/FAIRplus/the-fair-cookbook/edit/dev/docs/content/recipes/help/recipe-template.md)
 
 
-## 10. Writing notes with HackMD.io:
+## Writing notes with HackMD.io:
 
 1. From a Github repository, by editing an existing Markdown 
 
@@ -184,7 +171,7 @@ Fill all the necessary information and press the blue `Push` button.
 
 >This recipe should get you started to contribute content, writing markdown documents, following the FAIRplus guidance and FAIRplus recipe template.
 >
->:radioactive_sign: If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the [dedicated email](mailto:FAIRplus-cookbook@elixir-europe.org) or via our [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+>☢ If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the [dedicated email](mailto:FAIRplus-cookbook@elixir-europe.org) or via our [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
 > ### What should I read next?
 > * [HackMD & MarkDown Tips and Tricks](https://www.TODO.org)
 > * [How to create jupyter notebook?](https://jupyter-notebook.readthedocs.io/en/stable/)

@@ -1457,11 +1457,11 @@ Some of the resources are specialized semantic artefacts developed to support th
 </div>
 <div class="section" id="relations">
 <h3>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">¶</a></h3>
-<p>Also known as <code class="docutils literal notranslate"><span class="pre">OWL.Properties</span></code>, their importance may be overlooked by <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">scientists</span></code> who are not <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">engineers</span></code> or <code class="docutils literal notranslate"><span class="pre">ontologists</span></code>. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by <code class="docutils literal notranslate"><span class="pre">reasoners</span></code> to carry the following key tasks:</p>
+<p>Also known as <code class="docutils literal notranslate"><span class="pre">OWL.Properties</span></code>, their importance may be overlooked by <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">scientists</span></code> who are not <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">engineers</span></code> or <code class="docutils literal notranslate"><span class="pre">ontologists</span></code>. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by tools known as <code class="docutils literal notranslate"><span class="pre">reasoners</span></code> to carry the following key tasks:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Ontology</span> <span class="pre">logical</span> <span class="pre">consistency</span></code> checks</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Automatic</span> <span class="pre">classification</span></code> and <code class="docutils literal notranslate"><span class="pre">inference</span></code> tasks</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Entailments</span></code>, i.e. detection of logical consequences resulting from axiomatics</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Entailments</span></code>, i.e. detection of logical consequences resulting from axiomatic definitions (closely related to the point above)</p></li>
 </ul>
 <p>This is particularly important when processing billions of facts expressed as RDF statements.</p>
 <p>One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more <em>in-depth</em> review of such topics, the reader is invited to consults the following work <a class="footnote-reference brackets" href="#pmid15892874" id="id7">6</a> <!--[by Smith et al](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46)-->.</p>
@@ -1506,14 +1506,24 @@ Some of the resources are specialized semantic artefacts developed to support th
 </table>
 <p>As <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> and <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> gain importance, we can expect the range and depth of relations to mature and expand as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
 This would also have to be placed in the context of advances in <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Mining</span></code> and <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>, where unsupervised methods start to demonstrate strong potential to detect relations between entities.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>B cell, CD19-positive
+<p>The following is an example of how a <code class="docutils literal notranslate"><span class="pre">defined</span> <span class="pre">class</span></code> may be created in an ontology. The code snippet shows one such class being expressed to create a type by specifying a number of <code class="docutils literal notranslate"><span class="pre">axioms</span></code>. These use <code class="docutils literal notranslate"><span class="pre">relations</span></code> (aka OWL.Properties), which may be set to</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;B cell, CD19-positive&#39;</span>
 equivalentClass :
-    lymphocyte of B lineage, CD19-positive 
-    and <span class="o">(</span> has plasma membrane part some CD19 molecule<span class="o">)</span> 
-    and <span class="o">(</span> <span class="k">in</span> taxon some Mammalia<span class="o">)</span> 
-    and <span class="o">(</span> capable of some B cell mediated immunity<span class="o">)</span>
+    <span class="s1">&#39;lymphocyte of B lineage, CD19-positive&#39;</span> 
+    and <span class="o">(</span> <span class="s1">&#39;has plasma membrane part&#39;</span> some <span class="s1">&#39;CD19 molecule&#39;</span><span class="o">)</span> 
+    and <span class="o">(</span> <span class="s1">&#39;in taxon&#39;</span> some Mammalia<span class="o">)</span> 
+    and <span class="o">(</span> <span class="s1">&#39;capable of&#39;</span> some <span class="s1">&#39;B cell mediated immunity&#39;</span><span class="o">)</span>
 </pre></div>
 </div>
+<p>Any class satisfying these patterns may be classified by an OWL reasoner as a child of that class. So the following class, with such properties that they all satisfy the requirements of the <code class="docutils literal notranslate"><span class="pre">defined</span> <span class="pre">class</span></code> declared above (e.g. “Homo sapiens” is_a type of “Mammalia”, etc…), will be classified automatically (i.e. without human intervention) by a reasoner such as ELK or Hermit as a child of ‘B cell, CD19-positive’ .</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;human B cell, CD19-positive&#39;</span>
+Class:
+    <span class="o">(</span> <span class="s1">&#39;has plasma membrane part&#39;</span> some <span class="s1">&#39;B-lymphocyte antigen CD19 isoform h2&#39;</span><span class="o">)</span>
+    and <span class="o">(</span> <span class="s1">&#39;in taxon&#39;</span> some <span class="s1">&#39;Homo sapiens&#39;</span><span class="o">)</span> 
+    and <span class="o">(</span> <span class="s1">&#39;capable of&#39;</span> some <span class="s1">&#39;B cell tolerance induction in mucosal-associated lymphoid tissue&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>The notion is important to grasp as it also explains why not all ontologies are compatible, because they may significantly differ in the underlying axioms they rely on to establish their hierarchies using reasoners.</p>
 </div>
 </div>
 <hr class="docutils" />

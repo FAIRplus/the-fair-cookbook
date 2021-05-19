@@ -353,7 +353,7 @@ This relates to this other FAIR principle mentioned in the introduction.
 
 The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
-A PURL is a **`persistent URL`**, meaning that it provides a ++permanent address to access a resource on the web++.
+A PURL is a **`persistent URL`**, meaning that it provides a **permanent address to access a resource on the web**.
 
 To understand the notion of PURL, one needs to first get familiar with the notion of `url indirection` (also known as `url redirect` or `url forwarding` ), which refers to the practice of providing a stable, fixed web address/url, but setting it up so that it points to another content, which may be periodically modified. 
 
