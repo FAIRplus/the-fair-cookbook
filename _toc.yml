@@ -6,7 +6,7 @@
   chapters:
     # - file: content/recipes/introduction
     - file: content/recipes/introduction/FAIR-cookbook-audience
-      title: Who should read it
+      title: Introduction
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
     - file: content/recipes/glossary-fair-terms
@@ -141,9 +141,9 @@
       sections:
             # - file: content/recipes/assessing-fairness/automatic-fair-assessment
             - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
-              title: with FAIREvaluator #FCB049
+              title: FAIR Evaluator tool #FCB049
             - file: content/recipes/assessing-fairness/fair-assessment-fairshake
-              title: with FAIRshake #FCB050
+              title: FAIRshake tool#FCB050
      
     - file: content/recipes/applied-examples
       title: Applied examples

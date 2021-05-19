@@ -155,7 +155,7 @@ The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) 
 
 
 
-The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a `containerized` version of the [Proteowizard](https://github.com/ProteoWizard/pwiz).
+The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a `containerized` version of the [Proteowizard](https://github.com/ProteoWizard/pwiz) {footcite}`Chambers2012`.
 
 > **requirements**:
 
@@ -232,7 +232,7 @@ To address the latter, one should consult the table of compatibility:
 
 For users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
 
-A number of libraries are available for parsing (reading and writing) `mzML` document. `mzML` is a king of `XML` format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library.
+A number of libraries are available for parsing (reading and writing) `mzML` document. `mzML` is a king of `XML` format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
 
 <!-- <div>
 <img src="https://i.imgur.com/BTs0GUS.png" width="750" border="1"/>
@@ -303,8 +303,12 @@ ___
 
 
 ## References
-1. Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918–920 (2012). https://doi.org/10.1038/nbt.237
-2. Bald T, Barth J, Niehues A, et al. pymzML--Python module for high-throughput bioinformatics on mass spectrometry data. Bioinformatics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI: 10.1093/bioinformatics/bts066.
+
+```{footbibliography}
+```
+
+<!-- 1. Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918–920 (2012). https://doi.org/10.1038/nbt.237
+2. Bald T, Barth J, Niehues A, et al. pymzML--Python module for high-throughput bioinformatics on mass spectrometry data. Bioinformatics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI: 10.1093/bioinformatics/bts066. -->
 
 
 ## Authors
