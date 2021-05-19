@@ -102,7 +102,7 @@ parse:
   myst_url_schemes: [ mailto, http, https, ftp ]
 
 bibtex_bibfiles:
-   - ./_bibliography/bibliography-identifier-mapping.bib
+   - ./_bibliography/bibliography-faircookbook.bib
 
 
 bibtex_reference_style: author_year
