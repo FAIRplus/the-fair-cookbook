@@ -26,7 +26,7 @@ This recipe aims to serve as a start point for designing ETL workflows, rather t
 
 ```{warning} 
 The content in these tables was generated in March 2021.
-For an updated contents, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
+For updated content, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
 To provide feedback on this content or report issues, please do so via the [FAIR Cookbook github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
 ```
 
@@ -199,7 +199,7 @@ For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fc
 </table>
 
 ```{warning} 
-The tools list below aims to provide an basic overview of what is there on the market. It is *not* a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+The tools list above aims to provide a basic overview of what is available on the market. It is *not* a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
 ```
 
 
@@ -336,8 +336,8 @@ To show how some of these tools may be used, the following related recipes provi
 
 
 1. {ref}`fcb-interop-fastqval`
-2. OMOP ETL [link]() (*in prepartion*)
-3. RDF ETL [link]()  (*in prepartion*)
+2. OMOP ETL [link]( TODO link to recipe) (*in prepartion*)
+3. RDF ETL [link]( TODO link to recipe)  (*in prepartion*)
 
 ___
 
