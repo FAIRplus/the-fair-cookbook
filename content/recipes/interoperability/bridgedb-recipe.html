@@ -941,14 +941,14 @@ Hands on guidance is provided for 2 interfaces (R package and a Python Webservic
 <div><p>📖 In the context of this recipe, we distinguish between two types of identifiers:</p>
 <ul class="simple">
 <li><p><em>Local identifiers</em> which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization).</p></li>
-<li><p><em>Global identifiers</em> which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb’s <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">data sources file</a></p></li>
+<li><p><em>Global identifiers</em> which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb’s <a class="reference external" href="https://github.com/bridgedb/datasources">data sources file</a></p></li>
 </ul>
 </div></blockquote>
 <p>We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers.</p>
 <p>In this recipe, we will cover how BridgeDb’s R package and webservices can be used to map between resource identifiers.</p>
 <div class="section" id="mapping-a-global-identifier-to-other-global-identifiers">
 <h3>Mapping a global identifier to other global identifiers<a class="headerlink" href="#mapping-a-global-identifier-to-other-global-identifiers" title="Permalink to this headline">¶</a></h3>
-<p>In this case, the input data is a list of elements with an identifier that is part of <a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">BridgeDb’s data sources</a>. In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention (<a class="reference external" href="http://www.genenames.org">HGNC</a>) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.</p>
+<p>In this case, the input data is a list of elements with an identifier that is part of <a class="reference external" href="https://github.com/bridgedb/datasources">BridgeDb’s data sources</a>. In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention (<a class="reference external" href="http://www.genenames.org">HGNC</a>) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.</p>
 <div class="section" id="bridgedb-via-webservices-using-python">
 <h4>BridgeDb via Webservices using Python<a class="headerlink" href="#bridgedb-via-webservices-using-python" title="Permalink to this headline">¶</a></h4>
 <blockquote>
