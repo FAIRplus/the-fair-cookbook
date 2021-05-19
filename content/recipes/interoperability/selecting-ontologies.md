@@ -327,11 +327,16 @@ equivalentClass :
 > 
 >The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choices will have.
 
+<!-- 
+TODO : fill in the links to what-should-I-read-next recipes
+
 > ### What should I read next?
 > * [How to build an application ontology?]()
 > * [How to select on ontology service?]()
 > * [How to deploy an ontology server?]()
 > * [How to establish a minimal metadata profile?]()
+-->
+
 ___
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
