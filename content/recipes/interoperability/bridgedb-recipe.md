@@ -97,14 +97,14 @@ ___
 
 > 📖 In the context of this recipe, we distinguish between two types of identifiers:
 >* *Local identifiers* which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization). 
->* *Global identifiers* which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb's [data sources file](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv)
+>* *Global identifiers* which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb's [data sources file](https://github.com/bridgedb/datasources)
 
 We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers. 
 
 In this recipe, we will cover how BridgeDb's R package and webservices can be used to map between resource identifiers.
 
 ### Mapping a global identifier to other global identifiers
-In this case, the input data is a list of elements with an identifier that is part of [BridgeDb's data sources](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv). In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention ([HGNC](http://www.genenames.org)) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
+In this case, the input data is a list of elements with an identifier that is part of [BridgeDb's data sources](https://github.com/bridgedb/datasources). In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention ([HGNC](http://www.genenames.org)) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
 
 #### BridgeDb via Webservices using Python
 > ❗ For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3, and BridgeDb Webservices v0.9.0 were used.
