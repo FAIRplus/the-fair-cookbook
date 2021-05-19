@@ -313,7 +313,7 @@ Running the above script to get the seeds for the terms `male`, `female`, and `u
 ['unknown']
 ```
 
-#### Step2.2.3 Seed term extraction with SPARQL 
+#### Step 2.2.3 Seed term extraction with SPARQL 
 
 Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL query`. Here, we generate a subset of `UBERON` terms which have a crossreference to either `FMA (for human anatomy)` or `MA (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
 
