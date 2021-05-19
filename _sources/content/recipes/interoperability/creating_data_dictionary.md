@@ -202,7 +202,7 @@ Why? Simply because if affords several key data management processes to take pla
 
 ### What to read next?
 
-> - {ref}`fcb-interop-selectonto`
+> - {ref}`fcb-selecting-ontologies`
 > - {ref}`fcb-interop-etl` (*in preparation*)
 > - Key issues to be aware of when planning [Extract-Transform-Load processes]( TODO add link)
 

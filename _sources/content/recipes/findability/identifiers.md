@@ -31,28 +31,32 @@ The main goals of this recipe are therefore:
 
 From these principles, it is necessary to explain three key processes, which are: 
 
-1. Identifier minting
-
+### Identifier minting
+```{admonition} Tip
+:class: tip 
  **`Identifier minting`** is fundamentally about the **`authority deciding identity`**. 
+``` 
  - the tax office
  - the HR department
  - the company registry
  - the EMBL-EBI
 
-2. URI construction
-
+### URI construction
+```{admonition} Tip
+:class: tip 
 **`URI construction`** is fundamentally about **`scoping the authority`**.
-
+```
 > for example, should the web address be:
 > http://organization/people/1123 
 > or
 > http://organization/commercial/people/1123
 
 
-3. URI Resolution: 
-
+### URI Resolution: 
+```{admonition} Tip
+:class: tip 
 **`URI resolution`** is fundamentally about **`directing requests to the relevant identified entity`**
-
+```
 The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
 All these key points will be developed in this recipe.

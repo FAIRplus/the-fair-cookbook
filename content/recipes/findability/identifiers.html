@@ -230,7 +230,7 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/ontology-why-using-them.html">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
      3. Introduction to terminologies and ontologies
     </a>
    </li>
@@ -400,7 +400,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
-     2. FAIRshake tool#FCB050
+     2. FAIRshake tool
     </a>
    </li>
   </ul>
@@ -642,6 +642,23 @@
   <a class="reference internal nav-link" href="#main-objectives">
    1.1. Main Objectives
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifier-minting">
+     1.1.1. Identifier minting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uri-construction">
+     1.1.2. URI construction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uri-resolution">
+     1.1.3. URI Resolution:
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#capability-maturity-table">
@@ -894,36 +911,45 @@ No
 To provide explanations on how to generate globaly unique identifiers, explain what IRI are and how they can be generated, retrieved and resolved.</p>
 </div></blockquote>
 <p>From these principles, it is necessary to explain three key processes, which are:</p>
-<ol class="simple">
-<li><p>Identifier minting</p></li>
-</ol>
+<div class="section" id="identifier-minting">
+<h3><span class="section-number">1.1.1. </span>Identifier minting<a class="headerlink" href="#identifier-minting" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">Identifier</span> <span class="pre">minting</span></code></strong> is fundamentally about the <strong><code class="docutils literal notranslate"><span class="pre">authority</span> <span class="pre">deciding</span> <span class="pre">identity</span></code></strong>.</p>
+</div>
 <ul class="simple">
 <li><p>the tax office</p></li>
 <li><p>the HR department</p></li>
 <li><p>the company registry</p></li>
 <li><p>the EMBL-EBI</p></li>
 </ul>
-<ol class="simple">
-<li><p>URI construction</p></li>
-</ol>
+</div>
+<div class="section" id="uri-construction">
+<h3><span class="section-number">1.1.2. </span>URI construction<a class="headerlink" href="#uri-construction" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">URI</span> <span class="pre">construction</span></code></strong> is fundamentally about <strong><code class="docutils literal notranslate"><span class="pre">scoping</span> <span class="pre">the</span> <span class="pre">authority</span></code></strong>.</p>
+</div>
 <blockquote>
 <div><p>for example, should the web address be:
 <a class="reference external" href="http://organization/people/1123">http://organization/people/1123</a>
 or
 <a class="reference external" href="http://organization/commercial/people/1123">http://organization/commercial/people/1123</a></p>
 </div></blockquote>
-<ol class="simple">
-<li><p>URI Resolution:</p></li>
-</ol>
+</div>
+<div class="section" id="uri-resolution">
+<h3><span class="section-number">1.1.3. </span>URI Resolution:<a class="headerlink" href="#uri-resolution" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">URI</span> <span class="pre">resolution</span></code></strong> is fundamentally about <strong><code class="docutils literal notranslate"><span class="pre">directing</span> <span class="pre">requests</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">relevant</span> <span class="pre">identified</span> <span class="pre">entity</span></code></strong></p>
+</div>
 <p>The standard approach would be resolving a <code class="docutils literal notranslate"><span class="pre">HTTP</span> <span class="pre">GET</span></code> request using content negotiation to choose between different representations of the resource.</p>
 <p>All these key points will be developed in this recipe.</p>
 <hr class="docutils" />
 <div class="figure align-default" id="id13">
 <a class="reference internal image-reference" href="../../../_images/identifiers-fig1.svg"><img alt="identifier services" src="../../../_images/identifiers-fig1.svg" width="700px" /></a>
 <p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <hr class="docutils" />

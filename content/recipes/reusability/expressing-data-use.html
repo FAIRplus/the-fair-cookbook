@@ -230,7 +230,7 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/ontology-why-using-them.html">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
      3. Introduction to terminologies and ontologies
     </a>
    </li>
@@ -400,7 +400,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
-     2. FAIRshake tool#FCB050
+     2. FAIRshake tool
     </a>
    </li>
   </ul>
@@ -719,8 +719,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementatino-in-data-catalogues-built-with-dcat-or-dats">
-   4.7. Implementatino in Data Catalogues built with DCAT or DATS
+  <a class="reference internal nav-link" href="#implementation-in-data-catalogues-built-with-dcat-or-dats">
+   4.7. Implementation in Data Catalogues built with DCAT or DATS
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1154,9 +1154,9 @@ For instance, if data reuse is restricted to research into <code class="docutils
 </pre></div>
 </div>
 <p>Browsing Data Access Committees available from EGA:</p>
-<div class="figure align-default" id="id1">
+<div class="figure align-default" id="id9">
 <a class="reference internal image-reference" href="../../../_images/dac-ega.png"><img alt="List of Data Access Policy from EGA" src="../../../_images/dac-ega.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">List of Data Access Policy from EGA</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">List of Data Access Policy from EGA</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="odrl-open-digital-rights-language">
@@ -1164,14 +1164,14 @@ For instance, if data reuse is restricted to research into <code class="docutils
 <p>ODRL stands for Open Digital Rights Language and is a set  W3C Recommendations defining a <code class="docutils literal notranslate"><span class="pre">policy</span> <span class="pre">expression</span> <span class="pre">language</span></code>.</p>
 <p>ODRL is made up of several components:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.w3.org/TR/odrl-model/">The ODRL Model</a></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/odrl-model/">The ODRL Model</a> <a class="footnote-reference brackets" href="#odrlmodel" id="id1">3</a></p></li>
 </ul>
-<div class="figure align-default" id="id2">
+<div class="figure align-default" id="id10">
 <a class="reference internal image-reference" href="https://www.w3.org/TR/odrl-model/00Model.png"><img alt="Open Digital Rights Language model" src="https://www.w3.org/TR/odrl-model/00Model.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.16 </span><span class="caption-text">ODRL overview</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.16 </span><span class="caption-text">ODRL overview</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.w3.org/TR/odrl-vocab/">The ODRL Vocabulary</a></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/odrl-vocab/">The ODRL Vocabulary</a> <a class="footnote-reference brackets" href="#odrlvocab" id="id2">4</a></p></li>
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">ODRL</span> <span class="pre">Vocabulary</span> <span class="pre">and</span> <span class="pre">Expression</span></code> provides the terms to express policies in RDF language.</p>
 <p>The ODRL Vocabulary and Expression complements the ODRL information model, which allows expressing similar information in JSON language.</p>
@@ -1179,7 +1179,7 @@ For instance, if data reuse is restricted to research into <code class="docutils
 <p class="admonition-title">Warning</p>
 <p>In 2015, the dedicated working group produced the following JSON schema implementation guidance
 <a class="reference external" href="https://www.w3.org/community/odrl/json/2.1/#section-Schema">https://www.w3.org/community/odrl/json/2.1/#section-Schema</a></p>
-<p>We base our representations on this specification.</p>
+<p>We base our representations on this specification <a class="footnote-reference brackets" href="#odrljson" id="id3">2</a>.</p>
 <p>We are aware of a possible misalignment between the specifications of the Working Group (from 2015) and the latest specifications as to whether to use the keys “name” or “leftOperand” (<a class="reference external" href="https://www.w3.org/TR/odrl-model/#constraint-rule">https://www.w3.org/TR/odrl-model/#constraint-rule</a>, 2018).
 In the following representations, we use the key “name” to validate against the 2015 JSON-schema <a class="reference external" href="https://www.w3.org/community/odrl/json/2.1/#section-Schema">https://www.w3.org/community/odrl/json/2.1/#section-Schema</a> / <a class="reference external" href="https://github.com/iptc/rightsml-dev/blob/master/licensed/ODRL21.json">https://github.com/iptc/rightsml-dev/blob/master/licensed/ODRL21.json</a></p>
 </div>
@@ -1218,7 +1218,7 @@ In the following representations, we use the key “name” to validate against 
 </div>
 <div class="section" id="encoding-research-restriction-on-disease-and-geographical-area-using-odrl-and-duo">
 <h3><span class="section-number">4.5.3. </span>Encoding Research Restriction on disease and geographical area using ODRL and DUO<a class="headerlink" href="#encoding-research-restriction-on-disease-and-geographical-area-using-odrl-and-duo" title="Permalink to this headline">¶</a></h3>
-<p>In this section, we document how to rely on a basic ODRL-based pattern using a DUO term to represent a situation where SecondaryUse of the data is allowed on the condition that work is restricted to <code class="docutils literal notranslate"><span class="pre">disease</span> <span class="pre">specific</span> <span class="pre">research</span></code></p>
+<p>In this section, we document how to rely on a basic ODRL-based pattern using a DUO term <a class="footnote-reference brackets" href="#duo" id="id4">1</a> to represent a situation where SecondaryUse of the data is allowed on the condition that work is restricted to <code class="docutils literal notranslate"><span class="pre">disease</span> <span class="pre">specific</span> <span class="pre">research</span></code></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Policy&quot;</span><span class="p">,</span>
     <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;https://fairplus.github.io/examples/policy_122334&quot;</span><span class="p">,</span>
@@ -1443,7 +1443,7 @@ This example is currently meant to present an example of how to use ODRL to repr
 </div>
 <div class="section" id="indicating-prohibitions-and-interdictions">
 <h3><span class="section-number">4.6.1. </span>Indicating Prohibitions and Interdictions<a class="headerlink" href="#indicating-prohibitions-and-interdictions" title="Permalink to this headline">¶</a></h3>
-<p>The ODRL model provides the <code class="docutils literal notranslate"><span class="pre">prohibitions</span></code> relation, which uses similar patterns to those seen while covering  <code class="docutils literal notranslate"><span class="pre">permissions</span></code>. The ODRL vocabulary is then used to identify the <code class="docutils literal notranslate"><span class="pre">actions</span></code> which are restricted under the <code class="docutils literal notranslate"><span class="pre">prohibition</span></code> header. Complex prohibitions can be expressed using <code class="docutils literal notranslate"><span class="pre">constraints</span></code> and <code class="docutils literal notranslate"><span class="pre">refinement</span></code> elements.</p>
+<p>The ODRL model <a class="footnote-reference brackets" href="#odrlmodel" id="id5">3</a> provides the <code class="docutils literal notranslate"><span class="pre">prohibitions</span></code> relation, which uses similar patterns to those seen while covering  <code class="docutils literal notranslate"><span class="pre">permissions</span></code>. The ODRL vocabulary is then used to identify the <code class="docutils literal notranslate"><span class="pre">actions</span></code> which are restricted under the <code class="docutils literal notranslate"><span class="pre">prohibition</span></code> header. Complex prohibitions can be expressed using <code class="docutils literal notranslate"><span class="pre">constraints</span></code> and <code class="docutils literal notranslate"><span class="pre">refinement</span></code> elements.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;policytype&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/odrl/2/Policy&quot;</span><span class="p">,</span>
     <span class="nt">&quot;policyid&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/policy:0099&quot;</span><span class="p">,</span>
@@ -1460,8 +1460,8 @@ This example is currently meant to present an example of how to use ODRL to repr
 </div>
 </div>
 </div>
-<div class="section" id="implementatino-in-data-catalogues-built-with-dcat-or-dats">
-<h2><span class="section-number">4.7. </span>Implementatino in Data Catalogues built with DCAT or DATS<a class="headerlink" href="#implementatino-in-data-catalogues-built-with-dcat-or-dats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="implementation-in-data-catalogues-built-with-dcat-or-dats">
+<h2><span class="section-number">4.7. </span>Implementation in Data Catalogues built with DCAT or DATS<a class="headerlink" href="#implementation-in-data-catalogues-built-with-dcat-or-dats" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="referring-to-an-odrl-policy-from-a-dcat-dataset">
 <h3><span class="section-number">4.7.1. </span>Referring to an ODRL Policy from a DCAT DataSet<a class="headerlink" href="#referring-to-an-odrl-policy-from-a-dcat-dataset" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@prefix dcat:&lt;https://www.w3.org/ns/dcat&gt; .
@@ -1491,7 +1491,7 @@ This example is currently meant to present an example of how to use ODRL to repr
 </div>
 <div class="section" id="dats-and-odrl-json">
 <h3><span class="section-number">4.7.2. </span>DATS and ODRL JSON<a class="headerlink" href="#dats-and-odrl-json" title="Permalink to this headline">¶</a></h3>
-<p>An evolution of the DATS [2,3] schema is used by University of Luxembourg to build a data catalogue for IMI projects and datasets.
+<p>An evolution of the DATS <a class="footnote-reference brackets" href="#pmid28585923" id="id6">7</a>, <a class="footnote-reference brackets" href="#pmid32031623" id="id7">5</a> schema is used by University of Luxembourg to build a data catalogue for IMI projects and datasets.
 The proposed patterns could be used and tested to representation DAC/DAA information as well as the allowed uses of datasets generated by the consortia funded by IMI.
 More complex use cases can be considered to assess to ability of the representations to be associated to specific datasets, for instance datasets associated with a particular data acquisition technique the access of which may require specific policies and conditions to be made machine readable.</p>
 <p>The approach is therefore to reference the  JSON representations compliant with the ODRL JSON schema 2.1 specification, as presented in earlier sections in conjunction with DATS JSON documents.</p>
@@ -1519,7 +1519,7 @@ Well, when it comes to genomics data, there is the Broad Institute’s  <a class
 <p class="caption"><span class="caption-number">Fig. 4.18 </span><span class="caption-text">Broad’s Institute  Data Use Oversight System landing page</span><a class="headerlink" href="#broad-s-institute-data-use-oversight-system" title="Permalink to this image">¶</a></p>
 </div>
 <p>DUOS requires official clearance from a <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Access</span> <span class="pre">Committee</span></code> representative or an <code class="docutils literal notranslate"><span class="pre">Authorized</span> <span class="pre">Submission</span> <span class="pre">Representative</span></code> to enable registration of a dataset into the DUOS.
-Once this authorization is available, the dataset has to be annotated following the patterns defined by GA4GH with Data Use Ontology and ‘SRA XML’ format.</p>
+Once this authorization is available, the dataset has to be annotated following the patterns defined by GA4GH with Data Use Ontology <a class="footnote-reference brackets" href="#pmid26796797" id="id8">6</a> and ‘SRA XML’ format.</p>
 <p>The European Genome Archive allows programmatic filtering based on the this information via the REST-API of the service.</p>
 </div>
 <div class="section" id="conclusion">
@@ -1528,86 +1528,43 @@ Once this authorization is available, the dataset has to be annotated following 
 This content provides an overview of the models available to do so and how it has been applied to life science data, showing the main features of the models and how to define use based on the major properties such as the type of research allowed, how to indicate disease domain or geographical restrictions as well as temporal restrictions associated to the dataset and defined by the data owners/data controlers.</p>
 <div class="section" id="what-to-read-next">
 <h3><span class="section-number">4.9.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<blockquote>
-<div><p><span class="xref std std-ref">rr-informed-consent-evolution-prov</span></p>
-</div></blockquote>
-<blockquote>
-<div><p><a class="reference internal" href="ATI_licensing_software.html#rr-licensing-software"><span class="std std-ref">Software licenses</span></a></p>
-</div></blockquote>
-<blockquote>
-<div><p><a class="reference internal" href="ATI_licensing_data.html#rr-licensing-data"><span class="std std-ref">Data licenses</span></a>
-=======</p>
-</div></blockquote>
 <ul class="simple">
 <li><p><a class="reference internal" href="ATI_licensing_software.html#rr-licensing-software"><span class="std std-ref">Software licenses</span></a></p></li>
 <li><p><a class="reference internal" href="ATI_licensing_data.html#rr-licensing-data"><span class="std std-ref">Data licenses</span></a></p></li>
 </ul>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>d5a45be479c0a78a9f965b75ca38435cf241225b</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="references">
 <h2><span class="section-number">4.10. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p>[1]. Dyke et al, 2017. <a class="reference external" href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005772">http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005772</a></p>
-<p>[2]. Sansone et al, 2017: <a class="reference external" href="https://doi.org/10.1038/sdata.2017.59">https://doi.org/10.1038/sdata.2017.59</a></p>
-<p>[3]. Alter et al, 2020: <a class="reference external" href="https://doi.org/10.1093/gigascience/giz165">https://doi.org/10.1093/gigascience/giz165</a></p>
-<p>[4]. ODLR model: <a class="reference external" href="https://www.w3.org/TR/odrl-model">https://www.w3.org/TR/odrl-model</a></p>
-<p>[5]. ODRL vocabulary: <a class="reference external" href="https://www.w3.org/TR/odrl-vocab/">https://www.w3.org/TR/odrl-vocab/</a></p>
-<p>[6]. DRL JSON schema: <a class="reference external" href="https://www.w3.org/community/odrl/json/2.1/#section-Schema">https://www.w3.org/community/odrl/json/2.1/#section-Schema</a></p>
-<p>[7]. DUO: <a class="reference external" href="http://purl.obolibrary.org/obo/duo.owl">http://purl.obolibrary.org/obo/duo.owl</a></p>
-<p>[8]. RIGHTML: <a class="reference external" href="https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html">https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html</a></p>
+<p id="bibtex-footbibliography-content/recipes/reusability/expressing-data-use-0"><dl class="footnote brackets">
+<dt class="label" id="duo"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p>Duo. URL: <a class="reference external" href="http://purl.obolibrary.org/obo/duo.owl">http://purl.obolibrary.org/obo/duo.owl</a>.</p>
+</dd>
+<dt class="label" id="odrljson"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Odrl json schema. URL: <a class="reference external" href="https://www.w3.org/community/odrl/json/2.1/#section-Schema">https://www.w3.org/community/odrl/json/2.1/#section-Schema</a>.</p>
+</dd>
+<dt class="label" id="odrlmodel"><span class="brackets">3</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id5">2</a>)</span></dt>
+<dd><p>Odrl model. URL: <a class="reference external" href="https://www.w3.org/TR/odrl-model">https://www.w3.org/TR/odrl-model</a>.</p>
+</dd>
+<dt class="label" id="odrlvocab"><span class="brackets"><a class="fn-backref" href="#id2">4</a></span></dt>
+<dd><p>Odrl vocabulary. URL: <a class="reference external" href="https://www.w3.org/TR/odrl-vocab/">https://www.w3.org/TR/odrl-vocab/</a>.</p>
+</dd>
+<dt class="label" id="pmid32031623"><span class="brackets"><a class="fn-backref" href="#id7">5</a></span></dt>
+<dd><p>G. Alter, A. Gonzalez-Beltran, L. Ohno-Machado, and P. Rocca-Serra. The Data Tags Suite (DATS) model for discovering data access and use requirements. <em>Gigascience</em>, 02 2020.</p>
+</dd>
+<dt class="label" id="pmid26796797"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
+<dd><p>S. O. Dyke, A. A. Philippakis, J. Rambla De Argila, D. N. Paltoo, E. S. Luetkemeier, B. M. Knoppers, A. J. Brookes, J. D. Spalding, M. Thompson, M. Roos, K. M. Boycott, M. Brudno, M. Hurles, H. L. Rehm, A. Matern, M. Fiume, and S. T. Sherry. Consent Codes: Upholding Standard Data Use Conditions. <em>PLoS Genet</em>, 12(1):e1005772, Jan 2016.</p>
+</dd>
+<dt class="label" id="pmid28585923"><span class="brackets"><a class="fn-backref" href="#id6">7</a></span></dt>
+<dd><p>S. A. Sansone, A. Gonzalez-Beltran, P. Rocca-Serra, G. Alter, J. S. Grethe, H. Xu, I. M. Fore, J. Lyle, A. E. Gururaj, X. Chen, H. E. Kim, N. Zong, Y. Li, R. Liu, I. B. Ozyurt, and L. Ohno-Machado. DATS, the data tag suite to enable discoverability of datasets. <em>Sci Data</em>, 4:170059, 06 2017.</p>
+</dd>
+</dl>
+</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
 <h2><span class="section-number">4.11. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
-<th class="text-align:left head"><p>Affiliation</p></th>
-<th class="text-align:left head"><p>orcid</p></th>
-<th class="text-align:left head"><p>CrediT role</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>Philippe Rocca-Serra</p></td>
-<td class="text-align:left"><p>University of Oxford</p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/0000-0001-9853-5668">https://orcid.org/0000-0001-9853-5668</a></p></td>
-<td class="text-align:left"><p>Conceptualization, Writing - Original Draft</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>Tom Plasterer</p></td>
-<td class="text-align:left"><p>Astra-Zeneca</p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/">https://orcid.org/</a></p></td>
-<td class="text-align:left"><p>Conceptualization</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p>Melanie Courtot</p></td>
-<td class="text-align:left"><p>EMBL-EBI</p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/0000-0002-9551-6370">https://orcid.org/0000-0002-9551-6370</a></p></td>
-<td class="text-align:left"><p>Review, Writing</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>Danielle Welter</p></td>
-<td class="text-align:left"><p>UNI-LU</p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://orcid.org/0000-0003-1058-2668">https://orcid.org/0000-0003-1058-2668</a></p></td>
-<td class="text-align:left"><p>Review, Writing</p></td>
-</tr>
-</tbody>
-</table>
-<p>=======</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -1656,27 +1613,13 @@ This content provides an overview of the models available to do so and how it ha
 </tr>
 </tbody>
 </table>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>d5a45be479c0a78a9f965b75ca38435cf241225b</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
 <h2><span class="section-number">4.12. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<hr class="footnotes docutils" />
 </div>
 </div>
 
