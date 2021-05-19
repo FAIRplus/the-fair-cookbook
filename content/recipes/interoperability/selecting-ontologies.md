@@ -285,11 +285,11 @@ Finally, a resource exists that describes statistical measures, statistical test
 
 ### Relations
 
-Also known as `OWL.Properties`, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by `reasoners` to carry the following key tasks:
+Also known as `OWL.Properties`, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by tools known as `reasoners` to carry the following key tasks:
 
 * `Ontology logical consistency` checks
 * `Automatic classification` and `inference` tasks
-* `Entailments`, i.e. detection of logical consequences resulting from axiomatics
+* `Entailments`, i.e. detection of logical consequences resulting from axiomatic definitions (closely related to the point above)
 
 This is particularly important when processing billions of facts expressed as RDF statements. 
 
@@ -310,14 +310,30 @@ In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org
 As `knowledge graphs` and `property graphs` gain importance, we can expect the range and depth of relations to mature and expand as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
 This would also have to be placed in the context of advances in `Text Mining` and `Machine Learning`, where unsupervised methods start to demonstrate strong potential to detect relations between entities.
 
+The following is an example of how a `defined class` may be created in an ontology. The code snippet shows one such class being expressed to create a type by specifying a number of `axioms`. These use `relations` (aka OWL.Properties), which may be set to 
+
 ```bash
-B cell, CD19-positive
+'B cell, CD19-positive'
 equivalentClass :
-    lymphocyte of B lineage, CD19-positive 
-    and ( has plasma membrane part some CD19 molecule) 
-    and ( in taxon some Mammalia) 
-    and ( capable of some B cell mediated immunity)
+    'lymphocyte of B lineage, CD19-positive' 
+    and ( 'has plasma membrane part' some 'CD19 molecule') 
+    and ( 'in taxon' some Mammalia) 
+    and ( 'capable of' some 'B cell mediated immunity')
 ```
+
+Any class satisfying these patterns may be classified by an OWL reasoner as a child of that class. So the following class, with such properties that they all satisfy the requirements of the `defined class` declared above (e.g. "Homo sapiens" is_a type of "Mammalia", etc...), will be classified automatically (i.e. without human intervention) by a reasoner such as ELK or Hermit as a child of 'B cell, CD19-positive' .
+
+```bash
+'human B cell, CD19-positive'
+Class:
+    ( 'has plasma membrane part' some 'B-lymphocyte antigen CD19 isoform h2')
+    and ( 'in taxon' some 'Homo sapiens') 
+    and ( 'capable of' some 'B cell tolerance induction in mucosal-associated lymphoid tissue')
+
+```
+
+The notion is important to grasp as it also explains why not all ontologies are compatible, because they may significantly differ in the underlying axioms they rely on to establish their hierarchies using reasoners.
+
 
 
 ---
