@@ -4,59 +4,27 @@
 +++
 <br/>
 
-----
 
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Ontologist </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p> 
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Data Curator </p>
-````
+````{panels_fairplus}
+:identifier_text: FCB0_TOBEMINTED
+:identifier_link: 'https://w3id.org/faircookbook/FCB0_TOBEMINTED'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: ontologist, terminology_manager, data_scientist, data_curator, data_manager 
+:has_executable_code: nope
+:recipe_name: Ontology mapping with Ontology Xref Service (OxO)
+```` 
 
 ---
 
 ## Main Objectives
 
-Multiple ontology terms can describe the same concept, which makes it difficult for data integration. `Ontology mapping`, or ontology alignment, is the process of determining correspondences between equivalent concepts in alternative ontologies and distinct vocabularies. 
+Different ontology terms can describe the same concept, which makes it difficult for data integration. `Ontology mapping`, or ontology alignment, is the process of determining correspondences between equivalent concepts in alternative ontologies and distinct vocabularies. 
 
-OxO maps terms in different ontologies, vocabularies and coding standards using evidence collected from the Ontology Lookup Service (OLS), Unified Medical Language System (UMLS), and other sources. 
+OxO maps terms in different ontologies, vocabularies and coding standards using evidence collected mainly from the Ontology Lookup Service (OLS), Unified Medical Language System (UMLS), but also from other sources. 
 
-This recipe demonstrates how to map ontology terms using the [EMBL-EBI Ontology Xref Service (OxO)](https://www.ebi.ac.uk/spot/oxo/).
+This recipe shows how to use the [EMBL-EBI Ontology Xref Service (OxO)](https://www.ebi.ac.uk/spot/oxo/) service to map ontology terms between source and target vocabularies.
 
 ## Graphical Overview
 
@@ -104,7 +72,8 @@ The process of using EMBL-EBI OxO, an Ontology Mapping Service.
 
 ## Requirements
 * recipe dependency:
-   * {ref}`Which vocabulary to use?`
+   * {ref}`fcb-introduction-terminologies-ontologies`
+   * {ref}`fcb-selecting-ontologies`
 * knowledge requirements:
    * Familiar with metadata curation
    * Familiar with ontology and other vocabularies
@@ -137,7 +106,7 @@ The process of using EMBL-EBI OxO, an Ontology Mapping Service.
 
 ## Using EMBL-EBI OXO
 
-Ontology cross Ontology or OXO service is available from a web interface or a programmatic interface. The following sections show both:
+Ontology cross Ontology or OxO service is available from a web interface or a programmatic interface. The following sections show both.
 
 ### OXO Web Interface:
 
@@ -233,7 +202,7 @@ OxO mapping results review: MONDO example.
 
 ## Using OxO service programmatically
 
-Besides the graphical user interface offered by OXO, a REST style API is also available.
+Besides the graphical user interface offered by OxO at EMBL-EBI, a REST style API is also available.
 It is therefore possible to invoke the mapping service from the command line. See the [OxO API documentation](https://www.ebi.ac.uk/spot/oxo/docs/api) page.
 
 In the following code snippet, an API request invoked via `curl` performed the same mapping presented in the section above, at step 3:
@@ -280,7 +249,7 @@ The corresponding results are as follows:
 
 
 
-### Common questions about OXO
+### Common questions about OxO
 
 1. What about incorrect mappings?
 
@@ -300,11 +269,13 @@ The corresponding results are as follows:
 
 
 ## Conclusion
-This recipe presented OxO, EMBL-EBI tool for performing ontology mapping  as an example to demonstrate the ontology mapping workflow.
+
+This recipe presented OxO, EMBL-EBI tool for performing ontology mapping as an example to demonstrate the ontology mapping workflow.
+In the context of a FAIRification workflow, a tool such as OxO comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
 
 > ### What should I read next?
-> * [How to build a data dictionary?]() / {ref}`fcb-interop-datadict`
-> * [How to build a semantic model?]() / {ref}`fcb-interop-semmod`
+> * [How to build a data dictionary?](fcb-interop-datadict)
+> * [How to build a semantic model?](fcb-interop-semmod)
 
 
 ## Authors
