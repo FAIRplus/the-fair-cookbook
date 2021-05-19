@@ -252,7 +252,7 @@ The table below is an overview of ontology strategies tools identified. Details 
 ## Requirements
 
 * recipe dependency:
-   * {ref}`fcb-interop-selectonto`
+   * {ref}`fcb-selecting-ontologies`
 * knowledge requirement:
    * be familiar with ontologies and semantic annotation.
 
@@ -687,7 +687,7 @@ __Manually curated list of tools__
 ## Implementation examples
 
 To show how these tools can be used in real life examples, please check the related recipes.
-- {ref}`fcb-interop-selectonto`
+- {ref}`fcb-selecting-ontologies`
 - {ref}`fcb-interop-ontorobot`
 <!-- - [Which vocabulary to use?](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html)
 - [Building an application ontology with Robot](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html) -->

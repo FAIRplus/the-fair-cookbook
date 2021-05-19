@@ -69,7 +69,7 @@
             sections:
               - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
                 title: Using BridgeDb web services #FCB018
-          - file: content/recipes/interoperability/ontology-why-using-them    
+          - file: content/recipes/interoperability/introduction-terminologies-ontologies    
             title: Introduction to terminologies and ontologies #FCB019
           - file: content/recipes/interoperability/selecting-ontologies
             title: Selecting terminologies and ontologies #FCB020
