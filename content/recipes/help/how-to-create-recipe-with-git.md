@@ -1,16 +1,15 @@
 (fcb-help-recipe-git)=
 # Add via Git
 
-## Main Objectives <a name="Main%20Objectives"></a>
+## Main Objectives 
 
 The main purpose of this recipe is:
 
-> Learn how to get set up to commit to the FAIR Cookbook or create a recipe using the GoogleDoc Template
+> Learn how to set up git to commit to the FAIR Cookbook
 
 ___
 
-## Graphical Overview of the FAIRification Recipe Objectives <a name="Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives"></a>
-
+## Graphical Overview of the FAIRification Recipe Objectives 
 
 <div class="mermaid">
 graph TD;
@@ -21,26 +20,20 @@ graph TD;
 </div>
 
 
-## Prequisites and Getting Set up <a name="Prequisites%20and%20Getting%20Set%20up"></a>
+## Prequisites and Getting Set up 
 
-<p style='text-align: justify;'>
 We rely on github infrastructure for hosting the documents making up the cookbook. The reliance of git subversion system ensures robust data provenance tracking as well as traceability of authors contributions.
 
 To make the most of the github infrastructure, we *strongly* advise about following the git flow process, which we will detail now.
-</p>
 
-
-```bash
-git clone the repository
-```
-<p style='text-align: justify;'>
-test that you are in the master branch by issueing the following command from the terminal:
-</p>
+Clone the repo, enter the directory, and test that you are in the master branch by issuing the following command from the terminal:
 
 ```bash
 git clone http://github.com/FAIRplus/the-fair-cookbook/
+cd the-fair-cookbook
 git branch 
 ```
+
 should show:
  
 ```bash
@@ -50,7 +43,7 @@ master
 then issue the following git command:
 
 ```bash
-git checkout -b my_recipe_branch master
+git checkout -b my_username-my_recipe_branch master
 git branch
 ```
 
@@ -59,41 +52,42 @@ should show:
 ```bash
 my_recipe
 ```
-<p style='text-align: justify;'>
-This means you are working on the dedicated copy of the master branch, any change made there will not affect the master files, which are held on the master files,
-when done with your edits, using the standard:
-</p>
+
+
+This means you are working on the dedicated copy of the master branch, any change made there will not affect the master files. 
+
+When you are done with your edits, use:
 
 ```bash
 git add .
-git commit -m 'some meaninful meessage, possibly indicated that would be closing an issue'
-git add .
-
-git add my_recipe.md
+git commit -m 'some meaninful message, possibly indicated that would be closing an issue'
 ```
-	
+
 followed by:
 
 ```bash
 git push origin my_recipe_branch
 ```
-<p style='text-align: justify;'>
-if you are done with all the edits, you are now ready to send a "Pull Request" to the `master` branch. In github speak and jargon, a `pull request` always specifies a repository and a branch to merge into from a development branch on a repo (forked from a repo and simple cloned from the master as we are currently doing)
-</p>
-<p style='text-align: justify;'>
+
+
+If you are done with all the edits, you are now ready to send a "Pull Request" to the `master` branch. In github speak and jargon, a `pull request` always specifies a repository and a branch to merge into from a development branch on a repo (forked from a repo and simple cloned from the master as we are currently doing)
+
+
 When sending a `Pull Request` aslo known as `PR`, you will have to specify a `reviewer` known as an `assignee` in the github  world. This optimally ensures that someone will review the contribution before `merging` it with the main `master` branch of the repository.
 You should **NEVER** merge into the master branch without a review (unless you are the master owner / editor in chielf / benevolent dictator for life).
-</p>
-<p style='text-align: justify;'>
+
+
+
 Upon this `pull request`, the `assignee` will perform a review of the contribution. The contribution will either be merged in the master if all the quality control checks have passed or will be sent for correction to the submitter. the submitter will carry out the correction and send a new pull request for revision, following the same pattern of revision, submission acceptance merge.
-</p>
-<p style='text-align: justify;'>
+
+
+
 **Key ideas:**
 - Each recipe should be developed in its own branch from the main github repository or from a branch in a forked version of the said repository.
 more information from the 
 - commit often
 - remember to pull before committing in order to incorporate the latest changes from the master.
-</p>
+
 
 ### test, test and test again before pushing!
 
@@ -127,7 +121,7 @@ pyenv activate faircb375
 pip install jupyter-book
 ```
 
-		NOTE: you may have to update `pip` if the system complains, sending. amessage looking like this 
+		NOTE: you may have to update `pip` if the system complains, sending a message looking like this 
 ```
 to update pip, issue `pip install pip --upgrade'
 ```
