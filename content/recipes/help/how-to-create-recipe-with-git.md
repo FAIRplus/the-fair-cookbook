@@ -146,7 +146,7 @@ make serve
 Open a new tab in your favourite browser and point to the url `http://127.0.0.1:4000/the-fair-cookbook/` 
 
 
-## Option-1 Writing the recipe in Mardown syntax <a name="Option-1%20Writing%20the%20recipe%20in%20Mardown%20syntax"></a>
+## Option 1: Writing the recipe in Markdown syntax
 
  - use the recipe template available from the issue tracker ["create new recipe"](https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose)
  - the template uses the [Markdown syntax], for which guidelines are available [here](https://guides.github.com/features/mastering-markdown/)
@@ -154,40 +154,37 @@ Open a new tab in your favourite browser and point to the url `http://127.0.0.1:
  - briefly, you will need to fill in the following 5 sections:
 
  1. licence information:
- <p style='text-align: justify;'>
  	you may use the default information which is provided or provide the terms of use of your liking.
- </p>
+
  2. goal and objective of the recipe
- <p style='text-align: justify;'>
  	you need to summerize the task using keywords, ideally expressing them in terms of `process` or `capability`.
  	you should also annotate the terms with an ontology term, coming from resources such as. `EDAM.action` or `OBI.planned_process` or `OBI.data_transformation`
- </p>	
+
  3. declare and list the input information types (data files, data types) and the expected output datatypes.
- <p style='text-align: justify;'>
  	you should use the table provided to structure the information and annotate those input. & output to indicate the file formats. 
- 	 </p>
+
  	 For doing so, we strongly recommend performing a mark up by linking to either a [FAIRsharing record about standards](https://www.fairsharing,org) and with and [EDAM.datatype](https://www.ebi.ac.uk/ols/ontologies/edam)
 
- 4. provide an overal graphical representation of the flow of actions required to accomplish the objectives set considering the set of input data elements.
+ 4. provide an overall graphical representation of the flow of actions required to accomplish the objectives set considering the set of input data elements.
 
  	the representation may be done using the markdown syntax defined by the [mermaid project](https://mermaid-js.github.io/mermaid/#/)*
- 	 <p style='text-align: justify;'>
+
  	graphic representation currently encompass visual representatiion such as Gantt chart, Flow Chart, Flow Diagram and Sequence Diagram. These diagrammtic represntations are particularly useful to indicate key decision processes, action to perform and data transfrormation path which may be considered in various contexts.
-</p>
+
  5. provide executable code in the form a notebook. the code could be organized according to the cookie cutter templates for data science, which enhances the replicability of the process.
- <p style='text-align: justify;'>
+
  	you may also provide a machine actionable workflow and associated containers for execution in a safe environment or as microservice.
-</p>
+
  6. don't forget to fill in the table of authors and contributors, by making sure you provide the orcid for each of contributors and the contribution by using the [CredIT role](https://casrai.org/credit/)
 
  7. consider minting a DOI for the new recipe, so it is citeable and versionned.
 
 
-## Option 2 Writing the recipe as a Google document. <a name="Option-2%20Writing%20the%20recipe%20as%20a%20Google%20document"></a>
-<p style='text-align: justify;'>
+## Option 2: Writing the recipe as a Google document
+
 The main benefits are the collaborative editing feature capabilities this allows.
 The main drawbacks are the conversion losses that are bound to happen when using add-ons such as:
-</p>
+
 - [https://github.com/supreetpal/gdoc-markdown-converter/](https://github.com/supreetpal/gdoc-markdown-converter/blob/develop/README.md)
 
 - [https://github.com/mangini/gdocs2md](https://github.com/mangini/gdocs2md)
@@ -197,14 +194,14 @@ The main drawbacks are the conversion losses that are bound to happen when using
 
 
 
-## Dealing with merge conflicts <a name="mergeconflicts"></a>
+## Dealing with merge conflicts
 
 See [Resolving a merge conflict using the command line](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)
 
 
 
 
-## Authors:
+## Authors
 
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
@@ -215,7 +212,7 @@ ___
 
 
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 

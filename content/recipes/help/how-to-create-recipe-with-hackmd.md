@@ -81,7 +81,7 @@ in the github repository bar as shown in the figure below:
 
 
 
-## Getting familiar with MarkDown:
+## Getting familiar with MarkDown
 
 Here is a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
 ![](https://i.imgur.com/Kt3d9eo.png)
