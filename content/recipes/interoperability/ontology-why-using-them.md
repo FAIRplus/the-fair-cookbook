@@ -148,7 +148,7 @@ Choosing an ontology and semantic resources is a complex issue, which requires c
 Clearly, declaring the semantic resources used to annotate a dataset also influences the `findability` and `reusability` and it is good practice to do so as it allows potential users to gauge the amount of mapping work that may be required to combine two datasets.
 
 > ###  What to read next?
-> * {ref}`fcb-interop-selectonto`
+> * {ref}`fcb-selecting-ontologies`
 > * {ref}`fcb-interop-ontorequest`
 > * {ref}`fcb-interop-ontorobot`
 > * {ref}`fcb-interop-onto-op`

@@ -1,4 +1,4 @@
-(fcb-interop-selectonto)=
+(fcb-selecting-ontologies)=
 # Selecting terminologies and ontologies
 
 +++
