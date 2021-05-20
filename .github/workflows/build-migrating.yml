@@ -17,7 +17,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
-      run: python -V 2>&1 | tee ./build.log
+      run: python -V
     - name: Install jupyter-book==0.10.2 and fixed dependencies
       run: >
             pip install 
@@ -149,9 +149,9 @@ jobs:
     - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
     - name: Build jupyter-book
-      run: jupyter-book build . 2>&1 | tee ./_build/build.log
+      run: jupyter-book build . 2>&1 | tee ./build.log
     - name: Record important warnings
-      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./_build/build.log > ./_build/cleaned_build.log && bash scripts/extract-warnings.sh 
+      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log && bash scripts/extract-warnings.sh 
     - name: Record current directory structure
       run: ls -alhR 
     - name: Install SSH Client 🔑
