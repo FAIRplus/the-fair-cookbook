@@ -31,28 +31,32 @@ The main goals of this recipe are therefore:
 
 From these principles, it is necessary to explain three key processes, which are: 
 
-1. Identifier minting
-
+### Identifier minting
+```{admonition} Tip
+:class: tip 
  **`Identifier minting`** is fundamentally about the **`authority deciding identity`**. 
+``` 
  - the tax office
  - the HR department
  - the company registry
  - the EMBL-EBI
 
-2. URI construction
-
+### URI construction
+```{admonition} Tip
+:class: tip 
 **`URI construction`** is fundamentally about **`scoping the authority`**.
-
+```
 > for example, should the web address be:
 > http://organization/people/1123 
 > or
 > http://organization/commercial/people/1123
 
 
-3. URI Resolution: 
-
+### URI Resolution: 
+```{admonition} Tip
+:class: tip 
 **`URI resolution`** is fundamentally about **`directing requests to the relevant identified entity`**
-
+```
 The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
 All these key points will be developed in this recipe.
@@ -349,7 +353,7 @@ This relates to this other FAIR principle mentioned in the introduction.
 
 The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
-A PURL is a **`persistent URL`**, meaning that it provides a ++permanent address to access a resource on the web++.
+A PURL is a **`persistent URL`**, meaning that it provides a **permanent address to access a resource on the web**.
 
 To understand the notion of PURL, one needs to first get familiar with the notion of `url indirection` (also known as `url redirect` or `url forwarding` ), which refers to the practice of providing a stable, fixed web address/url, but setting it up so that it points to another content, which may be periodically modified. 
 

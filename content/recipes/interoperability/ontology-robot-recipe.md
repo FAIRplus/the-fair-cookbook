@@ -27,7 +27,7 @@ An application ontology is a semantic artefact which is developed to answer the 
 ## Graphical Overview
 
 
-```{figure} ontology-robot-recipe.md-figure1.png
+```{figure} ontology-robot-recipe.md-figure1.mmd.png
 ---
 name: ontology-robot-recipe-figure1
 alt: Building an ontology with Robot tool
@@ -103,7 +103,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 |                                                       | ➕ How to remove terms from the resulting ontology that are not needed?                                               |
 |                                                       | ➕ How to guarantee consistency of the final ontology?                                                                |
 |                                                       | ➕ How to identify differences in comparison to a previous version of the resulting ontology?                         |
-| **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
+| **Questions without specifying compounds or genes for the {download}`example dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`**   |                                                                                                                                       |
 |                                                       | ➕ Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
 |                                                       | ➕ Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
 |                                                       | ➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
@@ -121,7 +121,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 
 
 
-_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](ExternalStudiesKQ.xlsx).
+_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is {download}`here <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`.
 
 
 
@@ -173,7 +173,7 @@ This step identifies the seeds needed to perform the knowledge extraction from e
 Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
 
-```{figure} ontology-robot-recipe.md-figure2.png
+```{figure} ontology-robot-recipe.md-figure2.mmd.png
 ---
 name: ontology-robot-recipe-figure2
 alt: Ontology seed term selection approaches.
@@ -313,7 +313,7 @@ Running the above script to get the seeds for the terms `male`, `female`, and `u
 ['unknown']
 ```
 
-#### Step2.2.3 Seed term extraction with SPARQL 
+#### Step 2.2.3 Seed term extraction with SPARQL 
 
 Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL query`. Here, we generate a subset of `UBERON` terms which have a crossreference to either `FMA (for human anatomy)` or `MA (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
 
@@ -562,9 +562,9 @@ ___
 
 ## Supplementary material
 
-- [Example Dataset](ExternalStudiesKQ.xlsx)
-- [Competency questions](competency_questions.md)
-- [Scripts and intermediate artifacts](ontology-robot)
+- {download}`Example Dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`
+- [Competency questions](ontology-robot-recipe/competency-questions.md)
+- [IPython Notebook for the MSIO Build Process](ontology-robot-recipe/MSIO-robot-build-process.ipynb)
 
 ___
 
@@ -575,7 +575,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft, Code
 | <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Original Draft
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |  | Writing - Draft, Review
+| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img>  | Writing - Draft, Review
 | <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
 
 ___

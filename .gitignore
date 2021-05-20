@@ -12,3 +12,7 @@ __pycache__
 .github/workflows/build-master.yml
 _build/
 venv/
+# robert's local symlinks:
+docker.sh
+extract-warnings.sh
+#

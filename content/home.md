@@ -216,7 +216,7 @@ Below there are links to some key recipes, click on them to explore their conten
 </div>
 <div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
 
-{ref}`fcb-aspera`
+{ref}`fcb-access-aspera`
 </div>
 
 <hr>
@@ -236,7 +236,7 @@ Below there are links to some key recipes, click on them to explore their conten
 <div class="recipeLabel"> Exemplar recipes: </div>
 <div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
 
-{ref}`fcb-interop-selectonto`
+{ref}`fcb-selecting-ontologies`
 </div>
 
 <div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
