@@ -1,9 +1,9 @@
 name: build-from-migrating-branch-and-deploy-to-external-repo
 on:
   workflow_dispatch:
-  #push:
-    #branches:
-      #- migrating
+  push:
+    branches:
+      - migrating
 
 jobs:
   build-and-deploy-to-other-repo:
@@ -149,7 +149,9 @@ jobs:
     - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
     - name: Build jupyter-book
-      run: jupyter-book build .
+      run: jupyter-book build . 2>&1 | tee ./_build/build.log
+    - name: Record important warnings
+      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./_build/build.log > ./_build/cleaned_build.log && bash scripts/extract-warnings.sh 
     - name: Record current directory structure
       run: ls -alhR 
     - name: Install SSH Client 🔑
