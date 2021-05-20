@@ -17,7 +17,7 @@ jobs:
     - name: Test
       run: > 
         cat _config.yml | 
-        grep -h
+        grep --help
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
