@@ -34,13 +34,12 @@ ___
 ## Graphical Overview
 
 
-```{figure} data-catalogue-mermaid.png
+```{figure} data-catalog.md-figure1.mmd.png
 ---
-width: 800px
-name: Building an data catalogue
-alt: Building an data catalogue
+name: data-catalog-figure1
+alt: Building and populating a data catalogue
 ---
-Building and populating data catalogue
+Building and populating a data catalogue
 ```
 
 ---
