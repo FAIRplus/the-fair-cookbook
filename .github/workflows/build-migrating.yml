@@ -14,6 +14,10 @@ jobs:
       with:
         persist-credentials: false
         ref: migrating
+    - name: Record important warnings
+      run: sed -h
+    - name: Record important warnings
+      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" _config.yml
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
@@ -155,7 +159,9 @@ jobs:
     - name: Record important warnings
       run: ls -alh && ls -alh _build 
     - name: Record important warnings
-      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log && bash scripts/extract-warnings.sh 
+      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log
+    - name: Record important warnings
+      run: cat ./_build/cleaned_build.log && bash scripts/extract-warnings.sh 
     - name: Record current directory structure
       run: ls -alhR 
     - name: Install SSH Client 🔑
