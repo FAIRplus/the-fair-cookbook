@@ -1,125 +1,28 @@
 (fcb-intro-audience)=
-# Who should read it?
+# Introduction
 
-+++
-<br/>
+## Your guide in the FAIRification journey
 
-<!-- ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
-:difficulty_level: 1
-:recipe_type: background_information
-:reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, data_scientist, funder  
-:has_executable_code: nope
-:recipe_name: Who should read the FAIR Cookbook?
-````  -->
+The FAIR Cookbook is a collection of birds-eye view recipes on the FAIR components, the infrastructure needed, and a set of applied examples in the Life Sciences, offering a deep dive in technical aspects of FAIR data management.
+This is a ‘live resource’, because recipes are added and improved, collaboratively and iteratively, in an open manner.
+The objective of the FAIR Cookbook is to develop and disseminate guidance and processes needed to make and keep data FAIR in the Life Sciences.
 
----
+Well-managed research data from academia and the industry sectors generate value far beyond the initial research purpose. Current  Life Sciences data resources are extensively used by the research community across all sectors e.g. from generating evidence of a mechanism of disease through to toxicology. However, a large proportion of data generated across all sectors of Life Sciences are neither easily discoverable nor accessible and interoperable, making (re)use challenging. Our ambition is to contribute to the development of public and private capacity for high quality data management, by providing recipes that see FAIR Principles embedded in the actual generation of data.
 
-## The FAIR Cookbook for IMI participants
+## Who is it for?
 
-The aim of the FAIR Cookbook is to reach as wide an audience as possible to improve the understanding of the FAIR principles, explain how to implement them and evaluate FAIR levels but also to provide practical guidance and hands-on, practical examples.
-
-But it is also true that, owing to the nature of the IMI FAIRPlus project, the intent is also to act as support material for IMI funded projects in order to guide awardees in either complying with the best practices and recommendations made by the funding agencies or simply to familiarize themselves with the FAIR principles.
-
-The content of the FAIR Cookbook is a collection of birds-eye view pieces explaining the tenets of FAIR compliant data management practicesw and applied pieces offering a deep dive in technical aspects of FAIR data management.
-
-The key point is that all these pieces are the results of close interactions with a number of IMI projects, pasts or ongoing, therefore covering a range of scenarios which we hope will be meaningful to IMI awardeeds or applicants.
-
-### If you are principal investigator of an IMI grant or applying to one
-
-If you are in such capacity, first congratulations for the successful application or for assembling together a consortium and applying. For you, the most important sections for you will probably be found in the pieces detailing the following points:
-
-* [how to write a `data management plan`]().
-* [how to handle `data accesss`]().
-* [how to choose `licenses` for data, for software]().
-
-### If you are a data manager
-
-The task befalling on the data manager in an IMI project varies greatly but can be quite daunting. It very much depends on the `context` of the project. Indeed, whether the project's focus is Clinical Trials (IMI Oncotrack) or Epidemiological studies (such as IMI EHDEN) or Molecular aspects drugs or targets (IMI Resolute), different requirements and constraints will need to be taken into account.
-But another variable also matters: the overall consortium position in keeping with data sharing. Since IMI2, all funded projects are by default included in the Open Data Release Pilot, but consortia can decide to opt out at any time. While this decision has a profound impact on the `accessibilty` of the data, for all other aspects of data management, the FAIR Cookbook still provides useful guidance.
-
-* [how to write a `data management plan`]().
-* [how to define a curation policy]()
-* [how to define a naming convention]() 
-* [how to choose `vocabularies`, `data standards` and `data repositories`]() 
-* [how to organize a data / variable dictionary]()
-* [Understanding the different FAIRification pathways]()
-
-### If you are a data producer
-
-As a data producer, you may find yourself with a new sets of data management requirements or you may be requested to provide descriptive information about the nature and technical characteristics of specific data acquisition modalities. The FAIR Cookbook provides guidance and organizing principles for assisting IMI data managers as they establish the `data management plan`. 
-
-* [How to package datasets for transfer]()
-* [How to provide sufficient metadata]() 
-* [How to make dataset findable]()
-* [How to make a FAIR API]()
-* [Did you know: Scientists sharing their data are more cited]().
-
-### If you are a data controler
-
-If dealing with sensitive, patient centric data, the data controler will be in charge of handling data access requests and monitoring who gains access to data generated by the consortium. 
-
-The requirements vary greatly depending on the various EU country legislation. The FAIR Cookbook provides general recommendations in line the European Union GDPR regulation.
-
-### If you are an IMI Grant Officer
-
-* [What to look for in a Data Management?]()
-* [How to incentivize data producers to practice FAIR data management]()
-* [How to drive adoption of FAIR data practice]()
-* [What are the key capabilities requires]()
-* [How to evaluate capability maturity]()
-
----
-
-## The FAIR Cookbook from an EFPIA standpoint
-
-The FAIR principles are having a massive impact on the perception of how essential good data management is in preserving data assets. This has resonated particularly in the Pharma industry, which has been looking at how to apply the principles not only to research data but also to a range of business processes in the industry. Therefore, from an EFPIA standpoint, the FAIR Cookbook provides critical insights into the following:
-
-* [understanding the FAIRification process]()
-* [evaluating data quality in terms of FAIR levels]()
-* [evaluating the capabilities and process maturity levels]()
-* [identifying skills and capabilities needed to implement FAIR]()
-* [identifying training resources available to explain FAIR]()
-
-While the FAIR Cookbook can not cover all business area, by providing hands on recipes applied to research data, the FAIR Cookbook offers unique insights into operation steps and allows a good appreciation of resources needed, which in turns can inform decision makers in charge of estimated the costs of applying the FAIR principles to other domains. In short, the FAIR Cookbook helps with evaluating the costs of porting the FAIR principles to a new business area.
+The FAIR Cookbook’s recipes are a combination of `guidance`, `technical`, `hands-on`, `background` and `review` types to cover the operation steps of FAIR data management, and are classified according to the audience types, to serve all those involved in the data management life cycle. The FAIR Cookbook is for anyone working in the Life Sciences who needs guidance on applying the FAIR Principles in practice. 
+- For `researchers`, `data scientists`, and `principal investigators` examples of key recipes are those on how to handle data access, choose licenses for datasets, package data for transfer, and provide sufficient descriptive metadata.
+- For `data stewards`, `data managers`, and `data curators` examples of key recipes are those providing applied FAIRification with clinical trial, epidemiological, and molecular data, as well as those on how to deal with sensitive, patient-centric data.
+- For `software developers`, and `terminology managers` examples of key recipes are the technical one focused on implementing and using a number of FAIR-enabling tools and services, which can complement their own resources. 
+- Lastly, the FAIR Cookbook is a resource `policy makers`, including `funders`, and `trainers` can use in their guidance material, to incentivize the practice of FAIR data management in the Life Sciences, via examples that are meaningful to the intended audience.
 
 
-## The FAIR Cookbook from a Small and Medium Entreprise.
+## A live resource: present and future
 
-Small and medium entreprises (SMEs), which operate in IMI projects and which often cooperate with EFPIA partners, are often spin outs from academic lab. They often offer agility, reactivity and innovation in supporting business processes. The capabilities offered by SMEs range from CRO, curation services, literature search, ontology developement. For SMEs, the FAIR Cookbook is an opportunity to highly their offerings but chiefly it is the means to bolster their practices and demonstrate their ability to deliver FAIR compliant services.
-
-Examples can be found in the following contributions by companies such as [the Hyve](), [Ontoforce]() or [ITTM]() for instance.
-
-
-## Conclusion
-
-The FAIR Cookbook will appeal to diverse audiences. While the FAIR Cookbook authors worked primarily to assist EU IMI funded applicants and awardees, providing guidances and examples rooted in experience garnered while working with specific IMI projects, the lessons learned along the way as well as the procedures developed can be of use to many. This is what we have introduced in this section.
-
-By identifying a number of functions as personas, the aim is also to engage with the community and seek feedback, contributions and comments. The authors therefore encourage readers to send requests and feedback using the following means:
-
-* log a recipe request using the [FAIR Cookbook issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/home.html&body=Your%20issue%20content%20here.)
-* rate the FAIR Cookbook and each of its recipes
-* contribute content by sending a recipe
-* contact us using [faircookbook@elixir-europe.org](mailto:faircookbook@elixir-europe.org)
-
-
-
-## Reference
-
-1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18.
-3. The FAIR Cookbook. [The FAIR Cookbook](https://fairplus.github.io/the-fair-cookbook/content/home.html)
-4. https://www.imi.europa.eu 
-
-
-
-## Authors
-
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
+The FAIR Cookbook is developed by a thriving [community](fcb-community) of Life Sciences professionals, in the academia and the industry sectors, including members of the [ELIXIR](https://elixir-europe.org/) community. Currently funded by the [IMI FAIRplus project](https://fairplus-project.eu/), a private-public partnership that comprises a coalition of Europe’s leading experts in data interoperability, standards, pre-clinical to clinical translation and long-term sustainable data repositories - with decades of experience in making data available to a wide scientific community for reuse.
+In addition to expanding its content, we will continue to add links to relevant community, mature and complementary resources in the Life Sciences, including but not limited to those part of the ELIXIR ecosystem, such as the [RDMkit](https://rdmkit.elixir-europe.org/index.html), [FAIRsharing](https://fairsharing.org/), [biotools](https://bio.tools/) and [TeSS](https://tess.elixir-europe.org/); also the [Pistoia Alliance’s FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/) for Life Science Industry, and more generic resources, such as ['The Turing Way'](https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/the-turing-way.html) handbook for reproducible data science, which the FAIR Cookbook already leverages on.
+Last but not least, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, see how to, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
 
 ___

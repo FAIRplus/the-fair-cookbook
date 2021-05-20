@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB008
+:identifier_link: 'https://w3id.org/faircookbook/FCB008'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 10
@@ -20,7 +20,7 @@
 
 The main purpose of this recipe is:
 
-To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release.
+To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release {footcite}`Madduri2019` {footcite}`minid-identifiers`.
 
 ___
 
@@ -304,9 +304,12 @@ ____
 
 ## Reference
 
-1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
+```{footbibliography}
+```
 
-2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles
+<!-- 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
+
+2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 
 ----
 

@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB037
+:identifier_link: 'http://w3id.org/faircookbook/FCB037'
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 30
@@ -20,9 +20,9 @@
 
 The main purpose of this recipe is:
 
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files.
+> Making self describing tabular data using Frictionless tools instead of dumping Excel files
 
-- ensure that results presented in MS Excel or PDF tables are made more open and unambiguous.
+- ensure that results presented in MS Excel or PDF tables are made more open and unambiguous
 - provide an RDF representation
 - enable reproduciblity of results
 - evaluate efficiency of the method via a data integrate challenge
@@ -31,11 +31,11 @@ ___
 
 ## Summary
 <!-- <p style='text-align: justify;'> -->
-- The first data source: article by [Raymond et al. Nat Genet. 50:772-777 (2018)](https://doi.org/10.1038/s41588-018-0110-3); is a targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological materials was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type.
+- The first data source: article by [Raymond et al. Nat Genet. 50:772-777 (2018)](https://doi.org/10.1038/s41588-018-0110-3); is a targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological material was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type.
 
 - The starting point: the human-understandable data in the [supplementary file 41588_2018_110_MOESM3_ESM.zi](https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip), containing the mean concentrations of 61 metabolites measured in three different parts of the rose flower, in six distinct genotypes.
 
-- The second data source: article by [Magnard et al. Science.Jul 3;349(6243):81-3 (2015)](https://doi.org/10.1126/science.aab0696); this is early work of the same group author of the first data source.
+- The second data source: article by [Magnard et al. Science.Jul 3;349(6243):81-3 (2015)](https://doi.org/10.1126/science.aab0696); this is early work of the same group of authors of the first data source.
 
 - The approach: we performed a retrospective curation and re-annotation of the data matrices, disambiguating of the experimental design, using community, open interoperability standards from [FAIRsharing](https://fairsharing.org); we focused on the clarity of the statistical results to ensure reusability and reproducibility of the analytical workflow by humans and machines. The FAIRification steps for the first data source are documented in the sections below; the same steps were applied to the second data source to assess inter-experiment agreement, as both studies used the same varieties of rose and plant parts. 
 
@@ -79,7 +79,7 @@ ___
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/)  | [CHEBI](http://www.obofoundry.org/ontology/chebi.html)  ||
-| [ISA-Tab](https://doi.org/10.25504/FAIRsharing.53gp75)  | [STATO](https://www.stato-ontology.org) ||
+| [ISA-Tab](https://doi.org/10.25504/FAIRsharing.53gp75)  | [STATO](http://stato-ontology.org) ||
 |  | [NCBITaxonomy](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi)||
 |   | [Plant Ontology](http://www.obofoundry.org/ontology/po.html)||
 
@@ -125,11 +125,11 @@ We regularized the three dimensions of the matrix (data cube), which represent: 
 
 #### Step 2A: semantic anchoring
 Metabolites (free text) names were augmented with unambiguous InChI codes, assigned by accessing CHEBI (https://doi.org/10.25504/FAIRsharing.62qk8w) programmatically via its LibChebi library (https://github.com/libChEBI/libChEBIpy).  
-We unpacked the information held in the column header, identifying the main types of tabulated entities and their relationships, and replacing free text with ontology term.
+We unpacked the information held in the column header, identifying the main types of tabulated entities and their relationships, and replacing free text with ontology terms.
 For example, we disambiguated the taxonomic name of the cultivar from the anatomical part using terms and identifiers from the NCBI Taxonomy (https://doi.org/10.25504/FAIRsharing.fj07xj) and Plant Ontology (https://doi.org/10.25504/FAIRsharing.3ngg40) respectively.
 
 #### Step 2B: disambiguation of the experimental design
-We clarified the intent of the experimentalist, which is a comparison between two independent variables identified (the rose variety and the organism part), which are both categorical variables with six and three discrete factor levels, respectively. Since only eight factor combinations are reported, we concluded that this is a fractional factorial design (rather than a  factorial design, where eighteen theoretical factor combinations are possible)
+We clarified the intent of the experimentalist, which is a comparison between two independent variables identified: the rose variety and the organism part, which are both categorical variables with six and three discrete factor levels, respectively. Since only eight factor combinations are reported, we concluded that this is a fractional factorial design (rather than a  factorial design, where eighteen theoretical factor combinations are possible)
 We disambiguated among the attributes of the samples those that are study factors and their values, to explicitly enable queries on treatment groups and their sizes. 
 We used the STATistics Ontology (STATO; https://doi.org/10.25504/FAIRsharing.na5xp) to unambiguously express and semantically type these notions.
 
@@ -140,12 +140,12 @@ We marked-up all entities with persistent resolvable identifiers to enhance data
     
 ### Step3: Preservation of the data matrices in an open syntax
 
-We used the Frictionless Tabular Data Package (https://frictionlessdata.io/data-packages) to describe the table headers in JSON format.
+We used the Frictionless Tabular Data Package (https://specs.frictionlessdata.io/data-package/) to describe the table headers in JSON format.
 The transformation is documented in a jupyter notebook (https://github.com/proccaserra/rose2018ng-notebook/blob/master/notebooks/0-rose-metabolites-Python-data-handling.ipynb).
      
 ### Step4: Address Reusability
 
-We performed a conversion to Linked Data, using terms from OBO Foundry Ontologies (https://fairsharing.org/collection/OBOFoundry) 
+We performed a conversion to Linked Data, using terms from OBO Foundry Ontologies (https://fairsharing.org/biodbcore-001083/) 
 As a result, the metabolite measurements can be plotted using popular visualization libraries (Python plotnine or R ggplot2) from either a SPARQL query over the RDF representation or from the data package directly.
 
      
@@ -158,7 +158,7 @@ We made the FAIRified outputs discoverable and citable by uploading them to Zeno
 - Rose scent FAIRification project code release: https://doi.org/10.5281/zenodo.2641109
 
 
-To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison, also released via Zenodo (https://doi.org/10.5281/zenodo.2640919).
+To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison are also released via Zenodo (https://doi.org/10.5281/zenodo.2640919).
 Lastly, we produced a study description file, in ISA-Tab format (https://doi.org/10.25504/FAIRsharing.53gp75), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (https://doi.org/10.25504/FAIRsharing.kkdpxe).
 
 ___

@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB023
+:identifier_link: 'https://w3id.org/faircookbook/FCB023'
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 60
@@ -17,7 +17,7 @@
 
 ## Main Objectives
 
-> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {cite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {cite}`Arp2015`. 
+> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {footcite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {footcite}`Arp2015`. 
 
 An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
@@ -27,10 +27,9 @@ An application ontology is a semantic artefact which is developed to answer the 
 ## Graphical Overview
 
 
-```{figure} onto-robot.png
+```{figure} ontology-robot-recipe.md-figure1.mmd.png
 ---
-width: 500px
-name: Building an ontology with Robot tool
+name: ontology-robot-recipe-figure1
 alt: Building an ontology with Robot tool
 ---
 Building an ontology with Robot tool.
@@ -51,7 +50,7 @@ Building an ontology with Robot tool.
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [ontology building](http://edamontology.org/operation_XXXX)  | [tsv,OWL]|OWL|
+| [Ontology and terminology](http://edamontology.org/topic_0089)  | [tsv,OWL]|OWL|
 
 
 ## Table of Data Standards
@@ -99,30 +98,30 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 | **Theme**                                             | **Competency Questions**                                                                                                              |
 |:------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
 | **General Questions**                                 |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: How to identify relevant public domain ontologies suiting our needs?             |
-|                                                       | :heavy_plus_sign: How to establish an ontology covering all terms that are included in the actual data to be represented?
-|                                                       | :heavy_plus_sign: How to remove terms from the resulting ontology that are not needed?                                               |
-|                                                       | :heavy_plus_sign: How to guarantee consistency of the final ontology?                                                                |
-|                                                       | :heavy_plus_sign: How to identify differences in comparison to a previous version of the resulting ontology?                         |
-| **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
-|                                                       | :heavy_plus_sign: Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
-|                                                       | :heavy_plus_sign: Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
-|                                                       | :heavy_plus_sign: Identify all data generated from primary cells whose origin is the lung.                                                            |
-|                                                       | :heavy_plus_sign: Identify all data generated from celllines whose origin is the lung.                                                                |
+|                                                       | ➕ How to identify relevant public domain ontologies suiting our needs?             |
+|                                                       | ➕ How to establish an ontology covering all terms that are included in the actual data to be represented?
+|                                                       | ➕ How to remove terms from the resulting ontology that are not needed?                                               |
+|                                                       | ➕ How to guarantee consistency of the final ontology?                                                                |
+|                                                       | ➕ How to identify differences in comparison to a previous version of the resulting ontology?                         |
+| **Questions without specifying compounds or genes for the {download}`example dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`**   |                                                                                                                                       |
+|                                                       | ➕ Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
+|                                                       | ➕ Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
+|                                                       | ➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
+|                                                       | ➕ Identify all data generated from primary cells whose origin is the lung.                                                            |
+|                                                       | ➕ Identify all data generated from celllines whose origin is the lung.                                                                |
 | **Questions including single genes or gene sets**     |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?                          |
+|                                                       | ➕ What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
+|                                                       | ➕ What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
+|                                                       | ➕ What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?                          |
 | **Questions including compound or treatment information** |                                                                                                                                       |
-|                                                       | :heavy_plus_sign: Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
-|                                                       | :heavy_plus_sign: Identify all data from patients treated with a specific medication.                                                                 |
-|                                                       | :heavy_plus_sign: Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
-|                                                       | :heavy_plus_sign: What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
+|                                                       | ➕ Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
+|                                                       | ➕ Identify all data from patients treated with a specific medication.                                                                 |
+|                                                       | ➕ Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
+|                                                       | ➕ What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
 
 
 
-_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx).
+_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is {download}`here <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`.
 
 
 
@@ -141,9 +140,9 @@ _Table 1: Patient metadata example_
 
 To build an `application ontology` that supports communication between different data resources, it is recommended to reuse existing terms from existing reference ontologies instead of creating new terms.
 
->:bulb: _Reference ontology:_ a semantic artifact with a canonical and comprehensive representation of the entities in a specific domain.
+>⚡ _Reference ontology:_ a semantic artifact with a canonical and comprehensive representation of the entities in a specific domain.
 >
->:bulb: _Source ontology:_ An ontology to be integrated into the application ontology, usually a reference ontology. 
+>⚡ _Source ontology:_ An ontology to be integrated into the application ontology, usually a reference ontology. 
 
 When selecting reference ontologies as source ontologies, the reusability and sustainability of the source ontology need to be considered. Many ontologies in [the OBO foundry](http://www.obofoundry.org/) use the [CC-BY](https://creativecommons.org/licenses/by/2.0/) licence, allowing sharing and adaptation. Such ontologies can be directly used as source ontology. Reference ontologies with similar umbrella structures can be conveniently combined in the application ontology. The format and maintenance of the reference ontology shall also be considered.
 
@@ -166,25 +165,22 @@ _Table 2: Available reference ontologies in selected domains_
 
 #### Step 2.2 Select seed ontology terms
 
-> :bulb: _Seed ontology terms_: A set of entities extracted from reference ontologies for the application ontology.
+> ⚡ _Seed ontology terms_: A set of entities extracted from reference ontologies for the application ontology.
 > 
 
 This step identifies the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology. Ontology Developer can provide the tools to ease and to scale the identification of the seeds. Domain experts can identify the right seeds for a given application ontology.
 
 Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
-<div class="mermaid">
-graph LR
-  A(fa:fa-file-text-o Select seed terms):::box -->B1(fa:fa-user-o Manual selection):::box
-  A -->B2(fa:fa-database Selection with ZOOMA):::box
-  A -->B3(fa:fa-database Selection with NCBO Annotator):::box
-  A -->B4(fa:fa-cogs Selection with SPARQL):::box
 
-  classDef box font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+```{figure} ontology-robot-recipe.md-figure2.mmd.png
+---
+name: ontology-robot-recipe-figure2
+alt: Ontology seed term selection approaches.
+---
+Ontology seed term selection approaches.
+```
 
-</div>
-
-_Figure 1: Ontology seed term selection approaches_
 
 [ZOOMA](https://www.ebi.ac.uk/spot/zooma/) is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the [European Bioinformatics Institute (EMBL-EBI)](https://www.ebi.ac.uk)
 . It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/index). Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
@@ -317,7 +313,7 @@ Running the above script to get the seeds for the terms `male`, `female`, and `u
 ['unknown']
 ```
 
-#### Step2.2.3 Seed term extraction with SPARQL 
+#### Step 2.2.3 Seed term extraction with SPARQL 
 
 Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL query`. Here, we generate a subset of `UBERON` terms which have a crossreference to either `FMA (for human anatomy)` or `MA (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
 
@@ -383,7 +379,7 @@ The `robot` extract command takes several arguments:
 
 * *method*: `ROBOT` uses 4 different algorithms to generate a module.  `TOP`, `BOT`, `STAR` (all from the SLME method), and `MIREOT`. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The `STAR` method creates a module by pulling all the properties and axioms of the seed classes but nothing else. `MIREOT` uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
 * *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
-* *imports*: this argument allows to specific whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
+* *imports*: this argument allows to specify whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
 * *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex)
 * *intermediates*: specific to the `MIREOT` method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (`all`,`minimal`, `none`).
 * *output*: the path to the owl file holding the results of the module extraction
@@ -436,13 +432,13 @@ And a template sample is presented following:
 ```{admonition} Tip
 :class: tip
 
-⚡ The generated ontology can be visualized by using the [Protégé tool](https://protege.stanford.edu/) or a [local deployment of OLS](https://hackmd.io/@FAIRcookbook/H1axYY3wU). 
-The `OLS local deployment` option is recommended by this recipe, given that `Protégé` may crash when loading medium or large size ontologies.
+⚡ The generated ontology can be visualized by using the [Protégé tool](https://protege.stanford.edu/) or local deployment of OLS. 
+The {ref}`fcb-infra-localols` option is recommended by this recipe, given that `Protégé` may crash when loading medium or large size ontologies.
 ```
     
 ### Step 5: Merge ontology modules and umbrella ontology
 
-Merging the ontology modules previuosly extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
+Merging the ontology modules previously extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
 
 The `merge` ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the `ROBOT` command merging the umbrella ontology and the modules is shown:
 
@@ -549,15 +545,15 @@ robot query --input <input_ontology_file> \
 ___
 
 
-
 ## References
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
-:filter: docname in docnames
+```{footbibliography}
 ```
-<!-- ```{bibliography} ./bibref/bibliography-identifier-mapping.bib
+
+<!-- ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ``` -->
+
 
 <!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
 - Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
@@ -565,9 +561,10 @@ ___
 ___
 
 ## Supplementary material
-- [Example Dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)
-- [Competency questions](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md)
-- [Scripts and intermediate artifacts](https://github.com/FAIRplus/the-fair-cookbook/tree/ontology_robot_recipe/docs/content/recipes/ontology-robot)
+
+- {download}`Example Dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`
+- [Competency questions](ontology-robot-recipe/competency-questions.md)
+- [IPython Notebook for the MSIO Build Process](ontology-robot-recipe/MSIO-robot-build-process.ipynb)
 
 ___
 
@@ -578,7 +575,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft, Code
 | <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Original Draft
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |  | Writing - Draft, Review
+| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img>  | Writing - Draft, Review
 | <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
 
 ___

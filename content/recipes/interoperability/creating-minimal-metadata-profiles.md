@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB026
+:identifier_link: 'https://w3id.org/faircookbook/FCB026'
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 20
@@ -38,11 +38,11 @@ The following steps are intended as a starting point to guide the generation of 
 
 ### Step 1: Define competency questions
 - What are the questions you would like to address with the template?
-Without a set of a competency questions, important variables may easily be forgotten. It is equally possible to collect too much metadata, making the resulting metadata model opaque and difficult to navigate. Competency questions serve as a guide to identify the most relevant experimental factors.
+Without a set of competency questions, important variables may easily be forgotten. It is equally possible to collect too much metadata, making the resulting metadata model opaque and difficult to navigate. Competency questions serve as a guide to identify the most relevant experimental factors.
 
 ### Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions
 - Compile metadata from different sources
-- Generate consolidated view on metadata by merging attributes as far as possible
+- Generate a consolidated view on metadata by merging attributes as far as possible
 - Differentiate metadata available for most of the studies from metadata occurring rarely (sparse matrix)
 - Identify gaps in the metadata available for most of the studies comprising data that is considered important but has not been captured in the past
 - Define a MSOM to be captured in the future from the metadata that is available for most of the studies and the metadata considered to be important
@@ -62,7 +62,7 @@ Without a set of a competency questions, important variables may easily be forgo
 - Integrate the sparse matrix of metadata not contained in the MSOM in the model
 
 ### Step 4:  Reality check
-- Introduce measures allowing identifying errors in reported data according to your model
+- Introduce measures allowing to identify errors in reported data according to your model
 - Expose your model to actual data delivered by independent colleagues and capture the errors and gaps that occurred
 - Identify errors and gaps that are related to the model and not occurring due to errors in the data
 - Adjust the model according to these errors and gaps

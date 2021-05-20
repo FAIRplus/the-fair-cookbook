@@ -1,9 +1,9 @@
 name: build-from-migrating-branch-and-deploy-to-external-repo
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - migrating
+  #push:
+    #branches:
+      #- migrating
 
 jobs:
   build-and-deploy-to-other-repo:

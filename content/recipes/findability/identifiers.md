@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: 21.11101/0000-0007-EA08-9
-:identifier_link: http://hdl.handle.net/21.11101/0000-0007-EA08-9
+:identifier_text: FCB006
+:identifier_link: https://w3id.org/faircookbook/FCB006
 :difficulty_level: 3
 :recipe_type: background_information
 :reading_time_minutes: 30
@@ -31,28 +31,32 @@ The main goals of this recipe are therefore:
 
 From these principles, it is necessary to explain three key processes, which are: 
 
-1. Identifier minting
-
+### Identifier minting
+```{admonition} Tip
+:class: tip 
  **`Identifier minting`** is fundamentally about the **`authority deciding identity`**. 
+``` 
  - the tax office
  - the HR department
  - the company registry
  - the EMBL-EBI
 
-2. URI construction
-
+### URI construction
+```{admonition} Tip
+:class: tip 
 **`URI construction`** is fundamentally about **`scoping the authority`**.
-
+```
 > for example, should the web address be:
 > http://organization/people/1123 
 > or
 > http://organization/commercial/people/1123
 
 
-3. URI Resolution: 
-
+### URI Resolution: 
+```{admonition} Tip
+:class: tip 
 **`URI resolution`** is fundamentally about **`directing requests to the relevant identified entity`**
-
+```
 The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
 All these key points will be developed in this recipe.
@@ -108,7 +112,12 @@ ___
 ## Minting identifiers
 
 
-> :notebook_with_decorative_cover: **"Identifier minting is fundamentally about the *authority deciding identity***."
+```{admonition} Tip
+:class: tip 
+
+ **Identifier minting is fundamentally about the *authority deciding identity.**
+```
+
 
 Identifiers are used to tag, identify, find and retrieve entities which are part of a collection or a resource maintained by some organization. This organization is the `authority` which rules over that area of knowledge. The core assumption is that identifiers must be unique, that is they can not be shared and there is a 1 to 1 relation between the 'identifier' and the entity it identifies.
 
@@ -162,8 +171,8 @@ This approach uses 2 inputs:
 - a cryptographic hashing algorithm implemented as a software function
 - a digital resource (e.g. a file)
 
-Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource.
-A number of algorithms can be used and some are already widely used such as `Message Digest algorithm MD5` specified by the RFC1321[1], the `Secure Hash Algorithm (SHA1)`,  `Secure Hash Algorithm 2 (SHA256)`, `Secure Hash Algorithm 3 (SHA3)` or `BLAKE2b-256` (RFC 7693). 
+Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
+A number of algorithms can be used and some are already widely used such as `Message Digest algorithm MD5` specified by the RFC1321[1]{footcite}`MD5`, the `Secure Hash Algorithm (SHA1)`,  `Secure Hash Algorithm 2 (SHA256)`, `Secure Hash Algorithm 3 (SHA3)` or `BLAKE2b-256` (RFC 7693) {footcite}`Blake2`. 
 The first two are considered obsolete, while the latter two are most advanced and approved by NIST.
 
 ---
@@ -344,7 +353,7 @@ This relates to this other FAIR principle mentioned in the introduction.
 
 The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
-A PURL is a **`persistent URL`**, meaning that it provides a ++permanent address to access a resource on the web++.
+A PURL is a **`persistent URL`**, meaning that it provides a **permanent address to access a resource on the web**.
 
 To understand the notion of PURL, one needs to first get familiar with the notion of `url indirection` (also known as `url redirect` or `url forwarding` ), which refers to the practice of providing a stable, fixed web address/url, but setting it up so that it points to another content, which may be periodically modified. 
 
@@ -406,7 +415,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 
 * [Identifiers.org](http://identifiers.org/)
 
-    > [Identifiers.org](https://identifiers.org) is a **Resolution Service** provides consistent access to life science data using [`Compact Uniform Resource Identifiers`](https://www.w3.org/TR/2010/NOTE-curie-20101216/), hosted by the EBI provides a resolution service, both as a web form and through the URL pattern. 
+    > [Identifiers.org](https://identifiers.org) is a **Resolution Service** provides consistent access to life science data using [`Compact Uniform Resource Identifiers`](https://www.w3.org/TR/2010/NOTE-curie-20101216/), hosted by the EBI provides a resolution service, both as a web form and through the URL pattern {footcite}`Juty2012`. 
     >`Compact Identifiers` consist of an `assigned`, `unique` `prefix` and a `local provider designated` **`accession number`** (prefix:accession).
     > The resolving location of `Compact Identifiers` is determined using information that is stored in the [Identifiers.org Registry](http://identifiers.org/).
     > Datasets can register their *namespace `prefix`* together with their `identifier pattern`. The service can then be used in the same way as the DOI resolution service. So for the UniProt page about BRCA1, we can resolve the CURIE `[uniprot:P38938]` using Identifiers.org. This means that the URL https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org/uniprot/P38938.
@@ -419,13 +428,13 @@ This is very useful for including unambiguous, global identifiers in scientific 
     > N2T can store more than one "target" (forwarding link) for an identifier, as well as any kind or amount of metadata (descriptive information)
         > N2T.net is also a "meta-resolver". In collaboration with identifiers.org, it recognizes over 600 well-known identifier types and knows where their respective servers are. Failing to find forwarding information for a specific individual identifier, it uses the identifier's type to look for an overall target rule.
 
-*For more details, see the [Identifier Resolution Services recipe](https://www.TODO.org/identifier-services/id-resolution.html).*
+*For more details, see the [Identifier Resolution Services recipe](fcb-infra-idres).*
 
 ___
 
 ## Conclusion
 
-> In this recipe, we have given an overview of globally unique and persistent identifier, i.e. FAIR principle F1. We have covered:
+> In this recipe, we have given an overview of globally unique and persistent identifier {footcite}`McMurry2017`, {footcite}`Ananthakrishnan2020`, i.e. FAIR principle F1. We have covered:
 >
 > - The difference between global and local identifiers;
 > - How to convert a local identifier into a global one;
@@ -433,35 +442,23 @@ ___
 >
 > We have given an overview of the different services available for handling identifiers.
 > 
-> But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI, RDF and HTTP.
+> But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI{footcite}`URL`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF{footcite}`RDFconcepts` and HTTP.
 > 
 >
 > ### What should I read next?
 > * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> * [Identifier Minting with Minid Client](https://www.TODO.org/infrastructure/minids.html)
-> * [Why resolvable identifiers matter?](https://www.TODO.org/findability/why-identifiers.html)
-> * [Identifier Resolution Services](https://www.TODO.org/identifier-services/id-resolution.html)
-> * [Identifier Mapping Services](https://www.TODO.org/identifier-services/identifier-mapping.html)
+> * [Identifier Minting with Minid Client](fcb-find-id-minid)
+<!-- > * [Why resolvable identifiers matter?](https://www.TODO.org/findability/why-identifiers.html) -->
+> * [Identifier Resolution Services](fcb-infra-idres)
+> * [Identifier Mapping Services](fcb-identifier-mapping)
 
 
 ___
 
 ## References
 
-1. IRI. [https://tools.ietf.org/html/rfc3987](https://tools.ietf.org/html/rfc3987)
-2. CURIE. [https://www.w3.org/TR/2010/NOTE-curie-20101216/](https://www.w3.org/TR/2010/NOTE-curie-20101216/)
-3. URL. [https://tools.ietf.org/html/rfc1738](https://tools.ietf.org/html/rfc1738)
-4. RDF concepts. https://www.w3.org/TR/rdf-concepts/ 
-5. MD5 specifications. https://tools.ietf.org/html/rfc1321
-6. Blake2 specifications. https://tools.ietf.org/html/rfc7693
-7. Cool URIs don't change. https://www.w3.org/Provider/Style/URI
-8. Leo Sauermann and Richard Cyganiak (eds.) (2008 December 3). Cool URIs for the Semantic Web, W3C Semantic Web Education and Outreach Interest Group Note, http://w3.org/TR/cooluris/
-9. https://blog.adamretter.org.uk/archival-identifiers-for-digital-files/
-10. https://blog.adamretter.org.uk/archival-catalog-identifiers/
-11. Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data. https://doi.org/10.1371/journal.pbio.2001414
-12. Nick Juty, Sarala M Wimalaratne, Stian Soiland-Reyes, John Kunze, Carole A Goble, and Tim Clark. 2020. Unique, persistent, resolvable: Identifiers as the foundation of FAIR. Data Intelligence (2020), 30–39. https://doi.org/10.1162/dint_a_00025
-13. Nick Juty, Nicolas Le Novere, and Camille Laibe. 2012. Identifiers.org and MIRIAM Registry: Community resources to provide persistent identification. Nucleic Acids Research 40, D1 (2012), D580–D586. https://doi.org/10.1093/nar/gkr1097
-14. Rachana Ananthakrishnan, Kyle  Chard, Mike  D'Arcy, Ian T Foster, Carl F Kesselman , Brendan  McCollam , Jim Christopher Pruyne , Philippe  Rocca-Serra, Robert E Schuler, Rick P Wagner. An Open Ecosystem for Pervasive Use of Persistent Identifiers. https://doi.org/10.1145/3311790.3396660
+```{footbibliography}
+```
 
 
 ___

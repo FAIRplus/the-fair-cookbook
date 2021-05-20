@@ -2,8 +2,8 @@
 # Identifier resolution services
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+:identifier_text: FCB046
+:identifier_link: 'https://w3id.org/faircookbook/FCB046'
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 15

@@ -1,5 +1,5 @@
 (fcb-infrastructure)=
-# Infrastructure for FAIR
+# Infrastructure
 
 +++
 ---
