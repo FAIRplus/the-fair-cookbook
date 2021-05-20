@@ -137,7 +137,7 @@ jobs:
     - name: Install mermaid via npm
       run: npm install @mermaid-js/mermaid-cli
     - name: Record mermaid version 
-      run: ./node_modules/.bin/mmdc -V
+      run: ./node_modules/.bin/mmdc -V 2>&1 | tee ./_build/build.log
     - name: Search all mermaid files and record a list of them
       run: find . -iname "*.mmd" > list_of_all_mermaid_files 
     - name: Print the list of mermaid files 
