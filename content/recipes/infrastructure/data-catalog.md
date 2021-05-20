@@ -132,10 +132,6 @@ For the readership interesting in finding out about additional capabilities need
 * {ref}`fcb-interop-metadataprofile`
 
 
-## References
-
----
-
 ## Authors
 
 
