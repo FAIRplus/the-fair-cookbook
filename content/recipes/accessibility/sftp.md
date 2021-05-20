@@ -242,7 +242,7 @@ More modern solutions and tools exist for fast transfer or mounting of remote dr
 > [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
 > [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
 > [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
-> {ref}`fcb-aspera`
+> {ref}`fcb-access-aspera`
 > [Rclone](https://rclone.org)
 
 ___
