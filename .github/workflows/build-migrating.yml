@@ -151,6 +151,10 @@ jobs:
     - name: Build jupyter-book
       run: jupyter-book build . 2>&1 | tee ./build.log
     - name: Record important warnings
+      run: cat ./build.log
+    - name: Record important warnings
+      run: ls -alh && ls -alh _build 
+    - name: Record important warnings
       run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log && bash scripts/extract-warnings.sh 
     - name: Record current directory structure
       run: ls -alhR 
