@@ -103,7 +103,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 |                                                       | ➕ How to remove terms from the resulting ontology that are not needed?                                               |
 |                                                       | ➕ How to guarantee consistency of the final ontology?                                                                |
 |                                                       | ➕ How to identify differences in comparison to a previous version of the resulting ontology?                         |
-| **Questions without specifying compounds or genes for the [example dataset](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/ExternalStudiesKQ.xlsx)**   |                                                                                                                                       |
+| **Questions without specifying compounds or genes for the {download}`example dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`**   |                                                                                                                                       |
 |                                                       | ➕ Identify all data generated from tissues taken from patients suffering from a specific disease.                                     |
 |                                                       | ➕ Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
 |                                                       | ➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
@@ -121,7 +121,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 
 
 
-_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is [here](ExternalStudiesKQ.xlsx).
+_Table 1_ is a snapshot of the example dataset. The complete patient metadata example dataset is {download}`here <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`.
 
 
 
@@ -562,9 +562,9 @@ ___
 
 ## Supplementary material
 
-- [Example Dataset](ExternalStudiesKQ.xlsx)
-- [Competency questions](competency_questions.md)
-- [Scripts and intermediate artifacts](ontology-robot)
+- {download}`Example Dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`
+- [Competency questions](ontology-robot-recipe/competency-questions.md)
+- [IPython Notebook for the MSIO Build Process](ontology-robot-recipe/MSIO-robot-build-process.ipynb)
 
 ___
 

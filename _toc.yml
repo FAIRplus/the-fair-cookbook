@@ -80,7 +80,9 @@
           - file: content/recipes/interoperability/ontology-robot-recipe
             title: Building an application ontology with ROBOT #FCB023
             sections:
-              - file: content/recipes/interoperability/ontology-robot/MSIO-robot-build-process.ipynb
+              - file: content/recipes/interoperability/ontology-robot-recipe/competency-questions
+                title: Competency questions for the Ontology ROBOT use case
+              - file: content/recipes/interoperability/ontology-robot-recipe/MSIO-robot-build-process.ipynb
                 title: Application ontology for metabolomics  #FCB024
           - file: content/recipes/interoperability/creating_data_dictionary 
             title: Creating a data/variable dictionary #FCB025
