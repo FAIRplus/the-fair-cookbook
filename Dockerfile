@@ -140,10 +140,14 @@ COPY ./   ./
 # Start the actual build
 RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build /app 2>&1 | tee /app/_build/build.log
 
-#RUN cat /build.log  
+# Clean the build log from all escape characters used for highlighting text (e.g. bold, red) and the 
+# "interactive" feel (i.e. going back to start of line and overwrite to create a up-counting progress bar)
+RUN sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" /app/_build/build.log > /app/_build/cleaned_build.log
 
+# pack the whole build folder into a gzipped tar file
 RUN cd /app && tar -czf /out.tar.gz _build
 
+# output what's in the _build folder, just for the sake of it.
 RUN ls -alh /app/_build
 
 ## ... all content was converted to html now and sits in /app/_build
