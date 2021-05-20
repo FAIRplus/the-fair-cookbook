@@ -1,9 +1,6 @@
 (fcb-infra-build-catalog)=
 # Building a catalogue of datasets
 
-+++
-<br/>
-
 ````{panels_fairplus}
 :identifier_text: FCB047
 :identifier_link: 'https://w3id.org/faircookbook/FCB047'
