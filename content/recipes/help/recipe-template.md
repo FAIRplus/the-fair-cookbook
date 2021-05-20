@@ -261,7 +261,7 @@ ___
 > * [Tips and Tricks](./tips-tricks.md)
 > * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
 > * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
-  [my-prefered-label](fcb-custom-tag)
+  [my-prefered-label](fcb-help-recipe-template)
 
 
 ---
@@ -276,7 +276,7 @@ ___
 
 ## Authors
 
-```note
+```{note}
 List the recipe contributors following the structure below and using the CASRAI credit vocabulary and do not change the structure of the table.
     - Conceptualization
     - Data curation
