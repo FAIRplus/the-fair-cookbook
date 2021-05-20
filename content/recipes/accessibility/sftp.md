@@ -1,4 +1,4 @@
-(fcb-access-sftp)=
+(fcb-sftp)=
 # Transferring data with SFTP
 
 ````{panels_fairplus}
@@ -78,7 +78,7 @@ Overview:
 
 ### Setting up a SFTP server
 
-While you can run an SFTP server also in a Windows environment (e.g. using the open source software FileZilla Server), a Linux server is certainly recommended. Most Linux distributions come with all required libraries (libssh2, OpenSSH) pre-installed. Following is a step-by-step summary for a CentOS server:
+You can run an SFTP server in a Windows environment, e.g. using the open source software FileZilla Server. A Linux server can be set-up  after installing the required libraries (libssh2, OpenSSH). Following is a step-by-step summary for a CentOS server:
 
 a.	Create a dedicated group for all future SFTP users:
 
@@ -242,7 +242,7 @@ More modern solutions and tools exist for fast transfer or mounting of remote dr
 > [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
 > [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
 > [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
-> {ref}`fcb-access-aspera`
+> {ref}`fcb-aspera`
 > [Rclone](https://rclone.org)
 
 ___

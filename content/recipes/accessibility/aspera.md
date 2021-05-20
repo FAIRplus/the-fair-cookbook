@@ -12,62 +12,56 @@
 :recipe_name: Downloading data with Aspera 
 ```` 
 
-## Main Objectives
+
+## Main objectives
 
 This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads . While the Aspera protocol is used by major public scientific data repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR compliance.
 
 
-
 ## Graphical overview
 
-```{figure} aspera-figure1.png
+```{figure} aspera.md-figure1.mmd.png
 ---
-name: aspera-data-transfer-process
-alt: Aspera Data Transfer Process
+name: aspera-figure1
+alt: Aspera Data Transfer Process.
 ---
 Aspera Data Transfer Process.
 ```
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
 ----
 ## Obtain Aspera services
 
-### Get Accounts Permissions:
+### Get accounts permissions
 * Apply for access
 * Pay attention to the conditions
 * Sign up if you are the appropriate person for this download/upload 
 * Typically Aspera sites are locked down and need a username and password.
-* For some sites, only one username is allowed per organisation, so it is worth making sure that that person is technically capable of uploading or downloading data, and also understands the data a little.
+* For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.
  
-### Decide how you are going to access the data:
+### Decide how you are going to access the data
 * A Web browser is great for initial browsing and downloading of small occasional files. It will automatically prompt you to download the Aspera broswer plugin to be able to do download any files.
 * For heavy duty downloading an Aspera command line client is needed. e.g. to download gigabytes or even terabytes of data.
  
-### Decide on Software needed and get it installed:
+### Decide on software needed and get it installed
  
-* For linux:
+* For Linux:
   * Aspera ascp This can be downloaded from:  https://downloads.asperasoft.com/
   * Documentation:
     * General: https://download.asperasoft.com/download/docs/ascp/2.7/html/index.html
     * Examples https://download.asperasoft.com/download/docs/ascp/2.7/html/fasp/ascp-examples.html
  
-#### Get the Firewall Configured as required to allow downloading and or uploading:
+#### Get the firewall configured as required to allow downloading and or uploading
 * You may need to have firewall exceptions raised to unblock ports 3301 and 22, with your organisation IT's network perimeter team. 
 * Try connecting first in case they are already not blocked
 
-#### Work out the appropriate command line options:
+#### Work out the appropriate command line options
 * For the Aspera command line, there are a large variety of options for downloading and uploading. See the download documentation above.
 * Considerations:
   * Use the `-k {1,2,3}`  option to allow restarts without re-downloading all the data.
   * Run it using something like screen, so that it can be running in the background on a server
   * On the command line you can choose a preferred transfer rate. Please be careful to not hog the network bandwidth (we found up to about 100Mbps is okay).
  
-#### Download Example command line:
+#### Worked-out example for downloading
 * These are the download command options we used. (and both ports 3301 and 22 were unblocked)
 
 ```bash
@@ -103,6 +97,7 @@ ascp version 3.9.6.176292
   * 
   -->
 
+
 ## Conclusion
 
 * Aspera is commercial software
@@ -111,7 +106,7 @@ ascp version 3.9.6.176292
 
 ### What to read next?
 
-  - {ref}`fcb-access-sftp` 
+  - {ref}`fcb-sftp` 
   - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
 
 ---

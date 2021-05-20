@@ -64,7 +64,7 @@ html:
     </div>
   google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
   comments:
-    hypothesis: true
+    hypothesis: false
     # utterances:
     #   repo: "FAIRplus/the-fair-cookbook"
 #######################################################################################
@@ -102,7 +102,7 @@ parse:
   myst_url_schemes: [ mailto, http, https, ftp ]
 
 bibtex_bibfiles:
-   - ./_bibliography/bibliography-identifier-mapping.bib
+   - ./_bibliography/bibliography-faircookbook.bib
 
 
 bibtex_reference_style: author_year

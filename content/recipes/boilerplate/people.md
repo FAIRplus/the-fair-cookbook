@@ -4,7 +4,9 @@
 ----
 
  <p style='text-align: justify;'>
-The work is coordinated by an Editorial Board, with Section Editors and a number of Contributors, who write and review recipes, or contribute to the work the recipes describe.
+The FAIR Cookbook is coordinated by an Editorial Board, assisted by Section Editors; a growing number of Contributors write and review recipes, or contribute to the work the recipes describe. 
+
+If you are a researcher or a data managers professional, with expertise and experience in FAIR data management, and you want to [contribute, see how to,](fcb-misc-contribute) or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org)
  </p>
  
 ----

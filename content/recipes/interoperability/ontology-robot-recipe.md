@@ -17,7 +17,7 @@
 
 ## Main Objectives
 
-> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {cite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {cite}`Arp2015`. 
+> The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {footcite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {footcite}`Arp2015`. 
 
 An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
@@ -27,7 +27,7 @@ An application ontology is a semantic artefact which is developed to answer the 
 ## Graphical Overview
 
 
-```{figure} ontology-robot-recipe.md-figure1.png
+```{figure} ontology-robot-recipe.md-figure1.mmd.png
 ---
 name: ontology-robot-recipe-figure1
 alt: Building an ontology with Robot tool
@@ -173,7 +173,7 @@ This step identifies the seeds needed to perform the knowledge extraction from e
 Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
 
-```{figure} ontology-robot-recipe.md-figure2.png
+```{figure} ontology-robot-recipe.md-figure2.mmd.png
 ---
 name: ontology-robot-recipe-figure2
 alt: Ontology seed term selection approaches.
@@ -313,7 +313,7 @@ Running the above script to get the seeds for the terms `male`, `female`, and `u
 ['unknown']
 ```
 
-#### Step2.2.3 Seed term extraction with SPARQL 
+#### Step 2.2.3 Seed term extraction with SPARQL 
 
 Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL query`. Here, we generate a subset of `UBERON` terms which have a crossreference to either `FMA (for human anatomy)` or `MA (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
 
@@ -547,12 +547,13 @@ ___
 
 ## References
 
-```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
-:filter: docname in docnames
+```{footbibliography}
 ```
-<!-- ```{bibliography} ./bibref/bibliography-identifier-mapping.bib
+
+<!-- ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
 ``` -->
+
 
 <!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
 - Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
