@@ -19,7 +19,7 @@ jobs:
         cat _config.yml | 
         grep 'WARNING' |  
         grep -ve '\.md:: WARNING: No footnote definitions found for label: (.*) \[myst\.footnote\]' 
-      - run: exit 1
+    - run: exit 1
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
