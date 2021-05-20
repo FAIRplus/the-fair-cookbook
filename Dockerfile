@@ -129,26 +129,29 @@ RUN cat /pip_freeze_actual.txt
 
 FROM jupyterbookbuilder-base-image AS jupyterbookbuilder
 
-RUN mkdir -p /app/_build/html
+# Set the working directory. You can customize this path to be equivalent to your computer's
+# directory structure, e.g. if you use an Integrated Development Environment (IDE) which allows you 
+# to click on file names from a terminal...   
+WORKDIR /Users/robert/git/the-fair-cookbook
 
-# Set the working directory.
-WORKDIR /app
+# Create an empty folder to prevent failure later on
+RUN mkdir -p ./_build/html
 
-# Copy strictly necessary files 
+# Copy files 
 COPY ./   ./
 
 # Start the actual build
-RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build /app 2>&1 | tee /app/_build/build.log
+RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build ./ 2>&1 | tee ./_build/build.log
 
 # Clean the build log from all escape characters used for highlighting text (e.g. bold, red) and the 
 # "interactive" feel (i.e. going back to start of line and overwrite to create a up-counting progress bar)
-RUN sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" /app/_build/build.log > /app/_build/cleaned_build.log
+RUN sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./_build/build.log > ./_build/cleaned_build.log
 
 # pack the whole build folder into a gzipped tar file
-RUN cd /app && tar -czf /out.tar.gz _build
+RUN tar -czf /out.tar.gz ./_build
 
 # output what's in the _build folder, just for the sake of it.
-RUN ls -alh /app/_build
+RUN ls -alh ./_build
 
-## ... all content was converted to html now and sits in /app/_build
-## ... a build log can be found in /app/_build/build.log
+## ... all content was converted to html now and sits in WORKDIR/_build
+## ... a build log can be found in WORKDIR/_build/build.log
