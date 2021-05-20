@@ -138,11 +138,13 @@ WORKDIR /app
 COPY ./   ./
 
 # Start the actual build
-RUN jupyter-book build /app
-#RUN cp /app/Dockerfile /app/_build/html/Dockerfile  
+RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build /app 2>&1 | tee /app/_build/build.log
 
-RUN cd /app && tar -czf /out.tar.gz _build/html
+#RUN cat /build.log  
 
-RUN ls /app/_build
+RUN cd /app && tar -czf /out.tar.gz _build
+
+RUN ls -alh /app/_build
 
 ## ... all content was converted to html now and sits in /app/_build
+## ... a build log can be found in /app/_build/build.log
