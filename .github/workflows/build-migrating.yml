@@ -18,10 +18,7 @@ jobs:
       run: > 
         cat _config.yml | 
         grep "WARNING" | 
-        grep -vE "\.md:: WARNING: No footnote definitions found for label: '(.*)' \[myst\.footnote\]" |
-        grep -vE "WARNING: image file not readable: (.*)\.mmd\.png" |
-        grep -v "/content/recipes/help/myst.md:" |
-        grep -v "/content/recipes/help/myst.md.rst:"
+        grep -ve "\.md:: WARNING: No footnote definitions found for label: '(.*)' \[myst\.footnote\]" 
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
