@@ -17,7 +17,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
-      run: python -V
+      run: python -V 2>&1 | tee ./build.log
     - name: Install jupyter-book==0.10.2 and fixed dependencies
       run: >
             pip install 
@@ -137,7 +137,7 @@ jobs:
     - name: Install mermaid via npm
       run: npm install @mermaid-js/mermaid-cli
     - name: Record mermaid version 
-      run: ./node_modules/.bin/mmdc -V 2>&1 | tee ./_build/build.log
+      run: ./node_modules/.bin/mmdc -V 
     - name: Search all mermaid files and record a list of them
       run: find . -iname "*.mmd" > list_of_all_mermaid_files 
     - name: Print the list of mermaid files 
