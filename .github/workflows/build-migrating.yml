@@ -14,8 +14,6 @@ jobs:
       with:
         persist-credentials: false
         ref: migrating
-    - name: Record important warnings
-      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" _config.yml
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
@@ -152,14 +150,18 @@ jobs:
       run: rm -rf ./node_modules
     - name: Build jupyter-book
       run: jupyter-book build . 2>&1 | tee ./build.log
-    - name: Record important warnings
-      run: cat ./build.log
-    - name: Record important warnings
-      run: ls -alh && ls -alh _build 
-    - name: Record important warnings
+    - name: Clean up build log (remove escape characters)
       run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
+    - name: Test
+      run: > 
+        cat _build/cleaned_build.log | 
+        grep "WARNING" | 
+        grep -vE "\.md:: WARNING: No footnote definitions found for label: '(.*)' \[myst\.footnote\]" |
+        grep -vE "WARNING: image file not readable: (.*)\.mmd\.png" |
+        grep -v "/content/recipes/help/myst.md:" |
+        grep -v "/content/recipes/help/myst.md.rst:"
     - name: Record important warnings
-      run: cat ./_build/cleaned_build.log && bash scripts/extract-warnings.sh 
+      run: ./scripts/extract-warnings.sh 
     - name: Record current directory structure
       run: ls -alhR 
     - name: Install SSH Client 🔑
