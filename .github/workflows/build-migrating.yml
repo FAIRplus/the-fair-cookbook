@@ -15,8 +15,6 @@ jobs:
         persist-credentials: false
         ref: migrating
     - name: Record important warnings
-      run: sed -h
-    - name: Record important warnings
       run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" _config.yml
     - name: Setup Python
       uses: actions/setup-python@v2
