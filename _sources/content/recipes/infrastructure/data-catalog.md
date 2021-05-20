@@ -1,9 +1,6 @@
 (fcb-infra-build-catalog)=
 # Building a catalogue of datasets
 
-+++
-<br/>
-
 ````{panels_fairplus}
 :identifier_text: FCB047
 :identifier_link: 'https://w3id.org/faircookbook/FCB047'
@@ -37,13 +34,12 @@ ___
 ## Graphical Overview
 
 
-```{figure} data-catalogue-mermaid.png
+```{figure} data-catalog.md-figure1.mmd.png
 ---
-width: 800px
-name: Building an data catalogue
-alt: Building an data catalogue
+name: data-catalog-figure1
+alt: Building and populating a data catalogue
 ---
-Building and populating data catalogue
+Building and populating a data catalogue
 ```
 
 ---
@@ -135,10 +131,6 @@ For the readership interesting in finding out about additional capabilities need
 * {ref}`fcb-find-seo`
 * {ref}`fcb-interop-metadataprofile`
 
-
-## References
-
----
 
 ## Authors
 

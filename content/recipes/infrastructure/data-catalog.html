@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/data-catalog.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Building a catalogue of datasets" />
-<meta property="og:description" content="Building a catalogue of datasets    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.o" />
+<meta property="og:description" content="Building a catalogue of datasets  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@t" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -255,7 +255,12 @@
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
        Application ontology for metabolomics
       </a>
      </li>
@@ -264,7 +269,7 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/creating_data_dictionary.html">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
      8. Creating a data/variable dictionary
     </a>
    </li>
@@ -423,8 +428,18 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html#bibliographic-reference">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
        Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html#bibliographic-reference">
+       Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
@@ -435,6 +450,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
        Integrating data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html#bibliographic-references">
+       Bibliographic References:
       </a>
      </li>
     </ul>
@@ -703,18 +723,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   2.8. References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   2.9. Authors
+   2.8. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   2.10. License
+   2.9. License
   </a>
  </li>
 </ul>
@@ -731,7 +746,6 @@
                 
   <div class="section" id="building-a-catalogue-of-datasets">
 <span id="fcb-infra-build-catalog"></span><h1><span class="section-number">2. </span>Building a catalogue of datasets<a class="headerlink" href="#building-a-catalogue-of-datasets" title="Permalink to this headline">¶</a></h1>
-<br/>
 <br/>
 <hr class="docutils" />
 <script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Building a catalogue of datasets", "audience": ["Data Manager", "Data Scientist", "Software Developer", "System Administrator"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB047", "url": "https://w3id.org/faircookbook/FCB047"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H60M0S", "totalTime": "PT0H60M0S"} </script>
@@ -810,9 +824,9 @@ Yes
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
 <h2><span class="section-number">2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="building-an-data-catalogue">
-<a class="reference internal image-reference" href="../../../_images/data-catalogue-mermaid.png"><img alt="Building an data catalogue" src="../../../_images/data-catalogue-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Building and populating data catalogue</span><a class="headerlink" href="#building-an-data-catalogue" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="data-catalog-figure1">
+<img alt="Building and populating a data catalogue" src="../../../_images/data-catalog.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Building and populating a data catalogue</span><a class="headerlink" href="#data-catalog-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -934,12 +948,8 @@ The vocabulary developed by the consortium of search engines has defined a metad
 </ul>
 </div>
 </div>
-<div class="section" id="references">
-<h2><span class="section-number">2.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-</div>
-<hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">2.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -970,7 +980,7 @@ The vocabulary developed by the consortium of search engines has defined a metad
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">2.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>

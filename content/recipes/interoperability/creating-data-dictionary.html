@@ -56,19 +56,19 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating_data_dictionary.html" />
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating-data-dictionary.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="9. Creating a metadata profile" href="creating-minimal-metadata-profiles.html" />
-    <link rel="prev" title="Application ontology for metabolomics" href="ontology-robot/MSIO-robot-build-process.html" />
+    <link rel="prev" title="Application ontology for metabolomics" href="ontology-robot-recipe/MSIO-robot-build-process.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating_data_dictionary.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating-data-dictionary.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Creating data/variable dictionary" />
 <meta property="og:description" content="Creating data/variable dictionary  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@" />
@@ -255,7 +255,12 @@
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="ontology-robot/MSIO-robot-build-process.html">
+      <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
+       Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
        Application ontology for metabolomics
       </a>
      </li>
@@ -423,8 +428,18 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html#bibliographic-reference">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
        Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html#bibliographic-reference">
+       Bibliographic Reference:
       </a>
      </li>
      <li class="toctree-l3">
@@ -435,6 +450,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
        Integrating data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html#bibliographic-references">
+       Bibliographic References:
       </a>
      </li>
     </ul>
@@ -589,7 +609,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/creating_data_dictionary.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/creating-data-dictionary.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -609,10 +629,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/creating_data_dictionary.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/creating-data-dictionary.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/creating_data_dictionary.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/creating-data-dictionary.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -817,7 +837,7 @@ No
 <h2>Main FAIRification Objectives<a class="headerlink" href="#main-fairification-objectives" title="Permalink to this headline">¶</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> is a file (or collection of files) which unambiguously declares, defines and annotates all the variables collected in a project and associated to a dataset.</p>
 <p>Building a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span></code> means delivering a machine-actionable list of variables, thus greatly helping in assessing the <strong>interoperability potential</strong> of a dataset.</p>
-<p>Presenting a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span> <span class="pre">template</span></code> is also meant to be useful to deal with current <span class="xref myst">IMI</span> projects as well as guide future ones.</p>
+<p>Presenting a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span> <span class="pre">template</span></code> is also meant to be useful to deal with current <a class="reference external" href="https://www.imi.europa.eu/">IMI</a> projects as well as guide future ones.</p>
 <p>The main purpose of this recipe is:</p>
 <blockquote>
 <div><ul class="simple">
@@ -835,9 +855,9 @@ No
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
 <h2>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="data-dictionary">
-<a class="reference internal image-reference" href="../../../_images/creating_data_dictionary-mermaid.png"><img alt="Data Dictionary" src="../../../_images/creating_data_dictionary-mermaid.png" style="height: 1050px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Data Dictionary.</span><a class="headerlink" href="#data-dictionary" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="creating-data-dictionary-figure1">
+<img alt="Data Dictionary" src="../../../_images/creating-data-dictionary.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Data Dictionary.</span><a class="headerlink" href="#creating-data-dictionary-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1556,7 +1576,7 @@ Why? Simply because if affords several key data management processes to take pla
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="ontology-robot/MSIO-robot-build-process.html" title="previous page">Application ontology for metabolomics</a>
+    <a class='left-prev' id="prev-link" href="ontology-robot-recipe/MSIO-robot-build-process.html" title="previous page">Application ontology for metabolomics</a>
     <a class='right-next' id="next-link" href="creating-minimal-metadata-profiles.html" title="next page"><span class="section-number">9. </span>Creating a metadata profile</a>
 
         </div>

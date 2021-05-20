@@ -5,71 +5,73 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAIR Cookbook Governance</title>
+    <title>Competency questions for the Ontology ROBOT use case</title>
     
-  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
   <link rel="stylesheet"
-    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
   <link rel="stylesheet"
-    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
-    <script src="../../../_static/mermaid.min.js"></script>
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/boilerplate/governance.html" />
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe/competency-questions.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Application ontology for metabolomics" href="MSIO-robot-build-process.html" />
+    <link rel="prev" title="7. Building an application ontology with ROBOT" href="../ontology-robot-recipe.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/boilerplate/governance.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe/competency-questions.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="FAIR Cookbook Governance" />
-<meta property="og:description" content="FAIR Cookbook Governance     &lt;p style=&#39;text-align: justify;&#39;&gt; The purpose of this document is to formalize the governance process that the FAIR Cookbook project" />
+<meta property="og:title"       content="Competency questions for the Ontology ROBOT use case" />
+<meta property="og:description" content="Competency questions for the Ontology ROBOT use case  General Questions  How to identify relevant public domain ontologies suiting our needs? (Might be out of s" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -85,20 +87,20 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../../index.html">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
   
-  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
   
   
 </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../home.html">
+  <a class="reference internal" href="../../../home.html">
    FAIR Cookbook
   </a>
  </li>
@@ -110,17 +112,17 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+  <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
    Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+  <a class="reference internal" href="../../introduction/FAIRplus-values.html">
    Ethical values of FAIR
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
    Glossary
   </a>
  </li>
@@ -130,49 +132,49 @@
   RECIPES
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../findability.html">
+  <a class="reference internal" href="../../findability.html">
    Findability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../findability/identifiers.html">
+    <a class="reference internal" href="../../findability/identifiers.html">
      1. Unique, persistent identifiers
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
      2. InChI and SMILES identifiers for chemical structures
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../findability/identifiers-minids.html">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
      3. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../findability/zenodo-deposition.html">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
      4. Depositing in Zenodo generic repository
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../findability/seo.html">
+    <a class="reference internal" href="../../findability/seo.html">
      5. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
        5.8.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
        5.8.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
        5.8.3. Data catalogue markup
       </a>
      </li>
@@ -185,17 +187,17 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../accessibility.html">
+  <a class="reference internal" href="../../accessibility.html">
    Accessibility
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../accessibility/sftp.html">
+    <a class="reference internal" href="../../accessibility/sftp.html">
      1. Transferring data with SFTP
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../accessibility/aspera.html">
+    <a class="reference internal" href="../../accessibility/aspera.html">
      2. Downloading data with Aspera
     </a>
    </li>
@@ -203,23 +205,23 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../interoperability.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
    Interoperability
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+    <a class="reference internal" href="../identifier-mapping.html">
      1. Interlinking data from different sources
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+    <a class="reference internal" href="../bridgedb-recipe.html">
      2. Identifier mapping with BridgeDb
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+      <a class="reference internal" href="../bridgedb/bridgedb-example.html">
        Using BridgeDb web services
       </a>
      </li>
@@ -228,32 +230,37 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+    <a class="reference internal" href="../introduction-terminologies-ontologies.html">
      3. Introduction to terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+    <a class="reference internal" href="../selecting-ontologies.html">
      4. Selecting terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+    <a class="reference internal" href="../ontology-new-term-request-recipe.html">
      5. Requesting new terms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+    <a class="reference internal" href="../ontology-operations-tools.html">
      6. Ontology-related tools and services
     </a>
    </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="../ontology-robot-recipe.html">
      7. Building an application ontology with ROBOT
     </a>
-    <ul class="collapse-ul">
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../interoperability/ontology-robot/MSIO-robot-build-process.html">
+      <a class="reference internal" href="MSIO-robot-build-process.html">
        Application ontology for metabolomics
       </a>
      </li>
@@ -262,22 +269,22 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/creating_data_dictionary.html">
+    <a class="reference internal" href="../creating-data-dictionary.html">
      8. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+    <a class="reference internal" href="../creating-minimal-metadata-profiles.html">
      9. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+      <a class="reference internal" href="../transcriptomics-metadata.html">
        Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+      <a class="reference internal" href="../covid19-sample-metadata-profile-shex-use-case.html">
        Metadata profile validation in RDF
       </a>
      </li>
@@ -286,17 +293,17 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+    <a class="reference internal" href="../from-proprietary-to-open-standard-mzml-exemplar.html">
      10. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+    <a class="reference internal" href="../fastq-file-format-validators.html">
      11. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../interoperability/ETL-tools.html">
+    <a class="reference internal" href="../ETL-tools.html">
      12. Extraction, transformation, and loading process
     </a>
    </li>
@@ -305,32 +312,32 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../reusability.html">
+  <a class="reference internal" href="../../reusability.html">
    Reusability
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../reusability/ATI-licensing.html">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
      1. Licensing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
      2. Software licenses
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
      3. Data licenses
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reusability/expressing-data-use.html">
+    <a class="reference internal" href="../../reusability/expressing-data-use.html">
      4. Declaring data's permitted uses
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reusability/provenance.html">
+    <a class="reference internal" href="../../reusability/provenance.html">
      5. Provenance information
     </a>
    </li>
@@ -339,42 +346,42 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../infrastructure.html">
+  <a class="reference internal" href="../../infrastructure.html">
    Infrastructure
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
      1. Identifier resolution services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
      2. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
      3. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
      4. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
        4.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
        4.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
        4.3. Deploying the EBI OLS
       </a>
      </li>
@@ -387,17 +394,17 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../assessing-fairness.html">
+  <a class="reference internal" href="../../assessing-fairness.html">
    Assessment
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+    <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
      1. FAIR Evaluator tool
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+    <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
      2. FAIRshake tool
     </a>
    </li>
@@ -406,33 +413,48 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../applied-examples.html">
+  <a class="reference internal" href="../../applied-examples.html">
    Applied examples
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+    <a class="reference internal" href="../../applied-examples/fair-data-matrix-recipe.html">
      1. Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
        Starting material
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html#bibliographic-reference">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
        Structuring data
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html#bibliographic-reference">
+       Bibliographic Reference:
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
        Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
        Integrating data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html#bibliographic-references">
+       Bibliographic References:
       </a>
      </li>
     </ul>
@@ -440,22 +462,22 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
+    <a class="reference internal" href="../../applied-examples/etox.html">
      2. eTox - toxicity datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
+    <a class="reference internal" href="../../applied-examples/nd4bb.html">
      3. nd4bb - chemical activities datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+    <a class="reference internal" href="../../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
      4. Oncotrack - clinical cohort datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+    <a class="reference internal" href="../../applied-examples/resolute_raw/resolute.html">
      5. RESOLUTE - transcriptomics datasets
     </a>
    </li>
@@ -471,17 +493,17 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../community.html">
+  <a class="reference internal" href="../../community.html">
    Community
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="people.html">
+    <a class="reference internal" href="../../boilerplate/people.html">
      1. Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="code_of_conduct.html">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
      2. Code of conduct
     </a>
    </li>
@@ -490,42 +512,42 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../help.html">
+  <a class="reference internal" href="../../help.html">
    Contribute
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="contributing.html">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
      1. How to contribute
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
      2. Add via GoogleDoc
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
      3. Add via HackMD
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
      4. Add via Git
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/recipe-template.html">
+    <a class="reference internal" href="../../help/recipe-template.html">
      5. Git recipe template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/tips-tricks.html">
+    <a class="reference internal" href="../../help/tips-tricks.html">
      6. Tips and tricks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/myst.html">
+    <a class="reference internal" href="../../help/myst.html">
      7. Markdown cheatsheet
     </a>
    </li>
@@ -534,12 +556,12 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
+  <a class="reference internal" href="../../boilerplate.html">
    Platform
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
+    <a class="reference internal" href="../../introduction/the-turing-way.html">
      1. Leveraging the Turing Way Book
     </a>
    </li>
@@ -587,7 +609,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/recipes/boilerplate/governance.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/interoperability/ontology-robot-recipe/competency-questions.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -607,10 +629,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/boilerplate/governance.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/ontology-robot-recipe/competency-questions.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/boilerplate/governance.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/ontology-robot-recipe/competency-questions.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -630,26 +652,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#license-of-governance-documents">
-   License of Governance Documents
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -658,27 +660,38 @@
         
               <div>
                 
-  <div class="section" id="fair-cookbook-governance">
-<span id="fcb-misc-governance"></span><h1>FAIR Cookbook Governance<a class="headerlink" href="#fair-cookbook-governance" title="Permalink to this headline">¶</a></h1>
-<hr class="docutils" />
- <p style='text-align: justify;'>
-The purpose of this document is to formalize the governance process that the FAIR Cookbook project will be relying on. This document clarifies how decisions are made and how the various elements of our community interact, including the relationship between open source collaborative development and work that may be funded by for-profit or non-profit entities.
- </p>
-<hr class="docutils" />
-<div class="section" id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="competency-questions-for-the-ontology-robot-use-case">
+<h1>Competency questions for the Ontology ROBOT use case<a class="headerlink" href="#competency-questions-for-the-ontology-robot-use-case" title="Permalink to this headline">¶</a></h1>
+<p>General Questions</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#"><span class="doc std std-doc">Main Governance Document</span></a></p></li>
-<li><p><a class="reference internal" href="code_of_conduct.html"><span class="doc std std-doc">Code of Conduct</span></a></p></li>
-<li><p><a class="reference internal" href="people.html"><span class="doc std std-doc">Current Steering Council and Institutional Partners</span></a></p></li>
+<li><p>How to identify relevant public domain ontologies suiting our needs? (Might be out of scope for ROBOT)</p></li>
+<li><p>How to establish an ontology covering all terms that are included in the actual data to be represented?</p></li>
+<li><p>How to merge the internal ontology with publicly available ontologies?</p></li>
+<li><p>How to remove terms from the resulting ontology that are not needed?</p></li>
+<li><p>How to guarantee consistency of the final ontology?</p></li>
+<li><p>How to identify differences in comparison to a previous version of the resulting ontology?</p></li>
 </ul>
-<!-- * [New Subproject Incubation Process](newsubprojects.md) -->
-</div>
-<div class="section" id="license-of-governance-documents">
-<h2>License of Governance Documents<a class="headerlink" href="#license-of-governance-documents" title="Permalink to this headline">¶</a></h2>
-<p>To the extent possible under law, FAIR Cookbook project has waived all copyright and related or neighboring rights to the main Governance documents, in accordance with the <a class="reference external" href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 license</a>.</p>
-<p>This work is published from the European Union and the United Kingdom.  See the <a class="reference external" href="http://LICENSE.md">LICENSE.md</a> file in this repository for details.</p>
-</div>
+<p>Questions without specifying compounds or genes</p>
+<ul class="simple">
+<li><p>Identify all data generated from tissues taken from patients suffering from a specific disease.</p></li>
+<li><p>Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.</p></li>
+<li><p>Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.</p></li>
+<li><p>Identify all data generated from primary cells whose origin is the lung.</p></li>
+<li><p>Identify all data generated from celllines whose origin is the lung.</p></li>
+</ul>
+<p>Questions including single genes or gene sets</p>
+<ul class="simple">
+<li><p>What is the expression of PPARg / growths factors in lung tissue from IPF patients?</p></li>
+<li><p>What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?</p></li>
+<li><p>What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?</p></li>
+</ul>
+<p>Questions including compound or treatment information</p>
+<ul class="simple">
+<li><p>Identify all data generated from primary cells treated with a kinase inhibitor.</p></li>
+<li><p>Identify all data from patients treated with a specific medication.</p></li>
+<li><p>Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.</p></li>
+<li><p>What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific diseas</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -694,7 +707,7 @@ The purpose of this document is to formalize the governance process that the FAI
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/recipes/boilerplate"
+            path: "./content/recipes/interoperability/ontology-robot-recipe"
         },
         predefinedOutput: true
     }
@@ -706,6 +719,8 @@ The purpose of this document is to formalize the governance process that the FAI
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="../ontology-robot-recipe.html" title="previous page"><span class="section-number">7. </span>Building an application ontology with ROBOT</a>
+    <a class='right-next' id="next-link" href="MSIO-robot-build-process.html" title="next page">Application ontology for metabolomics</a>
 
         </div>
         
@@ -729,7 +744,7 @@ The purpose of this document is to formalize the governance process that the FAI
     </div>
 
     
-  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

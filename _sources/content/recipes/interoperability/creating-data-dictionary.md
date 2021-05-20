@@ -27,7 +27,7 @@ A `data dictionary` is a file (or collection of files) which unambiguously decla
 
 Building a `FAIR data dictionary` means delivering a machine-actionable list of variables, thus greatly helping in assessing the **interoperability potential** of a dataset.
 
-Presenting a `FAIR data dictionary template` is also meant to be useful to deal with current [IMI]((https://www.imi.europa.eu/)) projects as well as guide future ones.
+Presenting a `FAIR data dictionary template` is also meant to be useful to deal with current [IMI](https://www.imi.europa.eu/) projects as well as guide future ones.
 
 The main purpose of this recipe is:
 
@@ -44,10 +44,9 @@ A well defined data dictionary is essential for data curation and analysis. It s
 
 ## Graphical overview
 
-```{figure} creating_data_dictionary-mermaid.png
+```{figure} creating-data-dictionary.md-figure1.mmd.png
 ---
-height: 1050px
-name: Data Dictionary
+name: creating-data-dictionary-figure1
 alt: Data Dictionary
 ---
 Data Dictionary.

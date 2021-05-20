@@ -106,7 +106,7 @@ ascp version 3.9.6.176292
 
 ### What to read next?
 
-  - {ref}`fcb-access-sftp` 
+  - {ref}`fcb-sftp` 
   - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
 
 ---
