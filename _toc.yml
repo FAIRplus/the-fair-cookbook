@@ -149,7 +149,7 @@
      
     - file: content/recipes/applied-examples
       title: Applied examples
-      numbered: 1
+      numbered: true
       sections:
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
           title: Making omics data matrices FAIR #FCB037
