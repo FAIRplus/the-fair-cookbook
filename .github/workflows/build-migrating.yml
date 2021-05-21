@@ -14,13 +14,6 @@ jobs:
       with:
         persist-credentials: false
         ref: migrating
-    - name: Test
-      run: > 
-        cat _config.yml | 
-        grep 'WARNING' |  
-        grep -ve '\.md:: WARNING: No footnote definitions found for label: (.*) \[myst\.footnote\]' ||
-        true
-    - run: exit 1
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
@@ -159,16 +152,6 @@ jobs:
       run: jupyter-book build . 2>&1 | tee ./build.log
     - name: Clean up build log (remove escape characters)
       run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
-    #- name: Test
-    #  run: > 
-    #    cat _build/cleaned_build.log | 
-    #    grep "WARNING" | 
-    #    grep -vE "\.md:: WARNING: No footnote definitions found for label: '(.*)' \[myst\.footnote\]" |
-    #    grep -vE "WARNING: image file not readable: (.*)\.mmd\.png" |
-    #    grep -v "/content/recipes/help/myst.md:" |
-    #    grep -v "/content/recipes/help/myst.md.rst:" 
-    #- name: Record important warnings
-    #  run: ./scripts/extract-warnings.sh 
     - name: Record current directory structure
       run: ls -alhR 
     - name: Install SSH Client 🔑
@@ -184,4 +167,6 @@ jobs:
         REPOSITORY_NAME: FAIRplus/the-fair-cookbook # The repository on github.com to which will be deployed = pushed.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: _build/html # The folder the action should deploy.
+    - name: Record important warnings
+      run: ./scripts/extract-warnings.sh 
         
