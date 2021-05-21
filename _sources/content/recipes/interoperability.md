@@ -4,7 +4,7 @@
 +++
 ---
 
-This chapter is dedicated to FAIRification processes which focus on improving interoperability.
+This chapter is dedicated to FAIRification processes which focus on improving Interoperability.
 
 Data usually need to be integrated with other data, and be interoperable with applications or workflows for analysis, storage, and processing.
 

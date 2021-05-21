@@ -6,7 +6,7 @@
 
 The first step in (re)using data is to find them, the second is to know how and under which condition they can be accessed.
 
-Data are accessible in that they can be always obtained by machines and humans:
+Data are Accessible in that they can be always obtained by machines and humans:
 - Upon appropriate authorization.
 - Through a well-defined protocol.
 - Thus, machines and humans alike will be able to judge the actual accessibilty of each data object.

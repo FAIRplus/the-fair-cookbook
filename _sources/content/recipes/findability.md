@@ -6,7 +6,7 @@
 
 Metadata and data should be discoverable by both humans and machines. 
 
-To be findable any data object should be uniquely and persistently identifiable:
+To be Findable any data object should be uniquely and persistently identifiable:
 - The same data object should be re-findable at any point in time, thus data objects should be persistent, with emphasis on their metadata.
 - A data object should minimally contain basic machine actionable metadata that allows it to be distinguished from other data objects.
 - Identifiers for any concept used in data objects should therefore be unique and persistent.
