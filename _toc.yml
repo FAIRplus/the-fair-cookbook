@@ -170,7 +170,7 @@
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
           title: Oncotrack - clinical cohort datasets #FCB044
         - file: content/recipes/applied-examples/resolute_raw/resolute
-          title: RESOLUTE - transcriptomics datasets #FCB045
+          title: ReSOLUTE - transcriptomics datasets #FCB045
 
     #   sections:
     #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
