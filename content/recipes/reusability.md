@@ -6,7 +6,7 @@
 
 Optimising the reuse of data is the ultimate goal, and to achieve this, metadata and data should be well-described so that they can be used, replicated and combined in different settings.
 
-For data objects to be reusable, additional criteria are:
+For data objects to be Reusable, additional criteria are:
 - Data objects should be compliant with principles of findability, accessibility and interoperability.
 - (Meta) data should be sufficiently well-described and rich that it can be automatically (with minimal human effort) linked or integrated, with relevant data sources.
 - Published data objects should refer to their sources with rich enough metadata and provenance to enable proper citation.
