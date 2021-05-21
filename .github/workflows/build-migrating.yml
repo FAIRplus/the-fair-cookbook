@@ -14,12 +14,13 @@ jobs:
       with:
         persist-credentials: false
         ref: migrating
-    #- name: Test
-    #  run: > 
-    #    cat _config.yml | 
-    #    grep 'WARNING' |  
-    #    grep -ve '\.md:: WARNING: No footnote definitions found for label: (.*) \[myst\.footnote\]' 
-    #- run: exit 1
+    - name: Test
+      run: > 
+        cat _config.yml | 
+        grep 'WARNING' |  
+        grep -ve '\.md:: WARNING: No footnote definitions found for label: (.*) \[myst\.footnote\]' ||
+        true
+    - run: exit 1
     - name: Setup Python
       uses: actions/setup-python@v2
     - name: Record Python version
@@ -165,7 +166,7 @@ jobs:
     #    grep -vE "\.md:: WARNING: No footnote definitions found for label: '(.*)' \[myst\.footnote\]" |
     #    grep -vE "WARNING: image file not readable: (.*)\.mmd\.png" |
     #    grep -v "/content/recipes/help/myst.md:" |
-    #    grep -v "/content/recipes/help/myst.md.rst:"
+    #    grep -v "/content/recipes/help/myst.md.rst:" 
     #- name: Record important warnings
     #  run: ./scripts/extract-warnings.sh 
     - name: Record current directory structure
