@@ -424,37 +424,22 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Starting material
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../fair-data-matrix/0-rose-metabolites-Python-data-handling.html#bibliographic-reference">
-       Bibliographic Reference:
+       1.11.1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Structuring data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../fair-data-matrix/1-rose-metabolites-Python-analysis.html#bibliographic-reference">
-       Bibliographic Reference:
+       1.11.2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring data with SPARQL
+       1.11.3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Integrating data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../fair-data-matrix/3-rose-metabolites-R-analysis.html#bibliographic-references">
-       Bibliographic References:
+       1.11.4. Integrating data
       </a>
      </li>
     </ul>
@@ -660,37 +645,37 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ingredients">
-   Ingredients
+   5.1. Ingredients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sample-metadata-etl-pipeline">
-   Sample metadata ETL pipeline
+   5.2. Sample metadata ETL pipeline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#transcriptomics-data-community-standard">
-   Transcriptomics data community standard
+   5.3. Transcriptomics data community standard
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fair-assessment">
-   FAIR assessment
+   5.4. FAIR assessment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
+   5.5. Summary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   Authors
+   5.6. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   License
+   5.7. License
   </a>
  </li>
 </ul>
@@ -774,7 +759,7 @@ No
 <p>The authors of this recipe delivered a set of JSON schemas for describing Transcriptomics experiments.</p>
 </div>
 <div class="section" id="ingredients">
-<h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Data transfer tools:</p>
 <ul>
@@ -806,14 +791,14 @@ No
 <p>This recipe provides an example of sample metadata extraction and curation practices, suggests a community standard for transcriptomics data and proposes a transcriptomics JSON schema, which allows direct submission of transcriptomics data to the public databases. Different approaches to assess the FAIR level of the dataset is also discussed.</p>
 </div>
 <div class="section" id="sample-metadata-etl-pipeline">
-<h2>Sample metadata ETL pipeline<a class="headerlink" href="#sample-metadata-etl-pipeline" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Sample metadata ETL pipeline<a class="headerlink" href="#sample-metadata-etl-pipeline" title="Permalink to this headline">¶</a></h2>
 <p>The ReSOLUTE datasets include 21 samples of seven cell lines. Each cell line has three replicates. The first draft of cell line metadata was first submitted to the NCBI SRA database and stored in the NCBI BioSample database. The raw sample metadata includes cell line name, provider and other administrative information.</p>
 <p>To avoid ambiguity and provide detailed cell line information, the ReSOLUTE cell lines were linked to cell lines in the <a class="reference external" href="https://web.expasy.org/cellosaurus/">Cellosaurus</a> database by the Cellosaurus accession ID, for example, cell line “HCT 116” was linked to accession “CVCL_0291”. Cellosaurus also provided enriched cell line information, including disease, species of origin, cell line category. Such information was fetched from the Cellosaurus website and mapped to corresponding samples.</p>
 <p>Besides the cell line enriched cell line annotation, the ReSOLUTE Data Release Plan also specified the cell line provider, culturing conditions and quality control information. Such information is also added to the cell line. License information was also mapped to the metadata.</p>
 <p>The sample metadata can be found in the EBI Biosamples database with additional curation. For example, in sample <a class="reference external" href="https://www.ebi.ac.uk/biosamples/samples/SAMN11893688">SAMN11893688</a>, all missing values were omitted. Attribute cell line, organism, sex and tissue were mapped to ontologies in the OLS database. All curations can record can be found <a class="reference external" href="https://www.ebi.ac.uk/biosamples/samples/SAMN11893688/curationlinks">here</a>.</p>
 </div>
 <div class="section" id="transcriptomics-data-community-standard">
-<h2>Transcriptomics data community standard<a class="headerlink" href="#transcriptomics-data-community-standard" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Transcriptomics data community standard<a class="headerlink" href="#transcriptomics-data-community-standard" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://fged.org/projects/minseqe/">Minimum Information about a high-throughput SEQuencing Experiment (MINSEQE)</a> is a recommended community standard of transcriptomics data. It defines five elements of transcriptomics data that shall be harvested, including metadata, sequence read data, final processed data and experimental protocols.</p>
 <p>FAIRsharing organization interpreted the MINSEQE guidelines and translated them into a machine-readable <a class="reference external" href="https://github.com/FAIRsharing/mircat/tree/master/minseqe">MINSEQE recommended JSON schema</a>. The FAIRsharing MINSEQE JSON schema provided a framework of transcriptomics data. When it comes to different experiments, the actual data can be extended. <a class="reference external" href="https://raw.githubusercontent.com/ebi-ait/FAIRPlus/master/RESOLUTE/transcriptomics/data/RESOLUTE_transcriptomics_metadata_MINSEQE.json">Here</a> is an example of ReSOLUTE transcriptomics data following this schema</p>
 <p>One limitation of the FAIRsharing MINSEQE schema is that it is incompatible to the submission standards of popular transcriptomics databases, like the European Nucleotide Archive (ENA). Transcriptomics data following the FAIRsharing MINSEQE standard must be modified to be submitted.</p>
@@ -824,7 +809,7 @@ No
 <p>To solve this problem, we proposed a <a class="reference external" href="https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema">transcriptomics schema</a> which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks ({numref}´resolute-figure1´). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. <em>(Note: This schema is still actively updated. Feedback welcomed)</em></p>
 </div>
 <div class="section" id="fair-assessment">
-<h2>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
 <p>The level of “FAIRness” of the ReSOLUTE transcriptomics was first determined using the CMMI maturity model described <a class="reference external" href="https://docs.google.com/document/d/1URLfNpBYkCrICpizKZJ7NE29FddNNcoR0T0o_SQza7U/edit#heading=h.w0g0276fq5i6">in this document.</a> The results of this first assessment can be found <a class="reference external" href="https://docs.google.com/document/d/1Q_Su8kY9uNYfCV30jSIoWNdeV8GxA_DTGAcGOSZscQM/edit?usp=sharing">here</a>. In a follow-up meeting, we defined actions that could be taken to increase the level for certain indicators (see <a class="reference external" href="https://docs.google.com/document/d/1yYDcUvyXzYLfq9NZX23tbgIjCSOenSURjcRj61FMdzQ/edit?usp=sharing">this document</a>). These actions were defined within Github.</p>
 <p>A <a class="reference external" href="https://docs.google.com/spreadsheets/d/11-jDoMbuxw8Nreurk7yKzk3EHJ54APAQnBl6VTKZPBk/edit#gid=1559176954">new FAIRplus maturity model</a> was set up, based on the RDA indicators. The focus was only on the indicators regarding Findability/Discoverability at that point. Before we could use this model however, the indicators were updated within the RDA initiative. We used their <a class="reference external" href="https://docs.google.com/spreadsheets/d/1mkjElFrTBPBH0QViODexNur0xNGhJqau0zkL4w8RRAw/edit?usp=sharing">new indicators</a> (for findability, v0.01) and their level definition to determine the levels for both the transcriptomics and proteomics datasets. The results can be found <a class="reference external" href="https://docs.google.com/spreadsheets/d/1abQ5_sOmBWbxAZhQVEUxQ_ybI1yTi0t-tJAVY5J5VY8/edit?usp=sharing">here</a>.</p>
 <p>In the meantime, an improved version of the RDA indicators was released (v0.02). In the results document a comparison/mapping is made between v0.02 and v0.01 for possible future reference. <br />
@@ -853,7 +838,7 @@ We have updated the scoring for the transcriptomics data to this new version (v0
 <p>The complete results can be viewed <a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/evaluations/170">here</a>.</p>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Cellosaurus accession number is recommended as an identifier for cell lines. Cellosaurus also provides enriched information about different cell lines.</p></li>
 <li><p>EBI BioSamples database is the master hosting platform for sample metadata, allowing curation and basic ontology annotation.</p></li>
@@ -863,7 +848,7 @@ We have updated the scoring for the transcriptomics data to this new version (v0
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
@@ -888,7 +873,7 @@ We have updated the scoring for the transcriptomics data to this new version (v0
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>

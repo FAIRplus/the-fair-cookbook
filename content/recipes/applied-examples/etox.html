@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3. ND4BB - clinical trial datasets" href="nd4bb.html" />
-    <link rel="prev" title="Integrating data" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" />
+    <link rel="prev" title="1.11.4. Integrating data" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -424,37 +424,22 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Starting material
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html#bibliographic-reference">
-       Bibliographic Reference:
+       1.11.1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Structuring data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair-data-matrix/1-rose-metabolites-Python-analysis.html#bibliographic-reference">
-       Bibliographic Reference:
+       1.11.2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring data with SPARQL
+       1.11.3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Integrating data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair-data-matrix/3-rose-metabolites-R-analysis.html#bibliographic-references">
-       Bibliographic References:
+       1.11.4. Integrating data
       </a>
      </li>
     </ul>
@@ -660,32 +645,32 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation-and-aim">
-   Motivation and Aim
+   2.1. Motivation and Aim
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-you-need-to-decide-between-different-knowledge-resources">
-   Why you need to decide between different Knowledge Resources
+   2.2. Why you need to decide between different Knowledge Resources
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-are-knowledge-resource-indexes">
-   What are Knowledge Resource Indexes?
+   2.3. What are Knowledge Resource Indexes?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-knowledge-resource-indexes">
-   Using Knowledge Resource Indexes
+   2.4. Using Knowledge Resource Indexes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   Authors
+   2.5. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   License
+   2.6. License
   </a>
  </li>
 </ul>
@@ -769,7 +754,7 @@ No
 <p>They identify 1) coverage report, and 2) entity mappings as useful applications enabled by knowledge resource indexes.</p>
 </div>
 <div class="section" id="motivation-and-aim">
-<h2>Motivation and Aim<a class="headerlink" href="#motivation-and-aim" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Motivation and Aim<a class="headerlink" href="#motivation-and-aim" title="Permalink to this headline">¶</a></h2>
 <p>The description of the metadata as well as the characterization of the actual content of a dataset often rely on short free-text excerpts. As an example, we can consider the names of the columns of a table (e.g. “laboratory tests”) or the different values of the cells belonging to a specific table column (e.g. “cholesterol”, “blood sugar”, “liver function”, etc.). Often such free-text excerpts are not rigorously characterized inside and across datasets, thus leading to situations in which it is difficult to unambiguously describe the semantics of each excerpt due to polysemy (i.e. several meanings can be associated to the same excerpt) and synonymy (i.e. a specific meaning can be expressed by more than one excerpt).</p>
 <p>In this regard, the possibility to describe both the structure (i.e. metadata) and content of a dataset by relying on the concepts formalized by widely-adopted knowledge resources (i.e. ontologies, thesauri, etc.) plays a key role in substantially improving the level of FAIRness of the same data: the identification of the concepts that better describe each piece of information included in a dataset is usually referred to as <strong>entity linking</strong>. The use of standardized, shared, consistent identifiers to unambiguously characterize the semantics of data fosters <em>Interoperability</em> and <em>Reusability</em>: indeed, the fact that distinct datasets rely on the same, shared set of concepts to describe (part of) their content makes their integration significantly easier, thus opening up novel possibilities for cross-fertilization. Also the <em>Findability</em> and <em>Accessibility</em> of information significantly benefit from the availability of descriptions of datasets based on standard vocabularies: information from distinct datasets can be seamlessly indexed and searched and data consumers, both humans and machines, can easily interpret, validate and summarize their content.</p>
 <p>Given a dataset, this FAIRification Recipe focuses on (semi-)automated approaches and best practices to:</p>
@@ -779,7 +764,7 @@ No
 </ul>
 </div>
 <div class="section" id="why-you-need-to-decide-between-different-knowledge-resources">
-<h2>Why you need to decide between different Knowledge Resources<a class="headerlink" href="#why-you-need-to-decide-between-different-knowledge-resources" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Why you need to decide between different Knowledge Resources<a class="headerlink" href="#why-you-need-to-decide-between-different-knowledge-resources" title="Permalink to this headline">¶</a></h2>
 <p>As a general consideration, given a dataset, the selection of the knowledge resources useful to describe its structure and content should be driven by the following general principles:</p>
 <ul class="simple">
 <li><p>the selection of a specific knowledge resource among a set of alternatives should be driven by: (i) <em>higher semantic coverage</em> with respect to the description of the dataset under consideration; (ii) <em>better formalization of key facets of the data to describe</em> with respect to the implementation of future data integration and indexing activities; (iii) <em>higher level of integration and availability of mappings from the chosen knowledge resources to other complementary ones</em></p></li>
@@ -788,12 +773,12 @@ No
 </ul>
 </div>
 <div class="section" id="what-are-knowledge-resource-indexes">
-<h2>What are Knowledge Resource Indexes?<a class="headerlink" href="#what-are-knowledge-resource-indexes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>What are Knowledge Resource Indexes?<a class="headerlink" href="#what-are-knowledge-resource-indexes" title="Permalink to this headline">¶</a></h2>
 <p><em>Knowledge resource indexes</em> represent core tools to enable data normalization and integration through concept mapping, thus fostering the reuse of existing knowledge resources. Knowledge resource indexes are repositories where several types of knowledge resources (e.g. ontologies, thesauri, etc.), usually describing distinct facets of a knowledge domain, are stored. Such indexes provide users with <strong>specific mechanisms to identify inside the set of indexed knowledge resources, the most relevant concepts useful to formally characterize the semantics of a piece of knowledge that is usually represented by a text excerpt</strong>. In particular, given a text excerpt (i.e. “neoplasia”), knowledge resource indexes select and rank concepts useful to characterize its semantics by relying on string matching strategies: the set of concepts that are described by labels (i.e. names or longer descriptions) that better match the text excerpt provided as input are retrieved. For instance, given the input text excerpt “neoplasia”, the concept with identifier <em>MC_0000002</em> lexicalized by means of the label “<em>Neoplasia</em>”, belonging to the Histopathology ontology is retrieved. In this FAIRification Recipe, we will rely on the <a class="reference external" href="https://www.ebi.ac.uk/ols/index">EBI Ontology Lookup Service (OLS)</a>, a knowledge resource index that at the time of writing, stores the most recent versions of 236 widespread biomedical ontologies. OLS provides an open REST API that supports the retrieval of the most relevant concepts useful to describe a text excerpt provided as input.</p>
 <p>Hereinafter this FAIRification Recipe, by relying on the OLS API, given an input dataset, presents into detail an automated ontology coverage evaluation strategy. Such strategy aims at: (i) identifying the knowledge resources that better describe the structure (i.e. metadata) and content of the dataset under consideration, in terms of semantic coverage; (ii) gathering the most relevant concepts useful to characterize each piece of knowledge that belongs to the input dataset (i.e. each text excerpt that describes a specific aspect of the input dataset). In particular, basic linguistic analyses are performed on both the descriptive text excerpts provided as input to the OLS API and the labels of the corresponding related concepts that are retrieved by the same API. By pre-processing each input text excerpt we intend to perform <em>basic query expansion procedures with the aim of increasing the recall of relevant concepts when querying the OLS knowledge resource indexer</em>. By analyzing the labels of the list of matching concepts retrieved by the OLS API, we intend to <em>refine such concept list by relying on rules and heuristics based on linguistic analyses</em>. When we deal with the evaluation of the semantic coverage of knowledge resources, it is not uncommon that the indexers we have at our disposal (e.g. the OLS) do not include all the knowledge resources we would like to consider as potential sources of useful concepts. To mitigate this issue, we rely on <em>OntoIndex</em>, a knowledge resource indexer based on <a class="reference external" href="https://www.elastic.co/">Elasticsearch</a> and developed by the Hospital del Mar Medical Research Institute (IMIM), Barcelona. The current version of <em>OntoIndex</em> supports the import, indexing and search for concepts that belong to ontologies formalized by means of the Ontology Web Language (OWL) or the Open Biological and Biomedical Ontology (OBO) format, the latter widely adopted to describe biomedical knowledge resources.</p>
 </div>
 <div class="section" id="using-knowledge-resource-indexes">
-<h2>Using Knowledge Resource Indexes<a class="headerlink" href="#using-knowledge-resource-indexes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Using Knowledge Resource Indexes<a class="headerlink" href="#using-knowledge-resource-indexes" title="Permalink to this headline">¶</a></h2>
 <p>The exploitation of the concepts formalized by widely-adopted knowledge resources (i.e. ontologies, thesauri, etc.) to semantically describe the structure (i.e. metadata) and content of a dataset is a key aspect to foster the FAIRness of the same data. With this regard, here we present an approach whose ultimate objective is easing and automating the choice and usage of a consistent and informed set of knowledge resources to describe a dataset under consideration. In particular, the proposed strategy <strong>automatically evaluates the suitability of a set of knowledge resources  (i.e. ontologies, thesauri, etc.) with respect to the semantic characterization of a list of terms that occur in an input dataset</strong> (i.e. the presence inside the considered knowledge resources, of concepts that properly describe the terms belonging to the input list).</p>
 <p>The input of our approach is represented by a list of terms (i.e. short free-text excerpts, see <a class="reference internal" href="#etox-figure1"><span class="std std-numref">Fig. 2.31</span></a>) that are used to describe a varied set of aspects of a dataset under analysis (e.g. the names of the columns of the tables of the dataset - i.e. cell headers). By considering the knowledge resources stored in as index (namely the OLS, eventually complemented by <em>OntoIndex</em>) we intend to generate as final outputs:</p>
 <ul class="simple">
@@ -830,7 +815,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -854,7 +839,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -885,7 +870,7 @@ No
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" title="previous page">Integrating data</a>
+    <a class='left-prev' id="prev-link" href="fair-data-matrix/3-rose-metabolites-R-analysis.html" title="previous page"><span class="section-number">1.11.4. </span>Integrating data</a>
     <a class='right-next' id="next-link" href="nd4bb.html" title="next page"><span class="section-number">3. </span>ND4BB - clinical trial datasets</a>
 
         </div>

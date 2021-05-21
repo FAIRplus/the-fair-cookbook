@@ -424,37 +424,22 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       Starting material
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html#bibliographic-reference">
-       Bibliographic Reference:
+       1.11.1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       Structuring data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair-data-matrix/1-rose-metabolites-Python-analysis.html#bibliographic-reference">
-       Bibliographic Reference:
+       1.11.2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       Exploring data with SPARQL
+       1.11.3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       Integrating data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair-data-matrix/3-rose-metabolites-R-analysis.html#bibliographic-references">
-       Bibliographic References:
+       1.11.4. Integrating data
       </a>
      </li>
     </ul>
@@ -660,69 +645,69 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ingredients">
-   Ingredients
+   3.1. Ingredients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objectives">
-   Objectives
+   3.2. Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#step-by-step-process">
-   Step by Step Process
+   3.3. Step by Step Process
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-description">
-     Dataset description
+     3.3.1. Dataset description
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-extraction">
-     Data extraction
+     3.3.2. Data extraction
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-transformation">
-     Data transformation
+     3.3.3. Data transformation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#extraction-and-annotation-of-structural-metadata">
-     Extraction and annotation of structural metadata
+     3.3.4. Extraction and annotation of structural metadata
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#evaluation-of-the-ontology-annotation">
-     Evaluation of the ontology annotation
+     3.3.5. Evaluation of the ontology annotation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fair-assessment">
-   FAIR assessment
+   3.4. FAIR assessment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#possible-next-steps">
-   Possible next steps
+   3.5. Possible next steps
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
+   3.6. Summary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   Authors
+   3.7. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   License
+   3.8. License
   </a>
  </li>
 </ul>
@@ -808,7 +793,7 @@ No
 <p>This is one of the first recipes within the FAIRplus project, and served as a pilot to develop a structured FAIRification process.</p>
 </div>
 <div class="section" id="ingredients">
-<h2>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Raw Data: <a class="reference external" href="https://www.dsf.unica.it/translocation/abdb/">AMR Compounds Database</a></p></li>
 <li><p>Metadata Model</p></li>
@@ -829,13 +814,13 @@ No
 </ul>
 </div>
 <div class="section" id="objectives">
-<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
 <p>The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data into a public repository using machine readable format, as well as improvement of some FAIR parameters.</p>
 </div>
 <div class="section" id="step-by-step-process">
-<h2>Step by Step Process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Step by Step Process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="dataset-description">
-<h3>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.1. </span>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h3>
 <p>The AMR database consists of several nested static HTML pages. The information is well structured, results are mainly quantitative numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>) and a machine-readable data set should be easily created.</p>
 <p>To get a good understanding of the AMR dataset, the AMR metadata shall be extracted. The AMR metadata includes three types of metadata: structural metadata, administrative metadata, and descriptive metadata. The structural metadata describes the structure of the dataset, for examples, column names and/or IDs. Administrative metadata contains the author, organization, and other provenance information. The descriptive metadata includes the procedure, usually protocols, in generating the experimental results. The descriptive metadata is always stored in a free-text format without data structure.</p>
 <p><a class="reference internal" href="#nd4bb-figure1"><span class="std std-numref">Fig. 3.6</span></a> is an example of the simplified schematic workflow of FAIRification, which includes the extraction, the transformation, the annotation, the licensing and the identifier assigning process. Due to time constraint, we focussed on the extraction and annotation of structural metadata. The administrative and the descriptive metadata will be added in the future.</p>
@@ -845,7 +830,7 @@ No
 </div>
 </div>
 <div class="section" id="data-extraction">
-<h3>Data extraction<a class="headerlink" href="#data-extraction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.2. </span>Data extraction<a class="headerlink" href="#data-extraction" title="Permalink to this headline">¶</a></h3>
 <p>Data are extracted using a <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf">KNIME workflow provided here</a>, with which we can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced.</p>
 <p><a class="reference internal" href="#nd4bb-figure2"><span class="std std-numref">Fig. 3.7</span></a> is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as HTML heading level 3 (&lt;h3&gt;, shown in the red box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 3.8</span></a>) and compounds as an unordered list (&lt;ul&gt;, shown in the yellow box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 3.8</span></a>).</p>
 <div class="figure align-default" id="nd4bb-figure2">
@@ -874,7 +859,7 @@ No
 </div>
 </div>
 <div class="section" id="data-transformation">
-<h3>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.3. </span>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
 <p>The data were extracted following the following schema to facilitate future data annotation: “PropertyGroup – Property – Value” where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in <a class="reference internal" href="#nd4bb-figure6"><span class="std std-numref">Fig. 3.12</span></a>. For each property, the corresponding values in a controlled vocabulary list are collected into a <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx">spreadsheet</a>. Missing values were fixed in this step as well.</p>
 <p>One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup).</p>
 <div class="figure align-default" id="nd4bb-figure6">
@@ -883,7 +868,7 @@ No
 </div>
 </div>
 <div class="section" id="extraction-and-annotation-of-structural-metadata">
-<h3>Extraction and annotation of structural metadata<a class="headerlink" href="#extraction-and-annotation-of-structural-metadata" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.4. </span>Extraction and annotation of structural metadata<a class="headerlink" href="#extraction-and-annotation-of-structural-metadata" title="Permalink to this headline">¶</a></h3>
 <p>To prepare for the ontology annotation, we first generated lists of different types of attributes, which include “AMRclass”, “AMR compound”, “PropertyGroup”, etc. In each spreadsheet, the values are listed as separate rows for ontology annotation.</p>
 <p>The strings went through additional parsing to improve mapping confidence. Duplicated or missing attributes were removed. Stemming and lemmatization were implemented to map the keyword to its root form to avoid mismatch due to spelling or form variations.</p>
 <p>All the strings were sent through ZOOMA/NCBO API to search for ontology annotation. The ontology annotation results are listed here (<a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BZOOMA_1019.xlsx">result Excel file for querying ZOOMA</a>, <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BNCBOREC_1021.xlsx">result Excel file for querying NCBO</a>). The ontology annotations were ranked and selected based on its confidence. For strings that didn’t find proper ontology mapping, the original values were kept. The ontology annotation preparation workflow is <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_EBI_ZOOMA_requests_V5.knwf">here</a>.</p>
@@ -892,17 +877,17 @@ No
 <p>Provenance metadata about the ontology annotation pipeline implementation are stored here in the same file.</p>
 </div>
 <div class="section" id="evaluation-of-the-ontology-annotation">
-<h3>Evaluation of the ontology annotation<a class="headerlink" href="#evaluation-of-the-ontology-annotation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.5. </span>Evaluation of the ontology annotation<a class="headerlink" href="#evaluation-of-the-ontology-annotation" title="Permalink to this headline">¶</a></h3>
 <p>Both generated files ‘ExtractedMetadata_20190124_ZOOMA_0329.xlsx’ and ‘ExtractedMetadata_20190124_NCBOREC_0347.xlsx’ show nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only few cases the NCBO Recommender showed results (e.g. BAL29880 and MBX2319) were ZOOMA did not find a corresponding ontology.</p>
 <p>The proposed workflow is insufficient to extract adequate and consistent semantic annotations for the structural metadata. In addition the retrieved links do not reflect the used version of the ontology.</p>
 </div>
 </div>
 <div class="section" id="fair-assessment">
-<h2>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>FAIR assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this headline">¶</a></h2>
 <p>We conducted an assessment of the FAIRness of the dataset, with the results stored <a class="reference external" href="https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit#gid=1320380260">here</a>. Although there are a few indicators that are not applicable to the ND4BB dataset because of data type limitations, and some indicators are too ambiguous to provide a objective assessment. We got different data curators evaluating the FAIRness separately and compared and discussed the conflicting assessment. In general, the FAIRness score against RDA FAIR indicator is 36%, of which the mandatory indicator score is 47% and the recommended indicator score is 32%.</p>
 </div>
 <div class="section" id="possible-next-steps">
-<h2>Possible next steps<a class="headerlink" href="#possible-next-steps" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Possible next steps<a class="headerlink" href="#possible-next-steps" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Extract administrative metadata, provenance information, e.g. owner, date of creation</p></li>
 <li><p>Add a license to data set</p></li>
@@ -915,7 +900,7 @@ No
 </ol>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>The AMR dataset was provided as a first example as it was immediately available. A generic FAIRification workflow was also provided. We reviewed the workflow and derived general principles for the cookbook. However (as for the principles we learnt) the lack of a context for the data, and the lack of goals for the FAIRification process made the actual action of FAIRification not valuable.</p>
 <p>As a result of our work on the AMR dataset, we identified useful general principles, including the need for license, availability of the data, the importance of context (e.g.: what ontologies to map to) and other details included in our report.</p>
 <p>We also identified key FAIRification steps in the proposed process, some of which are non obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow.</p>
@@ -923,7 +908,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -947,7 +932,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
