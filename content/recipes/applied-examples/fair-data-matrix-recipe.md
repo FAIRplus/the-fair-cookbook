@@ -69,8 +69,8 @@ ___
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [conversion](http://edamontology.org/operation_3434)  | [Microsoft Excel file (.xlsx)]()  | [Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/)  |
-| [conversion](http://edamontology.org/operation_3434)  | [Adobe PDF (.pdf)]()  | [Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/)  |
+| [conversion](http://edamontology.org/operation_3434)  | Microsoft Excel file (.xlsx)<!-- TODO add a link to a specification of MS Excel file format -->  | [Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/)  |
+| [conversion](http://edamontology.org/operation_3434)  | Adobe PDF (.pdf)<!-- TODO add a link to a specification of Adobe PDF file format -->  | [Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/)  |
 | [format validation](http://edamontology.org/operation_0336)  | [Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/)   | [report](http://edamontology.org/data_2048)  |
 | [conversion](http://edamontology.org/operation_3434)  | [Frictionless JSON Data Package](https://frictionlessdata.io/specs/data-package/)  | [RDF/linked data](https://fairsharing.org/FAIRsharing.p77ph9)  |
 | [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)| [annotated text](http://edamontology.org/data_3779)|
