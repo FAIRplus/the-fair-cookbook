@@ -73,7 +73,7 @@ alt: A visualization of the entities within the proposed transcriptomics schema.
 A visualization of the entities within the proposed transcriptomics schema.
 ```
 
-To solve this problem, we proposed a [transcriptomics schema](https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema) which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks ({numref}´resolute-figure1´). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. _(Note: This schema is still actively updated. Feedback welcomed)_
+To solve this problem, we proposed a [transcriptomics schema](https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema) which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks ({numref}`resolute-figure1`). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. _(Note: This schema is still actively updated. Feedback welcomed)_
 
 
 ## FAIR assessment 
