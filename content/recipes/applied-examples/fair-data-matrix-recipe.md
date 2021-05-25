@@ -22,7 +22,7 @@ The main purpose of this recipe is:
 
 > Making self describing tabular data using Frictionless tools instead of dumping Excel files
 
-- ensure that results presented in MS Excel or PDF tables are made more open and unambiguous
+- ensure that results presented in Excel files or PDF tables are made more open and unambiguous
 - provide an RDF representation
 - enable reproduciblity of results
 - evaluate efficiency of the method via a data integrate challenge
