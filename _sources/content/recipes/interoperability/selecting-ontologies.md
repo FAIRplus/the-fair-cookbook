@@ -347,10 +347,10 @@ The notion is important to grasp as it also explains why not all ontologies are 
 TODO : fill in the links to what-should-I-read-next recipes
 
 > ### What should I read next?
-> * [How to build an application ontology?]()
-> * [How to select on ontology service?]()
-> * [How to deploy an ontology server?]()
-> * [How to establish a minimal metadata profile?]()
+> * How to build an application ontology?<!-- TODO add a link to corresponding document -->
+> * How to select on ontology service?<!-- TODO add a link to corresponding document -->
+> * How to deploy an ontology server?<!-- TODO add a link to corresponding document -->
+> * How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document -->
 -->
 
 ___

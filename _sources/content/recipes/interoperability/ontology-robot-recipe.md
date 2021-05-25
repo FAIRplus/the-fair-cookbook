@@ -540,8 +540,8 @@ robot query --input <input_ontology_file> \
 
 > ### What should I read next?
 
-> * {ref}`fcb-interop-metadataprofile`  <!-- [How to establish a minimal metadata profile?]() -->
-> * {ref}`fcb-interop-ontorequest` <!-- [How to submit/request terms to an ontology ?]() -->
+> * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document --> -->
+> * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?<!-- TODO add a link to corresponding document --> -->
 ___
 
 

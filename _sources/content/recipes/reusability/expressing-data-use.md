@@ -54,10 +54,10 @@ Data Use
 
  Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-| [JSON-LD]() | []()  |   |
+| JSON-LD<!-- TODO add a link to corresponding document --> | <!-- TODO add a link to corresponding document -->  |   |
 | [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html)  | [DCAT v2](https://www.w3.org/TR/vocab-dcat-2/)  |   |
 | [ISO-3066](https://www.iso.org/iso-3166-country-codes.html)  | [ODRL](https://www.w3.org/TR/odrl-vocab/)  |   |
-| [EGA XML]()   | [DUO](http://www.obofoundry.org/ontology/duo.html)  |   |
+| EGA XML<!-- TODO add a link to corresponding document -->   | [DUO](http://www.obofoundry.org/ontology/duo.html)  |   |
 | [Data Article Tag Suite (DATS)](https://datatagsuite.github.io/schema/)  | [MONDO](http://www.obofoundry.org/ontology/mondo.html)  |   |
 
 

@@ -52,7 +52,7 @@ ___
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [formatting](http://edamontology.org/operation_3438)  | [Waters MS format]()  | [mzML](https://fairsharing.org/FAIRsharing.26dmba)  |
+| [formatting](http://edamontology.org/operation_3438)  | Waters MS format<!-- TODO add a link to corresponding document -->  | [mzML](https://fairsharing.org/FAIRsharing.26dmba)  |
 | [text annotation](http://edamontology.org/operation_3778)  | [PSI-MS](https://fairsharing.org/FAIRsharing.284e1z)  | [annotated text](http://edamontology.org/data_3779)  |
 
 
@@ -88,7 +88,7 @@ ___
 
 ### Step 1: obtain the dataset
 
-In the case of the [IMI RESOLUTE]() project, the data is released via the [University of Luxembourg]() server (assuming you have access resolved):
+In the case of the IMI RESOLUTE<!-- TODO add a link to corresponding document --> project, the data is released via the University of Luxembourg<!-- TODO add a link to corresponding document --> server (assuming you have access resolved):
 
 ```bash
 $> sftp fairplus@NNN.000.000.NNN
@@ -130,9 +130,9 @@ drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
 
 > :octopus: The archive would have benefitted from having a manifest file listing all the files and their associated checksums. In so doing, it would have allowed validation and verification that no corruption happened during file transfer.
 
-> :octopus: Refer to the recipe: "[How to calculate file checksums]()"
+> :octopus: Refer to the recipe: "How to calculate file checksums<!-- TODO add a link to corresponding document -->"
 
-> :octopus: Refer to the recipe: "[How to package data for shipping with BDbags]()"
+> :octopus: Refer to the recipe: "How to package data for shipping with BDbags<!-- TODO add a link to corresponding document -->"
 
 
 
@@ -294,10 +294,10 @@ Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be a
 
 
 > ### What to read next
-  >  - [How to calculate file checksums]()
-  >  - [How to package data for shipping with BDbags]()
-  >  - [How to produce an ISA metadata file from a set of mzML fles]()
-  >  - [How to deposit data to Zenodo]()
+  >  - How to calculate file checksums<!-- TODO add a link to corresponding document -->
+  >  - How to package data for shipping with BDbags<!-- TODO add a link to corresponding document -->
+  >  - How to produce an ISA metadata file from a set of mzML fles<!-- TODO add a link to corresponding document -->
+  >  - How to deposit data to Zenodo<!-- TODO add a link to corresponding document -->
 
 ___
 

@@ -73,10 +73,10 @@ A `Data Catalogue` is a resource meant to allow fast identification of `Data set
 
 `Data Catalogues` have been identified as critical infrastructure and therefore a number of model exist to support their implementation.
 1. DATS:
-The [Data Article Tag Suite model]() has been developed during the NIH-BD2K projects and underpins the [datamed catalogue](https://datamed.org/), the aim of which was to produce a prototype of a [`Pubmed for Datasets`](https://pubmed.ncbi.nlm.nih.gov/29346583/).
+The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the NIH-BD2K projects and underpins the [datamed catalogue](https://datamed.org/), the aim of which was to produce a prototype of a [`Pubmed for Datasets`](https://pubmed.ncbi.nlm.nih.gov/29346583/).
 
 3. DCAT:
-In the world of semantic web technologies, The [W3C DCAT specifications]() (v1 and the newly released version 2) provide a vocabulary to express `data catalogue metadata` in **RDF**.
+In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document --> (v1 and the newly released version 2) provide a vocabulary to express `data catalogue metadata` in **RDF**.
 3. Schema.org:
 The vocabulary developed by the consortium of search engines has defined a metadata profile for [`Dataset`](https://schema.org/DataSet), [`Data Catalogue`](https://schema.org/DataCatalog)
 
@@ -105,10 +105,10 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-| [JSON]()  | []()  | []()  |
-| [RDF]()  | [DCAT v1]()  | [DATS]()  |
-| [RDF]()  | [DCAT v2]()  | [DATS]()  |
-| [JSON-LD]()  | [Schema.org]()  | []()  |
+| JSON<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
+| RDF<!-- TODO add a link to corresponding document -->  | DCAT v1<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
+| RDF<!-- TODO add a link to corresponding document -->  | DCAT v2<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
+| JSON-LD<!-- TODO add a link to corresponding document -->  | Schema.org<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
 
 
 ___
