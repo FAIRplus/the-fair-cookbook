@@ -197,7 +197,7 @@ This recipe provides a step-by-step guide to deploying the `IMI data catalogue` 
 
 > ### What should I read next?
 > * {ref}`fcb-infra-build-catalog`
-> * [How to deploy the FAIRPORT data catalogue?]() (*in preparation*)
+> * How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document --> (*in preparation*)
 > * {ref}`fcb-find-seo`
 > * {ref}`fcb-interop-metadataprofile`
 > * {ref}`fcb-interop-txmetadata`

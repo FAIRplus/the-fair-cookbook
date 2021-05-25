@@ -471,7 +471,7 @@ Figure 10: Typical Low Level Support Questions
 
 ## Available common open source software
 
-### [EMBL-EBI Ontology Lookup Service]() (Ontology Portal Tool)
+### EMBL-EBI Ontology Lookup Service<!-- TODO add a link to corresponding document --> (Ontology Portal Tool)
 
 #### Overview
 
@@ -494,7 +494,7 @@ It is a repository for biomedical ontologies that aims to provide a single point
 7. **`Ontology Language`**: Custom translation of OBO and OWL 2 languages to the Neo4J graph model.
 8. **`Programming Language`**: Java.
 
-### [NCBO Bioportal Virtual Appliance]() (Ontology Portal Tool)
+### NCBO Bioportal Virtual Appliance<!-- TODO add a link to corresponding document --> (Ontology Portal Tool)
 
 #### Overview
 
@@ -558,7 +558,7 @@ It is an Open Data Platform for Linked Data, which provides an open implementa
 7. **`Ontology Language`**: OWL serialized as RDF/RDFS triples. 
 8. **`Programming Language`**: Java.
 
-### [European Data Portal]() (Open Data Platform Tool)
+### European Data Portal<!-- TODO add a link to corresponding document --> (Open Data Platform Tool)
 
 #### Overview
 
@@ -591,9 +591,9 @@ Determining which infrastructure to rely on for service terminologies and ontolo
 To complement this recipe, reading the following chapter is highly encouraged.
 
 > ### What should I read next?
-> * [Key functional requirements to consider when selecting an ontology service?]()]
-> * [How to select an ontology?]()
-> * [How to build an application ontology?]()
+> * Key functional requirements to consider when selecting an ontology service?<!-- TODO add a link to corresponding document -->]
+> * How to select an ontology?<!-- TODO add a link to corresponding document -->
+> * How to build an application ontology?<!-- TODO add a link to corresponding document -->
 
 
 

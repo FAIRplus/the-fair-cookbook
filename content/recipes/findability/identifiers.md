@@ -103,8 +103,8 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPR
 | [IRI](https://tools.ietf.org/html/rfc3987) |   |   |
 | [CURIE](https://www.w3.org/TR/2010/NOTE-curie-20101216/) |   |   |
 | [URL](https://tools.ietf.org/html/rfc1738) |  |  |
-| [HTTP]() |  |  |
-| [RDF]() |  |  |
+| HTTP<!-- TODO add a link to corresponding document --> |  |  |
+| RDF<!-- TODO add a link to corresponding document --> |  |  |
 
 ___
 
@@ -237,7 +237,7 @@ In our context, the use of the hashing function is to generate a unique key whic
 
 Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers *resolvable (a notion also known as `dereferencable`)*.
 
-In other words, in order to create globally unique identifiers `for the web`, it is necessary to understand what [Uniform Resource Locators]() (a.k.a `URL`) are and how to construct them for use with the [Hypertext Transfer Protocol]().
+In other words, in order to create globally unique identifiers `for the web`, it is necessary to understand what Uniform Resource Locators<!-- TODO add a link to corresponding document --> (a.k.a `URL`) are and how to construct them for use with the Hypertext Transfer Protocol<!-- TODO add a link to corresponding document -->.
 
 This results in URLs of the following form
 
