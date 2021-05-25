@@ -111,19 +111,19 @@ ___
 
 ## Step by Step Process
 
-### Step1: Address Data Findability and Accessibility:
+### Step1: Address Data Findability and Accessibility
 
 We made the initial spreadsheet table discoverable and citable by:
 
 - uploading it to Zenodo. 
-- assigning an open license (CC-BY 4.0)
+- assigning an open license ([CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/))
 - obtaining a persistent unique identifier in the form of a DOI: https://doi.org/10.5281/zenodo.2598799
 
 
      
 ### Step2: Address Interoperability
 
-We regularized the three dimensions of the matrix (data cube), which represent: i) the metabolites (molecular entities), ii) the treatments (experimental conditions and corresponding biomaterials and bioassays), and iii) the quantitation type (measurements).
+We transformed the data into a three-dimensional matrix (data cube), which represent: i) the metabolites (molecular entities), ii) the treatments (experimental conditions and corresponding biomaterials and bioassays), and iii) the quantitation type (measurements).
 
 #### Step 2A: semantic anchoring
 Metabolites (free text) names were augmented with unambiguous InChI codes, assigned by accessing CHEBI (https://doi.org/10.25504/FAIRsharing.62qk8w) programmatically via its LibChebi library (https://github.com/libChEBI/libChEBIpy).  
