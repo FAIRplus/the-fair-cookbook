@@ -11,13 +11,13 @@ Here are some [instructions][link_signupinstructions].
 
 Already know what you're looking for in this guide? Jump to the following sections:
 
-* [Joining the conversation](#joining-the-conversation)
-* [Contributing through Github](#contributing-through-github)
-* [Understanding issues, milestones, and project boards](#understanding-issues-milestones-and-project-boards)
-* [Making a change](#making-a-change)
-* [Structuring contributions](#style-guide)
-* [Recognizing contributors](#recognizing-contributions)
+* {ref}`fcb-joining-the-conversation`
+* {ref}`fcb-contributing-through-github`
+* {ref}`fcb-understanding-issues-milestones-and-project-boards`
+* {ref}`fcb-making-a-change`
+* {ref}`fcb-recognizing-contributions`
 
+(fcb-joining-the-conversation)=
 ## Joining the conversation
 
 `FAIR cookbook` is a young project maintained by a growing group of enthusiastic developers&mdash; and we're excited to have you join!
@@ -25,6 +25,7 @@ Most of our discussions will take place on open [issues][link_issues].
 
 As a reminder, we expect all contributors to `FAIR cookbook` to adhere to the [FAIR cookbook Code of Conduct][link_coc] in these conversations.
 
+(fcb-contributing-through-github)=
 ## Contributing through GitHub
 
 - [git][link_git] is a really useful tool for version control.
@@ -39,7 +40,7 @@ or as a [link][rick_roll] (`[link](https://https://youtu.be/dQw4w9WgXcQ)`) to an
 GitHub has a helpful page on
 [getting started with writing and formatting Markdown on GitHub][writing_formatting_github].
 
-
+(fcb-understanding-issues-milestones-and-project-boards)=
 ## Understanding issues, milestones and project boards
 
 Every project on GitHub uses [issues][link_issues] slightly differently.
@@ -56,31 +57,9 @@ goals and immediate next steps.
 
 ### Issue labels
 
-The current list of labels are [here][link_labels] and include:
+The current list of labels are [here][link_labels].
 
-* [![Help Wanted](https://img.shields.io/badge/-help%20wanted-159818.svg)][link_helpwanted] *These issues contain a task that a member of the team has determined we need additional help with.*
-
-    If you feel that you can contribute to one of these issues, we especially encourage you to do so!
-
-    * [![Good First Issue](https://img.shields.io/badge/-good%20first%20issue-blueviolet.svg)][link_helpwanted] *These issues contain a task that a member of the team thinks could be a good entry point to the project.*
-
-        If you're new to the `FAIR cookbook` project, we think that this is a great place for your first contribution!
-
-* [![Bugs](https://img.shields.io/badge/-bugs-fc2929.svg)][link_bugs] *These issues point to problems in the project.*
-
-    If you find new a bug, please give as much detail as possible in your issue, including steps to recreate the error.
-    If you experience the same bug as one already listed, please add any additional information that you have as a comment.
-
-* [![Enhancement](https://img.shields.io/badge/-enhancement-84b6eb.svg)][link_enhancement] *These issues are asking for enhancements to be added to the project.*
-
-    Please try to make sure that your enhancement is distinct from any others that have already been requested or implemented.
-    If you find one that's similar but there are subtle differences please reference the other request in your issue.
-
-* [![Question](https://img.shields.io/badge/-question-DE8BE7.svg)][link_question] *These are questions that users and contributors have asked.*
-
-    Please check the issues (especially closed ones) to see if your question has been asked and answered before. 
-    If you find one that's similar but there are subtle differences please reference the other request in your issue.
-
+(fcb-making-a-change)=
 ## Making a change
 
 We appreciate all contributions to `FAIR cookbook`, but those accepted fastest will follow a workflow similar to the following:
@@ -135,7 +114,7 @@ and that you plan to continue working on it.
 When your pull request is Ready for Review, you can select this option on the PR's page,
 and a project maintainer will review your proposed changes.
 
-
+(fcb-recognizing-contributions)=
 ## Recognizing contributors
 
 We welcome and recognize all contributions from documentation to testing to code development.
@@ -143,14 +122,14 @@ You can see a list of current contributors in the [contributors tab][link_contri
 
 ## Thank you!
 
-You're awesome. :wave::smiley:
+You're awesome. 👋 😃
 
 <br>
 
 *&mdash; Based on contributing guidelines from the [STEMMRoleModels][link_stemmrolemodels] project.*
 
 [link_git]: https://git-scm.com
-[link_github]: https://github.com/https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md
+[link_github]: https://github.com/
 [link_FAIR-cookbook]: https://github.com/fair-cookbook/the-fair-cookbook
 [link_signupinstructions]: https://help.github.com/articles/signing-up-for-a-new-github-account
 
@@ -161,14 +140,11 @@ You're awesome. :wave::smiley:
 [sphinx]: http://www.sphinx-doc.org/en/master/index.html
 [readthedocs]: https://docs.readthedocs.io/en/latest/index.html
 
-[link_issues]: https://github.com/fair-cookbook/the-fair-cookbook/issues
-[link_coc]: https://fairplus.github.io/cookbook-dev/code_of_conduct.html
+[link_issues]: https://github.com/FAIRplus/the-fair-cookbook/issues
+[link_coc]: https://fairplus.github.io/the-fair-cookbook/content/recipes/boilerplate/code_of_conduct.html
 
-[link_labels]: https://github.com/fair-cookbook/the-fair-cookbook/labels
-[link_bugs]: https://github.com/fair-cookbook/the-fair-cookbook/labels/bug
-[link_helpwanted]: https://github.com/fair-cookbook/the-fair-cookbook/help%20wanted
-[link_enhancement]: https://github.com/fair-cookbook/the-fair-cookbook/enhancement
-[link_question]: https://github.com/fair-cookbook/the-fair-cookbook/labels/question
+[link_labels]: https://github.com/FAIRplus/the-fair-cookbook/labels
+
 
 [link_pullrequest]: https://help.github.com/articles/creating-a-pull-request/
 [link_fork]: https://help.github.com/articles/fork-a-repo/
@@ -178,5 +154,5 @@ You're awesome. :wave::smiley:
 
 [link_drafts]: https://help.github.com/articles/about-pull-requests/#draft-pull-requests
 
-[link_contributors]: https://github.com/fair-cookbook/the-fair-cookbook/graphs/contributors
+[link_contributors]: https://github.com/FAIRplus/the-fair-cookbook/graphs/contributors
 [link_stemmrolemodels]: https://github.com/KirstieJane/STEMMRoleModels
