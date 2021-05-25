@@ -20,7 +20,7 @@
 
 The main purpose of this recipe is:
 
-> Making self describing tabular data using Frictionless tools instead of dumping Excel files
+> Making self describing tabular data using [the suite of Frictionless specifications](https://specs.frictionlessdata.io/) instead of dumping Excel files
 
 - ensure that results presented in Excel files or PDF tables are made more open and unambiguous
 - provide an RDF representation
@@ -30,7 +30,9 @@ ___
 
 
 ## Summary
-<!-- <p style='text-align: justify;'> -->
+
+Scientific data is often stored as unstructured data in proprietary file formats, with meaning of the files and data understandable by knowledgeable experts only. Often the meaning derives from the context, given in a scientific publication to which the data is attached as a "supporting information". One of the aims of FAIR is to change this towards machine-understandable representation of information. This recipe exemplifies this journey on a concrete example:  
+
 - The first data source: article by [Raymond et al. Nat Genet. 50:772-777 (2018)](https://doi.org/10.1038/s41588-018-0110-3); is a targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological material was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type.
 
 - The starting point: the human-understandable data in the [supplementary file 41588_2018_110_MOESM3_ESM.zi](https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip), containing the mean concentrations of 61 metabolites measured in three different parts of the rose flower, in six distinct genotypes.
@@ -40,14 +42,14 @@ ___
 - The approach: we performed a retrospective curation and re-annotation of the data matrices, disambiguating of the experimental design, using community, open interoperability standards from [FAIRsharing](https://fairsharing.org); we focused on the clarity of the statistical results to ensure reusability and reproducibility of the analytical workflow by humans and machines. The FAIRification steps for the first data source are documented in the sections below; the same steps were applied to the second data source to assess inter-experiment agreement, as both studies used the same varieties of rose and plant parts. 
 
 - The results: semantically-anchored data matrices served as Linked Data, deposited in public archives (Zenodo and MetaboLights), and consumable by software agents for queries like “Retrieve study predictor variables and their levels” and “What is sample size used to compute the means?” to support study results review and assessment.
-<!-- </p> -->
+
 
 ## Graphical Overview
 
-```{figure} fair-data-matrix.png
+```{figure} fair-data-matrix-recipe.md-figure1.mmd.png
 ---
 width: 800px
-name: Overview of the FAIRification process of a data matrix
+name: fcb-fairify-examples-datamatrix-figure1
 alt: Overview of the FAIRification process of a data matrix
 ---
 Overview of the FAIRification process of a data matrix.
