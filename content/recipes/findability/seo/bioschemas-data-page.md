@@ -93,10 +93,10 @@ Bioschemas Generator start screen.
    - The form defaults to the data type with the first alphabetical character, e.g. for `identifier` this defaults to `PropertyValue` but `Text` or `URL ` will be more appropriate in most cases
    - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
 
-<!--    ![Bioschemas Generator Gene profile form](BioschemasGeneratorGeneRecordForm.png) -->
+<!--    ![Bioschemas Generator Gene profile form](BioschemasGeneratorGeneForm.png) -->
 
 
-```{figure} BioschemasGeneratorGeneRecordForm.png
+```{figure} BioschemasGeneratorGeneForm.png
 ---
 height: 550px
 name: Bioschemas Generator Gene profile form
