@@ -54,7 +54,7 @@ graph LR
     subgraph ETL-RDF
         subgraph Data extraction
 
-            A1[Data query snd retrieval]
+            A1[Data query and retrieval]
         end
 
         subgraph Data transform
