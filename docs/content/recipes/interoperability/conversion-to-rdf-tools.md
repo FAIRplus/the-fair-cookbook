@@ -24,7 +24,7 @@ ___
 
 **_Recipe Type_**: Inventory
 
-**_Executable code_**: set_value_FIXME, [Yes,No]
+**_Executable code_**: No
 
 
 ## Table of Contents
@@ -214,7 +214,7 @@ RDF extension:
 *   Import and export to Turtle and RDF/XML
 *   Query against a Sparql endpoint
 
-Notes on how to install extensions: [install extensions](https://github.com/OpenRefine/OpenRefine/wiki/Installing-Extensions)
+Notes on how to install extensions: [install extensions](https://docs.openrefine.org/manual/installing#installing-extensions)
 
 
 #### OpenRefine metadata extension
