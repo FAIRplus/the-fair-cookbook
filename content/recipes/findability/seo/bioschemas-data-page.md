@@ -31,9 +31,9 @@ ___
 ---
 width: 800px
 name: 
-alt: The process of annotated a webpage with bioschema markup for Search Engine discovery
+alt: The process of annotated a webpage with Bioschemas markup to support machine processing of the page
 ---
-The process of annotated a webpage with bioschema markup for Search Engine discovery.
+The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
 ```
 
 
@@ -50,27 +50,27 @@ ___
 
 ## Method
 
-We will outline the steps for marking up a page in your site. As a specific example, we will use the Wikidata page for [BRCA1](https://www.wikidata.org/wiki/Q227339).
+We will outline the steps for embedding machine processable mark up within a web page in your site. As a specific example, we will use the Wikidata page for [BRCA1](https://www.wikidata.org/wiki/Q227339).
 
 1. Identify a data page in your site for which you will develop markup
 
 2. Open the [Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
-   1.  Select the type of data page that you are marking up. In the example we will use `GeneRecord`. Here are the main data record profiles to choose from <sup>[1](#draft-profiles)</sup>. 
+   1.  Select the type of data page that you are marking up, i.e. the primary subject of the page. In the example we will use `Gene`. Here are the Bioschemas [profiles](https://bioschemas.org/profiles/) that you can choose from <sup>[1](#draft-profiles)</sup>. 
 
-      - `ChemicalSubstanceRecord` for a page about a chemical substance composed of molecular entities
+      - `ChemicalSubstance` for a page about a chemical substance composed of molecular entities
 
-      - `GeneRecord` for a page about a gene
+      - `Gene` for a page about a gene
 
-      - `MolecularEntityRecord` for a page about a single molecular entity
+      - `MolecularEntity` for a page about a single molecular entity
 
-      - `ProteinRecord` for a page about a protein
+      - `Protein` for a page about a protein
 
-      - `Sample` for a page about a biological sample
+      - `BioSample` for a page about a biological sample
       
       - `Taxon` for a page about a taxon
       
-   2. Enter the URL of the page in URL box, e.g. `https://www.wikidata.org/wiki/Q227339`
+   2. Enter the URL of the page in URL box, e.g. `https://www.wikidata.org/wiki/Q227339`. Note that this URL will be used as the identifier for the resource being described in the markup.
 
    3. Click on the `Show Form` button
 
@@ -91,19 +91,18 @@ Bioschemas Generator start screen.
 
    - You should complete all *Minimum* properties and as many *Recommended* properties as possible. You can show/hide properties using the `Additional Properties` buttons.
    - The form defaults to the data type with the first alphabetical character, e.g. for `identifier` this defaults to `PropertyValue` but `Text` or `URL ` will be more appropriate in most cases
-   - For XXXRecord pages, the first `identifier` property refers to the web page while the second `identifier` property refers to the chemical, gene, protein, ...
    - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
 
-<!--    ![Bioschemas Generator GeneRecord profile form](BioschemasGeneratorGeneRecordForm.png) -->
+<!--    ![Bioschemas Generator Gene profile form](BioschemasGeneratorGeneRecordForm.png) -->
 
 
 ```{figure} BioschemasGeneratorGeneRecordForm.png
 ---
 height: 550px
-name: Bioschemas Generator GeneRecord profile form
-alt: Bioschemas Generator GeneRecord profile form
+name: Bioschemas Generator Gene profile form
+alt: Bioschemas Generator Gene profile form
 ---
-Bioschemas Generator GeneRecord profile form.
+Bioschemas Generator Gene profile form.
 ```
 
    
@@ -112,58 +111,53 @@ Bioschemas Generator GeneRecord profile form.
 ```html
 <script type="application/ld+json" >
 {
- "@context": "http://schema.org",
- "@id": "https://www.wikidata.org/wiki/Q227339",
- "@type": "DataRecord",
- "dct:conformsTo": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14",
- "identifier": "https://www.wikidata.org/wiki/Q227339",
- "mainEntity": {
-   "@type": "Gene",
-   "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
-   "identifier": "Q227339",
-   "description": "protein-coding gene in the species Homo sapiens",
-   "encodesBioChemEntity": {
-     "@type": "BioChemEntity",
-     "@id": "https://www.wikidata.org/wiki/Q17487737"
-   },
-   "isPartOfBioChemEntity": {
-     "@type": "BioChemEntity",
-     "@id": "https://www.wikidata.org/wiki/Q220677"
-   },
-   "url": "https://www.wikidata.org/wiki/Q227339",
-   "alternateName": [
-     "breast cancer 1, early onset",
-     "BRCAI",
-			"BRCC1",
-			"BROVCA1",
-			"IRIS",
-			"PNCA4",
-			"PPP1R53",
-			"PSCP",
-			"RNF53",
-			"FANCS",
-			"breast cancer 1",
-			"BRCA1, DNA repair associated",
-			"BRCA1 DNA repair associated"
-   ],
-   "image": {
-     "@type": "ImageObject",
-     "@id": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Protein_BRCA1_PDB_1jm7.png/220px-Protein_BRCA1_PDB_1jm7.png"
-   },
-   "taxonomicRange": {
-     "@type": "Taxon",
-     "@id": "https://www.wikidata.org/wiki/Q15978631"
-   },
-   "sameAs": [
-     "https://meshb.nlm.nih.gov/#/record/ui?ui=D019398",
-     "https://www.ncbi.nlm.nih.gov/nuccore/NR_027676",
-     "http://identifiers.org/ensembl/ENSG00000012048",
-     "https://www.ncbi.nlm.nih.gov/gene/672"
-   ]
- },
- "sameAs": [
-   "http://identifiers.org/ncbigene/672"
- ]
+  "@context": "https://schema.org",
+  "@id": "https://www.wikidata.org/wiki/Q227339",
+  "@type": "Gene",
+  "alternateName": [
+    "breast cancer 1, early onset",
+    "BRCAI",
+    "BRCC1",
+    "BROVCA1",
+    "IRIS",
+    "PNCA4",
+    "PPP1R53",
+    "PSCP",
+    "RNF53",
+    "FANCS",
+    "breast cancer 1",
+    "BRCA1, DNA repair associated",
+    "BRCA1 DNA repair associated"
+  ],
+  "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
+  "description": "protein-coding gene in the species Homo sapiens",
+  "encodesBioChemEntity": {
+    "@type": "BioChemEntity",
+    "@id": "https://www.wikidata.org/wiki/Q17487737"
+  },
+  "identifier": "https://www.wikidata.org/wiki/Q227339",
+  "identifier": "Q227339",
+  "image": {
+    "@type": "ImageObject",
+    "@id": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Protein_BRCA1_PDB_1jm7.png/220px-Protein_BRCA1_PDB_1jm7.png"
+  },
+  "isPartOfBioChemEntity": {
+    "@type": "BioChemEntity",
+    "@id": "https://www.wikidata.org/wiki/Q220677"
+  },
+  "name": "BRCA1", 
+  "sameAs": [
+    "https://meshb.nlm.nih.gov/#/record/ui?ui=D019398",
+    "https://www.ncbi.nlm.nih.gov/nuccore/NR_027676",
+    "http://identifiers.org/ensembl/ENSG00000012048",
+    "https://www.ncbi.nlm.nih.gov/gene/672",
+    "http://identifiers.org/ncbigene/672"
+  ],
+  "taxonomicRange": {
+    "@type": "Taxon",
+    "@id": "https://www.wikidata.org/wiki/Q15978631"
+  },
+  "url": "https://www.wikidata.org/wiki/Q227339"
 }
 </script >
 ```
@@ -176,21 +170,21 @@ Bioschemas Generator GeneRecord profile form.
 
 ```
 "encodesBioChemEntity": {
-     "@type": "BioChemEntity",
-     "@id": "https://www.wikidata.org/wiki/Q17487737"
-   },
+  "@type": "BioChemEntity",
+  "@id": "https://www.wikidata.org/wiki/Q17487737"
+},
 ```
 
 to
 
 ```
 "encodesBioChemEntity": {
-     "@type": "Protein",
-     "@id": "https://www.wikidata.org/wiki/Q17487737"
-   },
+  "@type": "Protein",
+  "@id": "https://www.wikidata.org/wiki/Q17487737"
+},
 ```
 
-     You can test that your JSON-LD is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
+You can test that your JSON-LD is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
 
 7. Once you are happy with your markup, include the `JSON-LD`, script tags and all, at the bottom of your HTML page template. Make sure that this is before the closing `</html>` tag
 
@@ -199,17 +193,13 @@ to
 ```html
 <script type="application/ld+json" >
 {
- "@context": "http://schema.org",
- "@id": "%%%PAGEURL%%%",
- "@type": "DataRecord",
- "dct:conformsTo": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14",
- "identifier": "%%%PAGEURL%%%",
- "mainEntity": {
-   "@type": "Gene",
-   "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
-   "identifier": "%%%ACCESSIONNUMBER%%%",
-   "description": "%%%DESCRIPTION%%%",
-   ...
+  "@context": "https://schema.org",
+  "@id": "%%%PAGEURL%%%",
+  "@type": "Gene",
+  "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
+  "identifier": "%%%PAGEURL%%%",
+  "description": "%%%DESCRIPTION%%%",
+  ...
 }
 ```
 
