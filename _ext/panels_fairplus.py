@@ -8,6 +8,7 @@ import sphinx.errors
 
 CONTROLLED_VOCABULARY_RECIPE_TYPE = {
     "background_information"    : "Background information",
+    "inventory"                 : "Inventory",
     "survey_review"             : "Survey / Review",
     "guidance"                  : "Guidance",
     "technical_guidance"        : "Technical Guidance",
@@ -22,6 +23,7 @@ CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
     "procurement_officer"       : "Procurement Officer",
     "principal_investigator"    : "Principal Investigator",
     "data_curator"              : "Data Curator",
+    "data_engineer"             : "Data Engineer",
     "data_manager"              : "Data Manager",
     "data_scientist"            : "Data Scientist",
     "chemoinformatician"        : "Chemoinformatician",
@@ -31,6 +33,8 @@ CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
     "system_administrator"      : "System Administrator",
     "terminology_manager"       : "Terminology Manager",
     "ontologist"                : "Ontologist",
+    "data_producer"             : "Data Producer",
+    "data_consumer"             : "Data Consumer",
     "everyone"                  : "Everyone",
 }
 
