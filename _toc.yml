@@ -95,6 +95,8 @@
                 title: Metadata profile validation in RDF #FCB028
           - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar  
             title: Converting from proprietary to open format #FCB029
+          - file: content/recipes/interoperability/rdf-conversion 
+            title: An inventory of tools for converting your data to RDF #FCB051
           - file: content/recipes/interoperability/fastq-file-format-validators
             title: File format validation, FASTQ example #FCB030
           - file: content/recipes/interoperability/ETL-tools
