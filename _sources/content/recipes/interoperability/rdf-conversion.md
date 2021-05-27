@@ -51,10 +51,11 @@ ___
 ## Table of Data Standards
 
 | Data Formats  | Terminologies | Models  |
-| R2RML<!-- TODO needs a link -->    |||
-| RML<!-- TODO needs a link -->      |||
-| YARRRML<!-- TODO needs a link -->  |||
-| YAML<!-- TODO needs a link -->     |||
+| :------------- | :------------- | :------------- |
+| R2RML<!-- TODO needs a link -->    |   |   |
+| RML<!-- TODO needs a link -->      |   |   |
+| YARRRML<!-- TODO needs a link -->  |   |   |
+| YAML<!-- TODO needs a link -->     |   |   |
 
 ___
 
@@ -96,9 +97,8 @@ Based on these criteria, find the right tool in the table below. Jump to the sec
 | RML-based tools (RML mapper, SDM-RDFizer) |     | ✅               | ✅              |            |               |
 | SPARQL-Generate                           |     | ✅               | ✅              |            |               |
 | Ontop (RDB only)                          |     | ✅               | ✅              |            | ✅             |
-| Virtuoso1                                 |     |                 | ✅              |            | ✅             |
+| Virtuoso (proprietary tool)                                 |     |                 | ✅              |            | ✅             |
 | Custom code                               |     | ✅               |                | ✅          |               |
-1 proprietary tool
 
 Except for OpenRefine and writing your own code, most tools make use of a mapping language to declare the rules for conversion to RDF. Read the section on transformation/mapping languages to find out more about these languages and why it makes sense to prefer YARRRML as the mapping language of choice.
 
@@ -293,18 +293,23 @@ ___
 
 ___
 
-## Authors:
+## Authors
 
-| Name                | Affiliation | orcid                                                         | CrediT role                | specific contribution |
-| :------------------ | :---------- | :------------------------------------------------------------ | :------------------------- | :-------------------- |
-| Eelke van der Horst | The Hyve    | [0000-0002-8777-5612](https://orcid.org/0000-0002-8777-5612)  | Writing - Original Draft   | original format       |
-| Jolanda Strubel     | The Hyve    |                                                               | Writing - Review & Editing | minor improvements    |
-| Kees van Bochoven   | The Hyve    | [[0000-0002-8589-0609](https://orcid.org/0000-0002-8589-0609) | Writing - Review & Editing | minor improvements    |
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role | 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/eelkevanderhorst'><img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'></img><div class="d-block">Eelke van der Horst</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0002-8777-5612'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i> | Writing – Original Draft   | 
+| <div class="firstCol"><a target="_blank" href='https://github.com/JolandaS'><img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'></img><div class="d-block">Jolanda Strubel</div></a>  </div>  | <!-- no orcid -->  | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>  | Writing - Review & Editing |  
+| <div class="firstCol"><a target="_blank" href='https://github.com/keesvanbochove'><img class='avatar-style' src='https://avatars.githubusercontent.com/keesvanbochove'></img><div class="d-block">Kees van Bochove</div></a>        </div> | <a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve  | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i> | Writing - Review & Editing | 
 
+Specific contributions:
+
+* Eelke van der Horst: original format  
+* Jolanda Strubel: minor improvements
+* Kees van Bochove: minor improvements
 ___
 
 
-## License:
+## License
 
 This page is released under the Creative Commons 4.0 BY license.
 
