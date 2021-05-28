@@ -148,7 +148,7 @@ RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" bu
 RUN sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./_build/build.log > ./_build/cleaned_build.log
 
 # pack the whole build folder into a gzipped tar file
-RUN tar -czf /out.tar.gz ./_build
+RUN tar -cf /out.tar ./_build
 
 # output what's in the _build folder, just for the sake of it.
 RUN ls -alh ./_build
