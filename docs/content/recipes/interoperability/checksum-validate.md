@@ -57,18 +57,62 @@ This recipe assumes the following:
 Checking the requirements (tests):
 
 
-  - Start up a console. Type `md5sum --version` and hit return. You should see as output: ```
-md5sum (GNU coreutils) 8.30
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
+  - Start up a console. Type 
+    ```
+    md5sum --version
+    ``` 
+    and hit return.
+      - You should see as output: 
+        ```text
+        md5sum (GNU coreutils) 8.30
+        Copyright (C) 2018 Free Software Foundation, Inc.
+        License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+        This is free software: you are free to change and redistribute it.
+        There is NO WARRANTY, to the extent permitted by law.
 
-Written by Ulrich Drepper, Scott Miller, and David Madore.```.
-  - Execute on the console `ls ~/file_to_compare.txt`. The output should be something like `/home/USERNAME/file_to_compare.txt`, where `USERNAME` is your username on the computer system. The output should NOT be something like `ls: cannot access '/home/USERNAME/file_to_compare.txt2': No such file or directory`.
-  - Execute on the console `ls -1 ~/path_to_directory/*.jpg`. You should see a list of all image files. The output should NOT be something like `ls: cannot access '/home/USERNAME/path_to_directory/*.jpg': No such file or directory`.
-  - Execute on the console `ls -1 ~/checksums.md5`. You should see `/home/USERNAME/checksums.md5`, and NOT something like `ls: cannot access '/home/USERNAME/checksums.md5': No such file or directory`.
-  - Execute `wc  ~/checksums.md5` and `ls -1 ~/path_to_directory/*.jpg | wc`. The first number of each output should match. This indicates that the number of checksums in the checksum file (which is the output of the first command) is equivalent to the number of jpg files in the `path_to_directory` directory.)
+        Written by Ulrich Drepper, Scott Miller, and David Madore.
+        ```
+  - Execute on the console: 
+    ```
+    ls ~/file_to_compare.txt
+    ```
+    - The output should be something like: 
+      ```
+      /home/USERNAME/file_to_compare.txt
+      ```
+      where `USERNAME` is your username on the computer system. The output should NOT be something like:
+      ```
+      ls: cannot access '/home/USERNAME/file_to_compare.txt2': No such file or directory
+      ```
+  - Execute on the console:
+    ```
+    ls -1 ~/path_to_directory/*.jpg
+    ```
+    - You should see a list of all image files. The output should NOT be something like:
+      ```
+      ls: cannot access '/home/USERNAME/path_to_directory/*.jpg': No such file or directory
+      ```
+  - Execute on the console:
+    ```
+    ls -1 ~/checksums.md5
+    ```
+    - You should see 
+      ```
+      /home/USERNAME/checksums.md5
+      ```
+      and NOT something like: 
+      ```
+      ls: cannot access '/home/USERNAME/checksums.md5': No such file or directory
+      ```
+  - Execute 
+    ```
+    wc  ~/checksums.md5
+    ``` 
+    and 
+    ```
+    ls -1 ~/path_to_directory/*.jpg | wc
+    ```
+      - The first number of each output should match. This indicates that the number of checksums in the checksum file (which is the output of the first command) is equivalent to the number of jpg files in the `path_to_directory` directory.
 
 
 ---
