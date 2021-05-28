@@ -1,0 +1,6 @@
+graph TD
+Start(START) --> A
+A{Requirements fulfilled?} -->|Yes| B[Apply this recipe]
+A -->|No| Stop(STOP)
+B --> C(Calculate the checksums in source system)
+C --> End(END)

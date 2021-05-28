@@ -1,18 +1,17 @@
+(fcb-checksum-validate)=
+# How to check intactness of files by validating checksums
 
-# Table of Contents
-0. [Abstract](#Abstract)
-1. [Graphical Overview](#Graphical%20Overview)
-2. [Requirements](#Requirements)
-3. [Recipe instructions](#Recipe%20instructions)
-4. [Possible improvements from the state of this recipe](#Possible%20improvements%20from%20the%20state%20of%20this%20recipe)
-5. [Further reading](#Further%20reading)
-6. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-7. [FAIRification Objectives, Inputs and Outputs](#FAIRification Objectives, Inputs and Outputs)
-5. [Table of Data Standards](#Table%20of%20Data%20Standards)
-6. [Authors](#Authors)
-8. [License](#License)
-
----
+<!-- TODO identifier needs to be minted and inserted -->
+````{panels_fairplus}
+:identifier_text: FCB--- 
+:identifier_link: 'https://w3id.org/faircookbook/FCB---'
+:difficulty_level: 4
+:recipe_type: hands_on, technical_guidance
+:reading_time_minutes: 15
+:intended_audience: bioinformatician, data_scientist, data_engineer
+:has_executable_code: nope
+:recipe_name: How to check intactness of files by validating checksums
+```` 
 
 ## Abstract
 
@@ -28,24 +27,18 @@ This recipe describes how to validate a list of checksums against the correspond
 focusing exclusively on the output of the Linux tool `md5sum`.
 
 
-___
-
+---
 
 ## Graphical Overview
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblN0YXJ0KFNUQVJUKSAtLT4gQVxuQXtSZXF1aXJlbWVudHMgZnVsZmlsbGVkP30gLS0-fFllc3wgQltBcHBseSB0aGlzIHJlY2lwZV1cbkEgLS0-fE5vfCBTdG9wKFNUT1ApXG5CIC0tPiBDKFRyYW5zZmVyIHRoZSBjaGVja3N1bSBmaWxlIGZyb20gc291cmNlIHRvIHRhcmdldCBzeXN0ZW0pXG5DIC0tPiBDMihDb21wYXJlIHRoZSBjaGVja3N1bXMgZnJvbSBjaGVja3N1bSBmaWxlIHdpdGggY2hlY2tzdW1zIGNhbGN1bGF0ZWQgb24gdGhlIHRhcmdldCBzeXN0ZW0pXG5DMiAtLT4gRHtDaGVja3N1bXMgaWRlbnRpY2FsP31cbkQgLS0-fFllc3wgRShJZGVudGl0eSBjb25maXJtZWQpXG5EIC0tPnxOb3wgRihJZGVudGl0eSBjb3VsZCBub3QgYmUgY29uZmlybWVkKSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblN0YXJ0KFNUQVJUKSAtLT4gQVxuQXtSZXF1aXJlbWVudHMgZnVsZmlsbGVkP30gLS0-fFllc3wgQltBcHBseSB0aGlzIHJlY2lwZV1cbkEgLS0-fE5vfCBTdG9wKFNUT1ApXG5CIC0tPiBDKFRyYW5zZmVyIHRoZSBjaGVja3N1bSBmaWxlIGZyb20gc291cmNlIHRvIHRhcmdldCBzeXN0ZW0pXG5DIC0tPiBDMihDb21wYXJlIHRoZSBjaGVja3N1bXMgZnJvbSBjaGVja3N1bSBmaWxlIHdpdGggY2hlY2tzdW1zIGNhbGN1bGF0ZWQgb24gdGhlIHRhcmdldCBzeXN0ZW0pXG5DMiAtLT4gRHtDaGVja3N1bXMgaWRlbnRpY2FsP31cbkQgLS0-fFllc3wgRShJZGVudGl0eSBjb25maXJtZWQpXG5EIC0tPnxOb3wgRihJZGVudGl0eSBjb3VsZCBub3QgYmUgY29uZmlybWVkKSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+```{figure} checksum-validate.md-figure1.mmd.png
+---
+name: checksum-validate-figure1
+alt: Graphical overview of the steps taken by this recipe.
+---
+Graphical overview of the steps taken by this recipe.
+```
 
-<div class="mermaid">
-graph TD
-Start(START) --> A
-A{Requirements fulfilled?} -->|Yes| B[Apply this recipe]
-A -->|No| Stop(STOP)
-B --> C(Transfer the checksum file from source to target system)
-C --> C2(Compare the checksums from checksum file with checksums calculated on the target system)
-C2 --> D{Checksums identical?}
-D -->|Yes| E(Identity confirmed)
-D -->|No| F(Identity could not be confirmed)
-</div>
 
 ---
 
@@ -56,9 +49,9 @@ This recipe assumes the following:
   - both source and target systems have the Linux operating system, preferentially Debian (no root access needed)
   - you have basic knowledge of how to use a terminal (called "shell", this can be bash or similar)
   - the tool `md5sum` is installed
-  - the source and target files are both placed in your home directory; we assume they are called `file_to_compare.txt` (replace this filename as necessary in the recipe instructions; you can download a demo file from here: <../assets/file_to_compare.txt>
+  - the source and target files are both placed in your home directory; we assume they are called `file_to_compare.txt` (replace this filename as necessary in the recipe instructions; you can download a demo file from here: {download}`./checksum-create.md-file_to_compare.txt` (remember to rename it to `file_to_compare.txt`)
   - for the more complex example (compare many files): the source and target files are both placed in a directory called `path_to_directory` within your home directory; we assume that this directory contains many image files with arbitrary names, but the common file extension ´.jpg´.
-  - the list of checksums is available and was generated according to the recipe [./how-to-create-checksums-file.md]
+  - the list of checksums is available and was generated according to the recipe {ref}`fcb-checksum-create`
 
 
 Checking the requirements (tests):
@@ -78,7 +71,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.```.
   - Execute `wc  ~/checksums.md5` and `ls -1 ~/path_to_directory/*.jpg | wc`. The first number of each output should match. This indicates that the number of checksums in the checksum file (which is the output of the first command) is equivalent to the number of jpg files in the `path_to_directory` directory.)
 
 
-___
+---
 
 ## Recipe instructions
 
@@ -131,43 +124,17 @@ This recipe in its current form has the following limitations:
 - Overview of checksum comparison with respect to file transmission: https://en.wikipedia.org/wiki/File:CPT-Hashing-File-Transmission.svg
 
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-
-----
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-
-COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology.
-
 ---
 
-## Table of Data Standards
+## Authors
 
-| Data Formats  |
-| :------------- |
-
-COMMENT: the concepts in this recipe did not map to any terms from the FAIRsharing.org database.
+| Name | Orcid | Affiliation | Type | Elixir Node | Credit Role |
+|------|-------|-------------|------|:-----------:|:-----------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><div class="d-block">Robert Giessmann</div></a> </div>      | <a target="_blank" href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Bayer AG                 | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i>   | <!-- no elixir node --> | Writing - Original Draft
 
 
 ---
 
-## Authors:
-
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Robert T. Giessmann |  Bayer AG | [0000-0002-0254-1500](https://http://orcid.org/0000-0002-0254-1500) | Writing - Original Draft |
-
----
-
-
-## License:
+## License
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
