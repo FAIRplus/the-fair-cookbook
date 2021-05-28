@@ -79,11 +79,13 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.```.
 
 On the shell execute:
 
-`md5sum -c ~/checksums.md5`
+```bash
+md5sum -c ~/checksums.md5
+```
 
 The output should be something like:
 
-```
+```bash
 /home/USERNAME/path_to_directory/picture1.jpg: OK
 /home/USERNAME/path_to_directory/picture2.jpg: OK
 /home/USERNAME/path_to_directory/picture3.jpg: OK
@@ -101,6 +103,26 @@ This recipe in its current form has the following limitations:
   - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: 0.01 seconds per MB of data.
   - you should mind the general limitations of checksums, which are however not covered in this recipe.
   - there is a known clash between the output format of the GNU / Linux tool `md5sum` and the macOS / BSD tool `md5`. Their standard output formats are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward. (hint: the Linux tool has the `--tag` flag which generates macOS-compatible output.) 
+ - `md5` is the most common hashing algorithm, but is also known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. `sha512`.
+
+For instance, on Mac OS environment, one can easily compute SHA2 checksum by issueing the following command:
+
+```bash
+shasum -a 256 /path/to/target/file.ext
+```
+
+On windows based environment, the [certutil](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil)  tool may be used:
+Calculate MD5 checksum:
+```bash
+CertUtil -hashfile /folder/favourite_file.extension MD5
+```
+Calculate SHA-1 checksum: 
+```bash
+CertUtil -hashfile /folder/favourite_file.extension SHA1 Calculate SHA-256 checksum: CertUtil -hashfile /folder/favourite_file.extension
+```
+
+- If necessary for the use case, the "relative mode" by executing e.g. `md5sum ./*` should be discussed.
+
 
 
 ### Extendability of this recipe
@@ -110,11 +132,6 @@ This recipe in its current form has the following limitations:
 - The procedure above could be combined with a file length indicator (usually the amount of octets = bytes); the file length is usually retrieved much faster than the checksum, and might already indicate the inequality of two files (albeit similar file length does not guarantee content-identity, of course).
 
 
-## Possible improvements from the current state of this recipe
-
-- `md5` is the most common hashing algorithm, but is also known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. `sha512`.
-- `md5` and checksum concepts are neither part of EDAM ontology nor of FAIRsharing.org. It would greatly benefit the community if these terminologies were introduced.
-- If necessary for the use case, the "relative mode" by executing e.g. `md5sum ./*` should be discussed.
 
 
 ## Further reading
