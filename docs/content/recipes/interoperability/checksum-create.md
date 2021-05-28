@@ -141,7 +141,9 @@ This recipe in its current form has the following limitations:
   - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: 0.01 seconds per MB of data.  
   - you should mind the general limitations of checksums, which are however not covered in this recipe.
   - there is a known clash between the output format of the GNU / Linux tool `md5sum` and the macOS / BSD tool `md5`. Their standard output formats are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward. (hint: the Linux tool has the `--tag` flag which generates macOS-compatible output.) 
-  - the recipe assumes that the absolute paths of the files are the same on source as well as on target system. 
+  - Windows users may use the included PowerShell function "Get-FileHash"
+  - the recipe assumes that the absolute paths of the files are the same on source as well as on target system. If necessary for the use case, the "relative mode" by executing e.g. `md5sum ./*` can be used to circumvent problems with absolute paths.
+  - `md5` is the most common hashing algorithm, but is also known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. `sha512`.
 
 
 ### Extendability of this recipe
@@ -149,13 +151,6 @@ This recipe in its current form has the following limitations:
 - The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture).
 - the recipe assumes that everything is placed in your home folder. If this is not the case, replace `~`, the home directory indicator, by the corresponding path, or execute specifically all `md5sum` commands only with relative pathes (by navigating in the corresponding directory, first). The command will be something like `md5sum ./YOUR_PATH_HERE/*.jpg`, then, and will output something like `c691b3d2fc2678839a9c141b6ee1524e  ./YOUR_PATH_HERE/picture1.jpg` then.
 - The procedure above could be combined with a file length indicator (usually the amount of octets = bytes); the file length is usually retrieved much faster than the checksum, and might already indicate the inequality of two files (albeit similar file length does not guarantee content-identity, of course).
-- From Wikipedia: "Windows users may use the included PowerShell function "Get-FileHash"
-
-## Possible improvements from the current state of this recipe
-
-- `md5` is the most common hashing algorithm, but is also known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. `sha512`.
-- `md5` and checksum concepts are neither part of EDAM ontology nor of FAIRsharing.org. It would greatly benefit the community if these terminologies were introduced.
-- If necessary for the use case, the "relative mode" by executing e.g. `md5sum ./*` should be discussed.
 
 
 ## Further reading
