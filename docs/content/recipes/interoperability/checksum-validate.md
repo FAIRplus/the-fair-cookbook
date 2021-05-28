@@ -6,7 +6,7 @@
 :identifier_text: FCB--- 
 :identifier_link: 'https://w3id.org/faircookbook/FCB---'
 :difficulty_level: 4
-:recipe_type: hands_on, technical_guidance
+:recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
 :has_executable_code: nope
