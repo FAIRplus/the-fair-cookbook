@@ -1,10 +1,9 @@
 (fcb-checksum-create)=
 # How to create checksum files
 
-<!-- TODO identifier needs to be minted and inserted -->
 ````{panels_fairplus}
-:identifier_text: FCB--- 
-:identifier_link: 'https://w3id.org/faircookbook/FCB---'
+:identifier_text: FCB052 
+:identifier_link: 'https://w3id.org/faircookbook/FCB052'
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 15
