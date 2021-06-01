@@ -38,6 +38,10 @@
         title: Minting identifiers with Minid #FCB008
       - file: content/recipes/findability/zenodo-deposition
         title: Depositing in Zenodo generic repository #FCB009
+      - file: content/recipes/findability/checksum-create
+        title: Describe data by checksums #FCB052
+      - file: content/recipes/findability/checksum-validate
+        title: Validating data by checksums #FCB053
       - file: content/recipes/findability/seo
         title: Search engine optimization #FCB010
         sections:
