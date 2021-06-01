@@ -1,6 +1,4 @@
-# Practical Considerations for CROs to align with FAIR data principles
-
-(and tips to mitigate ETL issues)
+# Practical Considerations for CROs to align with FAIR data principles (and tips to mitigate ETL issues)
 
 ___
 
