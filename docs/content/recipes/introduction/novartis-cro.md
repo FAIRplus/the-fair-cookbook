@@ -116,12 +116,19 @@ It may be a worthwhile effort to narrow down scope of data that requires FAIRifi
 6.	Machine Readable DMP (Data Management Plans):
 The DMP is probably the most vital document that containing key information regarding how data will be created, collected, transferred and utilized. It also entails out detailed descriptions about the collection mechanisms, audit procedures and key study protocol related information. Having a machine readable DMP can show immediate and significant cost savings and in the process aim for ‘FAIR by design’, which also is a living document throughout the lifecycle of the data.
 Utilizing existing data exchange standards such as ODM (Operational data model) and SDM-XML (Study data model) can prove to be very useful. It would be valuable to see what common data elements exist that is utilized in the DMP such as study title, phase, databases and protocol version. The key would be to ensure over time we can mine for existing DMP’s and possibly (hopefully) come up with a set of common data elements that can be re-purposed. Since, CRO’s are a goldmine for such information it would be a valuable endeavor to pursue.
-7.	Scoring Mechanisms using Data Maturity Indicators: 
-- Start with harmonized data models to leverage standard terminologies and a fixed set of studies for a given therapeutic area. By having a closed environment with a fixed set of variables (list of studies) it will be easier to show FAIRification.
-b.	Score at dataset level and eventually by source (if multiple sources are utilized) against the FAIR principles – using a scale range as needed (binary or limits (0 -5) ) 
-c.	Persist scores over time to understand and detect a change of state and show baseline.
-d.	Expand scope to see if scoring can be calculated for ETL pipelines on the fly as ingestion happens across sources. 
-e.	Revisit and improvise if needed. This can also act as a KPI to show value of FAIRification
+
+7.	Utilizing Data Maturity Indicators as Scoring Mechanisms:
+
+There are a series of indicators designed by both IMI FAIRplus WG and RDA-WG (Research Data Alliance - Working group). One can in essence define these as principles wherein; each principle is mapped to one or more indicator/s. An example would be as referenced here (https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/identifiers.html#fcb-find-identifiers). Each dataset or digital object in essence will contain a persistent identifier that one can use to retrieve information about that dataset perpetually. However, what identifiers are to be chosen or implementation depends on the community. A binary value can be assigned to indicate whether the datasets have passed or failed the indicator test or it can be measured as levels of maturity (0 = . A collection of such tests can be mapped as scores for a given data asset (dataset, digital object, images etc..) that can be persisted to show maturity over time. Note: The term "maturity" here applies to the maturity of the dataset and not how data is managed within an enterprise. Data Stewardship, Data Governance, Data Operations and other process drivers would still be present as a foundational layers to define what "maturity" means within an organization. An example of an use case can be as follows:
+
+a. Start with known harmonized data models to leverage standard terminologies for a small subset of studies for a therapeutic area. 
+b. Meaure score at dataset level for each indicator/s as applicable and eventually by source. 
+c. Persist scores over time to understand and detect a change of state and show baseline. 
+d. Expand scope to see if this scoring mechanism can be calculated for ETL pipelines on the fly at ingestion.
+e. Revisit and improvise if needed.
+f. Use scores to understand where remedial actions are needed to improve overall data quality.
+
+In essence, we are enriching the data asset/s with rich metadata (community defined) for machine readability to support knowledge discovery. 
 
 8.	Ontologies and Interoperability:
  Building, managing, sharing and using ontologies are one of the cornerstone principles to enable high quality data and interoperability. ETL processes suffer largely due to poorly defined ontologies rule sets. This in part may be due to lack of data understanding, values that were either not mapped or incorrectly mapped. Even in standardized systems, using controlled terminologies cited at (https://datascience.cancer.gov/resources/cancer-vocabulary/cdisc-terminology) mixed flavors of data values created at the study source can cause confusion. Example a patient’s final treatment disposition status presented as “CP” instead of “COMPLETED”.  Utilizing units of measure have their own set of challenges. It is therefore paramount to understand an ontology driven data will not only enable us to align closer to FAIR principles but also mitigate quirky data issues.
