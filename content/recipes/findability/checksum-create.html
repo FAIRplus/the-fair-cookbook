@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Building a catalogue of datasets</title>
+    <title>5. How to create checksum files</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,22 +56,22 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/data-catalog.html" />
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/checksum-create.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3. Deploying the IMI data catalogue" href="data-catalog-deployment.html" />
-    <link rel="prev" title="1. Identifier resolution services" href="id-resolution.html" />
+    <link rel="next" title="6. How to check intactness of files by validating checksums" href="checksum-validate.html" />
+    <link rel="prev" title="4. Depositing in Zenodo generic repository" href="zenodo-deposition.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/data-catalog.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/checksum-create.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Building a catalogue of datasets" />
-<meta property="og:description" content="Building a catalogue of datasets  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@t" />
+<meta property="og:title"       content="How to create checksum files" />
+<meta property="og:description" content="How to create checksum files  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@type&#34;" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -133,58 +133,58 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../findability.html">
    Findability
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../findability/identifiers.html">
+    <a class="reference internal" href="identifiers.html">
      1. Unique, persistent identifiers
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chemical-identities.html">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
      2. InChI and SMILES identifiers for chemical structures
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../findability/identifiers-minids.html">
+    <a class="reference internal" href="identifiers-minids.html">
      3. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../findability/zenodo-deposition.html">
+    <a class="reference internal" href="zenodo-deposition.html">
      4. Depositing in Zenodo generic repository
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../findability/checksum-create.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      5. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../findability/checksum-validate.html">
+    <a class="reference internal" href="checksum-validate.html">
      6. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../findability/seo.html">
+    <a class="reference internal" href="seo.html">
      7. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+      <a class="reference internal" href="seo/bioschemas-data-page.html">
        7.8.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+      <a class="reference internal" href="seo/bioschemas-dataset.html">
        7.8.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+      <a class="reference internal" href="seo/bioschemas-datacatalog.html">
        7.8.3. Data catalogue markup
       </a>
      </li>
@@ -360,43 +360,43 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../infrastructure.html">
    Infrastructure
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="id-resolution.html">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
      1. Identifier resolution services
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
      2. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="data-catalog-deployment.html">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
      3. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="vocabularies.html">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
      4. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
        4.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="vocabularies/Selecting_and_using_ontology_lookup_services.html">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
        4.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="vocabularies/UC3_R13_local_ontology_services.html">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
        4.3. Deploying the EBI OLS
       </a>
      </li>
@@ -609,7 +609,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/recipes/infrastructure/data-catalog.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/findability/checksum-create.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -629,10 +629,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/infrastructure/data-catalog.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/findability/checksum-create.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/infrastructure/data-catalog.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/findability/checksum-create.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -659,77 +659,65 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-objectives">
-   2.1. Main Objectives
+  <a class="reference internal nav-link" href="#abstract">
+   5.1. Abstract
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   2.2. Graphical Overview
+   5.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capability-maturity-table">
-   2.3. Capability &amp; Maturity Table
+  <a class="reference internal nav-link" href="#requirements">
+   5.3. Requirements:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#user-story">
-   2.4. User Story
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-body-of-the-recipe">
-   2.5. Main body of the recipe
+  <a class="reference internal nav-link" href="#recipe-instructions">
+   5.4. Recipe instructions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-a-data-catalogue">
-     2.5.1. What is a Data Catalogue?
+    <a class="reference internal nav-link" href="#generating-the-checksums">
+     5.4.1. Generating the checksums
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-are-the-standards-supporting-establishing-a-data-catalogue">
-     2.5.2. What are the standards supporting establishing a data catalogue?
+    <a class="reference internal nav-link" href="#storing-the-checksums-in-a-dedicated-file">
+     5.4.2. Storing the checksums in a dedicated file
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-are-data-catalogue-populated">
-     2.5.3. How are Data Catalogue populated?
+    <a class="reference internal nav-link" href="#calculating-the-checksums-for-all-files-in-one-directory">
+     5.4.3. Calculating the checksums for all files in one directory
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-are-examples-of-data-catalogues">
-     2.5.4. What are examples of Data Catalogues?
+    <a class="reference internal nav-link" href="#limitations-of-this-recipe">
+     5.4.4. Limitations of this recipe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extendability-of-this-recipe">
+     5.4.5. Extendability of this recipe
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-data-standards">
-   2.6. Table of Data Standards
+  <a class="reference internal nav-link" href="#further-reading">
+   5.5. Further reading
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   2.7. Conclusion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-should-i-read-next">
-     2.7.1. What should I read next?
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   2.8. Authors
+   5.6. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   2.9. License
+   5.7. License
   </a>
  </li>
 </ul>
@@ -744,11 +732,11 @@
         
               <div>
                 
-  <div class="section" id="building-a-catalogue-of-datasets">
-<span id="fcb-infra-build-catalog"></span><h1><span class="section-number">2. </span>Building a catalogue of datasets<a class="headerlink" href="#building-a-catalogue-of-datasets" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="how-to-create-checksum-files">
+<span id="fcb-checksum-create"></span><h1><span class="section-number">5. </span>How to create checksum files<a class="headerlink" href="#how-to-create-checksum-files" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Building a catalogue of datasets", "audience": ["Data Manager", "Data Scientist", "Software Developer", "System Administrator"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB047", "url": "https://w3id.org/faircookbook/FCB047"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H60M0S", "totalTime": "PT0H60M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "How to create checksum files", "audience": ["Bioinformatician", "Data Scientist", "Data Engineer"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB052", "url": "https://w3id.org/faircookbook/FCB052"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -758,14 +746,14 @@
 <i class="itemIcon fa fa-clock fa-2x text--white"></i>
 <div class="itemContent">
 <div class="label"> Reading Time </div>
-60 minutes
+15 minutes
 </div>
 </div></div>
 <div class="item"><div class="itemContainer">
 <i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
 <div class="itemContent">
 <div class="label"> Executable Code </div>
-Yes
+No
 </div>
 </div></div>
 <div class="item" style="margin-bottom:10px"><div class="itemContainer">
@@ -783,7 +771,7 @@ Yes
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Building a catalogue of datasets</div>
+<div style="flex-grow:1; margin-right:5px">How to create checksum files</div>
 <img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
@@ -795,161 +783,156 @@ Yes
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue">Data Manager, Data Scientist, Software Developer, System Administrator</div>
+<div class="sectionValue">Bioinformatician, Data Scientist, Data Engineer</div>
 </div>
 </div>
 <div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://w3id.org/faircookbook/FCB047" class="text--purple-dark">FCB047
+<a href="https://w3id.org/faircookbook/FCB052" class="text--purple-dark">FCB052
 </a></div>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="main-objectives">
-<h2><span class="section-number">2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>The main purpose of this recipe is:</p>
-<blockquote>
-<div><p>To detail the key elements for the creation of a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">catalogue</span></code> to enable data <code class="docutils literal notranslate"><span class="pre">findability</span></code> in an organisation.</p>
-</div></blockquote>
-<p>We will cover the following points:</p>
-<ol class="simple">
-<li><p>metadata model selection</p></li>
-<li><p>annotation with controled vocabularies</p></li>
-<li><p>ETL</p></li>
-<li><p>data loading</p></li>
-<li><p>data indexing</p></li>
-<li><p>facet oriented searching</p></li>
-<li><p>minting of stable, persistent and resolvable identifiers</p></li>
-</ol>
+<div class="section" id="abstract">
+<h2><span class="section-number">5.1. </span>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>When copying a file (“source file”) to a target location, it may become necessary
+to confirm that the actual content, i.e. the bits that make up the information, arrived correctly in the target system.
+Confirming the identity of two different files may be achieved by calculating
+a so-called “checksum” of the file
+in the source system, calculating the checksum in the target system, and comparing
+the outputs. The checksum is a proxy of the content of the file, but is much shorter.
+Because the algorithm is previously agreed on and shared between the source and target system,
+the comparison of the checksum indicates whether the files are identical (within some limitations).</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="data-catalog-figure1">
-<img alt="Building and populating a data catalogue" src="../../../_images/data-catalog.md-figure1.mmd.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Building and populating a data catalogue</span><a class="headerlink" href="#data-catalog-figure1" title="Permalink to this image">¶</a></p>
+<h2><span class="section-number">5.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="checksum-create-figure1">
+<img alt="When to apply this recipe." src="../../../_images/checksum-create.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">When to apply this recipe.</span><a class="headerlink" href="#checksum-create-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="capability-maturity-table">
-<h2><span class="section-number">2.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
-<th class="text-align:left head"><p>Initial Maturity Level</p></th>
-<th class="text-align:left head"><p>Final Maturity Level</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>Findability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>Interoperability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="user-story">
-<h2><span class="section-number">2.4. </span>User Story<a class="headerlink" href="#user-story" title="Permalink to this headline">¶</a></h2>
-<p>For <strong><code class="docutils literal notranslate"><span class="pre">role.Data</span> <span class="pre">Scientists</span></code></strong>, it is essential to be able to <em><code class="docutils literal notranslate"><span class="pre">action.identify</span></code></em> and <em><code class="docutils literal notranslate"><span class="pre">action.discover</span></code></em> datasets of potential relevance in the context of <em><code class="docutils literal notranslate"><span class="pre">action.data</span> <span class="pre">integration</span></code></em> and <em><code class="docutils literal notranslate"><span class="pre">action.meta-analytical</span> <span class="pre">work</span></code></em>.</p>
-<p>For <strong><code class="docutils literal notranslate"><span class="pre">role.Database</span> <span class="pre">Managers</span></code></strong>, a lightweight solution is needed to support a shallow indexing supported fast ingest without intense curation, but good potential for data discovery. Works should rely on approved data standards.</p>
-<p>For <strong><code class="docutils literal notranslate"><span class="pre">role.lab</span> <span class="pre">scientists</span></code></strong>, the key is to have a minimal burden when having to <em><code class="docutils literal notranslate"><span class="pre">action.deposit</span></code></em> a dataset to an institutional archive or simply <em><code class="docutils literal notranslate"><span class="pre">action.register</span></code></em> to dataset to the <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">catalogue</span></code>.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="main-body-of-the-recipe">
-<h2><span class="section-number">2.5. </span>Main body of the recipe<a class="headerlink" href="#main-body-of-the-recipe" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-is-a-data-catalogue">
-<h3><span class="section-number">2.5.1. </span>What is a Data Catalogue?<a class="headerlink" href="#what-is-a-data-catalogue" title="Permalink to this headline">¶</a></h3>
-<p>A <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Catalogue</span></code> is a resource meant to allow fast identification of <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">set</span></code>. In keeping with the familiar notion of catalogue, (be it that of an exhibition or that of brand products), the notion of <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">catalogue</span></code> needs to be understood as the compendium of <code class="docutils literal notranslate"><span class="pre">short</span> <span class="pre">descriptive</span> <span class="pre">metadata</span> <span class="pre">elements</span></code> about an actual set of data. The <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Index</span> <span class="pre">or</span> <span class="pre">Data</span> <span class="pre">Catalogue</span></code> <strong>does not</strong> store the datasets themselves but provides information about where the datasets can be obtained from. Therefore, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Catalogues</span></code> are often used to index the content of ‘<code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Repositories</span></code> and <code class="docutils literal notranslate"> <span class="pre">Data</span> <span class="pre">Archives</span></code>, which provide hosting solutions for the actual datasets, which are often organized (but not always)’ around specific <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">types</span></code> or <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">production</span> <span class="pre">modalities</span></code> (e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence archives and so on.)</p>
-</div>
-<div class="section" id="what-are-the-standards-supporting-establishing-a-data-catalogue">
-<h3><span class="section-number">2.5.2. </span>What are the standards supporting establishing a data catalogue?<a class="headerlink" href="#what-are-the-standards-supporting-establishing-a-data-catalogue" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Catalogues</span></code> have been identified as critical infrastructure and therefore a number of model exist to support their implementation.</p>
-<ol class="simple">
-<li><p>DATS:
-The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the NIH-BD2K projects and underpins the <a class="reference external" href="https://datamed.org/">datamed catalogue</a>, the aim of which was to produce a prototype of a <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/29346583/"><code class="docutils literal notranslate"><span class="pre">Pubmed</span> <span class="pre">for</span> <span class="pre">Datasets</span></code></a>.</p></li>
-<li><p>DCAT:
-In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document --> (v1 and the newly released version 2) provide a vocabulary to express <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">catalogue</span> <span class="pre">metadata</span></code> in <strong>RDF</strong>.</p></li>
-<li><p><a class="reference external" href="http://Schema.org">Schema.org</a>:
-The vocabulary developed by the consortium of search engines has defined a metadata profile for <a class="reference external" href="https://schema.org/DataSet"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a>, <a class="reference external" href="https://schema.org/DataCatalog"><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Catalogue</span></code></a></p></li>
-</ol>
-</div>
-<div class="section" id="how-are-data-catalogue-populated">
-<h3><span class="section-number">2.5.3. </span>How are Data Catalogue populated?<a class="headerlink" href="#how-are-data-catalogue-populated" title="Permalink to this headline">¶</a></h3>
-<p>A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories or harvesting JSON-LD files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more</p>
-</div>
-<div class="section" id="what-are-examples-of-data-catalogues">
-<h3><span class="section-number">2.5.4. </span>What are examples of Data Catalogues?<a class="headerlink" href="#what-are-examples-of-data-catalogues" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="requirements">
+<h2><span class="section-number">5.3. </span>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This recipe assumes the following:</p>
 <ul class="simple">
-<li><p>Commercial solutions:</p>
+<li><p>both source and target systems have the Linux operating system, preferentially Debian (no root access needed)</p></li>
+<li><p>you have basic knowledge of how to use a terminal (called “shell”, this can be bash or similar)</p></li>
+<li><p>the tool <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> is installed</p></li>
+<li><p>the source and target files are both placed in your respective home directories; we assume they are called <code class="docutils literal notranslate"><span class="pre">file_to_compare.txt</span></code> (replace this filename as necessary in the recipe instructions; you can download a demo file from here: <a class="reference download internal" download="" href="../../../_downloads/ee82a862657ac3179ed3333020e44e28/checksum-create.md-file_to_compare.txt"><code class="xref download docutils literal notranslate"><span class="pre">./checksum-create.md-file_to_compare.txt</span></code></a> (remember to rename it to <code class="docutils literal notranslate"><span class="pre">file_to_compare.txt</span></code>)</p></li>
+<li><p>for the more complex example (compare many files): the source and target files are both placed in a directory called <code class="docutils literal notranslate"><span class="pre">path_to_directory</span></code> within your home directory; we assume that this directory contains many image files with arbitrary names, but all with the common file extension <code class="docutils literal notranslate"><span class="pre">.jpg</span></code>.</p></li>
+</ul>
+<p>Checking the requirements (tests):</p>
 <ul>
-<li><p><a class="reference external" href="https://www.collibra.com/download/data-catalog-study-dresner-advisory-services-ppc?_bk=catalogue%20data&amp;_bt=389929247489&amp;_bm=e&amp;_bn=g">Collibra</a></p></li>
+<li><p>Start up a console. Type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md5sum</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>and hit return.</p>
+<ul>
+<li><p>You should see as output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>md5sum (GNU coreutils) 8.30
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;https://gnu.org/licenses/gpl.html&gt;.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Ulrich Drepper, Scott Miller, and David Madore.
+</pre></div>
+</div>
+</li>
 </ul>
 </li>
-<li><p>Open source solutions:</p>
+<li><p>Execute on the console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">~/</span><span class="n">file_to_compare</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
 <ul>
-<li><p><a class="reference external" href="https://datamed.org/">NIH DataMed</a></p></li>
-<li><p><a class="reference external" href="https://www.omicsdi.org/">EMBL-EBI OMICS-DI</a></p></li>
-<li><p><a class="reference external" href="https://bayer-group.github.io/COLID-Documentation/#/">Bayer AG Colid</a></p></li>
+<li><p>The output should be something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">file_to_compare</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is your username on the computer system. The output should NOT be something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">access</span> <span class="s1">&#39;/home/USERNAME/file_to_compare.txt2&#39;</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Execute on the console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="mi">1</span> <span class="o">~/</span><span class="n">path_to_directory</span><span class="o">/*.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<ul>
+<li><p>You should see a list of all image files. The output should NOT be something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">access</span> <span class="s1">&#39;/home/USERNAME/path_to_directory/*.jpg&#39;</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+</pre></div>
+</div>
+</li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
 <hr class="docutils" />
-<div class="section" id="table-of-data-standards">
-<h2><span class="section-number">2.6. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
-<th class="text-align:left head"><p>Terminologies</p></th>
-<th class="text-align:left head"><p>Models</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>JSON<!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p><!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p><!-- TODO add a link to corresponding document --></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>RDF<!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p>DCAT v1<!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p>DATS<!-- TODO add a link to corresponding document --></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p>RDF<!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p>DCAT v2<!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p>DATS<!-- TODO add a link to corresponding document --></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>JSON-LD<!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p>Schema.org<!-- TODO add a link to corresponding document --></p></td>
-<td class="text-align:left"><p><!-- TODO add a link to corresponding document --></p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="recipe-instructions">
+<h2><span class="section-number">5.4. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generating-the-checksums">
+<h3><span class="section-number">5.4.1. </span>Generating the checksums<a class="headerlink" href="#generating-the-checksums" title="Permalink to this headline">¶</a></h3>
+<p>On the shell execute:</p>
+<p><code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">~/file_to_compare.txt</span></code></p>
+<p>The output should be:</p>
+<p><code class="docutils literal notranslate"><span class="pre">c691b3d2fc2678839a9c141b6ee1524e</span>&#160; <span class="pre">/home/USERNAME/file_to_compare.txt</span></code></p>
 </div>
-<hr class="docutils" />
-<div class="section" id="conclusion">
-<h2><span class="section-number">2.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<p>This recipe introduced the general concept of data catalogue and why they constitute a key capability to deliver data discoverability.</p>
-<div class="section" id="what-should-i-read-next">
-<h3><span class="section-number">2.7.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
-<p>We encourage the readers to either delve deeper into the specific of data catalogues by consulting the following recipes</p>
+<div class="section" id="storing-the-checksums-in-a-dedicated-file">
+<h3><span class="section-number">5.4.2. </span>Storing the checksums in a dedicated file<a class="headerlink" href="#storing-the-checksums-in-a-dedicated-file" title="Permalink to this headline">¶</a></h3>
+<p>On the shell execute:</p>
+<p><code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">~/file_to_compare.txt</span> <span class="pre">&gt;</span> <span class="pre">~/checksums.md5</span></code></p>
+<p>You will not get output for this command.</p>
+<p>Execute:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">~/checksums.md5</span></code></p>
+<p>The output should be:</p>
+<p><code class="docutils literal notranslate"><span class="pre">c691b3d2fc2678839a9c141b6ee1524e</span>&#160; <span class="pre">/home/USERNAME/file_to_compare.txt</span></code></p>
+</div>
+<div class="section" id="calculating-the-checksums-for-all-files-in-one-directory">
+<h3><span class="section-number">5.4.3. </span>Calculating the checksums for all files in one directory<a class="headerlink" href="#calculating-the-checksums-for-all-files-in-one-directory" title="Permalink to this headline">¶</a></h3>
+<p>On the shell execute:</p>
+<p><code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">~/path_to_directory/*.jpg</span> <span class="pre">&gt;</span> <span class="pre">~/checksums.md5</span></code></p>
+<p>There will be no output; however, this command may take a while to execute.</p>
+<p>For 60 pictures of 3.5 MB each, this command took 1.6 seconds on a MacBook Pro (2017) with a SSD drive.</p>
+</div>
+<div class="section" id="limitations-of-this-recipe">
+<h3><span class="section-number">5.4.4. </span>Limitations of this recipe<a class="headerlink" href="#limitations-of-this-recipe" title="Permalink to this headline">¶</a></h3>
+<p>This recipe in its current form has the following limitations:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="data-catalog-deployment.html#fcb-infra-imi-cat-deploy"><span class="std std-ref">Deploying the IMI data catalogue</span></a></p></li>
-</ul>
-<!-- * TODO Deploying the FAIRPORT data catalogue {ref}` TODO fcb-infra-fairport-deploy` --> 
-<!-- * TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`     -->
-<p>For the readership interesting in finding out about additional capabilities needed to enhance other aspects of FAIR such interoperability and reusability, see the following:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../findability/seo.html#fcb-find-seo"><span class="std std-ref">Search engine optimization</span></a></p></li>
-<li><p><a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html#fcb-interop-metadataprofile"><span class="std std-ref">Creating a metadata profile</span></a></p></li>
+<li><p>the above assumes that everything is placed in your home folder. (for a resolution see section “Extendability of this recipe” below.)</p></li>
+<li><p>the above assumes that you don’t have a problem with calculating the checksums sequentially. Depending on your system’s resources (especially available CPU time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: 0.01 seconds per MB of data.</p></li>
+<li><p>you should mind the general limitations of checksums, which are however not covered in this recipe.</p></li>
+<li><p>there is a known clash between the output format of the GNU / Linux tool <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> and the macOS / BSD tool <code class="docutils literal notranslate"><span class="pre">md5</span></code>. Their standard output formats are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward. (hint: the Linux tool has the <code class="docutils literal notranslate"><span class="pre">--tag</span></code> flag which generates macOS-compatible output.)</p></li>
+<li><p>Windows users may use the included PowerShell function “Get-FileHash”</p></li>
+<li><p>the recipe assumes that the absolute paths of the files are the same on source as well as on target system. If necessary for the use case, the “relative mode” by executing e.g. <code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">./*</span></code> can be used to circumvent problems with absolute paths.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> is the most common hashing algorithm, but is also known to have vulnerabilities for checksum hacking (see <a class="reference external" href="https://en.wikipedia.org/wiki/MD5#Security">https://en.wikipedia.org/wiki/MD5#Security</a>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. <code class="docutils literal notranslate"><span class="pre">sha512</span></code>.</p></li>
 </ul>
 </div>
+<div class="section" id="extendability-of-this-recipe">
+<h3><span class="section-number">5.4.5. </span>Extendability of this recipe<a class="headerlink" href="#extendability-of-this-recipe" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture).</p></li>
+<li><p>the recipe assumes that everything is placed in your home folder. If this is not the case, replace <code class="docutils literal notranslate"><span class="pre">~</span></code>, the home directory indicator, by the corresponding path, or execute specifically all <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> commands only with relative pathes (by navigating in the corresponding directory, first). The command will be something like <code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">./YOUR_PATH_HERE/*.jpg</span></code>, then, and will output something like <code class="docutils literal notranslate"><span class="pre">c691b3d2fc2678839a9c141b6ee1524e</span>&#160; <span class="pre">./YOUR_PATH_HERE/picture1.jpg</span></code> then.</p></li>
+<li><p>The procedure above could be combined with a file length indicator (usually the amount of octets = bytes); the file length is usually retrieved much faster than the checksum, and might already indicate the inequality of two files (albeit similar file length does not guarantee content-identity, of course).</p></li>
+</ul>
 </div>
+</div>
+<div class="section" id="further-reading">
+<h2><span class="section-number">5.5. </span>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Wikipedia article on checksums: <a class="reference external" href="https://en.wikipedia.org/wiki/Checksum">https://en.wikipedia.org/wiki/Checksum</a></p></li>
+<li><p>Wikipedia article on the algorithm <code class="docutils literal notranslate"><span class="pre">md5</span></code>: <a class="reference external" href="https://en.wikipedia.org/wiki/MD5">https://en.wikipedia.org/wiki/MD5</a></p></li>
+<li><p>Wikipedia article on the tool <code class="docutils literal notranslate"><span class="pre">md5sum</span></code>: <a class="reference external" href="https://en.wikipedia.org/wiki/Md5sum">https://en.wikipedia.org/wiki/Md5sum</a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">2.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -961,28 +944,20 @@ The vocabulary developed by the consortium of search engines has defined a metad
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div></p></td>
-<td><p><a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td class="text-align:center"><p><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
-<td class="text-align:center"><p>Writing – Review &amp; Editing, Conceptualization</p></td>
-</tr>
-<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div></p></td>
-<td><p><a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td class="text-align:center"><p><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
-<td class="text-align:center"><p>Writing - Review &amp; Editing, Funding acquisition</p></td>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><div class="d-block">Robert Giessmann</div></a> </div></p></td>
+<td><p><a target="_blank" href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
+<td><p>Bayer AG</p></td>
+<td><p><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td class="text-align:center"><p><!-- no elixir node --></p></td>
+<td class="text-align:center"><p>Writing - Original Draft</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">2.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>This page is released under the Creative Commons 4.0 BY license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<h2><span class="section-number">5.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a></p>
 </div>
 </div>
 
@@ -999,7 +974,7 @@ The vocabulary developed by the consortium of search engines has defined a metad
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/recipes/infrastructure"
+            path: "./content/recipes/findability"
         },
         predefinedOutput: true
     }
@@ -1011,8 +986,8 @@ The vocabulary developed by the consortium of search engines has defined a metad
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="id-resolution.html" title="previous page"><span class="section-number">1. </span>Identifier resolution services</a>
-    <a class='right-next' id="next-link" href="data-catalog-deployment.html" title="next page"><span class="section-number">3. </span>Deploying the IMI data catalogue</a>
+    <a class='left-prev' id="prev-link" href="zenodo-deposition.html" title="previous page"><span class="section-number">4. </span>Depositing in Zenodo generic repository</a>
+    <a class='right-next' id="next-link" href="checksum-validate.html" title="next page"><span class="section-number">6. </span>How to check intactness of files by validating checksums</a>
 
         </div>
         
