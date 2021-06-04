@@ -66,7 +66,7 @@ Data Use
 ### Implementation
 
 DUOS:
-https://duos.broadinstitute.org/#/home
+https://duos.broadinstitute.org/
 
 ---
 

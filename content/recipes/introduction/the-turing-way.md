@@ -76,7 +76,7 @@ For instance, being able to immediately apply the onboard process, the use of te
 
 ## What now?
 
-Once FAIR+ Cookbook settled on a technical solution, the project was allowed to focus on the content provision. In the last 6 months, working with our collaborators, the [FAIR cookbook](https://fairplus.github.io/cookbook-dev/intro) has seen a healthy growth of its content, now reaching 40 + recipes.
+Once FAIR+ Cookbook settled on a technical solution, the project was allowed to focus on the content provision. In the last 6 months, working with our collaborators, the [FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/) has seen a healthy growth of its content, now reaching 40 + recipes.
 
 *`"All we had to do"`* was to engage, reuse and activate our community to produce content.
 

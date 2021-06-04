@@ -22,9 +22,9 @@ The main purpose of this recipe is:
 > to describe what `search engine optimization` is and show how to implement markup with the [`Schema.org`](http://schema.org) vocabulary, and [`Bioschemas`](https://bioschemas.org) extension, to improve page discovery and visibility by web page indexers.
 
 There are sub-recipes for embedding search engine optimization into specific web pages about a specific type or resource:
-- [Data catalog](https://fair-cookbook.github.io/_build/html/content/recipes/seo/bioschemas-datacatalog.html)
-- [Dataset](https://fair-cookbook.github.io/_build/html/content/recipes/seo/bioschemas-dataset.html)
-- [Resource specific page](https://fair-cookbook.github.io/_build/html/content/recipes/seo/bioschemas-data-page.html) (Gene, Molecular Entity, Protein)
+- [Data catalog](fcb-find-bs-catalog)
+- [Dataset](fcb-find-bs-dataset)
+- [Resource specific page](fcb-find-bs-data) (Gene, Molecular Entity, Protein)
 
 ___
 

@@ -78,7 +78,7 @@ The Data Article Tag Suite model<!-- TODO add a link to corresponding document -
 3. DCAT:
 In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document --> (v1 and the newly released version 2) provide a vocabulary to express `data catalogue metadata` in **RDF**.
 3. Schema.org:
-The vocabulary developed by the consortium of search engines has defined a metadata profile for [`Dataset`](https://schema.org/DataSet), [`Data Catalogue`](https://schema.org/DataCatalog)
+The vocabulary developed by the consortium of search engines has defined a metadata profile for [`Dataset`](https://schema.org/Dataset), [`Data Catalogue`](https://schema.org/DataCatalog)
 
 
 ### How are Data Catalogue populated?
@@ -89,13 +89,13 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 
 * Commercial solutions:
 
-    *  [Collibra](https://www.collibra.com/download/data-catalog-study-dresner-advisory-services-ppc?_bk=catalogue%20data&_bt=389929247489&_bm=e&_bn=g)
+    *  [Collibra](https://www.collibra.com/data-catalog)
 
 * Open source solutions:
 
     * [NIH DataMed](https://datamed.org/)
     * [EMBL-EBI OMICS-DI](https://www.omicsdi.org/)
-    * [Bayer AG Colid](https://bayer-group.github.io/COLID-Documentation/#/)
+    * [Bayer AG Colid](https://bayer-group.github.io/COLID-Documentation/)
 
 
 ----

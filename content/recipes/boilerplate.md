@@ -72,7 +72,7 @@ The `FAIR Cookbook` is built using [jupyter-book](https://jupyterbook.org/intro.
 * **[HackMD](https://hackmd.io)** is used as Markdown Editor thanks to its integration with `github` and its [`browser extensions`](https://hackmd.io/s/hackmd-it)
 * **[jupyter notebook](https://jupyter.org/)** can be used to provide executable code
 * **[binder](https://mybinder.org)** is enabled which allows in web execution of any jupyter notebook distributed with the `FAIR Cookbook`
-* **[mermaid](https://mermaid-js.github.io/mermaid/#/)** javascript library is used to produce flowcharts, Gantt charts and pie charts used in the book.
+* **[mermaid](https://mermaid-js.github.io/mermaid)** javascript library is used to produce flowcharts, Gantt charts and pie charts used in the book.
 
 
 
