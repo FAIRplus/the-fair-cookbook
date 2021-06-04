@@ -244,7 +244,7 @@ width: 750px
 name: pymzml in Biotools registry
 alt: pymzml in Biotools registry
 ---
-The Python `pymzml` library entry in the [Elixir Biotools catalog](https://biotools.org/) of resources.
+The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.tools/) of resources.
 ```
 
 
@@ -288,16 +288,16 @@ In the follow-up recipe, we will show how to boostrap the creation of an ISA met
 
 ## Conclusion
 
-In this recipe, we have shown how to convert a proprietary file format to an open standard format, using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data formats and unfortunately not all benefit from the support of open source / open format communities. However by consulting the [Elixir UK](https://Elixirhug.org) [FAIRsharing registry](https://fairsharing.org), it is possible to identify if such open format specifications are available.
+In this recipe, we have shown how to convert a proprietary file format to an open standard format, using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data formats and unfortunately not all benefit from the support of open source / open format communities. However by consulting the [Elixir UK](https://elixir-europe.org/about-us/who-we-are/nodes/uk) [FAIRsharing registry](https://fairsharing.org), it is possible to identify if such open format specifications are available.
 Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be also possible to retrieve libraries and software components allowing manipulations of such format.
 
 
 
 > ### What to read next
-  >  - How to calculate file checksums<!-- TODO add a link to corresponding document -->
+  >  - [How to calculate file checksums](fcb-checksum-create)<!-- TODO add a link to corresponding document -->
   >  - How to package data for shipping with BDbags<!-- TODO add a link to corresponding document -->
   >  - How to produce an ISA metadata file from a set of mzML fles<!-- TODO add a link to corresponding document -->
-  >  - How to deposit data to Zenodo<!-- TODO add a link to corresponding document -->
+  >  - [How to deposit data to Zenodo](fcb-find-zenodo)<!-- TODO add a link to corresponding document -->
 
 ___
 

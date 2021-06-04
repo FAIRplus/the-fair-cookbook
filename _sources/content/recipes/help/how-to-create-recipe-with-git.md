@@ -163,7 +163,7 @@ Open a new tab in your favourite browser and point to the url `http://127.0.0.1:
  3. declare and list the input information types (data files, data types) and the expected output datatypes.
  	you should use the table provided to structure the information and annotate those input. & output to indicate the file formats. 
 
- 	 For doing so, we strongly recommend performing a mark up by linking to either a [FAIRsharing record about standards](https://www.fairsharing,org) and with and [EDAM.datatype](https://www.ebi.ac.uk/ols/ontologies/edam)
+ 	 For doing so, we strongly recommend performing a mark up by linking to either a [FAIRsharing record about standards](https://www.fairsharing.org) and with and [EDAM.datatype](https://www.ebi.ac.uk/ols/ontologies/edam)
 
  4. provide an overall graphical representation of the flow of actions required to accomplish the objectives set considering the set of input data elements.
 

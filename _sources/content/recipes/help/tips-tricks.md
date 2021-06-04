@@ -34,7 +34,7 @@ which should be rendered as this sign:
 
 ## 2. Styling Mermaid Flowchart:
 
-you can check the [mermaid documentation](https://mermaid-js.github.io/mermaid/#/examples?id=larger-flowchart-with-some-styling) 
+you can check the [mermaid documentation](https://mermaid-js.github.io/mermaid/#/examples) 
 
 We however provide some help with examples below
 

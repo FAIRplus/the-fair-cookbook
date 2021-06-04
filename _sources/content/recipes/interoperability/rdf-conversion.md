@@ -288,7 +288,7 @@ ___
 
 #### What should I read next?
 
-* [A data engineer's guide to semantic modelling - Ilaria Maresi](https://zenodo.org/record/3898519#.YC-abmhKiHs) (Zenodo)
+* [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo)
 
 
 ___

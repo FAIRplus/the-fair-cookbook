@@ -228,15 +228,15 @@ The following is an incomplete list of identifier mapping services.
     > ```
 
     > For more information including the available methods, see the [UniChem REST documentation](https://www.ebi.ac.uk/unichem/info/webservices).
-* [sameas.org](https://sameas.org/)
+* [sameas.org](http://sameas.org/)
   
-    > [sameas.org](https://sameas.org/) is a general purpose service that will return a set of equivalent URLs for a given URL. The equivalences are based on an incomplete set of `owl:sameAs` statements contained in data available on the web.
+    > [sameas.org](http://sameas.org/) is a general purpose service that will return a set of equivalent URLs for a given URL. The equivalences are based on an incomplete set of `owl:sameAs` statements contained in data available on the web.
     > 
     > The following `curl` command retrieves the equivalent URLs for EBI RDF Platform representation of ChEMBL [DIAZEPAM](https://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL12) as a JSON object.
     > ```bash
     > curl -iLH "Accept: application/json" "http://sameas.org/?uri=http://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL12"
     > ```
-    > Note that the coverage of sameas.org within the life sciences is very small.
+    > Note that the coverage of http://sameas.org within the life sciences is very small.
 
 
 <!-- * [Identifiers.org](https://identifiers.org/)
