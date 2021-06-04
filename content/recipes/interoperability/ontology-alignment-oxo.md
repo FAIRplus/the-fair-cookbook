@@ -1,0 +1,324 @@
+(fcb-interop-oxo)=
+# Ontology mapping with Ontology Xref Service (OxO)
+
++++
+<br/>
+
+----
+
+````{panels}
+:container: container-lg pb-3
+:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
+:card: rounded
+
+<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Recipe metadata</b></h4>
+ identifier: <a href="">RX.X</a> 
+ version: <a href="">v1.0</a>
+
+---
+<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Difficulty level</b></h4>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
+
+---
+<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Reading Time</b></h4>
+<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
+<h4><b>Recipe Type</b></h4>
+<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Hands-on
+<h4><b>Executable Code</b></h4>
+<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
+
+---
+<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
+^^^
+<h4><b>Intended Audience</b></h4>
+<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Ontologist </p>
+<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
+<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p> 
+<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
+<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Data Curator </p>
+````
+
+---
+
+## Main Objectives
+
+Multiple ontology terms can describe the same concept, which makes it difficult for data integration. `Ontology mapping`, or ontology alignment, is the process of determining correspondences between equivalent concepts in alternative ontologies and distinct vocabularies. 
+
+OxO maps terms in different ontologies, vocabularies and coding standards using evidence collected from the Ontology Lookup Service (OLS), Unified Medical Language System (UMLS), and other sources. 
+
+This recipe demonstrates how to map ontology terms using the [EMBL-EBI Ontology Xref Service (OxO)](https://www.ebi.ac.uk/spot/oxo/).
+
+## Graphical Overview
+
+```mermaid
+graph TB
+    A[Identify source ontology term ID]
+    B[Select target ontology]
+    C[Perform mapping]
+    D[Review mapping results]
+    
+    B-->A
+    A-->C
+    C-->D
+    
+    E((OLS))
+    F((ZOOMA))
+    G((OxO))
+    
+    A-.-E
+    A-.-F
+    B-.-E
+    D-.-E
+    C-.-G
+    
+    style A stroke:#757575,stroke-width:3px
+    style B stroke:#757575,stroke-width:3px
+    style C stroke:#757575,stroke-width:3px
+    style D stroke:#757575,stroke-width:3px
+
+    
+    style E fill:#708c98 ,stroke-width:0px
+    style F fill:#708c98 ,stroke-width:0px
+    style G fill:#708c98 ,stroke-width:0px
+    
+```
+
+```{figure} ./oxo.png
+---
+width: 500px
+name: The process of using EMBL-EBI OxO, an Ontology Mapping Service
+alt: The process of using EMBL-EBI OxO, an Ontology Mapping Service
+---
+The process of using EMBL-EBI OxO, an Ontology Mapping Service.
+```
+
+## Requirements
+* recipe dependency:
+   * {ref}`Which vocabulary to use?`
+* knowledge requirements:
+   * Familiar with metadata curation
+   * Familiar with ontology and other vocabularies
+* technical requirements:
+    * Experience with API or Bash scripts allows users to try the automated solutions.
+
+## Capability & Maturity Table
+
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+| :------------- | :------------- | :------------- |
+| Interoperability | minimal | repeatable,automatable |
+
+
+
+## FAIRification Objectives, Inputs and Outputs
+
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [ID mapping](http://edamontology.org/operation_3282)  | [Ontology term](http://edamontology.org/data_0966)  | [Ontology term](http://edamontology.org/data_0966)  |
+| [Annotation](http://edamontology.org/operation_0226)  | [Ontology term](http://edamontology.org/data_0966)  | [Ontology term](http://edamontology.org/data_0966)  |
+
+## Table of Data Standards
+
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+|  | [Mondo Disease ontology](https://www.ebi.ac.uk/ols/ontologies/mondo)  | |
+| | [Human Disease ontology](https://www.ebi.ac.uk/ols/ontologies/doid)  |  |
+|| [Medical Subject Headings](https://meshb.nlm.nih.gov/search)
+
+
+## Using EMBL-EBI OXO
+
+Ontology cross Ontology or OXO service is available from a web interface or a programmatic interface. The following sections show both:
+
+### OXO Web Interface:
+
+#### Step 1: Identify source vocabulary and target vocabulary
+
+For pathology data annotation, vocabularies, such as [MeSH](https://meshb.nlm.nih.gov/search), [NCI thesaurus](https://www.ebi.ac.uk/ols/ontologies/ncit), [ICD-10](https://www.who.int/standards/classifications/classification-of-diseases), [UMLS](https://www.nlm.nih.gov/research/umls/index.html), [Human Disease Ontology(DOID)](https://www.ebi.ac.uk/ols/ontologies/doid), and [MONDO disease ontology](https://www.ebi.ac.uk/ols/ontologies/mondo), are widely used. In this example, we use **MeSH and DOID** as `source vocabularies` and **MONDO** as the `target vocabulary` to demonstrate the ontology mapping workflow. 
+
+Obviously, a target vocabulary needs to be selected before mapping. A variety of factors can influence the selection of a terminology resource for a specific purpose or curation context. For more information about this topic, more detailed guidance on how to select vocabularies can be found [here](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html). 
+
+
+OxO allows users to explore the mapping status between the target vocabulary and other vocabularies. Figure 1 shows how terms in MONDO are linked to terms in other ontologies. MONDO has over 16,000 mappings to terms in UMLS. It is also mapped to terms in DOID, Ophanet, OMIM, MeSH, etc.
+
+<!-- ![](https://i.imgur.com/bi5WoIf.png)
+
+<div align="center">Figure1: Ontology mapping overview</div>
+ -->
+
+```{figure} https://i.imgur.com/bi5WoIf.png
+---
+width: 600px
+name: OxO summary result overview
+alt: OxO summary result overview
+---
+OxO summary result overview.
+```
+
+
+### Step 2: Provide the source vocabulary term ID
+
+OxO takes ontology term IDs as inputs for ontology mapping, which assumes the (meta)data has been annotated. If the data is not annotated, please check the ontology annotation recipe first. 
+
+In this example, we use terms for ***type 2 diabetes*** from 2 distinct sources. The corresponding term IDs are listed in the table below.
+
+|Text|Corresponding term in MeSH| Corresponding term in DOID|
+|--|--|--|
+|type 2 diabetes|[MeSH:D003924](https://www.ncbi.nlm.nih.gov/mesh/68003924)|[DOID:9352](https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FDOID_9352)
+
+### Step 3: Perform mapping
+
+Figure 2 shows how to map the MeSH and DOID terms to the MONDO disease ontology. Users are expected to:
+- specify the target ontology
+- provide a list of source term IDs
+- indicate the expected mapping distance.
+
+In this example, we set the `mapping distance` to 1, which uses high confidence mapping evidence only.
+Having greater mapping distance returns more mappings but decreases the mapping confidence. 
+
+
+<!-- ![](https://i.imgur.com/1EepmN9.png)
+<div align="center">Figure 2: Ontology mapping with OxO user inputs.</div> -->
+
+```{figure} https://i.imgur.com/bi5WoIf.png
+---
+width: 600px
+name: OxO mapping with direct user inputs.
+alt: OxO mapping with direct user inputs
+---
+OxO mapping with direct user inputs
+```
+
+
+Figure 3 shows the corresponding mapping results. Both terms have been mapped to 'MONDO:0005148'. The results can be downloaded as flat-table(tsv) files.
+
+
+<!-- ![](https://i.imgur.com/l1z8OgL.png)
+<div align="center">Figure 3: Mapping results</div> -->
+
+```{figure} https://i.imgur.com/bi5WoIf.png
+---
+width: 600px
+name: OxO mapping results tabular view
+alt: OxO mapping results tabular view
+---
+OxO mapping results tabular view.
+```
+
+### Step 4: Review mapping results
+
+To ensure the quality of the mapping, users are recommended to review the mapping results, especially when the mapping distance increases. OxO allows users to explore vocabulary term relationships (see figure 4) by providing a network view of all linked terms. Users can also find more information about each term in the [Ontology lookup service](https://www.ebi.ac.uk/ols/index).
+
+<!-- ![](https://i.imgur.com/937iuPV.jpg)
+<div align="center">Figure 4: MONDO term overview</div> -->
+
+```{figure} https://i.imgur.com/937iuPV.jpg
+---
+width: 600px
+name: OxO mapping results review: MONDO example
+alt: OxO mapping results review: MONDO example
+---
+OxO mapping results review: MONDO example.
+```
+
+
+## Using OxO service programmatically
+
+Besides the graphical user interface offered by OXO, a REST style API is also available.
+It is therefore possible to invoke the mapping service from the command line. See the [OxO API documentation](https://www.ebi.ac.uk/spot/oxo/docs/api) page.
+
+In the following code snippet, an API request invoked via `curl` performed the same mapping presented in the section above, at step 3:
+
+```bash
+curl 'https://www.ebi.ac.uk/spot/oxo/api/search' -i 
+-X POST 
+-H 'Content-Type: application/json' 
+-H 'Accept: application/json' 
+-d '{
+  "ids" : [ "DOID:9352","MeSH:D003924"],
+  "inputSource" : null,
+  "mappingTarget" : [ "MONDO" ],
+  "mappingSource" : [ "MONDO" ],
+  "distance" : 1
+}'
+```
+
+The corresponding results are as follows:
+
+```bash
+{
+      "queryId" : "DOID:9352",
+      "querySource" : null,
+      "curie" : "DOID:9352",
+      "label" : "type 2 diabetes mellitus",
+      "mappingResponseList" : [ {
+        "curie" : "MONDO:0005148",
+        "label" : "type 2 diabetes mellitus",
+        "sourcePrefixes" : [ "MONDO" ],
+        "targetPrefix" : "MONDO",
+        "distance" : 1
+      } ],
+      "_links" : {
+        "self" : {
+          "href" : "https://www.ebi.ac.uk/spot/oxo/api/terms/DOID:9352"
+        },
+        "mappings" : {
+          "href" : "https://www.ebi.ac.uk/spot/oxo/api/mappings?fromId=DOID:9352"
+        }
+      }
+    }
+```
+
+
+
+### Common questions about OXO
+
+1. What about incorrect mappings?
+
+    OxO imports term mapping information from ontologies and other curated databases. 
+    **It doesn't validate the mapping evidence**.
+    Users are recommended to check the mapping results manually, especially when the mapping distance is above 1.
+    
+2. Why is no mapping found?
+
+    OxO relies on the ontology and other curated databases to improve the mapping coverage. Some terms describing the same concept might not be aligned in OxO. In this case, users are recommended to identify possible mappings by searching in OLS. 
+    
+    To help the ontology community improve the mapping, users can also submit an update request in corresponding ontologies. The guidance can be found here {ref}`fcb-interop-ontorequest`
+    
+3. Ontology mapping service for internal databases
+
+    OxO has been dockerized for local deployment and licensed under [Apache License 2.0](https://github.com/EBISPOT/OXO/blob/master/LICENSE). The source code can be found [here](https://github.com/EBISPOT/OXO).
+
+
+## Conclusion
+This recipe presented OxO, EMBL-EBI tool for performing ontology mapping  as an example to demonstrate the ontology mapping workflow.
+
+> ### What should I read next?
+> * [How to build a data dictionary?]() / {ref}`fcb-interop-datadict`
+> * [How to build a semantic model?]() / {ref}`fcb-interop-semmod`
+
+
+## Authors
+
+| Name | Affiliation  | orcid | CrediT role  |
+| :------------- | :------------- | :------------- |:------------- |
+| Fuqi Xu|[EMBL-EBI](www.ebi.ac.uk)| [0000-0002-5923-3859](https://orcid.org/orcid.org/0000-0002-5923-3859) | Writing - Original Draft |
+| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Review |
+
+___
+
+
+## License
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+
+
