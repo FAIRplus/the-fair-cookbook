@@ -136,11 +136,13 @@ In the context of clinical data landscape, the SHARE API facilitated by CDISC ha
 The ability to visualize data maturity and persist information over time to detect or present a positive change in state can add tremendous value; both to sponsors and service providers. Several open-source tools are readily available that can build dynamic charts to present data with fine granularity. An example from the sponsor’s end may be the ability to visualize various CRO / vendor data sources and clearly infer what needs to be improved any by how much. Persistence (of data) pays and in this case can tell us over time which guiding principles will need attention. Note, not all principles or indicators may apply and we may need to build custom indicators depending on business decisions.
 
 ## Returns on Investments / Benefits: 
-- Capability in quickly adjusting to changing business demands and improvised search capabilities e.g. a subset of population within a disease area across a specific age group being administered a certain concomitant med.
-- Enhanced methodology for target identification and drug re-purposing.
-- Ability to pool data and perform ad-hoc analysis in an effective method. 
-- Reduced study set up times, high data quality and annotations can provide significant cost savings in the long term.
-- Will increase capabilities for AI and ML applications including data scientists who rely on high quality searchable data which can be re-used to build algorithms – either to screen for compounds or run simulations to understand the drug’s MOA (mechanism of action).
+
+ - Legacy repository of semi-curated or not well formed data assets are a goldmine of information un-used. Strategic partnerships between research organizations and    Pharmaceutical R&D to align with FAIR principles can unlock true value of these data assets. This however; requires significant time and careful evaluation is recommended.
+ - Enables scientists to develop associations between data assets between or within trial drug products with knowledge graphs more swiftly. 
+ - Reduced clinical study set up times, high data quality and annotations to convert corpus to structured data can provide significant cost savings in the long term.
+ - Increased capabilities for AI and ML applications for data scientists who rely on high quality searchable data which can be re-used to build algorithms – either to screen    for compounds or run simulations to understand the drug’s MOA (mechanism of action).
+ - Target identification and drug re-purposing cycle times can be reduced.
+
 
 ## Key Performance Indicators:
 
