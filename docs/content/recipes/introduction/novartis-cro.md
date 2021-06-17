@@ -172,7 +172,7 @@ ___
 
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
-| Gabriel N Backinathan |  Novartis | [0000-0001-6283-1166](https://orcid.org/0000-0001-6283-1166) | Writing - Original Draft |
+| Gabriel N Backianathan |  Novartis | [0000-0001-6283-1166](https://orcid.org/0000-0001-6283-1166) | Writing - Original Draft |
 
 
 ___
