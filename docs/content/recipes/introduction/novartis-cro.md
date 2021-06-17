@@ -146,16 +146,17 @@ The ability to visualize data maturity and persist information over time to dete
 
 ## Key Performance Indicators:
 
-<TODO: add link sentence>
+1. Measured reduction in cycle times for patient enrollment and study setup. 
+2. Surveyed results indicating awareness of FAIR adoption and implementation across organization. These surveys could be designed specifically to accomodate domain specific results to have better audience reachability.
+3. Increased data quality avoiding some of the common pitfalls when it comes to regular ETL problems.
+	a. Patient Informed consent and protocol amendments that involves secondary consents with missing values.
+        b. Incorrect visit description at treatment or study discontinuation stage that causes ambiguity in data interpretation.
+        c. Missing or incorrect controlled vocabularies
+        d. Ambiguosly described Patient Identifiers causing potential downstream issues for analytics. 
 
-- <**TODO: clarify sentence** =>Number of datasets that are empty at source over a specified time interval of time either due to updates to rule definitions.
--	**Time taken for making data available to end-user** post `patient enrollment` and `data collection` at site(s).
--	**Number of missing values for `consent data`** especially when a protocol amendment is completed and secondary consents are not registered. 
--	**Number of patients who have incorrect visit description at treatment or study discontinuation stage** that causes ambiguity in data interpretation.
--	Scoring values for FAIR data that indicates:
-    -	 what has changed 
-    -	 rate of change
-    for instaince, `time taken to achieve score of 3 to 4 on a scale of 5 for Findability`)
+4. Clear description of maturity levels that are governed by data management principles and which are in turn are mapped to FAIR indicators.
+5. Change of state in FAIRness of digital assets between maturity levels.
+6. Rate of change of FAIRness to indicate how, when are where data quality is being improved.
 
 ---
 ## Conclusion
