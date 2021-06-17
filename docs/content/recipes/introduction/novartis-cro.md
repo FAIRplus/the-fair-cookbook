@@ -149,10 +149,10 @@ The ability to visualize data maturity and persist information over time to dete
 - Measured reduction in cycle times for patient enrollment and study setup. 
 - Surveyed results indicating awareness of FAIR adoption and implementation across organization. These surveys could be designed specifically to accomodate domain specific results to have better audience reachability.
 - Increased data quality avoiding some of the common pitfalls when it comes to regular ETL problems.
-	a. Patient Informed consent and protocol amendments that involves secondary consents with missing values.
-        b. Incorrect visit description at treatment or study discontinuation stage that causes ambiguity in data interpretation.
-        c. Missing or incorrect controlled vocabularies
-        d. Ambiguosly described Patient Identifiers causing potential downstream issues for analytics. 
+       - a. Patient Informed consent and protocol amendments that involves secondary consents with missing values.
+       - b. Incorrect visit description at treatment or study discontinuation stage that causes ambiguity in data interpretation.
+       - c. Missing or incorrect controlled vocabularies
+       - d. Ambiguosly described Patient Identifiers causing potential downstream issues for analytics. 
 
 - Clear description of maturity levels that are governed by data management principles and which are in turn are mapped to FAIR indicators.
 - Change of state in FAIRness of digital assets between maturity levels.
