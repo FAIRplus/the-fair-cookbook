@@ -161,7 +161,8 @@ The ability to visualize data maturity and persist information over time to dete
 ---
 ## Conclusion
 
-TODO 
+The data landscape is constantly evolving and the need to forge strong partnerships and foster a data driven organization has become paramount across the life sciences sector. It is important to recall adopting FAIR is not merely a set of rules but rather a dynamically connected ecosystem of data, principles, tools, processes and most importantly people. While similar efforts have already been undertaken in the past, the availability of newer technologies to scale, community efforts such as cookbook recipes and other parallel tasks is slowly helping us inch closer to a more sustainable FAIR from go model. CRO's are primarily designed to drive costs lower and hence the need for top-down approach from Pharmaceuticals combined with the potential to realize long term cost savings which in turn can continue to fuel this endeavor. 
+
 ### What to read next
 
 https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/identifiers.html#fcb-find-identifiers
