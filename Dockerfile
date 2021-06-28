@@ -132,7 +132,7 @@ FROM jupyterbookbuilder-base-image AS jupyterbookbuilder
 # Set the working directory. You can customize this path to be equivalent to your computer's
 # directory structure, e.g. if you use an Integrated Development Environment (IDE) which allows you 
 # to click on file names from a terminal...   
-WORKDIR /Users/robert/git/the-fair-cookbook
+WORKDIR /Users/Robert/git/the-fair-cookbook
 
 # Create an empty folder to prevent failure later on
 RUN mkdir -p ./_build/html
