@@ -13,7 +13,7 @@ the EHDEN and OHDSI use case
 :reading_time_minutes: 15
 :intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
 :has_executable_code: nope
-:recipe_name: EDHNE ODHSI discovery with schema.org
+:recipe_name: EDHNE ODHSI discovery with Schema.org
 ```` 
 
 
@@ -26,7 +26,6 @@ The output of the COVID-19 study-a-thon (a OHDSI community initiative, involving
 
 
 ### Abbreviations
-
 
 
 *   EHDEN: European Health Data & Evidence Network
@@ -48,15 +47,15 @@ The purpose of the present content is to highlight how to improve dataset Findab
 
 The methods described in this recipe are however generally applicable for observational health databases and studies, not just data in the OMOP CDM format.
 
-In March 2020 the OHDSI community organized a [study-a-thon focussed on COVID-19](https://www.ohdsi.org/ohdsi-news-updates/covid19-studyathon/), which was aimed at addressing a number of key medical questions around COVID-19, such as predicting hospitalization and drug safety and effectiveness. For this purpose, a large collection of healthcare databases around the world was investigated. Many important digital assets were produced during the [study-a-thon](https://ohdsi.org/ohdsi-kicks-off-international-collaborative-to-generate-real-world-evidence-on-covid-19-with-virtual-study-a-thon/), such as study protocols, database metadata and characterizations, study results and publications. 
+In March 2020 the OHDSI community organized a [study-a-thon focussed on COVID-19](https://www.ohdsi.org/ohdsi-news-updates/covid19-studyathon/), which was aimed at addressing a number of key medical questions around COVID-19, such as predicting hospitalization and drug safety and effectiveness. For this purpose, a large collection of healthcare databases around the world were investigated. Many important digital assets were produced during the [study-a-thon](https://ohdsi.org/ohdsi-kicks-off-international-collaborative-to-generate-real-world-evidence-on-covid-19-with-virtual-study-a-thon/), such as study protocols, database metadata and characterizations, study results, and publications. 
 
-From the FAIR assessment performed in order to better understand the current state of FAIRness of studies and databases used in OHDSI and in the COVID-19 study-a-thon in particular, it was found that there was room for improvement on both Findability and Reusability. Since increasing Findability was a common denominator for both studies and data sources, the main focus of the FAIRification was on developing structured metadata, specifically tailored for studies and data sources
+From the FAIR assessment performed in order to better understand the current state of FAIRness of studies and databases used in OHDSI and in the COVID-19 study-a-thon in particular, it was found that there was room for improvement on both Findability and Reusability. Since increasing Findability was a common denominator for both studies and data sources, the main focus of the FAIRification was on developing structured metadata, specifically tailored for studies and data sources.
 
-This recipe will describe a proof-of-concept that shows the step-by-step process of making resources more FAIR:
+This recipe will describe a proof-of-concept that shows the step-by-step process of making resources more FAIR by:
 
-*   inventorization and prioritisation of digital resources 
-*   adding metadata to the resources using existing ontologies and defining new entities to make them findable by humans and machines
-*   creating a website for FAIR dissemination of selected digital resources.
+*   Inventorization and prioritisation of digital resources; 
+*   Adding metadata to the resources using existing ontologies and defining new entities to make them findable by humans and machines;
+*   Creating a website for FAIR dissemination of selected digital resources.
 
 
 ## Tools
@@ -77,7 +76,7 @@ This recipe will describe a proof-of-concept that shows the step-by-step process
 | [Turtle](https://www.w3.org/TR/turtle/) |   |   |
 | [YAML](https://yaml.org/spec/1.2/spec.html) |   |   |
 | [JSON-LD](https://www.w3.org/TR/json-ld11/) |  |  |
-|  | [schema.org](https://schema.org) |  |
+|  | [Schema.org](https://schema.org) |  |
 |  |[Custom OHDSI extension](https://github.com/thehyve/ohdsi-schemas/blob/master/models/ohdsi_model/ohdsi_semantic_model.ttl) to schema.org | |
 
 
@@ -146,9 +145,9 @@ To increase the findability we captured the structured and rich metadata, by dev
 
 Modelling metadata elements in RDF has the advantage that the metadata elements are properly semantically described, structured and linked. In addition, RDF is easily expandable and modifiable. 
 
-The Turtle serialization format was chosen as RDF format. Metadata elements were defined and mapped to [schema.org](http://schema.org) types and properties. Schema.org is a vocabulary that can be used to create structured data on the internet and to make the data discoverable. 
+The Turtle serialization format was chosen as the RDF format. Metadata elements were defined and mapped to [Schema.org](http://schema.org) types and properties. Schema.org is a vocabulary that can be used to create structured data on the internet and to make the data discoverable. 
 
-Relevant schema.org types for studies and databases included: 
+Relevant Schema.org types for studies and databases included: 
 
 
 
@@ -179,10 +178,10 @@ alt:  part of the relevant metadata elements in the model
 ```{figure} edhen-odhsi/Figure_2B.jpg
 ---
 width: 600px
-name:  RDF representation of two schema.org types, written in Turtle
-alt:  RDF representation of two schema.org types, written in Turtle
+name:  RDF representation of two Schema.org types, written in Turtle
+alt:  RDF representation of two Schema.org types, written in Turtle
 ---
-RDF representation of two schema.org types, written in Turtle
+RDF representation of two Schema.org types, written in Turtle
 ```
 
 <!-- ```bash
@@ -203,17 +202,17 @@ schema:Drug a owl:Class ;
 **B. **RDF representation of two schema.org types, written in Turtle.** -->
 
 
-### OHDSI extension to schema.org vocabulary
+### OHDSI extension to Schema.org vocabulary
 
 [Schema.org](https://schema.org/) is a general purpose vocabulary for searching entities on the internet, so metadata elements specific for some OHDSI assets were not present. To be able to capture metadata as extensive as necessary, custom types and properties had to be created. These included: 
 
 
 
-*   properties specific for OHDSI studies(e.g. study types and study use cases)
-*   database properties (e.g. database characteristics and population size) 
-*   author properties (e.g. GitHub handle and forum profile). 
+*   Properties specific for OHDSI studies(e.g. study types and study use cases)
+*   Database properties (e.g. database characteristics and population size) 
+*   Author properties (e.g. GitHub handle and forum profile). 
 
-For OHDSI specific types and properties the namespace [http://data.ohdsi.org/](http://data.ohdsi.org/) is used, using the “ohdsi” prefix. 
+For OHDSI specific types and properties the namespace [http://data.ohdsi.org/](http://data.ohdsi.org/) is used, using the `ohdsi` prefix. 
 
 The RDF model was validated using Apache Jena RIOT (version 3.15.0), using the following command:
 
@@ -231,7 +230,7 @@ The metadata model is shared in a public [GitHub repository](https://github.com/
 
 In principle, the RDF classes defined in the above Turtle file can directly be used to set up the JSON-LD file needed for the website metadata. But in this example, we used an extra step by first capturing the metadata of studies, databases and authors, in the more data entry friendly YAML format. The YAML format can be annotated with comments to guide the person submitting their metadata. 
 
-The following figure shows the metadata in Turtle and in YAML. YAML uses slightly different wording and syntax, to make it easier for end users / science bloggers to understand what kind of metadata is expected to fill in. 
+The following figure shows the metadata in Turtle and in YAML. YAML uses slightly different wording and syntax, to make it easier for end users / science bloggers to understand what kind of metadata is expected to be filled in. 
 
 
 <!-- ![alt_text](images/image4.png) -->
@@ -250,7 +249,7 @@ Example Turtle representation of metadata instantiation of the OHDSI Covid19Icar
 <!-- **Figure 3. **Left: 
 Example Turtle representation of metadata instantiation of the OHDSI Covid19Icarius study. Right: YAML representation of the same metadata as displayed on the left.** -->
 
-The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces a HTML output from that which contains the article text but also embeds the entered metadata as JSON-LD (see figure 4 and step 4). In order to do this, some custom processing logic is written that takes the YAML fields as input and formats this into proper RDF in accordance with the metadata model.
+The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML output from that which contains the article text but also embeds the entered metadata as JSON-LD (see Figure 4 and Step 4). In order to do this, some custom processing logic is written that takes the YAML fields as input and formats this into RDF in accordance with the metadata model.
 
 
 
@@ -274,9 +273,10 @@ Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concep
 
 JSON-LD is a format for structured and linked data and, like Turtle, a serialization format of RDF. 
 
-It can be embedded in the HTML code in the back end of a website. Search engines like Google (including Google dataset search) use this structured data to find and understand the data. Understanding the data goes hand in hand with using the [schema.org](http://schema.org) vocabulary, because annotating metadata with schema.org types and properties gives meaning to the data. This search engine optimization (SEO, see the [Search Engine optimization](https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/seo.html) recipe) enables better Findability of the data.
+It can be embedded in the HTML code in the back end of a website. Search engines like Google (including [Google dataset search](https://datasetsearch.research.google.com/)) use this structured data to find and understand the data. Understanding the data goes hand in hand with using the [Schema.org](http://schema.org) vocabulary, because annotating metadata with Schema.org types and properties gives meaning to the data. This search engine optimization (SEO, see the [Search Engine optimization](https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/seo.html) recipe) enables better Findability of the data.
 
-For this proof-of-concept project, a website was created for dissemination of metadata on studies, databases and authors, generated and used during the OHDSI COVID-19 study-a-thon. Metadata on studies, databases and authors is displayed on this [website](https://covid19.ohdsi.app/), and is embedded as JSON-LD in the HTML code as well. 
+For this proof-of-concept project, a website was created for dissemination of metadata on studies, databases and authors, generated and used during the OHDSI COVID-19 study-a-thon. Metadata on studies, databases and authors is displayed on this [website](https://covid19.ohdsi.app/), and is embedded as JSON-LD in the HTML code as well.
+<!-- TODO: Give example of a page with markup -->
 
 Embedding metadata in JSON-LD in HTML will enable web crawlers to scrape the metadata and will increase Findability by search engines. When for example querying [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/), the data should pop up when JSON-LD is embedded.
 
@@ -284,7 +284,7 @@ Embedding metadata in JSON-LD in HTML will enable web crawlers to scrape the met
 
 ### Making a sitemap file and letting crawlers know
 
-Setting up a robots.txt file at the root of a website will give search engine crawlers a guide on which web pages can be crawled, and which pages can’t be crawled. Crawling all pages is possible by adding this line to the robots.txt file:
+Setting up a `robots.txt` file at the root of a website will give search engine crawlers a guide on which web pages can be crawled, and which pages can’t be crawled. Crawling all pages is possible by adding this line to the `robots.txt` file:
 
 
 ```bash
@@ -294,11 +294,12 @@ User-agent: *
 
 The Hugo framework automatically generates a sitemap when building a website (in this example: [https://covid19.ohdsi.app/sitemap.xml](https://covid19.ohdsi.app/sitemap.xml))
 
-Figure 5 shows part of the model instantiated with metadata for a particular COVID-19 study in JSON-LD format. (This matches the metadata shown in figure 3). Figure 4 shows the relationship between the Turtle, YAML and JSON-LD files.
+Figure 5 shows part of the model instantiated with metadata for a particular COVID-19 study in JSON-LD format. (This matches the metadata shown in Figure 3.)
 
 The generated JSON-LD files can be validated using [Google’s Rich Result Test](https://search.google.com/test/rich-results). This tool can easily validate JSON-LD code, by either submitting a URL directing to the JSON-LD, or by pasting JSON-LD code.
+<!-- TODO give an example link to a page being validated -->
 
-An important note to make here is that to make the data findable for Google Dataset search the model and final JSON-LD markup needed to mention the “schema:Dataset” class. In a first iteration, we had used our new “ohdsi:database” class and the website was not found (even if the ohdsi:database is-a schema:Dataset statement from the model is repeated in the JSON-LD, so the Google Dataset search doesn’t seem to use inference to determine this).
+An important note to make here is that to make the data findable for Google Dataset search the model and final JSON-LD markup needed to mention the `schema:Dataset` class. In a first iteration, we had used our new `ohdsi:database` class and the website was not found (even if the `ohdsi:database is-a schema:Dataset` statement from the model is repeated in the JSON-LD; Google's Schema.org tools used a fixed context file, ignoring any additional statements included in your own JSON-LD).
 
 <!-- 
 ![alt_text](images/image6.png ) -->
@@ -322,13 +323,13 @@ The static site generator [HUGO](https://gohugo.io/) was used to create the [cov
 
 Part of the content is populated automatically, by scraping information from the [OHDSI forum](https://forums.ohdsi.org/) and [README files](https://github.com/ohdsi-studies/StudyRepoTemplate) in the study-specific GitHub repositories. The metadata in YAML is converted to JSON-LD in the back end of the website. In the front end of the website, this meta data is shown in a human-readable way. 
 
-The source code of the website can be found [on Github](https://github.com/thehyve/ohdsi-covid19-site). 
+The source code of the website can be found on [Github](https://github.com/thehyve/ohdsi-covid19-site). 
 
 
 
 ### Final result
 
-The final result of applying all these steps looks like this, as HTML page in the browser with JSON-LD metadata ‘under the hood:
+The final result of applying all these steps looks like this: an HTML page in the browser with JSON-LD metadata under the hood:
 
 <!-- ![alt_text](images/image7.png) -->
 
@@ -378,9 +379,9 @@ The OHDSI covid19 datasets as viewed from Google Dataset Search
 
 ## Conclusion
 
-The key reusable element in this recipe is the use of schema.org JSON-LD statements in any website to promote findability of metadata in search engines. Using the Hugo site generator has the advantage that it is very versatile and includes a lot of scientific/blogging authoring tools out of the box. However, the particular implementation of using YAML as input format (which is ‘canonical Hugo’) and converting this during the static website generation process to JSON-LD is quite laborious and also potentially introduces issues during the conversion. Therefore, it is probably easier and more scalable to let the scientists write their metadata directly in JSON-LD, helped by some good examples and templates, and the Hugo software could even be extended to facilitate that as well.
+The key reusable element in this recipe is the use of Schema.org JSON-LD statements in any website to promote findability of metadata in search engines. Using the Hugo site generator has the advantage that it is very versatile and includes a lot of scientific/blogging authoring tools out of the box. However, the particular implementation of using YAML as input format (which is ‘canonical Hugo’) and converting this during the static website generation process to JSON-LD is quite laborious and also potentially introduces issues during the conversion. Therefore, it is probably easier and more scalable to let the scientists write their metadata directly in JSON-LD, helped by some good examples and templates, and the Hugo software could even be extended to facilitate that as well.
 
-Another next step that could be taken, besides publishing the JSON-LD metadata directly on the web, is to wrap it into a container such as [RO-CRATE](https://www.researchobject.org/ro-crate/) and publish these directly into a scientific artefacts repository. This would also help to sustain the availability of the data, because for all it’s great properties, static websites are only live as long as the webhost stays up, and the average website disappears after a few years. Hosting the website on [IPFS](https://ipfs.io/) and using a pinning service could be yet another remedy to fix this problem, but this would be out of scope of this recipe.
+Another next step that could be taken, besides publishing the JSON-LD metadata directly on the web, is to wrap it into a container such as [RO-CRATE](https://www.researchobject.org/ro-crate/) and publish these directly into a scientific artefacts repository. This would also help to sustain the availability of the data, because for all its great properties, static websites only live as long as the webhost stays up, and the average website disappears after a few years. Hosting the website on [IPFS](https://ipfs.io/) and using a pinning service could be yet another remedy to fix this problem, but this would be out of scope of this recipe.
 
 ### What should I read next?
 
@@ -407,6 +408,7 @@ Another next step that could be taken, besides publishing the JSON-LD metadata d
 | <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Emma Vos</div>   </div>    | <a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |  | Writing - Original Draft
 | <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'></img><div class="d-block">Jolanda Struebel</div>   </div>    | <a target="_blank" href='https://orcid.org/0000-0001-6675-4639'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>     |  | Writing - Original Draft
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing | Writing – Review & Editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/alasdairgray'><img class='avatar-style' src='https://avatars.githubusercontent.com/alasdairgray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div>         | <a target="_blank" href='http://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot-Watt University     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
 
 
 ---
