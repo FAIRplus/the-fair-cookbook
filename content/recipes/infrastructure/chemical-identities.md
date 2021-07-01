@@ -90,6 +90,13 @@ The last script calculates a SMILES for each entry in the SDF file:
 groovy smiles.groovy -f foo.sdf
 ```
 
+___
+
+## References
+
+```{footbibliography}
+```
+
 ---
 
 ## Authors
