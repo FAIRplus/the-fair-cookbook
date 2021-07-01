@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - testing
+      - update/recipes_wikidata
 
 jobs:
   build-and-deploy-to-other-repo:
