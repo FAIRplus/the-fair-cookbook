@@ -1,5 +1,7 @@
 # Registering Datasets
 "UCnn.x Registering a dataset in Wikidata"
+
+
 ## Main Objectives
 
 The main purpose of this recipe is:
@@ -7,8 +9,6 @@ The main purpose of this recipe is:
 > Learn how to register a dataset on WikiData with the appropriate citation.
 
 ___
-
-
 
 
 ## Requirements
@@ -26,18 +26,18 @@ To register datasets to WikiData requires a WikiData account.
 ## Main Content
 
 
-### Finding Datasets
+### 2.0 Finding Datasets
 
-There are several ways to locate datasets to be registered into WikiData. A consideration is that the dataset has the recommended license. For details related to finding datasets and determining the correct licenses please refer to Finding Compounds(add link here)
+There are several ways to locate datasets to be registered into Wikidata. A consideration is that the dataset has the recommended license. For details related to finding datasets and determining the correct licenses please refer to Finding Compounds(add link here)
 
-### Data Set Registration
+### 2.1 Data Set Registration
 
 After locating a dataset, details about the dataset should be recorded. Important details include, the DOI, the title of the dataset, the author(s) of the dataset, publication date of the dataset, and links to the source of the dataset.
 
 Details about the dataset can be translated into a quickstatement using https://scholia.toolforge.org/doi/\$DOI. This is done by replacing '\$DOI' with the DOI of the dataset you are registering.
 
 
-### Adding 
+### 2.2 Adding 
 
 With the quick statement of the dataset, the dataset can be added to WikiData using https://quickstatements.toolforge.org/. This step requires a WikiData account. 
 
