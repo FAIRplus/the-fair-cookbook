@@ -151,13 +151,13 @@ Relevant Schema.org types for studies and databases included:
 
 
 
-*   [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) 
-*   [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign) 
-*   [MedicalStudyStatus](https://schema.org/MedicalStudyStatus) 
-*   [MedicalCondition](https://schema.org/MedicalCondition) 
-*   [Drug](https://schema.org/Drug) 
-*   [Organization](https://schema.org/Organization)
-*   [Person](https://schema.org/Person) 
+*   [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy): main type that represents the medical study itself
+*   [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign): provides details about the design of the study
+*   [MedicalStudyStatus](https://schema.org/MedicalStudyStatus): provides the status of the study (although this is based on clinical trials, and observational studies will not use all statuses)
+*   [MedicalCondition](https://schema.org/MedicalCondition): used to link the study to the specific medical condition(s) it covers
+*   [Drug](https://schema.org/Drug): used to link the study to any pharmaceutical products it covers
+*   [Organization](https://schema.org/Organization): represents an organization, such as a university
+*   [Person](https://schema.org/Person): represents a person and is mainly used to indicate the authors of / researchers involved in the study
 
 The figure below shows part of the relevant metadata elements in the model.
 
