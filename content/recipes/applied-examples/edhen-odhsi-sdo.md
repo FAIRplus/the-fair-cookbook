@@ -28,13 +28,13 @@ The output of the COVID-19 study-a-thon (a OHDSI community initiative, involving
 ### Abbreviations
 
 
-*   EHDEN: European Health Data & Evidence Network
+*   [EHDEN](https://ehden.eu): European Health Data & Evidence Network
 *   ETL: Extract Transform Load
-*   JSON-LD: JSON - Linked Data
-*   OHDSI: Observational Health Data Sciences and Informatics
-*   OMOP CDM: Observational Medical Outcomes Partnership Common Data Model
-*   RDF: Resource Description Framework
-*   YAML: YAML Ain’t Markup Language (human-readable data-serialization language)
+*   [JSON-LD](https://www.w3.org/TR/json-ld11): JSON - Linked Data
+*   [OHDSI](https://www.ohdsi.org): Observational Health Data Sciences and Informatics
+*   [OMOP CDM](https://ohdsi.github.io/CommonDataModel): Observational Medical Outcomes Partnership Common Data Model
+*   [RDF](https://www.w3.org/TR/rdf-concepts): Resource Description Framework
+*   [YAML](https://yaml.org): YAML Ain’t Markup Language (human-readable data-serialization language)
 
 
 ## Introduction
