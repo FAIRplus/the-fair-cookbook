@@ -12,7 +12,8 @@ the EHDEN and OHDSI use case
 :recipe_type: guidance
 :reading_time_minutes: 15
 :intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
-:has_executable_code: nope
+:has_execu
+_code: nope
 :recipe_name: EDHNE ODHSI discovery with Schema.org
 ```` 
 
@@ -73,11 +74,9 @@ This recipe will describe a proof-of-concept that shows the step-by-step process
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-| [Turtle](https://www.w3.org/TR/turtle/) |   |   |
-| [YAML](https://yaml.org/spec/1.2/spec.html) |   |   |
-| [JSON-LD](https://www.w3.org/TR/json-ld11/) |  |  |
-|  | [Schema.org](https://schema.org) |  |
-|  |[Custom OHDSI extension](https://github.com/thehyve/ohdsi-schemas/blob/master/models/ohdsi_model/ohdsi_semantic_model.ttl) to schema.org | |
+|  [JSON-LD](https://www.w3.org/TR/json-ld11/) |  [Schema.org](https://schema.org) and [Custom OHDSI extension](https://github.com/thehyve/ohdsi-schemas/blob/master/models/ohdsi_model/ohdsi_semantic_model.ttl) to schema.org  | RDF  |
+| [YAML](https://yaml.org/spec/1.2/spec.html) | Custom HUGO template | NA |
+
 
 
 
@@ -103,7 +102,7 @@ Recipe Steps
 
 ### Inventory and prioritization of digital resources
 
-In order to start the FAIRification process of digital resources in OHDSI, it was important to inventorize which kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more. Each digital resource itself can consist of multiple (sub) digital resources, as shown in figure 1.
+In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more. Each digital resource itself can consist of multiple (sub) digital resources, as shown in figure 1.
 
 
 ```{figure} edhen-odhsi/Figure_1.jpg
@@ -184,7 +183,7 @@ alt:  RDF representation of two Schema.org types, written in Turtle
 RDF representation of two Schema.org types, written in Turtle
 ```
 
-<!-- ```bash
+<!-- ```turtle
 schema:MedicalObservationalStudy a owl:Class ;
        rdfs:isDefinedBy  <https://health-lifesci.schema.org/MedicalObservationalStudy> ;
        rdfs:label  "MedicalObservationalStudy"@en ;
@@ -316,7 +315,7 @@ Example JSON-LD representation of metadata instantiation of the OHDSI Covid19Ica
 
 
 
-### Static website generator HUGO
+### Generate final website version using HUGO
 
 The static site generator [HUGO](https://gohugo.io/) was used to create the [covid19.ohdsi.app](https://covid19.ohdsi.app/) website. To populate the website with metadata, so-called [archetypes](https://gohugo.io/content-management/archetypes/) were created. These archetypes are content templates that use the YAML format, as the JSON-LD format is not the easiest format to enter data, to manually populate the static website pages with metadata. Hence, these archetype templates are used for metadata instanciation of the website.
 (see chapter  [3]() and [4]() of this recipe). 
