@@ -23,19 +23,19 @@ _code: nope
 
 In this recipe, an example will be described on how to make observational health databases and observational studies more Findable, by creating a metadata model and a human and machine readable website for dissemination of these resources. 
 
-The output of the COVID-19 study-a-thon (a OHDSI community initiative, involving the IMI EHDEN project) held in March 2020, is used as proof-of-concept.
+The output of the [COVID-19](https://www.ohdsi.org/covid-19-updates) [study-a-thon](https://www.thehyve.nl/articles/studyathon-multidisciplinary-collaboration-in-biomedical-open-science) (a OHDSI community [initiative](https://www.ohdsi.org/88-hours), involving the IMI [EHDEN](https://ehden.eu) project) held in March 2020, is used as proof-of-concept.
 
 
 ### Abbreviations
 
 
-*   EHDEN: European Health Data & Evidence Network
+*   [EHDEN](https://ehden.eu): European Health Data & Evidence Network
 *   ETL: Extract Transform Load
-*   JSON-LD: JSON - Linked Data
-*   OHDSI: Observational Health Data Sciences and Informatics
-*   OMOP CDM: Observational Medical Outcomes Partnership Common Data Model
-*   RDF: Resource Description Framework
-*   YAML: YAML Ain’t Markup Language (human-readable data-serialization language)
+*   [JSON-LD](https://www.w3.org/TR/json-ld11): JSON - Linked Data
+*   [OHDSI](https://www.ohdsi.org): Observational Health Data Sciences and Informatics
+*   [OMOP CDM](https://ohdsi.github.io/CommonDataModel): Observational Medical Outcomes Partnership Common Data Model
+*   [RDF](https://www.w3.org/TR/rdf-concepts): Resource Description Framework
+*   [YAML](https://yaml.org): YAML Ain’t Markup Language (human-readable data-serialization language)
 
 
 ## Introduction
@@ -150,13 +150,13 @@ Relevant Schema.org types for studies and databases included:
 
 
 
-*   [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) 
-*   [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign) 
-*   [MedicalStudyStatus](https://schema.org/MedicalStudyStatus) 
-*   [MedicalCondition](https://schema.org/MedicalCondition) 
-*   [Drug](https://schema.org/Drug) 
-*   [Organization](https://schema.org/Organization)
-*   [Person](https://schema.org/Person) 
+*   [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy): main type that represents the medical study itself
+*   [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign): provides details about the design of the study
+*   [MedicalStudyStatus](https://schema.org/MedicalStudyStatus): provides the status of the study (although this is based on clinical trials, and observational studies will not use all statuses)
+*   [MedicalCondition](https://schema.org/MedicalCondition): used to link the study to the specific medical condition(s) it covers
+*   [Drug](https://schema.org/Drug): used to link the study to any pharmaceutical products it covers
+*   [Organization](https://schema.org/Organization): represents an organization, such as a university
+*   [Person](https://schema.org/Person): represents a person and is mainly used to indicate the authors of / researchers involved in the study
 
 The figure below shows part of the relevant metadata elements in the model.
 
