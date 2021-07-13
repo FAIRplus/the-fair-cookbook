@@ -1,5 +1,5 @@
 # Finding FAIR Experimental Datasets for Chemical Compounds
- "Using Wikidata to find experimental data related chemical compounds in a FAIR dataset"
+ "Using Wikidata to find experimental data related chemical compounds in a FAIR dataset."
 
 
  ````{panels_fairplus}
@@ -8,41 +8,44 @@
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
-:intended_audience: bioinformatician, data_scientist, data_engineer
+:intended_audience: bioinformatician, data_curator, data_scientist, data_engineer
 :has_executable_code: nope
-:recipe_name: How to find Experimental Datasets
+:recipe_name: How to find FAIR Datasets
 ```` 
 
 ## Main Objectives
 
-
-The main purpose of this recipe is:
-
-> Provid a summary statement about the purpose of the recipe.
-
-The goal of this recipe is to find compounds from scientifc sources to add to Wiki Data. There are many different trusted sources and repositories that contain research surrounding chemical compounds and, given the proper licenses, these compounds can be added to WikiData.
-
-It is important that this data be under the creative commons license CCO
-
+The goal of this recipe is to find compounds from scientific sources to add to Wiki Data. Many different trusted sources and repositories contain research surrounding chemical compounds, and, given the proper licenses, these compounds can be added to WikiData.
 ___
+
+## Dataset Extensions and Identifiers
+
+Here are some datasets types which are simple to add to WikiData. Each has a well-structured format. 
+
+* SDF file (FairSharing doi:[10.25504/fairsharing.ew26v7](https://doi.org/10.25504/fairsharing.ew26v7))
+
+* csv file (FairSharing [bsg-s001546/](https://fairsharing.org/bsg-s001546/))
+
+## Identifiers
+To add other related chemical identifiers to each compound at least universal identifier must be present. For example: 
+
+* SMILES (FairSharing doi:[10.25504/fairsharing.qv4b3c](https://doi.org/10.25504/fairsharing.qv4b3c))
+* InChI (FairSharing doi:[10.25504/fairsharing.ddk9t9](https://doi.org/10.25504/fairsharing.ddk9t9))
 
 
 
 
 ## Requirements:
-- technical requirements:
-   - pulbic license knowledge
-   - Data format knowledge
+* Public license knowledge
+* Data format knowledge
 ---
 
 
 ## Main Content
-
-
-Adding compounds to WikiData is a multi-step procedure. This process begins with identifying data with the correct licensing that can be added. There are many different resources available that have open source research. Moreover, much of this research has datasets accompagnying it. These datasets, or other various supplementary material, may be unstructured, semi-structured, or structured. Ideally datasets in a standardized format and has some sort of meta-information to help with identification. 
+Adding compounds to WikiData is a multi-step procedure. This process begins with identifying data with the correct licensing. There are many different resources available that have open-source research. Moreover, much of this research has datasets accompanying it: these datasets, or other various supplementary material, may be unstructured, semi-structured, or structured. Ideally, datasets in a standardized format and has some meta-information to help with identification. 
 
 ### Process
-1) Searching for chemistry papers on figshare
+1) Searching for chemistry papers on Figshare
 2) Filter papers via the CCO license search criteria
 3) Search for datasets or other supplementary material
 4) View the dataset contents to decern the quality

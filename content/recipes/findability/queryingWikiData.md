@@ -16,26 +16,26 @@
 
 
 
-The main purpose of this recipe is:
+The primary purpose of this recipe is:
 
-> How to generate globally unique, resolvable and persistent identifiers, starting from an InChIKey
+> How to generate globally unique, resolvable, and persistent identifiers, starting from an InChIKey
 
-Globally unique keys are crucial to the maintainance of a open source database such as wikiData. They ensure that entities such as chemical compounds are not duplicated throughout the database. For chemical compounds there are many identifiers that could be used to label a compound. However, many of these are not unique to the compound described. The formula for compounds may be the same for several different compounds. Moreovewr, for other identifiers such as the canonical smiles, a compound may may multiple smiles associated with it. Both of these scenarios are problematic for the purpose of adding entities to an open source database. 
+Globally unique keys are crucial to the maintenance of an open-source database such as WikiData. They ensure that entities such as chemical compounds are not duplicated throughout the database. For chemical compounds, many identifiers can label a compound. However, many of these are not unique to the compound described. For example, the formula for compounds may be the same for several different compounds. Moreover, for other identifiers such as the canonical smiles, a compound may multiple smiles associated with it. Both of these scenarios are problematic to add entities to an open source database. 
 
-Therefore, before we desire the identifier for our compound to be globally unique, resolvable, and persistent the inChI key is used as the identifier.
+Therefore, before we desire the identifier for our compound to be globally unique, resolvable, and persistent, the InChI key is used as the identifier.
 
 ___
 
 
-To creata a resolvable identifier for a compound without the inChIkey already present, another identifier is required. This could be any one of the following
+When creating a resolvable identifier for a compound without the inChIkey already present, another identifier is required. This  identifier could be any one of the following
 
-* smiles
-* inChi
+* Smiles
+* InChI
 * IUPACName
 
-The following scripts support csv files with headers. They take in a csv with one of the identifiers listed above and output a list of inChiKeys in a separate output file. 
+The following scripts support CSV files with headers. They take in a CSV with one of the identifiers listed above and output a list of InChiKeys in a separate output file. 
 
-The script requires that the column with the identifier is specified along with the specification of the type of identifier.
+The script requires that the column with the identifier is specified and the specification of the type of identifier.
 
 For example:
 

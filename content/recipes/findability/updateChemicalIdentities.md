@@ -13,7 +13,7 @@
 
 ## Main Objectives
 
-The main purpose of this recipe is:
+The primary purpose of this recipe is:
 
 > Determine chemical identifiers, given a compound
 > Updating chemical compounds in WikiData
@@ -45,7 +45,7 @@ This script is available from the chemistry development kit/
 
 
 ### 2.2 Updating WikiData
-With the available identifiers of a compound the compound can be updated in WikiData either:
+With the available identifiers of a compound the compound can be updated within WikiData using any of the following:
 
 - Direct edits to the compound page from the compound's WikiData page using the 'edit' functionality 
 - Quick statements at https://quickstatements.toolforge.org/
