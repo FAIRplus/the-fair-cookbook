@@ -57,8 +57,8 @@ Check this git repository for more detailed use instructions and where to find t
 
 ### Record validation
 
-When generating InChIs, the InChI library may return two success states reflecting issues with
-the compound record in the SDF file: WARNING and ERROR. This first script reports such issues:
+When generating InChIs, the InChI library may return several success states reflecting issues with
+the compound record in the SDF file, including: WARNING and ERROR. This first script reports such issues:
 
 ```bash
 groovy badRecords.groovy -f foo.sdf
