@@ -1,5 +1,17 @@
-# Finding Compounds
+# Finding FAIR Experimental Datasets for Chemical Compounds
  "Using Wikidata to find experimental data related chemical compounds in a FAIR dataset"
+
+
+ ````{panels_fairplus}
+:identifier_text: FCB053 
+:identifier_link: 'https://w3id.org/faircookbook/FCB053'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: bioinformatician, data_scientist, data_engineer
+:has_executable_code: nope
+:recipe_name: How to find Experimental Datasets
+```` 
 
 ## Main Objectives
 
@@ -17,10 +29,10 @@ ___
 
 
 
-## Requirements
-* technical requirements:
-   * pulbic license knowledge
-   * Data format knowledge
+## Requirements:
+- technical requirements:
+   - pulbic license knowledge
+   - Data format knowledge
 ---
 
 
