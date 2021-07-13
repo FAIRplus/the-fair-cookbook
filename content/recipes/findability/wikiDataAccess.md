@@ -1,4 +1,4 @@
-# WikiData Access
+# Wikidata Access
  ````{panels_fairplus}
 :identifier_text: FCB053 
 :identifier_link: 'https://w3id.org/faircookbook/FCB053'
