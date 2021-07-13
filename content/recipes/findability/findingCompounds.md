@@ -15,6 +15,8 @@
 
 ## Main Objectives
 
+Remove later*
+
 The goal of this recipe is to find compounds from scientific sources to add to Wiki Data. Many different trusted sources and repositories contain research surrounding chemical compounds, and, given the proper licenses, these compounds can be added to WikiData.
 ___
 
