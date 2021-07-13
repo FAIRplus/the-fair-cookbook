@@ -9,11 +9,11 @@
 :has_executable_code: nope
 :recipe_name: Gaining  
 ```` 
-" How to access metadata in Wikidata with RDF and SPARQL"
+" How to access metadata in Wikidata with RDF and SPARQL."
 ## Main Objectives
 
 
-The main purpose of this recipe is:
+The primary purpose of this recipe is:
 
 > How to gain access to WikiData
 > What restrictions are in place for a WikiData account
@@ -32,12 +32,12 @@ The first step to gaining access to WikiData is to register an account at (https
 
 
 ### Initial Restrictions
-After creating an account large scale edits are restricted until an account has been deemed a trusted account. Fifty edits are required for an account to be deemed trusted
+After creating an account, large-scale edits are restricted until an account has been deemed a trusted account. Fifty edits are required for an account to be considered to be trusted
 
 ## Conclusion
-In this recipe  we have gone over:
+In this recipe, we have gone over:
 1) How to create a WikiData account
-2) Regstrictions of editting
+2) Restrictions of editing
 
 
 ## Authors

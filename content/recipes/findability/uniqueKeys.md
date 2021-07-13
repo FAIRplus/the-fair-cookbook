@@ -11,13 +11,13 @@
 :recipe_name: Generating unique keys for Compounds
 ```` 
 
-" How to generate globally unique, resolvable and persistent identifiers, starting from an InChIKey"
+" How to generate globally unique, resolvable and persistent identifiers, starting from an InChIKey."
 ## Main Objectives
 
 
-The main purpose of this recipe is:
+The primary purpose of this recipe is:
 
-> Provid a summary statement about the purpose of the recipe.
+> Provide a summary statement about the meaning of the recipe.
 
 
 ## Requirements

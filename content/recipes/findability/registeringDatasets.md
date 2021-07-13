@@ -11,12 +11,12 @@
 :recipe_name: How to Register a Dataset with WikiData
 ```` 
 
-"UCnn.x Registering a dataset in Wikidata"
+"UCnn.x Registering a dataset in Wikidata."
 
 
 ## Main Objectives
 
-The main purpose of this recipe is:
+The primary purpose of this recipe is:
 
 > Learn how to register a dataset on WikiData with the appropriate citation.
 
@@ -25,10 +25,10 @@ ___
 
 ## Requirements
 
-To run the below scripts, you need a Groovy(add link here) installation. The Groovy script use version xxx.xxx of the Chemistry Development Kit(add link here), (see also doi:10.1186/s13321-017-0220-4).(Add link here) This library and its use in Groovy is further explained in the book Groovy Cheminformatics with the Chemistry Development Kit. (add link here)
+To run the below scripts, you need a Groovy installation. The Groovy script use version X.X of the Chemistry Development Kit (add the link here) (see also doi:10.1186/s13321-017-0220-4). (Add link here) This library and its use in Groovy is further explained in the book Groovy Cheminformatics with the Chemistry Development Kit. (add the link here)
 
 Click here for more detailed use instructions and where to find the tools:
-https://github.com/FAIRplus/fairplus-sdf(add link here)
+https://github.com/FAIRplus/fairplus-sdf(add the link here)
 
 To register datasets to WikiData requires a WikiData account.
 
@@ -40,18 +40,18 @@ To register datasets to WikiData requires a WikiData account.
 
 ### 2.0 Finding Datasets
 
-There are several ways to locate datasets to be registered into Wikidata. A consideration is that the dataset has the recommended license. For details related to finding datasets and determining the correct licenses please refer to Finding Compounds(add link here)
+There are several ways to locate datasets to be registered into Wikidata. A consideration is that the dataset has the recommended license. For details related to finding datasets and determining the correct licenses, please refer to Finding Compounds(add the link here)
 
 ### 2.1 Data Set Registration
 
-After locating a dataset, details about the dataset should be recorded. Important details include, the DOI, the title of the dataset, the author(s) of the dataset, publication date of the dataset, and links to the source of the dataset.
+After locating a dataset, record the details of the dataset. Essential attributes include the DOI, the title of the dataset, the author(s) of the dataset, publication date of the dataset, and links to the dataset source.
 
-Details about the dataset can be translated into a quickstatement using https://scholia.toolforge.org/doi/\$DOI. This is done by replacing '\$DOI' with the DOI of the dataset you are registering.
+Dataset details can be transformed into a Quickstatement using https://scholia.toolforge.org/doi/\$DOI. '\$DOI' in the link must be replaced with the DOI of the dataset you are registering.
 
 
 ### 2.2 Adding 
 
-With the quick statement of the dataset, the dataset can be added to WikiData using https://quickstatements.toolforge.org/. This step requires a WikiData account. 
+With the Quickstatement of the dataset, the dataset can be added to WikiData using https://quickstatements.toolforge.org/. This step requires a WikiData account. 
 
 
 ## Authors
