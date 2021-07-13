@@ -64,7 +64,7 @@ the compound record in the SDF file: WARNING and ERROR. This first script report
 groovy badRecords.groovy -f foo.sdf
 ```
 
-The output may look like:
+The output may look like this:
 
 ```
 Sulfinpyrazone  Omitted undefined stereo        WARNING
