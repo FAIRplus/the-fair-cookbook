@@ -15,15 +15,14 @@
 
 The primary purpose of this recipe is:
 
-> How to gain access to WikiData
-> What restrictions are in place for a WikiData account
-> WikiData and RDF
-> WikiData and SPARQL
+> How to gain access to Wikidata
+> What restrictions are in place for a Wikidata account
+> Wikidata and RDF
+> Wikidata and SPARQL
 
 ## Requirements
 
 ---
-small edit
 
 ## Main Content
 
