@@ -11,15 +11,15 @@ assignees:
   - 'proccaserra'
 ---
 
-The following checklists will guide you through the process of advancing a recipe through its pipeline. You can click on "Submit new Issue" now, and read on later.
+The following checklists will guide you through the process of advancing a recipe through its pipeline. You can click on "Submit new issue" now, and read on later.
 
 For issue meta-management, please conduct the following steps:
 
 - [ ] change the title of this issue to a title that gives sufficient detail about the recipe you want to bring into the cookbook
-- [ ] assign this issue also to yourself (at your right side: click "Assignees" -> "...")
+- [ ] assign this issue also to yourself (at your right side: click "Assignees" -> search for your username here on Github -> click it)
 
 Now you can delete the text above.
-If you needed to add a task to the list below, please think about amending the issue template: https://github.com/FAIRplus/the-fair-cookbook/blob/master/.github/ISSUE_TEMPLATE/meta-checklist.md
+If you needed to add a task to the list below, please think about amending the issue template: https://github.com/FAIRplus/the-fair-cookbook/blob/migrating/.github/ISSUE_TEMPLATE/meta-checklist.md
 Great! Now, to the actual tasks:
 
 - [ ] identify author
@@ -30,3 +30,4 @@ Great! Now, to the actual tasks:
 - [ ] conduct review
 - [ ] incorporate reviewer's comments
 - [ ] publish recipe
+
