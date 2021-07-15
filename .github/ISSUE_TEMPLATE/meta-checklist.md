@@ -4,6 +4,8 @@ about: This helps you to follow-up and visualize our progress.
 title: TitleOfRecipe
 labels: 
   - 'issue type: meta checklist'
+  - 'author's task: write abstract'
+  - 'editor's task: identify author'
 ---
 
 The following checklists will guide you through the process of advancing a recipe through its pipeline. You can click on "Submit new Issue" now, and read on later.
