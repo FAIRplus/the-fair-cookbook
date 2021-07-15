@@ -787,8 +787,8 @@ No
 <div class="section" id="graphical-overview">
 <h2><span class="section-number">7.8.1.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="../../../../_images/bs-data-mermaid.png"><img alt="The process of annotated a webpage with bioschema markup for Search Engine discovery" src="../../../../_images/bs-data-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.3 </span><span class="caption-text">The process of annotated a webpage with bioschema markup for Search Engine discovery.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../../../_images/bs-data-mermaid.png"><img alt="The process of annotated a webpage with Bioschemas markup to support machine processing of the page" src="../../../../_images/bs-data-mermaid.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.3 </span><span class="caption-text">The process of annotated a webpage with Bioschemas markup to support machine processing of the page.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -816,23 +816,23 @@ No
 <hr class="docutils" />
 <div class="section" id="method">
 <h2><span class="section-number">7.8.1.4. </span>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
-<p>We will outline the steps for marking up a page in your site. As a specific example, we will use the Wikidata page for <a class="reference external" href="https://www.wikidata.org/wiki/Q227339">BRCA1</a>.</p>
+<p>We will outline the steps for embedding machine processable mark up within a web page in your site. As a specific example, we will use the Wikidata page for <a class="reference external" href="https://www.wikidata.org/wiki/Q227339">BRCA1</a>.</p>
 <ol>
 <li><p>Identify a data page in your site for which you will develop markup</p></li>
 <li><p>Open the <a class="reference external" href="http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/">Bioschemas Generator</a></p>
 <ol class="simple">
-<li><p>Select the type of data page that you are marking up. In the example we will use <code class="docutils literal notranslate"><span class="pre">GeneRecord</span></code>. Here are the main data record profiles to choose from <sup><a class="reference external" href="#draft-profiles">1</a></sup>.</p></li>
+<li><p>Select the type of data page that you are marking up, i.e. the primary subject of the page. In the example we will use <code class="docutils literal notranslate"><span class="pre">Gene</span></code>. Here are the Bioschemas <a class="reference external" href="https://bioschemas.org/profiles/">profiles</a> that you can choose from <sup><a class="reference external" href="#draft-profiles">1</a></sup>.</p></li>
 </ol>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ChemicalSubstanceRecord</span></code> for a page about a chemical substance composed of molecular entities</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">GeneRecord</span></code> for a page about a gene</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MolecularEntityRecord</span></code> for a page about a single molecular entity</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ProteinRecord</span></code> for a page about a protein</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Sample</span></code> for a page about a biological sample</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ChemicalSubstance</span></code> for a page about a chemical substance composed of molecular entities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Gene</span></code> for a page about a gene</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MolecularEntity</span></code> for a page about a single molecular entity</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Protein</span></code> for a page about a protein</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BioSample</span></code> for a page about a biological sample</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Taxon</span></code> for a page about a taxon</p></li>
 </ul>
 <ol class="simple">
-<li><p>Enter the URL of the page in URL box, e.g. <code class="docutils literal notranslate"><span class="pre">https://www.wikidata.org/wiki/Q227339</span></code></p></li>
+<li><p>Enter the URL of the page in URL box, e.g. <code class="docutils literal notranslate"><span class="pre">https://www.wikidata.org/wiki/Q227339</span></code>. Note that this URL will be used as the identifier for the resource being described in the markup.</p></li>
 <li><p>Click on the <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Form</span></code> button</p></li>
 </ol>
 </li>
@@ -847,73 +847,67 @@ No
 <ul class="simple">
 <li><p>You should complete all <em>Minimum</em> properties and as many <em>Recommended</em> properties as possible. You can show/hide properties using the <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">Properties</span></code> buttons.</p></li>
 <li><p>The form defaults to the data type with the first alphabetical character, e.g. for <code class="docutils literal notranslate"><span class="pre">identifier</span></code> this defaults to <code class="docutils literal notranslate"><span class="pre">PropertyValue</span></code> but <code class="docutils literal notranslate"><span class="pre">Text</span></code> or <code class="docutils literal notranslate"><span class="pre">URL</span> </code> will be more appropriate in most cases</p></li>
-<li><p>For XXXRecord pages, the first <code class="docutils literal notranslate"><span class="pre">identifier</span></code> property refers to the web page while the second <code class="docutils literal notranslate"><span class="pre">identifier</span></code> property refers to the chemical, gene, protein, …</p></li>
 <li><p>The right side of the screen gives examples for properties, where these have been provided by the Bioschemas profile authors. Click on the <code class="docutils literal notranslate"><span class="pre">Show</span></code> button to see the example for a specific property. Click on <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Recommended</span></code>, or <code class="docutils literal notranslate"><span class="pre">Optional</span></code> to expand/contract the section and see the properties contained at that marginality level</p></li>
 </ul>
 </li>
 </ol>
-<!--    ![Bioschemas Generator GeneRecord profile form](BioschemasGeneratorGeneRecordForm.png) -->
-<div class="figure align-default" id="bioschemas-generator-generecord-profile-form">
-<a class="reference internal image-reference" href="../../../../_images/BioschemasGeneratorGeneRecordForm.png"><img alt="Bioschemas Generator GeneRecord profile form" src="../../../../_images/BioschemasGeneratorGeneRecordForm.png" style="height: 550px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.5 </span><span class="caption-text">Bioschemas Generator GeneRecord profile form.</span><a class="headerlink" href="#bioschemas-generator-generecord-profile-form" title="Permalink to this image">¶</a></p>
+<!--    ![Bioschemas Generator Gene profile form](BioschemasGeneratorGeneForm.png) -->
+<div class="figure align-default" id="bioschemas-generator-gene-profile-form">
+<a class="reference internal image-reference" href="../../../../_images/BioschemasGeneratorGeneForm.png"><img alt="Bioschemas Generator Gene profile form" src="../../../../_images/BioschemasGeneratorGeneForm.png" style="height: 550px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.5 </span><span class="caption-text">Bioschemas Generator Gene profile form.</span><a class="headerlink" href="#bioschemas-generator-gene-profile-form" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="simple">
 <li><p>You should now see the generated markup in <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code> format. You can click on the <code class="docutils literal notranslate"><span class="pre">Microdata</span></code> and <code class="docutils literal notranslate"><span class="pre">RDFa</span></code> tabs to see the same content rendered in the different formats. However, we recommend the use of <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code>. For our Wikidata example, we get the following markup</p></li>
 </ol>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span> <span class="p">&gt;</span>
 <span class="p">{</span>
- <span class="s2">&quot;@context&quot;</span><span class="o">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
- <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q227339&quot;</span><span class="p">,</span>
- <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;DataRecord&quot;</span><span class="p">,</span>
- <span class="s2">&quot;dct:conformsTo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14&quot;</span><span class="p">,</span>
- <span class="s2">&quot;identifier&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q227339&quot;</span><span class="p">,</span>
- <span class="s2">&quot;mainEntity&quot;</span><span class="o">:</span> <span class="p">{</span>
-   <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;Gene&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;dct:conformsTo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Gene/0.7-RELEASE&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;identifier&quot;</span><span class="o">:</span> <span class="s2">&quot;Q227339&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;protein-coding gene in the species Homo sapiens&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;encodesBioChemEntity&quot;</span><span class="o">:</span> <span class="p">{</span>
-     <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;BioChemEntity&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q17487737&quot;</span>
-   <span class="p">},</span>
-   <span class="s2">&quot;isPartOfBioChemEntity&quot;</span><span class="o">:</span> <span class="p">{</span>
-     <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;BioChemEntity&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q220677&quot;</span>
-   <span class="p">},</span>
-   <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q227339&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;alternateName&quot;</span><span class="o">:</span> <span class="p">[</span>
-     <span class="s2">&quot;breast cancer 1, early onset&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;BRCAI&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;BRCC1&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;BROVCA1&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;IRIS&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;PNCA4&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;PPP1R53&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;PSCP&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;RNF53&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;FANCS&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;breast cancer 1&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;BRCA1, DNA repair associated&quot;</span><span class="p">,</span>
-			<span class="s2">&quot;BRCA1 DNA repair associated&quot;</span>
-   <span class="p">],</span>
-   <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="p">{</span>
-     <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Protein_BRCA1_PDB_1jm7.png/220px-Protein_BRCA1_PDB_1jm7.png&quot;</span>
-   <span class="p">},</span>
-   <span class="s2">&quot;taxonomicRange&quot;</span><span class="o">:</span> <span class="p">{</span>
-     <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;Taxon&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q15978631&quot;</span>
-   <span class="p">},</span>
-   <span class="s2">&quot;sameAs&quot;</span><span class="o">:</span> <span class="p">[</span>
-     <span class="s2">&quot;https://meshb.nlm.nih.gov/#/record/ui?ui=D019398&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;https://www.ncbi.nlm.nih.gov/nuccore/NR_027676&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;http://identifiers.org/ensembl/ENSG00000012048&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;https://www.ncbi.nlm.nih.gov/gene/672&quot;</span>
-   <span class="p">]</span>
- <span class="p">},</span>
- <span class="s2">&quot;sameAs&quot;</span><span class="o">:</span> <span class="p">[</span>
-   <span class="s2">&quot;http://identifiers.org/ncbigene/672&quot;</span>
- <span class="p">]</span>
+  <span class="s2">&quot;@context&quot;</span><span class="o">:</span> <span class="s2">&quot;https://schema.org&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q227339&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;Gene&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;alternateName&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;breast cancer 1, early onset&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BRCAI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BRCC1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BROVCA1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;IRIS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PNCA4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PPP1R53&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PSCP&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RNF53&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FANCS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;breast cancer 1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BRCA1, DNA repair associated&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BRCA1 DNA repair associated&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;dct:conformsTo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Gene/0.7-RELEASE&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;protein-coding gene in the species Homo sapiens&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;encodesBioChemEntity&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;BioChemEntity&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q17487737&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q227339&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="o">:</span> <span class="s2">&quot;Q227339&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Protein_BRCA1_PDB_1jm7.png/220px-Protein_BRCA1_PDB_1jm7.png&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;isPartOfBioChemEntity&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;BioChemEntity&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q220677&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;BRCA1&quot;</span><span class="p">,</span> 
+  <span class="s2">&quot;sameAs&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;https://meshb.nlm.nih.gov/#/record/ui?ui=D019398&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://www.ncbi.nlm.nih.gov/nuccore/NR_027676&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;http://identifiers.org/ensembl/ENSG00000012048&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://www.ncbi.nlm.nih.gov/gene/672&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;http://identifiers.org/ncbigene/672&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;taxonomicRange&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;Taxon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q15978631&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q227339&quot;</span>
 <span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">script</span> <span class="p">&gt;</span>
 </pre></div>
@@ -925,38 +919,32 @@ No
 </li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;encodesBioChemEntity&quot;</span><span class="p">:</span> <span class="p">{</span>
-     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;BioChemEntity&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q17487737&quot;</span>
-   <span class="p">},</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;BioChemEntity&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q17487737&quot;</span>
+<span class="p">},</span>
 </pre></div>
 </div>
 <p>to</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;encodesBioChemEntity&quot;</span><span class="p">:</span> <span class="p">{</span>
-     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Protein&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q17487737&quot;</span>
-   <span class="p">},</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Protein&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q17487737&quot;</span>
+<span class="p">},</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> You can test that your JSON-LD is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
-</pre></div>
-</div>
+<p>You can test that your JSON-LD is valid syntax, and visualise your markup using the <a class="reference external" href="https://json-ld.org/playground/">JSON-LD Playground</a>.</p>
 <ol class="simple">
 <li><p>Once you are happy with your markup, include the <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code>, script tags and all, at the bottom of your HTML page template. Make sure that this is before the closing <code class="docutils literal notranslate"><span class="pre">&lt;/html&gt;</span></code> tag</p></li>
 <li><p>Replace the values in your markup with variables that your web page templating system will replace with values from your database. For example, the follow snippet uses variables of the form <code class="docutils literal notranslate"><span class="pre">%%%PAGEURL%%%</span></code></p></li>
 </ol>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span> <span class="p">&gt;</span>
 <span class="p">{</span>
- &quot;@context&quot;: &quot;http://schema.org&quot;,
- &quot;@id&quot;: &quot;%%%PAGEURL%%%&quot;,
- &quot;@type&quot;: &quot;DataRecord&quot;,
- &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14&quot;,
- &quot;identifier&quot;: &quot;%%%PAGEURL%%%&quot;,
- &quot;mainEntity&quot;: {
-   &quot;@type&quot;: &quot;Gene&quot;,
-   &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/Gene/0.7-RELEASE&quot;,
-   &quot;identifier&quot;: &quot;%%%ACCESSIONNUMBER%%%&quot;,
-   &quot;description&quot;: &quot;%%%DESCRIPTION%%%&quot;,
-   ...
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@id&quot;: &quot;%%%PAGEURL%%%&quot;,
+  &quot;@type&quot;: &quot;Gene&quot;,
+  &quot;dct:conformsTo&quot;: &quot;https://bioschemas.org/profiles/Gene/0.7-RELEASE&quot;,
+  &quot;identifier&quot;: &quot;%%%PAGEURL%%%&quot;,
+  &quot;description&quot;: &quot;%%%DESCRIPTION%%%&quot;,
+  ...
 }
 </pre></div>
 </div>
