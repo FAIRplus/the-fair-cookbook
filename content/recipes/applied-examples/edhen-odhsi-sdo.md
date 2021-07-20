@@ -150,6 +150,7 @@ Relevant Schema.org types for studies and databases included:
 
 
 
+*   [Dataset](https://schema.org/Dataset): represents a data file or database resulting from the study
 *   [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy): main type that represents the medical study itself
 *   [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign): provides details about the design of the study
 *   [MedicalStudyStatus](https://schema.org/MedicalStudyStatus): provides the status of the study (although this is based on clinical trials, and observational studies will not use all statuses)
@@ -277,7 +278,7 @@ It can be embedded in the HTML code in the back end of a website. Search engines
 For this proof-of-concept project, a website was created for dissemination of metadata on studies, databases and authors, generated and used during the OHDSI COVID-19 study-a-thon. Metadata on studies, databases and authors is displayed on this [website](https://covid19.ohdsi.app/), and is embedded as JSON-LD in the HTML code as well.
 <!-- TODO: Give example of a page with markup -->
 
-Embedding metadata in JSON-LD in HTML will enable web crawlers to scrape the metadata and will increase Findability by search engines. When for example querying [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/), the data should pop up when JSON-LD is embedded.
+Embedding metadata in JSON-LD in HTML will enable web crawlers to scrape the metadata and will increase Findability by search engines. When for example querying [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/), the data should pop up when JSON-LD is embedded, but only when the `schema:Dataset` class is included (see also the next section for details on this).
 
 
 
@@ -317,8 +318,7 @@ Example JSON-LD representation of metadata instantiation of the OHDSI Covid19Ica
 
 ### Generate final website version using HUGO
 
-The static site generator [HUGO](https://gohugo.io/) was used to create the [covid19.ohdsi.app](https://covid19.ohdsi.app/) website. To populate the website with metadata, so-called [archetypes](https://gohugo.io/content-management/archetypes/) were created. These archetypes are content templates that use the YAML format, as the JSON-LD format is not the easiest format to enter data, to manually populate the static website pages with metadata. Hence, these archetype templates are used for metadata instanciation of the website.
-(see chapter  [3]() and [4]() of this recipe). 
+The static site generator [HUGO](https://gohugo.io/) was used to create the [covid19.ohdsi.app](https://covid19.ohdsi.app/) website. To populate the website with metadata, so-called [archetypes](https://gohugo.io/content-management/archetypes/) were created. These archetypes are content templates that use the YAML format, as the JSON-LD format is not the easiest format to enter data, to manually populate the static website pages with metadata. Hence, these archetype templates are used for metadata instanciation of the website. (see the previous sections of this recipe). 
 
 Part of the content is populated automatically, by scraping information from the [OHDSI forum](https://forums.ohdsi.org/) and [README files](https://github.com/ohdsi-studies/StudyRepoTemplate) in the study-specific GitHub repositories. The metadata in YAML is converted to JSON-LD in the back end of the website. In the front end of the website, this meta data is shown in a human-readable way. 
 
@@ -382,20 +382,11 @@ The key reusable element in this recipe is the use of Schema.org JSON-LD stateme
 
 Another next step that could be taken, besides publishing the JSON-LD metadata directly on the web, is to wrap it into a container such as [RO-CRATE](https://www.researchobject.org/ro-crate/) and publish these directly into a scientific artefacts repository. This would also help to sustain the availability of the data, because for all its great properties, static websites only live as long as the webhost stays up, and the average website disappears after a few years. Hosting the website on [IPFS](https://ipfs.io/) and using a pinning service could be yet another remedy to fix this problem, but this would be out of scope of this recipe.
 
-### What should I read next?
+### Additional reading
 
->1. [EHDEN DeliverableD4.5 - Interoperability roadmap](https://zenodo.org/record/4474373)
->2. How to choose the correct data model for your (observational/clinical/study?) data:
->    1. FHIR
->    2. OMOP CDM
->    3. Open EHR
->    4. i2b2 tranSMART
->    5. CDISC/SDTM
->3. {ref}`fcb-find-seo`
->4. {ref}`fcb-interop-covid-metadata`
-<!-- Findability of data by search engines: follow-up of [Search Engine Optimization](https://fairplus.github.io/cookbook-dev/recipes/findability/seo.html) recipe, describing web crawling, robots.txt, sitemaps and possible roadblocks. -->
-<!-- 4. A metadata profile for observational studies (like the [A Transcriptiomics MetaData Profile](https://fairplus.github.io/cookbook-dev/recipes/interoperability/transcriptomics-metadata.html) recipe). -->
-
+>1. Findability of data by search engines: [Search Engine Optimization](https://w3id.org/faircookbook/FCB010) recipe, describing web crawling, robots.txt, sitemaps and possible roadblocks.
+>2. [Recipe](https://w3id.org/faircookbook/FCB026) on how to create a metadata profile.
+>3. [EHDEN DeliverableD4.5 - Interoperability roadmap](https://zenodo.org/record/4474373)
 ---
 
 ## Authors
