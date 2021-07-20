@@ -27,7 +27,7 @@
 
 ## Turning FAIR into practice
 
-The [FAIR Principles](https://doi.org/10.1038/sdata.2016.18) put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are aspirational and generic. The FAIR Cookbook guides *`researchers`* and *`data stewards`* in their FAIRification journey; and also provides *`policy makers`* and *`trainers`* with practical examples to recommend in their guidance and use in their educational material. 
+The [FAIR Principles](https://doi.org/10.1038/sdata.2016.18) put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are aspirational and generic. The FAIR Cookbook guides *`researchers`* and *`data stewards`* of the Life Science domain in their FAIRification journey; and also provides *`policy makers`* and *`trainers`* with practical examples to recommend in their guidance and use in their educational material. 
 
 <!-- 
 ## Persona-based content browsing
