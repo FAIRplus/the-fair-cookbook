@@ -51,6 +51,10 @@ CONTROLLED_VOCABULARY_EXECUTABLE_CODE = {
     "nope" : "No",
 }
 
+LINK_TO_THE_FAIRPLUS_LOGO = "https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png"
+
+###
+
 make_red_start = "\033[91m"
 make_red_end   = "\033[0m"
 def _make_string_red(string):
@@ -201,7 +205,7 @@ class PanelFairplus(Directive):
                 '<div class="card-body text--purple-dark">',
                     '<div class="title">',
                         f'<div style="flex-grow:1; margin-right:5px">{self.options["recipe_name"]}</div>',
-                        '<img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>',
+                        f'<img src="{LINK_TO_THE_FAIRPLUS_LOGO}" alt="FAIRPlus logo"> </img>',
                     '</div>',
                     '<div class="section">',
                         '<i class="sectionIcon fa fa-laptop fa-2x"></i>'
