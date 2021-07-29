@@ -167,9 +167,9 @@ This recipe in its current form has the following limitations:
 
 ## Authors
 
-| Name | Orcid | Affiliation | Type | Elixir Node | Credit Role |
-|------|-------|-------------|------|:-----------:|:-----------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><div class="d-block">Robert Giessmann</div></a> </div>      | <a target="_blank" href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Bayer AG                 | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i>   | <!-- no elixir node --> | Writing - Original Draft
+````{authors_fairplus}
+Robert: Writing - Original Draft
+````
 
 
 ---
