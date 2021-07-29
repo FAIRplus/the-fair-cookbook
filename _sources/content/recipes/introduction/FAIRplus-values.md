@@ -103,15 +103,17 @@ As there will be projects related to different subjects and/or with different ki
 A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR principles. This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
 
 
-## Authors
-
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Alejandra Delfin Rossaro</div>      </div>   | <a target="_blank" href='https://orcid.org/0000-0002-5423-4203'><i class='fab fa-orcid fa-2x text--orange'></i></a> | CNRS, Toulouse, France; Joint research unit on epidemiology and public health, Inserm (National Institute for Health and Medical Research) and University Toulouse III Paul Sabatier, Toulouse, France        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing - Original Draft |
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Anne Cambon-Thomsen</div>        </div>      | <a target="_blank" href='https://orcid.org/0000-0001-8793-3644'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Toulouse III Paul Sabatier, Toulouse, France        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing - Original Draft |
-
 ---
 
+## Authors
+
+````{authors_fairplus}
+Alejandra: Writing - Original Draft
+Anne: Writing - Original Draft
+````
+
+
+---
 
 ## License
 
