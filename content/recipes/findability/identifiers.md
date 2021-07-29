@@ -87,7 +87,7 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPR
 | Identifier resolution||repeatable|
 | content negotiation||repeatable|
 
-----
+---
 <!-- 
 ## FAIRification Objectives, Inputs and Outputs
 

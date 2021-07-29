@@ -47,7 +47,7 @@ The process of annotating a dataset webpage with bioschema markup for Search Eng
 | Interoperability | minimal |   |
 
 
-----
+---
 
 ## Method
 
@@ -212,7 +212,7 @@ Your site should now generate dataset pages with embedded markup.
 
 Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 

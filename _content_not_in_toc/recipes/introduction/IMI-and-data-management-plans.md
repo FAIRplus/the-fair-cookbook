@@ -4,7 +4,7 @@
 +++
 <br/>
 
-----
+---
 
 ````{panels}
 :container: container-lg pb-3

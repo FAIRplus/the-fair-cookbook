@@ -54,7 +54,7 @@ The table below lists common file validation use cases. This recipe provides sol
 | :------------- | :------------- | :------------- |
 |Interoperability |minimal |	repeatable|
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 

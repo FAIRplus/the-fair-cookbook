@@ -35,7 +35,7 @@ To provide a transparent Evaluation the recipe will:
 | :------------- | :------------- | :------------- |
 |  |  |  |
 
-----
+---
 
 ## Data Sharing
 This chapter explains what data sharing is. It defines a high-level logical data sharing model, to help a user who is not familiar with data sharing get an overview of the major components. Please note that in the real world the defined components are not always explicitly defined. Often implicit concept definitions are used and people are not always aware of the implicit definitions. Sometimes some of the components may even not exist, because for the given data sharing use case they might not be needed.

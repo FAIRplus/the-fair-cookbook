@@ -88,7 +88,7 @@ The tools list above aims to provide a basic overview of what is available on th
 | Interoperability | minimal | automated |
 
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 

@@ -42,7 +42,7 @@ alt:  Which ontology should be used?
 | Interoperability | minimal | repeatable |
 
 
-----
+---
 
 ## Context is everything
 

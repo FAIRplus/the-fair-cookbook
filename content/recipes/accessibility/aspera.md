@@ -28,7 +28,7 @@ alt: Aspera Data Transfer Process.
 Aspera Data Transfer Process.
 ```
 
-----
+---
 ## Obtain Aspera services
 
 ### Get accounts permissions

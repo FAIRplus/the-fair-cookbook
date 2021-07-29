@@ -63,7 +63,7 @@ Overview of the FAIRification process of a data matrix.
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 

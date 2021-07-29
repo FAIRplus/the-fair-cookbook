@@ -69,7 +69,7 @@ Philippe: Writing - Original Draft
 ````
 
 
-----
+---
 
 ## License
 

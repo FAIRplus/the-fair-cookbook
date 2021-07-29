@@ -54,7 +54,7 @@ Overview of key aspects in Identifier Mapping
 | Interoperability | minimal | repeatable |
 | Identifier mapping ||repeatable|
 
-----
+---
 <!-- 
 ## FAIRification Objectives, Inputs and Outputs
 

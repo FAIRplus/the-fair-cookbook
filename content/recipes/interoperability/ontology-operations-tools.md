@@ -45,7 +45,7 @@ For an updated contents, please check the [FAIR tooling repository](https://gith
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | automatable |
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 

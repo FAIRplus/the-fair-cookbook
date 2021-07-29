@@ -46,7 +46,7 @@ The process of depositing to CERN Zenodo.
 | :------------- | :------------- | :------------- |
 | Findability | minimal | repeatable |
 
-----
+---
 ## Introduction to Zenodo repository
 
 ### What is Zenodo?

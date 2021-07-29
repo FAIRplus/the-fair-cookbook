@@ -36,7 +36,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 
 ```
 
-----
+---
 
 ````{panels}
 :container: container-lg pb-3
@@ -165,7 +165,7 @@ The table is therefore structure to identify the capability, the **initial** mat
 this section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
 ```
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
