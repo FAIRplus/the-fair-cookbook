@@ -230,13 +230,16 @@ Script 3: [Transform to JSON.R](https://drive.google.com/file/d/18Ik3RryhWVFq9_2
 
 Supplementary figure 1: [Example of Sample 150-MET1-XEN2 in BioSamples database](https://drive.google.com/open?id=1ALOwGwB2RpWksH4TuGeye8qEnUm0ULVH)
 
-___
+
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img> | Writing - Original Draft
+````{authors_fairplus}
+Fuqi: Writing - Original Draft
+````
+
+
 ---
 
 ## License

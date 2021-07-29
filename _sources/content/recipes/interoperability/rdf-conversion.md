@@ -18,7 +18,7 @@ The main purpose of this recipe is:
 
 > Present an inventory of a selection of popular tools for converting datasets in different formats (e.g. CSV, JSON, RDBMs, XML) to RDF, and to provide guidance for choosing the right tool.
 
-___
+---
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
@@ -34,7 +34,7 @@ alt: Building an ontology with Robot tool
 Building an ontology with Robot tool.
 ```
 
-___
+---
 
 
 ## Requirements
@@ -57,7 +57,7 @@ ___
 | YARRRML<!-- TODO needs a link -->  |   |   |
 | YAML<!-- TODO needs a link -->     |   |   |
 
-___
+---
 
 ## Introduction
 
@@ -284,20 +284,20 @@ For python there’s the [RDFLib](https://rdflib.dev/) package. Working in Jupyt
 For Java the two most common libraries for working with RDF are [Apache Jena](https://jena.apache.org/) and [Eclipse RDF4J](https://rdf4j.org/).
 
 
-___
+---
 
 #### What should I read next?
 
 * [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo)
 
 
-___
+---
 
 ## Authors
 
 | Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role | 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/eelkevanderhorst'><img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'></img><div class="d-block">Eelke van der Horst</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0002-8777-5612'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i> | Writing – Original Draft   | 
+| <div class="firstCol"><a target="_blank" href='https://github.com/eelkevanderhorst'><img class='avatar-style' src='https://avatars.githubusercontent.com/eelkevanderhorst'></img><div class="d-block">Eelke van der Horst</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0002-8777-5612'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i> | Writing - Original Draft   | 
 | <div class="firstCol"><a target="_blank" href='https://github.com/JolandaS'><img class='avatar-style' src='https://avatars.githubusercontent.com/JolandaS'></img><div class="d-block">Jolanda Strubel</div></a>  </div>  | <a target="_blank" href='https://orcid.org/0000-0001-6675-4639'><i class='fab fa-orcid fa-2x text--orange'></i></a>   | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>  | Writing - Review & Editing |  
 | <div class="firstCol"><a target="_blank" href='https://github.com/keesvanbochove'><img class='avatar-style' src='https://avatars.githubusercontent.com/keesvanbochove'></img><div class="d-block">Kees van Bochove</div></a>        </div> | <a target="_blank" href='https://orcid.org/0000-0002-8589-0609'><i class='fab fa-orcid fa-2x text--orange'></i></a> | The Hyve  | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i> | Writing - Review & Editing | 
 
@@ -306,7 +306,7 @@ Specific contributions:
 * Eelke van der Horst: original format  
 * Jolanda Strubel: minor improvements
 * Kees van Bochove: minor improvements
-___
+---
 
 
 ## License

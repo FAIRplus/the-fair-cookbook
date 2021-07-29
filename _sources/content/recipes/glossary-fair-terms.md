@@ -152,7 +152,7 @@ Interoperability
 ## J
 ```{glossary}
 JSON
-	Javascript Online Notation a syntax for data structures and used to transmit data objects consisting of attribute–value pairs.
+	Javascript Online Notation a syntax for data structures and used to transmit data objects consisting of attribute-value pairs.
 ```
 
 ---
@@ -160,7 +160,7 @@ JSON
 ## K
 ```{glossary}
 KG
-	Knowledge graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge graphs are often used to store interlinked descriptions of entities – objects, events, situations or abstract concepts – with free-form semantics. (source: wikipedia)
+	Knowledge graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge graphs are often used to store interlinked descriptions of entities - objects, events, situations or abstract concepts - with free-form semantics. (source: wikipedia)
 
 KPI
 	Key Performance Indicator. a generic term to cover any metric  or indicator use to gauge efficiency.

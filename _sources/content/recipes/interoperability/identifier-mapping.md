@@ -98,7 +98,7 @@ Examples of types of mappings are:
     * Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB)
 
 
-___
+---
 
 ## Identifier Mappings
 
@@ -247,7 +247,7 @@ The following is an incomplete list of identifier mapping services.
 
 
 
-___
+---
 
 ## Conclusion
 
@@ -270,7 +270,7 @@ ___
     > * [Identifier Resolution Services](./findability/id-resolution.html) 
 -->
 
-___
+---
 
 
 
@@ -284,7 +284,7 @@ ___
 :style: alpha
 ``` -->
 
-___
+---
 
 ## Authors
 
@@ -293,11 +293,11 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div> | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft
 | <div class="firstCol"><a target="_blank" href='https://github.com/Chris-Evelo'><img class='avatar-style' src='https://avatars.githubusercontent.com/Chris-Evelo'></img><div class="d-block">Chris Evelo</div></a>      </div>    | <a target="_blank" href='https://orcid.org/0000-0002-5301-3142'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft
 | <div class="firstCol"><a target="_blank" href='https://github.com/egonw'><img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'></img><div class="d-block">Egon Willighagen</div></a>  </div>        | <a target="_blank" href='https://orcid.org/0000-0001-7542-0286'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/lucas-ubm'><img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'></img><div class="d-block">Lucas Giovanni </div></a>    </div>      | <a target="_blank" href='https://orcid.org/0000-0001-6518-9535'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing – review & editing
+| <div class="firstCol"><a target="_blank" href='https://github.com/lucas-ubm'><img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'></img><div class="d-block">Lucas Giovanni </div></a>    </div>      | <a target="_blank" href='https://orcid.org/0000-0001-6518-9535'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - review & editing
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Review - corrections & editing |
 
 
-___
+---
 
 ## License
 

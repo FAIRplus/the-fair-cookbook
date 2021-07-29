@@ -745,7 +745,7 @@ If you have access to the repository, you can access information in it about:
 
 
 
-___
+---
 
 ## Authors
 
