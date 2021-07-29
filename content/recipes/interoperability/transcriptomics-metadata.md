@@ -28,7 +28,7 @@ This document is aimed at anyone interested in the metadata, and specifically th
 
 
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -36,7 +36,7 @@ ___
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
 
-___
+---
 
 ## Transcriptomics Data model 
 
@@ -191,7 +191,7 @@ While it is essential that any transcriptomics metadata be annotated with ontolo
 
 Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to easily define a comprehensive metadata template to capture all the experimental variables to describe any transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata template is provided [here](creating-minimal-metadata-profiles.md)
 
-___
+---
 
 
 
@@ -204,7 +204,7 @@ ___
 | <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  |
 | <div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div>  | <a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a> | GSK  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |
 
-___
+---
 
 
 ## License

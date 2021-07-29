@@ -25,7 +25,7 @@ In addition to expanding its content, we will continue to add links to relevant 
 Last but not least, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, see how to, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
 
-___
+---
 
 ## License
 

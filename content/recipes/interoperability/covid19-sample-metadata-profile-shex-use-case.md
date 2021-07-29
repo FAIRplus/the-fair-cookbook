@@ -501,7 +501,7 @@ select distinct ?sample ?p ?o
 
 
 
-___ 
+--- 
 
 ## References
 
@@ -513,7 +513,7 @@ ___
 [5]. https://shex.io/shex-semantics/
 
 
-___
+---
 
 ## Authors
 
@@ -523,7 +523,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Review & Editing
 | <div class="firstCol"><a target="_blank" href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><div class="d-block">Robert Giessmann</div></a></div> | <a target="_blank" href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Bayer AG      | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Review & Editing
 
-___
+---
 
 ## License
 

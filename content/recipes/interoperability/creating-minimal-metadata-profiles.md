@@ -29,7 +29,7 @@ alt: Building a minimal metadata profile
 Building a minimal metadata profile.
 ```
 
-___
+---
 
 
 ## How to generate a metadata template

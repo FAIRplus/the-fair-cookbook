@@ -69,7 +69,7 @@ A1 -->|made available to|B
   
   
   
-  ___
+  ---
 
 ## Authors
 
@@ -77,7 +77,7 @@ A1 -->|made available to|B
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft|
 
-___
+---
 
 ## License
 

@@ -100,7 +100,7 @@ The tools list above aims to provide a basic overview of what is available on th
 | [data submission, annotation and curation](http://edamontology.org/topic_0219)| |
 
 
-___
+---
 
 ## Operations
 
@@ -211,14 +211,14 @@ To show how some of these tools may be used, the following related recipes provi
 2. OMOP ETL [link]( TODO link to recipe) (*in prepartion*)
 3. RDF ETL [link]( TODO link to recipe)  (*in prepartion*)
 -->
-___
+---
 
 ## References
 
 ```{footbibliography}
 ```
 
-___
+---
 
 ## Authors
 
@@ -230,7 +230,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing |
 
 
-___
+---
 
 ## License
 

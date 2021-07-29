@@ -498,7 +498,7 @@ Below there are links to some key recipes, click on them to explore their conten
 
 
 
-___
+---
 
 <!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
 

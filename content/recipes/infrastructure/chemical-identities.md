@@ -22,7 +22,7 @@ The main purpose of this recipe is:
 > To take an SDF file, validate the content for chemical inconsistencies, and generate
 > InChIs, InChIKeys, and SMILES for each entry in the SDF file.
 
-___
+---
 
 
 ## Requirements
@@ -43,7 +43,7 @@ ___
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChI](https://fairsharing.org/FAIRsharing.ddk9t9) |
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
 
-___
+---
 
 
 ## Creating InChI and SMILES identifiers for chemical structures
@@ -90,7 +90,7 @@ The last script calculates a SMILES for each entry in the SDF file:
 groovy smiles.groovy -f foo.sdf
 ```
 
-___
+---
 
 ## References
 
@@ -106,7 +106,7 @@ Egon: Writing - Original Draft, Conceptualization
 Philippe: Writing - Review & Editing
 ````
 
-___
+---
 
 ## License
 

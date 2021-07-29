@@ -47,7 +47,7 @@
 <p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p>
 ````
 
-___
+---
 
 ## Introduction
 
@@ -253,7 +253,7 @@ The principles will be the organizing principle for the FAIRplus Cookbook. While
 <p>TODO: add text here</p>
 ```` -->
 
-___
+---
  
 ## Conclusions
 
@@ -264,7 +264,7 @@ This section should be seen as a refresher for any one unclear about the FAIR pr
 > * [Assessing FAIRness](../assessing-fairness)
 > * [What is IMI](./what-is-IMI.md)
 
-___
+---
 
 ## Reference
 
@@ -277,7 +277,7 @@ ___
 1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
 2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6 -->
 
-___
+---
 
 ## Authors
 
@@ -288,7 +288,7 @@ ___
 ||||Review|
 ||||Review|
 
-___
+---
 
 ## License
 

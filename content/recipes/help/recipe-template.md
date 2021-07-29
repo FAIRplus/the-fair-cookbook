@@ -56,7 +56,7 @@ The main purpose of this recipe is:
 
 > Provid a summary statement about the purpose of the recipe.
 
-___
+---
 
 
 ## Graphical Overview
@@ -87,7 +87,7 @@ C-3PO_droid
 ```
 
 
-___
+---
 
 
 ## Requirements
@@ -152,7 +152,7 @@ Ideally, authors should mark up the information using either EDAM Ontology URI o
 | [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)  | [SRA XML](https://fairsharing.org/FAIRsharing.q72e3w)  |
 | [DICOM](https://fairsharing.org/FAIRsharing.b7z8by)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [OMOP](https://fairsharing.org/FAIRsharing.qk984b)  |
 
-___
+---
 
 ## Main Content
 
@@ -250,7 +250,7 @@ graph TD;
 ````
 
 
-___
+---
 
 ## Conclusion
 
@@ -272,7 +272,7 @@ ___
 ```
 
 
-___
+---
 
 ## Authors
 

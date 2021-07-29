@@ -33,7 +33,7 @@ alt:  Which ontology should be used?
 ```
 
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -353,7 +353,7 @@ TODO : fill in the links to what-should-I-read-next recipes
 > * How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document -->
 -->
 
-___
+---
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
 
@@ -385,7 +385,7 @@ Hripcsak, George et al. “Observational Health Data Sciences and Informatics (O
  -->
 
 
-___
+---
 
 ## Authors
 
@@ -397,7 +397,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/alasdairgray'><img class='avatar-style' src='https://avatars.githubusercontent.com/alasdairgray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div>         | <a target="_blank" href='http://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot-Watt University     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing |
 
 
-___
+---
 
 ## License
 

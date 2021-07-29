@@ -25,7 +25,7 @@ To provide a transparent Evaluation the recipe will:
 * Evaluate the common criteria against the LCSB offering
 * Propose potential improvements for the LCSB offering 
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -621,7 +621,7 @@ Often it is very time-consuming for a user to find from complex tool documents a
     For the How-To cards, it would be useful to understand the intent to write and share it. The data management topic is a very broad topic where you find already a lot of information on the web. The assumption is that it is about sharing special aspects for the management of biomedical research data. Also at least showing example workflows, or giving guidance about the content structure and quality would help to promote people for sharing.
 Depending on the number of shared How-To cards we could imagine that introduction of metadata would help to make them more findable.
 
-___
+---
 
 
 ## Authors
@@ -631,7 +631,7 @@ ___
 | Kurt Dauth |  Boehringer Ingelheim | | Writing - Original Draft |
 | Emiliano Reynares |  Boehringer Ingelheim | [0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716) | Writing - Review & Editing. | 
 
-___
+---
 
 
 ## License

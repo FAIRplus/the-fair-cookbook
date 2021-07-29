@@ -18,7 +18,7 @@ The main purpose of this recipe is:
 
 > Present an inventory of a selection of popular tools for converting datasets in different formats (e.g. CSV, JSON, RDBMs, XML) to RDF, and to provide guidance for choosing the right tool.
 
-___
+---
 
 
 ## Graphical Overview of the FAIRification Recipe Objectives
@@ -34,7 +34,7 @@ alt: Building an ontology with Robot tool
 Building an ontology with Robot tool.
 ```
 
-___
+---
 
 
 ## Requirements
@@ -57,7 +57,7 @@ ___
 | YARRRML<!-- TODO needs a link -->  |   |   |
 | YAML<!-- TODO needs a link -->     |   |   |
 
-___
+---
 
 ## Introduction
 
@@ -284,14 +284,14 @@ For python there’s the [RDFLib](https://rdflib.dev/) package. Working in Jupyt
 For Java the two most common libraries for working with RDF are [Apache Jena](https://jena.apache.org/) and [Eclipse RDF4J](https://rdf4j.org/).
 
 
-___
+---
 
 #### What should I read next?
 
 * [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo)
 
 
-___
+---
 
 ## Authors
 
@@ -306,7 +306,7 @@ Specific contributions:
 * Eelke van der Horst: original format  
 * Jolanda Strubel: minor improvements
 * Kees van Bochove: minor improvements
-___
+---
 
 
 ## License

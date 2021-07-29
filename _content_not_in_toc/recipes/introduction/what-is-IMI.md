@@ -93,7 +93,7 @@ _IMI calls_ Information about the Innovative Medicine Initiative calls and appli
 
 
 
-___
+---
 
 ## Conclusion
 
@@ -103,7 +103,7 @@ This piece mirrors information available from [IMI](https://www.imi.europa.eu) a
 > * [IMI and Data Management Plans]()
 > * [FAIR in the context of IMI]()
 
-___
+---
 
 ## Reference
 
@@ -113,7 +113,7 @@ ___
 4. https://www.imi.europa.eu/about-imi/how-imi-works
 5. https://www.imi.europa.eu/about-imi/governance
 
-___
+---
 
 ## Authors
 
@@ -124,7 +124,7 @@ ___
 ||||Review|
 ||||Review|
 
-___
+---
 
 ## License
 

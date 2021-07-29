@@ -34,7 +34,7 @@ The main purpose of this recipe is:
 > - Provide a guide on what factors should be considered when building a `data dictionary` for data collection, data processing and analysis. 
 > - Give an example of a data dictionary
 > - Provide an example of machine-actionable data dictionary template.
-___
+---
 
 ## User Stories
 
@@ -109,7 +109,7 @@ Data Dictionary.
 | 3\_SampleMapping.txt | SUBJECT\_ID        | Subject number            | https://schema.org/identifier                   | https://schema.org     | ordinal variable          | integer            |               |                   |                   |            |                          |                                 |                         |                | SAMPLE\_ID             | Y        | FORM 3               |                                             |
 | 3\_SampleMapping.txt | SAMPLE\_ID         | Sample ID                 | https://schema.org/identifier         | https://schema.org     | categorical variable      | string             |               |                   |                   |             |                          |                                 |                         |                | SUBJECT\_ID            | Y        | FORM 3               |                                             |                                          |
  
-___
+---
 
 ## Elements that should be included when building a data dictionary
 
@@ -210,7 +210,7 @@ Why? Simply because if affords several key data management processes to take pla
   -->
 
 
-___
+---
 
 ## Authors
 
@@ -221,7 +221,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 
 
-___
+---
 
 
 ## License

@@ -183,7 +183,7 @@ Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Re
 | :------------- | :------------- | :------------- |:------------- |
 | Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft | 
 
-___
+---
 
 ## License
 

@@ -22,7 +22,7 @@ The main purpose of this recipe is:
 
 To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release {footcite}`Madduri2019` {footcite}`minid-identifiers`.
 
-___
+---
 
 
 ## Graphical Overview
@@ -61,7 +61,7 @@ An overview of the identifier minting process.
 | :------------- | :------------- | :------------- |
 | [service invokation](http://edamontology.org/operation_3763)  | [file](http://purl.obolibrary.org/obo/STATO_0000002)  | [guid](http://edamontology.org/data_0976)  |
 
-___
+---
 
 
 ## Installing the minid 2.0 client
@@ -79,7 +79,7 @@ pip3 install --pre minid
 use the dev branch to obtain to source
 [minid github repository](https://github.com/fair-research/minid)
 
-___
+---
 
 ## Configuration
 
@@ -300,7 +300,7 @@ Below is a sample file manifest configuration file:
 Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets get be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
-____
+---_
 
 ## Reference
 

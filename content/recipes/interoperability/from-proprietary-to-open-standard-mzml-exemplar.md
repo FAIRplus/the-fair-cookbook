@@ -22,7 +22,7 @@
 - Apply the approach to a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project.
 
 
-___
+---
 
 
 
@@ -38,7 +38,7 @@ alt: Converting to an open standard file format
 Converting to an open standard file format.
 ```
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -65,7 +65,7 @@ ___
 
 
 
-___
+---
 
 
 ## Ingredients
@@ -299,7 +299,7 @@ Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be a
   >  - How to produce an ISA metadata file from a set of mzML fles<!-- TODO add a link to corresponding document -->
   >  - [How to deposit data to Zenodo](fcb-find-zenodo)<!-- TODO add a link to corresponding document -->
 
-___
+---
 
 
 ## References
@@ -318,7 +318,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 | <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition
 | <div class="firstCol"><a target="_blank" href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><div class="d-block">Robert Giessmann</div></a></div> | <a target="_blank" href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Bayer AG      | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Review & Editing
-___
+---
 
 ## License
 
