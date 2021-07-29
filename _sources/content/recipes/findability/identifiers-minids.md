@@ -249,7 +249,7 @@ $ minid -h
 
 Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>).
 
-----
+---
 
 ### file manifest format
 
@@ -311,7 +311,7 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 
 2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 
-----
+---
 
 ## Authors
 

@@ -51,7 +51,7 @@ Building and populating a data catalogue
 | Findability | minimal | repeatable |
 | Interoperability | minimal | repeatable |
 
-----
+---
 
 ## User Story
 For **`role.Data Scientists`**, it is essential to be able to *`action.identify`* and *`action.discover`* datasets of potential relevance in the context of *`action.data integration`* and *`action.meta-analytical work`*.
@@ -61,7 +61,7 @@ For **`role.Database Managers`**, a lightweight solution is needed to support a 
 For **`role.lab scientists`**, the key is to have a minimal burden when having to *`action.deposit`* a dataset to an institutional archive or simply *`action.register`* to dataset to the `data catalogue`. 
 
 
-----
+---
 ## Main body of the recipe
 
 ### What is a Data Catalogue?
@@ -98,7 +98,7 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
     * [Bayer AG Colid](https://bayer-group.github.io/COLID-Documentation/)
 
 
-----
+---
 
 
 ## Table of Data Standards
@@ -146,6 +146,7 @@ Susanna: Writing - Review & Editing, Funding acquisition
 ---
 
 ## License
+
 This page is released under the Creative Commons 4.0 BY license.
 
 <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

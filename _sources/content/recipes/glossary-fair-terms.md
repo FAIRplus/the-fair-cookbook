@@ -37,7 +37,7 @@ Controlled Terminology
 	a list of vetted concepts used by a computer system or a database for marking content to ensure annotation consistence and query recall.
 ```
 
-----
+---
 
 ## D
 ```{glossary}

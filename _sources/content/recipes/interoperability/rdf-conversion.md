@@ -46,7 +46,7 @@ Building an ontology with Robot tool.
 * other:
   * plan/model of how to map your source entities/properties to classes/types/properties, and how to create resource URIs <!-- TODO would be nice to link out to a recipe about minting -->
 
-----
+---
 
 ## Table of Data Standards
 

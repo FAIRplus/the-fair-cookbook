@@ -46,7 +46,7 @@ The process of annotated a webpage with Bioschemas markup to support machine pro
 | Findability | minimal | repeatable |
 | Interoperability | minimal |  |
 
-----
+---
 
 ## Method
 
@@ -211,7 +211,7 @@ You should complete this process for each different type of data that you includ
 
 Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[2](#bioschemas-validator)</sup>.
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 

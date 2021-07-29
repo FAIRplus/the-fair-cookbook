@@ -37,7 +37,7 @@ The process of annotating a data catalog webpage with bioschema markup for Searc
 ```
 
 
-----
+---
 
 ## Capability & Maturity Table
 
@@ -46,7 +46,7 @@ The process of annotating a data catalog webpage with bioschema markup for Searc
 | Findability | minimal | repeatable |
 | Interoperability | minimal |  |
 
-----
+---
 
 ## Method
 
@@ -231,7 +231,7 @@ Your site should now include DataCatalog markup.
 
 Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 

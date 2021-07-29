@@ -188,7 +188,7 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 * [Sample](https://bioschemas.org/profiles/Sample)
 * [Taxon](https://bioschemas.org/profiles/Taxon)
 
-----
+---
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |

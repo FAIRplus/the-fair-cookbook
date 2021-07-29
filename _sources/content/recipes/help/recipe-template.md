@@ -36,7 +36,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 
 ```
 
-----
+---
 
 ````{panels_fairplus}
 :identifier_text: RX.X
@@ -120,7 +120,7 @@ The table is therefore structure to identify the capability, the **initial** mat
 
 
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
