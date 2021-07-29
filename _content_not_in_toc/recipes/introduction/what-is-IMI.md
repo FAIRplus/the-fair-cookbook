@@ -37,7 +37,7 @@ _IMI_ The European Union Innovative Medicine Initiative, a public private partne
 
 ## How is IMI funded?
 
-IMI has been running since 2008, with  a first round covering the years 2008 – 2014, with a budget of 2 billion euros, making it the largest public private partnership in the world at that time. IMI has now entered a new phase, called IMI2, which will span 2014-2022 and will focus on a new set of priorities, such as to develop next generation vaccines, medicines and treatments, such as new antibiotics, and has a budget brought to 3.26 billion euros. 
+IMI has been running since 2008, with  a first round covering the years 2008 - 2014, with a budget of 2 billion euros, making it the largest public private partnership in the world at that time. IMI has now entered a new phase, called IMI2, which will span 2014-2022 and will focus on a new set of priorities, such as to develop next generation vaccines, medicines and treatments, such as new antibiotics, and has a budget brought to 3.26 billion euros. 
 - €1.638 billion (half the budget) comes from the Health, Demographic Change and Wellbeing Societal Challenge of Horizon 2020, the EU's framework programme for research and innovation;
 - €1.425 billion is committed to the programme by EFPIA companies;
 - up to €213 million can be committed by other life science industries or organisations that decide to contribute to IMI2 as members or Associated Partners in individual projects.

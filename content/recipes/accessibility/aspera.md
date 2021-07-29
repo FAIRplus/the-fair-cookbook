@@ -114,8 +114,8 @@ ascp version 3.9.6.176292
 ## Authors
 
 ````{authors_fairplus}
-Peter: Writing – Original Draft
-Philippe: Writing – Review & Editing, Conceptualization
+Peter: Writing - Original Draft
+Philippe: Writing - Review & Editing, Conceptualization
 ````
 
 --- 

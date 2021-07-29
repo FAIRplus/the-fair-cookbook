@@ -103,7 +103,7 @@ ___
 
 ````{authors_fairplus}
 Egon: Writing - Original Draft, Conceptualization
-Philippe: Writing – Review & Editing
+Philippe: Writing - Review & Editing
 ````
 
 ___

@@ -49,7 +49,7 @@
 
 ___
 
-Starting with IMI2 and the stipulation of article 29.2 of the new [IMI-JU Grant Agreement](https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement–AGA.pdf) [1], **if they elect to disseminate results**, rather than patent and exploit them, IMI2 grant awardees must ensure that all published peer reviewed publications produced using data generated during IMI projects must be made open access. 
+Starting with IMI2 and the stipulation of article 29.2 of the new [IMI-JU Grant Agreement](https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement-AGA.pdf) [1], **if they elect to disseminate results**, rather than patent and exploit them, IMI2 grant awardees must ensure that all published peer reviewed publications produced using data generated during IMI projects must be made open access. 
 
 From Call 11 onwards, **all IMI2 projects participate `by default` in the `Horizon 2020 Open Research Data Pilot (ORDP)`**, covered by Article 29.3 of the IMI2 Grant Agreement.
 Although IMI2 encourages grant awardees to remain part of the ORDP, grant awardees retain the right to opt-out if necessary.
@@ -260,7 +260,7 @@ ___
 ## Reference
 
 1. https://www.imi.europa.eu/resources-projects/open-access-and-data-management-projects
-2. https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement–AGA.pdf
+2. https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement-AGA.pdf
 3. https://ec.europa.eu/research/participants/data/ref/h2020/other/gm/reporting/h2020-tpl-oa-data-mgt-plan-annotated_en.pdf
 4. FAIRsharing.org
 

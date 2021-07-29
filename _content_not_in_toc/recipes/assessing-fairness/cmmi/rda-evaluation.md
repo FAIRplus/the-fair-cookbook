@@ -15,11 +15,11 @@ The RDA Data Maturity model suggests two different evaluation methods:
 
 The indicator maturity levels are defined as follows:
 
-     0 – not applicable
-     1 – not being considered yet
-     2 – under consideration or in planning phase
-     3 – in implementation phase
-     4 – fully implemented
+     0 - not applicable
+     1 - not being considered yet
+     2 - under consideration or in planning phase
+     3 - in implementation phase
+     4 - fully implemented
 
 ## Measuring Pass-or-Fail
 - Focus on determining how a resource under evaluation performs on meeting the indicators across the FAIR areas.
