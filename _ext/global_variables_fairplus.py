@@ -148,3 +148,16 @@ CONTROLLED_AUTHOR_LIST = {
 "Wei"          : { "github_handle" : "weiguUL",          "name" : "Wei Gu",                     "orcid" : "0000-0003-3951-6680",        "affiliation" : "University of Luxembourg",                        "type_of_affiliation" : "academia",         "elixir_node" : "LU"        }, 
 "Yojana"       : { "github_handle" : "YojanaGadiya",     "name" : "Yojana Gaidya",              "orcid" : "0000-0002-7683-0452",        "affiliation" : "Fraunhofer Institute",                            "type_of_affiliation" : "academia",         "elixir_node" : ""          }, 
 }
+
+
+CONTROLLED_LICENSE_LIST = {
+    "CC-BY-4.0": """This page is released under the Creative Commons 4.0 BY license.
+
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+""", 
+    "CC0-1.0": """This page is released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+
+<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"><img src="[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)" height="20"/></a>
+"""
+
+}

@@ -29,8 +29,6 @@ class AuthorsFairplus(Directive):
 
     def _parse_content(self):
 
-        self.author_dict 
-
         for line in self.content:
             if line.strip() == "":
                 continue

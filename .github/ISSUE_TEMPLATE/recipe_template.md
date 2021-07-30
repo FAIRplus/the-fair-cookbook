@@ -282,20 +282,20 @@ graph TD;
 > * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
 > * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. {ref}`fcb-intro-fair-principles`
 
+
 ---
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  | specific contribution |
-| :------------- | :------------- | :------------- |:------------- |:------------- |
-| First Name Last Name |  Organization, Country| [0000-0000-0000-0000](https://orcid.org/orcid.org/0000-0000-0000-0000) | Writing - Original Draft | original format |
+````{authors_fairplus}
+YourName: YourContribution
+````
+
 
 ---
 
-
-
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

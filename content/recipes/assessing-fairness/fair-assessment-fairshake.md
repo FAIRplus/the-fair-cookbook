@@ -716,6 +716,6 @@ Daniel: Writing - Original Draft, Code
 
 ## License
 
-This page is released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
-
-<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"><img src="[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)" height="20"/></a>
+````{license_fairplus}
+CC0-1.0
+````
