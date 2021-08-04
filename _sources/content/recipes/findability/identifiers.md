@@ -466,7 +466,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 ## Authors
 
 ````{authors_fairplus}
-Andrea: Conceptualization
+AndreaSplendiani: Conceptualization
 Alasdair: Writing - Original Draft
 Chris: Writing - Original Draft
 Egon: Writing - Original Draft
