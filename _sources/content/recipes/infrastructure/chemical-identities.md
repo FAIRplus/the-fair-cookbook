@@ -90,6 +90,15 @@ The last script calculates a SMILES for each entry in the SDF file:
 groovy smiles.groovy -f foo.sdf
 ```
 
+## Conclusion
+
+This recipe explained who to validate the chemical structures in an SDF file,
+and convert them to SMILES, InChI, and InChIKey. The latter can then be used
+with BridgeDb and its metabolite ID mapping databases to get additional identifiers.
+
+### What should I read next?
+* [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)
+
 ---
 
 ## References
