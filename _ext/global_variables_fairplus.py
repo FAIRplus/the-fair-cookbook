@@ -147,7 +147,7 @@ CONTROLLED_AUTHOR_LIST = {
 "Vitaly"            : { "github_handle" : "sedlyarov",        "name" : "Vitaly Sedlyarov",           "orcid" : "0000-0002-9872-3535",        "affiliation" : "Boehringer-Ingelheim AG",                         "type_of_affiliation" : "efpia",            "elixir_node" : ""          }, 
 "Wei"               : { "github_handle" : "weiguUL",          "name" : "Wei Gu",                     "orcid" : "0000-0003-3951-6680",        "affiliation" : "University of Luxembourg",                        "type_of_affiliation" : "academia",         "elixir_node" : "LU"        }, 
 "Yojana"            : { "github_handle" : "YojanaGadiya",     "name" : "Yojana Gaidya",              "orcid" : "0000-0002-7683-0452",        "affiliation" : "Fraunhofer Institute",                            "type_of_affiliation" : "academia",         "elixir_node" : ""          }, 
-"Zachary"           : { "github_handle" : "zjwarnes",         "name" : "Zachary Warnes",             "orcid" : "",                           "affiliation" : "Maastricht University",                           "type_of_affiliation" : "academia",         "elixir_node" : "NL"        }, 
+"Zachary"           : { "github_handle" : "zjwarnes",         "name" : "Zachary Warnes",             "orcid" : "0000-0002-7777-6013",        "affiliation" : "Maastricht University",                           "type_of_affiliation" : "academia",         "elixir_node" : "NL"        }, 
 }
 
 
