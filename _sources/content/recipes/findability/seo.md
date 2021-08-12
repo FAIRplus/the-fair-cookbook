@@ -211,11 +211,10 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 
 ## Authors
 
-<!-- TODO seems unlikely that all authors did review, but noone the original draft. Clarify -->
 ````{authors_fairplus}
-Alasdair: Writing - Review & Editing
+Philippe: Writing - Original Draft, Conceptualization
+Alasdair: Writing - Original Draft, Writing - Review & Editing
 Leyla: Writing - Review & Editing
-Philippe: Writing - Review & Editing, Conceptualization
 ````
 
 
