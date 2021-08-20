@@ -170,19 +170,32 @@ alt:  part of the relevant metadata elements in the model
 ---
  part of the relevant metadata elements in the model
 ```
+RDF representation of two Schema.org types, written in Turtle:
+```
+schema:MedicalObservationalStudy a owl:Class ;
+       rdfs:isDefinedBy  
+<https://health-lifesci.schema.org/MedicalObservationalStudy> ;
+       rdfs:label  "MedicalObservationalStudy"@en ;
+       rdfs:subClassOf schema:MedicalStudy .
+schema:Drug a owl:Class ;
+       rdfs:isDefinedBy  
+<https://health-lifesci.schema.org/Drug> ;
+       rdfs:label  "Drug"@en ;
+       rdfs:subClassOf schema:Substance .
+```
 
 <!-- ![alt_text](images/image3.png) -->
 
 
 
-```{figure} edhen-odhsi/Figure_2B.jpg
+<!--```{figure} edhen-odhsi/Figure_2B.jpg
 ---
 width: 600px
 name:  RDF representation of two Schema.org types, written in Turtle
 alt:  RDF representation of two Schema.org types, written in Turtle
 ---
 RDF representation of two Schema.org types, written in Turtle
-```
+``` -->
 
 <!-- ```turtle
 schema:MedicalObservationalStudy a owl:Class ;
@@ -305,15 +318,65 @@ An important note to make here is that to make the data findable for Google Data
 ![alt_text](images/image6.png ) -->
 
 
-```{figure} edhen-odhsi/Figure_5_R1.pdf
+<!-- ```{figure} edhen-odhsi/Figure_5_R1.pdf
 ---
 width: 600px
 name:  Example JSON-LD representation of metadata instantiation of the OHDSI Covid19Icarius study
 alt:  Example JSON-LD representation of metadata instantiation of the OHDSI Covid19Icarius study
 ---
 Example JSON-LD representation of metadata instantiation of the OHDSI Covid19Icarius study
+``` -->
+Example JSON-LD representation of metadata instantiation of the OHDSI Covid19Icarius study:
 ```
-
+{ "@graph" : [ 
+     { "@id" : "study:Covid19Icarius",
+       "@type" : "schema:MedicalObservationalStudy",
+       "analyticsUseCase" : "ohdsi:PopulationLevelEstimation",
+       "healthCondition" : "concept:37311061",
+       "studySubject" : "concept:45775375"  },
+    {
+      "@id": "concept:37311061",
+      "@type": "schema:MedicalCondition",
+      "code": {
+           "@type": "schema:MedicalCode",
+           "codeValue": "840539006",S
+           "codingSystem": "SNOMED",
+           "sameAs": "http://snomed.info/id/840539006"
+      },
+      "identifier": "37311061",
+      "name": "Disease caused by 2019-nCoV"
+     },
+   {
+      "@id": "concept:45775375",
+      "@type": "schema:Drug",
+      "code": {
+           "@type": "schema:MedicalCode",
+           "codeValue": "1546359",
+           "codingSystem": "RxNorm"
+      },
+      "identifier": "45775375",
+      "name": "quinaprilat"
+     }
+   ],
+ "@context" : {
+     "analyticsUseCase" : {
+          "@id" : "http://data.ohdsi.org/analyticsUseCase",
+          "@type" : "@id" },
+      "healthCondition" : {
+          "@id" : "http://schema.org/healthCondition",
+          "@type" : "@id"},
+      "studySubject" : {
+          "@id" : "http://schema.org/studySubject",
+          "@type" : "@id" },
+      "name" : {
+          "@id" : "http://schema.org/name" },
+      "identifier" : {
+          "@id" : "http://schema.org/identifier" },
+      "code" : {
+          "@id" : "http://schema.org/code",
+          "@type" : "@id" }}
+}
+```
 
 
 ### Generate final website version using HUGO
