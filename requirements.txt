@@ -54,7 +54,7 @@ nbdime==3.0.0
 nbformat==5.1.3
 nest-asyncio==1.5.1
 nested-lookup==0.2.22
-notebook==6.3.0
+notebook==6.4.1
 packaging==20.9
 pandocfilters==1.4.3
 parso==0.8.2
