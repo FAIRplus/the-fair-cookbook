@@ -1,5 +1,5 @@
 (fcb-nd4bb)=
-# ND4BB - clinical trial datasets
+# ND4BB - chemical activities datasets
 
 <!-- 
 TODO: check whether all files can be put on Zenodo
@@ -11,7 +11,7 @@ TODO: clarify authors
 :identifier_link: http://w3id.org/faircookbook/FCB043
 :difficulty_level: 4
 :recipe_type: applied_example
-:recipe_name: ND4BB - clinical trial datasets
+:recipe_name: ND4BB - chemical activities datasets
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator
 :has_executable_code: nope
