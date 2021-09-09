@@ -21,7 +21,7 @@ _code: nope
 
 ## Main objectives
 
-In this recipe, an example will be described on how to make observational health databases and observational studies more Findable (notably [FAIR principles](https://www.go-fair.org/fair-principles/) F2 and F4) and interoperability (principles I1 and I2), by creating a metadata model and a human and machine readable website for dissemination of these resources. 
+In this recipe, an example will be described on how to make observational health databases and observational studies more Findable (notably the FAIR principles [F2](https://www.go-fair.org/fair-principles/f2-data-described-rich-metadata/) and [F4](https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/)) and interoperability (principles [I1](https://www.go-fair.org/fair-principles/i1-metadata-use-formal-accessible-shared-broadly-applicable-language-knowledge-representation/) and [I2](https://www.go-fair.org/fair-principles/i2-metadata-use-vocabularies-follow-fair-principles/)), by creating a metadata model and a human and machine readable website for dissemination of these resources. 
 
 The output of the [COVID-19](https://www.ohdsi.org/covid-19-updates) [study-a-thon](https://www.thehyve.nl/articles/studyathon-multidisciplinary-collaboration-in-biomedical-open-science) (a OHDSI community [initiative](https://www.ohdsi.org/88-hours), involving the IMI [EHDEN](https://ehden.eu) project) held in March 2020, is used as proof-of-concept.
 
