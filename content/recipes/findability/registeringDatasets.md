@@ -8,7 +8,7 @@
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
 :has_executable_code: nope
-:recipe_name: How to Register a Dataset with WikiData
+:recipe_name: How to Register a Dataset with Wikidata
 ```` 
 
 "UCnn.x Registering a dataset in Wikidata."
@@ -17,7 +17,7 @@
 ## Main Objectives
 
 
-Learn how to register a dataset on WikiData with the appropriate citation.
+Learn how to register a dataset on Wikidata with the appropriate citation.
 
 ___
 
@@ -29,7 +29,7 @@ To run the below scripts, you need a Groovy installation. The Groovy script use 
 Click here for more detailed use instructions and where to find the tools:
 https://github.com/FAIRplus/fairplus-sdf(add the link here)
 
-To register datasets to WikiData requires a WikiData account.
+To register datasets to Wikidata requires a Wikidata account.
 
 ---
 
@@ -52,7 +52,7 @@ Dataset details can be transformed into a Quickstatement using https://scholia.t
 
 ### Adding 
 
-With the Quickstatement of the dataset, the dataset can be added to WikiData using https://quickstatements.toolforge.org/. This step requires a WikiData account. 
+With the Quickstatement of the dataset, the dataset can be added to Wikidata using https://quickstatements.toolforge.org/. This step requires a Wikidata account. 
 
 
 ## Authors
