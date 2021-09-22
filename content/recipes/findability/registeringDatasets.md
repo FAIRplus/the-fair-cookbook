@@ -19,6 +19,7 @@
 Useful datasets become more useful when they are easily found. The **FAIR principles** state that: 
 
 > F1. (Meta)data are assigned a globally unique and persistent identifier
+> 
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol 
 
 This recipe is about making the dataset metadata more FAIR:
@@ -39,7 +40,7 @@ To register datasets to [Wikidata](https://www.wikidata.org/) requires a Wikidat
 
 This recipes takes an interest in datasets with information about small chemical compounds, particularly datasets with an SDF file or spreadsheet with SMILES.
 But the registration itself in Wikidata to make it more findable works for any dataset. The registration in Wikidata makes the metadata more findable by
-itself. This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
+itself {footcite}`Waagmeester2020`. This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
 recipe easier to follow.
 
 Importantly, Wikidata allows the dataset to be used as reference in Wikidata to support statements. For example, if the dataset contains a logP value,
@@ -77,6 +78,12 @@ Dataset details can be transformed into a Quickstatement using https://scholia.t
 ### Adding 
 
 With the Quickstatement of the dataset, the dataset can be added to Wikidata using https://quickstatements.toolforge.org/. This step requires a Wikidata account. 
+
+
+## References
+
+```{footbibliography}
+```
 
 
 ---
