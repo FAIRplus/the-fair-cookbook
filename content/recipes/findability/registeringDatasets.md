@@ -78,7 +78,7 @@ DOI, the title of the dataset, the author(s) of the dataset, publication date of
 dataset source. You may need this later.
 
 With the DOI, there is a good chance that Scholia {footcite}`Nielsen2017` can help you register the dataset in Wikidata.
-You can use the `https://scholia.toolforge.org/doi/\$DOI` pattern ('\$DOI' in the link must be replaced with the
+You can use the `https://scholia.toolforge.org/doi/$DOI` pattern ('$DOI' in the link must be replaced with the
 DOI of the dataset you are registering) to check if your dataset is already listed in
 Wikidata. If not this page will use the DOI to convert the metadata transformed into a Quickstatements.
 
@@ -87,18 +87,18 @@ Wikidata. If not this page will use the DOI to convert the metadata transformed 
 With the Quickstatements of the dataset, the dataset can be added to Wikidata using
 the https://quickstatements.toolforge.org/ website. This is the step which requires a Wikidata account.
 
-### Step 1: Wikidata login
+#### Step 1: Wikidata login
 
 First, log in with Wikidata or check if you already are.
 
-### Step 2: Authorize Quickstatements
+#### Step 2: Authorize Quickstatements
 
 After step 1, authorize Quickstatements with your Wikidata account using the "Log in" button
 in the top right corner of the Quickstatements website.
 
-### Step 3: Open the Scholia page
+#### Step 3: Open the Scholia page
 
-If your dataset is not already Wikidata, use the `https://scholia.toolforge.org/doi/\$DOI` Scholia
+If your dataset is not already Wikidata, use the `https://scholia.toolforge.org/doi/$DOI` Scholia
 page to create Quickstatements. The result should look something like this:
 
 ```{figure} images/scholia.png
@@ -109,13 +109,49 @@ alt: Scholia page showing Quickstatements for a dataset not yet in Wikidata
 Scholia page showing Quickstatements for a dataset not yet in Wikidata.
 ```
 
+#### Step 4: Execute the Quickstatements
 
+On the page from Step 3, click the blue "Submit to Quickstatements" button which will take you to the
+Quickstatements website, which will look something like this:
+
+```{figure} images/quickstatements.png
+---
+name: quickstatements
+alt: Quickstatements showing the same Quickstatements but now parsed and ready for applying to Wikidata
+---
+Quickstatements showing the same Quickstatements but now parsed and ready for applying to Wikidata.
+```
+
+After you click "Run", Quickstatements starts making edits in Wikidata, and when done, it should look
+like this:
+
+```{figure} images/quickstatements2.png
+---
+name: quickstatements2
+alt: Quickstatements showing the same Quickstatements after applying to Wikidata
+---
+Quickstatements showing the same Quickstatements after applying to Wikidata.
+```
+
+### Optional: adding additional information
+
+The result page from Step 4 will include a link to the newly created Wikidata item. It will have
+a Wikidata identifer starting with an "Q", for example [Q108653787](https://www.wikidata.org/wiki/Q108653787).
+
+Additional information that can be provided include:
+
+* links to Wikidata items for authors using the P50 property for "author"
+* keywords
+* other metadata
+
+This [Use Scholia and Wikidata to find scientific literature](https://laurendupuis.github.io/Scholia_tutorial/)
+tutorial provides more information on how Wikidata uses keywords to further expose literature,
+but works identical to other research output, such as datasets.
 
 ## References
 
 ```{footbibliography}
 ```
-
 
 ---
 
