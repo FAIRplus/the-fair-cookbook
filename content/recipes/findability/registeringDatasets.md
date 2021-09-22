@@ -16,32 +16,56 @@
 
 ## Main Objectives
 
+Useful datasets become more useful when they are easily found. The **FAIR principles** state that: 
 
-Learn how to register a dataset on Wikidata with the appropriate citation.
+> F1. (Meta)data are assigned a globally unique and persistent identifier
+> A1. (Meta)data are retrievable by their identifier using a standardised communications protocol 
+
+This recipe is about making the dataset metadata more FAIR:
+
+> Learn how to register a published dataset on Wikidata with the appropriate citation to increase its findability.
 
 ___
 
 
 ## Requirements
 
-To run the below scripts, you need a Groovy installation. The Groovy script use version X.X of the Chemistry Development Kit (add the link here) (see also doi:10.1186/s13321-017-0220-4). (Add link here) This library and its use in Groovy is further explained in the book Groovy Cheminformatics with the Chemistry Development Kit. (add the link here)
-
-Click here for more detailed use instructions and where to find the tools:
-https://github.com/FAIRplus/fairplus-sdf(add the link here)
-
-To register datasets to Wikidata requires a Wikidata account.
+To register datasets to [Wikidata](https://www.wikidata.org/) requires a Wikidata account ([create one](https://www.wikidata.org/wiki/Special:CreateAccount)).
 
 ---
 
 
 ## Main Content
 
+This recipes takes an interest in datasets with information about small chemical compounds, particularly datasets with an SDF file or spreadsheet with SMILES.
+But the registration itself in Wikidata to make it more findable works for any dataset. The registration in Wikidata makes the metadata more findable by
+itself. This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
+recipe easier to follow.
+
+Importantly, Wikidata allows the dataset to be used as reference in Wikidata to support statements. For example, if the dataset contains a logP value,
+then this logP value can be associated to the compound in Wikidata with a statement, with the dataset itself as reference.
+<!-- TODO: add screenshot of example -->
 
 ### Finding Datasets
 
-There are several ways to locate datasets to be registered into Wikidata. A consideration is that the dataset has the recommended license. For details related to finding datasets and determining the correct licenses, please refer to Finding Compounds(add the link here)
+There are several ways to locate datasets to be registered into Wikidata. One consideration is that the dataset has the recommended license and an identifier.
 
-[Link identifiers] 
+Example of where open datasets with information about chemical compounds can be found include:
+
+* [Figshare](https://figshare.com/)
+* [Zenodo](https://zenodo.org/)
+* [Joint Research Centre Data Catalogue](https://data.jrc.ec.europa.eu/dataset)
+
+Of course, there are also general data search engines now that may help find the data you are looking for:
+
+* [Google Dataset Search](https://datasetsearch.research.google.com/)
+* [DataCite Commons](https://commons.datacite.org/)
+
+<!--
+TODO: add below statement when that recipe is included too:
+
+For details related to finding datasets and determining the correct licenses, please refer to Finding Compounds. 
+-->
 
 ### Data Set Registration
 
