@@ -101,7 +101,7 @@ in the top right corner of the Quickstatements website.
 If your dataset is not already Wikidata, use the `https://scholia.toolforge.org/doi/\$DOI` Scholia
 page to create Quickstatements. The result should look something like this:
 
-```{figure} scholia.png
+```{figure} images/scholia.png
 ---
 name: scholia
 alt: Scholia page showing Quickstatements for a dataset not yet in Wikidata
