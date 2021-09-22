@@ -92,7 +92,7 @@ With the Quickstatement of the dataset, the dataset can be added to Wikidata usi
 
 ````{authors_fairplus}
 Egon: Writing
-Zachery: Writing - Original Draft
+Zachary: Writing - Original Draft
 ````
 
 
