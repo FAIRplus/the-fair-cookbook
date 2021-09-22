@@ -1,8 +1,8 @@
 # Registering Datasets
 
  ````{panels_fairplus}
-:identifier_text: FCB053 
-:identifier_link: 'https://w3id.org/faircookbook/FCB053'
+:identifier_text: FCBxxx
+:identifier_link: 'https://w3id.org/faircookbook/FCBxxx'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
