@@ -141,10 +141,10 @@ drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
 One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (DOI), https://fairsharing.org/FAIRsharing.26dmba for HUPO-PSI mzML specifications.
 
 <!-- <div>
-  <img src="https://i.imgur.com/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
+  <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
 </div> -->
 
-```{figure} https://i.imgur.com/AWOWTbr.png
+```{figure} /images/AWOWTbr.png
 ---
 width: 750px
 name: A Standard Record in the FAIRsharing catalog of resources
@@ -235,10 +235,10 @@ For users unfamiliar with format, a search via popular search engine will yield 
 A number of libraries are available for parsing (reading and writing) `mzML` document. `mzML` is a king of `XML` format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
 
 <!-- <div>
-<img src="https://i.imgur.com/BTs0GUS.png" width="750" border="1"/>
+<img src="/images/BTs0GUS.png" width="750" border="1"/>
 </div> -->
 
-```{figure} https://i.imgur.com/BTs0GUS.png
+```{figure} /images/BTs0GUS.png
 ---
 width: 750px
 name: pymzml in Biotools registry
@@ -271,10 +271,10 @@ pf.save(
 ```
 
 <!-- <div>
-<img src="https://i.imgur.com/caaqwFo.png" width="650"/>
+<img src="/images/caaqwFo.png" width="650"/>
 </div> -->
 
-```{figure} https://i.imgur.com/caaqwFo.png
+```{figure} /images/caaqwFo.png
 ---
 width: 650px
 name: pymzml rendered msrun profile

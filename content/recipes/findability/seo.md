@@ -153,14 +153,14 @@ Now, we are presenting the same information augmented with the JSON-LD file usin
 Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the [`Google Structured Data Testing Tool`](https://search.google.com/structured-data/testing-tool)
 <!-- 
-![](https://i.imgur.com/Ge8gsWL.png =650px)
+![](/images/Ge8gsWL.png =650px)
 
 <div style="display: flex; justify-content: center;">
-<img src="https://i.imgur.com/Ge8gsWL.png" width="650" style="border:1px solid black"/>
+<img src="/images/Ge8gsWL.png" width="650" style="border:1px solid black"/>
 </div> -->
 
 
-```{figure} https://i.imgur.com/Ge8gsWL.png
+```{figure} /images/Ge8gsWL.png
 ---
 height: 580px
 name: Google Structured Data Testing Tool

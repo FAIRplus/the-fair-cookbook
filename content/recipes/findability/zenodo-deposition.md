@@ -86,11 +86,11 @@ This section guides users through the key steps to perform to organize a deposit
 
 ### Zenodo Compatible Data Collection - Data upload
 
-<!-- <div> <img src="https://i.imgur.com/TYpr8jM.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" />
+<!-- <div> <img src="/images/TYpr8jM.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" />
 </div> -->
 
 
-```{figure} https://i.imgur.com/TYpr8jM.png
+```{figure} /images/TYpr8jM.png
 ---
 height: 450px
 name: Uploading files to Zenodo
@@ -107,10 +107,10 @@ Files can be dragged and dropped, with the following limitations:
 After adding the set of files associated with the submission, the upload should be initiated by the pressing the `start upload` green button.
 Failing to do so will result in a failure to proceed with the submission and an error will be thrown, reminding users to do so.
 
-<!-- <img src="https://i.imgur.com/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
 
 
-```{figure} https://i.imgur.com/LwMorlw.png
+```{figure} /images/LwMorlw.png
 ---
 height: 450px
 name: Starting the file upload to Zenodo
@@ -123,10 +123,10 @@ Starting the file upload to Zenodo Repository.
 The next key step is to select the `upload type`. In this instance, the `Dataset` is selected. This matters as it provide strong typing which is relied on by `search engine` and therefore impacts `findability`.
 
 
-<!-- <img src="https://i.imgur.com/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
 
 
-```{figure} https://i.imgur.com/OYyz4dT.png
+```{figure} /images/OYyz4dT.png
 ---
 height: 150px
 name: Selecting the upload type to Zenodo
@@ -143,10 +143,10 @@ Selecting the upload type to Zenodo Repository.
 * Basic metadata such as. `title`, `description`, at minima should be provided.
 * Authors should be identified, ideally using their `orcid`, so linking can be performed. This affects authors citation and impact evaluation. For IMI FAIRplus participants, since all have now such an identifier, the link should be made systematically.
 
-<!-- <img src="https://i.imgur.com/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
 
-```{figure} https://i.imgur.com/WmlqBjL.png
+```{figure} /images/WmlqBjL.png
 ---
 height: 450px
 name: Basic metadata to report 
@@ -162,9 +162,9 @@ Basic metadata to report .
 
 * 'Keywords' can be adding to tag the submission. These are free text and no controlled terminology can be used in the interface at the moment.
 
-<!-- <img src="https://i.imgur.com/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
-```{figure} https://i.imgur.com/9Bp91gX.png
+```{figure} /images/9Bp91gX.png
 ---
 height: 450px
 name: Setting keywords associated with the Zenodo deposition
@@ -182,9 +182,9 @@ Setting keywords associated with the Zenodo deposition .
 * Zenodo provides facilities to set `Access Conditions` and `License`, `Data Controler Contact Information`, as well as `Embargo Duration` if applicable
 * As indicated above, it is possible to `set an Embargo Period`, if the option `embargoed access` is selected under the `Access right` section.
 
-<!-- <img src="https://i.imgur.com/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
-```{figure} https://i.imgur.com/fSxOjXe.png"
+```{figure} /images/fSxOjXe.png"
 ---
 height: 400px
 name: Choosing a License is essential 
@@ -200,9 +200,9 @@ Choosing a License is essential.
 
 * Setting Access Conditions/License, Data Controler Contact Information, Embargo Duration if applicable
 
-<!-- <img src="https://i.imgur.com/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
-```{figure} https://i.imgur.com/ty9rpXF.png
+```{figure} /images/ty9rpXF.png
 ---
 height: 350px
 name: Setting access conditions
@@ -213,9 +213,9 @@ Setting access conditions.
 
 * Start typing to display more licenses available from Zenodo
 
-<!-- <img src="https://i.imgur.com/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
+<!-- <img src="/images/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
 
-```{figure} https://i.imgur.com/249GhMg.png
+```{figure} /images/249GhMg.png
 ---
 height: 100px
 name: Autocompletion prompts available licenses
@@ -231,9 +231,9 @@ Autocompletion prompts available licenses.
 
 Since the Zenodo mission is to collect EC funded data, the repository provides the means to lookup `Grant Information`:
 
-<!-- <img src="https://i.imgur.com/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
  
-```{figure} https://i.imgur.com/STjyFbT.png
+```{figure} /images/STjyFbT.png
 ---
 height: 200px
 name: Linking Funding to Zenodo Submission
@@ -252,10 +252,10 @@ Linking Funding to Zenodo Submission.
 
 * Miscellaneous Information:
 
-<!-- <img src="https://i.imgur.com/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
+<!-- <img src="/images/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
  
-```{figure} https://i.imgur.com/uhGZN5t.png
+```{figure} /images/uhGZN5t.png
 ---
 height: 300px
 name: Miscellaneous Information about the Zenodo Submission
