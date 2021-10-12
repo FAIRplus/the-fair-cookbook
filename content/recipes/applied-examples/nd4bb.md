@@ -1,5 +1,5 @@
 (fcb-nd4bb)=
-# ND4BB - clinical trial datasets
+# ND4BB - chemical activities datasets
 
 <!-- 
 TODO: check whether all files can be put on Zenodo
@@ -11,7 +11,7 @@ TODO: clarify authors
 :identifier_link: http://w3id.org/faircookbook/FCB043
 :difficulty_level: 4
 :recipe_type: applied_example
-:recipe_name: ND4BB - clinical trial datasets
+:recipe_name: ND4BB - chemical activities datasets
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator
 :has_executable_code: nope
@@ -134,7 +134,7 @@ Workflow to extract the data from compound/charge webpage.
 
 ### Data transformation
 
-The data were extracted following the following schema to facilitate future data annotation: "PropertyGroup – Property – Value" where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in {numref}`nd4bb-figure6`. For each property, the corresponding values in a controlled vocabulary list are collected into a [spreadsheet](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx). Missing values were fixed in this step as well. 
+The data were extracted following the following schema to facilitate future data annotation: "PropertyGroup - Property - Value" where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in {numref}`nd4bb-figure6`. For each property, the corresponding values in a controlled vocabulary list are collected into a [spreadsheet](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx). Missing values were fixed in this step as well. 
 
 One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup). 
 
@@ -201,14 +201,15 @@ Overall this dataset has been very useful to start our overall process and team 
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Manfred Kohler</div></div> |   | Fraunhofer Institute   | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing - Original Draft
+````{authors_fairplus}
+Manfred: Writing - Original Draft
+````
+
 
 ---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

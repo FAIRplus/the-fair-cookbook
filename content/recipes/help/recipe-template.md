@@ -36,7 +36,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 
 ```
 
-----
+---
 
 ````{panels_fairplus}
 :identifier_text: RX.X
@@ -56,7 +56,7 @@ The main purpose of this recipe is:
 
 > Provid a summary statement about the purpose of the recipe.
 
-___
+---
 
 
 ## Graphical Overview
@@ -87,7 +87,7 @@ C-3PO_droid
 ```
 
 
-___
+---
 
 
 ## Requirements
@@ -120,7 +120,7 @@ The table is therefore structure to identify the capability, the **initial** mat
 
 
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -152,7 +152,7 @@ Ideally, authors should mark up the information using either EDAM Ontology URI o
 | [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)  | [SRA XML](https://fairsharing.org/FAIRsharing.q72e3w)  |
 | [DICOM](https://fairsharing.org/FAIRsharing.b7z8by)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [OMOP](https://fairsharing.org/FAIRsharing.qk984b)  |
 
-___
+---
 
 ## Main Content
 
@@ -250,7 +250,7 @@ graph TD;
 ````
 
 
-___
+---
 
 ## Conclusion
 
@@ -272,7 +272,7 @@ ___
 ```
 
 
-___
+---
 
 ## Authors
 
@@ -291,8 +291,8 @@ List the recipe contributors following the structure below and using the CASRAI 
     - Supervision
     - Validation
     - Visualization
-    - Writing – original draft
-    - Writing – review & editing
+    - Writing - original draft
+    - Writing - review & editing
 ```
 
 ```{admonition} Important
@@ -303,12 +303,12 @@ this section is relied upon by another component developed by FAIRplus to enhanc
 
 | Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/'><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">John Duff</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0000-0000-0000'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization
+| <div class="firstCol"><a target="_blank" href='https://github.com/'><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">John Duff</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0000-0000-0000'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Conceptualization
 
 ---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

@@ -2,63 +2,18 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 from json import dumps
-import sphinx_panels.panels
 import sphinx.errors
+import sphinx_panels.panels
+from sphinx.util import logging
 
+from global_variables_fairplus import LINK_TO_THE_FAIRPLUS_LOGO, CONTROLLED_VOCABULARY_EXECUTABLE_CODE, CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL, CONTROLLED_VOCABULARY_INTENDED_AUDIENCE, CONTROLLED_VOCABULARY_RECIPE_TYPE 
 
-CONTROLLED_VOCABULARY_RECIPE_TYPE = {
-    "background_information"    : "Background information",
-    "inventory"                 : "Inventory",
-    "survey_review"             : "Survey / Review",
-    "guidance"                  : "Guidance",
-    "technical_guidance"        : "Technical Guidance",
-    "hands_on"                  : "Hands-on",
-    "applied_example"           : "Experience Report / Applied Example",
-    "perspective"               : "Perspective"
-
-}
-
-CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
-    "funder"                    : "Funder",
-    "procurement_officer"       : "Procurement Officer",
-    "principal_investigator"    : "Principal Investigator",
-    "data_curator"              : "Data Curator",
-    "data_engineer"             : "Data Engineer",
-    "data_manager"              : "Data Manager",
-    "data_scientist"            : "Data Scientist",
-    "chemoinformatician"        : "Chemoinformatician",
-    "bioinformatician"          : "Bioinformatician",
-    "software_engineer"         : "Software Engineer",
-    "software_developer"        : "Software Developer",
-    "system_administrator"      : "System Administrator",
-    "terminology_manager"       : "Terminology Manager",
-    "ontologist"                : "Ontologist",
-    "data_producer"             : "Data Producer",
-    "data_consumer"             : "Data Consumer",
-    "everyone"                  : "Everyone",
-}
-
-CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL = {
-    "1" : "very easy",
-    "2" : "easy",
-    "3" : "medium",
-    "4" : "hard",
-    "5" : "very hard",
-}
-
-CONTROLLED_VOCABULARY_EXECUTABLE_CODE = {
-    "yeah" : "Yes",
-    "nope" : "No",
-}
-
-make_red_start = "\033[91m"
-make_red_end   = "\033[0m"
-def _make_string_red(string):
-    return make_red_start + string + make_red_end
+logger = logging.getLogger(__name__)
+logger.info('Hello, this is "panels_fairplus" extension!')
 
 
 class PanelFairplus(Directive):
-    has_content = True
+    has_content = False
     final_argument_whitespace = True ## actually, this allows ANY argument to contain whitespace.
     option_spec = {
         "identifier_text"       : directives.unchanged_required,
@@ -201,7 +156,7 @@ class PanelFairplus(Directive):
                 '<div class="card-body text--purple-dark">',
                     '<div class="title">',
                         f'<div style="flex-grow:1; margin-right:5px">{self.options["recipe_name"]}</div>',
-                        '<img src="/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>',
+                        f'<img src="{LINK_TO_THE_FAIRPLUS_LOGO}" alt="FAIRPlus logo"> </img>',
                     '</div>',
                     '<div class="section">',
                         '<i class="sectionIcon fa fa-laptop fa-2x"></i>'
@@ -307,3 +262,7 @@ def setup(app):
         'parallel_write_safe': True,
     }
 
+escape_character_to_make_a_string_red_start = "\033[91m"
+escape_character_to_make_a_string_red_end   = "\033[0m"
+def _make_string_red(string):
+    return escape_character_to_make_a_string_red_start + string + escape_character_to_make_a_string_red_end

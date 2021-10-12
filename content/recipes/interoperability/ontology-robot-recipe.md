@@ -44,7 +44,7 @@ Building an ontology with Robot tool.
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -63,7 +63,7 @@ Building an ontology with Robot tool.
 
 
 
-___
+---
 
 
 ## Ingredients
@@ -542,7 +542,7 @@ robot query --input <input_ontology_file> \
 
 > * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document --> -->
 > * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?<!-- TODO add a link to corresponding document --> -->
-___
+---
 
 
 ## References
@@ -558,7 +558,7 @@ ___
 <!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
 - Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
 
-___
+---
 
 ## Supplementary material
 
@@ -566,22 +566,23 @@ ___
 - [Competency questions](ontology-robot-recipe/competency-questions.md)
 - [IPython Notebook for the MSIO Build Process](ontology-robot-recipe/MSIO-robot-build-process.ipynb)
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft, Code
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img>  | Writing - Draft, Review
-| <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
+````{authors_fairplus}
+Danielle: Writing - Original Draft, Code
+Karsten: Writing - Original Draft
+Philippe: Writing - Review & Editing, Conceptualization
+Fuqi: Writing - Original Draft, Writing - Review & Editing
+Emiliano: Writing - Review & Editing
+````
 
-___
+
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

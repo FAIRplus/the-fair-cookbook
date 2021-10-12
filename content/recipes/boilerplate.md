@@ -1,68 +1,6 @@
 (fcb-misc)=
 # Platform
 
-<!-- --- -->
-<!-- 
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fas fa-broadcast-tower fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Collaborations</b></h4>
-<p><a href="https://fairtoolkit.pistoiaalliance.org/">Pistoia Alliance</a</p>
-<p><a href="https://the-turing-way.netlify.app/welcome/">The Turing Way</a</p>
----
-
-<i class="fab fa-creative-commons fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Licence</b></h4>
-<p>Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
----
-
-<i class="fas fa-cog fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Technical Stack</b></h4>
-<p><a href="https://jupyterbook.org/intro.html">JupyterBook 0.9.1</a></p>
----
-
-<i class="fas fa-cog fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Syntax</b></h4>
-
-{ref}`fcb-myst-cheatsheet`
-<p>ipython notebooks</p>
----
-
-<i class="fab fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Hosting Platform</b></h4>
-<p><a href="https://github.com/FAIRplus/the-fair-cookbook/">Github</a></p>
----
-
-<i class="fab fa-docker fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Containerized version</b></h4>
-<p>Yes</p>
----
-
-<i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Support</b></h4>
-<p><a href="mailto:fairplus-cookbook@elixir-europe.org">Elixir-europe FAIRcookbook</a></p>
----
-
-<i class="fa fa-check-circle fa-2x text--orange"></i>
-^^^
-<h4><b>Feature Requests</b></h4>
-<p><a href="https://github.com/FAIRplus/the-fair-cookbook/issues">Issue tracker</a></p>
-````
- -->
----
-
 ## Technology stack
 
 The `FAIR Cookbook` is built using [jupyter-book](https://jupyterbook.org/intro.html), following the practice used by the [Alan Turing's Institute Book of Data Science](https://the-turing-way.netlify.app/welcome).

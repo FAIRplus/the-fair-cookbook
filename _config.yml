@@ -97,6 +97,8 @@ sphinx:
     - sphinx_sitemap
   local_extensions:
     panels_fairplus: _ext/
+    license_fairplus: _ext/
+    authors_fairplus: _ext/
 
 parse:
   myst_url_schemes: [ mailto, http, https, ftp ]

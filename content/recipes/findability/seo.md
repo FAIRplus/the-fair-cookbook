@@ -26,7 +26,7 @@ There are sub-recipes for embedding search engine optimization into specific web
 - [Dataset](fcb-find-bs-dataset)
 - [Resource specific page](fcb-find-bs-data) (Gene, Molecular Entity, Protein)
 
-___
+---
 
 
 ## Graphical Overview
@@ -45,7 +45,7 @@ alt: Search Engine Optimization
 Search Engine Optimization.
 ```
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -188,7 +188,7 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 * [Sample](https://bioschemas.org/profiles/Sample)
 * [Taxon](https://bioschemas.org/profiles/Taxon)
 
-----
+---
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |
@@ -205,23 +205,23 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 |  [JSON-LD](http://edamontology.org/format_3749)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](http://edamontology.org/data_2353)  |
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 
-___
+---
 
 
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization |
-| <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div> | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/ljgarcia'><img class='avatar-style' src='https://avatars.githubusercontent.com/ljgarcia'></img><div class="d-block"> Leyla Garcia | <a target="_blank" href='https://orcid.org/0000-0003-3986-0510'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | ZB MED Information Centre for life sciences | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing – Review & Editing |
+````{authors_fairplus}
+Philippe: Writing - Original Draft, Conceptualization
+Alasdair: Writing - Original Draft, Writing - Review & Editing
+Leyla: Writing - Review & Editing
+````
 
-___
 
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

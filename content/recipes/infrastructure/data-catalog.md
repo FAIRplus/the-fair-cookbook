@@ -28,7 +28,7 @@ We will cover the following points:
 6. facet oriented searching
 7. minting of stable, persistent and resolvable identifiers
 
-___
+---
 
 
 ## Graphical Overview
@@ -51,7 +51,7 @@ Building and populating a data catalogue
 | Findability | minimal | repeatable |
 | Interoperability | minimal | repeatable |
 
-----
+---
 
 ## User Story
 For **`role.Data Scientists`**, it is essential to be able to *`action.identify`* and *`action.discover`* datasets of potential relevance in the context of *`action.data integration`* and *`action.meta-analytical work`*.
@@ -61,7 +61,7 @@ For **`role.Database Managers`**, a lightweight solution is needed to support a 
 For **`role.lab scientists`**, the key is to have a minimal burden when having to *`action.deposit`* a dataset to an institutional archive or simply *`action.register`* to dataset to the `data catalogue`. 
 
 
-----
+---
 ## Main body of the recipe
 
 ### What is a Data Catalogue?
@@ -98,7 +98,7 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
     * [Bayer AG Colid](https://bayer-group.github.io/COLID-Documentation/)
 
 
-----
+---
 
 
 ## Table of Data Standards
@@ -111,7 +111,7 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 | JSON-LD<!-- TODO add a link to corresponding document -->  | Schema.org<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
 
 
-___
+---
 
     
 ## Conclusion
@@ -132,17 +132,21 @@ For the readership interesting in finding out about additional capabilities need
 * {ref}`fcb-interop-metadataprofile`
 
 
+---
+
 ## Authors
 
+<!-- TODO seems unlikely that all authors did review, but noone the original draft. Clarify -->
+````{authors_fairplus}
+Philippe: Writing - Review & Editing
+Susanna: Writing - Review & Editing, Funding acquisition
+````
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization |
-| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition |
 
-___
+---
 
 ## License
-This page is released under the Creative Commons 4.0 BY license.
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

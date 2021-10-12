@@ -22,7 +22,7 @@ The main purpose of this recipe is:
 
 > To embed `Schema.org` markup in a web page representing a dataset.
 
-___
+---
 
 
 ## Graphical Overview
@@ -37,7 +37,7 @@ alt: The process of annotating a dataset webpage with bioschema markup for Searc
 The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.
 ```
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -47,7 +47,7 @@ ___
 | Interoperability | minimal |   |
 
 
-----
+---
 
 ## Method
 
@@ -212,7 +212,7 @@ Your site should now generate dataset pages with embedded markup.
 
 Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -229,28 +229,29 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 | [HTML](http://edamontology.org/format_2331) | | |
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div> | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/ljgarcia'><img class='avatar-style' src='https://avatars.githubusercontent.com/ljgarcia'></img><div class="d-block"> Leyla Garcia | <a target="_blank" href='https://orcid.org/0000-0003-3986-0510'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | ZB MED Information Centre for life sciences | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing – Review & Editing |
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
+````{authors_fairplus}
+Alasdair: Writing - Original Draft
+Leyla: Writing - Review & Editing
+Philippe: Writing - Review & Editing
+````
 
-___
+
+---
 
 ## Footnotes
 
 <a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
 
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 
 

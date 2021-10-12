@@ -175,10 +175,10 @@ The portable version of WinSCP can be preconfigured so that a user only needs to
 
 Libraries implementing SFTP are available for different programming languages.
 
-- Python – pysftp (https://pysftp.readthedocs.io/en/release_0.2.8/index.html#)
-- Perl – Net::SFTP (https://metacpan.org/pod/Net::SFTP)
+- Python - pysftp (https://pysftp.readthedocs.io/en/release_0.2.8/index.html#)
+- Perl - Net::SFTP (https://metacpan.org/pod/Net::SFTP)
 - JavaScript - ssh2-sftp-client (https://www.npmjs.com/package/ssh2-sftp-client)
-- Bash – sftp (similar to scp)
+- Bash - sftp (similar to scp)
 
 
 ### Correctness and completeness of transfer
@@ -245,22 +245,23 @@ More modern solutions and tools exist for fast transfer or mounting of remote dr
 > {ref}`fcb-access-aspera`
 > [Rclone](https://rclone.org)
 
-___
+
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Dorothy Reilly</div>      </div>    |   | Novartis AG   | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> || Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/sedlyarov'><img class='avatar-style' src='https://avatars.githubusercontent.com/sedlyarov'></img><div class="d-block">Vitaly Sedlyarov</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0002-9872-3535'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/ulo'><img class='avatar-style' src='https://avatars.githubusercontent.com/ulo'></img><div class="d-block">Ulrich Goldmann</div></a>    </div> | <a target="_blank" href='https://orcid.org/0000-0003-1120-6912'><i class='fab fa-orcid fa-2x text--orange'></i></a> | CEMM | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> || Writing - Original Draft|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
+````{authors_fairplus}
+Dorothy: Writing - Original Draft
+Vitaly: Writing - Original Draft
+Ulrich: Writing - Original Draft
+Philippe: Writing - Review & Editing
+````
 
 
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
