@@ -4,7 +4,7 @@
 > 🚀  or How a meeting with The Turing Way bootstrapped IMI FAIRPlus Cookbook project 🚀
 
 
-```{figure} https://i.imgur.com/3rXmOW0.png
+```{figure} /images/3rXmOW0.png
 ---
 height: 450px
 name: The FAIR Cookbook.
