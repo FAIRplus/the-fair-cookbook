@@ -172,7 +172,7 @@ This approach uses 2 inputs:
 - a digital resource (e.g. a file)
 
 Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
-A number of algorithms can be used and some are already widely used such as `Message Digest algorithm MD5` specified by the RFC1321[1]{footcite}`MD5`, the `Secure Hash Algorithm (SHA1)`,  `Secure Hash Algorithm 2 (SHA256)`, `Secure Hash Algorithm 3 (SHA3)` or `BLAKE2b-256` (RFC 7693) {footcite}`Blake2`. 
+A number of algorithms can be used and some are already widely used such as `Message Digest algorithm MD5` specified by the RFC1321 {footcite}`MD5`, the `Secure Hash Algorithm (SHA1)`,  `Secure Hash Algorithm 2 (SHA256)`, `Secure Hash Algorithm 3 (SHA3)` or `BLAKE2b-256` (RFC 7693) {footcite}`Blake2`. 
 The first two are considered obsolete, while the latter two are most advanced and approved by NIST.
 
 ---
