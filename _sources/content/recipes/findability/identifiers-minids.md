@@ -106,7 +106,7 @@ $ touch minid-config.cfg
   <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
 </div> 
  -->
-  <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
+  <!-- ![](/images/B5UbkpF.png) -->
 
 
 ```{figure} images/globus/globus-account-create.png
@@ -138,7 +138,7 @@ Creating a Globus account.
   This will open the GlobusID login page. Simply enter your credentials obtained from 2.
 
 <!-- ![](./images/globus/globus-account-login.png) -->
-<!-- ![](https://i.imgur.com/2OZFcJa.png) -->
+<!-- ![](/images/2OZFcJa.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -158,7 +158,7 @@ Globus account login.
   followed by:
 
 <!-- ![](./images/globus/globus-account-allow.png) -->
-<!-- ![](https://i.imgur.com/avzyAFZ.png) -->
+<!-- ![](/images/avzyAFZ.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -178,7 +178,7 @@ Globus account allow.
   If all goes well, the following browser screen will be shown:
 
 <!-- ![](./images/globus/globus-account-login-success.png) -->
-<!-- ![](https://i.imgur.com/THYPg4E.png) -->
+<!-- ![](/images/THYPg4E.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
 </div>  -->

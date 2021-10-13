@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -1001,10 +1001,10 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 <h3><span class="section-number">10.7.3. </span>Step 3: Convert vendor specific format to an open format<a class="headerlink" href="#step-3-convert-vendor-specific-format-to-an-open-format" title="Permalink to this headline">¶</a></h3>
 <p>One can consult the Elixir-UK <a class="reference external" href="https://fairsharing.org/">FAIRsharing catalog</a> of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (DOI), <a class="reference external" href="https://fairsharing.org/FAIRsharing.26dmba">https://fairsharing.org/FAIRsharing.26dmba</a> for HUPO-PSI mzML specifications.</p>
 <!-- <div>
-  <img src="https://i.imgur.com/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
+  <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
 </div> -->
 <div class="figure align-default" id="a-standard-record-in-the-fairsharing-catalog-of-resources">
-<a class="reference internal image-reference" href="https://i.imgur.com/AWOWTbr.png"><img alt="A Standard Record in the FAIRsharing catalog of resources" src="https://i.imgur.com/AWOWTbr.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/AWOWTbr.png"><img alt="A Standard Record in the FAIRsharing catalog of resources" src="../../../_images/AWOWTbr.png" style="width: 750px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 10.2 </span><span class="caption-text">The <a class="reference external" href="https://fairsharing.org/FAIRsharing.26dmba">HUPI-PSI mzML Standard Record</a> in the <a class="reference external" href="https://fairsharing.org/">Elixir FAIRsharing catalog</a> of resources.</span><a class="headerlink" href="#a-standard-record-in-the-fairsharing-catalog-of-resources" title="Permalink to this image">¶</a></p>
 </div>
 <p>The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a <code class="docutils literal notranslate"><span class="pre">containerized</span></code> version of the <a class="reference external" href="https://github.com/ProteoWizard/pwiz">Proteowizard</a> <a class="footnote-reference brackets" href="#chambers2012" id="id1">2</a>.</p>
@@ -1108,10 +1108,10 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 <p>For users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.</p>
 <p>A number of libraries are available for parsing (reading and writing) <code class="docutils literal notranslate"><span class="pre">mzML</span></code> document. <code class="docutils literal notranslate"><span class="pre">mzML</span></code> is a king of <code class="docutils literal notranslate"><span class="pre">XML</span></code> format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library <a class="footnote-reference brackets" href="#bald2012" id="id2">1</a>.</p>
 <!-- <div>
-<img src="https://i.imgur.com/BTs0GUS.png" width="750" border="1"/>
+<img src="/images/BTs0GUS.png" width="750" border="1"/>
 </div> -->
 <div class="figure align-default" id="pymzml-in-biotools-registry">
-<a class="reference internal image-reference" href="https://i.imgur.com/BTs0GUS.png"><img alt="pymzml in Biotools registry" src="https://i.imgur.com/BTs0GUS.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/BTs0GUS.png"><img alt="pymzml in Biotools registry" src="../../../_images/BTs0GUS.png" style="width: 750px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 10.3 </span><span class="caption-text">The Python <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library entry in the <a class="reference external" href="https://bio.tools/">Elixir Biotools catalog</a> of resources.</span><a class="headerlink" href="#pymzml-in-biotools-registry" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import os
@@ -1133,10 +1133,10 @@ pf.save<span class="o">(</span>
 </pre></div>
 </div>
 <!-- <div>
-<img src="https://i.imgur.com/caaqwFo.png" width="650"/>
+<img src="/images/caaqwFo.png" width="650"/>
 </div> -->
 <div class="figure align-default" id="pymzml-rendered-msrun-profile">
-<a class="reference internal image-reference" href="https://i.imgur.com/caaqwFo.png"><img alt="pymzml rendered msrun profile" src="https://i.imgur.com/caaqwFo.png" style="width: 650px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/caaqwFo.png"><img alt="pymzml rendered msrun profile" src="../../../_images/caaqwFo.png" style="width: 650px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">The Python <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.</span><a class="headerlink" href="#pymzml-rendered-msrun-profile" title="Permalink to this image">¶</a></p>
 </div>
 <p>In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML documents. But in the following, we’ll show how to read an mzML file using a python library.</p>
