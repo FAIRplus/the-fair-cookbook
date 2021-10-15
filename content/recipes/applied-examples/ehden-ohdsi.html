@@ -1,0 +1,1300 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. FAIRification of observational studies and databases: the EHDEN and OHDSI use case</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/ehden-ohdsi.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Community" href="../community.html" />
+    <link rel="prev" title="5. ReSOLUTE - transcriptomics datasets" href="resolute_raw/resolute.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/ehden-ohdsi.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="FAIRification of observational studies and databases: the EHDEN and OHDSI use case" />
+<meta property="og:description" content="FAIRification of observational studies and databases: the EHDEN and OHDSI use case  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/applied-examples/ehden-ohdsi.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/ehden-ohdsi.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/applied-examples/ehden-ohdsi.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   6.1. Main objectives
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbreviations">
+     6.1.1. Abbreviations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   6.2. Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools">
+   6.3. Tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   6.4. Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview-of-the-fairification-recipe-objectives">
+   6.5. Graphical Overview of the FAIRification Recipe Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-process">
+   6.6. Step-by-Step process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inventory-and-prioritization-of-digital-resources">
+     6.6.1. Inventory and prioritization of digital resources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-status-of-database-and-study-dissemination-in-ohdsi">
+     6.6.2. Current status of database and study dissemination in OHDSI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-a-semantic-model-for-relevant-metadata-elements">
+     6.6.3. Defining a (semantic) model for relevant metadata elements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ohdsi-extension-to-schema-org-vocabulary">
+     6.6.4. OHDSI extension to Schema.org vocabulary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadata-capture-using-yaml">
+     6.6.5. Metadata capture using YAML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#embedding-the-metadata-in-the-website-as-json-ld">
+     6.6.6. Embedding the metadata in the website as JSON-LD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-a-sitemap-file-and-letting-crawlers-know">
+     6.6.7. Making a sitemap file and letting crawlers know
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-final-website-version-using-hugo">
+     6.6.8. Generate final website version using HUGO
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-result">
+     6.6.9. Final result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   6.7. Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-reading">
+     6.7.1. Additional reading
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   6.8. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   6.9. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="fairification-of-observational-studies-and-databases-the-ehden-and-ohdsi-use-case">
+<span id="fcb-ehden-ohdsi"></span><h1><span class="section-number">6. </span>FAIRification of observational studies and databases: the EHDEN and OHDSI use case<a class="headerlink" href="#fairification-of-observational-studies-and-databases-the-ehden-and-ohdsi-use-case" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "EHDEN OHDSI discovery with Schema.org", "audience": ["Terminology Manager", "Data Manager", "Data Scientist", "Ontologist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Experience Report / Applied Example", "identifier": {"@type": "PropertyValue", "name": "FCB054", "url": "https://w3id.org/faircookbook/FCB054"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+15 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">EHDEN OHDSI discovery with Schema.org</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Experience Report / Applied Example</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Terminology Manager, Data Manager, Data Scientist, Ontologist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB054" class="text--purple-dark">FCB054
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">6.1. </span>Main objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>In this recipe, an example will be described on how to make observational health databases and observational studies more Findable (notably the FAIR principles <a class="reference external" href="https://www.go-fair.org/fair-principles/f2-data-described-rich-metadata/">F2</a> and <a class="reference external" href="https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/">F4</a>) and interoperability (principles <a class="reference external" href="https://www.go-fair.org/fair-principles/i1-metadata-use-formal-accessible-shared-broadly-applicable-language-knowledge-representation/">I1</a> and <a class="reference external" href="https://www.go-fair.org/fair-principles/i2-metadata-use-vocabularies-follow-fair-principles/">I2</a>), by creating a metadata model and a human and machine readable website for dissemination of these resources.</p>
+<p>The output of the <a class="reference external" href="https://www.ohdsi.org/covid-19-updates">COVID-19</a> <a class="reference external" href="https://www.thehyve.nl/articles/studyathon-multidisciplinary-collaboration-in-biomedical-open-science">study-a-thon</a> (a OHDSI community <a class="reference external" href="https://www.ohdsi.org/88-hours">initiative</a>, involving the IMI <a class="reference external" href="https://ehden.eu">EHDEN</a> project) held in March 2020, is used as proof-of-concept.</p>
+<div class="section" id="abbreviations">
+<h3><span class="section-number">6.1.1. </span>Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ehden.eu">EHDEN</a>: European Health Data &amp; Evidence Network</p></li>
+<li><p>ETL: Extract Transform Load</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/json-ld11">JSON-LD</a>: JSON - Linked Data</p></li>
+<li><p><a class="reference external" href="https://www.ohdsi.org">OHDSI</a>: Observational Health Data Sciences and Informatics</p></li>
+<li><p><a class="reference external" href="https://ohdsi.github.io/CommonDataModel">OMOP CDM</a>: Observational Medical Outcomes Partnership Common Data Model</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/rdf-concepts">RDF</a>: Resource Description Framework</p></li>
+<li><p><a class="reference external" href="https://yaml.org">YAML</a>: YAML Ain’t Markup Language (human-readable data-serialization language)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction">
+<h2><span class="section-number">6.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This recipe is based on work done on OMOP Common Data Model data as used during the Covid 19 Study-a-thon, a OHDSI community initiative, organised in collaboration with the IMI EHDEN project. The background information was previously described in this <a class="reference external" href="https://fairtoolkit.pistoiaalliance.org/use-cases/fairifying-collaborative-research-on-real-world-data-the-hyve/">use case</a> on the Pistoia Alliance FAIR toolkit website, and also published in an EHDEN Deliverable, <a class="reference external" href="https://zenodo.org/record/4474373">D4.5 - Roadmap for interoperability</a>. Briefly, the IMI2 EHDEN project’s main aim is to reduce the time to produce medical evidence for health outcomes research and to do so, EHDEN has prioritized data harmonization at source.</p>
+<p>However, data standardization and harmonization does not necessarily equate with FAIR data (see for example this <a class="reference external" href="https://www.thehyve.nl/articles/data-quality-with-fair-principles">article</a>). This is where the interaction with the IMI2 FAIRplus project can bring benefits.</p>
+<p>The purpose of the present content is to highlight how to improve dataset Findability after the data harmonization has taken place.</p>
+<p>The methods described in this recipe are however generally applicable for observational health databases and studies, not just data in the OMOP CDM format.</p>
+<p>In March 2020 the OHDSI community organized a <a class="reference external" href="https://www.ohdsi.org/ohdsi-news-updates/covid19-studyathon/">study-a-thon focussed on COVID-19</a>, which was aimed at addressing a number of key medical questions around COVID-19, such as predicting hospitalization and drug safety and effectiveness. For this purpose, a large collection of healthcare databases around the world were investigated. Many important digital assets were produced during the <a class="reference external" href="https://ohdsi.org/ohdsi-kicks-off-international-collaborative-to-generate-real-world-evidence-on-covid-19-with-virtual-study-a-thon/">study-a-thon</a>, such as study protocols, database metadata and characterizations, study results, and publications.</p>
+<p>From the FAIR assessment performed in order to better understand the current state of FAIRness of studies and databases used in OHDSI and in the COVID-19 study-a-thon in particular, it was found that there was room for improvement on both Findability and Reusability. Since increasing Findability was a common denominator for both studies and data sources, the main focus of the FAIRification was on developing structured metadata, specifically tailored for studies and data sources.</p>
+<p>This recipe will describe a proof-of-concept that shows the step-by-step process of making resources more FAIR by:</p>
+<ul class="simple">
+<li><p>Inventorization and prioritisation of digital resources;</p></li>
+<li><p>Adding metadata to the resources using existing ontologies and defining new entities to make them findable by humans and machines;</p></li>
+<li><p>Creating a website for FAIR dissemination of selected digital resources.</p></li>
+</ul>
+</div>
+<div class="section" id="tools">
+<h2><span class="section-number">6.3. </span>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Tool Name</p></th>
+<th class="text-align:left head"><p>capability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://jena.apache.org/">Apache Jena RDF validator</a></p></td>
+<td class="text-align:left"><p>RDF format validators</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://search.google.com/test/rich-results">Rich Results Test for JSON-LD</a></p></td>
+<td class="text-align:left"><p>RDF format validators</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://emif-catalogue.eu/">EMIF Catalogue</a></p></td>
+<td class="text-align:left"><p>Database</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://gohugo.io/">HUGO</a></p></td>
+<td class="text-align:left"><p>Static website generator</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-data-standards">
+<h2><span class="section-number">6.4. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/json-ld11/">JSON-LD</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://schema.org">Schema.org</a> and <a class="reference external" href="https://github.com/thehyve/ohdsi-schemas/blob/master/models/ohdsi_model/ohdsi_semantic_model.ttl">Custom OHDSI extension</a> to <a class="reference external" href="http://schema.org">schema.org</a></p></td>
+<td class="text-align:left"><p>RDF</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://yaml.org/spec/1.2/spec.html">YAML</a></p></td>
+<td class="text-align:left"><p>Custom HUGO template</p></td>
+<td class="text-align:left"><p>NA</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="graphical-overview-of-the-fairification-recipe-objectives">
+<h2><span class="section-number">6.5. </span>Graphical Overview of the FAIRification Recipe Objectives<a class="headerlink" href="#graphical-overview-of-the-fairification-recipe-objectives" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="ehden-ohdsi-figure0">
+<img alt="Recipe Steps" src="../../../_images/ehden-ohdsi.md-figure0.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Recipe Steps</span><a class="headerlink" href="#ehden-ohdsi-figure0" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-by-step-process">
+<h2><span class="section-number">6.6. </span>Step-by-Step process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="inventory-and-prioritization-of-digital-resources">
+<h3><span class="section-number">6.6.1. </span>Inventory and prioritization of digital resources<a class="headerlink" href="#inventory-and-prioritization-of-digital-resources" title="Permalink to this headline">¶</a></h3>
+<p>In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more. Each digital resource itself can consist of multiple (sub) digital resources, as shown in <a class="reference internal" href="#ehden-ohdsi-figure1"><span class="std std-numref">Fig. 6.4</span></a>.</p>
+<div class="figure align-default" id="ehden-ohdsi-figure1">
+<img alt="Inventory and prioritization of digital resources" src="../../../_images/ehden-ohdsi.md-figure1.jpg" />
+<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from <a class="reference external" href="https://zenodo.org/record/4474373">EHDEN D4.5</a>).</span><a class="headerlink" href="#ehden-ohdsi-figure1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Prioritization of initial digital resources to FAIRify was important, as the OHDSI ecosystem is quite extensive. In light of the study-a-thon on COVID-19 held in March 2020 by OHDSI and after a <a class="reference external" href="https://forums.ohdsi.org/t/implementing-the-fair-principles-in-the-ohdsi-approach-and-tools/10387">community inventory</a>, studies and databases were selected as relevant digital resources to FAIRify, as these are important resources for the researchers studying observational health data on COVID-19 and related topics.</p>
+</div>
+<div class="section" id="current-status-of-database-and-study-dissemination-in-ohdsi">
+<h3><span class="section-number">6.6.2. </span>Current status of database and study dissemination in OHDSI<a class="headerlink" href="#current-status-of-database-and-study-dissemination-in-ohdsi" title="Permalink to this headline">¶</a></h3>
+<p><strong>Databases in OHDSI</strong></p>
+<p>General sources that provide information on observational health databases that are conformed to the OMOP CDM are the <a class="reference external" href="https://www.ohdsi.org/web/wiki/doku.php?id=resources:2020_data_network">data network page</a>, the <a class="reference external" href="https://emif-catalogue.eu/">EMIF catalogue</a> and the <a class="reference external" href="https://portal.ehden.eu">EHDEN Portal</a> (under development).</p>
+<p>The data network page of OHDSI shows some metadata on databases converted to the OMOP CDM.</p>
+<p>The <a class="reference external" href="https://emif-catalogue.eu/">EMIF catalogue</a> is developed by the European Medical Information Framework (EMIF) and enables publishing and sharing of metadata on health data sources. Different consortia implementing the OMOP CDM disseminate metadata on databases in this catalogue. The EHDEN Portal builds on technology from the EMIF catalogue and further expands this with functionality to compare databases and run studies in the network.</p>
+<p><strong>Studies in OHDSI</strong></p>
+<p>Studies are currently disseminated through <a class="reference external" href="https://data.ohdsi.org/">data.ohdsi.org</a>. This web page links to the study results and <a class="reference external" href="https://github.com/ohdsi-studies">GitHub repositories of studies</a> that are performed in the OHDSI community. The web application <a class="reference external" href="https://data.ohdsi.org/OhdsiStudies/">data.ohdsi.org/OhdsiStudies</a> gives an overview of all studies in OHDSI with some associated metadata, such as study status, study leads and relevant dates.</p>
+</div>
+<div class="section" id="defining-a-semantic-model-for-relevant-metadata-elements">
+<h3><span class="section-number">6.6.3. </span>Defining a (semantic) model for relevant metadata elements<a class="headerlink" href="#defining-a-semantic-model-for-relevant-metadata-elements" title="Permalink to this headline">¶</a></h3>
+<p>To increase the findability we captured the structured and rich metadata, by developing a semantic model in RDF for the observational studies and databases. The model contained all relevant metadata elements for studies, databases, as well as persons associated with those studies and databases.</p>
+<p>Modelling metadata elements in RDF has the advantage that the metadata elements are properly semantically described, structured and linked. In addition, RDF is easily expandable and modifiable.</p>
+<p>The Turtle serialization format was chosen as the RDF format. Metadata elements were defined and mapped to <a class="reference external" href="http://schema.org">Schema.org</a> types and properties. <a class="reference external" href="http://Schema.org">Schema.org</a> is a vocabulary that can be used to create structured data on the internet and to make the data discoverable.</p>
+<p>Relevant <a class="reference external" href="http://Schema.org">Schema.org</a> types for studies and databases included:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/Dataset">Dataset</a>: represents a data file or database resulting from the study</p></li>
+<li><p><a class="reference external" href="https://schema.org/MedicalObservationalStudy">MedicalObservationalStudy</a>: main type that represents the medical study itself</p></li>
+<li><p><a class="reference external" href="https://schema.org/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>: provides details about the design of the study</p></li>
+<li><p><a class="reference external" href="https://schema.org/MedicalStudyStatus">MedicalStudyStatus</a>: provides the status of the study (although this is based on clinical trials, and observational studies will not use all statuses)</p></li>
+<li><p><a class="reference external" href="https://schema.org/MedicalCondition">MedicalCondition</a>: used to link the study to the specific medical condition(s) it covers</p></li>
+<li><p><a class="reference external" href="https://schema.org/Drug">Drug</a>: used to link the study to any pharmaceutical products it covers</p></li>
+<li><p><a class="reference external" href="https://schema.org/Organization">Organization</a>: represents an organization, such as a university</p></li>
+<li><p><a class="reference external" href="https://schema.org/Person">Person</a>: represents a person and is mainly used to indicate the authors of / researchers involved in the study</p></li>
+</ul>
+<p><a class="reference internal" href="#ehden-ohdsi-figure-2"><span class="std std-numref">Fig. 6.5</span></a> shows part of the relevant metadata elements in the model.</p>
+<div class="figure align-default" id="ehden-ohdsi-figure-2">
+<img alt="Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings." src="../../../_images/ehden-ohdsi.md-figure2.jpg" />
+<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Part of the metadata model. Here, each class (orange) and relationship is represented as a <a class="reference external" href="http://schema.org">schema.org</a> concept. Literals (yellow) are data types, e.g integers or strings.</span><a class="headerlink" href="#ehden-ohdsi-figure-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>RDF representation of two <a class="reference external" href="http://Schema.org">Schema.org</a> types, written in Turtle:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span><span class="p">:</span><span class="n">MedicalObservationalStudy</span> <span class="n">a</span> <span class="n">owl</span><span class="p">:</span><span class="n">Class</span> <span class="p">;</span>
+       <span class="n">rdfs</span><span class="p">:</span><span class="n">isDefinedBy</span>  
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">health</span><span class="o">-</span><span class="n">lifesci</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">MedicalObservationalStudy</span><span class="o">&gt;</span> <span class="p">;</span>
+       <span class="n">rdfs</span><span class="p">:</span><span class="n">label</span>  <span class="s2">&quot;MedicalObservationalStudy&quot;</span><span class="nd">@en</span> <span class="p">;</span>
+       <span class="n">rdfs</span><span class="p">:</span><span class="n">subClassOf</span> <span class="n">schema</span><span class="p">:</span><span class="n">MedicalStudy</span> <span class="o">.</span>
+
+<span class="n">schema</span><span class="p">:</span><span class="n">Drug</span> <span class="n">a</span> <span class="n">owl</span><span class="p">:</span><span class="n">Class</span> <span class="p">;</span>
+       <span class="n">rdfs</span><span class="p">:</span><span class="n">isDefinedBy</span>  
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">health</span><span class="o">-</span><span class="n">lifesci</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">Drug</span><span class="o">&gt;</span> <span class="p">;</span>
+       <span class="n">rdfs</span><span class="p">:</span><span class="n">label</span>  <span class="s2">&quot;Drug&quot;</span><span class="nd">@en</span> <span class="p">;</span>
+       <span class="n">rdfs</span><span class="p">:</span><span class="n">subClassOf</span> <span class="n">schema</span><span class="p">:</span><span class="n">Substance</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ohdsi-extension-to-schema-org-vocabulary">
+<h3><span class="section-number">6.6.4. </span>OHDSI extension to <a class="reference external" href="http://Schema.org">Schema.org</a> vocabulary<a class="headerlink" href="#ohdsi-extension-to-schema-org-vocabulary" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://schema.org/">Schema.org</a> is a general purpose vocabulary for searching entities on the internet, so metadata elements specific for some OHDSI assets were not present. To be able to capture metadata as extensive as necessary, custom types and properties had to be created. These included:</p>
+<ul class="simple">
+<li><p>Properties specific for OHDSI studies(e.g. study types and study use cases)</p></li>
+<li><p>Database properties (e.g. database characteristics and population size)</p></li>
+<li><p>Author properties (e.g. GitHub handle and forum profile).</p></li>
+</ul>
+<p>The resulting metadata model was shared in a public <a class="reference external" href="https://github.com/thehyve/ohdsi-schemas/blob/d18a9a924cd13fc4525b5965e6ecb43c5d22a333/models/ohdsi_model/ohdsi_semantic_model.ttl">GitHub repository</a>.</p>
+<p>For OHDSI specific types and properties the namespace <a class="reference external" href="http://data.ohdsi.org/">http://data.ohdsi.org/</a> is used, using the <code class="docutils literal notranslate"><span class="pre">ohdsi</span></code> prefix.</p>
+<p>The RDF model was validated using Apache Jena RIOT (version 3.15.0), using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>riot.bat --validate ohdsi_semantic_model.ttl
+</pre></div>
+</div>
+</div>
+<div class="section" id="metadata-capture-using-yaml">
+<h3><span class="section-number">6.6.5. </span>Metadata capture using YAML<a class="headerlink" href="#metadata-capture-using-yaml" title="Permalink to this headline">¶</a></h3>
+<p>In principle, the RDF classes defined in the above Turtle file can directly be used to set up the JSON-LD file needed for the website metadata. But in this example, we used an extra step by first capturing the metadata of studies, databases and authors, in the more data entry friendly YAML format. The YAML format can be annotated with comments to guide the person submitting their metadata.</p>
+<p>The following figure shows the metadata in Turtle and in YAML. YAML uses slightly different wording and syntax, to make it easier for end users / science bloggers to understand what kind of metadata is expected to be filled in.</p>
+<p>In YAML, the data looks like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Study identifier, specifically created for the website.</span>
+<span class="c1"># The identifier is the last part of the URL directing to the particular study</span>
+<span class="nt">study_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">‘Covid19Icarius’</span>
+<span class="c1"># Analytics Use Case of the Study, choose 0, 1, 2 or 3:</span>
+<span class="c1"># 0: Characterization</span>
+<span class="c1"># 1: Population-Level Estimation</span>
+<span class="c1"># 2: Patient-Level Prediction</span>
+<span class="c1"># 3: Characterization and Population-Level Estimation</span>
+<span class="nt">study_usecase</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">]</span>
+<span class="c1"># Conditions studied; if multiple conditions are being studied,</span>
+<span class="c1"># duplicate all keys under &quot;conditions&quot;</span>
+<span class="nt">conditions</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">concept_name</span><span class="p">:</span> <span class="s">&quot;Disease</span><span class="nv"> </span><span class="s">caused</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">2019-nCoV&quot;</span>
+  <span class="nt">concept_id</span><span class="p">:</span> <span class="s">&quot;37311061&quot;</span>
+  <span class="nt">code</span><span class="p">:</span>
+    <span class="nt">concept_code</span><span class="p">:</span> <span class="s">&quot;840539006&quot;</span>
+    <span class="nt">vocabulary_id</span><span class="p">:</span> <span class="s">&quot;SNOMED</span><span class="nv"> </span><span class="s">CT&quot;</span>
+    <span class="nt">concept_code_url</span><span class="p">:</span> <span class="s">&quot;http://snomed.info/id/840539006&quot;</span>
+<span class="c1"># Drug studied; if multiple subjects are being studied,</span>
+<span class="c1"># duplicate all keys under &quot;study_subject&quot;</span>
+<span class="nt">study_subject</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">concept_name</span><span class="p">:</span> <span class="s">&quot;quinaprilat&quot;</span>
+  <span class="nt">concept_id</span><span class="p">:</span> <span class="s">&quot;45775375&quot;</span>
+  <span class="nt">code</span><span class="p">:</span>
+    <span class="nt">concept_code</span><span class="p">:</span> <span class="s">&quot;1546359&quot;</span>
+    <span class="nt">vocabulary_id</span><span class="p">:</span> <span class="s">&quot;RxNorm&quot;</span>
+    <span class="nt">concept_code_url</span><span class="p">:</span> <span class="s">&quot;http://purl.bioontology.org/ontology/RXNORM/1546359&quot;</span>
+</pre></div>
+</div>
+<p>The data in YAML gets converted into Turtle programatically:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>@prefix ohdsi: &lt;http://data.ohdsi.org/&gt; .
+@prefix concept: &lt;http://data.ohdsi.org/concept/&gt; .
+@prefix study: &lt;https://covid19.ohdsi.app/study/&gt; .
+@prefix schema: &lt;http://schema.org/&gt; .
+study:Covid19Icarius a schema:MedicalObservationalStudy ;
+ohdsi:analyticsUseCase ohdsi:PopulationLevelEstimation ;
+schema:healthCondition concept:37311061 ;
+schema:studySubject concept:45775375 .
+concept:37311061 a schema:MedicalCondition ;
+schema:name &quot;Disease caused by 2019-nCoV&quot; ;
+schema:identifier &quot;37311061&quot; ;
+schema:code [ a schema:MedicalCode ;
+schema:codeValue &quot;840539006&quot; ;
+schema:codingSystem &quot;SNOMED CT&quot; ;
+schema:sameAs &quot;http://snomed.info/id/840539006&quot; ] .
+concept:45775375 a schema:Drug ;
+schema:name &quot;quinaprilat&quot; ;
+schema:identifier &quot;1777087&quot; ;
+schema:code [ a schema:MedicalCode ;
+schema:codeValue “1546359&quot; ;
+schema:codingSystem &quot;RxNorm&quot; ;
+schema:sameAs &quot;http://purl.bioontology.org/ontology/RXNORM/“1546359&quot; ] .
+</pre></div>
+</div>
+<p>The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML output from that which contains the article text but also embeds the entered metadata as JSON-LD (see <a class="reference internal" href="#ehden-ohdsi-figure3"><span class="std std-numref">Fig. 6.6</span></a>). In order to do this, we have written custom processing logic that takes the YAML data as input and formats this into RDF in accordance with the metadata model.</p>
+<div class="figure align-default" id="ehden-ohdsi-figure3">
+<img alt="Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project." src="../../../_images/ehden-ohdsi.md-figure3.jpg" />
+<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.</span><a class="headerlink" href="#ehden-ohdsi-figure3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="embedding-the-metadata-in-the-website-as-json-ld">
+<h3><span class="section-number">6.6.6. </span>Embedding the metadata in the website as JSON-LD<a class="headerlink" href="#embedding-the-metadata-in-the-website-as-json-ld" title="Permalink to this headline">¶</a></h3>
+<p>JSON-LD is a format for structured and linked data and, like Turtle, a serialization format of RDF.</p>
+<p>It can be embedded in the HTML code in the back end of a website. Search engines like Google (including <a class="reference external" href="https://datasetsearch.research.google.com/">Google dataset search</a>) use this structured data to find and understand the data. Understanding the data goes hand in hand with using the <a class="reference external" href="http://schema.org">Schema.org</a> vocabulary, because annotating metadata with <a class="reference external" href="http://Schema.org">Schema.org</a> types and properties gives meaning to the data. This search engine optimization (SEO, see the <a class="reference external" href="https://w3id.org/faircookbook/FCB010">Search Engine optimization recipe</a>) enables better Findability of the data.</p>
+<p>For this proof-of-concept project, a website was created for dissemination of metadata on studies, databases and authors, generated and used during the OHDSI COVID-19 study-a-thon. Metadata on studies, databases and authors is displayed on this <a class="reference external" href="https://covid19.ohdsi.app/">website</a>, and is embedded as JSON-LD in the HTML code as well.</p>
+<!-- TODO: Give example of a page with markup -->
+<p>Embedding metadata in JSON-LD in HTML will enable web crawlers to scrape the metadata and will increase Findability by search engines. When for example querying <a class="reference external" href="https://datasetsearch.research.google.com/">https://datasetsearch.research.google.com/</a>, the data should pop up when JSON-LD is embedded, but only when the <code class="docutils literal notranslate"><span class="pre">schema:Dataset</span></code> class is included (see also the next section for details on this).</p>
+</div>
+<div class="section" id="making-a-sitemap-file-and-letting-crawlers-know">
+<h3><span class="section-number">6.6.7. </span>Making a sitemap file and letting crawlers know<a class="headerlink" href="#making-a-sitemap-file-and-letting-crawlers-know" title="Permalink to this headline">¶</a></h3>
+<p>Setting up a <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> file at the root of a website will give search engine crawlers a guide on which web pages can be crawled, and which pages can’t be crawled. Crawling all pages is possible by adding this line to the <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> file:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>User-agent: *
+</pre></div>
+</div>
+<p>The Hugo framework automatically generates a sitemap when building a website (in this example: <a class="reference external" href="https://covid19.ohdsi.app/sitemap.xml">https://covid19.ohdsi.app/sitemap.xml</a>)</p>
+<p>The generated JSON-LD files can be validated using <a class="reference external" href="https://search.google.com/test/rich-results">Google’s Rich Result Test</a>. This tool can easily validate JSON-LD code, by either submitting a URL directing to the JSON-LD, or by pasting JSON-LD code.</p>
+<!-- TODO give an example link to a page being validated -->
+<p>An important note to make here is that to make the data findable for Google Dataset search the model and final JSON-LD markup needed to mention the <code class="docutils literal notranslate"><span class="pre">schema:Dataset</span></code> class. In a first iteration, we had used our new <code class="docutils literal notranslate"><span class="pre">ohdsi:database</span></code> class and the website was not found (even if the <code class="docutils literal notranslate"><span class="pre">ohdsi:database</span> <span class="pre">is-a</span> <span class="pre">schema:Dataset</span></code> statement from the model is repeated in the JSON-LD; Google’s <a class="reference external" href="http://Schema.org">Schema.org</a> tools used a fixed context file, ignoring any additional statements included in your own JSON-LD).</p>
+<p>Examplarily, the JSON-LD representation of metadata instantiation of the OHDSI Covid19Icarius study looks like this in JSON-LD (compare the metadata presented above in YAML and Turtle format):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;@graph&quot;</span> <span class="p">:</span> <span class="p">[</span> 
+     <span class="p">{</span> <span class="s2">&quot;@id&quot;</span> <span class="p">:</span> <span class="s2">&quot;study:Covid19Icarius&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;schema:MedicalObservationalStudy&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;analyticsUseCase&quot;</span> <span class="p">:</span> <span class="s2">&quot;ohdsi:PopulationLevelEstimation&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;healthCondition&quot;</span> <span class="p">:</span> <span class="s2">&quot;concept:37311061&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;studySubject&quot;</span> <span class="p">:</span> <span class="s2">&quot;concept:45775375&quot;</span>  <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;concept:37311061&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:MedicalCondition&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:MedicalCode&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;codeValue&quot;</span><span class="p">:</span> <span class="s2">&quot;840539006&quot;</span><span class="p">,</span><span class="n">S</span>
+           <span class="s2">&quot;codingSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;SNOMED&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://snomed.info/id/840539006&quot;</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;37311061&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Disease caused by 2019-nCoV&quot;</span>
+     <span class="p">},</span>
+   <span class="p">{</span>
+      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;concept:45775375&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:Drug&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:MedicalCode&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;codeValue&quot;</span><span class="p">:</span> <span class="s2">&quot;1546359&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;codingSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;RxNorm&quot;</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;45775375&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;quinaprilat&quot;</span>
+     <span class="p">}</span>
+   <span class="p">],</span>
+ <span class="s2">&quot;@context&quot;</span> <span class="p">:</span> <span class="p">{</span>
+     <span class="s2">&quot;analyticsUseCase&quot;</span> <span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;@id&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://data.ohdsi.org/analyticsUseCase&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;@id&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;healthCondition&quot;</span> <span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;@id&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://schema.org/healthCondition&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;@id&quot;</span><span class="p">},</span>
+      <span class="s2">&quot;studySubject&quot;</span> <span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;@id&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://schema.org/studySubject&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;@id&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;@id&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://schema.org/name&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;identifier&quot;</span> <span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;@id&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://schema.org/identifier&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;code&quot;</span> <span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;@id&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://schema.org/code&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;@id&quot;</span> <span class="p">}}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-final-website-version-using-hugo">
+<h3><span class="section-number">6.6.8. </span>Generate final website version using HUGO<a class="headerlink" href="#generate-final-website-version-using-hugo" title="Permalink to this headline">¶</a></h3>
+<p>The static site generator <a class="reference external" href="https://gohugo.io/">HUGO</a> was used to create the <a class="reference external" href="https://covid19.ohdsi.app/">covid19.ohdsi.app</a> website. To populate the website with metadata, so-called <a class="reference external" href="https://gohugo.io/content-management/archetypes/">archetypes</a> were created. These archetypes are content templates that use the YAML format, as the JSON-LD format is not the easiest format to enter data, to manually populate the static website pages with metadata. Hence, these archetype templates are used for metadata instanciation of the website. (see the previous sections of this recipe).</p>
+<p>Part of the content is populated automatically, by scraping information from the <a class="reference external" href="https://forums.ohdsi.org/">OHDSI forum</a> and <a class="reference external" href="https://github.com/ohdsi-studies/StudyRepoTemplate">README files</a> in the study-specific GitHub repositories. The metadata in YAML is converted to JSON-LD in the back end of the website. In the front end of the website, this meta data is shown in a human-readable way.</p>
+<p>The source code of the website can be found on <a class="reference external" href="https://github.com/thehyve/ohdsi-covid19-site">https://github.com/thehyve/ohdsi-covid19-site</a>.</p>
+</div>
+<div class="section" id="final-result">
+<h3><span class="section-number">6.6.9. </span>Final result<a class="headerlink" href="#final-result" title="Permalink to this headline">¶</a></h3>
+<p>The final result of applying all these steps looks like this: an HTML page in the browser with JSON-LD metadata under the hood. A screenshot of the HTML page is presented in <a class="reference internal" href="#ehden-ohdsi-figure6"><span class="std std-numref">Fig. 6.7</span></a>.</p>
+<div class="figure align-default" id="ehden-ohdsi-figure6">
+<img alt="This screenshot shows the &quot;study&quot; view of the Hugo covid19 app, here the entry &quot;covid19icarius&quot; (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the &quot;JSON-LD&quot; tab would allow to see the corresponding JSON-LD for this record." src="../../../_images/ehden-ohdsi.md-figure6.png" />
+<p class="caption"><span class="caption-number">Fig. 6.7 </span><span class="caption-text">This screenshot shows the “study” view of the Hugo covid19 app, here the entry “covid19icarius” (<a class="reference external" href="https://covid19.ohdsi.app/study/covid19icarius/">https://covid19.ohdsi.app/study/covid19icarius/</a>). The selected tab shows collapsed details sections, whereas the “JSON-LD” tab would allow to see the corresponding JSON-LD for this record.</span><a class="headerlink" href="#ehden-ohdsi-figure6" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the HTML page of the record, the HTML head element is augmented with a script element which embeds the same JSON-LD information payload and makes it available to search engines’ crawlers.</p>
+<p>Finally, with all this in place, one may now use the dedicated Google Dataset Search site to discover new covid related datasets. <a class="reference internal" href="#ehden-ohdsi-figure7"><span class="std std-numref">Fig. 6.8</span></a> shows the ICARIUS dataset, which was highlighted in the previous sections, as indexed in Google Dataset Search.</p>
+<div class="figure align-default" id="ehden-ohdsi-figure7">
+<img alt="The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe." src="../../../_images/ehden-ohdsi.md-figure7.png" />
+<p class="caption"><span class="caption-number">Fig. 6.8 </span><span class="caption-text">The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.</span><a class="headerlink" href="#ehden-ohdsi-figure7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2><span class="section-number">6.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>The key reusable element in this recipe is the use of <a class="reference external" href="http://Schema.org">Schema.org</a> JSON-LD statements in any website to promote findability of metadata in search engines. Using the Hugo site generator has the advantage that it is very versatile and includes a lot of scientific/blogging authoring tools out of the box. However, the particular implementation of using YAML as input format (which is ‘canonical Hugo’) and converting this during the static website generation process to JSON-LD is quite laborious and also potentially introduces issues during the conversion. Therefore, it is probably easier and more scalable to let the scientists write their metadata directly in JSON-LD, helped by some good examples and templates, and the Hugo software could even be extended to facilitate that as well.</p>
+<p>Another next step that could be taken, besides publishing the JSON-LD metadata directly on the web, is to wrap it into a container such as <a class="reference external" href="https://www.researchobject.org/ro-crate/">RO-CRATE</a> and publish these directly into a scientific artefacts repository. This would also help to sustain the availability of the data, because for all its great properties, static websites only live as long as the webhost stays up, and the average website disappears after a few years. Hosting the website on <a class="reference external" href="https://ipfs.io/">IPFS</a> and using a pinning service could be yet another remedy to fix this problem, but this is out of scope of this recipe.</p>
+<div class="section" id="additional-reading">
+<h3><span class="section-number">6.7.1. </span>Additional reading<a class="headerlink" href="#additional-reading" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Findability of data by search engines: <a class="reference external" href="https://w3id.org/faircookbook/FCB010">Search Engine Optimization</a> recipe, describing web crawling, robots.txt, sitemaps and possible roadblocks.</p></li>
+<li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB026">Recipe</a> on how to create a metadata profile.</p></li>
+<li><p><a class="reference external" href="https://zenodo.org/record/4474373">EHDEN Deliverable D4.5 - Interoperability roadmap</a>.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">6.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>ELIXIR Node</p></th>
+<th class="head"><p>Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/keesvanbochove"><img class="avatar-style" src="https://avatars.githubusercontent.com/keesvanbochove"></img><div class="d-block">Kees van Bochove</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-8589-0609"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>The Hyve</p></td>
+<td><p><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Original Draft, Conceptualization</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><img class="avatar-style" src="https://avatars.githubusercontent.com/NONE"></img><div class="d-block">Emma Vos</div></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-8589-0609"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>The Hyve</p></td>
+<td><p><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/JolandaS"><img class="avatar-style" src="https://avatars.githubusercontent.com/JolandaS"></img><div class="d-block">Jolanda Strubel</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-6675-4639"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>The Hyve</p></td>
+<td><p><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/AlasdairGray"><img class="avatar-style" src="https://avatars.githubusercontent.com/AlasdairGray"></img><div class="d-block">Alasdair J G Gray</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-5711-4872"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Heriot Watt University</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/robertgiessmann"><img class="avatar-style" src="https://avatars.githubusercontent.com/robertgiessmann"></img><div class="d-block">Robert Giessmann</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-0254-1500"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Bayer AG</p></td>
+<td><p><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">6.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/applied-examples"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="resolute_raw/resolute.html" title="previous page"><span class="section-number">5. </span>ReSOLUTE - transcriptomics datasets</a>
+    <a class='right-next' id="next-link" href="../community.html" title="next page">Community</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
