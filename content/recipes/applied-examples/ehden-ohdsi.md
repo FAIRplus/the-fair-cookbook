@@ -2,16 +2,15 @@
 # FAIRification of observational studies and databases: the EHDEN and OHDSI use case
 
 ````{panels_fairplus}
-:identifier_text: FCB0XX
-:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
+:identifier_text: FCB054
+:identifier_link: 'https://w3id.org/faircookbook/FCB054'
 :difficulty_level: 1
-:recipe_type: guidance
+:recipe_type: applied_example
 :reading_time_minutes: 15
 :intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
 :has_executable_code: nope
 :recipe_name: EHDEN OHDSI discovery with Schema.org
 ```` 
-
 
 
 ## Main objectives
