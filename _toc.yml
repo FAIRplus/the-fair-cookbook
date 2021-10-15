@@ -177,8 +177,8 @@
           title: Oncotrack - clinical cohort datasets #FCB044
         - file: content/recipes/applied-examples/resolute_raw/resolute
           title: ReSOLUTE - transcriptomics datasets #FCB045
-        - file: content/recipes/applied-examples/edhen-odhsi-sdo
-          title: EDHEN-ODHSI
+        - file: content/recipes/applied-examples/ehden-ohdsi
+          title: EHDEN-OHDSI
           numbered: false
 
 
