@@ -84,10 +84,10 @@ This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on 
 ```
 
 
-<!-- ![](https://i.imgur.com/jOYK2ZM.jpg) -->
+<!-- ![](/images/jOYK2ZM.jpg) -->
 
 
-```{figure} https://i.imgur.com/jOYK2ZM.jpg
+```{figure} /images/jOYK2ZM.jpg
 ---
 width: 800px
 name: FASTQutils library
