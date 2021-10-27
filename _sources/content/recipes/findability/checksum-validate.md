@@ -1,5 +1,5 @@
 (fcb-checksum-validate)=
-# How to check intactness of files by validating checksums
+# How to check file integrity by validating checksums
 
 ````{panels_fairplus}
 :identifier_text: FCB053 
@@ -9,7 +9,7 @@
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
 :has_executable_code: nope
-:recipe_name: How to check intactness of files by validating checksums
+:recipe_name: How to check file integrity by validating checksums
 ```` 
 
 ## Abstract
