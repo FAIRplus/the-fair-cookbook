@@ -9,6 +9,8 @@
       title: Introduction
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
+    - file: content/recipes/introduction/training-datasets
+      title: Datasets of relevance
     - file: content/recipes/glossary-fair-terms
       title: Glossary
       # title: Introduction
@@ -21,6 +23,7 @@
           # - file: content/recipes/introduction/IMI-and-data-management-plans
           # - file: content/recipes/introduction/IMI-Data-Access-Request-Process
           # - file: content/recipes/introduction/data-sharing-models
+
   
 
 - part: RECIPES
