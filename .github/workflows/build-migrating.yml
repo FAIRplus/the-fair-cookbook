@@ -16,6 +16,8 @@ jobs:
         ref: migrating
     - name: Setup Python
       uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
     - name: Record Python version
       run: python -V
     - name: Install jupyter-book==0.10.2 and fixed dependencies
