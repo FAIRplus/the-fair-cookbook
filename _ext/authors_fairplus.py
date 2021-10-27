@@ -60,7 +60,7 @@ class AuthorsFairplus(Directive):
         for author in self.author_dict:
             if not author in CONTROLLED_AUTHOR_LIST:
                 raise sphinx.errors.ExtensionError(_make_string_red(
-                    f"The author '{author}' is not registered in the CONTROLLED_AUTHOR_LIST"
+                    f"The author '{author}' is not registered in the CONTROLLED_AUTHOR_LIST. You can add the author in _ext/global_variables_fairplus.py if you want."
                 ))
 
         return 
