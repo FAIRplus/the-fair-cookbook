@@ -58,17 +58,17 @@ We will outline the steps for embedding machine processable mark up within a web
 
    1.  Select the type of data page that you are marking up, i.e. the primary subject of the page. In the example we will use `Gene`. Here are the Bioschemas [profiles](https://bioschemas.org/profiles/) that you can choose from <sup>[1](#draft-profiles)</sup>. 
 
-      - `ChemicalSubstance` for a page about a chemical substance composed of molecular entities
+        - `ChemicalSubstance` for a page about a chemical substance composed of molecular entities
 
-      - `Gene` for a page about a gene
+        - `Gene` for a page about a gene
 
-      - `MolecularEntity` for a page about a single molecular entity
+        - `MolecularEntity` for a page about a single molecular entity
 
-      - `Protein` for a page about a protein
+        - `Protein` for a page about a protein
 
-      - `BioSample` for a page about a biological sample
-      
-      - `Taxon` for a page about a taxon
+        - `BioSample` for a page about a biological sample
+        
+        - `Taxon` for a page about a taxon
       
    2. Enter the URL of the page in URL box, e.g. `https://www.wikidata.org/wiki/Q227339`. Note that this URL will be used as the identifier for the resource being described in the markup.
 
