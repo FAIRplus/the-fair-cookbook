@@ -1,0 +1,26 @@
+graph TD
+
+subgraph .
+  A00(Data Owner/ Research Project consortium):::box1 -->|produces|A11(Confidentiality Disclosure <br> & <br> Collaboration Agreement):::box2
+end
+
+subgraph ..
+ LT(Legal team):::box1 -->|defines|Terms(legal terms):::box2
+end
+
+A00-->|contracts|LT
+A00 -->|contracts|DH
+subgraph ...
+  DH(5.data hosting organization):::box1 -->|hosts|Data(data):::box2
+end
+
+
+subgraph ....
+  A0(Data Requester):::box1
+  A0 -->|produces|A1(research proposal):::box2
+end
+
+classDef box1 font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+classDef box2 font-family:avenir,font-size:14px,fill:lightblue,stroke:#222,color:#fff,stroke-width:1px
+
+linkStyle 0,1,2,3,4,5 font-family:avenir,stroke:black,stroke-width:1px,color:darkred
