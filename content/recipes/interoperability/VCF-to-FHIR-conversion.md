@@ -21,7 +21,7 @@ The main purpose of this recipe is to provide FAIR guidance relevant to the clin
 
 > - providing a tool to convert Variant Call Files (VCF) to a HL7 FHIR message
 > - highlighting known limitations of the solution
-> - raising awareness in the FHIR standard in the context of clinically relevant data. 
+> - raising awareness of the FHIR standard in the context of clinically relevant data. 
 
 ## Graphical Overview
 
@@ -42,8 +42,8 @@ The table below lists relevant use cases.
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
 |Data owner| Convert VCF to a FHIR message| Produce an information payload carrying patient genotyping information in a standardized format compatible with EHR|
-|Data consumer| integrate patient genetic information| seamlessly integration with other FHIR messages from other sources| 
-|Data manager| unify clinical information in one format| facilitate reuse and mining by clinicians|
+|Data consumer| Integrate patient genetic information| Have seamless integration with other FHIR messages from other sources| 
+|Data manager| Unify clinical information in one format| Facilitate reuse and mining by clinicians|
 
 
 ## Capability & Maturity Table
@@ -68,17 +68,17 @@ The table below lists relevant use cases.
 | [VCF](http://edamontology.org/format_3016)  | |
 | [BCF](http://edamontology.org/format_3020)  | |
 | [FHIR](https://fairsharing.org/FAIRsharing.25k4yp)  | |
-| [Compressed Format](https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_4006)| |
+| [Compressed Format](http://edamontology.org/format_4006)| |
 ||[LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)||
 ---
 
-The `Variant Call File` or[VCF](http://edamontology.org/format_3016) is a file format specified by the Global Alliance for Genomic Health to report on genetic variation as detected by a range of molecular biology techniques (e.g., PCR, GeneChip, sequencing). It is considered to be the  _de facto_ standards for reporting genetic variations in their various forms. It is therefore the output for most genetic analysis pipelines (e.g., the [Galaxy Worflow](https://toolshed.g2.bx.psu.edu/) tool [`affy2vcf`](https://github.com/gregvonkuster/galaxy_tools/tree/master/tools/convert_formats/affy2vcf) )
+The `Variant Call File` or [VCF](http://edamontology.org/format_3016) is a file format specified by the Global Alliance for Genomic Health to report on genetic variation as detected by a range of molecular biology techniques (e.g., PCR, GeneChip, sequencing). It is considered to be the  _de facto_ standard for reporting genetic variations in their various forms. It is therefore the output for most genetic analysis pipelines (e.g., the [Galaxy Worflow](https://toolshed.g2.bx.psu.edu/) tool [`affy2vcf`](https://github.com/gregvonkuster/galaxy_tools/tree/master/tools/convert_formats/affy2vcf) )
 
-The latest version of (v4.3) `Variant Call File` detailed specifications can be viewed [here](http://samtools.github.io/hts-specs/VCFv4.3.pdf) 
+The latest version of `Variant Call File` is v4.3; detailed specifications can be viewed [here](http://samtools.github.io/hts-specs/VCFv4.3.pdf) 
 
-The VCF format is species agnostic, making it suitable for use in any context, from Agronomy to the Clinics. 
-In fact, this is last use case this particular recipe will be focusing on. Indeed, this is when bioinformatics meets medical informatics and the need to translate data into different format arises. 
-In the world of clinical informatics, exchanging information between system increasingly relies on Health Level 7 data standards and in particular on the Fast Healthcare Interoperability Resource (FHIR). A number of working groups focus on how to best fit clinical information within the paradigm of the HL7 FHIR representation.
+The VCF format is species agnostic, making it suitable for use in any context, from agronomy to clinical practice. 
+In fact, it is this last use case that this particular recipe will be focusing on. Indeed, this is when bioinformatics meets medical informatics and the need to translate data into different format arises. 
+In the world of clinical informatics, exchanging information between systems increasingly relies on Health Level 7 data standards and in particular on the Fast Healthcare Interoperability Resource (FHIR). A number of working groups focus on how to best fit clinical information within the paradigm of the HL7 FHIR representation.
 
 In this FAIR Cookbook recipe, we will highlight a software component allowing to convert VCF files holding a specific type of genetic variation information into the HL7 FHIR mode. 
 
@@ -88,10 +88,10 @@ In this FAIR Cookbook recipe, we will highlight a software component allowing to
  - **does not** support `structural variants`
  - This software is not intended for use in production systems
  - This software is mainly a prototype for evaluation, testing and refinement of the conversion process and the FHIR message payload
- - This software does not catter by patient reidentification issues, which needs to be carefully catered for if dealing with real patient data, and not test data.
+ - This software does not deal with patient reidentification issues, which needs to be carefully considered if dealing with real patient data, and not test data.
 ```
 
-The aptly named `vcf2fhir` software is a python library designed to perform this task. This is the result of work recently published by Dolin et al, 2021. {footcite}`pmid33653260`.
+The aptly named `vcf2fhir` software is a python library designed to perform this task. It is the result of work recently published by Dolin et al, 2021. {footcite}`pmid33653260`.
 
 
 
@@ -103,7 +103,7 @@ The aptly named `vcf2fhir` software is a python library designed to perform this
 
 ### Requirements
 
-The users should be at ease with command line interfaces.
+Users should be at ease with command line interfaces.
 
 In order for the `vcf2fhir` python library to run, the following libraries need to be present on the system.
 
@@ -193,11 +193,11 @@ vcf_fhir_converter.convert()
 
 ```
 
-The result of the conversion is a so-called `FHIR Genomics report`, the specification of which are available [here](http://hl7.org/fhir/uv/genomics-reporting/index.html). A number of options are available from the converter to allow users to modify and tune the output to contains specific information. The conversion can therefore be limited to a subset of records found in a VCF file by specifying particular portions, e.g., conversion regions, studied regions, clinical annotations, and uncallable regions, etc.
+The result of the conversion is a so-called `FHIR Genomics report`, the specification of which are available [here](http://hl7.org/fhir/uv/genomics-reporting/index.html). A number of options are available from the converter to allow users to modify and tune the output to contains specific information. The conversion can therefore be limited to a subset of records found in a VCF file by specifying particular portions, e.g., conversion regions, studied regions, clinical annotations, or uncallable regions.
 
 For a full and detailed overview of these options, we direct the readers to the [original manual](https://github.com/elimuinformatics/vcf2fhir/blob/master/docs/Manual.md) for the `vcf2fhir` library.
 
-Depending on the options specified by the users, different types of 'FHIR genomics report' may be generated. They will differ in content and layout but all we rely on a number of normative patterns and terminologies (e.g. LOINC).
+Depending on the options specified by the user, different types of 'FHIR genomics report' may be generated. They will differ in content and layout but all rely on a number of normative patterns and terminologies (e.g. LOINC).
 
 * Create FHIR Diagnostic Report
 * Create RegionStudied observations
@@ -206,7 +206,7 @@ Depending on the options specified by the users, different types of 'FHIR genomi
 * Create DiagnosticImplication observations 
 
 
-More Example to instantiate Converter
+More examples to instantiate Converter
 
 -  Converts all variants in VCF. FHIR report contains no region-studied
    observation.
@@ -410,14 +410,14 @@ Note the use of [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb) terminology 
 
 #### Built-in Support Conversion Error Logging
 
-No conversion tool is failsafe. Therefore, the `vcf2fhir` library provides 2 distinct logging functions, which plug-in naturally in the Python generic error logging package.
+No conversion tool is failsafe. Therefore, the `vcf2fhir` library provides 2 distinct logging functions, which plug naturally into the Python generic error logging package.
 
 -  **vcf2fhir.general**: this mode provides the standard library logging functions. 
 
 -  **vcf2fhir.invalidrecord**: this mode logs all the `records` from the input vcf file which are in present in the `conversion region` but are not converted to `fhir format`.
 
 
-To take advantage of the mechanism, users can invoke each of the `vcf2fhir` logger in the manner described below:
+To take advantage of the mechanism, users can invoke each of the `vcf2fhir` loggers in the manner described below:
 
 
 ```python
@@ -445,20 +445,20 @@ logger.addHandler(ch)
 
 ### Take Home message from using `vcf2fhir` python library
 
-* initial capability supportting generation of `HL7 FHIR Genomics Report message` from VCF files.
+* initial capability supporting generation of `HL7 FHIR Genomics Report message` from VCF files.
 * obtention of LOINC annotated, JSON formated documents.
-* a conversion error log is available. This proves very useful for quality control and error tracking tasks
+* a conversion error log is available. This proves very useful for quality control and error tracking tasks.
 
 
 
  
 ## Conclusion
 
-In this recipe, we provide a practical hands-on advice on how to make a specific subtype of clinical genetic information FAIR in the form of the FHIR message when converting from a VCF file.
+In this recipe, we provide practical hands-on advice on how to make a specific subtype of clinical genetic information FAIR in the form of a FHIR message when converting from a VCF file.
 
 We also highlighted the existing limitations surrounding the use of the open source conversion tool and that users should **carefully** assess the nature of the information present in the input VCF files prior to executing the code.
 
-Bearing this in mind, the `vcf2fhir` tool provide an easy to deply and easy to use solution for any one interesting in adding a FHIR message capability to a clinical genetic analysis pipeline relying for instance on DNA microarray genotyping solutions/
+Bearing this in mind, the `vcf2fhir` tool provides an easy to deploy and easy to use solution for anyone interested in adding a FHIR message capability to a clinical genetic analysis pipeline relying for instance on DNA microarray genotyping solutions.
 
 The authors of the tool aim to expand the capabilities of the tool to include `enhancing the conversion logic to accommodate VCF rows representing structural variants (i.e. rows that contain an INFO.SVTYPE field)`.
 
@@ -466,9 +466,9 @@ The authors of the tool aim to expand the capabilities of the tool to include `e
 
 ### What to read next
 
-- *[From Electronic Health Records Notes to FHIR](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/EHRN2FHIR.md) 
-- * Pistoia Alliance FAIR4Clinical Guidance - An Introduction
-- * Pistoia Alliance FAIR4Clin - Metadata
+- [From Electronic Health Records Notes to FHIR](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/EHRN2FHIR.md) 
+- Pistoia Alliance FAIR4Clinical Guidance - An Introduction
+- Pistoia Alliance FAIR4Clin - Metadata
 
 
 ---
