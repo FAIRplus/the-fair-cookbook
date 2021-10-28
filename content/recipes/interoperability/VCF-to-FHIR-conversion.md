@@ -25,13 +25,13 @@ The main purpose of this recipe is to provide FAIR guidance relevant to the clin
 
 ## Graphical Overview
 
-```{figure} vcf2fhir-conversion.png
+```{figure} vcf2fhir-json-overview.png
 ---
 width: 350px
 name: Converting a VCF open standard file to a HL7 FHIR formatted payload
 alt: Converting a VCF open standard file to a HL7 FHIR formatted payload
 ---
-Converting a VCF open standard file to a HL7 FHIR formatted payload.
+Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.
 ```
 
 
@@ -469,6 +469,8 @@ The authors of the tool aim to expand the capabilities of the tool to include `e
 - [From Electronic Health Records Notes to FHIR](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/EHRN2FHIR.md) 
 - Pistoia Alliance FAIR4Clinical Guidance - An Introduction
 - Pistoia Alliance FAIR4Clin - Metadata
+- [HL7 FHIR for FAIR implementation guidelines](https://build.fhir.org/ig/HL7/fhir-for-fair/index.html)
+
 
 
 ---
