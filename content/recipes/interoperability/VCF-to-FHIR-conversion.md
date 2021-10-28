@@ -37,7 +37,7 @@ Converting a VCF open standard file to a HL7 FHIR formatted payload.
 
 ## User Stories
 
-The table below lists relevant use cases. This recipe provides solutions with FASTQ files {footcite}`Cock2010` as an example.
+The table below lists relevant use cases.
 
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
@@ -91,7 +91,7 @@ In this FAIR Cookbook recipe, we will highlight a software component allowing to
  - This software does not catter by patient reidentification issues, which needs to be carefully catered for if dealing with real patient data, and not test data.
 ```
 
-The aptly named `vcf2fhir` software is a python library designed to perform this task. This is the result of work recently published {footnote}`Dolin-2021`
+The aptly named `vcf2fhir` software is a python library designed to perform this task. This is the result of work recently published by Dolin et al, 2021. {footcite}`pmid33653260`.
 
 
 
