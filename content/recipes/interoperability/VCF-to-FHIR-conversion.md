@@ -147,7 +147,7 @@ Not only that, but as we indicated in the introduction, the VCF files should be 
 Obtaining an exemplar VCF file from the vcf2fhir github repository using the `wget` command:
 
 ```bash
-wget -c https://github.com/elimuinformatics/vcf2fhir/blob/master/vcf2fhir/test/vcf_example1.vcf
+wget -c https://raw.githubusercontent.com/elimuinformatics/vcf2fhir/master/vcf2fhir/test/vcf_example1.vcf
 ```
 
 
