@@ -105,6 +105,8 @@
             title: File format validation, FASTQ example #FCB030
           - file: content/recipes/interoperability/ETL-tools
             title: Extraction, transformation, and loading process #FCB031
+          - file: content/recipes/interoperability/nlp-to-rdf
+            title: From unstructured text to knowledge graph #FCB***  
 
     - file: content/recipes/reusability
       title: Reusability
