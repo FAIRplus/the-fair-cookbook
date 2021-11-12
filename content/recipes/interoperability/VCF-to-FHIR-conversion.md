@@ -124,7 +124,7 @@ pip install cython wheel
 ```
 
 
-### Installing `vcr2fhir` python library:
+### Installing `vcf2fhir` python library:
 
 Since the `vcf2fhir` is available from [pypi.org](https://pypi.org), we can install the vcf2fhir binary from `pip`.
 
@@ -446,9 +446,8 @@ logger.addHandler(ch)
 ### Take Home message from using `vcf2fhir` python library
 
 * initial capability supporting generation of `HL7 FHIR Genomics Report message` from VCF files.
-* obtention of LOINC annotated, JSON formated documents.
+* generation of LOINC annotated, JSON formated documents.
 * a conversion error log is available. This proves very useful for quality control and error tracking tasks.
-
 
 
  
