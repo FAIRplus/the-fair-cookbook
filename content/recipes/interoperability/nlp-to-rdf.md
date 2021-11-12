@@ -61,15 +61,15 @@ overview of an NLP/NLU pipeline.
 
 ## Table of Tools
 
-| Tool Name  | URI |   |
+| Tool Name  | URI | Availability  |
 | :------------- | :------------- | :------------- |
-| [MIMIC-III](https://www.nature.com/articles/sdata201635#citeas)|{footcite}`Johnson2016`| |
-| [spacy](https://spacy.io/)<!-- TODO needs a link -->    |   |   |
+| [MIMIC-III](https://doi.org/10.1038/sdata.2016.35)|{footcite}`Johnson2016`||
+| [spacy](https://doi.org/10.18653/v1/W19-5034)|{footcite}`Neumann2019`|https://spacy.io/|
 | [AWS comprehend](https://aws.amazon.com/comprehend/medical/)<!-- TODO needs a link -->    |   |   |
-| [BERT](TODO:link)| {footcite}'Mu.2021'    |   |   |
-| [BioBERT](TODO:link)<!-- TODO needs a link -->    |   |   |
-| [SciBERT](TODO:link)<!-- TODO needs a link -->    |   |   |
-| [BioClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)|{footcite}`https://arxiv.org/abs/1904.03323`|  |
+| [BERT](https://arxiv.org/abs/1810.04805)| {footcite}`Devlin2018`| https://github.com/google-research/bert  |   |
+| [BioBERT](https://doi.org/10.1093/bioinformatics/btz682)| {footcite}`Lee2020` | https://github.com/dmis-lab/biobert  |
+| [SciBERT](https://arxiv.org/abs/1903.10676)| {footcite}`Beltagy2019` | https://github.com/allenai/scibert |
+| [BioClinicalBERT](https://arxiv.org/abs/1904.03323)|{footcite}`Alsentzer2019`| https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT |
 ---
 
 ## Introduction
