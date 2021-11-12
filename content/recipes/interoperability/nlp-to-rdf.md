@@ -93,6 +93,37 @@ assemble a corpus of data.
 ### Step 2: select a NLP framework
 
 for instance, spacy
+<!-- TODO redefine based on use case -->
+
+```python
+
+import en_core_sci_md
+from fuzzywuzzy import fuzz
+
+vocab_dict = {‘Alzheimer’: ‘neugenerative_disease’, ‘parkinsons’: ‘neugenerative_disease’}
+vocab_groups = {‘neugenerative_disease’}
+
+# Instal spacy model locally from https://allenai.github.io/scispacy/
+ nlp = en_core_sci_md.load()
+
+        	# Extracting tokens from description
+        	doc = nlp(description)
+
+        	short_desc_dict = {
+            	name: set()
+            	for name in vocab_groups
+        	}
+
+        	for entity in doc.ents:
+            	entity = entity.text
+
+            	for word in vocab_dict:
+			# Use fuzzy match to check for words
+                		distance = fuzz.ratio(entity, word)
+
+                		if distance > 80:  # Descent score to eliminated FPs 
+                    			short_desc_dict[vocab_dict[word]].add(entity)
+```
 
 ### Step 3: select a model
 
