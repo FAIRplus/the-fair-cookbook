@@ -141,7 +141,10 @@ RUN mkdir -p ./_build/html
 COPY ./   ./
 
 # Start the actual build
-RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build ./ 2>&1 | tee ./_build/build.log
+RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build -W ./ 2>&1 | tee ./_build/build.log 
+
+# Let the build fail if there are errors in the build of the jupyter_book 
+RUN grep "There was an error in building your book. Look above for the cause." ./_build/build.log; test $? -eq 1
 
 # Clean the build log from all escape characters used for highlighting text (e.g. bold, red) and the 
 # "interactive" feel (i.e. going back to start of line and overwrite to create a up-counting progress bar)
