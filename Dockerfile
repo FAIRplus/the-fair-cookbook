@@ -125,6 +125,40 @@ RUN pip freeze > /pip_freeze_actual.txt
 RUN cat /pip_freeze_actual.txt
 
 ## ------------ next stage: --------------
+## build the images from mermaid files
+
+FROM alpine as orchestrator
+
+COPY ./ ./
+
+RUN find . -iname "*.mmd" > list_of_all_mermaid_files.txt
+RUN tar c -f all_mermaid_files.tar -T list_of_all_mermaid_files.txt
+RUN ls -lh all_mermaid_files.tar
+
+## ------------ next stage: --------------
+## build the images from mermaid files
+
+FROM minlag/mermaid-cli:8.13.4 as imageconverter
+WORKDIR /home/mermaidcli
+
+RUN echo "{\"args\": [ \"--no-sandbox\" ] }" > puppeteer-config.json
+
+COPY --from=orchestrator all_mermaid_files.tar list_of_all_mermaid_files.txt .
+RUN tar -xf all_mermaid_files.tar
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 800 -o $line.png ; done
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 1600 -o $line.hi-res.png ; done
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 400 -o $line.lo-res.png  ; done
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -o $line.svg                ; done
+
+RUN cp list_of_all_mermaid_files.txt list_of_files_to_copy.txt
+RUN sed 's/$/.png/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN sed 's/$/.hi-res.png/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN sed 's/$/.lo-res.png/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN sed 's/$/.svg/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN tar -cf ./all_raw_and_converted_mermaid_images.tar -T list_of_files_to_copy.txt
+
+
+## ------------ next stage: --------------
 ## load the content
 
 FROM jupyterbookbuilder-base-image AS jupyterbookbuilder
@@ -139,6 +173,8 @@ RUN mkdir -p ./_build/html
 
 # Copy files 
 COPY ./   ./
+COPY --from=imageconverter /home/mermaidcli/all_raw_and_converted_mermaid_images.tar .
+RUN tar -xf all_raw_and_converted_mermaid_images.tar
 
 # Start the actual build
 RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build -W ./ 2>&1 | tee ./_build/build.log 
