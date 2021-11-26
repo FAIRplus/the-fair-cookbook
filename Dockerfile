@@ -177,7 +177,7 @@ COPY --from=imageconverter /home/mermaidcli/all_raw_and_converted_mermaid_images
 RUN tar -xf all_raw_and_converted_mermaid_images.tar
 
 # Start the actual build
-RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build -W ./ 2>&1 | tee ./_build/build.log 
+RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build ./ 2>&1 | tee ./_build/build.log
 
 # Let the build fail if there are errors in the build of the jupyter_book 
 RUN grep "There was an error in building your book. Look above for the cause." ./_build/build.log; test $? -eq 1
