@@ -184,7 +184,7 @@ Setting keywords associated with the Zenodo deposition .
 
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
-```{figure} /images/fSxOjXe.png"
+```{figure} /images/fSxOjXe.png
 ---
 height: 400px
 name: Choosing a License is essential 
