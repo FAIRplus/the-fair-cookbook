@@ -20,12 +20,9 @@ This recipe covers documentation of the popular Aspera Fast Transfer Protocol an
 
 ## Graphical overview
 
-```{figure} aspera.md-figure1.mmd.png
----
+```{figure_fairplus} aspera.md-figure1.mmd
 name: aspera-figure1
-alt: Aspera Data Transfer Process.
----
-Aspera Data Transfer Process.
+subtitle: Aspera Data Transfer Process.
 ```
 
 ---
