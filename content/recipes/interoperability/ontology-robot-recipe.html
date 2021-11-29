@@ -1,0 +1,1747 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Building an application ontology with ROBOT</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="7.12.1. Competency questions for the Ontology ROBOT use case" href="ontology-robot-recipe/competency-questions.html" />
+    <link rel="prev" title="6. Ontology-related tools and services" href="ontology-operations-tools.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Building an application ontology with ROBOT" />
+<meta property="og:description" content="Building an application ontology with ROBOT    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="current reference internal" href="#">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/ontology-robot-recipe.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/ontology-robot-recipe.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/ontology-robot-recipe.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   7.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   7.2. Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   7.3. Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   7.4. FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   7.5. Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingredients">
+   7.6. Ingredients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-process">
+   7.7. Step by step process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminary-requirements">
+     7.7.1. Preliminary requirements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-define-the-goal-of-the-application-ontology">
+     7.7.2. Step 1: Define the goal of the application ontology
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-select-terms-from-reference-ontologies">
+     7.7.3. Step 2: Select terms from reference ontologies
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-2-1-select-source-ontologies">
+       7.7.3.1. Step 2.1 Select source ontologies
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-2-2-select-seed-ontology-terms">
+       7.7.3.2. Step 2.2 Select seed ontology terms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#seed-term-extraction-with-zooma">
+       7.7.3.3. Seed term extraction with ZOOMA
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#seed-term-extraction-with-ncbo-annotator">
+       7.7.3.4. Seed term extraction with NCBO Annotator
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-2-2-3-seed-term-extraction-with-sparql">
+       7.7.3.5. Step 2.2.3 Seed term extraction with SPARQL
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-extract-ontology-modules-from-source-ontologies">
+     7.7.4. Step 3: Extract ontology modules from source ontologies
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-1-get-source-ontology-files">
+       7.7.4.1. Step 3.1 Get source ontology files
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-2-choose-ontology-extraction-algorithms">
+       7.7.4.2. Step 3.2 Choose ontology extraction algorithms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-3-extract-modules-using-seed-terms">
+       7.7.4.3. Step 3.3 Extract modules using seed terms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-4-assess-extracted-modules">
+       7.7.4.4. Step 3.4 Assess extracted modules
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-build-the-upper-level-umbrella-ontology">
+     7.7.5. Step 4: Build the upper level umbrella ontology
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-merge-ontology-modules-and-umbrella-ontology">
+     7.7.6. Step 5: Merge ontology modules and umbrella ontology
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-6-post-merge-modifications">
+     7.7.7. Step 6: Post-merge modifications
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-6-1-materialize-and-reasoning">
+       7.7.7.1. Step 6.1: Materialize and Reasoning
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-6-2-annotate">
+       7.7.7.2. Step 6.2: Annotate
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-6-3-convert">
+       7.7.7.3. Step 6.3: Convert
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-7-assess-coverage-of-the-ontology-scope">
+     7.7.8. Step 7: Assess coverage of the ontology scope
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   7.8. Conclusions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-read-next">
+     7.8.1. What should I read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   7.9. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#supplementary-material">
+   7.10. Supplementary material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   7.11. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   7.12. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="building-an-application-ontology-with-robot">
+<span id="fcb-interop-ontorobot"></span><h1><span class="section-number">7. </span>Building an application ontology with ROBOT<a class="headerlink" href="#building-an-application-ontology-with-robot" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Building an application ontology with ROBOT", "audience": ["Terminology Manager", "Data Manager", "Data Scientist", "Ontologist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB023", "url": "https://w3id.org/faircookbook/FCB023"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H60M0S", "totalTime": "PT0H60M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+60 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+Yes
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Building an application ontology with ROBOT</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Hands-on</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Terminology Manager, Data Manager, Data Scientist, Ontologist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB023" class="text--purple-dark">FCB023
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">7.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The main purpose of this recipe is building an application ontology from source ontologies using <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> <a class="footnote-reference brackets" href="#pmid31357927" id="id1">2</a> via a sustainable dynamic pipeline to allow seamless integration of source ontology updates <a class="footnote-reference brackets" href="#arp2015" id="id2">1</a>.</p>
+</div></blockquote>
+<p>An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> synchronized with the <code class="docutils literal notranslate"><span class="pre">reference</span> <span class="pre">ontologies</span></code> that imports are made from.  We aim to document how a certain level of automation can be achieved.</p>
+<p><a class="reference external" href="http://robot.obolibrary.org/">ROBOT</a> is an open source tool for ontology development. It supports ontology editing, ontology annotation, ontology format conversion, and other functions. It runs on the Java Virtual Machine (JVM) and can be used through command line tools on Windows, macOS and Linux.</p>
+</div>
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">7.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="ontology-robot-recipe-figure1">
+<img alt="Building an ontology with Robot tool" src="../../../_images/ontology-robot-recipe.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 7.12 </span><span class="caption-text">Building an ontology with Robot tool.</span><a class="headerlink" href="#ontology-robot-recipe-figure1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="capability-maturity-table">
+<h2><span class="section-number">7.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<!-- TO DO -->
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>minimal</p></td>
+<td class="text-align:left"><p>repeatable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2><span class="section-number">7.4. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/topic_0089">Ontology and terminology</a></p></td>
+<td class="text-align:left"><p>[tsv,OWL]</p></td>
+<td class="text-align:left"><p>OWL</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-data-standards">
+<h2><span class="section-number">7.5. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.atygwy">OWL</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.aa0eat">OBO</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="ingredients">
+<h2><span class="section-number">7.6. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Tool Name</p></th>
+<th class="text-align:left head"><p>Tool Location</p></th>
+<th class="text-align:left head"><p>Tool function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>ROBOT</p></td>
+<td class="text-align:left"><p><a class="reference external" href="http://robot.obolibrary.org/">http://robot.obolibrary.org/</a></p></td>
+<td class="text-align:left"><p>ontology management cli</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Ontology development kit</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://github.com/INCATools/ontology-development-kit">https://github.com/INCATools/ontology-development-kit</a> (comes with ROBOT included)</p></td>
+<td class="text-align:left"><p>ontology management environment</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Protégé/other ontology editor</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://protege.stanford.edu/">https://protege.stanford.edu/</a></p></td>
+<td class="text-align:left"><p>ontology editor</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>SPARQL</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/sparql11-query/">https://www.w3.org/TR/sparql11-query/</a></p></td>
+<td class="text-align:left"><p>ontology query language</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>ELK</p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://www.cs.ox.ac.uk/isg/tools/ELK/">https://www.cs.ox.ac.uk/isg/tools/ELK/</a></p></td>
+<td class="text-align:left"><p>ontology reasoner</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Hermit</p></td>
+<td class="text-align:left"><p><a class="reference external" href="http://www.hermit-reasoner.com/">http://www.hermit-reasoner.com/</a></p></td>
+<td class="text-align:left"><p>ontology reasoner</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="step-by-step-process">
+<h2><span class="section-number">7.7. </span>Step by step process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="preliminary-requirements">
+<h3><span class="section-number">7.7.1. </span>Preliminary requirements<a class="headerlink" href="#preliminary-requirements" title="Permalink to this headline">¶</a></h3>
+<p>The development of <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> requires joint contributions from <code class="docutils literal notranslate"><span class="pre">domain</span> <span class="pre">experts</span></code>, <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span> <span class="pre">owners</span></code> and <code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">developers</span></code>. The domain expert provides essential domain knowledge. The use case owners defines the <code class="docutils literal notranslate"><span class="pre">competency</span> <span class="pre">questions</span></code> of the application ontology. And the ontology developers are <code class="docutils literal notranslate"><span class="pre">IT</span> <span class="pre">specialists</span></code> working on the construction of the application ontology.</p>
+</div>
+<div class="section" id="step-1-define-the-goal-of-the-application-ontology">
+<h3><span class="section-number">7.7.2. </span>Step 1: Define the goal of the application ontology<a class="headerlink" href="#step-1-define-the-goal-of-the-application-ontology" title="Permalink to this headline">¶</a></h3>
+<p>The development of an <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> is driven by specific use cases and target datasets. The first step in application ontology development is to determine the subject and the aim of the application ontology.</p>
+<p>In this recipe, we demonstrate the workflow of building an application ontology for patient metadata and patient sequencing data investigations. <code class="docutils literal notranslate"><span class="pre">Competency</span> <span class="pre">questions</span></code> of this ontology are provided below:</p>
+<!-- [here](https://github.com/FAIRplus/the-fair-cookbook/blob/ontology_robot_recipe/docs/content/recipes/ontology-robot/competency_questions.md).  -->
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p><strong>Theme</strong></p></th>
+<th class="text-align:left head"><p><strong>Competency Questions</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><strong>General Questions</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ How to identify relevant public domain ontologies suiting our needs?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ How to establish an ontology covering all terms that are included in the actual data to be represented?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ How to remove terms from the resulting ontology that are not needed?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ How to guarantee consistency of the final ontology?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ How to identify differences in comparison to a previous version of the resulting ontology?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><strong>Questions without specifying compounds or genes for the <a class="reference download internal" download="" href="../../../_downloads/5591660813f83203f617deec6d135104/ExternalStudiesKQ.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">example</span> <span class="pre">dataset</span></code></a></strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from tissues taken from patients suffering from a specific disease.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from primary cells whose origin is the lung.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from celllines whose origin is the lung.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><strong>Questions including single genes or gene sets</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ What is the expression of PPARg / growths factors in lung tissue from IPF patients?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ What is the expression of PPARg / growths factors in all available tissues obtained from healthy subjects?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><strong>Questions including compound or treatment information</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from primary cells treated with a kinase inhibitor.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data from patients treated with a specific medication.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>➕ What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1</em> is a snapshot of the example dataset. The complete patient metadata example dataset is <a class="reference download internal" download="" href="../../../_downloads/5591660813f83203f617deec6d135104/ExternalStudiesKQ.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Study</p></th>
+<th class="head"><p>source_id</p></th>
+<th class="head"><p>sample_description</p></th>
+<th class="head"><p>tissue</p></th>
+<th class="head"><p>source_tissue</p></th>
+<th class="head"><p>cell</p></th>
+<th class="head"><p>cellline</p></th>
+<th class="head"><p>disease</p></th>
+<th class="head"><p>gender</p></th>
+<th class="head"><p>species</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GSE52463Nance2014</p></td>
+<td><p>EX08_001</p></td>
+<td><p>Lung - Normal</p></td>
+<td><p>Lung</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Normal</p></td>
+<td><p>male</p></td>
+<td><p>Homo sapiens</p></td>
+</tr>
+<tr class="row-odd"><td><p>GSE52463Nance2014</p></td>
+<td><p>EX08_015</p></td>
+<td><p>Lung - IPF</p></td>
+<td><p>Lung</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Idiopathic Pulmonary Fibrosis</p></td>
+<td><p>male</p></td>
+<td><p>Homo sapiens</p></td>
+</tr>
+<tr class="row-even"><td><p>GSE116987Marcher2019</p></td>
+<td><p>EX101_1</p></td>
+<td><p>HSC CCl4-treated w0</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Hepatic Stellate Cell</p></td>
+<td><p></p></td>
+<td><p>NA</p></td>
+<td><p></p></td>
+<td><p>Mus musculus</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1: Patient metadata example</em></p>
+</div>
+<div class="section" id="step-2-select-terms-from-reference-ontologies">
+<h3><span class="section-number">7.7.3. </span>Step 2: Select terms from reference ontologies<a class="headerlink" href="#step-2-select-terms-from-reference-ontologies" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="step-2-1-select-source-ontologies">
+<h4><span class="section-number">7.7.3.1. </span>Step 2.1 Select source ontologies<a class="headerlink" href="#step-2-1-select-source-ontologies" title="Permalink to this headline">¶</a></h4>
+<p>To build an <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> that supports communication between different data resources, it is recommended to reuse existing terms from existing reference ontologies instead of creating new terms.</p>
+<blockquote>
+<div><p>⚡ <em>Reference ontology:</em> a semantic artifact with a canonical and comprehensive representation of the entities in a specific domain.</p>
+<p>⚡ <em>Source ontology:</em> An ontology to be integrated into the application ontology, usually a reference ontology.</p>
+</div></blockquote>
+<p>When selecting reference ontologies as source ontologies, the reusability and sustainability of the source ontology need to be considered. Many ontologies in <a class="reference external" href="http://www.obofoundry.org/">the OBO foundry</a> use the <a class="reference external" href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a> licence, allowing sharing and adaptation. Such ontologies can be directly used as source ontology. Reference ontologies with similar umbrella structures can be conveniently combined in the application ontology. The format and maintenance of the reference ontology shall also be considered.</p>
+<p>Specific use cases and requirements from the target dataset also affect the choice of source ontologies. For use cases focusing on extracting data from heterogeneous datasets with complicated data types and data relationships, reference ontologies with rich term relationships are preferred. The interpretation of each term also depends on the context and requirements of the target dataset. For example, <em>“hypertension”</em> can be either interpreted as a <em>phenotype</em> and mapped to phenotype ontologies, or a <em>disease</em> mapped to disease ontologies.</p>
+<p>The example dataset includes metadata related to disease, species, cell lines, tissues and biological sex. <em>Table 2</em> lists some reference ontologies available in corresponding domains. In this recipe, we selected <em>MONDO</em> for disease domain, <em>UBERON</em> for anatomy, <em>NCBItaxon</em> for species taxonomy and <em>PATO</em> for biological sex.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Domain</p></th>
+<th class="head"><p>Reference Ontologies</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Disease</p></td>
+<td><p><a class="reference external" href="http://www.obofoundry.org/ontology/mondo.html">Mondo Disease Ontology, MONDO</a><br> <a class="reference external" href="https://disease-ontology.org/">Disease Ontology, DIOD</a><br></p></td>
+</tr>
+<tr class="row-odd"><td><p>Species</p></td>
+<td><p><a class="reference external" href="http://www.obofoundry.org/ontology/ncbitaxon.html">NCBI organismal classification, NCBItaxon</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Cell line</p></td>
+<td><p><a class="reference external" href="http://www.obofoundry.org/ontology/cl.html">Cell Ontology, CL</a><br> <a class="reference external" href="http://www.obofoundry.org/ontology/clo.html">Cell Line Ontology, CLO</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Tissue</p></td>
+<td><p><a class="reference external" href="http://www.obofoundry.org/ontology/ncit.html">NCI Thesaurus OBO Edition, NCIT</a><br> <a class="reference external" href="http://www.obofoundry.org/ontology/omit.html">Ontology for MIRNA Target, OMIT</a><br> <a class="reference external" href="http://www.obofoundry.org/ontology/uberon.html">Uberon multi-species anatomy ontology, UBERON</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Biological Sex</p></td>
+<td><p><a class="reference external" href="http://www.obofoundry.org/ontology/pato.html">Phenotype And Trait Ontology, PATO</a></p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2: Available reference ontologies in selected domains</em></p>
+</div>
+<div class="section" id="step-2-2-select-seed-ontology-terms">
+<h4><span class="section-number">7.7.3.2. </span>Step 2.2 Select seed ontology terms<a class="headerlink" href="#step-2-2-select-seed-ontology-terms" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>⚡ <em>Seed ontology terms</em>: A set of entities extracted from reference ontologies for the application ontology.</p>
+</div></blockquote>
+<p>This step identifies the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology. Ontology Developer can provide the tools to ease and to scale the identification of the seeds. Domain experts can identify the right seeds for a given application ontology.</p>
+<p>Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - <a class="reference external" href="https://www.ebi.ac.uk/spot/zooma/">Zooma</a> and <a class="reference external" href="https://bioportal.bioontology.org/annotator">NCBO Annotator</a> - are depicted.</p>
+<div class="figure align-default" id="ontology-robot-recipe-figure2">
+<img alt="Ontology seed term selection approaches." src="../../../_images/ontology-robot-recipe.md-figure2.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 7.13 </span><span class="caption-text">Ontology seed term selection approaches.</span><a class="headerlink" href="#ontology-robot-recipe-figure2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference external" href="https://www.ebi.ac.uk/spot/zooma/">ZOOMA</a> is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the <a class="reference external" href="https://www.ebi.ac.uk">European Bioinformatics Institute (EMBL-EBI)</a>
+. It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the <a class="reference external" href="https://www.ebi.ac.uk/ols/index">Ontology Lookup Service (OLS)</a>. Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.</p>
+<p>The <a class="reference external" href="https://bioportal.bioontology.org/annotator">NCBO Annotator</a> is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal ontologies.</p>
+<p>Both the <code class="docutils literal notranslate"><span class="pre">Zooma</span></code> and <code class="docutils literal notranslate"><span class="pre">NCBO</span> <span class="pre">Annotator</span> <span class="pre">service</span></code> provides a <code class="docutils literal notranslate"><span class="pre">web</span> <span class="pre">interface</span></code> and a <code class="docutils literal notranslate"><span class="pre">REST</span> <span class="pre">API</span></code> to identify the seed terms by annotation of free text. Two scripts able to automate the annotation of a set of free text terms are shown following.</p>
+</div>
+<div class="section" id="seed-term-extraction-with-zooma">
+<h4><span class="section-number">7.7.3.3. </span>Seed term extraction with ZOOMA<a class="headerlink" href="#seed-term-extraction-with-zooma" title="Permalink to this headline">¶</a></h4>
+<p>The following sample script uses the <code class="docutils literal notranslate"><span class="pre">Zooma</span> <span class="pre">web</span> <span class="pre">service</span></code> to get a list of seed terms - i.e., the URIs of ontology classes -. The service also states the level of confidence of every seed proposed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Python3</span>
+<span class="c1">#zooma-annotator-script.py file</span>
+
+<span class="k">def</span> <span class="nf">get_annotations</span><span class="p">(</span><span class="n">propertyType</span><span class="p">,</span> <span class="n">propertyValues</span><span class="p">,</span> <span class="n">filters</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get Zooma annotations for the values of a given property of a given type.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="kn">import</span> <span class="nn">requests</span>
+    
+    <span class="n">annotations</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">no_annotations</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">propertyValues</span><span class="p">:</span>
+        <span class="n">ploads</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;propertyValue&#39;</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
+                  <span class="s1">&#39;propertyType&#39;</span><span class="p">:</span> <span class="n">propertyType</span><span class="p">,</span>
+                  <span class="s1">&#39;filter&#39;</span><span class="p">:</span> <span class="n">filters</span><span class="p">}</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.ebi.ac.uk/spot/zooma/v2/api/services/annotate&#39;</span><span class="p">,</span>
+                         <span class="n">params</span><span class="o">=</span><span class="n">ploads</span><span class="p">)</span>
+            
+        <span class="kn">import</span> <span class="nn">json</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">no_annotations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">annotations</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;semanticTags&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                                <span class="sa">f</span><span class="s2">&quot;# </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
+                                <span class="sa">f</span><span class="s2">&quot;-Confidence:</span><span class="si">{</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">annotations</span><span class="p">,</span> <span class="n">no_annotations</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">propertyType</span> <span class="o">=</span> <span class="s1">&#39;gender&#39;</span>
+    <span class="n">propertyValues</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">]</span>
+
+    <span class="n">annotations</span><span class="p">,</span> <span class="n">no_annotations</span> <span class="o">=</span> <span class="n">get_annotations</span><span class="p">(</span><span class="n">propertyType</span><span class="p">,</span> <span class="n">propertyValues</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">annotations</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">no_annotations</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running the above script to get the seeds for the terms <code class="docutils literal notranslate"><span class="pre">male</span></code>, <code class="docutils literal notranslate"><span class="pre">female</span></code>, and <code class="docutils literal notranslate"><span class="pre">unknown</span></code> generates the following results:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;http://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.orpha.net/ORDO/Orphanet_288 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003850 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003952 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0009471 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0000203 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003863 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0000616 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://purl.obolibrary.org/obo/HP_0000952 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003853 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_1001331 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003769 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://purl.obolibrary.org/obo/HP_0000132 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0000408 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0008549 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0001642 # unknown-Confidence:MEDIUM&#39;</span><span class="p">]</span>
+<span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seed-term-extraction-with-ncbo-annotator">
+<h4><span class="section-number">7.7.3.4. </span>Seed term extraction with NCBO Annotator<a class="headerlink" href="#seed-term-extraction-with-ncbo-annotator" title="Permalink to this headline">¶</a></h4>
+<p>The following sample script uses the NCBO Annotator web service to get a list of seed terms - i.e., the URIs of ontology classes -.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Python3</span>
+<span class="c1">#ncbo-annotator-script.py file</span>
+
+<span class="k">def</span> <span class="nf">get_annotations</span><span class="p">(</span><span class="n">propertyValues</span><span class="p">,</span> <span class="n">ontologies</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get NCBO Annotations for the values of a given property.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        
+    <span class="kn">import</span> <span class="nn">requests</span>
+    
+    <span class="n">annotations</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">no_annotations</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">propertyValues</span><span class="p">:</span>
+        <span class="n">ploads</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;apikey&#39;</span><span class="p">:</span> <span class="s1">&#39;8b5b7825-538d-40e0-9e9e-5ab9274a9aeb&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
+                  <span class="s1">&#39;ontologies&#39;</span><span class="p">:</span> <span class="n">ontologies</span><span class="p">,</span>
+                  <span class="s1">&#39;longest_only&#39;</span><span class="p">:</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;exclude_numbers&#39;</span><span class="p">:</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;whole_word_only&#39;</span><span class="p">:</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;exclude_synonyms&#39;</span><span class="p">:</span> <span class="s1">&#39;false&#39;</span><span class="p">}</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://data.bioontology.org/annotator&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">ploads</span><span class="p">)</span>
+        
+        <span class="kn">import</span> <span class="nn">json</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">no_annotations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">annotations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;annotatedClass&#39;</span><span class="p">][</span><span class="s1">&#39;@id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> # </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">annotations</span><span class="p">,</span> <span class="n">no_annotations</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">propertyType</span> <span class="o">=</span> <span class="s1">&#39;gender&#39;</span>
+    <span class="n">propertyValues</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">]</span>
+
+    <span class="n">annotations</span><span class="p">,</span> <span class="n">no_annotations</span> <span class="o">=</span> <span class="n">get_annotations</span><span class="p">(</span><span class="n">propertyType</span><span class="p">,</span> <span class="n">propertyValues</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">annotations</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">no_annotations</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running the above script to get the seeds for the terms <code class="docutils literal notranslate"><span class="pre">male</span></code>, <code class="docutils literal notranslate"><span class="pre">female</span></code>, and <code class="docutils literal notranslate"><span class="pre">unknown</span></code> generates the following results:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;http://purl.obolibrary.org/obo/UBERON_0003101 # male&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;http://purl.obolibrary.org/obo/UBERON_0003100 # female&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;unknown&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-2-3-seed-term-extraction-with-sparql">
+<h4><span class="section-number">7.7.3.5. </span>Step 2.2.3 Seed term extraction with SPARQL<a class="headerlink" href="#step-2-2-3-seed-term-extraction-with-sparql" title="Permalink to this headline">¶</a></h4>
+<p>Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">query</span></code>. Here, we generate a subset of <code class="docutils literal notranslate"><span class="pre">UBERON</span></code> terms which have a crossreference to either <code class="docutils literal notranslate"><span class="pre">FMA</span> <span class="pre">(for</span> <span class="pre">human</span> <span class="pre">anatomy)</span></code> or <code class="docutils literal notranslate"><span class="pre">MA</span> <span class="pre">(for</span> <span class="pre">mouse</span> <span class="pre">anatomy)</span></code> terms, since our example datasets includes human, mouse and rat data.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX scdo: &lt;http://scdontology.h3abionet.org/ontology/&gt;
+PREFIX obo: &lt;http://purl.obolibrary.org/obo/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT ?uri WHERE <span class="o">{</span>
+
+<span class="o">{</span>
+ <span class="o">{</span>
+  ?uri oboInOwl:hasDbXref ?xref .
+ <span class="o">}</span>
+UNION
+ <span class="o">{</span>
+  ?axiom a owl:Axiom<span class="p">;</span>
+  	owl:annotatedSource ?uri<span class="p">;</span>
+        oboInOwl:hasDbXref ?xref .
+ <span class="o">}</span>
+<span class="o">}</span>
+
+?uri a owl:Class
+
+FILTER isLiteral<span class="o">(</span>?xref<span class="o">)</span>
+FILTER regex<span class="o">(</span> ?xref, <span class="s2">&quot;^FMA|^MA:&quot;</span>, <span class="s2">&quot;i&quot;</span><span class="o">)</span> 
+
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="step-3-extract-ontology-modules-from-source-ontologies">
+<h3><span class="section-number">7.7.4. </span>Step 3: Extract ontology modules from source ontologies<a class="headerlink" href="#step-3-extract-ontology-modules-from-source-ontologies" title="Permalink to this headline">¶</a></h3>
+<p>Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend to collect all steps together into a script or <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> to avoid missing steps. <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.</p>
+<div class="section" id="step-3-1-get-source-ontology-files">
+<h4><span class="section-number">7.7.4.1. </span>Step 3.1 Get source ontology files<a class="headerlink" href="#step-3-1-get-source-ontology-files" title="Permalink to this headline">¶</a></h4>
+<p>We recommend starting each (re)build of the application ontology with the latest versions of the source ontologies unless there is a good reason not to update to the latest version. Ideally, this should be done automatically, for example through a shell script that CURLs all ontologies from their source URIs, e.g.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl -L http://purl.obolibrary.org/obo/uberon.owl &gt; uberon.owl
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-2-choose-ontology-extraction-algorithms">
+<h4><span class="section-number">7.7.4.2. </span>Step 3.2 Choose ontology extraction algorithms<a class="headerlink" href="#step-3-2-choose-ontology-extraction-algorithms" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> supports two types of ontology module extraction, <code class="docutils literal notranslate"><span class="pre">Syntactic</span> <span class="pre">Locality</span> <span class="pre">Module</span> <span class="pre">Extractor</span></code> (SLME) and <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">Information</span> <span class="pre">to</span> <span class="pre">Reference</span> <span class="pre">an</span> <span class="pre">External</span> <span class="pre">Ontology</span> <span class="pre">Term</span></code> (MIREOT). <code class="docutils literal notranslate"><span class="pre">SLME</span></code> extractions can be further subdivided into TOP (top module), <code class="docutils literal notranslate"><span class="pre">BOT</span></code> (bottom module) and <code class="docutils literal notranslate"><span class="pre">STAR</span></code> (fixpoint-nested module). For full details of what these different options entail, see <a class="reference external" href="http://robot.obolibrary.org/extract.html">http://robot.obolibrary.org/extract.html</a>. We recommend the use of BOT for comprehensive modules that preserve the links between ontology classes and the use of <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code> if relationships apart from parent-child ones are less important.</p>
+</div>
+<div class="section" id="step-3-3-extract-modules-using-seed-terms">
+<h4><span class="section-number">7.7.4.3. </span>Step 3.3 Extract modules using seed terms<a class="headerlink" href="#step-3-3-extract-modules-using-seed-terms" title="Permalink to this headline">¶</a></h4>
+<p>Using <code class="docutils literal notranslate"><span class="pre">robot</span></code> tool provided by the <code class="docutils literal notranslate"><span class="pre">OBO</span> <span class="pre">foundry</span></code>, the creation of a module can be done with one command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>robot extract --method &lt;some_selection&gt; <span class="se">\</span>
+    --input &lt;some_input.owl&gt; <span class="se">\</span>
+    --term-file &lt;list_of_classes_of_interest_in_ontology.txt&gt; <span class="se">\</span>
+    --intermediates &lt;choose_from_option&gt; <span class="se">\</span>
+    --output ./ontology_modules/extracted_module.owl
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">robot</span></code> extract command takes several arguments:</p>
+<ul class="simple">
+<li><p><em>method</em>: <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> uses 4 different algorithms to generate a module.  <code class="docutils literal notranslate"><span class="pre">TOP</span></code>, <code class="docutils literal notranslate"><span class="pre">BOT</span></code>, <code class="docutils literal notranslate"><span class="pre">STAR</span></code> (all from the SLME method), and <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code>. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The <code class="docutils literal notranslate"><span class="pre">STAR</span></code> method creates a module by pulling all the properties and axioms of the seed classes but nothing else. <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code> uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.</p></li>
+<li><p><em>input</em>: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.</p></li>
+<li><p><em>imports</em>: this argument allows to specify whether or not to include imported ontologies. Note that the default is to do so using the value <code class="docutils literal notranslate"><span class="pre">include</span></code>. Choose <code class="docutils literal notranslate"><span class="pre">exclude</span></code> otherwise.</p></li>
+<li><p><em>term-file</em>: the text file holding the list of classes of interested identified by their iri (e.g. <a class="reference external" href="http://purl.obolibrary.org/obo/UBERON_0001235">http://purl.obolibrary.org/obo/UBERON_0001235</a> # adrenal cortex)</p></li>
+<li><p><em>intermediates</em>: specific to the <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code> method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (<code class="docutils literal notranslate"><span class="pre">all</span></code>,<code class="docutils literal notranslate"><span class="pre">minimal</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>).</p></li>
+<li><p><em>output</em>: the path to the owl file holding the results of the module extraction</p></li>
+<li><p><em>copy-ontology-annotations</em>: a boolean value true/false to pull or not any class annotation from the parent ontology. default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><em>sources</em>: optional, a pointer to a file mapping</p></li>
+<li><p><em>annotate-with-source</em>: a boolean value true/false. default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+</ul>
+<p>The above query, saved under <code class="docutils literal notranslate"><span class="pre">select_anatomy_subset.sparql</span></code> can be used to generate a dynamic seed list, then do a <code class="docutils literal notranslate"><span class="pre">BOT</span></code> extraction:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>robot query --input uberon.owl --query select_anatomy_subset.sparql uberon_seed_list.txt
+
+robot extract --method BOT --input uberon.owl --term-file uberon_seed_list.txt -o uberon_subset.owl
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-4-assess-extracted-modules">
+<h4><span class="section-number">7.7.4.4. </span>Step 3.4 Assess extracted modules<a class="headerlink" href="#step-3-4-assess-extracted-modules" title="Permalink to this headline">¶</a></h4>
+<p>The extracted ontology module should include all seed terms and represent the term relationships correctly. It should also preserve the correct hierarchical structure of the source ontology and have consistent granularity.</p>
+</div>
+</div>
+<div class="section" id="step-4-build-the-upper-level-umbrella-ontology">
+<h3><span class="section-number">7.7.5. </span>Step 4: Build the upper level umbrella ontology<a class="headerlink" href="#step-4-build-the-upper-level-umbrella-ontology" title="Permalink to this headline">¶</a></h3>
+<p>The umbrella ontology is the root structure of the ontology. Building the umbrella ontology aims to model the main entity of the use case and its relationships with the ontology classes extracted on the previous step. The main identity of the ontology and relationships with extracted modules can be identified by domain experts, or specified by the use case owner.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> provides a template-driven ontology term generation system. A <code class="docutils literal notranslate"><span class="pre">ROBOT</span> <span class="pre">template</span></code> is a <code class="docutils literal notranslate"><span class="pre">tab-separated</span> <span class="pre">values</span></code> (TSV) or <code class="docutils literal notranslate"><span class="pre">comma-separated</span> <span class="pre">values</span></code> (CSV) file that depicts a set of patterns to build ontology entities - i.e., classes, properties, and individuals -. These templates can be used for modular ontology development.
+After the <em>Domain Expert</em> and the <em>Use Case/Scenario Owner</em> specify the main entity of the use case and its relationships with remaining ontology entities, the <em>Ontology Developer</em> generates the <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> templates depicting the set of patterns aimed to build the <em>umbrella</em> ontology.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> command using a template to build an ontology is shown below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>robot template --template template.csv <span class="se">\</span>
+    --prefix <span class="s2">&quot;r4: https://fairplus-project.eu/ontologies/R4/&quot;</span> <span class="se">\</span>
+    --ontology-iri <span class="s2">&quot;https://fairplus-project.eu/ontologies/R4/&quot;</span> <span class="se">\</span>
+    --output ./templates/umbrella.owl
+</pre></div>
+</div>
+<p>And a template sample is presented following:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Label</p></th>
+<th class="head"><p>Entity Type</p></th>
+<th class="head"><p>Equivalent Axioms</p></th>
+<th class="head"><p>Characteristic</p></th>
+<th class="head"><p>Domain</p></th>
+<th class="head"><p>Range</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>LABEL</p></td>
+<td><p>TYPE</p></td>
+<td><p>EC %</p></td>
+<td><p>CHARACTERISTIC</p></td>
+<td><p>DOMAIN</p></td>
+<td><p>RANGE</p></td>
+</tr>
+<tr class="row-odd"><td><p>ex:cl_2</p></td>
+<td><p>Class_2</p></td>
+<td><p>class</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>ex:cl_3</p></td>
+<td><p>Class_3</p></td>
+<td><p>class</p></td>
+<td><p>ex:cl_2</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>ex:op_1</p></td>
+<td><p>Prop_1</p></td>
+<td><p>object property</p></td>
+<td><p>-</p></td>
+<td><p>Class_2</p></td>
+<td><p>Class_3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>ex:dp_1</p></td>
+<td><p>Prop_2</p></td>
+<td><p>data property</p></td>
+<td><p>-</p></td>
+<td><p>functional</p></td>
+<td><p>Class_2</p></td>
+<td><p>xsd:string</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>⚡ The generated ontology can be visualized by using the <a class="reference external" href="https://protege.stanford.edu/">Protégé tool</a> or local deployment of OLS.
+The <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html#fcb-infra-localols"><span class="std std-ref">Deploying the EBI OLS</span></a> option is recommended by this recipe, given that <code class="docutils literal notranslate"><span class="pre">Protégé</span></code> may crash when loading medium or large size ontologies.</p>
+</div>
+</div>
+<div class="section" id="step-5-merge-ontology-modules-and-umbrella-ontology">
+<h3><span class="section-number">7.7.6. </span>Step 5: Merge ontology modules and umbrella ontology<a class="headerlink" href="#step-5-merge-ontology-modules-and-umbrella-ontology" title="Permalink to this headline">¶</a></h3>
+<p>Merging the ontology modules previously extracted and the umbrella ontology locally built produces a first draft of the application ontology.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">merge</span></code> ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> command merging the umbrella ontology and the modules is shown:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -jar robot.jar merge <span class="se">\</span>
+    --input ./ontology_modules/iao_mireot_robot_module_1.owl <span class="se">\</span>
+    --input ./ontology_modules/obi_mireot_robot_module_2.owl <span class="se">\</span>
+    --input ./ontology_modules/duo_mireot_robot_module_3.owl <span class="se">\</span>
+    --input ./templates/umbrella.owl <span class="se">\</span>
+    --output ./results/r4_app_ontology.owl
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-6-post-merge-modifications">
+<h3><span class="section-number">7.7.7. </span>Step 6: Post-merge modifications<a class="headerlink" href="#step-6-post-merge-modifications" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="step-6-1-materialize-and-reasoning">
+<h4><span class="section-number">7.7.7.1. </span>Step 6.1: Materialize and Reasoning<a class="headerlink" href="#step-6-1-materialize-and-reasoning" title="Permalink to this headline">¶</a></h4>
+<p>Commands below infer superclasses and superclasses and reduce duplicated axioms merged term:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>robot materialize <span class="se">\</span>
+--reasoner ELK  <span class="se">\</span>
+--input merged_owl  <span class="se">\</span>
+reduce <span class="se">\</span>
+--output materialized.owl 
+</pre></div>
+</div>
+<p>The ontology materialization uses <code class="docutils literal notranslate"><span class="pre">OWL</span> <span class="pre">reasoners</span></code>. <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> provides <a class="reference external" href="http://robot.obolibrary.org/reason">several ontology reasoners</a>.</p>
+<p>It is also possible to identify issues in the ontology with some <code class="docutils literal notranslate"><span class="pre">quality</span> <span class="pre">control</span> <span class="pre">SPARQL</span> <span class="pre">queries</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>robot report --input edit.owl --output report.tsv
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-6-2-annotate">
+<h4><span class="section-number">7.7.7.2. </span>Step 6.2: Annotate<a class="headerlink" href="#step-6-2-annotate" title="Permalink to this headline">¶</a></h4>
+<p>Ontology annotation adds metadata to the owl file. It is recommended to provide <code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">IRIs</span></code>, <code class="docutils literal notranslate"><span class="pre">version</span> <span class="pre">IRIs</span></code>, <code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">descriptions</span></code> and <code class="docutils literal notranslate"><span class="pre">license</span></code> to support future usage and management.</p>
+<p>The annotation can be added either line-by-line or provided in a turtile(.ttl) file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#ANNOTATE</span>
+robot annotate --input materialized.owl <span class="se">\</span>
+  --ontology-iri <span class="s2">&quot;https://github.com/ontodev/robot/examples/annotated.owl&quot;</span> <span class="se">\</span>
+  --version-iri <span class="s2">&quot;https://github.com/ontodev/robot/examples/annotated-1.owl&quot;</span> <span class="se">\</span>
+  --annotation rdfs:comment <span class="s2">&quot;Comment&quot;</span> <span class="se">\</span>
+  --annotation rdfs:label <span class="s2">&quot;Label&quot;</span> <span class="se">\</span>
+  --annotation-file annotations.ttl <span class="se">\</span>
+  --output results/annotated.owl
+</pre></div>
+</div>
+<p>Below is an example annotation file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix example: &lt;https://github.com/ontodev/robot/examples/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+example:annotated.owl
+  rdf:type owl:Ontology <span class="p">;</span>
+  rdfs:comment <span class="s2">&quot;Comment from annotations.ttl file.&quot;</span> .
+  dcterms:title <span class="s2">&quot;Example title&quot;</span>
+  dcterms:license &lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;
+  owl:versionIRI &lt;https://github.com/ontodev/robot/examples/annotated-1.owl&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-6-3-convert">
+<h4><span class="section-number">7.7.7.3. </span>Step 6.3: Convert<a class="headerlink" href="#step-6-3-convert" title="Permalink to this headline">¶</a></h4>
+<p>Besides <code class="docutils literal notranslate"><span class="pre">OWL</span> <span class="pre">format</span></code>, the <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Biomedical</span> <span class="pre">Ontology</span> <span class="pre">(OBO)</span> <span class="pre">format</span></code> is also widely used in life science related ontologies. It is possible to convert an <code class="docutils literal notranslate"><span class="pre">.owl</span></code> file to <code class="docutils literal notranslate"><span class="pre">.obo</span></code> file using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#CONVERT:</span>
+robot convert <span class="se">\</span>
+--input  annotated.owl<span class="se">\</span>
+--format obo <span class="se">\</span>
+--output results/annotated.obo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="step-7-assess-coverage-of-the-ontology-scope">
+<h3><span class="section-number">7.7.8. </span>Step 7: Assess coverage of the ontology scope<a class="headerlink" href="#step-7-assess-coverage-of-the-ontology-scope" title="Permalink to this headline">¶</a></h3>
+<p>The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">queries</span></code> and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span> <span class="pre">owner</span></code> and o<code class="docutils literal notranslate"><span class="pre">ntology</span> <span class="pre">developer</span></code> can also collaborate on the assessment of the competency questions answers/results.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> provides the <code class="docutils literal notranslate"><span class="pre">query</span></code> command to perform <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">queries</span></code>  against an ontology to verify and validate the ontology.</p>
+<p>The query command runs SPARQL <code class="docutils literal notranslate"><span class="pre">ASK</span></code>, <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, and <code class="docutils literal notranslate"><span class="pre">CONSTRUCT</span></code> queries by using the <code class="docutils literal notranslate"><span class="pre">--query</span></code> option with two arguments: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">query</span> <span class="pre">file</span></code> and <code class="docutils literal notranslate"><span class="pre">an</span> <span class="pre">output</span> <span class="pre">file</span></code>. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> and use the <code class="docutils literal notranslate"><span class="pre">--queries</span></code> option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>robot query --input &lt;input_ontology_file&gt; <span class="se">\</span>
+    --queries &lt;query_file&gt; <span class="se">\</span>
+    --output-dir &lt;path_to_rsults&gt; results/
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusions">
+<h2><span class="section-number">7.8. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. This more advanced recipe has identified and described all the different steps that one needs to consider to build such a resource. While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date. It is therefore also critical to understand the benefits of contributing to existing open efforts.</p>
+</div></blockquote>
+<div class="section" id="what-should-i-read-next">
+<h3><span class="section-number">7.8.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="creating-minimal-metadata-profiles.html#fcb-interop-metadataprofile"><span class="std std-ref">Creating a metadata profile</span></a>  &lt;!– How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document --> –&gt;</p></li>
+<li><p><a class="reference internal" href="ontology-new-term-request-recipe.html#fcb-interop-ontorequest"><span class="std std-ref">Requesting new terms</span></a> &lt;!– How to submit/request terms to an ontology ?<!-- TODO add a link to corresponding document --> –&gt;</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2><span class="section-number">7.9. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-footbibliography-content/recipes/interoperability/ontology-robot-recipe-0"><dl class="footnote brackets">
+<dt class="label" id="arp2015"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Robert Arp, Barry Smith, and Andrew D. Spear. <em>Building Ontologies with Basic Formal Ontology</em>. The MIT Press, 2021/05/14/ 2015. ISBN 9780262527811. URL: <a class="reference external" href="http://www.jstor.org/stable/j.ctt17kk7vw">http://www.jstor.org/stable/j.ctt17kk7vw</a>.</p>
+</dd>
+<dt class="label" id="pmid31357927"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>R. C. Jackson, J. P. Balhoff, E. Douglass, N. L. Harris, C. J. Mungall, and J. A. Overton. ROBOT: A Tool for Automating Ontology Workflows. <em>BMC Bioinformatics</em>, 20(1):407, Jul 2019.</p>
+</dd>
+</dl>
+</p>
+<!-- ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
+:filter: docname in docnames
+``` -->
+<!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
+- Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
+</div>
+<hr class="docutils" />
+<div class="section" id="supplementary-material">
+<h2><span class="section-number">7.10. </span>Supplementary material<a class="headerlink" href="#supplementary-material" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../_downloads/5591660813f83203f617deec6d135104/ExternalStudiesKQ.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Example</span> <span class="pre">Dataset</span></code></a></p></li>
+<li><p><a class="reference internal" href="ontology-robot-recipe/competency-questions.html"><span class="doc std std-doc">Competency questions</span></a></p></li>
+<li><p><a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html"><span class="doc std std-doc">IPython Notebook for the MSIO Build Process</span></a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">7.11. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>ELIXIR Node</p></th>
+<th class="head"><p>Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/daniwelter"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0003-1058-2668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Luxembourg</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
+<td><p>Writing - Original Draft, Code</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><img class="avatar-style" src="https://avatars.githubusercontent.com/NONE"></img><div class="d-block">Karsten Quast</div></div></p></td>
+<td><p></p></td>
+<td><p>Boehringer-Ingelheim AG</p></td>
+<td><p><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing, Conceptualization</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/fuqix"><img class="avatar-style" src="https://avatars.githubusercontent.com/fuqix"></img><div class="d-block">Fuqi Xu</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-5923-3859"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>EMBL-EBI</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/embl.png" ></img></p></td>
+<td><p>Writing - Original Draft, Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/ereynrs"><img class="avatar-style" src="https://avatars.githubusercontent.com/ereynrs"></img><div class="d-block">Emiliano Reynares</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-5109-3716"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Boehringer-Ingelheim AG</p></td>
+<td><p><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">7.12. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<div class="toctree-wrapper compound">
+</div>
+<hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="ontology-operations-tools.html" title="previous page"><span class="section-number">6. </span>Ontology-related tools and services</a>
+    <a class='right-next' id="next-link" href="ontology-robot-recipe/competency-questions.html" title="next page"><span class="section-number">7.12.1. </span>Competency questions for the Ontology ROBOT use case</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

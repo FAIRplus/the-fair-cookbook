@@ -1,0 +1,1430 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.4.2. Metadata profile validation in RDF</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="10. Converting from proprietary to open format" href="from-proprietary-to-open-standard-mzml-exemplar.html" />
+    <link rel="prev" title="9.4.1. Metadata profile for transcriptomics" href="transcriptomics-metadata.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Metadata profile validation in RDF" />
+<meta property="og:description" content="Metadata profile validation in RDF    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   9.4.2.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   9.4.2.2. Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   9.4.2.3. FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   9.4.2.4. Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools">
+   9.4.2.5. Tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   9.4.2.6. Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-the-metadata-fields">
+   9.4.2.7. Defining the metadata fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#semantic-anchoring-of-metadata-element">
+   9.4.2.8. Semantic anchoring of metadata element:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metadata-schema-definition-using-salad-schema-language">
+   9.4.2.9. 1. metadata schema definition using SALAD schema language:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-corresponding-metadata-acquisition-web-form">
+     9.4.2.9.1. The corresponding metadata acquisition web form:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemplar-instance-data">
+   9.4.2.10. 2. Exemplar instance data:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-from-yaml-to-rdf">
+   9.4.2.11. 3. Conversion from YAML to RDF:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rdf-graph-validation-with-shex-expression">
+   9.4.2.12. 4. RDF graph validation with ShEx expression:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-shex">
+     9.4.2.12.1. 4.1 What is ShEx?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-is-this-needed">
+     9.4.2.12.2. 4.2 Why is this needed?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sparql-queries-available-here">
+   9.4.2.13. 5. SPARQL queries available here:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-sparql-endpoint">
+     9.4.2.13.1. 5.1. The SPARQL endpoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-the-metadata-described-the-fastq-sequence-files">
+     9.4.2.13.2. 5.2. Exploring the metadata described the FASTQ sequence files
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   9.4.2.14. Conclusions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-read-next">
+     9.4.2.14.1. What should I read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   9.4.2.15. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   9.4.2.16. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   9.4.2.17. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="metadata-profile-validation-in-rdf">
+<span id="fcb-interop-covid-metadata"></span><h1><span class="section-number">9.4.2. </span>Metadata profile validation in RDF<a class="headerlink" href="#metadata-profile-validation-in-rdf" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Metadata profile validation in RDF", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB028", "url": "https://w3id.org/faircookbook/FCB028"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+30 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+Yes
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Metadata profile validation in RDF</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Hands-on</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB028" class="text--purple-dark">FCB028
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">9.4.2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of this recipe is to show how to create a metadata collection form complying with a community minimal information checklist (MIUViG), in the context of Covid-19 strain sequencing assays carried on patient collected samples.
+In addition, the recipe includes the conversion of sample metadata to an RDF/Linked Data graph and checks its structure for conformance to requirement using the ShapeExpression specifications.
+Finally, use queries expressed in SPARQL are shown to demonstrate potential data integration scenarios.</p>
+</div>
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">9.4.2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="building-a-commmunity-compliant-metadata-profile">
+<a class="reference internal image-reference" href="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png"><img alt="building a commmunity compliant metadata profile" src="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2><span class="section-number">9.4.2.3. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>semantic markup<!-- TODO add a link to corresponding document --></p></td>
+<td class="text-align:left"><p>text<!-- TODO add a link to corresponding document --></p></td>
+<td class="text-align:left"><p>URI<!-- TODO add a link to corresponding document --></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>constraint validation<!-- TODO add a link to corresponding document --></p></td>
+<td class="text-align:left"><p>text<!-- TODO add a link to corresponding document --></p></td>
+<td class="text-align:left"><p>DOI<!-- TODO add a link to corresponding document --></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>file</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-data-standards">
+<h2><span class="section-number">9.4.2.4. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://yaml.org">YAML</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.1gr4tz">EFO</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/bsg-s000518/">MIxS</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">RDF</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.dpkb5f">SIO</a></p></td>
+<td class="text-align:left"><p>MIUVIG<!-- TODO add a link to corresponding document --></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://shex.io/shex-semantics/">Shape Expression Syntax (SHEX)</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.a6r7zs">EDAM</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/biodbcore-001083/">OBO foundry</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.PB6595">Wikidata</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tools">
+<h2><span class="section-number">9.4.2.5. </span>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Tool Name</p></th>
+<th class="text-align:left head"><p>capability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.commonwl.org/draft-3/SchemaSalad.html">Semantic Annotation for Linked Arvado Data (SALAD)</a></p></td>
+<td class="text-align:left"><p>conversion from  YAML to RDF</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://rdfshape.weso.es/shExVisualize">WESO shExVisualize</a></p></td>
+<td class="text-align:left"><p>Shape expression syntax visualization</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://virtuoso.openlinksw.com/">Virtuoso</a></p></td>
+<td class="text-align:left"><p>RDF triple store</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="introduction">
+<h2><span class="section-number">9.4.2.6. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>:information_source:
+This recipe is adapted from work carried during the Elixir Covid-19 biohackathon, by the ontology and workflow tracks and presented <a class="reference external" href="http://covid19.genenetwork.org/">here</a> and detailed in the <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/paper/paper.md">following manuscript</a> while all the code and associated material is hosted on this <a class="reference external" href="https://github.com/arvados/bh20-seq-resource">github repository</a>.</p>
+</div></blockquote>
+<blockquote>
+<div><p>:information_source:
+<a class="reference external" href="https://">Robert Hoendorf</a>, <a class="reference external" href="https://">Jose Emilio Labra Gayo</a>,<a class="reference external" href="https://">Thomas Liener</a>, <a class="reference external" href="https://">Nuria Queralt Rosinach</a>
+, <a class="reference external" href="https://">Tazro  Ohta</a>, <a class="reference external" href="https://">Philippe Rocca-Serra</a>, <a class="reference external" href="https://">Claus Weilland</a>, <a class="reference external" href="https://">Piotr Prins</a>,  <a class="reference external" href="https://">Danielle Welter</a>. Thomas Liener  and Danielle Welter acted as coordinator between the ontology track and the workflow track led by Piotr Prins.</p>
+</div></blockquote>
+<p>In this specific report, we focus solely on the specific task of creating <code class="docutils literal notranslate"><span class="pre">covid-19</span> <span class="pre">virus</span> <span class="pre">sample</span> <span class="pre">metadata</span> <span class="pre">reporting</span> <span class="pre">profile</span></code>. The aim was to ensure that each sequencing file generated by the sequencing efforts came with sufficient descriptive metadata to allow basic correlation analysis.</p>
+<p>Therefore, 6 essential steps were performed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Listing essential sample attributes</p></li>
+<li><p>Performing a semantic anchoring of these attributes</p></li>
+<li><p>Defining a formal representation capturing those requirements</p></li>
+<li><p>Expressing instance data in RDF/linked data format</p></li>
+<li><p>Validating RDF instance data against requirements using a Shape Expression(SHEX)</p></li>
+<li><p>Testing query cases by formulating SPARQL queries</p></li>
+</ul>
+</div></blockquote>
+<p>The following sections detail each of these steps</p>
+</div>
+<div class="section" id="defining-the-metadata-fields">
+<h2><span class="section-number">9.4.2.7. </span>Defining the metadata fields<a class="headerlink" href="#defining-the-metadata-fields" title="Permalink to this headline">¶</a></h2>
+<!-- <div><img src="/images/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
+<div><img src="/images/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../../_images/lwV1cPd.png"><img alt="Defining the metadata fields" src="../../../_images/lwV1cPd.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Defining the metadata fields</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="defining-the-metadata-fields-1">
+<a class="reference internal image-reference" href="../../../_images/1ahQLjy.png"><img alt="Defining the metadata fields-1" src="../../../_images/1ahQLjy.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.4 </span><span class="caption-text">Defining the metadata fields-1</span><a class="headerlink" href="#defining-the-metadata-fields-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><br>Based on the <a class="reference external" href="https://gensc.org/">Genome Standards Consortium</a> metadata requirement profile for uncultivated viral sample, also known as the <a class="reference external" href="https://github.com/GenomicsStandardsConsortium/mixs/blob/master/UViGs_MIxS.xlsx">Minimum Information About an Uncultivated Virus Genome (MIUViG)</a>, the first step is to anchor the tags defined by GSC and approved by the those <strong>International Nucleotide Sequence Database Collaboration</strong> (<a class="reference external" href="http://www.insdc.org/">INSDC</a>) tags to one (or more) semantic framework(s).</p>
+</div>
+<div class="section" id="semantic-anchoring-of-metadata-element">
+<h2><span class="section-number">9.4.2.8. </span>Semantic anchoring of metadata element:<a class="headerlink" href="#semantic-anchoring-of-metadata-element" title="Permalink to this headline">¶</a></h2>
+<p>Several distinct to the following resources mappings have been made by the developers :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://obofoundry.org">OBO Foundry</a></p></li>
+<li><p><a class="reference external" href="https://wikidata.org">Wikidata</a></p></li>
+<li><p><a class="reference external" href="https://schema.org">schema.org</a></p></li>
+</ul>
+<!-- ![](/images/Ro92a7D.png) -->
+<!-- <div><img src="/images/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../../../_images/Ro92a7D.png"><img alt="Semantic anchoring of metadata element" src="../../../_images/Ro92a7D.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.5 </span><span class="caption-text">Semantic anchoring of metadata element</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<br>
+<p>However, for the final implementation, only the OBO related mappings have been used as show in the following figure.</p>
+<!-- <div><img src="/images/Lc7FcPs.png" width="800" style="border:1px solid black"/></div> -->
+<!-- ![](/images/Lc7FcPs.png) -->
+<div class="figure align-default" id="semantic-anchoring-of-metadata-element-final">
+<a class="reference internal image-reference" href="../../../_images/Lc7FcPs.png"><img alt="Semantic anchoring of metadata element - final" src="../../../_images/Lc7FcPs.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">Semantic anchoring of metadata element - final</span><a class="headerlink" href="#semantic-anchoring-of-metadata-element-final" title="Permalink to this image">¶</a></p>
+</div>
+<br>
+</div>
+<div class="section" id="metadata-schema-definition-using-salad-schema-language">
+<h2><span class="section-number">9.4.2.9. </span>1. metadata schema definition using SALAD schema language:<a class="headerlink" href="#metadata-schema-definition-using-salad-schema-language" title="Permalink to this headline">¶</a></h2>
+<p>Quoting the project’s documentation, “<em><a class="reference external" href="https://github.com/common-workflow-language/schema_salad">the Semantic Annotations for Linked Avro Data (SALAD)</a> is a schema language for describing JSON or YAML structured linked data documents. <code class="docutils literal notranslate"><span class="pre">SALAD</span> <span class="pre">schema</span></code> describes rules for preprocessing, structural validation, and hyperlink checking for documents described by a Salad schema. Salad supports rich data modeling with inheritance, template specialization, object identifiers, object references, documentation generation, code generation, and transformation to RDF. SALAD provides a bridge between document and record oriented data modeling and the Semantic Web.”</em></p>
+<p>The SALAD schema is used extensively by the <a class="reference external" href="https://github.com/common-workflow-language">Common Workflow Language(CWL)</a> for defining and specifying computational workflows.
+But in this example, we are using the SALAD schema to capture the annotation requirements in a <a class="reference external" href="https://yaml.org">YAML</a> document, while also embedding the semantics constraints, which can then be used to  to build a web form (see below) but also support conversion to RDF/LinkedData.</p>
+<blockquote>
+<div><p>:warning: This YAML document must be a UTF-8 text encoded, JSON-compatible subset of YAML in order to be processed by the SALAD schema processor.</p>
+</div></blockquote>
+<p>Below is a partial view of the YAML defined metadata  form, showing how <code class="docutils literal notranslate"><span class="pre">host</span></code> information requirements have been defined:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$base</span>: http://biohackathon.org/bh20-seq-schema
+<span class="nv">$namespaces</span>:
+  sch: https://schema.org/
+  efo: http://www.ebi.ac.uk/efo/
+  obo: http://purl.obolibrary.org/obo/
+  sio: http://semanticscience.org/resource/
+  edam: http://edamontology.org/
+  evs: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#
+
+<span class="nv">$graph</span>:
+
+- name: hostSchema
+  type: record
+  fields:
+    host_species:
+        doc: Host species as defined <span class="k">in</span> NCBITaxon, e.g. http://purl.obolibrary.org/obo/NCBITaxon_9606 <span class="k">for</span> Homo sapiens
+        type: string
+        jsonldPredicate:
+          _id: http://www.ebi.ac.uk/efo/EFO_0000532
+          _type: <span class="s2">&quot;@id&quot;</span>
+          noLinkCheck: <span class="nb">true</span>
+    host_id:
+        doc: Identifer <span class="k">for</span> the host. If you submit multiple samples from the same host, use the same host_id <span class="k">for</span> those samples
+        type: string?
+        jsonldPredicate:
+          _id: http://semanticscience.org/resource/SIO_000115
+    host_sex:
+        doc: Sex of the host as defined <span class="k">in</span> PATO, expect Male <span class="o">(</span>http://purl.obolibrary.org/obo/PATO_0000384<span class="o">)</span> or Female <span class="o">(</span>http://purl.obolibrary.org/obo/PATO_0000383<span class="o">)</span> or <span class="k">in</span> Intersex <span class="o">(</span>http://purl.obolibrary.org/obo/PATO_0001340<span class="o">)</span>
+        type: string?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/PATO_0000047
+          _type: <span class="s2">&quot;@id&quot;</span>
+          noLinkCheck: <span class="nb">true</span>
+    host_age:
+        doc: Age of the host as number <span class="o">(</span>e.g. <span class="m">50</span><span class="o">)</span>
+        type: int?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/PATO_0000011
+    host_age_unit:
+        doc: Unit of host age e.g. http://purl.obolibrary.org/obo/UO_0000036
+        type: string?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/NCIT_C42574
+          _type: <span class="s2">&quot;@id&quot;</span>
+          noLinkCheck: <span class="nb">true</span>
+    host_health_status:
+        doc: A condition or state at a particular time, must be one of the following <span class="o">(</span>obo:NCIT_C115935 obo:NCIT_C3833 obo:NCIT_C25269 obo:GENEPIO_0002020 obo:GENEPIO_0001849 obo:NCIT_C28554 obo:NCIT_C37987<span class="o">)</span>
+        type: string?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/NCIT_C25688
+          _type: <span class="s2">&quot;@id&quot;</span>
+          noLinkCheck: <span class="nb">true</span>
+    host_treatment:
+      doc: Process <span class="k">in</span> which the act is intended to modify or alter host status
+      type: string?
+      jsonldPredicate:
+          _id: http://www.ebi.ac.uk/efo/EFO_0000727
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">source</span></code>: <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml">https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml</a></p>
+<div class="section" id="the-corresponding-metadata-acquisition-web-form">
+<h3><span class="section-number">9.4.2.9.1. </span>The corresponding metadata acquisition web form:<a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form" title="Permalink to this headline">¶</a></h3>
+<!-- <div><img src="/images/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../../../_images/5eQN9hw.png"><img alt="The corresponding metadata acquisition web form" src="../../../_images/5eQN9hw.png" style="width: 800px;" /></a>
+</div>
+<!-- ![](/images/5eQN9hw.png) -->
+<!-- <div><img src="/images/RR5GSgi.png" width="800" style="border:1px solid black"/></div> -->
+<!-- ![](/images/RR5GSgi.png) -->
+<div class="figure align-default" id="the-corresponding-metadata-acquisition-web-form-2">
+<a class="reference internal image-reference" href="../../../_images/RR5GSgi.png"><img alt="The corresponding metadata acquisition web form 2" src="../../../_images/RR5GSgi.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.7 </span><span class="caption-text">The corresponding metadata acquisition web form</span><a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form-2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="exemplar-instance-data">
+<h2><span class="section-number">9.4.2.10. </span>2. Exemplar instance data:<a class="headerlink" href="#exemplar-instance-data" title="Permalink to this headline">¶</a></h2>
+<p>When users submit information via the form (or by other programatic means), an instance YAML file is generated, which looks like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>id: placeholder
+
+host:
+    host_id: XX1
+    host_species: http://purl.obolibrary.org/obo/NCBITaxon_9606
+    host_sex: http://purl.obolibrary.org/obo/PATO_0000384
+    host_age: <span class="m">20</span>
+    host_age_unit: http://purl.obolibrary.org/obo/UO_0000036
+    host_health_status: http://purl.obolibrary.org/obo/NCIT_C25269
+    host_treatment: Process <span class="k">in</span> which the act is intended to modify or alter host status <span class="o">(</span>Compounds<span class="o">)</span>
+    host_vaccination: <span class="o">[</span>vaccines1,vaccine2<span class="o">]</span>
+    ethnicity: http://purl.obolibrary.org/obo/HANCESTRO_0010
+    additional_host_information: Optional free text field <span class="k">for</span> additional information
+
+sample:
+    sample_id: Id of the sample as defined by the submitter 
+    collector_name: Name of the person that took the sample
+    collecting_institution: Institute that was responsible of sampling  
+    specimen_source: <span class="o">[</span>http://purl.obolibrary.org/obo/NCIT_C155831,http://purl.obolibrary.org/obo/NCIT_C155835<span class="o">]</span>
+    collection_date: <span class="s2">&quot;2020-01-01&quot;</span>
+    collection_location: http://www.wikidata.org/entity/Q148
+    sample_storage_conditions: frozen specimen
+    source_database_accession: <span class="o">[</span>http://identifiers.org/insdc/LC522350.1#sequence<span class="o">]</span>
+    additional_collection_information: Optional free text field <span class="k">for</span> additional information
+
+virus:
+    virus_species: http://purl.obolibrary.org/obo/NCBITaxon_2697049
+    virus_strain: SARS-CoV-2/human/CHN/HS_8/2020
+
+technology:
+    sample_sequencing_technology: <span class="o">[</span>http://www.ebi.ac.uk/efo/EFO_0009173,http://www.ebi.ac.uk/efo/EFO_0009173<span class="o">]</span>
+    sequence_assembly_method: Protocol used <span class="k">for</span> assembly
+    sequencing_coverage: <span class="o">[</span><span class="m">70</span>.0, <span class="m">100</span>.0<span class="o">]</span>
+    additional_technology_information: Optional free text field <span class="k">for</span> additional information
+
+submitter:
+    authors: <span class="o">[</span>John Doe, Joe Boe, Jonny Oe<span class="o">]</span>
+    submitter_name: <span class="o">[</span>John Doe<span class="o">]</span>
+    submitter_address: John Doe<span class="se">\&#39;</span>s address
+    originating_lab: John Doe kitchen
+    lab_address: John Doe<span class="se">\&#39;</span>s address
+    provider_sample_id: XXX1
+    submitter_sample_id: XXX2
+    publication: PMID00001113
+    submitter_orcid: <span class="o">[</span>https://orcid.org/0000-0000-0000-0000,https://orcid.org/0000-0000-0000-0001<span class="o">]</span>
+    additional_submitter_information: Optional free text field <span class="k">for</span> additional information
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">source</span></code>: <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml">https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml</a></p>
+</div>
+<div class="section" id="conversion-from-yaml-to-rdf">
+<h2><span class="section-number">9.4.2.11. </span>3. Conversion from YAML to RDF:<a class="headerlink" href="#conversion-from-yaml-to-rdf" title="Permalink to this headline">¶</a></h2>
+<p>Using the schema SALAD python package, the YAML instance file can be easily converted to RDF as shown in the code snippet below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install schema_salad
+</pre></div>
+</div>
+<p>Get JSON-LD context::</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ schema-salad-tool --print-jsonld-context myschema.yml mydocument.yml
+</pre></div>
+</div>
+<p>Convert a document to JSON-LD::</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ schema-salad-tool --print-pre myschema.yml mydocument.yml &gt; mydocument.jsonld
+</pre></div>
+</div>
+</div>
+<div class="section" id="rdf-graph-validation-with-shex-expression">
+<h2><span class="section-number">9.4.2.12. </span>4. RDF graph validation with ShEx expression:<a class="headerlink" href="#rdf-graph-validation-with-shex-expression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-shex">
+<h3><span class="section-number">9.4.2.12.1. </span>4.1 What is ShEx?<a class="headerlink" href="#what-is-shex" title="Permalink to this headline">¶</a></h3>
+<p>ShEx stands for <code class="docutils literal notranslate"><span class="pre">Shape</span> <span class="pre">Expression</span></code> and is a syntax for validating and describing RDF graphs. ShEx expressions can be used both to describe RDF and check the conformance of RDF data. The ShEx language  specification was published by the W3C Shape Expressions Community Group but it is not a W3C Standard nor is it on the W3C Standards Track.</p>
+<p>It should be noted that the current W3C Technical Recommendations for RDF shape validation is the <a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL specification</a>.</p>
+<p>ShEx was selected owing to its simplicity, ease of use and availability of experts.</p>
+</div>
+<div class="section" id="why-is-this-needed">
+<h3><span class="section-number">9.4.2.12.2. </span>4.2 Why is this needed?<a class="headerlink" href="#why-is-this-needed" title="Permalink to this headline">¶</a></h3>
+<p>While defining a SALAD schema using YAML allows to list key entities and their attributes, it does not allow to check constraints. This has to be done on the RDF which needs to be checks for compliancee against a set of constraints which can be expressed using ShEx. Working with a ShEx expert (<a class="reference external" href="http://di002.edv.uniovi.es/~labra/">Dr Jose Emilio Labra Gayo - (Oviedo Uni)</a>, the following <a class="reference external" href="https://shex.io/shex-semantics/">Shape Expression syntax</a> profile was developed and used to validate the RDF before persistence to the SPARQL endpoint.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX : &lt;https://raw.githubusercontent.com/arvados/bh20-seq-resource/master/bh20sequploader/bh20seq-shex.rdf#&gt;
+PREFIX MainSchema: &lt;http://biohackathon.org/bh20-seq-schema#MainSchema/&gt;
+PREFIX hostSchema: &lt;http://biohackathon.org/bh20-seq-schema#hostSchema/&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX obo: &lt;http://purl.obolibrary.org/obo/&gt;
+PREFIX sio: &lt;http://semanticscience.org/resource/&gt;
+PREFIX efo: &lt;http://www.ebi.ac.uk/efo/&gt;
+PREFIX evs: &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#&gt;
+PREFIX edam: &lt;http://edamontology.org/&gt;
+PREFIX wikidata: &lt;http://www.wikidata.org/entity/&gt;
+
+:submissionShape <span class="o">{</span>
+  MainSchema:host   @:hostShape <span class="p">;</span>
+  MainSchema:sample @:sampleShape <span class="p">;</span>
+  MainSchema:submitter @:submitterShape <span class="p">;</span>
+  MainSchema:technology @:technologyShape <span class="p">;</span>
+  MainSchema:virus @:virusShape<span class="p">;</span>
+<span class="o">}</span>
+
+:hostShape  <span class="o">{</span>
+    efo:EFO_0000532 <span class="o">[</span> obo:NCBITaxon_~ <span class="o">]</span> <span class="p">;</span>
+    sio:SIO_000115 xsd:string ?<span class="p">;</span>
+    obo:PATO_0000047 <span class="o">[</span> obo:PATO_0000384 obo:PATO_0000383 obo:PATO_0001340<span class="o">]</span> ?<span class="p">;</span>
+    obo:PATO_0000011 xsd:integer ?<span class="p">;</span>
+    obo:NCIT_C42574 <span class="o">[</span> obo:UO_~ <span class="o">]</span> ?<span class="p">;</span>
+  obo:NCIT_C25688 <span class="o">[</span>obo:NCIT_C115935 obo:NCIT_C3833 obo:NCIT_C25269 obo:GENEPIO_0002020 obo:GENEPIO_0001849 obo:NCIT_C28554 obo:NCIT_C37987 <span class="o">]</span> ? <span class="p">;</span>
+    efo:EFO_0000727 xsd:string ?<span class="p">;</span>
+    obo:VO_0000002 xsd:string <span class="o">{</span><span class="m">0</span>,10<span class="o">}</span><span class="p">;</span>
+    sio:SIO_001167 xsd:string ?<span class="p">;</span>
+    sio:SIO_001014 <span class="o">[</span> obo:HANCESTRO_~ <span class="o">]</span> ? <span class="p">;</span> <span class="c1">#ethnicity</span>
+<span class="o">}</span>
+
+:sampleShape  <span class="o">{</span>
+    sio:SIO_000115 xsd:string<span class="p">;</span>
+    evs:C25164 xsd:string<span class="p">;</span>
+    obo:GAZ_00000448 <span class="o">[</span>wikidata:~<span class="o">]</span> <span class="p">;</span>
+    obo:OBI_0001895 xsd:string ?<span class="p">;</span>
+    obo:NCIT_C41206 xsd:string ?<span class="p">;</span>
+    obo:OBI_0001479 IRI <span class="o">{</span><span class="m">0</span>,2<span class="o">}</span><span class="p">;</span>
+    obo:OBI_0001472 xsd:string ?<span class="p">;</span>
+    sio:SIO_001167 xsd:string ?<span class="p">;</span>
+  edam:data_2091 IRI <span class="o">{</span><span class="m">0</span>,3<span class="o">}</span><span class="p">;</span>
+<span class="o">}</span>
+
+:submitterShape <span class="o">{</span>
+    obo:NCIT_C42781 xsd:string + <span class="p">;</span>
+    sio:SIO_000116 xsd:string *<span class="p">;</span>
+    sio:SIO_000172 xsd:string ?<span class="p">;</span>
+    obo:NCIT_C37984 xsd:string ?<span class="p">;</span>
+    obo:OBI_0600047 xsd:string ?<span class="p">;</span>
+    obo:NCIT_C37900 xsd:string ?<span class="p">;</span>
+    efo:EFO_0001741 xsd:string ?<span class="p">;</span>
+    obo:NCIT_C19026 xsd:string ?<span class="p">;</span>
+    sio:SIO_000115 
+    sio:SIO_001167 xsd:string ?<span class="p">;</span>
+<span class="o">}</span>
+
+:technologyShape <span class="o">{</span>
+    obo:OBI_0600047 IRI <span class="o">{</span><span class="m">0</span>,3<span class="o">}</span> <span class="p">;</span>
+    efo:EFO_0002699 xsd:string ?<span class="p">;</span>
+    obo:FLU_0000848 xsd:double OR xsd:integer <span class="o">{</span><span class="m">0</span>,3<span class="o">}</span><span class="p">;</span>
+    sio:SIO_001167 xsd:string ?<span class="p">;</span>
+<span class="o">}</span>
+
+:virusShape<span class="o">{</span>
+  edam:data_1875 <span class="o">[</span> obo:NCBITaxon_~ <span class="o">]</span> <span class="p">;</span>
+    sio:SIO_010055 xsd:string ?<span class="p">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">source:</span></code> <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-shex.rdf">https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-shex.rdf</a></p>
+<p>Using the <a class="reference external" href="http://www.weso.es/">WESO</a> developed <a class="reference external" href="http://rdfshape.weso.es/">RDF shape viewer</a>,  Shape Expression can be rendered graphical. In the example below a <a class="reference external" href="https://schema.org">schema.org</a> base shex expression in presented.</p>
+<!-- <div><img src="/images/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
+ -->
+<div class="figure align-default" id="weso-shape-expression-viewer">
+<a class="reference internal image-reference" href="../../../_images/z2rriQu.png"><img alt="WESO SHape Expression Viewer" src="../../../_images/z2rriQu.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.8 </span><span class="caption-text">WESO SHape Expression Viewer</span><a class="headerlink" href="#weso-shape-expression-viewer" title="Permalink to this image">¶</a></p>
+</div>
+<!-- ![](/images/z2rriQu.png) -->
+<p>There is a blog focusing mainly on the sequence analysis but there is a section on metadata validation.</p>
+</div>
+</div>
+<div class="section" id="sparql-queries-available-here">
+<h2><span class="section-number">9.4.2.13. </span>5. SPARQL queries available here:<a class="headerlink" href="#sparql-queries-available-here" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://covid19.genenetwork.org/blog?id=using-covid-19-pubseq-part1">http://covid19.genenetwork.org/blog?id=using-covid-19-pubseq-part1</a></p>
+<div class="section" id="the-sparql-endpoint">
+<h3><span class="section-number">9.4.2.13.1. </span>5.1. The SPARQL endpoint<a class="headerlink" href="#the-sparql-endpoint" title="Permalink to this headline">¶</a></h3>
+<p>The following endpoint during the Elixir Covid-19 Biohackthon and metadata information converted from the YAML definition to RDF turtle format was loaded in the following SPARQL Endpoint.</p>
+<p><a class="reference external" href="http://sparql.genenetwork.org/sparql/">http://sparql.genenetwork.org/sparql/</a></p>
+<p>The collection of metadata in rdf format is available for download: <a class="reference external" href="https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl">https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl</a></p>
+</div>
+<div class="section" id="exploring-the-metadata-described-the-fastq-sequence-files">
+<h3><span class="section-number">9.4.2.13.2. </span>5.2. Exploring the metadata described the FASTQ sequence files<a class="headerlink" href="#exploring-the-metadata-described-the-fastq-sequence-files" title="Permalink to this headline">¶</a></h3>
+<p>Limiting search to metadata add <a class="reference external" href="http://covid-19.genenetwork.org/graph/metadata.ttl">http://covid-19.genenetwork.org/graph/metadata.ttl</a> in the top input box. Now you can find a predicate for submitter that looks like <a class="reference external" href="http://biohackathon.org/bh20-seq-schema#MainSchema/submitter">http://biohackathon.org/bh20-seq-schema#MainSchema/submitter</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX pubseq: &lt;http://biohackathon.org/bh20-seq-schema#MainSchema/&gt;
+PREFIX sio: &lt;http://semanticscience.org/resource/&gt;
+<span class="k">select</span> distinct ?sample ?p ?o
+<span class="o">{</span>
+   ?sample sio:SIO_000115 <span class="s2">&quot;MT326090.1&quot;</span> .
+   ?sample ?p ?o .
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusions">
+<h2><span class="section-number">9.4.2.14. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF and Shape Express standard.
+Other approaches are possible and we provide details in a dedicated recipe where JSON schema<!-- TODO add a link to corresponding document --> and JSON-LD<!-- TODO add a link to corresponding document --> technologies are used.
+This recipe tackles an important aspect of the FAIR principles, shining the light on the need to provide sufficient descriptive metadata to associate with an assay data file to allow its correct interpretation.
+The recipe therefore provides a piece of the jigsaw to establish a FAIR datasets.
+There are some caveats or improvements which could be made. For instance, the devised shex expression and the associated instance RDF graph  could be assigned a persistent identifiers (PID).
+Another improvement could be a better integration with repositories such FAIRsharing or the main sequence data submission systems such as INSDC deposition pipelines.</p>
+</div></blockquote>
+<div class="section" id="what-should-i-read-next">
+<h3><span class="section-number">9.4.2.14.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How to validate a FASTQ sequencing file?<!-- TODO add a link to corresponding document --></p></li>
+<li><p>How to express Minimal Metadata checklist in machine readable format<!-- TODO add a link to corresponding document --></p></li>
+<li><p>How to validate metadata with JSON Schema?<!-- TODO add a link to corresponding document --></p></li>
+<li><p>How to perform data integration with SPARQL?<!-- TODO add a link to corresponding document --></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2><span class="section-number">9.4.2.15. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>[1]. Avro - <a class="reference external" href="http://avro.apache.org">http://avro.apache.org</a>
+[2]. metaschema - <a class="reference external" href="https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml">https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml</a>
+[3]. schema salad - <a class="reference external" href="http://www.commonwl.org/v1.0/SchemaSalad.html">http://www.commonwl.org/v1.0/SchemaSalad.html</a>
+[4]. <a class="reference external" href="https://www.w3.org/RDF/">https://www.w3.org/RDF/</a>
+[5]. <a class="reference external" href="https://shex.io/shex-semantics/">https://shex.io/shex-semantics/</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">9.4.2.16. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>ELIXIR Node</p></th>
+<th class="head"><p>Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/daniwelter"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0003-1058-2668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Luxembourg</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/robertgiessmann"><img class="avatar-style" src="https://avatars.githubusercontent.com/robertgiessmann"></img><div class="d-block">Robert Giessmann</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-0254-1500"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Bayer AG</p></td>
+<td><p><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">9.4.2.17. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="transcriptomics-metadata.html" title="previous page"><span class="section-number">9.4.1. </span>Metadata profile for transcriptomics</a>
+    <a class='right-next' id="next-link" href="from-proprietary-to-open-standard-mzml-exemplar.html" title="next page"><span class="section-number">10. </span>Converting from proprietary to open format</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

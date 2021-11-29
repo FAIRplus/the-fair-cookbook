@@ -1,0 +1,1433 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13. Extraction, transformation, and loading process</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ETL-tools.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Reusability" href="../reusability.html" />
+    <link rel="prev" title="12. File format validation, FASTQ example" href="fastq-file-format-validators.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ETL-tools.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Extraction, transformation, and loading process" />
+<meta property="og:description" content="Extraction, transformation, and loading process  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://biosch" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/ETL-tools.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/ETL-tools.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/ETL-tools.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   13.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   13.2. Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   13.3. Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   13.4. Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   13.5. FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations">
+   13.6. Operations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-transformation">
+     13.6.1. Data transformation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-deposition">
+     13.6.2. Data Deposition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-use-case">
+     13.6.3. Example use case:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#omop-etl-link-todo-link-to-recipe-in-prepartion-3-rdf-etl-link-todo-link-to-recipe-in-prepartion">
+   13.7.
+   <!--
+2. OMOP ETL [link]( TODO link to recipe) (*in prepartion*)
+3. RDF ETL [link]( TODO link to recipe)  (*in prepartion*)
+-->
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   13.8. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   13.9. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   13.10. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="extraction-transformation-and-loading-process">
+<span id="fcb-interop-etl"></span><h1><span class="section-number">13. </span>Extraction, transformation, and loading process<a class="headerlink" href="#extraction-transformation-and-loading-process" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Extraction, transformation, and loading process", "audience": ["Data Curator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Survey / Review", "identifier": {"@type": "PropertyValue", "name": "FCB031", "url": "https://w3id.org/faircookbook/FCB031"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+15 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Extraction, transformation, and loading process</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Survey / Review</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Data Curator, Data Manager, Data Scientist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB031" class="text--purple-dark">FCB031
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">13.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>This recipe identifies tools for <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">extraction</span></code>, <code class="docutils literal notranslate"><span class="pre">transformation</span></code>, and <code class="docutils literal notranslate"><span class="pre">loading</span></code> (ETL).
+ETL is the process of collecting data from one source to persist it in another designated system in which the data is represented differently <a class="footnote-reference brackets" href="#etl-wiki" id="id1">1</a>.
+A common use case in data science is to build a scalable and portable ETL system to extract data from various sources, transform said-data into a cohesive dataset, and load the data to an internal or public database to support data exploration.</p>
+<p>This recipe aims to serve as a start point for designing ETL workflows, rather than provide a comprehensive list covering all available tools.</p>
+<blockquote>
+<div><p>The lists of tools are generated either by manual curation, which reflects what is being used in the industry, or automatally discovered from the bio.tools repository.</p>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The content in these tables was generated in March 2021.
+For updated content, please check the <a class="reference external" href="https://github.com/FAIRplus/WP3_FAIR_tooling">FAIR tooling repository</a>.
+To provide feedback on this content or report issues, please do so via the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">FAIR Cookbook github issue tracker</a></p>
+</div>
+</div>
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">13.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<p>The figure below shows different ETL-related operations and their relationships, together with related tools and recipes.</p>
+<div class="figure align-default" id="overview-of-key-aspects-in-etl-process">
+<a class="reference internal image-reference" href="../../../_images/ETL-tools-mermaid.png"><img alt="Overview of key aspects in ETL process" src="../../../_images/ETL-tools-mermaid.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 13.1 </span><span class="caption-text">Overview of key aspects in ETL process</span><a class="headerlink" href="#overview-of-key-aspects-in-etl-process" title="Permalink to this image">¶</a></p>
+</div>
+<p>The table below is an overview of ETL tools identified.
+Details of each tools are also provided in this doc.
+For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fcb-interop-etl2rdf-tools` -->.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Data query and retrieval</p></td>
+<td><p>Data transformation</p></td>
+<td><p>Data deposition</p></td>
+</tr>
+<tr class="row-odd"><td><p>TAMR</p></td>
+<td><p>SDTM</p></td>
+<td><p>REDCap</p></td>
+</tr>
+<tr class="row-even"><td><p>Bert</p></td>
+<td><p>TriFacta</p></td>
+<td><p>TransMART</p></td>
+</tr>
+<tr class="row-odd"><td><p>Termite</p></td>
+<td><p>OMOP</p></td>
+<td><p>Stardog</p></td>
+</tr>
+<tr class="row-even"><td><p>Oracle clinical</p></td>
+<td><p>Collibra</p></td>
+<td><p>Postgresql</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeoBoost2</p></td>
+<td><p>Apache Hadoop</p></td>
+<td><p>Chemotion</p></td>
+</tr>
+<tr class="row-even"><td><p>MartView</p></td>
+<td><p>Talend</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CLOBNET</p></td>
+<td><p>Informatica</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>PDBUSQLExtractor</p></td>
+<td><p>OpenRefine-metadata-extension</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>repo</p></td>
+<td><p>DISQOVER</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>SNPator</p></td>
+<td><p>Query Tabular</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>PyGMQL</p></td>
+<td><p>ms-data-core-api</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>PlantPIs</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>BAGET</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>NCBI Resources</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CPAD</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The tools list above aims to provide a basic overview of what is available on the market. It is <em>not</em> a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">github issue tracker</a>.</p>
+</div>
+</div>
+<div class="section" id="requirements">
+<h2><span class="section-number">13.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Knowledge requirement:</p>
+<ul>
+<li><p>General familiarity with data cleaning, data loading tasks.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="capability-maturity-table">
+<h2><span class="section-number">13.4. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>minimal</p></td>
+<td class="text-align:left"><p>automated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2><span class="section-number">13.5. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_2422">data retrieval</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_2428">validation</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_3431">data deposition</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/topic_0219">data submission, annotation and curation</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="operations">
+<h2><span class="section-number">13.6. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<!-- <h3 id=Data-query-and-retrieval>Data query and retrieval</h3> -->
+<p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">query</span> <span class="pre">and</span> <span class="pre">retrieval</span></code> is the process of extracting structured or unstructured data from different sources. The process of identifying and obtaining data from data management systems.</p>
+<p><strong>Manually curated list of tools</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.tamr.com/">TAMR</a></p></td>
+<td><p>A cloud-native data mastering solution (cloud MDM) accelerate analytics through machine learning (ML), available on Google Cloud, Azure and AWS.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>information integration, data unification</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/google-research/bert">Bert</a></p></td>
+<td><p>Bidirectional Encoder Representations from Transformers (BERT) is a Transformer-based machine learning technique for natural language processing (NLP) pre-training developed by Google, aiming to extractcontext-sensitive features from an input text.</p></td>
+<td><p>Apache License 2.0</p></td>
+<td><p>relationship extraction</p></td>
+<td><p>Data model</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.scibite.com/platform/termite/">Termite</a></p></td>
+<td><p>TERMite (TERM identification, tagging &amp; extraction) is a fast named entity recognition (NER) and extraction engine for semantic analytics.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>information extraction</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.oracle.com/uk/industries/life-sciences/clinical-research/">Oracle clinical</a></p></td>
+<td><p>a single application and infrastructure for electronic data capture and clinical data management, while leveraging the renowned Oracle database. Oracle Clinical enables management of all clinical trial data in a single system, improving accuracy, visibility, and data integrity.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Clinical data</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Automatically created list of tools by querying <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/geoboost2">GeoBoost2</a></p></td>
+<td><p>A natural languageprocessing pipeline for GenBank metadata enrichment for virus phylogeography.</p></td>
+<td><p>Apache-2.0 License</p></td>
+<td><p>Biotechnology, Natural language processing, Workflows, Public health and epidemiology, Infectiousdisease</p></td>
+<td><p>Web application</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/martview">MartView</a></p></td>
+<td><p>Tool for data retrieval and data mining that integrates data from Ensembl. Through the web interface it allows you to apply a series of filters to create custom datasets which can be converted to several useful output formats.</p></td>
+<td><p>N/A</p></td>
+<td><p>Pathology, Data integration and warehousing, Database management, Molecular interactions, pathways and networks, Gene transcripts</p></td>
+<td><p>Web Application</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/CLOBNET">CLOBNET</a></p></td>
+<td><p>Cloud-based machine learning system (CLOBNET) that is an open-source, lean infrastructure for electronic health record (EHR) data integration and is capable of extract, transform, and load (ETL) processing</p></td>
+<td><p>BSD-2-Clause</p></td>
+<td><p>Machine learning, Medicines research and development</p></td>
+<td><p>Web application (for internal use)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/PDBUSQLExtractor">PDBUSQLExtractor</a></p></td>
+<td><p>Scalable Extraction of Big Macromolecular Data in Azure Data Lake Environment.</p></td>
+<td><p>GPL-3.0</p></td>
+<td><p>Nucleic acid structure analysis</p></td>
+<td><p>C# library</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/repo">repo</a></p></td>
+<td><p>A data manager meant to avoid manual storage/retrieval of data to/from the file system. It builds one (or more) centralized repository where R objects are stored with rich annotations, including corresponding code chunks, and easily searched and retrieved.</p></td>
+<td><p>GPL-3.0</p></td>
+<td><p>Data submission, annotation and curation, Data management, Database management</p></td>
+<td><p>R library</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/snpator">SNPator</a></p></td>
+<td><p>Originally designed to help CeGen users to handle, retrieve, transform and analyze the genetic data generated by the genotyping facilities of the institution. However, it is also open to external users who may want to upload their own genotyped data in order to take advantage its data processing features. Users will be able to perform a set of operations which may range from very simple format transformations to some complex biostatistical calculations.</p></td>
+<td><p>N/A</p></td>
+<td><p>Bioinformatics, Data quality management, Genetic variation, GWAS study</p></td>
+<td><p>Web Application</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/PyGMQL">PyGMQL</a></p></td>
+<td><p>Scalable data extraction and analysis for heterogeneous genomic datasets. Based on GMQL.</p></td>
+<td><p>Apache-2.0</p></td>
+<td><p>Imaging, Workflows, Database management</p></td>
+<td><p>Python Library</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data portals with extraction functionalities discovered from <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/plantpis">PlantPIs</a></p></td>
+<td><p>Web querying system for a database collecting plant protease inhibitors data.</p></td>
+<td><p>Plant biology, Gene and protein families</p></td>
+<td><p>Database Portal</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/baget">BAGET</a></p></td>
+<td><p>Web service designed to facilitate extraction of specific gene and protein sequences from completely determined prokaryotic genomes. Query results can be exported as a rich text format file for printing, archival or further analysis.</p></td>
+<td><p>N/A</p></td>
+<td><p>DNA, Sequencing, Model organisms, Sequence analysis</p></td>
+<td><p>Web application</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/ncbi_resources">NCBI Resources</a></p></td>
+<td><p>Analysis and retrieval resources for the data in GenBank and other biological data made available through the NCBI web site.</p></td>
+<td><p>Open Access</p></td>
+<td><p>Data mining, Data integration and warehousing, Database management, Molecular interactions, pathways and networks, Rare diseases</p></td>
+<td><p>Web Application, Database portal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/cpad">CPAD</a></p></td>
+<td><p>Curated Protein Aggregation Database (CPAD) is an integrated database which contains information related to amyloidogenic proteins, Aggregation prone regions, aggregation kinetics and structure of proteins relevant to aggregation.</p></td>
+<td><p>N/A</p></td>
+<td><p>Proteomics, Data submission, annotation and curation, Proteins, Small molecules, Literature and language</p></td>
+<td><p>Data Portal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/GenomicsDB">GenomicsDB</a></p></td>
+<td><p>Advancing clinical cohort selection with genomics analysis on a distributed platform. Highly performant data storage in C++ for importing, querying and transforming variant data with Java/Spark. Used in gatk4.</p></td>
+<td><p>MIT License</p></td>
+<td><p>Exome sequencing, Systems medicine, Personalised medicine, Complementary medicine, Biobank</p></td>
+<td><p>Command-line</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/epivizFileServer">Epiviz File Server</a></p></td>
+<td><p>A library to query and transform genomic data from indexed files</p></td>
+<td><p>MIT License</p></td>
+<td><p>Oncology,Workflows, DNA</p></td>
+<td><p>Python Library</p></td>
+</tr>
+</tbody>
+</table>
+<!-- <h3 id=Data-transformation>Data transformation</h3> -->
+<div class="section" id="data-transformation">
+<h3><span class="section-number">13.6.1. </span>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">transformation</span></code> is the process of converting the data format, structure, and value for a specific goal, which may include meeting a specific data standards.</p>
+<p>Below are listed common operations in data transformation:</p>
+<ul class="simple">
+<li><p>Data annotation
+The process of labeling data or metadata.</p></li>
+<li><p>Data validation
+The process of ensuring data has met data standards both in terms of data content and data format.</p></li>
+<li><p>Data aggregation
+The process of gathering data and presenting it, usually, in a summarized format.</p></li>
+</ul>
+<p><strong>Manually curated list of tools</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtm">SDTM</a></p></td>
+<td><p>SDTM provides a standard for organizing and formatting data to streamline processes in collection management analysis and reporting.</p></td>
+<td><p>N/A</p></td>
+<td><p>data aggregation, data warehousing, Standard for Exchange of Non-clinical Data</p></td>
+<td><p>Data standard</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.trifacta.com">TriFacta</a></p></td>
+<td><p>A data preparation tool for data quality improvement, data transformation, and building data pipelines.</p></td>
+<td><p>Commercial license</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ohdsi.org/data-standardization/the-common-data-model/">OMOP</a></p></td>
+<td><p>The OMOP Common Data Model allows for the systematic analysis of disparate observational databases.</p></td>
+<td><p>N/A</p></td>
+<td><p>Data transformation</p></td>
+<td><p>Data model</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.collibra.com/">Collibra</a></p></td>
+<td><p>an enterprise-oriented data governance platform that provides tools for data management and stewardship.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Data catalogue,data governance, data linkage</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://hadoop.apache.org/">Apache Hadoop</a></p></td>
+<td><p>A framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines</p></td>
+<td><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a></p></td>
+<td><p>Distributed computing</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.talend.com/products/integrate-data/">Talend</a></p></td>
+<td><p>A unified approach that combines rapid data integration, transformation, and mapping with automated quality checks to ensure trustworthy data in every step.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Data integration</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.informatica.com/">Informatica</a></p></td>
+<td><p>Connect &amp; fetch data from different heterogeneous source and processing of data.</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Data integration</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Automatically created list of tools by querying <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/FAIRDataTeam/OpenRefine-metadata-extension">OpenRefine-metadata-extension</a></p></td>
+<td><p>Enables a post-hoc FAIRification workflow: load an existing dataset, perform data wrangling tasks, add FAIR attributes to the data, generate a linked data version of the data and, finally, push the result to an online FAIR data infrastructure to make it accessible and discoverable.</p></td>
+<td><p>MIT License</p></td>
+<td><p>Data submission, Annotation and curation, Data identity and mapping</p></td>
+<td><p>Extension</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/discover">DISQOVER</a></p></td>
+<td><p>Data integration platform for public, licensed and internal data. The Data Ingestion Engine enables transforming data into Linked Data which can be searched, navigated and analysed via the user interface and the API.</p></td>
+<td><p>N/A</p></td>
+<td><p>Biomedical science, Omics, Biology, Chemistry, Medicine</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/pga">PGA</a></p></td>
+<td><p>Construction of customized protein databases based on RNA-Seq data with/without genome guided, database searching, post-processing and report generation.</p></td>
+<td><p>GPL-2.0</p></td>
+<td><p>Proteomics, Proteomics experiment, Data submission, annotation and curation, Data integration and warehousing, Database management, Data governance, RNA-seq</p></td>
+<td><p>R library</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bio.tools/Query_Tabular">Query Tabular</a></p></td>
+<td><p>Galaxy-based tool which manipulates tabular files. Query Tabular automatically creates a SQLite database directly from a tabular file within a Galaxy workflow. The SQLite database can be saved to the Galaxy history, and further process to generate tabular outputs containing desired information and formatting.</p></td>
+<td><p>CC-BY-4.0</p></td>
+<td><p>Bioinformatics,Workflows</p></td>
+<td><p>Galaxy-based</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/ms-data-core-api">ms-data-core-api</a></p></td>
+<td><p>The primary purpose of ms-data-core-api library is to provide commonly used classes and Object Model for Proteomics Experiments. You may also find it useful for your own computational proteomics projects.</p></td>
+<td><p>Apache-2.0</p></td>
+<td><p>Proteomics, Proteomics experiment, Software engineering</p></td>
+<td><p>Java Library</p></td>
+</tr>
+</tbody>
+</table>
+<!-- <h3 id=Data-deposition>Data deposition</h3> -->
+</div>
+<div class="section" id="data-deposition">
+<h3><span class="section-number">13.6.2. </span>Data Deposition<a class="headerlink" href="#data-deposition" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">deposition</span></code> is the process of loading data to hosting (end) destinations, such as public data archives and data warehouses.</p>
+<p><strong>Manually curated list of tools</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.project-redcap.org/">REDCap</a></p></td>
+<td><p>REDCap is a secure web application for building and managing online surveys and databases. While REDCap can be used to collect virtually any type of data in any environment</p></td>
+<td><p><a class="reference external" href="https://projectredcap.org/partners/termsofuse/">REDCap License Terms</a></p></td>
+<td><p>Cloud migration</p></td>
+<td><p>Web application</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/transmart">TransMART</a></p></td>
+<td><p>An open-source data warehouse designed to store large amounts of clinical data from clinical trials, as well as data from basic research</p></td>
+<td><p><a class="reference external" href="https://github.com/transmart/transmartApp/blob/master/LICENSE.TXT">GPL-3.0 License</a></p></td>
+<td><p>Data storage, clinical data</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.stardog.com/">Stardog</a></p></td>
+<td><p>Triple Store Database, Provide an enterprise knowledge graph as FAIR+ data catalogue</p></td>
+<td><p>Commercial license</p></td>
+<td><p>Data integration,data catalog</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.postgresql.org/">Postgresql</a></p></td>
+<td><p>A free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance.</p></td>
+<td><p><a class="reference external" href="https://www.postgresql.org/about/licence/">The PostgreSQL Licence</a></p></td>
+<td><p>Relational database</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Automatically created list of tools by querying <a class="reference external" href="https://bio.tools">Bio.Tools</a>.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Topics</p></th>
+<th class="head"><p>Resource type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://bio.tools/chemotion">Chemotion</a></p></td>
+<td><p>Repository for chemistry research data that provides solutions for current challenges to store research data in a feasible manner, allowing the conservation of domain specific information in a machine readable format.</p></td>
+<td><p>CC-BY-4.0</p></td>
+<td><p>Data submission, annotation and curation, Workflows, Chemistry</p></td>
+<td><p>Data repository</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="example-use-case">
+<h3><span class="section-number">13.6.3. </span>Example use case:<a class="headerlink" href="#example-use-case" title="Permalink to this headline">¶</a></h3>
+<p>To show how some of these tools may be used, the following related recipes provide further guidance with real life examples.</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="fastq-file-format-validators.html#fcb-interop-fastqval"><span class="std std-ref">File format validation, FASTQ example</span></a></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="omop-etl-link-todo-link-to-recipe-in-prepartion-3-rdf-etl-link-todo-link-to-recipe-in-prepartion">
+<h2><span class="section-number">13.7. </span><!--
+2. OMOP ETL [link]( TODO link to recipe) (*in prepartion*)
+3. RDF ETL [link]( TODO link to recipe)  (*in prepartion*)
+--><a class="headerlink" href="#omop-etl-link-todo-link-to-recipe-in-prepartion-3-rdf-etl-link-todo-link-to-recipe-in-prepartion" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">13.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-footbibliography-content/recipes/interoperability/ETL-tools-0"><dl class="footnote brackets">
+<dt class="label" id="etl-wiki"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Wikipedia. Extract, transform, load. URL: <a class="reference external" href="https://en.wikipedia.org/wiki/Extract,_transform,_load">https://en.wikipedia.org/wiki/Extract,_transform,_load</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">13.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>ELIXIR Node</p></th>
+<th class="head"><p>Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/fuqix"><img class="avatar-style" src="https://avatars.githubusercontent.com/fuqix"></img><div class="d-block">Fuqi Xu</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-5923-3859"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>EMBL-EBI</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/embl.png" ></img></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/evaMart"><img class="avatar-style" src="https://avatars.githubusercontent.com/evaMart"></img><div class="d-block">Eva Marin del Pico</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-8324-2897"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Barcelona Supercomputing Centre</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-ES.svg" ></img></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><img class="avatar-style" src="https://avatars.githubusercontent.com/NONE"></img><div class="d-block">Sukhi Singh</div></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-8324-2897"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>The Hyve</p></td>
+<td><p><i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i></p></td>
+<td><p></p></td>
+<td><p>Tool curation</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">13.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="fastq-file-format-validators.html" title="previous page"><span class="section-number">12. </span>File format validation, FASTQ example</a>
+    <a class='right-next' id="next-link" href="../reusability.html" title="next page">Reusability</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

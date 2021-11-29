@@ -1,0 +1,1041 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
+.mermaidClass > rect{
+    fill:#FF0000;
+    stroke:#FFFF00;
+    stroke-width:4px;
+}
+
+img.emoji {
+    display: inline;
+    height: 1em;
+    width: 1em;
+    margin-bottom: 0.25em;
+}
+
+/** FONT FAMILIES **/
+nav.c-textbook__sidebar,
+a,
+a.reference.external,
+a:visited,
+a.anchorjs-link,
+a.anchor-link,
+a.nav-link,
+.c-sidebar__title,
+h1,
+h2,
+h3,
+h4,
+h2.c-sidebar__title,
+ul.c-sidebar__chapters,
+div.navbar-brand-box,
+div,
+div.cell,
+div.c-textbook__content,
+div.c-topbar,
+aside.sidebar__right,
+main.jupyter-page,
+main.c-textbook__page,
+div.col-12.col-md-3.bd-sidebar.site-navigation.show
+{
+    font-family: "Avenir", Avenir, serif;
+}
+
+body {
+    font-family: Courier, Helvetica, sans-serif;
+}
+
+html, html *:not(i) {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+nav.c-textbook__sidebar {
+	font-weight: bold;
+    opacity: 0.95;
+}
+
+.bd-sidebar nav ul.nav a:hover,
+.bd-sidebar nav ul.nav li.active > a,
+.bd-sidebar nav ul.nav li.active > a:hover {
+    max-width: 350px;
+}
+
+section > p,
+section > footer,
+section > table {
+    width: 120%;
+    font-size: 14px;
+}
+
+/*-------DEFINING CSS CARD AND TABLE LAYOUT---------*/
+/*--------------------------------------------------*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+.card-container:hover .card{
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card {
+    -webkit-transition: -webkit-transform 2.7s;
+    transition: transform 2.7s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back {
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+/*---------------------------------------------------------*/
+/*-------END OF DEFINING CSS CARD AND TABLE LAAOUT---------*/
+
+
+.footer {
+	width: auto;
+	text-align: center;
+}
+
+footer div.container p:first-child {
+    display: none !important;
+}
+
+footer li {
+    text-align: left;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+	width:0;
+}
+
+h1  {
+ 	display: inline;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+h2 {
+    font-weight: 100;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1;
+}
+
+h2.c-sidebar__title{
+    font-size: 2.0em;
+}
+
+ul.toc__menu a {
+    display: block;
+    padding: 0.25rem .75rem;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+li.active {
+    margin-left: -1px;
+}
+
+ul.c-sidebar__chapters {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.c-page__nav,
+.c-page__nav__next,
+.c-page__nav__prev{
+	width:  120%;
+}
+
+div.navbar-brand-box {
+  width: 120%;
+}
+
+div.text_cell_render{
+	width: 90%;
+}
+
+/*<!-- controls centre page width -->*/
+div.jb_cell{
+	width: 130%;
+}
+
+main.jupyter-page{
+	text-align: justify;
+	width: 100%;
+}
+
+main.c-textbook__page{
+	font-size: 16px;
+}
+
+div.col-12.col-md-3.bd-sidebar.site-navigation.show {
+    font-weight: bold;
+    opacity: 0.95;
+}
+
+div.col-12.col-md-9.pl-md-3.pr-md-0 {
+  width: 130%;
+}
+
+main.overflow-auto {
+    overflow: initial !important;
+}
+
+img.imageez {
+    display: block;
+    margin: auto;
+}
+
+
+/* ################################################## */
+/**                   FRONT PAGE TABLE               **/
+/* ################################################## */
+.summary-content {
+    padding-bottom: 0 !important;
+}
+
+img.avatar-style {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 3px 3px 11px rgba(66, 28, 100, 0.36);
+    margin-right: 20px;
+}
+
+#authors table,
+#contributors table ,
+details table {
+    display: table !important
+}
+
+details table tr p:not(:first-child),
+#authors table tr p:not(:first-child){
+    text-align: center;
+}
+
+details table tr td,
+#authors table tr td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#contributors table tr td:not(:first-child) p,
+#authors table tr p:not(:first-child){
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#authors table tr td,
+#authors table tr th,
+details table tr td,
+details table tr th{
+    font-size: 1.2rem;
+}
+
+#authors table tr th p,
+details table tr th p {
+    text-align: center;
+}
+
+#authors table tr td:first-child p,
+#contributors table tr td:first-child p,
+details table tr td:first-child p{
+    display: none;
+}
+
+#authors table tr td:first-child div.firstCol,
+details table tr td:first-child div.firstCol,
+#authors table tr td:not(:first-child) p,
+details table tr td:not(:first-child) p{
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#authors table tr td:first-child div.firstCol div.d-block,
+details table tr td:first-child div.firstCol div.d-block {
+    margin: auto;
+    text-align: center;
+}
+
+@media (min-width: 1220px) {
+    #authors table tr th:nth-child(3),
+    details table tr th:nth-child(3) {
+        min-width: 330px;
+    }
+}
+
+#authors img.elixir-style,
+details img.elixir-style {
+    margin: auto;
+    display: block;
+    width: 100px;
+    height: auto;
+    max-width: none;
+}
+
+#authors table .fa,
+#authors table .fas,
+#authors table .fab,
+details table .fa,
+details table .fas,
+details table .fab {
+    font-size: 25px;
+}
+
+#authors table th a,
+details table th a {
+    color: white !important;
+}
+
+div.firstCol div.d-block {
+    text-align: center;
+}
+
+
+/* ################################################## */
+/**           MEDIA QUERY WIDTH > 1405px             **/
+/* ################################################## */
+
+@media (min-width: 1405px) {
+    div.container-xl, footer .container {
+        max-width: 100% !important;
+        padding-left: 0 !important;
+    }
+    div#site-navigation {
+        max-width: 300px;
+        padding: 40px 20px 20px 20px;
+    }
+    div#site-navigation .navbar_extra_footer {
+        margin-bottom: 0 !important;
+        margin-top: 20px;
+    }
+    div#main-content {
+        padding-top: 25px;
+        min-height: 97vh;
+    }
+    button#navbar-toggler {
+        margin-left: 10px !important;
+    }
+    div.topbar-contents div.site-navigation {
+        display: none;
+    }
+    div.topbar .topbar-main {
+        padding-right: 10px;
+    }
+    footer,
+    footer {
+        width: 98.5vw !important;
+        position: absolute;
+        left: -295px;
+    }
+    footer *:not(img) {
+        width: 100% !important;
+    }
+    footer .column {
+      float: initial !important;
+    }
+    footer .container p, footer .container div.extra_footer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .container .extra_footer * {
+        max-width: 900px;
+    }
+    footer .row_footer {
+        display: block;
+        margin: auto;
+    }
+    #site-navigation {
+        display: flex;
+        flex-direction: column;
+    }
+    #site-navigation nav#bd-docs-nav {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 1404px) {
+    .footer {
+        margin-right: 20px;
+    }
+}
+
+div#site-navigation img.logo{
+    width: 260px !important;
+    margin: 0 !important;
+}
+
+div#site-navigation a.navbar-brand,
+div#site-navigation .navbar-brand-box {
+    width: auto;
+}
+
+div#site-navigation li.active {
+    border-left: 0 !important
+}
+
+#prev-link, #next-link {
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 20px;
+}
+
+#prev-link:hover, #next-link:hover {
+    text-decoration: none;
+    box-shadow: 3px 3px 11px #421C6E;
+}
+
+main.bd-content #main-content h1 {
+    font-weight: bold;
+}
+
+footer.footer p:not(:first-child) {
+    display: none;
+}
+
+.card.setHeight .cardLabel {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.card.setHeight {
+    min-height: 145px;
+}
+
+.card.setHeight .card-header{
+    padding:0 !important
+}
+
+.card.setHeight .card-header h4{
+    padding: 10px;
+    width:100%;
+    height:100%;
+}
+
+.card.setHeight .card-body {
+    font-weight: bold;
+    text-align: center;
+}
+
+.card.FAIRcard {
+    margin-bottom: 20px;
+}
+
+.card.FAIRcard .card-header {
+    padding: 10px 25px;
+    border: 0 !important;
+    background: #f7f7f7 !important;
+}
+
+.card.FAIRcard .card-body {
+    padding: 0 20px 10px 20px;
+    border: 0 !important;
+    background: #f7f7f7 !important;
+}
+
+@media (min-width: 1405px) {
+   .card.FAIRcard .card-body {
+       padding: 0 45px 10px 45px;
+       min-height: 135px;
+   }
+}
+
+.card.FAIRcard .bigLetter {
+    font-size: 30px;
+    border: 4px solid;
+    padding: 12px 0;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: inline-block;
+    box-shadow: 3px 3px 11px #ccc;
+    height: 60px;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+}
+
+.card.FAIRcard .cardTitle {
+    font-size: 24px;
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+
+.card.FAIRcard .recipeItem p {
+    display: inline-block;
+}
+
+.card.FAIRcard .recipeItem {
+    font-size: 18px;
+    display: flex;
+}
+
+.card.FAIRcard .recipeItem i {
+    margin-top: 5px;
+}
+
+.card.FAIRcard .recipeLabel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card.FAIRcard #interoperablePrinciple .bigLetter {
+    padding-left: 23px !important;
+    padding-right: 23px !important;
+}
+
+.card.FAIRcard #accessiblePrinciple .bigLetter {
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+}
+
+.card.FAIRcard #reusablePrinciple .bigLetter {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+
+@media (max-width: 1404px) {
+   .card.FAIRcard #accessiblePrinciple .bigLetter {
+       padding-left: 12px;
+    }
+    .card.FAIRcard #interoperablePrinciple .bigLetter {
+        padding-left: 17px;
+    }
+}
+
+/* ################################################## */
+/**                   EASY COLORS                    **/
+/* ################################################## */
+
+/** BORDERS **/
+hr,
+li.c-sidebar__divider {
+  border-top: 1px solid #fc7a4a;
+}
+
+li.active {
+    border-left: 1px solid #fc7a4a;
+}
+
+img.imageez {
+	border: 1px solid black !important;
+}
+
+details table tr td,
+details table tr th,
+#authors table tr td,
+#authors table tr th{
+    border-top: 1px solid #fc7a4a;
+}
+
+#authors table tr th,
+details table tr th {
+    border-bottom: 1px solid #fc7a4a;
+}
+
+#authors table tbody,
+details table tbody {
+    border-right: 1px solid #fc7a4a;
+    border-bottom: 1px solid #fc7a4a;
+}
+
+#authors table,
+details table{
+    display: table;
+    border-left: 1px solid #fc7a4a;
+}
+
+div.topbar div.bd-toc {
+    border-left: 1px solid #fc7a4a !important;
+}
+nav#bd-toc-nav li.active,
+nav#bd-toc-nav a.active {
+    border-left: 1px solid #421C6E !important;
+}
+
+div.topbar div.tocsection {
+    color:white;
+    min-height: 50px;
+    border: 0 !important;
+}
+
+.c-page__nav,
+.c-page__nav__next,
+.c-page__nav__prev{
+	border-color: darkgrey;
+}
+
+.card.FAIRcard #findablePrinciple .bigLetter {
+    border-color: #fc7a4a;
+}
+
+.card.FAIRcard #accessiblePrinciple .bigLetter {
+    border-color: #8038D1;
+}
+
+.card.FAIRcard #interoperablePrinciple .bigLetter {
+    border-color: #300861;
+}
+
+.card.FAIRcard #reusablePrinciple .bigLetter {
+    border-color: #7E0038;
+}
+
+.card.FAIRcard .cardTitle p {
+    margin-bottom: 0;
+}
+
+.miniCards .FAIRcard .bigLetter {
+    padding: 10px 0 0 0 !important;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    margin-right: 0;
+}
+
+.miniCards .FAIRcard .cardTitle {
+    padding-left: 15px;
+}
+
+.miniCards .FAIRcard .card-header {
+    overflow: hidden;
+    word-break: break-word;
+    padding: 10px;
+}
+
+@media (max-width: 1481px) {
+    .miniCards .FAIRcard .cardTitle * {
+        font-size: 1.2rem;
+    }
+}
+
+img.avatar-style {
+    border: 4px solid #fc7a4a;
+    display: block;
+    margin: auto;
+}
+
+
+/** TEXT COLORS **/
+li.toc-list-item__active,
+a.toc-linknode-name--H2,
+code,
+.c-sidebar__entry--active.c-sidebar__entry--active,
+ul.toc__menu a {
+	color: #8038d1;
+}
+
+main.bd-content #main-content h2,
+main.bd-content #main-content h1{
+    color: #421C6E !important;
+}
+
+li.toc-list-item-active,
+li.toc-list-itme-active,
+span.caption-text {
+	color: #300861;
+}
+
+.fab.fa-github,
+.fas.fa-download,
+.fas.fa-expand,
+.fas.fa-arrow-left,
+.fas.far-arrow-up,
+.fas.fa-bars,
+.fas.fa-lightbulb,
+.fas.fa-pencil-alt,
+.fas.fa-list,
+.fas.fa-download,
+i.fab.fa-github,
+.fas.fa-download,
+.fas.fa-expand,
+.fas.fa-arrow-left,
+.fas.far-arrow-up,
+.fas.fa-bars,
+.fas.fa-lightbulb,
+.fas.fa-pencil-alt,
+.fas.fa-list,
+i.fas.fa-download,
+main.bd-content #main-content a,
+main.bd-content #main-content a:visited,
+main.bd-content #main-content h3,
+main.bd-content #main-content h3 *,
+main.bd-content #main-content h4,
+main.bd-content #main-content h4 *,
+.bd-toc nav a:hover,
+.bd-toc nav li.active > a.active,
+nav.onthispage li.active a,
+a,
+a.reference.external,
+a:visited,
+a.anchorjs-link,
+a.anchor-link,
+a.nav-link,
+li.toc-list-item,
+button.btn.btn-secondary.topbarbtn,
+button.btn.btn-secondary,
+.prev-next-bottom a.right-next,
+.prev-next-bottom a.left-prev,
+.bd-sidebar nav ul.nav a:hover,
+.bd-sidebar nav ul.nav li.active > a,
+.bd-sidebar nav ul.nav li.active > a:hover,
+.c-sidebar__title,
+ul.c-sidebar__chapters,
+button.btn.btn-secondary.topbarbtn,
+button.btn.btn-secondary {
+  color: #fc7a4a;
+}
+
+main.c-textbook__page {
+   color:black;
+}
+
+div.col-12.col-md-3.bd-sidebar.site-navigation.show,
+nav.c-textbook__sidebar {
+    color:lightgray;
+}
+
+#prev-link, #next-link {
+    color: white !important;
+}
+
+#authors table tr th,
+details table tr th {
+    color: white;
+    background: #fc7a4a;
+    border-bottom: 0 !important;
+    min-width: 100px;
+}
+
+footer,
+footer *:not(a) {
+    background: #421C6E;
+    color: white;
+}
+
+.text--primary {
+    color: #421C6E !important
+}
+
+.text--secondary {
+    color: #fc7a4a !important;
+}
+
+.text--orange {
+    color: #fc7a4a !important;
+}
+
+.text--purple-light {
+    color: #8038d1 !important;
+}
+
+.text--purple-dark {
+    color: #300861 !important;
+}
+
+.text--red {
+    color: #7e0038 !important;
+}
+
+.text--white {
+    color: white !important;
+}
+
+
+/** BACKGROUND COLORS **/
+nav.c-textbook__sidebar,
+div.col-12.col-md-3.bd-sidebar.site-navigation.show {
+  background-image: linear-gradient(#f1f1f1, #f1f1f1);
+}
+
+#prev-link, #next-link {
+    background: #421C6E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #300861;
+}
+
+::-webkit-scrollbar{
+	background: #fc7a4a;
+}
+
+aside.sidebar__right {
+	background-color: white;
+}
+
+.card.setHeight .card-body {
+    background: #F1F1F1;
+}
+
+div.topbar {
+    position: fixed;
+    background: #421C6E;
+    z-index: 2001;
+}
+
+.primary {
+    background: #421C6E !important;
+}
+
+.secondary {
+    background: #fc7a4a;
+}
+
+.purple-light {
+    background: #8038d1 !important;
+}
+
+.purple-dark {
+    background: #300861 !important;
+}
+
+.red {
+    background: #7e0038 !important;
+}
+
+
+/* ################################################## */
+/**                  RECIPE CARDS                    **/
+/* ################################################## */
+
+.recipe {
+    flex-direction:row;
+    width: 733px;
+    border-radius: 8px !important;
+    border: 1px solid #300861 !important;
+}
+
+.recipe .card-header {
+    flex-grow: 1;
+    padding: 0;
+    border-top-left-radius: 7px !important;
+    border-bottom-left-radius: 7px !important;
+}
+
+.recipe .card-body {
+    flex-grow: 6;
+    padding: 0;
+}
+
+.recipe .overview,
+.recipe .label {
+    width: 100%;
+    text-align: center;
+}
+
+.recipe .label,
+.recipe .overviewLabel {
+    color: grey;
+}
+
+.recipe .overview{
+    padding: 10px 0;
+}
+
+.recipe .title {
+    font-size: 25px;
+    padding-left: 15px;
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recipe .title img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.recipe .overview .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.recipe .overview .itemIcon {
+    font-size: 40px;
+}
+
+.recipe .overview .itemContent {
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+    line-height: 1.3;
+}
+
+.recipe .itemContainer {
+    width: 205px;
+    text-align: left;
+    padding-left: 22px;
+}
+
+.recipe .itemContent .fa-fire {
+    font-size: 15px;
+}
+
+.recipe .section {
+    padding: 10px 40px;
+    display: flex;
+}
+
+.recipe .card-body {
+    background: rgba(0,0,0,.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe .section .sectionContent {
+    display: inline-block;
+    line-height: 1.2;
+    margin-left: 10px;
+}
+
+.recipe .section .label {
+    text-align: left;
+}
+
+.recipe .section .sectionValue {
+    font-size: 20px;
+}
+
+.recipe .section .sectionIcon {
+    font-size: 42px;
+}
+
+.recipe .card-footer {
+    padding: 0 10px;
+    text-align: right;
+    border: 0 !important;
+    color: grey;
+    background: transparent !important;
+}
+
+
+
+@media (max-width: 1250px) {
+    .recipe {
+        flex-direction: column;
+        width: 100%;
+    }
+    .recipe .overview .item {
+        margin: 5px 10px;
+        display: inline-block
+    }
+    .recipe .itemContainer {
+        width: auto;
+        padding-left: 0;
+        min-width: 165px;
+    }
+    .recipe .title img {
+        margin: 0;
+    }
+    .recipe .overviewLabel {
+        margin-bottom: 15px;
+    }
+    .recipe .title {
+        padding: 10px 10px 0 20px;
+    }
+    .recipe .card-footer {
+        margin-top: 20px;
+    }
+    .recipe .card-header {
+        border-radius: 0 !important;
+        border-top-left-radius: 7px !important;
+        border-top-right-radius: 7px !important;
+    }
+}
+
+.bd-topbar-whitespace {
+    max-height:45px;
+}

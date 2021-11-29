@@ -1,0 +1,1737 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Selecting terminologies and ontologies</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="5. Requesting new terms" href="ontology-new-term-request-recipe.html" />
+    <link rel="prev" title="3. Introduction to terminologies and ontologies" href="introduction-terminologies-ontologies.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Selecting terminologies and ontologies" />
+<meta property="og:description" content="Selecting terminologies and ontologies    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://biosc" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/selecting-ontologies.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/selecting-ontologies.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/selecting-ontologies.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   4.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   4.2. Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   4.3. Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context-is-everything">
+   4.4. Context is everything
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clinical-trial-data">
+     4.4.1. Clinical Trial Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observational-health-data">
+     4.4.2. Observational Health Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-research-context">
+     4.4.3. Basic research context
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selecting-terminologies">
+   4.5. Selecting Terminologies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-cases-and-general-recommendations">
+     4.5.1. Use Cases and General Recommendations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selection-criteria">
+     4.5.2. Selection Criteria
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-of-core-terminologies">
+     4.5.3. Set of Core Terminologies
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#organism-organism-parts-and-developmental-stages">
+       4.5.3.1. Organism, Organism Parts and Developmental Stages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diseases-and-phenotype">
+       4.5.3.2. Diseases and Phenotype
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pathology-and-disease-specific-resources">
+       4.5.3.3. Pathology and Disease Specific Resources
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cellular-entities">
+       4.5.3.4. Cellular entities
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#molecular-entities">
+       4.5.3.5. Molecular Entities
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#assays-and-technologies">
+       4.5.3.6. Assays and Technologies
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relations">
+     4.5.4. Relations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   4.6. Conclusions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   4.7. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   4.8. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   4.9. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="selecting-terminologies-and-ontologies">
+<span id="fcb-selecting-ontologies"></span><h1><span class="section-number">4. </span>Selecting terminologies and ontologies<a class="headerlink" href="#selecting-terminologies-and-ontologies" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Selecting terminologies and ontologies", "audience": ["Principal Investigator", "Data Manager", "Terminology Manager", "Data Scientist", "Ontologist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB020", "url": "https://w3id.org/faircookbook/FCB020"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+15 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Selecting terminologies and ontologies</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Principal Investigator, Data Manager, Terminology Manager, Data Scientist, Ontologist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB020" class="text--purple-dark">FCB020
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">4.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The main purpose of this recipe is to provide guidance on how to select the most suitable semantic artefacts given a specific research context in general, and when it comes to life and biomedical sciences projects, their main themes, i.e. <em>risk assessment</em>, <em>clinical trial</em>, <em>drug discovery</em> or <em>fundamental research</em>.</p>
+</div>
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">4.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="selecting-ontologies-figure1">
+<a class="reference internal image-reference" href="../../../_images/selecting-ontologies.md-figure1.mmd.png"><img alt="Which ontology should be used?" src="../../../_images/selecting-ontologies.md-figure1.mmd.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Which ontology should be used? Depending on dataset context, domain specific resources may be mandated, such as Clinical Data Interchange Standards Consortium (CDISC), Observational Health Data Sciences and Informatics (OHDSI) or Open Biomedical Ontologies (OBO). The Experimantal Factor Ontology (EFO) is specifically used by EMBL-EBI ArrayExpress to annotated dataset.</span><a class="headerlink" href="#selecting-ontologies-figure1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="capability-maturity-table">
+<h2><span class="section-number">4.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>minimal</p></td>
+<td class="text-align:left"><p>repeatable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="context-is-everything">
+<h2><span class="section-number">4.4. </span>Context is everything<a class="headerlink" href="#context-is-everything" title="Permalink to this headline">¶</a></h2>
+<p>The domain of operation will generally dictate the semantic framework that is most suited to a given dataset. This is simply due to the fact that the advances in data standardization in specific fields are such that it is a sound decision to adopt a complete stack of standards, both syntactic and semantic.</p>
+<p>Here, we present the three most common scenarios in biomedical research, based on experience garnered during IMI eTRIKS <a class="footnote-reference brackets" href="#philippe-rocca-serra-2016-50825" id="id1">4</a>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#clinical-trial-data">Clinical Trial Data</a></p></li>
+<li><p><a class="reference external" href="#observational-health-data">Observational Health Data</a></p></li>
+<li><p><a class="reference external" href="#basic-research-context">Basic research context</a></p></li>
+</ul>
+<div class="section" id="clinical-trial-data">
+<h3><span class="section-number">4.4.1. </span>Clinical Trial Data<a class="headerlink" href="#clinical-trial-data" title="Permalink to this headline">¶</a></h3>
+<p>Operating in the field of Clinical Trials means that datasets are generated during <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, meaning that researchers influence and control the predictor variables, which are usually different intensity levels of therapeutic agents, in order to gain insights in terms of benefits in patient outcomes.
+In this context, regulatory requirements make it so that data must be recorded in standard forms to allow for review and appraisal by regulators such as FDA reviewers in the US. The <a class="reference external" href="https://www.cdisc.org/standards">CDISC standards</a> are the <em><code class="docutils literal notranslate"><span class="pre">de-facto</span> <span class="pre">standard</span></code></em> in this area, which mandates the use of semantics resources such as:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Semantic Resource</p></th>
+<th class="head"><p>Domain</p></th>
+<th class="head"><p>Service</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CDISC vocabulary</p></td>
+<td><p>clinical trial data</p></td>
+<td><p>EVS</p></td>
+</tr>
+<tr class="row-odd"><td><p>NCI Thesaurus</p></td>
+<td><p>biomedicine</p></td>
+<td><p>EVS,Bioportal,OLS</p></td>
+</tr>
+<tr class="row-even"><td><p>SNOMED-CT</p></td>
+<td><p>pathology</p></td>
+<td><p>EVS,Bioportal(§)</p></td>
+</tr>
+<tr class="row-odd"><td><p>UMLS</p></td>
+<td><p>pathology</p></td>
+<td><p>EVS,Bioportal(§)</p></td>
+</tr>
+<tr class="row-even"><td><p>LOINC</p></td>
+<td><p>laboratory tests</p></td>
+<td><p>Loinc</p></td>
+</tr>
+<tr class="row-odd"><td><p>RxNORM</p></td>
+<td><p>drugs</p></td>
+<td><p>Bioportal</p></td>
+</tr>
+<tr class="row-even"><td><p>GUDID</p></td>
+<td><p>instruments</p></td>
+<td><p>FDA</p></td>
+</tr>
+</tbody>
+</table>
+<p>All available from the <a class="reference external" href="https://evs.nci.nih.gov/">NCBI EVS system</a>, <a class="reference external" href="https://loinc.org/">LOINC</a>, <a class="reference external" href="https://www.ebi.ac.uk/ols/index">OLS</a> or <a class="reference external" href="https://bioportal.bioontology.org/">Bioportal</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some resources are only available under restrictive licences, which prevent derivative work, which may limit access and use. Furthermore, some licenses are expensive.</p>
+</div>
+</div>
+<div class="section" id="observational-health-data">
+<h3><span class="section-number">4.4.2. </span>Observational Health Data<a class="headerlink" href="#observational-health-data" title="Permalink to this headline">¶</a></h3>
+<p>This context refers to data collected during <code class="docutils literal notranslate"><span class="pre">observational</span> <span class="pre">studies</span></code>, which in contrast to <code class="docutils literal notranslate"><span class="pre">interventional</span> <span class="pre">studies</span></code>, draw inferences from a sample to a population where the independent variable is not under the control of the researcher because of ethical concerns or logistical constraints [1]. This is typically the case in epidemiological work or exposure follow-up studies in the context of risk assessment and evaluation of clinical outcomes. <code class="docutils literal notranslate"><span class="pre">Observational</span> <span class="pre">health</span> <span class="pre">data</span></code> can also include <code class="docutils literal notranslate"><span class="pre">electronic</span> <span class="pre">health</span> <span class="pre">records</span> <span class="pre">(EHR)</span></code> or <code class="docutils literal notranslate"> <span class="pre">administrative</span> <span class="pre">insurance</span> <span class="pre">claims</span></code> and allow research around acquiring <em><code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">world</span> <span class="pre">evidence</span></code></em> from large corpora of data.
+In this specific context, one model and associated set of standards has been particularly successful. With several hundred millions of patients’ information structured using the <strong>Observational Medical Outcomes Partnership (<a class="reference external" href="https://ohdsi.org/omop/">OMOP</a>)</strong>, the Observational Health Data Sciences and Informatics (<a class="reference external" href="https://ohdsi.org/">ODHSI</a>) <code class="docutils literal notranslate"><span class="pre">open-science</span> <span class="pre">community</span></code> has laid the foundation for a widely adopted data model. Therefore, building a FAIRification process around the standard stack produced by the ODHSI community needs to be considered if operating in such a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">context</span></code>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Semantic Resource</p></th>
+<th class="head"><p>Domain</p></th>
+<th class="head"><p>Service</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CDISC vocabulary</p></td>
+<td><p>clinical trial data</p></td>
+<td><p>EVS</p></td>
+</tr>
+<tr class="row-odd"><td><p>NCI Thesaurus</p></td>
+<td><p>biomedicine</p></td>
+<td><p>EVS,Bioportal,OLS</p></td>
+</tr>
+<tr class="row-even"><td><p>SNOMED-CT</p></td>
+<td><p>pathology</p></td>
+<td><p>EVS,Bioportal(§)</p></td>
+</tr>
+<tr class="row-odd"><td><p>UMLS</p></td>
+<td><p>pathology</p></td>
+<td><p>EVS,Bioportal(§)</p></td>
+</tr>
+<tr class="row-even"><td><p>LOINC</p></td>
+<td><p>laboratory tests</p></td>
+<td><p>LOINC</p></td>
+</tr>
+<tr class="row-odd"><td><p>RxNORM</p></td>
+<td><p>drugs</p></td>
+<td><p>Bioportal</p></td>
+</tr>
+</tbody>
+</table>
+<p>For a more detailed overview and deep-dive into the ODHSI and OMOP semantic support, we recommend the reading of the chapter dedicated to the <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> <a class="reference external" href="https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html">in the <strong><code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">of</span> <span class="pre">OHDSI</span></code></strong></a> <a class="footnote-reference brackets" href="#pmid27274072" id="id2">2</a></p>
+</div>
+<div class="section" id="basic-research-context">
+<h3><span class="section-number">4.4.3. </span>Basic research context<a class="headerlink" href="#basic-research-context" title="Permalink to this headline">¶</a></h3>
+<p>This refers to datasets and research output being generated using model organisms and cellular systems in the context of basic, fundamental research. In this arena, the regulatory pressure is much less present but this does not rule out data management best practices and proper archival requirements.
+As a consequence of fewer constraints, researchers are often confronted with a sea of options. This and the next sections aim to provide some guidance when tasked with deciding on which semantic resource to use.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p><strong>An important consideration</strong>
+to bear in mind when selecting semantic resources is to assess whether or not <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">archival</span> <span class="pre">in</span> <span class="pre">public</span> <span class="pre">repositories</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">required</span></code>. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no particular constraints on data annotations but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the Experimental Factor Ontology (<a class="reference external" href="https://www.ebi.ac.uk/efo/">EFO</a>) for annotating data could ease deposition.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p><strong><a class="reference external" href="https://fairsharing.org">The FAIRsharing registry</a></strong> <a class="footnote-reference brackets" href="#pmid30940948" id="id3">5</a> is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefact used by public data repositories.</p>
+</div>
+</div>
+</div>
+<div class="section" id="selecting-terminologies">
+<h2><span class="section-number">4.5. </span>Selecting Terminologies<a class="headerlink" href="#selecting-terminologies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-cases-and-general-recommendations">
+<h3><span class="section-number">4.5.1. </span>Use Cases and General Recommendations<a class="headerlink" href="#use-cases-and-general-recommendations" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>The use and implementation of common terminologies enables the normalisation and harmonisation of both variable labels and allowed values for each field. Implementing the use of common terminologies in the data collection or curation workflow will ensure consistency of the annotation across all data. This is particularly important if data is generated at multiple partner sites and/or by multiple individuals.</p></li>
+<li><p>If data fields are annotated with terms from freely chosen ontologies (rather than those dictated by a common model such as CDSIC), care should be taken to avoid picking terms from ontologies at random. If a set of concepts are all available in one ontology, this ontology should be preferred over a set of ontologies. Mapping services such as <a class="reference external" href="https://www.ebi.ac.uk/spot/oxo/">OxO</a> are available to verify whether a term of interest in one ontology has an equivalent term in another ontology.</p></li>
+<li><p>Restrictions of allowed values for a given field should ideally be limited to a single ontology and better yet, to a single branch of a chosen ontology. This will vastly improve the semantic queryability as well as the consistency and interoperability of the data.</p></li>
+<li><p>Many ontologies and vocabularies reuse concepts from other ontologies, in line with best practice in ontology design, to limit duplication of efforts and proliferation of parallel synonymous concepts. Care should however be taken to use concepts in the most appropriate environment. This is usually their original source unless they are used as part of a larger set of terms. As an example, the Experimental Factor Ontology (EFO) reuses concepts from a range of ontologies, including species from the NCBI taxonomy, assays from OBI, and diseases and phenotypes from MONDO and HPO. If annotating a dataset or resource which covers all of these concepts, it therefore makes sense to use EFO as the primary annotation source. However, if only annotations for species are required, the NCBI taxonomy should be used directly to ensure completeness, since not all species in NCBItaxon will have been imported into EFO.</p></li>
+</ol>
+</div>
+<div class="section" id="selection-criteria">
+<h3><span class="section-number">4.5.2. </span>Selection Criteria<a class="headerlink" href="#selection-criteria" title="Permalink to this headline">¶</a></h3>
+<p>A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exist. There are however a number of excellent publications such as <a class="reference external" href="https://doi.org/10.1136/amiajnl-2013-002066">“A sea of standards for omics data: sink or swim?”</a> <a class="footnote-reference brackets" href="#pmid24076747" id="id4">7</a> and <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1004743">“Ten Simple Rules for Selection a Bio-ontology”</a> <a class="footnote-reference brackets" href="#pmid26867217" id="id5">3</a> providing some guidance on the subject. Below are a set of suggested criteria for evaluating the suitability of a terminology resource.</p>
+<ul class="simple">
+<li><p><strong>Exclusion criteria</strong>:</p>
+<ul>
+<li><p>🔸 Absent licence or terms of use (<em>indicator of usability</em>)</p></li>
+<li><p>🔸 Restrictive licences or terms of use with restrictions on redistribution and reuse</p></li>
+<li><p>🔸 Absence of term definitions</p></li>
+<li><p>🔸 Absence of sufficient class metadata (<em>indicator of quality</em>)</p></li>
+<li><p>🔸 Absence of sustainability indicators (<em>absence of funding records</em>)</p></li>
+</ul>
+</li>
+<li><p><strong>Inclusion criteria</strong>:</p>
+<ul>
+<li><p>🔰  Scope and coverage meets the requirements of the concept identified</p></li>
+<li><p>🔰  Unique URI, textual definition and IDs for each term</p></li>
+<li><p>🔰  Resource releases are versioned</p></li>
+<li><p>🔰  Size of resource (<em>indicator of coverage</em>)</p></li>
+<li><p>🔰  Number of classes and subclasses (<em>indicator of depth</em>)</p></li>
+<li><p>🔰  Number of terms having definitions and synonyms (<em>indicator of richness</em>)</p></li>
+<li><p>🔰  Presence of a help desk and contact point (<em>indicator of community support</em>)</p></li>
+<li><p>🔰  Presence of term submission tracker/issue tracker (<em>indicator of resource agility and capability to grow upon request</em>)</p></li>
+<li><p>🔰  Potential integrative nature of the resource (<em>as indicator of translational application potential</em>)</p></li>
+<li><p>🔰  Licensing information available (<em>as indicator of freedom to use</em>)</p></li>
+<li><p>🔰  Use of a top level ontology (<em>as indicator of a resource built for generic use</em>)</p></li>
+<li><p>🔰  Pragmatism (<em>as indicator of actual, current real life practice)</em></p></li>
+<li><p>🔰  Possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="set-of-core-terminologies">
+<h3><span class="section-number">4.5.3. </span>Set of Core Terminologies<a class="headerlink" href="#set-of-core-terminologies" title="Permalink to this headline">¶</a></h3>
+<p>The terminologies presented here have been organized by theme and scope. When possible, sections are organized by <code class="docutils literal notranslate"><span class="pre">granularity</span> <span class="pre">levels</span></code>, progressing from <code class="docutils literal notranslate"><span class="pre">macroscopic</span> <span class="pre">scale</span></code> (organism) to <code class="docutils literal notranslate"><span class="pre">microscopic</span> <span class="pre">scale</span></code> (tissue, cells) and <code class="docutils literal notranslate"><span class="pre">molecular</span> <span class="pre">scale</span></code> (macromolecules, proteins, small molecules, xenobiotic chemicals).
+Domains also cover <code class="docutils literal notranslate"><span class="pre">processes</span></code> or <code class="docutils literal notranslate"><span class="pre">actions</span></code> and their <code class="docutils literal notranslate"><span class="pre">participants</span></code> or <code class="docutils literal notranslate"><span class="pre">agents</span></code> but also can be organized from <code class="docutils literal notranslate"><span class="pre">general/generic</span></code> (disease) to <code class="docutils literal notranslate"><span class="pre">specialized/specific</span></code> (infectious disease).</p>
+<div class="section" id="organism-organism-parts-and-developmental-stages">
+<h4><span class="section-number">4.5.3.1. </span>Organism, Organism Parts and Developmental Stages<a class="headerlink" href="#organism-organism-parts-and-developmental-stages" title="Permalink to this headline">¶</a></h4>
+<p>The resources listed here focus on providing structured vocabularies to describe <code class="docutils literal notranslate"><span class="pre">taxonomic</span></code> and <code class="docutils literal notranslate"><span class="pre">anatomical</span></code> information.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Organism</strong></p></td>
+<td><p>NCBITaxonomy</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ncbitaxon.owl">http://purl.obolibrary.org/obo/ncbitaxon.owl</a></p></td>
+<td><p>none specified</p></td>
+<td><p><a class="reference external" href="https://uts.nlm.nih.gov/license.html">UMLS license</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Vertebrate Anatomy</strong></p></td>
+<td><p>UBERON</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/uberon/ext.owl">http://purl.obolibrary.org/obo/uberon/ext.owl</a> <a class="reference external" href="http://purl.obolibrary.org/obo/uberon/ext.obo">http://purl.obolibrary.org/obo/uberon/ext.obo</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obophenotype/uberon/issues">https://github.com/obophenotype/uberon/issues</a></p></td>
+<td><p>Integrative Resource engineered to go across species</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Human Anatomy</strong></p></td>
+<td><p>Foundational Model of Anatomy (FMA)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/fma.owl">http://purl.obolibrary.org/obo/fma.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/">https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/</a></p></td>
+<td><p>Excellent cross-referencing with Uberon</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Human Developmental Stages</strong></p></td>
+<td><p>Human Developmental Stages</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/hsapdv.owl">http://purl.obolibrary.org/obo/hsapdv.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mouse Anatomy</strong></p></td>
+<td><p>Mouse Anatomy (MA)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ma.owl">http://purl.obolibrary.org/obo/ma.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obophenotype/mouse-anatomy-ontology/issues">https://github.com/obophenotype/mouse-anatomy-ontology/issues</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Strain</strong></p></td>
+<td><p>Rat Strain Ontology</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/rs.owl">http://purl.obolibrary.org/obo/rs.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/rat-genome-database/RS-Rat-Strain-Ontology/issues">https://github.com/rat-genome-database/RS-Rat-Strain-Ontology/issues</a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>In research, many different model organism are used (e.g. Dogs, Monkeys…) and specialized resources are available for many model organisms, including C. elegans, Drosophila, Xenopus, Zebrafish, plants and fungi. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.</p>
+</div>
+<div class="section" id="diseases-and-phenotype">
+<h4><span class="section-number">4.5.3.2. </span>Diseases and Phenotype<a class="headerlink" href="#diseases-and-phenotype" title="Permalink to this headline">¶</a></h4>
+<p>Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones, biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Pathology/Disease (generic)</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>SNOMED-CT</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/SNOMEDCT?p=summary">Bioportal</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://www.nlm.nih.gov/databases/umls.html">SNOMED license</a> - part of the UMLS license</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>NCI Thesaurus</p></td>
+<td><p><a class="reference external" href="http://evs.nci.nih.gov/ftp1/NCI_Thesaurus">http://evs.nci.nih.gov/ftp1/NCI_Thesaurus</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm">NCI license</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>International Classification of Diseases (ICD-10)</p></td>
+<td><p>View on <a class="reference external" href="https://icd.who.int/browse10/2010/en">WHO site</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://www.who.int/about/copyright/en/">WHO license</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Unified Medical Language System (UMLS)</p></td>
+<td><p><a class="reference external" href="https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html">https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://www.nlm.nih.gov/databases/umls.html">UMLS license</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Disease Ontology Identifiers (DOID)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/doid.owl">http://purl.obolibrary.org/obo/doid.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></p></td>
+<td><p><a class="reference external" href="https://github.com/DiseaseOntology/HumanDiseaseOntology/issues">https://github.com/DiseaseOntology/HumanDiseaseOntology/issues</a></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>MONDO Disease Ontology<sup>*</sup></p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/mondo.owl">http://purl.obolibrary.org/obo/mondo.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/monarch-initiative/mondo/issues">https://github.com/monarch-initiative/mondo/issues</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Infectious Disease Ontology (IDO)</p></td>
+<td><p><a class="reference external" href="https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl">https://code.google.com/p/infectious-disease-ontology/source/browse/trunk/src/ontology/ido-core/ido-main.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://code.google.com/p/infectious-disease-ontology/issues/list">https://code.google.com/p/infectious-disease-ontology/issues/list</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Phenotype</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Human Phenotype (HP)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/hp.owl">http://purl.obolibrary.org/obo/hp.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://hpo.jax.org/app/license">HPO Licence</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obophenotype/human-phenotype-ontology/issues/">https://github.com/obophenotype/human-phenotype-ontology/issues/</a></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Medical Dictionary for Regulatory Activities Terminology (MedDRA)</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/MEDDRA">Bioportal</a></p></td>
+<td><p></p></td>
+<td><p>Academic: Free accessible <br/> Commercial contact MSSO</p></td>
+<td><p><a class="reference external" href="https://mssotools.com/webcr/">https://mssotools.com/webcr/</a> login required</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Mammalian Phenotype (MP)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/mp.owl">http://purl.obolibrary.org/obo/mp.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obophenotype/mammalian-phenotype-ontology/issues">https://github.com/obophenotype/mammalian-phenotype-ontology/issues</a></p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><em><sup>*</sup>MONDO was born of an effort to harmonise disease definitions from a number sources, includig <a class="reference external" href="https://www.omim.org/">OMIM</a> (Online Mendelian Inheritance in Man), <a class="reference external" href="https://www.orpha.net/">Orphanet</a>, EFO and DOID, with work in progress to include NCIt. The OWL version includes axiomatisation using CL, Uberon, GO, HP, RO &amp; NCBITaxon. The ontology is under active development by a range of ontology and domain experts. If no other limiting requirements dictate the use of an alternative ontology (e.g. use of NCItaxon as part of a CDISC-compliant dataset), it is therefore the most recommended open source ontology from the above list.</em></p>
+</div></blockquote>
+<p>As with anatomy in the previous section, there is a growing body of organism-specific phenotype resources, such as C. elegans, Drosophila, Fission Yeast, Xenopus and Zebrafish.</p>
+</div>
+<div class="section" id="pathology-and-disease-specific-resources">
+<h4><span class="section-number">4.5.3.3. </span>Pathology and Disease Specific Resources<a class="headerlink" href="#pathology-and-disease-specific-resources" title="Permalink to this headline">¶</a></h4>
+<p>There is a wide range of ontologies available for specific diseases or disease types. Some examples are given below but this list is by no means exhaustive. Check ontology repositories such as <a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies">OLS</a>, <a class="reference external" href="https://bioportal.bioontology.org/ontologies">Bioportal</a> or the <a class="reference external" href="http://obofoundry.org/">OBO Foundry</a> for up-to-date lists of available ontologies</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Malaria</strong></p></td>
+<td><p>Malaria Ontology (IDOMAL)</p></td>
+<td><p></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Alzheimer Disease</strong></p></td>
+<td><p>Alzheimer’s Disease Ontology (ADO)</p></td>
+<td><p><a class="reference external" href="https://www.scai.fraunhofer.de/content/dam/scai/de/downloads/bioinformatik/ontologies/ADO/ADO.zip">https://www.scai.fraunhofer.de/content/dam/scai/de/downloads/bioinformatik/ontologies/ADO/ADO.zip</a></p></td>
+<td><p>BFO</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Rare disorder</strong></p></td>
+<td><p>Orphanet Rare Disease Ontology (ORDO)</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/ORDO">Bioportal</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cellular-entities">
+<h4><span class="section-number">4.5.3.4. </span>Cellular entities<a class="headerlink" href="#cellular-entities" title="Permalink to this headline">¶</a></h4>
+<p>Following on through our review of semantic resources by granularity levels, this section details a number of reference resources which provide coverage for the describing <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">types</span></code>, <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">lines</span></code> <a class="footnote-reference brackets" href="#pmid29805321" id="id6">1</a> and <code class="docutils literal notranslate"><span class="pre">cellular</span> <span class="pre">phenotypes</span></code>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Cell</strong></p></td>
+<td><p>Cell Ontology (CL)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/cl.owl">http://purl.obolibrary.org/obo/cl.owl</a> <a class="reference external" href="http://purl.obolibrary.org/obo/cl.obo">http://purl.obolibrary.org/obo/cl.obo</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://code.google.com/p/cell-ontology/issues/list">https://code.google.com/p/cell-ontology/issues/list</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Cell Lines</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Cellosaurus</p></td>
+<td><p><a class="reference external" href="ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo">ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo</a> <a class="reference external" href="ftp://ftp.expasy.org/databases/cellosaurus">ftp://ftp.expasy.org/databases/cellosaurus</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Cell Line Ontology (CLO)</p></td>
+<td><p><a class="reference external" href="https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl">https://github.com/CLO-ontology/CLO/blob/master/src/ontology/clo.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://github.com/CLO-ontology/CLO/issues">https://github.com/CLO-ontology/CLO/issues</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Cell Molecular Phenotype</strong></p></td>
+<td><p>Cell Molecular Phenotype Ontology (CMPO)</p></td>
+<td><p><a class="reference external" href="https://github.com/EBISPOT/CMPO/releases/">https://github.com/EBISPOT/CMPO/releases/</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://github.com/EBISPOT/CMPO/issues">https://github.com/EBISPOT/CMPO/issues</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="molecular-entities">
+<h4><span class="section-number">4.5.3.5. </span>Molecular Entities<a class="headerlink" href="#molecular-entities" title="Permalink to this headline">¶</a></h4>
+<p>This section highlights the major and most widely used OBO Foundry resources for <code class="docutils literal notranslate"><span class="pre">molecules</span> <span class="pre">of</span> <span class="pre">biological</span> <span class="pre">relevance</span></code> as well as <code class="docutils literal notranslate"><span class="pre">molecular</span> <span class="pre">structures</span></code>, <code class="docutils literal notranslate"><span class="pre">biological</span> <span class="pre">processes</span></code> and <code class="docutils literal notranslate"><span class="pre">cellular</span> <span class="pre">components</span></code></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Chemicals and Small Molecules</strong></p></td>
+<td><p>Chemical Entities of Biological Interest (ChEBI)</p></td>
+<td><p><a class="reference external" href="https://www.ebi.ac.uk/chebi/">ChEBI</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/ebi-chebi/ChEBI/issues">https://github.com/ebi-chebi/ChEBI/issues</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gene Function, Molecular Component, Biological Process</strong></p></td>
+<td><p>Gene Ontology (GO)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/go.obo">http://purl.obolibrary.org/obo/go.obo</a> <a class="reference external" href="http://purl.obolibrary.org/obo/go.owl">http://purl.obolibrary.org/obo/go.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="http://sourceforge.net/p/geneontology/ontology-requests/">http://sourceforge.net/p/geneontology/ontology-requests/</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Protein/peptide</strong></p></td>
+<td><p>Protein Ontology (PRO)</p></td>
+<td><p><a class="reference external" href="https://proconsortium.org">https://proconsortium.org</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/PROconsortium/PRoteinOntology/issues">https://github.com/PROconsortium/PRoteinOntology/issues</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Besides these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resources are relevant.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Drug</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>National Drug File</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/NDFRT">Bioportal</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://uts.nlm.nih.gov/license.html">NIH license</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>The Drug Ontology (DRON)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/dron.owl">http://purl.obolibrary.org/obo/dron.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://ontology.atlassian.net/browse/DRON">https://ontology.atlassian.net/browse/DRON</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>RxNORM</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/RXNORM">Bioportal</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="http://www.nlm.nih.gov/databases/umls.html">RxNORM license</a> - part of the UMLS license</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="assays-and-technologies">
+<h4><span class="section-number">4.5.3.6. </span>Assays and Technologies<a class="headerlink" href="#assays-and-technologies" title="Permalink to this headline">¶</a></h4>
+<p>The resources listed in this section are providing key descriptors bridging data acquisition procedures (as used in a clinical setting and wet lab work) with instruments, units of measurements, endpoints as well as sometimes the biological process or molecular entities of biological significance.
+Some of the resources are specialized semantic artefacts developed to support the standardized reporting of data modalities.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Radiology</strong></p></td>
+<td><p>Radiology Lexicon (RADLex)</p></td>
+<td><p>View on <a class="reference external" href="https://bioportal.bioontology.org/ontologies/RADLEX">Bioportal</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Medical Imaging</strong></p></td>
+<td><p>DICOM</p></td>
+<td><p><a class="reference external" href="http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html">http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Sample Processing/Reagents/Instruments Assay Definition</strong></p></td>
+<td><p>Ontology for Biomedical Investigations (OBI)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/obi.owl">http://purl.obolibrary.org/obo/obi.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/obi-ontology/obi/issues">https://github.com/obi-ontology/obi/issues</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Biological screening assays and their results including high-throughput screening (HTS)</strong></p></td>
+<td><p>BioAssay Ontology (BAO)</p></td>
+<td><p><a class="reference external" href="http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl">http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-by-SA 4.0 International</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mass Spectrometry (instrument/acquisition parameter/spectrum related information)</strong></p></td>
+<td><p>HUPO Proteomics Standards Initiative-Mass Spectrometry controlled vocabulary (PSI-MS)</p></td>
+<td><p><a class="reference external" href="https://github.com/HUPO-PSI/psi-ms-CV">https://github.com/HUPO-PSI/psi-ms-CV</a></p></td>
+<td><p>none specified</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-by 4.0</a></p></td>
+<td><p><a class="reference external" href="https://github.com/HUPO-PSI/psi-ms-CV/issues">https://github.com/HUPO-PSI/psi-ms-CV/issues</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>NMR Spectroscopy (instrument/acquisition parameter/spectrum related information)</strong></p></td>
+<td><p>Nuclear Magnetic Resonance Controlled Vocabulary (NMR-CV)</p></td>
+<td><p><a class="reference external" href="http://nmrml.org/cv/v1.0.rc1/nmrCV.owl">http://nmrml.org/cv/v1.0.rc1/nmrCV.owl</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></p></td>
+<td><p><a class="reference external" href="https://github.com/nmrML/nmrML/issues?state=open">https://github.com/nmrML/nmrML/issues?state=open</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Laboratory test</strong></p></td>
+<td><p>Logical Observation Identifier Names and Codes (LOINC)</p></td>
+<td><p>LOINC and RELMA Complete Download File <a class="reference external" href="https://loinc.org/downloads/">https://loinc.org/downloads/</a></p></td>
+<td><p>none specified</p></td>
+<td><p><a class="reference external" href="https://uts.nlm.nih.gov/license.html">RELMA license</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Units</strong></p></td>
+<td><p>Units Ontology (UO)</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/uo.owl">http://purl.obolibrary.org/obo/uo.owl</a></p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-ontology-research-group/unit-ontology/issues">https://github.com/bio-ontology-research-group/unit-ontology/issues</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Some multi-domain ontologies such as the NCI Thesaurus (NCIt) and the Experimental Factor Ontology (EFO) also cover aspects of the above domains such as assays and sample collection and processing. Depending on the overall context of a resource selection process, it can make more sense to use a multi-domain ontology with suitable coverage to improve consistency and interoperability within a resource or dataset.</p>
+<p>Finally, a resource exists that describes statistical measures, statistical tests or methods as well as statistically relevant graphical representations. It may be used for reporting results and annotating experimental results.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scope</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File location</p></th>
+<th class="head"><p>Top-Level Ontology</p></th>
+<th class="head"><p>Licence</p></th>
+<th class="head"><p>Issue Tracker URI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Experimental Design, Statistical Methods and Statistical Measures</strong></p></td>
+<td><p>Statistical Methods Ontology (STATO)</p></td>
+<td><p><a class="reference external" href="http://stato-ontology.org">http://stato-ontology.org</a></p></td>
+<td><p>BFO</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-by 3.0 Unported Licence</a></p></td>
+<td><p><a class="reference external" href="https://github.com/ISA-tools/stato/issues?state=open">https://github.com/ISA-tools/stato/issues?state=open</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="relations">
+<h3><span class="section-number">4.5.4. </span>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">¶</a></h3>
+<p>Also known as <code class="docutils literal notranslate"><span class="pre">OWL.Properties</span></code>, their importance may be overlooked by <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">scientists</span></code> who are not <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">engineers</span></code> or <code class="docutils literal notranslate"><span class="pre">ontologists</span></code>. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by tools known as <code class="docutils literal notranslate"><span class="pre">reasoners</span></code> to carry the following key tasks:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Ontology</span> <span class="pre">logical</span> <span class="pre">consistency</span></code> checks</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Automatic</span> <span class="pre">classification</span></code> and <code class="docutils literal notranslate"><span class="pre">inference</span></code> tasks</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Entailments</span></code>, i.e. detection of logical consequences resulting from axiomatic definitions (closely related to the point above)</p></li>
+</ul>
+<p>This is particularly important when processing billions of facts expressed as RDF statements.</p>
+<p>One also needs to understand the current limitations in expressivity afforded by the current semantic web languages and the associated axiomatics as well as computational constraints associated with inference. For more <em>in-depth</em> review of such topics, the reader is invited to consults the following work <a class="footnote-reference brackets" href="#pmid15892874" id="id7">6</a> <!--[by Smith et al](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r46)-->.</p>
+<p>In the field of Biology and Biomedicine, the <a class="reference external" href="http://obofoundry.org">OBO Foundry</a> coordinates the development of interoperable ontologies. At the core of this interoperation lies the <strong><a class="reference external" href="http://www.obofoundry.org/ontology/ro.html">Relation Ontology</a></strong> released under the <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> license.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Relation Ontology</p></th>
+<th class="head"><p>File</p></th>
+<th class="head"><p>Variant</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Relation Ontology</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ro.owl">ro.owl</a></p></td>
+<td><p>Canonical edition</p></td>
+</tr>
+<tr class="row-odd"><td><p>Relation Ontology in obo format</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ro.obo">ro.obo</a></p></td>
+<td><p>Has imports merged in</p></td>
+</tr>
+<tr class="row-even"><td><p>RO Core relations</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ro/core.owl">ro/core.owl</a></p></td>
+<td><p>Minimal subset intended to work with BFO-classes <a class="reference external" href="https://github.com/oborel/obo-relations/wiki/ROCore">page</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>RO base ontology</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ro/ro-base.owl">ro/ro-base.owl</a></p></td>
+<td><p>Axioms defined within RO and to be used in imports for other ontologies <a class="reference external" href="https://github.com/INCATools/ontology-development-kit/issues/50">page</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Interaction relations</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ro/subsets/ro-interaction.owl">ro/subsets/ro-interaction.owl</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ecology subset</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ro/subsets/ro-eco.owl">ro/subsets/ro-eco.owl</a></p></td>
+<td><p>For use in ecology and environmental science</p></td>
+</tr>
+<tr class="row-even"><td><p>Neuroscience subset</p></td>
+<td><p><a class="reference external" href="http://purl.obolibrary.org/obo/ro/subsets/ro-neuro.owl">ro/subsets/ro-neuro.owl</a></p></td>
+<td><p>For use in neuroscience <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/28/9/1262.long">page</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>As <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> and <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> gain importance, we can expect the range and depth of relations to mature and expand as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
+This would also have to be placed in the context of advances in <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Mining</span></code> and <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>, where unsupervised methods start to demonstrate strong potential to detect relations between entities.</p>
+<p>The following is an example of how a <code class="docutils literal notranslate"><span class="pre">defined</span> <span class="pre">class</span></code> may be created in an ontology. The code snippet shows one such class being expressed to create a type by specifying a number of <code class="docutils literal notranslate"><span class="pre">axioms</span></code>. These use <code class="docutils literal notranslate"><span class="pre">relations</span></code> (aka OWL.Properties), which may be set to</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;B cell, CD19-positive&#39;</span>
+equivalentClass :
+    <span class="s1">&#39;lymphocyte of B lineage, CD19-positive&#39;</span> 
+    and <span class="o">(</span> <span class="s1">&#39;has plasma membrane part&#39;</span> some <span class="s1">&#39;CD19 molecule&#39;</span><span class="o">)</span> 
+    and <span class="o">(</span> <span class="s1">&#39;in taxon&#39;</span> some Mammalia<span class="o">)</span> 
+    and <span class="o">(</span> <span class="s1">&#39;capable of&#39;</span> some <span class="s1">&#39;B cell mediated immunity&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Any class satisfying these patterns may be classified by an OWL reasoner as a child of that class. So the following class, with such properties that they all satisfy the requirements of the <code class="docutils literal notranslate"><span class="pre">defined</span> <span class="pre">class</span></code> declared above (e.g. “Homo sapiens” is_a type of “Mammalia”, etc…), will be classified automatically (i.e. without human intervention) by a reasoner such as ELK or Hermit as a child of ‘B cell, CD19-positive’ .</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;human B cell, CD19-positive&#39;</span>
+Class:
+    <span class="o">(</span> <span class="s1">&#39;has plasma membrane part&#39;</span> some <span class="s1">&#39;B-lymphocyte antigen CD19 isoform h2&#39;</span><span class="o">)</span>
+    and <span class="o">(</span> <span class="s1">&#39;in taxon&#39;</span> some <span class="s1">&#39;Homo sapiens&#39;</span><span class="o">)</span> 
+    and <span class="o">(</span> <span class="s1">&#39;capable of&#39;</span> some <span class="s1">&#39;B cell tolerance induction in mucosal-associated lymphoid tissue&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>The notion is important to grasp as it also explains why not all ontologies are compatible, because they may significantly differ in the underlying axioms they rely on to establish their hierarchies using reasoners.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusions">
+<h2><span class="section-number">4.6. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Selecting semantic resources depends on many different factors. However, the most important factor remains the <code class="docutils literal notranslate"><span class="pre">context</span></code> of the data and associated landscape of data standards as well as the ultimate integration goal, which will dictate the final choice.</p>
+<p>The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choices will have.</p>
+</div></blockquote>
+<!-- 
+TODO : fill in the links to what-should-I-read-next recipes
+
+> ### What should I read next?
+> * How to build an application ontology?<!-- TODO add a link to corresponding document -->
+<blockquote>
+<div><ul class="simple">
+<li><p>How to select on ontology service?<!-- TODO add a link to corresponding document --></p></li>
+<li><p>How to deploy an ontology server?<!-- TODO add a link to corresponding document --></p></li>
+<li><p>How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document -->
+–&gt;</p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">4.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-footbibliography-content/recipes/interoperability/selecting-ontologies-0"><dl class="footnote brackets">
+<dt class="label" id="pmid29805321"><span class="brackets"><a class="fn-backref" href="#id6">1</a></span></dt>
+<dd><p>A. Bairoch. The Cellosaurus, a Cell-Line Knowledge Resource. <em>J Biomol Tech</em>, 29(2):25–38, 07 2018.</p>
+</dd>
+<dt class="label" id="pmid27274072"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>G. Hripcsak, P. B. Ryan, J. D. Duke, N. H. Shah, R. W. Park, V. Huser, M. A. Suchard, M. J. Schuemie, F. J. DeFalco, A. Perotte, J. M. Banda, C. G. Reich, L. M. Schilling, M. E. Matheny, D. Meeker, N. Pratt, and D. Madigan. Characterizing treatment pathways at scale using the OHDSI network. <em>Proc Natl Acad Sci U S A</em>, 113(27):7329–7336, 07 2016.</p>
+</dd>
+<dt class="label" id="pmid26867217"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dd><p>J. Malone, R. Stevens, S. Jupp, T. Hancocks, H. Parkinson, and C. Brooksbank. Ten Simple Rules for Selecting a Bio-ontology. <em>PLoS Comput Biol</em>, 12(2):e1004743, Feb 2016.</p>
+</dd>
+<dt class="label" id="philippe-rocca-serra-2016-50825"><span class="brackets"><a class="fn-backref" href="#id1">4</a></span></dt>
+<dd><p>Philippe Rocca-Serra, Dorina Bratfalean, Fabien Richard, Christopher Marshall, Martin Romacker, Auffray Charles, Michael Braxenthaler, Paul Houston, Sansone Susanna-Assunta, and on the behalf of the. eTRIKS Standards Starter Pack Release 1.1 April 2016. April 2016. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.50825">https://doi.org/10.5281/zenodo.50825</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.50825">doi:10.5281/zenodo.50825</a>.</p>
+</dd>
+<dt class="label" id="pmid30940948"><span class="brackets"><a class="fn-backref" href="#id3">5</a></span></dt>
+<dd><p>S. A. Sansone, P. McQuilton, P. Rocca-Serra, A. Gonzalez-Beltran, M. Izzo, A. L. Lister, and M. Thurston. FAIRsharing as a community approach to standards, repositories and policies. <em>Nat Biotechnol</em>, 37(4):358–367, 04 2019.</p>
+</dd>
+<dt class="label" id="pmid15892874"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dd><p>B. Smith, W. Ceusters, B. Klagges, J. Köhler, A. Kumar, J. Lomax, C. Mungall, F. Neuhaus, A. L. Rector, and C. Rosse. Relations in biomedical ontologies. <em>Genome Biol</em>, 6(5):R46, 2005.</p>
+</dd>
+<dt class="label" id="pmid24076747"><span class="brackets"><a class="fn-backref" href="#id4">7</a></span></dt>
+<dd><p>J. D. Tenenbaum, S. A. Sansone, and M. Haendel. A sea of standards for omics data: sink or swim? <em>J Am Med Inform Assoc</em>, 21(2):200–203, 2014.</p>
+</dd>
+</dl>
+</p>
+<!-- Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). https://doi.org/10.1186/gb-2005-6-5-r46
+
+Rocca-Serra P, Bratfalean D, Richard F, Marshall C, Romacker M., Auffray C, ., … on the behalf of the eTRIKS consortium, . (2016, April 25). eTRIKS Standards Starter Pack Release 1.1 April 2016. Zenodo. http://doi.org/10.5281/zenodo.50825
+
+Malone J, Stevens R, Jupp S, Hancocks T, Parkinson H, Brooksbank C. Ten Simple Rules for Selecting a Bio-ontology. PLoS Comput Biol. 2016;12(2):e1004743. Published 2016 Feb 11. http://doi.org/10.1371/journal.pcbi.1004743
+
+Bairoch A. The Cellosaurus, a cell line knowledge resource. J. Biomol. Tech. (2018) 29:25-38. http://doi.org/10.7171/jbt.18-2902-002.
+
+Sansone, S.-A., McQuilton, P., Rocca-Serra, P., Gonzalez-Beltran, A., Izzo, M., Lister, A.L. and Thurston, M. (2019) FAIRsharing as a community approach to standards, repositories and policies. Nature biotechnology, 37, 358: http://doi.org/10.1038/s41587-019-0080-8.
+
+Hripcsak, G., Ryan, P. B., Duke, J. D., Shah, N. H., Park, R. W., Huser, V., Suchard, M. A., Schuemie, M. J., DeFalco, F. J., Perotte, A., Banda, J. M., Reich, C. G., Schilling, L. M., Matheny, M. E., Meeker, D., Pratt, N., & Madigan, D. (2016). Characterizing treatment pathways at scale using the OHDSI network. Proceedings of the National Academy of Sciences of the United States of America, 113(27), 7329-7336. https://doi.org/10.1073/pnas.1510502113
+
+Hripcsak, George et al. “Observational Health Data Sciences and Informatics (OHDSI): Opportunities for Observational Researchers.” Studies in health technology and informatics vol. 216 (2015): 574-8.
+ -->
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">4.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>ELIXIR Node</p></th>
+<th class="head"><p>Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/susannasansone"><img class="avatar-style" src="https://avatars.githubusercontent.com/susannasansone"></img><div class="d-block">Susanna-Assunta Sansone</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-5306-5690"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing, Funding Acquisition</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/daniwelter"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0003-1058-2668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Luxembourg</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/AlasdairGray"><img class="avatar-style" src="https://avatars.githubusercontent.com/AlasdairGray"></img><div class="d-block">Alasdair J G Gray</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-5711-4872"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Heriot Watt University</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">4.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="introduction-terminologies-ontologies.html" title="previous page"><span class="section-number">3. </span>Introduction to terminologies and ontologies</a>
+    <a class='right-next' id="next-link" href="ontology-new-term-request-recipe.html" title="next page"><span class="section-number">5. </span>Requesting new terms</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

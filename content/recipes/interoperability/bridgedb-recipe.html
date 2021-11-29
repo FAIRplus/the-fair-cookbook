@@ -1,0 +1,1667 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Identifier mapping with BridgeDb</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/bridgedb-recipe.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.12.1. Using BridgeDb web services" href="bridgedb/bridgedb-example.html" />
+    <link rel="prev" title="1. Interlinking data from different sources" href="identifier-mapping.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/bridgedb-recipe.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Identifier mapping with BridgeDb" />
+<meta property="og:description" content="Identifier mapping with BridgeDb  &lt;!-- TODO : the recipe does not reference its figures --&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;:" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="current reference internal" href="#">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/bridgedb-recipe.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/bridgedb-recipe.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/bridgedb-recipe.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   2.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   2.2. Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   2.3. Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capability-maturity-table">
+   2.4. Capability &amp; Maturity Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools">
+   2.5. Tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.6. Identifier mapping with BridgeDb
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapping-a-global-identifier-to-other-global-identifiers">
+     2.6.1. Mapping a global identifier to other global identifiers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bridgedb-via-webservices-using-python">
+       2.6.1.1. BridgeDb via Webservices using Python
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bridgedb-via-the-dedicated-r-package">
+       2.6.1.2. BridgeDb via the dedicated R package
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapping-local-identifier-to-a-different-global-identifier">
+     2.6.2. Mapping local identifier to a different global identifier
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#webservices-in-python">
+       2.6.2.1. Webservices in Python
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r-package">
+       2.6.2.2. R Package
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#provenance">
+   2.7. Provenance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code">
+   2.8. Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   2.9. Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-read-next">
+     2.9.1. What should I read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   2.10. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   2.11. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   2.12. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="fcb-bridgedb-recipe">
+<span id="identifier-mapping-with-bridgedb"></span><h1><span class="section-number">2. </span>Identifier mapping with BridgeDb<a class="headerlink" href="#fcb-bridgedb-recipe" title="Permalink to this headline">¶</a></h1>
+<!--
+TODO : the recipe does not reference its figures
+-->
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Identifier mapping with BridgeDb", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB017", "url": "https://w3id.org/faircookbook/FCB017"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+30 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+Yes
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Identifier mapping with BridgeDb</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Hands-on</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB017" class="text--purple-dark">FCB017
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-objectives">
+<h2><span class="section-number">2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The main purpose of this recipe is to:</p>
+<blockquote>
+<div><p>Provide practical examples on how to <strong>map identifiers for Genes, Proteins, Metabolites and Pathways</strong> between resources using a purpose built tool, namely <a class="reference external" href="https://bio.tools/bridgedb">BridgeDb</a>.
+Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by <a class="reference external" href="https://bio.tools/bridgedb">BridgeDb</a>.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<p>This recipe will cover the highlighted topics</p>
+<div class="figure align-default" id="bridgedb-recipe-figure0">
+<img alt="Overview of key aspects in Identifier Mapping" src="../../../_images/identifier-mapping.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Overview of key aspects in Identifier Mapping</span><a class="headerlink" href="#bridgedb-recipe-figure0" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="requirements">
+<h2><span class="section-number">2.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This recipe has the following requirements:</p>
+<ul>
+<li><p>Recipe dependency:</p>
+  <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
+<ul class="simple">
+<li><p><a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
+</ul>
+</li>
+<li><p>Skill dependency:</p>
+<ul class="simple">
+<li><p>Programming knowledge</p></li>
+<li><p>R</p></li>
+<li><p>Python</p></li>
+</ul>
+</li>
+<li><p>Technical dependency</p>
+<ul class="simple">
+<li><p>R or Python environment</p></li>
+<li><p>BridgeDb R package installed</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="capability-maturity-table">
+<h2><span class="section-number">2.4. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
+<th class="text-align:left head"><p>Initial Maturity Level</p></th>
+<th class="text-align:left head"><p>Final Maturity Level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
+<td class="text-align:left"><p>Minimal</p></td>
+<td class="text-align:left"><p>Repeatable</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Reusability</p></td>
+<td class="text-align:left"><p>Minimal</p></td>
+<td class="text-align:left"><p>Reusable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="tools">
+<h2><span class="section-number">2.5. </span>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>The table below lists the software that is used to execute the examples in this recipe.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Software</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>version</p></th>
+<th class="head"><p>Biotools record</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb webservices</a></p></td>
+<td><p>BridgeDb is a framework to map identifiers between various databases. It includes a Java library that provides an API to work with identifier-identifier mapping databases and resources.</p></td>
+<td><p>0.0.9</p></td>
+<td><p><a class="reference external" href="https://bio.tools/bridgedb">https://bio.tools/bridgedb</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Python</p></td>
+<td><p>An interpreted, high-level and general-purpose programming language.</p></td>
+<td><p>3.8.5</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://pandas.pydata.org/">pandas</a></p></td>
+<td><p>pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.</p></td>
+<td><p>1.1.3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>R is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing.</p></td>
+<td><p>v4.0.3</p></td>
+<td><p><a class="reference external" href="https://bio.tools/r">https://bio.tools/r</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.tidyverse.org/">tidyverse</a></p></td>
+<td><p>tidyverse is an opinionated collection of R packages designed for data science.</p></td>
+<td><p>1.3.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://doi.org/doi:10.18129/B9.bioc.BridgeDbR">BridgeDbR</a></p></td>
+<td><p>An R package for BridgeDb</p></td>
+<td><p>2.0.0</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2><span class="section-number">2.6. </span>Identifier mapping with BridgeDb<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a> is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use <a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> to carry out this process.</p>
+<p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> is an open source tool dedicated to performing identifier mapping <a class="footnote-reference brackets" href="#van-iersel-bridgedb-2010" id="id2">2</a>. BridgeDb offers three different interfaces:</p>
+<ul class="simple">
+<li><p>Java API</p></li>
+<li><p>R package</p></li>
+<li><p>REST Web-services</p></li>
+</ul>
+<blockquote>
+<div><p>📖 In the context of this recipe, we distinguish between two types of identifiers:</p>
+<ul class="simple">
+<li><p><em>Local identifiers</em> which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization).</p></li>
+<li><p><em>Global identifiers</em> which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb’s <a class="reference external" href="https://github.com/bridgedb/datasources">data sources file</a></p></li>
+</ul>
+</div></blockquote>
+<p>We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers.</p>
+<p>In this recipe, we will cover how BridgeDb’s R package and webservices can be used to map between resource identifiers.</p>
+<div class="section" id="mapping-a-global-identifier-to-other-global-identifiers">
+<h3><span class="section-number">2.6.1. </span>Mapping a global identifier to other global identifiers<a class="headerlink" href="#mapping-a-global-identifier-to-other-global-identifiers" title="Permalink to this headline">¶</a></h3>
+<p>In this case, the input data is a list of elements with an identifier that is part of <a class="reference external" href="https://github.com/bridgedb/datasources">BridgeDb’s data sources</a>. In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention (<a class="reference external" href="http://www.genenames.org">HGNC</a>) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.</p>
+<div class="section" id="bridgedb-via-webservices-using-python">
+<h4><span class="section-number">2.6.1.1. </span>BridgeDb via Webservices using Python<a class="headerlink" href="#bridgedb-via-webservices-using-python" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>❗ For this tutorial Python v3.8.5, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> v1.1.3, and BridgeDb Webservices v0.9.0 were used.</p>
+</div></blockquote>
+<p>One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform exemplary mappings.</p>
+<p>We start by defining strings containing the URL of the webservices and the specific method from the Webservices we want to use. In our case, a <code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">cross</span> <span class="pre">reference</span></code>. When doing the query, we need to specify <strong>the organism</strong> and <strong>the source dataset</strong>. We can also <em>optionally</em> specify a <em>target data source</em> if we only want to map to a specific data source, e.g. Ensembl.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://webservice.bridgedb.org/&quot;</span>
+<span class="n">batch_request</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">&quot;</span><span class="si">{org}</span><span class="s2">/xrefsBatch/</span><span class="si">{source}{}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>If the aim is to map only to a specific target data source, then one can check whether the mapping is supported by invoking the following webservice call:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapping_available</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{org}</span><span class="s2">/isMappingSupported/</span><span class="si">{source}</span><span class="s2">/</span><span class="si">{target}</span><span class="s2">&quot;</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="n">mapping_available</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">org</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;En&#39;</span><span class="p">)</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+<p>This will return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the mapping between the given source and target is supported for the given organism or <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<p>We then load our data into a pandas dataframe and call the requests library using our query.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">batch_request</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;?dataSource=En&#39;</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s1">&#39;Homo sapiens&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The webservice response is now stored in the <code class="docutils literal notranslate"><span class="pre">response</span></code> variable. We can then simply pass this variable to the <code class="docutils literal notranslate"><span class="pre">to_df</span></code> method provided in the <code class="docutils literal notranslate"><span class="pre">bridgedb_script.py</span></code> module (see <a class="reference external" href="#Code">Code</a>). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.</p>
+<p>The output table will contain the:</p>
+<ul class="simple">
+<li><p>Original identifier</p></li>
+<li><p>Data source that the identifier is part of</p></li>
+<li><p>Mapped identifier</p></li>
+<li><p>Data source for the mapped identifier</p></li>
+</ul>
+<p>In our case the output of <code class="docutils literal notranslate"><span class="pre">to_df</span></code> is:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>original</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+<th class="text-align:left head"><p>target</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ENSG00000121410</p></td>
+<td class="text-align:left"><p>En</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1CF</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ENSG00000148584</p></td>
+<td class="text-align:left"><p>En</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A2MP1</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ENSG00000256069</p></td>
+<td class="text-align:left"><p>En</p></td>
+</tr>
+</tbody>
+</table>
+<p>If we were to not specify the target data source (by passing an empty string as the parameter), we would get all the potential mappings for the given identifiers. In our case (top 10 rows):</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>original</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+<th class="text-align:left head"><p>target</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>uc002qsd.5</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>8039748</p></td>
+<td class="text-align:left"><p>X</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>GO:0072562</p></td>
+<td class="text-align:left"><p>T</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>uc061drj.1</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ILMN_2055271</p></td>
+<td class="text-align:left"><p>Il</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>Hs.529161</p></td>
+<td class="text-align:left"><p>U</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>GO:0070062</p></td>
+<td class="text-align:left"><p>T</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>GO:0002576</p></td>
+<td class="text-align:left"><p>T</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>uc061drt.1</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>51020_at</p></td>
+<td class="text-align:left"><p>X</p></td>
+</tr>
+</tbody>
+</table>
+<p>As one can see, using the BridgeDb webservice via Python is extremely simple and can be easily integrated in an annotation pipeline.</p>
+</div>
+<div class="section" id="bridgedb-via-the-dedicated-r-package">
+<h4><span class="section-number">2.6.1.2. </span>BridgeDb via the dedicated R package<a class="headerlink" href="#bridgedb-via-the-dedicated-r-package" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For this tutorial R v4.0.3, <a class="reference external" href="https://www.tidyverse.org/">tidyverse</a> v1.3.0, and <a class="reference external" href="https://www.bioconductor.org/packages/release/bioc/html/BridgeDbR.html">BridgeDbR</a> v2.0.0 were used.</p>
+</div>
+<p>After having loaded the required R libraries, we read the data and create a new column to include the source of the identifier.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">data_df</span> <span class="o">&lt;-</span> <span class="nf">read_tsv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;identifier&#39;</span><span class="p">))</span>
+<span class="n">data_df</span><span class="o">$</span><span class="n">source</span> <span class="o">=</span> <span class="s">&#39;H&#39;</span>
+</pre></div>
+</div>
+<p>We then load the data for the organism we are mapping from.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span> <span class="n">location</span> <span class="o">&lt;-</span> <span class="nf">getDatabase</span><span class="p">(</span><span class="s">&#39;Homo sapiens&#39;</span><span class="p">)</span>
+ <span class="n">mapper</span> <span class="o">&lt;-</span> <span class="nf">loadDatabase</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And use the library’s     dedicated function to map the identifiers:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">maps</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">data_df</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s">&#39;En&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will return:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>identifier</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>target</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>ENSG00000121410</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1CF</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>ENSG00000148584</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A2MP1</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>ENSG00000256069</p></td>
+</tr>
+</tbody>
+</table>
+<p>As seen earlier when using Python language, we can obtain all possible mappings simply by not specifying the target. This will result in (top 10)</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>identifier</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>target</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>uc002qsd.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>X</p></td>
+<td class="text-align:left"><p>8039748</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>GO:0072562</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>uc061drj.1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Il</p></td>
+<td class="text-align:left"><p>ILMN_2055271</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>U</p></td>
+<td class="text-align:left"><p>Hs.529161</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>GO:0070062</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>GO:0002576</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>uc061drt.1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>X</p></td>
+<td class="text-align:left"><p>51020_at</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>An error message indicating “Error in download.file” may be thrown. This may be caused by the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> variable being set to too small a value. To remediate the issue, try increasing the timeout variable value by calling <code class="docutils literal notranslate"><span class="pre">options(timeout=300)</span></code>.</p>
+</div>
+<!--
+This will maybe link to the identifier mapping recipe in the future, where there will be a specific section detailing identifier equivalence files taking into account scientific lenses, as discussed with Egon. 
+
+--------------------------------
+
+
+### Mapping a local identifier to global identifier
+[NEED HELP HERE]
+This is a step that should be done manually. In this case an important decision should be made, which identifiers to map to. To decide this you should look for the data source that contains the closest definition of the concepts to the one you used for your local identifiers.
+
+-->
+</div>
+</div>
+<div class="section" id="mapping-local-identifier-to-a-different-global-identifier">
+<h3><span class="section-number">2.6.2. </span>Mapping local identifier to a different global identifier<a class="headerlink" href="#mapping-local-identifier-to-a-different-global-identifier" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to <a class="reference external" href="http://www.genenames.org">HGNC</a>. One may consult the list of other potential data formats in the <a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a> recipe. The mapping should be <strong>one-to-one</strong> for this recipe.</p>
+</div>
+<p>The TSV mapping file looks as follows:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>local</p></th>
+<th class="text-align:left head"><p>source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>bb34</p></td>
+<td class="text-align:left"><p>A1CF</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>eg93</p></td>
+<td class="text-align:left"><p>A2MP1</p></td>
+</tr>
+</tbody>
+</table>
+<p>You may notice the <code class="docutils literal notranslate"><span class="pre">source</span></code> identifiers correspond with those used in the previous example.</p>
+<p>This is how the mapping will work</p>
+<div class="figure align-default" id="bridgedb-recipe-figure1">
+<img alt="Overview of BridgeDb tools" src="../../../_images/bridgedb-recipe.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Overview of BridgeDb tools</span><a class="headerlink" href="#bridgedb-recipe-figure1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="webservices-in-python">
+<h4><span class="section-number">2.6.2.1. </span>Webservices in Python<a class="headerlink" href="#webservices-in-python" title="Permalink to this headline">¶</a></h4>
+<p>As before, we will define variables including the <code class="docutils literal notranslate"><span class="pre">web-service's</span> <span class="pre">URL</span></code> and the <code class="docutils literal notranslate"><span class="pre">method</span></code> that we will use, in this instance: <code class="docutils literal notranslate"><span class="pre">xRefsBatch</span></code>.
+We then pass the source column to the <code class="docutils literal notranslate"><span class="pre">post</span> <span class="pre">request</span></code> as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_data</span> <span class="o">=</span> <span class="n">case2</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">batch_request</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="n">org</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+<span class="n">response2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">source_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You may notice here that we did not pass a target source, this could be done as specified before. Then, we use <code class="docutils literal notranslate"><span class="pre">to_df</span></code> again and as expected obtain the same dataframe as before.
+To see the equivalences with our local identifiers, we can simply join the dataframes, as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">local_mapping</span> <span class="o">=</span> <span class="n">mappings</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">case2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">),</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;original&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which will return the following table (first 10 rows)</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>original</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+<th class="text-align:left head"><p>target</p></th>
+<th class="text-align:left head"><p>local</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>uc002qsd.5</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>8039748</p></td>
+<td class="text-align:left"><p>X</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>GO:0072562</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>uc061drj.1</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ILMN_2055271</p></td>
+<td class="text-align:left"><p>Il</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>Hs.529161</p></td>
+<td class="text-align:left"><p>U</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>GO:0070062</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>GO:0002576</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>uc061drt.1</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>51020_at</p></td>
+<td class="text-align:left"><p>X</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+</tbody>
+</table>
+<p>In case we did specify the <code class="docutils literal notranslate"><span class="pre">target</span></code> argument to be <code class="docutils literal notranslate"><span class="pre">Ensembl</span> <span class="pre">(En)</span></code>, we would instead get</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>original</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+<th class="text-align:left head"><p>target</p></th>
+<th class="text-align:left head"><p>local</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ENSG00000121410</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>aa11</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>A1CF</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ENSG00000148584</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>bb34</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>A2MP1</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>ENSG00000256069</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>eg93</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here, we see a <code class="docutils literal notranslate"><span class="pre">one-to-one</span></code> relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is <code class="docutils literal notranslate"><span class="pre">one-to-many</span></code>. Depending on the identifiers and resources, the relation could also be <code class="docutils literal notranslate"><span class="pre">many-to-many</span></code> as shown below.</p>
+<div class="figure align-default" id="bridgedb-recipe-figure2">
+<img alt="An example of a mapping via BridgeDb." src="../../../_images/bridgedb-recipe.md-figure2.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">An example of a mapping via BridgeDb. You may notice that despite the 1-to-1 relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">original</span></code> we get a N-to-N relation between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code> due to the N-to-N relation between <code class="docutils literal notranslate"><span class="pre">original</span></code> and <code class="docutils literal notranslate"><span class="pre">mapping</span></code>.</span><a class="headerlink" href="#bridgedb-recipe-figure2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This many-to-many relationship stems from different <em>scientific lenses</em> in the data sources. You can read more about these in <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id3">1</a>. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered “equal” from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.</p>
+</div>
+</div>
+<div class="section" id="r-package">
+<h4><span class="section-number">2.6.2.2. </span>R Package<a class="headerlink" href="#r-package" title="Permalink to this headline">¶</a></h4>
+<p>Here, we will follow the same steps as in the previous case. The only difference is that we need to specify the columns/fields to use when loading the data:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">data_df</span> <span class="o">&lt;-</span> <span class="nf">read_tsv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">col_names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;local&#39;</span><span class="p">,</span> <span class="s">&#39;identifier&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Then, after computing the mapping, we can join it with the local identifier</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">right_join</span><span class="p">(</span><span class="n">data_df</span><span class="p">,</span> <span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Assuming we did not specify the target data source we obtain the following table (first 10 rows):</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>local</p></th>
+<th class="text-align:left head"><p>identifier</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>target</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>uc002qsd.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>X</p></td>
+<td class="text-align:left"><p>8039748</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>GO:0072562</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>uc061drj.1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Il</p></td>
+<td class="text-align:left"><p>ILMN_2055271</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>U</p></td>
+<td class="text-align:left"><p>Hs.529161</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>GO:0070062</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>T</p></td>
+<td class="text-align:left"><p>GO:0002576</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>Uc</p></td>
+<td class="text-align:left"><p>uc061drt.1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>H</p></td>
+<td class="text-align:left"><p>X</p></td>
+<td class="text-align:left"><p>51020_at</p></td>
+</tr>
+</tbody>
+</table>
+<p>In case we did specify the target data source we would get:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>local</p></th>
+<th class="text-align:left head"><p>identifier</p></th>
+<th class="text-align:left head"><p>source</p></th>
+<th class="text-align:left head"><p>target</p></th>
+<th class="text-align:left head"><p>mapping</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>aa11</p></td>
+<td class="text-align:left"><p>A1BG</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>ENSG00000121410</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>bb34</p></td>
+<td class="text-align:left"><p>A1CF</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>ENSG00000148584</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>eg93</p></td>
+<td class="text-align:left"><p>A2MP1</p></td>
+<td class="text-align:left"><p>HGNC</p></td>
+<td class="text-align:left"><p>En</p></td>
+<td class="text-align:left"><p>ENSG00000256069</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="provenance">
+<h2><span class="section-number">2.7. </span>Provenance<a class="headerlink" href="#provenance" title="Permalink to this headline">¶</a></h2>
+<p>BridgeDb provides provenance information through:</p>
+<ul class="simple">
+<li><p>A call to <code class="docutils literal notranslate"><span class="pre">/properties/</span></code> method of the Webservice</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getProperties()</span></code> in BridgeDbR (passing the mapper as a parameter)</p></li>
+</ul>
+<p>This returns the following information for each of the data sources for a given organism:</p>
+<ul class="simple">
+<li><p>Data source name</p></li>
+<li><p>Build date</p></li>
+<li><p>Series</p></li>
+<li><p>Data type</p></li>
+<li><p>Data source version</p></li>
+<li><p>Schema version</p></li>
+</ul>
+<p>Improvements on provenance are under way (see <a class="reference external" href="https://github.com/bridgedb/BridgeDb/issues/164">here</a>).</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="code">
+<h2><span class="section-number">2.8. </span>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>You can find ready-made methods to map using R and Python for the given use cases <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/tree/9ad9481be32812b2565f9f9f1897642ae26eddff/content/recipes/interoperability/bridgedb/data">here</a>. These assume the data has the structure described in this recipe.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusion">
+<h2><span class="section-number">2.9. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>We showed how to use BridgeDb’s webservices and R package to map identifiers from different data sources using a minimal dataset.
+BridgeDb provides handy functionality to make ‘omics’ data more interoperable and reusable.
+As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
+These are aspects of information provenance which we plan to provide in the future.</p>
+<div class="section" id="what-should-i-read-next">
+<h3><span class="section-number">2.9.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../findability/identifiers.html#fcb-find-identifiers"><span class="std std-ref">Unique, persistent identifiers</span></a></p></li>
+<li><p><a class="reference internal" href="identifier-mapping.html#fcb-identifier-mapping"><span class="std std-ref">Interlinking data from different sources</span></a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2><span class="section-number">2.10. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-footbibliography-content/recipes/interoperability/bridgedb-recipe-0"><dl class="footnote brackets">
+<dt class="label" id="batchelor-scientific-nodate"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p>Colin Batchelor, Christian Y A Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T Evelo, Anna Gaulton, Carole Goble, Alasdair J G Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, and Egon L Willighagen. Scientiﬁc Lenses to Support Multiple Views over Linked Chemistry Data. In <em>The Semantic Web – ISWC 2014. Lecture Notes in Computer Science</em>, 16. 2014. <a class="reference external" href="https://doi.org/10.1007/978-3-319-11964-9_7">doi:10.1007/978-3-319-11964-9_7</a>.</p>
+</dd>
+<dt class="label" id="van-iersel-bridgedb-2010"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Martijn P. van Iersel, Alexander R. Pico, Thomas Kelder, Jianjiong Gao, Isaac Ho, Kristina Hanspers, Bruce R. Conklin, and Chris T. Evelo. The BridgeDb framework: standardized access to gene, protein and metabolite identifier mapping services. <em>BMC Bioinformatics</em>, 11(1):5, January 2010. URL: <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">https://doi.org/10.1186/1471-2105-11-5</a> (visited on 2021-02-05), <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">doi:10.1186/1471-2105-11-5</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">2.11. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>ELIXIR Node</p></th>
+<th class="head"><p>Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/lucas-ubm"><img class="avatar-style" src="https://avatars.githubusercontent.com/lucas-ubm"></img><div class="d-block">Lucas Giovanni</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-6518-9535"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Maastricht University</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg" ></img></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/AlasdairGray"><img class="avatar-style" src="https://avatars.githubusercontent.com/AlasdairGray"></img><div class="d-block">Alasdair J G Gray</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-5711-4872"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Heriot Watt University</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">2.12. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<div class="toctree-wrapper compound">
+</div>
+<hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/interoperability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="identifier-mapping.html" title="previous page"><span class="section-number">1. </span>Interlinking data from different sources</a>
+    <a class='right-next' id="next-link" href="bridgedb/bridgedb-example.html" title="next page"><span class="section-number">2.12.1. </span>Using BridgeDb web services</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
