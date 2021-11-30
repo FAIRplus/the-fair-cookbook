@@ -158,6 +158,10 @@ jobs:
       run: rm -rf ./node_modules
     - name: Build jupyter-book
       run: jupyter-book build . 2>&1 | tee ./build.log
+    - name: a
+      run: cat ./build.log
+    - name: Let the build fail if there are errors in the build of the jupyter_book 
+      run: grep "There was an error in building your book. Look above for the cause." ./build.log; echo $? #test $? -eq 1
     - name: Clean up build log (remove escape characters)
       run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
     - name: Record current directory structure
