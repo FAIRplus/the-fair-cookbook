@@ -158,10 +158,6 @@ jobs:
       run: rm -rf ./node_modules
     - name: Build jupyter-book
       run: jupyter-book build . 2>&1 | tee ./build.log
-    - name: test existence
-      run: ls -lh ./build.log
-    - name: Let the build fail if there are errors in the build of the jupyter_book 
-      run: grep "There was an error in building your book. Look above for the cause." ./build.log
     - name: Let the build fail if there are errors in the build of the jupyter_book 
       run: grep "There was an error in building your book. Look above for the cause." ./build.log; echo $?
     - name: Clean up build log (remove escape characters)
