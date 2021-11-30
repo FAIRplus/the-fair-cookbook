@@ -158,14 +158,12 @@ jobs:
       run: rm -rf ./node_modules
     - name: Build jupyter-book
       run: jupyter-book build . 2>&1 | tee ./build.log
-    - name: a
-      run: cat ./build.log
     - name: Let the build fail if there are errors in the build of the jupyter_book 
-      run: grep "There was an error in building your book. Look above for the cause." ./build.log
+      run: grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1
     - name: Clean up build log (remove escape characters)
       run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
-    - name: Record current directory structure
-      run: ls -alhR 
+    - name: Check for important warnings
+      run: ./scripts/extract-warnings.sh 
     - name: Install SSH Client 🔑
       uses: webfactory/ssh-agent@v0.4.1
       with:
@@ -179,6 +177,4 @@ jobs:
         REPOSITORY_NAME: FAIRplus/the-fair-cookbook # The repository on github.com to which will be deployed = pushed.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: _build/html # The folder the action should deploy.
-    - name: Record important warnings
-      run: ./scripts/extract-warnings.sh 
         
