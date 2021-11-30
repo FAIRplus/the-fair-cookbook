@@ -161,8 +161,6 @@ jobs:
     - name: Let the build fail if there are errors in the build of the jupyter_book 
       run: grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1
       shell: bash {0}
-    - name: introduce fake warning
-      run: echo "WARNING fake warning" >> ./build.log
     - name: Clean up build log (remove escape characters)
       run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
     - name: Check for important warnings
