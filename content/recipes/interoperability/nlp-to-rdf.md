@@ -45,9 +45,10 @@ overview of an NLP/NLU pipeline.
   * basic understanding of: command line syntax, basic knowledge of python and knowledge graph representation as RDF graphs.
   * availability of a corpus of unstructured text. The corpus could be:
       - a subset of pubmed abstracts
-      - a public collection such as the MIMIC-III datasets of electronic medical notes.
+      - a public collection such as the MIMIC-III datasets of electronic medical notes
       - a synthetic dataset produced by a software.
-      * We recommmend the readership to review the [following content from the FAIR cookbook](TODO:insert/link/here), which details a number of public datasets available for training and teaching
+      
+  * We recommmend the readership to review the [following content from the FAIR cookbook](TODO:insert/link/here), which details a number of public datasets available for training and teaching
 
 ---
 
@@ -76,21 +77,34 @@ overview of an NLP/NLU pipeline.
 
 Despite the progress in organizing scientific knowledge in specialized databases as evidenced by the ever expanding number of resources available from 
 [FAIRsharing.org](https://www.fairsharing.org), unstructured text remains in many areas how domain knowledge is held in a field. 
-`Unstructured text` refers simply to natural language text as found in journal articles, scientific reports or medical notes. The qualifier `unstructured` refers to the fact that the information is available simply as a sequence of words, without any markup or annotation.
-While these documents are meaningful to humans, it presents two challenges. To the humans, reading and synthesizing the volumes of texts available is impossible. To computers and software agents, it was, until recently, extremely difficult to **extract meaning** from **unstructured text.**
-However, in recent years, the fields of computational linguistics and machine learning have seen breakthroughs in 'natural language processing', which enable researchers and scientists to tap into the knowledge mines that constitutes unstructured text.  Tools such as `BERT`, short for Bidirectional Entity Recognition Transformers,  now known collectively as `Transformers` have transformed our ability to exploit unstructured text.
-The tasks of Named Entity Recognition (NER) and Relation Recognition, critical to accomplishing 'natural language understanding' (NLU) can now be done with higher confidence and, as evidenced by the increasing number of publications, is delivering advances in biomedicine and healthcase which benefit to patients and science advancement.
 
-Therefore, the purpose of this content is to introduce some of the solutions that exist and provide easy to follow examples as well as direct users to more advanced/specialized resources
+`Unstructured text` refers simply to natural language text as found in journal articles, scientific reports, or medical notes. The qualifier `unstructured` refers to the fact that the information is available simply as a sequence of words, without any markup or annotation. 
+
+While these documents are meaningful to humans, it presents two challenges. To the humans, reading and synthesizing the volumes of texts available is impossible. To computers and software agents, it was, until recently, extremely difficult to **extract meaning** from **unstructured text.**
+
+However, in recent years, the fields of computational linguistics and machine learning have seen breakthroughs in **natural language processing (NLP)**, which enable researchers and scientists to tap into the knowledge mines that constitutes unstructured text. One such class of models have come into highlight for solving this issue and they are attention based models called as `Transformers`.([More info in blog post](https://jalammar.github.io/illustrated-transformer/)) 
+<!-- TODO add reference to paper and blog post for transformers and attention mechanisms-->
+
+The tasks of Named Entity Recognition (NER) and Relation Recognition, critical to accomplishing `natural language understanding (NLU)`, can now be done with higher confidence. This is evidenced by the increasing number of publications delivering advances in biomedicine and healthcare.
+
+Therefore, the purpose of this content is to introduce some solutions that exist and provide easy to follow examples as well as direct users to more advanced/specialized resources
 
 
 ## Step by step process
 
-### Step 1: consider requirements
+### Step 1: Data assembling
 
 assemble a corpus of data.
 
-### Step 2: select a NLP framework
+### Step 2: Model preparation
+
+While a lot of science is available in english, when dealing with electronic medical notes (EMN) or electronic health records (EHR), making sure that models are available in the relevant language is something to bear in mind.
+
+For a framework such as Spacy, `models` exist for 19 languages.  By `models`, we refer here to the availability of word embeddings identified following a training procedure on reference body of text of a given language.
+
+One needs to understand that, owing to the nature of the training procedure, the 'default models' may lack specificity and sensitivity to pick up entities belonging to a specialized domain. This is why a number of specialized models have been devised to support NER tasks in specific domains. Additionally one should bear in mind the hardware requirements for training such complex models.
+
+Following on our example of the `Spacy` library, specific components can be added to augment the capabilities of the default tool. For instance, `[medSpacy](https://spacy.io/universe/category/biomedical)` can be used to support task such as detecting family history or asserting negation.
 
 for instance, spacy
 <!-- TODO redefine based on use case -->
@@ -125,15 +139,7 @@ vocab_groups = {‘neugenerative_disease’}
                     			short_desc_dict[vocab_dict[word]].add(entity)
 ```
 
-### Step 3: select a model
-
-While a lot of science is available in english, when dealing with electronic medical notes (EMN) or electronic health records (EHR), making sure that models are available in the relevant language is something to bear in mind.
-For a framework such as as Spacy, `models` exist for 19 languages.  By `models`, we refer here to the availability of word embeddings identified following a training procedure on reference body of text of a given language.
-One needs to understand that, owing to the nature of the training procedure and training datasets, the 'default models' may lack specificity and sensitivity to pick up entities belonging to a specialized domain.
-This is why a number of specialized models have been devised to support NER tasks in specific domains.
-Following on our example of the `Spacy` library, specific components can be added to augment the capabilities of the default tool. For instance, `[medSpacy](https://spacy.io/universe/category/biomedical)` can be used to support task such as detecting family history or asserting negation.
-
-### Step 4: analysing the results
+### Step 4: Data analysis
 
 ### Step 5: post processing and predicate formation
 
