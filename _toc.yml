@@ -11,6 +11,8 @@
       title: Ethical values of FAIR
     - file: content/recipes/glossary-fair-terms
       title: Glossary
+    # - file: content/recipes/introduction/priorization
+    #   title: selection of projects for FAIRification; "yojana's recipe" # FCB055
       # title: Introduction
       # numbered: true
       # sections:
