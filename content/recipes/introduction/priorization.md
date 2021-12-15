@@ -1,6 +1,21 @@
 (fcb-prioritization)=
 # Prioritization of projects for FAIRification
 
++++
+<br/>
+
+````{panels_fairplus}
+:identifier_text: FCB055
+:identifier_link: 'https://w3id.org/faircookbook/FCB055'
+:difficulty_level: 2
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience:   
+:has_executable_code: nope
+:recipe_name: Prioritization of projects for FAIRification
+```` 
+
+
 ## Main Objectives 
 
 The main purpose of this recipe is:
@@ -8,38 +23,48 @@ The main purpose of this recipe is:
 > To provide an overview of elements that could help users in prioritisation and selection of potential projects, processes, or data for FAIRification. For each of these elements, we provide comparative benefits between different stages and justify the order of the stages required for FAIRification. Finally, we also highlight the reasons for making the data FAIR.
 
 ---
-
 ## Introduction
 With the increased awareness in the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a principle approach to prioritizing project or data FAIRification. The present recipe aims to provide insights into how to go about this by outlining essential elements which have been considered and “battle tested”.  
 
-In the recipe, we would begin by pointing out the reasons why one needs to make their dataset FAIR. Following this, a brief overview of the dataset corpus formulation. Once the team has collected all the necessary data, it can now pass through the prioritisation phase. Here a thorough assessment of the dataset based on certain criteria is done. This assessment in-turn leads to development of a scorecard. Finally, with the points each dataset has achieved in the scorecard, a raking can be established and projects or datasets can be prioritized.
+In the recipe, is structured in the following way:
+* We would begin by pointing out the reasons why one needs to make their dataset FAIR. 
+* Following this, a brief overview of the dataset corpus formulation. Once the team has collected all the necessary data, it can now pass through the prioritisation phase. Here a thorough assessment of the dataset based on certain criteria is done. This assessment in-turn leads to development of a scorecard.
+* Finally, with the points each dataset has achieved in the scorecard, a raking can be established and projects or datasets can be prioritized.
 
+---
+## Graphical Overview 
 
-## Graphical Overview of the FAIRification Recipe Objectives 
+<!--
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBKGZhOmZhLXVzZXJzIElkZW50aWZpY2F0aW9uIG9mIHByb2plY3Qgc2VsZWN0aW9uIDxicj4gYW5kIHByaW9yaXRpemF0aW9uIHRlYW0pLS0-IHxDb2xsZWN0IGRhdGFzZXQgcmVsZXZhbnQgaW5mb3JtYXRpb258QlsoUHJvamVjdCBjb3JwdXMgY3JlYXRpb24pXVxuICAgIEItLT4gfENyZWF0aW5nIGZhY3RvciBjaGVja2xpc3R8IEMoZmE6ZmEtdGgtbGlzdCBQcmlvcml0aXphdGlvbiBvZiBwcm9qZWN0cyBiYXNlZCA8YnI-IG9uIGZhY3RvciBsaXN0KVxuICAgIEMtLT4gfEFkZGluZyBwb2ludHMgZm9yIGZhY3RvcnMgaW50byBhIHNjb3JlYm9hcmR8IEQoZmE6ZmEtc29ydCBTY29yZWNhcmQgZm9ybXVsYXRpb24gYW5kIHByb2plY3QgPGJyPiByYW5raW5nKVxuICAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBKGZhOmZhLXVzZXJzIElkZW50aWZpY2F0aW9uIG9mIHByb2plY3Qgc2VsZWN0aW9uIDxicj4gYW5kIHByaW9yaXRpemF0aW9uIHRlYW0pLS0-IHxDb2xsZWN0IGRhdGFzZXQgcmVsZXZhbnQgaW5mb3JtYXRpb258QlsoUHJvamVjdCBjb3JwdXMgY3JlYXRpb24pXVxuICAgIEItLT4gfENyZWF0aW5nIGZhY3RvciBjaGVja2xpc3R8IEMoZmE6ZmEtdGgtbGlzdCBQcmlvcml0aXphdGlvbiBvZiBwcm9qZWN0cyBiYXNlZCA8YnI-IG9uIGZhY3RvciBsaXN0KVxuICAgIEMtLT4gfEFkZGluZyBwb2ludHMgZm9yIGZhY3RvcnMgaW50byBhIHNjb3JlYm9hcmR8IEQoZmE6ZmEtc29ydCBTY29yZWNhcmQgZm9ybXVsYXRpb24gYW5kIHByb2plY3QgPGJyPiByYW5raW5nKVxuICAiLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)
+-->
 
-<div class="mermaid" style="text-align: center;">
-graph TD;
-	A(fa:fa-users Identification of project selection <br> and prioritization team) --> |Collect dataset relevant information|B[(Project corpus creation)]
-    B--> |Creating factor checklist| C(fa:fa-th-list Prioritization of projects based <br> on factor list)
-    C--> |Adding points for factors into a scoreboard| D(fa:fa-sort Scorecard formulation and project <br> ranking)
-</div>
+```{figure} images/prioritization-mermaid.png
+---
+height: 550px
+name: Prioritization overview
+alt: Prioritization overview
+---
+Prioritization overview.
+```
 
+---
 ## Determining of need of FAIRification
 
 Before understanding why and how to *prioritise* projects for the FAIR pipeline, it is essential to understand *the need* for FAIRification of data. The list below identifies key reasons (as examples) why one should make their data FAIR: 
-- Increase impact and visibility:
+* Increase impact and visibility:
 	- It helps in increasing visibility and impact of the data within the scientific community by standardising the published project/dataset metadata using a well-accepted metadata model and getting indexed by major community resources.
-- Data harmonisation:
+* Data harmonisation:
 	- When creating a tool with the help of multiple independent resources, FAIRification can help in easing the integration of data sources, for instance with the help of a common terminology.
-- Encourages community collaboration:
+* Encourages community collaboration:
 	- The FAIRification process can attract communities together for potential collaboration as each of the independent communities would now have a structured data format to map their data for integration.
-- Prepares data for downstream tasks:
+* Prepares data for downstream tasks:
 	- A FAIRified data is machine readable and hence can potentially be used by software agents such as machine learning (ML) or artificial intelligence (AI) models for analysis with help of downstream.
-- Adds economic aspect of capitalization on research investment:
+* Adds economic aspect of capitalization on research investment:
 	- A FAIRified data is reusable, meaning that initial investment and newly generated data assets are protected but also that additional investment in redoing research can be avoided.
 
 Additional  reasons for the need of FAIRification, encompassing the ethical reasons for doing so. They are more fully described in a dedicated recipe called [Values of FAIR](https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/FAIRplus-values.html).
 
+---
 ## Dataset selection
 
 To answer whether a project requires FAIRification or not, it is essential to first gather all relevant information about the projects and then analyze the resultant information in a stepwise manner. 
@@ -58,6 +83,7 @@ The information that PSP team users can collect about the projects covered:
 
 With the help of the above mentioned list, the PSP team can formulate a filtering or prioritisation schema. The next sections discuss different methods for achieving this. 
 
+---
 ## Project Prioritisation
 
 Once the basic information is collected, the PSP team can now describe projects through a [scoreboard](https://zenodo.org/record/5778431#.YbikDxNKhH1). This scoreboard serves the purpose for prioritisation of the projects that would go through the FAIRification process. Enlisted below are the different aspects that can be considered while creating the scoreboard. This list is not extensive and the PSP team can modify the criteria based on their needs.
@@ -128,6 +154,7 @@ Each of these criteria have an independent stance and when creating a scoreboard
 | Data champion  | Availability of DMP |
 | Data Type   | Partners involved |
 
+---
 ## Scorecard formulation and ranking
 
 Overall, for each criteria, a rank can be assigned based on the priority decided by the PSP team. This ranked-based assessment of projects would in turn lead to development of a scoreboard (Figure/Table). To enable ranking of projects, an additive sum of each of these criteria should be used, thereby directing each project with one final score. In the end, a descending ranking of the projects can be achieved, and the top k number of projects can be selected for FAIRification by the PSP team and handed over to the FAIR experts.
@@ -137,18 +164,44 @@ Overall, for each criteria, a rank can be assigned based on the priority decided
 
 The detailed description of each of the scores can be found on the [scorecard template](https://zenodo.org/record/5778431#.YbikDxNKhH1).
 
+---
 ## Conclusion
 
-Faced with a larger number of projects needing FAIRification, it becomes necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding  the benefits of making their data FAIR, provides suggestions for assisting in establishing a prioritization procedure. Hence, the aim of the recipe is to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. Additionally, it provides the reader a scorecard template that can be translated and used for their use cases.
-What to read next section
-Data Catalog recipe
-The Value of FAIR
-Data Management Plan
-Pointer to RDMtk
-FAIR+Q Pistoia Alliance paper
+> Faced with a larger number of projects needing FAIRification, it becomes necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding  the benefits of making their data FAIR, provides suggestions for assisting in establishing a prioritization procedure. Hence, the aim of the recipe is to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. Additionally, it provides the reader a scorecard template that can be translated and used for their use cases.
+> 
+> ## What to read next section
+> * [Data catalog](fcb-find-bs-catalog)
+> * [The Value of FAIR]()
+> * Data Management Plan
+> * Pointer to RDMtk
+> * AIR+Q Pistoia Alliance paper
+
+---
+## References
+1. [FAIRplus Report on IMI projects for data types and current technical solutions](https://zenodo.org/record/4428721#.YbmWNL3MJPZ)
+1. FAIRplus: D1.3 The first 15 IMI data sets selected and available for inclusion in WP 2 - 4 processes | Zenodo
+1. https://direct.mit.edu/dint/article/3/4/507/107429/Exploring-the-Current-Practices-Costs-and-Benefits 
+1. https://zenodo.org/record/5778431#.YbikDxNKhH1 
 
 
 
+---
+## Authors
 
+````{authors_fairplus}
+Yojana: Writing - Original Draft, Editing, Conceptualization
+David: Writing - Review & Editing
+Wei: Writing - Review & Editing
+Andrea: Writing - Review & Editing
+Philippe: Writing - Review & Editing
+````
+
+
+---
+## License
+
+````{license_fairplus}
+CC-BY-4.0
+````
 
 
