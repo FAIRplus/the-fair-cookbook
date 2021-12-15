@@ -20,11 +20,11 @@
 
 The main purpose of this recipe is:
 
-> To provide an overview of elements that could help users in prioritisation and selection of potential projects, processes, or data for FAIRification. For each of these elements, we provide comparative benefits between different stages and justify the order of the stages required for FAIRification. Finally, we also highlight the reasons for making the data FAIR.
+> To provide an overview of elements that could help users in prioritization and selection of potential projects, processes, or data for FAIRification. For each of these elements, we provide comparative benefits between different stages and justify the order of the stages required for FAIRification. Finally, we also highlight the reasons for making the data FAIR.
 
 ---
 ## Introduction
-With the increased awareness in the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a principle approach to prioritizing project or data FAIRification. The present recipe aims to provide insights into how to go about this by outlining essential elements which have been considered and “battle tested”.  
+With the increased awareness of the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a *principled approach* to prioritizing datasets for data FAIRification. The present recipe aims to provide insights into how to go about this process by showcasing essential criterian which have been considered and "battle-tested".  
 
 The is structured in the following way:
 * We begin by pointing out the reasons why one needs to make their dataset FAIR. 
@@ -50,7 +50,7 @@ Prioritization overview.
 ---
 ## Determining of need of FAIRification
 
-Before understanding why and how to *prioritise* projects for the FAIR pipeline, it is essential to understand *the need* for FAIRification of data. The list below identifies key reasons (as examples) why one should make their data FAIR: 
+Before understanding why and how to *prioritize* projects for the FAIR pipeline, it is essential to understand *the need* for FAIRification of data. The list below identifies key reasons (as examples) why one should make their data FAIR: 
 * Increase impact and visibility:
 	- It helps in increasing visibility and impact of the data within the scientific community by standardising the published project/dataset metadata using a well-accepted metadata model and getting indexed by major community resources.
 * Data harmonisation:
@@ -58,7 +58,7 @@ Before understanding why and how to *prioritise* projects for the FAIR pipeline,
 * Encourages community collaboration:
 	- The FAIRification process can attract communities together for potential collaboration as each of the independent communities would now have a structured data format to map their data for integration.
 * Prepares data for downstream tasks:
-	- A FAIRified data is machine readable and hence can potentially be used by software agents such as machine learning (ML) or artificial intelligence (AI) models for analysis with help of downstream.
+	- A FAIRified data is machine-readable and hence can potentially be used by software agents such as machine learning (ML) or artificial intelligence (AI) models for analysis with help of downstream.
 * Adds economic aspect of capitalization on research investment:
 	- A FAIRified data is reusable, meaning that initial investment and newly generated data assets are protected but also that additional investment in redoing research can be avoided.
 
@@ -81,43 +81,43 @@ The information that PSP team users can collect about the projects covered:
 	<li>Data and the data types involved</li>
 </ol>
 
-With the help of the above mentioned list, the PSP team can formulate a filtering or prioritisation schema. The next sections discuss different methods for achieving this. 
+With the help of the above mentioned list, the PSP team can formulate a filtering or prioritization schema. The next sections discuss different methods for achieving this. 
 
 ---
-## Project Prioritisation
+## Project prioritization
 
-Once the basic information is collected, the PSP team can now describe projects through a [scoreboard](https://zenodo.org/record/5778431#.YbikDxNKhH1). This scoreboard serves the purpose for prioritisation of the projects that would go through the FAIRification process. Enlisted below are the different aspects that can be considered while creating the scoreboard. This list is not extensive and the PSP team can modify the criteria based on their needs.
+Once the basic information is collected, the PSP team can now describe projects through a [scoreboard](https://zenodo.org/record/5778431#.YbikDxNKhH1). This scoreboard serves the purpose for prioritization of the projects that would go through the FAIRification process. Enlisted below are the different aspects that can be considered while creating the scoreboard. This list is not extensive and the PSP team can modify the criteria based on their needs.
 
 #### 1. Prioritization based on focus
 
-When dealing with large number of projects, the PSP team can get an overview of the research area or focus area of the given project. Specifically, projects from biomedical or clinical areas tend to be associated with a comorbidity or pathology, and the team can leverage this specific information to create a customised prioritisation schema. If the focus area of the project is not available directly, one  makes use of manual curation or certain natural language processing (NLP) pipelines to extract this information from project documents. One such example of the tool used by IMI is demonstrated on [GitHub](https://github.com/Fraunhofer-ITMP/IMI-Project-Prioritization).
+When dealing with large number of projects, the PSP team can get an overview of the research area or focus area of the given project. Specifically, projects from biomedical or clinical areas tend to be associated with a comorbidity or pathology, and the team can leverage this specific information to create a customised prioritization schema. If the focus area of the project is not available directly, one  makes use of manual curation or certain natural language processing (NLP) pipelines to extract this information from project documents. One such example of the tool used by IMI is demonstrated on [GitHub](https://github.com/Fraunhofer-ITMP/IMI-Project-Prioritization).
 
-**An *in-house* prioritisation scheme can be established by FAIR experts for selection of relevant projects for the FAIRification process.** This involves a two-step approach:
+**An *in-house* prioritization scheme can be established by FAIR experts for selection of relevant projects for the FAIRification process.** This involves a two-step approach:
 <ol>
 	<li>Identification of certain priority disease areas, such as COVID-19, neurodegenerative diseases, cardiovascular diseases, etc.</li>
-	<li>Prioritising projects falling into these priority areas compared to others.</li>
+	<li>Prioritizing projects falling into these priority areas compared to others.</li>
 </ol>
 
-#### 2. Prioritisation based on timeline
+#### 2. Prioritization based on timeline
 
 The process for FAIRification could be done either to the data present in a project or to a processing pipeline that is part of the project. Due to the interdependence of the data or process with the project, the time range at which a project runs is an important criteria to understand the availability of the data or pipeline. Taking a deeper look into the data dependency for the FAIRification process, a project can be divided into three stages of development: early stage, middle stage, and end stage.
 - A project is in early stages of development when the data requirements for the given project are being listed and simultaneously being collected. At this stage, the data availability is the lowest, and it is easier to design a data model, choose ontologies etc. that ensures creation of FAIR data by design'.
 - In the middle stage, all the data relevant for the given project has been collected and now needs to be standardised for downstream tasks such as for predictions using machine learning approaches. This is a stage where there is maximum availability of data. 
 - Lastly, in the end stage, data has either been deposited or handed over to the respective heads and the project is near its termination. Furthermore, it is at this stage that the risk  of organisation restructuring is highest, with staff reassignment or departure. Hence, starting a FAIRification process at a project  end stage could be the least favourable as this could place large demands in time and resources on key personnel, such as for corresponding data owners and data generators, at a time of effort wind down.
 
-**Hence, the best time of engaging a project into the FAIR pipeline would be dependent on the retrospective and prospective aspects of the project.** `The best time to FAIRify prospective projects is the early stage`. This stage is the best time to define and layout metadata standards that need to be followed during the project's trajectory. As a result, it eliminates many of the downstream logistical and financial problems. On the other hand, the FAIRification of retrospective projects is in the middle stage. This is because it is a data-rich stage and contact with both data owners and generators could be established for a better understanding of the data.
+**Hence, the best time of engaging a project into the FAIR pipeline would be dependent on the retrospective and prospective aspects of the project.** `The best time to FAIRify prospective projects is the early stage`. This stage is the best time to define and layout metadata standards that need to be followed during the project's trajectory. As a result, it eliminates many of the downstream logistical and financial problems. `On the other hand, the best time to engage in FAIRification of retrospective projects is in the middle stage.` This is because it is a data-rich stage and contact with both data owners and generators could be established for a better understanding of the data.
 
-#### 3. Prioritisation based on partners
+#### 3. Prioritization based on partners
 	
-A project has the potential to involve a large number of people each coming from various institutions. Consequently, users can also consider the wider consortia involved as a criteria for prioritising projects from a list of projects. In the end, the FAIRification process should benefit as many people as possible.
+A project has the potential to involve a large number of people each coming from various institutions. Consequently, users can also consider the wider consortia involved as a criteria for prioritizing projects from a list of projects. In the end, the FAIRification process should benefit as many people as possible.
 
-**Thus, projects that have diverse partners involved (e.g.  academic, industrial, start-up, and so on)  should be prioritised over singleton partners, that is those projects that involve people from the same institute or industrial group.** The main reason for this priority is the impact of the FAIRification process. Within an intra-organization group, the data generators, maintainers, and depositors might have the same terminology and definitions related to the data and hence, a FAIRification process would only be needed when the data has to be deposited on public repositories or databases. On the other hand, in an inter-organization group, definitions and terminologies aren't likely to be consistent, and the transfer of data from data generators to depositors might be time-consuming. As a result, the FAIRification process would be beneficial by increasing transparency between intra-organizational groups.
+**Thus, projects that have diverse partners involved (e.g.  academic, industrial, start-up, and so on)  should be prioritized over singleton partners, that is those projects that involve people from the same institute or industrial group.** The main reason for this priority is the impact of the FAIRification process. Within an intra-organization group, the data generators, maintainers, and depositors might have the same terminology and definitions related to the data and hence, a FAIRification process would only be needed when the data has to be deposited on public repositories or databases. On the other hand, in an inter-organization group, definitions and terminologies aren't likely to be consistent, and the transfer of data from data generators to depositors might be time-consuming. As a result, the FAIRification process would be beneficial by increasing transparency between intra-organizational groups.
 
-#### 4. Prioritisation based on existence of Data Management Plan (DMP)
+#### 4. Prioritization based on existence of Data Management Plan (DMP)
 
-A data management plan (DMP) is a document that describes the life cycle of a data beginning from its generation, followed by processing and collection, then dissemination, and finally the usage (More details in [Data Management Plan]() recipe). This established document gives the data owners and FAIR experts an overview of the resource under study. On the basis of this DMP document, a FAIRification process can be determined and established. In case of the absence of a DMP, the FAIR experts lack the ability to find the best FAIRification process for the given data thereby leading to inefficient results. Overall, the DMP plan would potentially point to the data regulatory aspect, considering the data usage as well as dissemination of the data into public resources. **Thus, projects that have their DMP documents established should be prioritized over those projects that do not have one ready yet.**
+A data management plan (DMP) is a document that describes the life cycle of a data beginning from its generation, followed by processing and collection, then dissemination, and finally the usage (More details in [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html) recipe). This established document gives the data owners and FAIR experts an overview of the resource under study. On the basis of this DMP document, a FAIRification process can be determined and established. In case of the absence of a DMP, the FAIR experts lack the ability to find the best FAIRification process for the given data thereby leading to inefficient results. Overall, the DMP plan would potentially point to the data regulatory aspect, considering the data usage as well as dissemination of the data into public resources. **Thus, projects that have their DMP documents established should be prioritized over those projects that do not have one ready yet.**
 
-#### 5. Prioritisation based on data availability and access
+#### 5. Prioritization based on data availability and access
 
 Even when the data is available, it does not necessarily mean that the data is accessible and thus it is essential to ensure both data availability and accessibility before the FAIRification process. In most situations, the data would only be accessible to users within the consortium, while in other situations the data is strictly restricted to data producers such as health records, especially for sensitive data.
 
@@ -130,23 +130,21 @@ When mentioned data accessibility, this could be broadly classified into three c
 
 **In summary, projects that FAIR experts can get access to data should be at a higher priority than those that have limitations on data access.**
 
-#### 6. Prioritisation based on presence of data champions
+#### 6. Prioritization based on presence of data champions
 
 **Data champions** can be defined as a group of people that have an expertise in dealing with certain processes, data, or pipeline. When dealing with specific processes or data types, it is beneficial if an expert who has experience in dealing with such processes or data already exists within the FAIR expert team.
 
-**Prioritisation of projects with consideration of expertise required in dealing with FAIRification tasks should be done.** Such projects can then have a predetermined timeline involved, making the step-by-step approach for accomplishing a FAIR process or data comparatively easy.
+**prioritization of projects with consideration of expertise required in dealing with FAIRification tasks should be done.** Such projects can then have a predetermined timeline involved, making the step-by-step approach for accomplishing a FAIR process or data comparatively easy.
 
-#### 7. Prioritisation based on data types
+#### 7. Prioritization based on data types
 
-Each project may produce a range of data that may be available in a number of different formats. 
-For instance,  sequencing data can be in distributed in FASTQ format while associated metadata be described using INSDC SRA format or imaging data in DICOM format. 
+Each project may produce a range of data that may be available in a number of different formats. For instance, sequencing data can be in distributed in *FASTQ* format while associated metadata be described using *INSDC SRA* format or imaging data in *DICOM* format. 
 It is therefore possible to rank projects based on this information and more precisely, one may use a resources such as [FAIRsharing](https://fairsharing.org) to do two things:
-i. identify the community approved data type format and terminologies supporting a data type
-ii. identify a funder or publisher recommended repository accepting this data type (e.g. EMBL EBI Array Express for Transcriptomics data)
+i. Identify the community approved data type format and terminologies supporting a data type
+ii. Identify a funder or publisher recommended repository accepting this data type (e.g. EMBL EBI Array Express for Transcriptomics data)
+**Hence, projects that have the above two pointers addressed should be prioritized over those that do not.**
 
-
-
-Along with the above criteria, two more factors play a crucial role in the prioritisation process:
+Along with the above criteria, two more factors play a crucial role in the prioritization process:
 
 - [ ]  The first is the **time management**. Since the FAIRification process can depend on a number of factors, it is important to acknowledge the time required for the process to complete. 
 
@@ -164,9 +162,19 @@ Each of these criteria have an independent stance and when creating a scoreboard
 ---
 ## Scorecard formulation and ranking
 
-Overall, for each criteria, a rank can be assigned based on the priority decided by the PSP team. This ranked-based assessment of projects would in turn lead to development of a scoreboard (Figure/Table). To enable ranking of projects, an additive sum of each of these criteria should be used, thereby directing each project with one final score. In the end, a descending ranking of the projects can be achieved, and the top k number of projects can be selected for FAIRification by the PSP team and handed over to the FAIR experts.
+Overall, for each criteria, a rank can be assigned based on the priority decided by the PSP team. This ranked-based assessment of projects would in turn lead to development of a scoreboard(Figure below)</a>. To enable ranking of projects, an additive sum of each of these criteria should be used, thereby directing each project with one final score. In the end, a descending ranking of the projects can be achieved, and the top k number of projects can be selected for FAIRification by the PSP team and handed over to the FAIR experts.
 
-<img></img>
+<div style="justify-content: center;">
+<img src="/images/score_card_ref.png" style="border:1px solid black"/>
+</div> -->
+
+```{figure} score_card_ref.png
+---
+name: Score card template
+alt: Score card template
+---
+Score card template.
+```
 
 The detailed description of each of the scores can be found on the [scorecard template](https://zenodo.org/record/5778431#.YbikDxNKhH1).
 
@@ -180,14 +188,12 @@ The detailed description of each of the scores can be found on the [scorecard te
 > * [The Value of FAIR](fcb-intro-fair-values)
 > * [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html)
 
-
 ---
 ## References
-1. [FAIRplus Report on IMI projects for data types and current technical solutions](https://zenodo.org/record/4428721#.YbmWNL3MJPZ)
-1. FAIRplus: D1.3 The first 15 IMI data sets selected and available for inclusion in WP 2 - 4 processes | Zenodo
-1. https://direct.mit.edu/dint/article/3/4/507/107429/Exploring-the-Current-Practices-Costs-and-Benefits 
-1. https://zenodo.org/record/5778431#.YbikDxNKhH1 
-
+1. [Report on IMI projects for data types and current technical solutions](https://zenodo.org/record/4428721#.YbmWNL3MJPZ)
+1. [The first 15 IMI data sets selected and available for inclusion in WP 2](https://zenodo.org/record/4428746#.YboFUr3MJPZ)
+1. [Exploring the current practices: Cost and Benefits](https://direct.mit.edu/dint/article/3/4/507/107429/Exploring-the-Current-Practices-Costs-and-Benefits) 
+1. [Scorecard formaulation template](https://zenodo.org/record/5778431#.YbikDxNKhH1)
 
 
 ---
