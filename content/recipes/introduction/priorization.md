@@ -26,7 +26,7 @@ The main purpose of this recipe is:
 ## Introduction
 With the increased awareness in the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a principle approach to prioritizing project or data FAIRification. The present recipe aims to provide insights into how to go about this by outlining essential elements which have been considered and “battle tested”.  
 
-In the recipe, is structured in the following way:
+The is structured in the following way:
 * We would begin by pointing out the reasons why one needs to make their dataset FAIR. 
 * Following this, a brief overview of the dataset corpus formulation. Once the team has collected all the necessary data, it can now pass through the prioritisation phase. Here a thorough assessment of the dataset based on certain criteria is done. This assessment in-turn leads to development of a scorecard.
 * Finally, with the points each dataset has achieved in the scorecard, a raking can be established and projects or datasets can be prioritized.
