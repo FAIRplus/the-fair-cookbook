@@ -7,12 +7,13 @@
     # - file: content/recipes/introduction
     - file: content/recipes/introduction/FAIR-cookbook-audience
       title: Introduction
+    - file: content/recipes/introduction/priorization
+      title: Selecting projects for FAIRification  # FCB055
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
     - file: content/recipes/glossary-fair-terms
       title: Glossary
-    # - file: content/recipes/introduction/priorization
-    #   title: selection of projects for FAIRification; "yojana's recipe" # FCB055
+ 
       # title: Introduction
       # numbered: true
       # sections:
