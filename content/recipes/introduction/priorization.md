@@ -62,7 +62,7 @@ Before understanding why and how to *prioritise* projects for the FAIR pipeline,
 * Adds economic aspect of capitalization on research investment:
 	- A FAIRified data is reusable, meaning that initial investment and newly generated data assets are protected but also that additional investment in redoing research can be avoided.
 
-Additional  reasons for the need of FAIRification, encompassing the ethical reasons for doing so. They are more fully described in a dedicated recipe called [Values of FAIR](https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/FAIRplus-values.html).
+Additional reasons for the need of FAIRification encompass ethical reasons for doing so. These are more fully described in a dedicated recipe called [Values of FAIR](https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/FAIRplus-values.html).
 
 ---
 ## Dataset selection
