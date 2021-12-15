@@ -164,7 +164,6 @@ Each of these criteria have an independent stance and when creating a scoreboard
 
 Overall, for each criteria, a rank can be assigned based on the priority decided by the PSP team. This ranked-based assessment of projects would in turn lead to development of a scoreboard (Figure/Table). To enable ranking of projects, an additive sum of each of these criteria should be used, thereby directing each project with one final score. In the end, a descending ranking of the projects can be achieved, and the top k number of projects can be selected for FAIRification by the PSP team and handed over to the FAIR experts.
 
-[comment]: <TODO!! Need help on this part.>
 <img></img>
 
 The detailed description of each of the scores can be found on the [scorecard template](https://zenodo.org/record/5778431#.YbikDxNKhH1).
