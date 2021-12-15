@@ -10,7 +10,7 @@
 :difficulty_level: 2
 :recipe_type: guidance
 :reading_time_minutes: 10
-:intended_audience:   
+:intended_audience:  everyone 
 :has_executable_code: nope
 :recipe_name: Prioritization of projects for FAIRification
 ```` 
@@ -24,7 +24,7 @@ The main purpose of this recipe is:
 
 ---
 ## Introduction
-With the increased awareness in the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a principle approach to prioritizing project or data FAIRification. The present recipe aims to provide insights into how to go about this by outlining essential elements which have been considered and ìbattle testedî.  
+With the increased awareness in the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a principle approach to prioritizing project or data FAIRification. The present recipe aims to provide insights into how to go about this by outlining essential elements which have been considered and ‚Äúbattle tested‚Äù.  
 
 In the recipe, is structured in the following way:
 * We would begin by pointing out the reasons why one needs to make their dataset FAIR. 
