@@ -144,7 +144,12 @@ Each data can be available in a number of different formats like sequencing data
 
 
 
-Along with the above criteria, two more factors play a crucial role in the prioritisation process. The first being the **time management**. Since the FAIRification process can depend on a number of factors, it is important to acknowledge the time required for the process to complete. The second being **risk management**, with the assessment of potential roadblocks that could interfere essential. Such roadblocks should be identified and rectified if possible prior to starting a FAIRification process. 
+Along with the above criteria, two more factors play a crucial role in the prioritisation process:
+
+- [ ]  The first is the **time management**. Since the FAIRification process can depend on a number of factors, it is important to acknowledge the time required for the process to complete. 
+
+- [ ] The second is  **risk management**, with the assessment of potential roadblocks that could interfere essential. Such roadblocks should be identified and rectified if possible prior to starting a FAIRification process. 
+
  
 Each of these criteria have an independent stance and when creating a scoreboard, a personalized priority between these factors need to be made. For example, if people have data champions within their FAIRification team, they would prioritize data availability and access factor over the data champions factor. To provide a granular overview of the criteria, classification based on two factors, cost and value, has been made as shown in the table below.
 
