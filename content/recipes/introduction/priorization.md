@@ -171,7 +171,7 @@ The detailed description of each of the scores can be found on the [scorecard te
 ---
 ## Conclusion
 
-> Faced with a larger number of projects needing FAIRification, it becomes necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding  the benefits of making their data FAIR, provides suggestions for assisting in establishing a prioritization procedure. Hence, the aim of the recipe is to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. Additionally, it provides the reader a scorecard template that can be translated and used for their use cases.
+> Faced with a larger number of projects needing FAIRification, it is necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding the benefits of making their data FAIR, provided suggestions for assisting in establishing a prioritization procedure. Hence, the aim of the recipe was to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. Additionally, it provides the readers with a scorecard template that may be translated and used for their use cases.
 > 
 > ## What to read next section
 > * [Data catalog](fcb-find-bs-catalog)
