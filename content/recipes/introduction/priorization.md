@@ -137,10 +137,12 @@ When mentioned data accessibility, this could be broadly classified into three c
 **Prioritisation of projects with consideration of expertise required in dealing with FAIRification tasks should be done.** Such projects can then have a predetermined timeline involved, making the step-by-step approach for accomplishing a FAIR process or data comparatively easy.
 
 #### 7. Prioritisation based on data types
-[comment]: <TODO!!>
-Each data can be available in a number of different formats like sequencing data can be in INSDC SRA format (some cookbook recipe?), or imaging data in DICOM format and more examples here. 
-- Community approved data type format (FAIRSharing)
-- Is there any repository accepting this data type (Array Express)
+
+Each project may produce a range of data that may be available in a number of different formats. 
+For instance,  sequencing data can be in distributed in FASTQ format while associated metadata be described using INSDC SRA format or imaging data in DICOM format. 
+It is therefore possible to rank projects based on this information and more precisely, one may use a resources such as [FAIRsharing](https://fairsharing.org) to do two things:
+i. identify the community approved data type format and terminologies supporting a data type
+ii. identify a funder or publisher recommended repository accepting this data type (e.g. EMBL EBI Array Express for Transcriptomics data)
 
 
 
