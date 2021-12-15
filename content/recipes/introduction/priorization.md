@@ -176,7 +176,7 @@ The detailed description of each of the scores can be found on the [scorecard te
 > ## What to read next section
 > * [Data catalog](fcb-find-bs-catalog)
 > * [The Value of FAIR](fcb-intro-fair-values)
-> * Data Management Plan
+> * [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html)
 
 
 ---
