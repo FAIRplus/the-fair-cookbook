@@ -171,7 +171,7 @@ The detailed description of each of the scores can be found on the [scorecard te
 > 
 > ## What to read next section
 > * [Data catalog](fcb-find-bs-catalog)
-> * [The Value of FAIR]()
+> * [The Value of FAIR](fcb-intro-fair-values)
 > * Data Management Plan
 > * Pointer to RDMtk
 > * AIR+Q Pistoia Alliance paper
