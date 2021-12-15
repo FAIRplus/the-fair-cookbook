@@ -29,7 +29,7 @@ With the increased awareness in the FAIR principles, the drive to implement them
 The is structured in the following way:
 * We begin by pointing out the reasons why one needs to make their dataset FAIR. 
 * Following this, a brief overview of the dataset corpus formulation. Once the team has collected all the necessary data, it can now pass through the prioritization phase. Here, a thorough assessment of the dataset based on certain criteria is done. This assessment, in turn, leads to the development of a scorecard.
-* Finally, with the points each dataset has achieved in the scorecard, a raking can be established and projects or datasets can be prioritized.
+* Finally, with the points each dataset has earned in the scorecard, a ranking can be established and projects or datasets can be prioritized.
 
 ---
 ## Graphical Overview 
