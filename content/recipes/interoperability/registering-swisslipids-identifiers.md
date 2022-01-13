@@ -32,8 +32,8 @@ Previously, we already proposed a [Swiss Lipid property for Wikidata](https://ww
 which was approved and created in [just before the 2020 BioHackathon Europe](https://www.wikidata.org/w/index.php?title=Property:P8691&oldid=1287579005).
 But populating Wikidata with identifiers got stuck.
 
-The intention for this BioHackathon is the add them, using SwissLipid ID <> InChIKey tuples and [Bacting](https://github.com/egonw/bacting) code
-(doi:[10.21105/joss.02558](https://doi.org/10.21105/joss.02558)). This page will describe the process.
+The intention for this BioHackathon is the add them, using SwissLipid ID <> InChIKey tuples and [Bacting](https://github.com/egonw/bacting)
+code {footcite}`Willighagen2021`. This page will describe the process.
 
 ### Step 1: getting the data
 
@@ -123,6 +123,8 @@ The resulting mappings are being added via the [QuickStatements website](https:/
 
 ## References
 
+```{footbibliography}
+```
 
 ---
 
