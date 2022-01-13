@@ -119,8 +119,6 @@ The resulting mappings are being added via the [QuickStatements website](https:/
 
 ## References
 
-```{footbibliography}
-```
 
 ---
 
