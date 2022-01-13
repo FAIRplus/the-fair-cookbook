@@ -116,6 +116,8 @@
             title: Extraction, transformation, and loading process #FCB031
           - file: content/recipes/interoperability/VCF-to-FHIR-conversion
             title: Clinical Genetic Information as FHIR JSON #FCB058
+          - file: content/recipes/interoperability/registering-swisslipids-identifiers
+            title: Registering SwissLipids identifiers in Wikidata #FCxxxx
             sections:
               - file: content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb
                 title: Converting VCF file to FHIR JSON #FCB059
