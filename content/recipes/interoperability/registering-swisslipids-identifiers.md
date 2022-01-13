@@ -13,11 +13,15 @@
 
 ## Main Objectives
 
+The objective of this recipe is to describe how external identifiers can be added to Wikidata in an automated.
+
 ___
 
 
 ## Requirements
 
+To record identifiers of some resource to make the content more findable and more interoperable, first a [Wikidata](https://www.wikidata.org/) property
+needs to be requested.
 
 ---
 
