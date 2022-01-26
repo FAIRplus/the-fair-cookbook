@@ -39,7 +39,9 @@ To register datasets to [Wikidata](https://www.wikidata.org/) requires a Wikidat
 ## Main Content
 
 This recipe takes an interest in datasets with information about small chemical compounds, particularly datasets with an [SDF](https://fairsharing.org/FAIRsharing.ew26v7) file or spreadsheets containing chemical identifiers in the form of [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c) strings.
-But the registration itself in Wikidata to make it more findable works for any dataset. The registration in Wikidata makes the metadata more findable by
+But the `Wikidata registration process` itself, to increase `Findability`, works for any dataset.
+
+The registration in Wikidata makes the metadata more findable by
 itself {footcite}`Waagmeester2020`. This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
 recipe easier to follow.
 
