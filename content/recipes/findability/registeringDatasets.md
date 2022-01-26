@@ -22,7 +22,7 @@ Useful datasets become more useful when they are easily found. The **FAIR princi
 > 
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol 
 
-This recipe is about making the dataset metadata more FAIR:
+This recipe is about making the dataset metadata more Findable:
 
 > Learn how to register a published dataset on Wikidata with the appropriate citation to increase its findability.
 
