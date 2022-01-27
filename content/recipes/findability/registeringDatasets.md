@@ -177,6 +177,7 @@ but works identical to other research output, such as datasets.
 
 ````{authors_fairplus}
 Egon: Writing
+Philippe: Writing - Review & Editing
 Zachary: Writing - Original Draft
 ````
 
