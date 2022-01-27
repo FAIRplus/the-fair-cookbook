@@ -31,7 +31,7 @@ ___
 
 ## Requirements
 
-To register datasets to [Wikidata](https://www.wikidata.org/) requires that the dataset is already archived somewhere that provides
+Register datasets in [Wikidata](https://www.wikidata.org/) {footcite}`Waagmeester2020` requires that the dataset is already archived somewhere that provides
 an DOI for the datasets, and it also requires that you have a Wikidata account ([create one](https://www.wikidata.org/wiki/Special:CreateAccount)).
 
 ---
@@ -39,11 +39,14 @@ an DOI for the datasets, and it also requires that you have a Wikidata account (
 
 ## Main Content
 
-This recipe takes an interest in datasets with information about small chemical compounds, particularly datasets with an [SDF](https://fairsharing.org/FAIRsharing.ew26v7) file or spreadsheets containing chemical identifiers in the form of [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c) strings.
-But the `Wikidata registration process` itself, to increase `Findability`, works for any dataset.
+Archiving a dataset can be an important step in making data FAIR (see *Depositing in Zenodo generic repository*, [fcb:FCB009](https://w3id.org/faircookbook/FCB009)),
+but by sharing the metadata, you make the dataset even more Findable. Sharing the metadata in Wikidata has the advantage that the dataset can
+be linked to many other life sciences databases.
 
-The registration in Wikidata makes the metadata more findable by
-itself {footcite}`Waagmeester2020`. This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
+This recipe takes an interest in datasets with information about small chemical compounds, particularly datasets with an [SDF](https://fairsharing.org/FAIRsharing.ew26v7)
+file or spreadsheets containing chemical identifiers in the form of [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c) strings.
+But the `Wikidata registration process` itself, to increase `Findability`, works for any dataset.
+This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
 recipe easier to follow.
 
 Importantly, Wikidata allows the dataset to be used as reference in Wikidata to support statements. For example, if the dataset contains a logP value,
