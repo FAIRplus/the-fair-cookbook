@@ -49,7 +49,7 @@ But the `Wikidata registration process` itself, to increase `Findability`, works
 This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
 recipe easier to follow.
 
-Importantly, Wikidata allows the dataset to be used as reference in Wikidata to support statements. For example, if the dataset contains a logP value,
+Importantly, registering a dataset in Wikidata allows it to be used as reference to support other Wikidata statements (existing or newly created ones) . For example, if the dataset contains a `logP` value,
 then this logP value can be associated to the compound in Wikidata with a statement, with the dataset itself as reference.
 <!-- TODO: add screenshot of example -->
 
