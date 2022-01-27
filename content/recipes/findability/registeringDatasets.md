@@ -91,7 +91,10 @@ Wikidata. If not this page will use the DOI to convert the metadata transformed 
 
 ### Adding a dataset with Quickstatements
 
-With the Quickstatements of the dataset, the dataset can be added to Wikidata using
+[Quickstatements](https://quickstatements.toolforge.org/) is a layer on top of Wikidata, a tool developed by Magnus Manske, research in Cambridge/UK to
+make it easier to edit Wikidata in an automated way. We use this here to automate the registering of
+a dataset in Wikidata too. We first generate Quickstatements which
+can be added to Wikidata using
 the https://quickstatements.toolforge.org/ website. This is the step which requires a Wikidata account.
 
 #### Step 1: Wikidata login
