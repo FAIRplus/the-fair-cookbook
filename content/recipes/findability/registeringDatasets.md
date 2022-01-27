@@ -80,9 +80,15 @@ For details related to finding datasets and determining the correct licenses, pl
 
 ### Dataset Registration in Wikidata
 
-After locating a dataset, check the availability of the details of the dataset. Essential attributes include the
-DOI, the title of the dataset, the author(s) of the dataset, publication date of the dataset, and links to the
-dataset source. You may need this later.
+After locating a dataset, check the availability of the details of the dataset. Essential attributes include:
+
+* the DOI
+* the title of the dataset
+* the author(s) of the dataset
+* the publication date of the dataset
+* links to the dataset source.
+
+  You may need these later, during the Wikidata registration process.
 
 With the DOI, there is a good chance that Scholia {footcite}`Nielsen2017` can help you register the dataset in Wikidata.
 You can use the `https://scholia.toolforge.org/doi/$DOI` pattern ('$DOI' in the link must be replaced with the
