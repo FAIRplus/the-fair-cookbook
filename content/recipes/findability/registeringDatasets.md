@@ -69,7 +69,7 @@ Of course, there are also general data search engines now that may help find the
 * [Google Dataset Search](https://datasetsearch.research.google.com/)
 * [DataCite Commons](https://commons.datacite.org/)
 
-If you have a new dataset and like to deposit it because it is not listed in any of the above resources,
+If you have a new dataset and would like to deposit it because it is not listed in any of the above resources,
 please check out the [Depositing in Zenodo generic repository](https://w3id.org/faircookbook/FCB009) recipe.
 
 <!--
@@ -90,32 +90,34 @@ After locating a dataset, check the availability of the details of the dataset. 
 
   You may need these later, during the Wikidata registration process.
 
-With the DOI, there is a good chance that Scholia {footcite}`Nielsen2017` can help you register the dataset in Wikidata.
+With the DOI, there is a good chance that [Scholia](https://scholia.toolforge.org/) {footcite}`Nielsen2017` can help you register the dataset in Wikidata.
 You can use the `https://scholia.toolforge.org/doi/$DOI` pattern ('$DOI' in the link must be replaced with the
 DOI of the dataset you are registering) to check if your dataset is already listed in
-Wikidata. If not this page will use the DOI to convert the metadata transformed into a Quickstatements.
+Wikidata.
+If not, this page will use the DOI to convert the associated metadata and translate them into a Wikidata compatible Scholia`Quickstatements`.
 
 ### Adding a dataset with Quickstatements
 
 [Quickstatements](https://quickstatements.toolforge.org/) is a layer on top of Wikidata, a tool developed by Magnus Manske, research in Cambridge/UK to
 make it easier to edit Wikidata in an automated way. We use this here to automate the registering of
-a dataset in Wikidata too. We first generate Quickstatements which
+a dataset in Wikidata too. We first generate `Quickstatements` which
 can be added to Wikidata using
-the https://quickstatements.toolforge.org/ website. This is the step which requires a Wikidata account.
+the [https://quickstatements.toolforge.org/](https://quickstatements.toolforge.org/) website.
+This is the step which requires a **Wikidata account**.
 
 #### Step 1: Wikidata login
 
-First, log in with Wikidata or check if you already are.
+First, [log in to Wikidata](https://www.wikidata.org/w/index.php?title=Special:UserLogin&returnto=Wikidata%3AMain+Page).
 
 #### Step 2: Authorize Quickstatements
 
-After step 1, authorize Quickstatements with your Wikidata account using the "Log in" button
+Then, authorize Quickstatements with your Wikidata account using the "Log in" button
 in the top right corner of the Quickstatements website.
 
 #### Step 3: Open the Scholia page
 
 If your dataset is not already Wikidata, use the `https://scholia.toolforge.org/doi/$DOI` Scholia
-page to create Quickstatements. The result should look something like this:
+page to create `Quickstatements`. The result should look something like this:
 
 ```{figure} images/scholia.png
 ---
