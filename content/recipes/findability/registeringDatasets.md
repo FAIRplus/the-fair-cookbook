@@ -22,7 +22,7 @@ Useful datasets become more useful when they are easily found. The **FAIR princi
 > 
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol 
 
-This recipe is about making the dataset metadata more Findable:
+This recipe is about making an already archived dataset metadata more Findable by getting the metadata distributed into other databases:
 
 > Learn how to register a published dataset on Wikidata with the appropriate citation to increase its findability.
 
@@ -31,7 +31,8 @@ ___
 
 ## Requirements
 
-To register datasets to [Wikidata](https://www.wikidata.org/) requires a Wikidata account ([create one](https://www.wikidata.org/wiki/Special:CreateAccount)).
+To register datasets to [Wikidata](https://www.wikidata.org/) requires that the dataset is already archived somewhere that provides
+an DOI for the datasets, and it also requires that you have a Wikidata account ([create one](https://www.wikidata.org/wiki/Special:CreateAccount)).
 
 ---
 
