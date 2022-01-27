@@ -55,9 +55,10 @@ then this logP value can be associated to the compound in Wikidata with a statem
 
 ### Finding Datasets
 
-There are several ways to locate datasets to be registered into Wikidata. One consideration is that the dataset has the recommended license and an identifier.
+There are several ways to locate datasets to be registered into Wikidata. One needs to take into consideration the following two requirements:
+the dataset should have a compatible license and the dataset should have an identifier.
 
-Example of where open datasets with information about chemical compounds can be found include:
+Examples of where open datasets with information about chemical compounds can be found include:
 
 * [Figshare](https://figshare.com/)
 * [Zenodo](https://zenodo.org/)
