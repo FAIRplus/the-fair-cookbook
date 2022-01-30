@@ -882,6 +882,9 @@ div.topbar {
     background: #7e0038 !important;
 }
 
+.darkgrey {
+    background: #2a2e3d !important;
+}
 
 /* ################################################## */
 /**                  RECIPE CARDS                    **/
@@ -895,6 +898,7 @@ div.topbar {
 }
 
 .recipe .card-header {
+    color: #2a2e3d ;
     flex-grow: 1;
     padding: 0;
     border-top-left-radius: 7px !important;
