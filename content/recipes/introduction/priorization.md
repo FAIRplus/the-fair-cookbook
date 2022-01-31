@@ -24,10 +24,10 @@ The main purpose of this recipe is:
 
 ---
 ## Introduction
-With the increased awareness of the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a *principled approach* to prioritizing datasets for data FAIRification. The present recipe aims to provide insights into how to go about this process by showcasing essential criterian which have been considered and "battle-tested".  
+With the increased awareness of the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a *principled approach* to prioritizing datasets for data FAIRification. The present recipe aims to provide insights into how to go about this process by showcasing essential criteria which have been considered and "battle-tested".  
 
-The is structured in the following way:
-* We begin by pointing out the reasons why one needs to make their dataset FAIR. 
+The recipe is structured in the following way:
+* We begin by pointing out the reasons why one should to make their dataset FAIR. 
 * Following this, a brief overview of the dataset corpus formulation. Once the team has collected all the necessary data, it can now pass through the prioritization phase. Here, a thorough assessment of the dataset based on certain criteria is done. This assessment, in turn, leads to the development of a scorecard.
 * Finally, with the points each dataset has earned in the scorecard, a ranking can be established and projects or datasets can be prioritized.
 
@@ -48,18 +48,18 @@ Prioritization overview.
 ```
 
 ---
-## Determining of need of FAIRification
+## Determining the need for FAIRification
 
-Before understanding why and how to *prioritize* projects for the FAIR pipeline, it is essential to understand *the need* for FAIRification of data. The list below identifies key reasons (as examples) why one should make their data FAIR: 
+Before understanding why and how to *prioritize* projects for the FAIR pipeline, it is essential to understand *the need* for FAIRification of data. The list below identifies key reasons why one should make data FAIR: 
 * Increase impact and visibility:
-	- It helps in increasing visibility and impact of the data within the scientific community by standardising the published project/dataset metadata using a well-accepted metadata model and getting indexed by major community resources.
-* Data harmonisation:
+	- Standardising published project/dataset metadata using a well-accepted metadata model and getting indexed by major community resources helps in increasing the visibility and impact of the data within the scientific community.
+* Harmonise data:
 	- When creating a tool with the help of multiple independent resources, FAIRification can help in easing the integration of data sources, for instance with the help of a common terminology.
 * Encourages community collaboration:
 	- The FAIRification process can attract communities together for potential collaboration as each of the independent communities would now have a structured data format to map their data for integration.
-* Prepares data for downstream tasks:
+* Prepare data for downstream tasks:
 	- A FAIRified data is machine-readable and hence can potentially be used by software agents such as machine learning (ML) or artificial intelligence (AI) models for analysis with help of downstream.
-* Adds economic aspect of capitalization on research investment:
+* Adds to the capitalization on research investment:
 	- A FAIRified data is reusable, meaning that initial investment and newly generated data assets are protected but also that additional investment in redoing research can be avoided.
 
 Additional reasons for the need of FAIRification encompass ethical reasons for doing so. These are more fully described in a dedicated recipe called [Values of FAIR](https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/FAIRplus-values.html).
@@ -92,7 +92,7 @@ Once the basic information is collected, the PSP team can now describe projects 
 
 When dealing with large number of projects, the PSP team can get an overview of the research area or focus area of the given project. Specifically, projects from biomedical or clinical areas tend to be associated with a comorbidity or pathology, and the team can leverage this specific information to create a customised prioritization schema. If the focus area of the project is not available directly, one  makes use of manual curation or certain natural language processing (NLP) pipelines to extract this information from project documents. One such example of the tool used by IMI is demonstrated on [GitHub](https://github.com/Fraunhofer-ITMP/IMI-Project-Prioritization).
 
-**An *in-house* prioritization scheme can be established by FAIR experts for selection of relevant projects for the FAIRification process.** This involves a two-step approach:
+An *in-house* prioritization scheme can be established by FAIR experts for selection of relevant projects for the FAIRification process. This involves a two-step approach:
 <ol>
 	<li>Identification of certain priority disease areas, such as COVID-19, neurodegenerative diseases, cardiovascular diseases, etc.</li>
 	<li>Prioritizing projects falling into these priority areas compared to others.</li>
@@ -105,7 +105,7 @@ The process for FAIRification could be done either to the data present in a proj
 - In the middle stage, all the data relevant for the given project has been collected and now needs to be standardised for downstream tasks such as for predictions using machine learning approaches. This is a stage where there is maximum availability of data. 
 - Lastly, in the end stage, data has either been deposited or handed over to the respective heads and the project is near its termination. Furthermore, it is at this stage that the risk  of organisation restructuring is highest, with staff reassignment or departure. Hence, starting a FAIRification process at a project  end stage could be the least favourable as this could place large demands in time and resources on key personnel, such as for corresponding data owners and data generators, at a time of effort wind down.
 
-**Hence, the best time of engaging a project into the FAIR pipeline would be dependent on the retrospective and prospective aspects of the project.** `The best time to FAIRify prospective projects is the early stage`. This stage is the best time to define and layout metadata standards that need to be followed during the project's trajectory. As a result, it eliminates many of the downstream logistical and financial problems. `On the other hand, the best time to engage in FAIRification of retrospective projects is in the middle stage.` This is because it is a data-rich stage and contact with both data owners and generators could be established for a better understanding of the data.
+Hence, the best time of engaging a project into the FAIR pipeline would be dependent on the retrospective and prospective aspects of the project. `The best time to FAIRify prospective projects is the early stage`. This stage is the best time to define and layout metadata standards that need to be followed during the project's trajectory. As a result, it eliminates many of the downstream logistical and financial problems. `On the other hand, the best time to engage in FAIRification of retrospective projects is in the middle stage.` This is because it is a data-rich stage and contact with both data owners and generators could be established for a better understanding of the data.
 
 #### 3. Prioritization based on partners
 	
