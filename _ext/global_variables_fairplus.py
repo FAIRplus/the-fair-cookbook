@@ -43,11 +43,11 @@ CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL = {
 }
 
 CONTROLLED_VOCABULARY_MATURITY_LEVEL = {
-    "1" : "level 0",
-    "2" : "level 1",
-    "3" : "level 2",
-    "4" : "level 3",
-    "5" : "level 4",
+    "1" : "level-1",
+    "2" : "level-2",
+    "3" : "level-3",
+    "4" : "level-4",
+    "5" : "level-5",
 }
 
 CONTROLLED_VOCABULARY_EXECUTABLE_CODE = {

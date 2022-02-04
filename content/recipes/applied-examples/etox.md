@@ -12,6 +12,7 @@ TODO: clarify authors
 :recipe_type: applied_example
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator, ontologist
+:maturity_level: 2
 :has_executable_code: nope
 :recipe_name: eTox - omics datasets
 ```` 

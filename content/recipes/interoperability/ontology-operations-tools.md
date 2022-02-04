@@ -8,7 +8,8 @@
 :difficulty_level: 5
 :recipe_type: survey_review
 :reading_time_minutes: 15
-:intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager  
+:intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager 
+:maturity_level: 2 
 :has_executable_code: nope
 :recipe_name: Ontology-related tools and services
 ```` 

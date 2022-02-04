@@ -11,6 +11,7 @@
 :recipe_type: hands_on
 :reading_time_minutes: 20
 :intended_audience: software_developer, data_manager, system_administrator  
+:maturity_level: 2
 :has_executable_code: yeah
 :recipe_name: Deploying the IMI data catalogue
 ```` 

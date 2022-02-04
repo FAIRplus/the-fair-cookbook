@@ -8,6 +8,7 @@
 :recipe_type: hands_on
 :reading_time_minutes: 60
 :intended_audience: data_manager, data_scientist, software_developer, system_administrator  
+:maturity_level: 2
 :has_executable_code: yeah
 :recipe_name: Building a catalogue of datasets 
 ```` 

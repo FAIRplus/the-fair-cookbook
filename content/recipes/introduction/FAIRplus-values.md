@@ -10,7 +10,8 @@
 :difficulty_level: 1
 :recipe_type: perspective
 :reading_time_minutes: 15
-:intended_audience: everyone  
+:intended_audience: everyone 
+:maturity_level: 2   
 :has_executable_code: nope
 :recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
 ```` -->

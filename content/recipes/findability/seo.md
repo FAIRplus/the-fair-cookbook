@@ -10,7 +10,8 @@
 :difficulty_level: 2
 :recipe_type: guidance
 :reading_time_minutes: 10
-:intended_audience: software_developer, data_scientist  
+:intended_audience: software_developer, data_scientist
+:maturity_level: 2  
 :has_executable_code: nope
 :recipe_name: Search engine optimization
 ```` 

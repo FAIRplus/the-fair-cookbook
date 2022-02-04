@@ -10,7 +10,8 @@
 :difficulty_level: 3
 :recipe_type: background_information
 :reading_time_minutes: 30
-:intended_audience: principal_investigator, data_manager, data_scientist  
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 2 
 :has_executable_code: nope
 :recipe_name: Unique, persistent identifiers
 ```` 

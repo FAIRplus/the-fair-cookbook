@@ -18,7 +18,8 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
-:intended_audience: principal_investigator, data_manager, data_scientist  
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 2 
 :has_executable_code: yeah
 :recipe_name: FAIRshake tool
 ```` 

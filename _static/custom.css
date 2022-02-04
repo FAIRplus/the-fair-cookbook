@@ -997,6 +997,11 @@ div.topbar {
     font-size: 42px;
 }
 
+.recipe .section .sectionIcon2 {
+    font-size: 42px;
+    color: orangered;
+}
+
 .recipe .card-footer {
     padding: 0 10px;
     text-align: right;
@@ -1004,6 +1009,25 @@ div.topbar {
     color: grey;
     background: transparent !important;
 }
+
+
+.bars {
+  width: 50px;
+  height: auto;
+}
+
+.bars path {
+  fill: darkgrey;
+}
+
+.level-1 path.bar1,
+.level-2 path.bar1, .level-2 path.bar2,
+.level-3 path.bar1, .level-3 path.bar2, .level-3 path.bar3,
+.level-4 path.bar1, .level-4 path.bar2, .level-4 path.bar3, .level-4 path.bar4,
+.level-5 path {
+   fill: orangered !important;
+}
+
 
 
 

@@ -45,6 +45,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 :recipe_type: background_information
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, funder
+:maturity_level: 2  
 :has_executable_code: nope
 :recipe_name: Recipe Template
 ```` 

@@ -14,6 +14,7 @@ TODO: clarify authors
 :recipe_name: ND4BB - chemical activities datasets
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator
+:maturity_level: 2
 :has_executable_code: nope
 ```` 
 

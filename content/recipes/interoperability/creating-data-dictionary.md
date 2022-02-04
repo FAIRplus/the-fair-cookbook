@@ -8,7 +8,8 @@
 :difficulty_level: 3
 :recipe_type: technical_guidance
 :reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, data_scientist  
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 2 
 :has_executable_code: nope
 :recipe_name: Creating data/variable dictionary
 ```` 

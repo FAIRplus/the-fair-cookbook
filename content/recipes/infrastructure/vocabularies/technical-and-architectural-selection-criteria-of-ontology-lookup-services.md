@@ -10,6 +10,7 @@
 :recipe_type: technical_guidance
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator  
+:maturity_level: 2
 :has_executable_code: nope
 :recipe_name: Portals and lookup services
 ```` 

@@ -13,6 +13,7 @@ TODO make referenced Google Drive documents available
 :recipe_type: applied_example
 :reading_time_minutes: 10
 :intended_audience: data_manager, data_curator, ontologist
+:maturity_level: 2
 :has_executable_code: nope
 :recipe_name: ReSOLUTE - transcriptomics datasets
 ```` 
