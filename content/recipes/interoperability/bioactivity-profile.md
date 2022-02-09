@@ -6,22 +6,42 @@ This recipe shows how to prepare `bioactivity data`, defined as the measurable e
 This recipe is meant to address the Findability and Interoperability of such type of data.
 
 ## Graphical overview of the Recipe FAIRification Objectives
-![](https://i.imgur.com/qNuKXQ4.png)
+```mermaid
+graph TD
+    A[Data collection] -->B(Enriched metadata)
+    B1{Minimum information checklist} -->B
+    B --> C(Annotaed metadata)
+    C1{Recommended data models} -->C
+    C --> D[Processed assay data]
+    D--> E[Formatted datasets]
+    E1{Format requirements} -->E
+    E--> F[Submission-ready datasets]
+    classDef standards stroke:#f66,stroke-width:2px,color:#000000,stroke-dasharray: 5 5
+    class B1,C1,E1 standards
+end
+```
 ## Introduction
-Bioactivity data, together with chemical data and omics data, can be used to search for new hits. FAIR bioactivity data guides the improvements of pharmacokinetic properties of compounds and the identification of drug targets. Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and pharmacokinetic study information.
+Bioactivity data, as stored in public archives such as the European repository [CHEMBL](https://www.ebi.ac.uk/chembl/) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov/) in together with chemical data and omics data, can be used to search for new `hits`(compounds with desired property in drug screening), for example by using cell line information, compound ID as input to queries over such resources.
+
+Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and, pharmacokinetic study information.
+
+The FAIR principles for data management can guide the improvements of pharmacokinetic properties of compounds and the identification of drug targets by enhancing the reporting of `bioactivity data`.
+
 Among the FAIR principles, the `use of  rich metadata` (F2. data are described with rich metadata and R1. meta(data) are richly described with a plurality of accurate and relevant attributes) and the reliance on `community standards`  (R1.3. (meta)data meet domain-relevant community standards) are essential.
+
 In the context of `bioactivity data`, we have on the one hand the [Minimum information about a bioactive entity (MIABE)](https://www.nature.com/articles/nrd3503) checklist recommend attributes, formats and vocabularies for the reuse of such datasets. 
+
 On the other hand, public bioactivity data archives, such as [ChEMBL](https://www.ebi.ac.uk/chembl/), [PubChem](https://pubchem.ncbi.nlm.nih.gov/), and [ECBD](https://ecbd.eu/) also have their own requirements for data submission.
 
-### Formats and data models
+### Data content
 
 <table>
   <tr>
-   <td><strong>Data format</strong>
+   <td><strong>Content</strong>
    </td>
-   <td><strong>Terminology</strong>
+   <td><strong>Details</strong>
    </td>
-   <td><strong>Data models</strong>
+   <td><strong>Data types</strong>
    </td>
   </tr>
   <tr>
@@ -160,45 +180,19 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 |CC50|Half maximal Cytotoxic Concentration|
 
 ## Further reading:
-- the Inchi recipe
+- [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
+- [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)
+
 
 ## Authors:
-<table>
-  <tr>
-   <td>Name
-   </td>
-   <td>Affiliation
-   </td>
-   <td>orcid
-   </td>
-   <td> CrediT role
-   </td>
-  </tr>
-  <tr>
-   <td>Andrea Zaliani
-   </td>
-   <td>Fraunhofer ITMP Hamburg
-   </td>
-   <td><a href="https://orcid.org/0000-0002-1740-8390">0000-0002-1740-8390</a>
-   </td>
-   <td>Writing - Original Draft
-   </td>
-  </tr>
-  <tr>
-   <td>Fuqi
-   </td>
-   <td>EBI
-   </td>
-   <td><a href="http://europepmc.org/search?query=AUTHORID:%220000-0002-5923-3859%22&sortby=Date">0000-0002-5923-3859</a>
-   </td>
-   <td>Writing - Original Draft
-   </td>
-  </tr>
-</table>
-
+````{authors_fairplus}
+AndreaZaliani: Writing - Original Draft, Editing, Conceptualization
+Fuqi: Writing - Writing - Original Draft, Editing, Conceptualization
+Philippe: Writing - Review & Editing
+````
 
 
 ## Licence:
-
-[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
-
+````{license_fairplus}
+CC-BY-4.0
+```
