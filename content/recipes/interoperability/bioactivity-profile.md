@@ -2,14 +2,16 @@
 
 [TOC]
 ## Main objective
-This recipe shows how to prepare bioactivity data to meet the ChEMBL submission criteria, focusing on data formats, structures, and vocabularies. 
+This recipe shows how to prepare `bioactivity data`, defined as the measurable effects of a chemical compound in a biological system monitored with a specific assay, to meet the ChEMBL submission criteria, focusing on data formats, structures, and vocabularies. 
+This recipe is meant to address the Findability and Interoperability of such type of data.
 
 ## Graphical overview of the Recipe FAIRification Objectives
 ![](https://i.imgur.com/qNuKXQ4.png)
-
+## Introduction
 Bioactivity data, together with chemical data and omics data, can be used to search for new hits. FAIR bioactivity data guides the improvements of pharmacokinetic properties of compounds and the identification of drug targets. Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and pharmacokinetic study information.
-
-The [Minimum information about a bioactive entity (MIABE)](https://www.nature.com/articles/nrd3503) standards recommend attributes, formats and vocabularies for the reuse of such datasets. Public bioactivity data archives, such as [ChEMBL](https://www.ebi.ac.uk/chembl/), [PubChem](https://pubchem.ncbi.nlm.nih.gov/), and [ECBD](https://ecbd.eu/) also have their own requirements for data submission.
+Among the FAIR principles, the `use of  rich metadata` (F2. data are described with rich metadata and R1. meta(data) are richly described with a plurality of accurate and relevant attributes) and the reliance on `community standards`  (R1.3. (meta)data meet domain-relevant community standards) are essential.
+In the context of `bioactivity data`, we have on the one hand the [Minimum information about a bioactive entity (MIABE)](https://www.nature.com/articles/nrd3503) checklist recommend attributes, formats and vocabularies for the reuse of such datasets. 
+On the other hand, public bioactivity data archives, such as [ChEMBL](https://www.ebi.ac.uk/chembl/), [PubChem](https://pubchem.ncbi.nlm.nih.gov/), and [ECBD](https://ecbd.eu/) also have their own requirements for data submission.
 
 ### Formats and data models
 
@@ -89,13 +91,15 @@ The [Minimum information about a bioactive entity (MIABE)](https://www.nature.co
 </table>
 
 ### Minimum metadata 
-**Minimum metadata** set constitutes metadata items that should ideally be systematically supplied with any experimental data. The minimum dataset includes three parts: 
 
-1. Assay and project references (mainly literature link and protocol or summary)
+A **minimum metadata set** represents a collection of metadata items that should ideally be systematically supplied to support interpretation by humans or machines within a specific domain, for instance bioactivity experimental data. The minimum metadata set includes three parts: 
+
+1. Assay and project bibliographic references (mainly links to literature and protocol or summary)
     - Project level metadata
-    - Common sample level metadata such as species, tissue, cell type etc.
-2. Compounds reference with structures
+    - Common sample-level metadata, such as species, tissue, cell type and so on.
+2. Chemical compounds reference, including chemical structures
 3. Assay results 
+
 ![](https://i.imgur.com/aU2KYV1.png)
 
 For ChEMBL submission, molecular structures and assay description as depicted in the scheme above are suggested as essential metadata. This is a subset of the following [schema](https://www.ebi.ac.uk/chembl/db_schema). In case mutated cell lines and/or mutated target proteins have been used in the assay, additional desirable metadata should be added in the proper group. MIABE also lists detailed bioassay description requirements.
