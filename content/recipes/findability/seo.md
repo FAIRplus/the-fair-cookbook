@@ -72,13 +72,13 @@ Search engine index pages based on their content, as identified by web crawlers.
 ### Schema.org Vocabulary
 
 A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
-Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation
+Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation.
 
 ### How does Schema.org work in practice:
 
 The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). `JSON-LD` is widely recommended as the most suitable approach.
 
-Below is a regular plain vanilla HTML page providing information about an scientific joournal article.
+Below is a regular plain vanilla HTML page providing information about an scientific journal article.
 
 ```HTML
 <!-- A list of the issues for a single volume of a given periodical. -->
@@ -175,7 +175,7 @@ Google Structured Data Testing Tool.
 `Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschemas` focuses on making Schema.org more relevant for the life sciences community by providing:
 
 1. `types` for life sciences entities such as chemicals, genes, and proteins.
-1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable
+1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable.
 
 The [main profiles](https://bioschemas.org/profiles/) currently specified by the `Bioschemas` organisation are as follows:
 
