@@ -95,8 +95,8 @@ To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
 
 1. a collection of FAIR indicators, selected from the list described above.
 2. a globally unique, persistent, resolveable identifier for the resource to be evaluated.
-3. a title for the evaluation. Enforce a naming convention to make future searches easiers as these evaluations are saved.
-4. a person identifier in the form of an ORCID
+3. a title for the evaluation. Enforce a naming convention to make future searches easier as these evaluations are saved.
+4. a person identifier in the form of an ORCID.
 
 <!-- ![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 
@@ -156,7 +156,7 @@ apparently a problem with identifier persistence if using DOI, which are URN rat
 
 ## Conclusion
 
-Using software tool to assess FAIR maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
+Using software tools to assess FAIR maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
 Furthermore, only automation is able to cope with the scale and volumes of assets to evaluate.
 The software-based evaluations are repeatable, reproducible and free of bias (other than those that may be related to definitions of the FAIR indicators themselves).
 These are also more demanding in terms of technical implementation and knowledge.
