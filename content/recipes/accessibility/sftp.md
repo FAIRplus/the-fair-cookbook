@@ -31,9 +31,6 @@
 ````
 `````
 
-
-
-
 ## Abstract
 
 Collaborating teams at two or more organizations often need to transfer and share data files. There are a number of ways to share files, all with various degrees of ease and usability.
@@ -156,40 +153,40 @@ h.	Now you have to make sure you open port 22 in your network to the outside wor
 
 Data could be transferred to/from SFTP server using multiple clients. Here there are some examples:
 
-FileZilla
+##### FileZilla
 
-OS: Windows, Mac OS, Linux
+**OS:** Windows, Mac OS, Linux
 
-License: Free Software (GPL)
+**License:** Free Software (GPL)
 
-Pros:
-- easy to setup;
-- portable version available (no installation, i.e. administrator rights, required)
-- cross-platform
+> **Pros**:
+> - easy to setup;
+> - portable version available (no installation, i.e. administrator rights, required)
+> - cross-platform
 
-Cons:
--	By default installs adware
-
-
-WinSCP
-
-OS: Windows
-
-License: Free Software (GPL)
-
-Pros:
-- easy to setup;
-- portable version available (no installation, i.e. administrator rights, required)
-
-Cons:
--	Only Windows
--	No x64 version (as of 07.07.2020)
+> **Cons**:
+> -	By default installs adware
 
 
-Other SFTP clients: Cyberduck, MonstaFTP (Free and paid) and many others
+##### WinSCP
 
-```
-{admonition} tip:
+**OS:** Windows
+
+**License:** Free Software (GPL)
+
+> **Pros:**
+> - easy to setup;
+> - portable version available (no installation, i.e. administrator rights, required)
+
+> **Cons:**
+> -	Only Windows
+> -	No x64 version (as of 07.07.2020)
+
+
+##### Other SFTP clients: Cyberduck, MonstaFTP (Free and paid) and many others
+
+```{admonition} Tip
+:class: tip
 The portable version of WinSCP can be preconfigured so that a user only needs to enter the password, without requiring knowledge of host names, protocols, ports or user name!
 ```
 
@@ -209,42 +206,46 @@ It is a good practice to ensure that file transfer is correct and complete.
 
 Sender should calculate checksum (md5, sha512, etc) for every file:
 
-```bash
+```python
 bash: md5sum * > md5sum.txt
 ```
 or
-```bash
+```python
 bash: sha512sum * > sha512sum.txt
 ```
 
 Windows: CertUtil -hashfile FILENAME MD5
+
 Recipient compares checksums:
-```bash
-Bash: md5sum -c md5sum.txt *
+```code
+bash: md5sum -c md5sum.txt *
 ```
 or
 
-```bash
-Bash: sha512sum -c sha512sum.txt *
+```code
+bash: sha512sum -c sha512sum.txt *
 ```
 
 
-The sender can use the sender organization’s HPC node to
-- (1)	set up a shell which runs in the background,
+The sender can use the sender organization’s HPC node to:
+- (1)	set up a shell which runs in the background.
 - (2)	launch the FTP session in the same local network as the server and directory of files to be transferred.
-- (3)	Transfer the files via the filesystem on both the local and remote system
+- (3)	Transfer the files via the filesystem on both the local and remote system.
 
 For example, an IMI collaboration project requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
-The process involved copying the files over to a secure FTP server, the receiving institution copies to their server, then the sender deletes the files on the FTP server.
+The process involves:
+  i.  copying the files over to a secure FTP server
+  ii. the receiving institution copies to their server, 
+  iii. then the sender deletes the files on the FTP server.
 
-Pros and cons:
-- Double copy process with an intermediate space
-- Cumbersome
-- Works for mid size data (Gigabyte range)
-- It works in most cases, especially if the file transfer is "one-time" batch of files.
-- It can be considered a good short term or “one-off” solution.
+> **Pros and cons:**
+> - Double copy process with an intermediate space
+> - Cumbersome
+> - Works for mid size data (Gigabyte range)
+> - It works in most cases, especially if the file transfer is "one-time" batch of files.
+> - It can be considered a good short term or “one-off” solution.
 
-This common process is described in a number of publically available resources, examples in the Further Reading section below.
+This common process is described in a number of publically available resources, examples in the `What to read next?` section below.
 
 
 ## Possible improvements from the state of this recipe:
@@ -256,15 +257,23 @@ This common process is described in a number of publically available resources, 
 ## Conclusion
 
 This content is a simple guideline for using a well known secure file transfer protocol.
-More modern solutions and tools exist for fast transfer or mounting of remote drive. For example [Rclone](https://rclone.org) is one such tool, allowing interaction with cloud storage solutions from a wide array of providers.
+
+More modern solutions and tools exist for fast transfer or mounting of remote drive.
+
+For example [Rclone](https://rclone.org) is one such tool, allowing interaction with cloud storage solutions from a wide array of providers.
 
 ### What to read next?
 
 > [Wikipedia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+>
 > [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
+>
 > [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
+>
 > [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
+>
 > {ref}`fcb-access-aspera`
+>
 > [Rclone](https://rclone.org)
 
 
@@ -272,18 +281,24 @@ More modern solutions and tools exist for fast transfer or mounting of remote dr
 
 ## Authors
 
+`````{dropdown} **Reference**
+
 ````{authors_fairplus}
 Dorothy: Writing - Original Draft
 Vitaly: Writing - Original Draft
 Ulrich: Writing - Original Draft
 Philippe: Writing - Review & Editing
 ````
-
+`````
 
 ---
 
 ## License
 
+`````{dropdown} **Reference**
+
 ````{license_fairplus}
 CC-BY-4.0
 ````
+`````
+

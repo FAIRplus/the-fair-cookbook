@@ -17,6 +17,44 @@
 ```` 
 
 
+
+`````{margin}
+````{panels}
+:column: col-4
+:card: border-2
+:header: bg-primary pa_green
+
+```{image} ./../../../../../../_static/images/logo/FAIR-Toolkit-logo.png
+:height: 25px
+:class: bg-primary yellow
+:name: FAIRtoolkit_logo
+```
+^^^ 
+[More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+
+````
+`````
+
+`````{margin}
+````{panels}
+:column: col-4
+:card: border-2
+:header: bg-primary pa_dark
+
+```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+:height: 25px
+:class: bg-primary white
+:name: FAIRtoolkit_logo
+```
+^^^ 
+
+[More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+
+````
+`````
+
+
+
 The **FAIR principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
 > F1. (Meta)data are assigned a globally unique and persistent identifier
 > 
@@ -242,13 +280,13 @@ In other words, in order to create globally unique identifiers `for the web`, it
 
 This results in URLs of the following form
 
-```
+````bash
           userinfo       host      port
           ┌──┴───┐ ┌──────┴──────┐ ┌┴┐
   https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
   └─┬─┘   └───────────┬──────────────┘└───────┬───────┘ └───────────┬─────────────┘ └┬┘
   scheme          authority                  path                 query           fragment
-```
+````
 source:[https://en.wikipedia.org/wiki/Uniform_Resource_Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 
 

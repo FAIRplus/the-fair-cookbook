@@ -886,6 +886,22 @@ div.topbar {
     background: #2a2e3d !important;
 }
 
+.pa_dark {
+    background: #003a53 !important;
+}
+
+.white {
+    background: #fefefe !important;
+}
+
+.pa_green {
+    background: #00998b !important;
+}
+
+.lightgray {
+    background: #a4a6a7 !important;
+}
+
 /* ################################################## */
 /**                  RECIPE CARDS                    **/
 /* ################################################## */

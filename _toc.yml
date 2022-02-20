@@ -7,6 +7,8 @@
     # - file: content/recipes/introduction
     - file: content/recipes/introduction/FAIR-cookbook-audience
       title: Introduction
+    - file: content/recipes/introduction/brief-FAIR-principles
+      title: What are the FAIR principles?
     - file: content/recipes/introduction/priorization
       title: Selecting projects for FAIRification  # FCB055
     - file: content/recipes/introduction/FAIRplus-values
