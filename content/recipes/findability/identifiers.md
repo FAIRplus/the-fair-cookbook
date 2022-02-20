@@ -428,6 +428,14 @@ This is very useful for including unambiguous, global identifiers in scientific 
     > N2T can store more than one "target" (forwarding link) for an identifier, as well as any kind or amount of metadata (descriptive information)
         > N2T.net is also a "meta-resolver". In collaboration with identifiers.org, it recognizes over 600 well-known identifier types and knows where their respective servers are. Failing to find forwarding information for a specific individual identifier, it uses the identifier's type to look for an overall target rule.
 
+
+
+* [Bioregistry](https://bioregistry.io/)
+
+    > [Bioregistry](https://bioregistry.io/) is a **Resolution Service**, developed in a [GitHub repository](https://github.com/biopragmatics/bioregistry). Like Identifiers.org it has a registry, but also a registry of registries, and it imports data from Identifiers.org and Name-to-Thing but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be [registered via GitHub issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL https://bioregistry.io/chebi:138488 resolves to the ChEBI page https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488. Bioregistry provides an [API to query the registry](https://bioregistry.io/apidocs/) itself.
+
+
+
 *For more details, see the [Identifier Resolution Services recipe](fcb-infra-idres).*
 
 ---
