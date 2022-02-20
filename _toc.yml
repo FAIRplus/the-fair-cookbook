@@ -108,6 +108,11 @@
             title: File format validation, FASTQ example #FCB030
           - file: content/recipes/interoperability/ETL-tools
             title: Extraction, transformation, and loading process #FCB031
+          - file: content/recipes/interoperability/VCF-to-FHIR-conversion
+            title: Clinical Genetic Information as FHIR JSON
+            sections:
+              - file: content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb
+                title: Converting VCF file to FHIR JSON
 
     - file: content/recipes/reusability
       title: Reusability
