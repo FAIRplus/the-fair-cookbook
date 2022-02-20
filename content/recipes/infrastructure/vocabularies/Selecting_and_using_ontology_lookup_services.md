@@ -1,53 +1,18 @@
-# Selection and exploitation of Ontology Lookup Services
+# Selecting an ontology lookup service
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 20 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Survey / Review
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p>
-<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrator</p>
-<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> Procurement Officer</p>
+````{panels_fairplus}
+:identifier_text: FCB004
+:identifier_link: 'https://w3id.org/faircookbook/FCB004'
+:difficulty_level: 1
+:recipe_type: survey_review
+:reading_time_minutes: 20
+:intended_audience: data_manager, data_scientist, terminology_manager, system_administrator, procurement_officer
+:has_executable_code: nope
+:recipe_name: Selecting an ontology lookup service
 ````
-
-___
 
 ## Table of Contents
 
@@ -111,7 +76,7 @@ This section provides guidelines and suggestions on how to select and leverage a
 
     The support of an active community of developers and users is a key aspect to take into account when choosing an ontology lookup service. This could be quantified by evaluating several factors of an ontology lookup service including: (i) availability of mailing or support lists; (ii) for open-source projects, using metrics such as the star-rating, the number of forks and followers and the frequency of commits of the project on the code-sharing platform used (e.g. GitHub); (iii) size of the community of users of the ontology lookup service (e.g. how many followers on social media accounts, how many clients advertised on the Website).
 
-## 3. **Key Selection Criteria**
+## 3. Key Selection Criteria
 
 The above questions have highlighted 20 factors which should be taken into account when choosing a service. These factors can be categorised into 3 groups; **ontology information, functionality** and **interfaces**, and include;
 
@@ -793,22 +758,22 @@ Twitter OBOFoundry account: 220 followers
   </tr>
 </table>
 
-___
+---
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Francesco Ronzano| [UPF]() |[]() | Writing - Original Draft|
-| Ashni Sedani| [GSK]() |[]() | Writing - Original Draft|
-| Kurt Dauth|[Boehringer Ingelheim](https://www.boehringer-ingelheim.com/) | | Writing - Original Draft|
-| Philippe Rocca-Serra |  [University of Oxford, Data Readiness Group](https://datareadiness.eng.ox.ac.uk/)| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Reviewer |
+````{authors_fairplus}
+Francesco: Writing - Original Draft
+Ashni: Writing - Original Draft
+Kurt: Writing - Original Draft
+Philippe: Writing - Review & Editing
+````
 
 
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

@@ -1,56 +1,25 @@
-# How to deploy a terminology service - EBI Ontology Lookup Service
+(fcb-infra-localols)=
+
+
+# Deploying the EBI OLS
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 20 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p>
-<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrator </p>
+````{panels_fairplus}
+:identifier_text: FCB005
+:identifier_link: 'https://w3id.org/faircookbook/FCB005'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 20
+:intended_audience: data_manager, data_scientist, terminology_manager, system_administrator
+:has_executable_code: yeah
+:recipe_name: Deploying the EBI OLS 
 ````
-
-___
 
 ## Main Objectives
 
-This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service(OLS) on local machines. This demonstrates the workflow for deploying open source ontology service softwares in-house. 
+This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service (OLS) on local machines. This demonstrates the workflow for deploying open source ontology service softwares in-house. 
 
 ## Introduction
 With an increasing need for ontology infrastructure to improve the interoperability of information-based R&D activities, many pharmaceutical companies seek ontology management solutions and ontology services. Compared with developing local ontology services from scratch, reusing and redeveloping open-source ontology services save the time and cost. __Recipe 3.1__ identifies public open-source ontology services. In this recipe, we use the [Ontology Lookup Service](https://www.ebi.ac.uk/ols/index) to demonstrate the workflow of deploying public ontology services in-house.
@@ -104,7 +73,7 @@ graph LR
 - [OLS Docker image](https://github.com/EBISPOT/OLS-docker) 
 - [Ontology metadata in OBO foundry](https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config)
 
-## Step-by-step guide:
+## Step-by-step guide
 
 ### 1. Install dependencies
 
@@ -185,6 +154,7 @@ wget -O - https://www.ebi.ac.uk/ols/api/ols-config\?ids\=efo,aero >> ols-config.
 For ontologies that are in the OBO foundry, the metadata can also be downloaded from the [OBO Foundry GitHub repository](https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config). Additional formatting is required for metadata downloaded from the OBO foundry.
 
 ### 3. Set up OLS in the local environment 
+
 >For Windows machines, run the Docker Desktop app to start the Docker daemon.
 
 ```shell
@@ -245,6 +215,7 @@ sudo docker run -d -p 8080:8080 --name=OLS -t ols
 ```
 
 ### Troubleshooting
+
 - Loading multiple ontologies from disk
     
 If more than one ontologies are going to be loaded into OLS from disk, the `Dockerfile` needs modifications before building the Docker container:
@@ -282,18 +253,18 @@ To customize the local OLS user interface, for example, adding corporate logos, 
 
 ## Authors
 
-| Name | Affiliation  | ORCID | CRediT role  |
-|--|--|--|--|
-|Fuqi Xu|[EMBL-EBI](https://www.ebi.ac.uk/)|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Writing - Original Draft|
-|Eva Martin | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Writing - Original Draft |
-Emiliano Reynares|[Boehringer Ingelheim](https://www.boehringer-ingelheim.com/)|[0000-0002-5109-3716](https://orcid.org/0000-0002-5109-3716)|Reviewing|
-| Philippe Rocca-Serra |  [University of Oxford, Data Readiness Group](https://datareadiness.eng.ox.ac.uk/)| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Reviewing |
+````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Eva: Writing - Original Draft
+Emiliano: Writing - Review & Editing
+Philippe: Writing - Review & Editing
+````
 
 
 ---
 
-## License:
+## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

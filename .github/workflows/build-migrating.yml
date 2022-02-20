@@ -16,6 +16,8 @@ jobs:
         ref: migrating
     - name: Setup Python
       uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
     - name: Record Python version
       run: python -V
     - name: Install jupyter-book==0.10.2 and fixed dependencies
@@ -46,7 +48,7 @@ jobs:
             imagesize==1.2.0
             importlib-metadata==4.0.1
             ipykernel==5.5.3
-            ipython==7.22.0
+            ipython==7.31.1
             ipython-genutils==0.2.0
             ipywidgets==7.6.3
             jedi==0.18.0
@@ -73,7 +75,7 @@ jobs:
             myst-parser==0.13.6
             nbclient==0.5.3
             nbconvert==5.6.1
-            nbdime==3.0.0
+            nbdime==3.1.1
             nbformat==5.1.3
             nest-asyncio==1.5.1
             nested-lookup==0.2.22
@@ -112,12 +114,13 @@ jobs:
             sphinx-thebe==0.0.8
             sphinx-togglebutton==0.2.3
             sphinxcontrib-applehelp==1.0.2
-            sphinxcontrib-bibtex==2.1.4
+            sphinxcontrib-bibtex==2.1.0
             sphinxcontrib-devhelp==1.0.2
             sphinxcontrib-htmlhelp==1.0.3
             sphinxcontrib-jsmath==1.0.1
             sphinxcontrib-qthelp==1.0.3
             sphinxcontrib-serializinghtml==1.1.4
+            sphinx-sitemap==2.2.0
             SQLAlchemy==1.3.24
             terminado==0.9.4
             testpath==0.4.4
@@ -136,21 +139,32 @@ jobs:
     - name: Install mermaid via npm
       run: npm install @mermaid-js/mermaid-cli
     - name: Record mermaid version 
-      run: ./node_modules/.bin/mmdc -V
+      run: ./node_modules/.bin/mmdc -V 
     - name: Search all mermaid files and record a list of them
       run: find . -iname "*.mmd" > list_of_all_mermaid_files 
     - name: Print the list of mermaid files 
       run: cat list_of_all_mermaid_files
-    - name: Convert all mermaid files to png
+    - name: Convert all mermaid files to various output formats -- standard png
       run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.png ; done
+    - name: Convert all mermaid files to various output formats -- hi-res png
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 1600 -o $line.hi-res.png ; done
+    - name: Convert all mermaid files to various output formats -- lo-res png
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.lo-res.png ; done
+    - name: Convert all mermaid files to various output formats -- svg
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -o $line.svg ; done
     - name: Cleanup of intermediates
       run: rm list_of_all_mermaid_files
     - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
     - name: Build jupyter-book
-      run: jupyter-book build .
-    - name: Record current directory structure
-      run: ls -alhR 
+      run: jupyter-book build . 2>&1 | tee ./build.log
+    - name: Let the build fail if there are errors in the build of the jupyter_book 
+      run: grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1
+      shell: bash {0}
+    - name: Clean up build log (remove escape characters)
+      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
+    - name: Check for important warnings
+      run: ./scripts/extract-warnings.sh 
     - name: Install SSH Client 🔑
       uses: webfactory/ssh-agent@v0.4.1
       with:

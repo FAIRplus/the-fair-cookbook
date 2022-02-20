@@ -1,52 +1,18 @@
-# Technical & architectural selection criteria of ontology lookup services
+# Portals and lookup services
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 20 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Technical Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p>
-<p> <i class="fa fa-terminal fa-lg" style="color:#7e0038;"></i> System Administrator</p>
-````
-
-___
+````{panels_fairplus}
+:identifier_text: FCB003
+:identifier_link: 'https://w3id.org/faircookbook/FCB003'
+:difficulty_level: 2
+:recipe_type: technical_guidance
+:reading_time_minutes: 20
+:intended_audience: data_manager, data_scientist, terminology_manager, system_administrator  
+:has_executable_code: nope
+:recipe_name: Portals and lookup services
+```` 
 
 ## Main Objective
 
@@ -505,7 +471,7 @@ Figure 10: Typical Low Level Support Questions
 
 ## Available common open source software
 
-### [EMBL-EBI Ontology Lookup Service]() (Ontology Portal Tool)
+### EMBL-EBI Ontology Lookup Service<!-- TODO add a link to corresponding document --> (Ontology Portal Tool)
 
 #### Overview
 
@@ -528,7 +494,7 @@ It is a repository for biomedical ontologies that aims to provide a single point
 7. **`Ontology Language`**: Custom translation of OBO and OWL 2 languages to the Neo4J graph model.
 8. **`Programming Language`**: Java.
 
-### [NCBO Bioportal Virtual Appliance]() (Ontology Portal Tool)
+### NCBO Bioportal Virtual Appliance<!-- TODO add a link to corresponding document --> (Ontology Portal Tool)
 
 #### Overview
 
@@ -592,7 +558,7 @@ It is an Open Data Platform for Linked Data, which provides an open implementa
 7. **`Ontology Language`**: OWL serialized as RDF/RDFS triples. 
 8. **`Programming Language`**: Java.
 
-### [European Data Portal]() (Open Data Platform Tool)
+### European Data Portal<!-- TODO add a link to corresponding document --> (Open Data Platform Tool)
 
 #### Overview
 
@@ -625,26 +591,25 @@ Determining which infrastructure to rely on for service terminologies and ontolo
 To complement this recipe, reading the following chapter is highly encouraged.
 
 > ### What should I read next?
-> * [Key functional requirements to consider when selecting an ontology service?]()]
-> * [How to select an ontology?]()
-> * [How to build an application ontology?]()
-
-
+> * Key functional requirements to consider when selecting an ontology service?<!-- TODO add a link to corresponding document -->]
+> * How to select an ontology?<!-- TODO add a link to corresponding document -->
+> * How to build an application ontology?<!-- TODO add a link to corresponding document -->
 
 
 ---
 
-### Authors
+## Authors
 
-| Name               | Affiliation            | ORCID             | CRediT Role          |
-|--------------------|------------------------|------------------:|--------------:|
-|Kurt Dauth          | Boehringer Ingelheim   |[]() |Original Author|
-|Emiliano Reynares   | Boehringer Ingelheim   |[0000-0002-5109-3716](https://orcid.org/orcid.org/0000-0002-5109-3716) | Author|
-|Petros Papadopoulos | Heriot-Watt University |[0000-0002-8110-7576](https://orcid.org/orcid.org/0000-0002-8110-7576) | Author|
-|Karsten Quast       | Boehringer Ingelheim   |[0000-0003-3922-5701](https://orcid.org/orcid.org/0000-0003-3922-5701) | Reviewer|
-|Philippe Rocca-Serra      | University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Reviewer|
+````{authors_fairplus}
+Kurt: Writing - Original Draft
+Emiliano: Writing - Original Draft
+Petros: Writing - Review & Editing
+Karsten: Writing - Review & Editing
+Philippe: Writing - Review & Editing
+````
+
 
 ---
-### Licence
+## Licence
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

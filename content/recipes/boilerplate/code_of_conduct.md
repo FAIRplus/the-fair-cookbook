@@ -1,7 +1,9 @@
 (fcb-misc-coc)=
-# FAIR Cookbook Code of Conduct
+# Code of conduct
++++
+---
 
-FAIR Cookbook  is an engaged and respectful community made up of people
+FAIR Cookbook is an engaged and respectful community made up of people
 from all over the world. Your involvement helps us to further our
 mission and to create an open platform that serves a broad range of
 communities, from research and education, to journalism, industry and
@@ -32,10 +34,7 @@ work, there is urgency or risk to someone, nobody is intervening publicly and
 you don't feel comfortable speaking in public, etc.  For these or other
 reasons, structured follow-up may be necessary and here we provide the means
 for that: we welcome reports by emailing
-[*conduct@faircookbook.org*](mailto:conduct@faircookbook.org) or by filling out [this
-form](https://goo.gl/forms/SOME_FORM). For more details please see our
-Reporting Guidelines (for online and
-in-person contexts).
+[*fairplus-cookbook@elixir-europe.org*](mailto:fairplus-cookbook@elixir-europe.org).
 
 This code applies equally to founders, developers, mentors and new community
 members, in all spaces managed by FAIR Cookbook. This
@@ -43,11 +42,6 @@ includes the mailing lists, our GitHub organizations, our chat rooms, in-person
 events, and any other forums created by the project team. In addition,
 violations of this code outside these spaces may affect a person's ability to
 participate within them.
-
-By embracing the following principles, guidelines and actions to follow or
-avoid, you will help us make Jupyter a welcoming and productive community. Feel
-free to contact the Code of Conduct Committee at
-[*conduct@jupyter.org*](mailto:conduct@faircookbook.org) with any questions.
 
 
 1. **Be friendly and patient**.
@@ -102,6 +96,7 @@ free to contact the Code of Conduct Committee at
    and telling someone that you are sorry is an act of empathy that doesn’t
    automatically imply an admission of guilt.
 
+---
 
 ## Reporting
 
@@ -110,10 +105,7 @@ a timely manner. Code of conduct violations reduce the value of the community
 for everyone and we take them seriously.
 
 You can file a report by emailing
-[*conduct@faircookbook.org*](mailto:conduct@faircookbook.org) or by filing out
-this form. For more details or
-information on reporting in-person at an event, please see our Reporting
-Guidelines.
+[*fairplus-cookbook@elixir-europe.org*](mailto:fairplus-cookbook@elixir-europe.org).
 
 The online form gives you the option to keep your report anonymous or request
 that we follow up with you directly. While we cannot follow up on an anonymous
@@ -128,7 +120,7 @@ Manual*.
 Original text courtesy of the [*Speak
 Up!*](http://web.archive.org/web/20141109123859/http://speakup.io/coc.html)
 and [*Django*](https://www.djangoproject.com/conduct) Projects,
-modified by FAIR Cookbook .  We are grateful to those projects for contributing these materials under open licensing terms for us to easily reuse.
+modified by FAIR Cookbook.  We are grateful to those projects for contributing these materials under open licensing terms for us to easily reuse.
 
 All content on this page is licensed under a [*Creative Commons
 Attribution*](http://creativecommons.org/licenses/by/4.0/) license.

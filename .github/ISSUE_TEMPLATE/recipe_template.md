@@ -36,7 +36,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 
 ```
 
-----
+---
 
 ````{panels}
 :container: container-lg pb-3
@@ -88,7 +88,7 @@ The main purpose of this recipe is:
 
 > Provid a summary statement about the purpose of the recipe.
 
-___
+---
 
 
 ## Graphical Overview
@@ -134,7 +134,7 @@ classDiagram
 ````
 
 
-___
+---
 
 
 ## Requirements
@@ -165,7 +165,7 @@ The table is therefore structure to identify the capability, the **initial** mat
 this section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
 ```
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -187,7 +187,7 @@ Ideally, authors should mark up the information using either EDAM Ontology URI o
 | [FASTQ](https://fairsharing.org/FAIRsharing.r2ts5t)  | [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)  | [SRA XML](https://fairsharing.org/FAIRsharing.q72e3w)  |
 | [DICOM](https://fairsharing.org/FAIRsharing.b7z8by)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [OMOP](https://fairsharing.org/FAIRsharing.qk984b)  |
 
-___
+---
 
 ## Main Content
 
@@ -270,7 +270,7 @@ graph TD;
 ````
 
 
-___
+---
 
 ## Conclusion
 
@@ -282,20 +282,20 @@ ___
 > * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
 > * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. {ref}`fcb-intro-fair-principles`
 
-___
+
+---
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  | specific contribution |
-| :------------- | :------------- | :------------- |:------------- |:------------- |
-| First Name Last Name |  Organization, Country| [0000-0000-0000-0000](https://orcid.org/orcid.org/0000-0000-0000-0000) | Writing - Original Draft | original format |
-
-___
+````{authors_fairplus}
+YourName: YourContribution
+````
 
 
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

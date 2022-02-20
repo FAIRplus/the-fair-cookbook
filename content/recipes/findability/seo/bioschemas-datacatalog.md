@@ -1,51 +1,19 @@
 (fcb-find-bs-catalog)=
-# Findability: Data Catalog Markup
+# Data catalogue markup
+
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">R X.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 10 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
-````
-
-___
-
+````{panels_fairplus}
+:identifier_text: FCB013
+:identifier_link: 'https://w3id.org/faircookbook/FCB013'
+:difficulty_level: 2
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist 
+:has_executable_code: nope
+:recipe_name: Data catalogue markup
+```` 
 
 ## Main Objectives
 
@@ -53,7 +21,7 @@ The main purpose of this recipe is:
 
 > To embed `Schema.org` markup in a web page that publishes multiple datasets in a single page.
 
-___
+---
 
 
 ## Graphical Overview
@@ -69,7 +37,7 @@ The process of annotating a data catalog webpage with bioschema markup for Searc
 ```
 
 
-----
+---
 
 ## Capability & Maturity Table
 
@@ -78,7 +46,7 @@ The process of annotating a data catalog webpage with bioschema markup for Searc
 | Findability | minimal | repeatable |
 | Interoperability | minimal |  |
 
-----
+---
 
 ## Method
 
@@ -263,7 +231,7 @@ Your site should now include DataCatalog markup.
 
 Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -280,27 +248,29 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 | [HTML](http://edamontology.org/format_2331) | |  |
 
-___
+---
 
-## Authors:
+## Authors
 
-| Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
-| :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
-| Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
-| Leyla Garcia | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
+````{authors_fairplus}
+Alasdair: Writing - Original Draft
+Leyla: Writing - Review & Editing
+Philippe: Writing - Review & Editing
+````
 
-___
 
-## Footnotes:
+---
+
+## Footnotes
 
 <a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
 
-___
+---
 
-## License:
+## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 
 

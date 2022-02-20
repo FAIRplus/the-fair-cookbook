@@ -1,51 +1,19 @@
 (fcb-find-seo)=
-# Findability: Search Engine Optimization
+# Search engine optimization
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">R X.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 10 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
-````
-
----
+````{panels_fairplus}
+:identifier_text: FCB010
+:identifier_link: 'https://w3id.org/faircookbook/FCB010'
+:difficulty_level: 2
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist  
+:has_executable_code: nope
+:recipe_name: Search engine optimization
+```` 
 
 ## Main Objectives
 
@@ -54,11 +22,11 @@ The main purpose of this recipe is:
 > to describe what `search engine optimization` is and show how to implement markup with the [`Schema.org`](http://schema.org) vocabulary, and [`Bioschemas`](https://bioschemas.org) extension, to improve page discovery and visibility by web page indexers.
 
 There are sub-recipes for embedding search engine optimization into specific web pages about a specific type or resource:
-- [Data catalog](https://fair-cookbook.github.io/_build/html/content/recipes/seo/bioschemas-datacatalog.html)
-- [Dataset](https://fair-cookbook.github.io/_build/html/content/recipes/seo/bioschemas-dataset.html)
-- [Resource specific page](https://fair-cookbook.github.io/_build/html/content/recipes/seo/bioschemas-data-page.html) (Gene, Molecular Entity, Protein)
+- [Data catalog](fcb-find-bs-catalog)
+- [Dataset](fcb-find-bs-dataset)
+- [Resource specific page](fcb-find-bs-data) (Gene, Molecular Entity, Protein)
 
-___
+---
 
 
 ## Graphical Overview
@@ -77,7 +45,7 @@ alt: Search Engine Optimization
 Search Engine Optimization.
 ```
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -104,13 +72,13 @@ Search engine index pages based on their content, as identified by web crawlers.
 ### Schema.org Vocabulary
 
 A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
-Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation
+Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation.
 
 ### How does Schema.org work in practice:
 
 The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). `JSON-LD` is widely recommended as the most suitable approach.
 
-Below is a regular plain vanilla HTML page providing information about an scientific joournal article.
+Below is a regular plain vanilla HTML page providing information about an scientific journal article.
 
 ```HTML
 <!-- A list of the issues for a single volume of a given periodical. -->
@@ -185,14 +153,14 @@ Now, we are presenting the same information augmented with the JSON-LD file usin
 Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the [`Google Structured Data Testing Tool`](https://search.google.com/structured-data/testing-tool)
 <!-- 
-![](https://i.imgur.com/Ge8gsWL.png =650px)
+![](/images/Ge8gsWL.png =650px)
 
 <div style="display: flex; justify-content: center;">
-<img src="https://i.imgur.com/Ge8gsWL.png" width="650" style="border:1px solid black"/>
+<img src="/images/Ge8gsWL.png" width="650" style="border:1px solid black"/>
 </div> -->
 
 
-```{figure} https://i.imgur.com/Ge8gsWL.png
+```{figure} /images/Ge8gsWL.png
 ---
 height: 580px
 name: Google Structured Data Testing Tool
@@ -207,7 +175,7 @@ Google Structured Data Testing Tool.
 `Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschemas` focuses on making Schema.org more relevant for the life sciences community by providing:
 
 1. `types` for life sciences entities such as chemicals, genes, and proteins.
-1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable
+1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable.
 
 The [main profiles](https://bioschemas.org/profiles/) currently specified by the `Bioschemas` organisation are as follows:
 
@@ -220,7 +188,7 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 * [Sample](https://bioschemas.org/profiles/Sample)
 * [Taxon](https://bioschemas.org/profiles/Taxon)
 
-----
+---
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |
@@ -237,23 +205,23 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 |  [JSON-LD](http://edamontology.org/format_3749)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](http://edamontology.org/data_2353)  |
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 
-___
+---
 
 
 
-## Authors:
+## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-| Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Contributions to text |
-| Leyla Garcia | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
-
-___
+````{authors_fairplus}
+Philippe: Writing - Original Draft, Conceptualization
+Alasdair: Writing - Original Draft, Writing - Review & Editing
+Leyla: Writing - Review & Editing
+````
 
 
-## License:
+---
 
-This page is released under the Creative Commons 4.0 BY license.
+## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

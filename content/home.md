@@ -1,26 +1,38 @@
 # FAIR Cookbook
++++
+---
 
-## The official site
+**Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and Reusable (FAIR).**
+
+---
+
+<!-- ## The official site -->
 
 <!-- Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
 
 🛢️🚧 **This project is still in early phase and this is work in progress** 🚧🛢️
  -->
----
 
+
+<!--
 ## The FAIR Cookbook overview
 
 * The FAIR Cookbook is an activity of the [FAIRplus project](https://fairplus-project.eu/) funded by the [Innovative Medicine Initiative (IMI)](https://www.imi.europa.eu)  
- <img src="/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).
+ <img src="/the-fair-cookbook/_static/images/logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).
 * The FAIR Cookbook is a project aiming at collating protocols for making data FAIR and provide examples of IMI dataset FAIRification.
 * The FAIR Cookbook is open source and licensed under CC-BY-4.0
 * The FAIR Cookbook is written using Markdown and deployed using `jupyter-book`
 * the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as `FAIR recipes`, and supporting code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly (quarterly) in order to reflect the progress made by the project and the various working groups, which bring together `academic` and `industry` partners.
+-->
 
+## Turning FAIR into practice
 
-## Persona-based content browsing
+The [FAIR Principles](https://doi.org/10.1038/sdata.2016.18) put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are aspirational and generic. The FAIR Cookbook guides *`researchers`* and *`data stewards`* of the Life Science domain in their FAIRification journey; and also provides *`policy makers`* and *`trainers`* with practical examples to recommend in their guidance and use in their educational material. 
+
 <!-- 
-🚧 **This section is under development** 🚧 -->
+## Persona-based content browsing
+
+🚧 **This section is under development** 🚧 
 
 
 ````{panels}
@@ -51,6 +63,8 @@
 <p>Head of Clinical Research</p>
 
 ````
+-->
+
 
 <!-- 
 <div class="row">
@@ -60,37 +74,37 @@
 	  	<i class="fab fa-github-alt fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Helmut</b></h4>
 	    <p>Architect & Engineer</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Jean</b></h4>
 	    <p>Data Scientist</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-check-circle fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Fulvia</b></h4>
 	    <p>Data Curator</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-user-md fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>Wang Ju</b></h4>
 	    <p>Head of Clinical Research</p>
-	  </div>
-	</div>
-  </div>
-</div>
+	  </span>
+	</span>
+  </span>
+</span>
  -->
 <!-- 
 <div class="cards-container">
@@ -100,17 +114,17 @@
 	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
 	    <h4><b>Helmut Entwikgung</b></h4>
 	    <p color="#300861">Architect & Engineer</p>
-      </div>
+      </span>
       <div class="back">
 	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
 	    <h4 color="white"><b>Wang Ju Fong</b></h4>
-	    <div>
+	    <span>
  		<img class="imageez" src="./images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" />
-		</div>
+		</span>
 	    <p color="#300861">Head of Clinical Research</p>
-      </div>
-    </div>
-</div>
+      </span>
+    </span>
+</span>
 
 <div class="cards-container">
    <div class="card-container">
@@ -119,161 +133,201 @@
 	  	<i class="fa fa-github-alt fa-2x" style="color:#300861;"></i>
 	    <h4><b>Helmut Entwikgung</b></h4>
 	    <p>Architect & Engineer</p>
-      </div>
+      </span>
       <div class="back">
 	  	<i class="fa fa-user-md fa-2x" style="color:#300861;"></i>
 	    <h4 color="#300861"><b>Wang Ju Fong</b></h4>
 	    <p color="#300861">Head of Clinical Research</p>
-      </div>
-    </div>
-  </div>
-</div> -->
+      </span>
+    </span>
+  </span>
+</span> -->
 
 
 
 
-## Content and learning objectives
+## Learning objectives
 
-Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges. 
+The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and indicators of FAIRness, the maturity model, the technologies, the tools and the standards available, as well as the skills required, and the challenges, to achieve and improve FAIRness.
+
+<!-- Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.  -->
 
 
-## The FAIRification Process
+<!-- ## The FAIRification Process
 
 ````{panels}
 :container: container-lg pb-3
 :column: col-lg-12 p-2
 :card: rounded
-<div>
+<span>
  <img class="imageez" src="../_static/images/userjourney.svg" alt="drawing" style="width:1100px;" border="1" color="black" align="top" onclick="window.open('../_static/images/userjourney.svg', '_blank');" />
+</span>
+````
+ -->
+
+
+## The recipes
+
+
+The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and level of difficulty. The FAIR Cookbook is a ‘live resource’; recipes are added and improved, iteratively, in an open manner, therefore bear with us if several sections are work in progress!
+Below there are links to some key recipes, click on them to explore their content; otherwise use the main menu on the left hand side to browse all the current recipes. 
+
+````{panels}
+:container: container-xl
+:column: col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12
+:card: FAIRcard
+
+<h4 class="my-0 d-table text--primary" id="findablePrinciple">
+    <span class="bigLetter text--orange"> F </span> 
+    <span class="cardTitle"> Findability </span>
+</h4>
+^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
+
+<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
+
+{ref}`fcb-find-identifiers`
+</div>
+
+<div class="recipeItem"> <i class="fa fa-search mr-2 text--primary"></i>
+
+{ref}`fcb-find-seo` 
+</div>
+ 
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Findability](fcb-find)    
+</div>
+
+---
+
+<h4 class="my-0 d-table text--primary" id="accessiblePrinciple">
+    <span class="bigLetter text--purple-light"> A </span> 
+    <span class="cardTitle"> Accessibility </span>
+</h4>
+^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
+
+<div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
+
+{ref}`fcb-sftp`
+</div>
+<div class="recipeItem"> <i class="fa fa-cloud mr-2 text--primary"></i>
+
+{ref}`fcb-access-aspera`
+</div>
+
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Accessibility](fcb-access)    
+</div>
+
+---
+
+<h4 class="my-0 d-table text--primary" id="interoperablePrinciple">
+    <span class="bigLetter text--purple-dark"> I </span> 
+    <span class="cardTitle"> Interoperability </span>
+</h4>
+^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
+<div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
+
+{ref}`fcb-selecting-ontologies`
+</div>
+
+<div class="recipeItem"> <i class="fa fa-puzzle-piece mr-2 text--primary"></i>
+
+{ref}`fcb-interop-metadataprofile`
+</div>
+
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Interoperability](fcb-interoperability)    
+</div>
+
+---
+
+<h4 class="my-0 d-table text--primary" id="reusablePrinciple">
+    <span class="bigLetter text--red"> R </span> 
+    <span class="cardTitle"> Reusability </span>
+</h4>
+^^^
+<div class="recipeLabel"> Exemplar recipes: </div>
+
+<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
+
+{ref}`rr-licensing-data`
+</div>
+
+<div class="recipeItem"> <i class="fa fa-recycle mr-2 text--primary"></i>
+
+{ref}`fcb-reusability-data_use`
+</div>
+
+<hr>
+<div class="recipeItem mb-2">
+    <i class="fa fa-arrow-right mr-2 text--primary"></i>
+    
+[More about Reusability](fcb-reusability)    
 </div>
 ````
 
-
-
-## The FAIR principles & key recipes: 
-
-<!-- 🚧 **This section is under development** 🚧 -->
-
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
-<h4><b>FINDABILITY</b></h4>
-^^^
-{ref}`fcb-find`
-
----
-
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-<h4><b>Search Engine Optimitization</b></h4>
-^^^
-{ref}`fcb-find-seo`
----
-
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-<h4><b>Open Archive Deposition</b></h4>
-^^^
-{ref}`fcb-find-zenodo`
----
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-<h4><b>Identifiers</b></h4>
-^^^
-{ref}`fcb-find-identifiers`
-````
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
-<h4><b>ACCESSIBILITY</b></h4>
-^^^
-{ref}`fcb-access`
----
-
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-<h4><b>Data Access Agreements</b></h4>
-^^^
-{ref}`fcb-access-anonymizing`
----
-
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-<h4><b>Access Protocols: sftp</b></h4>
-^^^
-{ref}`fcb-access-sftp`
----
-
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-<h4><b>Access Protocols: Aspera</b></h4>
-^^^
-{ref}`fcb-access-aspera`
-````
-
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
----
-
-<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
-<h4><b>INTEROPERABILITY</b></h4>
-^^^
-{ref}`fcb-interoperability`
----
-
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
-<h4><b>Metadata profile</b></h4>
-^^^
-{ref}`fcb-interop-metadataprofile`
----
-
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
-<h4><b>Ontology building</b></h4>
-^^^
-{ref}`fcb-interop-ontorobot`
----
-
-<i class="fa ffa-cog fa-lg" style="color:#300861;"></i>
-<h4><b>Vocabular selection</b></h4>
-^^^
-{ref}`fcb-interop-selectonto`
-````
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
----
-
-<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
-<h4><b>REUSABILITY</b></h4>
-^^^
-{ref}`fcb-reusability`
----
-
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-<h4><b>Data use conditions</b></h4>
-^^^
-{ref}`fcb-reusability-data_use`
----
-
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-<h4><b>License selection</b></h4>
-^^^
-{ref}`rr-licensing-data`
----
-
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-<h4><b>Community Standards</b></h4>
-^^^
-{ref}`fcb-reusability-community-std`
-````
-
+<hr>
+<div class="container-lg miniCards">
+    <div class="row">
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="infrastructure">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-toolbox text--purple-dark"></i> 
+                        </span> 
+                        <span class="cardTitle">
+                      
+[Infrastructure](fcb-infrastructure)
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="examples">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-book text--purple-dark"></i> 
+                        </span> 
+                        <span class="cardTitle">
+                      
+[Applied Examples](fcb-applied-examples)
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="assessments">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-tasks text--purple-dark"></i> 
+                        </span> 
+                        <span class="cardTitle">
+                      
+[Assessment](fcb-assess)
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- 
 
@@ -284,18 +338,18 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
 	    <h4><b>FINDABILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
 	    <h4><b>Search Engine Optimitization</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
@@ -303,20 +357,20 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<br/>
 	    <h4><b>Open Archive Deposition</b></h4>
 	    <p>TODO: add text here </p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
 	    <h4><b>Annotation</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
- </div>
-</div>
-<div> 
+	  </span>
+	</span>
+ </span>
+</span>
+<span> 
 <div class="row">
 
   <div class="column">
@@ -325,37 +379,37 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
 	    <h4><b>ACCESSIBILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
 	    <h4><b>Access condition</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
 	    <h4><b>License selection</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
 	    <h4><b>Standards</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
-</div>
+	  </span>
+	</span>
+  </span>
+</span>
 
 <div class="row">
 
@@ -365,37 +419,37 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
 	    <h4><b>INTEROPERABILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
 	    <h4><b>Metadata Standards</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
 	    <h4><b>Open Syntax</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
 	    <h4><b>Ontology</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
- </div>
+	  </span>
+	</span>
+  </span>
+ </span>
 
 <div class="row">
 
@@ -405,37 +459,37 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 	  	<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
 	    <h4><b>REUSABILITY</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
 	    <h4><b>Standards</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>  
+	  </span>
+	</span>
+  </span>  
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
 	    <h4><b>Ontology</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
+	  </span>
+	</span>
+  </span>
   <div class="column">
 	<div class="card">
 	  <div class="container">
 	  	<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
 	    <h4><b>SMART API</b></h4>
 	    <p>TODO: add text here</p>
-	  </div>
-	</div>
-  </div>
-</div>
+	  </span>
+	</span>
+  </span>
+</span>
  
  -->
 
@@ -443,105 +497,28 @@ Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR princip
 
 
 
-## Development Roadmap
 
-The FAIRcookbook development process currently operates on a quarterly release cycle. Each cycle sees 2 `scrums` where specific `use cases` or `themes` are chosen and task forces assigned. The outcome of these efforts are new `FAIRification protocols`, or `FAIR recipes` which, after review, are integrated to the main FAIR Cookbook and tagged for release in the github main branch, which is used to build the web-friendly version of the book.
-
-
-☑️ FAIR Cookbook development roadmap Gantt chart for the year 2020
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-12 p-2
-:card: rounded
-
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ2FudHRcblx0dGl0bGUgRkFJUiBDb29rYm9vayBEZXZlbG9wbWVudCBSb2FkbWFwIGFuZCBQcm9qZWN0ZWQgUmVsZWFzZSBDeWNsZXNcblx0ZGF0ZUZvcm1hdCAgWVlZWS1NTS1ERFxuXG5cdHNlY3Rpb24gSW5pdGlhbCBEcmFmdFxuICAgIGYyZiBIaW54dG9uICA6YTAsIDIwMjAtMDEtMjcsIDNkXG4gIFx0c2NydW0gMSAgICAgIDphZnRlciBhMCwgOTBkXG5cdFxuICBzZWN0aW9uIFNwcmluZyAyMDIwIFJlbGVhc2VcbiAgICBmMmYgQmFyY2Vsb25hICA6YTEsIDIwMjAtMDQtMjgsIDNkXG4gICAgc2NydW0gMiAgICAgICAgOmFmdGVyIGExLCA5MGRcblxuICBzZWN0aW9uIFN1bW1lciAyMDIwIFJlbGVhc2VcbiAgICBmMmYgVXRyZWNodDogYTIsIDIwMjAtMDctMjgsIDNkXG4gICAgc2NydW0gMyAgICAgICA6IGFmdGVyIGEyLCA5MGRcblxuICBzZWN0aW9uIEZhbGwgMjAyMDIgUmVsZWFzZVxuXHQgIGYyZiBNYW5jaGVzdGVyPyAgIDphMywgMjAyMC0xMC0yOCwgM2RcbiAgICBzY3J1bSA0ICAgICAgIDogYWZ0ZXIgYTMsIDkwZFxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
-````
-
-
-☑️  The envisioned table of content for the  FAIR Cookbook can be found [here](https://docs.google.com/spreadsheets/d/13B2aLm5ZXFUwAu6DlcL7soWL8yzX6juR4ijgUpzIsv4/edit?usp=sharing) 
-This Google Document is publicly available in `view mode`, and with `edit mode` for all FAIRplus members.
-
-___
+---
 
 <!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
 
 
-## Meet the developers:
+## Contributors
 
-* The FAIR Cookbook development currently coordinated by: 
- 
-   - [Philippe Rocca-Serra](https://orcid.org/0000-0001-9853-5668) (University of Oxford)
-   - [Susanna-Assunta Sansone](https://orcid.org/0000-0001-5306-5690) (University of Oxford)
-   - [Andrea Splendiani](https://orcid.org/0000-0002-3201-9617) (Novartis)
-   - [Robert Giessman](https://orcid.org/0000-0002-0254-1500) (Bayer AG)
-
-
-
-* The FAIR Cookbook content was contributed by the following FAIRplus Consortium Members:
-
-| Name                       | Affiliation | Name                           | Affiliation |
-|:----------------------------|:-------------|:--------------------------------|-------------:|
-| Chuang Kee Ong             | AZ          | Ibrahim Emam                   | ICL         |
-| Colin Wood                 | AZ          | Francesco Ronzano              | IMIM        |
-| Ola Engkvist               | AZ          | Laura Furlong                  | IMIM        |
-| Ratnesh Sahay              | AZ          | Herman Van Vlijmen             | Janssen     |
-| David Henderson            | Bayer       | Jean-Marc Neefs                | Janssen     |
-| Robert Giessmann           | Bayer       | Paul Peeters                   | Janssen     |
-| Kurt Dauth                 | BI          | Rudi Verbeeck                  | Janssen     |
-| Karsten Quast              | Boehringer  | Scott Lusher                   | Janssen     |
-| Emiliano Reynares          | Boehringer  | Derek Marren                   | Lilly       |
-| Eva Navarrete              | BSC         | Andrea Splendiani              | Novartis    |
-| Salvador Capella Gutierrez | BSC	       | Dorothy Reilly                 | Novartis    |
-| Hannah Hurst               | EMBL-EBI    | Nick Lynch                     | PHACTS      |
-| Fuqi Xu                    | EMBL-EBI    | Vitaly Sedlyarov               | RESOLUTE    |
-| Melanie Courtot            | EMBL-EBI    | Ulrich Goldmann                | RESOLUTE    |
-| Tony Burdett               | EMBL-EBI    | Manuela Pruess                 | SIB         |
-| Andrea Zaliani             | Fraunhofer  | Mark Ibberson                  | SIB         |
-| Andreas Pippow             | Fraunhofer  | Vassilios Ioannidis            | SIB         |
-| Franziska Kroh             | Fraunhofer  | Danielle Welter                | UL          |
-| Gesa Witt                  | Fraunhofer  | Venkata P. Satagopam           | UL          |
-| Manfred Kohler             | Fraunhofer  | Wei Gu                         | UL          |
-| Oya Deniz Beyan            | Fraunhofer  | Chris Evelo                    | UM          |
-| Philip Gribbon             | Fraunhofer  | Egon Willighagen               | UM          |
-| Ashni Sedani               | GSK         | Nuno (Ryan) Silva Nunes        | UM          |
-| Femi Akintobi              | GSK         | Carole Goble                   | UNIMAN      |
-| George Papadotas           | GSK         | Ebtisam Alharbi                | UNIMAN      |
-| Peter Woollard             | GSK         | Nick Juty                      | UNIMAN      |
-| Alasdair J G Gray          | HWU         | Dominique Batista              | UOXF        |
-| Petros Papadopoulos        | HWU         | Philippe Rocca-Serra           | UOXF        |
-| Ilaria Maresi              | HYVE        | Susanna-Assunta Sansone        | UOXF        |
-| Jolanda Strubel            | HYVE        | Alejandra Delfin Rossaro       | UPS         |
-| Emma Vos                   | HYVE        | Anne Cambon-Thomsen            | UPS         |
-
+The FAIR Cookbook is developed by a thriving [community of Life Science professionals](fcb-community), in the academia and the industry sectors, including members of the ELIXIR community. Funded by the [IMI FAIRplus project](https://fairplus-project.eu/), a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to participate, join us and [contribute](fcb-help), or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org)
 
 
 
 ---
 
-## Technology stack
+## Licence
 
-The `FAIR Cookbook` is built using [jupyter-book](https://jupyterbook.org/intro.html), following the practice used by the Alan Turing's Institute Book of Data Science.
+All content of the FAIR Cookbook is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. 
 
-* **[github](https://github.com)** is used to version control and hosting
-* **[Markdown](https://guides.github.com/features/mastering-markdown/)** is used for the write-up
-* **[HackMD](https://hackmd.io)** is used as Markdown Editor thanks to its integration with `github` and its [`browser extensions`](https://hackmd.io/s/hackmd-it)
-* **[jupyter notebook](https://jupyter.org/)** can be used to provide executable code
-* **[binder](https://mybinder.org)** is enabled which allows in web execution of any jupyter notebook distributed with the `FAIR Cookbook`
-* **[mermaid](https://mermaid-js.github.io/mermaid/#/)** javascript library is used to produce flowcharts, Gantt charts and pie charts used in the book.
-<!--* **[netlify]()** is being tested for web hosting and deployment -->
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
 
-* **Jekyll Themes** provide the style for the web friendly version. The name of this theme is saved in the Jekyll `_config.yml` configuration file found in [repository settings](https://github.com/fair-cookbook/the-fair-cookbook/settings).
+## How to cite it
 
-___
+The FAIR Cookbook: a deliverable of the [FAIRplus project](https://fairplus-project.eu/) (grant agreement 802750), funded by the [IMI programme](https://www.imi.europa.eu), a private-public partnership that receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. 
 
-## Support or Contact
-
-Having troubles? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or [contact support](mailto:fairplus-cookbook@elixir-europe.org) and we’ll help you sort it out.
-
-___
-
-## Acknowledgements
-
-The FAIR Cookbook is produced thanks to `Jupyter Book`.
 

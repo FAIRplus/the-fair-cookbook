@@ -1,16 +1,12 @@
 (fcb-assess)=
-# Assessing FAIRness and FAIR compliance
+# Assessment
 
-This Chapter is dedicated to FAIR Evaluation and FAIR assessment processes.
+This chapter is dedicated to the services, tools, and indicators necessary for the assessment or the evaluation of data against the FAIR Principles, which are aspirational. 
 
-We will therefore cover topics such as:
+This is a nascent area and there are a number of manual questionnaires, checklists as well as automated tests, many listed [here](https://fairassist.org), which help users understand how to achieve a state of FAIRness, and how this can be measured and improved. 
 
+Browse existing recipes, and bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner.
 
-1. Using and Developping FAIR Indicators 
-2. Carrying out FAIR assessments manually:
-3. Automatic Assessment with FAIREvaluator
-4. Automatic Assessment with FAIRShake
+If you want to contribute follow the {ref}`help <fcb-help>` provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
-5. FAIRNess and Data Readiness
-6. Maintaining and Improving FAIRness
-
+--

@@ -1,10 +1,9 @@
- #######################################################################################
+#######################################################################################
 # Book settings
 title                       : "" # The title of the book. Will be placed in the left navbar.
-author                      : The FAIRplus project members  # The author of the book
-copyright                   : "2020 (CC-BY 4.0)"  # Copyright year to be placed in the footer
+author                      : ""  # The author of the book
 logo                        : "./_static/cookbook-logo-small.png"  # A path to the book logo
-exclude_patterns            : [.github/*, README.md, venv/*, node_modules/* ]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : [.github/*, README.md, venv/*, node_modules/*, _content_not_in_toc/* ]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
@@ -26,26 +25,48 @@ html:
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   extra_footer              :   # Will be displayed underneath the footer.
     <script>mermaid.init();</script>
-    <div class="row_footer">
-    This project has received funding from the <a href="https://www.imi.europa.eu/">Innovative Medicines Initiative</a> 
-    2 Joint Undertaking under grant agreement No 802750. This Joint Undertaking receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. This communication reflects the views of the authors and neither IMI nor the European Union, EFPIA or any Associated Partners are liable for any use that may be made of the information contained herein.
+    <div class="container-lg mt-3">
+      <div class="row">
+        <div class="col-xl-3">
+            <div class="footerImages">
+              <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a>
+              <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a>
+              <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a>
+            </div>
+            <div class="mb-3"> Grant agreement 802750 </div>
+        </div>
+        <div class="col-xl-6 d-flex">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 d-flex" style="justify-content:center">
+                <ul>
+                  <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
+                  <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
+                </ul>
+              </div>
+              <div class="col-6 d-flex" style="justify-content:center">
+                <ul>
+                  <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li>
+                  <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3">
+          <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a>
+          <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
+        </div>
+      </div>
     </div>
-
-    <div class="row_footer">
-    This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a>
-    </div>
-
-    <div class="row_footer">
-    <div class="column" style="center"><a href="https://europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/eu-flag-recolored-fairplus.png" height="20" alt="EU flag" style="float:center""></a></div>
-    <div class="column"><a href="https://www.imi.europa.eu/"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/imi-logo-fairplus-v1.png" height="20" alt="IMI logo" style="float:center""></a></div>
-    <div class="column"><a href="https://efpia.eu"><img src="https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/migrating/_static/images/logo/efpia-logo-fairplus2.png" height="20" alt="EFPIA logo" style="float:center""></a></div>
-    <br/>
+    <div class="row_footer my-3">
+      The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license.
     </div>
   google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
   comments:
-    hypothesis: true
-    utterances:
-      repo: "FAIRplus/the-fair-cookbook"
+    hypothesis: false
+    # utterances:
+    #   repo: "FAIRplus/the-fair-cookbook"
 #######################################################################################
 # Launch button settings
 launch_buttons:
@@ -61,22 +82,30 @@ repository:
   branch                    : migrating  # Which branch of the repository should be used when creating links
 
 #######################################################################################
-# Advanced and power-user settings  
+# Advanced and power-user settings 
+# sphinx:
+#   config:
+#     html_baseurl: 'https://path_to_book/'
+#   extra_extensions:
+#     - sphinx_sitemap 
 sphinx:
-  extra_extensions          :   # A list of extra extensions to load by Sphinx.
    # - sphinx_tabs.tabs
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
     html_extra_path         : ["_inject_after_build"]
+    html_baseurl            : 'https://fairplus.github.io/the-fair-cookbook'
+  extra_extensions:   # A list of extra extensions to load by Sphinx.
+    - sphinx_sitemap
   local_extensions:
+    authors_fairplus: _ext/
+    figure_fairplus: _ext/
+    license_fairplus: _ext/
     panels_fairplus: _ext/
 
 parse:
   myst_url_schemes: [ mailto, http, https, ftp ]
 
 bibtex_bibfiles:
-   - ./_bibliography/fairbookreferences.bib
-   - ./_bibliography/bibliography-bridgedb.bib
-   - ./_bibliography/bibliography-identifier-mapping.bib
-   - ./_bibliography/bibliography-identifier-mapping2.bib
+   - ./_bibliography/bibliography-faircookbook.bib
+
 
 bibtex_reference_style: author_year

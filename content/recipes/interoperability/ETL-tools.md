@@ -1,22 +1,23 @@
 (fcb-interop-etl)=
 
-# Tools for Data Extraction, Transformation, and Loading (ETL)
+# Extraction, transformation, and loading process
 
 ````{panels_fairplus}
-:identifier_text: http://w3id.org/faircookbook/FCB_TBA
-:identifier_link: http://w3id.org/faircookbook/FCB_TBA
+:identifier_text: FCB031
+:identifier_link: 'https://w3id.org/faircookbook/FCB031'
 :difficulty_level: 5
 :recipe_type: survey_review
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist  
 :has_executable_code: nope
+:recipe_name: Extraction, transformation, and loading process
 ```` 
 
 
 ## Main Objectives
 
 This recipe identifies tools for `data extraction`, `transformation`, and `loading` (ETL). 
-ETL is the process of collecting data from one source to persist it in another designated system in which the data is represented differently [1].
+ETL is the process of collecting data from one source to persist it in another designated system in which the data is represented differently {footcite}`etl_wiki`.
 A common use case in data science is to build a scalable and portable ETL system to extract data from various sources, transform said-data into a cohesive dataset, and load the data to an internal or public database to support data exploration.
 
 This recipe aims to serve as a start point for designing ETL workflows, rather than provide a comprehensive list covering all available tools.
@@ -25,7 +26,7 @@ This recipe aims to serve as a start point for designing ETL workflows, rather t
 
 ```{warning} 
 The content in these tables was generated in March 2021.
-For an updated contents, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
+For updated content, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
 To provide feedback on this content or report issues, please do so via the [FAIR Cookbook github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
 ```
 
@@ -46,159 +47,29 @@ Overview of key aspects in ETL process
 
 The table below is an overview of ETL tools identified.
 Details of each tools are also provided in this doc.
-For ETL tools for RDF data model, please check recipe {ref}`fcb-interop-etl2rdf-tools` 
+For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fcb-interop-etl2rdf-tools` -->.
 
-
-<table>
-  <tr>
-   <td><strong><a href=#Data-query-and-retrieval>Data query and retrieval</a></strong>
-   </td>
-   <td><strong><a href=#Data-transformation>Data transformation</a></strong>
-   </td>
-   <td><strong><a href=#Data-deposition>Data deposition</a></strong>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://www.tamr.com/">TAMR</a>
-   </td>
-   <td><a href="https://www.cdisc.org/standards/foundational/sdtm">SDTM</a>
-   </td>
-   <td><a href="https://www.project-redcap.org/">REDCap</a>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/google-research/bert">Bert</a>
-   </td>
-   <td><a href="https://www.trifacta.com">TriFacta</a>
-   </td>
-   <td><a href="https://github.com/transmart">TransMART</a>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://www.scibite.com/platform/termite/">Termite</a>
-   </td>
-   <td><a href="https://www.ohdsi.org/data-standardization/the-common-data-model/">OMOP</a>
-   </td>
-   <td><a href="https://www.stardog.com/">Stardog</a>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://www.oracle.com/uk/industries/life-sciences/clinical-research/">Oracle clinical</a>
-   </td>
-   <td><a href="https://www.collibra.com/">Collibra</a>
-   </td>
-   <td><a href="https://www.postgresql.org/">Postgresql</a>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/geoboost2">GeoBoost2</a>
-   </td>
-   <td><a href="https://hadoop.apache.org/">Apache Hadoop</a>
-   </td>
-   <td><a href="https://bio.tools/chemotion">Chemotion</a>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/martview">MartView</a>
-   </td>
-   <td><a href="https://www.talend.com/products/integrate-data/">Talend</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/CLOBNET">CLOBNET</a>
-   </td>
-   <td><a href="https://www.informatica.com/">Informatica</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/PDBUSQLExtractor">PDBUSQLExtractor</a>
-   </td>
-   <td><a href="https://github.com/FAIRDataTeam/OpenRefine-metadata-extension">OpenRefine-metadata-extension</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/repo">repo</a>
-   </td>
-   <td><a href="https://bio.tools/discover">DISQOVER</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/snpator">SNPator</a>
-   </td>
-   <td><a href="https://bio.tools/Query_Tabular">Query Tabular</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/PyGMQL">PyGMQL</a>
-   </td>
-   <td><a href="https://bio.tools/ms-data-core-api">ms-data-core-api</a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/plantpis">PlantPIs</a>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/baget">BAGET</a>
-   </td>
-   <td><a href=""></a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/ncbi_resources">NCBI Resources</a>
-   </td>
-   <td><a href=""></a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/cpad">CPAD</a>
-   </td>
-   <td><a href=""></a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/GenomicsDB">GenomicsDB</a>
-   </td>
-   <td><a href=""></a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://bio.tools/epivizFileServer">Epiviz File Server</a></a>
-   </td>
-   <td><a href=""></a>
-   </td>
-   <td>
-   </td>
-  </tr>
-  
-</table>
+|                          |                               |                 |
+|--------------------------|-------------------------------|-----------------|
+| Data query and retrieval | Data transformation           | Data deposition |
+| TAMR                     | SDTM                          | REDCap          |
+| Bert                     | TriFacta                      | TransMART       |
+| Termite                  | OMOP                          | Stardog         |
+| Oracle clinical          | Collibra                      | Postgresql      |
+| GeoBoost2                | Apache Hadoop                 | Chemotion       |
+| MartView                 | Talend                        |                 |
+| CLOBNET                  | Informatica                   |                 |
+| PDBUSQLExtractor         | OpenRefine-metadata-extension |                 |
+| repo                     | DISQOVER                      |                 |
+| SNPator                  | Query Tabular                 |                 |
+| PyGMQL                   | ms-data-core-api              |                 |
+| PlantPIs                 |                               |                 |
+| BAGET                    |                               |                 |
+| NCBI Resources           |                               |                 |
+| CPAD                     |                               |                 |
 
 ```{warning} 
-The tools list below aims to provide an basic overview of what is there on the market. It is *not* a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+The tools list above aims to provide a basic overview of what is available on the market. It is *not* a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
 ```
 
 
@@ -217,7 +88,7 @@ The tools list below aims to provide an basic overview of what is there on the m
 | Interoperability | minimal | automated |
 
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -229,7 +100,7 @@ The tools list below aims to provide an basic overview of what is there on the m
 | [data submission, annotation and curation](http://edamontology.org/topic_0219)| |
 
 
-___
+---
 
 ## Operations
 
@@ -335,35 +206,37 @@ To show how some of these tools may be used, the following related recipes provi
 
 
 1. {ref}`fcb-interop-fastqval`
-2. TODO: OMOP ETL [link]()
-3. TODO: RDF ETL [link]()
-
-___
-
+   
+<!--
+2. OMOP ETL [link]( TODO link to recipe) (*in prepartion*)
+3. RDF ETL [link]( TODO link to recipe)  (*in prepartion*)
+-->
+---
 
 ## References
 
-1. https://en.wikipedia.org/wiki/Extract,_transform,_load
+```{footbibliography}
+```
 
-___
-
+---
 
 ## Authors
 
-|Name|Affiliation|ORCID|Credit role|
-|---|--|--|--|
-|Fuqi Xu|EMBL-EBI|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Original draft|
-|Eva Martin|BSC|[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Original draft
-|Sukhi Singh|the Hyve|[]()|Tool curation|
-|Philippe Rocca-Serra |  Data Readiness Group, University of Oxford, UK| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Review|
+````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Eva: Writing - Original Draft
+Sukhi: Tool curation
+Philippe: Writing - Review & Editing
+````
 
-___
+
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 
 
 

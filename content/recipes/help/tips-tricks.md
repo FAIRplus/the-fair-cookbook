@@ -1,5 +1,5 @@
 (fcb-help-tips)=
-# Recipe Tips and Tricks 
+# Tips and tricks 
 
 
 ## Main Objectives
@@ -34,7 +34,7 @@ which should be rendered as this sign:
 
 ## 2. Styling Mermaid Flowchart:
 
-you can check the [mermaid documentation](https://mermaid-js.github.io/mermaid/#/examples?id=larger-flowchart-with-some-styling) 
+you can check the [mermaid documentation](https://mermaid-js.github.io/mermaid/#/examples) 
 
 We however provide some help with examples below
 
@@ -93,7 +93,7 @@ Formatting table can be a painful process.
 
 To cut on the hardship, simply using the following online [Markdown table generator](https://www.tablesgenerator.com/markdown_tables)
 
-![](https://i.imgur.com/Pek2BoQ.png)
+![](/images/Pek2BoQ.png)
 
 The component is intuitive to use and support copy and pate from say Excel for instance. Do the necessary tuning and then hit the `Generate` button to produce the Table in MarkDown format. 
 Then, click on the green 'copy to clipboard button', go back to your markdown editor or HackMD and paste.
@@ -104,8 +104,8 @@ job done!
 
 When using HackMD, images can be inserting using the common toolbar and these are uploaded to imgur and the markdown looks like this:
 
-```Markdown
-![](https://i.imgur.com/yI8TRNM.png)
+```bash
+![](/images/yI8TRNM.png)
 ```
 
 but sizing is not properly supported which leads to rendering issues.
@@ -114,7 +114,7 @@ To solve the issue, the `best` course of action is to use an HTML `div` tag, whi
 
 ```HTML
 <div> <img 
-src="https://i.imgur.com/yI8TRNM.png" 
+src="/images/yI8TRNM.png" 
 alt="drawing" 
 style="width:750px;" 
 border="1px solid black" 
@@ -125,7 +125,7 @@ align="top" />
 Adjust the `width` element to resize the image to something satisfying. 
 
 
-___
+---
 
 ## How to create workflow figures
 
@@ -139,18 +139,18 @@ graph LR;
     C -->|No| E[Vendor locked Data]
 ```
 
-___
+---
 
 
 
 ## Authors:
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft |
-| Susanna-Assunta Sansone |  University of Oxford, Data Readiness Group |[0000-0001-5306-5690](https://orcid.org/orcid.org/0000-0001-5306-5690) | Writing - Review & Editing, Funding acquisition | 
+| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft|
+| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition
 
-___
+---
 
 
 

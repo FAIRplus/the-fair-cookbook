@@ -1,54 +1,16 @@
-(fcb-interop-idmapping)=
+(fcb-identifier-mapping)=
+# Interlinking data from different sources
 
-# How to interlink data from different sources?
-
-+++
-<br/>
-
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Background Information
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigators </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-
-````
-
-___
+````{panels_fairplus}
+:identifier_text: FCB016
+:identifier_link: 'https://w3id.org/faircookbook/FCB016'
+:difficulty_level: 2
+:recipe_type: background_information
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:has_executable_code: nope
+:recipe_name: Interlinking data from different sources
+```` 
 
 
 ## Main Objectives
@@ -74,13 +36,12 @@ This recipe assumes that you are already familiar with identifiers and the minti
 This recipe will cover the topics highlighted in orange:
 
 
-```{figure} id-map-service-mermaid.png
+```{figure} identifier-mapping.md-figure1.mmd.png
 ---
-width: 800px
-name: Overview of key aspects in  Identifier Mapping
-alt: Overview of key aspects in  Identifier Mapping
+name: identifier-mapping-figure1
+alt: Overview of key aspects in Identifier Mapping
 ---
-Overview of key aspects in  Identifier Mapping
+Overview of key aspects in Identifier Mapping
 ```
 
 ---
@@ -93,7 +54,7 @@ Overview of key aspects in  Identifier Mapping
 | Interoperability | minimal | repeatable |
 | Identifier mapping ||repeatable|
 
-----
+---
 <!-- 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -121,23 +82,23 @@ Overview of key aspects in  Identifier Mapping
 
 Before diving into identifier mapping, it is important to understand the possible types of mappings that can be performed between entities.
 While initially we might think of mapping as simply linking identical entities in different databases/formats, sometimes related entities might also be of interest. 
-When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see {cite}`batchelor_scientic_nodate`). 
+When these mappings might only be interesting depending on the context in which data is being used, we run into a situation that has been described as "scientific lenses" (see {footcite}`batchelor_scientific_nodate`). 
 These lenses allow us to dynamically select which mappings to consider relevant and which to ignore.
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.
 
 Examples of types of mappings are:
-* **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds
-* **Ontology mapping**: this can either be 
-    * As a direct 1-to-1 mapping between equivalent terms in different ontologies
-    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {cite}`wang_concept_2010`.
+* **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds.
+* **Ontology mapping**: this can either be: 
+    * As a direct 1-to-1 mapping between equivalent terms in different ontologies.
+    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {footcite}.`wang_concept_2010`.
 * **Identifier mapping**: The focus of this recipe. This can either be:
-    * Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl)
-    * Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different)
-    * Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these)
-    * Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB)
+    * Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl).
+    * Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different).
+    * Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these).
+    * Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB).
 
 
-___
+---
 
 ## Identifier Mappings
 
@@ -149,7 +110,7 @@ To satisfy the Findability criteria F1, organisations must create identifiers fo
 
 Databases often contain data that exists in, or is closely related to, the content of other databases. For example, the genome database [Ensembl](http://ensembl.org/) contains data about genes that are related to entries in databases such as HUGO Gene Nomenclature Committee (https://www.genenames.org/) or [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/); or a database about drugs, e.g. [DrugBank](https://drugbank.com/), often contains details of the chemical substance that forms the drug which are also contained in chemical databases such as [ChEBI](https://www.ebi.ac.uk/chebi/) or [PubChem](https://pubchem.ncbi.nlm.nih.gov/). This results in a large number of unique identifiers notionally for the same concept. This large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. However, the databases often contain `cross-reference` links to other databases to represent these `equivalences`.
 
-The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see {cite}`batchelor_scientic_nodate` for more details).
+The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see {footcite}`batchelor_scientific_nodate` for more details).
 
 While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the [Human Protein Atlas](https://www.proteinatlas.org/) database reuses [Ensembl](https://www.ensembl.org/) identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data is already connected through the common identifier. However, this means that the Human Protein Atlas must ensure that their definition of the concept is exactly aligned with the Ensembl identifier for **all** application uses.
 
@@ -163,8 +124,8 @@ Depending on the nature of the data, there are different ways that equivalences 
 
 Some elements to take into consideration are:
 
-1. a **mapping predicate** taken from a well known ontology, e.g. `owl:sameAs` or `skos:narrower`
-2. the **evidence** behind the equivalence claims, e.g. a similarity score or the property on which the equivalence is based such as InChI Key for chemicals
+1. a **mapping predicate** taken from a well known ontology, e.g. `owl:sameAs` or `skos:narrower`.
+2. the **evidence** behind the equivalence claims, e.g. a similarity score or the property on which the equivalence is based such as InChI Key for chemicals.
 1. **audit trail information**, i.e. who, what, when, e.g. `agent X using mapping tool Y on YYYY-MM-DD`. PROV-O ontology could be used to support such statements.
 
 
@@ -176,11 +137,11 @@ There are several file format for exchanging identifier equivalences.
 
 ### Using Text File
 
-The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the verison of the datasets that were linked.
+The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the version of the datasets that were linked.
 
 The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.
 
-```tsv
+```bash
 ChEMBL_Target_Component	UniProt
 CHEMBL_TC_4803	A0ZX81
 CHEMBL_TC_2584	A1ZA98 
@@ -193,7 +154,7 @@ The OBOFoundry Simple Standard for Sharing Ontology Mappings ([SSSOM](https://gi
 
 The following TSV shows our example data as a mapping file using the minimal columns (correct as of November 2020). The information provided is less than the minimal VoID model above.
 
-```tsv
+```bash
 subject_id  predicate_id  object_id match_type
 chembl:CHEMBL_TC_4803 skos:exactMatch uniprot:A0ZX81  sio:database-cross-reference
 chembl:CHEMBL_TC_2584 skos:exactMatch uniprot:A1ZA98  sio:database-cross-reference
@@ -250,7 +211,7 @@ The following is an incomplete list of identifier mapping services.
 
 * [bridgedb.org](https://bridgedb.github.io/) 
 
-    > [BridgeDb](https://bridgedb.github.io/) {cite}`van_iersel_bridgedb_2010` is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
+    > [BridgeDb](https://bridgedb.github.io/) {footcite}`van_iersel_bridgedb_2010` is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.
     > 
     > It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following `curl` command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) `L` identifier `1234` for the `Human` gene [CCR5](https://www.ncbi.nlm.nih.gov/gene/1234) as a TSV file.
     >```bash
@@ -259,7 +220,7 @@ The following is an incomplete list of identifier mapping services.
     > * [BridgeDbR Tutorial](https://bioconductor.org/packages/release/bioc/vignettes/BridgeDbR/inst/doc/tutorial.html)
 
 * [UniChem](https://www.ebi.ac.uk/unichem/)
-    > [UniChem](https://www.ebi.ac.uk/unichem/) {cite}`chambers_unichem_2013` is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
+    > [UniChem](https://www.ebi.ac.uk/unichem/) {footcite}`chambers_unichem_2013` is a specialised identifier mapping service for chemical structures. For a chemical structure -- specified as an identifier, InChI, or InChI Key -- it will equivalent structures found in the [EMBL-EBI](https://www.ebi.ac.uk/) chemistry resources.
     > 
     > The following `curl` command retrieves the equivalent database identifiers for the ChEMBL identifier `CHEMBL12` [DIAZEPAM](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/) and returns the result as a JSON object.
     > ```bash
@@ -267,15 +228,15 @@ The following is an incomplete list of identifier mapping services.
     > ```
 
     > For more information including the available methods, see the [UniChem REST documentation](https://www.ebi.ac.uk/unichem/info/webservices).
-* [sameas.org](https://sameas.org/)
+* [sameas.org](http://sameas.org/)
   
-    > [sameas.org](https://sameas.org/) is a general purpose service that will return a set of equivalent URLs for a given URL. The equivalences are based on an incomplete set of `owl:sameAs` statements contained in data available on the web.
+    > [sameas.org](http://sameas.org/) is a general purpose service that will return a set of equivalent URLs for a given URL. The equivalences are based on an incomplete set of `owl:sameAs` statements contained in data available on the web.
     > 
     > The following `curl` command retrieves the equivalent URLs for EBI RDF Platform representation of ChEMBL [DIAZEPAM](https://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL12) as a JSON object.
     > ```bash
     > curl -iLH "Accept: application/json" "http://sameas.org/?uri=http://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL12"
     > ```
-    > Note that the coverage of sameas.org within the life sciences is very small.
+    > Note that the coverage of http://sameas.org within the life sciences is very small.
 
 
 <!-- * [Identifiers.org](https://identifiers.org/)
@@ -286,11 +247,11 @@ The following is an incomplete list of identifier mapping services.
 
 
 
-___
+---
 
 ## Conclusion
 
-> In this recipe, we have given an overview of the need to map between globally unique and persistent identifier from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
+> In this recipe, we have given an overview of the need to map between globally unique and persistent identifiers from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
 >
 > - The idea of data identifier equivalence;
 > - How to publish and exchange data identifier equivalences;
@@ -299,42 +260,47 @@ ___
 > Data identifier equivalences increase the interoperability between data sources since it allows data about an individual to be integrated together. 
 > As a minimum, you should aim to link your dataset's persistant data identifiers to one major dataset within the community. The [ELIXIR Core Data Resources](https://elixir-europe.org/platforms/data/core-data-resources) provide a useful list of major datasets within the life sciences.
 >
-> #### What should I read next?
+> ### What should I read next?
 > * {ref}`fcb-find-identifiers`
 > * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> * [Identifier Resolution Services](./findability/id-resolution.html)
-> * {ref}`fcb-interop-bridgedb`
+> * {ref}`fcb-bridgedb-recipe`
 > * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
 
+<!-- 
+    > * [Identifier Resolution Services](./findability/id-resolution.html) 
+-->
+
+---
 
 
-
-___
 
 ## References
 
-```{bibliography} idmapping/idmapping.bib
-
+```{footbibliography}
 ```
 
+<!-- ```{bibliography}
+:filter: docname in docnames
+:style: alpha
+``` -->
 
-___
+---
 
 ## Authors
 
-| Name             | Affiliation                        | orcid                                                        | CrediT role              | 
-|:---------------- |:---------------------------------- |:------------------------------------------------------------ |:------------------------ |
-| Alasdair Gray    | Heriot-Watt University / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
-| Chris Evelo      | Maastricht University              | [0000-0002-5301-3142](https://orcid.org/0000-0002-5301-3142) | Writing - Original Draft | 
-| Egon Willighagen | Maastricht University              | [0000-0001-7542-0286](https://orcid.org/0000-0001-7542-0286) | Writing - Original Draft | 
-| Lucas Giovanni Uberti-Bona Marin| Maastricht University|[0000-0001-6518-9535](https://orcid.org/0000-0001-6518-9535) | Writing – review & editing |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Review - corrections & editing |
+````{authors_fairplus}
+Alasdair: Writing - Original Draft
+Chris: Writing - Original Draft
+Egon: Writing - Original Draft
+Lucas: Writing - Review & Editing
+Philippe: Writing - Review & Editing
+````
 
 
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

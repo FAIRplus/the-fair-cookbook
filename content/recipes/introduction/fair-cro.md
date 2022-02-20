@@ -1,6 +1,6 @@
 (fcb-intro-cro)=
 
-# Practical Considerations for CROs to align with FAIR data principles
+# Practical Considerations for CROs to play FAIR
 
 
 ````{panels_fairplus}
@@ -11,6 +11,7 @@
 :reading_time_minutes: 15
 :intended_audience: procurement_officer, principal_investigator, data_curator, data_manager, data_scientist  
 :has_executable_code: nope
+:recipe_name: Practical Considerations for CROs to play FAIR
 ```` 
 
 
@@ -118,22 +119,29 @@ With this content, we intended to bring forward the experience gained *"from the
 ### What to read next
 
 >{ref}`fcb-assess`
-
+>
 >{ref}`fcb-assess-fair-fairshake`
-
->{ref}`fcb-assess-fair-fair-automatic-evaluator`
-
+>
+>{ref}`fcb-assess-fair-automatic-evaluator`
+>
 >{ref}`fcb-interop-etl`
-
->[FAIR+Q: FAIR data and data quality by the Pistoia Alliance]
+>
+>[FAIR+Q: FAIR data and data quality by the Pistoia Alliance](https://doi.org/10.1016/j.drudis.2022.01.006)
 
 ___
 ## Authors:
 
+````{authors_fairplus}
+Gabriel: Writing - Original Draft, Conceptualization
+Philippe: Writing - Review & Writing
+
+````
+<!--
 | Name | Affiliation  | orcid | CrediT role  |
 | :------------- | :------------- | :------------- |:------------- |
 | Gabriel N Backiananthan |  Novartis, USA | [0000-000X-XXXX-XXXX](https://orcid.org/0000-000X-XXXX-XXXX) | Writing - Original Draft |
 | Philippe Rocca-Serra | Data Readiness Group, University of Oxford, UK| [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) | Review, Writing |
+-->
 
 
 ___
@@ -141,4 +149,6 @@ ___
 
 ## License:
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

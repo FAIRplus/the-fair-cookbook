@@ -1,52 +1,19 @@
 (fcb-interop-fastqval)=
-# File format validation, an example with FASTQ files
+# File format validation, FASTQ example
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-````
-
----
+````{panels_fairplus}
+:identifier_text: FCB030
+:identifier_link: 'https://w3id.org/faircookbook/FCB030'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:has_executable_code: yeah
+:recipe_name: File format validation, FASTQ example
+```` 
 
 ## Main Objectives
 
@@ -71,7 +38,7 @@ Validating FASTQ open standard file format.
 
 ## User Stories
 
-The table below lists common file validation use cases. This recipe provides solutions with FASTQ files as an example.
+The table below lists common file validation use cases. This recipe provides solutions with FASTQ files {footcite}`Cock2010` as an example.
 
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
@@ -87,7 +54,7 @@ The table below lists common file validation use cases. This recipe provides sol
 | :------------- | :------------- | :------------- |
 |Interoperability |minimal |	repeatable|
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -102,9 +69,9 @@ The table below lists common file validation use cases. This recipe provides sol
 | :------------- | :------------- | :------------- |
 | [FASTQ](http://edamontology.org/format_2182)  | |
 | [Compressed Format](https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_4006)| |
-___
+---
 
-[FASTQ](http://edamontology.org/format_2182) is the _de facto_ sequencing file format and one of the most common file formats in bioinformatics analysis. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformatics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis process.
+[FASTQ](http://edamontology.org/format_2182) is the _de facto_ sequencing file format and one of the most common file formats in bioinformatics analysis {footcite}`ENAfastq`, {footcite}`NCBIformats`. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformatics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis processes.
 
 FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle compressed FASTQ files. 
 
@@ -117,10 +84,10 @@ This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on 
 ```
 
 
-<!-- ![](https://i.imgur.com/jOYK2ZM.jpg) -->
+<!-- ![](/images/jOYK2ZM.jpg) -->
 
 
-```{figure} https://i.imgur.com/jOYK2ZM.jpg
+```{figure} /images/jOYK2ZM.jpg
 ---
 width: 800px
 name: FASTQutils library
@@ -142,7 +109,7 @@ The users are expected to be comfortable with Unix-based OS and basic Bash progr
 
 ### Step 1: Install fastq-utils
 
-The command below installs _fastq-utils_ via Conda. It is also possible to install _fastq-utils_ from [the source code](https://github.com/nunofonseca/fastq_utils).
+The command below installs _fastq-utils_ via Conda. It is also possible to install _fastq-utils_ from [the source code](https://github.com/nunofonseca/fastq_utils) {footcite}`nuno_fonseca_2020_3936692`.
 
 ```shell
 conda install -c bioconda fastq_utils
@@ -166,7 +133,7 @@ The command below downloads an _Ion Torrent S5_ fastq file from ENA. [This file]
 ```shell
 wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
 ```
-Uses can inspect the _fastq.gz_ file using `gzip -cd SRR12132977.fastq.gz | head -8`. Below is the header of this FASTQ file.
+Users can inspect the _fastq.gz_ file using `gzip -cd SRR12132977.fastq.gz | head -8`. Below is the header of this FASTQ file.
 ```
 @SRR12132977.1 1/1
 AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACAAACTAAAATGTCTGATAATGGACCCCAAAATCAGCGAAATGCACCCCGCATTACGTTTGGTGGACCCTCAG
@@ -301,7 +268,7 @@ The table lists technical considerations when selecting the validator, including
 | |Commercial use|Can be used for commercial purpose|☑️|
 |Code|Open source|Source code available on public platforms|☑️|
 
-_*See details in the [FASTQ specification recipe]()._
+_*See details in the [FASTQ specification recipe]( TODO include link)._
  
 ## Conclusion
 
@@ -311,33 +278,37 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 ### What to read next
 
 - 🐙[From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
-- 🐙[FASTQ file specification recipe](https://www.TBD.org)
-- 🐙[FASTQ file validator in Biopython](https://www.TBD.org)
+- 🐙[FASTQ file specification recipe](TODO include link to recipe https://www.TBD.org )
+- 🐙[FASTQ file validator in Biopython](TODO include link to recipe https://www.TBD.org)
 
 ---
 
 ## References
 
-- Cock, Peter J. A., Christopher J. Fields, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FASTQ File Format for Sequences with Quality Scores, and the Solexa/Illumina FASTQ Variants’. Nucleic Acids Research 38, no. 6 (1 April 2010): 1767–71. https://doi.org/10.1093/nar/gkp1137.
+```{footbibliography}
+```
+
+<!-- - Cock, Peter J. A., Christopher J. Fields, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FASTQ File Format for Sequences with Quality Scores, and the Solexa/Illumina FASTQ Variants’. Nucleic Acids Research 38, no. 6 (1 April 2010): 1767-71. https://doi.org/10.1093/nar/gkp1137.
 - ENA. ‘Accepted Read Data Formats — ENA Training Modules 1 Documentation’. Accessed 6 July 2020. https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format.
 - NCBI. ‘File Format Guide’. Accessed 14 July 2020. https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files.
-- Nuno Fonseca, and Jonathan Manning. Nunofonseca/Fastq_utils 0.24.0. Zenodo, 2020. https://doi.org/10.5281/zenodo.3936692.
+- Nuno Fonseca, and Jonathan Manning. Nunofonseca/Fastq_utils 0.24.0. Zenodo, 2020. https://doi.org/10.5281/zenodo.3936692. -->
 
 
 ---
 
 ## Authors
 
-|Name|Institute|ORCID|Contributions|
-|--|--|--|--|
-|Fuqi Xu|[EMBL-EBI](https://www.ebi.ac.uk/)|[0000-0002-5923-3859](https://orcid.org/0000-0002-5923-3859)|Writing - Original Draft|
-|Eva Martin | [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/) |[0000-0001-8324-2897](https://orcid.org/0000-0001-8324-2897)|Reviewing and editing |
-|Peter Woollard|[GSK](https://www.gsk.com/en-gb/)|[0000-0002-7654-6902](https://orcid.org/0000-0002-7654-6902)|Reviewing|
+````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Eva: Writing - Review & Editing
+Peter: Writing - Review & Editing
+````
+
 
 ---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

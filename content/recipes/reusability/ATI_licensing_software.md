@@ -1,5 +1,17 @@
 (rr-licensing-software)=
-# Software Licenses
+# Software licenses
+
+````{panels_fairplus}
+:identifier_text: FCB033
+:identifier_link: 'https://w3id.org/faircookbook/FCB033'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:has_executable_code: nope
+:recipe_name: Software licenses
+```` 
+
 
 ````{note} 
 <!-- 

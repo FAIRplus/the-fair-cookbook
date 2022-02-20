@@ -2,6 +2,18 @@
 (rr-licensing)=
 # Licensing
 
+````{panels_fairplus}
+:identifier_text: FCB032
+:identifier_link: 'https://w3id.org/faircookbook/FCB032'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:has_executable_code: nope
+:recipe_name: Licensing
+```` 
+
+
 ````{note} 
 <!-- 
 <a href="https://the-turing-way.netlify.app/welcome"><img src="../../../_images/turing-way-logo.jpg" alt="ati" width="60px"></a> -->

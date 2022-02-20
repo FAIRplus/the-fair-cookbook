@@ -1,175 +1,149 @@
-(fcb-bridgedb)=
-# Identifier mapping with BridgeDB
+(fcb-bridgedb-recipe)=
+# Identifier mapping with BridgeDb
 
+<!--
+TODO : the recipe does not reference its figures
+-->
 
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigators </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-
-````
-
-___
+````{panels_fairplus}
+:identifier_text: FCB017
+:identifier_link: 'https://w3id.org/faircookbook/FCB017'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:has_executable_code: yeah
+:recipe_name: Identifier mapping with BridgeDb
+```` 
 
 
 ## Main Objectives
 
 The main purpose of this recipe is to:
 
-> Provide practical examples on how to map **identifiers for molecular entities** (`such as Genes, Proteins, Metabolites and Pathways`) between resources using a purpose built tool, namely [BridgeDB](https://bio.tools/bridgedb).
-> Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by [BridgeDB](https://bio.tools/bridgedb).
+> Provide practical examples on how to **map identifiers for Genes, Proteins, Metabolites and Pathways** between resources using a purpose built tool, namely [BridgeDb](https://bio.tools/bridgedb).
+> Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by [BridgeDb](https://bio.tools/bridgedb).
 
 
-___
+---
 
 
 ## Graphical Overview
 
 This recipe will cover the highlighted topics
 
-```{figure} id-map-service-mermaid.png
+```{figure} identifier-mapping.md-figure1.mmd.png
 ---
-width: 800px
-name: overview-identifier-mapping-1
-alt: Overview of key aspects in  Identifier Mapping
+name: bridgedb-recipe-figure0
+alt: Overview of key aspects in Identifier Mapping
 ---
-Overview of key aspects in  Identifier Mapping
+Overview of key aspects in Identifier Mapping
 ```
 
-___
+---
 
 
 ## Requirements
 
-* recipe dependency:
-    <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
-    * {ref}`fcb-interop-idmapping`
+This recipe has the following requirements:
 
-* skill dependency:
-    * programming knowledge
+* Recipe dependency:
+    <!-- TODO (recipe not existent yet ) * {ref}`fcb-identifiers` -->
+    * {ref}`fcb-identifier-mapping`
+
+* Skill dependency:
+    * Programming knowledge
     * R
     * Python
 
-* technical dependency
+* Technical dependency
     * R or Python environment
-    * BridgeDB R package installed
+    * BridgeDb R package installed
 ---
 
 ## Capability & Maturity Table
 
 | Capability  | Initial Maturity Level | Final Maturity Level  |
 | :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-| Reusability | minimal| reusable|
+| Interoperability | Minimal | Repeatable |
+| Reusability | Minimal| Reusable|
 
 ---
 
 ## Tools
 
+The table below lists the software that is used to execute the examples in this recipe.
 
 | Software                                            | Description                                                                                                                                                                               | version | Biotools record                                          |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------- 
 | [BridgeDb webservices](https://bridgedb.github.io/) | BridgeDb is a framework to map identifiers between various databases. It includes a Java library that provides an API to work with identifier-identifier mapping databases and resources. | 0.0.9   | [https://bio.tools/bridgedb](https://bio.tools/bridgedb) |
-| Python                                              | an interpreted, high-level and general-purpose programming language                                                                                                                       | 3.8.5   |                                                          |
-| [Pandas](https://pandas.pydata.org/)                | pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,built on top of the Python programming language.                                     | 1.1.3   |                                                          |
+| Python                                              | An interpreted, high-level and general-purpose programming language.                                                                                                                       | 3.8.5   |                                                          |
+| [pandas](https://pandas.pydata.org/)                | pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.                                     | 1.1.3   |                                                          |
 | R                                                   | R is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing.                                 | v4.0.3  | https://bio.tools/r                                      |
-| tidyverse                                           | The tidyverse is an opinionated collection of R packages designed for data science.  | 1.3.0||
-|BridgeDbR|an R package for BridgeDb| 2.0.0||
+| [tidyverse](https://www.tidyverse.org/)                                           | tidyverse is an opinionated collection of R packages designed for data science.  | 1.3.0||
+|[BridgeDbR](https://doi.org/doi:10.18129/B9.bioc.BridgeDbR)|An R package for BridgeDb| 2.0.0||
 
-___
+---
 
 ## Identifier mapping with BridgeDb
 
-{ref}`fcb-interop-idmapping` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use BridgeDb to carry out  this process.
+{ref}`Interlinking data from different sources <fcb-identifier-mapping>` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use [BridgeDb](https://bridgedb.github.io/) to carry out this process.
 
-BridgeDB is an open source tool dedicated to performing identifier mapping. BridgeDB offers three different interfaces:
+[BridgeDb](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping {footcite}`van_iersel_bridgedb_2010`. BridgeDb offers three different interfaces:
 * Java API
 * R package
 * REST Web-services
 
 
-> :book: In the context of this recipe, we distinguish between two types of identifiers:
->* *Local identifiers*, which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization) 
->* *Global identifiers*, which refer to identifiers which globally unique and uniquely point to an entity, as available from BridgeDb's [data sources file](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv)
+> 📖 In the context of this recipe, we distinguish between two types of identifiers:
+>* *Local identifiers* which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization). 
+>* *Global identifiers* which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb's [data sources file](https://github.com/bridgedb/datasources)
 
 We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers. 
 
-In this recipe, we will cover how the R package and webservices can be used to accomplish the stated objectives.
+In this recipe, we will cover how BridgeDb's R package and webservices can be used to map between resource identifiers.
 
-### Mapping global identifier to other global identifier
-In this case, the input data is a list of elements with an identifier that is part of [BridgeDb's data sources](https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv). In our example, we will use a list of Homo Sapiens, Hugo Gene Nomenclature Convention ([HGNC](http://www.genenames.org)) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
+### Mapping a global identifier to other global identifiers
+In this case, the input data is a list of elements with an identifier that is part of [BridgeDb's data sources](https://github.com/bridgedb/datasources). In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention ([HGNC](http://www.genenames.org)) gene identifiers stored in a TSV file. The objective is to map these to other available gene identifiers.
 
 #### BridgeDb via Webservices using Python
-> :exclamation: For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3 and BridgeDb Webservices v0.9.0 were used.
+> ❗ For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3, and BridgeDb Webservices v0.9.0 were used.
 
-One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming language. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform the mappings suggested under [Cases](#Cases) 
+One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform exemplary mappings.
 
-- We start by defining strings containing the url of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map one of them (e.g. Ensembl)  
+We start by defining strings containing the URL of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map to a specific data source, e.g. Ensembl.
 
 ```python
 url = "https://webservice.bridgedb.org/"
 batch_request = url+"{org}/xrefsBatch/{source}{}"
 ```
 
-> If the aim is to only map to a specific target data source, then one can check whether the mapping is supported by invoking the following  webservices:  
+If the aim is to map only to a specific target data source, then one can check whether the mapping is supported by invoking the following webservice call:  
 
 ```python
 mapping_available = "{org}/isMappingSupported/{source}/{target}"
 query = url+mapping_available.format(org='Homo sapiens', source='H', target='En')
 requests.get(query).text
 ```
-> This will return `True` if the mapping between the given source and target is supported for the given organism or `False` otherwise.
 
-- We then load our data into a pandas dataframe and call the requests library using our query.
+This will return `True` if the mapping between the given source and target is supported for the given organism or `False` otherwise.
+
+We then load our data into a pandas dataframe and call the requests library using our query.
 
 ```python
 query = batch_request.format('?dataSource=En', org='Homo sapiens', source='H')
 response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
 
-> The webservice response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module (see [Code](#Code)). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
+The webservice response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module (see [Code](#Code)). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
 
-The output table will contain:
-* The original identifier
-* The data source that the identifier is part of
-* The mapped identifier
-* The data source for the mapped identifier
+The output table will contain the:
+* Original identifier
+* Data source that the identifier is part of
+* Mapped identifier
+* Data source for the mapped identifier
 
->In our case the output of `to_df` is:
+In our case the output of `to_df` is:
 
 | original   | source   | mapping         | target   |
 |:-----------|:---------|:----------------|:---------|
@@ -177,9 +151,7 @@ The output table will contain:
 | A1CF       | HGNC     | ENSG00000148584 | En       |
 | A2MP1      | HGNC     | ENSG00000256069 | En       |
 
-
-
-> If we were to not specify the target data source (by passing an empty string as the parameter), we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
+If we were to not specify the target data source (by passing an empty string as the parameter), we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
 
 | original   | source   | mapping      | target   |
 |:-----------|:---------|:-------------|:---------|
@@ -194,13 +166,13 @@ The output table will contain:
 | A1BG       | HGNC     | uc061drt.1   | Uc       |
 | A1BG       | HGNC     | 51020_at     | X        |
 
-As one can see, using BridgeDb service via Python is extremely simple and can be easily integrated in an annotation pipeline.
+As one can see, using the BridgeDb webservice via Python is extremely simple and can be easily integrated in an annotation pipeline.
 
 
 #### BridgeDb via the dedicated R package
 
 ```{note} 
-For this tutorial R v4.0.3, [tidyverse](https://www.tidyverse.org/) v1.3.0 and [BridgeDbR](https://www.bioconductor.org/packages/release/bioc/html/BridgeDbR.html) v2.0.0 were used.
+For this tutorial R v4.0.3, [tidyverse](https://www.tidyverse.org/) v1.3.0, and [BridgeDbR](https://www.bioconductor.org/packages/release/bioc/html/BridgeDbR.html) v2.0.0 were used.
 ```
 
 After having loaded the required R libraries, we read the data and create a new column to include the source of the identifier.
@@ -244,7 +216,7 @@ As seen earlier when using Python language, we can obtain all possible mappings 
 | A1BG       | H      | X      | 51020_at     |
 
 ```{warning} 
-An error message indicating "Error in download.file" may be thrown. If the case, it may be caused by `timeout` variable being set to too small a value. To remediate the issue, try increasing the timeout variable value by calling `options(timeout=300)`
+An error message indicating "Error in download.file" may be thrown. This may be caused by the `timeout` variable being set to too small a value. To remediate the issue, try increasing the timeout variable value by calling `options(timeout=300)`.
 ```
 
 <!--
@@ -253,7 +225,7 @@ This will maybe link to the identifier mapping recipe in the future, where there
 --------------------------------
 
 
-### Mapping local identifier to global identifier
+### Mapping a local identifier to global identifier
 [NEED HELP HERE]
 This is a step that should be done manually. In this case an important decision should be made, which identifiers to map to. To decide this you should look for the data source that contains the closest definition of the concepts to the one you used for your local identifiers.
 
@@ -262,7 +234,7 @@ This is a step that should be done manually. In this case an important decision 
 ### Mapping local identifier to a different global identifier
 
 ```{note} 
- In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-interop-idmapping` recipe. The mapping should be **one-to-one** for this recipe. 
+ In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-identifier-mapping` recipe. The mapping should be **one-to-one** for this recipe. 
 ```
 
 The TSV mapping file looks as follows:
@@ -277,18 +249,17 @@ You may notice the `source` identifiers correspond with those used in the previo
 
 This is how the mapping will work
 
-```{figure} bridgedb-fig1-mermaid.png
+```{figure} bridgedb-recipe.md-figure1.mmd.png
 ---
-name: overview-bridgedb-universum
-alt: Overview of BridgeDB tools
+name: bridgedb-recipe-figure1
+alt: Overview of BridgeDb tools
 ---
-Overview of BridgeDB tools
+Overview of BridgeDb tools
 ```
 
 #### Webservices in Python
 
 As before, we will define variables including the `web-service's URL` and the `method` that we will use, in this instance: `xRefsBatch`.
-
 We then pass the source column to the `post request` as follows
 
 ```python
@@ -327,17 +298,17 @@ In case we did specify the `target` argument to be `Ensembl (En)`, we would inst
 Here, we see a `one-to-one` relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
 
 
-```{figure} bridgedb-fig2-mermaid.png
+```{figure} bridgedb-recipe.md-figure2.mmd.png
 ---
-name: exemplary-bridgedb-mapping
-alt: An example of a mapping via BridgeDB.
+name: bridgedb-recipe-figure2
+alt: An example of a mapping via BridgeDb.
 ---
-An example of a mapping via BridgeDB. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
+An example of a mapping via BridgeDb. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
 ```
 
 
 ```{note} 
-This many-to-many relationship stems from different *scientific lenses* in the data sources. You can read more about these in {footcite}`batchelor_scientific_nodate`. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical lense. This is what then leads to many-to-many relationships.
+This many-to-many relationship stems from different *scientific lenses* in the data sources. You can read more about these in {footcite}`batchelor_scientific_nodate`. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.
 ```
 
 #### R Package
@@ -378,7 +349,7 @@ In case we did specify the target data source we would get:
 ## Provenance
 
 BridgeDb provides provenance information through:
-* A call to /properties/ in the Webservices
+* A call to `/properties/` method of the Webservice
 * `getProperties()` in BridgeDbR (passing the mapper as a parameter)
 
 This returns the following information for each of the data sources for a given organism:
@@ -389,46 +360,49 @@ This returns the following information for each of the data sources for a given 
 * Data source version
 * Schema version
 
-Improvements on provenance are under way (see [here](https://github.com/bridgedb/BridgeDb/issues/164))
+Improvements on provenance are under way (see [here](https://github.com/bridgedb/BridgeDb/issues/164)).
 
-___
+---
 
 ## Code 
-You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/bridgedb/docs/content/recipes/interoperability/bridgedb). These assume the data has the structure described in this recipe.
+You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/9ad9481be32812b2565f9f9f1897642ae26eddff/content/recipes/interoperability/bridgedb/data). These assume the data has the structure described in this recipe.
 
 ---
 
 ## Conclusion
 
-We showed how to use BridgeDb webservices and R package to map identifiers from different data sources using a minimal dataset. 
-BridgeDb provides handy functionality to make 'omics' type of data more interoperable and reusable.
+We showed how to use BridgeDb's webservices and R package to map identifiers from different data sources using a minimal dataset. 
+BridgeDb provides handy functionality to make 'omics' data more interoperable and reusable.
 As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
-These are aspects of information provenance which 
+These are aspects of information provenance which we plan to provide in the future.
  
 ### What should I read next?
 * {ref}`fcb-find-identifiers`
-* {ref}`fcb-interop-idmapping`
+* {ref}`fcb-identifier-mapping`
 
 ---
 
+
 ## References
 
-```{footbibliography} 
+```{footbibliography}
 ```
-
-___
+---
 
 ## Authors
 
-| Name | Affiliation  | orcid | Credit role  | specific contribution |
-| :------------- | :------------- | :------------- |:------------- |:------------- |
-| Lucas Giovanni Uberti-Bona Marin |  Maastricht University| [0000-0001-6518-9535](https://orcid.org/0000-0001-6518-9535)| Writing - Original Draft | Original format |
+````{authors_fairplus}
+Lucas: Writing - Original Draft
+Philippe: Writing - Review & Editing
+Alasdair: Writing - Review & Editing
+````
 
-___
+
+---
 
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

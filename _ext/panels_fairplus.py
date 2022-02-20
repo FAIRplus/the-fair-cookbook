@@ -1,56 +1,19 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
-import sphinx_panels.panels
+from json import dumps
 import sphinx.errors
+import sphinx_panels.panels
+from sphinx.util import logging
 
+from global_variables_fairplus import LINK_TO_THE_FAIRPLUS_LOGO, CONTROLLED_VOCABULARY_EXECUTABLE_CODE, CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL, CONTROLLED_VOCABULARY_INTENDED_AUDIENCE, CONTROLLED_VOCABULARY_MATURITY_LEVEL, CONTROLLED_VOCABULARY_RECIPE_TYPE 
 
-CONTROLLED_VOCABULARY_RECIPE_TYPE = {
-    "background_information"    : "Background information",
-    "survey_review"             : "Survey / Review",
-    "guidance"                  : "Guidance",    
-    "technical_guidance"        : "Technical Guidance",
-    "hands_on"                  : "Hands-on",
-    "applied_example"           : "Experience Report / Applied Example",
-
-}
-
-CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
-    "funder"                    : "Funder",
-    "procurement_officer"       : "Procurement Officer",
-    "principal_investigator"    : "Principal Investigator",
-    "data_curator"              : "Data Curator",
-    "data_manager"              : "Data Manager",
-    "data_scientist"            : "Data Scientist",
-    "chemoinformatician"        : "Chemoinformatician",
-    "bioinformatician"          : "Bioinformatician",
-    "software_engineer"         : "Software Engineer",
-    "system_administrator"      : "System Administrator",
-    "terminology_manager"       : "Terminology Manager",
-    "ontologist"                : "Ontologist",
-}
-
-CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL = {
-    "1" : "very easy",
-    "2" : "easy",
-    "3" : "medium",
-    "4" : "hard",
-    "5" : "very hard",
-}
-
-CONTROLLED_VOCABULARY_EXECUTABLE_CODE = {
-    "yeah" : "Yes",
-    "nope" : "No",
-}
-
-make_red_start = "\033[91m"
-make_red_end   = "\033[0m"
-def _make_string_red(string):
-    return make_red_start + string + make_red_end
+logger = logging.getLogger(__name__)
+logger.info('Hello, this is "panels_fairplus" extension!')
 
 
 class PanelFairplus(Directive):
-    has_content = True
+    has_content = False
     final_argument_whitespace = True ## actually, this allows ANY argument to contain whitespace.
     option_spec = {
         "identifier_text"       : directives.unchanged_required,
@@ -60,12 +23,14 @@ class PanelFairplus(Directive):
         "recipe_type"           : directives.unchanged_required,
         "has_executable_code"   : directives.unchanged_required,
         "intended_audience"     : directives.unchanged_required,
+        # "maturity_level"        : directives.unchanged_required,
+        "recipe_name": directives.unchanged_required
     }
 
     def _clean_options(self):
-        
+
         # are the options existent and non-empty?
-        for option_name in self.option_spec: 
+        for option_name in self.option_spec:
             assert option_name in self.options, \
                 sphinx.errors.ExtensionError(_make_string_red(
                     f"You did not provide the required option {option_name}."
@@ -75,10 +40,10 @@ class PanelFairplus(Directive):
                 sphinx.errors.ExtensionError(_make_string_red(
                     f"The value of {option_name} has to be non-empty."
                     ))
-        
+
         # identifier_text
         pass
-        
+
 
         # identifier_link
         assert self.options["identifier_link"].startswith("http://") or self.options["identifier_link"].startswith("https://"), \
@@ -140,74 +105,154 @@ class PanelFairplus(Directive):
 
         self.options["intended_audience"] = list_of_intended_audiences
 
-        
+
+        # # maturity_level
+        # assert      self.options["maturity_level"]  in CONTROLLED_VOCABULARY_MATURITY_LEVEL or \
+        #         str(self.options["maturity_level"]) in CONTROLLED_VOCABULARY_MATURITY_LEVEL , \
+        #     sphinx.errors.ExtensionError(
+        #         _make_string_red(
+        #             f"The value of maturity_level has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_MATURITY_LEVEL))} ."
+        #             ))
+        # self.options["maturity_level"] = str(self.options["maturity_level"])
+
+
+
         # has_executable_code
         assert self.options["has_executable_code"] in CONTROLLED_VOCABULARY_EXECUTABLE_CODE, \
             sphinx.errors.ExtensionError(_make_string_red(
                 f"The value of has_executable_code has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_EXECUTABLE_CODE))} ."
                 ))
-            ## no joke, because "True" and "yes" are evaluated by YAML to be "", we need "yeah" and "nope"... 
+            ## no joke, because "True" and "yes" are evaluated by YAML to be "", we need "yeah" and "nope"...
+
+        assert ':' not in self.options["recipe_name"], \
+            sphinx.errors.ExtensionError(
+                _make_string_red("The colon (i.e. the character ':') is not allowed in recipe_name: %s" % (self.options["recipe_name"])))
 
 
     def _create_content(self):
         content = []
-
-
-        content.extend(
-            [
+        content.extend([
             '<br/>',
             '',
             '----',
-            '',
-            '````{panels}',
-            ':container: container-lg pb-3',
-            ':column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1',
-            ':card: rounded',
-            '',
-            '<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>',
-            '^^^',
-            '<h4><b>Identifier</b></h4>',
-            f'<i class="fa fa-map-signs fa-lg" style="color:#7e0038;"></i> <a href="{self.options["identifier_link"]}">{self.options["identifier_text"]}</a> ',
-            '',
-            '---',
-            '<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>',
-            '^^^',
-            '<h4><b>Difficulty level</b></h4>',
-            *['<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>'] * self.options["difficulty_level"],
-            *['<i class="fa fa-fire fa-lg" style="color:lightgrey;"></i>'] * (5 - self.options["difficulty_level"]),
-            '',
-            '---',
-            '<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>',
-            '^^^',
-            '<h4><b>Reading Time</b></h4>',
-            f'<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> {self.options["reading_time_minutes"]} minutes',
-            '<h4><b>Recipe Type</b></h4>',
-            f'<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> { CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]] }',
-            '<h4><b>Executable Code</b></h4>',
-            f'<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> { CONTROLLED_VOCABULARY_EXECUTABLE_CODE[self.options["has_executable_code"]] }',
-            '',
-            '---',
-            '<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>',
-            '^^^',
-            '<h4><b>Intended Audience</b></h4>',
-            '<p><i class="fa fa-money-bill fa-lg" style="color:#7e0038;"></i> Funder</p>'                                if "funder" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Procurement Officer  </p>'                 if "procurement_officer" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i>    Principal Investigator</p>'                if "principal_investigator" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Data Curator  </p>'                        if "data_curator" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i>   Data Manager</p>'                          if "data_manager" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i>     Data Scientist</p>'                        if "data_scientist" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Chemoinformatician  </p>'                  if "chemoinformatician" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Bioinformatician  </p>'                    if "bioinformatician" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Software Engineer  </p>'                   if "software_engineer" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       System Administrator  </p>'                if "system_administrator" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Terminology Manager  </p>'                 if "terminology_manager" in self.options["intended_audience"] else "",
-            '<p><i class="fa fa-user fa-lg" style="color:#7e0038;"></i>       Ontologist  </p>'                          if "ontologist" in self.options["intended_audience"] else "",
-            '````',
+            f'{self.get_ld()}',
+            '<div class="card recipe d-flex">',
+                '<div class="card-header purple-dark text--white">',
+                    '<div class="overview">',
+                        '<div class="overviewLabel">Recipe Overview</div>',
+                        '<div class="overviewContent">',
+                            '<div class="item"><div class="itemContainer">',
+                                '<i class="itemIcon fa fa-clock fa-2x text--white"></i>',
+                                '<div class="itemContent">',
+                                    '<div class="label"> Reading Time </div>',
+                                    f'{self.options["reading_time_minutes"]} minutes',
+                               '</div>',
+                            '</div></div>',
+                            '<div class="item"><div class="itemContainer">',
+                                '<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>',
+                                '<div class="itemContent">',
+                                    '<div class="label"> Executable Code </div>',
+                                    f'{ CONTROLLED_VOCABULARY_EXECUTABLE_CODE[self.options["has_executable_code"]] }',
+                                '</div>',
+                            '</div></div>',
+                            '<div class="item" style="margin-bottom:10px"><div class="itemContainer">',
+                                '<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>',
+                                '<div class="itemContent">',
+                                    '<div class="label" style="position:relative; left:-6px">Difficulty</div>',
+                                    *['<i class="fa fa-fire"></i>'] * self.options["difficulty_level"],
+                                    *['<i class="fa fa-fire" style="color:grey"></i>'] * (5 - self.options["difficulty_level"]),
+                                '</div>',
+                            '</div></div>',
+                        '</div>'
+                    '</div>',
+                '</div>',
+                '<div class="card-body text--purple-dark">',
+                    '<div class="title">',
+                        f'<div style="flex-grow:1; margin-right:5px">{self.options["recipe_name"]}</div>',
+                        f'<img src="{LINK_TO_THE_FAIRPLUS_LOGO}" alt="FAIRPlus logo"> </img>',
+                    '</div>',
+                    '<div class="section">',
+                        '<i class="sectionIcon fa fa-laptop fa-2x"></i>'
+                        '<div class="sectionContent">',
+                            '<div class="label">Recipe Type</div>',
+                            f'<div class="sectionValue">{ CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]] }</div>',
+                        '</div>',
+                    '</div>',
+                    '<div class="section" style="flex-grow: 1;">',
+                        '<i class="sectionIcon fa fa-users fa-2x"></i>'
+                        '<div class="sectionContent">',
+                            '<div class="label">Audience</div>',
+                            f'<div class="sectionValue">{self.get_audience()}</div>',
+                        '</div>',
+                    '</div>',
+                    # '<div class="section" style="flex-grow: 1;">',
+                    #     '<i class="sectionIcon fas fa-battery-empty fa-2x"></i>'
+                    #     '<div class="sectionContent">',
+                    #         '<div class="label">Maturity Level</div>',
+                    #         f'<div class="sectionValue">{self.get_maturity()}</div>',
+                    #     '</div>',
+                    # '</div>',
+                    '<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with ',
+                        f'<a href="{self.options["identifier_link"]}" class="text--purple-dark">{self.options["identifier_text"]}',
+                    '</a></div>',
+                '</div>',
+            '</div>',
             '',
             '----',
             ''
         ])
         return content
+
+    def get_audience(self):
+        """
+        Gets the list of audience targets properly formatted as a string
+        :return str: a string properly formatted containing the list of audience targets
+        """
+        return ", ".join([CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
+                          for target in self.options["intended_audience"]])
+
+    # def get_maturity(self):
+    #     """
+    #     Gets the list of improved maturity indicators
+    #     :return str: a string properly formatted containing the list of audience targets
+    #     """
+    #     return ", ".join([CONTROLLED_VOCABULARY_MATURITY_LEVEL[target]
+    #                       for target in self.options["maturity_level"]])
+
+
+    def get_ld(self):
+        """
+        Parses the class attributes to build the corresponding JSON-LD markup.
+        :return: a json-ld representation of the recipe
+        """
+        json_ld = {
+            "@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"},
+            "@type": ["sdo:HowTo", "bs:TrainingMaterial"],
+            "name": self.options["recipe_name"],
+            "audience": [CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
+                         for target in self.options["intended_audience"]],
+            "isPartOf": [
+                {
+                    "@type": "CreativeWork",
+                    "url": "https://fairplus.github.io/the-fair-cookbook/",
+                    "name": "The FAIR Cookbook"
+                }
+            ],
+            "learningResourceType": CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": self.options["identifier_text"],
+                "url": self.options["identifier_link"]
+            },
+            "license": {
+                "@type": "CreativeWork",
+                "url": "https://creativecommons.org/licenses/by/4.0/",
+                "name": "CC-BY-4.0"
+            },
+            "timeRequired": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
+            "totalTime": "PT0H%sM0S" % str(self.options["reading_time_minutes"])
+        }
+        return '<script type="application/ld+json"> %s </script>' % dumps(json_ld)
 
     def run(self):
 
@@ -245,4 +290,8 @@ def setup(app):
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
-    
+
+escape_character_to_make_a_string_red_start = "\033[91m"
+escape_character_to_make_a_string_red_end   = "\033[0m"
+def _make_string_red(string):
+    return escape_character_to_make_a_string_red_start + string + escape_character_to_make_a_string_red_end
