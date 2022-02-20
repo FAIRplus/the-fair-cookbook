@@ -26,7 +26,7 @@ The **FAIR principles**, under the `Findability` and the `Accessibility` chapter
 The main goals of this recipe are therefore:
 
 > To understand the purpose of a globally unique and persistent identifier and how they can be used to retrieve the associated (meta)data using a standardized communication protocol.
-> To provide explanations on how to generate globaly unique identifiers, explain what IRI are and how they can be generated, retrieved and resolved.
+> To provide explanations on how to generate globaly unique identifiers, explain what IRIs are and how they can be generated, retrieved and resolved.
 
 
 From these principles, it is necessary to explain three key processes, which are: 
@@ -235,7 +235,7 @@ In our context, the use of the hashing function is to generate a unique key whic
  **URI construction is fundamentally about scoping the authority**.
 ```
 
-Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers *resolvable (a notion also known as `dereferencable`)*.
+Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers *resolvable (a notion also known as `dereferenceable`)*.
 
 In other words, in order to create globally unique identifiers `for the web`, it is necessary to understand what Uniform Resource Locators<!-- TODO add a link to corresponding document --> (a.k.a `URL`) are and how to construct them for use with the Hypertext Transfer Protocol<!-- TODO add a link to corresponding document -->.
 
@@ -296,7 +296,7 @@ it is often the case the `authority` is reduced to the `host` , which is then re
 ---
 
 ### `path`: 
-The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zeor or more path segements separated by a `/`.
+The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zero or more path segements separated by a `/`.
 
 ### `query`:
 The `query` is an optional part of the URL syntax that starts with a `?`. Typically the `query` component consists of a service of key-value pairs separated by an `&` deliminator.
@@ -316,7 +316,7 @@ In order to achieve the capability of `persistence`, it is necessary for the res
 3. optionally a path: `/dataset-name/`
 4. a local identifier (such as database accession number, such as P12133 from uniprot) or a globally unique identifier (such as a UUID or hash code).
 
-In a virtual example which uses a UUID for the local identifier and does not use a path, it looks like this
+In a virtual example which uses a UUID for the local identifier and does not use a path, it looks like this:
 
 ```bash
 https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
@@ -341,7 +341,7 @@ Once such URIs are available, one may also turn them into compact identifiers ca
 ## Identifier Resolution - Enabling persistence through indirection
 
 
-This relates to this other FAIR principle mentioned in the introduction.
+This relates to the following FAIR principle mentioned in the introduction:
 
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol.
 
@@ -382,7 +382,7 @@ CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Worki
 
 The CURIE consists of a **`namespace prefix`** followed by the **`local identifier`**.
 
-There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI `[doi:10.1038/sdata.2016.18]` refers to the FAIR Principles paper[^safe-CURIE]. The Digital Object Identifier System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL https://www.doi.org/10.1038/sdata.2016.18 to resolve the paper's DOI. This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
+There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI `[doi:10.1038/sdata.2016.18]` refers to the FAIR Principles paper [^safe-CURIE]. The Digital Object Identifier System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL https://www.doi.org/10.1038/sdata.2016.18 to resolve the paper's DOI. This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
 
 `Namespaces` can be defined *by convention*, such as the case with `doi`, and registered with services to allow for the resolution of CURIEs (see [Identifier Resolution Services](##identifier-resolution-services) below). These are extensively used to map CURIEs to URLs that can be resolved.
 

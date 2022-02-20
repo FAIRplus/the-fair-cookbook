@@ -15,7 +15,7 @@ To provide content, you have the three follow options, which are detailed in the
 
 * Provide content in `Github` by sending a `Pull Request`
 
-It always start by getting in touch with the group, by simply logging an issue in our [repository issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues). 
+It always starts by getting in touch with the group, by simply logging an issue in our [repository issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues). 
 
 Remember you can also provide a recipe in the form on Jupyter Notebook. Simply, fork the Github repo, following the editing guidelines and the [Jupyter-Book documentation](https://jupyterbook.org/intro.html), and give us a nudge when you are ready to submit.
 

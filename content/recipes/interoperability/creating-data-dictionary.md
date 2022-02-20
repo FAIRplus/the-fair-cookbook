@@ -32,7 +32,7 @@ Presenting a `FAIR data dictionary template` is also meant to be useful to deal 
 The main purpose of this recipe is:
 
 > - Provide a guide on what factors should be considered when building a `data dictionary` for data collection, data processing and analysis. 
-> - Give an example of a data dictionary
+> - Give an example of a data dictionary.
 > - Provide an example of machine-actionable data dictionary template.
 ---
 

@@ -87,15 +87,15 @@ These lenses allow us to dynamically select which mappings to consider relevant 
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.
 
 Examples of types of mappings are:
-* **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds
-* **Ontology mapping**: this can either be 
-    * As a direct 1-to-1 mapping between equivalent terms in different ontologies
-    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {footcite}`wang_concept_2010`.
+* **Content mapping**: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds.
+* **Ontology mapping**: this can either be: 
+    * As a direct 1-to-1 mapping between equivalent terms in different ontologies.
+    * As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {footcite}.`wang_concept_2010`.
 * **Identifier mapping**: The focus of this recipe. This can either be:
-    * Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl)
-    * Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different)
-    * Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these)
-    * Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB)
+    * Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl).
+    * Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different).
+    * Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these).
+    * Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB).
 
 
 ---
@@ -124,8 +124,8 @@ Depending on the nature of the data, there are different ways that equivalences 
 
 Some elements to take into consideration are:
 
-1. a **mapping predicate** taken from a well known ontology, e.g. `owl:sameAs` or `skos:narrower`
-2. the **evidence** behind the equivalence claims, e.g. a similarity score or the property on which the equivalence is based such as InChI Key for chemicals
+1. a **mapping predicate** taken from a well known ontology, e.g. `owl:sameAs` or `skos:narrower`.
+2. the **evidence** behind the equivalence claims, e.g. a similarity score or the property on which the equivalence is based such as InChI Key for chemicals.
 1. **audit trail information**, i.e. who, what, when, e.g. `agent X using mapping tool Y on YYYY-MM-DD`. PROV-O ontology could be used to support such statements.
 
 
@@ -137,7 +137,7 @@ There are several file format for exchanging identifier equivalences.
 
 ### Using Text File
 
-The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the verison of the datasets that were linked.
+The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the version of the datasets that were linked.
 
 The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.
 
@@ -251,7 +251,7 @@ The following is an incomplete list of identifier mapping services.
 
 ## Conclusion
 
-> In this recipe, we have given an overview of the need to map between globally unique and persistent identifier from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
+> In this recipe, we have given an overview of the need to map between globally unique and persistent identifiers from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
 >
 > - The idea of data identifier equivalence;
 > - How to publish and exchange data identifier equivalences;

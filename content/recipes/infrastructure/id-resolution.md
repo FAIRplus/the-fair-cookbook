@@ -14,7 +14,7 @@
 
 ## Main Objective
 
-Linked Data require on URL and HTTP protocol to ensure linking. 
+Linked Data require on URL and HTTP protocols to ensure linking. 
 
 ## Introduction
 
@@ -33,7 +33,7 @@ CoolURI don't change
 
 ### PURL stands for Persistent URL
 
-As defined from https://archive.org/services/purl/help, PURL are `persistent URL` andd they provides a permanent http address to access a  resource on the web [https://archive.org/services/purl/help]
+As defined in https://archive.org/services/purl/help, PURL are `persistent URL` and they provide a permanent http address to access a  resource on the web [https://archive.org/services/purl/help].
 The PURL service is administered by the Internet Archive. Users can request domains from the service under which to administer and mint persistent url.
 
 

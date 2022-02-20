@@ -285,7 +285,7 @@ Finally, a resource exists that describes statistical measures, statistical test
 
 ### Relations
 
-Also known as `OWL.Properties`, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by tools known as `reasoners` to carry the following key tasks:
+Also known as `OWL Properties`, their importance may be overlooked by `data scientists` who are not `knowledge engineers` or `ontologists`. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by tools known as `reasoners` to carry the following key tasks:
 
 * `Ontology logical consistency` checks
 * `Automatic classification` and `inference` tasks
@@ -310,7 +310,7 @@ In the field of Biology and Biomedicine, the [OBO Foundry](http://obofoundry.org
 As `knowledge graphs` and `property graphs` gain importance, we can expect the range and depth of relations to mature and expand as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
 This would also have to be placed in the context of advances in `Text Mining` and `Machine Learning`, where unsupervised methods start to demonstrate strong potential to detect relations between entities.
 
-The following is an example of how a `defined class` may be created in an ontology. The code snippet shows one such class being expressed to create a type by specifying a number of `axioms`. These use `relations` (aka OWL.Properties), which may be set to 
+The following is an example of how a `defined class` may be created in an ontology. The code snippet shows one such class being expressed to create a type by specifying a number of `axioms`. These use `relations` (aka OWL Properties), which may be set to 
 
 ```bash
 'B cell, CD19-positive'
@@ -351,7 +351,7 @@ TODO : fill in the links to what-should-I-read-next recipes
 > * How to select on ontology service?<!-- TODO add a link to corresponding document -->
 > * How to deploy an ontology server?<!-- TODO add a link to corresponding document -->
 > * How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document -->
--->
+
 
 ---
 
