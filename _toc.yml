@@ -102,6 +102,8 @@
                 title: Metadata profile for transcriptomics #FCB027
               - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
                 title: Metadata profile validation in RDF #FCB028
+              - file: content/recipes/interoperability/bioactivity-profile
+                title: Bioactivity data profile
           - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar  
             title: Converting from proprietary to open format #FCB029
           - file: content/recipes/interoperability/rdf-conversion 
