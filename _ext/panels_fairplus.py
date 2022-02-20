@@ -23,7 +23,7 @@ class PanelFairplus(Directive):
         "recipe_type"           : directives.unchanged_required,
         "has_executable_code"   : directives.unchanged_required,
         "intended_audience"     : directives.unchanged_required,
-        "maturity_level"        : directives.unchanged_required,
+        # "maturity_level"        : directives.unchanged_required,
         "recipe_name": directives.unchanged_required
     }
 
@@ -106,14 +106,14 @@ class PanelFairplus(Directive):
         self.options["intended_audience"] = list_of_intended_audiences
 
 
-        # maturity_level
-        assert      self.options["maturity_level"]  in CONTROLLED_VOCABULARY_MATURITY_LEVEL or \
-                str(self.options["maturity_level"]) in CONTROLLED_VOCABULARY_MATURITY_LEVEL , \
-            sphinx.errors.ExtensionError(
-                _make_string_red(
-                    f"The value of maturity_level has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_MATURITY_LEVEL))} ."
-                    ))
-        self.options["maturity_level"] = str(self.options["maturity_level"])
+        # # maturity_level
+        # assert      self.options["maturity_level"]  in CONTROLLED_VOCABULARY_MATURITY_LEVEL or \
+        #         str(self.options["maturity_level"]) in CONTROLLED_VOCABULARY_MATURITY_LEVEL , \
+        #     sphinx.errors.ExtensionError(
+        #         _make_string_red(
+        #             f"The value of maturity_level has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_MATURITY_LEVEL))} ."
+        #             ))
+        # self.options["maturity_level"] = str(self.options["maturity_level"])
 
 
 
@@ -185,13 +185,13 @@ class PanelFairplus(Directive):
                             f'<div class="sectionValue">{self.get_audience()}</div>',
                         '</div>',
                     '</div>',
-                    '<div class="section" style="flex-grow: 1;">',
-                        '<i class="sectionIcon fas fa-battery-empty fa-2x"></i>'
-                        '<div class="sectionContent">',
-                            '<div class="label">Maturity Level</div>',
-                            f'<div class="sectionValue">{self.get_maturity()}</div>',
-                        '</div>',
-                    '</div>',
+                    # '<div class="section" style="flex-grow: 1;">',
+                    #     '<i class="sectionIcon fas fa-battery-empty fa-2x"></i>'
+                    #     '<div class="sectionContent">',
+                    #         '<div class="label">Maturity Level</div>',
+                    #         f'<div class="sectionValue">{self.get_maturity()}</div>',
+                    #     '</div>',
+                    # '</div>',
                     '<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with ',
                         f'<a href="{self.options["identifier_link"]}" class="text--purple-dark">{self.options["identifier_text"]}',
                     '</a></div>',
@@ -211,13 +211,13 @@ class PanelFairplus(Directive):
         return ", ".join([CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
                           for target in self.options["intended_audience"]])
 
-    def get_maturity(self):
-        """
-        Gets the list of improved maturity indicators
-        :return str: a string properly formatted containing the list of audience targets
-        """
-        return ", ".join([CONTROLLED_VOCABULARY_MATURITY_LEVEL[target]
-                          for target in self.options["maturity_level"]])
+    # def get_maturity(self):
+    #     """
+    #     Gets the list of improved maturity indicators
+    #     :return str: a string properly formatted containing the list of audience targets
+    #     """
+    #     return ", ".join([CONTROLLED_VOCABULARY_MATURITY_LEVEL[target]
+    #                       for target in self.options["maturity_level"]])
 
 
     def get_ld(self):
