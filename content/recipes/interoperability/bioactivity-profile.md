@@ -2,7 +2,6 @@
 # Bioactivity data profile
 
 
-
 ````{panels_fairplus}
 :identifier_text: FCBxxx
 :identifier_link: 'https://w3id.org/faircookbook/FCBxxx'
@@ -14,26 +13,24 @@
 :recipe_name: Depositing Bioactivity Data
 ```` 
 
-[TOC]
 ## Main objective
 This recipe shows how to prepare `bioactivity data`, defined as the measurable effects of a chemical compound in a biological system monitored with a specific assay, to meet the ChEMBL submission criteria, focusing on data formats, structures, and vocabularies. 
 This recipe is meant to address the Findability and Interoperability of such type of data.
 
 ## Graphical overview of the Recipe FAIRification Objectives
-```mermaid
-graph TD
-    A[Data collection] -->B(Enriched metadata)
-    B1{Minimum information checklist} -->B
-    B --> C(Annotaed metadata)
-    C1{Recommended data models} -->C
-    C --> D[Processed assay data]
-    D--> E[Formatted datasets]
-    E1{Format requirements} -->E
-    E--> F[Submission-ready datasets]
-    classDef standards stroke:#f66,stroke-width:2px,color:#000000,stroke-dasharray: 5 5
-    class B1,C1,E1 standards
-end
-```
+
+
+<!-- ```{figure} bioactivity-figure1.mmd.png -->
+<!-- --- -->
+<!-- name: bioactivity-figure1 -->
+<!-- alt:  bioactivity data FAIR overview -->
+<!-- --- -->
+<!-- bioactivity data FAIR overview -->
+<!-- --- -->
+<!-- ``` -->
+<!-- -->
+
+
 ## Introduction
 Bioactivity data, as stored in public archives such as the European repository [CHEMBL](https://www.ebi.ac.uk/chembl/) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov/) in together with chemical data and omics data, can be used to search for new `hits`(compounds with desired property in drug screening), for example by using cell line information, compound ID as input to queries over such resources.
 
@@ -46,6 +43,7 @@ Among the FAIR principles, the `use of  rich metadata` (F2. data are described w
 In the context of `bioactivity data`, we have on the one hand the [Minimum information about a bioactive entity (MIABE)](https://www.nature.com/articles/nrd3503) checklist recommend attributes, formats and vocabularies for the reuse of such datasets. 
 
 On the other hand, public bioactivity data archives, such as [ChEMBL](https://www.ebi.ac.uk/chembl/), [PubChem](https://pubchem.ncbi.nlm.nih.gov/), and [ECBD](https://ecbd.eu/) also have their own requirements for data submission.
+
 
 ### Data content
 
@@ -140,23 +138,19 @@ For ChEMBL submission, molecular structures and assay description as depicted in
 
 Besides metadata, the diagram below also shows how to prepare numeric assay data.
 
-```mermaid
-graph TD
+<!--  ```{figure} bioactivity-figure2.mmd.png -->
+<!-- --- -->
+<!-- name: bioactivity-figure2 -->
+<!-- alt: Preparing numeric assay data for bioactivity -->
+<!-- --- -->
+<!-- Preparing numeric assay data for bioactivity -->
+<!-- ```  -->
 
-    A[Primary data at one concentration]-->B{Number of readouts: <br>Quantitive measures<br> per molecule}
-    B-->|one column|V{Which unit?}
-    V-->|value <br> Unit:percentage|D
-    V-->|value <br> Unit:micromolar|F
-    B-->|multi columns|C[valid readouts]
-    C-->|experiments|D{if triplicates}
-    D-->|aggregating or filtering|E[validated ones]
-    E--> |calculating|G[One average readout value <br> per concentration]
-    G-->F[CC/AC/IC50/IC90 curves]
-```
+
 
 ### Data vocabularies
 
- [A set of well-established standards and **minimum metadata checklists**](https://chembl.gitbook.io/chembl-loader/untitled-10) exist for various aspects of ChEMBL formatting.  
+[A set of well-established standards and **minimum metadata checklists**](https://chembl.gitbook.io/chembl-loader/untitled-10) exist for various aspects of ChEMBL formatting.  
 
 * **Chemical information ontology (CHEMINF)** [http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl](http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl) 
 
@@ -166,14 +160,15 @@ graph TD
 
     [http://www.bioassayontology.org/bao/bao_complete.owl](http://www.bioassayontology.org/bao/bao_complete.owl) 
 
-    The BioAssay Ontology (BAO) describes biological screening assays and their results, including high-throughput screening (HTS) data for the purpose of categorising assays and data analysis. BAO is an extensible, knowledge-based, highly expressive (currently [SHOIQ(D)](SHOIQ(D))) description of biological assays making use of descriptive logic based features of the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl2-syntax/)
+    The BioAssay Ontology (BAO) describes biological screening assays and their results, including high-throughput screening (HTS) data for the purpose of categorising assays and data analysis. BAO is an extensible, knowledge-based, highly expressive description of biological assays {footcite}`pmid21702939` making use of descriptive logic based features of the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl2-syntax/)
 
-* __Ontology of units of Measure (OM)__
+* **Ontology of units of Measure (OM)**
  [http://www.ontology-of-units-of-measure.org/resource/om-2](http://www.ontology-of-units-of-measure.org/resource/om-2) 
- The OM ontology provides classes, instances, and properties that represent the different concepts used for defining and using measures and units. It includes, for instance, common units such as the SI units meter and kilogram, and a wide range of units of significance for the field of Chemistry and related information.
+ The OM ontology provides classes, instances, and properties that represent the different concepts used for defining and using measures and units.
+ It includes, for instance, common units such as the SI units meter and kilogram, and a wide range of units of significance for the field of Chemistry and related information.
 It can be easily mapped to other resources such as [Unit Ontology](https://www.ebi.ac.uk/ols/ontologies/om), with tools such as [OXO](https://www.ebi.ac.uk/spot/oxo/)
 
-More information on annotating data with ontologies using tools like [Zooma](https://www.ebi.ac.uk/spot/zooma/), can be found in Section 7.7.3.3. of [this recipe ](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html)
+More information on annotating data with ontologies using tools like [Zooma](https://www.ebi.ac.uk/spot/zooma/), can be found in Section 7.7.3.3. of [this recipe](https://w3id.org/faircookbook/FCB023)
 
 ### Exemplar Bioactivity datasets
 
@@ -197,14 +192,24 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 >- [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
 >- [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)
 
+---
 
 ## Authors:
-````{authors_fairplus}
+
+```{authors_fairplus}
 AndreaZaliani: Writing - Original Draft, Editing, Conceptualization
 Fuqi: Writing - Writing - Original Draft, Editing, Conceptualization
 Philippe: Writing - Review & Editing
-````
+```
 
+---
+
+## References:
+```{footbibliography}
+```
+<!-- Visser, U., Abeyruwan, S., Vempati, U. et al. BioAssay Ontology (BAO): a semantic description of bioassays and high-throughput screening results. BMC Bioinformatics 12, 257 (2011). https://doi.org/10.1186/1471-2105-12-257 -->
+
+---
 
 ## Licence:
 

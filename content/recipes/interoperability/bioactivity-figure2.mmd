@@ -1,0 +1,12 @@
+graph TD
+
+    A[Primary data at one concentration]-->B{Number of readouts: <br>Quantitive measures<br> per molecule}
+    B-->|one column|V{Which unit?}
+    V-->|value <br> Unit:percentage|D
+    V-->|value <br> Unit:micromolar|F
+    B-->|multi columns|C[valid readouts]
+    C-->|experiments|D{if triplicates}
+    D-->|aggregating or filtering|E[validated ones]
+    E--> |calculating|G[One average readout value <br> per concentration]
+    G-->F[CC/AC/IC50/IC90 curves]
+end
