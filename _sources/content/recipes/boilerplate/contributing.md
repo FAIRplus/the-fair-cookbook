@@ -34,7 +34,7 @@ As a reminder, we expect all contributors to `FAIR cookbook` to adhere to the [F
 You'll use [Markdown][markdown] to chat in issues and pull requests on GitHub.
 You can think of Markdown as a few little symbols around your text that will allow GitHub
 to render the text with formatting.
-For example you could write words as bold (`**bold**`), or in italics (`*italics*`)
+For example you could write words as bold (`**bold**`), or in italics (`*italics*`).
 <!-- ,
 or as a [link][rick_roll] (`[link](https://https://youtu.be/dQw4w9WgXcQ)`) to another webpage. -->
 

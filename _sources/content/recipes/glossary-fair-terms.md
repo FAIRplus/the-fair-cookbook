@@ -95,7 +95,7 @@ FIP
 	a FAIR implementation Profile, which can be understood as the set of metadata element and their value sets, semantic resources and constraints to capture information in a domain of interest.
 
 FHIR
-	see HL7 FHIR
+	see HL7 FHIR.
 
 ```
 
@@ -116,7 +116,7 @@ Gremlin
 	a graph traversal and query language developed as part of the Apache Tinkerpop project.
 
 GUPRID
-	Globally Unique Persistent Resolvable Identifier, a type of persistent identifier with added properties such as guaranted uniqueness and accessibility via HTTP protocol
+	Globally Unique Persistent Resolvable Identifier, a type of persistent identifier with added properties such as guaranted uniqueness and accessibility via HTTP protocol.
 ```
 
 ---
@@ -144,7 +144,7 @@ IMI
 	Innovative Medicine Initiative, a European Union public-private partnership funding program bringing together academic and industrial stakeholders on the theme of developing new therapeutic solutions.
 
 Interoperability
-	The property of a resource to work together with other software agents without
+	The property of a resource to work together with other software agents.
 ```
 
 ---
@@ -152,7 +152,7 @@ Interoperability
 ## J
 ```{glossary}
 JSON
-	Javascript Online Notation a syntax for data structures and used to transmit data objects consisting of attribute-value pairs.
+	Javascript Online Notation, a syntax for data structures and used to transmit data objects consisting of attribute-value pairs.
 ```
 
 ---
@@ -160,10 +160,10 @@ JSON
 ## K
 ```{glossary}
 KG
-	Knowledge graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge graphs are often used to store interlinked descriptions of entities - objects, events, situations or abstract concepts - with free-form semantics. (source: wikipedia)
+	a Knowledge Graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge Graphs are often used to store interlinked descriptions of entities - objects, events, situations or abstract concepts - with free-form semantics. (source: wikipedia)
 
 KPI
-	Key Performance Indicator. a generic term to cover any metric  or indicator use to gauge efficiency.
+	Key Performance Indicator, a generic term to cover any metric  or indicator use to gauge efficiency.
 ```
 
 ---
@@ -173,8 +173,8 @@ KPI
 Licensing
 	the process of assigning a license, i.e a formal, legally binding document which articulates the condition of use of an entity.
 
-LD Linked Data
-	linked data is structured data which is interlinked with other data so it becomes more useful through semantic queries. (source: wikipedia)
+LD 
+	Linked Data is structured data which is interlinked with other data so it becomes more useful through semantic queries. (source: wikipedia)
 ```
 
 ---
@@ -235,7 +235,8 @@ Property Graph
 Provenance Metadata
 	metadata the aim of which is to provide traceability, audit and trail capability allowing consumers to understand its origin.
 
-PROV a W3C RDF vocabulary for representing and expressing provenance information 	
+PROV 
+	a W3C RDF vocabulary for representing and expressing provenance information. 	
 ```
 
 ---
@@ -305,7 +306,7 @@ Structural Metadata
 	metadata the aim of which is to define data structure and content organization.
 
 Swagger API
-	see openAPI
+	see openAPI.
 ```
 
 ---
@@ -329,7 +330,7 @@ URI
 ## V
 ```{glossary}
 ValueSet
-	the range of discrete values allowed for a categorical variable
+	the range of discrete values allowed for a categorical variable.
 ```
 
 ---
@@ -345,7 +346,7 @@ Wikidata
 ## X
 ```{glossary}
 XML
-	Extensible Markup Language
+	Extensible Markup Language.
 ```
 
 ---
@@ -353,7 +354,7 @@ XML
 ## Y
 ```{glossary}
 YML
-	Yet Another Markup Language
+	Yet Another Markup Language.
 
 Yummydata
 	Yummydata is a site that lists and monitors SPARQL endpoints that provide data of interest to the biomedical community.

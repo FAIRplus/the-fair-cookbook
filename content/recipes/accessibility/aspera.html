@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="../interoperability/ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -823,7 +847,7 @@ Yes
 <hr class="docutils" />
 <div class="section" id="main-objectives">
 <h2><span class="section-number">2.1. </span>Main objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads . While the Aspera protocol is used by major public scientific data repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is <strong>proprietary</strong>. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR compliance.</p>
+<p>This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is <strong>proprietary</strong>. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR compliance.</p>
 </div>
 <div class="section" id="graphical-overview">
 <h2><span class="section-number">2.2. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
@@ -837,9 +861,9 @@ Yes
 <div class="section" id="get-accounts-permissions">
 <h3><span class="section-number">2.3.1. </span>Get accounts permissions<a class="headerlink" href="#get-accounts-permissions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Apply for access</p></li>
-<li><p>Pay attention to the conditions</p></li>
-<li><p>Sign up if you are the appropriate person for this download/upload</p></li>
+<li><p>Apply for access.</p></li>
+<li><p>Pay attention to the conditions.</p></li>
+<li><p>Sign up if you are the appropriate person for this download/upload.</p></li>
 <li><p>Typically Aspera sites are locked down and need a username and password.</p></li>
 <li><p>For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.</p></li>
 </ul>
@@ -856,7 +880,7 @@ Yes
 <ul class="simple">
 <li><p>For Linux:</p>
 <ul>
-<li><p>Aspera ascp This can be downloaded from:  <a class="reference external" href="https://downloads.asperasoft.com/">https://downloads.asperasoft.com/</a></p></li>
+<li><p>Aspera ascp. This can be downloaded from:  <a class="reference external" href="https://downloads.asperasoft.com/">https://downloads.asperasoft.com/</a></p></li>
 <li><p>Documentation:</p>
 <ul>
 <li><p>General: <a class="reference external" href="https://download.asperasoft.com/download/docs/ascp/2.7/html/index.html">https://download.asperasoft.com/download/docs/ascp/2.7/html/index.html</a></p></li>
@@ -870,7 +894,7 @@ Yes
 <h4><span class="section-number">2.3.3.1. </span>Get the firewall configured as required to allow downloading and or uploading<a class="headerlink" href="#get-the-firewall-configured-as-required-to-allow-downloading-and-or-uploading" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>You may need to have firewall exceptions raised to unblock ports 3301 and 22, with your organisation IT’s network perimeter team.</p></li>
-<li><p>Try connecting first in case they are already not blocked</p></li>
+<li><p>Try connecting first in case they are already not blocked.</p></li>
 </ul>
 </div>
 <div class="section" id="work-out-the-appropriate-command-line-options">
@@ -880,7 +904,7 @@ Yes
 <li><p>Considerations:</p>
 <ul>
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">-k</span> <span class="pre">{1,2,3}</span></code>  option to allow restarts without re-downloading all the data.</p></li>
-<li><p>Run it using something like screen, so that it can be running in the background on a server</p></li>
+<li><p>Run it using something like screen, so that it can be running in the background on a server.</p></li>
 <li><p>On the command line you can choose a preferred transfer rate. Please be careful to not hog the network bandwidth (we found up to about 100Mbps is okay).</p></li>
 </ul>
 </li>
@@ -912,8 +936,8 @@ ascp version <span class="m">3</span>.9.6.176292
 <div class="section" id="monitoring-connections-and-file-transfers">
 <h3><span class="section-number">2.3.4. </span>Monitoring connections and file transfers<a class="headerlink" href="#monitoring-connections-and-file-transfers" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Observe the  download/upload speed e.g. 100Mbs and then you can estimate the finish time</p></li>
-<li><p>Have some automated monitoring on the download process to  notify you if it  stops/finishes.  Even an hourly <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-sh</span></code> from a cron job</p></li>
+<li><p>Observe the  download/upload speed e.g. 100Mbs and then you can estimate the finish time.</p></li>
+<li><p>Have some automated monitoring on the download process to  notify you if it  stops/finishes.  Even an hourly <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-sh</span></code> from a cron job.</p></li>
 <li><p>Also typically you are pulling down many directories and files. On completion, it may be worth doing a recursive file listing to a file e.g. <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-ltR</span> <span class="pre">&gt;</span> <span class="pre">file_listing.txt</span></code> to give you and your “customers” a simple file catalogue.</p></li>
 </ul>
 </div>
@@ -922,8 +946,8 @@ ascp version <span class="m">3</span>.9.6.176292
 <ul class="simple">
 <li><p>For uploading much of the above applies. The main differences are:</p>
 <ul>
-<li><p>be aware of geographical zoning and which areas to upload to</p></li>
-<li><p>prepare data for ease of tranfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).</p></li>
+<li><p>Be aware of geographical zoning and which areas to upload to.</p></li>
+<li><p>Prepare data for ease of tranfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).</p></li>
 </ul>
 </li>
 </ul>

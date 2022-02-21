@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="../interoperability/ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -684,8 +708,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#determining-of-need-of-fairification">
-   Determining of need of FAIRification
+  <a class="reference internal nav-link" href="#determining-the-need-for-fairification">
+   Determining the need for FAIRification
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -848,10 +872,10 @@ No
 <hr class="docutils" />
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>With the increased awareness of the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a <em>principled approach</em> to prioritizing datasets for data FAIRification. The present recipe aims to provide insights into how to go about this process by showcasing essential criterian which have been considered and “battle-tested”.</p>
-<p>The is structured in the following way:</p>
+<p>With the increased awareness of the FAIR principles, the drive to implement them can be felt in projects and programs. However, considering the volume and variety of such projects and the finite nature of available resources, it is also necessary to establish a <em>principled approach</em> to prioritizing datasets for data FAIRification. The present recipe aims to provide insights into how to go about this process by showcasing essential criteria which have been considered and “battle-tested”.</p>
+<p>The recipe is structured in the following way:</p>
 <ul class="simple">
-<li><p>We begin by pointing out the reasons why one needs to make their dataset FAIR.</p></li>
+<li><p>We begin by pointing out the reasons why one should to make their dataset FAIR.</p></li>
 <li><p>Following this, a brief overview of the dataset corpus formulation. Once the team has collected all the necessary data, it can now pass through the prioritization phase. Here, a thorough assessment of the dataset based on certain criteria is done. This assessment, in turn, leads to the development of a scorecard.</p></li>
 <li><p>Finally, with the points each dataset has earned in the scorecard, a ranking can be established and projects or datasets can be prioritized.</p></li>
 </ul>
@@ -868,16 +892,16 @@ No
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="determining-of-need-of-fairification">
-<h2>Determining of need of FAIRification<a class="headerlink" href="#determining-of-need-of-fairification" title="Permalink to this headline">¶</a></h2>
-<p>Before understanding why and how to <em>prioritize</em> projects for the FAIR pipeline, it is essential to understand <em>the need</em> for FAIRification of data. The list below identifies key reasons (as examples) why one should make their data FAIR:</p>
+<div class="section" id="determining-the-need-for-fairification">
+<h2>Determining the need for FAIRification<a class="headerlink" href="#determining-the-need-for-fairification" title="Permalink to this headline">¶</a></h2>
+<p>Before understanding why and how to <em>prioritize</em> projects for the FAIR pipeline, it is essential to understand <em>the need</em> for FAIRification of data. The list below identifies key reasons why one should make data FAIR:</p>
 <ul class="simple">
 <li><p>Increase impact and visibility:</p>
 <ul>
-<li><p>It helps in increasing visibility and impact of the data within the scientific community by standardising the published project/dataset metadata using a well-accepted metadata model and getting indexed by major community resources.</p></li>
+<li><p>Standardising published project/dataset metadata using a well-accepted metadata model and getting indexed by major community resources helps in increasing the visibility and impact of the data within the scientific community.</p></li>
 </ul>
 </li>
-<li><p>Data harmonisation:</p>
+<li><p>Harmonise data:</p>
 <ul>
 <li><p>When creating a tool with the help of multiple independent resources, FAIRification can help in easing the integration of data sources, for instance with the help of a common terminology.</p></li>
 </ul>
@@ -887,12 +911,12 @@ No
 <li><p>The FAIRification process can attract communities together for potential collaboration as each of the independent communities would now have a structured data format to map their data for integration.</p></li>
 </ul>
 </li>
-<li><p>Prepares data for downstream tasks:</p>
+<li><p>Prepare data for downstream tasks:</p>
 <ul>
 <li><p>A FAIRified data is machine-readable and hence can potentially be used by software agents such as machine learning (ML) or artificial intelligence (AI) models for analysis with help of downstream.</p></li>
 </ul>
 </li>
-<li><p>Adds economic aspect of capitalization on research investment:</p>
+<li><p>Adds to the capitalization on research investment:</p>
 <ul>
 <li><p>A FAIRified data is reusable, meaning that initial investment and newly generated data assets are protected but also that additional investment in redoing research can be avoided.</p></li>
 </ul>
@@ -923,7 +947,7 @@ No
 <div class="section" id="prioritization-based-on-focus">
 <h3>1. Prioritization based on focus<a class="headerlink" href="#prioritization-based-on-focus" title="Permalink to this headline">¶</a></h3>
 <p>When dealing with large number of projects, the PSP team can get an overview of the research area or focus area of the given project. Specifically, projects from biomedical or clinical areas tend to be associated with a comorbidity or pathology, and the team can leverage this specific information to create a customised prioritization schema. If the focus area of the project is not available directly, one  makes use of manual curation or certain natural language processing (NLP) pipelines to extract this information from project documents. One such example of the tool used by IMI is demonstrated on <a class="reference external" href="https://github.com/Fraunhofer-ITMP/IMI-Project-Prioritization">GitHub</a>.</p>
-<p><strong>An <em>in-house</em> prioritization scheme can be established by FAIR experts for selection of relevant projects for the FAIRification process.</strong> This involves a two-step approach:</p>
+<p>An <em>in-house</em> prioritization scheme can be established by FAIR experts for selection of relevant projects for the FAIRification process. This involves a two-step approach:</p>
 <ol>
 	<li>Identification of certain priority disease areas, such as COVID-19, neurodegenerative diseases, cardiovascular diseases, etc.</li>
 	<li>Prioritizing projects falling into these priority areas compared to others.</li>
@@ -933,11 +957,11 @@ No
 <h3>2. Prioritization based on timeline<a class="headerlink" href="#prioritization-based-on-timeline" title="Permalink to this headline">¶</a></h3>
 <p>The process for FAIRification could be done either to the data present in a project or to a processing pipeline that is part of the project. Due to the interdependence of the data or process with the project, the time range at which a project runs is an important criteria to understand the availability of the data or pipeline. Taking a deeper look into the data dependency for the FAIRification process, a project can be divided into three stages of development: early stage, middle stage, and end stage.</p>
 <ul class="simple">
-<li><p>A project is in early stages of development when the data requirements for the given project are being listed and simultaneously being collected. At this stage, the data availability is the lowest, and it is easier to design a data model, choose ontologies etc. that ensures creation of FAIR data by design’.</p></li>
+<li><p>A project is in early stages of development when the data requirements for the given project are being listed and simultaneously being collected. At this stage, the data availability is the lowest, and it is easier to design a data model, choose ontologies etc. that ensures creation of FAIR data by design.</p></li>
 <li><p>In the middle stage, all the data relevant for the given project has been collected and now needs to be standardised for downstream tasks such as for predictions using machine learning approaches. This is a stage where there is maximum availability of data.</p></li>
 <li><p>Lastly, in the end stage, data has either been deposited or handed over to the respective heads and the project is near its termination. Furthermore, it is at this stage that the risk  of organisation restructuring is highest, with staff reassignment or departure. Hence, starting a FAIRification process at a project  end stage could be the least favourable as this could place large demands in time and resources on key personnel, such as for corresponding data owners and data generators, at a time of effort wind down.</p></li>
 </ul>
-<p><strong>Hence, the best time of engaging a project into the FAIR pipeline would be dependent on the retrospective and prospective aspects of the project.</strong> <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">best</span> <span class="pre">time</span> <span class="pre">to</span> <span class="pre">FAIRify</span> <span class="pre">prospective</span> <span class="pre">projects</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">early</span> <span class="pre">stage</span></code>. This stage is the best time to define and layout metadata standards that need to be followed during the project’s trajectory. As a result, it eliminates many of the downstream logistical and financial problems. <code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">the</span> <span class="pre">other</span> <span class="pre">hand,</span> <span class="pre">the</span> <span class="pre">best</span> <span class="pre">time</span> <span class="pre">to</span> <span class="pre">engage</span> <span class="pre">in</span> <span class="pre">FAIRification</span> <span class="pre">of</span> <span class="pre">retrospective</span> <span class="pre">projects</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">middle</span> <span class="pre">stage.</span></code> This is because it is a data-rich stage and contact with both data owners and generators could be established for a better understanding of the data.</p>
+<p>Hence, the best time of engaging a project into the FAIR pipeline would be dependent on the retrospective and prospective aspects of the project. <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">best</span> <span class="pre">time</span> <span class="pre">to</span> <span class="pre">FAIRify</span> <span class="pre">prospective</span> <span class="pre">projects</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">early</span> <span class="pre">stage</span></code>. This stage is the best time to define and layout metadata standards that need to be followed during the project’s trajectory. As a result, it eliminates many of the downstream logistical and financial problems. <code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">the</span> <span class="pre">other</span> <span class="pre">hand,</span> <span class="pre">the</span> <span class="pre">best</span> <span class="pre">time</span> <span class="pre">to</span> <span class="pre">engage</span> <span class="pre">in</span> <span class="pre">FAIRification</span> <span class="pre">of</span> <span class="pre">retrospective</span> <span class="pre">projects</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">middle</span> <span class="pre">stage.</span></code> This is because it is a data-rich stage and contact with both data owners and generators could be established for a better understanding of the data.</p>
 </div>
 <div class="section" id="prioritization-based-on-partners">
 <h3>3. Prioritization based on partners<a class="headerlink" href="#prioritization-based-on-partners" title="Permalink to this headline">¶</a></h3>
@@ -963,7 +987,7 @@ No
 <div class="section" id="prioritization-based-on-presence-of-data-champions">
 <h3>6. Prioritization based on presence of data champions<a class="headerlink" href="#prioritization-based-on-presence-of-data-champions" title="Permalink to this headline">¶</a></h3>
 <p><strong>Data champions</strong> can be defined as a group of people that have an expertise in dealing with certain processes, data, or pipeline. When dealing with specific processes or data types, it is beneficial if an expert who has experience in dealing with such processes or data already exists within the FAIR expert team.</p>
-<p><strong>prioritization of projects with consideration of expertise required in dealing with FAIRification tasks should be done.</strong> Such projects can then have a predetermined timeline involved, making the step-by-step approach for accomplishing a FAIR process or data comparatively easy.</p>
+<p><strong>Prioritization of projects with consideration of expertise required in dealing with FAIRification tasks should be done.</strong> Such projects can then have a predetermined timeline involved, making the step-by-step approach for accomplishing a FAIR process or data comparatively easy.</p>
 </div>
 <div class="section" id="prioritization-based-on-data-types">
 <h3>7. Prioritization based on data types<a class="headerlink" href="#prioritization-based-on-data-types" title="Permalink to this headline">¶</a></h3>
@@ -1001,7 +1025,7 @@ ii. Identify a funder or publisher recommended repository accepting this data ty
 <hr class="docutils" />
 <div class="section" id="scorecard-formulation-and-ranking">
 <h2>Scorecard formulation and ranking<a class="headerlink" href="#scorecard-formulation-and-ranking" title="Permalink to this headline">¶</a></h2>
-<p>Overall, for each criteria, a rank can be assigned based on the priority decided by the PSP team. This ranked-based assessment of projects would in turn lead to development of a scoreboard(Figure below)</a>. To enable ranking of projects, an additive sum of each of these criteria should be used, thereby directing each project with one final score. In the end, a descending ranking of the projects can be achieved, and the top k number of projects can be selected for FAIRification by the PSP team and handed over to the FAIR experts.</p>
+<p>Overall, for each criteria, a rank can be assigned based on the priority decided by the PSP team. This ranked-based assessment of projects would in turn lead to development of a scoreboard (Figure below). To enable ranking of projects, an additive sum of each of these criteria should be used, thereby directing each project with one final score. In the end, a descending ranking of the projects can be achieved, and the top k number of projects can be selected for FAIRification by the PSP team and handed over to the FAIR experts.</p>
 <!--
 <div style="justify-content: center;">
 <img src="/images/score_card_ref.png" style="border:1px solid black"/>

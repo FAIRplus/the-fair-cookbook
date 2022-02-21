@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="../interoperability/ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -935,8 +959,8 @@ One may browse the list of currently community defined indicators from the <code
 <ol class="simple">
 <li><p>a collection of FAIR indicators, selected from the list described above.</p></li>
 <li><p>a globally unique, persistent, resolveable identifier for the resource to be evaluated.</p></li>
-<li><p>a title for the evaluation. Enforce a naming convention to make future searches easiers as these evaluations are saved.</p></li>
-<li><p>a person identifier in the form of an ORCID</p></li>
+<li><p>a title for the evaluation. Enforce a naming convention to make future searches easier as these evaluations are saved.</p></li>
+<li><p>a person identifier in the form of an ORCID.</p></li>
 </ol>
 <!-- ![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 <div class="figure align-default" id="running-the-fairevaluator-part-1-setting-the-input">
@@ -971,7 +995,7 @@ One may browse the list of currently community defined indicators from the <code
 </div>
 <div class="section" id="conclusion">
 <h2><span class="section-number">1.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<p>Using software tool to assess FAIR maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
+<p>Using software tools to assess FAIR maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
 Furthermore, only automation is able to cope with the scale and volumes of assets to evaluate.
 The software-based evaluations are repeatable, reproducible and free of bias (other than those that may be related to definitions of the FAIR indicators themselves).
 These are also more demanding in terms of technical implementation and knowledge.

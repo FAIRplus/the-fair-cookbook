@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="../interoperability/ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -882,12 +906,12 @@ No
 <div class="section" id="schema-org-vocabulary">
 <h3><span class="section-number">7.4.3. </span><a class="reference external" href="http://Schema.org">Schema.org</a> Vocabulary<a class="headerlink" href="#schema-org-vocabulary" title="Permalink to this headline">¶</a></h3>
 <p>A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
-Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation</p>
+Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation.</p>
 </div>
 <div class="section" id="how-does-schema-org-work-in-practice">
 <h3><span class="section-number">7.4.4. </span>How does <a class="reference external" href="http://Schema.org">Schema.org</a> work in practice:<a class="headerlink" href="#how-does-schema-org-work-in-practice" title="Permalink to this headline">¶</a></h3>
 <p>The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code> is widely recommended as the most suitable approach.</p>
-<p>Below is a regular plain vanilla HTML page providing information about an scientific joournal article.</p>
+<p>Below is a regular plain vanilla HTML page providing information about an scientific journal article.</p>
 <div class="highlight-HTML notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- A list of the issues for a single volume of a given periodical. --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>The Lancet<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -970,7 +994,7 @@ The tool is known as the <a class="reference external" href="https://search.goog
 <p><code class="docutils literal notranslate"><span class="pre">Schema.org</span></code> development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the <a class="reference external" href="https://bioschemas.org/"><code class="docutils literal notranslate"><span class="pre">Bioschemas</span> <span class="pre">project</span></code></a>, which has been running for a few years with the support of the <a class="reference external" href="https://elixir-europe.org/"><code class="docutils literal notranslate"><span class="pre">EU-Elixir</span> <span class="pre">organization</span></code></a>. <code class="docutils literal notranslate"><span class="pre">Bioschemas</span></code> focuses on making <a class="reference external" href="http://Schema.org">Schema.org</a> more relevant for the life sciences community by providing:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> for life sciences entities such as chemicals, genes, and proteins.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">profiles</span></code> that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profiles</span></code> that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable.</p></li>
 </ol>
 <p>The <a class="reference external" href="https://bioschemas.org/profiles/">main profiles</a> currently specified by the <code class="docutils literal notranslate"><span class="pre">Bioschemas</span></code> organisation are as follows:</p>
 <ul class="simple">

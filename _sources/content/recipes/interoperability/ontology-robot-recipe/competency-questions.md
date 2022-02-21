@@ -28,4 +28,4 @@ Questions including compound or treatment information
 - Identify all data generated from primary cells treated with a kinase inhibitor.
 - Identify all data from patients treated with a specific medication.
 - Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.
-- What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific diseas
+- What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease.

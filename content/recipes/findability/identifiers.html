@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="../interoperability/ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -938,7 +962,7 @@ No
 <p>The main goals of this recipe are therefore:</p>
 <blockquote>
 <div><p>To understand the purpose of a globally unique and persistent identifier and how they can be used to retrieve the associated (meta)data using a standardized communication protocol.
-To provide explanations on how to generate globaly unique identifiers, explain what IRI are and how they can be generated, retrieved and resolved.</p>
+To provide explanations on how to generate globaly unique identifiers, explain what IRIs are and how they can be generated, retrieved and resolved.</p>
 </div></blockquote>
 <p>From these principles, it is necessary to explain three key processes, which are:</p>
 <div class="section" id="identifier-minting">
@@ -1172,7 +1196,7 @@ The first two are considered obsolete, while the latter two are most advanced an
 <p class="admonition-title">Tip</p>
 <p><strong>URI construction is fundamentally about scoping the authority</strong>.</p>
 </div>
-<p>Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers <em>resolvable (a notion also known as <code class="docutils literal notranslate"><span class="pre">dereferencable</span></code>)</em>.</p>
+<p>Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers <em>resolvable (a notion also known as <code class="docutils literal notranslate"><span class="pre">dereferenceable</span></code>)</em>.</p>
 <p>In other words, in order to create globally unique identifiers <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">the</span> <span class="pre">web</span></code>, it is necessary to understand what Uniform Resource Locators<!-- TODO add a link to corresponding document --> (a.k.a <code class="docutils literal notranslate"><span class="pre">URL</span></code>) are and how to construct them for use with the Hypertext Transfer Protocol<!-- TODO add a link to corresponding document -->.</p>
 <p>This results in URLs of the following form</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>          userinfo       host      port
@@ -1229,7 +1253,7 @@ The first two are considered obsolete, while the latter two are most advanced an
 <hr class="docutils" />
 <div class="section" id="path">
 <h3><span class="section-number">1.6.4. </span><code class="docutils literal notranslate"><span class="pre">path</span></code>:<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">path</span></code> defines the directory on the <code class="docutils literal notranslate"><span class="pre">host</span></code> where the resource is located and consists of a sequence of zeor or more path segements separated by a <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">path</span></code> defines the directory on the <code class="docutils literal notranslate"><span class="pre">host</span></code> where the resource is located and consists of a sequence of zero or more path segements separated by a <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 </div>
 <div class="section" id="query">
 <h3><span class="section-number">1.6.5. </span><code class="docutils literal notranslate"><span class="pre">query</span></code>:<a class="headerlink" href="#query" title="Permalink to this headline">¶</a></h3>
@@ -1251,7 +1275,7 @@ In order to achieve the capability of <code class="docutils literal notranslate"
 <li><p>optionally a path: <code class="docutils literal notranslate"><span class="pre">/dataset-name/</span></code></p></li>
 <li><p>a local identifier (such as database accession number, such as P12133 from uniprot) or a globally unique identifier (such as a UUID or hash code).</p></li>
 </ol>
-<p>In a virtual example which uses a UUID for the local identifier and does not use a path, it looks like this</p>
+<p>In a virtual example which uses a UUID for the local identifier and does not use a path, it looks like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 </pre></div>
 </div>
@@ -1272,7 +1296,7 @@ In order to achieve the capability of <code class="docutils literal notranslate"
 </div>
 <div class="section" id="identifier-resolution-enabling-persistence-through-indirection">
 <h2><span class="section-number">1.8. </span>Identifier Resolution - Enabling persistence through indirection<a class="headerlink" href="#identifier-resolution-enabling-persistence-through-indirection" title="Permalink to this headline">¶</a></h2>
-<p>This relates to this other FAIR principle mentioned in the introduction.</p>
+<p>This relates to the following FAIR principle mentioned in the introduction:</p>
 <blockquote>
 <div><p>A1. (Meta)data are retrievable by their identifier using a standardised communications protocol.</p>
 </div></blockquote>
@@ -1300,7 +1324,7 @@ When an author needs to move a page, they can update the PURL to point to the ne
 <h3><span class="section-number">1.8.1. </span>Introducing CURIES or Compact URIs<a class="headerlink" href="#introducing-curies-or-compact-uris" title="Permalink to this headline">¶</a></h3>
 <p>CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Working Group Note <a class="reference external" href="https://www.w3.org/TR/2010/NOTE-curie-20101216/">CURIE Syntax 1.0</a>, and provide a human readable shortening of IRIs.</p>
 <p>The CURIE consists of a <strong><code class="docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">prefix</span></code></strong> followed by the <strong><code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">identifier</span></code></strong>.</p>
-<p>There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI <code class="docutils literal notranslate"><span class="pre">[doi:10.1038/sdata.2016.18]</span></code> refers to the FAIR Principles paper<a class="footnote-reference brackets" href="#safe-curie" id="id5">1</a>. The Digital Object Identifier System web site (<a class="reference external" href="https://www.doi.org/">https://www.doi.org/</a>) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL <a class="reference external" href="https://www.doi.org/10.1038/sdata.2016.18">https://www.doi.org/10.1038/sdata.2016.18</a> to resolve the paper’s DOI. This results in the client being taken to the page at <a class="reference external" href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a>.</p>
+<p>There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI <code class="docutils literal notranslate"><span class="pre">[doi:10.1038/sdata.2016.18]</span></code> refers to the FAIR Principles paper <a class="footnote-reference brackets" href="#safe-curie" id="id5">1</a>. The Digital Object Identifier System web site (<a class="reference external" href="https://www.doi.org/">https://www.doi.org/</a>) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL <a class="reference external" href="https://www.doi.org/10.1038/sdata.2016.18">https://www.doi.org/10.1038/sdata.2016.18</a> to resolve the paper’s DOI. This results in the client being taken to the page at <a class="reference external" href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Namespaces</span></code> can be defined <em>by convention</em>, such as the case with <code class="docutils literal notranslate"><span class="pre">doi</span></code>, and registered with services to allow for the resolution of CURIEs (see <a class="reference external" href="##identifier-resolution-services">Identifier Resolution Services</a> below). These are extensively used to map CURIEs to URLs that can be resolved.</p>
 <p>Going back to our <em>Life Science context</em>, we can use the following CURIE <code class="docutils literal notranslate"><span class="pre">[uniprot:P38398]</span></code> to refer to the UniProt record for the protein.</p>
 <p>This is very useful for including unambiguous, global identifiers in scientific articles.</p>
@@ -1337,6 +1361,11 @@ Datasets can register their <em>namespace <code class="docutils literal notransl
 <div><p><a class="reference external" href="https://n2t.net/">Name2Things</a> (N2T) is a <strong>Resolution Service</strong>, maintained at the California Digital Library (CDL) within the University of California (UC) Office of the President. CDL supports electronic library services for ten UC campuses and affiliated law schools, medical centers, and national laboratories, as well as hundreds of museums, herbaria, botanical gardens, etc. Similar to URL shorteners like <a class="reference external" href="http://bit.ly">bit.ly</a>, N2T serves content <strong>indirectly</strong>.
 N2T can store more than one “target” (forwarding link) for an identifier, as well as any kind or amount of metadata (descriptive information)
 <a class="reference external" href="http://N2T.net">N2T.net</a> is also a “meta-resolver”. In collaboration with <a class="reference external" href="http://identifiers.org">identifiers.org</a>, it recognizes over 600 well-known identifier types and knows where their respective servers are. Failing to find forwarding information for a specific individual identifier, it uses the identifier’s type to look for an overall target rule.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://bioregistry.io/">Bioregistry</a></p>
+<blockquote>
+<div><p><a class="reference external" href="https://bioregistry.io/">Bioregistry</a> is a <strong>Resolution Service</strong>, developed in a <a class="reference external" href="https://github.com/biopragmatics/bioregistry">GitHub repository</a>. Like <a class="reference external" href="http://Identifiers.org">Identifiers.org</a> it has a registry, but also a registry of registries, and it imports data from <a class="reference external" href="http://Identifiers.org">Identifiers.org</a> and Name-to-Thing but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be <a class="reference external" href="https://github.com/biopragmatics/bioregistry/issues/new/choose">registered via GitHub issues</a>. Compact identifiers are supported and the URL <a class="reference external" href="https://bioregistry.io/chebi:138488">https://bioregistry.io/chebi:138488</a> resolves to the ChEBI page <a class="reference external" href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488</a>. Bioregistry provides an <a class="reference external" href="https://bioregistry.io/apidocs/">API to query the registry</a> itself.</p>
 </div></blockquote>
 </li>
 </ul>

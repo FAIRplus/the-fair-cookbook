@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -1487,7 +1511,7 @@ Some of the resources are specialized semantic artefacts developed to support th
 </div>
 <div class="section" id="relations">
 <h3><span class="section-number">4.5.4. </span>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">¶</a></h3>
-<p>Also known as <code class="docutils literal notranslate"><span class="pre">OWL.Properties</span></code>, their importance may be overlooked by <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">scientists</span></code> who are not <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">engineers</span></code> or <code class="docutils literal notranslate"><span class="pre">ontologists</span></code>. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by tools known as <code class="docutils literal notranslate"><span class="pre">reasoners</span></code> to carry the following key tasks:</p>
+<p>Also known as <code class="docutils literal notranslate"><span class="pre">OWL</span> <span class="pre">Properties</span></code>, their importance may be overlooked by <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">scientists</span></code> who are not <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">engineers</span></code> or <code class="docutils literal notranslate"><span class="pre">ontologists</span></code>. These are essential components as, when correctly crafted with a proper understanding of the logical constraints available to semantic languages such as OWL, are exploited by tools known as <code class="docutils literal notranslate"><span class="pre">reasoners</span></code> to carry the following key tasks:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Ontology</span> <span class="pre">logical</span> <span class="pre">consistency</span></code> checks</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Automatic</span> <span class="pre">classification</span></code> and <code class="docutils literal notranslate"><span class="pre">inference</span></code> tasks</p></li>
@@ -1536,7 +1560,7 @@ Some of the resources are specialized semantic artefacts developed to support th
 </table>
 <p>As <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> and <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> gain importance, we can expect the range and depth of relations to mature and expand as more expressivity is needed and progress is made by reasoner technology to fully exploit their benefits.
 This would also have to be placed in the context of advances in <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Mining</span></code> and <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>, where unsupervised methods start to demonstrate strong potential to detect relations between entities.</p>
-<p>The following is an example of how a <code class="docutils literal notranslate"><span class="pre">defined</span> <span class="pre">class</span></code> may be created in an ontology. The code snippet shows one such class being expressed to create a type by specifying a number of <code class="docutils literal notranslate"><span class="pre">axioms</span></code>. These use <code class="docutils literal notranslate"><span class="pre">relations</span></code> (aka OWL.Properties), which may be set to</p>
+<p>The following is an example of how a <code class="docutils literal notranslate"><span class="pre">defined</span> <span class="pre">class</span></code> may be created in an ontology. The code snippet shows one such class being expressed to create a type by specifying a number of <code class="docutils literal notranslate"><span class="pre">axioms</span></code>. These use <code class="docutils literal notranslate"><span class="pre">relations</span></code> (aka OWL Properties), which may be set to</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;B cell, CD19-positive&#39;</span>
 equivalentClass :
     <span class="s1">&#39;lymphocyte of B lineage, CD19-positive&#39;</span> 
@@ -1572,8 +1596,7 @@ TODO : fill in the links to what-should-I-read-next recipes
 <div><ul class="simple">
 <li><p>How to select on ontology service?<!-- TODO add a link to corresponding document --></p></li>
 <li><p>How to deploy an ontology server?<!-- TODO add a link to corresponding document --></p></li>
-<li><p>How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document -->
-–&gt;</p></li>
+<li><p>How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document --></p></li>
 </ul>
 </div></blockquote>
 <hr class="docutils" />

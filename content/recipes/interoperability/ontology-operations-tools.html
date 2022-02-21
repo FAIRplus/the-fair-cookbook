@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -810,7 +834,7 @@ No
 <div class="section" id="main-objectives">
 <h2><span class="section-number">6.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>This recipe aims to provide <code class="docutils literal notranslate"><span class="pre">an</span> <span class="pre">overview</span> <span class="pre">of</span> <span class="pre">tools</span> <span class="pre">available</span></code> to perform a number of key operations using ontologies and relevant to FAIR processes: from <code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">management</span></code> to using <code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">for</span> <span class="pre">annotation</span></code> or <code class="docutils literal notranslate"><span class="pre">performing</span> <span class="pre">ontology</span> <span class="pre">mapping</span></code>.</p>
-<p>It aims to serve as a starting point to identify tools for FAIRifications tasks where ontologies and semantic frameworks are needed.</p>
+<p>It aims to serve as a starting point to identify tools for FAIRification tasks where ontologies and semantic frameworks are needed.</p>
 <div class="admonition-disclaimer admonition">
 <p class="admonition-title">disclaimer</p>
 <p>It is not intended to provide a comprehensive list covering all possible tools.</p>

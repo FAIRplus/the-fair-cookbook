@@ -1,0 +1,2894 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14.10.1. Introduction to the VCF2FHIR python library</title>
+    
+  <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script src="../../../../_static/mermaid.core.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Reusability" href="../../reusability.html" />
+    <link rel="prev" title="14. Converting VCF file to HL7 FHIR JSON Genomic Report profile" href="../VCF-to-FHIR-conversion.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Introduction to the VCF2FHIR python library" />
+<meta property="og:description" content="Introduction to the VCF2FHIR python library  author: philippe.rocca-serra@oerc.ox.ac.uk  license: CC-BY-4.0  version: 1.0  creation-date: 2021.10.22  This pytho" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="../VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../applied-examples/ehden-ohdsi.html">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/FAIRplus/the-fair-cookbook/migrating?urlpath=lab/tree/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/FAIRplus/the-fair-cookbook/blob/migrating/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#let-s-get-going-by-importing-all-the-necessary-python-libraries">
+   14.10.1.1. Let’s get going by importing all the necessary python libraries
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vcf2fhir-python-libraryvcf2fhir-main-method-is-called-converter-and-takes-a-number-of-arguments-most-of-which-are-optional">
+     14.10.1.1.1. VCF2FHIR python library
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       vcf2fhir
+      </span>
+     </code>
+     main method is called
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Converter
+      </span>
+     </code>
+     and takes a number of arguments, most of which are optional.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#invoking-the-converter-is-as-simple-as-the-following-command">
+       14.10.1.1.1.1. Invoking the converter is as simple as the following command:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#invoking-the-convert-submethod-to-serialize-the-information-as-a-hl7-fhir-json-message-to-a-default-file-output">
+       14.10.1.1.1.2. Invoking the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         convert()
+        </span>
+       </code>
+       submethod to serialize the information as a HL7 FHIR JSON message to a default file output.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#performing-both-actions-in-one-go-while-using-an-additional-optional-argument">
+       14.10.1.1.1.3. Performing both actions in one go while using an additional optional argument
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#invoking-the-conversion-and-writing-to-a-user-defined-file-instead-of-the-default-file">
+       14.10.1.1.1.4. Invoking the conversion and writing to a user defined file instead of the default file.
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#peaking-at-the-resulting-json-file">
+     14.10.1.1.2. Peaking at the resulting JSON file:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracking-conversion-errors-by-activating-the-logger-function">
+     14.10.1.1.3. Tracking conversion errors by activating the logger function
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#i-instantiate-a-logger-and-set-a-error-logging-level">
+       14.10.1.1.3.1. i. instantiate a logger and set a error logging level
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ii-define-an-file-as-output-and-a-formatter-pattern">
+       14.10.1.1.3.2. ii. define an file as output and a formatter pattern
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-the-dedicated-invalid-record-logger">
+     14.10.1.1.4. Using the dedicated
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       invalid_record_logger
+      </span>
+     </code>
+     :
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#i-create-a-logger-and-pass-it-the-specific-vcf2fhir-logger-as-follows">
+       14.10.1.1.4.1. i. create a logger and pass it the specific vcf2fhir logger as follows:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ii-configure-the-logger-output-file-error-logging-level-and-output-formatting">
+       14.10.1.1.4.2. ii. configure the logger output file, error logging level and output formatting
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#iii-plug-the-error-handler-in-the-logger-and-execute">
+       14.10.1.1.4.3. iii.  plug the error handler in the logger  and execute
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-can-now-read-the-log-file-to-check-what-happened-during-the-conversion-from-vcf-to-fhir-json">
+     14.10.1.1.5. We can now read the log file to check what happened during the conversion from VCF to FHIR JSON.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusion">
+     14.10.1.1.6. Conclusion
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-does-this-matter-and-how-does-it-relate-to-fair">
+       14.10.1.1.6.1. Why does this matter and how does it relate to FAIR:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference">
+     14.10.1.1.7. Reference:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-the-vcf2fhir-python-library">
+<h1><span class="section-number">14.10.1. </span>Introduction to the VCF2FHIR python library<a class="headerlink" href="#introduction-to-the-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>author: <a class="reference external" href="mailto:philippe&#46;rocca-serra&#37;&#52;&#48;oerc&#46;ox&#46;ac&#46;uk">philippe<span>&#46;</span>rocca-serra<span>&#64;</span>oerc<span>&#46;</span>ox<span>&#46;</span>ac<span>&#46;</span>uk</a></p></li>
+<li><p>license: CC-BY-4.0</p></li>
+<li><p>version: 1.0</p></li>
+<li><p>creation-date: 2021.10.22</p></li>
+</ul>
+<p>This python library (in early stage of development) by Dolin et al, 2021 [1] provides an <strong>initial capability</strong> to convert genetic variation information stored in a standard <a class="reference external" href="http://samtools.github.io/hts-specs/VCFv4.3.pdf">Variant Call File (VCF)</a> into a JSON-based HL7 FHIR message, compliant with <code class="docutils literal notranslate"><span class="pre">HL7</span> <span class="pre">FHIR</span> <span class="pre">Genomics</span> <span class="pre">Report</span></code> guidelines.</p>
+<p>This notebook offers a simple way for anyone interested in how FAIR principles can be connected to <code class="docutils literal notranslate"><span class="pre">Clinical</span> <span class="pre">World</span></code> to try it out for themselves.</p>
+<ul class="simple">
+<li><p>Main Features:</p>
+<ul>
+<li><p>supports <code class="docutils literal notranslate"><span class="pre">simple</span> <span class="pre">variants</span></code> (SNVs, MNVs, Indels)</p></li>
+</ul>
+</li>
+<li><p>Limitations:</p>
+<ul>
+<li><p><strong>does not</strong> support <code class="docutils literal notranslate"><span class="pre">structural</span> <span class="pre">variants</span></code></p></li>
+<li><p>This software is not intended for use in production systems</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="let-s-get-going-by-importing-all-the-necessary-python-libraries">
+<h2><span class="section-number">14.10.1.1. </span>Let’s get going by importing all the necessary python libraries<a class="headerlink" href="#let-s-get-going-by-importing-all-the-necessary-python-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">vcf2fhir</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="vcf2fhir-python-libraryvcf2fhir-main-method-is-called-converter-and-takes-a-number-of-arguments-most-of-which-are-optional">
+<h3><span class="section-number">14.10.1.1.1. </span>VCF2FHIR python library<code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> main method is called <code class="docutils literal notranslate"><span class="pre">Converter</span></code> and takes a number of arguments, most of which are optional.<a class="headerlink" href="#vcf2fhir-python-libraryvcf2fhir-main-method-is-called-converter-and-takes-a-number-of-arguments-most-of-which-are-optional" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Required arguments:</p></li>
+</ul>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">vcf_filename</span> <span class="pre">(required)</span></code>: the path to a text-based or bgzipped VCF file.</p>
+<p><strong>IMPORTANT:</strong></p>
+<ul class="simple">
+<li><p>Valid path and filename without whitespace must be provided.</p></li>
+<li><p>VCF file must conform to VCF Version 4.1 or later.</p></li>
+<li><p><a class="reference external" href="http://FORMAT.GT">FORMAT.GT</a> must be present.</p></li>
+<li><p>Multi-sample VCFs are allowed, but only the first sample will be converted.</p></li>
+<li><p>bgzipped VCF files are allowed but then the additional argument <code class="docutils literal notranslate"><span class="pre">has_tabix</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">True</span></code> and a tabix index file must be provided. The Tabix file must have the same name as the bgzipped VCF file, with a ‘.tbi’ extension, and must be in the same folder.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ref_build</span> <span class="pre">(required)</span></code>: Genome Reference Consortium genome assembly to which variants in the VCF were called.</p>
+<p><strong>IMPORTANT:</strong></p>
+<ul class="simple">
+<li><p>Must be one of ‘GRCh37’ or ‘GRCh38’.</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Optional arguments are:</p></li>
+</ul>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">patient_id</span></code> (optional):</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conv_region_dict</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conv_region_filename</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">annotation_filename</span> <span class="pre">(optional)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region_studied_filename</span> <span class="pre">(optional)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nocall_filename</span> <span class="pre">(optional):</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ratio_ad_dp</span> <span class="pre">(optional)(default</span> <span class="pre">value</span> <span class="pre">=</span> <span class="pre">0.99)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">genomic_source_class</span> <span class="pre">(optional)(default</span> <span class="pre">value</span> <span class="pre">=</span> <span class="pre">somatic)</span></code></p></li>
+</ul>
+<p>For more information about those options, refer to the <a class="reference external" href="https://vcf2fhir.readthedocs.io/en/latest/API.html">library documentation</a>.</p>
+<div class="section" id="invoking-the-converter-is-as-simple-as-the-following-command">
+<h4><span class="section-number">14.10.1.1.1.1. </span>Invoking the converter is as simple as the following command:<a class="headerlink" href="#invoking-the-converter-is-as-simple-as-the-following-command" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fhir</span> <span class="o">=</span> <span class="n">vcf2fhir</span><span class="o">.</span><span class="n">Converter</span><span class="p">(</span><span class="s1">&#39;vcftests.vcf&#39;</span><span class="p">,</span><span class="s1">&#39;GRCh37&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="invoking-the-convert-submethod-to-serialize-the-information-as-a-hl7-fhir-json-message-to-a-default-file-output">
+<h4><span class="section-number">14.10.1.1.1.2. </span>Invoking the <code class="docutils literal notranslate"><span class="pre">convert()</span></code> submethod to serialize the information as a HL7 FHIR JSON message to a default file output.<a class="headerlink" href="#invoking-the-convert-submethod-to-serialize-the-information-as-a-hl7-fhir-json-message-to-a-default-file-output" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fhir</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="performing-both-actions-in-one-go-while-using-an-additional-optional-argument">
+<h4><span class="section-number">14.10.1.1.1.3. </span>Performing both actions in one go while using an additional optional argument<a class="headerlink" href="#performing-both-actions-in-one-go-while-using-an-additional-optional-argument" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vcf2fhir</span><span class="o">.</span><span class="n">Converter</span><span class="p">(</span><span class="s1">&#39;vcftests.vcf&#39;</span><span class="p">,</span><span class="s1">&#39;GRCh38&#39;</span><span class="p">,</span> <span class="s1">&#39;patient01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="invoking-the-conversion-and-writing-to-a-user-defined-file-instead-of-the-default-file">
+<h4><span class="section-number">14.10.1.1.1.4. </span>Invoking the conversion and writing to a user defined file instead of the default file.<a class="headerlink" href="#invoking-the-conversion-and-writing-to-a-user-defined-file-instead-of-the-default-file" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="o">=</span><span class="n">vcf2fhir</span><span class="o">.</span><span class="n">Converter</span><span class="p">(</span><span class="s1">&#39;vcftests.vcf&#39;</span><span class="p">,</span><span class="s1">&#39;GRCh37&#39;</span><span class="p">,</span> <span class="s1">&#39;patient01&#39;</span><span class="p">,</span> <span class="n">ratio_ad_dp</span> <span class="o">=</span> <span class="mf">0.89</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">output_filename</span><span class="o">=</span><span class="s1">&#39;patient01.json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="peaking-at-the-resulting-json-file">
+<h3><span class="section-number">14.10.1.1.2. </span>Peaking at the resulting JSON file:<a class="headerlink" href="#peaking-at-the-resulting-json-file" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;patient01.json&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">input</span><span class="p">:</span>
+    <span class="n">fhirmsg</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">fhirmsg</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;category&quot;: [
+        {
+            &quot;coding&quot;: [
+                {
+                    &quot;code&quot;: &quot;GE&quot;,
+                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0074&quot;
+                }
+            ]
+        }
+    ],
+    &quot;code&quot;: {
+        &quot;coding&quot;: [
+            {
+                &quot;code&quot;: &quot;81247-9&quot;,
+                &quot;display&quot;: &quot;Master HL7 genetic variant reporting panel&quot;,
+                &quot;system&quot;: &quot;http://loinc.org&quot;
+            }
+        ]
+    },
+    &quot;contained&quot;: [
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;69548-6&quot;,
+                        &quot;display&quot;: &quot;Genetic variant assessment&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48004-6&quot;,
+                                &quot;display&quot;: &quot;DNA change (c.HGVS)&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10:60465:T:C&quot;,
+                                &quot;system&quot;: &quot;http://varnomen.hgvs.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48013-7&quot;,
+                                &quot;display&quot;: &quot;Genomic reference sequence ID&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10&quot;,
+                                &quot;system&quot;: &quot;http://www.ncbi.nlm.nih.gov/nuccore&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48002-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Source Class&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA6684-0&quot;,
+                                &quot;display&quot;: &quot;Somatic&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69547-8&quot;,
+                                &quot;display&quot;: &quot;Genomic Ref allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69551-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Alt allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;C&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;92822-6&quot;,
+                                &quot;display&quot;: &quot;Genomic coord system&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA30102-0&quot;,
+                                &quot;display&quot;: &quot;1-based character counting&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;exact-start-end&quot;,
+                                &quot;display&quot;: &quot;Variant exact start and end&quot;,
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueRange&quot;: {
+                        &quot;low&quot;: {
+                            &quot;value&quot;: 60466
+                        }
+                    }
+                }
+            ],
+            &quot;id&quot;: &quot;dv-506559af936d4&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;LA9633-4&quot;,
+                        &quot;display&quot;: &quot;present&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;diagnostic-implication&quot;,
+                        &quot;display&quot;: &quot;Diagnostic Implication&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;53037-8&quot;,
+                                &quot;display&quot;: &quot;Genetic variation clinical significance [Imp]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;display&quot;: &quot;not specified&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                }
+            ],
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-506559af936d4&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;di-6da3099b6b204&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;69548-6&quot;,
+                        &quot;display&quot;: &quot;Genetic variant assessment&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48004-6&quot;,
+                                &quot;display&quot;: &quot;DNA change (c.HGVS)&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10:60578:G:A&quot;,
+                                &quot;system&quot;: &quot;http://varnomen.hgvs.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48013-7&quot;,
+                                &quot;display&quot;: &quot;Genomic reference sequence ID&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10&quot;,
+                                &quot;system&quot;: &quot;http://www.ncbi.nlm.nih.gov/nuccore&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48002-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Source Class&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA6684-0&quot;,
+                                &quot;display&quot;: &quot;Somatic&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69547-8&quot;,
+                                &quot;display&quot;: &quot;Genomic Ref allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;G&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69551-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Alt allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;A&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;92822-6&quot;,
+                                &quot;display&quot;: &quot;Genomic coord system&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA30102-0&quot;,
+                                &quot;display&quot;: &quot;1-based character counting&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;exact-start-end&quot;,
+                                &quot;display&quot;: &quot;Variant exact start and end&quot;,
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueRange&quot;: {
+                        &quot;low&quot;: {
+                            &quot;value&quot;: 60579
+                        }
+                    }
+                }
+            ],
+            &quot;id&quot;: &quot;dv-6f399c7fb0be4&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;LA9633-4&quot;,
+                        &quot;display&quot;: &quot;present&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;diagnostic-implication&quot;,
+                        &quot;display&quot;: &quot;Diagnostic Implication&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;53037-8&quot;,
+                                &quot;display&quot;: &quot;Genetic variation clinical significance [Imp]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;display&quot;: &quot;not specified&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                }
+            ],
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-6f399c7fb0be4&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;di-12de791e725b4&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;69548-6&quot;,
+                        &quot;display&quot;: &quot;Genetic variant assessment&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48004-6&quot;,
+                                &quot;display&quot;: &quot;DNA change (c.HGVS)&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10:60582:G:C&quot;,
+                                &quot;system&quot;: &quot;http://varnomen.hgvs.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48013-7&quot;,
+                                &quot;display&quot;: &quot;Genomic reference sequence ID&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10&quot;,
+                                &quot;system&quot;: &quot;http://www.ncbi.nlm.nih.gov/nuccore&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48002-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Source Class&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA6684-0&quot;,
+                                &quot;display&quot;: &quot;Somatic&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69547-8&quot;,
+                                &quot;display&quot;: &quot;Genomic Ref allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;G&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69551-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Alt allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;C&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;92822-6&quot;,
+                                &quot;display&quot;: &quot;Genomic coord system&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA30102-0&quot;,
+                                &quot;display&quot;: &quot;1-based character counting&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;exact-start-end&quot;,
+                                &quot;display&quot;: &quot;Variant exact start and end&quot;,
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueRange&quot;: {
+                        &quot;low&quot;: {
+                            &quot;value&quot;: 60583
+                        }
+                    }
+                }
+            ],
+            &quot;id&quot;: &quot;dv-6175dec7e9904&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;LA9633-4&quot;,
+                        &quot;display&quot;: &quot;present&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;diagnostic-implication&quot;,
+                        &quot;display&quot;: &quot;Diagnostic Implication&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;53037-8&quot;,
+                                &quot;display&quot;: &quot;Genetic variation clinical significance [Imp]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;display&quot;: &quot;not specified&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                }
+            ],
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-6175dec7e9904&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;di-cda284da44504&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;69548-6&quot;,
+                        &quot;display&quot;: &quot;Genetic variant assessment&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48004-6&quot;,
+                                &quot;display&quot;: &quot;DNA change (c.HGVS)&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10:60592:A:T&quot;,
+                                &quot;system&quot;: &quot;http://varnomen.hgvs.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48013-7&quot;,
+                                &quot;display&quot;: &quot;Genomic reference sequence ID&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10&quot;,
+                                &quot;system&quot;: &quot;http://www.ncbi.nlm.nih.gov/nuccore&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48002-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Source Class&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA6684-0&quot;,
+                                &quot;display&quot;: &quot;Somatic&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69547-8&quot;,
+                                &quot;display&quot;: &quot;Genomic Ref allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;A&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69551-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Alt allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;92822-6&quot;,
+                                &quot;display&quot;: &quot;Genomic coord system&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA30102-0&quot;,
+                                &quot;display&quot;: &quot;1-based character counting&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;exact-start-end&quot;,
+                                &quot;display&quot;: &quot;Variant exact start and end&quot;,
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueRange&quot;: {
+                        &quot;low&quot;: {
+                            &quot;value&quot;: 60593
+                        }
+                    }
+                }
+            ],
+            &quot;id&quot;: &quot;dv-c5a54b1cd5684&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;LA9633-4&quot;,
+                        &quot;display&quot;: &quot;present&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;diagnostic-implication&quot;,
+                        &quot;display&quot;: &quot;Diagnostic Implication&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;53037-8&quot;,
+                                &quot;display&quot;: &quot;Genetic variation clinical significance [Imp]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;display&quot;: &quot;not specified&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                }
+            ],
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-c5a54b1cd5684&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;di-7771ce77a9a54&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;69548-6&quot;,
+                        &quot;display&quot;: &quot;Genetic variant assessment&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48004-6&quot;,
+                                &quot;display&quot;: &quot;DNA change (c.HGVS)&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10:60691:T:C&quot;,
+                                &quot;system&quot;: &quot;http://varnomen.hgvs.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48013-7&quot;,
+                                &quot;display&quot;: &quot;Genomic reference sequence ID&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10&quot;,
+                                &quot;system&quot;: &quot;http://www.ncbi.nlm.nih.gov/nuccore&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48002-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Source Class&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA6684-0&quot;,
+                                &quot;display&quot;: &quot;Somatic&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69547-8&quot;,
+                                &quot;display&quot;: &quot;Genomic Ref allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69551-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Alt allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;C&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;92822-6&quot;,
+                                &quot;display&quot;: &quot;Genomic coord system&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA30102-0&quot;,
+                                &quot;display&quot;: &quot;1-based character counting&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;exact-start-end&quot;,
+                                &quot;display&quot;: &quot;Variant exact start and end&quot;,
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueRange&quot;: {
+                        &quot;low&quot;: {
+                            &quot;value&quot;: 60692
+                        }
+                    }
+                }
+            ],
+            &quot;id&quot;: &quot;dv-b69d08e525b44&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;LA9633-4&quot;,
+                        &quot;display&quot;: &quot;present&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;diagnostic-implication&quot;,
+                        &quot;display&quot;: &quot;Diagnostic Implication&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;53037-8&quot;,
+                                &quot;display&quot;: &quot;Genetic variation clinical significance [Imp]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;display&quot;: &quot;not specified&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                }
+            ],
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-b69d08e525b44&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;di-69f5a76124f04&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;69548-6&quot;,
+                        &quot;display&quot;: &quot;Genetic variant assessment&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48004-6&quot;,
+                                &quot;display&quot;: &quot;DNA change (c.HGVS)&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10:60881:T:G&quot;,
+                                &quot;system&quot;: &quot;http://varnomen.hgvs.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48013-7&quot;,
+                                &quot;display&quot;: &quot;Genomic reference sequence ID&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_000023.10&quot;,
+                                &quot;system&quot;: &quot;http://www.ncbi.nlm.nih.gov/nuccore&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48002-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Source Class&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA6684-0&quot;,
+                                &quot;display&quot;: &quot;Somatic&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69547-8&quot;,
+                                &quot;display&quot;: &quot;Genomic Ref allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69551-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Alt allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;G&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;92822-6&quot;,
+                                &quot;display&quot;: &quot;Genomic coord system&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA30102-0&quot;,
+                                &quot;display&quot;: &quot;1-based character counting&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;exact-start-end&quot;,
+                                &quot;display&quot;: &quot;Variant exact start and end&quot;,
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueRange&quot;: {
+                        &quot;low&quot;: {
+                            &quot;value&quot;: 60882
+                        }
+                    }
+                }
+            ],
+            &quot;id&quot;: &quot;dv-e18135b890434&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;LA9633-4&quot;,
+                        &quot;display&quot;: &quot;present&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;diagnostic-implication&quot;,
+                        &quot;display&quot;: &quot;Diagnostic Implication&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;53037-8&quot;,
+                                &quot;display&quot;: &quot;Genetic variation clinical significance [Imp]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;display&quot;: &quot;not specified&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                }
+            ],
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-e18135b890434&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;di-ee4e4752910f4&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;69548-6&quot;,
+                        &quot;display&quot;: &quot;Genetic variant assessment&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48004-6&quot;,
+                                &quot;display&quot;: &quot;DNA change (c.HGVS)&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_012920.1:6017:A:C&quot;,
+                                &quot;system&quot;: &quot;http://varnomen.hgvs.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48013-7&quot;,
+                                &quot;display&quot;: &quot;Genomic reference sequence ID&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;NC_012920.1&quot;,
+                                &quot;system&quot;: &quot;http://www.ncbi.nlm.nih.gov/nuccore&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;48002-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Source Class&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA6684-0&quot;,
+                                &quot;display&quot;: &quot;Somatic&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;81258-6&quot;,
+                                &quot;display&quot;: &quot;Sample VAF&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueQuantity&quot;: {
+                        &quot;code&quot;: &quot;1&quot;,
+                        &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,
+                        &quot;value&quot;: 0.8
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69547-8&quot;,
+                                &quot;display&quot;: &quot;Genomic Ref allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;A&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;69551-0&quot;,
+                                &quot;display&quot;: &quot;Genomic Alt allele [ID]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueString&quot;: &quot;C&quot;
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;92822-6&quot;,
+                                &quot;display&quot;: &quot;Genomic coord system&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;LA30102-0&quot;,
+                                &quot;display&quot;: &quot;1-based character counting&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;exact-start-end&quot;,
+                                &quot;display&quot;: &quot;Variant exact start and end&quot;,
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueRange&quot;: {
+                        &quot;low&quot;: {
+                            &quot;value&quot;: 6018
+                        }
+                    }
+                }
+            ],
+            &quot;id&quot;: &quot;dv-3d5841401bfb4&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;LA9633-4&quot;,
+                        &quot;display&quot;: &quot;present&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;diagnostic-implication&quot;,
+                        &quot;display&quot;: &quot;Diagnostic Implication&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/TbdCodes&quot;
+                    }
+                ]
+            },
+            &quot;component&quot;: [
+                {
+                    &quot;code&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;code&quot;: &quot;53037-8&quot;,
+                                &quot;display&quot;: &quot;Genetic variation clinical significance [Imp]&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    },
+                    &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;display&quot;: &quot;not specified&quot;,
+                                &quot;system&quot;: &quot;http://loinc.org&quot;
+                            }
+                        ]
+                    }
+                }
+            ],
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-3d5841401bfb4&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;di-07dcac1e12104&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;82120-7&quot;,
+                        &quot;display&quot;: &quot;Allelic phase&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-6f399c7fb0be4&quot;
+                },
+                {
+                    &quot;reference&quot;: &quot;#dv-6175dec7e9904&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;sid-b582d59d887d4&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;Cis&quot;,
+                        &quot;display&quot;: &quot;Cis&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/SequencePhaseRelationshipCS&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;category&quot;: [
+                {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;code&quot;: &quot;laboratory&quot;,
+                            &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;code&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;82120-7&quot;,
+                        &quot;display&quot;: &quot;Allelic phase&quot;,
+                        &quot;system&quot;: &quot;http://loinc.org&quot;
+                    }
+                ]
+            },
+            &quot;derivedFrom&quot;: [
+                {
+                    &quot;reference&quot;: &quot;#dv-6175dec7e9904&quot;
+                },
+                {
+                    &quot;reference&quot;: &quot;#dv-c5a54b1cd5684&quot;
+                }
+            ],
+            &quot;id&quot;: &quot;sid-87677dfd43394&quot;,
+            &quot;meta&quot;: {
+                &quot;profile&quot;: [
+                    &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship&quot;
+                ]
+            },
+            &quot;resourceType&quot;: &quot;Observation&quot;,
+            &quot;status&quot;: &quot;final&quot;,
+            &quot;subject&quot;: {
+                &quot;reference&quot;: &quot;Patient/patient01&quot;
+            },
+            &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                    {
+                        &quot;code&quot;: &quot;Cis&quot;,
+                        &quot;display&quot;: &quot;Cis&quot;,
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/SequencePhaseRelationshipCS&quot;
+                    }
+                ]
+            }
+        }
+    ],
+    &quot;id&quot;: &quot;dr-0646393fe2044&quot;,
+    &quot;issued&quot;: &quot;2021-10-22T10:49:11+00:00&quot;,
+    &quot;meta&quot;: {
+        &quot;profile&quot;: [
+            &quot;http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report&quot;
+        ]
+    },
+    &quot;resourceType&quot;: &quot;DiagnosticReport&quot;,
+    &quot;result&quot;: [
+        {
+            &quot;reference&quot;: &quot;#dv-506559af936d4&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#di-6da3099b6b204&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#dv-6f399c7fb0be4&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#di-12de791e725b4&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#dv-6175dec7e9904&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#di-cda284da44504&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#dv-c5a54b1cd5684&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#di-7771ce77a9a54&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#dv-b69d08e525b44&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#di-69f5a76124f04&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#dv-e18135b890434&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#di-ee4e4752910f4&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#dv-3d5841401bfb4&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#di-07dcac1e12104&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#sid-b582d59d887d4&quot;
+        },
+        {
+            &quot;reference&quot;: &quot;#sid-87677dfd43394&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;final&quot;,
+    &quot;subject&quot;: {
+        &quot;reference&quot;: &quot;Patient/patient01&quot;
+    }
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tracking-conversion-errors-by-activating-the-logger-function">
+<h3><span class="section-number">14.10.1.1.3. </span>Tracking conversion errors by activating the logger function<a class="headerlink" href="#tracking-conversion-errors-by-activating-the-logger-function" title="Permalink to this headline">¶</a></h3>
+<p>As with all conversions, things can go awry. It is therefore always good to log any error when executing code.
+The authors of the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> library provide 2 distinct logging modes, which we’ll now use.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> logging process simply builds on the well established python <code class="docutils literal notranslate"><span class="pre">logging</span></code> library and therefore to use it is as simple as using said library:</p>
+<div class="section" id="i-instantiate-a-logger-and-set-a-error-logging-level">
+<h4><span class="section-number">14.10.1.1.3.1. </span>i. instantiate a logger and set a error logging level<a class="headerlink" href="#i-instantiate-a-logger-and-set-a-error-logging-level" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">general_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;vcf2fhir.general&#39;</span><span class="p">)</span>
+<span class="n">general_logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ii-define-an-file-as-output-and-a-formatter-pattern">
+<h4><span class="section-number">14.10.1.1.3.2. </span>ii. define an file as output and a formatter pattern<a class="headerlink" href="#ii-define-an-file-as-output-and-a-formatter-pattern" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create console handler and set level to debug</span>
+<span class="n">ch</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="s1">&#39;vcf2fhir-generic-errors.log&#39;</span><span class="p">)</span>
+<span class="n">ch</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="c1"># create formatter</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(name)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># add formatter to ch</span>
+<span class="n">ch</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="c1"># add ch to logger</span>
+<span class="n">general_logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-dedicated-invalid-record-logger">
+<h3><span class="section-number">14.10.1.1.4. </span>Using the dedicated <code class="docutils literal notranslate"><span class="pre">invalid_record_logger</span></code>:<a class="headerlink" href="#using-the-dedicated-invalid-record-logger" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="i-create-a-logger-and-pass-it-the-specific-vcf2fhir-logger-as-follows">
+<h4><span class="section-number">14.10.1.1.4.1. </span>i. create a logger and pass it the specific vcf2fhir logger as follows:<a class="headerlink" href="#i-create-a-logger-and-pass-it-the-specific-vcf2fhir-logger-as-follows" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invalid_record_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;vcf2fhir.invalidrecord&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ii-configure-the-logger-output-file-error-logging-level-and-output-formatting">
+<h4><span class="section-number">14.10.1.1.4.2. </span>ii. configure the logger output file, error logging level and output formatting<a class="headerlink" href="#ii-configure-the-logger-output-file-error-logging-level-and-output-formatting" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inv_ch</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="s1">&#39;vcf2fhir-invalid-record-errors.log&#39;</span><span class="p">)</span>
+<span class="n">inv_ch</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">inv_ch</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">note</span></code>: *we reuse the <code class="docutils literal notranslate"><span class="pre">formatter</span></code> created previously</p>
+</div>
+<div class="section" id="iii-plug-the-error-handler-in-the-logger-and-execute">
+<h4><span class="section-number">14.10.1.1.4.3. </span>iii.  plug the error handler in the logger  and execute<a class="headerlink" href="#iii-plug-the-error-handler-in-the-logger-and-execute" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invalid_record_logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">inv_ch</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="we-can-now-read-the-log-file-to-check-what-happened-during-the-conversion-from-vcf-to-fhir-json">
+<h3><span class="section-number">14.10.1.1.5. </span>We can now read the log file to check what happened during the conversion from VCF to FHIR JSON.<a class="headerlink" href="#we-can-now-read-the-log-file-to-check-what-happened-during-the-conversion-from-vcf-to-fhir-json" title="Permalink to this headline">¶</a></h3>
+<p>This is an important Quality Control step as the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> is still experimental and under active development.
+Therefore, users of the tool need to excert critical thinking, understand the parsing and conversion rules as well as understand
+the limit of the envelop of the tool, as explained by the authors in their manuscript .</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;vcf2fhir-invalid-record-errors.log&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">input</span><span class="p">:</span>
+    <span class="n">lines</span><span class="o">=</span><span class="nb">input</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;2021-10-22 09:37:17,523 - vcf2fhir.invalidrecord - DEBUG - Reason: VCF INFO.SVTYPE must be in [&#39;INS&#39;, &#39;DEL&#39;, &#39;DUP&#39;, &#39;CNV&#39;, &#39;INV&#39;]. Record: Record(CHROM=M, POS=11551, REF=T, ALT=[TN[M:16141[]), considered sample: CallData(GT=1, PS=None)\n&quot;, &quot;2021-10-22 09:37:17,524 - vcf2fhir.invalidrecord - DEBUG - Reason: VCF INFO.SVTYPE must be in [&#39;INS&#39;, &#39;DEL&#39;, &#39;DUP&#39;, &#39;CNV&#39;, &#39;INV&#39;]. Record: Record(CHROM=M, POS=11562, REF=T, ALT=[TN]11:49883566]]), considered sample: CallData(GT=1)\n&quot;, &quot;2021-10-22 09:37:17,525 - vcf2fhir.invalidrecord - DEBUG - Reason: Mitochondrial DNA with GT = 0 or its diploid, Record: Record(CHROM=M, POS=6021, REF=A, ALT=[C]), considered sample: CallData(GT=0|1, PS=60003, DP=15, AD=[&#39;12&#39;, &#39;3&#39;], CGA_RDP=12)\n&quot;, &quot;2021-10-22 09:37:17,526 - vcf2fhir.invalidrecord - DEBUG - Reason: Mitochondrial DNA with GT = 0 or its diploid, Record: Record(CHROM=M, POS=6027, REF=A, ALT=[C]), considered sample: CallData(GT=0|1, PS=60003, DP=17, AD=[&#39;13&#39;, &#39;4&#39;], CGA_RDP=13)\n&quot;, &quot;2021-10-22 09:37:17,526 - vcf2fhir.invalidrecord - DEBUG - Reason: VCF FORMAT.GT is in [&#39;0/0&#39;,&#39;0|0&#39;,&#39;0&#39;], Record: Record(CHROM=M, POS=6028, REF=A, ALT=[C]), considered sample: CallData(GT=0, PS=60003, DP=17, AD=[&#39;13&#39;, &#39;4&#39;], CGA_RDP=13)\n&quot;, &quot;2021-10-22 09:37:20,983 - vcf2fhir.invalidrecord - DEBUG - Reason: VCF INFO.SVTYPE must be in [&#39;INS&#39;, &#39;DEL&#39;, &#39;DUP&#39;, &#39;CNV&#39;, &#39;INV&#39;]. Record: Record(CHROM=M, POS=11551, REF=T, ALT=[TN[M:16141[]), considered sample: CallData(GT=1, PS=None)\n&quot;, &quot;2021-10-22 09:37:20,983 - vcf2fhir.invalidrecord - DEBUG - Reason: VCF INFO.SVTYPE must be in [&#39;INS&#39;, &#39;DEL&#39;, &#39;DUP&#39;, &#39;CNV&#39;, &#39;INV&#39;]. Record: Record(CHROM=M, POS=11562, REF=T, ALT=[TN]11:49883566]]), considered sample: CallData(GT=1)\n&quot;, &quot;2021-10-22 09:37:20,987 - vcf2fhir.invalidrecord - DEBUG - Reason: Mitochondrial DNA with GT = 0 or its diploid, Record: Record(CHROM=M, POS=6021, REF=A, ALT=[C]), considered sample: CallData(GT=0|1, PS=60003, DP=15, AD=[&#39;12&#39;, &#39;3&#39;], CGA_RDP=12)\n&quot;, &quot;2021-10-22 09:37:20,987 - vcf2fhir.invalidrecord - DEBUG - Reason: Mitochondrial DNA with GT = 0 or its diploid, Record: Record(CHROM=M, POS=6027, REF=A, ALT=[C]), considered sample: CallData(GT=0|1, PS=60003, DP=17, AD=[&#39;13&#39;, &#39;4&#39;], CGA_RDP=13)\n&quot;, &quot;2021-10-22 09:37:20,988 - vcf2fhir.invalidrecord - DEBUG - Reason: VCF FORMAT.GT is in [&#39;0/0&#39;,&#39;0|0&#39;,&#39;0&#39;], Record: Record(CHROM=M, POS=6028, REF=A, ALT=[C]), considered sample: CallData(GT=0, PS=60003, DP=17, AD=[&#39;13&#39;, &#39;4&#39;], CGA_RDP=13)\n&quot;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h3><span class="section-number">14.10.1.1.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>With this notebook, we’ve shown how to convert genetic variation information held in a VCF formatted file (it must comply with v4.1 or higher for this conversion to work) and generate a JSON-based HL7 FHIR Genomics Report message.</p>
+<div class="section" id="why-does-this-matter-and-how-does-it-relate-to-fair">
+<h4><span class="section-number">14.10.1.1.6.1. </span>Why does this matter and how does it relate to FAIR:<a class="headerlink" href="#why-does-this-matter-and-how-does-it-relate-to-fair" title="Permalink to this headline">¶</a></h4>
+<p>The conversion from VCF to HL7 FHIR JSON message has to do with the <code class="docutils literal notranslate"><span class="pre">**I</span> <span class="pre">and</span> <span class="pre">R**</span></code> of <code class="docutils literal notranslate"><span class="pre">FAIR</span></code>, that is interoperability and reusability.
+From a syntactic standpoint, the availability of genetic variation information at a granular level in an easily parseable form (JSON) is a gain for anyone looking at merging this information with other clinical messages.
+From a semantic standpoint, the reliance on <code class="docutils literal notranslate"><span class="pre">LOINC</span></code> vocabulary to mark up the patterns defined in the HL7 FHIR Genomics Reports enhances interoperation between systems by provided unambiguous annotations.
+Finally, as more systems are able to produce FHIR message from a variety of instruments or data sources, the availability of a FHIR message covering a subset of genetic variation available from testing facilities makes investigating and mining phenotypic and genotypic relations more straightforward.</p>
+<p>However, one needs to remember that the capability affored by the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> library is at an early stage and only supports simple cases. More efforts and more efforts is needed before a functionality is available at a Technical Readiness Level compatible with production systems.</p>
+</div>
+</div>
+<div class="section" id="reference">
+<h3><span class="section-number">14.10.1.1.7. </span>Reference:<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Dolin, R.H., Gothi, S.R., Boxwala, A. et al. vcf2fhir: a utility to convert VCF files into HL7 FHIR format for genomics-EHR integration. BMC Bioinformatics 22, 104 (2021). <a class="reference external" href="https://doi.org/10.1186/s12859-021-04039-1">https://doi.org/10.1186/s12859-021-04039-1</a></p></li>
+<li><p><a class="reference external" href="https://github.com/elimuinformatics/vcf2fhir">https://github.com/elimuinformatics/vcf2fhir</a></p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "isa-api-py39"
+        },
+        kernelOptions: {
+            kernelName: "isa-api-py39",
+            path: "./content/recipes/interoperability/vcf2fhir"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'isa-api-py39'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../VCF-to-FHIR-conversion.html" title="previous page"><span class="section-number">14. </span>Converting VCF file to HL7 FHIR JSON Genomic Report profile</a>
+    <a class='right-next' id="next-link" href="../../reusability.html" title="next page">Reusability</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

@@ -44,9 +44,9 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mermaid.js"></script>
-    <script src="../../_static/mermaid.core.js"></script>
     <script src="../../_static/mermaid.min.js"></script>
+    <script src="../../_static/mermaid.core.js"></script>
+    <script src="../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Findability" href="findability.html" />
-    <link rel="prev" title="Ethical values of FAIR" href="introduction/FAIRplus-values.html" />
+    <link rel="prev" title="Practical Considerations for CROs to play FAIR" href="introduction/fair-cro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="interoperability/ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -892,7 +916,7 @@
 </dd>
 <dt id="term-FIP">FIP <a class="headerlink" href="#term-FIP" title="Permalink to this term">¶</a></dt><dd><p>a FAIR implementation Profile, which can be understood as the set of metadata element and their value sets, semantic resources and constraints to capture information in a domain of interest.</p>
 </dd>
-<dt id="term-FHIR">FHIR<a class="headerlink" href="#term-FHIR" title="Permalink to this term">¶</a></dt><dd><p>see HL7 FHIR</p>
+<dt id="term-FHIR">FHIR<a class="headerlink" href="#term-FHIR" title="Permalink to this term">¶</a></dt><dd><p>see HL7 FHIR.</p>
 </dd>
 </dl>
 </div>
@@ -908,7 +932,7 @@
 </dd>
 <dt id="term-Gremlin">Gremlin<a class="headerlink" href="#term-Gremlin" title="Permalink to this term">¶</a></dt><dd><p>a graph traversal and query language developed as part of the Apache Tinkerpop project.</p>
 </dd>
-<dt id="term-GUPRID">GUPRID<a class="headerlink" href="#term-GUPRID" title="Permalink to this term">¶</a></dt><dd><p>Globally Unique Persistent Resolvable Identifier, a type of persistent identifier with added properties such as guaranted uniqueness and accessibility via HTTP protocol</p>
+<dt id="term-GUPRID">GUPRID<a class="headerlink" href="#term-GUPRID" title="Permalink to this term">¶</a></dt><dd><p>Globally Unique Persistent Resolvable Identifier, a type of persistent identifier with added properties such as guaranted uniqueness and accessibility via HTTP protocol.</p>
 </dd>
 </dl>
 </div>
@@ -932,7 +956,7 @@
 </dd>
 <dt id="term-IMI">IMI<a class="headerlink" href="#term-IMI" title="Permalink to this term">¶</a></dt><dd><p>Innovative Medicine Initiative, a European Union public-private partnership funding program bringing together academic and industrial stakeholders on the theme of developing new therapeutic solutions.</p>
 </dd>
-<dt id="term-Interoperability">Interoperability<a class="headerlink" href="#term-Interoperability" title="Permalink to this term">¶</a></dt><dd><p>The property of a resource to work together with other software agents without</p>
+<dt id="term-Interoperability">Interoperability<a class="headerlink" href="#term-Interoperability" title="Permalink to this term">¶</a></dt><dd><p>The property of a resource to work together with other software agents.</p>
 </dd>
 </dl>
 </div>
@@ -940,7 +964,7 @@
 <div class="section" id="j">
 <h2>J<a class="headerlink" href="#j" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-JSON">JSON<a class="headerlink" href="#term-JSON" title="Permalink to this term">¶</a></dt><dd><p>Javascript Online Notation a syntax for data structures and used to transmit data objects consisting of attribute-value pairs.</p>
+<dt id="term-JSON">JSON<a class="headerlink" href="#term-JSON" title="Permalink to this term">¶</a></dt><dd><p>Javascript Online Notation, a syntax for data structures and used to transmit data objects consisting of attribute-value pairs.</p>
 </dd>
 </dl>
 </div>
@@ -948,9 +972,9 @@
 <div class="section" id="k">
 <h2>K<a class="headerlink" href="#k" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-KG">KG<a class="headerlink" href="#term-KG" title="Permalink to this term">¶</a></dt><dd><p>Knowledge graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge graphs are often used to store interlinked descriptions of entities - objects, events, situations or abstract concepts - with free-form semantics. (source: wikipedia)</p>
+<dt id="term-KG">KG<a class="headerlink" href="#term-KG" title="Permalink to this term">¶</a></dt><dd><p>a Knowledge Graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge Graphs are often used to store interlinked descriptions of entities - objects, events, situations or abstract concepts - with free-form semantics. (source: wikipedia)</p>
 </dd>
-<dt id="term-KPI">KPI<a class="headerlink" href="#term-KPI" title="Permalink to this term">¶</a></dt><dd><p>Key Performance Indicator. a generic term to cover any metric  or indicator use to gauge efficiency.</p>
+<dt id="term-KPI">KPI<a class="headerlink" href="#term-KPI" title="Permalink to this term">¶</a></dt><dd><p>Key Performance Indicator, a generic term to cover any metric  or indicator use to gauge efficiency.</p>
 </dd>
 </dl>
 </div>
@@ -960,7 +984,7 @@
 <dl class="glossary simple">
 <dt id="term-Licensing">Licensing<a class="headerlink" href="#term-Licensing" title="Permalink to this term">¶</a></dt><dd><p>the process of assigning a license, i.e a formal, legally binding document which articulates the condition of use of an entity.</p>
 </dd>
-<dt id="term-LD-Linked-Data">LD Linked Data<a class="headerlink" href="#term-LD-Linked-Data" title="Permalink to this term">¶</a></dt><dd><p>linked data is structured data which is interlinked with other data so it becomes more useful through semantic queries. (source: wikipedia)</p>
+<dt id="term-LD">LD <a class="headerlink" href="#term-LD" title="Permalink to this term">¶</a></dt><dd><p>Linked Data is structured data which is interlinked with other data so it becomes more useful through semantic queries. (source: wikipedia)</p>
 </dd>
 </dl>
 </div>
@@ -1013,7 +1037,8 @@
 </dd>
 <dt id="term-Provenance-Metadata">Provenance Metadata<a class="headerlink" href="#term-Provenance-Metadata" title="Permalink to this term">¶</a></dt><dd><p>metadata the aim of which is to provide traceability, audit and trail capability allowing consumers to understand its origin.</p>
 </dd>
-<dt id="term-PROV-a-W3C-RDF-vocabulary-for-representing-and-expressing-provenance-information">PROV a W3C RDF vocabulary for representing and expressing provenance information 	<a class="headerlink" href="#term-PROV-a-W3C-RDF-vocabulary-for-representing-and-expressing-provenance-information" title="Permalink to this term">¶</a></dt><dd></dd>
+<dt id="term-PROV">PROV <a class="headerlink" href="#term-PROV" title="Permalink to this term">¶</a></dt><dd><p>a W3C RDF vocabulary for representing and expressing provenance information.</p>
+</dd>
 </dl>
 </div>
 <hr class="docutils" />
@@ -1066,7 +1091,7 @@
 </dd>
 <dt id="term-Structural-Metadata">Structural Metadata<a class="headerlink" href="#term-Structural-Metadata" title="Permalink to this term">¶</a></dt><dd><p>metadata the aim of which is to define data structure and content organization.</p>
 </dd>
-<dt id="term-Swagger-API">Swagger API<a class="headerlink" href="#term-Swagger-API" title="Permalink to this term">¶</a></dt><dd><p>see openAPI</p>
+<dt id="term-Swagger-API">Swagger API<a class="headerlink" href="#term-Swagger-API" title="Permalink to this term">¶</a></dt><dd><p>see openAPI.</p>
 </dd>
 </dl>
 </div>
@@ -1090,7 +1115,7 @@
 <div class="section" id="v">
 <h2>V<a class="headerlink" href="#v" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-ValueSet">ValueSet<a class="headerlink" href="#term-ValueSet" title="Permalink to this term">¶</a></dt><dd><p>the range of discrete values allowed for a categorical variable</p>
+<dt id="term-ValueSet">ValueSet<a class="headerlink" href="#term-ValueSet" title="Permalink to this term">¶</a></dt><dd><p>the range of discrete values allowed for a categorical variable.</p>
 </dd>
 </dl>
 </div>
@@ -1106,7 +1131,7 @@
 <div class="section" id="x">
 <h2>X<a class="headerlink" href="#x" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-XML">XML<a class="headerlink" href="#term-XML" title="Permalink to this term">¶</a></dt><dd><p>Extensible Markup Language</p>
+<dt id="term-XML">XML<a class="headerlink" href="#term-XML" title="Permalink to this term">¶</a></dt><dd><p>Extensible Markup Language.</p>
 </dd>
 </dl>
 </div>
@@ -1114,7 +1139,7 @@
 <div class="section" id="y">
 <h2>Y<a class="headerlink" href="#y" title="Permalink to this headline">¶</a></h2>
 <dl class="glossary simple">
-<dt id="term-YML">YML<a class="headerlink" href="#term-YML" title="Permalink to this term">¶</a></dt><dd><p>Yet Another Markup Language</p>
+<dt id="term-YML">YML<a class="headerlink" href="#term-YML" title="Permalink to this term">¶</a></dt><dd><p>Yet Another Markup Language.</p>
 </dd>
 <dt id="term-Yummydata">Yummydata<a class="headerlink" href="#term-Yummydata" title="Permalink to this term">¶</a></dt><dd><p>Yummydata is a site that lists and monitors SPARQL endpoints that provide data of interest to the biomedical community.</p>
 </dd>
@@ -1158,7 +1183,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="introduction/FAIRplus-values.html" title="previous page">Ethical values of FAIR</a>
+    <a class='left-prev' id="prev-link" href="introduction/fair-cro.html" title="previous page">Practical Considerations for CROs to play FAIR</a>
     <a class='right-next' id="next-link" href="findability.html" title="next page">Findability</a>
 
         </div>

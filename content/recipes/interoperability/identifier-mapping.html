@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
-    <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -124,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for CROs to play FAIR
   </a>
  </li>
  <li class="toctree-l1">
@@ -303,6 +308,11 @@
        9.4.2. Metadata profile validation in RDF
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -326,6 +336,20 @@
     <a class="reference internal" href="ETL-tools.html">
      13. Extraction, transformation, and loading process
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -945,19 +969,19 @@ These lenses allow us to dynamically select which mappings to consider relevant 
 For example allowing or disallowing mappings between stereoisomers or between genes and proteins.</p>
 <p>Examples of types of mappings are:</p>
 <ul class="simple">
-<li><p><strong>Content mapping</strong>: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds</p></li>
-<li><p><strong>Ontology mapping</strong>: this can either be</p>
+<li><p><strong>Content mapping</strong>: where we are mapping the actual entities by using techniques such as BLAST in biological sequences or comparing InChI identifiers for chemical compounds.</p></li>
+<li><p><strong>Ontology mapping</strong>: this can either be:</p>
 <ul>
-<li><p>As a direct 1-to-1 mapping between equivalent terms in different ontologies</p></li>
-<li><p>As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see <a class="footnote-reference brackets" href="#wang-concept-2010" id="id2">4</a>.</p></li>
+<li><p>As a direct 1-to-1 mapping between equivalent terms in different ontologies.</p></li>
+<li><p>As a complex m-to-m mapping between terms in different ontologies taking into account their hierarchical structure, see {footcite}.<code class="docutils literal notranslate"><span class="pre">wang_concept_2010</span></code>.</p></li>
 </ul>
 </li>
 <li><p><strong>Identifier mapping</strong>: The focus of this recipe. This can either be:</p>
 <ul>
-<li><p>Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl)</p></li>
-<li><p>Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different)</p></li>
-<li><p>Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these)</p></li>
-<li><p>Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB)</p></li>
+<li><p>Mapping between differently formed identifiers that resolve to the same entity. (e.g. the same gene with different identifiers under HGNC and Ensembl).</p></li>
+<li><p>Mapping between identical local identifiers with different namespaces (e.g. PDB where there exist regional mirrors of the database so accesion/local identifier is the same but namespace is different).</p></li>
+<li><p>Mapping between entities that are related enough to be usefully connected (e.g. linking information on proteins, genes, RNA and reporter sequences for these).</p></li>
+<li><p>Mapping between databases containing different information about the same entity (e.g. links between the protein sequence database UniProt and the protein 3D structure database PDB).</p></li>
 </ul>
 </li>
 </ul>
@@ -971,7 +995,7 @@ For example allowing or disallowing mappings between stereoisomers or between ge
 </div>
 <p>To satisfy the Findability criteria F1, organisations must create identifiers for the concepts within their database. This generates locally unique identifiers which can in turn be transformed into globally unique identifiers using namespaces for which the database organisation are the <code class="docutils literal notranslate"><span class="pre">authority</span></code>.</p>
 <p>Databases often contain data that exists in, or is closely related to, the content of other databases. For example, the genome database <a class="reference external" href="http://ensembl.org/">Ensembl</a> contains data about genes that are related to entries in databases such as HUGO Gene Nomenclature Committee (<a class="reference external" href="https://www.genenames.org/">https://www.genenames.org/</a>) or <a class="reference external" href="https://www.ncbi.nlm.nih.gov/gene/">NCBI Gene</a>; or a database about drugs, e.g. <a class="reference external" href="https://drugbank.com/">DrugBank</a>, often contains details of the chemical substance that forms the drug which are also contained in chemical databases such as <a class="reference external" href="https://www.ebi.ac.uk/chebi/">ChEBI</a> or <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>. This results in a large number of unique identifiers notionally for the same concept. This large number of identifiers for the same concept prevents interoperability of the data, since additional knowledge is needed to know which identifiers represent the same concept from different databases. However, the databases often contain <code class="docutils literal notranslate"><span class="pre">cross-reference</span></code> links to other databases to represent these <code class="docutils literal notranslate"><span class="pre">equivalences</span></code>.</p>
-<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id3">1</a> for more details).</p>
+<p>The need for each database to mint their own identifier is a result of each taking a different perspective on the concept. For example, a chemical database will distinguish between different salt forms of the chemical whereas a drug database may not contain this differentiation. These differences in perspective are driven by the goal of the databse in terms of the data that they store. The interlinking of these data items can affect the reuse of the data in applications. As such, the declaration of cross-references should be done in a way that allows others to understand the nature of the equivalence declared, and therefore determine if it is appropriate for their use (see <a class="footnote-reference brackets" href="#batchelor-scientific-nodate" id="id2">1</a> for more details).</p>
 <p>While the minting of identifiers is often done in isolation of other organisations,  there are instances of databases who reuse identifiers from a well known community database. For example, the <a class="reference external" href="https://www.proteinatlas.org/">Human Protein Atlas</a> database reuses <a class="reference external" href="https://www.ensembl.org/">Ensembl</a> identifiers for their data records. In these cases there is no need to map between the data instances in the two databases, the data is already connected through the common identifier. However, this means that the Human Protein Atlas must ensure that their definition of the concept is exactly aligned with the Ensembl identifier for <strong>all</strong> application uses.</p>
 </div>
 <div class="section" id="identifier-equivalences">
@@ -982,8 +1006,8 @@ To support reuse of the data, the <code class="docutils literal notranslate"><sp
 <p>Depending on the nature of the data, there are different ways that equivalences can be computed.</p>
 <p>Some elements to take into consideration are:</p>
 <ol class="simple">
-<li><p>a <strong>mapping predicate</strong> taken from a well known ontology, e.g. <code class="docutils literal notranslate"><span class="pre">owl:sameAs</span></code> or <code class="docutils literal notranslate"><span class="pre">skos:narrower</span></code></p></li>
-<li><p>the <strong>evidence</strong> behind the equivalence claims, e.g. a similarity score or the property on which the equivalence is based such as InChI Key for chemicals</p></li>
+<li><p>a <strong>mapping predicate</strong> taken from a well known ontology, e.g. <code class="docutils literal notranslate"><span class="pre">owl:sameAs</span></code> or <code class="docutils literal notranslate"><span class="pre">skos:narrower</span></code>.</p></li>
+<li><p>the <strong>evidence</strong> behind the equivalence claims, e.g. a similarity score or the property on which the equivalence is based such as InChI Key for chemicals.</p></li>
 <li><p><strong>audit trail information</strong>, i.e. who, what, when, e.g. <code class="docutils literal notranslate"><span class="pre">agent</span> <span class="pre">X</span> <span class="pre">using</span> <span class="pre">mapping</span> <span class="pre">tool</span> <span class="pre">Y</span> <span class="pre">on</span> <span class="pre">YYYY-MM-DD</span></code>. PROV-O ontology could be used to support such statements.</p></li>
 </ol>
 </div>
@@ -993,7 +1017,7 @@ To support reuse of the data, the <code class="docutils literal notranslate"><sp
 We will discuss the most widely used formats and demonstrate them with a sample of data derived from <a class="reference external" href="https://www.ebi.ac.uk/chembl/">ChEMBL</a> which provides cross-reference equivalences for two records in the ChEMBL database to UniProt proteins.</p>
 <div class="section" id="using-text-file">
 <h3><span class="section-number">1.8.1. </span>Using Text File<a class="headerlink" href="#using-text-file" title="Permalink to this headline">¶</a></h3>
-<p>The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the verison of the datasets that were linked.</p>
+<p>The simplest way to exchange equivalences is in a simple text file, which could be structured as a tab-separated-value (TSV) file. Such a file usually consists of two columns, one per dataset, and each row represents an equivalence declaration. The interpretation is that the two identifiers on the same row are equivalent in some way. These files tend to carry little to no metadata about the mappings, i.e. the mechanism by which the mapping was derived is not given, nor are details of the version of the datasets that were linked.</p>
 <p>The following example shows the mapping equivalences between ChEMBL target components (proteins) and UniProt proteins.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ChEMBL_Target_Component	UniProt
 CHEMBL_TC_4803	A0ZX81
@@ -1060,7 +1084,7 @@ The above has shown that the two formats can represent the same information. Bot
 <ul>
 <li><p><a class="reference external" href="https://bridgedb.github.io/">bridgedb.org</a></p>
 <blockquote>
-<div><p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> <a class="footnote-reference brackets" href="#van-iersel-bridgedb-2010" id="id4">3</a> is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.</p>
+<div><p><a class="reference external" href="https://bridgedb.github.io/">BridgeDb</a> <a class="footnote-reference brackets" href="#van-iersel-bridgedb-2010" id="id3">3</a> is a framework for identifier mapping within the life sciences which covers genes, proteins, genetic variants, metabolites, and metabolic reactions. It is provided as a web service, a standalone application that can be installed locally, a Java library or an R Package.</p>
 <p>It permits users to lookup equivalent database identifiers for a given database identifier within a specified organism. The following <code class="docutils literal notranslate"><span class="pre">curl</span></code> command to the REST API retrieves the equivalent identifiers for the EntrezGene (now known as NCBI Gene) <code class="docutils literal notranslate"><span class="pre">L</span></code> identifier <code class="docutils literal notranslate"><span class="pre">1234</span></code> for the <code class="docutils literal notranslate"><span class="pre">Human</span></code> gene <a class="reference external" href="https://www.ncbi.nlm.nih.gov/gene/1234">CCR5</a> as a TSV file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://webservice.bridgedb.org/Human/xrefs/L/1234&quot;</span> -H <span class="s2">&quot;accept: */*&quot;</span>
 </pre></div>
@@ -1072,7 +1096,7 @@ The above has shown that the two formats can represent the same information. Bot
 </li>
 <li><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a></p>
 <blockquote>
-<div><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a> <a class="footnote-reference brackets" href="#chambers-unichem-2013" id="id5">2</a> is a specialised identifier mapping service for chemical structures. For a chemical structure – specified as an identifier, InChI, or InChI Key – it will equivalent structures found in the <a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a> chemistry resources.</p>
+<div><p><a class="reference external" href="https://www.ebi.ac.uk/unichem/">UniChem</a> <a class="footnote-reference brackets" href="#chambers-unichem-2013" id="id4">2</a> is a specialised identifier mapping service for chemical structures. For a chemical structure – specified as an identifier, InChI, or InChI Key – it will equivalent structures found in the <a class="reference external" href="https://www.ebi.ac.uk/">EMBL-EBI</a> chemistry resources.</p>
 <p>The following <code class="docutils literal notranslate"><span class="pre">curl</span></code> command retrieves the equivalent database identifiers for the ChEMBL identifier <code class="docutils literal notranslate"><span class="pre">CHEMBL12</span></code> <a class="reference external" href="https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL12/">DIAZEPAM</a> and returns the result as a JSON object.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://www.ebi.ac.uk/unichem/rest/src_compound_id/CHEMBL12/1&quot;</span> -H <span class="s2">&quot;accept: */*&quot;</span>
 </pre></div>
@@ -1103,7 +1127,7 @@ The above has shown that the two formats can represent the same information. Bot
 <div class="section" id="conclusion">
 <h2><span class="section-number">1.10. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>In this recipe, we have given an overview of the need to map between globally unique and persistent identifier from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:</p>
+<div><p>In this recipe, we have given an overview of the need to map between globally unique and persistent identifiers from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:</p>
 <ul class="simple">
 <li><p>The idea of data identifier equivalence;</p></li>
 <li><p>How to publish and exchange data identifier equivalences;</p></li>
@@ -1129,17 +1153,14 @@ As a minimum, you should aim to link your dataset’s persistant data identifier
 <div class="section" id="references">
 <h2><span class="section-number">1.11. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p id="bibtex-footbibliography-content/recipes/interoperability/identifier-mapping-0"><dl class="footnote brackets">
-<dt class="label" id="batchelor-scientific-nodate"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dt class="label" id="batchelor-scientific-nodate"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
 <dd><p>Colin Batchelor, Christian Y A Brenninkmeijer, Christine Chichester, Mark Davies, Daniela Digles, Ian Dunlop, Chris T Evelo, Anna Gaulton, Carole Goble, Alasdair J G Gray, Paul Groth, Lee Harland, Karen Karapetyan, Antonis Loizou, John P Overington, Steve Pettifer, Jon Steele, Robert Stevens, Valery Tkachenko, Andra Waagmeester, Antony Williams, and Egon L Willighagen. Scientiﬁc Lenses to Support Multiple Views over Linked Chemistry Data. In <em>The Semantic Web – ISWC 2014. Lecture Notes in Computer Science</em>, 16. 2014. <a class="reference external" href="https://doi.org/10.1007/978-3-319-11964-9_7">doi:10.1007/978-3-319-11964-9_7</a>.</p>
 </dd>
-<dt class="label" id="chambers-unichem-2013"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dt class="label" id="chambers-unichem-2013"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>Jon Chambers, Mark Davies, Anna Gaulton, Anne Hersey, Sameer Velankar, Robert Petryszak, Janna Hastings, Louisa Bellis, Shaun McGlinchey, and John P. Overington. UniChem: a unified chemical structure cross-referencing and identifier tracking system. <em>Journal of Cheminformatics</em>, 5(1):3, January 2013. <a class="reference external" href="https://doi.org/10.1186/1758-2946-5-3">doi:10.1186/1758-2946-5-3</a>.</p>
 </dd>
-<dt class="label" id="van-iersel-bridgedb-2010"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dt class="label" id="van-iersel-bridgedb-2010"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Martijn P. van Iersel, Alexander R. Pico, Thomas Kelder, Jianjiong Gao, Isaac Ho, Kristina Hanspers, Bruce R. Conklin, and Chris T. Evelo. The BridgeDb framework: standardized access to gene, protein and metabolite identifier mapping services. <em>BMC Bioinformatics</em>, 11(1):5, January 2010. URL: <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">https://doi.org/10.1186/1471-2105-11-5</a> (visited on 2021-02-05), <a class="reference external" href="https://doi.org/10.1186/1471-2105-11-5">doi:10.1186/1471-2105-11-5</a>.</p>
-</dd>
-<dt class="label" id="wang-concept-2010"><span class="brackets"><a class="fn-backref" href="#id2">4</a></span></dt>
-<dd><p>Ying Wang, Weiru Liu, and David Bell. A Concept Hierarchy Based Ontology Mapping Approach. In Yaxin Bi and Mary-Anne Williams, editors, <em>Knowledge Science, Engineering and Management</em>, Lecture Notes in Computer Science, 101–113. Berlin, Heidelberg, 2010. Springer. <a class="reference external" href="https://doi.org/10.1007/978-3-642-15280-1_12">doi:10.1007/978-3-642-15280-1_12</a>.</p>
 </dd>
 </dl>
 </p>
