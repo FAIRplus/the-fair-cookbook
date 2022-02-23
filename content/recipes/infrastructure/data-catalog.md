@@ -126,7 +126,7 @@ We encourage the readers to either delve deeper into the specific of data catalo
 <!-- * TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`     -->
 
 
-For the readership interesting in finding out about additional capabilities needed to enhance other aspects of FAIR such interoperability and reusability, see the following:
+For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR such interoperability and reusability, see the following:
 
 * {ref}`fcb-find-seo`
 * {ref}`fcb-interop-metadataprofile`

@@ -56,7 +56,7 @@ We will outline the steps for embedding machine processable mark up within a web
 
 2. Open the [Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
-   1.  Select the type of data page that you are marking up, i.e. the primary subject of the page. In the example we will use `Gene`. Here are the Bioschemas [profiles](https://bioschemas.org/profiles/) that you can choose from <sup>[1](#draft-profiles)</sup>. 
+   1.  Select the type of data page that you are marking up, i.e. the primary subject of the page. In the example we will use `Gene`. Here are the Bioschemas [profiles](https://bioschemas.org/profiles/) that you can choose from<sup>[1](#draft-profiles)</sup>. 
 
         - `ChemicalSubstance` for a page about a chemical substance composed of molecular entities
 

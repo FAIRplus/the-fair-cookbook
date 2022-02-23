@@ -1,0 +1,1196 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Transferring data with SFTP</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/accessibility/sftp.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2. Downloading data with Aspera" href="aspera.html" />
+    <link rel="prev" title="Accessibility" href="../accessibility.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/accessibility/sftp.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Transferring data with SFTP" />
+<meta property="og:description" content="Transferring data with SFTP  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@type&#34;:" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     5. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     6. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     7. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       7.8.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       7.8.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       7.8.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     1. Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1.11.1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       1.11.2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       1.11.3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       1.11.4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     2. eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     3. nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     4. Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     5. ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     6. EHDEN-OHDSI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  ABOUT
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/people.html">
+     1. Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
+     2. Code of conduct
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../boilerplate/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../boilerplate.html">
+   Platform
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/the-turing-way.html">
+     1. Leveraging the Turing Way Book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/accessibility/sftp.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/accessibility/sftp.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/accessibility/sftp.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract">
+   1.1. Abstract
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background-info">
+   1.2. Background info
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   1.3. Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recipe-instructions">
+   1.4. Recipe instructions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-a-sftp-server">
+     1.4.1. Setting up a SFTP server
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-upload-and-download">
+     1.4.2. Data upload and download
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#manual-i-e-drag-n-drop">
+       1.4.2.1. Manual, i.e. drag’n’drop
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#automatic">
+       1.4.2.2. Automatic
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correctness-and-completeness-of-transfer">
+     1.4.3. Correctness and completeness of transfer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#possible-improvements-from-the-state-of-this-recipe">
+   1.5. Possible improvements from the state of this recipe:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   1.6. Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     1.6.1. What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   1.7. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   1.8. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="transferring-data-with-sftp">
+<span id="fcb-sftp"></span><h1><span class="section-number">1. </span>Transferring data with SFTP<a class="headerlink" href="#transferring-data-with-sftp" title="Permalink to this headline">¶</a></h1>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Transferring data with SFTP", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB014", "url": "http://w3id.org/faircookbook/FCB014"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+15 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+Yes
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Transferring data with SFTP</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Hands-on</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-signal fa-2x"></i><div class="sectionContent">
+<div class="label">Maturity Level</div>
+<div class="sectionValue">level 1</div>
+</div>
+</div>
+<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="http://w3id.org/faircookbook/FCB014" class="text--purple-dark">FCB014
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/data_transfer.html">Data Transfer related content from the RDM Toolkit</a></p>
+<a class="bg-primary darkgrey reference internal image-reference" href="../../../_images/RDMkit_logo_inverted.svg" id="rdmtoolkit-logo"><img alt="../../../_images/RDMkit_logo_inverted.svg" class="bg-primary darkgrey" height="25px" id="rdmtoolkit-logo" src="../../../_images/RDMkit_logo_inverted.svg" /></a>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+<!-- :::{admonition} content from the
+:class: dropdown 
+```{image} RDMkit_logo_inverted.svg
+:height: 25px
+:class: bg-primary darkgrey
+:name: rdmtoolkit_logo
+```
+[Data Transfer related content from the RDM Toolkit](https://rdmkit.elixir-europe.org/data_transfer.html)
+::: -->
+<div class="section" id="abstract">
+<h2><span class="section-number">1.1. </span>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>Collaborating teams at two or more organizations often need to transfer and share data files. There are a number of ways to share files, all with various degrees of ease and usability.
+The particular information security risk management (ISRM) protocols at the sending and receiving institutions need to be considered when one chooses and optimizes file-transfer solutions.
+One common method for transferring files is SFTP or scp (secure copy).
+[final sentence missing]</p>
+</div>
+<div class="section" id="background-info">
+<h2><span class="section-number">1.2. </span>Background info<a class="headerlink" href="#background-info" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>SFTP: Secure or SSH File Transfer protocol is a standard way to transfer files securely using a remote server.</p></li>
+<li><p>SFTP is not to be confused with FTP or FTPS. While FTP does not use encryption at all and therefore can be considered insecure, FTPS adds a layer of encryption on top of FTP but it still comes with a number of drawbacks from the FTP protocol, e.g. requiring a range of open ports. SFTP uses an entirely different protocol based on SSH (secure shell) and uses strong encryption for authentication information as well as the data transferred.</p></li>
+<li><p>In order to upload and download files, the client needs to communicate with the server over port 22 (which is the default port for SFTP) and the network configurations on the sender as well as the recipient side need to allow this traffic. If network restrictions block this communication, one might try to run the SFTP server on a different port (e.g. 443).</p></li>
+<li><p>In this scenario, a SFTP server is a pure file transfer server, i.e. it lives outside of any sensitive network area and both parties (the sender and recipient) need to use a SFTP client to upload from and download to their internal storage systems. After transfer and integrity check, files would be typically removed by the receiver.</p></li>
+</ul>
+<!-- ## Graphical Overview
+
+not existent
+
+---
+
+## Capability and Maturity Table.
+
+
+| Capability  | Initial Maturity Level | Final Maturity Level  |
+| :------------- | :------------- | :------------- |
+| Interoperability | minimal | repeatable |
+
+
+## FAIRification Objectives, Inputs and Outputs
+
+COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology. 
+
+---
+
+## Table of Data Standards
+
+COMMENT: the concepts in this recipe did not map to any terms from the FAIRsharing.org database.-->
+</div>
+<div class="section" id="requirements">
+<h2><span class="section-number">1.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>For client (receiver/sender):</p>
+<ul class="simple">
+<li><p>Basic understanding of SFTP client configurations</p></li>
+<li><p>(optional) Basic programming skills to automate upload or download process</p></li>
+</ul>
+<p>For server (system administrator):</p>
+<ul class="simple">
+<li><p>Compliance with company IT-security policies</p></li>
+<li><p>Understanding firewall configurations</p></li>
+<li><p>Ability to use terminal (bash)</p></li>
+</ul>
+</div>
+<div class="section" id="recipe-instructions">
+<h2><span class="section-number">1.4. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
+<p>Overview:</p>
+<ul class="simple">
+<li><p>(1)	Setting up SFTP server</p>
+<ul>
+<li><p>1.a.	Instructions</p></li>
+<li><p>1.b.	Security considerations</p></li>
+</ul>
+</li>
+<li><p>(2)	Data upload/download</p>
+<ul>
+<li><p>2a.	Manual</p></li>
+<li><p>2b.	Automatic</p></li>
+</ul>
+</li>
+<li><p>(3) Correctness and completeness of transfer</p></li>
+</ul>
+<div class="section" id="setting-up-a-sftp-server">
+<h3><span class="section-number">1.4.1. </span>Setting up a SFTP server<a class="headerlink" href="#setting-up-a-sftp-server" title="Permalink to this headline">¶</a></h3>
+<p>You can run an SFTP server in a Windows environment, e.g. using the open source software FileZilla Server. A Linux server can be set-up  after installing the required libraries (libssh2, OpenSSH). Following is a step-by-step summary for a CentOS server:</p>
+<p>a.	Create a dedicated group for all future SFTP users:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ groupadd sftpusers
+</pre></div>
+</div>
+<p>b.	First create a folder on a volume with sufficient free space:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir -p /data/sftp
+</pre></div>
+</div>
+<p>c.	Set permissions:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ chown root:sftpusers /data/sftp
+$ chmod <span class="m">775</span> /data/sftp
+</pre></div>
+</div>
+<p>d.	Create one or more SFTP users, assigning them to the previously created group:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ useradd -g sftpusers -d / -s /sbin/nologin USERNAME
+</pre></div>
+</div>
+<p>e.	Set the password for the new user:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ passwd USERNAME
+</pre></div>
+</div>
+<p>f.	Edit the SSHD configuration at /etc/ssh/sshd_config (e.g. using vi or nano) by adding the following lines:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Match Group sftpusers
+ChrootDirectory /data/sftp
+ForceCommand internal-sftp
+</pre></div>
+</div>
+<p>g.	Restart the SSH services</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ service sshd restart
+</pre></div>
+</div>
+<p>h.	Now you have to make sure you open port 22 in your network to the outside world under a specific domain name or static IP address.</p>
+</div>
+<div class="section" id="data-upload-and-download">
+<h3><span class="section-number">1.4.2. </span>Data upload and download<a class="headerlink" href="#data-upload-and-download" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="manual-i-e-drag-n-drop">
+<h4><span class="section-number">1.4.2.1. </span>Manual, i.e. drag’n’drop<a class="headerlink" href="#manual-i-e-drag-n-drop" title="Permalink to this headline">¶</a></h4>
+<p>Data could be transferred to/from SFTP server using multiple clients. Here there are some examples:</p>
+<p>FileZilla</p>
+<p>OS: Windows, Mac OS, Linux</p>
+<p>License: Free Software (GPL)</p>
+<p>Pros:</p>
+<ul class="simple">
+<li><p>easy to setup;</p></li>
+<li><p>portable version available (no installation, i.e. administrator rights, required)</p></li>
+<li><p>cross-platform</p></li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li><p>By default installs adware</p></li>
+</ul>
+<p>WinSCP</p>
+<p>OS: Windows</p>
+<p>License: Free Software (GPL)</p>
+<p>Pros:</p>
+<ul class="simple">
+<li><p>easy to setup;</p></li>
+<li><p>portable version available (no installation, i.e. administrator rights, required)</p></li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li><p>Only Windows</p></li>
+<li><p>No x64 version (as of 07.07.2020)</p></li>
+</ul>
+<p>Other SFTP clients: Cyberduck, MonstaFTP (Free and paid) and many others</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{admonition} tip:
+The portable version of WinSCP can be preconfigured so that a user only needs to enter the password, without requiring knowledge of host names, protocols, ports or user name!
+</pre></div>
+</div>
+</div>
+<div class="section" id="automatic">
+<h4><span class="section-number">1.4.2.2. </span>Automatic<a class="headerlink" href="#automatic" title="Permalink to this headline">¶</a></h4>
+<p>Libraries implementing SFTP are available for different programming languages.</p>
+<ul class="simple">
+<li><p>Python - pysftp (<a class="reference external" href="https://pysftp.readthedocs.io/en/release_0.2.8/index.html">https://pysftp.readthedocs.io/en/release_0.2.8/index.html</a>)</p></li>
+<li><p>Perl - Net::SFTP (<a class="reference external" href="https://metacpan.org/pod/Net::SFTP">https://metacpan.org/pod/Net::SFTP</a>)</p></li>
+<li><p>JavaScript - ssh2-sftp-client (<a class="reference external" href="https://www.npmjs.com/package/ssh2-sftp-client">https://www.npmjs.com/package/ssh2-sftp-client</a>)</p></li>
+<li><p>Bash - sftp (similar to scp)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="correctness-and-completeness-of-transfer">
+<h3><span class="section-number">1.4.3. </span>Correctness and completeness of transfer<a class="headerlink" href="#correctness-and-completeness-of-transfer" title="Permalink to this headline">¶</a></h3>
+<p>It is a good practice to ensure that file transfer is correct and complete.</p>
+<p>Sender should calculate checksum (md5, sha512, etc) for every file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash: md5sum * &gt; md5sum.txt
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash: sha512sum * &gt; sha512sum.txt
+</pre></div>
+</div>
+<p>Windows: CertUtil -hashfile FILENAME MD5
+Recipient compares checksums:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Bash: md5sum -c md5sum.txt *
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Bash: sha512sum -c sha512sum.txt *
+</pre></div>
+</div>
+<p>The sender can use the sender organization’s HPC node to</p>
+<ul class="simple">
+<li><p>(1)	set up a shell which runs in the background,</p></li>
+<li><p>(2)	launch the FTP session in the same local network as the server and directory of files to be transferred.</p></li>
+<li><p>(3)	Transfer the files via the filesystem on both the local and remote system</p></li>
+</ul>
+<p>For example, an IMI collaboration project requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
+The process involved copying the files over to a secure FTP server, the receiving institution copies to their server, then the sender deletes the files on the FTP server.</p>
+<p>Pros and cons:</p>
+<ul class="simple">
+<li><p>Double copy process with an intermediate space</p></li>
+<li><p>Cumbersome</p></li>
+<li><p>Works for mid size data (Gigabyte range)</p></li>
+<li><p>It works in most cases, especially if the file transfer is “one-time” batch of files.</p></li>
+<li><p>It can be considered a good short term or “one-off” solution.</p></li>
+</ul>
+<p>This common process is described in a number of publically available resources, examples in the Further Reading section below.</p>
+</div>
+</div>
+<div class="section" id="possible-improvements-from-the-state-of-this-recipe">
+<h2><span class="section-number">1.5. </span>Possible improvements from the state of this recipe:<a class="headerlink" href="#possible-improvements-from-the-state-of-this-recipe" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>One could provide for increased automation by writing a small script to iterate through each directory when one is transferring a set of directories, each containing a number of data files.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusion">
+<h2><span class="section-number">1.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This content is a simple guideline for using a well known secure file transfer protocol.
+More modern solutions and tools exist for fast transfer or mounting of remote drive. For example <a class="reference external" href="https://rclone.org">Rclone</a> is one such tool, allowing interaction with cloud storage solutions from a wide array of providers.</p>
+<div class="section" id="what-to-read-next">
+<h3><span class="section-number">1.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol">Wikipedia article on SFTP</a>
+<a class="reference external" href="https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/">The Geek Stuff, FTP and SFTP Beginners guide with 10 examples</a>
+<a class="reference external" href="https://hpc.uni.lu/users/docs/filetransfer.html">Example of customization for a specific institution: University of Luxembourg File Transfer</a>
+<a class="reference external" href="https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/">Setting up an SFTP server on CentOS</a>
+<a class="reference internal" href="aspera.html#fcb-access-aspera"><span class="std std-ref">Downloading data with Aspera</span></a>
+<a class="reference external" href="https://rclone.org">Rclone</a></p>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="authors">
+<h2><span class="section-number">1.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>ORCID</p></th>
+<th class="head"><p>Affiliation</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>ELIXIR Node</p></th>
+<th class="head"><p>Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="firstCol"><img class="avatar-style" src="https://avatars.githubusercontent.com/NONE"></img><div class="d-block">Dorothy Reilly</div></div></p></td>
+<td><p></p></td>
+<td><p>Novartis AG</p></td>
+<td><p><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/sedlyarov"><img class="avatar-style" src="https://avatars.githubusercontent.com/sedlyarov"></img><div class="d-block">Vitaly Sedlyarov</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-9872-3535"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Boehringer-Ingelheim AG</p></td>
+<td><p><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/ulo"><img class="avatar-style" src="https://avatars.githubusercontent.com/ulo"></img><div class="d-block">Ulrich Goldmann</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0003-1120-6912"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>CEMM</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>University of Oxford</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p>Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="license">
+<h2><span class="section-number">1.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This page is released under the Creative Commons 4.0 BY license.</p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/accessibility"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../accessibility.html" title="previous page">Accessibility</a>
+    <a class='right-next' id="next-link" href="aspera.html" title="next page"><span class="section-number">2. </span>Downloading data with Aspera</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li> <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

@@ -18,7 +18,7 @@
 
 This recipe aims to provide `an overview of tools available` to perform a number of key operations using ontologies and relevant to FAIR processes: from `ontology management` to using `ontology for annotation` or `performing ontology mapping`.
 
-It aims to serve as a starting point to identify tools for FAIRifications tasks where ontologies and semantic frameworks are needed. 
+It aims to serve as a starting point to identify tools for FAIRification tasks where ontologies and semantic frameworks are needed. 
 
 ```{admonition} disclaimer
 It is not intended to provide a comprehensive list covering all possible tools.

@@ -42,6 +42,14 @@ CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL = {
     "5" : "very hard",
 }
 
+CONTROLLED_VOCABULARY_MATURITY_LEVEL = {
+    "1" : "level 0",
+    "2" : "level 1",
+    "3" : "level 2",
+    "4" : "level 3",
+    "5" : "level 4",
+}
+
 CONTROLLED_VOCABULARY_EXECUTABLE_CODE = {
     "yeah" : "Yes",
     "nope" : "No",
@@ -104,6 +112,7 @@ CONTROLLED_AUTHOR_LIST = {
 "Francesco"         : { "github_handle" : "fra82",            "name" : "Francesco Ronzano",          "orcid" : "0000-0001-5037-9061",        "affiliation" : "IMIM",                                            "type_of_affiliation" : "academia",         "elixir_node" : "ES"        }, 
 "Franziska"         : { "github_handle" : "",                 "name" : "Franziska Kroh",             "orcid" : "",                           "affiliation" : "Fraunhofer Institute",                            "type_of_affiliation" : "academia",         "elixir_node" : ""          }, 
 "Fuqi"              : { "github_handle" : "fuqix",            "name" : "Fuqi Xu",                    "orcid" : "0000-0002-5923-3859",        "affiliation" : "EMBL-EBI",                                        "type_of_affiliation" : "academia",         "elixir_node" : "embl"      }, 
+"Gabriel"           : { "github_handle" : "denoa1",           "name" : "Gabriel Backianathan",       "orcid" : "",                           "affiliation" : "Novartis AG",                                     "type_of_affiliation" : "efpia",            "elixir_node" : ""          }, 
 "George"            : { "github_handle" : "",                 "name" : "George Papadotas",           "orcid" : "",                           "affiliation" : "GSK",                                             "type_of_affiliation" : "efpia",            "elixir_node" : ""          }, 
 "Gesa"              : { "github_handle" : "",                 "name" : "Gesa Witt",                  "orcid" : "0000-0003-2344-706X",        "affiliation" : "Fraunhofer Institute",                            "type_of_affiliation" : "academia",         "elixir_node" : ""          }, 
 "Hannah"            : { "github_handle" : "HEHurst",          "name" : "Hannah Hurst",               "orcid" : "",                           "affiliation" : "EMBL-EBI",                                        "type_of_affiliation" : "academia",         "elixir_node" : "embl"      }, 
