@@ -18,7 +18,7 @@
 ## Main Objective 
 
 ### Background
-It is undeniable that there is an ever-growing need to manage data in terms of both volume and complexity within the life sciences sector. Technological advances have certainly paved the way to handle large volumes of data in the past decade or so. However, the ability to `semantically` connect and exchange information within and between  organizations remains a challenge to most part even today. Coupled with the need to manage compliances, regulations, newer discoveries in disease areas and audits, the ability to manage, store and access data is certainly an uphill task.
+It is undeniable that there is an ever-growing need to manage data in terms of both volume and complexity within the life sciences sector. Technological advances have certainly paved the way to handle large volumes of data in the past decade or so. However, the ability to `semantically` connect and exchange information within and between organizations remains a challenge to most part even today. Coupled with the need to manage compliances, regulations, newer discoveries in disease areas and audits, the ability to manage, store and access data is certainly an uphill task.
 ### Goals
 This recipe intends to enumerate ideas that one should consider within the context of Contract Research Organizations (CRO) and how adopting and applying FAIR principles will generate a higher ROI over the long run. We also will explore key scenarios in mitigating some of the repeated ETL pains that CROs face on a regular basis when managing data in the life sciences sector.
 While the recipe tries to encompass research topics, the focus remains within the clinical landscape.
@@ -114,7 +114,7 @@ Of course, when considering enacting a policy change such as rolling out FAIR da
 ---
 ## Conclusion
 
-With this content, we intended to bring forward the experience gained *"from the trenches"* of data management by highlighting how the FAIR practice could inform key decisions when engaging wit Contract Research Organizations, from defining tasks, identifying required capabilities to defining metrics of performance for tracking trends and effects. This goes beyond the notion of FAIR data and touches on the need to also track and assess the quality of data and processes.
+With this content, we intended to bring forward the experience gained *"from the trenches"* of data management by highlighting how the FAIR practice could inform key decisions when engaging with Contract Research Organizations, from defining tasks, identifying required capabilities to defining metrics of performance for tracking trends and effects. This goes beyond the notion of FAIR data and touches on the need to also track and assess the quality of data and processes.
 
 ### What to read next
 
