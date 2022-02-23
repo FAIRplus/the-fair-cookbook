@@ -52,7 +52,7 @@ The process of depositing to CERN Zenodo.
 
 ### What is Zenodo?
 
-Zenodo is a repository developed by [CERN](https://home.cern/), under the [OpenAire](https://www.openaire.eu/) program the focus of which is on **open data**. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the `Innovative Medicine Initiative (IMI)`.
+Zenodo is a repository developed by [CERN](https://home.cern/) under the [OpenAire](https://www.openaire.eu/) program, the focus of which is on **open data**. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the `Innovative Medicine Initiative (IMI)`.
 
 ### Why use Zenodo?
 
@@ -64,7 +64,7 @@ To cite `Zenodo's documentation`, here are a few reasons why using the repositor
 * Open or closed — Share e.g. anonymized clinical trial data with only medical professionals via our restricted access mode.
 * Versioning — Easily update your dataset with our versioning feature.
 * GitHub integration — Easily preserve your GitHub repository in Zenodo.
-* Usage statisics — All uploads display standards compliant usage statistics
+* Usage statisics — All uploads display standards compliant usage statistics.
 
 
 ## 1. How to use Zenodo Deposition Web Interface?
@@ -105,7 +105,7 @@ Files can be dragged and dropped, with the following limitations:
 * 50 GB total / dataset
 
 
-After adding the set of files associated with the submission, the upload should be initiated by the pressing the `start upload` green button.
+After adding the set of files associated with the submission, the upload should be initiated by pressing the `start upload` green button.
 Failing to do so will result in a failure to proceed with the submission and an error will be thrown, reminding users to do so.
 
 <!-- <img src="/images/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
@@ -157,11 +157,11 @@ Basic metadata to report .
 ```
 
 
-* **Reserve a Digital Object Identifier**: This is a service provided natively by the Zenodo service, by virtue of its integration with Datacite services. This is quite an important point as it means the a Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information **can not be changed without creating a new version of the archive and therefore minting a new doi**
+* **Reserve a Digital Object Identifier**: This is a service provided natively by the Zenodo service, by virtue of its integration with Datacite services. This is quite an important point as it means the Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information **can not be changed without creating a new version of the archive and therefore minting a new doi**
  
 
 
-* 'Keywords' can be adding to tag the submission. These are free text and no controlled terminology can be used in the interface at the moment.
+* 'Keywords' can be added to tag the submission. These are free text and no controlled terminology can be used in the interface at the moment.
 
 <!-- <img src="/images/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
@@ -180,7 +180,7 @@ Setting keywords associated with the Zenodo deposition .
 
 ###  Zenodo Compatible Data Collection - Access and License information
 
-* Zenodo provides facilities to set `Access Conditions` and `License`, `Data Controler Contact Information`, as well as `Embargo Duration` if applicable
+* Zenodo provides facilities to set `Access Conditions` and `License`, `Data Controler Contact Information`, as well as `Embargo Duration` if applicable.
 * As indicated above, it is possible to `set an Embargo Period`, if the option `embargoed access` is selected under the `Access right` section.
 
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
@@ -196,7 +196,7 @@ Choosing a License is essential.
 
 
 
-  * Zenodo places to no limit when it comes to duration of the embargo period. So submitters should check EC and IMI guidelines or local institutional requirements for guidance.
+  * Zenodo places no limit when it comes to duration of the embargo period. So submitters should check EC and IMI guidelines or local institutional requirements for guidance.
 
 
 * Setting Access Conditions/License, Data Controler Contact Information, Embargo Duration if applicable
@@ -431,14 +431,14 @@ r.status_code
 > The integration with ORCID<!-- TODO add a link to corresponding document --> makes it very easy to obtain an account on CERN's service. 
 > The integration with Datacite<!-- TODO add a link to corresponding document --> means that submitters can reserve and obtain Digital Object Identifiers (DOI) very simply. These can then be cited and used as references to the datasets.
 > The integration with Crossref<!-- TODO add a link to corresponding document --> means that funding information case be easily looked up, thus reducing data entry burden in most conditions but especially for EU funded projects such as IMI.
-> Licensing information can also be easily supplied
+> Licensing information can also be easily supplied.
 > Data access and embargo dates can be reserved.
-> Findability via search engines is enhanced as Zenodo supports content negotiation, serving [schema.org](https://schema.org) based JSON-LD documents
+> Findability via search engines is enhanced as Zenodo supports content negotiation, serving [schema.org](https://schema.org) based JSON-LD documents.
 > Users should however be reminded of the following limitations of the service:
-    > - absence of contraints on the nature of the datafiles being uploaded
-    > - no domain specific awareness and domain specific metadata
-    > - absence of connection with specialized repositories
-    > - size limitation for a given datasets.
+    > - Absence of contraints on the nature of the datafiles being uploaded.
+    > - No domain specific awareness and domain specific metadata.
+    > - Absence of connection with specialized repositories.
+    > - Size limitation for a given datasets.
     
     
 

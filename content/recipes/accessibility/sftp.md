@@ -8,7 +8,6 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist
-:maturity_level: 2
 :has_executable_code: yeah
 :recipe_name: Transferring data with SFTP
 ```` 
@@ -35,8 +34,8 @@
 
 Collaborating teams at two or more organizations often need to transfer and share data files. There are a number of ways to share files, all with various degrees of ease and usability.
 The particular information security risk management (ISRM) protocols at the sending and receiving institutions need to be considered when one chooses and optimizes file-transfer solutions.
-One common method for transferring files is SFTP or scp (secure copy).
-[final sentence missing]
+One common method for transferring files is SFTP or scp (Secure Copy).
+
 
 
 ## Background info
