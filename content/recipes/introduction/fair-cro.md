@@ -11,6 +11,8 @@
 :reading_time_minutes: 15
 :intended_audience: procurement_officer, principal_investigator, data_curator, data_manager, data_scientist  
 :has_executable_code: nope
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :recipe_name: Practical Considerations for CROs to play FAIR
 ```` 
 

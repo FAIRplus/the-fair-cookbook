@@ -50,6 +50,54 @@ CONTROLLED_VOCABULARY_MATURITY_LEVEL = {
     "5" : "level-5",
 }
 
+CONTROLLED_VOCABULARY_MATURITY_INDICATOR = {
+    "1" : "[F+MM-1.1C]",
+    "2" : "[F+MM-1.2C]", 
+    "3"  : "[F+MM-1.3C]",
+    "4"  : "[F+MM-1.1R]", 
+    "5"  : "[F+MM-1.2R]", 
+    "6"  : "[F+MM-1.1H]", 
+    "7"  : "[F+MM-1.2H]", 
+    "8"  : "[F+MM-1.3H]", 
+    "9"  : "[F+MM-2.1C]", 
+    "10"  : "[F+MM-2.2C]", 
+    "11"  : "[F+MM-2.3C]", 
+    "12"  : "[F+MM-2.4C]", 
+    "13"  : "[F+MM-2.1R]", 
+    "14"  : "[F+MM-2.2R]", 
+    "15"  : "[F+MM-2.3R]", 
+    "16"  : "[F+MM-2.1H]", 
+    "17"  : "[F+MM-2.2H]", 
+    "18"  : "[F+MM-3.1C]", 
+    "19"  : "[F+MM-3.2C]", 
+    "20"  : "[F+MM-3.3C]", 
+    "21"  : "[F+MM-3.1R]", 
+    "22"  : "[F+MM-3.2R]", 
+    "23"  : "[F+MM-3.3R]", 
+    "24"  : "[F+MM-3.1H]", 
+    "25"  : "[F+MM-3.2H]", 
+    "26"  : "[F+MM-3.3H]", 
+    "27"  : "[F+MM-3.4H]", 
+    "28"  : "[F+MM-4.1C]", 
+    "29"  : "[F+MM-4.2C]", 
+    "30"  : "[F+MM-4.3C]", 
+    "31"  : "[F+MM-4.4C]", 
+    "32"  : "[F+MM-4.1R]", 
+    "33"  : "[F+MM-4.2R]", 
+    "34"  : "[F+MM-4.1H]", 
+    "35"  : "[F+MM-5.1C]", 
+    "36"  : "[F+MM-5.2C]", 
+    "37"  : "[F+MM-5.3C]", 
+    "38"  : "[F+MM-5.1R]", 
+    "39"  : "[F+MM-5.2R]", 
+    "40"  : "[F+MM-5.1H]", 
+    "41"  : "[F+MM-5.2H]", 
+    "42"  : "[F+MM-5.3H]"
+}
+
+
+
+
 CONTROLLED_VOCABULARY_EXECUTABLE_CODE = {
     "yeah" : "Yes",
     "nope" : "No",
@@ -167,7 +215,7 @@ CONTROLLED_LICENSE_LIST = {
 """, 
     "CC0-1.0": """This page is released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
 
-<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"><img src="[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)" height="20"/></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"><img src=""[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication]"(https://creativecommons.org/publicdomain/zero/1.0/deed.en)" height="20"/></a>
 """
 
 }

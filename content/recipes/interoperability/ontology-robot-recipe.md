@@ -12,6 +12,7 @@
 :reading_time_minutes: 60
 :intended_audience: terminology_manager, data_manager, data_scientist, ontologist
 :maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: Building an application ontology with ROBOT
 ```` 

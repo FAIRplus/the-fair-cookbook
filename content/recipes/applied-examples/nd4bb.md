@@ -15,6 +15,7 @@ TODO: clarify authors
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator
 :maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 ```` 
 

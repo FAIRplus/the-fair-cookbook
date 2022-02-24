@@ -12,6 +12,7 @@
 :reading_time_minutes: 10
 :intended_audience:  everyone 
 :maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Prioritization of projects for FAIRification
 ```` 

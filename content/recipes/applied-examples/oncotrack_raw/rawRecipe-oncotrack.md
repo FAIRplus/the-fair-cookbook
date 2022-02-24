@@ -9,6 +9,7 @@
 :reading_time_minutes: 10
 :intended_audience: data_manager, data_curator, ontologist
 :maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Oncotrack - clinical cohort datasets
 ```` 

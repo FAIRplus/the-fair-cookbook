@@ -6,7 +6,7 @@ import sphinx.errors
 import sphinx_panels.panels
 from sphinx.util import logging
 
-from global_variables_fairplus import LINK_TO_THE_FAIRPLUS_LOGO, CONTROLLED_VOCABULARY_EXECUTABLE_CODE, CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL, CONTROLLED_VOCABULARY_INTENDED_AUDIENCE, CONTROLLED_VOCABULARY_MATURITY_LEVEL, CONTROLLED_VOCABULARY_RECIPE_TYPE 
+from global_variables_fairplus import LINK_TO_THE_FAIRPLUS_LOGO, CONTROLLED_VOCABULARY_EXECUTABLE_CODE, CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL, CONTROLLED_VOCABULARY_INTENDED_AUDIENCE, CONTROLLED_VOCABULARY_MATURITY_LEVEL, CONTROLLED_VOCABULARY_MATURITY_INDICATOR, CONTROLLED_VOCABULARY_RECIPE_TYPE 
 
 logger = logging.getLogger(__name__)
 logger.info('Hello, this is "panels_fairplus" extension!')
@@ -23,7 +23,8 @@ class PanelFairplus(Directive):
         "recipe_type"           : directives.unchanged_required,
         "has_executable_code"   : directives.unchanged_required,
         "intended_audience"     : directives.unchanged_required,
-        # "maturity_level"        : directives.unchanged_required,
+        "maturity_level"        : directives.unchanged_required,
+        "maturity_indicator"    : directives.unchanged_required,
         "recipe_name": directives.unchanged_required
     }
 
@@ -107,14 +108,41 @@ class PanelFairplus(Directive):
 
 
 
-        # # maturity_level
-        # assert      self.options["maturity_level"]  in CONTROLLED_VOCABULARY_MATURITY_LEVEL or \
-        #         str(self.options["maturity_level"]) in CONTROLLED_VOCABULARY_MATURITY_LEVEL , \
-        #     sphinx.errors.ExtensionError(
-        #         _make_string_red(
-        #             f"The value of maturity_level has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_MATURITY_LEVEL))} ."
-        #             ))
-        # self.options["maturity_level"] = str(self.options["maturity_level"])
+        # maturity_level
+        assert      self.options["maturity_level"]  in CONTROLLED_VOCABULARY_MATURITY_LEVEL or \
+                str(self.options["maturity_level"]) in CONTROLLED_VOCABULARY_MATURITY_LEVEL , \
+            sphinx.errors.ExtensionError(
+                _make_string_red(
+                    f"The value of maturity_level has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_MATURITY_LEVEL))} ."
+                    ))
+        self.options["maturity_level"] = str(self.options["maturity_level"])
+
+
+        # maturity_indicators
+        list_of_maturity_indicators = []
+        for split_element in self.options["maturity_indicator"].split(","):
+            stripped = split_element.strip()
+            if stripped == "": continue
+            list_of_maturity_indicators.append( stripped )
+
+            assert stripped in CONTROLLED_VOCABULARY_MATURITY_INDICATOR, \
+            sphinx.errors.ExtensionError(
+                _make_string_red(
+                    f"The value of maturity_indicators has to be out of the following controlled vocabulary: {', '.join(list(CONTROLLED_VOCABULARY_MATURITY_INDICATOR))} ."
+                    ))
+
+        # assert len(list_of_maturity_indicators) > 0, \
+        #     sphinx.errors.ExtensionError(_make_string_red(
+        #         f"The value of intended_audience has to contain at least one element."
+        #         ))
+
+        self.options["maturity_indicator"] = list_of_maturity_indicators
+
+
+
+
+
+
 
 
         # has_executable_code
@@ -185,13 +213,19 @@ class PanelFairplus(Directive):
                             f'<div class="sectionValue">{self.get_audience()}</div>',
                         '</div>',
                     '</div>',
-                    # '<div class="section" style="flex-grow: 1;">',
-                    #     '<i class="sectionIcon fas fa-battery-empty fa-2x"></i>'
-                    #     '<div class="sectionContent">',
-                    #         '<div class="label">Maturity Level</div>',
-                    #         f'<div class="sectionValue">{self.get_maturity()}</div>',
-                    #     '</div>',
-                    # '</div>',
+                    '<div class="section" style="flex-grow: 1;">',
+                        f'<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars {self.get_maturity()}">',
+                          '<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>',
+                          '<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />',  
+                          '<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />',
+                          '<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>',
+                          '<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>',
+                        '</svg>',
+                        '<div class="sectionContent">',
+                          '<div class="label">Maturity Level & Indicator</div>',
+                          f'<div class="sectionValue">{self.get_indicators()}</div>',
+                        '</div>',
+                    '</div>'
                     '<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with ',
                         f'<a href="{self.options["identifier_link"]}" class="text--purple-dark">{self.options["identifier_text"]}',
                     '</a></div>',
@@ -211,13 +245,21 @@ class PanelFairplus(Directive):
         return ", ".join([CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
                           for target in self.options["intended_audience"]])
 
-    # def get_maturity(self):
-    #     """
-    #     Gets the list of improved maturity indicators
-    #     :return str: a string properly formatted containing the list of audience targets
-    #     """
-    #     return ", ".join([CONTROLLED_VOCABULARY_MATURITY_LEVEL[target]
-    #                       for target in self.options["maturity_level"]])
+    def get_maturity(self):
+        """
+        Gets the list of improved maturity indicators
+        :return str: a string properly formatted containing the list of audience targets
+        """
+        return ", ".join([CONTROLLED_VOCABULARY_MATURITY_LEVEL[target]
+                          for target in self.options["maturity_level"]])
+
+    def get_indicators(self):
+        """
+        Gets the list of improved maturity indicators
+        :return str: a string properly formatted containing the list of audience targets
+        """
+        return "\n ".join(["<a href=\"https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/\"" + CONTROLLED_VOCABULARY_MATURITY_INDICATOR[target]+".md\">"+CONTROLLED_VOCABULARY_MATURITY_INDICATOR[target]+"</a>"
+                          for target in self.options["maturity_indicator"]])
 
 
     def get_ld(self):

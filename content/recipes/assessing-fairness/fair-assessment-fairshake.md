@@ -20,6 +20,7 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist 
 :maturity_level: 2 
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: FAIRshake tool
 ```` 

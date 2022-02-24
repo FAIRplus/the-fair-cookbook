@@ -10,6 +10,8 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :recipe_name: Depositing Bioactivity Data
 ```` 
 
