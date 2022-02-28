@@ -25,7 +25,7 @@ The main purpose of this recipe is to:
 > Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by [BridgeDb](https://bio.tools/bridgedb).
 
 
-___
+---
 
 
 ## Graphical Overview
@@ -40,7 +40,7 @@ alt: Overview of key aspects in Identifier Mapping
 Overview of key aspects in Identifier Mapping
 ```
 
-___
+---
 
 
 ## Requirements
@@ -83,7 +83,7 @@ The table below lists the software that is used to execute the examples in this 
 | [tidyverse](https://www.tidyverse.org/)                                           | tidyverse is an opinionated collection of R packages designed for data science.  | 1.3.0||
 |[BridgeDbR](https://doi.org/doi:10.18129/B9.bioc.BridgeDbR)|An R package for BridgeDb| 2.0.0||
 
-___
+---
 
 ## Identifier mapping with BridgeDb
 
@@ -362,7 +362,7 @@ This returns the following information for each of the data sources for a given 
 
 Improvements on provenance are under way (see [here](https://github.com/bridgedb/BridgeDb/issues/164)).
 
-___
+---
 
 ## Code 
 You can find ready-made methods to map using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/9ad9481be32812b2565f9f9f1897642ae26eddff/content/recipes/interoperability/bridgedb/data). These assume the data has the structure described in this recipe.
@@ -387,22 +387,22 @@ These are aspects of information provenance which we plan to provide in the futu
 
 ```{footbibliography}
 ```
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/lucas-ubm'><img class='avatar-style' src='https://avatars.githubusercontent.com/lucas-ubm'></img><div class="d-block">Lucas Giovanni </div></a>    </div>      | <a target="_blank" href='https://orcid.org/0000-0001-6518-9535'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
-| <div class="firstCol"><a target="_blank" href='https://github.com/alasdairgray'><img class='avatar-style' src='https://avatars.githubusercontent.com/alasdairgray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div>         | <a target="_blank" href='http://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot-Watt University     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
+````{authors_fairplus}
+Lucas: Writing - Original Draft
+Philippe: Writing - Review & Editing
+Alasdair: Writing - Review & Editing
+````
 
 
-___
+---
 
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

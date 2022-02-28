@@ -26,7 +26,7 @@ The **FAIR principles**, under the `Findability` and the `Accessibility` chapter
 The main goals of this recipe are therefore:
 
 > To understand the purpose of a globally unique and persistent identifier and how they can be used to retrieve the associated (meta)data using a standardized communication protocol.
-> To provide explanations on how to generate globaly unique identifiers, explain what IRI are and how they can be generated, retrieved and resolved.
+> To provide explanations on how to generate globaly unique identifiers, explain what IRIs are and how they can be generated, retrieved and resolved.
 
 
 From these principles, it is necessary to explain three key processes, which are: 
@@ -61,7 +61,7 @@ The standard approach would be resolving a `HTTP GET` request using content nego
 
 All these key points will be developed in this recipe.
 
-___
+---
 
 
 ```{figure} ./identifiers-fig1.svg
@@ -87,7 +87,7 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPR
 | Identifier resolution||repeatable|
 | content negotiation||repeatable|
 
-----
+---
 <!-- 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -106,7 +106,7 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPR
 | HTTP<!-- TODO add a link to corresponding document --> |  |  |
 | RDF<!-- TODO add a link to corresponding document --> |  |  |
 
-___
+---
 
 
 ## Minting identifiers
@@ -136,7 +136,7 @@ With this approach, the notion of `universally unique` is a probabilistic one. *
 According to the [RFC4122 specifications](https://tools.ietf.org/html/rfc4122), a UUID is an identifier that is unique across both space and time, with respect to the space of all UUIDs.  Since a UUID is a fixed  size and contains a time field, it is possible for values to rollover (around A.D. 3400, depending on the specific algorithm  used).  A UUID can be used for multiple purposes, from tagging objects with an extremely short lifetime, to reliably identifying very persistent objects across a network.
 
 
-___
+---
 
 ```{note}
 
@@ -148,7 +148,7 @@ Key Fact about UUID:
 > - `completely semantic free (opaque) identifier`
 ```
 
-___
+---
 
 
 * Generation in Python
@@ -172,7 +172,7 @@ This approach uses 2 inputs:
 - a digital resource (e.g. a file)
 
 Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
-A number of algorithms can be used and some are already widely used such as `Message Digest algorithm MD5` specified by the RFC1321[1]{footcite}`MD5`, the `Secure Hash Algorithm (SHA1)`,  `Secure Hash Algorithm 2 (SHA256)`, `Secure Hash Algorithm 3 (SHA3)` or `BLAKE2b-256` (RFC 7693) {footcite}`Blake2`. 
+A number of algorithms can be used and some are already widely used such as `Message Digest algorithm MD5` specified by the RFC1321 {footcite}`MD5`, the `Secure Hash Algorithm (SHA1)`,  `Secure Hash Algorithm 2 (SHA256)`, `Secure Hash Algorithm 3 (SHA3)` or `BLAKE2b-256` (RFC 7693) {footcite}`Blake2`. 
 The first two are considered obsolete, while the latter two are most advanced and approved by NIST.
 
 ---
@@ -235,7 +235,7 @@ In our context, the use of the hashing function is to generate a unique key whic
  **URI construction is fundamentally about scoping the authority**.
 ```
 
-Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers *resolvable (a notion also known as `dereferencable`)*.
+Having covered the technical details to generated globally unique identifiers, it is now necessary to discuss the issue making identifiers *resolvable (a notion also known as `dereferenceable`)*.
 
 In other words, in order to create globally unique identifiers `for the web`, it is necessary to understand what Uniform Resource Locators<!-- TODO add a link to corresponding document --> (a.k.a `URL`) are and how to construct them for use with the Hypertext Transfer Protocol<!-- TODO add a link to corresponding document -->.
 
@@ -274,7 +274,7 @@ Note how the required part is the `host`, with `userinfo` and `port` information
 
 In the `authority`, the notion of `host` corresponds to the `Internet Protocol (IP) address` of a server hosting a resource. Often, the IP address corresponding to the `host` is given a `host name` such as `www.example.org`. The `host name` should be a `Qualified Domain Name` at minima, or a `Fully Qualified Domain Name (FQDN)` ideally and registered with the `Domain Name Service (DNS)` which allows the resolution (lookup) between the `ip address` and the `hostname`.
 
-___
+---
 
 ```{note} Tip
 
@@ -285,7 +285,7 @@ it is often the case the `authority` is reduced to the `host` , which is then re
 > - hostname subdomain,`www` in the www.example.com web address
 ```
 
-___
+---
 
 
 ```{note} Tip
@@ -293,10 +293,10 @@ ___
 >`subdomain` can be defined in the Domain Name Service and belong to the main domain.  Technically, to add a subdomain pointing to the domain name, one needs to create/add a CNAME to the DNS for a registered domain name
 ```
 
-___
+---
 
 ### `path`: 
-The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zeor or more path segements separated by a `/`.
+The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zero or more path segements separated by a `/`.
 
 ### `query`:
 The `query` is an optional part of the URL syntax that starts with a `?`. Typically the `query` component consists of a service of key-value pairs separated by an `&` deliminator.
@@ -316,15 +316,15 @@ In order to achieve the capability of `persistence`, it is necessary for the res
 3. optionally a path: `/dataset-name/`
 4. a local identifier (such as database accession number, such as P12133 from uniprot) or a globally unique identifier (such as a UUID or hash code).
 
-In a virtual example which uses a UUID for the local identifier and does not use a path, it looks like this
+In a virtual example which uses a UUID for the local identifier and does not use a path, it looks like this:
 
 ```bash
 https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
-Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier` (IRI – commonly referred to as a URL) by appending the local identifier onto a namesapce.
+Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier` (IRI - commonly referred to as a URL) by appending the local identifier onto a namesapce.
 
-___
+---
 
 ```{admonition} Tip
 :class: tip
@@ -341,7 +341,7 @@ Once such URIs are available, one may also turn them into compact identifiers ca
 ## Identifier Resolution - Enabling persistence through indirection
 
 
-This relates to this other FAIR principle mentioned in the introduction.
+This relates to the following FAIR principle mentioned in the introduction:
 
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol.
 
@@ -382,7 +382,7 @@ CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Worki
 
 The CURIE consists of a **`namespace prefix`** followed by the **`local identifier`**.
 
-There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI `[doi:10.1038/sdata.2016.18]` refers to the FAIR Principles paper[^safe-CURIE]. The Digital Object Identifier System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL https://www.doi.org/10.1038/sdata.2016.18 to resolve the paper's DOI. This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
+There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI `[doi:10.1038/sdata.2016.18]` refers to the FAIR Principles paper [^safe-CURIE]. The Digital Object Identifier System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL https://www.doi.org/10.1038/sdata.2016.18 to resolve the paper's DOI. This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
 
 `Namespaces` can be defined *by convention*, such as the case with `doi`, and registered with services to allow for the resolution of CURIEs (see [Identifier Resolution Services](##identifier-resolution-services) below). These are extensively used to map CURIEs to URLs that can be resolved.
 
@@ -428,9 +428,17 @@ This is very useful for including unambiguous, global identifiers in scientific 
     > N2T can store more than one "target" (forwarding link) for an identifier, as well as any kind or amount of metadata (descriptive information)
         > N2T.net is also a "meta-resolver". In collaboration with identifiers.org, it recognizes over 600 well-known identifier types and knows where their respective servers are. Failing to find forwarding information for a specific individual identifier, it uses the identifier's type to look for an overall target rule.
 
+
+
+* [Bioregistry](https://bioregistry.io/)
+
+    > [Bioregistry](https://bioregistry.io/) is a **Resolution Service**, developed in a [GitHub repository](https://github.com/biopragmatics/bioregistry). Like Identifiers.org it has a registry, but also a registry of registries, and it imports data from Identifiers.org and Name-to-Thing but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be [registered via GitHub issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL https://bioregistry.io/chebi:138488 resolves to the ChEBI page https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488. Bioregistry provides an [API to query the registry](https://bioregistry.io/apidocs/) itself.
+
+
+
 *For more details, see the [Identifier Resolution Services recipe](fcb-infra-idres).*
 
-___
+---
 
 ## Conclusion
 
@@ -453,7 +461,7 @@ ___
 > * [Identifier Mapping Services](fcb-identifier-mapping)
 
 
-___
+---
 
 ## References
 
@@ -461,23 +469,23 @@ ___
 ```
 
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/sgtp'><img class='avatar-style' src='https://avatars.githubusercontent.com/sgtp'></img><div class="d-block">Andrea Splendiani</div></a>       </div>   | <a target="_blank" href='https://orcid.org/0000-0002-3201-9617'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Novartis AG   | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Conceptualization
-| <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div> | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/Chris-Evelo'><img class='avatar-style' src='https://avatars.githubusercontent.com/Chris-Evelo'></img><div class="d-block">Chris Evelo</div></a>      </div>    | <a target="_blank" href='https://orcid.org/0000-0002-5301-3142'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/egonw'><img class='avatar-style' src='https://avatars.githubusercontent.com/egonw'></img><div class="d-block">Egon Willighagen</div></a>  </div>        | <a target="_blank" href='https://orcid.org/0000-0001-7542-0286'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Maastricht        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-NL.svg' ></img> | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization
+````{authors_fairplus}
+AndreaSplendiani: Conceptualization
+Alasdair: Writing - Original Draft
+Chris: Writing - Original Draft
+Egon: Writing - Original Draft
+Philippe: Writing - Review & Editing, Conceptualization
+````
 
 
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

@@ -44,7 +44,7 @@ Building an ontology with Robot tool.
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -63,7 +63,7 @@ Building an ontology with Robot tool.
 
 
 
-___
+---
 
 
 ## Ingredients
@@ -83,7 +83,7 @@ ___
 
 ### Preliminary requirements
 
-The development of `application ontology` requires joint contributions from `domain experts`, `use case owners` and `ontology developers`. The domain expert provides essential domain knowledge. The use case owners defines the `competency questions` of the application ontology. And the ontology developers are `IT specialists` working on the construction of the application ontology.
+The development of an `application ontology` requires joint contributions from `domain experts`, `use case owners` and `ontology developers`. The domain expert provides essential domain knowledge. The use case owners defines the `competency questions` of the application ontology. And the ontology developers are `IT specialists` working on the construction of the application ontology.
 
 ### Step 1: Define the goal of the application ontology
 
@@ -380,12 +380,12 @@ The `robot` extract command takes several arguments:
 * *method*: `ROBOT` uses 4 different algorithms to generate a module.  `TOP`, `BOT`, `STAR` (all from the SLME method), and `MIREOT`. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The `STAR` method creates a module by pulling all the properties and axioms of the seed classes but nothing else. `MIREOT` uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
 * *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
 * *imports*: this argument allows to specify whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
-* *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex)
+* *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex).
 * *intermediates*: specific to the `MIREOT` method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (`all`,`minimal`, `none`).
-* *output*: the path to the owl file holding the results of the module extraction
+* *output*: the path to the owl file holding the results of the module extraction.
 * *copy-ontology-annotations*: a boolean value true/false to pull or not any class annotation from the parent ontology. default is `false`
-* *sources*: optional, a pointer to a file mapping 
-* *annotate-with-source*: a boolean value true/false. default is `false`
+* *sources*: optional, a pointer to a file mapping .
+* *annotate-with-source*: a boolean value true/false. Default is `false`.
 
 
 The above query, saved under `select_anatomy_subset.sparql` can be used to generate a dynamic seed list, then do a `BOT` extraction: 
@@ -478,7 +478,7 @@ robot report --input edit.owl --output report.tsv
 
 Ontology annotation adds metadata to the owl file. It is recommended to provide `ontology IRIs`, `version IRIs`, `ontology title`, `descriptions` and `license` to support future usage and management. 
 
-The annotation can be added either line-by-line or provided in a turtile(.ttl) file. 
+The annotation can be added either line-by-line or provided in a turtle (.ttl) file. 
 ```bash
 #ANNOTATE
 robot annotate --input materialized.owl \
@@ -525,7 +525,7 @@ The final step of the ontology construction is to assess coverage of the ontolog
 
 `ROBOT` provides the `query` command to perform `SPARQL queries`  against an ontology to verify and validate the ontology.
 
-The query command runs SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: `a query file` and `an output file`. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown following.
+The query command runs SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: `a query file` and `an output file`. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown as follows.
 
 ```bash
 robot query --input <input_ontology_file> \
@@ -540,9 +540,9 @@ robot query --input <input_ontology_file> \
 
 > ### What should I read next?
 
-> * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document --> -->
-> * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?<!-- TODO add a link to corresponding document --> -->
-___
+> * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile? --> <!-- TODO add a link to corresponding document -->
+> * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?--> <!-- TODO add a link to corresponding document -->
+---
 
 
 ## References
@@ -558,7 +558,7 @@ ___
 <!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
 - Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
 
-___
+---
 
 ## Supplementary material
 
@@ -566,22 +566,23 @@ ___
 - [Competency questions](ontology-robot-recipe/competency-questions.md)
 - [IPython Notebook for the MSIO Build Process](ontology-robot-recipe/MSIO-robot-build-process.ipynb)
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Original Draft, Code
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Karsten Quast</div></div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img>  | Writing - Draft, Review
-| <div class="firstCol"><a target="_blank" href='https://github.com/ereynrs'><img class='avatar-style' src='https://avatars.githubusercontent.com/ereynrs'></img><div class="d-block">Emiliano Reynares</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-5109-3716'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
+````{authors_fairplus}
+Danielle: Writing - Original Draft, Code
+Karsten: Writing - Original Draft
+Philippe: Writing - Review & Editing, Conceptualization
+Fuqi: Writing - Original Draft, Writing - Review & Editing
+Emiliano: Writing - Review & Editing
+````
 
-___
+
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

@@ -45,7 +45,7 @@ It is therefore important to contrast the projected expenditure to the estimated
 
 With IMI funding such a diverse variety of projects, ranging from `drug discovery` or `vaccine development`, to `drug safety assessment` and to `clinical trials` and `observational studdies`, it is obvious that a `one size fits all` approach can not work and that **context aware FAIRification processes** have to be developed, to meet the specifics of IMI projects and their needs.
 
-___
+---
 
 ### FAIRification: Data Readiness and Big Data
 
@@ -94,7 +94,7 @@ alt:
 _IMI Harmony_ received €42 Million to harmonize data from patients affected by common blood cell malignancies using standards.
 ```
 
-___
+---
 
     
 ### The IMI FAIRplus project
@@ -105,7 +105,7 @@ The main outcome of the FAIRplus project is the present [FAIRplus Cookbook](http
 
 The so-called `recipes` will ranges from simple protocols (e.g. computing hash function for file fingerprinting) to very advanced ones allowed code execution, carrying an ETL process and a data integration challenge using semantic web technologies such SPARQL federated querying to perform a `semantic mash up` against a well documented `query case`.
 
-___
+---
 
 
 ## Conclusion
@@ -117,7 +117,7 @@ The section also outlined how IMI FAIRplus can leverage sister projects to scale
 > * [the IMI FAIRplus FAIRification Process overview](https://www.TODO.todo)
 
 
-___
+---
 
 ## Reference
 
@@ -129,7 +129,7 @@ ___
 6. [LOINC](https://loinc.org/)
 7. [SNOMED](https://www.snomed.org)
 
-___
+---
 
 ## Authors
 
@@ -140,11 +140,13 @@ ___
 ||||Review|
 ||||Review|
 
-___
+---
 
 ## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 
 
 

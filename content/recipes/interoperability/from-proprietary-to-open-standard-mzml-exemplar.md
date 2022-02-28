@@ -22,7 +22,7 @@
 - Apply the approach to a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project.
 
 
-___
+---
 
 
 
@@ -38,7 +38,7 @@ alt: Converting to an open standard file format
 Converting to an open standard file format.
 ```
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -46,7 +46,7 @@ ___
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -65,7 +65,7 @@ ___
 
 
 
-___
+---
 
 
 ## Ingredients
@@ -141,10 +141,10 @@ drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
 One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (DOI), https://fairsharing.org/FAIRsharing.26dmba for HUPO-PSI mzML specifications.
 
 <!-- <div>
-  <img src="https://i.imgur.com/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
+  <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
 </div> -->
 
-```{figure} https://i.imgur.com/AWOWTbr.png
+```{figure} /images/AWOWTbr.png
 ---
 width: 750px
 name: A Standard Record in the FAIRsharing catalog of resources
@@ -235,10 +235,10 @@ For users unfamiliar with format, a search via popular search engine will yield 
 A number of libraries are available for parsing (reading and writing) `mzML` document. `mzML` is a king of `XML` format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
 
 <!-- <div>
-<img src="https://i.imgur.com/BTs0GUS.png" width="750" border="1"/>
+<img src="/images/BTs0GUS.png" width="750" border="1"/>
 </div> -->
 
-```{figure} https://i.imgur.com/BTs0GUS.png
+```{figure} /images/BTs0GUS.png
 ---
 width: 750px
 name: pymzml in Biotools registry
@@ -271,10 +271,10 @@ pf.save(
 ```
 
 <!-- <div>
-<img src="https://i.imgur.com/caaqwFo.png" width="650"/>
+<img src="/images/caaqwFo.png" width="650"/>
 </div> -->
 
-```{figure} https://i.imgur.com/caaqwFo.png
+```{figure} /images/caaqwFo.png
 ---
 width: 650px
 name: pymzml rendered msrun profile
@@ -299,7 +299,7 @@ Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be a
   >  - How to produce an ISA metadata file from a set of mzML fles<!-- TODO add a link to corresponding document -->
   >  - [How to deposit data to Zenodo](fcb-find-zenodo)<!-- TODO add a link to corresponding document -->
 
-___
+---
 
 
 ## References
@@ -307,21 +307,23 @@ ___
 ```{footbibliography}
 ```
 
-<!-- 1. Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918–920 (2012). https://doi.org/10.1038/nbt.237
+<!-- 1. Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918-920 (2012). https://doi.org/10.1038/nbt.237
 2. Bald T, Barth J, Niehues A, et al. pymzML--Python module for high-throughput bioinformatics on mass spectrometry data. Bioinformatics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI: 10.1093/bioinformatics/bts066. -->
 
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition
-| <div class="firstCol"><a target="_blank" href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><div class="d-block">Robert Giessmann</div></a></div> | <a target="_blank" href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Bayer AG      | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
-___
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Review & Editing, Funding acquisition
+Robert: Writing - Review & Editing
+````
+
+
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

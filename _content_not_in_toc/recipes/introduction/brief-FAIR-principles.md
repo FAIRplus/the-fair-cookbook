@@ -250,7 +250,7 @@ TODO: add text here
 TODO: add text here
 ````
 
-___
+---
  
 ## Conclusions
 
@@ -261,7 +261,7 @@ This section should be seen as a refresher for any one unclear about the FAIR pr
 > * [Assessing FAIRness](../assessing-fairness)
 > * [What is IMI](./what-is-IMI.md)
 
-___
+---
 
 ## Reference
 
@@ -274,7 +274,7 @@ ___
 1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
 2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6 -->
 
-___
+---
 
 ## Authors
 
@@ -285,11 +285,13 @@ ___
 ||||Review|
 ||||Review|
 
-___
+---
 
 ## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 
 
 

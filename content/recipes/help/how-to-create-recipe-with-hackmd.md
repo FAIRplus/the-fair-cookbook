@@ -7,7 +7,7 @@
 
 **version:** [v1.0](v1.0)
 
-___
+---
 
 **_Difficulty level:_** moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle:
 
@@ -42,11 +42,11 @@ The document contains a checklist taking you point by point through the installa
 At the current time, the `HackMD-it` browser extension is only available for Chrome and Firefox and [this tutorial](https://hackmd.io/s/hackmd-it) details the installation procedure. 
 Once you've carried the extension installation, any github repository for which you have access and for which HackMD app has been authorized (which is already the case for all FAIRplus github repositories), any `Markdown` document will be readily editable using 'HackMD' and you should see the following *icon* 
 
-<div> <img src="https://i.imgur.com/k79IQUA.png" alt="drawing" style="width:145px;" border="1px solid black" align="top" /></div>
+<div> <img src="/images/k79IQUA.png" alt="drawing" style="width:145px;" border="1px solid black" align="top" /></div>
 
 in the github repository bar as shown in the figure below:
 
-<div> <img src="https://i.imgur.com/yI8TRNM.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
+<div> <img src="/images/yI8TRNM.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
 
 
 </br>
@@ -60,12 +60,12 @@ in the github repository bar as shown in the figure below:
 ## Create a github account and obtain your github handle
 
 ## Request to be added to the [FAIR Cookbook github repository](https://github.com/FAIRplus/the-fair-cookbook) and accept the invitation.
-<div> <img src="https://i.imgur.com/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
+<div> <img src="/images/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
 
 ## Create a new recipe
 ### Create a new issue in the [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
 
-<div> <img src="https://i.imgur.com/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
+<div> <img src="/images/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
 
 </br>
 
@@ -77,19 +77,19 @@ in the github repository bar as shown in the figure below:
 > git checkout -b recipe_xx master
 
 ## Create a [HackMD.io](https://hackmd.io) account, simply using your github credentials
-<div> <img src="https://i.imgur.com/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" /></div>
+<div> <img src="/images/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" /></div>
 
 
 
 ## Getting familiar with MarkDown
 
 Here is a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/)
-![](https://i.imgur.com/Kt3d9eo.png)
+![](/images/Kt3d9eo.png)
 
 
 ## Build confidence using HackMD
 
-![](https://i.imgur.com/bt012cm.png)
+![](/images/bt012cm.png)
 
 use the split view to have what you type immediately rendered.
 
@@ -114,13 +114,13 @@ git add my_new_recipe.md
 git push origin my_recipe_branch
 ```
 
-In a browser (one with the hackMD browser extension enabled), navigate to the recipe page on the github repository and click on the `hackMD` button ![](https://i.imgur.com/k79IQUA.png =145x)
+In a browser (one with the hackMD browser extension enabled), navigate to the recipe page on the github repository and click on the `hackMD` button ![](/images/k79IQUA.png =145x)
 
 This will launch the HackMD.io editor in a separate tab.
 
 ⚡  Toggling back to the github page, notice the following message, which highlights 2 options, one allowing to switch back to the editor view, one allowing to end it. 
 
-![](https://i.imgur.com/3uqMaT3.png)
+![](/images/3uqMaT3.png)
 
 By pressing `Stop Editing`, HackMD.io tab closes and the user is taken back to Github page. The user is now offered to either `commit changes` or `cancel`
 
@@ -132,7 +132,7 @@ By pressing `Stop Editing`, HackMD.io tab closes and the user is taken back to G
 2. Directly from HackMD by creating a new note from the tool itself
 
 To do so, open HackMD and go the `New Note`
-![](https://i.imgur.com/KMsANJL.png =345x)
+![](/images/KMsANJL.png =345x)
 
 This will open a empty HackMD page and if one presses `pull from Github`, a pop-up will open and allow users to select: 
 - a github repository
@@ -141,27 +141,27 @@ This will open a empty HackMD page and if one presses `pull from Github`, a pop-
 
 Fill in the relevant information (all required) before it is possible to hit the blue `pull` button.
 
-![](https://i.imgur.com/Bccq6OD.png)
+![](/images/Bccq6OD.png)
 
 
 If the `pull` is successful, the user can now edit the document.
 
 When the edits are completed, the user can push the file back to github. To do so, one needs to hit the '...' icon in the top right-hand corner of the HackMD menu bar, as show below:
 
-![](https://i.imgur.com/0TdXGl0.png =400x)
+![](/images/0TdXGl0.png =400x)
 
 Navigate to `Versions`. This will bring the following window:
 
-![](https://i.imgur.com/6AUdRLo.png)
+![](/images/6AUdRLo.png)
 
 
 Press the blue 'Push to Github' button to bring up the following menu:
 
-![](https://i.imgur.com/zSMLtMU.png)
+![](/images/zSMLtMU.png)
 
 The process is very similar to that described when pulling a file. Except that is now possible to create a branch for the commit, an option we recommend using.
 
-![](https://i.imgur.com/rheX0ib.png)
+![](/images/rheX0ib.png)
 
 Fill all the necessary information and press the blue `Push` button.
 
@@ -178,7 +178,7 @@ Fill all the necessary information and press the blue `Push` button.
 > * [FAIRplus recipe template](https://the-fair-cookbook.netlify.app/recipes/help/recipe-template)
 
 
-___
+---
 
 ## Authors:
 
@@ -187,7 +187,7 @@ ___
 | <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft|
 | <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition |
 
-___
+---
 
 
 ## License:

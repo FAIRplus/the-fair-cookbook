@@ -14,8 +14,8 @@ Well-managed research data from academia and the industry sectors generate value
 The FAIR Cookbook’s recipes are a combination of `guidance`, `technical`, `hands-on`, `background` and `review` types to cover the operation steps of FAIR data management, and are classified according to the audience types, to serve all those involved in the data management life cycle. The FAIR Cookbook is for anyone working in the Life Sciences who needs guidance on applying the FAIR Principles in practice. 
 - For `researchers`, `data scientists`, and `principal investigators` examples of key recipes are those on how to handle data access, choose licenses for datasets, package data for transfer, and provide sufficient descriptive metadata.
 - For `data stewards`, `data managers`, and `data curators` examples of key recipes are those providing applied FAIRification with clinical trial, epidemiological, and molecular data, as well as those on how to deal with sensitive, patient-centric data.
-- For `software developers`, and `terminology managers` examples of key recipes are the technical one focused on implementing and using a number of FAIR-enabling tools and services, which can complement their own resources. 
-- Lastly, the FAIR Cookbook is a resource `policy makers`, including `funders`, and `trainers` can use in their guidance material, to incentivize the practice of FAIR data management in the Life Sciences, via examples that are meaningful to the intended audience.
+- For `software developers`, and `terminology managers` examples of key recipes are the technical ones focused on implementing and using a number of FAIR-enabling tools and services, which can complement their own resources. 
+- Lastly, the FAIR Cookbook is a resource for `policy makers`, including `funders`, and `trainers` that can use it in their guidance material, to incentivize the practice of FAIR data management in the Life Sciences, via examples that are meaningful to the intended audience.
 
 
 ## A live resource: present and future
@@ -25,9 +25,11 @@ In addition to expanding its content, we will continue to add links to relevant 
 Last but not least, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, see how to, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
 
-___
+---
 
 ## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 

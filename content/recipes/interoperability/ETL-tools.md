@@ -88,7 +88,7 @@ The tools list above aims to provide a basic overview of what is available on th
 | Interoperability | minimal | automated |
 
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -100,7 +100,7 @@ The tools list above aims to provide a basic overview of what is available on th
 | [data submission, annotation and curation](http://edamontology.org/topic_0219)| |
 
 
-___
+---
 
 ## Operations
 
@@ -211,32 +211,32 @@ To show how some of these tools may be used, the following related recipes provi
 2. OMOP ETL [link]( TODO link to recipe) (*in prepartion*)
 3. RDF ETL [link]( TODO link to recipe)  (*in prepartion*)
 -->
-___
+---
 
 ## References
 
 ```{footbibliography}
 ```
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img> | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/evaMart'><img class='avatar-style' src='https://avatars.githubusercontent.com/EvaMart'></img><div class="d-block">Eva Marin del Pico</div></a></div>   | <a target="_blank" href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Barcelona Supercomputing Centre | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-ES.svg' ></img> | Writing - Original Draft
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no-github'></img><div class="d-block">Sukhi Singh</div>        </div> |  <a target="_blank" href='https://orcid.org/0000-0001-8324-2897'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | The Hyve      | <i class="fas fa-project-diagram fa-1x" style="color:#300861;" alt="SME"></i>    | | Tool curation
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing |
+````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Eva: Writing - Original Draft
+Sukhi: Tool curation
+Philippe: Writing - Review & Editing
+````
 
 
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 
 
 

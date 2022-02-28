@@ -4,7 +4,7 @@
 +++
 <br/>
 
-----
+---
 
 ````{panels}
 :container: container-lg pb-3
@@ -47,9 +47,9 @@
 <p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p>
 ````
 
-___
+---
 
-Starting with IMI2 and the stipulation of article 29.2 of the new [IMI-JU Grant Agreement](https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement–AGA.pdf) [1], **if they elect to disseminate results**, rather than patent and exploit them, IMI2 grant awardees must ensure that all published peer reviewed publications produced using data generated during IMI projects must be made open access. 
+Starting with IMI2 and the stipulation of article 29.2 of the new [IMI-JU Grant Agreement](https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement-AGA.pdf) [1], **if they elect to disseminate results**, rather than patent and exploit them, IMI2 grant awardees must ensure that all published peer reviewed publications produced using data generated during IMI projects must be made open access. 
 
 From Call 11 onwards, **all IMI2 projects participate `by default` in the `Horizon 2020 Open Research Data Pilot (ORDP)`**, covered by Article 29.3 of the IMI2 Grant Agreement.
 Although IMI2 encourages grant awardees to remain part of the ORDP, grant awardees retain the right to opt-out if necessary.
@@ -138,7 +138,7 @@ Ideally, DMP produced by IMI projects should identify:
 > - the `data repositories` vetted by the community or endorsed by the funding agencies or required by the regulators to ensure data archival and data review.
 
 
-___ 
+--- 
 
 ### Resources to use to help build a DMP for an IMI project
 
@@ -161,7 +161,7 @@ _FAIRsharing_ The FAIRsharing catalogue of data management resources.
 
 
 
-___
+---
 
 
 **2. ELIXIR Deposition Databases for Biomolecular Data**
@@ -181,7 +181,7 @@ _Elixir_ The ELIXIR Deposition Databases for Biomolecular Data.
 
 
 
-___
+---
 
 
 **3. Data Stewardship Wizard**
@@ -203,7 +203,7 @@ _DSW_ Data Stewardship Wizard
 ```
 
 
-___
+---
 
 
 **4. Existing Data Management Plans: the IMI Resolute example**
@@ -242,7 +242,7 @@ alt: Data Stewardship Wizard detail
 _DMP Resolute 2_ Data Management Plan by IMI Resolute detail
 ```
 
-___
+---
 
 ## Conclusion
 
@@ -254,17 +254,17 @@ Key resources have been highlighted as well as examples of Data Management Plans
 > * [Preparing to engage with FAIRplus]()
 
 
-___
+---
 
 
 ## Reference
 
 1. https://www.imi.europa.eu/resources-projects/open-access-and-data-management-projects
-2. https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement–AGA.pdf
+2. https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi2/Annotated_Model_Grant_Agreement-AGA.pdf
 3. https://ec.europa.eu/research/participants/data/ref/h2020/other/gm/reporting/h2020-tpl-oa-data-mgt-plan-annotated_en.pdf
 4. FAIRsharing.org
 
-___
+---
 
 ## Authors
 
@@ -275,9 +275,11 @@ ___
 ||||Review|
 ||||Review|
 
-___
+---
 
 ## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
 

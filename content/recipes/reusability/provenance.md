@@ -56,7 +56,7 @@
 
 ## Main Objectives
 
-In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essentially. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its `Provenance`. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of tracability and accountability can be established. The notions of `audit and trail` as well as `versioning` and `authorship` are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
+In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essential. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its `Provenance`. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of traceability and accountability can be established. The notions of `audit and trail` as well as `versioning` and `authorship` are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
 
 ## Introduction
 
@@ -139,19 +139,20 @@ Example of a write edge in W3C PROV format:
 ```{footbibliography}
 ```
 
-___
+
+---
 
 ## Authors
 
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+````
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
 
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

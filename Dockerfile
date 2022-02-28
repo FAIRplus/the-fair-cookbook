@@ -30,7 +30,7 @@ RUN pip install                                  \
             imagesize==1.2.0                     \
             importlib-metadata==4.0.1            \
             ipykernel==5.5.3                     \
-            ipython==7.22.0                      \
+            ipython==7.31.1                      \
             ipython-genutils==0.2.0              \
             ipywidgets==7.6.3                    \
             jedi==0.18.0                         \
@@ -57,11 +57,11 @@ RUN pip install                                  \
             myst-parser==0.13.6                  \
             nbclient==0.5.3                      \
             nbconvert==5.6.1                     \
-            nbdime==3.0.0                        \
+            nbdime==3.1.1                        \
             nbformat==5.1.3                      \
             nest-asyncio==1.5.1                  \
             nested-lookup==0.2.22                \
-            notebook==6.3.0                      \
+            notebook>=6.4.1                      \
             packaging==20.9                      \
             pandocfilters==1.4.3                 \
             parso==0.8.2                         \
@@ -125,6 +125,40 @@ RUN pip freeze > /pip_freeze_actual.txt
 RUN cat /pip_freeze_actual.txt
 
 ## ------------ next stage: --------------
+## build the images from mermaid files
+
+FROM alpine as orchestrator
+
+COPY ./ ./
+
+RUN find . -iname "*.mmd" > list_of_all_mermaid_files.txt
+RUN tar c -f all_mermaid_files.tar -T list_of_all_mermaid_files.txt
+RUN ls -lh all_mermaid_files.tar
+
+## ------------ next stage: --------------
+## build the images from mermaid files
+
+FROM minlag/mermaid-cli:8.13.4 as imageconverter
+WORKDIR /home/mermaidcli
+
+RUN echo "{\"args\": [ \"--no-sandbox\" ] }" > puppeteer-config.json
+
+COPY --from=orchestrator all_mermaid_files.tar list_of_all_mermaid_files.txt .
+RUN tar -xf all_mermaid_files.tar
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 800 -o $line.png ; done
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 1600 -o $line.hi-res.png ; done
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 400 -o $line.lo-res.png  ; done
+RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -o $line.svg                ; done
+
+RUN cp list_of_all_mermaid_files.txt list_of_files_to_copy.txt
+RUN sed 's/$/.png/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN sed 's/$/.hi-res.png/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN sed 's/$/.lo-res.png/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN sed 's/$/.svg/' list_of_all_mermaid_files.txt >> list_of_files_to_copy.txt
+RUN tar -cf ./all_raw_and_converted_mermaid_images.tar -T list_of_files_to_copy.txt
+
+
+## ------------ next stage: --------------
 ## load the content
 
 FROM jupyterbookbuilder-base-image AS jupyterbookbuilder
@@ -139,9 +173,14 @@ RUN mkdir -p ./_build/html
 
 # Copy files 
 COPY ./   ./
+COPY --from=imageconverter /home/mermaidcli/all_raw_and_converted_mermaid_images.tar .
+RUN tar -xf all_raw_and_converted_mermaid_images.tar
 
 # Start the actual build
 RUN python -u -c "import jupyter_book.commands; jupyter_book.commands.main()" build ./ 2>&1 | tee ./_build/build.log
+
+# Let the build fail if there are errors in the build of the jupyter_book 
+RUN grep "There was an error in building your book. Look above for the cause." ./_build/build.log; test $? -eq 1
 
 # Clean the build log from all escape characters used for highlighting text (e.g. bold, red) and the 
 # "interactive" feel (i.e. going back to start of line and overwrite to create a up-counting progress bar)

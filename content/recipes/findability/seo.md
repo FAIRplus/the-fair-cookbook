@@ -26,7 +26,7 @@ There are sub-recipes for embedding search engine optimization into specific web
 - [Dataset](fcb-find-bs-dataset)
 - [Resource specific page](fcb-find-bs-data) (Gene, Molecular Entity, Protein)
 
-___
+---
 
 
 ## Graphical Overview
@@ -45,7 +45,7 @@ alt: Search Engine Optimization
 Search Engine Optimization.
 ```
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -72,13 +72,13 @@ Search engine index pages based on their content, as identified by web crawlers.
 ### Schema.org Vocabulary
 
 A few years back, a consortium of search engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
-Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation
+Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation.
 
 ### How does Schema.org work in practice:
 
 The principle is actually fairly simple. It relies on embedding machine readable content into the HTML file. A variety of options are available (RDFa, microformat, JSON-LD). `JSON-LD` is widely recommended as the most suitable approach.
 
-Below is a regular plain vanilla HTML page providing information about an scientific joournal article.
+Below is a regular plain vanilla HTML page providing information about an scientific journal article.
 
 ```HTML
 <!-- A list of the issues for a single volume of a given periodical. -->
@@ -153,14 +153,14 @@ Now, we are presenting the same information augmented with the JSON-LD file usin
 Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
 The tool is known as the [`Google Structured Data Testing Tool`](https://search.google.com/structured-data/testing-tool)
 <!-- 
-![](https://i.imgur.com/Ge8gsWL.png =650px)
+![](/images/Ge8gsWL.png =650px)
 
 <div style="display: flex; justify-content: center;">
-<img src="https://i.imgur.com/Ge8gsWL.png" width="650" style="border:1px solid black"/>
+<img src="/images/Ge8gsWL.png" width="650" style="border:1px solid black"/>
 </div> -->
 
 
-```{figure} https://i.imgur.com/Ge8gsWL.png
+```{figure} /images/Ge8gsWL.png
 ---
 height: 580px
 name: Google Structured Data Testing Tool
@@ -175,7 +175,7 @@ Google Structured Data Testing Tool.
 `Schema.org` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related information more effectively. This proves to be a good timing for the [`Bioschemas project`](https://bioschemas.org/), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org/). `Bioschemas` focuses on making Schema.org more relevant for the life sciences community by providing:
 
 1. `types` for life sciences entities such as chemicals, genes, and proteins.
-1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable
+1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable.
 
 The [main profiles](https://bioschemas.org/profiles/) currently specified by the `Bioschemas` organisation are as follows:
 
@@ -188,7 +188,7 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 * [Sample](https://bioschemas.org/profiles/Sample)
 * [Taxon](https://bioschemas.org/profiles/Taxon)
 
-----
+---
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |
@@ -205,23 +205,23 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 |  [JSON-LD](http://edamontology.org/format_3749)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](http://edamontology.org/data_2353)  |
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 
-___
+---
 
 
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization |
-| <div class="firstCol"><a target="_blank" href='https://github.com/AlasdairGray'><img class='avatar-style' src='https://avatars.githubusercontent.com/AlasdairGray'></img><div class="d-block">Alasdair J G Gray</div></a>  </div> | <a target="_blank" href='https://orcid.org/0000-0002-5711-4872'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Heriot Watt University | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/ljgarcia'><img class='avatar-style' src='https://avatars.githubusercontent.com/ljgarcia'></img><div class="d-block"> Leyla Garcia | <a target="_blank" href='https://orcid.org/0000-0003-3986-0510'><i class='fab fa-orcid fa-2x text--orange'></i></a>  | ZB MED Information Centre for life sciences | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | | Writing – Review & Editing |
+````{authors_fairplus}
+Philippe: Writing - Original Draft, Conceptualization
+Alasdair: Writing - Original Draft, Writing - Review & Editing
+Leyla: Writing - Review & Editing
+````
 
-___
 
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

@@ -15,26 +15,23 @@
 
 ## Main objectives
 
-This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads . While the Aspera protocol is used by major public scientific data repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR compliance.
+This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories such as NCBI SRA and EMBL ENA, it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR compliance.
 
 
 ## Graphical overview
 
-```{figure} aspera.md-figure1.mmd.png
----
+```{figure_fairplus} aspera.md-figure1.mmd
 name: aspera-figure1
-alt: Aspera Data Transfer Process.
----
-Aspera Data Transfer Process.
+subtitle: Aspera Data Transfer Process.
 ```
 
-----
+---
 ## Obtain Aspera services
 
 ### Get accounts permissions
-* Apply for access
-* Pay attention to the conditions
-* Sign up if you are the appropriate person for this download/upload 
+* Apply for access.
+* Pay attention to the conditions.
+* Sign up if you are the appropriate person for this download/upload. 
 * Typically Aspera sites are locked down and need a username and password.
 * For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.
  
@@ -45,20 +42,20 @@ Aspera Data Transfer Process.
 ### Decide on software needed and get it installed
  
 * For Linux:
-  * Aspera ascp This can be downloaded from:  https://downloads.asperasoft.com/
+  * Aspera ascp. This can be downloaded from:  https://downloads.asperasoft.com/
   * Documentation:
     * General: https://download.asperasoft.com/download/docs/ascp/2.7/html/index.html
     * Examples https://download.asperasoft.com/download/docs/ascp/2.7/html/fasp/ascp-examples.html
  
 #### Get the firewall configured as required to allow downloading and or uploading
 * You may need to have firewall exceptions raised to unblock ports 3301 and 22, with your organisation IT's network perimeter team. 
-* Try connecting first in case they are already not blocked
+* Try connecting first in case they are already not blocked.
 
 #### Work out the appropriate command line options
 * For the Aspera command line, there are a large variety of options for downloading and uploading. See the download documentation above.
 * Considerations:
   * Use the `-k {1,2,3}`  option to allow restarts without re-downloading all the data.
-  * Run it using something like screen, so that it can be running in the background on a server
+  * Run it using something like screen, so that it can be running in the background on a server.
   * On the command line you can choose a preferred transfer rate. Please be careful to not hog the network bandwidth (we found up to about 100Mbps is okay).
  
 #### Worked-out example for downloading
@@ -82,15 +79,15 @@ ascp version 3.9.6.176292
 
 ### Monitoring connections and file transfers
 
-* Observe the  download/upload speed e.g. 100Mbs and then you can estimate the finish time
-* Have some automated monitoring on the download process to  notify you if it  stops/finishes.  Even an hourly `du -sh` from a cron job
+* Observe the  download/upload speed e.g. 100Mbs and then you can estimate the finish time.
+* Have some automated monitoring on the download process to  notify you if it  stops/finishes.  Even an hourly `du -sh` from a cron job.
 * Also typically you are pulling down many directories and files. On completion, it may be worth doing a recursive file listing to a file e.g. `ls -ltR > file_listing.txt` to give you and your "customers" a simple file catalogue.
 
 ### Considerations for uploading
 
 * For uploading much of the above applies. The main differences are:
-  * be aware of geographical zoning and which areas to upload to
-  * prepare data for ease of tranfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).
+  * Be aware of geographical zoning and which areas to upload to.
+  * Prepare data for ease of tranfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).
 
 <!-- TODO (needed - no real example yet)
 * Example command line for uploading
@@ -113,16 +110,15 @@ ascp version 3.9.6.176292
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/PeterWoollard'><img class='avatar-style' src='https://avatars.githubusercontent.com/PeterWoollard'></img><div class="d-block">Peter Woollard</div></a>  </div>  | <a target="_blank" href='https://orcid.org/0000-0002-7654-6902'><i class='fab fa-orcid fa-2x text--orange'></i></a> | GSK  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> | | Writing - Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing, Conceptualization |
-
+````{authors_fairplus}
+Peter: Writing - Original Draft
+Philippe: Writing - Review & Editing, Conceptualization
+````
 
 --- 
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

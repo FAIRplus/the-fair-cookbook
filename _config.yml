@@ -96,6 +96,9 @@ sphinx:
   extra_extensions:   # A list of extra extensions to load by Sphinx.
     - sphinx_sitemap
   local_extensions:
+    authors_fairplus: _ext/
+    figure_fairplus: _ext/
+    license_fairplus: _ext/
     panels_fairplus: _ext/
 
 parse:

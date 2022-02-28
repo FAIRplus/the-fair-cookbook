@@ -758,21 +758,22 @@ Twitter OBOFoundry account: 220 followers
   </tr>
 </table>
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/fra82'><img class='avatar-style' src='https://avatars.githubusercontent.com/fra82'></img><div class="d-block">Francesco Ronzano</div></a>  </div>      | <a target="_blank" href='https://orcid.org/0000-0001-5037-9061'><i class='fab fa-orcid fa-2x text--orange'></i></a> | IMIM | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> |  <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-ES.svg' ></img> | Writing – Original Draft
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Ashni Sedani</div>        </div>    | <a target="_blank" href='https://orcid.org/0000-0002-2424-3483'><i class='fab fa-orcid fa-2x text--orange'></i></a> | GSK  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> | | Writing – Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/kdauth'><img class='avatar-style' src='https://avatars.githubusercontent.com/kdauth'></img><div class="d-block">Kurt Dauth</div></a> </div>  |   | Boehringer-Ingelheim AG| <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  |Writing – Original Draft
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
+````{authors_fairplus}
+Francesco: Writing - Original Draft
+Ashni: Writing - Original Draft
+Kurt: Writing - Original Draft
+Philippe: Writing - Review & Editing
+````
 
-___
+
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

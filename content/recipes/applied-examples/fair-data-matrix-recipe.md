@@ -26,7 +26,7 @@ The main purpose of this recipe is:
 - provide an RDF representation
 - enable reproduciblity of results
 - evaluate efficiency of the method via a data integrate challenge
-___
+---
 
 
 ## Summary
@@ -35,7 +35,7 @@ Scientific data is often stored as unstructured data in proprietary file formats
 
 - The first data source: article by [Raymond et al. Nat Genet. 50:772-777 (2018)](https://doi.org/10.1038/s41588-018-0110-3); is a targeted metabolite profiling study of strain-related chemical signatures of the rose fragrance; the biological material was selected to allow a comparison between parts of the plant, and across cultivars in the same tissue type.
 
-- The starting point: the human-understandable data in the [supplementary file 41588_2018_110_MOESM3_ESM.zi](https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip), containing the mean concentrations of 61 metabolites measured in three different parts of the rose flower, in six distinct genotypes.
+- The starting point: the human-understandable data in the [supplementary file 41588_2018_110_MOESM3_ESM.zip](https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip), containing the mean concentrations of 61 metabolites measured in three different parts of the rose flower, in six distinct genotypes.
 
 - The second data source: article by [Magnard et al. Science.Jul 3;349(6243):81-3 (2015)](https://doi.org/10.1126/science.aab0696); this is early work of the same group of authors of the first data source.
 
@@ -55,7 +55,7 @@ alt: Overview of the FAIRification process of a data matrix
 Overview of the FAIRification process of a data matrix.
 ```
 
-___
+---
 
 ## Capability & Maturity Table
 
@@ -63,7 +63,7 @@ ___
 | :------------- | :------------- | :------------- |
 | Interoperability | minimal | repeatable |
 
-----
+---
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -86,7 +86,7 @@ ___
 |   | [Plant Ontology](http://www.obofoundry.org/ontology/po.html)||
 
 
-___
+---
 
 
 ## Table of Software and Tools
@@ -104,7 +104,7 @@ ___
 | [matplotlib](https://matplotlib.org/)|    
 | [sparql](https://www.w3.org/TR/sparql11-query/)|
 
-___
+---
 
 
 
@@ -163,26 +163,26 @@ We made the FAIRified outputs discoverable and citable by uploading them to Zeno
 To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison are also released via Zenodo (https://doi.org/10.5281/zenodo.2640919).
 Lastly, we produced a study description file, in ISA-Tab format (https://doi.org/10.25504/FAIRsharing.53gp75), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (https://doi.org/10.25504/FAIRsharing.kkdpxe).
 
-___
+---
 
 ## Reference
 Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics data matrices, an exemplar. Sci Data 6, 271 (2019) [doi:10.1038/s41597-019-0286-0](https://doi.org/10.1038/s41597-019-0286-0)
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition |
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Review & Editing, Funding acquisition
+````
 
 
-___
+---
 
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

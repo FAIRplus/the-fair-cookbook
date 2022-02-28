@@ -22,7 +22,7 @@ The main purpose of this recipe is:
 
 To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release {footcite}`Madduri2019` {footcite}`minid-identifiers`.
 
-___
+---
 
 
 ## Graphical Overview
@@ -61,7 +61,7 @@ An overview of the identifier minting process.
 | :------------- | :------------- | :------------- |
 | [service invokation](http://edamontology.org/operation_3763)  | [file](http://purl.obolibrary.org/obo/STATO_0000002)  | [guid](http://edamontology.org/data_0976)  |
 
-___
+---
 
 
 ## Installing the minid 2.0 client
@@ -79,7 +79,7 @@ pip3 install --pre minid
 use the dev branch to obtain to source
 [minid github repository](https://github.com/fair-research/minid)
 
-___
+---
 
 ## Configuration
 
@@ -106,7 +106,7 @@ $ touch minid-config.cfg
   <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
 </div> 
  -->
-  <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
+  <!-- ![](/images/B5UbkpF.png) -->
 
 
 ```{figure} images/globus/globus-account-create.png
@@ -138,7 +138,7 @@ Creating a Globus account.
   This will open the GlobusID login page. Simply enter your credentials obtained from 2.
 
 <!-- ![](./images/globus/globus-account-login.png) -->
-<!-- ![](https://i.imgur.com/2OZFcJa.png) -->
+<!-- ![](/images/2OZFcJa.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -158,7 +158,7 @@ Globus account login.
   followed by:
 
 <!-- ![](./images/globus/globus-account-allow.png) -->
-<!-- ![](https://i.imgur.com/avzyAFZ.png) -->
+<!-- ![](/images/avzyAFZ.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -178,7 +178,7 @@ Globus account allow.
   If all goes well, the following browser screen will be shown:
 
 <!-- ![](./images/globus/globus-account-login-success.png) -->
-<!-- ![](https://i.imgur.com/THYPg4E.png) -->
+<!-- ![](/images/THYPg4E.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -249,7 +249,7 @@ $ minid -h
 
 Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>).
 
-----
+---
 
 ### file manifest format
 
@@ -297,10 +297,10 @@ Below is a sample file manifest configuration file:
 
 ## Conclusions
 
-Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets get be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
+Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets can be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
-____
+---_
 
 ## Reference
 
@@ -311,20 +311,20 @@ ____
 
 2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 
-----
+---
 
 ## Authors
 
-| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/mikedarcy'><img class='avatar-style' src='https://avatars.githubusercontent.com/mikedarcy'></img><div class="d-block">Mike d'Arcy</div></a>   </div>  | <a target="_blank" href='http://orcid.org/0000-0003-2280-917X'><i class='fab fa-orcid fa-2x text--orange'></i></a>  |  |  |  |  Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
+````{authors_fairplus}
+Mike: Writing - Original Draft
+Philippe: Writing - Review & Editing
+````
 
 
 --- 
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

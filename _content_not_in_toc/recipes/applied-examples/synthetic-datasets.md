@@ -30,4 +30,9 @@ http://www.ltscomputingllc.com/wp-content/uploads/2018/08/synpuf1k_omop_cdm_5.2.
 https://github.com/OHDSI/CommonDataModel/tree/v5.2.2
 
 
+## EBM NLP
+https://github.com/bepnye/EBM-NLP
+
+
+
 

@@ -89,11 +89,11 @@ The following sections detail each of these steps
 
 ## Defining the metadata fields
 
-<!-- <div><img src="https://i.imgur.com/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
-<div><img src="https://i.imgur.com/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
+<!-- <div><img src="/images/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
+<div><img src="/images/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
 
 
-```{figure} https://i.imgur.com/lwV1cPd.png
+```{figure} /images/lwV1cPd.png
 ---
 width: 300px
 name: Defining the metadata fields
@@ -102,7 +102,7 @@ alt: Defining the metadata fields
 Defining the metadata fields
 ```
 
-```{figure} https://i.imgur.com/1ahQLjy.png
+```{figure} /images/1ahQLjy.png
 ---
 width: 300px
 name: Defining the metadata fields-1
@@ -124,10 +124,10 @@ Several distinct to the following resources mappings have been made by the devel
 - [Wikidata](https://wikidata.org)
 - [schema.org](https://schema.org)
 
-<!-- ![](https://i.imgur.com/Ro92a7D.png) -->
-<!-- <div><img src="https://i.imgur.com/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
+<!-- ![](/images/Ro92a7D.png) -->
+<!-- <div><img src="/images/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
 
-```{figure} https://i.imgur.com/Ro92a7D.png
+```{figure} /images/Ro92a7D.png
 ---
 width: 800px
 name: Semantic anchoring of metadata element
@@ -143,10 +143,10 @@ Semantic anchoring of metadata element
 However, for the final implementation, only the OBO related mappings have been used as show in the following figure.
 
 
-<!-- <div><img src="https://i.imgur.com/Lc7FcPs.png" width="800" style="border:1px solid black"/></div> -->
-<!-- ![](https://i.imgur.com/Lc7FcPs.png) -->
+<!-- <div><img src="/images/Lc7FcPs.png" width="800" style="border:1px solid black"/></div> -->
+<!-- ![](/images/Lc7FcPs.png) -->
 
-```{figure} https://i.imgur.com/Lc7FcPs.png
+```{figure} /images/Lc7FcPs.png
 ---
 width: 800px
 name: Semantic anchoring of metadata element - final
@@ -239,9 +239,9 @@ $graph:
 
 ### The corresponding metadata acquisition web form:
 
-<!-- <div><img src="https://i.imgur.com/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
+<!-- <div><img src="/images/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
 
-```{figure} https://i.imgur.com/5eQN9hw.png
+```{figure} /images/5eQN9hw.png
 ---
 width: 800px
 name: The corresponding metadata acquisition web form
@@ -249,14 +249,14 @@ alt: The corresponding metadata acquisition web form
 ---
 ```
 
-<!-- ![](https://i.imgur.com/5eQN9hw.png) -->
+<!-- ![](/images/5eQN9hw.png) -->
 
-<!-- <div><img src="https://i.imgur.com/RR5GSgi.png" width="800" style="border:1px solid black"/></div> -->
+<!-- <div><img src="/images/RR5GSgi.png" width="800" style="border:1px solid black"/></div> -->
 
-<!-- ![](https://i.imgur.com/RR5GSgi.png) -->
+<!-- ![](/images/RR5GSgi.png) -->
 
 
-```{figure} https://i.imgur.com/RR5GSgi.png
+```{figure} /images/RR5GSgi.png
 ---
 width: 800px
 name: The corresponding metadata acquisition web form 2
@@ -435,10 +435,10 @@ PREFIX wikidata: <http://www.wikidata.org/entity/>
 
 Using the [WESO](http://www.weso.es/) developed [RDF shape viewer](http://rdfshape.weso.es/),  Shape Expression can be rendered graphical. In the example below a [schema.org](https://schema.org) base shex expression in presented.
 
-<!-- <div><img src="https://i.imgur.com/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
+<!-- <div><img src="/images/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
  -->
 
-```{figure} https://i.imgur.com/z2rriQu.png
+```{figure} /images/z2rriQu.png
 ---
 width: 1200px
 name: WESO SHape Expression Viewer
@@ -448,7 +448,7 @@ WESO SHape Expression Viewer
 ```
 
 
-<!-- ![](https://i.imgur.com/z2rriQu.png) -->
+<!-- ![](/images/z2rriQu.png) -->
 
 There is a blog focusing mainly on the sequence analysis but there is a section on metadata validation.
 
@@ -501,7 +501,7 @@ select distinct ?sample ?p ?o
 
 
 
-___ 
+--- 
 
 ## References
 
@@ -513,20 +513,21 @@ ___
 [5]. https://shex.io/shex-semantics/
 
 
-___
+---
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft |
-| <div class="firstCol"><a target="_blank" href='https://github.com/daniwelter'><img class='avatar-style' src='https://avatars.githubusercontent.com/daniwelter'></img><div class="d-block">Danielle Welter</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0003-1058-2668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/robertgiessmann'><img class='avatar-style' src='https://avatars.githubusercontent.com/robertgiessmann'></img><div class="d-block">Robert Giessmann</div></a></div> | <a target="_blank" href='https://orcid.org/0000-0002-0254-1500'><i class='fab fa-orcid fa-2x text--orange'></i></a> | Bayer AG      | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i> |  | Writing – Review & Editing
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+Danielle: Writing - Review & Editing
+Robert: Writing - Review & Editing
+````
 
-___
+
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

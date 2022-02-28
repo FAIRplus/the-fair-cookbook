@@ -95,8 +95,8 @@ To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
 
 1. a collection of FAIR indicators, selected from the list described above.
 2. a globally unique, persistent, resolveable identifier for the resource to be evaluated.
-3. a title for the evaluation. Enforce a naming convention to make future searches easiers as these evaluations are saved.
-4. a person identifier in the form of an ORCID
+3. a title for the evaluation. Enforce a naming convention to make future searches easier as these evaluations are saved.
+4. a person identifier in the form of an ORCID.
 
 <!-- ![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 
@@ -156,7 +156,7 @@ apparently a problem with identifier persistence if using DOI, which are URN rat
 
 ## Conclusion
 
-Using software tool to assess FAIR maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
+Using software tools to assess FAIR maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
 Furthermore, only automation is able to cope with the scale and volumes of assets to evaluate.
 The software-based evaluations are repeatable, reproducible and free of bias (other than those that may be related to definitions of the FAIR indicators themselves).
 These are also more demanding in terms of technical implementation and knowledge.
@@ -180,17 +180,16 @@ Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Re
 
 ## Authors
 
-| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/terazus'><img class='avatar-style' src='https://avatars.githubusercontent.com/terazus'></img><div class="d-block">Dominique Batista</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0002-2109-489X'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing – Review & Editing
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+Dominique: Writing - Review & Editing
+````
 
 
-
-___
+---
 
 ## License
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````
