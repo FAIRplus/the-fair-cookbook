@@ -62,22 +62,22 @@ The exact listing of the metadata fields required for a FAIRification of the gen
 |[BioSamples](https://www.ebi.ac.uk/biosamples/)|
 |[European Nucleotide Archive, ENA](https://www.ebi.ac.uk/ena/browser/home)|
 |[European Variation Archive,EVA](https://www.ebi.ac.uk/eva/)|
-|International Nucleotide Sequence Database Collaboration
+|[International Nucleotide Sequence Database Collaboration](https://www.insdc.org/)
 |[VCF Validator](https://github.com/EBIvariation/vcf-validator/wiki/User's-Guide)|
 
 
 ## Step by Step Process
 
 
-### Step1: Take DNA sample and register sample material at BioSamples
+### Step 1: Take DNA sample and register sample material at BioSamples
 
 
-#### Step1.1: Take DNA sample
+#### Step 1.1: Take DNA sample
 
 The experimentalist takes a sample of plant biological material. The sample metadata are collected according to _the [MIAPPE](https://github.com/MIAPPE/MIAPPE/tree/master/MIAPPE_Checklist-Data-Model-v1.1) specifications, Biological Material section_. It enriches minimal [MCPD](https://www.bioversityinternational.org/e-library/publications/detail/faobioversity-multi-crop-passport-descriptors-v21-mcpd-v21/) fields with sample traceability information.
 
 
-#### Step1.2: Register sample material at BioSamples
+#### Step 1.2: Register sample material at BioSamples
 
 This is done in general through JSON API ([Python](https://github.com/PBR/elixir-fondue-datathon/tree/master/test_data_set/BioSamples/scripts/python) and [Shell](https://github.com/PBR/elixir-fondue-datathon/tree/master/test_data_set/BioSamples/scripts/shell) commands are also available). Refer to the official [documentation](https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_a_sample) for the complete details. Here is the proposed procedure:
 
@@ -102,57 +102,22 @@ The following CURL command returns 3 accessions as the body contains names for 3
 
 `curl 'https://www.ebi.ac.uk/biosamples/samples/bulk-accession?authProvider=WEBIN' -i -X POST -H "Content-Type: application/json;charset=UTF-8" -H "Accept: application/hal+json" -H "Authorization: Bearer $TOKEN" -d '[{  "name" : "FakeSample 1"}, { "name" : "FakeSample 2"}, {  "name" : "FakeSample 3"}]'`
 
-OR / AND
-> [time=Thu, Feb 24, 2022 3:00 PM][color=#8d37dd][name=Fuqi Xu] This is a really good example for using two types of authentication in biosamples. But it might not be that relavant in the cookbook context. Is it okay if we replace the section below with a pointer to corresponding sections in the BioSamples documentation?
-```
-_1- Register an API token_
-* DEV: 
-``curl -u username:password  https://explore.api.aai.ebi.ac.uk/auth > aap.jwt TOKEN=`cat aap.jwt` ``
-* LIVE: 
-``curl -u username:password  https://api.aai.ebi.ac.uk/auth > aap.jwt TOKEN=`cat aap.jwt` ``
-
-_2- Register the domain, ie the AAP domain the sample belongs to._
+Please refer to the [BioSamples documentation](https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_a_sample). 
 
 
-
-* JSON
-
-    DEV:
-`curl 'https://explore.api.aai.ebi.ac.uk/domains' -i -X POST -H 'Content-Type: application/json;charset=UTF-8' -H "Authorization: Bearer $TOK" -H 'Accept: application/hal+json' -d '{"domainName":"Testdomain","domainDesc":"For testing"}'`
-    LIVE:
-`curl 'https://api.aai.ebi.ac.uk/domains' -i -X POST -H 'Content-Type: application/json;charset=UTF-8' -H "Authorization: Bearer $TOK" -H 'Accept: application/hal+json' -d '{"domainName":"Testdomain","domainDesc":"Testdomain"}'`
-
-
-OR
-
-* GUI
-
-
-    DEV: [https://explore.api.aai.ebi.ac.uk/login](https://explore.api.aai.ebi.ac.uk/login) 
-    LIVE: [https://api.aai.ebi.ac.uk/login](https://api.aai.ebi.ac.uk/login) 
-
-
-_3- Submission to BioSamples directly_
-`curl '[https://www.ebi.ac.uk/biosamples/samples](https://www.ebi.ac.uk/biosamples/samples)' -i -X POST -H UTF-8" -H "Accept: application/hal+json" -H "Authorization: Bearer $TOKEN" -d @biosample_file.json`
-```
 
 More general information is available on the RDMkit [plant genomics assembly](https://rdmkit.elixir-europe.org/plant_genomics_assembly.html). A specific checklist is used: [BioSamples - Plant MIAPPE checklist](https://www.ebi.ac.uk/biosamples/schemas/certification/plant-miappe.json).
 
 
-### Step2: Sequence DNA sample and submit reads to ENA
+### Step 2: Sequence DNA sample and submit reads to ENA
 
 
-#### Step2.1: Perform sequencing of DNA sample
+#### Step 2.1: Perform sequencing of DNA sample
 
-The sequencing staff performs the sequencing of the DNA sample, which is followed by a quality control. The reads are then archived into the LIMS.
-> [time=Thu, Feb 24, 2022 3:00 PM][color=#8d37dd][name=Fuqi]
-> Can we replace LIMS with lab note system? maybe not every labs uses LIMS. More details on LIMS also works.
-
-> [time=Fri, Feb 25, 2022 8:36 AM][name=Sebastian Beier]
-> LIMS is the general term for laboratory information management system, if you like we can spell this out.
+The sequencing staff performs the sequencing of the DNA sample, which is followed by a quality control. The reads are then archived in the institutional Laboratory Information Management System (LIMS).
 
 
-#### Step2.2: Register and submit sequencing reads to ENA 
+#### Step 2.2: Register and submit sequencing reads to ENA 
 
 Submit Sequencing reads to ENA, using BioSamples IDs to identify material.
 
@@ -267,51 +232,30 @@ Now that study and sample metadata have been registered, it is time to submit th
 
 7. Click '**Submit**' and see if your submission validates successfully. If you encounter errors, try using the '**Download Template Spreadsheet'** button, open the file and check it in this plain text format; it can be easier to fix errors this way than in the interface. 
 
-    See Section _Possible bugs_.
-
 
     Note that the use of template spreadsheets is the best way to submit multiple datasets through this interface.
 
 8. If you manage to complete your submission, visit the 'Runs' tab to review your submission.
 
-> [name=Fuqi Xu][color=purple]
-    Is it okay if we remove the possible bugs section. This can be keeped in the biosamples documentation, but might be too detailed for the cookbook
-    
-```
-#### Possible Bugs
+### Step 3: Check if used reference genome assembly is available
 
-Unfortunately, the Webin submission system is not entirely without bugs. 
-
-If you receive an error saying ‘File Not Found’:
-
-
-
-1. Click the 'Download spreadsheet' button.
-2. Open the file.
-3. You will find the information you entered is present, but the column for your filenames is empty; fill in the filenames as appropriate.
-4. Return to the submission interface and use the 'Upload spreadsheet' button to provide your amended submission, which should now be accepted.
-
-```
-### Step3: Check if used reference genome assembly is 
-    available
-
-Is a GCF / GCA accession number available ? Check on [https://www.ebi.ac.uk/ena/browser](https://www.ebi.ac.uk/ena/browser)?
+Is a GCF / GCA accession number available ? Check on [https://www.ebi.ac.uk/ena/browser](https://www.ebi.ac.uk/ena/browser).
 
 
 
 * If yes, proceed directly to VCF submission at step 4.
-* If no, [submit reference genome assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html) to INSDC (NCBI Genbank / EBML-EBI ENA / DDBJ) and wait until accession number is issued, then proceed to step 4.
+* If no, [submit reference genome assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html) to [INSDC](https://www.insdc.org/) (NCBI Genbank / EBML-EBI ENA / DDBJ) and wait until accession number is issued, then proceed to step 4.
 
 
-### Step4: Analyse sequencing results and submit VCF file to EVA
+### Step 4: Analyse sequencing results and submit VCF file to EVA
 
 
-#### Step4.1: Analyse sequencing results
+#### Step 4.1: Analyse sequencing results
 
 The bioinformatician performs the computational analysis, then the genotyping results are archived into the LIMS.
 
 
-#### Step4.2: Prepare genotyping dataset for submission
+#### Step 4.2: Prepare genotyping dataset for submission
 
 Refer to the publication [Recommendations for the formatting of VCF files to make plant genotyping data FAIR](https://doi.org/10.12688/f1000research.109080.1).
 
@@ -383,14 +327,16 @@ Examples:
 Please check the official format specifications to avoid redundancy and possible incompatibilities.
 
 
-#### Step4.3: Submit VCF file to EVA
+#### Step 4.3: Submit VCF file to EVA
 
-Submit VCF file to EVA, using BioSamples IDs to identify material, GCF/GCA accession for the reference genome assembly, and ENA accession numbers for the sequencing reads of the material used. Refer to the official [documentation](https://www.ebi.ac.uk/eva/?Submit-Data).
-
--[name=Fuqi Xu][color=purple]
-    maybe a couple of sentences on the conclusion?
+Once the metadata and data has been formatted according to the specifications above, make sure that the resulting VCF file complies to VCF specifications. For that purpose we propose the [VCF validator](https://github.com/EBIvariation/vcf-validator) (an example on how to use it is available on the github link). \
+    \
+Once the file has been fully validated without any error messages you can submit the VCF file to EVA, using BioSamples IDs to identify material, GCF/GCA accession for the reference genome assembly, and ENA accession numbers for the sequencing reads of the material used. Refer to the official [documentation](https://www.ebi.ac.uk/eva/?Submit-Data).
     
-### Reference
+## Conclusion
+At this point, the VCF contains metadata and data formatted for the purpose of better discoverability and higher interoperability. Data could thus be more easily read and evaluated automatically by machines and it is made easier to connect different data sources with each other, so that in general a higher degree of FAIR has been achieved. 
+    
+## Reference
 
 [Beier et. al (2022) - Recommendations for the formatting of VCF files to make plant genotyping data FAIR](https://doi.org/10.12688/f1000research.109080.1)
 
