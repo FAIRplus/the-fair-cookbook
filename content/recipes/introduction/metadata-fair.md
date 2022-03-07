@@ -20,12 +20,12 @@
 
 The main purpose of this recipe is:
 
-> To introduce the notion of metadata and detail why their matter in the context of FAIR. This recipe aims to provide insights into the different types of metadata, why they differ and how they relate to each other. Finally, we also highlight the various models and vocabularies available as well as explain what it means to make metadata machine actionable.
+> To introduce the notion of metadata and detail why their matter in the context of FAIR. This recipe aims to provide insights into the different types of metadata, why they differ, and how they relate to each other. Finally, we also highlight the various models and vocabularies available as well as explain what it means to make metadata machine actionable.
 
 ---
 ## Introduction
 
-Upon reading the [FAIR principles](fcb-fairprinciples), one can't help but notice that everything rests of the availability of **machine readable metadata**. For a number of new comers to FAIR or to Data Management for that matter, the first hurdle is so grasp the notion of 'metadata' and this alone can be a challenge.
+Upon reading the [FAIR principles](fcb-fairprinciples), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR or Data Management for that matter, the first hurdle is to grasp the notion of 'metadata' and this alone can be a challenge.
 Below are a number of commonly found definitions of metadata:
 
 * the recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidataMetadata`.
@@ -89,7 +89,7 @@ Each key in this json object corresponds to a metadata element the definition of
 
 ### 2. Structural metadata
 
-Structural metadata concerns itself with provide descriptors allowing agents to understand how data is organised so this type of metadata could provide information about the layout of a table, the relations between elements and their types.
+Structural metadata concerns itself with provide descriptors allowing agents to understand how data is organised so this type of metadata could provide information about the layout of a table, the relations between elements, and their types.
 
 ```bash=
 TODO: include example
@@ -102,12 +102,12 @@ Administrative metadata covers things like record identifier and can also includ
 #### 3.1 Provenance metadata
 
 This subtype of metadata is mainly concerned with capturing information about the agents and processes which produced the entity. So processes such as creation, modification, conversion should be described as well as the dates on which these have been executing and by whom. Versioning information also falls into this category of metadata information {footcite}`casraiprovenance`.
-This used to be known as "Audit and Trail" information as it allows to understand how information was generated and therefore provides tokens of trust and evidence which can be used to establish validatity, reliability and trust-worthiness of data.
+This used to be known as "Audit and Trail" information as it allows understanding how information was generated and therefore provides tokens of trust and evidence which can be used to establish validity, reliability, and trust-worthiness of data.
 
 #### 3.2 Legal metadata
 
-This subtype of metadata concerned itself with providing tag to allow information about the condition of use of the data, copyright information, patent coverage and these sort of topic.
-Why this matters? Well it is an essentially piece of information to know about a dataset to decide if use is allowed or not as the implication of failing to comply with the terms of use can be far reaching.
+This subtype of metadata concerned itself with providing tag to allow information about the condition of use of the data, copyright information, patent coverage, and likewise topic.
+Why this matters? Well it is essentially a piece of information to know about a dataset to decide if data use is allowed or not as the implication of failing to comply with the terms of use can be far-reaching.
 
 ### 4. Quality metadata
 
@@ -122,13 +122,13 @@ This typology can easily be critisized as the boundaries between to different do
 
 
 
-## Semantic frameworks for metadata:
+## Semantic frameworks for metadata
 
 We have given an overview of the basic definitions of what metadata is and its various possible flavours. 
-But then comes the key question: How does it work in real life? and from there, we need to look at some technical details and since we are dealing with things FAIR, we inevitably slide back into the notion of Linked Data and Resource Description Framework.
-This essentially means that we can not talk about machine actionable metadata (referred to in some quarters as 'active metadata') without talking about **semantics** and **controled terminologies** on the one hand , and on the other hand about **syntax** and **serialization format**.
-This is simply because for computational methods to work , there needs to be agreements, social-contracts and protocols in places to define things to enable interoperability. 
-As with all human things, there will be redundant, overlaping, competing efforts vying for a domain of knowledge. Semantic models for metadata do not escape this.
+This raises an unanswered key question: How does it work in real life? For this, we need to look at some technical details and since we are dealing with things FAIR, we inevitably slide back into the notion of Linked Data and Resource Description Framework.
+This essentially means that we can not talk about machine actionable metadata (referred to in some quarters as 'active metadata') without talking about **semantics** and **controlled terminologies** on the one hand, and on the other hand about **syntax** and **serialization format**.
+This is simply because for computational methods to work, there needs to be agreements, social-contracts, and protocols in places to define things to enable interoperability. 
+As with all human things, there will be redundant, overlapping, competing efforts vying for a domain of knowledge. Semantic models for metadata do not escape this.
 
 
 
