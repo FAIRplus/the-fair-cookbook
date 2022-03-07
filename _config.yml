@@ -29,9 +29,9 @@ html:
       <div class="row">
         <div class="col-xl-3">
             <div class="footerImages">
-              <a href="https://europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a>
-              <a href="https://www.imi.europa.eu/"><img src="/the-fair-cookbook/_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a>
-              <a href="https://efpia.eu"><img src="/the-fair-cookbook/_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a>
+              <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a>
+              <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a>
+              <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a>
             </div>
             <div class="mb-3"> Grant agreement 802750 </div>
         </div>
@@ -46,15 +46,15 @@ html:
               </div>
               <div class="col-6 d-flex" style="justify-content:center">
                 <ul>
-                  <li> <a href="/the-fair-cookbook/content/recipes/boilerplate/people.html"> Contributors </a> </li> </li>
-                  <li> <a href="/the-fair-cookbook/content/recipes/help.html"> How to contribute </a> </li>
+                  <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li>
+                  <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
         <div class="col-xl-3">
-          <a href="https://elixir-europe.org/" target="_blank"><img src="/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a>
+          <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a>
           <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
         </div>
       </div>
