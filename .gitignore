@@ -17,3 +17,4 @@ venv/
 docker.sh
 extract-warnings.sh
 #
+.idea
