@@ -4,13 +4,9 @@
 > 🚀  or How a meeting with The Turing Way bootstrapped IMI FAIRPlus Cookbook project 🚀
 
 
-```{figure} /images/3rXmOW0.png
----
-height: 450px
-name: The FAIR Cookbook.
-alt: A Data Expert cooking a recipe to make a dataset or a service FAIR.
----
-_The FAIR Cookbook._ A Data Expert cooking a recipe to make a dataset or a service FAIR. Credits to Scriberia.
+```{figure_fairplus} /images/3rXmOW0.png
+name: TODO
+subtitle: The FAIR Cookbook. A Data Expert cooking a recipe to make a dataset or a service FAIR. Credits to Scriberia.
 ```
 
 
