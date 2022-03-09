@@ -1,3 +1,4 @@
+from fileinput import filename
 import os
 
 from docutils import nodes
@@ -64,17 +65,15 @@ class FigureFairplus(Directive):
 
         ## check file
         context = self.content.items[0][0]
-        path_to_file = os.path.abspath(os.path.join(os.path.dirname(context), filename_string))
 
-                
-        ## TODO workaround until finalized
-        if ".mmd.png" in filename_string:
-            self.is_vectorgraphic = False
-            filename_string = "/dummy.jpeg"
-            path_to_file = "/Users/robert/git/the-fair-cookbook/dummy.jpeg"
-        ############################################
-        
+        ## understand "absolute" paths to images as pointing to root of execution
+        check_filename = filename_string
+        if check_filename[0] == "/":
+            context = os.path.join(os.getcwd(), "DUMMY.EXT")
+            check_filename = check_filename[1:]
+        path_to_file = os.path.abspath(os.path.join(os.path.dirname(context), check_filename))
         assert os.path.exists(path_to_file), _make_string_red(f"image file does not exist: {filename_string}")
+        
         self.filename = filename_string
 
         file_extension = os.path.splitext(filename_string)[1].lower()[1:] 
