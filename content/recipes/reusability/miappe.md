@@ -375,8 +375,7 @@ Institute of Bio- and Geoscience, IBG-4: Bioinformatics, Forschungszentrum Jüli
   <tr>
    <td>Erwan Le Floch
    </td>
-   <td>URGI (Unité de Recherche Génomique Info), INRAE,
-Route de Saint-Cyr, 78026 Versailles, France
+   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France.
    </td>
    <td><a href="https://orcid.org/0000-0002-1010-6859">0000-0002-1010-6859</a> 
    </td>
@@ -386,8 +385,7 @@ Route de Saint-Cyr, 78026 Versailles, France
   <tr>
    <td>Cyril Pommier
    </td>
-   <td>URGI (Unité de Recherche Génomique Info), INRAE,
-Route de Saint-Cyr, 78026 Versailles, France
+   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France.
    </td>
    <td><a href="https://orcid.org/0000-0002-9040-8733">0000-0002-9040-8733</a>
    </td>
