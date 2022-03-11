@@ -15,8 +15,7 @@ The main objective of the recipe is to provide a means of submitting to public r
     4) Conversion of the resulting analysis file (in VCF format) to be FAIR
     5) Submission of the genotyping results to EVA.
 
-
-
+In terms of FAIRification goals, this means obtaining stable, resolvable  identifiers for the datasets and meeting community annotation requirements as expressed in the MIAPPE requirements. 
 ## Summary
 
 This recipe provides guidance for submitting plant genotyping data to public repositories. It explains step-by-step which work should be done and when. Special attention should be paid to the metadata maintenance of the data that will be deposited in different repositories as part of this recipe. A prerequisite for fully understanding this recipe is a basic knowledge of the [MIAPPE standard](https://fairsharing.org/bsg-s000543/). 
