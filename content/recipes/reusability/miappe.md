@@ -82,7 +82,7 @@ This is done in general through JSON API ([Python](https://github.com/PBR/elixir
 
 1. Create a user account
 
-First you need an account to submit samples to BioSamples. We recommend new users, or those planning to make downstream submissions to ENA, use the Webin Authentication service. You can create a Webin account using [Webin web interface](https://www.ebi.ac.uk/ena/submit/sra/#home). Please refer to [ENA documentation](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html) for more details about creating an account. 
+First you need an account to submit samples to EMBL-EBI BioSamples database. We recommend new users, or those planning to make downstream submissions to ENA, to use the Webin Authentication service. You can create a Webin account using [Webin web interface](https://www.ebi.ac.uk/ena/submit/sra/#home). Please refer to [ENA documentation](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html) for more details about creating an account. 
 
 2. Login to the system and get a JWT
 
