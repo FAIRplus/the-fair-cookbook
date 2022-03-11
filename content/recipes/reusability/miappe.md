@@ -84,7 +84,7 @@ This is done in general through JSON API ([Python](https://github.com/PBR/elixir
 
 First you need an account to submit samples to EMBL-EBI BioSamples database. We recommend new users, or those planning to make downstream submissions to ENA, to use the Webin Authentication service. You can create a Webin account using [Webin web interface](https://www.ebi.ac.uk/ena/submit/sra/#home). Please refer to [ENA documentation](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html) for more details about creating an account. 
 
-2. Login to the system and get a JWT
+2. Login to the system and get a JSON Web Token (JWT)
 
 Webin uses JSON Web Token (JWT) for authentication. Use your login credentials to retrieve a JWT. You can either use the Webin [Swagger interface](https://www.ebi.ac.uk/ena/submit/webin/auth/swagger-ui/index.html?configUrl=/ena/submit/webin/auth/v3/api-docs/swagger-config) (A) or a programmatic method (B):
 
