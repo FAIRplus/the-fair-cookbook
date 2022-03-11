@@ -230,7 +230,9 @@ Now that study and sample metadata have been registered, it is time to submit th
     * **First File Name:** HOR_1361_BRG.fastq.gz
 
 
-    **Hint**: If you did not note down your sample accession, you can safely visit the ‘**Samples**’ tab, copy the accession, then return to the New Submission tab: your progress will be saved.
+```{note}
+ If you did not note down your sample accession, you can safely visit the ‘**Samples**’ tab, copy the accession, then return to the New Submission tab: your progress will be saved.
+```
 
 7. Click '**Submit**' and see if your submission validates successfully. If you encounter errors, try using the '**Download Template Spreadsheet'** button, open the file and check it in this plain text format; it can be easier to fix errors this way than in the interface. 
 
