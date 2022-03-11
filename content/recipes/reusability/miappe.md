@@ -155,7 +155,7 @@ The selection of available checklists can be browsed at: [https://www.ebi.ac.uk/
 2. Find the '**Register samples**' radio button and click **'Next'**.
 3. You must choose an appropriate checklist of values to be provided for your sample: click '**Select checklist**' and expand the '**Other checklists**' group to browse checklists of this type.
 4. Select the appropriate checklist. For general purposes ERC000037 (**‘ENA Plant Sample Checklist’**) should be the default when submitting plant sequencing data. Now click '**Next**'.
-
+add a image of the web ui for https://www.ebi.ac.uk/ena/browser/view/ERC000037
 5. Submitters now have the option of including additional fields in their checklist. It is not necessary to include any additional fields but you can take this opportunity to see which fields are included by default, what requirements they have, and what else is available.
 
     Click '**Next**'.
