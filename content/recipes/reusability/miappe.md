@@ -63,7 +63,7 @@ The exact listing of the metadata fields required for a FAIRification of the gen
 |[European Variation Archive,EVA](https://www.ebi.ac.uk/eva/)|
 |[International Nucleotide Sequence Database Collaboration](https://www.insdc.org/)
 |[VCF Validator](https://github.com/EBIvariation/vcf-validator/wiki/User's-Guide)|
-
+|[Curl](https://curl.se/)|
 
 ## Step by Step Process
 
