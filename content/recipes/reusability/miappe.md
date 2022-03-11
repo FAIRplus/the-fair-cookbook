@@ -127,7 +127,7 @@ To begin, you should register a study. Recall that a study describes the purpose
 
 1. Log in to the [Webin Submission Portal](https://www.ebi.ac.uk/ena/submit/sra/#home) with your Webin credentials.
  
-2. Click the '**New Submissio**n' tab and find the '**Register study (project)**' radio button. Click '**Next**' to see the study registration interface:
+2. Click the '**New Submission**' tab and find the '**Register study (project)**' radio button. Click '**Next**' to see the study registration interface:
  ![](https://i.imgur.com/JrDztCg.png)
  
 3. The '**Short Name**' field should be filled in with something brief and meaningful, e.g.:*barley_study_2021*
