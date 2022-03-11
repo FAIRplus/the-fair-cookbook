@@ -185,7 +185,10 @@ add a image of the web ui for https://www.ebi.ac.uk/ena/browser/view/ERC000037
 
 12. Fill out the remaining details by reference to the values to the best of your knowledge. Only fields marked with a ***** are required, but it is best to fill as many fields as possible.
 
-    **Hint:** You can always find out more about what a field means and what information it accepts by hovering over the blue 'i'.
+Use a markdown directive (note: not supported by hackMD but supported by jupyter notebook)
+``` {note}
+You can always find out more about what a field means and what information it accepts by hovering over the blue 'i'.
+```
 
 13. By the time you have completed this, your sample will be well-annotated and     understandable to people finding it in the database later. 
 
