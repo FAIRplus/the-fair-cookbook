@@ -7,7 +7,7 @@
 
 Plant genotyping and phenotyping data are often used in combination to make evidence-based inferences about different trait expressions. A challenge here is not necessarily to collect the data, but to offer them in a stable way over the long term in public repositories with sufficient metadata information to make conclusions about them in line with FAIR principles. Since these repositories are often not directly linked, it is even more important to provide metadata that allows users to recognise these links by their identifiers. A key point here is sample management; the identifiers assigned here help both humans and machines to understand which experimental data are linked.
 
-The main objective of the recipe is to provide a means of submitting and tracking genotyping data in public repositories, with a particular focus on plants. This includes:
+The main objective of the recipe is to provide a means of submitting to public repositories and tracking genotyping data, with a particular focus on plants.  This includes:
 
     1) Submission of sample data and metadata information to BioSamples.
     2) Submission of sequencing data and metadata to ENA.
