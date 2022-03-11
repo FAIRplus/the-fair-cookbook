@@ -145,7 +145,7 @@ The next step is to register the sample, which will give other users essential c
 
 As discussed above, **samples are best submitted through BioSamples**.
 
-In ENA, samples are required to conform to a checklist of values. Checklists define a set of mandatory and recommended values for a given type of sample. It is recommended that you look at these early and make sure you collect all required metadata items for the type of sample you will be registering.
+In ENA, samples are required to conform to a checklist of values. Checklists define a set of mandatory and recommended descriptor fields for a given type of sample. It is recommended that you look at these early and make sure you collect all required metadata items for the type of sample you will be registering.
 
 The selection of available checklists can be browsed at: [https://www.ebi.ac.uk/ena/browser/checklists](https://www.ebi.ac.uk/ena/browser/checklists). Currently, three plant specific checklists are available: [ERC000020](https://www.ebi.ac.uk/ena/browser/view/ERC000020), [ERC000035](https://www.ebi.ac.uk/ena/browser/view/ERC000035) and [ERC000037](https://www.ebi.ac.uk/ena/browser/view/ERC000037). 
 
