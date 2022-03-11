@@ -337,7 +337,7 @@ Please check the official format specifications to avoid redundancy and possible
 
 Once the metadata and data has been formatted according to the specifications above, make sure that the resulting VCF file complies with VCF specifications. For that purpose, we propose the [VCF validator](https://github.com/EBIvariation/vcf-validator) (an example of how to use it is available on the github link). \
     \
-Once the file has been fully validated without any error messages you can submit the VCF file to EVA, using BioSamples IDs to identify material, GCF/GCA accession for the reference genome assembly, and ENA accession numbers for the sequencing reads of the material used. Refer to the official [documentation](https://www.ebi.ac.uk/eva/?Submit-Data).
+Once the file has been fully validated without any error messages you can submit the VCF file to EVA, using BioSamples IDs to identify the material, GCF/GCA accession for the reference genome assembly, and ENA accession numbers for the sequencing reads of the material used. Refer to the official [documentation](https://www.ebi.ac.uk/eva/?Submit-Data).
     
 ## Conclusion
 At this point, the VCF contains metadata and data formatted for the purpose of better discoverability and higher interoperability. Data could thus be more easily read and evaluated automatically by machines and it is made easier to connect different data sources with each other, so that in general a higher degree of FAIR has been achieved. 
