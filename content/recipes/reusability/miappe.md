@@ -237,7 +237,9 @@ Now that study and sample metadata have been registered, it is time to submit th
 7. Click '**Submit**' and see if your submission validates successfully. If you encounter errors, try using the '**Download Template Spreadsheet'** button, open the file and check it in this plain text format; it can be easier to fix errors this way than in the interface. 
 
 
-    Note that the use of template spreadsheets is the best way to submit multiple datasets through this interface.
+```{note}
+Note that the use of template spreadsheets is the best way to submit multiple datasets through this interface.
+```
 
 8. If you manage to complete your submission, visit the 'Runs' tab to review your submission.
 
