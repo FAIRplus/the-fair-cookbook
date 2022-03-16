@@ -1,9 +1,0 @@
-graph TD
-Start(START) --> A
-A{Requirements fulfilled?} -->|Yes| B[Apply this recipe]
-A -->|No| Stop(STOP)
-B --> C(Transfer the checksum file from source to target system)
-C --> C2(Compare the checksums from checksum file with checksums calculated on the target system)
-C2 --> D{Checksums identical?}
-D -->|Yes| E(Identity confirmed)
-D -->|No| F(Identity could not be confirmed)
