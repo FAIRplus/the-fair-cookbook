@@ -32,10 +32,10 @@ class FigureFairplus(Directive):
     def _create_content(self):
         if self.is_vectorgraphic:
             filename = self.filename + ".svg"
-            links_to_high_resolution_pictures = "" + \
-                f"{{download}}`[download as png] <{self.filename + '.hi-res.png'}>` "        + \
-                f"{{download}}`[download as mermaid diagram] <{self.filename}>` "             + \
-                f"{{download}}`[download as svg vector graphic] <{self.filename + '.svg'}>` "
+            links_to_high_resolution_pictures = "Download as " + \
+                f"{{download}}`[png] <{self.filename + '.hi-res.png'}>` "        + \
+                f"{{download}}`[mmd] <{self.filename}>` "             + \
+                f"{{download}}`[svg] <{self.filename + '.svg'}>` "
 
         else:
             filename = self.filename
