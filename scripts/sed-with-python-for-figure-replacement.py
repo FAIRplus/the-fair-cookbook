@@ -19,8 +19,7 @@ for file in all_md_files:
     #
     recipe_short_handle = content.splitlines()[0]
     assert recipe_short_handle.startswith("(") and recipe_short_handle.endswith(")=")
-    recipe_short_handle = recipe_short_handle[1:] + recipe_short_handle[:-2]
-    print(recipe_short_handle)
+    recipe_short_handle = recipe_short_handle[1:-2]
 
     start_position = 0
     offset = 0
@@ -110,7 +109,7 @@ for file in all_md_files:
 
         if linedict.get("name", None) == linedict.get("alt", None):
             #print("   ", "DEBUG: you will need to correct the naming of this figure, as I will replace the name with 'TODO'...")
-            linedict["name"] = "TODO"
+            linedict["name"] = recipe_short_handle + f"-figure{figure_counter}"
         elif linedict.get("name", "") in linedict.get("alt", ""):
             print("   ", "DEBUG: strange case here about name and alt lines:", repr((linedict.get("name", ""), linedict.get("alt", ""))) )
             #print("   ", "DEBUG: you will need to correct the naming of this figure, as I will replace the name with 'TODO'...")

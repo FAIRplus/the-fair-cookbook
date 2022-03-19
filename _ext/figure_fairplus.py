@@ -45,7 +45,7 @@ class FigureFairplus(Directive):
         content = [f"```{{figure}} {filename}",
         "---",
         f"name: {self.name}",
-        f"alt: {self.subtitle}",
+        f"alt: {self.subtitle.replace(':', '-')}",
         "---",
         f"{self.subtitle} {links_to_high_resolution_pictures}",
         "```"
