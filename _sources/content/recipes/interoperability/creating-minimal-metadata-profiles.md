@@ -20,13 +20,9 @@
 
 
 
-```{figure} creating-minimal-metadata-profiles-mermaid.png
----
-height: 1000px
-name: Building a minimal metadata profile
-alt: Building a minimal metadata profile
----
-Building a minimal metadata profile.
+```{figure_fairplus} creating-minimal-metadata-profiles-mermaid.png
+name: fcb-interop-metadataprofile-figure1
+subtitle: Building a minimal metadata profile.
 ```
 
 ---

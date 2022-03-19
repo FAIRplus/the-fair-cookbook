@@ -896,9 +896,9 @@ No
 <p>The FAIRification of Oncotrack metadata includes four steps: 1) accessing the data, 2) metadata extraction, transform and load (ETL) pipeline, 3) data curation and 4) data sharing. (Figure 1)</p>
 <!-- ![alt_text](image_0.png "image_tooltip")
 _Figure 1: OncoTrack metadata FAIRification pipeline_ -->	
-<div class="figure align-default" id="oncotrack-metadata-fairification-pipeline">
-<a class="reference internal image-reference" href="../../../../_images/image_0.png"><img alt="OncoTrack metadata FAIRification pipeline." src="../../../../_images/image_0.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.19 </span><span class="caption-text">OncoTrack metadata FAIRification pipeline.</span><a class="headerlink" href="#oncotrack-metadata-fairification-pipeline" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="fcb-fairify-examples-oncotrack-figure1">
+<img alt="OncoTrack metadata FAIRification pipeline." src="../../../../_images/image_0.png" />
+<p class="caption"><span class="caption-number">Fig. 4.19 </span><span class="caption-text">OncoTrack metadata FAIRification pipeline.</span><a class="headerlink" href="#fcb-fairify-examples-oncotrack-figure1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="data-description">
 <h3><span class="section-number">4.3.1. </span>Data Description<a class="headerlink" href="#data-description" title="Permalink to this headline">¶</a></h3>
@@ -907,20 +907,21 @@ _Figure 1: OncoTrack metadata FAIRification pipeline_ -->
 <p>The original cohort metadata is stored in an Excel spreadsheet. Figure 2 is an example of the cohort metadata. Each sample is listed as a separate row in the spreadsheet. Sample attributes are listed in columns. The sample names follow the<a class="reference external" href="https://drive.google.com/file/d/1qTQ4cYsmD3AN9XYRxpwayOerc78LUzq6/view?usp=sharing"> OncoTrack identifier system guidelines</a>, which consist of patient ID, tumour type, and patient-derived cell culture model ID. For example, Sample <em>“150_MET1_XEN2”</em> represents <em>“The second xenograft culture of the first metastatic tumour sample in Patient 150.”</em></p>
 <!-- ![alt_text](image_1.png "image_tooltip")
 _Figure 2: Example of OncoTrack public cohort metadata -->_
-<div class="figure align-default" id="example-of-oncotrack-public-cohort-metadata">
-<a class="reference internal image-reference" href="../../../../_images/image_1.png"><img alt="Example of OncoTrack public cohort metadata." src="../../../../_images/image_1.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.20 </span><span class="caption-text">Example of OncoTrack public cohort metadata.</span><a class="headerlink" href="#example-of-oncotrack-public-cohort-metadata" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="fcb-fairify-examples-oncotrack-figure2">
+<img alt="Example of OncoTrack public cohort metadata." src="../../../../_images/image_1.png" />
+<p class="caption"><span class="caption-number">Fig. 4.20 </span><span class="caption-text">Example of OncoTrack public cohort metadata.</span><a class="headerlink" href="#fcb-fairify-examples-oncotrack-figure2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drugs are tested on patient-derived organoid(PDO) and patient-derived xenografts(PDX) models in five sets of experiments. Different sets have their unique measurement methods, drug response scales. For example, in <em>Sheet 1: PDO drug response</em> experiment, IC50 value is measured and defines the drug <em>response category</em> (Figure 3a). In <em>Sheet 2: PDX drug response test</em>, the <em>response evaluation criteria in solid tumours (<strong>RECIST</strong>)</em> scales defines the <em>drug response category</em> (Figure 3b). In both examples, the <em>drug response category</em> is marked by colour codes.</p>
 <!-- ![alt_text](image_2.png "image_tooltip") -->
-<div class="figure align-default" id="example-of-oncotrack">
-<a class="reference internal image-reference" href="../../../../_images/image_2.png"><img alt="." src="../../../../_images/image_2.png" style="width: 800px;" /></a>
+<div class="figure align-default" id="fcb-fairify-examples-oncotrack-figure3">
+<img alt="Example of OncoTrack." src="../../../../_images/image_2.png" />
+<p class="caption"><span class="caption-number">Fig. 4.21 </span><span class="caption-text">Example of OncoTrack.</span><a class="headerlink" href="#fcb-fairify-examples-oncotrack-figure3" title="Permalink to this image">¶</a></p>
 </div>
 <!-- ![alt_text](image_3.png "image_tooltip")
 _Figure 3: Example of Oncotrack drug response data_ -->
-<div class="figure align-default" id="example-of-oncotrack-drug-response-data">
-<a class="reference internal image-reference" href="../../../../_images/image_3.png"><img alt="Example of Oncotrack drug response data." src="../../../../_images/image_3.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.21 </span><span class="caption-text">Example of Oncotrack drug response data.</span><a class="headerlink" href="#example-of-oncotrack-drug-response-data" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="fcb-fairify-examples-oncotrack-figure4">
+<img alt="Example of Oncotrack drug response data." src="../../../../_images/image_3.png" />
+<p class="caption"><span class="caption-number">Fig. 4.22 </span><span class="caption-text">Example of Oncotrack drug response data.</span><a class="headerlink" href="#fcb-fairify-examples-oncotrack-figure4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="metadata-etl-pipeline">
@@ -930,16 +931,16 @@ _Figure 3: Example of Oncotrack drug response data_ -->
 <p>The cohort metadata was converted to a<a class="reference external" href="https://docs.google.com/document/d/1pBjRe7rWO4xsUIVecIgxOm_SJaMWeWf8KBrsDTDVAmg/edit?usp=sharing"> tab-delimited table</a>, of which each row represents one sample, and each column represents one sample attribute. 144 samples from 106 patients were extracted, including 35 organoids and 59 xenografts. Tumour type and sample origin information was retrieved from the sample name. The disease name <em>“colon and rectal cancer”</em> was replaced with ontology term<a class="reference external" href="http://www.ebi.ac.uk/efo/EFO_0005842"> “Colorectal cancer”</a>. Figure 4 is an example of the extracted cohort metadata.</p>
 <!-- ![alt_text](image_4.png "image_tooltip")
 _Figure 4: Example of the extracted cohort metadata_ -->
-<div class="figure align-default" id="example-of-the-extracted-cohort-metadata">
-<a class="reference internal image-reference" href="../../../../_images/image_4.png"><img alt="Example of the extracted cohort metadata." src="../../../../_images/image_4.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.22 </span><span class="caption-text">Example of the extracted cohort metadata.</span><a class="headerlink" href="#example-of-the-extracted-cohort-metadata" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="fcb-fairify-examples-oncotrack-figure5">
+<img alt="Example of the extracted cohort metadata." src="../../../../_images/image_4.png" />
+<p class="caption"><span class="caption-number">Fig. 4.23 </span><span class="caption-text">Example of the extracted cohort metadata.</span><a class="headerlink" href="#fcb-fairify-examples-oncotrack-figure5" title="Permalink to this image">¶</a></p>
 </div>
 <p>Drug sensitivity data were also extracted from the original spreadsheets. Each drug test per sample was listed as one entry. To coordinate different measurement approaches and response category scales, all drug sensitivity data were converted to a unified representation. All the measurement results were stored in Attribute <em>“Value”</em>, the drug response categorizes criteria were stored in Attribute <em>“Unit”,</em> and the <em>drug response category</em> was recalculated and stored in Attribute <em>“Response”.</em> Figure 5 is an example of the extracted drug sensitivity data. 1829 drug tests were extracted in total. The drug response summary is <a class="reference external" href="https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing">here</a>.</p>
 <!-- ![alt_text](image_5.png "image_tooltip")
 _Figure 5: Example of extracted drug sensitivity data_	 -->
-<div class="figure align-default" id="example-of-extracted-drug-sensitivity-data">
-<a class="reference internal image-reference" href="../../../../_images/image_5.png"><img alt="Example of extracted drug sensitivity data." src="../../../../_images/image_5.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.23 </span><span class="caption-text">Example of extracted drug sensitivity data.</span><a class="headerlink" href="#example-of-extracted-drug-sensitivity-data" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="fcb-fairify-examples-oncotrack-figure6">
+<img alt="Example of extracted drug sensitivity data." src="../../../../_images/image_5.png" />
+<p class="caption"><span class="caption-number">Fig. 4.24 </span><span class="caption-text">Example of extracted drug sensitivity data.</span><a class="headerlink" href="#fcb-fairify-examples-oncotrack-figure6" title="Permalink to this image">¶</a></p>
 </div>
 <p>To associate drug sensitivity data with related sample cohort metadata and convert them to machine-readable formats, we combined cohort metadata and drug sensitivity data to JSON files. The <a class="reference external" href="https://drive.google.com/file/d/1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY/view">BioSamples JSON schema</a> was used as the sample metadata template, allowing direct submissions to<a class="reference external" href="https://www.ebi.ac.uk/biosamples/"> BioSamples database</a> and can be easily converted to other formats, like XML, spreadsheets, etc.</p>
 <p>The BioSamples JSON schema includes four blocks, submission metadata (e.g. submission domain, release date, update date), administrative metadata, (e.g. contacts, affiliations), general sample metadata (sample names, species, etc) and sample characteristics. All information is stored in key: value pairs. In sample characteristics, only data with flatten structure is accepted.</p>
@@ -960,9 +961,9 @@ _Figure 5: Example of extracted drug sensitivity data_	 -->
 ![alt_text](image_6.jpg "image_tooltip")
 _Figure 6: Example of  ZOOMA ontology mapping results_
  -->
-<div class="figure align-default" id="example-of-zooma-ontology-mapping-results">
-<a class="reference internal image-reference" href="../../../../_images/image_6.jpg"><img alt="Example of ZOOMA ontology mapping results." src="../../../../_images/image_6.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.24 </span><span class="caption-text">Example of ZOOMA ontology mapping results.</span><a class="headerlink" href="#example-of-zooma-ontology-mapping-results" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="fcb-fairify-examples-oncotrack-figure7">
+<img alt="Example of ZOOMA ontology mapping results." src="../../../../_images/image_6.jpg" />
+<p class="caption"><span class="caption-number">Fig. 4.25 </span><span class="caption-text">Example of ZOOMA ontology mapping results.</span><a class="headerlink" href="#fcb-fairify-examples-oncotrack-figure7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="data-discrepancy">

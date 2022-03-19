@@ -1,4 +1,4 @@
- (fcb-applied-examples)=
+(fcb-applied-examples)=
 # Applied examples
 +++
 ---

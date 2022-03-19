@@ -30,12 +30,9 @@ focusing exclusively on the output of the Linux tool `md5sum`.
 
 ## Graphical Overview
 
-```{figure} checksum-validate.md-figure1.mmd.png
----
+```{figure_fairplus} checksum-validate.md-figure1.mmd
 name: checksum-validate-figure1
-alt: Graphical overview of the steps taken by this recipe.
----
-Graphical overview of the steps taken by this recipe.
+subtitle: Graphical overview of the steps taken by this recipe.
 ```
 
 

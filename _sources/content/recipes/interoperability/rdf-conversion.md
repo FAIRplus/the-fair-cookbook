@@ -26,12 +26,9 @@ The main purpose of this recipe is:
 Figure {numref}`rdf-conversion-figure1` shows an example ETL workflow.
 
 
-```{figure} rdf-conversion.md-figure1.mmd.png
----
+```{figure_fairplus} rdf-conversion.md-figure1.mmd
 name: rdf-conversion-figure1
-alt: Building an ontology with Robot tool
----
-Building an ontology with Robot tool.
+subtitle: Building an ontology with Robot tool.
 ```
 
 ---

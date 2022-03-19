@@ -59,13 +59,9 @@ For an updated contents, please check the [FAIR tooling repository](https://gith
 
 The figure below shows different ontology-related operations and their relationships, together with related tools and recipes.
  
-```{figure} ontology-operations-mermaid.png
----
-width: 700px
-name: Overview of key aspects in ontology associated processes
-alt: Overview of key aspects in ontology associated processes
----
-Overview of key aspects in ontology associated processes
+```{figure_fairplus} ontology-operations-mermaid.png
+name: fcb-interop-onto-op-figure1
+subtitle: Overview of key aspects in ontology associated processes
 ```
 The table below is an overview of ontology strategies tools identified. Details of each tools are provided below.
 

@@ -28,13 +28,9 @@ Finally, the content aims to highlight key use-cases which require coverage, how
 
 
 
-```{figure} data-usage-mermaid.png
----
-width: 700px
+```{figure_fairplus} data-usage-mermaid.png
 name: expressing-data-use-figure1
-alt: Dealing with Policies and Data Use
----
-Data Use
+subtitle: Dealing with Policies and Data Use
 ```
 
 
@@ -95,13 +91,9 @@ We summarize here the key objects used by the European Genome Archive, in compli
 
 https://ega-archive.org/data-use-conditions
 
-```{figure} duo-ols-view-1.png
----
-width: 700px
+```{figure_fairplus} duo-ols-view-1.png
 name: expressing-data-use-figure2
-alt: Data Use Ontology Overview Part 1
----
-Data Use Ontology Overview Part 1
+subtitle: Data Use Ontology Overview Part 1
 ```
 
 ```{figure} duo-ols-view-2.png
@@ -112,25 +104,6 @@ alt: Data Use Ontology Overview Part 2
 ---
 Data Use Ontology Overview Part 2
 ```
-
-<!-- 
-````{panels}
-:column: col-8
-:card: border-2
-DUO in OLS
-^^^
-```{figure} duo-ols-view-1.png
-width: 400px
-```
----
-DUO in OLS
-^^^
-```{figure} duo-ols-view-2.png
-width: 400px
-```
-
-```` -->
-
 
 The information presented below has been sourced from the ENA Github repo.
 
@@ -358,13 +331,9 @@ https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/
 Browsing Data Access Committees available from EGA:
 
 
-```{figure} dac-ega.png
----
-width: 700px
+```{figure_fairplus} dac-ega.png
 name: 
-alt: List of Data Access Policy from EGA
----
-List of Data Access Policy from EGA
+subtitle: List of Data Access Policy from EGA
 ```
 
 
@@ -377,13 +346,9 @@ ODRL is made up of several components:
 
 - [The ODRL Model](https://www.w3.org/TR/odrl-model/) {footcite}`ODRLmodel`
 
-```{figure} https://www.w3.org/TR/odrl-model/00Model.png
----
-width: 700px
-name: 
-alt: Open Digital Rights Language model
----
-ODRL overview
+```{figure_fairplus} /images/00Model.png
+name: fcb-reusability-data_use-figurex
+subtitle: The Open Digital Rights Language model
 ```
 
 - [The ODRL Vocabulary](https://www.w3.org/TR/odrl-vocab/) {footcite}`ODRLvocab`
@@ -755,13 +720,9 @@ http://odrlapi.appspot.com/
 
 
 
-```{figure} ./odrl-validation-app.png
----
-width: 800px
-alt: ODRL Validation and Evaluation Sandbox
-name: ODRL Validation and Evaluation Sandbox
----
-ODRL Validation and Evaluation Sandbox
+```{figure_fairplus} ./odrl-validation-app.png
+name: fcb-reusability-data_use-figure4
+subtitle: ODRL Validation and Evaluation Sandbox
 ```
 
 
@@ -778,13 +739,9 @@ It is all good and and well to describe patterns in various formats but are ther
 Well, when it comes to genomics data, there is the Broad Institute's  [Data Use Oversight System (DUOS)](https://duos.broadinstitute.org/#/home) is one such tool.
 
 
-```{figure} ./broads-duos.png
----
-width: 800px
-alt: Broad's Institute  Data Use Oversight System
-name: Broad's Institute  Data Use Oversight System
----
-Broad's Institute  Data Use Oversight System landing page
+```{figure_fairplus} ./broads-duos.png
+name: fcb-reusability-data_use-figure5
+subtitle: Broad's Institute  Data Use Oversight System landing page
 ```
 
 DUOS requires official clearance from a `Data Access Committee` representative or an `Authorized Submission Representative` to enable registration of a dataset into the DUOS.

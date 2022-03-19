@@ -5,7 +5,7 @@
 
 
 ```{figure_fairplus} /images/3rXmOW0.png
-name: TODO
+name: intro-ati-twb-figure1
 subtitle: The FAIR Cookbook. A Data Expert cooking a recipe to make a dataset or a service FAIR. Credits to Scriberia.
 ```
 

@@ -28,7 +28,7 @@ The main purpose of this recipe is:
 
 
 ```{figure_fairplus} ./bs-datacatalog-mermaid.png
-name: TODO
+name: find-bs-catalog-figure1
 subtitle: The process of annotating a data catalog webpage with bioschema markup for Search Engine discovery.
 ```
 
@@ -78,7 +78,7 @@ subtitle: Bioschemas Generator start screen.
 <!--    ![Bioschemas Generator DataCatalog profile form](BioschemasGeneratorDataCatalogForm.png) -->
 
 ```{figure_fairplus} BioschemasGeneratorDataCatalogForm.png
-name: TODO
+name: find-bs-catalog-figure2
 subtitle: Bioschemas Generator DataCatalog profile form.
 ```   
 
