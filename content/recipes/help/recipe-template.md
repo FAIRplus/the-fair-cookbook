@@ -186,13 +186,9 @@ If you want to include figures, please use the following
 
 
 <!-- 
-```{figure} ./my_figure.svg
----
-width: 700px
-name: the figure title
-alt: something to display if the link to the figure is broken
----
-the proper caption for the figure.
+```{figure_fairplus} ./my_figure.svg
+name: fcb-help-recipe-template-figure1
+subtitle: the proper caption for the figure.
 ```
 -->
 

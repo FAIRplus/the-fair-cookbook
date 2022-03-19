@@ -28,13 +28,9 @@ Finally, the content aims to highlight key use-cases which require coverage, how
 
 
 
-```{figure} data-usage-mermaid.png
----
-width: 700px
+```{figure_fairplus} data-usage-mermaid.png
 name: expressing-data-use-figure1
-alt: Dealing with Policies and Data Use
----
-Data Use
+subtitle: Dealing with Policies and Data Use
 ```
 
 
@@ -350,13 +346,9 @@ ODRL is made up of several components:
 
 - [The ODRL Model](https://www.w3.org/TR/odrl-model/) {footcite}`ODRLmodel`
 
-```{figure} https://www.w3.org/TR/odrl-model/00Model.png
----
-width: 700px
-name: 
-alt: Open Digital Rights Language model
----
-ODRL overview
+```{figure_fairplus} /images/00Model.png
+name: fcb-reusability-data_use-figurex
+subtitle: The Open Digital Rights Language model
 ```
 
 - [The ODRL Vocabulary](https://www.w3.org/TR/odrl-vocab/) {footcite}`ODRLvocab`

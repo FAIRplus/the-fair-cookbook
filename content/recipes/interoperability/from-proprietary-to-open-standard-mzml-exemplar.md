@@ -140,13 +140,9 @@ One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of
   <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
 </div> -->
 
-```{figure} /images/AWOWTbr.png
----
-width: 750px
-name: A Standard Record in the FAIRsharing catalog of resources
-alt: A Standard Record in the FAIRsharing catalog of resources
----
-The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing catalog](https://fairsharing.org/) of resources.
+```{figure_fairplus} /images/AWOWTbr.png
+name: fcb-interop-convertopen-figure2
+subtitle: The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing catalog](https://fairsharing.org/) of resources.
 ```
 
 
@@ -234,13 +230,9 @@ A number of libraries are available for parsing (reading and writing) `mzML` doc
 <img src="/images/BTs0GUS.png" width="750" border="1"/>
 </div> -->
 
-```{figure} /images/BTs0GUS.png
----
-width: 750px
-name: pymzml in Biotools registry
-alt: pymzml in Biotools registry
----
-The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.tools/) of resources.
+```{figure_fairplus} /images/BTs0GUS.png
+name: fcb-interop-convertopen-figure3
+subtitle: The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.tools/) of resources.
 ```
 
 
@@ -270,13 +262,9 @@ pf.save(
 <img src="/images/caaqwFo.png" width="650"/>
 </div> -->
 
-```{figure} /images/caaqwFo.png
----
-width: 650px
-name: pymzml rendered msrun profile
-alt: pymzml rendered msrun profile
----
-The Python `pymzml` library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.
+```{figure_fairplus} /images/caaqwFo.png
+name: fcb-interop-convertopen-figure4
+subtitle: The Python `pymzml` library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.
 ```
 
 

@@ -72,8 +72,10 @@ class FigureFairplus(Directive):
             context = os.path.join(os.getcwd(), "DUMMY.EXT")
             check_filename = check_filename[1:]
         path_to_file = os.path.abspath(os.path.join(os.path.dirname(context), check_filename))
-        assert os.path.exists(path_to_file), _make_string_red(f"image file does not exist: {filename_string}")
         
+        assert os.path.exists(path_to_file), _make_string_red(f"image file does not exist: {filename_string}")
+        if not os.path.exists(path_to_file):
+            logger.error(f"ERROR: {context} - image file does not exist: {filename_string}")
         self.filename = filename_string
 
         file_extension = os.path.splitext(filename_string)[1].lower()[1:] 
@@ -88,7 +90,10 @@ class FigureFairplus(Directive):
         elif file_extension == "png" or file_extension == "jpg" or file_extension == "jpeg":
             self.is_vectorgraphic = False
         else:
-            raise "Unknown file extension for an image"
+            logger.error(f"ERROR: {context} - Unknown file extension for an image")
+            #raise Exception(f"{context} - Unknown file extension for an image")
+            raise sphinx.errors.ExtensionError("")
+
 
 
         ## check name

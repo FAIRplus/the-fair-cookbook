@@ -64,13 +64,9 @@ All these key points will be developed in this recipe.
 ---
 
 
-```{figure} ./identifiers-fig1.svg
----
-width: 700px
-name: 
-alt: identifier services
----
-Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .
+```{figure_fairplus} ./identifiers-fig1.mmd
+name: fcb-find-identifiers-figure1
+subtitle: Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID).
 ```
 
 ---

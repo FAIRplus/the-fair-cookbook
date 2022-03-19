@@ -96,14 +96,11 @@ These heuristics will be refined and extended iteratively by exploring term to c
 name: etox-figure1
 subtitle: Overview of the automatic ontology coverage evaluation strategy.
 ```
+                
 
-
-```{figure} etox.md-figure2.png
----
+```{figure_fairplus} etox.md-figure2.png
 name: etox-figure2
-alt: Example of textual analyses of terms / concept labels
----
-Example of textual analyses of terms / concept labels.
+subtitle: Example of textual analyses of terms / concept labels.
 ```
 
 

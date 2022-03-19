@@ -25,13 +25,9 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 ## Graphical Overview
 
 
-```{figure} covid19-sample-metadata-profile-shex-use-case-mermaid.png
----
-width: 800px
-name: building a commmunity compliant metadata profile
-alt: building a commmunity compliant metadata profile
----
-Building a commmunity compliant metadata profile.
+```{figure_fairplus} covid19-sample-metadata-profile-shex-use-case-mermaid.png
+name: fcb-interop-covid-metadata-figure1
+subtitle: Building a commmunity compliant metadata profile.
 ```
 
 ## FAIRification Objectives, Inputs and Outputs
@@ -97,14 +93,10 @@ The following sections detail each of these steps
 name: fcb-interop-covid-metadata-figure2
 subtitle: Defining the metadata fields
 ```
-
-```{figure} /images/1ahQLjy.png
----
-width: 300px
-name: Defining the metadata fields-1
-alt: Defining the metadata fields-1
----
-Defining the metadata fields-1
+                   
+```{figure_fairplus} /images/1ahQLjy.png
+name: fcb-interop-covid-metadata-figure3
+subtitle: Defining the metadata fields-1
 ```
 
 
@@ -241,13 +233,9 @@ subtitle: The corresponding metadata acquisition web form
 <!-- ![](/images/RR5GSgi.png) -->
 
 
-```{figure} /images/RR5GSgi.png
----
-width: 800px
-name: The corresponding metadata acquisition web form 2
-alt: The corresponding metadata acquisition web form 2
----
-The corresponding metadata acquisition web form
+```{figure_fairplus} /images/RR5GSgi.png
+name: fcb-interop-covid-metadata-figure7
+subtitle: The corresponding metadata acquisition web form
 ```
 
 

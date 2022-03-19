@@ -81,7 +81,7 @@ One may browse the list of currently community defined indicators from the `Coll
 <!-- ![Select a 'FAIR Maturity Indicator - Collections'](./assets/fair-eval-img2.png)  -->
 
 ```{figure_fairplus} ./assets/fair-eval-img2.png
-name: fcb-assess-fair-automatic-evaluator-figure2
+name: fcb-assess-fair-automatic-evaluator-figure1
 subtitle: Select a 'FAIR Maturity Indicator - Collections'
 ```    
 
@@ -96,13 +96,9 @@ To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
 
 <!-- ![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 
-```{figure} ./assets/fair-eval-img4.png
----
-width: 800px
-name: Running the FAIREvaluator - part 1 - setting the input
-alt: Running the FAIREvaluator - part 1 - setting the input
----
-Running the FAIREvaluator - part 1: setting the input
+```{figure_fairplus} ./assets/fair-eval-img4.png
+name: fcb-assess-fair-automatic-evaluator-figure2
+subtitle: Running the FAIREvaluator - part 1: setting the input
 ```
 
 ### Running the FAIREvaluator
@@ -112,13 +108,9 @@ Hit the 'Run Evaluation' button from 'https://fairsharing.github.io/FAIR-Evaluat
 
 <!-- ![Running the FAIREvaluator - part 2: execution ](./assets/fair-eval-img5.png) -->
 
-```{figure} ./assets/fair-eval-img5.png
----
-width: 800px
-name: Running the FAIREvaluator - part 2 - execution
-alt: Running the FAIREvaluator - part 2 - execution
----
-Running the FAIREvaluator - part 2: execution
+```{figure_fairplus} ./assets/fair-eval-img5.png
+name: fcb-assess-fair-automatic-evaluator-figure3
+subtitle: Running the FAIREvaluator - part 2: execution
 ```
 
      
@@ -129,7 +121,7 @@ Following execution of the FAIREvaluator, a detail report is generated.
 <!-- ![FAIREvaluator report - overall report ](./assets/fair-eval-img6.png) -->
 
 ```{figure_fairplus} ./assets/fair-eval-img6.png
-name: fcb-assess-fair-automatic-evaluator-figure5
+name: fcb-assess-fair-automatic-evaluator-figure4
 subtitle: FAIREvaluator report - overall report
 ```
 
@@ -137,13 +129,9 @@ Time to dig into the details and figure out the reasons why some indicators are 
 
 <!-- ![apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*](./assets/fair-eval-img7.png) -->
 
-```{figure} ./assets/fair-eval-img7.png
----
-width: 800px
-name: FAIREvaluator error report 
-alt: FAIREvaluator error report
----
-apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*
+```{figure_fairplus} ./assets/fair-eval-img7.png
+name: fcb-assess-fair-automatic-evaluator-figure5
+subtitle: FAIREvaluator error report: apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*
 ```
 
 ## Conclusion

@@ -102,13 +102,9 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="/images/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
 
 
-```{figure} /images/LwMorlw.png
----
-height: 450px
-name: Starting the file upload to Zenodo
-alt: Starting the file upload  to Zenodo
----
-Starting the file upload to Zenodo Repository.
+```{figure_fairplus} /images/LwMorlw.png
+name: fcb-find-zenodo-figure2
+subtitle: Starting the file upload to Zenodo Repository.
 ```
 
 

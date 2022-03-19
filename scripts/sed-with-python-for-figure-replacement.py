@@ -130,7 +130,7 @@ for file in all_md_files:
         if linedict.get("alt").strip() in linedict.get("text").strip():
             subtitle = linedict.get("text", "").strip()
         else:
-            print("   ", "ERROR: you need to correct alt / subtitle manually:", repr(directive_lines[3]), repr(directive_lines[5]) )
+            print("   ", "ERROR: you need to correct alt / subtitle manually:", repr((linedict.get("alt"), linedict.get("text"))) )
             error += 1
 
         #

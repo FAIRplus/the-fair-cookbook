@@ -78,14 +78,11 @@ Data are extracted using a [KNIME workflow provided here](https://owncloud.lcsb.
 name: nd4bb-figure2
 subtitle: Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.
 ```
+                   
 
-
-```{figure} nd4bb.md-figure3.jpg
----
+```{figure_fairplus} nd4bb.md-figure3.jpg
 name: nd4bb-figure3
-alt: Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.
----
-Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.
+subtitle: Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.
 ```
 
 
@@ -109,14 +106,11 @@ The complete workflow to extract the data from the compound/charge webpage is de
 name: nd4bb-figure5
 subtitle: Example of one ND4BB raw data. Marked in green boxes are a table section with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources.
 ```
+                   
 
-
-```{figure} nd4bb.md-figure7.png
----
+```{figure_fairplus} nd4bb.md-figure7.png
 name: nd4bb-figure7
-alt: Workflow to extract the data from compound/charge webpage.
----
-Workflow to extract the data from compound/charge webpage.
+subtitle: Workflow to extract the data from compound/charge webpage.
 ```
 
 

@@ -62,13 +62,9 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
    3.  Click on the `Show Form` button
 
 
-```{figure} BioschemasGenerator.png
----
+```{figure_fairplus} BioschemasGenerator.png
 name: bioschemas-generator-start-screen-3
-alt: Bioschemas Generator start screen.
-
----
-Bioschemas Generator start screen.
+subtitle: Bioschemas Generator start screen.
 ```
 
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button

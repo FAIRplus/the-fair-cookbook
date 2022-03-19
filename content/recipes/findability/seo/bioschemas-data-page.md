@@ -73,13 +73,9 @@ We will outline the steps for embedding machine processable mark up within a web
 <!--    ![Bioschemas Generator start screen](BioschemasGenerator.png) -->
 
 
-```{figure} BioschemasGenerator.png
----
+```{figure_fairplus} BioschemasGenerator.png
 name: bioschemas-generator-start-screen-2
-alt: Bioschemas Generator start screen.
-
----
-Bioschemas Generator start screen.
+subtitle: Bioschemas Generator start screen.
 ```
 
 
