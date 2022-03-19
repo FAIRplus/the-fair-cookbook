@@ -92,13 +92,9 @@ Bioschemas Generator start screen.
 <!--    ![Bioschemas Generator Gene profile form](BioschemasGeneratorGeneForm.png) -->
 
 
-```{figure} BioschemasGeneratorGeneForm.png
----
-height: 550px
-name: Bioschemas Generator Gene profile form
-alt: Bioschemas Generator Gene profile form
----
-Bioschemas Generator Gene profile form.
+```{figure_fairplus} BioschemasGeneratorGeneForm.png
+name: fcb-find-bs-data-figure2
+subtitle: Bioschemas Generator Gene profile form.
 ```
 
    

@@ -80,13 +80,9 @@ Bioschemas Generator start screen.
 
 <!--    ![Bioschemas Generator Dataset profile form](BioschemasGeneratorDatasetForm.png) -->
 
-```{figure} BioschemasGeneratorDatasetForm.png
----
-height: 550px
-name: Bioschemas Generator Dataset profile form
-alt: Bioschemas Generator Dataset profile form
----
-Bioschemas Generator Dataset profile form.
+```{figure_fairplus} BioschemasGeneratorDatasetForm.png
+name: fcb-find-bs-dataset-figure2
+subtitle: Bioschemas Generator Dataset profile form.
 ``` 
 
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our UniProtKB example, we get the following markup

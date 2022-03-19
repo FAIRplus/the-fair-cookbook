@@ -121,6 +121,7 @@ for file in all_md_files:
 
         if error == 1 and " " in linedict.get("name", ""):
             linedict["name"] = recipe_short_handle + f"-figure{figure_counter}"
+            error -= 1
 
 
         name_of_figure = linedict.get("name", "").strip()

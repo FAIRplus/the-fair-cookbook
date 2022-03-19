@@ -29,13 +29,9 @@
 ## Graphical Overview
 
 
-```{figure} from-proprietary.png
----
-width: 450px
-name: Converting to an open standard file format
-alt: Converting to an open standard file format
----
-Converting to an open standard file format.
+```{figure_fairplus} from-proprietary.png
+name: fcb-interop-convertopen-figure1
+subtitle: Converting to an open standard file format.
 ```
 
 ---

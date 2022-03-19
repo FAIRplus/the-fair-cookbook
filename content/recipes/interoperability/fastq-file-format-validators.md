@@ -24,13 +24,9 @@ The main purpose of this recipe is to:
 
 ## Graphical Overview
 
-```{figure} fastq-validation.png
----
-width: 350px
-name: Validating FASTQ open standard file format
-alt: Validating FASTQ open standard file format
----
-Validating FASTQ open standard file format.
+```{figure_fairplus} fastq-validation.png
+name: fcb-interop-fastqval-figure1
+subtitle: Validating FASTQ open standard file format.
 ```
 
 
@@ -87,13 +83,9 @@ This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on 
 <!-- ![](/images/jOYK2ZM.jpg) -->
 
 
-```{figure} /images/jOYK2ZM.jpg
----
-width: 800px
-name: FASTQutils library
-alt: FASTQutils library
----
-the FASTQutils library.
+```{figure_fairplus} /images/jOYK2ZM.jpg
+name: fcb-interop-fastqval-figure2
+subtitle: the FASTQutils library.
 ```
 
 
