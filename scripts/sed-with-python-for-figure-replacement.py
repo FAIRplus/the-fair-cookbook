@@ -17,14 +17,21 @@ for file in all_md_files:
     content = file.read_text()
     original_content = copy.copy(content)
     #
+    recipe_short_handle = content.splitlines()[0]
+    assert recipe_short_handle.startswith("(") and recipe_short_handle.endswith(")=")
+    recipe_short_handle = recipe_short_handle[1:] + recipe_short_handle[:-2]
+    print(recipe_short_handle)
+
     start_position = 0
     offset = 0
     replacements_made = 0
+    figure_counter = 0
     while True:
         #print("while True")
         contains_figure_directive_at_position = content.find("{figure}", start_position)
         if contains_figure_directive_at_position == -1:
             break 
+        figure_counter += 1
         contains_figure_directive_at_line = original_content.count("\n", 0, contains_figure_directive_at_position+offset) +1
         filel = file.as_posix() + f":{contains_figure_directive_at_line}"
         print()
@@ -103,15 +110,18 @@ for file in all_md_files:
 
         if linedict.get("name", None) == linedict.get("alt", None):
             #print("   ", "DEBUG: you will need to correct the naming of this figure, as I will replace the name with 'TODO'...")
-            name_of_figure = "TODO"
+            linedict["name"] = "TODO"
         elif linedict.get("name", "") in linedict.get("alt", ""):
             print("   ", "DEBUG: strange case here about name and alt lines:", repr((linedict.get("name", ""), linedict.get("alt", ""))) )
             #print("   ", "DEBUG: you will need to correct the naming of this figure, as I will replace the name with 'TODO'...")
-            name_of_figure = "TODO"
+            linedict["name"] = "TODO"
         
         if " " in linedict.get("name", ""):
             print("   ", "ERROR: invalid name:", repr(linedict.get("name", "")))
             error += 1
+
+        if error == 1 and " " in linedict.get("name", ""):
+            linedict["name"] = recipe_short_handle + f"-figure{figure_counter}"
 
 
         name_of_figure = linedict.get("name", "").strip()
