@@ -96,8 +96,9 @@ The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drug
 ---
 width: 800px
 name: Example of OncoTrack.
-alt: .
+alt: Example of OncoTrack.
 ---
+Example of OncoTrack.
 ```
 
 <!-- ![alt_text](image_3.png "image_tooltip")

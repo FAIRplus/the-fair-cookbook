@@ -92,12 +92,9 @@ These heuristics will be refined and extended iteratively by exploring term to c
 
 * if no **exact** matches are present, the term to concept match is described as a **partial** match. If there is more than one label of the matching concept that generated a **partial** match we consider the concept labels that has the higher number of shared lemmas with the original term
 
-```{figure} etox.md-figure1.png
----
+```{figure_fairplus} etox.md-figure1.png
 name: etox-figure1
-alt: Overview of the automatic ontology coverage evaluation strategy
----
-Overview of the automatic ontology coverage evaluation strategy.
+subtitle: Overview of the automatic ontology coverage evaluation strategy.
 ```
 
 

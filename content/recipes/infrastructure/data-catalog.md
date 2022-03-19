@@ -34,12 +34,9 @@ We will cover the following points:
 ## Graphical Overview
 
 
-```{figure} data-catalog.md-figure1.mmd.png
----
+```{figure_fairplus} data-catalog.md-figure1.mmd
 name: data-catalog-figure1
-alt: Building and populating a data catalogue
----
-Building and populating a data catalogue
+subtitle: Building and populating a data catalogue
 ```
 
 ---

@@ -27,13 +27,9 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 
-```{figure} ./bs-data-mermaid.png
----
-width: 800px
+```{figure_fairplus} ./bs-data-mermaid.png
 name: 
-alt: The process of annotated a webpage with Bioschemas markup to support machine processing of the page
----
-The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
+subtitle: The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
 ```
 
 

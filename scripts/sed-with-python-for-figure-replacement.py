@@ -1,19 +1,25 @@
 import pathlib
 import copy
 
-#all_md_files = list(pathlib.Path("../content").glob("**/*.md"))[:25]
+all_md_files = list(pathlib.Path("../content").glob("**/*.md")) #[:25]
 #all_md_files = [pathlib.Path("../content/recipes/introduction/the-turing-way.md")]
 #all_md_files = [pathlib.Path("../content/recipes/findability/seo/bioschemas-datacatalog.md")]
-all_md_files = [pathlib.Path("../content/recipes/interoperability/bridgedb-recipe.md")]
+#all_md_files = [pathlib.Path("../content/recipes/interoperability/bridgedb-recipe.md")]
 print(len(all_md_files))
 
 for file in all_md_files:
+
+    if "help/myst.md" in file.as_posix():
+        continue
+
+    print()
     print(f"Acting on file {file} ...")
     content = file.read_text()
     original_content = copy.copy(content)
     #
     start_position = 0
     offset = 0
+    replacements_made = 0
     while True:
         #print("while True")
         contains_figure_directive_at_position = content.find("{figure}", start_position)
@@ -21,6 +27,7 @@ for file in all_md_files:
             break 
         contains_figure_directive_at_line = original_content.count("\n", 0, contains_figure_directive_at_position+offset) +1
         filel = file.as_posix() + f":{contains_figure_directive_at_line}"
+        print()
         print(f"... acting on directive at {filel} :")
         #
         directive_start_at_position = content.find("```", contains_figure_directive_at_position-10)
@@ -79,6 +86,7 @@ for file in all_md_files:
         linedict.pop("width", None)
 
         #
+        print("   ", f"{linedict=}")
         name_of_figure = None
         subtitle = None
 
@@ -94,14 +102,15 @@ for file in all_md_files:
 
 
         if linedict.get("name", None) == linedict.get("alt", None):
-            print("   ", "DEBUG: please correct naming:", repr((linedict.get("name", ""), linedict.get("alt", ""))) )
+            #print("   ", "DEBUG: you will need to correct the naming of this figure, as I will replace the name with 'TODO'...")
             name_of_figure = "TODO"
         elif linedict.get("name", "") in linedict.get("alt", ""):
             print("   ", "DEBUG: strange case here about name and alt lines:", repr((linedict.get("name", ""), linedict.get("alt", ""))) )
+            #print("   ", "DEBUG: you will need to correct the naming of this figure, as I will replace the name with 'TODO'...")
             name_of_figure = "TODO"
         
         if " " in linedict.get("name", ""):
-            print("   ", "ERROR: invalid name:", directive_lines[2])
+            print("   ", "ERROR: invalid name:", repr(linedict.get("name", "")))
             error += 1
 
 
@@ -137,7 +146,15 @@ for file in all_md_files:
         file.write_text(content)
         offset += len(directive_original_content)-len(new_content) 
         
+        replacements_made += 1
         print("   ", "... done.")
+    
+    if replacements_made == 0:
+        print("   ", "no replacements made.")
+        continue 
+    else:
+        pass
+        #break
     #   
     #print(filel)
     #print(directive_original_content)

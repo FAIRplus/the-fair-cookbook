@@ -247,6 +247,7 @@ width: 800px
 name: The corresponding metadata acquisition web form
 alt: The corresponding metadata acquisition web form
 ---
+The corresponding metadata acquisition web form
 ```
 
 <!-- ![](/images/5eQN9hw.png) -->

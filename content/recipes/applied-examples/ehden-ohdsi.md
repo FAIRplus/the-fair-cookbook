@@ -72,12 +72,9 @@ This recipe will describe a proof-of-concept that shows the step-by-step process
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-```{figure} ehden-ohdsi.md-figure0.mmd.png
----
+```{figure_fairplus} ehden-ohdsi.md-figure0.mmd
 name: ehden-ohdsi-figure0
-alt: Recipe Steps
----
-Recipe Steps
+subtitle: Recipe Steps
 ```
 
 
@@ -88,12 +85,9 @@ Recipe Steps
 In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more. Each digital resource itself can consist of multiple (sub) digital resources, as shown in {numref}`ehden-ohdsi-figure1`.
 
 
-```{figure} ehden-ohdsi.md-figure1.jpg
----
+```{figure_fairplus} ehden-ohdsi.md-figure1.jpg
 name: ehden-ohdsi-figure1
-alt: Inventory and prioritization of digital resources
----
-Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from [EHDEN D4.5](https://zenodo.org/record/4474373)).
+subtitle: Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from [EHDEN D4.5](https://zenodo.org/record/4474373)).
 ```
 
 
@@ -137,12 +131,9 @@ Relevant Schema.org types for studies and databases included:
 {numref}`ehden-ohdsi-figure-2` shows part of the relevant metadata elements in the model.
 
 
-```{figure} ehden-ohdsi.md-figure2.jpg
----
+```{figure_fairplus} ehden-ohdsi.md-figure2.jpg
 name: ehden-ohdsi-figure-2
-alt: Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings. 
----
-Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings. 
+subtitle: Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings.
 ```
 
 
@@ -250,12 +241,9 @@ schema:sameAs "http://purl.bioontology.org/ontology/RXNORM/“1546359" ] .
 The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML output from that which contains the article text but also embeds the entered metadata as JSON-LD (see {numref}`ehden-ohdsi-figure3`). In order to do this, we have written custom processing logic that takes the YAML data as input and formats this into RDF in accordance with the metadata model.
 
 
-```{figure} ehden-ohdsi.md-figure3.jpg
----
+```{figure_fairplus} ehden-ohdsi.md-figure3.jpg
 name: ehden-ohdsi-figure3
-alt: Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.
----
-Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.
+subtitle: Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.
 ```
 
 
@@ -354,12 +342,9 @@ The source code of the website can be found on [https://github.com/thehyve/ohdsi
 The final result of applying all these steps looks like this: an HTML page in the browser with JSON-LD metadata under the hood. A screenshot of the HTML page is presented in {numref}`ehden-ohdsi-figure6`.
 
 
-```{figure} ehden-ohdsi.md-figure6.png
----
+```{figure_fairplus} ehden-ohdsi.md-figure6.png
 name: ehden-ohdsi-figure6
-alt: This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON-LD" tab would allow to see the corresponding JSON-LD for this record.
----
-This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON-LD" tab would allow to see the corresponding JSON-LD for this record.
+subtitle: This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON-LD" tab would allow to see the corresponding JSON-LD for this record.
 ```
 
 
@@ -368,12 +353,9 @@ In the HTML page of the record, the HTML head element is augmented with a script
 Finally, with all this in place, one may now use the dedicated Google Dataset Search site to discover new covid related datasets. {numref}`ehden-ohdsi-figure7` shows the ICARIUS dataset, which was highlighted in the previous sections, as indexed in Google Dataset Search.
 
 
-```{figure} ehden-ohdsi.md-figure7.png
----
+```{figure_fairplus} ehden-ohdsi.md-figure7.png
 name: ehden-ohdsi-figure7
-alt: The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe. 
----
-The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.
+subtitle: The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.
 ```
 
 

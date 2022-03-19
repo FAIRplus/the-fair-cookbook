@@ -95,13 +95,9 @@ We summarize here the key objects used by the European Genome Archive, in compli
 
 https://ega-archive.org/data-use-conditions
 
-```{figure} duo-ols-view-1.png
----
-width: 700px
+```{figure_fairplus} duo-ols-view-1.png
 name: expressing-data-use-figure2
-alt: Data Use Ontology Overview Part 1
----
-Data Use Ontology Overview Part 1
+subtitle: Data Use Ontology Overview Part 1
 ```
 
 ```{figure} duo-ols-view-2.png
@@ -112,25 +108,6 @@ alt: Data Use Ontology Overview Part 2
 ---
 Data Use Ontology Overview Part 2
 ```
-
-<!-- 
-````{panels}
-:column: col-8
-:card: border-2
-DUO in OLS
-^^^
-```{figure} duo-ols-view-1.png
-width: 400px
-```
----
-DUO in OLS
-^^^
-```{figure} duo-ols-view-2.png
-width: 400px
-```
-
-```` -->
-
 
 The information presented below has been sourced from the ENA Github repo.
 
@@ -358,13 +335,9 @@ https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/
 Browsing Data Access Committees available from EGA:
 
 
-```{figure} dac-ega.png
----
-width: 700px
+```{figure_fairplus} dac-ega.png
 name: 
-alt: List of Data Access Policy from EGA
----
-List of Data Access Policy from EGA
+subtitle: List of Data Access Policy from EGA
 ```
 
 

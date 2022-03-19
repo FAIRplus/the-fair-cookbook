@@ -20,15 +20,10 @@ This recipe is meant to address the Findability and Interoperability of such typ
 ## Graphical overview of the Recipe FAIRification Objectives
 
 
-<!-- ```{figure} bioactivity-figure1.mmd.png -->
-<!-- --- -->
+<!-- ```{figure_fairplus} bioactivity-figure1.mmd -->
 <!-- name: bioactivity-figure1 -->
-<!-- alt:  bioactivity data FAIR overview -->
-<!-- --- -->
-<!-- bioactivity data FAIR overview -->
-<!-- --- -->
+<!-- subtitle: bioactivity data FAIR overview -->
 <!-- ``` -->
-<!-- -->
 
 
 ## Introduction
@@ -138,12 +133,9 @@ For ChEMBL submission, molecular structures and assay description as depicted in
 
 Besides metadata, the diagram below also shows how to prepare numeric assay data.
 
-<!--  ```{figure} bioactivity-figure2.mmd.png -->
-<!-- --- -->
+<!-- ```{figure_fairplus} bioactivity-figure2.mmd -->
 <!-- name: bioactivity-figure2 -->
-<!-- alt: Preparing numeric assay data for bioactivity -->
-<!-- --- -->
-<!-- Preparing numeric assay data for bioactivity -->
+<!-- subtitle: Preparing numeric assay data for bioactivity -->
 <!-- ```  -->
 
 

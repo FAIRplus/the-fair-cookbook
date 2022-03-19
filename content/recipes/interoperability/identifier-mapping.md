@@ -36,12 +36,9 @@ This recipe assumes that you are already familiar with identifiers and the minti
 This recipe will cover the topics highlighted in orange:
 
 
-```{figure} identifier-mapping.md-figure1.mmd.png
----
+```{figure_fairplus} identifier-mapping.md-figure1.mmd
 name: identifier-mapping-figure1
-alt: Overview of key aspects in Identifier Mapping
----
-Overview of key aspects in Identifier Mapping
+subtitle: Overview of key aspects in Identifier Mapping
 ```
 
 ---

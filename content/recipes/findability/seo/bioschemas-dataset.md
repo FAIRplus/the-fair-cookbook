@@ -28,13 +28,9 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 
-```{figure} ./bs-dataset-mermaid.png
----
-width: 500px
+```{figure_fairplus} ./bs-dataset-mermaid.png
 name: 
-alt: The process of annotating a dataset webpage with bioschema markup for Search Engine discovery
----
-The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.
+subtitle: The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.
 ```
 
 ---

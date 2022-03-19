@@ -26,13 +26,9 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 <!--
-```{figure} ./zenodo.svg
----
-width: 500px
+```{figure_fairplus} ./zenodo.svg
 name: 
-alt: The process of depositing to CERN Zenodo
----
-The process of depositing to CERN Zenodo.
+subtitle: The process of depositing to CERN Zenodo.
 ```
 ---
 -->
