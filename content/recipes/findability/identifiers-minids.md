@@ -35,8 +35,6 @@ To create a **persistent**, **globally unique** and **resolvable identifier** us
  -->
 
 ```{figure_fairplus} identifiers-minids-fig1.png
----
-height: 550px
 name: fcb-find-id-minid-figure1
 subtitle: An overview of the identifier minting process
 ```

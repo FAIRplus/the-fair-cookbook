@@ -1,3 +1,4 @@
+(fcb-vocabularies)=
 # Vocabulary management
 
 +++

@@ -728,13 +728,9 @@ http://odrlapi.appspot.com/
 
 
 
-```{figure} ./odrl-validation-app.png
----
-width: 800px
-alt: ODRL Validation and Evaluation Sandbox
-name: ODRL Validation and Evaluation Sandbox
----
-ODRL Validation and Evaluation Sandbox
+```{figure_fairplus} ./odrl-validation-app.png
+name: fcb-reusability-data_use-figure4
+subtitle: ODRL Validation and Evaluation Sandbox
 ```
 
 
@@ -751,13 +747,9 @@ It is all good and and well to describe patterns in various formats but are ther
 Well, when it comes to genomics data, there is the Broad Institute's  [Data Use Oversight System (DUOS)](https://duos.broadinstitute.org/#/home) is one such tool.
 
 
-```{figure} ./broads-duos.png
----
-width: 800px
-alt: Broad's Institute  Data Use Oversight System
-name: Broad's Institute  Data Use Oversight System
----
-Broad's Institute  Data Use Oversight System landing page
+```{figure_fairplus} ./broads-duos.png
+name: fcb-reusability-data_use-figure5
+subtitle: Broad's Institute  Data Use Oversight System landing page
 ```
 
 DUOS requires official clearance from a `Data Access Committee` representative or an `Authorized Submission Representative` to enable registration of a dataset into the DUOS.

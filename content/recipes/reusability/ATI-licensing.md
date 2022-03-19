@@ -1,4 +1,3 @@
-
 (rr-licensing)=
 # Licensing
 

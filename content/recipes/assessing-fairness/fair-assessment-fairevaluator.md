@@ -80,13 +80,9 @@ One may browse the list of currently community defined indicators from the `Coll
 
 <!-- ![Select a 'FAIR Maturity Indicator - Collections'](./assets/fair-eval-img2.png)  -->
 
-```{figure} ./assets/fair-eval-img2.png
----
-width: 800px
-name: Select a 'FAIR Maturity Indicator - Collections'
-alt: Select a 'FAIR Maturity Indicator - Collections'
----
-Select a 'FAIR Maturity Indicator - Collections'
+```{figure_fairplus} ./assets/fair-eval-img2.png
+name: fcb-assess-fair-automatic-evaluator-figure2
+subtitle: Select a 'FAIR Maturity Indicator - Collections'
 ```    
 
 ### Preparing the input information
@@ -132,13 +128,9 @@ Following execution of the FAIREvaluator, a detail report is generated.
 
 <!-- ![FAIREvaluator report - overall report ](./assets/fair-eval-img6.png) -->
 
-```{figure} ./assets/fair-eval-img6.png
----
-width: 800px
-name: FAIREvaluator report - overall report
-alt: FAIREvaluator report - overall report
----
-FAIREvaluator report - overall report
+```{figure_fairplus} ./assets/fair-eval-img6.png
+name: fcb-assess-fair-automatic-evaluator-figure5
+subtitle: FAIREvaluator report - overall report
 ```
 
 Time to dig into the details and figure out the reasons why some indicators are reporting a failure:
