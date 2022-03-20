@@ -54,8 +54,8 @@ class FigureFairplus(Directive):
 
     def _parse_content(self):
 
-        print(self.content)
-        print(self.content.items)
+        #print(self.content)
+        #print(self.content.items)
         assert len(self.content) == 3, _make_string_red("The {figure_fairplus} directive expects to consist of three lines, like this:\n"+
             " ````{figure_fairplus} example.md-figure1.mmd \n name: example-figure1 \n subtitle: Example Figure has explanatory text. \n ````")
 
