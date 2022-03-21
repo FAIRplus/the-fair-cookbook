@@ -138,13 +138,6 @@ class PanelFairplus(Directive):
 
         self.options["maturity_indicator"] = list_of_maturity_indicators
 
-
-
-
-
-
-
-
         # has_executable_code
         assert self.options["has_executable_code"] in CONTROLLED_VOCABULARY_EXECUTABLE_CODE, \
             sphinx.errors.ExtensionError(_make_string_red(
@@ -162,7 +155,7 @@ class PanelFairplus(Directive):
         content.extend([
             '<br/>',
             '',
-            '----',
+
             f'{self.get_ld()}',
             '<div class="card recipe d-flex">',
                 '<div class="card-header purple-dark text--white">',
@@ -224,15 +217,18 @@ class PanelFairplus(Directive):
                         '<div class="sectionContent">',
                           '<div class="label">Maturity Level & Indicator</div>',
                           f'<div class="sectionValue">{self.get_indicators()}</div>',
+            '<div class="tooltip">hover me',
+            '<span class="tooltiptext">Tooltip text</span></div>',
                         '</div>',
                     '</div>'
                     '<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with ',
                         f'<a href="{self.options["identifier_link"]}" class="text--purple-dark">{self.options["identifier_text"]}',
                     '</a></div>',
+
                 '</div>',
             '</div>',
             '',
-            '----',
+
             ''
         ])
         return content
@@ -242,8 +238,18 @@ class PanelFairplus(Directive):
         Gets the list of audience targets properly formatted as a string
         :return str: a string properly formatted containing the list of audience targets
         """
-        return ", ".join([CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
-                          for target in self.options["intended_audience"]])
+        audience = []
+        for target in self.options["intended_audience"]:
+            term, curie = CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target].split("|")
+            if curie == "NA":
+                audience_tag = term
+            else:
+                audience_tag = "<a href=\"http://purl.obolibrary.org/obo/" + curie + "\">" + term + "</a>"
+
+            audience.append(audience_tag)
+        # return ", ".join(["<a href=\"http://purl.obolibrary.org/obo/" +  + "</a>"
+        #                   for target in self.options["intended_audience"]])
+        return ", ".join(audience)
 
     def get_maturity(self):
         """

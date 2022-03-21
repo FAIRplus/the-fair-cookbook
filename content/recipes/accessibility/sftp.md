@@ -1,9 +1,12 @@
 (fcb-sftp)=
 # Transferring data with SFTP
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB014
-:identifier_link: http://w3id.org/faircookbook/FCB014
+:identifier_link: https://w3id.org/faircookbook/FCB014
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
@@ -15,36 +18,29 @@
 ```` 
 
 
-`````{margin}
-````{panels}
-:column: col-4
-:card: border-2
-:header: bg-primary darkgrey
-
-```{image} RDMkit_logo_inverted.svg
-:height: 25px
-:class: bg-primary darkgrey
-:name: rdmtoolkit_logo
-```
-^^^ 
-[More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
-
-````
-`````
-
 ## Abstract
 
-Collaborating teams at two or more organizations often need to transfer and share data files. There are a number of ways to share files, all with various degrees of ease and usability.
-The particular information security risk management (ISRM) protocols at the sending and receiving institutions need to be considered when one chooses and optimizes file-transfer solutions.
+Collaborating teams at two or more organizations often need to transfer and share data files. There are a number of 
+ways to share files, all with various degrees of ease and usability.
+The particular information security risk management (ISRM) protocols at the sending and receiving institutions need to 
+be considered when one chooses and optimizes file-transfer solutions.
 One common method for transferring files is SFTP or scp (Secure Copy).
 
 
 
 ## Background info
 - SFTP: Secure or SSH File Transfer protocol is a standard way to transfer files securely using a remote server.
-- SFTP is not to be confused with FTP or FTPS. While FTP does not use encryption at all and therefore can be considered insecure, FTPS adds a layer of encryption on top of FTP but it still comes with a number of drawbacks from the FTP protocol, e.g. requiring a range of open ports. SFTP uses an entirely different protocol based on SSH (secure shell) and uses strong encryption for authentication information as well as the data transferred.
-- In order to upload and download files, the client needs to communicate with the server over port 22 (which is the default port for SFTP) and the network configurations on the sender as well as the recipient side need to allow this traffic. If network restrictions block this communication, one might try to run the SFTP server on a different port (e.g. 443).
-- In this scenario, a SFTP server is a pure file transfer server, i.e. it lives outside of any sensitive network area and both parties (the sender and recipient) need to use a SFTP client to upload from and download to their internal storage systems. After transfer and integrity check, files would be typically removed by the receiver.
+SFTP is not to be confused with FTP or FTPS. While FTP does not use encryption at all and therefore can be considered
+insecure, FTPS adds a layer of encryption on top of FTP but it still comes with a number of drawbacks from the FTP 
+protocol, e.g. requiring a range of open ports. SFTP uses an entirely different protocol based on SSH (secure shell) 
+and uses strong encryption for authentication information as well as the data transferred.
+In order to upload and download files, the client needs to communicate with the server over port 22 
+(which is the default port for SFTP) and the network configurations on the sender as well as the recipient side
+need to allow this traffic. If network restrictions block this communication, one might try to run the SFTP server on
+a different port (e.g. 443).
+In this scenario, a SFTP server is a pure file transfer server, i.e. it lives outside of any sensitive network area and
+both parties (the sender and recipient) need to use a SFTP client to upload from and download to their internal storage
+systems. After transfer and integrity check, files would be typically removed by the receiver.
 
 
 <!-- ## Graphical Overview
@@ -276,13 +272,27 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 > {ref}`fcb-access-aspera`
 >
 > [Rclone](https://rclone.org)
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ./../../../../../../_static/images/logo/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> ````
 
 
----
+
+## References
+````{dropdown} **References**
+````
 
 ## Authors
-
-`````{dropdown} **Reference**
 
 ````{authors_fairplus}
 Dorothy: Writing - Original Draft
@@ -290,16 +300,11 @@ Vitaly: Writing - Original Draft
 Ulrich: Writing - Original Draft
 Philippe: Writing - Review & Editing
 ````
-`````
-
----
 
 ## License
-
-`````{dropdown} **Reference**
 
 ````{license_fairplus}
 CC-BY-4.0
 ````
-`````
+
 

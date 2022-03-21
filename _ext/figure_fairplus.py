@@ -40,7 +40,6 @@ class FigureFairplus(Directive):
             filename = self.filename
             links_to_high_resolution_pictures = ""
 
-
         content = [f"```{{figure}} {filename}",
         "---",
         f"name: {self.name}",
@@ -91,7 +90,6 @@ class FigureFairplus(Directive):
         else:
             raise "Unknown file extension for an image"
 
-
         ## check name
         assert name_string.startswith("name: "), _make_string_red("The second line of the {figure_fairplus} directive has to start with 'name: '.")
         self.name = name_string[6:]
@@ -99,11 +97,6 @@ class FigureFairplus(Directive):
         ## check subtitle
         assert subtitle_string.startswith("subtitle: "), _make_string_red("The third line of the {figure_fairplus} directive has to start with 'subtitle: '.")
         self.subtitle = subtitle_string[10:]
-        
-
-
-
-
 
     def _parse_content_into_nodes(self, new_content):
         if len(self.content) > 0:

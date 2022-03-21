@@ -1,7 +1,7 @@
 (fcb-find-bs-catalog)=
 # Data catalogue markup
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -250,7 +250,13 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 | [HTML](http://edamontology.org/format_2331) | |  |
 
----
+
+
+
+## References
+````{dropdown} **References**
+<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles
+````
 
 ## Authors
 
@@ -259,15 +265,6 @@ Alasdair: Writing - Original Draft
 Leyla: Writing - Review & Editing
 Philippe: Writing - Review & Editing
 ````
-
-
----
-
-## Footnotes
-
-<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
-
----
 
 ## License
 

@@ -1,6 +1,9 @@
 (fcb-reusability-provenance)=
 # Provenance information
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB036
 :identifier_link: 'https://w3id.org/faircookbook/FCB036'
@@ -15,9 +18,13 @@
 ```` 
 
 
+
+
+
 ## Main Objectives
 
 In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essential. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its **Provenance**. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of traceability and accountability can be established. The notions of **audit and trail** as well as **versioning** and **authorship** are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
+
 
 ## Provenance: a definition
 
@@ -71,7 +78,7 @@ Overview of the Provenance Ontology main classes.
 
 Below is an example of provenance information represented using the PROV-O ontology and serialized as RDF statements using turtle representation.
 
-````javascript
+````bash
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -286,13 +293,13 @@ cwltool --print-rdf --rdf-serializer=turtle mywf.cwl
 
 #### CWLProv-py
 
-This tool, also an output from the Common Workflow Language consoritum, is solely intended as a validator for provenance information when available from Research Objects {footcite}`cwlprov-py`. 
-It a standalone python package, which provides a command line interface (CLI) to read, inspect research objects capturing workflow execution information using the CWL syntax.
+This tool, also an output from the Common Workflow Language consortium, is solely intended as a validator for provenance information when available from Research Objects {footcite}`cwlprov-py`. 
+It is a standalone python package, which provides a command line interface (CLI) to read, inspect research objects capturing workflow execution information using the CWL syntax.
 
 To install the package, simply run the standard python install package pip: 
 
-```python
-pip3 install cwlprov
+```python=
+pip install cwlprov
 ```
 
 To run cwlprov following installation and using an exemplar CWL file, run the following command:
@@ -342,7 +349,39 @@ For a more in depth exploration of provenance information, we encourage our read
 > * [Provenance Information and workflow]()
 > * [FAIR data matrix](fcb-fairify-examples-datamatrix)
 > * [Minid identifiers](https://w3id.org/faircookbook/FCB008)
-
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+> :height: 40px
+> :align: center
+> :name: FAIRtoolkit_logo
+> ```
+> ^^^
+> [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+> ````
+<!--
+> :header: bg-primary pa_dark
+> ```{image} ./../../../../../../_static/images/logo/TTW.svg
+> :height: 40px
+> :align: center
+> :name: Turing-Way-logo
+> ```
+> ^^^
+> [The Turing Way Book of Data Sciences](https://the-turing-way.netlify.app/welcome.html/)
+> ---
+-->
 
 
 
@@ -353,22 +392,15 @@ For a more in depth exploration of provenance information, we encourage our read
 ```
 ````
 
----
 
 ## Authors
-`````{dropdown} **Authors**
 ````{authors_fairplus}
 Philippe: Writing - Original Draft
+Wei: Review & Editing
 ````
-`````
 
----
-
+    
 ## License
-
-````{dropdown} **License**
 ````{license_fairplus}
 CC-BY-4.0
 ````
-````
-

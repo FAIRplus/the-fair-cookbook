@@ -2,6 +2,9 @@
 
 # Practical Considerations for CROs to play FAIR
 
++++
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB056
@@ -130,27 +133,18 @@ With this content, we intended to bring forward the experience gained *"from the
 >
 >[FAIR+Q: FAIR data and data quality by the Pistoia Alliance](https://doi.org/10.1016/j.drudis.2022.01.006)
 
-___
-## Authors:
 
+## Reference
+````{dropdown} **Reference**
+````
+
+## Authors
 ````{authors_fairplus}
 Gabriel: Writing - Original Draft, Conceptualization
 Philippe: Writing - Review & Writing
-
 ````
-<!--
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Gabriel N Backiananthan |  Novartis, USA | [0000-000X-XXXX-XXXX](https://orcid.org/0000-000X-XXXX-XXXX) | Writing - Original Draft |
-| Philippe Rocca-Serra | Data Readiness Group, University of Oxford, UK| [0000-0001-9853-5668](https://orcid.org/0000-0001-9853-5668) | Review, Writing |
--->
 
-
-___
-
-
-## License:
-
+## License
 ````{license_fairplus}
 CC-BY-4.0
 ````

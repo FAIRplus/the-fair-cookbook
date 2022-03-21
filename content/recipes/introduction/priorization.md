@@ -3,6 +3,7 @@
 
 +++
 <br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB055
@@ -192,15 +193,17 @@ The detailed description of each of the scores can be found on the [scorecard te
 > * [The Value of FAIR](fcb-intro-fair-values)
 > * [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html)
 
----
+
+
 ## References
+````{dropdown} **Reference**
 1. [Report on IMI projects for data types and current technical solutions](https://zenodo.org/record/4428721#.YbmWNL3MJPZ)
 1. [The first 15 IMI data sets selected and available for inclusion in WP 2](https://zenodo.org/record/4428746#.YboFUr3MJPZ)
 1. [Exploring the current practices: Cost and Benefits](https://direct.mit.edu/dint/article/3/4/507/107429/Exploring-the-Current-Practices-Costs-and-Benefits) 
-1. [Scorecard formaulation template](https://zenodo.org/record/5778431#.YbikDxNKhH1)
+1. [Scorecard formulation template](https://zenodo.org/record/5778431#.YbikDxNKhH1)
+````
 
 
----
 ## Authors
 
 ````{authors_fairplus}
@@ -211,8 +214,6 @@ AndreaZaliani: Writing - Review & Editing
 Philippe: Writing - Review & Editing
 ````
 
-
----
 ## License
 
 ````{license_fairplus}

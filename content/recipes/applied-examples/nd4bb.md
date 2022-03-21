@@ -5,6 +5,8 @@
 TODO: check whether all files can be put on Zenodo
 TODO: clarify authors
 -->
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB043
@@ -188,7 +190,7 @@ We conducted an assessment of the FAIRness of the dataset, with the results stor
 8. Expand the ontology annotation to all terms
 
 
-## Summary
+## Conclusion
 
 The AMR dataset was provided as a first example as it was immediately available. A generic FAIRification workflow was also provided. We reviewed the workflow and derived general principles for the cookbook. However (as for the principles we learnt) the lack of a context for the data, and the lack of goals for the FAIRification process made the actual action of FAIRification not valuable.
 
@@ -199,19 +201,17 @@ We also identified key FAIRification steps in the proposed process, some of whic
 Overall this dataset has been very useful to start our overall process and team activities.
 
 
----
+
+````{dropdown} **References**
+````
 
 ## Authors
-
 ````{authors_fairplus}
 Manfred: Writing - Original Draft
 ````
 
 
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

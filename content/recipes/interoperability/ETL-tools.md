@@ -2,6 +2,9 @@
 
 # Extraction, transformation, and loading process
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB031
 :identifier_link: 'https://w3id.org/faircookbook/FCB031'
@@ -213,14 +216,13 @@ To show how some of these tools may be used, the following related recipes provi
 2. OMOP ETL [link]( TODO link to recipe) (*in prepartion*)
 3. RDF ETL [link]( TODO link to recipe)  (*in prepartion*)
 -->
----
+
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
-
----
+````
 
 ## Authors
 
@@ -231,8 +233,6 @@ Sukhi: Tool curation
 Philippe: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

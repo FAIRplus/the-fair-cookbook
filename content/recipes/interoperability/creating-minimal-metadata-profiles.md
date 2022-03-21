@@ -1,7 +1,7 @@
 (fcb-interop-metadataprofile)=
 # Creating a metadata profile
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -71,7 +71,8 @@ Without a set of competency questions, important variables may easily be forgott
 - Re-iterate the reality check until no more severe errors and gaps are occurring that are relevant for the previously defined competency questions
 
 
----
+
+
 
 ## Authors
 

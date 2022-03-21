@@ -1,6 +1,9 @@
 (rr-licensing-data)=
 # Data licenses
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB034
 :identifier_link: 'https://w3id.org/faircookbook/FCB034'
@@ -118,10 +121,34 @@ The [Data Curation Center (DCC) guide](https://www.dcc.ac.uk/guidance/how-guides
 
 If you would like to read more about the challenges and finer points of licensing, [this article](https://research.okfn.org/avoiding-data-use-silos/) is a great resource to get you started.
 
+### What to read next?
+
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Licensing` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/licensing.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ./../../../../../../_static/images/logo/TTW.svg
+> :height: 40px
+> :align: center
+> :name: Turing-Way-logo
+> ```
+> ^^^
+> [The Turing Way Book of Data Sciences: Data Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-data.html)
+
 
 
 ## References
-
+````{dropdown} **Reference**
 ```{footbibliography} 
 ```
-
+````

@@ -1,6 +1,8 @@
 (fcb-interop-onto-op)=
 # Ontology-related tools and services
 
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB022
@@ -204,7 +206,12 @@ To show how these tools can be used in real life examples, please check the rela
 <!-- - [Which vocabulary to use?](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html)
 - [Building an application ontology with Robot](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html) -->
 
----
+
+## References
+````{dropdown} **References**
+
+````
+
 
 ## Authors
 
@@ -216,7 +223,6 @@ Philippe: Writing - Review & Editing
 ````
 
 
----
 
 ## License
 

@@ -1,6 +1,8 @@
 (fcb-bioactivity-profile)=
 # Bioactivity data profile
 
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB057
@@ -194,9 +196,18 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 >- [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
 >- [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)
 
----
 
-## Authors:
+
+## References
+````{dropdown} **References**
+```{footbibliography}
+```
+````
+<!-- Visser, U., Abeyruwan, S., Vempati, U. et al. BioAssay Ontology (BAO): a semantic description of bioassays and high-throughput screening results. BMC Bioinformatics 12, 257 (2011). https://doi.org/10.1186/1471-2105-12-257 -->
+
+
+
+## Authors
 
 ```{authors_fairplus}
 AndreaZaliani: Writing - Original Draft, Editing, Conceptualization
@@ -204,16 +215,7 @@ Fuqi: Writing - Writing - Original Draft, Editing, Conceptualization
 Philippe: Writing - Review & Editing
 ```
 
----
-
-## References:
-```{footbibliography}
-```
-<!-- Visser, U., Abeyruwan, S., Vempati, U. et al. BioAssay Ontology (BAO): a semantic description of bioassays and high-throughput screening results. BMC Bioinformatics 12, 257 (2011). https://doi.org/10.1186/1471-2105-12-257 -->
-
----
-
-## Licence:
+## Licence
 
 ````{license_fairplus}
 CC-BY-4.0

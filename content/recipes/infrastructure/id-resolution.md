@@ -60,8 +60,8 @@ Refer to the community page for a complete guidance on how to create new identif
 
 
 ## References
-
-
+````{dropdown} **References**
+````
 
 
 ## Authors
@@ -69,9 +69,6 @@ Refer to the community page for a complete guidance on how to create new identif
 ````{authors_fairplus}
 Philippe: Writing - Original Draft
 ````
-
-
----
 
 ## License
 

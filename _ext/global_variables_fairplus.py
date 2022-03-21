@@ -11,27 +11,27 @@ CONTROLLED_VOCABULARY_RECIPE_TYPE = {
     "hands_on"                  : "Hands-on",
     "applied_example"           : "Experience Report / Applied Example",
     "perspective"               : "Perspective"
-
 }
 
 CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
-    "funder"                    : "Funder",
-    "procurement_officer"       : "Procurement Officer",
-    "principal_investigator"    : "Principal Investigator",
-    "data_curator"              : "Data Curator",
-    "data_engineer"             : "Data Engineer",
-    "data_manager"              : "Data Manager",
-    "data_scientist"            : "Data Scientist",
-    "chemoinformatician"        : "Chemoinformatician",
-    "bioinformatician"          : "Bioinformatician",
-    "software_engineer"         : "Software Engineer",
-    "software_developer"        : "Software Developer",
-    "system_administrator"      : "System Administrator",
-    "terminology_manager"       : "Terminology Manager",
-    "ontologist"                : "Ontologist",
-    "data_producer"             : "Data Producer",
-    "data_consumer"             : "Data Consumer",
-    "everyone"                  : "Everyone",
+    "funder"                    : "Funder|NA", #   no CV_term_id
+    "procurement_officer"       : "Procurement Officer|T4FS_0000572", # http://purl.obolibrary.org/obo/T4FS_0000572
+    "principal_investigator"    : "Principal Investigator|T4FS_0000571", # http://purl.obolibrary.org/obo/T4FS_0000571
+    "data_curator"              : "Data Curator|T4FS_0000389",   # database curator http://purl.obolibrary.org/obo/T4FS_0000389
+    "data_engineer"             : "Data Engineer|NA",  # is it used?
+    "data_manager"              : "Data Manager|T4FS_0000520",   # http://purl.obolibrary.org/obo/T4FS_0000520
+    "data_scientist"            : "Data Scientist|T4FS_0000566", # data scientist  http://purl.obolibrary.org/obo/T4FS_0000566
+    "chemoinformatician"        : "Chemoinformatician|NA", # no CV_term_id
+    "bioinformatician"          : "Bioinformatician|NA", # no CV_term_id
+    "software_engineer"         : "Software Engineer|T4FS_0000569", # http://purl.obolibrary.org/obo/T4FS_0000569
+    "software_developer"        : "Software Developer|NA", # no CV_term_id (see SW Engineer)
+    "system_administrator"      : "System Administrator|T4FS_0000570", #http://purl.obolibrary.org/obo/T4FS_0000570
+    "terminology_manager"       : "Terminology Manager|T4FS_0000568", # http://purl.obolibrary.org/obo/T4FS_0000568
+    "ontologist"                : "Ontologist|T4FS_0000567", # http://purl.obolibrary.org/obo/T4FS_0000567
+    "data_producer"             : "Data Producer|NA", #
+    "data_consumer"             : "Data Consumer|NA", #
+    "everyone"                  : "Everyone|NA", # no CV_term_id
+    "data_steward"              : "Data Steward|T4FS_0000178" # http://purl.obolibrary.org/obo/T4FS_0000178
 }
 
 CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL = {
@@ -209,15 +209,16 @@ CONTROLLED_AUTHOR_LIST = {
 "Zachary"           : { "github_handle" : "zjwarnes",         "name" : "Zachary Warnes",             "orcid" : "0000-0002-7777-6013",        "affiliation" : "Maastricht University",                           "type_of_affiliation" : "academia",         "elixir_node" : "NL"        }, 
 }
 
-
+# <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" height="25"/></a>
 CONTROLLED_LICENSE_LIST = {
-    "CC-BY-4.0": """This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
-""", 
-    "CC0-1.0": """This page is released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
-
-<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"><img src=""[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication]"(https://creativecommons.org/publicdomain/zero/1.0/deed.en)" height="20"/></a>
-"""
-
+    "CC-BY-4.0": """<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+    """,
+    "CC0-1.0": """<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">
+    <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg" height="35"/></a>
+    This page is released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+    """
 }

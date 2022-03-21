@@ -1,6 +1,10 @@
 (fcb-resolute)=
 # ReSOLUTE - transcriptomics datasets
 
++++
+<br/>
+<br/>
+
 <!--
 TODO clarify authors
 TODO make referenced Google Drive documents available
@@ -21,7 +25,6 @@ TODO make referenced Google Drive documents available
 
 
 ````{admonition} Editor's summary
-
 The authors of this recipe delivered a set of JSON schemas for describing Transcriptomics experiments. 
 ````
 
@@ -43,7 +46,9 @@ The authors of this recipe delivered a set of JSON schemas for describing Transc
 *   FAIR evaluation standard: 
     *   [RDA FAIR indicators](https://github.com/RDA-FAIR/FAIR-data-maturity-model-WG/tree/master/results%20of%20preliminary%20analysis)
 
-This recipe provides an example of sample metadata extraction and curation practices, suggests a community standard for transcriptomics data and proposes a transcriptomics JSON schema, which allows direct submission of transcriptomics data to the public databases. Different approaches to assess the FAIR level of the dataset is also discussed.
+This recipe provides an example of sample metadata extraction and curation practices, suggests a community standard for 
+transcriptomics data and proposes a transcriptomics JSON schema, which allows direct submission of transcriptomics data 
+to the public databases. Different approaches to assess the FAIR level of the dataset is also discussed.
 
 
 ## Sample metadata ETL pipeline
@@ -75,14 +80,29 @@ alt: A visualization of the entities within the proposed transcriptomics schema.
 A visualization of the entities within the proposed transcriptomics schema.
 ```
 
-To solve this problem, we proposed a [transcriptomics schema](https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema) which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. The new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, project metadata as different building blocks ({numref}`resolute-figure1`). This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted to the DSP and distributed to all related databases. _(Note: This schema is still actively updated. Feedback welcomed)_
+To solve this problem, we proposed a [transcriptomics schema](https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema) 
+which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. T
+he new transcriptomics schema is based on the MINSEQE standard, also allows enriched sample, cell lines, 
+project metadata as different building blocks ({numref}`resolute-figure1`). 
+This schema is compatible with the DSP schema which allows data validated against this schema to be directly submitted 
+to the DSP and distributed to all related databases. _(Note: This schema is still actively updated. Feedback welcomed)_
 
 
 ## FAIR assessment 
 
-The level of “FAIRness” of the ReSOLUTE transcriptomics was first determined using the CMMI maturity model described [in this document.](https://docs.google.com/document/d/1URLfNpBYkCrICpizKZJ7NE29FddNNcoR0T0o_SQza7U/edit#heading=h.w0g0276fq5i6) The results of this first assessment can be found [here](https://docs.google.com/document/d/1Q_Su8kY9uNYfCV30jSIoWNdeV8GxA_DTGAcGOSZscQM/edit?usp=sharing). In a follow-up meeting, we defined actions that could be taken to increase the level for certain indicators (see [this document](https://docs.google.com/document/d/1yYDcUvyXzYLfq9NZX23tbgIjCSOenSURjcRj61FMdzQ/edit?usp=sharing)). These actions were defined within Github.
+The level of “FAIRness” of the ReSOLUTE transcriptomics was first determined using the CMMI maturity model described
+[in this document.](https://docs.google.com/document/d/1URLfNpBYkCrICpizKZJ7NE29FddNNcoR0T0o_SQza7U/edit#heading=h.w0g0276fq5i6) 
+The results of this first assessment can be found [here](https://docs.google.com/document/d/1Q_Su8kY9uNYfCV30jSIoWNdeV8GxA_DTGAcGOSZscQM/edit?usp=sharing). 
+In a follow-up meeting, we defined actions that could be taken to increase the level for certain indicators
+(see [this document](https://docs.google.com/document/d/1yYDcUvyXzYLfq9NZX23tbgIjCSOenSURjcRj61FMdzQ/edit?usp=sharing)).
+These actions were defined within Github.
 
-A [new FAIRplus maturity model](https://docs.google.com/spreadsheets/d/11-jDoMbuxw8Nreurk7yKzk3EHJ54APAQnBl6VTKZPBk/edit#gid=1559176954) was set up, based on the RDA indicators. The focus was only on the indicators regarding Findability/Discoverability at that point. Before we could use this model however, the indicators were updated within the RDA initiative. We used their [new indicators](https://docs.google.com/spreadsheets/d/1mkjElFrTBPBH0QViODexNur0xNGhJqau0zkL4w8RRAw/edit?usp=sharing) (for findability, v0.01) and their level definition to determine the levels for both the transcriptomics and proteomics datasets. The results can be found [here](https://docs.google.com/spreadsheets/d/1abQ5_sOmBWbxAZhQVEUxQ_ybI1yTi0t-tJAVY5J5VY8/edit?usp=sharing).
+A [new FAIRplus maturity model](https://docs.google.com/spreadsheets/d/11-jDoMbuxw8Nreurk7yKzk3EHJ54APAQnBl6VTKZPBk/edit#gid=1559176954) was set up, based on the RDA indicators.
+The focus was only on the indicators regarding Findability/Discoverability at that point. 
+Before we could use this model however, the indicators were updated within the RDA initiative. 
+We used their [new indicators](https://docs.google.com/spreadsheets/d/1mkjElFrTBPBH0QViODexNur0xNGhJqau0zkL4w8RRAw/edit?usp=sharing)
+(for findability, v0.01) and their level definition to determine the levels for both the transcriptomics and proteomics datasets.
+The results can be found [here](https://docs.google.com/spreadsheets/d/1abQ5_sOmBWbxAZhQVEUxQ_ybI1yTi0t-tJAVY5J5VY8/edit?usp=sharing).
 
 In the meantime, an improved version of the RDA indicators was released (v0.02). In the results document a comparison/mapping is made between v0.02 and v0.01 for possible future reference. \
 We have updated the scoring for the transcriptomics data to this new version (v0.02).
@@ -98,34 +118,33 @@ We have updated the scoring for the transcriptomics data to this new version (v0
         *   44% for the recommended indicators
         *   6 indicators were thought to be not applicable
 
-The FAIRness level of the transcriptomics dataset for the HUH-7 cell line (as published on SRA) was also determined using the [FAIR evaluation services](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!) (an online evaluator). The result was that this dataset only passed for 3 out of the 22 indicators tested. This was, however, mainly due to the limitations of machine readability of the metadata and the license details within SRA. 
+The FAIRness level of the transcriptomics dataset for the HUH-7 cell line (as published on SRA) was also determined
+using the [FAIR evaluation services](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!) 
+(an online evaluator). The result was that this dataset only passed for 3 out of the 22 indicators tested. 
+This was, however, mainly due to the limitations of machine readability of the metadata and the license details within SRA. 
 
 The complete results can be viewed <a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/evaluations/170">here</a>. 
 
 
-## Summary
+## Conclusion
 
 
-1. Cellosaurus accession number is recommended as an identifier for cell lines. Cellosaurus also provides enriched information about different cell lines.
+1. Cellosaurus accession number is recommended as an identifier for cell lines.
+Cellosaurus also provides enriched information about different cell lines.
 2. EBI BioSamples database is the master hosting platform for sample metadata, allowing curation and basic ontology annotation. 
 3. MINSEQE is the recommended community standard for transcriptomics data. 
-4. A new transcriptomics schema was proposed which reflects the transcriptomics community guidelines and is supported by the EBI database submission platform.
+4. A new transcriptomics schema was proposed which reflects the transcriptomics community guidelines 
+and is supported by the EBI database submission platform.
 
 
----
+
 
 ## Authors
-
-
 ````{authors_fairplus}
 Fuqi: Writing - Original Draft
 ````
 
-
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

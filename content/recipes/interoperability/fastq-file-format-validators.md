@@ -1,7 +1,7 @@
 (fcb-interop-fastqval)=
 # File format validation, FASTQ example
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -283,20 +283,18 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 - 🐙[FASTQ file specification recipe](TODO include link to recipe https://www.TBD.org )
 - 🐙[FASTQ file validator in Biopython](TODO include link to recipe https://www.TBD.org)
 
----
+
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
-
+````
 <!-- - Cock, Peter J. A., Christopher J. Fields, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FASTQ File Format for Sequences with Quality Scores, and the Solexa/Illumina FASTQ Variants’. Nucleic Acids Research 38, no. 6 (1 April 2010): 1767-71. https://doi.org/10.1093/nar/gkp1137.
 - ENA. ‘Accepted Read Data Formats — ENA Training Modules 1 Documentation’. Accessed 6 July 2020. https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format.
 - NCBI. ‘File Format Guide’. Accessed 14 July 2020. https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files.
 - Nuno Fonseca, and Jonathan Manning. Nunofonseca/Fastq_utils 0.24.0. Zenodo, 2020. https://doi.org/10.5281/zenodo.3936692. -->
 
-
----
 
 ## Authors
 
@@ -306,8 +304,6 @@ Eva: Writing - Review & Editing
 Peter: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

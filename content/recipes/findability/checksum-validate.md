@@ -1,6 +1,9 @@
 (fcb-checksum-validate)=
 # How to check file integrity by validating checksums
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB053 
 :identifier_link: 'https://w3id.org/faircookbook/FCB053'

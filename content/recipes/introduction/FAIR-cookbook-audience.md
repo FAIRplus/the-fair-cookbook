@@ -24,6 +24,16 @@ The FAIR Cookbook is developed by a thriving [community](fcb-community) of Life 
 In addition to expanding its content, we will continue to add links to relevant community, mature and complementary resources in the Life Sciences, including but not limited to those part of the ELIXIR ecosystem, such as the [RDMkit](https://rdmkit.elixir-europe.org/index.html), [FAIRsharing](https://fairsharing.org/), [biotools](https://bio.tools/) and [TeSS](https://tess.elixir-europe.org/); also the [Pistoia Alliance’s FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/) for Life Science Industry, and more generic resources, such as ['The Turing Way'](https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/the-turing-way.html) handbook for reproducible data science, which the FAIR Cookbook already leverages on.
 Last but not least, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to contribute, see how to, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
 
+## The FAIR Cookbook Webinar
+
+In May 2021, Our team presented the FAIR Cookbook during a very successful Elixir Webinar which saw more 480 participants
+connect. You can now watch the recording of the webinar on this channel:
+
+
+
+
+[![Discovering the FAIR Cookbook](img.png)](https://www.youtube.com/watch?v=Dxkh5NjwE7U)
+
 
 ---
 
@@ -32,4 +42,5 @@ Last but not least, the FAIR Cookbook is a community-driven resource that is bei
 ````{license_fairplus}
 CC-BY-4.0
 ````
+
 

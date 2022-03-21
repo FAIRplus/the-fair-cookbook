@@ -1,7 +1,7 @@
 (fcb-interop-vcf_fhir)=
 # Converting VCF file to HL7 FHIR JSON Genomic Report profile 
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -476,35 +476,22 @@ The conversion from VCF to HL7 FHIR JSON message has to do with the `**I and R**
 
 
 
----
+
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
-
-
-<!--Dolin, R.H., Gothi, S.R., Boxwala, A. et al. vcf2fhir: a utility to convert VCF files into HL7 FHIR format for genomics-EHR integration. BMC Bioinformatics 22, 104 (2021). https://doi.org/10.1186/s12859-021-04039-1 -->
-
-
-
-
-
----
+````
 
 ## Authors
-
 ````{authors_fairplus}
 Philippe: Writing - Original Draft
 Vassilios: Writing - Review & Editing
 Danielle: Writing - Review & Editing
 ````
 
-
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

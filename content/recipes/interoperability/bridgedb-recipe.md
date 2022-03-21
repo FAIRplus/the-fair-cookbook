@@ -1,6 +1,9 @@
 (fcb-bridgedb-recipe)=
 # Identifier mapping with BridgeDb
 
+<br/>
+<br/>
+
 <!--
 TODO : the recipe does not reference its figures
 -->
@@ -387,9 +390,10 @@ These are aspects of information provenance which we plan to provide in the futu
 
 ## References
 
+````{dropdown} **references**
 ```{footbibliography}
 ```
----
+````
 
 ## Authors
 
@@ -398,9 +402,6 @@ Lucas: Writing - Original Draft
 Philippe: Writing - Review & Editing
 Alasdair: Writing - Review & Editing
 ````
-
-
----
 
 
 ## License

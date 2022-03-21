@@ -1,6 +1,9 @@
 (fcb-assess-fair-automatic-evaluator)=
 # FAIR Evaluator tool
 
+<br/>
+<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB049
@@ -49,7 +52,7 @@
 ## Objectives
 
 - Perform an automatic assessment of a dataset against the FAIR principles {footcite}`pmid26978244` expressed as nanopublications using the [FAIREvaluator](https://w3id.org/AmIFAIR) {footcite}`pmid31541130`.
-- Obtain human and machine readable reports highlighting strengths and weaknesses with respect to FAIR.
+- Obtain human and machine-readable reports highlighting strengths and weaknesses with respect to FAIR.
 
 ## Step by Step Process
 
@@ -170,9 +173,10 @@ Services such as the FAIRevaluator are essential to gauge improvements of data m
 
 
 ## Reference
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 <!-- Wilkinson, M.D., Dumontier, M., Sansone, S. et al. Evaluating FAIR maturity through a scalable, automated, community-governed framework. Sci Data 6, 174 (2019). [doi:10.1038/s41597-019-0184-5](https://doi.org/10.1038/s41597-019-0184-5)
 
@@ -187,8 +191,6 @@ Philippe: Writing - Original Draft
 Dominique: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

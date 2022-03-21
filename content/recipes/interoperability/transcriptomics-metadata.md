@@ -1,7 +1,7 @@
 (fcb-interop-txmetadata)=
 # Metadata profile for transcriptomics
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -189,11 +189,15 @@ While it is essential that any transcriptomics metadata be annotated with ontolo
 |Nucleotide reference sequence|ReqSeq|Entity||
 
 
-## Summary
+## Conclusion
 
-Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to easily define a comprehensive metadata template to capture all the experimental variables to describe any transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata template is provided [here](creating-minimal-metadata-profiles.md)
+Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to
+easily define a comprehensive metadata template to capture all the experimental variables to describe any 
+transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata
+template is provided [here](creating-minimal-metadata-profiles.md)
 
----
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -205,10 +209,7 @@ Peter: <!-- TODO -->
 ````
 
 
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

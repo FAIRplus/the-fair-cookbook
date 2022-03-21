@@ -1,6 +1,9 @@
 (fcb-checksum-create)=
 # How to create checksum files
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB052 
 :identifier_link: 'https://w3id.org/faircookbook/FCB052'
@@ -161,7 +164,9 @@ This recipe in its current form has the following limitations:
 - Wikipedia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 
 
----
+## References
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -169,8 +174,6 @@ This recipe in its current form has the following limitations:
 Robert: Writing - Original Draft
 ````
 
-
----
 
 ## License
 

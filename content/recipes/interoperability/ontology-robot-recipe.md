@@ -1,7 +1,7 @@
 (fcb-interop-ontorobot)=
 # Building an application ontology with ROBOT
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -535,7 +535,7 @@ robot query --input <input_ontology_file> \
     --output-dir <path_to_rsults> results/
 ```
 
----
+
 ## Conclusions
 
 > Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. This more advanced recipe has identified and described all the different steps that one needs to consider to build such a resource. While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date. It is therefore also critical to understand the benefits of contributing to existing open efforts.    
@@ -544,13 +544,15 @@ robot query --input <input_ontology_file> \
 
 > * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile? --> <!-- TODO add a link to corresponding document -->
 > * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?--> <!-- TODO add a link to corresponding document -->
----
+
+
 
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 <!-- ```{bibliography} ../../../_bibliography/bibliography-identifier-mapping.bib
 :filter: docname in docnames
@@ -560,15 +562,14 @@ robot query --input <input_ontology_file> \
 <!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
 - Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
 
----
 
 ## Supplementary material
-
+````{dropdown} **Supplementary material**
 - {download}`Example Dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`
 - [Competency questions](ontology-robot-recipe/competency-questions.md)
 - [IPython Notebook for the MSIO Build Process](ontology-robot-recipe/MSIO-robot-build-process.ipynb)
+````
 
----
 
 ## Authors
 
@@ -581,10 +582,7 @@ Emiliano: Writing - Review & Editing
 ````
 
 
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

@@ -105,7 +105,10 @@ As there will be projects related to different subjects and/or with different ki
 A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR principles. This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
 
 
----
+## References
+
+````{dropdown} **Reference**
+````
 
 ## Authors
 
@@ -114,8 +117,6 @@ Alejandra: Writing - Original Draft
 Anne: Writing - Original Draft
 ````
 
-
----
 
 ## License
 

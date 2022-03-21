@@ -1,6 +1,8 @@
 (fcb-introduction-terminologies-ontologies)=
 # Introduction to terminologies and ontologies
 
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB019
@@ -157,10 +159,9 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->
 
----
 
 ## References
-
+````{dropdown} **References**
 1. RDF. https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/
 2. SKOS. https://www.w3.org/2004/02/skos/
 3. OWL. https://www.w3.org/OWL/
@@ -175,8 +176,8 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 12. Topbraid composer. https://www.topquadrant.com/products/topbraid-composer/
 13. INCAtools. https://github.com/INCATools
 14. ROBOT. [R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.](https://doi.org/10.1186/s12859-019-3002-3)
+````
 
----
 
 ## Authors
 
@@ -185,8 +186,6 @@ Philippe: Writing - Original Draft
 Alasdair: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

@@ -1,6 +1,8 @@
-
 (rr-licensing)=
 # Licensing
+
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB032
@@ -59,3 +61,26 @@ Do not make any important decisions based solely on the contents of this chapter
 Without a license, all rights are with the author of the code, and that means nobody else can use, copy, distribute, or modify the work without consent.
 A license gives this consent.
 If you do not have a license for your software, it is effectively unusable by the whole research community.
+
+
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Licensing` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/licensing.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ./../../../../../../_static/images/logo/TTW.svg
+> :height: 40px
+> :align: center
+> :name: Turing-Way-logo
+> ```
+> ^^^
+> [The Turing Way Book of Data Sciences](https://the-turing-way.netlify.app/reproducible-research/licensing.html)

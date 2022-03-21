@@ -1,7 +1,7 @@
 (fcb-find-zenodo)=
 # Depositing in Zenodo generic repository
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -467,17 +467,18 @@ r.status_code
 | [JSON-LD](https://fairsharing.org/bsg-s001214/)|||
 
 
----
+
+## References
+````{dropdown} **References**
+````
+
 ## Authors
 
-<!-- TODO seems unlikely that all authors did review, but noone the original draft. Clarify -->
 ````{authors_fairplus}
-Philippe: Writing - Review & Editing, Conceptualization
+Philippe: Writing - Writing, Conceptualization
 Susanna: Writing - Review & Editing, Funding acquisition
 ````
 
-
----
 ## License
 
 ````{license_fairplus}

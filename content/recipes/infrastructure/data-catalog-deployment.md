@@ -204,8 +204,9 @@ This recipe provides a step-by-step guide to deploying the `IMI data catalogue` 
 > * {ref}`fcb-interop-metadataprofile`
 > * {ref}`fcb-interop-txmetadata`
 
- 
----
+## References
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -216,9 +217,6 @@ Wei: Writing - Review & Editing
 Venkata: Writing - Review & Editing
 Philippe: Writing - Review & Editing
 ````
-
-
----
 
 ## License
 

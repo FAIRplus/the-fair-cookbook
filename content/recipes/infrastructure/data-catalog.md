@@ -134,7 +134,9 @@ For the readership interested in finding out about additional capabilities neede
 * {ref}`fcb-interop-metadataprofile`
 
 
----
+## References
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -144,8 +146,6 @@ Philippe: Writing - Review & Editing
 Susanna: Writing - Review & Editing, Funding acquisition
 ````
 
-
----
 
 ## License
 

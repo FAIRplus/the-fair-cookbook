@@ -66,7 +66,7 @@ class AuthorsFairplus(Directive):
         return 
 
     def _create_content(self):
-        content = []
+        content = [f"````{{dropdown}} **Authors**"]
 
         content.extend([
             '| Name | ORCID | Affiliation | Type | ELIXIR Node | Contribution |',
@@ -84,7 +84,7 @@ class AuthorsFairplus(Directive):
             
 
             if github_handle != "":
-                github_link_start = f'<a target="_blank" href="https://github.com/{github_handle}">'
+                github_link_start = '<a target="_blank" href="https://github.com/{github_handle}">'
                 github_link_end   = '</a>'
                 github_image_block = f'<img class="avatar-style" src="https://avatars.githubusercontent.com/{github_handle}"></img>'
             else:
@@ -115,18 +115,23 @@ class AuthorsFairplus(Directive):
                 assert elixir_node in CONTROLLED_LIST_OF_ELIXIR_NODES, \
                     sphinx.errors.ExtensionError(_make_string_red(f"The elixir_node of '{author}' is not registered in the CONTROLLED_LIST_OF_ELIXIR_NODES."))
 
-                elixir_block = f'<img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/{CONTROLLED_LIST_OF_ELIXIR_NODES[elixir_node]}" ></img>'
+                elixir_block = f'<img class="elixir-style" src="../../../_static/images/logo/Elixir/{CONTROLLED_LIST_OF_ELIXIR_NODES[elixir_node]}" ></img>'
             else:
                 elixir_block = ""
-
 
             contribution_list = self.author_dict[author]
             contribution_block = ", ".join(contribution_list)
 
 
             content.extend([
-                f'| {github_and_name_block} | {orcid_block} | {affiliation} | {type_block} | {elixir_block} | {contribution_block} |'
+                f'| {github_and_name_block} | {orcid_block} | {affiliation} | {type_block} | {elixir_block} | {contribution_block} |',
+
             ])
+
+        content.extend([
+            "````"
+        ])
+
         return content
 
 

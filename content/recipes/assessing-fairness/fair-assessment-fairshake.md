@@ -12,6 +12,9 @@ A tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of
 This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
 ````
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB050
 :identifier_link: 'https://w3id.org/faircookbook/FCB050'
@@ -689,9 +692,10 @@ In this recipe, we have detailed and described the manual and automatic process 
 
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 ### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo
 
@@ -705,7 +709,6 @@ If you have access to the repository, you can access information in it about:
 
 
 
----
 
 ## Authors
 
@@ -714,7 +717,6 @@ Daniel: Writing - Original Draft, Code
 ````
 
 
----
 
 ## License
 

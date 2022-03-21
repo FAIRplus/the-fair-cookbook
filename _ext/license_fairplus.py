@@ -34,9 +34,8 @@ class LicenseFairplus(Directive):
         except:
             this_file = None
 
-
         assert len(self.content) == 1, sphinx.errors.ExtensionError(_make_string_red(
-                    f"The content of this directive must consist of one line exactly. This error occured in file {this_file} ."
+            f"The content of this directive must consist of one line exactly. This error occurred in file {this_file} ."
                 ))
                 
         line = self.content[0].strip()
@@ -49,25 +48,28 @@ class LicenseFairplus(Directive):
 
         return 
 
-
     def _create_content(self):
-        content = [CONTROLLED_LICENSE_LIST[self.license]]
-        return content
+        content = [f"````{{dropdown}} **License**",
+                   CONTROLLED_LICENSE_LIST[self.license],
+                   "````"
+                   ]
 
+        # content = [CONTROLLED_LICENSE_LIST[self.license]]
+        return content
 
     def _parse_content_into_nodes(self, new_content):
         if len(self.content) > 0:
             common_filename = self.content.items[0][0]
             for index, (filename, linenumber) in enumerate(self.content.items):
-                assert filename   == common_filename, "Unexpected behavior of sphinx."
-                assert linenumber == index          , "Unexpected behavior of sphinx."
+                assert filename == common_filename, "Unexpected behavior of sphinx."
+                assert linenumber == index        , "Unexpected behavior of sphinx."
         else:
             common_filename = None
         self.content.data = []
         self.content.items = []
         for idx, line in enumerate(new_content):
             self.content.data.append(line)
-            self.content.items.append( (common_filename, idx) )
+            self.content.items.append((common_filename, idx))
         node = nodes.container()
         self.state.nested_parse(self.content, self.content_offset, node)
         return node.children
@@ -93,5 +95,5 @@ def setup(app):
 
 def _make_string_red(string):
     escape_character_to_make_a_string_red_start = "\033[91m"
-    escape_character_to_make_a_string_red_end   = "\033[0m"
+    escape_character_to_make_a_string_red_end = "\033[0m"
     return escape_character_to_make_a_string_red_start + string + escape_character_to_make_a_string_red_end

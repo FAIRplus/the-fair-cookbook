@@ -1,7 +1,7 @@
 (fcb-selecting-ontologies)=
 # Selecting terminologies and ontologies
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -338,7 +338,6 @@ The notion is important to grasp as it also explains why not all ontologies are 
 
 
 
----
 ## Conclusions
 
 > Selecting semantic resources depends on many different factors. However, the most important factor remains the `context` of the data and associated landscape of data standards as well as the ultimate integration goal, which will dictate the final choice.
@@ -349,21 +348,19 @@ The notion is important to grasp as it also explains why not all ontologies are 
 TODO : fill in the links to what-should-I-read-next recipes
 
 > ### What should I read next?
-> * How to build an application ontology?<!-- TODO add a link to corresponding document -->
-> * How to select on ontology service?<!-- TODO add a link to corresponding document -->
-> * How to deploy an ontology server?<!-- TODO add a link to corresponding document -->
-> * How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document -->
+> * How to build an application ontology? <!-- TODO add a link to corresponding document -->
+> * How to select on ontology service? <!-- TODO add a link to corresponding document -->
+> * How to deploy an ontology server? <!-- TODO add a link to corresponding document -->
+> * [How to establish a minimal metadata profile?](ref{`fcb-interop-covid-metadata`}) <!-- TODO add a link to corresponding document -->
 
-
----
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
 
 ## References
-
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 <!-- Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). https://doi.org/10.1186/gb-2005-6-5-r46
 
@@ -381,7 +378,6 @@ Hripcsak, George et al. “Observational Health Data Sciences and Informatics (O
  -->
 
 
----
 
 ## Authors
 
@@ -392,8 +388,6 @@ Danielle: Writing - Review & Editing
 Alasdair: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

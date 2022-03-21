@@ -1,7 +1,7 @@
 (fcb-reusability-data_use)=
 # Declaring data's permitted uses
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -803,34 +803,28 @@ This content provides an overview of the models available to do so and how it ha
 
 ### What to read next?
 
-
 * {ref}`rr-licensing-software`
 * {ref}`rr-licensing-data`
 
 
 
-
----
-
-
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
----
 
 ## Authors
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft, Conceptualization |
-| <div class="firstCol"><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">Tom Plasterer</div></div>    |   | Astra-Zeneca  | <i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i>       |  |Writing - Original Draft, Conceptualization
-| <div class="firstCol"><a target="_blank" href='https://github.com/mcourtot'><img class='avatar-style' src='https://avatars.githubusercontent.com/mcourtot'></img><div class="d-block">Melanie Courtot</div></a></div>    | <a target="_blank" href='https://orcid.org/0000-0002-9551-6370'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img> | Writing - Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/fuqix'><img class='avatar-style' src='https://avatars.githubusercontent.com/fuqix'></img><div class="d-block">Fuqi Xu</div></a>   </div>      | <a target="_blank" href='https://orcid.org/0000-0002-5923-3859'><i class='fab fa-orcid fa-2x text--orange'></i></a> | EMBL-EBI      | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/embl.png' ></img> | Writing - Review & Editing
-| <div class="firstCol"><a target="_blank" href='https://github.com/weiguUL'><img class='avatar-style' src='https://avatars.githubusercontent.com/weiguUL'></img><div class="d-block">Wei Gu</div></a>  </div>    | <a target="_blank" href='https://orcid.org/0000-0003-3951-6680'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Luxembourg        | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-LU.svg' ></img> | Writing - Review & Editing
+````{authors_fairplus}
+Tom: Conceptualization, Writing, Review & Editing
+Philippe: Conceptualization,Writing - Original Draft, Review & Editing 
+Melanie: Review & Editing 
+Fuqi: Review & Editing 
+Wei: Review & Editing 
+````
 
----
 
 ## License
 

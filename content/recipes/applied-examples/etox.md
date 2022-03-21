@@ -5,6 +5,10 @@
 TODO: clarify authors
 -->
 
+<br/>
+<br/>
+
+
 ````{panels_fairplus}
 :identifier_text: FCB042
 :identifier_link: 'http://w3id.org/faircookbook/FCB042'
@@ -112,16 +116,16 @@ Example of textual analyses of terms / concept labels.
 ```
 
 
----
+
+````{dropdown} **References**
+````
+
 
 ## Authors
 
 ````{authors_fairplus}
 Francesco: Writing - Original Draft
 ````
-
-
----
 
 ## License
 

@@ -1,7 +1,7 @@
 (fcb-find-bs-data)=
 # Data page markup with Bioschemas 
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -231,7 +231,14 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 | [HTML](http://edamontology.org/format_2331) | | |
 
 
----
+
+
+## References
+````{dropdown} **References**
+<a name="draft-profiles">1</a>: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile.  
+<a name="bioschemas-validator">2</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
+````
+
 
 ## Authors
 
@@ -241,15 +248,6 @@ Leyla: Writing - Review & Editing
 Philippe: Writing - Review & Editing
 ````
 
-
----
-
-## Footnotes
-
-<a name="draft-profiles">1</a>: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile.  
-<a name="bioschemas-validator">2</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
-
----
 
 ## License
 

@@ -165,12 +165,12 @@ We made the FAIRified outputs discoverable and citable by uploading them to Zeno
 To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison are also released via Zenodo (https://doi.org/10.5281/zenodo.2640919).
 Lastly, we produced a study description file, in ISA-Tab format (https://doi.org/10.25504/FAIRsharing.53gp75), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (https://doi.org/10.25504/FAIRsharing.kkdpxe).
 
----
+
 
 ## Reference
+````{dropdown} **Reference**
 Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics data matrices, an exemplar. Sci Data 6, 271 (2019) [doi:10.1038/s41597-019-0286-0](https://doi.org/10.1038/s41597-019-0286-0)
-
----
+````
 
 ## Authors
 
@@ -178,9 +178,6 @@ Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics dat
 Philippe: Writing - Original Draft
 Susanna: Writing - Review & Editing, Funding acquisition
 ````
-
-
----
 
 
 ## License

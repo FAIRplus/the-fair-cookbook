@@ -207,7 +207,11 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 |  [JSON-LD](http://edamontology.org/format_3749)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](http://edamontology.org/data_2353)  |
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 
----
+
+
+## References
+````{dropdown} **References**
+````
 
 
 
@@ -219,8 +223,6 @@ Alasdair: Writing - Original Draft, Writing - Review & Editing
 Leyla: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

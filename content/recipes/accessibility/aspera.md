@@ -1,6 +1,9 @@
 (fcb-access-aspera)=
 # Downloading data with Aspera
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB015
 :identifier_link: http://w3id.org/faircookbook/FCB015
@@ -89,7 +92,7 @@ ascp version 3.9.6.176292
 
 * For uploading much of the above applies. The main differences are:
   * Be aware of geographical zoning and which areas to upload to.
-  * Prepare data for ease of tranfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).
+  * Prepare data for ease of transfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).
 
 <!-- TODO (needed - no real example yet)
 * Example command line for uploading
@@ -108,25 +111,21 @@ ascp version 3.9.6.176292
   - {ref}`fcb-sftp` 
   - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
 
----
+
+## References
+````{dropdown} **References** 
+````
 
 ## Authors
-
-`````{dropdown} **Authors** 
 
 ````{authors_fairplus}
 Peter: Writing - Original Draft, Conceptualization
 Philippe: Writing - Review & Editing
 ````
-`````
-
---- 
 
 ## License
-
-`````{dropdown} **License** 
 
 ````{license_fairplus}
 CC-BY-4.0
 ````
-`````
+

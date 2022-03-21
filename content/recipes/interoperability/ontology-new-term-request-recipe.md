@@ -1,7 +1,7 @@
 (fcb-interop-ontorequest)=
 # Requesting new terms
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -154,7 +154,10 @@ Changes or additions to UMLS can be requested by contacting [NLM Customer Suppor
 UMLS is updated in May and November of each year.
 
 
----
+
+## References
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -163,9 +166,6 @@ Ulrich: Writing - Original Draft
 Emma: Writing - Original Draft
 Philippe: Writing - Review & Editing, Conceptualization 
 ````
-
-
----
 
 ## License
 

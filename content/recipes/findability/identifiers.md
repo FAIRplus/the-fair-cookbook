@@ -16,45 +16,8 @@
 :has_executable_code: nope
 :recipe_name: Unique, persistent identifiers
 ```` 
-
-
-
-`````{margin}
-````{panels}
-:column: col-4
-:card: border-2
-:header: bg-primary pa_green
-
-```{image} ./../../../../../../_static/images/logo/FAIR-Toolkit-logo.png
-:height: 25px
-:class: bg-primary yellow
-:name: FAIRtoolkit_logo
-```
-^^^ 
-[More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-
-````
-`````
-
-`````{margin}
-````{panels}
-:column: col-4
-:card: border-2
-:header: bg-primary pa_dark
-
-```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
-:height: 25px
-:class: bg-primary white
-:name: FAIRtoolkit_logo
-```
-^^^ 
-
-[More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-
-````
-`````
-
-
+<br>
+<br>
 
 The **FAIR principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
 > F1. (Meta)data are assigned a globally unique and persistent identifier
@@ -113,19 +76,24 @@ alt: identifier services
 Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .
 ```
 
----
 
+[comment]: <> (## Capability & Maturity Table)
 
-## Capability & Maturity Table
+[comment]: <> (| Capability  | Initial Maturity Level | Final Maturity Level  |)
 
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-| Accessibility | minimal | repeatable |
-| Identifier minting||repeatable|
-| URI construction||repeatable|
-| Identifier resolution||repeatable|
-| content negotiation||repeatable|
+[comment]: <> (| :------------- | :------------- | :------------- |)
+
+[comment]: <> (| Findability | minimal | repeatable |)
+
+[comment]: <> (| Accessibility | minimal | repeatable |)
+
+[comment]: <> (| Identifier minting||repeatable|)
+
+[comment]: <> (| URI construction||repeatable|)
+
+[comment]: <> (| Identifier resolution||repeatable|)
+
+[comment]: <> (| content negotiation||repeatable|)
 
 ---
 <!-- 
@@ -422,7 +390,7 @@ CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Worki
 
 The CURIE consists of a **`namespace prefix`** followed by the **`local identifier`**.
 
-There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI `[doi:10.1038/sdata.2016.18]` refers to the FAIR Principles paper [^safe-CURIE]. The Digital Object Identifier System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL https://www.doi.org/10.1038/sdata.2016.18 to resolve the paper's DOI. This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
+There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI `[doi:10.1038/sdata.2016.18]` refers to the FAIR Principles paper. The Digital Object Identifier System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL https://www.doi.org/10.1038/sdata.2016.18 to resolve the paper's DOI. This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
 
 `Namespaces` can be defined *by convention*, such as the case with `doi`, and registered with services to allow for the resolution of CURIEs (see [Identifier Resolution Services](##identifier-resolution-services) below). These are extensively used to map CURIEs to URLs that can be resolved.
 
@@ -494,22 +462,41 @@ This is very useful for including unambiguous, global identifiers in scientific 
 > 
 >
 > ### What should I read next?
-> * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> * [Identifier Minting with Minid Client](fcb-find-id-minid)
+* [Identifier Minting with Minid Client](fcb-find-id-minid)
 <!-- > * [Why resolvable identifiers matter?](https://www.TODO.org/findability/why-identifiers.html) -->
 > * [Identifier Resolution Services](fcb-infra-idres)
 > * [Identifier Mapping Services](fcb-identifier-mapping)
+> 
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> ```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+> :height: 40px
+> :align: center
+> :name: FAIRtoolkit_logo
+> ```
+> ^^^
+>[The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+> ---
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ./../../../../../../_static/images/logo/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Identifiers` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/identifiers.html)
+> ````
 
 
----
 
 ## References
-
+`````{dropdown} **References**
 ```{footbibliography}
 ```
+`````
 
-
----
 
 ## Authors
 
@@ -520,9 +507,6 @@ Chris: Writing - Original Draft
 Egon: Writing - Original Draft
 Philippe: Writing - Review & Editing, Conceptualization
 ````
-
-
----
 
 ## License
 

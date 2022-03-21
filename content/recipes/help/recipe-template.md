@@ -1,7 +1,8 @@
 (fcb-help-recipe-template)=
 # Git recipe template
 
-+++
+
+<br/>
 <br/>
 
 ```{admonition} Important
@@ -265,16 +266,44 @@ graph TD;
 > * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
   [my-prefered-label](fcb-help-recipe-template)
 
+````{note}
+To the Reviewers and Editors: The following panels show how to link with external resources such as :
+* The RDMtoolkit
+* The Pistoia Alliance
+* The Turing Way Book of Data Science
+````
 
----
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+> :height: 40px
+> :align: center
+> :name: FAIRtoolkit_logo
+> ```
+> ^^^
+> [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+> ````
+
 
 ## References:
 
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 
----
 
 ## Authors
 
@@ -299,18 +328,22 @@ List the recipe contributors following the structure below and using the CASRAI 
 
 ```{admonition} Important
 :class: tip
-this section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
+This section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
 ```
 
+````{note}
+Consult the python file [global_variables_fairplus.py](https://github.com/FAIRplus/the-fair-cookbook/blob/migrating/_ext/global_variables_fairplus.py)
+````
 
-| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/'><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">John Duff</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0000-0000-0000'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Conceptualization
 
----
+````{authors_fairplus}
+Philippe: Writing - Review & Editing
+Wei: Writing - Review & Editing
+````
+
 
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````
+

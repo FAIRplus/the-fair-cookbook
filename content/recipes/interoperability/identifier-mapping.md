@@ -1,6 +1,9 @@
 (fcb-identifier-mapping)=
 # Interlinking data from different sources
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB016
 :identifier_link: 'https://w3id.org/faircookbook/FCB016'
@@ -249,8 +252,6 @@ The following is an incomplete list of identifier mapping services.
 
 
 
----
-
 ## Conclusion
 
 > In this recipe, we have given an overview of the need to map between globally unique and persistent identifiers from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
@@ -272,24 +273,21 @@ The following is an incomplete list of identifier mapping services.
     > * [Identifier Resolution Services](./findability/id-resolution.html) 
 -->
 
----
-
 
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 <!-- ```{bibliography}
 :filter: docname in docnames
 :style: alpha
 ``` -->
 
----
 
 ## Authors
-
 ````{authors_fairplus}
 Alasdair: Writing - Original Draft
 Chris: Writing - Original Draft
@@ -299,10 +297,7 @@ Philippe: Writing - Review & Editing
 ````
 
 
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

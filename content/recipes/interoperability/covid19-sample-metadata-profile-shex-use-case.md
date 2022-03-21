@@ -1,7 +1,7 @@
 (fcb-interop-covid-metadata)=
 # Metadata profile validation in RDF 
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -482,7 +482,6 @@ select distinct ?sample ?p ?o
 ```
 
 
----
 
 ## Conclusions
 
@@ -503,33 +502,24 @@ select distinct ?sample ?p ?o
 
 
 
---- 
-
 ## References
-
-
+````{dropdown} **References**
 [1]. Avro - http://avro.apache.org
 [2]. metaschema - https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml
 [3]. schema salad - http://www.commonwl.org/v1.0/SchemaSalad.html
 [4]. https://www.w3.org/RDF/
 [5]. https://shex.io/shex-semantics/
+````
 
-
----
 
 ## Authors
-
 ````{authors_fairplus}
 Philippe: Writing - Original Draft
 Danielle: Writing - Review & Editing
 Robert: Writing - Review & Editing
 ````
 
-
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

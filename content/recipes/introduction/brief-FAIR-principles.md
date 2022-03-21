@@ -340,39 +340,28 @@ This section should be seen as a refresher for any one unclear about the FAIR pr
 ## References
 
 ````{dropdown} **Reference**
-
 <!-- ```{bibliography} ./fair.bib
   :style: alpha
 ``` -->
-
-
 1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
 2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6 
 
-
 ````
----
+
 
 ## Authors
 
-````{dropdown} **Authors** 
-
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft|
-|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-5306-5690](https://orcid.org/orcid.org/0000-0001-5306-5690)|Writing - Original Draft|
-||||Review|
-||||Review|
-```
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Original Draft
 ````
 
----
+
 
 ## License
 
-````{dropdown} **License** 
-```{license_fairplus}
+````{license_fairplus}
 CC-BY-4.0
-```
 ````
+
 

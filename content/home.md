@@ -511,14 +511,13 @@ The FAIR Cookbook is developed by a thriving [community of Life Science professi
 
 ---
 
-## Licence
-
-All content of the FAIR Cookbook is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. 
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
-
 ## How to cite it
 
 The FAIR Cookbook: a deliverable of the [FAIRplus project](https://fairplus-project.eu/) (grant agreement 802750), funded by the [IMI programme](https://www.imi.europa.eu), a private-public partnership that receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. 
 
 
+## License
+
+````{license_fairplus}
+CC-BY-4.0
+````

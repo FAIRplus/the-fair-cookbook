@@ -13,9 +13,11 @@
       title: Selecting projects for FAIRification  #FCB055
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
+    - file: content/recipes/introduction/training-datasets
+      title: Datasets of relevance
     - file: content/recipes/introduction/fair-cro #FCB056
       title: Practical Considerations for CROs to play FAIR
-    - file: content/recipes/glossary-fair-terms
+    - file: content/recipes/introduction/glossary-fair-terms
       title: Glossary
  
       # title: Introduction
@@ -30,7 +32,7 @@
           # - file: content/recipes/introduction/data-sharing-models
   
 
-- part: RECIPES
+- part: FAIR RECIPES
 
   chapters:
     - file: content/recipes/findability 
@@ -166,34 +168,7 @@
               title: FAIR Evaluator tool #FCB049
             - file: content/recipes/assessing-fairness/fair-assessment-fairshake
               title: FAIRshake tool #FCB050
-     
-    - file: content/recipes/applied-examples
-      title: Applied examples
-      numbered: true
-      sections:
-        - file: content/recipes/applied-examples/fair-data-matrix-recipe
-          title: Making omics data matrices FAIR #FCB037
-          # numbered: false
-          sections:
-            - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
-              title: Starting material #FCB038
-            - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
-              title: Structuring data #FCB039
-            - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
-              title: Exploring data with SPARQL #FCB040
-            - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
-              title: Integrating data #FCB041
-        - file: content/recipes/applied-examples/etox
-          title: eTox - toxicity datasets #FCB042
-        - file: content/recipes/applied-examples/nd4bb
-          title: nd4bb - chemical activities datasets #FCB044
-        - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
-          title: Oncotrack - clinical cohort datasets #FCB044
-        - file: content/recipes/applied-examples/resolute_raw/resolute
-          title: ReSOLUTE - transcriptomics datasets #FCB045
-        - file: content/recipes/applied-examples/ehden-ohdsi
-          title: EHDEN-OHDSI #FCB054
-          numbered: false
+
 
 
     #   sections:
@@ -209,25 +184,104 @@
     #         - file: content/recipes/assessing-fairness/cmmi/evaluation-method
     #         - file: content/recipes/assessing-fairness/cmmi/rda-evaluation
 
+- part: FAIR Maturity
+  chapters:
+#    - file: content/recipes/maturity
+#      title: Maturity
+#      sections:
+    - file: content/recipes/maturity/l1
+      title: Recipes reaching Level I
+      sections:
+        - file: content/recipes/infrastructure/id-resolution
+          title: Identifier resolution services #FCB046
+#    - file: content/recipes/maturity/l2
+#      title: Recipes reaching Level II
+#    - file: content/recipes/maturity/levelthree
+#      title: Recipes reaching Level III
+#    - file: content/recipes/maturity/levelfour
+#      title: Recipes reaching Level IV
+
+
+- part: FAIRification Fairs
+  chapters:
+    - file: content/recipes/maturity/isa-maturity-progression
+      title: Moving through maturity levels with ISA
+      sections:
+          - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb
+            title: Creating a basic ISA document
+          - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb
+            title: Making a community compliant - ISA in JSON
+          - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb
+            title: Moving to a semantically typed version - ISA in RDF
+          - file: content/recipes/maturity/isa-as-RO.ipynb
+            title: Packaging ISA as a Research Object (RO)
+          - file: content/recipes/maturity/isa-ro-zenodo-deposition
+            title: Programmatic deposition to Zenodo
+
+    - file: content/recipes/applied-examples/fair-data-matrix-recipe
+      title: Making omics data matrices FAIR #FCB037
+      sections:
+          - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
+            title: Starting material #FCB038
+          - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
+            title: Structuring data #FCB039
+          - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
+            title: Exploring data with SPARQL #FCB040
+          - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
+            title: Integrating data #FCB041
+
+    - file: content/recipes/applied-examples/fair-workflows
+      title: Making Computational Workflows FAIR
+
+
+- part: FAIRified Datasets
+  chapters:
+    - file: content/recipes/applied-examples
+      title: Applied examples
+      numbered: true
+      sections:
+        - file: content/recipes/applied-examples/etox
+          title: eTox - toxicity datasets #FCB042
+        - file: content/recipes/applied-examples/nd4bb
+          title: nd4bb - chemical activities datasets #FCB044
+        - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
+          title: Oncotrack - clinical cohort datasets #FCB044
+        - file: content/recipes/applied-examples/resolute_raw/resolute
+          title: ReSOLUTE - transcriptomics datasets #FCB045
+        - file: content/recipes/applied-examples/ehden-ohdsi
+          title: EHDEN-OHDSI #FCB054
+          numbered: false
 
 
 - part: ABOUT
   chapters:
     - file: content/recipes/community
       title: Community
-      numbered: true
+      numbered: false
       sections:
-        # - file: content/recipes/boilerplate/governance
-        - file: content/recipes/boilerplate/people
+        # - file: content/recipes/afterword/governance
+        - file: content/recipes/afterword/people
           title: Boards and contributors
-        - file: content/recipes/boilerplate/code_of_conduct
+        - file: content/recipes/afterword/code_of_conduct
           title: Code of conduct
+        - file: content/recipes/afterword
+          title: Platform
+          numbered: false
+          sections:
+            - file: content/recipes/afterword/the-turing-way
+              title: Leveraging the Turing Way Book
+        # - file: content/recipes/boilerplate/technology_stack
+        #   title: Technology stack
+        # - file: content/recipes/boilerplate/license
+        # - file: content/recipes/boilerplate/project_information
+        # - file: content/recipes/boilerplate/roadmap
+        # - file: content/recipes/boilerplate/disclaimer
 
     - file: content/recipes/help
       title: Contribute
       numbered: true
       sections:
-        - file: content/recipes/boilerplate/contributing
+        - file: content/recipes/help/contributing
           title: How to contribute
         - file: content/recipes/help/how-to-create-recipe-with-gdoc
           title: Add via GoogleDoc
@@ -242,16 +296,4 @@
         - file: content/recipes/help/myst
           title: Markdown cheatsheet
 
-    - file: content/recipes/boilerplate
-      title: Platform
-      numbered: true
-      sections:
-          - file: content/recipes/introduction/the-turing-way
-            title: Leveraging the Turing Way Book
-          # - file: content/recipes/boilerplate/technology_stack
-          #   title: Technology stack
-          # - file: content/recipes/boilerplate/license
-          # - file: content/recipes/boilerplate/project_information
-          # - file: content/recipes/boilerplate/roadmap
-          # - file: content/recipes/boilerplate/disclaimer
 

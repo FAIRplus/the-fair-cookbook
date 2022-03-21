@@ -101,14 +101,14 @@ with BridgeDb and its metabolite ID mapping databases to get additional identifi
 ### What should I read next?
 * [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)
 
----
+
 
 ## References
 
+````{dropdown} **References**
 ```{footbibliography}
 ```
-
----
+````
 
 ## Authors
 
@@ -117,7 +117,6 @@ Egon: Writing - Original Draft, Conceptualization
 Philippe: Writing - Review & Editing
 ````
 
----
 
 ## License
 
