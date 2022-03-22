@@ -17,6 +17,8 @@
       title: Datasets of relevance
     - file: content/recipes/introduction/fair-cro #FCB056
       title: Practical Considerations for CROs to play FAIR
+    - file: content/recipes/introduction/FAIR-and-knowledge-graphs
+      title: FAIR and Knowledge Graphs
     - file: content/recipes/introduction/glossary-fair-terms
       title: Glossary
  
