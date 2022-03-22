@@ -91,7 +91,7 @@ Based on these criteria, find the right tool in the table below. Jump to the sec
 | ----------------------------------------- | --- | --------------- | -------------- | ---------- | ------------- |
 | OpenRefine + RDF extension                | ✅   | +/-         | +/-        | ✅          |               |
 | TopBraid Composer (ME)1                   | ✅   |                 |                |            |               |
-| RML-based tools (RML mapper, SDM-RDFizer) |     | ✅               | ✅              |            |               |
+| RML-based tools (RML mapper, SDM-RDFizer, Morph-KGC) |     | ✅               | ✅              |            |               |
 | SPARQL-Generate                           |     | ✅               | ✅              |            |               |
 | Ontop (RDB only)                          |     | ✅               | ✅              |            | ✅             |
 | Virtuoso (proprietary tool)                                 |     |                 | ✅              |            | ✅             |
@@ -218,6 +218,13 @@ RMLMapper is the reference implementation for RML-based mapping tools. It has th
 SDM-RDFizer is a Python-based tool which is similar to RMLMapper but is suited for large datasets. It requires some additional configurations for settings like intermediary file locations.
 
 *   For download and instructions, see [SDM-RDFizer (GitHub)](https://github.com/SDM-TIB/SDM-RDFizer).
+
+
+#### Morph-KGC
+
+Morph-KGC is a powerful engine to generate RDF knowledge graphs. It supports a wide range of relational databases and data file formats. It scales to large volumes of data and runs from the command line or as a python library (creating an [RDFLib](https://github.com/RDFLib/rdflib) graph). It is also integrated in [kglab](https://github.com/DerwenAI/kglab), an abstraction layer for working with knowledge graphs using popular libraries.
+
+*   Download and documentation: [Morph-KGC](https://github.com/oeg-upm/morph-kgc).
 
 
 #### Other RML-based tools

@@ -794,13 +794,18 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#morph-kgc">
+       11.7.3.3. Morph-KGC
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#other-rml-based-tools">
-       11.7.3.3. Other RML-based tools
+       11.7.3.4. Other RML-based tools
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#sparql-generate">
-       11.7.3.4. SPARQL-Generate
+       11.7.3.5. SPARQL-Generate
       </a>
      </li>
     </ul>
@@ -1057,7 +1062,7 @@ No
 <td><p></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p>RML-based tools (RML mapper, SDM-RDFizer)</p></td>
+<tr class="row-even"><td><p>RML-based tools (RML mapper, SDM-RDFizer, Morph-KGC)</p></td>
 <td><p></p></td>
 <td><p>✅</p></td>
 <td><p>✅</p></td>
@@ -1196,12 +1201,19 @@ No
 <li><p>For download and instructions, see <a class="reference external" href="https://github.com/SDM-TIB/SDM-RDFizer">SDM-RDFizer (GitHub)</a>.</p></li>
 </ul>
 </div>
+<div class="section" id="morph-kgc">
+<h4><span class="section-number">11.7.3.3. </span>Morph-KGC<a class="headerlink" href="#morph-kgc" title="Permalink to this headline">¶</a></h4>
+<p>Morph-KGC is a powerful engine to generate RDF knowledge graphs. It supports a wide range of relational databases and data file formats. It scales to large volumes of data and runs from the command line or as a python library (creating an <a class="reference external" href="https://github.com/RDFLib/rdflib">RDFLib</a> graph). It is also integrated in <a class="reference external" href="https://github.com/DerwenAI/kglab">kglab</a>, an abstraction layer for working with knowledge graphs using popular libraries.</p>
+<ul class="simple">
+<li><p>Download and documentation: <a class="reference external" href="https://github.com/oeg-upm/morph-kgc">Morph-KGC</a>.</p></li>
+</ul>
+</div>
 <div class="section" id="other-rml-based-tools">
-<h4><span class="section-number">11.7.3.3. </span>Other RML-based tools<a class="headerlink" href="#other-rml-based-tools" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.7.3.4. </span>Other RML-based tools<a class="headerlink" href="#other-rml-based-tools" title="Permalink to this headline">¶</a></h4>
 <p>There are other RML-based conversion tools that are more tailored to particular scenarios, for instance <a class="reference external" href="https://github.com/RMLio/RMLStreamer">RMLStreamer</a> for streaming data. For an overview of feature completeness of tools, see the <a class="reference external" href="https://rml.io/implementation-report/">RML Implementation Report</a>.</p>
 </div>
 <div class="section" id="sparql-generate">
-<h4><span class="section-number">11.7.3.4. </span>SPARQL-Generate<a class="headerlink" href="#sparql-generate" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.7.3.5. </span>SPARQL-Generate<a class="headerlink" href="#sparql-generate" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://ci.mines-stetienne.fr/sparql-generate/">SPARQL-Generate</a> is a template-based language for generating RDF streams from a range of input formats, such as tabular data, JSON, XML, and relational databases. It extends SPARQL 1.1, which means it should feel familiar for everyone already familiar with SPARQL queries.</p>
 <ul class="simple">
 <li><p>To quickly write and test queries (on small datasets), use the <a class="reference external" href="https://ci.mines-stetienne.fr/sparql-generate/playground.html">SPARQL-Generate Playground</a> web-application.</p></li>
