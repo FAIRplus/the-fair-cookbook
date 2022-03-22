@@ -1,7 +1,5 @@
 # Plant genomic and genetic variation data submission to EMBL-EBI databases
 
-[TOC]
-
 
 ## Main Objective
 
@@ -343,10 +341,12 @@ Once the file has been fully validated without any error messages you can submit
 At this point, the VCF contains metadata and data formatted for the purpose of better discoverability and higher interoperability. Data could thus be more easily read and evaluated automatically by machines and it is made easier to connect different data sources with each other, so that in general a higher degree of FAIR has been achieved. 
     
 ## Reference
-TODO: use cookbook directives 
 
+````{dropdown} **References**
 ```{footbibligraphy}
 ```
+````
+  
 TODO add those to the bibtex file and use {footcite}`<your_bib_tag>` in the text when referencing
 <!--
 [Beier et. al (2022) - Recommendations for the formatting of VCF files to make plant genotyping data FAIR](https://doi.org/10.12688/f1000research.109080.1)
@@ -360,6 +360,10 @@ TODO add those to the bibtex file and use {footcite}`<your_bib_tag>` in the text
 
 ## Authors
 
+````{authors_fairplus}
+  
+````
+  
 <table>
   <tr>
    <td>
@@ -387,7 +391,7 @@ Institute of Bio- and Geoscience, IBG-4: Bioinformatics, Forschungszentrum Jüli
   <tr>
    <td>Erwan Le Floch
    </td>
-   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France
+   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France.
    </td>
    <td><a href="https://orcid.org/0000-0002-1010-6859">0000-0002-1010-6859</a> 
    </td>
@@ -397,7 +401,7 @@ Institute of Bio- and Geoscience, IBG-4: Bioinformatics, Forschungszentrum Jüli
   <tr>
    <td>Cyril Pommier
    </td>
-   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France
+   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France.
    </td>
    <td><a href="https://orcid.org/0000-0002-9040-8733">0000-0002-9040-8733</a>
    </td>
@@ -437,3 +441,4 @@ UK
 
 ````{license_fairplus}
 CC-BY-4.0
+````
