@@ -206,6 +206,8 @@
 
 - part: FAIRification Fairs
   chapters:
+    - file: content/recipes/reusability/miappe
+      title: Plant genomic and genetic variation submission to EMBL-EBI databases
     - file: content/recipes/maturity/isa-maturity-progression
       title: Moving through maturity levels with ISA
       sections:
