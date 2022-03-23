@@ -206,36 +206,39 @@
 
 - part: FAIRification Fairs
   chapters:
-    - file: content/recipes/reusability/miappe
-      title: Plant genomic and genetic variation submission to EMBL-EBI databases
-    - file: content/recipes/maturity/isa-maturity-progression
-      title: Moving through maturity levels with ISA
+    - file: content/recipes/maturity
+      title: Complex examples
+      numbered: true
       sections:
-          - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb
-            title: Creating a basic ISA document
-          - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb
-            title: Making a community compliant - ISA in JSON
-          - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb
-            title: Moving to a semantically typed version - ISA in RDF
-          - file: content/recipes/maturity/isa-as-RO.ipynb
-            title: Packaging ISA as a Research Object (RO)
-          - file: content/recipes/maturity/isa-ro-zenodo-deposition
-            title: Programmatic deposition to Zenodo
-
-    - file: content/recipes/applied-examples/fair-data-matrix-recipe
-      title: Making omics data matrices FAIR #FCB037
-      sections:
-          - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
-            title: Starting material #FCB038
-          - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
-            title: Structuring data #FCB039
-          - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
-            title: Exploring data with SPARQL #FCB040
-          - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
-            title: Integrating data #FCB041
-
-    - file: content/recipes/applied-examples/fair-workflows
-      title: Making Computational Workflows FAIR
+        - file: content/recipes/reusability/miappe
+          title: Plant genomic and genetic variation submission to EMBL-EBI databases
+        - file: content/recipes/maturity/isa-maturity-progression
+          title: Moving through maturity levels with ISA
+          sections:
+              - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb
+                title: Creating a basic ISA document
+              - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb
+                title: Making a community compliant - ISA in JSON
+              - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb
+                title: Moving to a semantically typed version - ISA in RDF
+              - file: content/recipes/maturity/isa-as-RO.ipynb
+                title: Packaging ISA as a Research Object (RO)
+              - file: content/recipes/maturity/isa-ro-zenodo-deposition
+                title: Programmatic deposition to Zenodo
+        - file: content/recipes/applied-examples/fair-data-matrix-recipe
+          title: Making omics data matrices FAIR #FCB037
+          numbered: true
+          sections:
+              - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
+                title: Starting material #FCB038
+              - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
+                title: Structuring data #FCB039
+              - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
+                title: Exploring data with SPARQL #FCB040
+              - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
+                title: Integrating data #FCB041
+        - file: content/recipes/applied-examples/fair-workflows
+          title: Making Computational Workflows FAIR
 
 
 - part: FAIRified Datasets
