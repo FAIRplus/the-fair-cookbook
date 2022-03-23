@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. How to check file integrity by validating checksums</title>
+    <title>7. How to check file integrity by validating checksums</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -60,8 +60,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="7. Search engine optimization" href="seo.html" />
-    <link rel="prev" title="5. How to create checksum files" href="checksum-create.html" />
+    <link rel="next" title="8. Search engine optimization" href="seo.html" />
+    <link rel="prev" title="6. How to create checksum files" href="checksum-create.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -169,33 +169,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="registeringDatasets.html">
+     5. How to Register a Dataset with Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="checksum-create.html">
-     5. Describe data by checksums
+     6. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     6. Validating data by checksums
+     7. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="seo.html">
-     7. Search engine optimization
+     8. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-data-page.html">
-       7.8.1. Data page markup with Bioschemas
+       8.8.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-dataset.html">
-       7.8.2. Dataset page markup with Schema.org
+       8.8.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-datacatalog.html">
-       7.8.3. Data catalogue markup
+       8.8.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -694,54 +699,54 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abstract">
-   6.1. Abstract
+   7.1. Abstract
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   6.2. Graphical Overview
+   7.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#requirements">
-   6.3. Requirements:
+   7.3. Requirements:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recipe-instructions">
-   6.4. Recipe instructions
+   7.4. Recipe instructions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#validating-the-checksums-directly">
-     6.4.1. Validating the checksums directly
+     7.4.1. Validating the checksums directly
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#limitations-of-this-recipe">
-     6.4.2. Limitations of this recipe
+     7.4.2. Limitations of this recipe
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#extendability-of-this-recipe">
-     6.4.3. Extendability of this recipe
+     7.4.3. Extendability of this recipe
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#further-reading">
-   6.5. Further reading
+   7.5. Further reading
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   6.6. Authors
+   7.6. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   6.7. License
+   7.7. License
   </a>
  </li>
 </ul>
@@ -757,7 +762,7 @@
               <div>
                 
   <div class="section" id="how-to-check-file-integrity-by-validating-checksums">
-<span id="fcb-checksum-validate"></span><h1><span class="section-number">6. </span>How to check file integrity by validating checksums<a class="headerlink" href="#how-to-check-file-integrity-by-validating-checksums" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-checksum-validate"></span><h1><span class="section-number">7. </span>How to check file integrity by validating checksums<a class="headerlink" href="#how-to-check-file-integrity-by-validating-checksums" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
 <script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "How to check file integrity by validating checksums", "audience": ["Bioinformatician", "Data Scientist", "Data Engineer"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB053", "url": "https://w3id.org/faircookbook/FCB053"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
@@ -817,7 +822,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="abstract">
-<h2><span class="section-number">6.1. </span>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <p>When copying a file (“source file”) to a target location, it may become necessary
 to confirm that the actual content, i.e. the bits that make up the information, arrived correctly in the target system.
 Confirming the identity of two different files may be achieved by calculating
@@ -831,14 +836,14 @@ focusing exclusively on the output of the Linux tool <code class="docutils liter
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">6.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="checksum-validate-figure1">
-<img alt="Graphical overview of the steps taken by this recipe." src="../../../_images/checksum-validate.md-figure1.mmd.svg" /><p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Graphical overview of the steps taken by this recipe. Download as <a class="reference download internal" download="" href="../../../_downloads/c36de083941f5fee84de8b19628108da/checksum-validate.md-figure1.mmd.hi-res.png"><code class="xref download docutils literal notranslate"><span class="pre">[png]</span></code></a> <a class="reference download internal" download="" href="../../../_downloads/af5dd5b02dd06091b6d29450ff222aa7/checksum-validate.md-figure1.mmd"><code class="xref download docutils literal notranslate"><span class="pre">[mmd]</span></code></a> <a class="reference download internal" download="" href="../../../_downloads/85761a7b11a9128200b352e9def8950c/checksum-validate.md-figure1.mmd.svg"><code class="xref download docutils literal notranslate"><span class="pre">[svg]</span></code></a></span><a class="headerlink" href="#checksum-validate-figure1" title="Permalink to this image">¶</a></p>
+<img alt="Graphical overview of the steps taken by this recipe." src="../../../_images/checksum-validate.md-figure1.mmd.svg" /><p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Graphical overview of the steps taken by this recipe. Download as <a class="reference download internal" download="" href="../../../_downloads/c36de083941f5fee84de8b19628108da/checksum-validate.md-figure1.mmd.hi-res.png"><code class="xref download docutils literal notranslate"><span class="pre">[png]</span></code></a> <a class="reference download internal" download="" href="../../../_downloads/af5dd5b02dd06091b6d29450ff222aa7/checksum-validate.md-figure1.mmd"><code class="xref download docutils literal notranslate"><span class="pre">[mmd]</span></code></a> <a class="reference download internal" download="" href="../../../_downloads/85761a7b11a9128200b352e9def8950c/checksum-validate.md-figure1.mmd.svg"><code class="xref download docutils literal notranslate"><span class="pre">[svg]</span></code></a></span><a class="headerlink" href="#checksum-validate-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="requirements">
-<h2><span class="section-number">6.3. </span>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>This recipe assumes the following:</p>
 <ul class="simple">
 <li><p>both source and target systems have the Linux operating system, preferentially Debian (no root access needed)</p></li>
@@ -929,9 +934,9 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 <hr class="docutils" />
 <div class="section" id="recipe-instructions">
-<h2><span class="section-number">6.4. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="validating-the-checksums-directly">
-<h3><span class="section-number">6.4.1. </span>Validating the checksums directly<a class="headerlink" href="#validating-the-checksums-directly" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.1. </span>Validating the checksums directly<a class="headerlink" href="#validating-the-checksums-directly" title="Permalink to this headline">¶</a></h3>
 <p>On the shell execute:</p>
 <p><code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">-c</span> <span class="pre">~/checksums.md5</span></code></p>
 <p>The output should be something like:</p>
@@ -944,7 +949,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 <p>This step will take as long as it needs to calculate the checksums of all files on the target system. As a benchmark you can expect 0.01 seconds per MB of data.</p>
 </div>
 <div class="section" id="limitations-of-this-recipe">
-<h3><span class="section-number">6.4.2. </span>Limitations of this recipe<a class="headerlink" href="#limitations-of-this-recipe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.2. </span>Limitations of this recipe<a class="headerlink" href="#limitations-of-this-recipe" title="Permalink to this headline">¶</a></h3>
 <p>This recipe in its current form has the following limitations:</p>
 <ul class="simple">
 <li><p>the above assumes that everything is placed in your home folder. (for a resolution see section “Extendability of this recipe” below.)</p></li>
@@ -957,7 +962,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </ul>
 </div>
 <div class="section" id="extendability-of-this-recipe">
-<h3><span class="section-number">6.4.3. </span>Extendability of this recipe<a class="headerlink" href="#extendability-of-this-recipe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.3. </span>Extendability of this recipe<a class="headerlink" href="#extendability-of-this-recipe" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture). However, additional steps would be needed to align the generated checksums to each other (questions: how would they be stored; how would they be brought together in one file to enable effective transport of the file containing the checksum entries).</p></li>
 <li><p>the recipe assumes that everything is placed in your home folder. If this is not the case, replace <code class="docutils literal notranslate"><span class="pre">~</span></code>, the home directory indicator, by the corresponding path, or execute specifically all <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> commands only with relative pathes (by navigating in the corresponding directory, first). The command will be something like <code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">./YOUR_PATH_HERE/*.jpg</span></code>, then, and will output something like <code class="docutils literal notranslate"><span class="pre">c691b3d2fc2678839a9c141b6ee1524e</span>&#160; <span class="pre">./YOUR_PATH_HERE/picture1.jpg</span></code> then.</p></li>
@@ -966,7 +971,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 </div>
 <div class="section" id="further-reading">
-<h2><span class="section-number">6.5. </span>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.5. </span>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Wikipedia article on checksums: <a class="reference external" href="https://en.wikipedia.org/wiki/Checksum">https://en.wikipedia.org/wiki/Checksum</a></p></li>
 <li><p>Wikipedia article on the tool <code class="docutils literal notranslate"><span class="pre">md5sum</span></code>: <a class="reference external" href="https://en.wikipedia.org/wiki/Md5sum">https://en.wikipedia.org/wiki/Md5sum</a></p></li>
@@ -975,7 +980,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">6.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -999,7 +1004,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">6.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 </div>
@@ -1030,8 +1035,8 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="checksum-create.html" title="previous page"><span class="section-number">5. </span>How to create checksum files</a>
-    <a class='right-next' id="next-link" href="seo.html" title="next page"><span class="section-number">7. </span>Search engine optimization</a>
+    <a class='left-prev' id="prev-link" href="checksum-create.html" title="previous page"><span class="section-number">6. </span>How to create checksum files</a>
+    <a class='right-next' id="next-link" href="seo.html" title="next page"><span class="section-number">8. </span>Search engine optimization</a>
 
         </div>
         

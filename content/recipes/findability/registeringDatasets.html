@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Minting identifiers with Minid</title>
+    <title>5. Registering Datasets</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,22 +56,22 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/identifiers-minids.html" />
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/registeringDatasets.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4. Depositing in Zenodo generic repository" href="zenodo-deposition.html" />
-    <link rel="prev" title="2. InChI and SMILES identifiers for chemical structures" href="../infrastructure/chemical-identities.html" />
+    <link rel="next" title="6. How to create checksum files" href="checksum-create.html" />
+    <link rel="prev" title="4. Depositing in Zenodo generic repository" href="zenodo-deposition.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/identifiers-minids.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/registeringDatasets.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Minting identifiers with Minid" />
-<meta property="og:description" content="Minting identifiers with Minid    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org" />
+<meta property="og:title"       content="Registering Datasets" />
+<meta property="og:description" content="Registering Datasets  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@type&#34;: [&#34;sdo:" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -158,8 +158,8 @@
      2. InChI and SMILES identifiers for chemical structures
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="identifiers-minids.html">
      3. Minting identifiers with Minid
     </a>
    </li>
@@ -168,8 +168,8 @@
      4. Depositing in Zenodo generic repository
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="registeringDatasets.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      5. How to Register a Dataset with Wikidata
     </a>
    </li>
@@ -648,7 +648,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/recipes/findability/identifiers-minids.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/findability/registeringDatasets.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -668,10 +668,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/findability/identifiers-minids.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/findability/registeringDatasets.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/findability/identifiers-minids.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/findability/registeringDatasets.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -699,76 +699,76 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   3.1. Main Objectives
+   5.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#graphical-overview">
-   3.2. Graphical Overview
+  <a class="reference internal nav-link" href="#requirements">
+   5.2. Requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capability-maturity-table">
-   3.3. Capability &amp; Maturity Table
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   3.4. FAIRification Objectives, Inputs and Outputs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-the-minid-2-0-client">
-   3.5. Installing the minid 2.0 client
+  <a class="reference internal nav-link" href="#main-content">
+   5.3. Main Content
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-with-pip">
-     3.5.1. installing with pip
+    <a class="reference internal nav-link" href="#finding-datasets">
+     5.3.1. Finding Datasets
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#building-from-source">
-     3.5.2. building from source:
+    <a class="reference internal nav-link" href="#dataset-registration-in-wikidata">
+     5.3.2. Dataset Registration in Wikidata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-a-dataset-with-quickstatements">
+     5.3.3. Adding a dataset with Quickstatements
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-1-wikidata-login">
+       5.3.3.1. Step 1: Wikidata login
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-2-authorize-quickstatements">
+       5.3.3.2. Step 2: Authorize Quickstatements
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-3-open-the-scholia-page">
+       5.3.3.3. Step 3: Open the Scholia page
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#step-4-execute-the-quickstatements">
+       5.3.3.4. Step 4: Execute the Quickstatements
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-adding-additional-information">
+     5.3.4. Optional: adding additional information
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configuration">
-   3.6. Configuration
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   3.7. Usage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#file-manifest-format">
-     3.7.1. file manifest format
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusions">
-   3.8. Conclusions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   3.9. Reference
+  <a class="reference internal nav-link" href="#references">
+   5.4. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   3.10. Authors
+   5.5. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   3.11. License
+   5.6. License
   </a>
  </li>
 </ul>
@@ -783,12 +783,11 @@
         
               <div>
                 
-  <div class="section" id="minting-identifiers-with-minid">
-<span id="fcb-find-id-minid"></span><h1><span class="section-number">3. </span>Minting identifiers with Minid<a class="headerlink" href="#minting-identifiers-with-minid" title="Permalink to this headline">¶</a></h1>
-<br/>
+  <div class="section" id="registering-datasets">
+<h1><span class="section-number">5. </span>Registering Datasets<a class="headerlink" href="#registering-datasets" title="Permalink to this headline">¶</a></h1>
 <br/>
 <hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Minting identifiers with Minid", "audience": ["Software Developer", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB008", "url": "https://w3id.org/faircookbook/FCB008"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "How to Register a Dataset with Wikidata", "audience": ["Bioinformatician", "Data Scientist", "Data Engineer"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCBxxx", "url": "https://w3id.org/faircookbook/FCBxxx"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -798,14 +797,14 @@
 <i class="itemIcon fa fa-clock fa-2x text--white"></i>
 <div class="itemContent">
 <div class="label"> Reading Time </div>
-10 minutes
+15 minutes
 </div>
 </div></div>
 <div class="item"><div class="itemContainer">
 <i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
 <div class="itemContent">
 <div class="label"> Executable Code </div>
-Yes
+No
 </div>
 </div></div>
 <div class="item" style="margin-bottom:10px"><div class="itemContainer">
@@ -823,7 +822,7 @@ Yes
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Minting identifiers with Minid</div>
+<div style="flex-grow:1; margin-right:5px">How to Register a Dataset with Wikidata</div>
 <img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
@@ -835,264 +834,161 @@ Yes
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue">Software Developer, Data Scientist</div>
+<div class="sectionValue">Bioinformatician, Data Scientist, Data Engineer</div>
 </div>
 </div>
 <div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://w3id.org/faircookbook/FCB008" class="text--purple-dark">FCB008
+<a href="https://w3id.org/faircookbook/FCBxxx" class="text--purple-dark">FCBxxx
 </a></div>
 </div>
 </div>
 <hr class="docutils" />
+<p>“UCnn.x Registering a dataset in Wikidata.”</p>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>The main purpose of this recipe is:</p>
-<p>To create a <strong>persistent</strong>, <strong>globally unique</strong> and <strong>resolvable identifier</strong> using the <em><strong>Minid client</strong></em> accessing the Minid 2.0 release <a class="footnote-reference brackets" href="#madduri2019" id="id1">2</a> <a class="footnote-reference brackets" href="#minid-identifiers" id="id2">1</a>.</p>
+<h2><span class="section-number">5.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>Useful datasets become more useful when they are easily found. The <strong>FAIR principles</strong> state that:</p>
+<blockquote>
+<div><p>F1. (Meta)data are assigned a globally unique and persistent identifier</p>
+<p>A1. (Meta)data are retrievable by their identifier using a standardised communications protocol</p>
+</div></blockquote>
+<p>This recipe is about making an already archived dataset metadata more Findable by getting the metadata distributed into other databases:</p>
+<blockquote>
+<div><p>Learn how to register a published dataset on Wikidata with the appropriate citation to increase its findability.</p>
+</div></blockquote>
 </div>
 <hr class="docutils" />
-<div class="section" id="graphical-overview">
-<h2><span class="section-number">3.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<!--  <div><img src="./images/minid-mermaid.png" width="650px" style="padding:1px;border:thin solid black;"/></div>   -->
-<!-- <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>
- -->
-<div class="figure align-default" id="fcb-find-id-minid-figure1">
-<img alt="An overview of the identifier minting process" src="../../../_images/identifiers-minids-fig1.png" />
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">An overview of the identifier minting process</span><a class="headerlink" href="#fcb-find-id-minid-figure1" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="capability-maturity-table">
-<h2><span class="section-number">3.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
-<th class="text-align:left head"><p>Initial Maturity Level</p></th>
-<th class="text-align:left head"><p>Final Maturity Level</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>identifier minting</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="requirements">
+<h2><span class="section-number">5.2. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Register datasets in <a class="reference external" href="https://www.wikidata.org/">Wikidata</a> <a class="footnote-reference brackets" href="#waagmeester2020" id="id1">2</a> requires that the dataset is already archived somewhere that provides
+an DOI for the datasets, and it also requires that you have a Wikidata account (<a class="reference external" href="https://www.wikidata.org/wiki/Special:CreateAccount">create one</a>).</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">3.4. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
-<th class="text-align:left head"><p>Input</p></th>
-<th class="text-align:left head"><p>Output</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_3763">service invokation</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="http://purl.obolibrary.org/obo/STATO_0000002">file</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/data_0976">guid</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="installing-the-minid-2-0-client">
-<h2><span class="section-number">3.5. </span>Installing the minid 2.0 client<a class="headerlink" href="#installing-the-minid-2-0-client" title="Permalink to this headline">¶</a></h2>
-<p>This is a prerequisite to be able to call the minid API hosted on a server at the following url <a class="reference external" href="http://minid.bd2k.org/minid">http://minid.bd2k.org/minid</a></p>
-<div class="section" id="installing-with-pip">
-<h3><span class="section-number">3.5.1. </span>installing with pip<a class="headerlink" href="#installing-with-pip" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">pre</span> <span class="n">minid</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="building-from-source">
-<h3><span class="section-number">3.5.2. </span>building from source:<a class="headerlink" href="#building-from-source" title="Permalink to this headline">¶</a></h3>
-<p>use the dev branch to obtain to source
-<a class="reference external" href="https://github.com/fair-research/minid">minid github repository</a></p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="configuration">
-<h2><span class="section-number">3.6. </span>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>prerequisite: create a minig-config.cfg file</p></li>
-</ol>
-<p>As a convenience you need specify this information in a minid configuration file (<code class="docutils literal notranslate"><span class="pre">~/.minid/minid-config.cfg</span></code>)
-To do so from the command line, issue the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir ~/Users/philippe/.minid
-$ <span class="nb">cd</span> .minid
-$ touch minid-config.cfg
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Create a GlobusID account</p></li>
-</ol>
-<p>Before using the API you first need to create a <a class="reference external" href="https://www.globusid.org/create">globus account</a></p>
-  <!-- <kbd>![](./images/globus/globus-account-create.png)<kbd/> -->
- <!--  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>   -->
-<!-- <div>
-  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
-</div> 
- -->
-  <!-- ![](/images/B5UbkpF.png) -->
-<div class="figure align-default" id="fcb-find-id-minid-figure2">
-<img alt="Creating a Globus account." src="../../../_images/globus-account-create.png" />
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Creating a Globus account.</span><a class="headerlink" href="#fcb-find-id-minid-figure2" title="Permalink to this image">¶</a></p>
-</div>
-<p>and validate your email address, as part of the registration process. A unique code will be sent to your email address. You must present this code along with your email address when accessing the API.</p>
-<ol class="simple">
-<li><p>Accessing minid service from the command line</p></li>
-</ol>
-<p>With the completion of the previous steps, you are now ready to use the minid service. The first thing to do is to invoke to <code class="docutils literal notranslate"><span class="pre">minid</span> <span class="pre">login</span></code> command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ minid login
-</pre></div>
-</div>
-<p>This will open the GlobusID login page. Simply enter your credentials obtained from 2.</p>
-<!-- ![](./images/globus/globus-account-login.png) -->
-<!-- ![](/images/2OZFcJa.png) -->
-<!-- <div>
-<img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div>  -->
-<!-- <div>
-  <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
-</div>  -->
-<div class="figure align-default" id="fcb-find-id-minid-figure3">
-<img alt="Globus account login." src="../../../_images/globus-account-login.png" />
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Globus account login.</span><a class="headerlink" href="#fcb-find-id-minid-figure3" title="Permalink to this image">¶</a></p>
-</div>
-<p>followed by:</p>
-<!-- ![](./images/globus/globus-account-allow.png) -->
-<!-- ![](/images/avzyAFZ.png) -->
-<!-- <div>
-<img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
-</div>  -->
-<!-- <div>
-<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
-</div> -->
-<div class="figure align-default" id="fcb-find-id-minid-figure4">
-<img alt="Globus account allow." src="../../../_images/globus-account-allow.png" />
-<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Globus account allow.</span><a class="headerlink" href="#fcb-find-id-minid-figure4" title="Permalink to this image">¶</a></p>
-</div>
-<p>If all goes well, the following browser screen will be shown:</p>
-<!-- ![](./images/globus/globus-account-login-success.png) -->
-<!-- ![](/images/THYPg4E.png) -->
-<!-- <div>
-<img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
-</div>  -->
-<!-- <div>
-<img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login-success.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
-</div>
- -->
-<div class="figure align-default" id="fcb-find-id-minid-figure5">
-<img alt="Globus account login success." src="../../../_images/globus-account-login-success.png" />
-<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Globus account login success.</span><a class="headerlink" href="#fcb-find-id-minid-figure5" title="Permalink to this image">¶</a></p>
-</div>
-<p>While the terminal will show the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>You have been logged <span class="k">in</span>.
-</pre></div>
-</div>
-<p>This means you are now ready to use the minid service from the command line.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="usage">
-<h2><span class="section-number">3.7. </span>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>The CLI supports the following simple operations (Note: the <code class="docutils literal notranslate"><span class="pre">--test</span></code> flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):</p>
+<div class="section" id="main-content">
+<h2><span class="section-number">5.3. </span>Main Content<a class="headerlink" href="#main-content" title="Permalink to this headline">¶</a></h2>
+<p>Archiving a dataset can be an important step in making data FAIR (see <em>Depositing in Zenodo generic repository</em>, <a class="reference external" href="https://w3id.org/faircookbook/FCB009">fcb:FCB009</a>),
+but by sharing the metadata, you make the dataset even more Findable. Sharing the metadata in Wikidata has the advantage that the dataset can
+be linked to many other life sciences databases.</p>
+<p>This recipe takes an interest in datasets with information about small chemical compounds, particularly datasets with an <a class="reference external" href="https://fairsharing.org/FAIRsharing.ew26v7">SDF</a>
+file or spreadsheets containing chemical identifiers in the form of <a class="reference external" href="https://fairsharing.org/FAIRsharing.qv4b3c">SMILES</a> strings.
+But the <code class="docutils literal notranslate"><span class="pre">Wikidata</span> <span class="pre">registration</span> <span class="pre">process</span></code> itself, to increase <code class="docutils literal notranslate"><span class="pre">Findability</span></code>, works for any dataset.
+This <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:Introduction">Wikidata:Introduction</a> describes the principle ideas and data model that will make this
+recipe easier to follow.</p>
+<p>Importantly, registering a dataset in Wikidata allows it to be used as reference to support other Wikidata statements (existing or newly created ones) . For example, if the dataset contains a <code class="docutils literal notranslate"><span class="pre">logP</span></code> value,
+then this logP value can be associated to the compound in Wikidata with a statement, with the dataset itself as reference.</p>
+<!-- TODO: add screenshot of example -->
+<div class="section" id="finding-datasets">
+<h3><span class="section-number">5.3.1. </span>Finding Datasets<a class="headerlink" href="#finding-datasets" title="Permalink to this headline">¶</a></h3>
+<p>There are several ways to locate datasets to be registered into Wikidata. One needs to take into consideration the following two requirements:
+the dataset should have a compatible license and the dataset should have an identifier.</p>
+<p>Examples of where open datasets with information about chemical compounds can be found include:</p>
 <ul class="simple">
-<li><p>Check a known minid identifier</p></li>
+<li><p><a class="reference external" href="https://figshare.com/">Figshare</a></p></li>
+<li><p><a class="reference external" href="https://zenodo.org/">Zenodo</a></p></li>
+<li><p><a class="reference external" href="https://data.jrc.ec.europa.eu/dataset">Joint Research Centre Data Catalogue</a></p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ minid check hdl:20.500.12633/1HK1DTv1wPt3a
-</pre></div>
-</div>
-<p>if everything is setup correctly, the command will return:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minid:               hdl:20.500.12633/1HK1DTv1wPt3a
-Title:
-Checksums:           e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 <span class="o">(</span>sha256<span class="o">)</span>
-Created:
-Landing Page:        https://identifiers.fair-research.org/hdl:20.500.12633/1HK1DTv1wPt3a
-EZID Landing Page:   https://ezid.cdlib.org/id/hdl:20.500.12633/1HK1DTv1wPt3a
-Locations:           http://example.com/foo.txt
-</pre></div>
-</div>
+<p>Of course, there are also general data search engines now that may help find the data you are looking for:</p>
 <ul class="simple">
-<li><p>Create a new identifier (the <code class="docutils literal notranslate"><span class="pre">--location</span></code> option, if provided, must be at the end).</p></li>
+<li><p><a class="reference external" href="https://datasetsearch.research.google.com/">Google Dataset Search</a></p></li>
+<li><p><a class="reference external" href="https://commons.datacite.org/">DataCite Commons</a></p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ minid --register <span class="o">[</span>--title &lt;title&gt;<span class="o">]</span> &lt;file_name&gt; <span class="o">[</span>--locations &lt;loc1&gt;..&lt;locN&gt;<span class="o">]</span>
-</pre></div>
+<p>If you have a new dataset and would like to deposit it because it is not listed in any of the above resources,
+please check out the <a class="reference external" href="https://w3id.org/faircookbook/FCB009">Depositing in Zenodo generic repository</a> recipe.</p>
+<!--
+TODO: add below statement when that recipe is included too:
+
+For details related to finding datasets and determining the correct licenses, please refer to Finding Compounds. 
+-->
 </div>
-<ul class="simple">
-<li><p>Update metadata about an identifier:</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ minid --update <span class="o">[</span>--title &lt;title&gt;<span class="o">]</span> <span class="o">[</span>--status &lt;status&gt;<span class="o">]</span> <span class="o">[</span>--obsoleted_by &lt;minid&gt;<span class="o">]</span> <span class="o">[</span>--locations &lt;loc1&gt; &lt;loc2&gt;<span class="o">]</span> &lt;identifier&gt;
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>View all minid options:</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ minid -h
-</pre></div>
-</div>
-<p>Landing pages are accessible via the minid website: <a class="reference external" href="http://minid.bd2k.org/minid/landingpage/%5C%3Cidentifier%5C%3E">http://minid.bd2k.org/minid/landingpage/&lt;identifier&gt;</a>.</p>
-<hr class="docutils" />
-<div class="section" id="file-manifest-format">
-<h3><span class="section-number">3.7.1. </span>file manifest format<a class="headerlink" href="#file-manifest-format" title="Permalink to this headline">¶</a></h3>
-<p>Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a <code class="docutils literal notranslate"><span class="pre">BDBag</span> <span class="pre">&lt;https://github.com/ini-bdds/bdbag&gt;</span></code>_ or the minid file manifest format.</p>
-<p>The minid file manifest format is a JSON-based format that enumerates a list of files as JSON objects that have the following attributes:</p>
-<ul class="simple">
-<li><p>length: The length of the file in bytes.</p></li>
-<li><p>filename: The filename (or path) relative to the manifest file.</p></li>
-<li><p>One or more (only one of each) of the following <code class="docutils literal notranslate"><span class="pre">algorithm:checksum</span></code> key-value pairs:</p>
+<div class="section" id="dataset-registration-in-wikidata">
+<h3><span class="section-number">5.3.2. </span>Dataset Registration in Wikidata<a class="headerlink" href="#dataset-registration-in-wikidata" title="Permalink to this headline">¶</a></h3>
+<p>After locating a dataset, check the availability of the details of the dataset. Essential attributes include:</p>
 <ul>
-<li><p>md5:&lt;md5 hex value&gt;</p></li>
-<li><p>sha256:&lt;sha256 hex value&gt;</p></li>
-<li><p>sha512:&lt;sha512 hex value&gt;</p></li>
-</ul>
+<li><p>the DOI</p></li>
+<li><p>the title of the dataset</p></li>
+<li><p>the author(s) of the dataset</p></li>
+<li><p>the publication date of the dataset</p></li>
+<li><p>links to the dataset source.</p>
+<p>You may need these later, during the Wikidata registration process.</p>
 </li>
-<li><p>url: the URL to the file.</p></li>
 </ul>
-<p>The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command.</p>
-<p>Below is a sample file manifest configuration file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  <span class="o">[</span>
-      <span class="o">{</span>
-          <span class="s2">&quot;length&quot;</span>:321,
-          <span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;file1.txt&quot;</span>,
-          <span class="s2">&quot;md5&quot;</span>:<span class="s2">&quot;5bbf5a52328e7439ae6e719dfe712200&quot;</span>,
-          <span class="s2">&quot;sha256&quot;</span>:<span class="s2">&quot;2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806&quot;</span>,
-          <span class="s2">&quot;url&quot;</span> : <span class="s2">&quot;globus://ddb59aef-6d04-11e5-ba46-22000b92c6ec/share/godata/file1.txt&quot;</span>
-      <span class="o">}</span>,
-      <span class="o">{</span>
-          <span class="s2">&quot;length&quot;</span>: <span class="m">632860</span>,
-          <span class="s2">&quot;filename&quot;</span>: <span class="s2">&quot;minid_v0.1_Nov_2015.pdf&quot;</span>,
-          <span class="s2">&quot;sha256&quot;</span>: <span class="s2">&quot;cacc1abf711425d3c554277a5989df269cefaa906d27f1aaa72205d30224ed5f&quot;</span>,
-          <span class="s2">&quot;url&quot;</span> : <span class="s2">&quot;http://bd2k.ini.usc.edu/assets/all-hands-meeting/minid_v0.1_Nov_2015.pdf&quot;</span>
-      <span class="o">}</span>
-  <span class="o">]</span>
-</pre></div>
+<p>With the DOI, there is a good chance that <a class="reference external" href="https://scholia.toolforge.org/">Scholia</a> <a class="footnote-reference brackets" href="#nielsen2017" id="id2">1</a> can help you register the dataset in Wikidata.
+You can use the <code class="docutils literal notranslate"><span class="pre">https://scholia.toolforge.org/doi/$DOI</span></code> pattern (‘$DOI’ in the link must be replaced with the
+DOI of the dataset you are registering) to check if your dataset is already listed in
+Wikidata.
+If not, this page will use the DOI to convert the associated metadata and translate them into a Wikidata compatible Scholia<code class="docutils literal notranslate"><span class="pre">Quickstatements</span></code>.</p>
+</div>
+<div class="section" id="adding-a-dataset-with-quickstatements">
+<h3><span class="section-number">5.3.3. </span>Adding a dataset with Quickstatements<a class="headerlink" href="#adding-a-dataset-with-quickstatements" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://quickstatements.toolforge.org/">Quickstatements</a> is a layer on top of Wikidata, a tool developed by Magnus Manske, research in Cambridge/UK to
+make it easier to edit Wikidata in an automated way. We use this here to automate the registering of
+a dataset in Wikidata too. We first generate <code class="docutils literal notranslate"><span class="pre">Quickstatements</span></code> which
+can be added to Wikidata using
+the <a class="reference external" href="https://quickstatements.toolforge.org/">https://quickstatements.toolforge.org/</a> website.
+This is the step which requires a <strong>Wikidata account</strong>.</p>
+<div class="section" id="step-1-wikidata-login">
+<h4><span class="section-number">5.3.3.1. </span>Step 1: Wikidata login<a class="headerlink" href="#step-1-wikidata-login" title="Permalink to this headline">¶</a></h4>
+<p>First, <a class="reference external" href="https://www.wikidata.org/w/index.php?title=Special:UserLogin&amp;returnto=Wikidata%3AMain+Page">log in to Wikidata</a>.</p>
+</div>
+<div class="section" id="step-2-authorize-quickstatements">
+<h4><span class="section-number">5.3.3.2. </span>Step 2: Authorize Quickstatements<a class="headerlink" href="#step-2-authorize-quickstatements" title="Permalink to this headline">¶</a></h4>
+<p>Then, authorize Quickstatements with your Wikidata account using the “Log in” button
+in the top right corner of the Quickstatements website.</p>
+</div>
+<div class="section" id="step-3-open-the-scholia-page">
+<h4><span class="section-number">5.3.3.3. </span>Step 3: Open the Scholia page<a class="headerlink" href="#step-3-open-the-scholia-page" title="Permalink to this headline">¶</a></h4>
+<p>If your dataset is not already Wikidata, use the <code class="docutils literal notranslate"><span class="pre">https://scholia.toolforge.org/doi/$DOI</span></code> Scholia
+page to create <code class="docutils literal notranslate"><span class="pre">Quickstatements</span></code>. The result should look something like this:</p>
+<div class="figure align-default" id="scholia">
+<img alt="Scholia page showing Quickstatements for a dataset not yet in Wikidata" src="../../../_images/scholia.png" />
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Scholia page showing Quickstatements for a dataset not yet in Wikidata.</span><a class="headerlink" href="#scholia" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-4-execute-the-quickstatements">
+<h4><span class="section-number">5.3.3.4. </span>Step 4: Execute the Quickstatements<a class="headerlink" href="#step-4-execute-the-quickstatements" title="Permalink to this headline">¶</a></h4>
+<p>On the page from Step 3, click the blue “Submit to Quickstatements” button which will take you to the
+Quickstatements website, which will look something like this:</p>
+<div class="figure align-default" id="quickstatements">
+<img alt="Quickstatements showing the same Quickstatements but now parsed and ready for applying to Wikidata" src="../../../_images/quickstatements.png" />
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Quickstatements showing the same Quickstatements but now parsed and ready for applying to Wikidata.</span><a class="headerlink" href="#quickstatements" title="Permalink to this image">¶</a></p>
+</div>
+<p>After you click “Run”, Quickstatements starts making edits in Wikidata, and when done, it should look
+like this:</p>
+<div class="figure align-default" id="quickstatements2">
+<img alt="Quickstatements showing the same Quickstatements after applying to Wikidata" src="../../../_images/quickstatements2.png" />
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Quickstatements showing the same Quickstatements after applying to Wikidata.</span><a class="headerlink" href="#quickstatements2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
-<div class="section" id="conclusions">
-<h2><span class="section-number">3.8. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
-<p>Using the <code class="docutils literal notranslate"><span class="pre">Minid</span></code> service, resources can now generate stable, resolvable identifiers for their digitial documents. The <code class="docutils literal notranslate"><span class="pre">Minid</span></code> service thus provides a key component to enable <code class="docutils literal notranslate"><span class="pre">interoperability</span></code> and <code class="docutils literal notranslate"><span class="pre">reusability</span></code> by ensuring digital assets can be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.</p>
-<p>—_</p>
+<div class="section" id="optional-adding-additional-information">
+<h3><span class="section-number">5.3.4. </span>Optional: adding additional information<a class="headerlink" href="#optional-adding-additional-information" title="Permalink to this headline">¶</a></h3>
+<p>The result page from Step 4 will include a link to the newly created Wikidata item. It will have
+a Wikidata identifer starting with an “Q”, for example <a class="reference external" href="https://www.wikidata.org/wiki/Q108653787">Q108653787</a>.</p>
+<p>Additional information that can be provided include:</p>
+<ul class="simple">
+<li><p>links to Wikidata items for authors using the P50 property for “author”</p></li>
+<li><p>keywords</p></li>
+<li><p>other metadata</p></li>
+</ul>
+<p>This <a class="reference external" href="https://laurendupuis.github.io/Scholia_tutorial/">Use Scholia and Wikidata to find scientific literature</a>
+tutorial provides more information on how Wikidata uses keywords to further expose literature,
+but works identical to other research output, such as datasets.</p>
 </div>
-<div class="section" id="reference">
-<h2><span class="section-number">3.9. </span>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
-<p id="bibtex-footbibliography-content/recipes/findability/identifiers-minids-0"><dl class="footnote brackets">
-<dt class="label" id="minid-identifiers"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>Minid 2.0.0b3.dev0 documentation. URL: <a class="reference external" href="https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles">https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles</a>.</p>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">5.4. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-footbibliography-content/recipes/findability/registeringDatasets-0"><dl class="footnote brackets">
+<dt class="label" id="nielsen2017"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Finn Årup Nielsen, Daniel Mietchen, and Egon Willighagen. <em>Scholia, Scientometrics and Wikidata</em>, pages 237–259. Volume 10577 of Lecture Notes in Computer Science. Springer International Publishing, 2017. URL: <a class="reference external" href="http://link.springer.com/10.1007/978-3-319-70407-4_36">http://link.springer.com/10.1007/978-3-319-70407-4_36</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-319-70407-4_36">doi:10.1007/978-3-319-70407-4_36</a>.</p>
 </dd>
-<dt class="label" id="madduri2019"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
-<dd><p>R. Madduri, K. Chard, M. D’Arcy, S. C. Jung, A. Rodriguez, D. Sulakhe, E. Deutsch, C. Funk, B. Heavner, M. Richards, P. Shannon, G. Glusman, N. Price, C. Kesselman, and I. Foster. Reproducible big data science: A case study in continuous FAIRness. <em>PLoS One</em>, 14(4):e0213013, 2019.</p>
+<dt class="label" id="waagmeester2020"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>Andra Waagmeester, Gregory Stupp, Sebastian Burgstaller-Muehlbacher, Benjamin M Good, Malachi Griffith, Obi L Griffith, Kristina Hanspers, Henning Hermjakob, Toby S Hudson, Kevin Hybiske, and et al. Wikidata as a knowledge graph for the life sciences. <em>eLife</em>, 9:e52614, Mar 2020. <a class="reference external" href="https://doi.org/10.7554/eLife.52614">doi:10.7554/eLife.52614</a>.</p>
 </dd>
 </dl>
 </p>
-<!-- 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
-
-2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 </div>
 <hr class="docutils" />
 <div class="section" id="authors">
-<h2><span class="section-number">3.10. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -1104,12 +1000,12 @@ Locations:           http://example.com/foo.txt
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/mikedarcy"><img class="avatar-style" src="https://avatars.githubusercontent.com/mikedarcy"></img><div class="d-block">Mike d’Arcy</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0003-2280-917X"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>University of Southern California</p></td>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/egonw"><img class="avatar-style" src="https://avatars.githubusercontent.com/egonw"></img><div class="d-block">Egon Willighagen</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0001-7542-0286"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Maastricht University</p></td>
 <td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/embl.png" ></img></p></td>
-<td><p>Writing - Original Draft</p></td>
+<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-NL.svg" ></img></p></td>
+<td><p>Writing</p></td>
 </tr>
 <tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
 <td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
@@ -1118,12 +1014,19 @@ Locations:           http://example.com/foo.txt
 <td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
 <td><p>Writing - Review &amp; Editing</p></td>
 </tr>
+<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/zjwarnes"><img class="avatar-style" src="https://avatars.githubusercontent.com/zjwarnes"></img><div class="d-block">Zachary Warnes</div></a></div></p></td>
+<td><p><a target="_blank" href="https://orcid.org/0000-0002-7777-6013"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p>Maastricht University</p></td>
+<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-NL.svg" ></img></p></td>
+<td><p>Writing - Original Draft</p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">3.11. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
 <hr class="footnotes docutils" />
@@ -1155,8 +1058,8 @@ Locations:           http://example.com/foo.txt
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../infrastructure/chemical-identities.html" title="previous page"><span class="section-number">2. </span>InChI and SMILES identifiers for chemical structures</a>
-    <a class='right-next' id="next-link" href="zenodo-deposition.html" title="next page"><span class="section-number">4. </span>Depositing in Zenodo generic repository</a>
+    <a class='left-prev' id="prev-link" href="zenodo-deposition.html" title="previous page"><span class="section-number">4. </span>Depositing in Zenodo generic repository</a>
+    <a class='right-next' id="next-link" href="checksum-create.html" title="next page"><span class="section-number">6. </span>How to create checksum files</a>
 
         </div>
         
