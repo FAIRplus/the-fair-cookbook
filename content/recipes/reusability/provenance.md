@@ -23,12 +23,19 @@
 
 ## Main Objectives
 
-In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essential. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its **Provenance**. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of traceability and accountability can be established. The notions of **audit and trail** as well as **versioning** and **authorship** are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.
+In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essential.
+The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of 
+quality are many. One of them is a check on the origin of the information, in other words, its **Provenance**. 
+Provenance covers the elements detailing how the data was produced by identifying the agents 
+(human, software, workflows) so a certain level of traceability and accountability can be established. 
+The notions of **audit and trail** as well as **versioning** and **authorship** are essential to be able, 
+should any distortion be identified in downstream analysis, to trace back to possible sources of error.
 
 
 ## Provenance: a definition
 
-**"Provenance is information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness"**. 
+**"Provenance is information about entities, activities, and people involved in producing a piece of data or thing, 
+which can be used to form assessments about its quality, reliability or trustworthiness"**. 
 Provenance has been an active field of academic research and several models have been developed over the year to cover the domain.
 The next section will introduce the most known models as well as detail how their overlap and what are the differences between these.
 
@@ -37,20 +44,23 @@ The next section will introduce the most known models as well as detail how thei
 
 ### OPM Open Provenance Model
 
-Published in 2011, the Open Provenance Model (OPM) {footcite}`MOREAU2011743` was the first formal model developed to catter for the reporting of provenance information with several main goals in mind:
+Published in 2011, the Open Provenance Model (OPM) {footcite}`MOREAU2011743` was the first formal model developed
+to cater for the reporting of provenance information with several main goals in mind:
 - provide a domain agnostic, formal and actionable definition of provenance
 - enable sharing of provenance information between systems, an issue of interoperability
 - support tool development and implementation
 - enable validation of provenance messages.
 
-The work was well received and several workshops and working groups refined the specification which resulting in a specification being submitted to the World Wide Web Consortium.
+The work was well-received and several workshops and working groups refined the specification which resulting in a
+specification being submitted to the World Wide Web Consortium.
 The following sections provides further insights into these efforts.
 
 
 ### The PROV Data Model
 This definition is taken from the W3C Provenance Data Model specifications {footcite}`provdm`.
 
-
+````{dropdown}
+:open:
 ```{figure} prov-dm-overview.png
 ---
 width: 800px
@@ -59,14 +69,20 @@ alt: Overview of the Provenance Data Model main classes
 ---
 Overview of the Provenance Data Model main classes.
 ```
-
+````
 
 ### PROV vocabulary:
 
 The PROV-O Provenance Ontology {footcite}`provo` is a W3C-vetted specification of the Provenance Data Model as an OWL ontology.
 The namespace for PROV-O is [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#).
-It is meant to allow expressing provenance information as modeled in the provenance model [W3C PROV-DM](https://www.w3.org/TR/prov-overview/) with Classes, Properties and relations defined in the W3C Ontology Web Language (OWL). Instances can therefore be represented in RDF and distributed in any of the official serialization, e.g. JSON-LD, RDF/XML, Turtle.
+It is meant to allow expressing provenance information as modeled in the provenance model
+[W3C PROV-DM](https://www.w3.org/TR/prov-overview/) with Classes, Properties and relations defined in the W3C 
+Ontology Web Language (OWL). Instances can therefore be represented in RDF and distributed in any of the official 
+serialization, e.g. JSON-LD, RDF/XML, Turtle.
 
+
+````{dropdown}
+:open:
 ```{figure} prov-o-overview.svg
 ---
 width: 800px
@@ -75,8 +91,11 @@ alt: Overview of the Provenance Ontology main classes
 ---
 Overview of the Provenance Ontology main classes.
 ```
+````
 
-Below is an example of provenance information represented using the PROV-O ontology and serialized as RDF statements using turtle representation.
+
+Below is an example of provenance information represented using the PROV-O ontology and serialized as RDF statements
+using turtle representation.
 
 ````bash
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
@@ -146,11 +165,13 @@ Below is an example of provenance information represented using the PROV-O ontol
 ## Tools for creating provenance metadata
 
 In the previous section, we have detailed the landscape of formal models to represent provenance information.
-In this section, we will show how tools have implemented these models, or domain-specific extension of them as in the case of computation workflow provenance information.
+In this section, we will show how tools have implemented these models, or domain-specific extension of them as in the
+case of computation workflow provenance information.
 
 ### CamFLow
 
-[CamFlow](https://camflow.org/#output_format) is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit {footcite}`Pasquier2017Camflow` and aims at capture information flow.
+[CamFlow](https://camflow.org/#output_format) is a Linux Security Module (LSM) designed to capture data provenance for
+the purpose of system audit {footcite}`Pasquier2017Camflow` and aims at capture information flow.
 
 
 CamFlow support 2 output formats.
@@ -201,21 +222,27 @@ CamFlow also concerns itself with a informatics system audit and as obvious from
 
 While this tool is probably of limited use to Life Sciences and bioinformatics applications, we mention it for two reasons:
 * it provides one of the first example of an implementation (even if very basic) making use of the W3C Prov-O model.
-* it provides an insight on how computational tool can deal with provenance information in ways which allow to assess systems health from a security point of view. 
+* it provides an insight on how computational tool can deal with provenance information in ways which allow assessing 
+systems health from a security point of view. 
 
 
 ### Computational workflows and Provenance information:
 
 
-As seen when introducing the W3C Provenance Data Model and Provenance Ontology, three key entities are necessary to record and track lineage information:
+As seen when introducing the W3C Provenance Data Model and Provenance Ontology, three key entities are necessary to 
+record and track lineage information:
 
 - The Entity the origin of which we are concerned with.
 - The Activity which resulted in the creation of the Entity
 - The Agent which performed the Activity aforementioned.
 
-Because the PROV model is domain agnostic and very generic, it can be applied, as is, to any situation or it can also be extended and specialized to suit a particular domain on knowledge.
-To give an example, tracking provenance information in the field of bioinformatics shares features with provenance tracking as used in manufacturing but it also has a number specific features.
-In the field of bioinformatics, where computational pipelines, known as workflows, are assembled to process ever larger datasets on high performance computing infrastructure and cloud infrastructure, having the ability to access data lineage matters for a number for reasons, such as:
+Because the PROV model is domain agnostic and very generic, it can be either applied as is, to any situation 
+or it can also be extended and specialized to suit a particular domain on knowledge.
+To give an example, tracking provenance information in the field of bioinformatics shares features with provenance
+tracking as used in manufacturing, but it also has a number of specific features.
+In the field of bioinformatics, where computational pipelines, known as workflows, are assembled to process ever larger
+datasets on high performance computing infrastructure and cloud infrastructure, having the ability to access data 
+lineage matters for a number for reasons, such as:
 
 - audit and trail tasks for regulatory compliance, where every step of the data processing needs to be documented for submission.
 - resource optimization and energy savings (e.g. should a workflow be executed again or not)
@@ -224,7 +251,8 @@ It is those features which have been the focus of an extension as part of the wo
 
 #### Example of CWLProv document
 
-The infobox below shows an example of CWLProv RDF document which details how provenance information about the execution of CWL coded workflow may be represented.
+The infobox below shows an example of CWLProv RDF document which details how provenance information about the execution 
+of CWL coded workflow may be represented.
 This document is take from the [CWLProv github repository](https://github.com/common-workflow-language/cwlprov/blob/main/prov.md).
 Such documents are generated and consumed by a feasibility demonstrator tool such as [CWLtool]()
 
@@ -255,13 +283,16 @@ activity(id:e79fc8dc-6e40-4236-b22c-41fee22947a9, -, -,
 
 
 ````{note}
-Speficic recipes about FAIR workflows are available in a specific chapter of the book.
+Specific recipes about FAIR workflows are available in a specific chapter of the book.
 ````
 
 ````{note}
 How widely supported are CWLprov documents?
 
-This is very part of academic research, meaning that these specifications demonstrate feasability and capability. A number of collaborators of the CWLProv group have included such provenance information in their frameworks. Tools such as `Bagit` or specifications such as `Research Objects` recommended CWLProv documents to be included in specific folders of the archives when preparing them.
+This is very part of academic research, meaning that these specifications demonstrate feasibility and capability. 
+A number of collaborators of the CWLProv group have included such provenance information in their frameworks. 
+Tools such as `Bagit` or specifications such as `Research Objects` recommended CWLProv documents to be included in 
+specific folders of the archives when preparing them.
 
 See the [BagIt profile](bagit.md) for details on the CWLProv folder structure, and the 
 [Research Object profile](ro.md) on how to declare the typing of the PROV files.
@@ -271,20 +302,27 @@ See the [BagIt profile](bagit.md) for details on the CWLProv folder structure, a
 #### CWLtool: a component to manage workflow information and generate CWLProv information
 
 
-cwltool for Common Workflow Language tool is a python reference implementation for the [Common Workflow Language](https://www.commonwl.org/), which means that it supports the full set of CWL specifications and provides validation functions to check CWL documents.
+'cwltool' for Common Workflow Language tool is a python reference implementation for the
+[Common Workflow Language](https://www.commonwl.org/), which means that it supports the full set of CWL specifications
+and provides validation functions to check CWL documents.
 
 
 ```bash=
 pip install cwltool
 ```
 
-cwltool is not the only implementation of the CWL specifications, others such as arvado and toil exist. In case these distinct implementations are also installed on the system, one needs to make sure a helper tool known as  'cwl-runner' is also installed. The *key* function of `cwl-runner` is to allow users to select which CWL implementation will be executed.
+cwltool is not the only implementation of the CWL specifications, others such as [Arvados](https://arvados.org/) and 
+[Toil](https://toil.ucsc-cgl.org/) exist. 
+In case these distinct implementations are also installed on the system, one needs to make sure a helper tool known as
+'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL implementation
+will be executed.
 
 ```bash=
 pip install cwltool-runner
 ```
 
-For the purpose of this recipe, which is to show how provenance information can be generated by a tool such as cwltool {footcite}`cwltool`, users will need to make sure that a 
+For the purpose of this recipe, which is to show how provenance information can be generated by a tool such as 
+cwltool {footcite}`cwltool`, users will need to make sure that a workflow is available before performing this conversion.
 
 
 ```bash=
@@ -293,8 +331,10 @@ cwltool --print-rdf --rdf-serializer=turtle mywf.cwl
 
 #### CWLProv-py
 
-This tool, also an output from the Common Workflow Language consortium, is solely intended as a validator for provenance information when available from Research Objects {footcite}`cwlprov-py`. 
-It is a standalone python package, which provides a command line interface (CLI) to read, inspect research objects capturing workflow execution information using the CWL syntax.
+This tool, also an output from the Common Workflow Language consortium, is solely intended as a validator for provenance
+information when available from Research Objects {footcite}`cwlprov-py`. 
+It is a standalone python package, which provides a command line interface (CLI) to read, inspect research objects 
+capturing workflow execution information using the CWL syntax.
 
 To install the package, simply run the standard python install package pip: 
 
@@ -302,7 +342,7 @@ To install the package, simply run the standard python install package pip:
 pip install cwlprov
 ```
 
-To run cwlprov following installation and using an exemplar CWL file, run the following command:
+To run 'cwlprov' following installation and using an exemplar CWL file, run the following command:
 
 
 ```python=
@@ -311,42 +351,60 @@ cwlprov --quiet --directory ./test/1.cwl validate
 
 ### Provenance and distributed ledger technology
 
-With this section, we intend to cover another aspect associated with provenance information. It is the issue of trustworthiness of the information and how to ascertain that even if a provenance information message is valid, it actually contains authentic and untampered information. 
+With this section, we intend to cover another aspect associated with provenance information. It is the issue of 
+trustworthiness of the information and how to ascertain that even if a provenance information message is valid, 
+it actually contains authentic and untempered information. 
 
-The raise of digital currencies such as bitcoin or ethereum has popularized the notion of 'blockchain', which is a type of what is known as "distributing ledger technology" (DLT).  Blockchains and DLT in general represent technological solution to the problem of trust in provenance. To achieve this goal, DLT relies on three key principles:
+The raise of digital currencies such as bitcoin or ethereum has popularized the notion of 'blockchain', which is a type
+of what is known as "distributing ledger technology" (DLT).  Blockchains and DLT in general represent technological 
+solution to the problem of trust in provenance. To achieve this goal, DLT relies on three key principles:
 
-- distribution of information: in other words, the system is decentralized, meaning that no single entity holds the database. Instead, a multitude of copies of the information are available from a myriad of independent nodes. 
+- distribution of information: in other words, the system is decentralized, meaning that no single entity holds the database.
+Instead, a multitude of copies of the information are available from a myriad of independent nodes. 
 
-- transparency:  this is a consequence of the distributed nature of the architecture. Transparency is understood as the availability of means of verification by being able to access independent sources of the reference information. This allows consistency checks to be performed and therefore provides the means of tempering detection. 
+- transparency:  this is a consequence of the distributed nature of the architecture. Transparency is understood as the
+availability of means of verification by being able to access independent sources of the reference information. 
+This allows consistency checks to be performed and therefore provides the means of tempering detection. 
 
 ````{note}
-Transparency does not equate open. Some blockchains are public but others are private, for instance to support domain specific applications ranging from financial services, supply chain or other sensitive area such as healthcare information {footcite}`10.3389/fsufs.2020.563424`.
+Transparency does not equate open. Some blockchains are public but others are private, for instance to support domain 
+specific applications ranging from financial services, supply chain or other sensitive area such as healthcare 
+information {footcite}`10.3389/fsufs.2020.563424`.
 ````
 
-- immutability: this is the last tenet of DLT and refers to the fact that once an entry has been to the distributed ledger, it is digitally signed and synchronized in the network by adding a new element (the block) to the blockchain. Each of the new is digitally signed via some cryptographic algorithm (e.g. Blake2). Any attempt to modify a particular block would result in changing its signature. This can be done but the cost could be prohibitively high as it would entail modifying all subsequent blocks in the chain. This architecture ensures the stability or immutability of the ledger.
+- immutability: this is the last tenet of DLT and refers to the fact that once an entry has been to the distributed
+ledger, it is digitally signed and synchronized in the network by adding a new element (the block) to the blockchain.
+Each of the new is digitally signed via some cryptographic algorithm (e.g. Blake2). Any attempt to modify a particular
+block would result in changing its signature. This can be done but the cost could be prohibitively high as it would 
+entail modifying all subsequent blocks in the chain. This architecture ensures the stability or immutability of the ledger.
 
 ````{admonition} Important
 :class: tip
 This notion of immutability assumes that cryptographic hashes using to digital proof the contracts can not be broken.
-The most advanced algorithms somehow garantee this given the current compute power available. However, it should not be taken for granted. A situation where cryptographic methods would be breached by disruptive technology such as breakthrough in quantum computing, are referred to as a `cryptographic armageddon` as it would wreak havoc on the entire edifice by allowing to rewrite a ledger, thus voiding trust in an instant {footcite}`ncsc_crypto_whitepaper`. 
-Despite such alarmist claims, quantum computing methods could make attempts to tamper with a ledger impossible, thus reinforcing the approach.
+The most advanced algorithms somehow guarantee this given the current compute power available. However, it should not be
+taken for granted. A situation where cryptographic methods would be breached by disruptive technology such as breakthrough
+in quantum computing, are referred to as a `cryptographic armageddon` as it would wreak havoc on the entire edifice by
+allowing to rewrite a ledger, thus voiding trust in an instant {footcite}`ncsc_crypto_whitepaper`. 
+Despite such alarmist claims, quantum computing methods could make attempts to tamper with a ledger impossible, 
+thus reinforcing the approach.
 ````   
 
 
 
 ## Conclusion
 
-With this FAIR Cookbook content, we have introduced the notion of Provenance information, providing a brief historical review of the domain model and given a few examples of tools implementing provenance information tracking.
+With this FAIR Cookbook content, we have introduced the notion of Provenance information, providing a brief historical 
+review of the domain model and given a few examples of tools implementing provenance information tracking.
 
-For a more in depth exploration of provenance information, we encourage our readers to follow up with more detailed material listed below:
+For a more in depth exploration of provenance information, we encourage our readers to follow up with more detailed 
+material listed below:
 
 
 ### What to read next?
 
-> * [Generating ISA based metadata and packaging it as a research object programmatically](TODO)
-> * [Making workflow information FAIR and depositing to Workflowhub](TODO)
+> * [Generating ISA based metadata and packaging it as a research object programmatically](https://w3id.org/faircookbook/FCB___)
+> * [Making workflow information FAIR and depositing to Workflowhub](https://w3id.org/faircookbook/FCB___)
 > * [How to meet community standards for annotation](./community-standards)
-> * [Provenance Information and workflow]()
 > * [FAIR data matrix](fcb-fairify-examples-datamatrix)
 > * [Minid identifiers](https://w3id.org/faircookbook/FCB008)
 >
