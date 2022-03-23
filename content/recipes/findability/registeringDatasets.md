@@ -1,4 +1,6 @@
 # Registering Datasets
+<br/>
+<br/>
 
  ````{panels_fairplus}
 :identifier_text: FCBxxx
@@ -11,7 +13,7 @@
 :recipe_name: How to Register a Dataset with Wikidata
 ```` 
 
-"UCnn.x Registering a dataset in Wikidata."
+[comment]: <> ("UCnn.x Registering a dataset in Wikidata.")
 
 
 ## Main Objectives
@@ -22,7 +24,7 @@ Useful datasets become more useful when they are easily found. The **FAIR princi
 > 
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol 
 
-This recipe is about making an already archived dataset metadata more Findable by getting the metadata distributed into other databases:
+This recipe is about making an already archived dataset metadata more **Findable** by getting the metadata distributed into other databases:
 
 > Learn how to register a published dataset on Wikidata with the appropriate citation to increase its findability.
 
@@ -45,11 +47,12 @@ be linked to many other life sciences databases.
 
 This recipe takes an interest in datasets with information about small chemical compounds, particularly datasets with an [SDF](https://fairsharing.org/FAIRsharing.ew26v7)
 file or spreadsheets containing chemical identifiers in the form of [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c) strings.
-But the `Wikidata registration process` itself, to increase `Findability`, works for any dataset.
+But the **Wikidata registration process** itself, to increase **Findability**, works for any dataset.
 This [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction) describes the principle ideas and data model that will make this
 recipe easier to follow.
 
-Importantly, registering a dataset in Wikidata allows it to be used as reference to support other Wikidata statements (existing or newly created ones) . For example, if the dataset contains a `logP` value,
+Importantly, registering a dataset in Wikidata allows it to be used as reference to support other Wikidata statements (existing or newly created ones).
+For example, if the dataset contains a **logP** value,
 then this logP value can be associated to the compound in Wikidata with a statement, with the dataset itself as reference.
 <!-- TODO: add screenshot of example -->
 
@@ -94,13 +97,13 @@ With the DOI, there is a good chance that [Scholia](https://scholia.toolforge.or
 You can use the `https://scholia.toolforge.org/doi/$DOI` pattern ('$DOI' in the link must be replaced with the
 DOI of the dataset you are registering) to check if your dataset is already listed in
 Wikidata.
-If not, this page will use the DOI to convert the associated metadata and translate them into a Wikidata compatible Scholia`Quickstatements`.
+If not, this page will use the DOI to convert the associated metadata and translate them into a Wikidata compatible Scholia **Quickstatements**.
 
 ### Adding a dataset with Quickstatements
 
 [Quickstatements](https://quickstatements.toolforge.org/) is a layer on top of Wikidata, a tool developed by Magnus Manske, research in Cambridge/UK to
 make it easier to edit Wikidata in an automated way. We use this here to automate the registering of
-a dataset in Wikidata too. We first generate `Quickstatements` which
+a dataset in Wikidata too. We first generate **Quickstatements** which
 can be added to Wikidata using
 the [https://quickstatements.toolforge.org/](https://quickstatements.toolforge.org/) website.
 This is the step which requires a **Wikidata account**.
@@ -117,7 +120,7 @@ in the top right corner of the Quickstatements website.
 #### Step 3: Open the Scholia page
 
 If your dataset is not already Wikidata, use the `https://scholia.toolforge.org/doi/$DOI` Scholia
-page to create `Quickstatements`. The result should look something like this:
+page to create Quickstatements. The result should look something like this:
 
 ```{figure} images/scholia.png
 ---
@@ -131,6 +134,7 @@ Scholia page showing Quickstatements for a dataset not yet in Wikidata.
 
 On the page from Step 3, click the blue "Submit to Quickstatements" button which will take you to the
 Quickstatements website, which will look something like this:
+
 
 ```{figure} images/quickstatements.png
 ---
@@ -154,7 +158,7 @@ Quickstatements showing the same Quickstatements after applying to Wikidata.
 ### Optional: adding additional information
 
 The result page from Step 4 will include a link to the newly created Wikidata item. It will have
-a Wikidata identifer starting with an "Q", for example [Q108653787](https://www.wikidata.org/wiki/Q108653787).
+a Wikidata identifier starting with an "Q", for example [Q108653787](https://www.wikidata.org/wiki/Q108653787).
 
 Additional information that can be provided include:
 
@@ -171,7 +175,6 @@ but works identical to other research output, such as datasets.
 ```{footbibliography}
 ```
 
----
 
 ## Authors
 
@@ -181,8 +184,6 @@ Philippe: Writing - Review & Editing
 Zachary: Writing - Original Draft
 ````
 
-
----
 
 ## License
 
