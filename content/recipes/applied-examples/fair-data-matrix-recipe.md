@@ -26,7 +26,7 @@ The main purpose of this recipe is:
 
 - ensure that results presented in Excel files or PDF tables are made more open and unambiguous
 - provide an RDF representation
-- enable reproduciblity of results
+- enable reproducibility of results
 - evaluate efficiency of the method via a data integrate challenge
 ---
 

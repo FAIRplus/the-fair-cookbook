@@ -179,7 +179,7 @@ tutorial provides more information on how Wikidata uses keywords to further expo
 but works identical to other research output, such as datasets.
 
 ## References
-````{dropdown}
+````{dropdown} **References**
 ```{footbibliography}
 ```
 ````
