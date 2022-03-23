@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/registeringDatasets.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Registering Datasets" />
-<meta property="og:description" content="Registering Datasets  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@type&#34;: [&#34;sdo:" />
+<meta property="og:description" content="Registering Datasets  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -786,6 +786,8 @@
   <div class="section" id="registering-datasets">
 <h1><span class="section-number">5. </span>Registering Datasets<a class="headerlink" href="#registering-datasets" title="Permalink to this headline">¶</a></h1>
 <br/>
+<br/>
+<br/>
 <hr class="docutils" />
 <script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "How to Register a Dataset with Wikidata", "audience": ["Bioinformatician", "Data Scientist", "Data Engineer"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCBxxx", "url": "https://w3id.org/faircookbook/FCBxxx"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
@@ -843,7 +845,6 @@ No
 </div>
 </div>
 <hr class="docutils" />
-<p>“UCnn.x Registering a dataset in Wikidata.”</p>
 <div class="section" id="main-objectives">
 <h2><span class="section-number">5.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>Useful datasets become more useful when they are easily found. The <strong>FAIR principles</strong> state that:</p>
@@ -851,7 +852,7 @@ No
 <div><p>F1. (Meta)data are assigned a globally unique and persistent identifier</p>
 <p>A1. (Meta)data are retrievable by their identifier using a standardised communications protocol</p>
 </div></blockquote>
-<p>This recipe is about making an already archived dataset metadata more Findable by getting the metadata distributed into other databases:</p>
+<p>This recipe is about making an already archived dataset metadata more <strong>Findable</strong> by getting the metadata distributed into other databases:</p>
 <blockquote>
 <div><p>Learn how to register a published dataset on Wikidata with the appropriate citation to increase its findability.</p>
 </div></blockquote>
@@ -870,10 +871,11 @@ but by sharing the metadata, you make the dataset even more Findable. Sharing th
 be linked to many other life sciences databases.</p>
 <p>This recipe takes an interest in datasets with information about small chemical compounds, particularly datasets with an <a class="reference external" href="https://fairsharing.org/FAIRsharing.ew26v7">SDF</a>
 file or spreadsheets containing chemical identifiers in the form of <a class="reference external" href="https://fairsharing.org/FAIRsharing.qv4b3c">SMILES</a> strings.
-But the <code class="docutils literal notranslate"><span class="pre">Wikidata</span> <span class="pre">registration</span> <span class="pre">process</span></code> itself, to increase <code class="docutils literal notranslate"><span class="pre">Findability</span></code>, works for any dataset.
+But the <strong>Wikidata registration process</strong> itself, to increase <strong>Findability</strong>, works for any dataset.
 This <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:Introduction">Wikidata:Introduction</a> describes the principle ideas and data model that will make this
 recipe easier to follow.</p>
-<p>Importantly, registering a dataset in Wikidata allows it to be used as reference to support other Wikidata statements (existing or newly created ones) . For example, if the dataset contains a <code class="docutils literal notranslate"><span class="pre">logP</span></code> value,
+<p>Importantly, registering a dataset in Wikidata allows it to be used as reference to support other Wikidata statements (existing or newly created ones).
+For example, if the dataset contains a <strong>logP</strong> value,
 then this logP value can be associated to the compound in Wikidata with a statement, with the dataset itself as reference.</p>
 <!-- TODO: add screenshot of example -->
 <div class="section" id="finding-datasets">
@@ -915,13 +917,13 @@ For details related to finding datasets and determining the correct licenses, pl
 You can use the <code class="docutils literal notranslate"><span class="pre">https://scholia.toolforge.org/doi/$DOI</span></code> pattern (‘$DOI’ in the link must be replaced with the
 DOI of the dataset you are registering) to check if your dataset is already listed in
 Wikidata.
-If not, this page will use the DOI to convert the associated metadata and translate them into a Wikidata compatible Scholia<code class="docutils literal notranslate"><span class="pre">Quickstatements</span></code>.</p>
+If not, this page will use the DOI to convert the associated metadata and translate them into a Wikidata compatible Scholia <strong>Quickstatements</strong>.</p>
 </div>
 <div class="section" id="adding-a-dataset-with-quickstatements">
 <h3><span class="section-number">5.3.3. </span>Adding a dataset with Quickstatements<a class="headerlink" href="#adding-a-dataset-with-quickstatements" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://quickstatements.toolforge.org/">Quickstatements</a> is a layer on top of Wikidata, a tool developed by Magnus Manske, research in Cambridge/UK to
 make it easier to edit Wikidata in an automated way. We use this here to automate the registering of
-a dataset in Wikidata too. We first generate <code class="docutils literal notranslate"><span class="pre">Quickstatements</span></code> which
+a dataset in Wikidata too. We first generate <strong>Quickstatements</strong> which
 can be added to Wikidata using
 the <a class="reference external" href="https://quickstatements.toolforge.org/">https://quickstatements.toolforge.org/</a> website.
 This is the step which requires a <strong>Wikidata account</strong>.</p>
@@ -937,7 +939,7 @@ in the top right corner of the Quickstatements website.</p>
 <div class="section" id="step-3-open-the-scholia-page">
 <h4><span class="section-number">5.3.3.3. </span>Step 3: Open the Scholia page<a class="headerlink" href="#step-3-open-the-scholia-page" title="Permalink to this headline">¶</a></h4>
 <p>If your dataset is not already Wikidata, use the <code class="docutils literal notranslate"><span class="pre">https://scholia.toolforge.org/doi/$DOI</span></code> Scholia
-page to create <code class="docutils literal notranslate"><span class="pre">Quickstatements</span></code>. The result should look something like this:</p>
+page to create Quickstatements. The result should look something like this:</p>
 <div class="figure align-default" id="scholia">
 <img alt="Scholia page showing Quickstatements for a dataset not yet in Wikidata" src="../../../_images/scholia.png" />
 <p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Scholia page showing Quickstatements for a dataset not yet in Wikidata.</span><a class="headerlink" href="#scholia" title="Permalink to this image">¶</a></p>
@@ -962,7 +964,7 @@ like this:</p>
 <div class="section" id="optional-adding-additional-information">
 <h3><span class="section-number">5.3.4. </span>Optional: adding additional information<a class="headerlink" href="#optional-adding-additional-information" title="Permalink to this headline">¶</a></h3>
 <p>The result page from Step 4 will include a link to the newly created Wikidata item. It will have
-a Wikidata identifer starting with an “Q”, for example <a class="reference external" href="https://www.wikidata.org/wiki/Q108653787">Q108653787</a>.</p>
+a Wikidata identifier starting with an “Q”, for example <a class="reference external" href="https://www.wikidata.org/wiki/Q108653787">Q108653787</a>.</p>
 <p>Additional information that can be provided include:</p>
 <ul class="simple">
 <li><p>links to Wikidata items for authors using the P50 property for “author”</p></li>
@@ -986,7 +988,6 @@ but works identical to other research output, such as datasets.</p>
 </dl>
 </p>
 </div>
-<hr class="docutils" />
 <div class="section" id="authors">
 <h2><span class="section-number">5.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
@@ -1024,7 +1025,6 @@ but works identical to other research output, such as datasets.</p>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
 <div class="section" id="license">
 <h2><span class="section-number">5.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>This page is released under the Creative Commons 4.0 BY license.</p>
