@@ -250,16 +250,15 @@
       numbered: true
       sections:
         - file: content/recipes/applied-examples/etox
-          title: eTox - toxicity datasets #FCB042
+          title: IMI eTox - toxicity datasets #FCB042
         - file: content/recipes/applied-examples/nd4bb
-          title: nd4bb - chemical activities datasets #FCB044
+          title: IMI nd4bb - chemical activities datasets #FCB044
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
-          title: Oncotrack - clinical cohort datasets #FCB044
+          title: IMI Oncotrack - clinical cohort datasets #FCB044
         - file: content/recipes/applied-examples/resolute_raw/resolute
-          title: ReSOLUTE - transcriptomics datasets #FCB045
+          title: IMI ReSOLUTE - transcriptomics datasets #FCB045
         - file: content/recipes/applied-examples/ehden-ohdsi
-          title: EHDEN-OHDSI #FCB054
-          numbered: false
+          title: IMI EHDEN-OHDSI #FCB054
 
 
 - part: ABOUT
