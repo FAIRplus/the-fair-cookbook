@@ -43,6 +43,8 @@
         title: Minting identifiers with Minid #FCB008
       - file: content/recipes/findability/zenodo-deposition
         title: Depositing in Zenodo generic repository #FCB009
+      - file: content/recipes/findability/registeringDatasets
+        title: How to Register a Dataset with Wikidata
       - file: content/recipes/findability/checksum-create
         title: Describe data by checksums #FCB052
       - file: content/recipes/findability/checksum-validate
