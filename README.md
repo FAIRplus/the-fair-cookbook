@@ -1,4 +1,8 @@
-# The FAIR Cookbook :construction: 
+# The FAIR Cookbook
+
+![license](https://img.shields.io/badge/license-CC--BY--4.0-blue)
+![build](https://github.com/FAIRplus/the-fair-cookbook/actions/workflows/build-migrating.yml/badge.svg?branch=migrating)
+[![contribute content](https://img.shields.io/badge/contribute-content-blueviolet)](https://github.com/FAIRplus/the-fair-cookbook/issues/new?assignees=proccaserra&labels=issue+type%3A+meta+checklist%2Cauthor%27s+task%3A+write+abstract%2Ceditor%27s+task%3A+identify+author&template=meta-checklist.md&title=TitleOfRecipe)
 
 FAIR is for **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. 
 
@@ -21,7 +25,7 @@ You are probably looking for [https://fairplus.github.io/the-fair-cookbook](http
 More information about the authors of the FAIRPlus Cookbook is available here: [Info For Authors](https://fairplus.github.io/the-fair-cookbook/content/home.html)
 
 
-## Feedback, Support or Contact
+## Feedback, support or contact
 
 Having trouble with the page? Want to give feedback? 
 
@@ -30,5 +34,15 @@ Having trouble with the page? Want to give feedback?
 
 
 ## Deploy locally:
+
+
+- Using Docker:
+
+`zsh ./script/docker.sh` # for MacOS users 
+
+or 
+
+`bash ./script/docker.sh` # for unix users
+
 - From outside the project:
 `jupyter-book build -W -n --keep-going the-fair-cookbook`
