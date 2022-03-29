@@ -35,7 +35,7 @@ jupyter-cache==0.4.2
 jupyter-client==6.1.12
 jupyter-core==4.7.1
 jupyter-packaging==0.9.2
-jupyter-server==1.6.4
+jupyter-server==1.15.4
 jupyter-server-mathjax==0.2.2
 jupyter-sphinx==0.3.1
 jupyterbook-latex==0.2.0
