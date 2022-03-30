@@ -495,15 +495,7 @@ connect different data sources with each other, so that in general a higher degr
 ```{footbibliography}
 ```
 ````
-  
-TODO add those to the bibtex file and use {footcite}`<your_bib_tag>` in the text when referencing
-<!--
-[Beier et. al (2022) - Recommendations for the formatting of VCF files to make plant genotyping data FAIR](https://doi.org/10.12688/f1000research.109080.1)
 
-[RDMkit - Tools Assembly - Plant Genomics](https://rdmkit.elixir-europe.org/plant_genomics_assembly.html)
-
-[Training Material from FONDUE datathon 2021](https://github.com/PBR/elixir-fondue-datathon)
--->
 
 
 
