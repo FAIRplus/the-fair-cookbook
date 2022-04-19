@@ -48,14 +48,18 @@ A well defined data dictionary is essential for data curation and analysis. It s
 
 ## Graphical overview
 
+
+````{dropdown} 
+:open:
 ```{figure} creating-data-dictionary.md-figure1.mmd.png
 ---
-width: 900px
+width: 1000px
 name: creating-data-dictionary-figure1
 alt: Data Dictionary
 ---
 Data Dictionary.
 ```
+````
 
 ---
 

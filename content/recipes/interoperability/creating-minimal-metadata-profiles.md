@@ -22,6 +22,8 @@
 
 
 
+````{dropdown} 
+:open:
 ```{figure} creating-minimal-metadata-profiles-mermaid.png
 ---
 height: 1000px
@@ -30,6 +32,7 @@ alt: Building a minimal metadata profile
 ---
 Building a minimal metadata profile.
 ```
+````
 
 ---
 

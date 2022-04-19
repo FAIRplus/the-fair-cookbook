@@ -48,6 +48,8 @@ Scientific data is often stored as unstructured data in proprietary file formats
 
 ## Graphical Overview
 
+````{dropdown}
+:open:
 ```{figure} fair-data-matrix-recipe.md-figure1.mmd.png
 ---
 width: 800px
@@ -56,6 +58,7 @@ alt: Overview of the FAIRification process of a data matrix
 ---
 Overview of the FAIRification process of a data matrix.
 ```
+````
 
 ---
 

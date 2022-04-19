@@ -1,6 +1,5 @@
 - file: content/home
 
-
 - part: FOREWORD
   numbered: false
   chapters:
@@ -9,16 +8,18 @@
       title: Introduction
     - file: content/recipes/introduction/brief-FAIR-principles
       title: What are the FAIR principles?
-    - file: content/recipes/introduction/priorization
-      title: Selecting projects for FAIRification  #FCB055
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
-    - file: content/recipes/introduction/training-datasets
-      title: Datasets of relevance
-    - file: content/recipes/introduction/fair-cro #FCB056
-      title: Practical Considerations for CROs to play FAIR
     - file: content/recipes/introduction/FAIR-and-knowledge-graphs
       title: FAIR and Knowledge Graphs
+    - file: content/recipes/introduction/public-kg-resource-integration
+      title: Public Knowledge Graphs for Life Sciences
+    - file: content/recipes/introduction/training-datasets
+      title: Datasets to train on FAIRification
+    - file: content/recipes/introduction/priorization
+      title: Selecting projects for FAIRification  #FCB055
+    - file: content/recipes/introduction/fair-cro #FCB056
+      title: Practical Considerations for a CRO to do FAIR
     - file: content/recipes/introduction/glossary-fair-terms
       title: Glossary
  
@@ -69,7 +70,6 @@
       title: Accessibility
       numbered: true
       sections:
-        # - file: content/recipes/accessibility/anonymizing-patient-data
         - file: content/recipes/accessibility/sftp
           title: Transferring data with SFTP #FCB014
         - file: content/recipes/accessibility/aspera
@@ -173,8 +173,6 @@
             - file: content/recipes/assessing-fairness/fair-assessment-fairshake
               title: FAIRshake tool #FCB050
 
-
-
     #   sections:
     #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
     #     - file: content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model
@@ -190,57 +188,56 @@
 
 - part: FAIR Maturity
   chapters:
-#    - file: content/recipes/maturity
-#      title: Maturity
-#      sections:
-    - file: content/recipes/maturity/l1
-      title: Recipes reaching Level I
+    - file: content/recipes/maturity
+      title: A Model To Gauge Dataset Maturity
       sections:
-        - file: content/recipes/infrastructure/id-resolution
-          title: Identifier resolution services #FCB046
+        - file: content/recipes/reusability/miappe
+          title: Improving dataset maturity - the MIAPPE use case
+        - file: content/recipes/maturity/isa-maturity-progression
+          title: Moving through maturity levels with ISA
+          sections:
+            - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb
+              title: Creating a basic ISA document
+            - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb
+              title: Making a community compliant - ISA in JSON
+            - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb
+              title: Moving to a semantically typed version - ISA in RDF
+            - file: content/recipes/maturity/isa-as-RO.ipynb
+              title: Packaging ISA as a Research Object (RO)
+            - file: content/recipes/maturity/isa-ro-zenodo-deposition
+              title: Programmatic deposition to Zenodo
+        - file: content/recipes/applied-examples/fair-data-matrix-recipe
+          title: Making omics data matrices FAIR #FCB037
+          numbered: true
+          sections:
+            - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
+              title: Starting material #FCB038
+            - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
+              title: Structuring data #FCB039
+            - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
+              title: Exploring data with SPARQL #FCB040
+            - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
+              title: Integrating data #FCB041
+        - file: content/recipes/applied-examples/fair-workflows
+          title: Making Computational Workflows FAIR
+
+#- part: FAIRification Fairs
+#  chapters:
+#    - file: content/recipes/maturity
+#      title: Moving through dataset maturity
+#      numbered: true
+#      sections:
+#    - file: content/recipes/maturity/l1
+#      title: Recipes reaching Level I
+#      sections:
+#        - file: content/recipes/infrastructure/id-resolution
+#          title: Identifier resolution services #FCB046
 #    - file: content/recipes/maturity/l2
 #      title: Recipes reaching Level II
 #    - file: content/recipes/maturity/levelthree
 #      title: Recipes reaching Level III
 #    - file: content/recipes/maturity/levelfour
 #      title: Recipes reaching Level IV
-
-
-- part: FAIRification Fairs
-  chapters:
-    - file: content/recipes/maturity
-      title: Complex examples
-      numbered: true
-      sections:
-        - file: content/recipes/reusability/miappe
-          title: Plant genomic and genetic variation submission to EMBL-EBI databases
-        - file: content/recipes/maturity/isa-maturity-progression
-          title: Moving through maturity levels with ISA
-          sections:
-              - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb
-                title: Creating a basic ISA document
-              - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb
-                title: Making a community compliant - ISA in JSON
-              - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb
-                title: Moving to a semantically typed version - ISA in RDF
-              - file: content/recipes/maturity/isa-as-RO.ipynb
-                title: Packaging ISA as a Research Object (RO)
-              - file: content/recipes/maturity/isa-ro-zenodo-deposition
-                title: Programmatic deposition to Zenodo
-        - file: content/recipes/applied-examples/fair-data-matrix-recipe
-          title: Making omics data matrices FAIR #FCB037
-          numbered: true
-          sections:
-              - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
-                title: Starting material #FCB038
-              - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
-                title: Structuring data #FCB039
-              - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
-                title: Exploring data with SPARQL #FCB040
-              - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
-                title: Integrating data #FCB041
-        - file: content/recipes/applied-examples/fair-workflows
-          title: Making Computational Workflows FAIR
 
 
 - part: FAIRified Datasets
@@ -263,7 +260,7 @@
           title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067TENTATIVE
 
 
-- part: ABOUT
+- part: AFTERWORD
   chapters:
     - file: content/recipes/community
       title: Community
@@ -291,7 +288,7 @@
       title: Contribute
       numbered: true
       sections:
-        - file: content/recipes/help/contributing
+        - file: content/recipes/afterword/contributing
           title: How to contribute
         - file: content/recipes/help/how-to-create-recipe-with-gdoc
           title: Add via GoogleDoc

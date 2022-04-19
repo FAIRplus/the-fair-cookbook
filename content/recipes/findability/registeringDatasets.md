@@ -126,6 +126,7 @@ page to create Quickstatements. The result should look something like this:
 :open:
 ```{figure} images/scholia.png
 ---
+width: 1200px
 name: scholia
 alt: Scholia page showing Quickstatements for a dataset not yet in Wikidata
 ---
@@ -142,6 +143,7 @@ Quickstatements website, which will look something like this:
 :open:
 ```{figure} images/quickstatements.png
 ---
+width: 1200px
 name: quickstatements
 alt: Quickstatements showing the same Quickstatements but now parsed and ready for applying to Wikidata
 ---
@@ -156,6 +158,7 @@ like this:
 :open:
 ```{figure} images/quickstatements2.png
 ---
+width: 1200px
 name: quickstatements2
 alt: Quickstatements showing the same Quickstatements after applying to Wikidata
 ---

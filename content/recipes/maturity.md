@@ -28,7 +28,7 @@ wrestling with the challenges of data management as defined in  the *Fourth para
 {footcite}`hey2009`. 
 Organizations need to decide how to allocate resources to increase the impact of digital artefacts as they are created. 
 Large amounts of literature exist detailing the key ideas for handling data. A resource such as the *DAMA book* covers in 
-great depths the fundamental operations and challenges associated with data management activities {footcite}`DAMA-DMBOK`.
+great depths the fundamental operations and challenges associated with data management activities {footcite}`DAMA-DMBOOK`.
 
 More recently, The FAIR principles articulated key requirements and properties data should have {footcite}`pmid26978244`.
 Following this important work, a number of initiatives have worked at producing domain specific maturity indicators. 
@@ -49,7 +49,7 @@ a screenshot of which is presented below.
 ````{dropdown} **FAIR DSM**
 :open:
 
-```{figure} img_1.png
+```{figure} ../../images/maturity_img_1.png
 ---
 width: 700px
 name: FAIR Dataset Maturity Model
@@ -79,7 +79,7 @@ and Research Objects {footcite}`sefton_peter_2022_5841615` to showcase how users
 ````{dropdown} **FAIR DSM**
 :open:
 
-```{figure} img.png
+```{figure} ../../images/maturity_img.png
 ---
 width: 450px
 name: FAIR DSM indicators in the FAIR Cookbook Recipe card
@@ -127,45 +127,48 @@ It also resulted in streamlining both the training program and the evaluation pr
 
 The following figure shows the effect of a FAIRification process on an IMI eTOX dataset.
 
-````{dropdown} **FAIR DSM**
+````{dropdown} **FAIR DSM image 1**
 :open:
 
-```{figure} ../../../../_images/DSMeval-img1.png
+```{figure} ../../images/DSMeval-img1.png
 ---
-width: 1000px
-name: FAIR DSM indicators before and after intervention
-alt:   FAIR DSM indicators before and after intervention
+width: 800px
+name: FAIR DSM indicators before and after intervention-Content
+alt:   FAIR DSM indicators before and after intervention-Content
 ---
-  FAIR DSM indicators before and after intervention
+FAIR DSM indicators before and after intervention-Content
+```
+````
+
+---
+
+````{dropdown} **FAIR DSM image 2**
+:open:
+
+```{figure} ../../images/DSMeval-img2.png
+---
+width: 800px
+name: FAIR DSM indicators before and after intervention-Format
+alt:   FAIR DSM indicators before and after intervention-Format
+---
+FAIR DSM indicators before and after intervention-Format
 ```
 ````
 
 
-````{dropdown} **FAIR DSM**
+---
+
+
+````{dropdown} **FAIR DSM image 3**
 :open:
 
-```{figure} ../../../../_images/DSMeval-img2.png
+```{figure} ../../images/DSMeval-img3.png
 ---
-width: 1000px
-name: FAIR DSM indicators before and after intervention
-alt:   FAIR DSM indicators before and after intervention
+width: 800px
+name: FAIR DSM indicators before and after intervention-Access
+alt:  FAIR DSM indicators before and after intervention-Access
 ---
-  FAIR DSM indicators before and after intervention
-```
-````
-
-
-
-````{dropdown} **FAIR DSM**
-:open:
-
-```{figure} ../../../../_images/DSMeval-img3.png
----
-width: 1000px
-name: FAIR DSM indicators before and after intervention
-alt:   FAIR DSM indicators before and after intervention
----
-  FAIR DSM indicators before and after intervention
+FAIR DSM indicators before and after intervention-Access
 ```
 ````
 
@@ -184,22 +187,12 @@ can be managed
 
 ### What to read next?
 >
-> Moving through maturity levels with ISA by running the following notebooks in the indicated order:
-> 
-> 1.[create-a-simple-isa-descriptor](https://w3id.org/faircookbook/FCB063)
-> 
-> 2.[isa-api-programmatic-rebuild-of-BII-S-3](https://w3id.org/faircookbook/FCB064)
 >
-> 3.[isa-json-conversion-to-rdf-linked-data](https://w3id.org/faircookbook/FCB064)
->
-> 4.[isa-as-ro](https://w3id.org/faircookbook/FCB066)
->
-> 
 > ````{panels}
-> :column: col-8
-> :card: border-6
+> :column: col-4
+> :card: border-2
 > :header: bg-primary pa_dark
-> ```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+> ```{image} ../../images/logos/pistoia_logo.png
 > :height: 40px
 > :align: center
 > :name: FAIRtoolkit_logo
@@ -207,25 +200,20 @@ can be managed
 > ^^^
 >[The Pistoia Alliance FAIRtoolkit Data Capability Maturity Model](https://fairtoolkit.pistoiaalliance.org/methods/data-capability-maturity-model/)
 > ````
-[comment]: <> (> ---)
+> 
+> Moving through maturity levels with ISA by running the following notebooks in the indicated order:
+> 
+> 1.[improving dataset maturity: the MIAPPE use case](https://w3id.org/faircookbook/FCB062)
+> 
+> 2.[create-a-simple-isa-descriptor](https://w3id.org/faircookbook/FCB063)
+> 
+> 3.[isa-api-programmatic-rebuild-of-BII-S-3](https://w3id.org/faircookbook/FCB064)
+>
+> 4.[isa-json-conversion-to-rdf-linked-data](https://w3id.org/faircookbook/FCB064)
+>
+> 5.[isa-as-ro](https://w3id.org/faircookbook/FCB066)
+>
 
-[comment]: <> (> :header: bg-primary pa_dark)
-
-[comment]: <> (> :body: grey)
-
-[comment]: <> (> ```{image} ./../../../../../../_static/images/logo/RDMkit_logo_inverted.svg)
-
-[comment]: <> (> :height: 40px)
-
-[comment]: <> (> :name: rdmtoolkit_logo)
-
-[comment]: <> (> ```)
-
-[comment]: <> (> ^^^)
-
-[comment]: <> (> [More about `Plant Genomics` from the `RDM Toolkit`]&#40;https://rdmkit.elixir-europe.org/plant_genomics_assembly.html&#41;)
-
-[comment]: <> (> )
 
 
 

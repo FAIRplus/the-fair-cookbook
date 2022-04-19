@@ -37,13 +37,17 @@ The main purpose of this recipe is to:
 
 This recipe will cover the highlighted topics
 
+````{dropdown} 
+:open:
 ```{figure} identifier-mapping.md-figure1.mmd.png
 ---
+width: 1000px
 name: bridgedb-recipe-figure0
 alt: Overview of key aspects in Identifier Mapping
 ---
 Overview of key aspects in Identifier Mapping
 ```
+````
 
 ---
 
@@ -254,6 +258,8 @@ You may notice the `source` identifiers correspond with those used in the previo
 
 This is how the mapping will work
 
+````{dropdown} 
+:open:
 ```{figure} bridgedb-recipe.md-figure1.mmd.png
 ---
 name: bridgedb-recipe-figure1
@@ -261,6 +267,7 @@ alt: Overview of BridgeDb tools
 ---
 Overview of BridgeDb tools
 ```
+````
 
 #### Webservices in Python
 
@@ -303,6 +310,8 @@ In case we did specify the `target` argument to be `Ensembl (En)`, we would inst
 Here, we see a `one-to-one` relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
 
 
+````{dropdown} 
+:open:
 ```{figure} bridgedb-recipe.md-figure2.mmd.png
 ---
 name: bridgedb-recipe-figure2
@@ -310,7 +319,7 @@ alt: An example of a mapping via BridgeDb.
 ---
 An example of a mapping via BridgeDb. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
 ```
-
+````
 
 ```{note} 
 This many-to-many relationship stems from different *scientific lenses* in the data sources. You can read more about these in {footcite}`batchelor_scientific_nodate`. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.

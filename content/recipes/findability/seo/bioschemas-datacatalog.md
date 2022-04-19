@@ -29,6 +29,8 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 
+````{dropdown} 
+:open:
 ```{figure} ./bs-datacatalog-mermaid.png
 ---
 width: 500px
@@ -37,6 +39,7 @@ alt: The process of annotating a data catalog webpage with bioschema markup for 
 ---
 The process of annotating a data catalog webpage with bioschema markup for Search Engine discovery.
 ```
+````
 
 
 ---
@@ -67,6 +70,8 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
    3.  Click on the `Show Form` button
 
 
+````{dropdown} 
+:open:
 ```{figure} BioschemasGenerator.png
 ---
 name: bioschemas-generator-start-screen-1
@@ -75,6 +80,7 @@ alt: Bioschemas Generator start screen.
 ---
 Bioschemas Generator start screen.
 ```
+````
 
 3. Complete the profile form with the information relevant for your page. Once completed, click on the `Generate Markup`  button
 
@@ -87,6 +93,8 @@ Bioschemas Generator start screen.
 
 <!--    ![Bioschemas Generator DataCatalog profile form](BioschemasGeneratorDataCatalogForm.png) -->
 
+````{dropdown} 
+:open:
 ```{figure} BioschemasGeneratorDataCatalogForm.png
 ---
 height: 550px
@@ -95,6 +103,7 @@ alt: Bioschemas Generator DataCatalog profile form
 ---
 Bioschemas Generator DataCatalog profile form.
 ```   
+````
 
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our FAIRsharing.org example, we get the following markup
 

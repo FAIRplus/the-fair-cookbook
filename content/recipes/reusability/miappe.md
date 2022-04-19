@@ -53,7 +53,7 @@ also part of this recipe with examples and explanations (See details in Section 
 ## Graphical overview of the FAIRification Objectives
 
 
-[comment]: <> (![]&#40;https://i.imgur.com/iqdjWqo.png&#41;)
+[comment]: <> (<!-- ![]&#40;https://i.imgur.com/iqdjWqo.png&#41; -->)
 
 ````{dropdown} **FAIRification Objectives**
 :open:
@@ -104,7 +104,7 @@ FAIRification Objectives
 ## Step-by-Step Process
 
 
-[comment]: <> (### Step 1: Take DNA sample and register sample material at BioSamples)
+<!-- ### Step 1: Take DNA sample and register sample material at BioSamples -->
 
 
 ### Step 1: Take DNA sample
@@ -169,7 +169,7 @@ More general information is available on the RDMkit {footcite}`rdmkit_plant_geno
 A specific checklist is used: [BioSamples - Plant MIAPPE checklist](https://www.ebi.ac.uk/biosamples/schemas/certification/plant-miappe.json).
 
 
-[comment]: <> (### Step 2: Sequence DNA sample and submit reads to ENA)
+<!-- ### Step 2: Sequence DNA sample and submit reads to ENA -->
 
 
 ### Step 3: Perform sequencing of DNA sample
@@ -355,7 +355,7 @@ to [INSDC](https://www.insdc.org/) (NCBI Genbank / EMBL-EBI ENA / DDBJ) and wait
  then proceed to step 4.
 
 
-[comment]: <> (### Step 6: Analyse sequencing results and submit VCF file to EVA)
+<!-- ### Step 6: Analyse sequencing results and submit VCF file to EVA -->
 
 
 ### Step 6: Analyse sequencing results
@@ -447,11 +447,11 @@ Once the metadata and data has been formatted according to the specifications ab
 file complies with VCF specifications. 
 For that purpose, we propose the [VCF validator tool on GitHub](https://github.com/EBIvariation/vcf-validator)  
 
-```code
+```bash
 vcf_validator -i /path/to/file.vcf
 ```
 
-```code
+```bash
 vcf_validator -i /path/to/compressed_file.vcf.gz
 ```
 
@@ -480,7 +480,7 @@ connect different data sources with each other, so that in general a higher degr
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ./../../../../../../_static/images/logo/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```
@@ -497,8 +497,6 @@ connect different data sources with each other, so that in general a higher degr
 ````
 
 
-
-
 ## Authors
 ````{authors_fairplus}
 Sebastian: Writing - Original Draft
@@ -508,145 +506,6 @@ Isuru: Writing
 Fuqi: Review & Editing
 Philippe: Review & Editing
 ````
-
-  
-[comment]: <> (<table>)
-
-[comment]: <> (  <tr>)
-
-[comment]: <> (   <td>)
-
-[comment]: <> (Name)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Affiliation)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>orcid)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td> CrediT role)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (  </tr>)
-
-[comment]: <> (  <tr>)
-
-[comment]: <> (   <td>Sebastian Beier)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Bioinformatics and Information Technology Group, Leibniz Institute of Plant Genetics and Crop Plant Research &#40;IPK&#41;, 06466 Seeland, Germany)
-
-[comment]: <> (<p><p>)
-
-[comment]: <> (Institute of Bio- and Geoscience, IBG-4: Bioinformatics, Forschungszentrum Jülich GmbH, 52428 Jülich, Germany)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td><a href="https://orcid.org/0000-0002-2177-8781">0000-0002-2177-8781</a>)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Writing - Original Draft)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (  </tr>)
-
-[comment]: <> (  <tr>)
-
-[comment]: <> (   <td>Erwan Le Floch)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France.)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td><a href="https://orcid.org/0000-0002-1010-6859">0000-0002-1010-6859</a> )
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Writing)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (  </tr>)
-
-[comment]: <> (  <tr>)
-
-[comment]: <> (   <td>Cyril Pommier)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France.)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td><a href="https://orcid.org/0000-0002-9040-8733">0000-0002-9040-8733</a>)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Writing)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (  </tr>)
-
-[comment]: <> (  <tr>)
-
-[comment]: <> (   <td>Isuru Liyanage)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Genome Campus, Hinxton,)
-
-[comment]: <> (<p>)
-
-[comment]: <> (UK)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td><a href="https://orcid.org/0000-0002-4839-5158">0000-0002-4839-5158</a>)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Writing)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (  </tr>)
-
-[comment]: <> (  <tr>)
-
-[comment]: <> (   <td>Fuqi Xu)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Genome Campus, Hinxton,)
-
-[comment]: <> (<p>)
-
-[comment]: <> (UK)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td><a href="https://orcid.org/0000-0002-5923-3859">0000-0002-5923-3859</a>)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (   <td>Editing and revising)
-
-[comment]: <> (   </td>)
-
-[comment]: <> (  </tr>)
-
-[comment]: <> (</table>)
 
 
 

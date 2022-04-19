@@ -18,12 +18,12 @@
 
 The main purpose of this recipe is:
 
->  To detail the key elements for the creation of a `data catalogue` to enable data `findability` in an organisation.
+>  To detail the key elements for the creation of a **data catalogue** to enable data **findability** in an organisation.
 
 We will cover the following points:
 
 1. metadata model selection
-2. annotation with controled vocabularies
+2. annotation with controlled vocabularies
 3. ETL
 4. data loading
 5. data indexing
@@ -56,11 +56,14 @@ Building and populating a data catalogue
 ---
 
 ## User Story
-For **`role.Data Scientists`**, it is essential to be able to *`action.identify`* and *`action.discover`* datasets of potential relevance in the context of *`action.data integration`* and *`action.meta-analytical work`*.
+For **role.Data Scientists**, it is essential to be able to *action.identify* and *action.discover* datasets of potential
+relevance in the context of *action.data integration* and *action.meta-analytical work*.
 
-For **`role.Database Managers`**, a lightweight solution is needed to support a shallow indexing supported fast ingest without intense curation, but good potential for data discovery. Works should rely on approved data standards.
+For **role.Database Managers**, a lightweight solution is needed to support a shallow indexing supported fast ingest 
+without intense curation, but good potential for data discovery. Works should rely on approved data standards.
 
-For **`role.lab scientists`**, the key is to have a minimal burden when having to *`action.deposit`* a dataset to an institutional archive or simply *`action.register`* to dataset to the `data catalogue`. 
+For **role.lab scientists**, the key is to have a minimal burden when having to *action.deposit* a dataset to an 
+institutional archive or simply *action.register* to dataset to the **data catalogue**. 
 
 
 ---
@@ -68,19 +71,30 @@ For **`role.lab scientists`**, the key is to have a minimal burden when having t
 
 ### What is a Data Catalogue?
 
-A `Data Catalogue` is a resource meant to allow fast identification of `Data set`. In keeping with the familiar notion of catalogue, (be it that of an exhibition or that of brand products), the notion of `data catalogue` needs to be understood as the compendium of `short descriptive metadata elements` about an actual set of data. The `Data Index or Data Catalogue` **does not** store the datasets themselves but provides information about where the datasets can be obtained from. Therefore, `Data Catalogues` are often used to index the content of '`Data Repositories` and ` Data Archives`, which provide hosting solutions for the actual datasets, which are often organized (but not always)' around specific `data types` or `data production modalities` (e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence archives and so on.)
+A **Data Catalogue** is a resource meant to allow fast identification of **Data set**. In keeping with the familiar notion 
+of catalogue, (be it that of an exhibition or that of brand products), the notion of **data catalogue** needs to be
+understood as the compendium of **short descriptive metadata elements** about an actual set of data. The 
+**Data Index or Data Catalogue** ***does not*** store the datasets themselves but provides information
+about where the datasets can be obtained from. Therefore, **Data Catalogues** are often used to index the content of
+'**Data Repositories** and ** Data Archives**, which provide hosting solutions for the actual datasets, which are often
+organized (but not always)' around specific **data types** or **data production modalities** 
+(e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence archives and so on.)
  
 
 ### What are the standards supporting establishing a data catalogue?
 
-`Data Catalogues` have been identified as critical infrastructure and therefore a number of model exist to support their implementation.
+**Data Catalogues** have been identified as critical infrastructure and therefore a number of model exist to support their implementation.
 1. DATS:
-The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the NIH-BD2K projects and underpins the [datamed catalogue](https://datamed.org/), the aim of which was to produce a prototype of a [`Pubmed for Datasets`](https://pubmed.ncbi.nlm.nih.gov/29346583/).
+The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the 
+NIH-BD2K projects and underpins the [datamed catalogue](https://datamed.org/), the aim of which was to produce a 
+prototype of a [**Pubmed for Datasets**](https://pubmed.ncbi.nlm.nih.gov/29346583/).
 
-3. DCAT:
-In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document --> (v1 and the newly released version 2) provide a vocabulary to express `data catalogue metadata` in **RDF**.
+2. DCAT:
+In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document -->
+(v1 and the newly released version 2) provide a vocabulary to express **data catalogue metadata** in **RDF**.
 3. Schema.org:
-The vocabulary developed by the consortium of search engines has defined a metadata profile for [`Dataset`](https://schema.org/Dataset), [`Data Catalogue`](https://schema.org/DataCatalog)
+The vocabulary developed by the consortium of search engines has defined a metadata profile for [**Dataset**](https://schema.org/Dataset),
+[**Data Catalogue**](https://schema.org/DataCatalog)
 
 
 ### How are Data Catalogue populated?
@@ -128,7 +142,8 @@ We encourage the readers to either delve deeper into the specific of data catalo
 <!-- * TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`     -->
 
 
-For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR such interoperability and reusability, see the following:
+For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR such
+interoperability and reusability, see the following:
 
 * {ref}`fcb-find-seo`
 * {ref}`fcb-interop-metadataprofile`
@@ -140,7 +155,7 @@ For the readership interested in finding out about additional capabilities neede
 
 ## Authors
 
-<!-- TODO seems unlikely that all authors did review, but noone the original draft. Clarify -->
+<!-- TODO seems unlikely that all authors did review, but no-one the original draft. Clarify -->
 ````{authors_fairplus}
 Philippe: Writing - Review & Editing
 Susanna: Writing - Review & Editing, Funding acquisition

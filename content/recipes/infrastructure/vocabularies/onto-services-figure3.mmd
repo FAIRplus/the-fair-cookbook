@@ -1,0 +1,32 @@
+graph TB;
+No[Tool does not fit]
+style No fill:red
+Candidate[Tool is a candidate]
+style Candidate fill:lightgreen
+Start --> SCL
+
+subgraph Selection Criteria Loop
+SCL>For each: Selection Criteria]
+style SCL fill:darkgrey
+SCLF[Last Selection Criteria finished]
+end
+
+SCL --> SCLF
+SCLF --> Candidate
+SCL --> SCQL
+
+subgraph Low Level Selection Criteria Gap Analysis
+SCQL>For each: Selection Criteria Question]
+style SCQL fill:darkgrey
+SCQM[Is a yes to the question yes mandatory for you?]
+end
+SCQL --> SCQM
+SCQM -->|yes| SCQY
+
+
+subgraph Single Mandatory Question Analysis
+SCQY[Is the answer to the question yes?]
+SCQC[Can customization provide a yes answer with costs below your limits?]
+end
+SCQY -->|no| SCQC
+SCQC -->|no| No

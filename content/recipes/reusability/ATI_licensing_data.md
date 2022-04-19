@@ -129,7 +129,7 @@ If you would like to read more about the challenges and finer points of licensin
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```
@@ -137,7 +137,7 @@ If you would like to read more about the challenges and finer points of licensin
 > [More about `Licensing` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/licensing.html)
 > ---
 > :header: bg-primary pa_dark
-> ```{image} ./../../../../../../_static/images/logo/TTW.svg
+> ```{image} ../../../images/logos/TTW.svg
 > :height: 40px
 > :align: center
 > :name: Turing-Way-logo

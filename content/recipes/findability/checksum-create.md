@@ -22,7 +22,7 @@
 When copying a file ("source file") to a target location, it may become necessary
 to confirm that the actual content, i.e. the bits that make up the information, arrived correctly in the target system.
 Confirming the identity of two different files may be achieved by calculating
-a so-called "checksum" of the file
+a so-called **checksum** of the file
 in the source system, calculating the checksum in the target system, and comparing
 the outputs. The checksum is a proxy of the content of the file, but is much shorter.
 Because the algorithm is previously agreed on and shared between the source and target system,
@@ -33,13 +33,17 @@ the comparison of the checksum indicates whether the files are identical (within
 
 ## Graphical Overview
 
+````{dropdown} 
+:open:
 ```{figure} checksum-create.md-figure1.mmd.png
 ---
+width: 450px
 name: checksum-create-figure1
 alt: When to apply this recipe.
 ---
 When to apply this recipe.
 ```
+````
 
 
 ---

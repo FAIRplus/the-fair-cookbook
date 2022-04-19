@@ -143,7 +143,7 @@ WORKDIR /home/mermaidcli
 
 RUN echo "{\"args\": [ \"--no-sandbox\" ] }" > puppeteer-config.json
 
-COPY --from=orchestrator all_mermaid_files.tar list_of_all_mermaid_files.txt .
+COPY --from=orchestrator all_mermaid_files.tar list_of_all_mermaid_files.txt ./
 RUN tar -xf all_mermaid_files.tar
 RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 800 -o $line.png ; done
 RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 1600 -o $line.hi-res.png ; done

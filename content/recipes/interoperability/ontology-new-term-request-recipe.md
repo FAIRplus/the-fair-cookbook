@@ -39,14 +39,18 @@ In most ontologies, everybody can request new terms. However, in some ontologies
     
 ## Graphical Overview
 
+
+````{dropdown} 
+:open:
 ```{figure} onto-new-term.png
 ---
-width: 600px
+width: 650px
 name: Process for requesting an new term to a terminology
 alt: Process for requesting an new term to a terminology
 ---
 Process for requesting an new term to a terminology.
 ```
+````
 
 ## Capability & Maturity Table
 

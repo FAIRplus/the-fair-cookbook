@@ -109,7 +109,7 @@ assumed missing.
 There is not a single specification around a metadata standard for high-content screening experiments.
 
 The most advanced recommendation is [REMBI](http://bit.ly/rembi_v1), the "Recommended Metadata for Biological Images" 
-{footcite}`Sarkans2021`.
+{footcite}`Sarkans2021` .
 
 REMBI spans different layers of granularity, from study, over samples, to images and even analyzed data. 
 This granularity is not necessarily reflected in the ways available to store information in files.
@@ -166,7 +166,7 @@ or this [GitHub repository](https://github.com/rgiessmann/data-management-for-hi
 
 ````{dropdown}
 :open:
-```{figure} bioimage-excel.png
+```{figure} ../../../images/bioimage-excel.png
 ---
 width: 800px
 name: fbioimage-excel

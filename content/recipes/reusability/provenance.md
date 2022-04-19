@@ -307,7 +307,7 @@ See the [BagIt profile](bagit.md) for details on the CWLProv folder structure, a
 and provides validation functions to check CWL documents.
 
 
-```bash=
+```bash
 pip install cwltool
 ```
 
@@ -317,7 +317,7 @@ In case these distinct implementations are also installed on the system, one nee
 'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL implementation
 will be executed.
 
-```bash=
+```bash
 pip install cwltool-runner
 ```
 
@@ -325,7 +325,7 @@ For the purpose of this recipe, which is to show how provenance information can 
 cwltool {footcite}`cwltool`, users will need to make sure that a workflow is available before performing this conversion.
 
 
-```bash=
+```bash
 cwltool --print-rdf --rdf-serializer=turtle mywf.cwl
 ```
 
@@ -338,14 +338,14 @@ capturing workflow execution information using the CWL syntax.
 
 To install the package, simply run the standard python install package pip: 
 
-```python=
+```python
 pip install cwlprov
 ```
 
 To run 'cwlprov' following installation and using an exemplar CWL file, run the following command:
 
 
-```python=
+```python
 cwlprov --quiet --directory ./test/1.cwl validate
 ```
 
@@ -404,8 +404,8 @@ material listed below:
 
 > * [Generating ISA based metadata and packaging it as a research object programmatically](https://w3id.org/faircookbook/FCB___)
 > * [Making workflow information FAIR and depositing to Workflowhub](https://w3id.org/faircookbook/FCB___)
-> * [How to meet community standards for annotation](./community-standards)
-> * [FAIR data matrix](fcb-fairify-examples-datamatrix)
+> * [How to meet community standards for annotation](./community-standards) {ref}`fcb-interop-txmetadata`
+> * [FAIR data matrix](fcb-fairify-examples-datamatrix) {ref}`fcb-fairify-examples-datamatrix`
 > * [Minid identifiers](https://w3id.org/faircookbook/FCB008)
 >
 > ````{panels}
@@ -413,7 +413,7 @@ material listed below:
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```
@@ -421,7 +421,7 @@ material listed below:
 > [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
 > ---
 > :header: bg-primary pa_dark
-> ```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+> ```{image} ../../../images/logos/pistoia_logo.png
 > :height: 40px
 > :align: center
 > :name: FAIRtoolkit_logo

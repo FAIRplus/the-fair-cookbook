@@ -2,16 +2,11 @@
 +++
 ---
 
-**Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and Reusable (FAIR).**
+**Created by researchers and data managers professionals, 
+the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable,
+Accessible, Interoperable and Reusable (FAIR).**
 
 ---
-
-<!-- ## The official site -->
-
-<!-- Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
-
-🛢️🚧 **This project is still in early phase and this is work in progress** 🚧🛢️
- -->
 
 
 <!--
@@ -21,13 +16,20 @@
  <img src="/the-fair-cookbook/_static/images/logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).
 * The FAIR Cookbook is a project aiming at collating protocols for making data FAIR and provide examples of IMI dataset FAIRification.
 * The FAIR Cookbook is open source and licensed under CC-BY-4.0
-* The FAIR Cookbook is written using Markdown and deployed using `jupyter-book`
-* the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as `FAIR recipes`, and supporting code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly (quarterly) in order to reflect the progress made by the project and the various working groups, which bring together `academic` and `industry` partners.
+* The FAIR Cookbook is written using Markdown and deployed using *jupyter-book*
+* the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as `FAIR recipes`, and supporting
+code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly 
+(quarterly) in order to reflect the progress made by the project and the various working groups, which bring together `academic` and `industry` partners.
 -->
 
 ## Turning FAIR into practice
 
-The [FAIR Principles](https://doi.org/10.1038/sdata.2016.18) put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are aspirational and generic. The FAIR Cookbook guides *`researchers`* and *`data stewards`* of the Life Science domain in their FAIRification journey; and also provides *`policy makers`* and *`trainers`* with practical examples to recommend in their guidance and use in their educational material. 
+The [FAIR Principles](https://doi.org/10.1038/sdata.2016.18) put specific emphasis on enhancing the ability of machines
+to automatically find and use the data, in addition to supporting its reuse by individuals.
+However, the FAIR Principles are aspirational and generic. 
+The FAIR Cookbook guides ***researchers*** and ***data stewards*** 
+of the Life Science domain in their FAIRification journey; and also provides ***policymakers*** and ***trainers*** with
+practical examples to recommend in their guidance and use in their educational material. 
 
 <!-- 
 ## Persona-based content browsing
@@ -148,9 +150,13 @@ The [FAIR Principles](https://doi.org/10.1038/sdata.2016.18) put specific emphas
 
 ## Learning objectives
 
-The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and indicators of FAIRness, the maturity model, the technologies, the tools and the standards available, as well as the skills required, and the challenges, to achieve and improve FAIRness.
+The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and indicators of FAIRness, 
+the maturity model, the technologies, the tools and the standards available, as well as the skills required, and the 
+challenges, to achieve and improve FAIRness.
 
-<!-- Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.  -->
+<!-- Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about 
+levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve 
+FAIRness; learn about the skills required, as well as the challenges.  -->
 
 
 <!-- ## The FAIRification Process
@@ -169,8 +175,11 @@ The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, th
 ## The recipes
 
 
-The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and level of difficulty. The FAIR Cookbook is a ‘live resource’; recipes are added and improved, iteratively, in an open manner, therefore bear with us if several sections are work in progress!
-Below there are links to some key recipes, click on them to explore their content; otherwise use the main menu on the left hand side to browse all the current recipes. 
+The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and 
+level of difficulty. The FAIR Cookbook is a **live resource**, meaning that content is added and improved, iteratively, 
+in an open manner, therefore bear with us if several sections are work in progress!
+Below there are links to some key recipes, click on them to explore their content; otherwise use the main menu on the 
+left-hand side to browse all the current recipes. 
 
 ````{panels}
 :container: container-xl
@@ -278,7 +287,8 @@ Below there are links to some key recipes, click on them to explore their conten
 </div>
 ````
 
-<hr>
+<hr/>
+
 <div class="container-lg miniCards">
     <div class="row">
         <div class="col-12 col-xl-4">
@@ -287,11 +297,13 @@ Below there are links to some key recipes, click on them to explore their conten
                     <h4 class="my-0 d-table text--purple-dark" id="infrastructure">
                         <span class="bigLetter text--purple-dark"> 
                             <i class="fas fa-toolbox text--purple-dark"></i> 
-                        </span> 
-                        <span class="cardTitle">
-                      
-[Infrastructure](fcb-infrastructure)
                         </span>
+<span class="cardTitle">
+<div class="recipeItem mb-2">
+
+[Infrastructure](fcb-infrastructure)
+</div>
+</span>
                     </h4>
                 </div>
             </div>
@@ -302,11 +314,14 @@ Below there are links to some key recipes, click on them to explore their conten
                     <h4 class="my-0 d-table text--purple-dark" id="examples">
                         <span class="bigLetter text--purple-dark"> 
                             <i class="fas fa-book text--purple-dark"></i> 
-                        </span> 
-                        <span class="cardTitle">
-                      
-[Applied Examples](fcb-applied-examples)
                         </span>
+<span class="cardTitle">
+<div class="recipeItem mb-2">
+
+[Applied Examples](fcb-applied-examples)
+<!-- {ref}`fcb-applied-examples` -->
+</div>
+</span>
                     </h4>
                 </div>
             </div>
@@ -319,15 +334,18 @@ Below there are links to some key recipes, click on them to explore their conten
                             <i class="fas fa-tasks text--purple-dark"></i> 
                         </span> 
                         <span class="cardTitle">
-                      
+<div class="recipeItem mb-2">
+
 [Assessment](fcb-assess)
-                        </span>
+</div>
+                     </span>
                     </h4>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- 
 
@@ -345,7 +363,7 @@ Below there are links to some key recipes, click on them to explore their conten
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-	    <h4><b>Search Engine Optimitization</b></h4>
+	    <h4><b>Search Engine Optimization</b></h4>
 	    <p>TODO: add text here</p>
 	  </span>
 	</span>
@@ -491,7 +509,7 @@ Below there are links to some key recipes, click on them to explore their conten
   </span>
 </span>
  
- -->
+-->
 
 
 
@@ -505,7 +523,12 @@ Below there are links to some key recipes, click on them to explore their conten
 
 ## Contributors
 
-The FAIR Cookbook is developed by a thriving [community of Life Science professionals](fcb-community), in the academia and the industry sectors, including members of the ELIXIR community. Funded by the [IMI FAIRplus project](https://fairplus-project.eu/), a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to participate, join us and [contribute](fcb-help), or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org)
+The FAIR Cookbook is developed by a thriving [community of Life Science professionals](fcb-community),
+in the academia and the industry sectors, including members of the ELIXIR community.
+Funded by the [IMI FAIRplus project](https://fairplus-project.eu/), a private-public partnership, the FAIR Cookbook is
+a community-driven resource that is being populated and improved,
+iteratively, in an open manner. If you want to participate, join us and [contribute](fcb-help), 
+or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org)
 
 
 
@@ -513,7 +536,9 @@ The FAIR Cookbook is developed by a thriving [community of Life Science professi
 
 ## How to cite it
 
-The FAIR Cookbook: a deliverable of the [FAIRplus project](https://fairplus-project.eu/) (grant agreement 802750), funded by the [IMI programme](https://www.imi.europa.eu), a private-public partnership that receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. 
+The FAIR Cookbook: a deliverable of the [FAIRplus project](https://fairplus-project.eu/) (grant agreement 802750),
+funded by the [IMI programme](https://www.imi.europa.eu), a private-public partnership that receives support 
+from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies. 
 
 
 ## License

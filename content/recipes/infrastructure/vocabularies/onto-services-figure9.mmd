@@ -1,0 +1,11 @@
+graph TB;
+
+subgraph "Delivery Questions"
+Del1[Is on premise supported?]
+Del2[Is cloud supported?]
+Del3[Is manual installation supported?]
+Del4[How much effort is needed for manual installation?]
+Del5[Is virtual image based installation supported?]
+DelL[Is Docker based installation supported?]
+end
+Del1 --> Del2 --> Del3 --> Del4  --> Del5 --> DelL

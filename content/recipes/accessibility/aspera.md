@@ -25,10 +25,14 @@ This recipe covers documentation of the popular Aspera Fast Transfer Protocol an
 
 ## Graphical overview
 
-```{figure_fairplus} aspera.md-figure1.mmd
+````{dropdown}
+:open:
+```{figure} aspera.md-figure1.mmd
+width: 650px
 name: aspera-figure1
 subtitle: Aspera Data Transfer Process.
 ```
+````
 
 ---
 ## Obtain Aspera services
@@ -37,7 +41,7 @@ subtitle: Aspera Data Transfer Process.
 * Apply for access.
 * Pay attention to the conditions.
 * Sign up if you are the appropriate person for this download/upload. 
-* Typically Aspera sites are locked down and need a username and password.
+* Typically, Aspera sites are locked down and need a username and password.
 * For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.
  
 ### Decide how you are going to access the data

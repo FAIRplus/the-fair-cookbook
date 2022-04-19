@@ -176,7 +176,7 @@ import holoview
 ````{admonition} Tip
 :class: tip
 
-If you need to include bibliograhic reference, use the following syntax: 
+If you need to include bibliographic reference, use the following syntax: 
 
 ```md
 {footcite}`Gu2020`
@@ -184,7 +184,8 @@ If you need to include bibliograhic reference, use the following syntax:
 
 ````
 
-This style of referencing will show up in text like this {footcite}`Gu2020`, and clicking on the link will take you to the `Reference`section at the bottom of the page.
+This style of referencing will show up in text like this {footcite}`Gu2020`, and clicking on the link will take you to
+the `Reference`section at the bottom of the page.
 
 
 ### ... create workflow figures
@@ -204,7 +205,7 @@ the proper caption for the figure.
 -->
 
 one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
-
+`````
 ````{panels} 
 :container: container-lg pb-3
 :column: col-lg-12 p-2
@@ -218,6 +219,8 @@ graph LR;
     C -->|No| E[Vendor locked Data]
 ```
 ````
+`````
+
 which is then rendered like this:
 
 ````{panels} 
@@ -234,8 +237,8 @@ graph LR;
 </div>
 ````
 
-Authors of graphical representations using the mermaid syntax can also style their graphs, as shown below
-
+Authors of graphical representations using the mermaid syntax can also style their graphs, as shown below:
+`````
 ````{panels} 
 :container: container-lg pb-3
 :column: col-lg-12 p-2
@@ -251,7 +254,7 @@ graph TD;
     style D fill:#0A749B,stroke:#333,stroke-width:2px
 </div>
 ````
-
+`````
 
 ---
 
@@ -278,7 +281,7 @@ To the Reviewers and Editors: The following panels show how to link with externa
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```
@@ -286,7 +289,7 @@ To the Reviewers and Editors: The following panels show how to link with externa
 > [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
 > ---
 > :header: bg-primary pa_dark
-> ```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+> ```{image} ../../../images/logos/pistoia_logo.png
 > :height: 40px
 > :align: center
 > :name: FAIRtoolkit_logo

@@ -1,0 +1,27 @@
+graph TB
+No[Tool does not fit]
+Candidate[Tool is a candidate]
+
+subgraph High Level Criteria Selection
+HlCheck[Does the tool match the high level criteria?]
+end
+HlCheck -->|yes| LlCheck
+HlCheck -->|no| No
+
+subgraph Low Level Criteria Selection
+LlCheck[Does the tool match the low level criteria?]
+end
+LlCheck -->|yes| Candidate
+LlCheck -->|no| No
+Candidate -->  Calc
+
+subgraph From Candidates Selection
+Calc[Define per criteria fulfillment number] --> Sum[Sum weighted fulfillment numbers]
+Sum -->  Highest[Has candidate highest fulfillment number]
+end
+Highest -->|yes| Yes[Best Tool for you]
+Highest -->|no| NotBest[Not Best Tool for you]
+style Candidate fill:lightgreen
+style Yes fill:green
+style No fill:red
+style NotBest fill:#FF9999

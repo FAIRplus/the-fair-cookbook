@@ -28,20 +28,16 @@ If you want to contribute follow the {ref}`help <fcb-help>` provided, or contact
 
 
 ## Authors
-`````{dropdown} authors
 ````{authors_fairplus}
 Philippe: Writing - Original Draft
 Dominique: Writing - Original Draft
 ````
-`````
----
 
 ## License
-`````{dropdown} license
 ````{license_fairplus}
 CC-BY-4.0
 ````
-`````
+
 
 
 

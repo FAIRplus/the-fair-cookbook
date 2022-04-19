@@ -52,7 +52,8 @@ The FAIR insignia aggregates each metric separately to inform someone where they
 <!-- ![Anatomy of a FAIR Insignia](./images/insignia-anatomy) -->
 <!-- <div><img src="https://fairshake.cloud/static/image/insignia-anatomy.png"  style="padding:1px;"/></div> -->
 
-
+````{dropdown}
+:open:
 ```{figure} https://fairshake.cloud/static/image/insignia-anatomy.png
 ---
 width: 800px
@@ -61,6 +62,7 @@ name: FAIRshare insignia explained
 ---
 FAIRshare insignia explained
 ```
+````
 
 
 These insignias capture a visual snapshot of a resources' aggregated assessments at a glance. Interactive tooltips shown by hovering over a particular square reveal which metric is represented by that square. Clicking a given box will bring you to a landing page with detailed information about the metric.
@@ -108,7 +110,8 @@ After [logging in to the website](https://fairshake.cloud/accounts/login/), you 
 After logging in:
 <!-- ![FAIRshake login page](./images/ss8.png) -->
 
-
+````{dropdown}
+:open:
 ```{figure} ./images/ss8.png
 ---
 width: 800px
@@ -117,11 +120,13 @@ name: FAIRshake login page
 ---
 FAIRshake login page
 ```
+````
 
 You're brought back to [the home page](https://fairshake.cloud/?q=lincs&projects=1&digitalobjects=1&rubrics=1&metrics=1) where you can perform searches to locate projects, digital objects, rubrics or metrics by name, perform assessments or add new elements.
 <!-- ![FAIRshake performing a search](./images/ss9.png) -->
 
-
+````{dropdown}
+:open:
 ```{figure} ./images/ss9.png
 ---
 width: 800px
@@ -130,13 +135,15 @@ name: FAIRshake performing a search
 ---
 FAIRshake performing a search
 ```
+````
 
 #### Scenario
 
 Janice is interested in a resource she contributed to: [L1000 dataset of CRISPR perturbagens](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293). She had a hard time finding it in the search so she decided to try the [FAIRshake Chrome extension](https://fairshake.cloud/chrome_extension/).
 
 <!-- ![FAIRshake Chrome Extension install](./images/ss10.png) -->
-
+````{dropdown}
+:open:
 ```{figure} ./images/ss10.png
 ---
 width: 800px
@@ -145,10 +152,14 @@ name: FAIRshake Chrome Extension install
 ---
 FAIRshake Chrome Extension install
 ```
+````
 
 After installing the extension she went to the [resource's own landing page](http://lincsportal.ccs.miami.edu/datasets/view/LDS-1293) (not the one on FAIRshake!) and activated the extension to find that, in fact, an assessment already exists for her already-C2M2 cataloged resource.
 
 <!-- ![Screenshot showing the FAIRshake chrome extension assessment summary](./images/ss6.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss6.png
 ---
 width: 800px
@@ -157,10 +168,13 @@ name: Screenshot showing the FAIRshake chrome extension assessment summary
 ---
 Screenshot showing the FAIRshake chrome extension assessment summary
 ```
+````
 
 She points her mouse over some of the red squares revealing information she doesn't quite understand.
 
 <!-- ![Screenshot showing the FAIRshake chrome extension assessment summary tooltip](./images/ss7.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss7.png
 ---
 width: 800px
@@ -169,6 +183,7 @@ name: Screenshot showing the FAIRshake chrome extension assessment summary toolt
 ---
 Screenshot showing the FAIRshake chrome extension assessment summary tooltip
 ```
+````
 
 Though an assay is listed and described accurately on the page, there is no OBI term available on the page. She hopes to understand how this answer came to be and learn how the detailed and valuable assay information shown on the landing page can be made more FAIR.
 
@@ -179,6 +194,8 @@ The C2M2 rubric was developed by the CFDE team to represent the concrete areas o
 To that end, and to get a better sense of the scope of the FAIR metrics that could be developed to better serve your community, let's take a look at the [FAIR metrics by fairmetrics.org Rubric](https://fairshake.cloud/rubric/25/). This rubric is a FAIRshake entry for the universal FAIR metrics published in [this paper](https://www.nature.com/articles/sdata2018118), representing a universal set of broad criteria that should apply to all digital objects.
 
 <!-- ![FAIR metrics Rubric on FAIRshake](./images/ss1.png)] -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss1.png
 ---
 width: 800px
@@ -187,6 +204,7 @@ name: FAIR metrics Rubric on FAIRshake
 ---
 FAIR metrics Rubric on FAIRshake
 ```
+````
 
 If you're following along, feel free to pick a digital object of your own that you know well and see if you can complete and publish a manual assessment with it! You can always find and delete it from your account if you choose not to keep it, just be sure not to publish it unless you're happy with it.
 
@@ -195,6 +213,8 @@ If you're following along, feel free to pick a digital object of your own that y
 Janice decides to perform a manual assessment of her resource using the FAIRmetrics rubric before digging into the specifics of the CFDE assessment.
 
 <!-- ![View on FAIRshake with extension](./images/ss11.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss11.png
 ---
 width: 500px
@@ -203,10 +223,13 @@ name: View on FAIRshake with extension
 ---
 View on FAIRshake with extension
 ```
+````
 
 Which brings her to FAIRshake to see the [relevant information available on FAIRshake](https://fairshake.cloud/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1) related to the page she was on.
 
 <!-- ![View on FAIRshake link location](./images/ss12.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss12.png
 ---
 width: 800px
@@ -215,12 +238,15 @@ name: View on FAIRshake link location
 ---
 View on FAIRshake link location
 ```
+````
 
 Alternatively, she could have found or registered her digital object directly on the FAIRshake website with the 'Create New Digital Object' button.
 
 Clicking the assess button, she ends up at [the assessment preparation page](https://fairshake.cloud/assessment/prepare/?q=http%3A%2F%2Flincsportal.ccs.miami.edu%2Fdatasets%2Fview%2FLDS-1293&projects=1&digitalobjects=1&rubrics=1&metrics=1&target=8901).
 
 <!-- ![Preparing an assessment on FAIRshake](./images/ss13.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss13.png
 ---
 width: 800px
@@ -229,10 +255,13 @@ name: Preparing an assessment on FAIRshake
 ---
 Preparing an assessment on FAIRshake
 ```
+````
 
 The digital object and its only rubric were selected automatically, but she ends up instead [select the fairmetrics rubric](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25).
 
 <!-- ![Selecting the FAIRmetrics rubric](./images/ss14.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss14.png
 ---
 width: 800px
@@ -241,10 +270,13 @@ name: Selecting the FAIRmetrics rubric
 ---
 Selecting the FAIRmetrics rubric
 ```
+````
 
 Instead of using the CFDE project, she will perform this assessment as part of the FAIRshake testing project. It will likely make sense to create our own project if we expect to do a bunch of related assessments.
 
 <!-- ![Selecting the FAIRmetrics project](./images/ss15.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss15.png
 ---
 width: 800px
@@ -253,10 +285,13 @@ name: Selecting the FAIRmetrics project
 ---
 Selecting the FAIRmetrics project
 ```
+````
 
 It's also important to note that project here can be left blank if our assessment isn't for any project.
 
 <!-- ![Preparing the FAIRshake Assessment](./images/ss16.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss16.png
 ---
 width: 800px
@@ -265,10 +300,13 @@ name: Preparing the FAIRshake Assessment
 ---
 Preparing the FAIRshake Assessment
 ```
+````
 
 Confirming this, Janice [begins a manual assessment](https://fairshake.cloud/assessment/prepare/?target=8901&rubric=25&project=55).
 
 <!-- ![Performing a Manual Assessment with FAIRshake](./images/ss17.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss17.png
 ---
 width: 800px
@@ -277,10 +315,13 @@ name: Performing a Manual Assessment with FAIRshake
 ---
 Performing a Manual Assessment with FAIRshake
 ```
+````
 
 Each metric represents a concept pertinent to FAIRness which is described shortly before each prompt but potentially in more depth on the metrics' landing page. Clicking on the metric "card" to the left of the question she gets [much more information in a new tab](https://fairshake.cloud/metric/104/).
 
 <!-- ![Global unique identifier metric on FAIRshake](./images/ss18.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss18.png
 ---
 width: 800px
@@ -289,10 +330,13 @@ name: Global unique identifier metric on FAIRshake
 ---
 Global unique identifier metric on FAIRshake
 ```
+````
 
 [Clicking 'View assessments'](https://fairshake.cloud/metric/104/assessments/) she can even see what other digital objects in the database got as an answer during an assessment through a tabular view.
 
 <!-- ![Assessments for Global unique identifier](./images/ss19.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss19.png
 ---
 width: 800px
@@ -301,12 +345,15 @@ name: Assessments for Global unique identifier
 ---
 Assessments for Global unique identifier
 ```
+````
 
 Clicking on any of these links will allow you to explore the projects, rubrics, or digital objects that were assessed to provide a more elaborate sense of why a particular score was received and in what context, we can see, for example, that these top entries refer to assessments made during an EBI workshop.
 
 Getting back to the assessment, Janice must determine whether the digital object satisfies the criterion at hand. This one asks us to provide a standard that defines the globally-unique structure of the identifier used for the resource.
 
 <!-- ![Identifying identifiers](./images/ss20.png) -->
+````{dropdown}
+:open:
 ```{figure} ./images/ss20.png
 ---
 width: 800px
@@ -315,6 +362,7 @@ name: Identifying identifiers
 ---
 Identifying identifiers
 ```
+````
 
 She finds out quite quickly that there are several identifiers:
 - the data source: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138
@@ -325,6 +373,9 @@ She finds out quite quickly that there are several identifiers:
 While all of these are identifiers, not all of them are used outside of the resource itself and thus shared as "globally" accepted. The *scheme* however is shared because URL [appears in the FAIRsharing database](https://fairsharing.org/standards/?q=&selected_facets=type_exact:identifier%20schema) along with DOI and other standardized identifier schemes.
 
 <!-- ![FAIRsharing identifiers](./images/ss21.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss21.png
 ---
 width: 800px
@@ -333,6 +384,7 @@ name: FAIRsharing identifiers
 ---
 FAIRsharing identifiers
 ```
+````
 
 A **URL** provides some level of standardization more than, say, a digital object that *doesn't have a resolvable URL*. But other identifier schemes may carry with them even more information, like a **DOI** which adds additional semantic interoperability conditions not present on URLs. Thus in certain circumstances, a URL might be good enough, but in others, a more specific standardized identifier might be more pertinent.
 
@@ -341,6 +393,9 @@ While a DOI guarantees authorship information associated with it, a URL may very
 Thus the matric *is* satisfied in a broad context, though if the question was more specific, for instance -- "is there a DOI for this digital object?" She might have answered differently. Hopefully this demonstration helps to illuminate the need for establishing more specific metrics relevant to your community. The more quantitative a metric is, the more stable and useful it will be when measured.
 
 <!-- ![Answer to question 1](./images/ss22.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss22.png
 ---
 width: 800px
@@ -349,11 +404,15 @@ name: Answer to question 1
 ---
 Answer to question 1
 ```
+````
 
 
 The next metric, persistent identifier, addresses persistence specifically and asks for a document describing the persistent identifier strategy. There is no obvious identifier type that guarantees this so she chooses to investigate further. After some digging she finds information about citation [in the terms](http://lincsportal.ccs.miami.edu/datasets/terms):
 
 <!-- ![LINCS dataset terms](./images/ss23.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss23.png
 ---
 width: 800px
@@ -362,6 +421,7 @@ name: LINCS dataset terms
 ---
 LINCS dataset terms
 ```
+````
 
 This reveals that our local identifiers are registered in [identifiers.org](http://identifiers.org/), also recognized as [a standard in FAIRsharing](https://fairsharing.org/FAIRsharing.nknzhj). In fact she could create a few more identifiers with this knowledge:
 
@@ -373,6 +433,9 @@ Even if LINCS decides to change the URL structure of its webpage, there is an ex
 This demonstrates a scenario where even though LINCS *has* persistent identifiers somewhere, they might not be discovered during the FAIR assessment. Whether we found the answer or not, we can learn something that can be improved.
 
 <!-- ![Answer to question 2](./images/ss24.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss24.png
 ---
 width: 800px
@@ -381,6 +444,7 @@ name: Answer to question 2
 ---
 Answer to question 2
 ```
+````
 
 Lastly we'll look at the machine readable metadata before discussing automated assessments.
 
@@ -391,6 +455,9 @@ In this vein, machine readable metadata should ideally be available and document
 This API provides a structured way of accessing the information on the website making dataset selection and filterability more viable but nonetheless still not trivial. As such we could say that we have machine-readable metadata but it doesn't express the full picture.
 
 <!-- ![Answer to question 3](./images/ss25.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss25.png
 ---
 width: 800px
@@ -399,6 +466,7 @@ name: Answer to question 3
 ---
 Answer to question 3
 ```
+````
 
 
 Hopefully it is clear that the FAIR metrics are broad ideas of things to think about when it comes to FAIR, but we'll likely need some more strict and concrete criterion if we're to measure FAIRness with precision. Furthermore, finding this information is a time consuming process and would be intractable with a large enough set of digital objects.
@@ -408,6 +476,9 @@ This is where automated assessments and quantifiable metrics come in to help mea
 When we're done with our assessment (or just want to save it for later) we can save, publish or delete it at the bottom of the assessment. Once published, an assessment cannot be modified, only one assessment on the same target, rubric, project can be worked on (without publishing) at a time. It's important to note that comments and urls will only be accessible to the authors of the digital object, the assessment, or the project in which it is assessed.
 
 <!-- ![Save publish or delete assessment](./images/ss26.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss26.png
 ---
 width: 800px
@@ -416,10 +487,14 @@ name: Save publish or delete assessment
 ---
 Save publish or delete assessment
 ```
+````
 
 If you complete and publish an assessment, your answers will become associated with the digital object that you assessed, and this information will be used for rendering the insignia and performing the analytics for that digital object.
 
 <!-- ![Assessment shown on FAIRshake](./images/ss27.png) -->
+
+````{dropdown}
+:open:
 ```{figure} ./images/ss27.png
 ---
 width: 800px
@@ -428,6 +503,7 @@ name: Assessment shown on FAIRshake
 ---
 Assessment shown on FAIRshake
 ```
+````
 
 
 Though the assessments seem to agree that the digital object has machine readable metadata, it's unclear from an outsider's perspective whether or not a globally unique identifier is present. Next, we'll find out exactly why, since those were reported by an automated assessment.
@@ -673,6 +749,8 @@ The rubric we used for the CFDE is available from [here](https://fairshake.cloud
 <!-- ![Reviewing FAIR assessment breakdown on FAIRshake](./images/ss5.png) -->
 <!-- <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/04/images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div> -->
 
+````{dropdown}
+:open:
 ```{figure} https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/04/images/ss5.png?raw=true
 ---
 width: 1000px
@@ -681,14 +759,25 @@ name: Reviewing FAIR assessment breakdown on FAIRshake
 ---
 Reviewing FAIR assessment breakdown on FAIRshake
 ```
+````
 
 
 
-Each bar is hoverable on FAIRshake indicating which metric is receiving that which particular score. The score itself is quantified between 0 and 1 much like the scores used to color the FAIR insignia, 0 representing little to no digital objects satisfy that particular metric and 1 meaning that the majority of digital objects satisfy the metric.
+Each bar is hoverable on FAIRshake indicating which metric is receiving that which particular score. 
+The score itself is quantified between 0 and 1 much like the scores used to color the FAIR insignia,
+0 representing little to no digital objects satisfy that particular metric and 1 meaning that the majority of digital objects satisfy the metric.
 
 ## Conclusion
 
-In this recipe, we have detailed and described the manual and automatic process of FAIRification with FAIRshake for a CFDE case study. While the assessment described here was for the CFDE DATS serialized assets, the same process is applicable to any standard and any type of digital object. Examples exist for assessing APIs, GitHub repositories, and tools, among other case studies using standards applicable to each. As more standards become codified and accessible through FAIRshake, they will become simpler to evaluate, ultimately increasing the FAIRness of the standard itself and anything using that standard. It should be noted that the process of using FAIRshake for performing assessments is mainly designed to increase awareness about standards that digital object producers can apply to improve the FAIRness of the digital assets they produce and publish.
+In this recipe, we have detailed and described the manual and automatic process of FAIRification with FAIRshake 
+for a CFDE case study. 
+While the assessment described here was for the CFDE DATS serialized assets,
+the same process is applicable to any standard and any type of digital object.
+Examples exist for assessing APIs, GitHub repositories, and tools, among other case studies using standards applicable to each.
+As more standards become codified and accessible through FAIRshake, they will become simpler to evaluate, ultimately 
+increasing the FAIRness of the standard itself and anything using that standard.
+It should be noted that the process of using FAIRshake for performing assessments is mainly designed to increase 
+awareness about standards that digital object producers can apply to improve the FAIRness of the digital assets they produce and publish.
 
 
 ## References
@@ -697,16 +786,17 @@ In this recipe, we have detailed and described the manual and automatic process 
 ```
 ````
 
-### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo
+<!-- ### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR Repo -->
 
+````{dropdown} **Supplementary Information**
 The CFDE FAIR repository is currently private given that it contains details about DCCs that have not yet been verified.
 Please submit a request to <https://www.nih-cfde.org/contact/> if you need access to the repository.
 
 If you have access to the repository, you can access information in it about:
-- [scripts](https://github.com/nih-cfde/FAIR) to convert several DCC's publicly facing metadata into C2M2 compatible frictionless datapackages organized by DCC name
-- [scripts](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment) to automatically assess C2M2 compatible frictionless datapackages against the C2M2 rubric on FAIRshake
+- [scripts](https://github.com/nih-cfde/FAIR) to convert several DCC's publicly facing metadata into C2M2 compatible frictionless data packages organized by DCC name
+- [scripts](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment) to automatically assess C2M2 compatible frictionless data packages against the C2M2 rubric on FAIRshake
 - [reports](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment/report) showing the satisfaction of the converted DCC metadata with the C2M2 rubric over time (FAIR assessments over time)
-
+````
 
 
 

@@ -30,6 +30,8 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 
+````{dropdown} 
+:open:
 ```{figure} ./bs-dataset-mermaid.png
 ---
 width: 500px
@@ -38,6 +40,7 @@ alt: The process of annotating a dataset webpage with bioschema markup for Searc
 ---
 The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.
 ```
+````
 
 ---
 
@@ -68,6 +71,8 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
    3.  Click on the `Show Form` button
 
 
+````{dropdown} 
+:open:
 ```{figure} BioschemasGenerator.png
 ---
 name: bioschemas-generator-start-screen-3
@@ -76,6 +81,7 @@ alt: Bioschemas Generator start screen.
 ---
 Bioschemas Generator start screen.
 ```
+````
 
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
 
@@ -86,6 +92,9 @@ Bioschemas Generator start screen.
 
 <!--    ![Bioschemas Generator Dataset profile form](BioschemasGeneratorDatasetForm.png) -->
 
+
+````{dropdown} 
+:open:
 ```{figure} BioschemasGeneratorDatasetForm.png
 ---
 height: 550px
@@ -94,6 +103,7 @@ alt: Bioschemas Generator Dataset profile form
 ---
 Bioschemas Generator Dataset profile form.
 ``` 
+````
 
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our UniProtKB example, we get the following markup
 

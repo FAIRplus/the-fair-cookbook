@@ -3,7 +3,8 @@ from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 import sphinx.errors
 from sphinx.util import logging
-
+from os.path import abspath, relpath
+import os
 
 from global_variables_fairplus import CONTROLLED_LICENSE_LIST
 
@@ -28,9 +29,13 @@ class LicenseFairplus(Directive):
     option_spec = {}
 
     def _parse_content(self):
-
+        # cc_logos_path = "/Users/philippe/Documents/git/FAIRplus-org/the-fair-cookbook/_static/images/logo/"
         try:
             this_file = self.content.items[0][0]
+            current_file = self.content.items[0][0]
+            # current_file_path = os.path.abspath(os.getcwd())
+            # relative_path = relpath(cc_logos_path, current_file)
+            # print("RELATIVE:", current_file, "|", current_file_path,    "|", cc_logos_path, "|", relative_path )
         except:
             this_file = None
 

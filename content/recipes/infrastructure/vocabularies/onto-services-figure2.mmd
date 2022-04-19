@@ -1,0 +1,64 @@
+graph TB
+subgraph Functionality
+FuncGap[Do you need more functions than offered?]
+FuncCust[Can I add the functions by customization?]
+end
+FuncNo[Tool does not fit]
+style FuncNo fill:red
+FuncGap-->|no| FuncOk
+FuncGap-->|yes| FuncCust
+FuncCust-->|yes| FuncOk
+FuncCust-->|no| FuncNo
+FuncOk[Ok] --> IfGap
+style FuncOk fill:lightgreen
+
+subgraph Interfaces
+IfGap[Do you need more interfaces than offered?]
+IfCust[Can I add my interfaces by customization?]
+end
+IfNo[Tool does not fit]
+style IfNo fill:red
+IfGap -->|yes| IfCust
+IfGap-->|no| IfOk
+IfCust -->|yes| IfOk
+IfCust -->|no| IfNo
+IfOk[Ok] --> Arch
+style IfOk fill:lightgreen
+
+subgraph Architecture
+Arch[Is the architecture too complex for solving your requirements?]
+end
+ArchNo[Tool does not fit]
+style ArchNo fill:red
+Arch -->|yes| ArchOk
+Arch -->|no| ArchNo
+ArchOk[Ok] --> CostGap
+style ArchOk fill:lightgreen
+
+subgraph Costs
+CostGap[Are the licence costs for the tool acceptable?]
+end
+CostNo[Tool does not fit]
+style CostNo fill:red
+CostGap-->|yes| CostOk
+CostGap-->|no| CostNo
+CostOk[Ok] --> PerfGap
+style CostOk fill:lightgreen
+
+subgraph Performance
+PerfGap[Does any existing installation cover your volume and processing profile?]
+end
+PerfNo[Tool does not fit]
+style PerfNo fill:red
+PerfGap-->|yes| SupGap
+PerfGap-->|no| PerfNo
+
+subgraph Support
+SupGap[Does the tool support match with your quality and long term support requirements?]
+end
+SupNo[Tool does not fit]
+style SupNo fill:red
+Candidate[Tool is a candidate]
+style Candidate fill:lightgreen
+SupGap-->|yes| Candidate
+SupGap-->|no| SupNo

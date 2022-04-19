@@ -29,6 +29,8 @@ An application ontology is a semantic artefact which is developed to answer the 
 ## Graphical Overview
 
 
+````{dropdown} 
+:open:
 ```{figure} ontology-robot-recipe.md-figure1.mmd.png
 ---
 name: ontology-robot-recipe-figure1
@@ -36,6 +38,7 @@ alt: Building an ontology with Robot tool
 ---
 Building an ontology with Robot tool.
 ```
+````
 
 
 ## Capability & Maturity Table
@@ -172,9 +175,11 @@ _Table 2: Available reference ontologies in selected domains_
 
 This step identifies the seeds needed to perform the knowledge extraction from external sources, i.e., the set of entities to extract in order to be integrated on the application ontology. Ontology Developer can provide the tools to ease and to scale the identification of the seeds. Domain experts can identify the right seeds for a given application ontology.
 
-Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
+Besides, the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
 
+````{dropdown} 
+:open:
 ```{figure} ontology-robot-recipe.md-figure2.mmd.png
 ---
 name: ontology-robot-recipe-figure2
@@ -182,6 +187,7 @@ alt: Ontology seed term selection approaches.
 ---
 Ontology seed term selection approaches.
 ```
+````
 
 
 [ZOOMA](https://www.ebi.ac.uk/spot/zooma/) is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the [European Bioinformatics Institute (EMBL-EBI)](https://www.ebi.ac.uk)

@@ -66,7 +66,8 @@ Navigate the FAIREvaluator tool, which can be accessed via the following 2 addre
 
 
 <!-- ![the FAIREvaluator Home page](./assets/fair-eval-img1.png) -->
-
+````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img1.png
 ---
 width: 800px
@@ -75,6 +76,7 @@ alt: the FAIREvaluator Home page
 ---
 the [FAIREvaluator](https://w3id.org/AmIFAIR) Home page
 ```
+````
 
 
 
@@ -85,6 +87,8 @@ One may browse the list of currently community defined indicators from the `Coll
 
 <!-- ![Select a 'FAIR Maturity Indicator - Collections'](./assets/fair-eval-img2.png)  -->
 
+````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img2.png
 ---
 width: 800px
@@ -92,19 +96,22 @@ name: Select a 'FAIR Maturity Indicator - Collections'
 alt: Select a 'FAIR Maturity Indicator - Collections'
 ---
 Select a 'FAIR Maturity Indicator - Collections'
-```    
+```
+````    
 
 ### Preparing the input information
 
 To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
 
 1. a collection of FAIR indicators, selected from the list described above.
-2. a globally unique, persistent, resolveable identifier for the resource to be evaluated.
+2. a globally unique, persistent, resolvable identifier for the resource to be evaluated.
 3. a title for the evaluation. Enforce a naming convention to make future searches easier as these evaluations are saved.
 4. a person identifier in the form of an ORCID.
 
 <!-- ![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 
+````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img4.png
 ---
 width: 800px
@@ -113,6 +120,7 @@ alt: Running the FAIREvaluator - part 1 - setting the input
 ---
 Running the FAIREvaluator - part 1: setting the input
 ```
+````
 
 ### Running the FAIREvaluator
 
@@ -121,6 +129,8 @@ Hit the 'Run Evaluation' button from 'https://fairsharing.github.io/FAIR-Evaluat
 
 <!-- ![Running the FAIREvaluator - part 2: execution ](./assets/fair-eval-img5.png) -->
 
+````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img5.png
 ---
 width: 800px
@@ -129,6 +139,7 @@ alt: Running the FAIREvaluator - part 2 - execution
 ---
 Running the FAIREvaluator - part 2: execution
 ```
+````
 
      
 ### Analysing the FAIREvaluator report
@@ -137,6 +148,8 @@ Following execution of the FAIREvaluator, a detail report is generated.
 
 <!-- ![FAIREvaluator report - overall report ](./assets/fair-eval-img6.png) -->
 
+````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img6.png
 ---
 width: 800px
@@ -145,19 +158,23 @@ alt: FAIREvaluator report - overall report
 ---
 FAIREvaluator report - overall report
 ```
+````
 
 Time to dig into the details and figure out the reasons why some indicators are reporting a failure:
 
-<!-- ![apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*](./assets/fair-eval-img7.png) -->
+<!-- ![apparently a problem with identifier persistence if using DOI, which are URN rather than URL *sensu stricto*](./assets/fair-eval-img7.png) -->
 
+````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img7.png
 ---
 width: 800px
 name: FAIREvaluator error report 
 alt: FAIREvaluator error report
 ---
-apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*
+apparently a problem with identifier persistence if using DOI, which are URN rather than URL *sensu stricto*
 ```
+````
 
 ## Conclusion
 

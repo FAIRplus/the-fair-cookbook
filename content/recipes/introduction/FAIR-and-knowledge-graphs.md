@@ -91,7 +91,7 @@ representations of information**, in contrast to **relational-model based repres
 ```{figure} kg-typology.png
 ---
 width: 1000px
-name: expressing-data-use-figure1
+name: kg-typology
 alt: Knowledge Graph Types
 ---
 Data Use
@@ -152,13 +152,13 @@ When all the entities in an RDF statement are identified and available as `Unive
 the RDF graph then becomes a `Linked Data Graph`, since each entity is no longer an `plain literal` and can now be 
 **looked up by means of HTTP requests** .
 
-```bash=
+```bash
 `P53 protein` `physically interacts with` `DNA`.
 ```
 
 using Wikidata identifiers can be expressed as: 
 
-````markdown=
+````markdown
 "@wdt": "https://www.wikidata.org/wiki/"
 [wdt:Q283350](https://www.wikidata.org/wiki/Q283350) [wdt:Property:P129](https://www.wikidata.org/wiki/Property:P129) 
 [wdt:Q7430](https://www.wikidata.org/wiki/Q7430)
@@ -184,7 +184,7 @@ To view some of the most performant and successful solutions, see the table belo
 comparing the merits of the various solutions.
 
 ```{dropdown} **Well known RDF triple store solutions**
-
+:open:
 | name | vendor | site | performance|
 |:---|:---|:---|---:|
 |Allelograph||https://allegrograph.com/products/allegrograph/|
@@ -212,7 +212,7 @@ but isn't a W3C approved specifications, even though SHEX is proving quite popul
 
 ##### iv. Querying an RDF graph - the W3C SPARQL Query Language
 
-RDF graphs stored in RDF triple stores, such as Virtuose {footcite}`virtuoso`, Blazegraph{footcite}`allelograph`, 
+RDF graphs stored in RDF triple stores, such as Virtuoso {footcite}`virtuoso`, Blazegraph{footcite}`allelograph`, 
 can be queried using a dedicated query language defined by a W3C specification known as 
 [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/).
 SPARQL stands for `SPARQL Query Language`, (pronounced `sparkle`){footcite}`sparql`. 
@@ -227,11 +227,11 @@ and why they matter.
 
 ````{dropdown} **SPARQL query example: Metabolites and the species they are found in**
 :open:
-```{figure} wikidata-sparql.jpg
+```{figure} ../../../images/wikidata-sparql.jpg
 ---
 width: 1000px
-name: wikidata sparql endpoint
-alt: wikidata sparql endpoint
+name: wikidata sparql
+alt: wikidata sparql
 ---
 A SPARQL query over Wikidata RDF endpoint
 ```
@@ -240,7 +240,7 @@ A SPARQL query over Wikidata RDF endpoint
 
 ````{dropdown} **SPARQL query example on WikiData: Cell lines with names that could also be URLs**
 :open:
-```{figure} wikidata-sparql-celllines.jpg
+```{figure} ../../../images/wikidata-sparql-celllines.jpg
 ---
 width: 1000px
 name: wikidata sparql endpoint
@@ -266,7 +266,8 @@ in addition, `edges` have a `Type`
 
 
 
-```admonition{tip}
+```{admonition} Important
+:class: tip
 The main thing to remember is that what distinguishes RDF graphs from Labeled Property graphs is that fact that the 
 edges in a LPG can carry annotations. 
 This allows for interesting properties which affect the querying options available to developers and data miners.
@@ -289,7 +290,7 @@ interface.
 * [Apache Gremlin]() is the **query language** powering Tinkerpop and its interactions with the underlying data stored
 as property graphs. Gremlin is a `graph traversal language` optimized for speed and fast access. 
 Defined by Marko Rodrigues, Gremlin language specifications are detailed in the following publication 
-{footcite}`Rodriguez10.1145/2815072.2815073` and is supported by libraries available in the most popular programming
+{footcite}`10.1145/2815072.2815073` and is supported by libraries available in the most popular programming
 language. Extensive documentation and training is available from the dedicated Apache project pages, 
 including a set of [`recipes`](https://tinkerpop.apache.org/docs/current/recipes/) to make the most of the 
 Gremlin language.
@@ -352,9 +353,9 @@ RETURN p.stId AS Pathway, rle.stId AS Reaction, rle.displayName AS ReactionName
 
 ````{dropdown} **CYPHER query example on Reactome: Comparison with SQL**
 :open:
-```{figure} pcbi.1005968.g001.jpg
+```{figure} ../../../images/pcbi.1005968.g001.jpg
 ---
-width: 700px
+width: 600px
 name: reactome cypher query
 alt: reactome cypher query
 ---
@@ -367,7 +368,7 @@ CYPHER query example on Reactome: Comparison with SQL. From Fabregat et al,2018.
 
 While its origin dates back to 2000, the company recently grabbed headlines for a [very successful IPO](https://neo4j.com/press-releases/neo4j-announces-seriesf-funding/) which netted circa 350 millions USD of venture capital funding. Such a success is testament to the robustness and validity of the approach taken by the group of computer scientists who built the solutions from the ground up to deliver one of the most successful solution for property graph based knowledge representation and querying.make full use of Neo4j representation and infrastructure capabilities.
 
-Neo4J open-sourced the Cypher query language and made it available via github as part of the `open-cypher` project
+Neo4J open-sourced the Cypher query language and made it available via GitHub as part of the `open-cypher` project
  
  
 A [large body of documentation and training material is available](https://neo4j.com/developer/cypher/), 
@@ -383,7 +384,6 @@ quote the landing page of the organization.
 > interfacing with the data. 
 > But the main idea here is that the `GraphQL` way of representing data is a natural fit to database systems
 > which are natively `graph databases`, such as Neo4j.
-> We will get back to this topic in [Section XX](TODO:ADD_LINK)
 > 
 
 ### 3. RDF graphs or Labeled Property graphs, which has the upper hand?
@@ -436,7 +436,7 @@ working group released an initial specification
 
 ## How are knowledge graphs generated?
 
-{footcite}`pmid32637040Nicholson`
+{footcite}`pmid32637040`
 
 
 ### Semantic models and ontologies: when knowledge engineers step in.
@@ -541,7 +541,6 @@ metadata, data about the data  in a FAIR way.
 ````
 
 
-<!-- --- -->
  
 ## Authors
 ````{authors_fairplus}
@@ -549,20 +548,6 @@ Philippe: Writing - Original Draft, Editing, Conceptualization
 Dominique: Writing - Review & Editing
 Susanna: Writing - Review & Editing
 ````
-
-[comment]: <> (| Name | Affiliation  | orcid | CrediT role  |)
-
-[comment]: <> (| :------------- | :------------- | :------------- |:------------- |)
-
-[comment]: <> (| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668]&#40;https://orcid.org/orcid.org/0000-0001-9853-5668&#41; | Writing - Original Draft, Conceptualization |)
-
-[comment]: <> (| Dominique Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668]&#40;https://orcid.org/orcid.org/0000-0001-9853-5668&#41; | Writing - Review |)
-
-[comment]: <> (| Susanna Assunta Sansone | University of Oxford, Data Readiness Group | [0000-0000-0000-0000]&#40;https://orcid.org/0000-0000-0000-0000&#41; | Writing - Original Draft, Review |)
-
-
-<!-- ___
- -->
 
 
 ## License

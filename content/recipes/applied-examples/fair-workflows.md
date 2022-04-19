@@ -43,7 +43,8 @@ ___
 
 ## Graphical Overview
 
-
+````{dropdown}
+:open:
 ```{figure} fair-workflows.png
 ---
 width: 700px
@@ -52,6 +53,7 @@ alt: FAIR workflows
 ---
 FAIR workflows
 ```
+````
 
 
 ## FAIRification Objectives, Inputs and Outputs
@@ -284,7 +286,7 @@ CWL documents can be annotated with [Schema.org](https://schema.org/) or [EDAM v
 
 The blocks of code below shows how this is done with 2 examples.
 
-```bash
+```yaml
 #!/usr/bin/env cwl-runner
 cwlVersion: v1.0
 class: CommandLineTool
@@ -456,7 +458,7 @@ The main thing about Apache Airflow is that code is used to generate the workflo
 For more information, refer to this tutorial: https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html. 
 
 A tool developed by Michael Kotliar, Andrey V Kartashov, Artem Barski brings CWL support to the Apache Airflow 
-framework, meaning that CWL expressed workflow can now be executed on the platform {ref}`Kotliar2019-GigaScience`
+framework, meaning that CWL expressed workflow can now be executed on the platform {footcite}`10.1093/gigascience/giz084`
 
 ````{dropdown}
 :open:
@@ -1608,7 +1610,7 @@ source: https://github.com/biocompute-objects/bco-ro-example-chipseq/blob/main/d
 
 * a BioCompute Object can be integrated with HL7 FHIR as a Provenance Resource.
 
-```code
+```json
 {
   "resourceType": "Provenance",
   "id": "example-biocompute-object",

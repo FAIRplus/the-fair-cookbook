@@ -71,14 +71,17 @@ FAIRsharing organization interpreted the MINSEQE guidelines and translated them 
 One limitation of the FAIRsharing MINSEQE schema is that it is incompatible to the submission standards of popular transcriptomics databases, like the European Nucleotide Archive (ENA). Transcriptomics data following the FAIRsharing MINSEQE standard must be modified to be submitted. 
 
 
-
+````{dropdown}
+:open:
 ```{figure} resolute.md-figure1.png
 ---
+width: 500px    
 name: resolute-figure1
 alt: A visualization of the entities within the proposed transcriptomics schema.
 ---
 A visualization of the entities within the proposed transcriptomics schema.
 ```
+````
 
 To solve this problem, we proposed a [transcriptomics schema](https://github.com/ebi-ait/FAIRPlus/tree/master/schemas/transcriptomics_schema) 
 which follows the EBI Data Submission Portal (DSP) standard, as well as compatible with the MINSEQE guidelines. T
@@ -120,7 +123,10 @@ We have updated the scoring for the transcriptomics data to this new version (v0
 
 The FAIRness level of the transcriptomics dataset for the HUH-7 cell line (as published on SRA) was also determined
 using the [FAIR evaluation services](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!) 
-(an online evaluator). The result was that this dataset only passed for 3 out of the 22 indicators tested. 
+(an online evaluator) {footcite}`pmid26978244`,{footcite}`pmid31541130`. 
+
+The result was that this dataset only passed for 3 out of the 22 indicators tested. 
+
 This was, however, mainly due to the limitations of machine readability of the metadata and the license details within SRA. 
 
 The complete results can be viewed <a href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/evaluations/170">here</a>. 
@@ -137,6 +143,11 @@ Cellosaurus also provides enriched information about different cell lines.
 and is supported by the EBI database submission platform.
 
 
+## References
+````{dropdown} **References**
+```{footbibliography}
+```
+````
 
 
 ## Authors

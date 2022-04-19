@@ -16,6 +16,7 @@ class FigureFairplus(Directive):
     This directive is supposed to work like this:
 
     ````{figure_fairplus} aspera.md-figure1.mmd
+    width: 800px
     name: aspera-figure1
     subtitle: Aspera Data Transfer Process.
     ````
@@ -44,6 +45,7 @@ class FigureFairplus(Directive):
         "---",
         f"name: {self.name}",
         f"alt: {self.subtitle}",
+       # f"width: {self.width}",
         "---",
         f"{self.subtitle} {links_to_high_resolution_pictures}",
         "```"
@@ -54,12 +56,13 @@ class FigureFairplus(Directive):
 
         print(self.content)
         print(self.content.items)
-        assert len(self.content) == 3, _make_string_red("The {figure_fairplus} directive expects to consist of three lines, like this:\n"+
-            " ````{figure_fairplus} example.md-figure1.mmd \n name: example-figure1 \n subtitle: Example Figure has explanatory text. \n ````")
+        assert len(self.content) == 3, _make_string_red("The {figure_fairplus} directive expects to consist of four lines, like this:\n"+
+            "````{figure_fairplus} example.md-figure1.mmd \nname: example-figure1 \nsubtitle: Example Figure has explanatory text. \nwidth: 500px \n````")
 
         filename_string = self.content[0]
         name_string     = self.content[1]
         subtitle_string = self.content[2]
+        #width_string    = self.content[3]
 
         ## check file
         context = self.content.items[0][0]
@@ -89,6 +92,10 @@ class FigureFairplus(Directive):
             self.is_vectorgraphic = False
         else:
             raise "Unknown file extension for an image"
+
+        ## check width
+        #assert width_string.startswith("width: "), _make_string_red("The second line of the {figure_fairplus} directive has to start with 'width: '.")
+       # self.width = width_string[7:]
 
         ## check name
         assert name_string.startswith("name: "), _make_string_red("The second line of the {figure_fairplus} directive has to start with 'name: '.")

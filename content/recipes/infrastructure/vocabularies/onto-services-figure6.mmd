@@ -1,0 +1,17 @@
+graph TB;
+
+subgraph Architecture Questions
+Arch1[Does the system support a distributed ontology administration model?]
+Arch2[Do the supported Databases match with our standards and knowledge?]
+Arch3[Can the Databases replaced by our standards and knowledge?]
+Arch4[Does the customization language match with our standards and knowledge?]
+Arch5[Do the supported Index server match with our standards and knowledge?]
+Arch6[Does the supported Operating System match with our standards and knowledge?]
+Arch7[Does the supported web server match with our organisation standards and knowledge?]
+Arch8[Does the system support on premise installation?]
+Arch9[Does the system support cloud installation?]
+Arch10[Is the system deployment supported by virtual image?]
+ArchL[Is the system deployment support by docker images?]
+end
+Arch1 --> Arch2 --> Arch3 --> Arch4 --> Arch5
+Arch5 --> Arch6 --> Arch7 --> Arch8 --> Arch9 --> Arch10 --> ArchL

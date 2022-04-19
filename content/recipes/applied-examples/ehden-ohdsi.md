@@ -101,6 +101,8 @@ This recipe will describe a proof-of-concept that shows the step-by-step process
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
+````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure0.mmd.png
 ---
 name: ehden-ohdsi-figure0
@@ -108,6 +110,7 @@ alt: Recipe Steps
 ---
 Recipe Steps
 ```
+````
 
 
 ## Step-by-Step process
@@ -119,7 +122,8 @@ kind of digital resources reside in the OHDSI ecosystem. Digital resources in OH
 itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more. 
 Each digital resource itself can consist of multiple (sub) digital resources, as shown in {numref}`ehden-ohdsi-figure1`.
 
-
+````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure1.jpg
 ---
 name: ehden-ohdsi-figure1
@@ -127,6 +131,7 @@ alt: Inventory and prioritization of digital resources
 ---
 Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from [EHDEN D4.5](https://zenodo.org/record/4474373)).
 ```
+````
 
 
 Prioritization of initial digital resources to FAIRify was important, as the OHDSI ecosystem is quite extensive.
@@ -185,7 +190,8 @@ Relevant Schema.org types for studies and databases included:
 
 {numref}`ehden-ohdsi-figure-2` shows part of the relevant metadata elements in the model.
 
-
+````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure2.jpg
 ---
 name: ehden-ohdsi-figure-2
@@ -193,10 +199,12 @@ alt: Part of the metadata model. Here, each class (orange) and relationship is r
 ---
 Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings. 
 ```
-
+````
 
 RDF representation of two Schema.org types, written in Turtle:
 
+````{dropdown}
+:open:
 ```
 schema:MedicalObservationalStudy a owl:Class ;
        rdfs:isDefinedBy  
@@ -210,7 +218,7 @@ schema:Drug a owl:Class ;
        rdfs:label  "Drug"@en ;
        rdfs:subClassOf schema:Substance .
 ```
-
+````
 
 ### OHDSI extension to Schema.org vocabulary
 
@@ -307,7 +315,8 @@ from that which contains the article text but also embeds the entered metadata a
 (see {numref}`ehden-ohdsi-figure3`). In order to do this, we have written custom processing logic that takes the YAML 
 data as input and formats this into RDF in accordance with the metadata model.
 
-
+````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure3.jpg
 ---
 name: ehden-ohdsi-figure3
@@ -315,6 +324,7 @@ alt: Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-c
 ---
 Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.
 ```
+````
 
 
 ### Embedding the metadata in the website as JSON-LD
@@ -440,7 +450,8 @@ The final result of applying all these steps looks like this: an HTML page in th
 the hood. 
 A screenshot of the HTML page is presented in {numref}`ehden-ohdsi-figure6`.
 
-
+````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure6.png
 ---
 name: ehden-ohdsi-figure6
@@ -448,7 +459,7 @@ alt: This screenshot shows the "study" view of the Hugo covid19 app, here the en
 ---
 This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON-LD" tab would allow to see the corresponding JSON-LD for this record.
 ```
-
+````
 
 In the HTML page of the record, the HTML head element is augmented with a script element which embeds the same JSON-LD
 information payload and makes it available to search engines’ crawlers.
@@ -457,7 +468,8 @@ Finally, with all this in place, one may now use the dedicated Google Dataset Se
 datasets. {numref}`ehden-ohdsi-figure7` shows the ICARIUS dataset, which was highlighted in the previous sections, 
 as indexed in Google Dataset Search.
 
-
+````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure7.png
 ---
 name: ehden-ohdsi-figure7
@@ -465,7 +477,7 @@ alt: The OHDSI covid19 datasets can be found in Google Dataset Search, because G
 ---
 The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.
 ```
-
+````
 
 ## Conclusion
 

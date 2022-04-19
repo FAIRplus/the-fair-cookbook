@@ -41,13 +41,17 @@ This recipe assumes that you are already familiar with identifiers and the minti
 This recipe will cover the topics highlighted in orange:
 
 
+````{dropdown} 
+:open:
 ```{figure} identifier-mapping.md-figure1.mmd.png
 ---
+width: 850px
 name: identifier-mapping-figure1
 alt: Overview of key aspects in Identifier Mapping
 ---
 Overview of key aspects in Identifier Mapping
 ```
+````
 
 ---
 

@@ -28,6 +28,8 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 <!--
+````{dropdown} 
+:open:
 ```{figure} ./zenodo.svg
 ---
 width: 500px
@@ -36,6 +38,7 @@ alt: The process of depositing to CERN Zenodo
 ---
 The process of depositing to CERN Zenodo.
 ```
+````
 ---
 -->
 
@@ -91,15 +94,17 @@ This section guides users through the key steps to perform to organize a deposit
 <!-- <div> <img src="/images/TYpr8jM.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" />
 </div> -->
 
-
+````{dropdown} 
+:open:
 ```{figure} /images/TYpr8jM.png
 ---
-height: 450px
+height: 600px
 name: Uploading files to Zenodo
 alt: Uploading files to Zenodo
 ---
 Uploading files to Zenodo Repository.
 ```
+````
 
 Files can be dragged and dropped, with the following limitations:
 * 5GB max each, 
@@ -111,23 +116,25 @@ Failing to do so will result in a failure to proceed with the submission and an 
 
 <!-- <img src="/images/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
 
-
+````{dropdown} 
+:open:
 ```{figure} /images/LwMorlw.png
 ---
-height: 450px
+height: 600px
 name: Starting the file upload to Zenodo
 alt: Starting the file upload  to Zenodo
 ---
 Starting the file upload to Zenodo Repository.
 ```
-
+````
 
 The next key step is to select the `upload type`. In this instance, the `Dataset` is selected. This matters as it provide strong typing which is relied on by `search engine` and therefore impacts `findability`.
 
 
 <!-- <img src="/images/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
 
-
+````{dropdown} 
+:open:
 ```{figure} /images/OYyz4dT.png
 ---
 height: 150px
@@ -136,6 +143,7 @@ alt: Selecting the upload type to Zenodo
 ---
 Selecting the upload type to Zenodo Repository.
 ```
+````
 
 
 ---
@@ -147,16 +155,17 @@ Selecting the upload type to Zenodo Repository.
 
 <!-- <img src="/images/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
-
+````{dropdown} 
+:open:
 ```{figure} /images/WmlqBjL.png
 ---
-height: 450px
+height: 600px
 name: Basic metadata to report 
 alt:  Basic metadata to report 
 ---
 Basic metadata to report .
 ```
-
+````
 
 * **Reserve a Digital Object Identifier**: This is a service provided natively by the Zenodo service, by virtue of its integration with Datacite services. This is quite an important point as it means the Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information **can not be changed without creating a new version of the archive and therefore minting a new doi**
  
@@ -166,15 +175,17 @@ Basic metadata to report .
 
 <!-- <img src="/images/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
+````{dropdown} 
+:open:
 ```{figure} /images/9Bp91gX.png
 ---
-height: 450px
+height: 600px
 name: Setting keywords associated with the Zenodo deposition
 alt:  Setting keywords associated with the Zenodo deposition
 ---
 Setting keywords associated with the Zenodo deposition .
 ```
-
+````
 
 
 ---
@@ -186,6 +197,8 @@ Setting keywords associated with the Zenodo deposition .
 
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
+````{dropdown} 
+:open:
 ```{figure} /images/fSxOjXe.png
 ---
 height: 400px
@@ -194,6 +207,7 @@ alt:  Choosing a License is essential
 ---
 Choosing a License is essential.
 ```
+````
 
 
 
@@ -204,6 +218,8 @@ Choosing a License is essential.
 
 <!-- <img src="/images/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
+````{dropdown} 
+:open:
 ```{figure} /images/ty9rpXF.png
 ---
 height: 350px
@@ -212,19 +228,23 @@ alt:  Setting access conditions
 ---
 Setting access conditions.
 ```
+````
 
 * Start typing to display more licenses available from Zenodo
 
 <!-- <img src="/images/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
 
+````{dropdown} 
+:open:
 ```{figure} /images/249GhMg.png
 ---
-height: 100px
+height: 150px
 name: Autocompletion prompts available licenses
 alt:  Autocompletion prompts available licenses
 ---
 Autocompletion prompts available licenses.
 ```
+````
 
 
 
@@ -234,7 +254,9 @@ Autocompletion prompts available licenses.
 Since the Zenodo mission is to collect EC funded data, the repository provides the means to lookup `Grant Information`:
 
 <!-- <img src="/images/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
- 
+
+````{dropdown} 
+:open:
 ```{figure} /images/STjyFbT.png
 ---
 height: 200px
@@ -243,6 +265,7 @@ alt:  Linking Funding to Zenodo Submission
 ---
 Linking Funding to Zenodo Submission.
 ```
+````
 
 
   * Zenodo: openAIRE connected repository
@@ -256,15 +279,17 @@ Linking Funding to Zenodo Submission.
 
 <!-- <img src="/images/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
- 
+````{dropdown} 
+:open:
 ```{figure} /images/uhGZN5t.png
 ---
-height: 300px
+height: 500px
 name: Miscellaneous Information about the Zenodo Submission
 alt:  Miscellaneous Information about the Zenodo Submission
 ---
 Miscellaneous Information about the Zenodo Submission.
 ```
+````
 
 
   * Contributors
@@ -436,7 +461,7 @@ r.status_code
 > Data access and embargo dates can be reserved.
 > Findability via search engines is enhanced as Zenodo supports content negotiation, serving [schema.org](https://schema.org) based JSON-LD documents.
 > Users should however be reminded of the following limitations of the service:
-    > - Absence of contraints on the nature of the datafiles being uploaded.
+    > - Absence of constraints on the nature of the datafiles being uploaded.
     > - No domain specific awareness and domain specific metadata.
     > - Absence of connection with specialized repositories.
     > - Size limitation for a given datasets.

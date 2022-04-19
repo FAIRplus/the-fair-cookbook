@@ -21,7 +21,8 @@
 
 The main purpose of this recipe is:
 
-> To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments, from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing. 
+> To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments,
+> from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing. 
 
 
 ### Who is this recipe aimed at?

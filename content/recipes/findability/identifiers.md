@@ -67,6 +67,8 @@ All these key points will be developed in this recipe.
 ---
 
 
+````{dropdown} Identifier services
+:open:  
 ```{figure} ./identifiers-fig1.svg
 ---
 width: 700px
@@ -75,25 +77,7 @@ alt: identifier services
 ---
 Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .
 ```
-
-
-[comment]: <> (## Capability & Maturity Table)
-
-[comment]: <> (| Capability  | Initial Maturity Level | Final Maturity Level  |)
-
-[comment]: <> (| :------------- | :------------- | :------------- |)
-
-[comment]: <> (| Findability | minimal | repeatable |)
-
-[comment]: <> (| Accessibility | minimal | repeatable |)
-
-[comment]: <> (| Identifier minting||repeatable|)
-
-[comment]: <> (| URI construction||repeatable|)
-
-[comment]: <> (| Identifier resolution||repeatable|)
-
-[comment]: <> (| content negotiation||repeatable|)
+````
 
 ---
 <!-- 
@@ -179,8 +163,8 @@ This approach uses 2 inputs:
 - a cryptographic hashing algorithm implemented as a software function
 - a digital resource (e.g. a file)
 
-Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
-A number of algorithms can be used and some are already widely used such as `Message Digest algorithm MD5` specified by the RFC1321 {footcite}`MD5`, the `Secure Hash Algorithm (SHA1)`,  `Secure Hash Algorithm 2 (SHA256)`, `Secure Hash Algorithm 3 (SHA3)` or `BLAKE2b-256` (RFC 7693) {footcite}`Blake2`. 
+Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string, which is therefore a signature (or fingerprint) of the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
+A number of algorithms can be used and some are already widely used such as *Message Digest algorithm MD5* specified by the RFC1321 {footcite}`MD5`, the *Secure Hash Algorithm (SHA1)*,  *Secure Hash Algorithm 2 (SHA256)*, *Secure Hash Algorithm 3 (SHA3)* or *BLAKE2b-256* (RFC 7693) {footcite}`Blake2`. 
 The first two are considered obsolete, while the latter two are most advanced and approved by NIST.
 
 ---
@@ -250,11 +234,11 @@ In other words, in order to create globally unique identifiers `for the web`, it
 This results in URLs of the following form
 
 ````bash
-          userinfo       host      port
-          ┌──┴───┐ ┌──────┴──────┐ ┌┴┐
-  https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
-  └─┬─┘   └───────────┬──────────────┘└───────┬───────┘ └───────────┬─────────────┘ └┬┘
-  scheme          authority                  path                 query           fragment
+        userinfo       host      port
+        ┌──┴───┐ ┌──────┴──────┐ ┌┴┐
+https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
+└─┬─┘   └───────────┬──────────────┘└───────┬───────┘ └───────────┬─────────────┘ └┬┘
+scheme          authority                  path                 query           fragment
 ````
 source:[https://en.wikipedia.org/wiki/Uniform_Resource_Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 
@@ -471,7 +455,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 > :column: col-4
 > :card: border-2
 > :header: bg-primary pa_dark
-> ```{image} ./../../../../../../_static/images/logo/pistoia_logo.png
+> ```{image} ../../../images/logos/pistoia_logo.png
 > :height: 40px
 > :align: center
 > :name: FAIRtoolkit_logo
@@ -481,7 +465,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 > ---
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ./../../../../../../_static/images/logo/RDMkit_logo_inverted.svg
+  > ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```

@@ -1,8 +1,11 @@
 # The FAIR Cookbook
 
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://faircookbook.elixir-europe.org/content/home.html)    
 ![license](https://img.shields.io/badge/license-CC--BY--4.0-blue)
 ![build](https://github.com/FAIRplus/the-fair-cookbook/actions/workflows/build-migrating.yml/badge.svg?branch=migrating)
 [![contribute content](https://img.shields.io/badge/contribute-content-blueviolet)](https://github.com/FAIRplus/the-fair-cookbook/issues/new?assignees=proccaserra&labels=issue+type%3A+meta+checklist%2Cauthor%27s+task%3A+write+abstract%2Ceditor%27s+task%3A+identify+author&template=meta-checklist.md&title=TitleOfRecipe)
+
+
 
 FAIR is for **F**indable, **A**ccessible, **I**nteroperable and **R**eusable. 
 

@@ -31,6 +31,8 @@
 ## Graphical Overview
 
 
+````{dropdown} 
+:open:
 ```{figure} from-proprietary.png
 ---
 width: 450px
@@ -39,6 +41,7 @@ alt: Converting to an open standard file format
 ---
 Converting to an open standard file format.
 ```
+````
 
 ---
 
@@ -130,7 +133,7 @@ drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
 -rw-r--r--@   1 bob  staff     162 14 Jan 10:59 ~$ta_Release_Proposal_20191115_Metabolome_of_parental_cell_lines.doc
 ```
 
-> :octopus: The archive would have benefitted from having a manifest file listing all the files and their associated checksums. In so doing, it would have allowed validation and verification that no corruption happened during file transfer.
+> :octopus: The archive would have benefited from having a manifest file listing all the files and their associated checksums. In so doing, it would have allowed validation and verification that no corruption happened during file transfer.
 
 > :octopus: Refer to the recipe: "How to calculate file checksums<!-- TODO add a link to corresponding document -->"
 
@@ -146,6 +149,9 @@ One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of
   <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
 </div> -->
 
+
+````{dropdown} 
+:open:
 ```{figure} /images/AWOWTbr.png
 ---
 width: 750px
@@ -154,7 +160,7 @@ alt: A Standard Record in the FAIRsharing catalog of resources
 ---
 The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing catalog](https://fairsharing.org/) of resources.
 ```
-
+````
 
 
 The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a `containerized` version of the [Proteowizard](https://github.com/ProteoWizard/pwiz) {footcite}`Chambers2012`.
@@ -240,6 +246,9 @@ A number of libraries are available for parsing (reading and writing) `mzML` doc
 <img src="/images/BTs0GUS.png" width="750" border="1"/>
 </div> -->
 
+
+````{dropdown} 
+:open:
 ```{figure} /images/BTs0GUS.png
 ---
 width: 750px
@@ -248,6 +257,7 @@ alt: pymzml in Biotools registry
 ---
 The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.tools/) of resources.
 ```
+````
 
 
 
@@ -276,6 +286,9 @@ pf.save(
 <img src="/images/caaqwFo.png" width="650"/>
 </div> -->
 
+
+````{dropdown} 
+:open:
 ```{figure} /images/caaqwFo.png
 ---
 width: 650px
@@ -284,7 +297,7 @@ alt: pymzml rendered msrun profile
 ---
 The Python `pymzml` library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.
 ```
-
+````
 
 In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML documents. But in the following, we'll show how to read an mzML file using a python library.
 

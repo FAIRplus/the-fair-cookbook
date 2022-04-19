@@ -62,7 +62,10 @@ For an updated contents, please check the [FAIR tooling repository](https://gith
 ## Overview
 
 The figure below shows different ontology-related operations and their relationships, together with related tools and recipes.
- 
+
+
+````{dropdown} 
+:open: 
 ```{figure} ontology-operations-mermaid.png
 ---
 width: 700px
@@ -71,6 +74,8 @@ alt: Overview of key aspects in ontology associated processes
 ---
 Overview of key aspects in ontology associated processes
 ```
+````
+
 The table below is an overview of ontology strategies tools identified. Details of each tools are provided below.
 
 |         Topic        |       Curated tools      |   Related tools in Bio.tools   |

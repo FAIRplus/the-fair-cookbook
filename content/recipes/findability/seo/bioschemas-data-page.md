@@ -29,6 +29,8 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 
+````{dropdown} 
+:open:
 ```{figure} ./bs-data-mermaid.png
 ---
 width: 800px
@@ -37,7 +39,7 @@ alt: The process of annotated a webpage with Bioschemas markup to support machin
 ---
 The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
 ```
-
+````
 
 ---
 
@@ -79,6 +81,8 @@ We will outline the steps for embedding machine processable mark up within a web
 <!--    ![Bioschemas Generator start screen](BioschemasGenerator.png) -->
 
 
+````{dropdown} 
+:open:
 ```{figure} BioschemasGenerator.png
 ---
 name: bioschemas-generator-start-screen-2
@@ -87,6 +91,7 @@ alt: Bioschemas Generator start screen.
 ---
 Bioschemas Generator start screen.
 ```
+````
 
 
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
@@ -98,6 +103,8 @@ Bioschemas Generator start screen.
 <!--    ![Bioschemas Generator Gene profile form](BioschemasGeneratorGeneForm.png) -->
 
 
+````{dropdown} 
+:open:
 ```{figure} BioschemasGeneratorGeneForm.png
 ---
 height: 550px
@@ -106,6 +113,7 @@ alt: Bioschemas Generator Gene profile form
 ---
 Bioschemas Generator Gene profile form.
 ```
+````
 
    
 4. You should now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our Wikidata example, we get the following markup

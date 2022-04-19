@@ -26,27 +26,19 @@ The main purpose of this recipe is:
 
 ---
 
-
-## Requirements
-
-* Skill depedency:
-   * Bash experience
-* Technical requirements:
-   * Groovy
-
----
-
-
-## FAIRification Objectives, Inputs and Outputs
-
+```{tabbed} FAIRification Objectives, Inputs and Outputs
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
 | [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChI](https://fairsharing.org/FAIRsharing.ddk9t9) |
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-
----
-
+```
+```{tabbed} Requirements
+* Skill dependency:
+   * Bash experience
+* Technical requirements:
+   * Groovy
+```
 
 ## Creating InChI and SMILES identifiers for chemical structures
 

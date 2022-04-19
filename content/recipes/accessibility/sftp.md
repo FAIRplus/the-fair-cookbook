@@ -214,12 +214,13 @@ bash: sha512sum * > sha512sum.txt
 Windows: CertUtil -hashfile FILENAME MD5
 
 Recipient compares checksums:
-```code
+
+```bash
 bash: md5sum -c md5sum.txt *
 ```
 or
 
-```code
+```bash
 bash: sha512sum -c sha512sum.txt *
 ```
 
@@ -278,7 +279,7 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ./../../../../../../_static/images/logo/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```

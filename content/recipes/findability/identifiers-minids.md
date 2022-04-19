@@ -36,6 +36,8 @@ To create a **persistent**, **globally unique** and **resolvable identifier** us
 <!-- <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>
  -->
 
+````{dropdown} 
+:open:
 ```{figure} identifiers-minids-fig1.png
 ---
 height: 550px
@@ -44,6 +46,7 @@ alt: An overview of the identifier minting process
 ---
 An overview of the identifier minting process.
 ```
+````
 
 
 
@@ -110,8 +113,9 @@ $ touch minid-config.cfg
  -->
   <!-- ![](/images/B5UbkpF.png) -->
 
-
-```{figure} images/globus/globus-account-create.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-create.png
 ---
 height: 500px
 name: Creating a Globus account
@@ -119,6 +123,7 @@ alt: Creating a Globus account
 ---
 Creating a Globus account.
 ```
+````
 
 
 
@@ -148,7 +153,9 @@ Creating a Globus account.
   <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div>  -->
 
-```{figure} images/globus/globus-account-login.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-login.png
 ---
 height: 250px
 name: Globus account login
@@ -156,6 +163,7 @@ alt: Globus account login
 ---
 Globus account login.
 ```
+````
   
   followed by:
 
@@ -168,7 +176,9 @@ Globus account login.
 <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div> -->
 
-```{figure} images/globus/globus-account-allow.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-allow.png
 ---
 height: 550px
 name: Globus account allow
@@ -176,6 +186,7 @@ alt: Globus account allow
 ---
 Globus account allow.
 ```
+````
   
   If all goes well, the following browser screen will be shown:
 
@@ -189,7 +200,10 @@ Globus account allow.
 </div>
  -->
 
-```{figure} images/globus/globus-account-login-success.png
+
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-login-success.png
 ---
 height: 200px
 name: Globus account login success
@@ -197,6 +211,7 @@ alt: Globus account login success
 ---
 Globus account login success.
 ```
+````
   
   While the terminal will show the following:
 

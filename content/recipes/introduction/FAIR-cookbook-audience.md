@@ -32,7 +32,7 @@ connect. You can now watch the recording of the webinar on this channel:
 
 
 
-[![Discovering the FAIR Cookbook](img.png)](https://www.youtube.com/watch?v=Dxkh5NjwE7U)
+[![Discovering the FAIR Cookbook](../../../images/FAIRCookbook-webinar.png)](https://www.youtube.com/watch?v=Dxkh5NjwE7U)
 
 
 ---
