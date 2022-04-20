@@ -72,7 +72,6 @@ between these types of graph explicitly may be required in the future.
 
 ```{figure} ../../../images/yummydata.png
 ---
-width: 750px
 name: yummydata
 alt: YummyData, a registry of sparql endpoints
 ---
@@ -104,7 +103,6 @@ More recently, the dataset is also available from Amazon Web Services
 :open:
 ```{figure} ../../../images/opentarget-aws.png
 ---
-width: 650px
 name: OpenTarget project in AWS
 alt: OpenTarget project in AWS
 ---
@@ -213,7 +211,7 @@ Pharos information is organized around:
 :open:
 ```{figure} ../../../images/pharos-project.png
 ---
-width: 650px
+width: 8    50px
 name: Pharos
 alt: Pharos
 ---

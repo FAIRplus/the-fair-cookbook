@@ -180,7 +180,7 @@ Overview of the bioimage-excel.
 3. Generate file lists with the Python scripts.
 
 ```python
-python first_python_script.py yourinputfilelist.xlsx
+python first_python_script.py        yourinputfilelist.xlsx
 ```
 
 

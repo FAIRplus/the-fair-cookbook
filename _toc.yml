@@ -204,8 +204,8 @@
               title: Moving to a semantically typed version - ISA in RDF
             - file: content/recipes/maturity/isa-as-RO.ipynb
               title: Packaging ISA as a Research Object (RO)
-            - file: content/recipes/maturity/isa-ro-zenodo-deposition
-              title: Programmatic deposition to Zenodo
+  #            - file: content/recipes/maturity/isa-ro-zenodo-deposition
+  #              title: Programmatic deposition to Zenodo
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
           title: Making omics data matrices FAIR #FCB037
           numbered: true
