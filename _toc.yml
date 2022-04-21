@@ -11,6 +11,8 @@
       title: Selecting projects for FAIRification  #FCB055
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
+    - file: content/recipes/introduction/metadata-fair #FCB0XX
+      title: Metadata and FAIR
     - file: content/recipes/introduction/fair-cro #FCB056
       title: Practical Considerations for CROs to play FAIR
     - file: content/recipes/glossary-fair-terms
