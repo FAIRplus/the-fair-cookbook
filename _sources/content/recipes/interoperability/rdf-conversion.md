@@ -222,9 +222,10 @@ SDM-RDFizer is a Python-based tool which is similar to RMLMapper but is suited f
 
 #### Morph-KGC
 
-Morph-KGC is a powerful engine to generate RDF knowledge graphs. It supports a wide range of relational databases and data file formats. It scales to large volumes of data and runs from the command line or as a python library (creating an [RDFLib](https://github.com/RDFLib/rdflib) graph). It is also integrated in [kglab](https://github.com/DerwenAI/kglab), an abstraction layer for working with knowledge graphs using popular libraries.
+Morph-KGC is a powerful engine to generate RDF and RDF-star knowledge graphs. It supports a wide range of relational databases and data file formats. It scales to large volumes of data and runs from the command line or as a python library (creating [RDFLib](https://github.com/RDFLib/rdflib) or [Oxigraph](https://github.com/oxigraph/oxigraph) graphs). It is also integrated in [kglab](https://github.com/DerwenAI/kglab), an abstraction layer for working with knowledge graphs using popular libraries.
 
-*   Download and documentation: [Morph-KGC](https://github.com/oeg-upm/morph-kgc).
+*   Download: [Morph-KGC](https://github.com/oeg-upm/morph-kgc).
+*   Documentation: [readthedocs](https://morph-kgc.readthedocs.io).
 
 
 #### Other RML-based tools
