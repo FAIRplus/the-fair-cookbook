@@ -27,12 +27,9 @@ An application ontology is a semantic artefact which is developed to answer the 
 ## Graphical Overview
 
 
-```{figure} ontology-robot-recipe.md-figure1.mmd.png
----
+```{figure_fairplus} ontology-robot-recipe.md-figure1.mmd
 name: ontology-robot-recipe-figure1
-alt: Building an ontology with Robot tool
----
-Building an ontology with Robot tool.
+subtitle: Building an ontology with Robot tool.
 ```
 
 
@@ -173,12 +170,9 @@ This step identifies the seeds needed to perform the knowledge extraction from e
 Besides the fact that is always possible to manually identify the set of seeds needed for the performing of the concept extraction, to have a helper tool allows to run the task at scale. Following, an automatable approach based on using widely known life sciences annotators  - [Zooma](https://www.ebi.ac.uk/spot/zooma/) and [NCBO Annotator](https://bioportal.bioontology.org/annotator) - are depicted.
 
 
-```{figure} ontology-robot-recipe.md-figure2.mmd.png
----
+```{figure_fairplus} ontology-robot-recipe.md-figure2.mmd
 name: ontology-robot-recipe-figure2
-alt: Ontology seed term selection approaches.
----
-Ontology seed term selection approaches.
+subtitle: Ontology seed term selection approaches.
 ```
 
 

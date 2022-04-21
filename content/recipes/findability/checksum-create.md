@@ -28,12 +28,9 @@ the comparison of the checksum indicates whether the files are identical (within
 
 ## Graphical Overview
 
-```{figure} checksum-create.md-figure1.mmd.png
----
+```{figure_fairplus} checksum-create.md-figure1.mmd
 name: checksum-create-figure1
-alt: When to apply this recipe.
----
-When to apply this recipe.
+subtitle: When to apply this recipe.
 ```
 
 

@@ -20,19 +20,14 @@ This recipe is meant to address the Findability and Interoperability of such typ
 ## Graphical overview of the Recipe FAIRification Objectives
 
 
-<!-- ```{figure} bioactivity-figure1.mmd.png -->
-<!-- --- -->
+<!-- ```{figure_fairplus} bioactivity-figure1.mmd -->
 <!-- name: bioactivity-figure1 -->
-<!-- alt:  bioactivity data FAIR overview -->
-<!-- --- -->
-<!-- bioactivity data FAIR overview -->
-<!-- --- -->
+<!-- subtitle: bioactivity data FAIR overview -->
 <!-- ``` -->
-<!-- -->
 
 
 ## Introduction
-Bioactivity data, as stored in public archives such as the European repository [CHEMBL](https://www.ebi.ac.uk/chembl/) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov/) in together with chemical data and omics data, can be used to search for new `hits`(compounds with desired property in drug screening), for example by using cell line information, compound ID as input to queries over such resources.
+Bioactivity data, as stored in public archives such as the European repository [CHEMBL](https://www.ebi.ac.uk/chembl/) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov/) in together with chemical data and omics data, can be used to search for new `hits` (compounds with desired property in drug screening), for example by using cell line information, compound ID as input to queries over such resources.
 
 Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and, pharmacokinetic study information.
 
@@ -138,12 +133,9 @@ For ChEMBL submission, molecular structures and assay description as depicted in
 
 Besides metadata, the diagram below also shows how to prepare numeric assay data.
 
-<!--  ```{figure} bioactivity-figure2.mmd.png -->
-<!-- --- -->
+<!-- ```{figure_fairplus} bioactivity-figure2.mmd -->
 <!-- name: bioactivity-figure2 -->
-<!-- alt: Preparing numeric assay data for bioactivity -->
-<!-- --- -->
-<!-- Preparing numeric assay data for bioactivity -->
+<!-- subtitle: Preparing numeric assay data for bioactivity -->
 <!-- ```  -->
 
 

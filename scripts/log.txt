@@ -1,0 +1,799 @@
+76
+
+Acting on file ../content/home.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/assessing-fairness.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/community.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/accessibility.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/reusability.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/help.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/boilerplate.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/glossary-fair-terms.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/findability.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/applied-examples.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/introduction/priorization.md ...
+
+... acting on directive at ../content/recipes/introduction/priorization.md:41 :
+    DEBUG: assuming this is a text line: Prioritization overview.
+    linedict={'name': 'Prioritization overview', 'alt': 'Prioritization overview', 'text': 'Prioritization overview.'}
+    ERROR: invalid name: 'Prioritization overview'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/introduction/priorization.md:173 :
+    DEBUG: assuming this is a text line: Score card template.
+    linedict={'name': 'Score card template', 'alt': 'Score card template', 'text': 'Score card template.'}
+    ERROR: invalid name: 'Score card template'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/introduction/the-turing-way.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/introduction/fair-cro.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/introduction/FAIR-cookbook-audience.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/introduction/FAIRplus-values.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/findability/checksum-create.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/findability/zenodo-deposition.md ...
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:89 :
+    DEBUG: assuming this is a text line: Uploading files to Zenodo Repository.
+    linedict={'name': 'Uploading files to Zenodo', 'alt': 'Uploading files to Zenodo', 'text': 'Uploading files to Zenodo Repository.'}
+    ERROR: invalid name: 'Uploading files to Zenodo'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:109 :
+    DEBUG: assuming this is a text line: Starting the file upload to Zenodo Repository.
+    linedict={'name': 'Starting the file upload to Zenodo', 'alt': 'Starting the file upload  to Zenodo', 'text': 'Starting the file upload to Zenodo Repository.'}
+    ERROR: invalid name: 'Starting the file upload to Zenodo'
+    ERROR: you need to correct alt / subtitle manually: 'name: Starting the file upload to Zenodo' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:125 :
+    DEBUG: assuming this is a text line: Selecting the upload type to Zenodo Repository.
+    linedict={'name': 'Selecting the upload type to Zenodo', 'alt': 'Selecting the upload type to Zenodo', 'text': 'Selecting the upload type to Zenodo Repository.'}
+    ERROR: invalid name: 'Selecting the upload type to Zenodo'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:145 :
+    DEBUG: assuming this is a text line: Basic metadata to report .
+    linedict={'name': 'Basic metadata to report', 'alt': 'Basic metadata to report', 'text': 'Basic metadata to report .'}
+    ERROR: invalid name: 'Basic metadata to report'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:163 :
+    DEBUG: assuming this is a text line: Setting keywords associated with the Zenodo deposition .
+    linedict={'name': 'Setting keywords associated with the Zenodo deposition', 'alt': 'Setting keywords associated with the Zenodo deposition', 'text': 'Setting keywords associated with the Zenodo deposition .'}
+    ERROR: invalid name: 'Setting keywords associated with the Zenodo deposition'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:183 :
+    DEBUG: assuming this is a text line: Choosing a License is essential.
+    linedict={'name': 'Choosing a License is essential', 'alt': 'Choosing a License is essential', 'text': 'Choosing a License is essential.'}
+    ERROR: invalid name: 'Choosing a License is essential'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:201 :
+    DEBUG: assuming this is a text line: Setting access conditions.
+    linedict={'name': 'Setting access conditions', 'alt': 'Setting access conditions', 'text': 'Setting access conditions.'}
+    ERROR: invalid name: 'Setting access conditions'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:214 :
+    DEBUG: assuming this is a text line: Autocompletion prompts available licenses.
+    linedict={'name': 'Autocompletion prompts available licenses', 'alt': 'Autocompletion prompts available licenses', 'text': 'Autocompletion prompts available licenses.'}
+    ERROR: invalid name: 'Autocompletion prompts available licenses'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:232 :
+    DEBUG: assuming this is a text line: Linking Funding to Zenodo Submission.
+    linedict={'name': 'Linking Funding to Zenodo Submission', 'alt': 'Linking Funding to Zenodo Submission', 'text': 'Linking Funding to Zenodo Submission.'}
+    ERROR: invalid name: 'Linking Funding to Zenodo Submission'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/zenodo-deposition.md:254 :
+    DEBUG: assuming this is a text line: Miscellaneous Information about the Zenodo Submission.
+    linedict={'name': 'Miscellaneous Information about the Zenodo Submission', 'alt': 'Miscellaneous Information about the Zenodo Submission', 'text': 'Miscellaneous Information about the Zenodo Submission.'}
+    ERROR: invalid name: 'Miscellaneous Information about the Zenodo Submission'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/findability/checksum-validate.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/findability/seo.md ...
+
+... acting on directive at ../content/recipes/findability/seo.md:39 :
+    DEBUG: assuming this is a text line: Search Engine Optimization.
+    linedict={'name': 'Search Engine Optimization', 'alt': 'Search Engine Optimization', 'text': 'Search Engine Optimization.'}
+    ERROR: invalid name: 'Search Engine Optimization'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/seo.md:163 :
+    DEBUG: assuming this is a text line: Google Structured Data Testing Tool.
+    linedict={'name': 'Google Structured Data Testing Tool', 'alt': 'Google Structured Data Testing Tool', 'text': 'Google Structured Data Testing Tool.'}
+    ERROR: invalid name: 'Google Structured Data Testing Tool'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/findability/identifiers-minids.md ...
+
+... acting on directive at ../content/recipes/findability/identifiers-minids.md:37 :
+    DEBUG: assuming this is a text line: An overview of the identifier minting process.
+    linedict={'name': 'Minting Minid', 'alt': 'An overview of the identifier minting process', 'text': 'An overview of the identifier minting process.'}
+    ERROR: invalid name: 'Minting Minid'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/identifiers-minids.md:112 :
+    DEBUG: assuming this is a text line: Creating a Globus account.
+    linedict={'name': 'Creating a Globus account', 'alt': 'Creating a Globus account', 'text': 'Creating a Globus account.'}
+    ERROR: invalid name: 'Creating a Globus account'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/identifiers-minids.md:149 :
+    DEBUG: assuming this is a text line: Globus account login.
+    linedict={'name': 'Globus account login', 'alt': 'Globus account login', 'text': 'Globus account login.'}
+    ERROR: invalid name: 'Globus account login'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/identifiers-minids.md:169 :
+    DEBUG: assuming this is a text line: Globus account allow.
+    linedict={'name': 'Globus account allow', 'alt': 'Globus account allow', 'text': 'Globus account allow.'}
+    ERROR: invalid name: 'Globus account allow'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/identifiers-minids.md:190 :
+    DEBUG: assuming this is a text line: Globus account login success.
+    linedict={'name': 'Globus account login success', 'alt': 'Globus account login success', 'text': 'Globus account login success.'}
+    ERROR: invalid name: 'Globus account login success'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/findability/identifiers.md ...
+
+... acting on directive at ../content/recipes/findability/identifiers.md:67 :
+    DEBUG: assuming this is a text line: Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .
+    linedict={'name': 'find-identifiers-figure1', 'alt': 'identifier services', 'text': 'Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPRID) .'}
+    ERROR: you need to correct alt / subtitle manually: 'name: find-identifiers-figure1' '---'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/findability/seo/bioschemas-dataset.md ...
+
+... acting on directive at ../content/recipes/findability/seo/bioschemas-dataset.md:65 :
+    DEBUG: assuming this is a text line: Bioschemas Generator start screen.
+    linedict={'name': 'bioschemas-generator-start-screen-3', 'alt': 'Bioschemas Generator start screen.', 'text': 'Bioschemas Generator start screen.'}
+    ... starting automated replacement ...
+    ... done.
+
+... acting on directive at ../content/recipes/findability/seo/bioschemas-dataset.md:82 :
+    DEBUG: assuming this is a text line: Bioschemas Generator Dataset profile form.
+    linedict={'name': 'Bioschemas Generator Dataset profile form', 'alt': 'Bioschemas Generator Dataset profile form', 'text': 'Bioschemas Generator Dataset profile form.'}
+    ERROR: invalid name: 'Bioschemas Generator Dataset profile form'
+    ... not doing anything because of previous errors.
+
+Acting on file ../content/recipes/findability/seo/bioschemas-data-page.md ...
+
+... acting on directive at ../content/recipes/findability/seo/bioschemas-data-page.md:76 :
+    DEBUG: assuming this is a text line: Bioschemas Generator start screen.
+    ERROR: unusual line: 
+    linedict={'name': 'bioschemas-generator-start-screen-2', 'alt': 'Bioschemas Generator start screen.', 'text': 'Bioschemas Generator start screen.'}
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/findability/seo/bioschemas-data-page.md:95 :
+    DEBUG: assuming this is a text line: Bioschemas Generator Gene profile form.
+    linedict={'name': 'Bioschemas Generator Gene profile form', 'alt': 'Bioschemas Generator Gene profile form', 'text': 'Bioschemas Generator Gene profile form.'}
+    ERROR: invalid name: 'Bioschemas Generator Gene profile form'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/findability/seo/bioschemas-datacatalog.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/bridgedb-recipe.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/creating-data-dictionary.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/VCF-to-FHIR-conversion.md ...
+
+... acting on directive at ../content/recipes/interoperability/VCF-to-FHIR-conversion.md:29 :
+    DEBUG: assuming this is a text line: Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.
+    linedict={'name': 'Converting a VCF open standard file to a HL7 FHIR formatted payload', 'alt': 'Converting a VCF open standard file to a HL7 FHIR formatted payload', 'text': 'Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.'}
+    ERROR: invalid name: 'Converting a VCF open standard file to a HL7 FHIR formatted payload'
+    ERROR: you need to correct alt / subtitle manually: 'name: Converting a VCF open standard file to a HL7 FHIR formatted payload' '---'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/ontology-new-term-request-recipe.md ...
+
+... acting on directive at ../content/recipes/interoperability/ontology-new-term-request-recipe.md:40 :
+    DEBUG: assuming this is a text line: Process for requesting an new term to a terminology.
+    linedict={'name': 'Process for requesting an new term to a terminology', 'alt': 'Process for requesting an new term to a terminology', 'text': 'Process for requesting an new term to a terminology.'}
+    ERROR: invalid name: 'Process for requesting an new term to a terminology'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/bioactivity-profile.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/creating-minimal-metadata-profiles.md ...
+
+... acting on directive at ../content/recipes/interoperability/creating-minimal-metadata-profiles.md:23 :
+    DEBUG: assuming this is a text line: Building a minimal metadata profile.
+    linedict={'name': 'Building a minimal metadata profile', 'alt': 'Building a minimal metadata profile', 'text': 'Building a minimal metadata profile.'}
+    ERROR: invalid name: 'Building a minimal metadata profile'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/ontology-operations-tools.md ...
+
+... acting on directive at ../content/recipes/interoperability/ontology-operations-tools.md:62 :
+    DEBUG: assuming this is a text line: Overview of key aspects in ontology associated processes
+    linedict={'name': 'Overview of key aspects in ontology associated processes', 'alt': 'Overview of key aspects in ontology associated processes', 'text': 'Overview of key aspects in ontology associated processes'}
+    ERROR: invalid name: 'Overview of key aspects in ontology associated processes'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/identifier-mapping.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/transcriptomics-metadata.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md ...
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:28 :
+    DEBUG: assuming this is a text line: Building a commmunity compliant metadata profile.
+    linedict={'name': 'building a commmunity compliant metadata profile', 'alt': 'building a commmunity compliant metadata profile', 'text': 'Building a commmunity compliant metadata profile.'}
+    ERROR: invalid name: 'building a commmunity compliant metadata profile'
+    ERROR: you need to correct alt / subtitle manually: 'name: building a commmunity compliant metadata profile' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:96 :
+    DEBUG: assuming this is a text line: Defining the metadata fields
+    linedict={'name': 'Defining the metadata fields', 'alt': 'Defining the metadata fields', 'text': 'Defining the metadata fields'}
+    ERROR: invalid name: 'Defining the metadata fields'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:105 :
+    ERROR: unusual line: ```
+    ERROR: unusual line: 
+    DEBUG: assuming this is a text line: Defining the metadata fields-1
+    ERROR: unusual line: 
+    linedict={'name': 'Defining the metadata fields-1', 'alt': 'Defining the metadata fields-1', 'text': 'Defining the metadata fields-1'}
+    ERROR: invalid name: 'Defining the metadata fields-1'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:130 :
+    DEBUG: assuming this is a text line: Semantic anchoring of metadata element
+    linedict={'name': 'Semantic anchoring of metadata element', 'alt': 'Semantic anchoring of metadata element', 'text': 'Semantic anchoring of metadata element'}
+    ERROR: invalid name: 'Semantic anchoring of metadata element'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:149 :
+    DEBUG: assuming this is a text line: Semantic anchoring of metadata element - final
+    linedict={'name': 'Semantic anchoring of metadata element - final', 'alt': 'Semantic anchoring of metadata element - final', 'text': 'Semantic anchoring of metadata element - final'}
+    ERROR: invalid name: 'Semantic anchoring of metadata element - final'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:244 :
+    DEBUG: assuming this is a text line: The corresponding metadata acquisition web form
+    linedict={'name': 'The corresponding metadata acquisition web form', 'alt': 'The corresponding metadata acquisition web form', 'text': 'The corresponding metadata acquisition web form'}
+    ERROR: invalid name: 'The corresponding metadata acquisition web form'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:260 :
+    DEBUG: assuming this is a text line: The corresponding metadata acquisition web form
+    linedict={'name': 'The corresponding metadata acquisition web form 2', 'alt': 'The corresponding metadata acquisition web form 2', 'text': 'The corresponding metadata acquisition web form'}
+    ERROR: invalid name: 'The corresponding metadata acquisition web form 2'
+    ERROR: you need to correct alt / subtitle manually: 'name: The corresponding metadata acquisition web form 2' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case.md:442 :
+    DEBUG: assuming this is a text line: WESO SHape Expression Viewer
+    linedict={'name': 'WESO SHape Expression Viewer', 'alt': 'WESO SHape Expression Viewer', 'text': 'WESO SHape Expression Viewer'}
+    ERROR: invalid name: 'WESO SHape Expression Viewer'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/introduction-terminologies-ontologies.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/rdf-conversion.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/selecting-ontologies.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/fastq-file-format-validators.md ...
+
+... acting on directive at ../content/recipes/interoperability/fastq-file-format-validators.md:27 :
+    DEBUG: assuming this is a text line: Validating FASTQ open standard file format.
+    linedict={'name': 'Validating FASTQ open standard file format', 'alt': 'Validating FASTQ open standard file format', 'text': 'Validating FASTQ open standard file format.'}
+    ERROR: invalid name: 'Validating FASTQ open standard file format'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/fastq-file-format-validators.md:90 :
+    DEBUG: assuming this is a text line: the FASTQutils library.
+    linedict={'name': 'FASTQutils library', 'alt': 'FASTQutils library', 'text': 'the FASTQutils library.'}
+    ERROR: invalid name: 'FASTQutils library'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/ontology-robot-recipe.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/ETL-tools.md ...
+
+... acting on directive at ../content/recipes/interoperability/ETL-tools.md:38 :
+    DEBUG: assuming this is a text line: Overview of key aspects in ETL process
+    linedict={'name': 'Overview of key aspects in ETL process', 'alt': 'Overview of key aspects in ETL process', 'text': 'Overview of key aspects in ETL process'}
+    ERROR: invalid name: 'Overview of key aspects in ETL process'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md ...
+
+... acting on directive at ../content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md:32 :
+    DEBUG: assuming this is a text line: Converting to an open standard file format.
+    linedict={'name': 'Converting to an open standard file format', 'alt': 'Converting to an open standard file format', 'text': 'Converting to an open standard file format.'}
+    ERROR: invalid name: 'Converting to an open standard file format'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md:147 :
+    DEBUG: assuming this is a text line: The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing catalog](https://fairsharing.org/) of resources.
+    linedict={'name': 'A Standard Record in the FAIRsharing catalog of resources', 'alt': 'A Standard Record in the FAIRsharing catalog of resources', 'text': 'The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing catalog](https://fairsharing.org/) of resources.'}
+    ERROR: invalid name: 'A Standard Record in the FAIRsharing catalog of resources'
+    ERROR: you need to correct alt / subtitle manually: 'name: A Standard Record in the FAIRsharing catalog of resources' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md:241 :
+    DEBUG: assuming this is a text line: The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.tools/) of resources.
+    linedict={'name': 'pymzml in Biotools registry', 'alt': 'pymzml in Biotools registry', 'text': 'The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.tools/) of resources.'}
+    ERROR: invalid name: 'pymzml in Biotools registry'
+    ERROR: you need to correct alt / subtitle manually: 'name: pymzml in Biotools registry' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md:277 :
+    DEBUG: assuming this is a text line: The Python `pymzml` library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.
+    linedict={'name': 'pymzml rendered msrun profile', 'alt': 'pymzml rendered msrun profile', 'text': 'The Python `pymzml` library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.'}
+    ERROR: invalid name: 'pymzml rendered msrun profile'
+    ERROR: you need to correct alt / subtitle manually: 'name: pymzml rendered msrun profile' '---'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/interoperability/ontology-robot-recipe/competency-questions.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/reusability/ATI_licensing_data.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/reusability/provenance.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/reusability/ATI_licensing_software.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/reusability/expressing-data-use.md ...
+
+... acting on directive at ../content/recipes/reusability/expressing-data-use.md:31 :
+    DEBUG: assuming this is a text line: Data Use
+    linedict={'name': 'expressing-data-use-figure1', 'alt': 'Dealing with Policies and Data Use', 'text': 'Data Use'}
+    ERROR: you need to correct alt / subtitle manually: 'name: expressing-data-use-figure1' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/reusability/expressing-data-use.md:103 :
+    ERROR: unusual line: ```
+    ERROR: unusual line: 
+    DEBUG: assuming this is a text line: Data Use Ontology Overview Part 2
+    ERROR: unusual line: 
+    linedict={'name': 'expressing-data-use-figure3', 'alt': 'Data Use Ontology Overview Part 2', 'text': 'Data Use Ontology Overview Part 2'}
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/reusability/expressing-data-use.md:353 :
+    DEBUG: assuming this is a text line: ODRL overview
+    linedict={'name': '', 'alt': 'Open Digital Rights Language model', 'text': 'ODRL overview'}
+    DEBUG: strange case here about name and alt lines: ('', 'Open Digital Rights Language model')
+    ERROR: you need to correct alt / subtitle manually: 'name: ' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/reusability/expressing-data-use.md:731 :
+    DEBUG: assuming this is a text line: ODRL Validation and Evaluation Sandbox
+    linedict={'alt': 'ODRL Validation and Evaluation Sandbox', 'name': 'ODRL Validation and Evaluation Sandbox', 'text': 'ODRL Validation and Evaluation Sandbox'}
+    ERROR: invalid name: 'ODRL Validation and Evaluation Sandbox'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/reusability/expressing-data-use.md:754 :
+    DEBUG: assuming this is a text line: Broad's Institute  Data Use Oversight System landing page
+    linedict={'alt': "Broad's Institute  Data Use Oversight System", 'name': "Broad's Institute  Data Use Oversight System", 'text': "Broad's Institute  Data Use Oversight System landing page"}
+    ERROR: invalid name: "Broad's Institute  Data Use Oversight System"
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/reusability/ATI-licensing.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/applied-examples/nd4bb.md ...
+
+... acting on directive at ../content/recipes/applied-examples/nd4bb.md:83 :
+    ERROR: unusual line: ```
+    ERROR: unusual line: 
+    DEBUG: assuming this is a text line: Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.
+    ERROR: unusual line: 
+    ERROR: unusual line: 
+    linedict={'name': 'nd4bb-figure3', 'alt': 'Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.', 'text': 'Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.'}
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/applied-examples/nd4bb.md:114 :
+    ERROR: unusual line: ```
+    ERROR: unusual line: 
+    DEBUG: assuming this is a text line: Workflow to extract the data from compound/charge webpage.
+    ERROR: unusual line: 
+    ERROR: unusual line: 
+    linedict={'name': 'nd4bb-figure7', 'alt': 'Workflow to extract the data from compound/charge webpage.', 'text': 'Workflow to extract the data from compound/charge webpage.'}
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/applied-examples/ehden-ohdsi.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/applied-examples/fair-data-matrix-recipe.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/applied-examples/etox.md ...
+
+... acting on directive at ../content/recipes/applied-examples/etox.md:101 :
+    ERROR: unusual line: ```
+    ERROR: unusual line: 
+    DEBUG: assuming this is a text line: Example of textual analyses of terms / concept labels.
+    ERROR: unusual line: 
+    ERROR: unusual line: 
+    linedict={'name': 'etox-figure2', 'alt': 'Example of textual analyses of terms / concept labels', 'text': 'Example of textual analyses of terms / concept labels.'}
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md ...
+
+... acting on directive at ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md:57 :
+    DEBUG: assuming this is a text line: OncoTrack metadata FAIRification pipeline.
+    linedict={'name': 'OncoTrack metadata FAIRification pipeline.', 'alt': 'OncoTrack metadata FAIRification pipeline.', 'text': 'OncoTrack metadata FAIRification pipeline.'}
+    ERROR: invalid name: 'OncoTrack metadata FAIRification pipeline.'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md:79 :
+    DEBUG: assuming this is a text line: Example of OncoTrack public cohort metadata.
+    linedict={'name': 'Example of OncoTrack public cohort metadata.', 'alt': 'Example of OncoTrack public cohort metadata.', 'text': 'Example of OncoTrack public cohort metadata.'}
+    ERROR: invalid name: 'Example of OncoTrack public cohort metadata.'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md:95 :
+    DEBUG: assuming this is a text line: Example of OncoTrack.
+    linedict={'name': 'Example of OncoTrack.', 'alt': 'Example of OncoTrack.', 'text': 'Example of OncoTrack.'}
+    ERROR: invalid name: 'Example of OncoTrack.'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md:107 :
+    DEBUG: assuming this is a text line: Example of Oncotrack drug response data.
+    linedict={'name': 'Example of Oncotrack drug response data.', 'alt': 'Example of Oncotrack drug response data.', 'text': 'Example of Oncotrack drug response data.'}
+    ERROR: invalid name: 'Example of Oncotrack drug response data.'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md:130 :
+    DEBUG: assuming this is a text line: Example of the extracted cohort metadata.
+    linedict={'name': 'Example of the extracted cohort metadata.', 'alt': 'Example of the extracted cohort metadata.', 'text': 'Example of the extracted cohort metadata.'}
+    ERROR: invalid name: 'Example of the extracted cohort metadata.'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md:146 :
+    DEBUG: assuming this is a text line: Example of extracted drug sensitivity data.
+    linedict={'name': 'Example of extracted drug sensitivity data.', 'alt': 'Example of extracted drug sensitivity data.', 'text': 'Example of extracted drug sensitivity data.'}
+    ERROR: invalid name: 'Example of extracted drug sensitivity data.'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.md:190 :
+    DEBUG: assuming this is a text line: Example of ZOOMA ontology mapping results.
+    linedict={'name': 'Example of ZOOMA ontology mapping results.', 'alt': 'Example of ZOOMA ontology mapping results.', 'text': 'Example of ZOOMA ontology mapping results.'}
+    ERROR: invalid name: 'Example of ZOOMA ontology mapping results.'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/applied-examples/resolute_raw/resolute.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/assessing-fairness/fair-assessment-fairevaluator.md ...
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairevaluator.md:65 :
+    DEBUG: assuming this is a text line: the [FAIREvaluator](https://w3id.org/AmIFAIR) Home page
+    linedict={'name': 'the FAIREvaluator Home page', 'alt': 'the FAIREvaluator Home page', 'text': 'the [FAIREvaluator](https://w3id.org/AmIFAIR) Home page'}
+    ERROR: invalid name: 'the FAIREvaluator Home page'
+    ERROR: you need to correct alt / subtitle manually: 'name: the FAIREvaluator Home page' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairevaluator.md:83 :
+    DEBUG: assuming this is a text line: Select a 'FAIR Maturity Indicator - Collections'
+    linedict={'name': "Select a 'FAIR Maturity Indicator - Collections'", 'alt': "Select a 'FAIR Maturity Indicator - Collections'", 'text': "Select a 'FAIR Maturity Indicator - Collections'"}
+    ERROR: invalid name: "Select a 'FAIR Maturity Indicator - Collections'"
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairevaluator.md:103 :
+    DEBUG: assuming this is a text line: Running the FAIREvaluator - part 1: setting the input
+    linedict={'name': 'Running the FAIREvaluator - part 1 - setting the input', 'alt': 'Running the FAIREvaluator - part 1 - setting the input', 'text': 'Running the FAIREvaluator - part 1: setting the input'}
+    ERROR: invalid name: 'Running the FAIREvaluator - part 1 - setting the input'
+    ERROR: you need to correct alt / subtitle manually: 'name: Running the FAIREvaluator - part 1 - setting the input' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairevaluator.md:119 :
+    DEBUG: assuming this is a text line: Running the FAIREvaluator - part 2: execution
+    linedict={'name': 'Running the FAIREvaluator - part 2 - execution', 'alt': 'Running the FAIREvaluator - part 2 - execution', 'text': 'Running the FAIREvaluator - part 2: execution'}
+    ERROR: invalid name: 'Running the FAIREvaluator - part 2 - execution'
+    ERROR: you need to correct alt / subtitle manually: 'name: Running the FAIREvaluator - part 2 - execution' '---'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairevaluator.md:135 :
+    DEBUG: assuming this is a text line: FAIREvaluator report - overall report
+    linedict={'name': 'FAIREvaluator report - overall report', 'alt': 'FAIREvaluator report - overall report', 'text': 'FAIREvaluator report - overall report'}
+    ERROR: invalid name: 'FAIREvaluator report - overall report'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairevaluator.md:148 :
+    DEBUG: assuming this is a text line: apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*
+    linedict={'name': 'FAIREvaluator error report', 'alt': 'FAIREvaluator error report', 'text': 'apparently a problem with identifier persistence if using DOI, which are URN rather than URL *stricto-sensu*'}
+    ERROR: invalid name: 'FAIREvaluator error report'
+    ERROR: you need to correct alt / subtitle manually: 'name: FAIREvaluator error report ' '---'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/assessing-fairness/fair-assessment-fairshake.md ...
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:51 :
+    DEBUG: assuming this is a text line: FAIRshare insignia explained
+    linedict={'alt': 'FAIRshare insignia explained', 'name': 'FAIRshare insignia explained', 'text': 'FAIRshare insignia explained'}
+    ERROR: invalid name: 'FAIRshare insignia explained'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:107 :
+    DEBUG: assuming this is a text line: FAIRshake login page
+    linedict={'alt': 'FAIRshake login page', 'name': 'FAIRshake login page', 'text': 'FAIRshake login page'}
+    ERROR: invalid name: 'FAIRshake login page'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:120 :
+    DEBUG: assuming this is a text line: FAIRshake performing a search
+    linedict={'alt': 'FAIRshake performing a search', 'name': 'FAIRshake performing a search', 'text': 'FAIRshake performing a search'}
+    ERROR: invalid name: 'FAIRshake performing a search'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:135 :
+    DEBUG: assuming this is a text line: FAIRshake Chrome Extension install
+    linedict={'alt': 'FAIRshake Chrome Extension install', 'name': 'FAIRshake Chrome Extension install', 'text': 'FAIRshake Chrome Extension install'}
+    ERROR: invalid name: 'FAIRshake Chrome Extension install'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:147 :
+    DEBUG: assuming this is a text line: Screenshot showing the FAIRshake chrome extension assessment summary
+    linedict={'alt': 'Screenshot showing the FAIRshake chrome extension assessment summary', 'name': 'Screenshot showing the FAIRshake chrome extension assessment summary', 'text': 'Screenshot showing the FAIRshake chrome extension assessment summary'}
+    ERROR: invalid name: 'Screenshot showing the FAIRshake chrome extension assessment summary'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:159 :
+    DEBUG: assuming this is a text line: Screenshot showing the FAIRshake chrome extension assessment summary tooltip
+    linedict={'alt': 'Screenshot showing the FAIRshake chrome extension assessment summary tooltip', 'name': 'Screenshot showing the FAIRshake chrome extension assessment summary tooltip', 'text': 'Screenshot showing the FAIRshake chrome extension assessment summary tooltip'}
+    ERROR: invalid name: 'Screenshot showing the FAIRshake chrome extension assessment summary tooltip'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:177 :
+    DEBUG: assuming this is a text line: FAIR metrics Rubric on FAIRshake
+    linedict={'alt': 'FAIR metrics Rubric on FAIRshake', 'name': 'FAIR metrics Rubric on FAIRshake', 'text': 'FAIR metrics Rubric on FAIRshake'}
+    ERROR: invalid name: 'FAIR metrics Rubric on FAIRshake'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:193 :
+    DEBUG: assuming this is a text line: View on FAIRshake with extension
+    linedict={'alt': 'View on FAIRshake with extension', 'name': 'View on FAIRshake with extension', 'text': 'View on FAIRshake with extension'}
+    ERROR: invalid name: 'View on FAIRshake with extension'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:205 :
+    DEBUG: assuming this is a text line: View on FAIRshake link location
+    linedict={'alt': 'View on FAIRshake link location', 'name': 'View on FAIRshake link location', 'text': 'View on FAIRshake link location'}
+    ERROR: invalid name: 'View on FAIRshake link location'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:219 :
+    DEBUG: assuming this is a text line: Preparing an assessment on FAIRshake
+    linedict={'alt': 'Preparing an assessment on FAIRshake', 'name': 'Preparing an assessment on FAIRshake', 'text': 'Preparing an assessment on FAIRshake'}
+    ERROR: invalid name: 'Preparing an assessment on FAIRshake'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:231 :
+    DEBUG: assuming this is a text line: Selecting the FAIRmetrics rubric
+    linedict={'alt': 'Selecting the FAIRmetrics rubric', 'name': 'Selecting the FAIRmetrics rubric', 'text': 'Selecting the FAIRmetrics rubric'}
+    ERROR: invalid name: 'Selecting the FAIRmetrics rubric'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:243 :
+    DEBUG: assuming this is a text line: Selecting the FAIRmetrics project
+    linedict={'alt': 'Selecting the FAIRmetrics project', 'name': 'Selecting the FAIRmetrics project', 'text': 'Selecting the FAIRmetrics project'}
+    ERROR: invalid name: 'Selecting the FAIRmetrics project'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:255 :
+    DEBUG: assuming this is a text line: Preparing the FAIRshake Assessment
+    linedict={'alt': 'Preparing the FAIRshake Assessment', 'name': 'Preparing the FAIRshake Assessment', 'text': 'Preparing the FAIRshake Assessment'}
+    ERROR: invalid name: 'Preparing the FAIRshake Assessment'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:267 :
+    DEBUG: assuming this is a text line: Performing a Manual Assessment with FAIRshake
+    linedict={'alt': 'Performing a Manual Assessment with FAIRshake', 'name': 'Performing a Manual Assessment with FAIRshake', 'text': 'Performing a Manual Assessment with FAIRshake'}
+    ERROR: invalid name: 'Performing a Manual Assessment with FAIRshake'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:279 :
+    DEBUG: assuming this is a text line: Global unique identifier metric on FAIRshake
+    linedict={'alt': 'Global unique identifier metric on FAIRshake', 'name': 'Global unique identifier metric on FAIRshake', 'text': 'Global unique identifier metric on FAIRshake'}
+    ERROR: invalid name: 'Global unique identifier metric on FAIRshake'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:291 :
+    DEBUG: assuming this is a text line: Assessments for Global unique identifier
+    linedict={'alt': 'Assessments for Global unique identifier', 'name': 'Assessments for Global unique identifier', 'text': 'Assessments for Global unique identifier'}
+    ERROR: invalid name: 'Assessments for Global unique identifier'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:305 :
+    DEBUG: assuming this is a text line: Identifying identifiers
+    linedict={'alt': 'Identifying identifiers', 'name': 'Identifying identifiers', 'text': 'Identifying identifiers'}
+    ERROR: invalid name: 'Identifying identifiers'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:323 :
+    DEBUG: assuming this is a text line: FAIRsharing identifiers
+    linedict={'alt': 'FAIRsharing identifiers', 'name': 'FAIRsharing identifiers', 'text': 'FAIRsharing identifiers'}
+    ERROR: invalid name: 'FAIRsharing identifiers'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:339 :
+    DEBUG: assuming this is a text line: Answer to question 1
+    linedict={'alt': 'Answer to question 1', 'name': 'Answer to question 1', 'text': 'Answer to question 1'}
+    ERROR: invalid name: 'Answer to question 1'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:352 :
+    DEBUG: assuming this is a text line: LINCS dataset terms
+    linedict={'alt': 'LINCS dataset terms', 'name': 'LINCS dataset terms', 'text': 'LINCS dataset terms'}
+    ERROR: invalid name: 'LINCS dataset terms'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:371 :
+    DEBUG: assuming this is a text line: Answer to question 2
+    linedict={'alt': 'Answer to question 2', 'name': 'Answer to question 2', 'text': 'Answer to question 2'}
+    ERROR: invalid name: 'Answer to question 2'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:389 :
+    DEBUG: assuming this is a text line: Answer to question 3
+    linedict={'alt': 'Answer to question 3', 'name': 'Answer to question 3', 'text': 'Answer to question 3'}
+    ERROR: invalid name: 'Answer to question 3'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:406 :
+    DEBUG: assuming this is a text line: Save publish or delete assessment
+    linedict={'alt': 'Save publish or delete assessment', 'name': 'Save publish or delete assessment', 'text': 'Save publish or delete assessment'}
+    ERROR: invalid name: 'Save publish or delete assessment'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:418 :
+    DEBUG: assuming this is a text line: Assessment shown on FAIRshake
+    linedict={'alt': 'Assessment shown on FAIRshake', 'name': 'Assessment shown on FAIRshake', 'text': 'Assessment shown on FAIRshake'}
+    ERROR: invalid name: 'Assessment shown on FAIRshake'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/assessing-fairness/fair-assessment-fairshake.md:671 :
+    DEBUG: assuming this is a text line: Reviewing FAIR assessment breakdown on FAIRshake
+    linedict={'alt': 'Reviewing FAIR assessment breakdown on FAIRshake', 'name': 'Reviewing FAIR assessment breakdown on FAIRshake', 'text': 'Reviewing FAIR assessment breakdown on FAIRshake'}
+    ERROR: invalid name: 'Reviewing FAIR assessment breakdown on FAIRshake'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/boilerplate/code_of_conduct.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/boilerplate/people.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/boilerplate/contributing.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/data-catalog-deployment.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/vocabularies.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/data-catalog.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/chemical-identities.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/id-resolution.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/accessibility/aspera.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/accessibility/sftp.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/help/how-to-create-recipe-with-git.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/help/recipe-template.md ...
+
+... acting on directive at ../content/recipes/help/recipe-template.md:80 :
+    DEBUG: assuming this is a text line: C-3PO_droid 
+    linedict={'name': 'This is a Robot', 'alt': 'C-3PO_droid', 'text': 'C-3PO_droid'}
+    ERROR: invalid name: 'This is a Robot'
+    ... not doing anything because of previous errors.
+
+... acting on directive at ../content/recipes/help/recipe-template.md:193 :
+    DEBUG: assuming this is a text line: the proper caption for the figure.
+    linedict={'name': 'the figure title', 'alt': 'something to display if the link to the figure is broken', 'text': 'the proper caption for the figure.'}
+    ERROR: invalid name: 'the figure title'
+    ERROR: you need to correct alt / subtitle manually: 'name: the figure title' '---'
+    ... not doing anything because of previous errors.
+    no replacements made.
+
+Acting on file ../content/recipes/help/tips-tricks.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/help/how-to-create-recipe-with-hackmd.md ...
+    no replacements made.
+
+Acting on file ../content/recipes/help/how-to-create-recipe-with-gdoc.md ...
+    no replacements made.
+...done.

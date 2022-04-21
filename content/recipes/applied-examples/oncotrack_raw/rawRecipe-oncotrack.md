@@ -54,13 +54,9 @@ The FAIRification of Oncotrack metadata includes four steps: 1) accessing the da
 <!-- ![alt_text](image_0.png "image_tooltip")
 _Figure 1: OncoTrack metadata FAIRification pipeline_ -->	
 
-```{figure} image_0.png
----
-width: 800px
-name: OncoTrack metadata FAIRification pipeline.
-alt: OncoTrack metadata FAIRification pipeline.
----
-OncoTrack metadata FAIRification pipeline.
+```{figure_fairplus} image_0.png
+name: fcb-fairify-examples-oncotrack-figure1
+subtitle: OncoTrack metadata FAIRification pipeline.
 ```
 
 
@@ -76,13 +72,9 @@ The original cohort metadata is stored in an Excel spreadsheet. Figure 2 is an e
 <!-- ![alt_text](image_1.png "image_tooltip")
 _Figure 2: Example of OncoTrack public cohort metadata -->_
 
-```{figure} image_1.png
----
-width: 800px
-name: Example of OncoTrack public cohort metadata.
-alt: Example of OncoTrack public cohort metadata.
----
-Example of OncoTrack public cohort metadata.
+```{figure_fairplus} image_1.png
+name: fcb-fairify-examples-oncotrack-figure2
+subtitle: Example of OncoTrack public cohort metadata.
 ```
 
 
@@ -92,24 +84,17 @@ The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drug
 
 <!-- ![alt_text](image_2.png "image_tooltip") -->
 
-```{figure} image_2.png
----
-width: 800px
-name: Example of OncoTrack.
-alt: .
----
+```{figure_fairplus} image_2.png
+name: fcb-fairify-examples-oncotrack-figure3
+subtitle: Example of OncoTrack.
 ```
 
 <!-- ![alt_text](image_3.png "image_tooltip")
 _Figure 3: Example of Oncotrack drug response data_ -->
 
-```{figure} image_3.png
----
-width: 800px
-name: Example of Oncotrack drug response data.
-alt: Example of Oncotrack drug response data.
----
-Example of Oncotrack drug response data.
+```{figure_fairplus} image_3.png
+name: fcb-fairify-examples-oncotrack-figure4
+subtitle: Example of Oncotrack drug response data.
 ```
 
 
@@ -126,13 +111,9 @@ The cohort metadata was converted to a[ tab-delimited table](https://docs.google
 _Figure 4: Example of the extracted cohort metadata_ -->
 
 
-```{figure} image_4.png
----
-width: 800px
-name: Example of the extracted cohort metadata.
-alt: Example of the extracted cohort metadata.
----
-Example of the extracted cohort metadata.
+```{figure_fairplus} image_4.png
+name: fcb-fairify-examples-oncotrack-figure5
+subtitle: Example of the extracted cohort metadata.
 ```
 
 Drug sensitivity data were also extracted from the original spreadsheets. Each drug test per sample was listed as one entry. To coordinate different measurement approaches and response category scales, all drug sensitivity data were converted to a unified representation. All the measurement results were stored in Attribute _“Value”_, the drug response categorizes criteria were stored in Attribute _“Unit”,_ and the _drug response category_ was recalculated and stored in Attribute _“Response”._ Figure 5 is an example of the extracted drug sensitivity data. 1829 drug tests were extracted in total. The drug response summary is [here](https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing). 
@@ -142,13 +123,9 @@ Drug sensitivity data were also extracted from the original spreadsheets. Each d
 _Figure 5: Example of extracted drug sensitivity data_	 -->
 
 
-```{figure} image_5.png
----
-width: 800px
-name: Example of extracted drug sensitivity data.
-alt: Example of extracted drug sensitivity data.
----
-Example of extracted drug sensitivity data.
+```{figure_fairplus} image_5.png
+name: fcb-fairify-examples-oncotrack-figure6
+subtitle: Example of extracted drug sensitivity data.
 ```
 
  	 	
@@ -186,13 +163,9 @@ The OncoTrack drug names were mapped to corresponding ontology terms in ChEBI an
 _Figure 6: Example of  ZOOMA ontology mapping results_
  -->
 
-```{figure} image_6.jpg
----
-width: 600px
-name: Example of ZOOMA ontology mapping results.
-alt: Example of ZOOMA ontology mapping results.
----
-Example of ZOOMA ontology mapping results.
+```{figure_fairplus} image_6.jpg
+name: fcb-fairify-examples-oncotrack-figure7
+subtitle: Example of ZOOMA ontology mapping results.
 ```
 
 #### Data discrepancy

@@ -32,12 +32,9 @@ The main purpose of this recipe is to:
 
 This recipe will cover the highlighted topics
 
-```{figure} identifier-mapping.md-figure1.mmd.png
----
+```{figure_fairplus} identifier-mapping.md-figure1.mmd
 name: bridgedb-recipe-figure0
-alt: Overview of key aspects in Identifier Mapping
----
-Overview of key aspects in Identifier Mapping
+subtitle: Overview of key aspects in Identifier Mapping
 ```
 
 ---
@@ -249,12 +246,9 @@ You may notice the `source` identifiers correspond with those used in the previo
 
 This is how the mapping will work
 
-```{figure} bridgedb-recipe.md-figure1.mmd.png
----
+```{figure_fairplus} bridgedb-recipe.md-figure1.mmd
 name: bridgedb-recipe-figure1
-alt: Overview of BridgeDb tools
----
-Overview of BridgeDb tools
+subtitle: Overview of BridgeDb tools
 ```
 
 #### Webservices in Python
@@ -298,12 +292,9 @@ In case we did specify the `target` argument to be `Ensembl (En)`, we would inst
 Here, we see a `one-to-one` relation between the identifiers in HGNC and En while the relation between HGNC and UCSC Genome Browser (Uc) or Gene Ontology (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
 
 
-```{figure} bridgedb-recipe.md-figure2.mmd.png
----
+```{figure_fairplus} bridgedb-recipe.md-figure2.mmd
 name: bridgedb-recipe-figure2
-alt: An example of a mapping via BridgeDb.
----
-An example of a mapping via BridgeDb. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
+subtitle: An example of a mapping via BridgeDb. You may notice that despite the 1-to-1 relation between `local` and `original` we get a N-to-N relation between `local` and `mapping` due to the N-to-N relation between `original` and `mapping`.
 ```
 
 

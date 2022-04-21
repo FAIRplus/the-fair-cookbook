@@ -26,13 +26,9 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 <!--
-```{figure} ./zenodo.svg
----
-width: 500px
+```{figure_fairplus} ./zenodo.svg
 name: 
-alt: The process of depositing to CERN Zenodo
----
-The process of depositing to CERN Zenodo.
+subtitle: The process of depositing to CERN Zenodo.
 ```
 ---
 -->
@@ -90,13 +86,9 @@ This section guides users through the key steps to perform to organize a deposit
 </div> -->
 
 
-```{figure} /images/TYpr8jM.png
----
-height: 450px
-name: Uploading files to Zenodo
-alt: Uploading files to Zenodo
----
-Uploading files to Zenodo Repository.
+```{figure_fairplus} /images/TYpr8jM.png
+name: fcb-find-zenodo-figure1
+subtitle: Uploading files to Zenodo Repository.
 ```
 
 Files can be dragged and dropped, with the following limitations:
@@ -110,13 +102,9 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="/images/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
 
 
-```{figure} /images/LwMorlw.png
----
-height: 450px
-name: Starting the file upload to Zenodo
-alt: Starting the file upload  to Zenodo
----
-Starting the file upload to Zenodo Repository.
+```{figure_fairplus} /images/LwMorlw.png
+name: fcb-find-zenodo-figure2
+subtitle: Starting the file upload to Zenodo Repository.
 ```
 
 
@@ -126,13 +114,9 @@ The next key step is to select the `upload type`. In this instance, the `Dataset
 <!-- <img src="/images/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
 
 
-```{figure} /images/OYyz4dT.png
----
-height: 150px
-name: Selecting the upload type to Zenodo
-alt: Selecting the upload type to Zenodo
----
-Selecting the upload type to Zenodo Repository.
+```{figure_fairplus} /images/OYyz4dT.png
+name: fcb-find-zenodo-figure3
+subtitle: Selecting the upload type to Zenodo Repository.
 ```
 
 
@@ -146,13 +130,9 @@ Selecting the upload type to Zenodo Repository.
 <!-- <img src="/images/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
 
-```{figure} /images/WmlqBjL.png
----
-height: 450px
-name: Basic metadata to report 
-alt:  Basic metadata to report 
----
-Basic metadata to report .
+```{figure_fairplus} /images/WmlqBjL.png
+name: fcb-find-zenodo-figure4
+subtitle: Basic metadata to report .
 ```
 
 
@@ -164,13 +144,9 @@ Basic metadata to report .
 
 <!-- <img src="/images/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
-```{figure} /images/9Bp91gX.png
----
-height: 450px
-name: Setting keywords associated with the Zenodo deposition
-alt:  Setting keywords associated with the Zenodo deposition
----
-Setting keywords associated with the Zenodo deposition .
+```{figure_fairplus} /images/9Bp91gX.png
+name: fcb-find-zenodo-figure5
+subtitle: Setting keywords associated with the Zenodo deposition .
 ```
 
 
@@ -184,13 +160,9 @@ Setting keywords associated with the Zenodo deposition .
 
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
-```{figure} /images/fSxOjXe.png
----
-height: 400px
-name: Choosing a License is essential 
-alt:  Choosing a License is essential 
----
-Choosing a License is essential.
+```{figure_fairplus} /images/fSxOjXe.png
+name: fcb-find-zenodo-figure6
+subtitle: Choosing a License is essential.
 ```
 
 
@@ -202,26 +174,18 @@ Choosing a License is essential.
 
 <!-- <img src="/images/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
-```{figure} /images/ty9rpXF.png
----
-height: 350px
-name: Setting access conditions
-alt:  Setting access conditions
----
-Setting access conditions.
+```{figure_fairplus} /images/ty9rpXF.png
+name: fcb-find-zenodo-figure7
+subtitle: Setting access conditions.
 ```
 
 * Start typing to display more licenses available from Zenodo
 
 <!-- <img src="/images/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
 
-```{figure} /images/249GhMg.png
----
-height: 100px
-name: Autocompletion prompts available licenses
-alt:  Autocompletion prompts available licenses
----
-Autocompletion prompts available licenses.
+```{figure_fairplus} /images/249GhMg.png
+name: fcb-find-zenodo-figure8
+subtitle: Autocompletion prompts available licenses.
 ```
 
 
@@ -233,13 +197,9 @@ Since the Zenodo mission is to collect EC funded data, the repository provides t
 
 <!-- <img src="/images/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
  
-```{figure} /images/STjyFbT.png
----
-height: 200px
-name: Linking Funding to Zenodo Submission
-alt:  Linking Funding to Zenodo Submission
----
-Linking Funding to Zenodo Submission.
+```{figure_fairplus} /images/STjyFbT.png
+name: fcb-find-zenodo-figure9
+subtitle: Linking Funding to Zenodo Submission.
 ```
 
 
@@ -255,13 +215,9 @@ Linking Funding to Zenodo Submission.
 <!-- <img src="/images/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
  
-```{figure} /images/uhGZN5t.png
----
-height: 300px
-name: Miscellaneous Information about the Zenodo Submission
-alt:  Miscellaneous Information about the Zenodo Submission
----
-Miscellaneous Information about the Zenodo Submission.
+```{figure_fairplus} /images/uhGZN5t.png
+name: fcb-find-zenodo-figure10
+subtitle: Miscellaneous Information about the Zenodo Submission.
 ```
 
 
