@@ -35,13 +35,9 @@ To provide feedback on this content or report issues, please do so via the [FAIR
 The figure below shows different ETL-related operations and their relationships, together with related tools and recipes.
 
  
-```{figure} ETL-tools-mermaid.png
----
-width: 800px
-name: Overview of key aspects in ETL process
-alt: Overview of key aspects in ETL process
----
-Overview of key aspects in ETL process
+```{figure_fairplus} ETL-tools-mermaid.png
+name: fcb-interop-etl-figure1
+subtitle: Overview of key aspects in ETL process
 ```
 
 

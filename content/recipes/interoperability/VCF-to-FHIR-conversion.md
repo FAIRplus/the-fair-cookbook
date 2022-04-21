@@ -5,8 +5,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: FCBXXX
-:identifier_link: 'https://w3id.org/faircookbook/FCBXXX'
+:identifier_text: FCB058
+:identifier_link: 'https://w3id.org/faircookbook/FCB058'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
@@ -26,13 +26,9 @@ The main purpose of this recipe is to provide FAIR guidance relevant to the clin
 
 ## Graphical Overview
 
-```{figure} vcf2fhir-json-overview.png
----
-width: 1200px
-name: Converting a VCF open standard file to a HL7 FHIR formatted payload
-alt: Converting a VCF open standard file to a HL7 FHIR formatted payload
----
-Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.
+```{figure_fairplus} vcf2fhir-json-overview.png
+name: fcb-interop-vcf_fhir-figure1
+subtitle: Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.
 ```
 
 

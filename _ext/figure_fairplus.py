@@ -1,3 +1,4 @@
+from fileinput import filename
 import os
 
 from docutils import nodes
@@ -31,10 +32,10 @@ class FigureFairplus(Directive):
     def _create_content(self):
         if self.is_vectorgraphic:
             filename = self.filename + ".svg"
-            links_to_high_resolution_pictures = "" + \
-                f"{{download}}`[download as png] <{self.filename + '.hi-res.png'}>` "        + \
-                f"{{download}}`[download as mermaid diagram] <{self.filename}>` "             + \
-                f"{{download}}`[download as svg vector graphic] <{self.filename + '.svg'}>` "
+            links_to_high_resolution_pictures = "Download as " + \
+                f"{{download}}`[png] <{self.filename + '.hi-res.png'}>` "        + \
+                f"{{download}}`[mmd] <{self.filename}>` "             + \
+                f"{{download}}`[svg] <{self.filename + '.svg'}>` "
 
         else:
             filename = self.filename
@@ -44,7 +45,7 @@ class FigureFairplus(Directive):
         content = [f"```{{figure}} {filename}",
         "---",
         f"name: {self.name}",
-        f"alt: {self.subtitle}",
+        f"alt: {self.subtitle.replace(':', '-')}",
         "---",
         f"{self.subtitle} {links_to_high_resolution_pictures}",
         "```"
@@ -53,8 +54,8 @@ class FigureFairplus(Directive):
 
     def _parse_content(self):
 
-        print(self.content)
-        print(self.content.items)
+        #print(self.content)
+        #print(self.content.items)
         assert len(self.content) == 3, _make_string_red("The {figure_fairplus} directive expects to consist of three lines, like this:\n"+
             " ````{figure_fairplus} example.md-figure1.mmd \n name: example-figure1 \n subtitle: Example Figure has explanatory text. \n ````")
 
@@ -64,17 +65,17 @@ class FigureFairplus(Directive):
 
         ## check file
         context = self.content.items[0][0]
-        path_to_file = os.path.abspath(os.path.join(os.path.dirname(context), filename_string))
 
-                
-        ## TODO workaround until finalized
-        if ".mmd.png" in filename_string:
-            self.is_vectorgraphic = False
-            filename_string = "/dummy.jpeg"
-            path_to_file = "/Users/robert/git/the-fair-cookbook/dummy.jpeg"
-        ############################################
+        ## understand "absolute" paths to images as pointing to root of execution
+        check_filename = filename_string
+        if check_filename[0] == "/":
+            context = os.path.join(os.getcwd(), "DUMMY.EXT")
+            check_filename = check_filename[1:]
+        path_to_file = os.path.abspath(os.path.join(os.path.dirname(context), check_filename))
         
         assert os.path.exists(path_to_file), _make_string_red(f"image file does not exist: {filename_string}")
+        if not os.path.exists(path_to_file):
+            logger.error(f"ERROR: {context} - image file does not exist: {filename_string}")
         self.filename = filename_string
 
         file_extension = os.path.splitext(filename_string)[1].lower()[1:] 
@@ -89,7 +90,10 @@ class FigureFairplus(Directive):
         elif file_extension == "png" or file_extension == "jpg" or file_extension == "jpeg":
             self.is_vectorgraphic = False
         else:
-            raise "Unknown file extension for an image"
+            logger.error(f"ERROR: {context} - Unknown file extension for an image")
+            #raise Exception(f"{context} - Unknown file extension for an image")
+            raise sphinx.errors.ExtensionError("")
+
 
 
         ## check name

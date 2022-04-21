@@ -28,7 +28,7 @@ With the increased awareness of the FAIR principles, the drive to implement them
 
 The structure of the recipe is as follows:
 * We begin by identifying reasons why an individual or a project team should make a data set FAIR. 
-* Following this, a brief overview of the corpus or dataset formulation that needs to be done by a small group of people. Once “the team” has collected all the necessary data, it can now pass through the prioritisation phase. Here, a thorough assessment of the dataset based on defined criteria is performed. This assessment is, in turn, recorded by means  of a “scorecard”.
+* Following this, a brief overview of the corpus or dataset formulation that needs to be done by a small group of people. Once ï¿½the teamï¿½ has collected all the necessary data, it can now pass through the prioritisation phase. Here, a thorough assessment of the dataset based on defined criteria is performed. This assessment is, in turn, recorded by means  of a ï¿½scorecardï¿½.
 * Finally, ranking based on the score each dataset has earned in the scorecard is established and ranked projects or datasets can be prioritised for FAIRification.
 
 ---
@@ -92,15 +92,15 @@ Once the basic information is collected, the PSP team can start to score each pr
 
 When dealing with many projects, the PSP team can get an overview of the research or focus area of the given projects. In cases where the aim of the goal is not directly available, a number of approaches can be used to exact this information. If the number of projects under consideration are small (< 15 projects), the team can manually curate this information with help of project leads. In contrast, if a larger number of projects are under consideration, the team can make use of advanced techniques such as natural language processing (NLP) based models to extract the project focus details. Within IMI, we built a small tool, which can be found on [GitHub](https://github.com/Fraunhofer-ITMP/IMI-Project-Prioritization), for mining of project focus area from project summaries.
 
-Based on this focus area, the PSP team can generate an *in-house scoring schema* by enlisting the different focus areas and sorting them based on the team’s interest or objective. Eventually, this in-house scoring schema would be used to score each of the projects.  
+Based on this focus area, the PSP team can generate an *in-house scoring schema* by enlisting the different focus areas and sorting them based on the teamï¿½s interest or objective. Eventually, this in-house scoring schema would be used to score each of the projects.  
 
 
-#### 2. Prioritisation based on project’s timeline
+#### 2. Prioritisation based on projectï¿½s timeline
 
 The process for FAIRification could be done either to the data present in a project or to a processing pipeline that is part of the project. In situations where the project involves external data owners, there is a need to consider the project timeline within the project prioritisation schema since the data would only be available within the defined time span, assuming that no dissemination of data into public repositories is done. 
 
 Furthermore, taking into account the interdependence between the data and project timeline of the data or process within the project, the time span at which a project runs is also an important criteria to understand the availability of the data or pipeline. The project can be divided into three stages of development on the basis of its duration: 
-- **Early stage** : A project is in early stages of development when the data requirements for the given project are being listed and simultaneously being collected. At this stage, the amount of data available is at its lowest, and it is easier to design a data model or schema, choose definite ontologies, etc. thereby ensuring creation of ‘FAIR data by design'.
+- **Early stage** : A project is in early stages of development when the data requirements for the given project are being listed and simultaneously being collected. At this stage, the amount of data available is at its lowest, and it is easier to design a data model or schema, choose definite ontologies, etc. thereby ensuring creation of ï¿½FAIR data by design'.
 - **Middle stage** : In the middle stage, data relevant for the given project have been collected and need to be standardised for downstream analysis tasks such as inputs into machine learning approaches. This is a stage where there is maximum availability of data, and the project's focus is on algorithmic models or data-based prediction models.
 - **End stage**: Lastly, in the end stage, data has either been deposited into public or private repositories or handed over to the respective project heads or consortium leaders. This indicates  that the project is near its termination. Furthermore, it is at this stage that the risk of organisation restructuring is highest, with staff reassignment or departure. 
 
@@ -150,7 +150,7 @@ Along with the above project-based factors, two more factors play a crucial role
 -  **Time management**: The FAIRification process can depend on a number of factors, it is important to acknowledge the time required for the process to be completed. 
 - **Risk management**: This involves the assessment of potential roadblocks that could interfere being essential and such roadblocks should be identified and rectified, ideally prior to starting a FAIRification process. 
 
-Each of these criteria are treated independently when creating a scorecard, and a personalised priority between these factors needs to be made by the PSP team. Thus, based on the criteria priority selected, the prioritisation between the different project factors can be made. For example, if the PSP team prioritises time management, the “data champions” factor should be at a higher priority over the “data availability and access” factor.
+Each of these criteria are treated independently when creating a scorecard, and a personalised priority between these factors needs to be made by the PSP team. Thus, based on the criteria priority selected, the prioritisation between the different project factors can be made. For example, if the PSP team prioritises time management, the ï¿½data championsï¿½ factor should be at a higher priority over the ï¿½data availability and accessï¿½ factor.
 
 Another prioritisation schema that could be used for intra-factor ranking could be the cost and value benefits of each of the factors {footcite}`10.1162/dint_a_00109`. The cost factors refer to the set of indicators or aspects that influence the costs associated with the FAIRification process, while the value factors can be defined as the value proposition for performing the FAIRification. To provide a granular overview of this criteria, classification based on two factors, cost and value, has been shown in the table below.
 
@@ -177,6 +177,7 @@ The prioritisation and selection schema mentioned in this recipe was successfull
 <div style="justify-content: center;">
 <img src="/images/score_card_ref.png" style="border:1px solid black"/>
 </div> -->
+
 
 ```{figure} score_card_ref.png
 ---

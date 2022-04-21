@@ -36,13 +36,9 @@ There are sub-recipes for embedding search engine optimization into specific web
 -->
 
 
-```{figure} images/seo-mermaid.png
----
-height: 550px
-name: Search Engine Optimization
-alt: Search Engine Optimization
----
-Search Engine Optimization.
+```{figure_fairplus} images/seo-mermaid.png
+name: fcb-find-seo-figure1
+subtitle: Search Engine Optimization.
 ```
 
 ---
@@ -160,13 +156,9 @@ The tool is known as the [`Google Structured Data Testing Tool`](https://search.
 </div> -->
 
 
-```{figure} /images/Ge8gsWL.png
----
-height: 580px
-name: Google Structured Data Testing Tool
-alt: Google Structured Data Testing Tool
----
-Google Structured Data Testing Tool.
+```{figure_fairplus} /images/Ge8gsWL.png
+name: fcb-find-seo-figure2
+subtitle: Google Structured Data Testing Tool.
 ```
 
 

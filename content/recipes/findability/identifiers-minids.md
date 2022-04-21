@@ -34,13 +34,9 @@ To create a **persistent**, **globally unique** and **resolvable identifier** us
 <!-- <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>
  -->
 
-```{figure} identifiers-minids-fig1.png
----
-height: 550px
-name: Minting Minid
-alt: An overview of the identifier minting process
----
-An overview of the identifier minting process.
+```{figure_fairplus} identifiers-minids-fig1.png
+name: fcb-find-id-minid-figure1
+subtitle: An overview of the identifier minting process
 ```
 
 
@@ -109,13 +105,9 @@ $ touch minid-config.cfg
   <!-- ![](/images/B5UbkpF.png) -->
 
 
-```{figure} images/globus/globus-account-create.png
----
-height: 500px
-name: Creating a Globus account
-alt: Creating a Globus account
----
-Creating a Globus account.
+```{figure_fairplus} images/globus/globus-account-create.png
+name: fcb-find-id-minid-figure2
+subtitle: Creating a Globus account.
 ```
 
 
@@ -146,13 +138,9 @@ Creating a Globus account.
   <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div>  -->
 
-```{figure} images/globus/globus-account-login.png
----
-height: 250px
-name: Globus account login
-alt: Globus account login
----
-Globus account login.
+```{figure_fairplus} images/globus/globus-account-login.png
+name: fcb-find-id-minid-figure3
+subtitle: Globus account login.
 ```
   
   followed by:
@@ -166,13 +154,9 @@ Globus account login.
 <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div> -->
 
-```{figure} images/globus/globus-account-allow.png
----
-height: 550px
-name: Globus account allow
-alt: Globus account allow
----
-Globus account allow.
+```{figure_fairplus} images/globus/globus-account-allow.png
+name: fcb-find-id-minid-figure4
+subtitle: Globus account allow.
 ```
   
   If all goes well, the following browser screen will be shown:
@@ -187,13 +171,9 @@ Globus account allow.
 </div>
  -->
 
-```{figure} images/globus/globus-account-login-success.png
----
-height: 200px
-name: Globus account login success
-alt: Globus account login success
----
-Globus account login success.
+```{figure_fairplus} images/globus/globus-account-login-success.png
+name: fcb-find-id-minid-figure5
+subtitle: Globus account login success.
 ```
   
   While the terminal will show the following:

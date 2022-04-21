@@ -27,13 +27,9 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 
-```{figure} ./bs-data-mermaid.png
----
-width: 800px
+```{figure_fairplus} ./bs-data-mermaid.png
 name: 
-alt: The process of annotated a webpage with Bioschemas markup to support machine processing of the page
----
-The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
+subtitle: The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
 ```
 
 
@@ -77,13 +73,9 @@ We will outline the steps for embedding machine processable mark up within a web
 <!--    ![Bioschemas Generator start screen](BioschemasGenerator.png) -->
 
 
-```{figure} BioschemasGenerator.png
----
+```{figure_fairplus} BioschemasGenerator.png
 name: bioschemas-generator-start-screen-2
-alt: Bioschemas Generator start screen.
-
----
-Bioschemas Generator start screen.
+subtitle: Bioschemas Generator start screen.
 ```
 
 
@@ -96,13 +88,9 @@ Bioschemas Generator start screen.
 <!--    ![Bioschemas Generator Gene profile form](BioschemasGeneratorGeneForm.png) -->
 
 
-```{figure} BioschemasGeneratorGeneForm.png
----
-height: 550px
-name: Bioschemas Generator Gene profile form
-alt: Bioschemas Generator Gene profile form
----
-Bioschemas Generator Gene profile form.
+```{figure_fairplus} BioschemasGeneratorGeneForm.png
+name: fcb-find-bs-data-figure2
+subtitle: Bioschemas Generator Gene profile form.
 ```
 
    

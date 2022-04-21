@@ -115,7 +115,7 @@ class AuthorsFairplus(Directive):
                 assert elixir_node in CONTROLLED_LIST_OF_ELIXIR_NODES, \
                     sphinx.errors.ExtensionError(_make_string_red(f"The elixir_node of '{author}' is not registered in the CONTROLLED_LIST_OF_ELIXIR_NODES."))
 
-                elixir_block = f'<img class="elixir-style" src="/the-fair-cookbook/_static/images/logo/Elixir/{CONTROLLED_LIST_OF_ELIXIR_NODES[elixir_node]}" ></img>'
+                elixir_block = f'<img class="elixir-style" src="../../../_static/images/logo/Elixir/{CONTROLLED_LIST_OF_ELIXIR_NODES[elixir_node]}" ></img>' #
             else:
                 elixir_block = ""
 

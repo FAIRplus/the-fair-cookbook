@@ -25,13 +25,9 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 ## Graphical Overview
 
 
-```{figure} covid19-sample-metadata-profile-shex-use-case-mermaid.png
----
-width: 800px
-name: building a commmunity compliant metadata profile
-alt: building a commmunity compliant metadata profile
----
-Building a commmunity compliant metadata profile.
+```{figure_fairplus} covid19-sample-metadata-profile-shex-use-case-mermaid.png
+name: fcb-interop-covid-metadata-figure1
+subtitle: Building a commmunity compliant metadata profile.
 ```
 
 ## FAIRification Objectives, Inputs and Outputs
@@ -93,22 +89,14 @@ The following sections detail each of these steps
 <div><img src="/images/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
 
 
-```{figure} /images/lwV1cPd.png
----
-width: 300px
-name: Defining the metadata fields
-alt: Defining the metadata fields
----
-Defining the metadata fields
+```{figure_fairplus} /images/lwV1cPd.png
+name: fcb-interop-covid-metadata-figure2
+subtitle: Defining the metadata fields
 ```
-
-```{figure} /images/1ahQLjy.png
----
-width: 300px
-name: Defining the metadata fields-1
-alt: Defining the metadata fields-1
----
-Defining the metadata fields-1
+                   
+```{figure_fairplus} /images/1ahQLjy.png
+name: fcb-interop-covid-metadata-figure3
+subtitle: Defining the metadata fields-1
 ```
 
 
@@ -127,13 +115,9 @@ Several distinct to the following resources mappings have been made by the devel
 <!-- ![](/images/Ro92a7D.png) -->
 <!-- <div><img src="/images/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
 
-```{figure} /images/Ro92a7D.png
----
-width: 800px
-name: Semantic anchoring of metadata element
-alt: Semantic anchoring of metadata element
----
-Semantic anchoring of metadata element
+```{figure_fairplus} /images/Ro92a7D.png
+name: fcb-interop-covid-metadata-figure4
+subtitle: Semantic anchoring of metadata element
 ```
 
 
@@ -146,13 +130,9 @@ However, for the final implementation, only the OBO related mappings have been u
 <!-- <div><img src="/images/Lc7FcPs.png" width="800" style="border:1px solid black"/></div> -->
 <!-- ![](/images/Lc7FcPs.png) -->
 
-```{figure} /images/Lc7FcPs.png
----
-width: 800px
-name: Semantic anchoring of metadata element - final
-alt: Semantic anchoring of metadata element - final
----
-Semantic anchoring of metadata element - final
+```{figure_fairplus} /images/Lc7FcPs.png
+name: fcb-interop-covid-metadata-figure5
+subtitle: Semantic anchoring of metadata element - final
 ```
 
 
@@ -241,12 +221,9 @@ $graph:
 
 <!-- <div><img src="/images/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
 
-```{figure} /images/5eQN9hw.png
----
-width: 800px
-name: The corresponding metadata acquisition web form
-alt: The corresponding metadata acquisition web form
----
+```{figure_fairplus} /images/5eQN9hw.png
+name: fcb-interop-covid-metadata-figure6
+subtitle: The corresponding metadata acquisition web form
 ```
 
 <!-- ![](/images/5eQN9hw.png) -->
@@ -256,13 +233,9 @@ alt: The corresponding metadata acquisition web form
 <!-- ![](/images/RR5GSgi.png) -->
 
 
-```{figure} /images/RR5GSgi.png
----
-width: 800px
-name: The corresponding metadata acquisition web form 2
-alt: The corresponding metadata acquisition web form 2
----
-The corresponding metadata acquisition web form
+```{figure_fairplus} /images/RR5GSgi.png
+name: fcb-interop-covid-metadata-figure7
+subtitle: The corresponding metadata acquisition web form
 ```
 
 
@@ -438,13 +411,9 @@ Using the [WESO](http://www.weso.es/) developed [RDF shape viewer](http://rdfsha
 <!-- <div><img src="/images/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
  -->
 
-```{figure} /images/z2rriQu.png
----
-width: 1200px
-name: WESO SHape Expression Viewer
-alt: WESO SHape Expression Viewer
----
-WESO SHape Expression Viewer
+```{figure_fairplus} /images/z2rriQu.png
+name: fcb-interop-covid-metadata-figure8
+subtitle: WESO SHape Expression Viewer
 ```
 
 

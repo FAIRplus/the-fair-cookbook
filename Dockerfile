@@ -41,7 +41,7 @@ RUN pip install                                  \
             jupyter-client==6.1.12               \
             jupyter-core==4.7.1                  \
             jupyter-packaging==0.9.2             \
-            jupyter-server==1.6.4                \
+            jupyter-server==1.15.4                \
             jupyter-server-mathjax==0.2.2        \
             jupyter-sphinx==0.3.1                \
             jupyterbook-latex==0.2.0             \
@@ -143,7 +143,7 @@ WORKDIR /home/mermaidcli
 
 RUN echo "{\"args\": [ \"--no-sandbox\" ] }" > puppeteer-config.json
 
-COPY --from=orchestrator all_mermaid_files.tar list_of_all_mermaid_files.txt .
+COPY --from=orchestrator all_mermaid_files.tar list_of_all_mermaid_files.txt ./
 RUN tar -xf all_mermaid_files.tar
 RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 800 -o $line.png ; done
 RUN cat list_of_all_mermaid_files.txt | while read line; do echo $line && ./node_modules/.bin/mmdc -p puppeteer-config.json -i $line -w 1600 -o $line.hi-res.png ; done

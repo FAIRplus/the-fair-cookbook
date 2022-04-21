@@ -77,13 +77,9 @@ All the images will be generated as png files.
 Then reference the figure using the Alan Turing Institute style as shown below:
 
 
-```{figure} ./images/C-3PO_droid.png
----
-width: 200px
-name: This is a Robot
-alt: C-3PO_droid
----
-C-3PO_droid 
+```{figure_fairplus} ./images/C-3PO_droid.png
+name: fcb-help-recipe-template-figure1
+subtitle: C-3PO_droid
 ```
 
 
@@ -190,13 +186,9 @@ If you want to include figures, please use the following
 
 
 <!-- 
-```{figure} ./my_figure.svg
----
-width: 700px
-name: the figure title
-alt: something to display if the link to the figure is broken
----
-the proper caption for the figure.
+```{figure_fairplus} ./my_figure.svg
+name: fcb-help-recipe-template-figure1
+subtitle: the proper caption for the figure.
 ```
 -->
 

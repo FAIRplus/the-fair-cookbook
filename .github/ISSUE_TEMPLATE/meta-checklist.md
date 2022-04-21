@@ -7,7 +7,6 @@ labels:
   - "author's task: write abstract"
   - "editor's task: identify author"
 assignees: 
-  - 'robertgiessmann'
   - 'proccaserra'
 ---
 
@@ -29,5 +28,6 @@ Great! Now, to the actual tasks:
 - [ ] identify reviewer
 - [ ] conduct review
 - [ ] incorporate reviewer's comments
-- [ ] publish recipe
+- [ ] editorial checks
+- [ ] recipe published
 
