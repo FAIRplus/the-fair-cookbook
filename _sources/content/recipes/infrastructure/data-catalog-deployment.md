@@ -11,6 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 20
 :intended_audience: software_developer, data_manager, system_administrator  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: Deploying the IMI data catalogue
 ```` 
@@ -22,7 +24,13 @@ This recipe is a step-by-step guide on how to deploy the IMI Data Catalogue in D
 
 ## Introduction
 
-For a more general introduction to data catalogues, their elements and data models, see the [data catalogue recipe](https://www.TODO.uldatacatalog.ul). This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, together with information on any access restrictions.
+For a more general introduction to data catalogues, their elements and data models, 
+see the [data catalogue recipe](https://www.TODO.uldatacatalog.ul). 
+This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue
+developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host 
+dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. 
+The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, 
+together with information on any access restrictions.
 
 ## Requirements
 
@@ -40,7 +48,8 @@ Check out the code to your local machine by running the following command in a t
 $ git clone git@github.com:FAIRplus/imi-data-catalogue.git
 ```
 
-Thanks to `docker-compose`, it is possible to easily manage all the components (solr and web server) required to run the application.
+Thanks to **docker-compose**, it is possible to easily manage all the components (solr and web server) required to run
+the application.
 
 
 ## Step-by-step guide
@@ -49,7 +58,7 @@ Unless otherwise specified, all the following commands should be run in a termin
 
 ### Building
 
-`(local)` and `(web container)` indicate context of execution.
+**(local)** and **(web container)** indicate context of execution.
 
 * First, generate the certificates that will be used to enable HTTPS in reverse proxy. To do so, execute:
 
@@ -68,14 +77,15 @@ This command relies on OpenSSL. If you don't plan to use HTTPS or just want to s
 
 ````
 
-* Return to the root directory (`$cd ../..`), then copy `datacatalog/settings.py.template` to `datacatalog/settings.py`. 
+* Return to the root directory (`$cd ../..`), then copy **datacatalog/settings.py.template** to **datacatalog/settings.py**. 
 
 ```bash
 $ cd ../..
 $ cp datacatalog/settings.py.template datacatalog/settings.py
 ```
 
-* Edit the `settings.py` file to add a random string of characters in `SECRET_KEY` attribute. For maximum security, in `Python`, use the following to generate this key:
+* Edit the **settings.py** file to add a random string of characters in **SECRET_KEY** attribute. For maximum security,
+in **Python**, use the following to generate this key:
 
 ```python
 import os
@@ -128,7 +138,8 @@ os.urandom(24)
 ```
 
 ### Maintenance of docker-compose
-Docker container keeps the application in the state it was when  built. Therefore, **if you change any files in the project, the container has to be rebuilt in order to see changes in application** :
+Docker container keeps the application in the state it was when  built. Therefore, **if you change any files in 
+the project, the container has to be rebuilt in order to see changes in application** :
 
 ```shell
 $ docker-compose up --build
@@ -140,11 +151,13 @@ If you wanted to delete Solr data, you'd need to run:
 $ docker-compose down --volumes
 ```
 
-This will remove any persisted data - you must redo `solr create_core` (see step 4 in the previous section) to recreate the Solr cores.
+This will remove any persisted data - you must redo **solr create_core** (see step 4 in the previous section) to 
+recreate the Solr cores.
 
 ### Modifying the datasets
 
-The datasets are all defined in the file `tests/data/records.json`. This file can me modified to add, delete and modify datasets. **After saving the file, rebuild and restart docker-compose**.
+The datasets are all defined in the file **tests/data/records.json**. This file can be modified to add, 
+delete and modify datasets. **After saving the file, rebuild and restart docker-compose**.
 
 First, to stop all the containers:
 
@@ -177,7 +190,8 @@ Finally, reindex the datasets using:
 ---
 
 ## Single Docker deployment
-In some cases, you might not want Solr and Nginx to run (for example, if there are **multiple instances** of `Data Catalog` running).
+In some cases, you might not want Solr and Nginx to run (for example, if there are **multiple instances** of
+**Data Catalog** running).
 Then, simply use:
 
 ```shell
@@ -187,13 +201,15 @@ Then, simply use:
 
 ## Manual deployment
 
-If you would prefer not to use Docker and compile and run the data catalogue manually instead, please follow the instructions in the [README file](https://github.com/FAIRplus/imi-data-catalogue/blob/master/README.md)
+If you'd rather not to use Docker and compile and run the data catalogue manually instead, please follow the
+instructions in the [README file](https://github.com/FAIRplus/imi-data-catalogue/blob/master/README.md)
 
 ---
     
 ## Conclusion
 
-This recipe provides a step-by-step guide to deploying the `IMI data catalogue` developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb), as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
+This recipe provides a step-by-step guide to deploying the **IMI data catalogue** developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb),
+as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
 > ### What should I read next?
 > * {ref}`fcb-infra-build-catalog`
@@ -202,8 +218,9 @@ This recipe provides a step-by-step guide to deploying the `IMI data catalogue` 
 > * {ref}`fcb-interop-metadataprofile`
 > * {ref}`fcb-interop-txmetadata`
 
- 
----
+## References
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -214,9 +231,6 @@ Wei: Writing - Review & Editing
 Venkata: Writing - Review & Editing
 Philippe: Writing - Review & Editing
 ````
-
-
----
 
 ## License
 

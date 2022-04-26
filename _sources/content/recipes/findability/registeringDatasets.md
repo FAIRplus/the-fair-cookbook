@@ -1,4 +1,4 @@
-# Registering Datasets
+# Registering Datasets in Wikidata
 <br/>
 <br/>
 
@@ -10,6 +10,8 @@
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
 :has_executable_code: nope
+:maturity_level: 1
+:maturity_indicator: 1, 2
 :recipe_name: How to Register a Dataset with Wikidata
 ```` 
 
@@ -28,7 +30,6 @@ This recipe is about making an already archived dataset metadata more **Findable
 
 > Learn how to register a published dataset on Wikidata with the appropriate citation to increase its findability.
 
-___
 
 
 ## Requirements
@@ -36,7 +37,6 @@ ___
 Register datasets in [Wikidata](https://www.wikidata.org/) {footcite}`Waagmeester2020` requires that the dataset is already archived somewhere that provides
 an DOI for the datasets, and it also requires that you have a Wikidata account ([create one](https://www.wikidata.org/wiki/Special:CreateAccount)).
 
----
 
 
 ## Main Content
@@ -122,38 +122,49 @@ in the top right corner of the Quickstatements website.
 If your dataset is not already Wikidata, use the `https://scholia.toolforge.org/doi/$DOI` Scholia
 page to create Quickstatements. The result should look something like this:
 
+````{dropdown}
+:open:
 ```{figure} images/scholia.png
 ---
+width: 1200px
 name: scholia
 alt: Scholia page showing Quickstatements for a dataset not yet in Wikidata
 ---
 Scholia page showing Quickstatements for a dataset not yet in Wikidata.
 ```
+````
 
 #### Step 4: Execute the Quickstatements
 
 On the page from Step 3, click the blue "Submit to Quickstatements" button which will take you to the
 Quickstatements website, which will look something like this:
 
-
+````{dropdown}
+:open:
 ```{figure} images/quickstatements.png
 ---
+width: 1200px
 name: quickstatements
 alt: Quickstatements showing the same Quickstatements but now parsed and ready for applying to Wikidata
 ---
 Quickstatements showing the same Quickstatements but now parsed and ready for applying to Wikidata.
 ```
+````
 
 After you click "Run", Quickstatements starts making edits in Wikidata, and when done, it should look
 like this:
 
+````{dropdown}
+:open:
 ```{figure} images/quickstatements2.png
 ---
+width: 1200px
 name: quickstatements2
 alt: Quickstatements showing the same Quickstatements after applying to Wikidata
 ---
 Quickstatements showing the same Quickstatements after applying to Wikidata.
 ```
+````
 
 ### Optional: adding additional information
 
@@ -171,17 +182,18 @@ tutorial provides more information on how Wikidata uses keywords to further expo
 but works identical to other research output, such as datasets.
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 
 ## Authors
 
 ````{authors_fairplus}
 Egon: Writing
-Philippe: Writing - Review & Editing
 Zachary: Writing - Original Draft
+Philippe: Writing - Review & Editing
 ````
 
 

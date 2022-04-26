@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Practical Considerations for CROs to play FAIR" href="fair-cro.html" />
+    <link rel="next" title="Knowledge graphs and FAIR" href="FAIR-and-knowledge-graphs.html" />
     <link rel="prev" title="Ethical values of FAIR" href="FAIRplus-values.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/metadata-fair.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="FAIR and the notion of metadata" />
-<meta property="og:description" content="FAIR and the notion of metadata    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.or" />
+<meta property="og:description" content="FAIR and the notion of metadata    &lt;br/&gt;   &lt;!-- ````{panels_fairplus} :identifier_text: FCB0XX :identifier_link: &#39;https://w3id.org/faircookbook/FCB0XX&#39; :difficu" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,8 +117,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -132,19 +132,39 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
+  <a class="reference internal" href="public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -175,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -195,17 +215,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -466,34 +486,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -501,28 +562,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -532,7 +573,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -542,14 +629,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -561,7 +662,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/contributing.html">
+    <a class="reference internal" href="../afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -593,20 +694,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../help/myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -801,64 +888,20 @@
   <div class="section" id="fair-and-the-notion-of-metadata">
 <span id="fcb-metadata"></span><h1>FAIR and the notion of metadata<a class="headerlink" href="#fair-and-the-notion-of-metadata" title="Permalink to this headline">¶</a></h1>
 <br/>
-<br/>
-<hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "FAIR and the notion of metadata", "audience": ["Everyone"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB0XX", "url": "https://w3id.org/faircookbook/FCB0XX"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
-<div class="card recipe d-flex">
-<div class="card-header purple-dark text--white">
-<div class="overview">
-<div class="overviewLabel">Recipe Overview</div>
-<div class="overviewContent">
-<div class="item"><div class="itemContainer">
-<i class="itemIcon fa fa-clock fa-2x text--white"></i>
-<div class="itemContent">
-<div class="label"> Reading Time </div>
-10 minutes
-</div>
-</div></div>
-<div class="item"><div class="itemContainer">
-<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
-<div class="itemContent">
-<div class="label"> Executable Code </div>
-No
-</div>
-</div></div>
-<div class="item" style="margin-bottom:10px"><div class="itemContainer">
-<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
-<div class="itemContent">
-<div class="label" style="position:relative; left:-6px">Difficulty</div>
-<i class="fa fa-fire"></i>
-<i class="fa fa-fire" style="color:grey"></i>
-<i class="fa fa-fire" style="color:grey"></i>
-<i class="fa fa-fire" style="color:grey"></i>
-<i class="fa fa-fire" style="color:grey"></i>
-</div>
-</div></div>
-</div></div>
-</div>
-<div class="card-body text--purple-dark">
-<div class="title">
-<div style="flex-grow:1; margin-right:5px">FAIR and the notion of metadata</div>
-<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
-</div>
-<div class="section">
-<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
-<div class="label">Recipe Type</div>
-<div class="sectionValue">Guidance</div>
-</div>
-</div>
-<div class="section" style="flex-grow: 1;">
-<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
-<div class="label">Audience</div>
-<div class="sectionValue">Everyone</div>
-</div>
-</div>
-<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://w3id.org/faircookbook/FCB0XX" class="text--purple-dark">FCB0XX
-</a></div>
-</div>
-</div>
-<hr class="docutils" />
+<!--
+````{panels_fairplus}
+:identifier_text: FCB0XX
+:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
+:difficulty_level: 1
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience:  everyone 
+:maturity_level: 1
+:maturity_indicator: 1
+:has_executable_code: nope
+:recipe_name: FAIR and the notion of metadata
+```` 
+-->
 <div class="section" id="main-objectives">
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is:</p>
@@ -869,7 +912,7 @@ No
 <hr class="docutils" />
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Upon reading the <span class="xref myst">FAIR principles</span>, one can’t help but notice that everything rests on the availability of <strong>machine readable metadata</strong>. For a number of newcomers to FAIR or Data Management for that matter, the first hurdle is to grasp the notion of ‘metadata’ and this alone can be a challenge.
+<p>Upon reading the <a class="reference internal" href="brief-FAIR-principles.html#fcb-fair-principles"><span class="std std-ref">FAIR principles</span></a>, one can’t help but notice that everything rests on the availability of <strong>machine readable metadata</strong>. For a number of newcomers to FAIR or Data Management for that matter, the first hurdle is to grasp the notion of ‘metadata’ and this alone can be a challenge.
 Below are a number of commonly found definitions of metadata:</p>
 <ul class="simple">
 <li><p>the recursive definition <strong>“data about the data”</strong>, which provides the idea that to understand data, you need extra data describing it <a class="footnote-reference brackets" href="#wikidatametadata" id="id1">4</a>.</p></li>
@@ -887,11 +930,26 @@ Below are a number of commonly found definitions of metadata:</p>
 ../datascriptor/node_modules/.bin/mmdc -i ../FAIRplus-org/the-fair-cookbook/content/recipes/introduction/metadata-fair-figure.mmd -o ../FAIRplus-org/the-fair-cookbook/content/recipes/introduction/metadata-fair-figure.png
 ```
  -->
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="metadata-overview">
-<a class="reference internal image-reference" href="../../../_images/metadata-fair-figure.png"><img alt="Metadata overview" src="../../../_images/metadata-fair-figure.png" style="height: 1200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Metadata overview.</span><a class="headerlink" href="#metadata-overview" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../../_images/metadata-fair-figure.png"><img alt="Metadata overview" src="../../../_images/metadata-fair-figure.png" style="width: 850px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Metadata overview.</span><a class="headerlink" href="#metadata-overview" title="Permalink to this image">¶</a></p>
 </div>
 </div>
+</details></div>
 <hr class="docutils" />
 <div class="section" id="different-shades-of-metadata">
 <h2>Different shades of metadata<a class="headerlink" href="#different-shades-of-metadata" title="Permalink to this headline">¶</a></h2>
@@ -902,15 +960,15 @@ Remember that for each of these definitions, we are actually talking about tags 
 <p>This is really the fundamental of metadata, things should at least be described by a <code class="docutils literal notranslate"><span class="pre">label</span></code>, or <code class="docutils literal notranslate"><span class="pre">name</span></code>, which is a probably the simplest form of metadata: a small string denoting a thing.
 Depending on the domain of knowledge, descriptive metadata complexity can increase.
 Taking an example, let’s consider the domain of a bibliographic record and let’s look at a bibtex <a class="footnote-reference brackets" href="#bibtex" id="id3">2</a> record:</p>
-<div class="highlight-bash= notranslate"><div class="highlight"><pre><span></span>@Article{Alter2020DATS,
-   Author=&quot;Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. &quot;,
-   Title=&quot;{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model for discovering data access and use requirements}&quot;,
-   Journal=&quot;Gigascience&quot;,
-   Year=&quot;2020&quot;,
-   Volume=&quot;9&quot;,
-   Number=&quot;2&quot;,
-   Month=&quot;02&quot;
-}
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@Article<span class="o">{</span>Alter2020DATS,
+   <span class="nv">Author</span><span class="o">=</span><span class="s2">&quot;Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. &quot;</span>,
+   <span class="nv">Title</span><span class="o">=</span><span class="s2">&quot;{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model for discovering data access and use requirements}&quot;</span>,
+   <span class="nv">Journal</span><span class="o">=</span><span class="s2">&quot;Gigascience&quot;</span>,
+   <span class="nv">Year</span><span class="o">=</span><span class="s2">&quot;2020&quot;</span>,
+   <span class="nv">Volume</span><span class="o">=</span><span class="s2">&quot;9&quot;</span>,
+   <span class="nv">Number</span><span class="o">=</span><span class="s2">&quot;2&quot;</span>,
+   <span class="nv">Month</span><span class="o">=</span><span class="s2">&quot;02&quot;</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 <p>In this object, seven metadata element are provided, each of them meant to receive a specific category of information about a journal article.
@@ -918,10 +976,14 @@ Each key in this json object corresponds to a metadata element the definition of
 </div>
 <div class="section" id="structural-metadata">
 <h3>2. Structural metadata<a class="headerlink" href="#structural-metadata" title="Permalink to this headline">¶</a></h3>
-<p>Structural metadata concerns itself with provide descriptors allowing agents to understand how data is organised so this type of metadata could provide information about the layout of a table, the relations between elements, and their types.</p>
-<div class="highlight-bash= notranslate"><div class="highlight"><pre><span></span>TODO: include example
-</pre></div>
-</div>
+<p>Structural metadata concerns itself with providing descriptors allowing agents to understand how data is organised so
+this type of metadata could provide information about the layout of a table, the relations between elements, and their types.
+Here, there are historical two important models to know about:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.openarchives.org/pmh/">OAI-PMH</a>
+OAI-PMH stands for the <em>Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)</em> and is a low-barrier mechanism for repository interoperability.</p></li>
+<li><p><a class="reference external" href="https://pcdm.org/2016/04/18/models">Portland Common Data Model</a></p></li>
+</ul>
 </div>
 <div class="section" id="administrative-metadata">
 <h3>3. Administrative metadata<a class="headerlink" href="#administrative-metadata" title="Permalink to this headline">¶</a></h3>
@@ -1000,40 +1062,59 @@ As with all human things, there will be redundant, overlapping, competing effort
 <hr class="docutils" />
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>ORCID</p></th>
-<th class="head"><p>Affiliation</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>ELIXIR Node</p></th>
-<th class="head"><p>Contribution</p></th>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p>Writing - Original Draft, Editing, Conceptualization</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft, Editing, Conceptualization</p></td>
 </tr>
-<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/iemam"><img class="avatar-style" src="https://avatars.githubusercontent.com/iemam"></img><div class="d-block">Ibrahim Emam</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0002-7561-2787"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>Imperial College London</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p>Writing - Reviewing</p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/iemam"></img><div class="d-block">Ibrahim Emam</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-7561-2787"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Imperial College London</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Reviewing</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+</details></div>
 <hr class="docutils" />
 <div class="section" id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>This page is released under the Creative Commons 4.0 BY license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
-<hr class="footnotes docutils" />
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><hr class="footnotes docutils" />
 </div>
 </div>
 
@@ -1063,7 +1144,7 @@ As with all human things, there will be redundant, overlapping, competing effort
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="FAIRplus-values.html" title="previous page">Ethical values of FAIR</a>
-    <a class='right-next' id="next-link" href="fair-cro.html" title="next page">Practical Considerations for CROs to play FAIR</a>
+    <a class='right-next' id="next-link" href="FAIR-and-knowledge-graphs.html" title="next page">Knowledge graphs and FAIR</a>
 
         </div>
         
@@ -1075,7 +1156,7 @@ As with all human things, there will be redundant, overlapping, competing effort
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

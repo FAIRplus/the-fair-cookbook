@@ -1,13 +1,18 @@
 (fcb-ehden-ohdsi)=
 # FAIRification of observational studies and databases: the EHDEN and OHDSI use case
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB054
 :identifier_link: 'https://w3id.org/faircookbook/FCB054'
 :difficulty_level: 1
 :recipe_type: applied_example
 :reading_time_minutes: 15
-:intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist 
+:maturity_level: 2 
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: EHDEN OHDSI discovery with Schema.org
 ```` 
@@ -15,9 +20,16 @@
 
 ## Main objectives
 
-In this recipe, an example will be described on how to make observational health databases and observational studies more Findable (notably the FAIR principles [F2](https://www.go-fair.org/fair-principles/f2-data-described-rich-metadata/) and [F4](https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/)) and interoperability (principles [I1](https://www.go-fair.org/fair-principles/i1-metadata-use-formal-accessible-shared-broadly-applicable-language-knowledge-representation/) and [I2](https://www.go-fair.org/fair-principles/i2-metadata-use-vocabularies-follow-fair-principles/)), by creating a metadata model and a human and machine readable website for dissemination of these resources. 
+In this recipe, an example will be described on how to make observational health databases and observational studies
+more Findable (notably the FAIR principles [F2](https://www.go-fair.org/fair-principles/f2-data-described-rich-metadata/)
+and [F4](https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/)) and
+interoperability (principles [I1](https://www.go-fair.org/fair-principles/i1-metadata-use-formal-accessible-shared-broadly-applicable-language-knowledge-representation/)
+and [I2](https://www.go-fair.org/fair-principles/i2-metadata-use-vocabularies-follow-fair-principles/)), by creating 
+a metadata model and a human and machine readable website for dissemination of these resources. 
 
-The output of the [COVID-19](https://www.ohdsi.org/covid-19-updates) [study-a-thon](https://www.thehyve.nl/articles/studyathon-multidisciplinary-collaboration-in-biomedical-open-science) (a OHDSI community [initiative](https://www.ohdsi.org/88-hours), involving the IMI [EHDEN](https://ehden.eu) project) held in March 2020, is used as proof-of-concept.
+The output of the [COVID-19](https://www.ohdsi.org/covid-19-updates) [study-a-thon](https://www.thehyve.nl/articles/studyathon-multidisciplinary-collaboration-in-biomedical-open-science) 
+(a OHDSI community [initiative](https://www.ohdsi.org/88-hours), involving the IMI [EHDEN](https://ehden.eu) project) 
+held in March 2020, is used as proof-of-concept.
 
 
 ### Abbreviations
@@ -33,21 +45,38 @@ The output of the [COVID-19](https://www.ohdsi.org/covid-19-updates) [study-a-th
 
 ## Introduction
 
-This recipe is based on work done on OMOP Common Data Model data as used during the Covid 19 Study-a-thon, a OHDSI community initiative, organised in collaboration with the IMI EHDEN project. The background information was previously described in this [use case](https://fairtoolkit.pistoiaalliance.org/use-cases/fairifying-collaborative-research-on-real-world-data-the-hyve/) on the Pistoia Alliance FAIR toolkit website, and also published in an EHDEN Deliverable, [D4.5 - Roadmap for interoperability](https://zenodo.org/record/4474373). Briefly, the IMI2 EHDEN project's main aim is to reduce the time to produce medical evidence for health outcomes research and to do so, EHDEN has prioritized data harmonization at source.
+This recipe is based on work done on OMOP Common Data Model data as used during the Covid 19 Study-a-thon, a OHDSI
+community initiative, organised in collaboration with the IMI EHDEN project. The background information was previously
+described in this [use case](https://fairtoolkit.pistoiaalliance.org/use-cases/fairifying-collaborative-research-on-real-world-data-the-hyve/)
+on the Pistoia Alliance FAIR toolkit website, and also published in an EHDEN Deliverable, 
+[D4.5 - Roadmap for interoperability](https://zenodo.org/record/4474373). 
+Briefly, the IMI2 EHDEN project's main aim is to reduce the time to produce medical evidence for health outcomes 
+research and to do so, EHDEN has prioritized data harmonization at source.
 
-However, data standardization and harmonization does not necessarily equate with FAIR data (see for example this [article](https://www.thehyve.nl/articles/data-quality-with-fair-principles)). This is where the interaction with the IMI2 FAIRplus project can bring benefits.
+However, data standardization and harmonization does not necessarily equate with FAIR data 
+(see for example this [article](https://www.thehyve.nl/articles/data-quality-with-fair-principles)). 
+This is where the interaction with the IMI2 FAIRplus project can bring benefits.
 
-The purpose of the present content is to highlight how to improve dataset Findability after the data harmonization has taken place.
+The purpose of the present content is to highlight how to improve dataset Findability after the data harmonization
+has taken place.
 
-The methods described in this recipe are however generally applicable for observational health databases and studies, not just data in the OMOP CDM format.
+The methods described in this recipe are however generally applicable for observational health databases and studies,
+not just data in the OMOP CDM format.
 
-In March 2020 the OHDSI community organized a [study-a-thon focussed on COVID-19](https://www.ohdsi.org/ohdsi-news-updates/covid19-studyathon/), which was aimed at addressing a number of key medical questions around COVID-19, such as predicting hospitalization and drug safety and effectiveness. For this purpose, a large collection of healthcare databases around the world were investigated. Many important digital assets were produced during the [study-a-thon](https://ohdsi.org/ohdsi-kicks-off-international-collaborative-to-generate-real-world-evidence-on-covid-19-with-virtual-study-a-thon/), such as study protocols, database metadata and characterizations, study results, and publications. 
+In March 2020 the OHDSI community organized a [study-a-thon focussed on COVID-19](https://www.ohdsi.org/ohdsi-news-updates/covid19-studyathon/),
+which was aimed at addressing a number of key medical questions around COVID-19, such as predicting hospitalization
+and drug safety and effectiveness. For this purpose, a large collection of healthcare databases around the world were
+investigated. Many important digital assets were produced during the [study-a-thon](https://ohdsi.org/ohdsi-kicks-off-international-collaborative-to-generate-real-world-evidence-on-covid-19-with-virtual-study-a-thon/),
+such as study protocols, database metadata and characterizations, study results, and publications. 
 
-From the FAIR assessment performed in order to better understand the current state of FAIRness of studies and databases used in OHDSI and in the COVID-19 study-a-thon in particular, it was found that there was room for improvement on both Findability and Reusability. Since increasing Findability was a common denominator for both studies and data sources, the main focus of the FAIRification was on developing structured metadata, specifically tailored for studies and data sources.
+From the FAIR assessment performed in order to better understand the current state of FAIRness of studies and databases
+used in OHDSI and in the COVID-19 study-a-thon in particular, it was found that there was room for improvement on both 
+Findability and Reusability. Since increasing Findability was a common denominator for both studies and data sources, 
+the main focus of the FAIRification was on developing structured metadata, specifically tailored for studies and data sources.
 
 This recipe will describe a proof-of-concept that shows the step-by-step process of making resources more FAIR by:
 
-*   Inventorization and prioritisation of digital resources; 
+*   Inventory and prioritisation of digital resources; 
 *   Adding metadata to the resources using existing ontologies and defining new entities to make them findable by humans and machines;
 *   Creating a website for FAIR dissemination of selected digital resources.
 
@@ -72,50 +101,81 @@ This recipe will describe a proof-of-concept that shows the step-by-step process
 
 ## Graphical Overview of the FAIRification Recipe Objectives
 
-```{figure_fairplus} ehden-ohdsi.md-figure0.mmd
+````{dropdown}
+:open:
+```{figure} ehden-ohdsi.md-figure0.mmd.png
+---
 name: ehden-ohdsi-figure0
-subtitle: Recipe Steps
+alt: Recipe Steps
+---
+Recipe Steps
 ```
+````
 
 
 ## Step-by-Step process
 
 ### Inventory and prioritization of digital resources
 
-In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more. Each digital resource itself can consist of multiple (sub) digital resources, as shown in {numref}`ehden-ohdsi-figure1`.
+In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which 
+kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM 
+itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more. 
+Each digital resource itself can consist of multiple (sub) digital resources, as shown in {numref}`ehden-ohdsi-figure1`.
 
-
-```{figure_fairplus} ehden-ohdsi.md-figure1.jpg
+````{dropdown}
+:open:
+```{figure} ehden-ohdsi.md-figure1.jpg
+---
 name: ehden-ohdsi-figure1
-subtitle: Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from [EHDEN D4.5](https://zenodo.org/record/4474373)).
+alt: Inventory and prioritization of digital resources
+---
+Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from [EHDEN D4.5](https://zenodo.org/record/4474373)).
 ```
+````
 
 
-Prioritization of initial digital resources to FAIRify was important, as the OHDSI ecosystem is quite extensive. In light of the study-a-thon on COVID-19 held in March 2020 by OHDSI and after a [community inventory](https://forums.ohdsi.org/t/implementing-the-fair-principles-in-the-ohdsi-approach-and-tools/10387), studies and databases were selected as relevant digital resources to FAIRify, as these are important resources for the researchers studying observational health data on COVID-19 and related topics. 
+Prioritization of initial digital resources to FAIRify was important, as the OHDSI ecosystem is quite extensive.
+In light of the study-a-thon on COVID-19 held in March 2020 by OHDSI and after a 
+[community inventory](https://forums.ohdsi.org/t/implementing-the-fair-principles-in-the-ohdsi-approach-and-tools/10387),
+studies and databases were selected as relevant digital resources to FAIRify, as these are important resources for the
+researchers studying observational health data on COVID-19 and related topics. 
 
 
 ### Current status of database and study dissemination in OHDSI
 
 **Databases in OHDSI**
 
-General sources that provide information on observational health databases that are conformed to the OMOP CDM are the [data network page](https://www.ohdsi.org/web/wiki/doku.php?id=resources:2020_data_network), the [EMIF catalogue](https://emif-catalogue.eu/) and the [EHDEN Portal](https://portal.ehden.eu) (under development). 
+General sources that provide information on observational health databases that are conformed to the OMOP CDM are the
+[data network page](https://www.ohdsi.org/web/wiki/doku.php?id=resources:2020_data_network), 
+the [EMIF catalogue](https://emif-catalogue.eu/) and the [EHDEN Portal](https://portal.ehden.eu) (under development). 
 
 The data network page of OHDSI shows some metadata on databases converted to the OMOP CDM.
 
-The [EMIF catalogue](https://emif-catalogue.eu/) is developed by the European Medical Information Framework (EMIF) and enables publishing and sharing of metadata on health data sources. Different consortia implementing the OMOP CDM disseminate metadata on databases in this catalogue. The EHDEN Portal builds on technology from the EMIF catalogue and further expands this with functionality to compare databases and run studies in the network.
+The [EMIF catalogue](https://emif-catalogue.eu/) is developed by the European Medical Information Framework (EMIF) and
+enables publishing and sharing of metadata on health data sources. Different consortia implementing the OMOP CDM 
+disseminate metadata on databases in this catalogue. The EHDEN Portal builds on technology from the EMIF catalogue and
+further expands this with functionality to compare databases and run studies in the network.
 
 **Studies in OHDSI**
 
-Studies are currently disseminated through [data.ohdsi.org](https://data.ohdsi.org/). This web page links to the study results and [GitHub repositories of studies](https://github.com/ohdsi-studies) that are performed in the OHDSI community. The web application [data.ohdsi.org/OhdsiStudies](https://data.ohdsi.org/OhdsiStudies/) gives an overview of all studies in OHDSI with some associated metadata, such as study status, study leads and relevant dates.
+Studies are currently disseminated through [data.ohdsi.org](https://data.ohdsi.org/). This web page links to the study
+results and [GitHub repositories of studies](https://github.com/ohdsi-studies) that are performed in the OHDSI community.
+The web application [data.ohdsi.org/OhdsiStudies](https://data.ohdsi.org/OhdsiStudies/) gives an overview of all studies
+in OHDSI with some associated metadata, such as study status, study leads and relevant dates.
 
 
 ### Defining a (semantic) model for relevant metadata elements
 
-To increase the findability we captured the structured and rich metadata, by developing a semantic model in RDF for the observational studies and databases. The model contained all relevant metadata elements for studies, databases, as well as persons associated with those studies and databases. 
+To increase the findability we captured the structured and rich metadata, by developing a semantic model in RDF for the
+observational studies and databases. The model contained all relevant metadata elements for studies, databases, as well
+as persons associated with those studies and databases. 
 
-Modelling metadata elements in RDF has the advantage that the metadata elements are properly semantically described, structured and linked. In addition, RDF is easily expandable and modifiable. 
+Modelling metadata elements in RDF has the advantage that the metadata elements are properly semantically described,
+structured and linked. In addition, RDF is easily expandable and modifiable. 
 
-The Turtle serialization format was chosen as the RDF format. Metadata elements were defined and mapped to [Schema.org](http://schema.org) types and properties. Schema.org is a vocabulary that can be used to create structured data on the internet and to make the data discoverable. 
+The Turtle serialization format was chosen as the RDF format. Metadata elements were defined and mapped to 
+[Schema.org](http://schema.org) types and properties. Schema.org is a vocabulary that can be used to create structured
+data on the internet and to make the data discoverable. 
 
 Relevant Schema.org types for studies and databases included: 
 
@@ -130,15 +190,21 @@ Relevant Schema.org types for studies and databases included:
 
 {numref}`ehden-ohdsi-figure-2` shows part of the relevant metadata elements in the model.
 
-
-```{figure_fairplus} ehden-ohdsi.md-figure2.jpg
+````{dropdown}
+:open:
+```{figure} ehden-ohdsi.md-figure2.jpg
+---
 name: ehden-ohdsi-figure-2
-subtitle: Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings.
+alt: Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings. 
+---
+Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings. 
 ```
-
+````
 
 RDF representation of two Schema.org types, written in Turtle:
 
+````{dropdown}
+:open:
 ```
 schema:MedicalObservationalStudy a owl:Class ;
        rdfs:isDefinedBy  
@@ -152,11 +218,13 @@ schema:Drug a owl:Class ;
        rdfs:label  "Drug"@en ;
        rdfs:subClassOf schema:Substance .
 ```
-
+````
 
 ### OHDSI extension to Schema.org vocabulary
 
-[Schema.org](https://schema.org/) is a general purpose vocabulary for searching entities on the internet, so metadata elements specific for some OHDSI assets were not present. To be able to capture metadata as extensive as necessary, custom types and properties had to be created. These included: 
+[Schema.org](https://schema.org/) is a general purpose vocabulary for searching entities on the internet, so metadata
+elements specific for some OHDSI assets were not present. To be able to capture metadata as extensive as necessary,
+custom types and properties had to be created. These included: 
 
 *   Properties specific for OHDSI studies(e.g. study types and study use cases)
 *   Database properties (e.g. database characteristics and population size) 
@@ -175,9 +243,13 @@ riot.bat --validate ohdsi_semantic_model.ttl
 
 ### Metadata capture using YAML
 
-In principle, the RDF classes defined in the above Turtle file can directly be used to set up the JSON-LD file needed for the website metadata. But in this example, we used an extra step by first capturing the metadata of studies, databases and authors, in the more data entry friendly YAML format. The YAML format can be annotated with comments to guide the person submitting their metadata. 
+In principle, the RDF classes defined in the above Turtle file can directly be used to set up the JSON-LD file needed 
+for the website metadata. But in this example, we used an extra step by first capturing the metadata of studies, 
+databases and authors, in the more data entry friendly YAML format. The YAML format can be annotated with comments
+to guide the person submitting their metadata. 
 
-The following figure shows the metadata in Turtle and in YAML. YAML uses slightly different wording and syntax, to make it easier for end users / science bloggers to understand what kind of metadata is expected to be filled in. 
+The following figure shows the metadata in Turtle and in YAML. YAML uses slightly different wording and syntax, 
+to make it easier for end users / science bloggers to understand what kind of metadata is expected to be filled in. 
 
 In YAML, the data looks like this:
 
@@ -238,43 +310,70 @@ schema:codingSystem "RxNorm" ;
 schema:sameAs "http://purl.bioontology.org/ontology/RXNORM/“1546359" ] .
 ```
 
-The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML output from that which contains the article text but also embeds the entered metadata as JSON-LD (see {numref}`ehden-ohdsi-figure3`). In order to do this, we have written custom processing logic that takes the YAML data as input and formats this into RDF in accordance with the metadata model.
+The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML output
+from that which contains the article text but also embeds the entered metadata as JSON-LD 
+(see {numref}`ehden-ohdsi-figure3`). In order to do this, we have written custom processing logic that takes the YAML 
+data as input and formats this into RDF in accordance with the metadata model.
 
-
-```{figure_fairplus} ehden-ohdsi.md-figure3.jpg
+````{dropdown}
+:open:
+```{figure} ehden-ohdsi.md-figure3.jpg
+---
 name: ehden-ohdsi-figure3
-subtitle: Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.
+alt: Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.
+---
+Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.
 ```
+````
 
 
 ### Embedding the metadata in the website as JSON-LD
 
 JSON-LD is a format for structured and linked data and, like Turtle, a serialization format of RDF. 
 
-It can be embedded in the HTML code in the back end of a website. Search engines like Google (including [Google dataset search](https://datasetsearch.research.google.com/)) use this structured data to find and understand the data. Understanding the data goes hand in hand with using the [Schema.org](http://schema.org) vocabulary, because annotating metadata with Schema.org types and properties gives meaning to the data. This search engine optimization (SEO, see the [Search Engine optimization recipe](https://w3id.org/faircookbook/FCB010)) enables better Findability of the data.
+It can be embedded in the HTML code in the back end of a website. Search engines like Google 
+(including [Google dataset search](https://datasetsearch.research.google.com/)) use this structured data to find 
+and understand the data. Understanding the data goes hand in hand with using the [Schema.org](http://schema.org) 
+vocabulary, because annotating metadata with Schema.org types and properties gives meaning to the data. 
+This search engine optimization (SEO, see the [Search Engine optimization recipe](https://w3id.org/faircookbook/FCB010)) 
+enables better Findability of the data.
 
-For this proof-of-concept project, a website was created for dissemination of metadata on studies, databases and authors, generated and used during the OHDSI COVID-19 study-a-thon. Metadata on studies, databases and authors is displayed on this [website](https://covid19.ohdsi.app/), and is embedded as JSON-LD in the HTML code as well.
+For this proof-of-concept project, a website was created for dissemination of metadata on studies, 
+databases and authors, generated and used during the OHDSI COVID-19 "study-a-thon". Metadata on studies, databases and
+authors is displayed on this [website](https://covid19.ohdsi.app/), and is embedded as JSON-LD in the HTML code as well.
 <!-- TODO: Give example of a page with markup -->
 
-Embedding metadata in JSON-LD in HTML will enable web crawlers to scrape the metadata and will increase Findability by search engines. When for example querying [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/), the data should pop up when JSON-LD is embedded, but only when the `schema:Dataset` class is included (see also the next section for details on this).
+Embedding metadata in JSON-LD in HTML will enable web crawlers to scrape the metadata and will increase Findability 
+by search engines. When for example querying 
+[https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/),
+the data should pop up when JSON-LD is embedded, but only when the `schema:Dataset` class is included
+(see also the next section for details on this).
 
 
 ### Making a sitemap file and letting crawlers know
 
-Setting up a `robots.txt` file at the root of a website will give search engine crawlers a guide on which web pages can be crawled, and which pages can’t be crawled. Crawling all pages is possible by adding this line to the `robots.txt` file:
+Setting up a `robots.txt` file at the root of a website will give search engine crawlers a guide on which web pages can
+be crawled, and which pages can’t be crawled. Crawling all pages is possible by adding this line to the `robots.txt` file:
 
 ```text
 User-agent: *
 ```
 
-The Hugo framework automatically generates a sitemap when building a website (in this example: [https://covid19.ohdsi.app/sitemap.xml](https://covid19.ohdsi.app/sitemap.xml))
+The Hugo framework automatically generates a sitemap when building a website 
+(in this example: [https://covid19.ohdsi.app/sitemap.xml](https://covid19.ohdsi.app/sitemap.xml))
 
-The generated JSON-LD files can be validated using [Google’s Rich Result Test](https://search.google.com/test/rich-results). This tool can easily validate JSON-LD code, by either submitting a URL directing to the JSON-LD, or by pasting JSON-LD code.
+The generated JSON-LD files can be validated using [Google’s Rich Result Test](https://search.google.com/test/rich-results).
+This tool can easily validate JSON-LD code, by either submitting a URL directing to the JSON-LD, or by pasting JSON-LD code.
 <!-- TODO give an example link to a page being validated -->
 
-An important note to make here is that to make the data findable for Google Dataset search the model and final JSON-LD markup needed to mention the `schema:Dataset` class. In a first iteration, we had used our new `ohdsi:database` class and the website was not found (even if the `ohdsi:database is-a schema:Dataset` statement from the model is repeated in the JSON-LD; Google's Schema.org tools used a fixed context file, ignoring any additional statements included in your own JSON-LD).
+An important note to make here is that to make the data findable for Google Dataset search the model and final
+JSON-LD markup needed to mention the `schema:Dataset` class. In a first iteration, we had used our new 
+`ohdsi:database` class and the website was not found (even if the `ohdsi:database is-a schema:Dataset` statement from
+the model is repeated in the JSON-LD; 
+Google's Schema.org tools used a fixed context file, ignoring any additional statements included in your own JSON-LD).
 
-Examplarily, the JSON-LD representation of metadata instantiation of the OHDSI Covid19Icarius study looks like this in JSON-LD (compare the metadata presented above in YAML and Turtle format):
+To illustrate, the JSON-LD representation of metadata instantiation of the OHDSI Covid19 Icarius study looks like this in
+JSON-LD (compare the metadata presented above in YAML and Turtle format):
 
 ```
 { "@graph" : [ 
@@ -330,50 +429,87 @@ Examplarily, the JSON-LD representation of metadata instantiation of the OHDSI C
 
 ### Generate final website version using HUGO
 
-The static site generator [HUGO](https://gohugo.io/) was used to create the [covid19.ohdsi.app](https://covid19.ohdsi.app/) website. To populate the website with metadata, so-called [archetypes](https://gohugo.io/content-management/archetypes/) were created. These archetypes are content templates that use the YAML format, as the JSON-LD format is not the easiest format to enter data, to manually populate the static website pages with metadata. Hence, these archetype templates are used for metadata instanciation of the website. (see the previous sections of this recipe). 
+The static site generator [HUGO](https://gohugo.io/) was used to create the 
+[covid19.ohdsi.app](https://covid19.ohdsi.app/) website. To populate the website with metadata, so-called
+[archetypes](https://gohugo.io/content-management/archetypes/) were created. These archetypes are content templates 
+that use the YAML format, as the JSON-LD format is not the easiest format to enter data, to manually populate the static
+website pages with metadata. Hence, these archetype templates are used for metadata instantiation of the website. 
+(see the previous sections of this recipe). 
 
-Part of the content is populated automatically, by scraping information from the [OHDSI forum](https://forums.ohdsi.org/) and [README files](https://github.com/ohdsi-studies/StudyRepoTemplate) in the study-specific GitHub repositories. The metadata in YAML is converted to JSON-LD in the back end of the website. In the front end of the website, this meta data is shown in a human-readable way. 
+Part of the content is populated automatically, by scraping information from the 
+[OHDSI forum](https://forums.ohdsi.org/) and [README files](https://github.com/ohdsi-studies/StudyRepoTemplate) in the 
+study-specific GitHub repositories. The metadata in YAML is converted to JSON-LD in the back end of the website. 
+In the front end of the website, this metadata is shown in a human-readable way. 
 
 The source code of the website can be found on [https://github.com/thehyve/ohdsi-covid19-site](https://github.com/thehyve/ohdsi-covid19-site). 
 
 
 ### Final result
 
-The final result of applying all these steps looks like this: an HTML page in the browser with JSON-LD metadata under the hood. A screenshot of the HTML page is presented in {numref}`ehden-ohdsi-figure6`.
+The final result of applying all these steps looks like this: an HTML page in the browser with JSON-LD metadata under
+the hood. 
+A screenshot of the HTML page is presented in {numref}`ehden-ohdsi-figure6`.
 
-
-```{figure_fairplus} ehden-ohdsi.md-figure6.png
+````{dropdown}
+:open:
+```{figure} ehden-ohdsi.md-figure6.png
+---
 name: ehden-ohdsi-figure6
-subtitle: This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON-LD" tab would allow to see the corresponding JSON-LD for this record.
+alt: This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON-LD" tab would allow to see the corresponding JSON-LD for this record.
+---
+This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON-LD" tab would allow to see the corresponding JSON-LD for this record.
 ```
+````
 
+In the HTML page of the record, the HTML head element is augmented with a script element which embeds the same JSON-LD
+information payload and makes it available to search engines’ crawlers.
 
-In the HTML page of the record, the HTML head element is augmented with a script element which embeds the same JSON-LD information payload and makes it available to search engines’ crawlers.
+Finally, with all this in place, one may now use the dedicated Google Dataset Search site to discover new covid-related
+datasets. {numref}`ehden-ohdsi-figure7` shows the ICARIUS dataset, which was highlighted in the previous sections, 
+as indexed in Google Dataset Search.
 
-Finally, with all this in place, one may now use the dedicated Google Dataset Search site to discover new covid related datasets. {numref}`ehden-ohdsi-figure7` shows the ICARIUS dataset, which was highlighted in the previous sections, as indexed in Google Dataset Search.
-
-
-```{figure_fairplus} ehden-ohdsi.md-figure7.png
+````{dropdown}
+:open:
+```{figure} ehden-ohdsi.md-figure7.png
+---
 name: ehden-ohdsi-figure7
-subtitle: The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.
+alt: The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe. 
+---
+The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.
 ```
-
+````
 
 ## Conclusion
 
-The key reusable element in this recipe is the use of Schema.org JSON-LD statements in any website to promote findability of metadata in search engines. Using the Hugo site generator has the advantage that it is very versatile and includes a lot of scientific/blogging authoring tools out of the box. However, the particular implementation of using YAML as input format (which is ‘canonical Hugo’) and converting this during the static website generation process to JSON-LD is quite laborious and also potentially introduces issues during the conversion. Therefore, it is probably easier and more scalable to let the scientists write their metadata directly in JSON-LD, helped by some good examples and templates, and the Hugo software could even be extended to facilitate that as well.
+The key reusable element in this recipe is the use of Schema.org JSON-LD statements in any website to promote
+findability of metadata in search engines. Using the Hugo site generator has the advantage that it is very versatile
+and includes a lot of scientific/blogging authoring tools out of the box. 
+However, the particular implementation of using YAML as input format (which is ‘canonical Hugo’) and converting this 
+during the static website generation process to JSON-LD is quite laborious and also potentially introduces issues during
+the conversion. Therefore, it is probably easier and more scalable to let the scientists write their metadata directly
+in JSON-LD, helped by some good examples and templates, and the Hugo software could even be extended to facilitate 
+that as well.
 
-Another next step that could be taken, besides publishing the JSON-LD metadata directly on the web, is to wrap it into a container such as [RO-CRATE](https://www.researchobject.org/ro-crate/) and publish these directly into a scientific artefacts repository. This would also help to sustain the availability of the data, because for all its great properties, static websites only live as long as the webhost stays up, and the average website disappears after a few years. Hosting the website on [IPFS](https://ipfs.io/) and using a pinning service could be yet another remedy to fix this problem, but this is out of scope of this recipe.
+Another next step that could be taken, besides publishing the JSON-LD metadata directly on the web, is to wrap it 
+into a container such as [RO-CRATE](https://www.researchobject.org/ro-crate/) and publish these directly into a 
+scientific artefact repository. This would also help to sustain the availability of the data, because for all its
+great properties, static websites only live as long as the web-host stays up, and the average website disappears after
+a few years. 
+Hosting the website on [IPFS](https://ipfs.io/) and using a pinning service could be yet another remedy to fix this
+problem, but this is out of scope of this recipe.
 
 
-### Additional reading
+### What to read next?
 
-*  Findability of data by search engines: [Search Engine Optimization](https://w3id.org/faircookbook/FCB010) recipe, describing web crawling, robots.txt, sitemaps and possible roadblocks.
+* Findability of data by search engines: [Search Engine Optimization](https://w3id.org/faircookbook/FCB010) recipe,
+describing web crawling, robots.txt, sitemaps and possible roadblocks.
 * [Recipe](https://w3id.org/faircookbook/FCB026) on how to create a metadata profile.
 * [EHDEN Deliverable D4.5 - Interoperability roadmap](https://zenodo.org/record/4474373).
 
 
----
+
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -386,7 +522,6 @@ Alasdair: Writing - Review & Editing
 Robert: Writing - Review & Editing
 ````
 
---- 
 
 ## License
 

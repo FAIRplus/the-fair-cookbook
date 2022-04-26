@@ -5,6 +5,10 @@
 TODO: clarify authors
 -->
 
+<br/>
+<br/>
+
+
 ````{panels_fairplus}
 :identifier_text: FCB042
 :identifier_link: 'http://w3id.org/faircookbook/FCB042'
@@ -12,6 +16,8 @@ TODO: clarify authors
 :recipe_type: applied_example
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_curator, ontologist
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: eTox - omics datasets
 ```` 
@@ -92,28 +98,38 @@ These heuristics will be refined and extended iteratively by exploring term to c
 
 * if no **exact** matches are present, the term to concept match is described as a **partial** match. If there is more than one label of the matching concept that generated a **partial** match we consider the concept labels that has the higher number of shared lemmas with the original term
 
-```{figure_fairplus} etox.md-figure1.png
-name: etox-figure1
-subtitle: Overview of the automatic ontology coverage evaluation strategy.
-```
-                
-
-```{figure_fairplus} etox.md-figure2.png
-name: etox-figure2
-subtitle: Example of textual analyses of terms / concept labels.
-```
-
-
+````{dropdown}
+:open:
+```{figure} etox.md-figure1.png
 ---
+name: etox-figure1
+alt: Overview of the automatic ontology coverage evaluation strategy
+---
+Overview of the automatic ontology coverage evaluation strategy.
+```
+````
+
+````{dropdown}
+:open:
+```{figure} etox.md-figure2.png
+---
+name: etox-figure2
+alt: Example of textual analyses of terms / concept labels
+---
+Example of textual analyses of terms / concept labels.
+```
+````
+
+## References
+````{dropdown} **References**
+````
+
 
 ## Authors
 
 ````{authors_fairplus}
 Francesco: Writing - Original Draft
 ````
-
-
----
 
 ## License
 

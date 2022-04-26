@@ -11,6 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: chemoinformatician, data_curator, data_manager, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: InChI and SMILES identifiers for chemical structures
 ```` 
@@ -24,27 +26,19 @@ The main purpose of this recipe is:
 
 ---
 
-
-## Requirements
-
-* Skill depedency:
-   * Bash experience
-* Technical requirements:
-   * Groovy
-
----
-
-
-## FAIRification Objectives, Inputs and Outputs
-
+```{tabbed} FAIRification Objectives, Inputs and Outputs
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
 | [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChI](https://fairsharing.org/FAIRsharing.ddk9t9) |
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-
----
-
+```
+```{tabbed} Requirements
+* Skill dependency:
+   * Bash experience
+* Technical requirements:
+   * Groovy
+```
 
 ## Creating InChI and SMILES identifiers for chemical structures
 
@@ -99,14 +93,14 @@ with BridgeDb and its metabolite ID mapping databases to get additional identifi
 ### What should I read next?
 * [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)
 
----
+
 
 ## References
 
+````{dropdown} **References**
 ```{footbibliography}
 ```
-
----
+````
 
 ## Authors
 
@@ -115,7 +109,6 @@ Egon: Writing - Original Draft, Conceptualization
 Philippe: Writing - Review & Editing
 ````
 
----
 
 ## License
 

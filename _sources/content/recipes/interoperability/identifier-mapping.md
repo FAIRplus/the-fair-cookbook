@@ -1,6 +1,9 @@
 (fcb-identifier-mapping)=
 # Interlinking data from different sources
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB016
 :identifier_link: 'https://w3id.org/faircookbook/FCB016'
@@ -8,6 +11,8 @@
 :recipe_type: background_information
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Interlinking data from different sources
 ```` 
@@ -36,10 +41,17 @@ This recipe assumes that you are already familiar with identifiers and the minti
 This recipe will cover the topics highlighted in orange:
 
 
-```{figure_fairplus} identifier-mapping.md-figure1.mmd
+````{dropdown} 
+:open:
+```{figure} identifier-mapping.md-figure1.mmd.png
+---
+width: 850px
 name: identifier-mapping-figure1
-subtitle: Overview of key aspects in Identifier Mapping
+alt: Overview of key aspects in Identifier Mapping
+---
+Overview of key aspects in Identifier Mapping
 ```
+````
 
 ---
 
@@ -244,8 +256,6 @@ The following is an incomplete list of identifier mapping services.
 
 
 
----
-
 ## Conclusion
 
 > In this recipe, we have given an overview of the need to map between globally unique and persistent identifiers from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
@@ -267,24 +277,21 @@ The following is an incomplete list of identifier mapping services.
     > * [Identifier Resolution Services](./findability/id-resolution.html) 
 -->
 
----
-
 
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 <!-- ```{bibliography}
 :filter: docname in docnames
 :style: alpha
 ``` -->
 
----
 
 ## Authors
-
 ````{authors_fairplus}
 Alasdair: Writing - Original Draft
 Chris: Writing - Original Draft
@@ -294,10 +301,7 @@ Philippe: Writing - Review & Editing
 ````
 
 
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

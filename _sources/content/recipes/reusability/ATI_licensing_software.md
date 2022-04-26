@@ -1,5 +1,8 @@
 (rr-licensing-software)=
 # Software licenses
+<br/>
+<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB033
@@ -8,6 +11,8 @@
 :recipe_type: guidance
 :reading_time_minutes: 15
 :intended_audience: everyone  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Software licenses
 ```` 
@@ -197,3 +202,26 @@ They may also require that the recipient of the combined work can re-link the mo
       Permissive licenses grant the largest set of permissions to users. Copyleft licenses require redistribution of the original or modified source to use the same license, with weak copyleft licences allowing a different choice of license for the combined work. Proprietary licenses rarely provide any permissions beyond the right to use the software.
     </caption>
 </table>
+
+
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Licensing` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/licensing.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ../../../images/logos/TTW.svg
+> :height: 40px
+> :align: center
+> :name: Turing-Way-logo
+> ```
+> ^^^
+> [The Turing Way Book of Data Sciences: Software Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-software.html)

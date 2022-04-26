@@ -1,6 +1,9 @@
 (fcb-checksum-validate)=
 # How to check file integrity by validating checksums
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB053 
 :identifier_link: 'https://w3id.org/faircookbook/FCB053'
@@ -8,6 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: How to check file integrity by validating checksums
 ```` 
@@ -30,10 +35,17 @@ focusing exclusively on the output of the Linux tool `md5sum`.
 
 ## Graphical Overview
 
-```{figure_fairplus} checksum-validate.md-figure1.mmd
+````{dropdown} 
+:open:
+```{figure} checksum-validate.md-figure1.mmd.png
+---
+width: 450px
 name: checksum-validate-figure1
-subtitle: Graphical overview of the steps taken by this recipe.
+alt: Graphical overview of the steps taken by this recipe.
+---
+Graphical overview of the steps taken by this recipe.
 ```
+````
 
 
 ---

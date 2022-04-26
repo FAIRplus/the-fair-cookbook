@@ -1,6 +1,8 @@
 (fcb-bioactivity-profile)=
 # Bioactivity data profile
 
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB057
@@ -10,6 +12,8 @@
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :has_executable_code: nope
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :recipe_name: Depositing Bioactivity Data
 ```` 
 
@@ -20,14 +24,19 @@ This recipe is meant to address the Findability and Interoperability of such typ
 ## Graphical overview of the Recipe FAIRification Objectives
 
 
-<!-- ```{figure_fairplus} bioactivity-figure1.mmd -->
+<!-- ```{figure} bioactivity-figure1.mmd.png -->
+<!-- --- -->
 <!-- name: bioactivity-figure1 -->
-<!-- subtitle: bioactivity data FAIR overview -->
+<!-- alt:  bioactivity data FAIR overview -->
+<!-- --- -->
+<!-- bioactivity data FAIR overview -->
+<!-- --- -->
 <!-- ``` -->
+<!-- -->
 
 
 ## Introduction
-Bioactivity data, as stored in public archives such as the European repository [CHEMBL](https://www.ebi.ac.uk/chembl/) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov/) in together with chemical data and omics data, can be used to search for new `hits` (compounds with desired property in drug screening), for example by using cell line information, compound ID as input to queries over such resources.
+Bioactivity data, as stored in public archives such as the European repository [CHEMBL](https://www.ebi.ac.uk/chembl/) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov/) in together with chemical data and omics data, can be used to search for new `hits`(compounds with desired property in drug screening), for example by using cell line information, compound ID as input to queries over such resources.
 
 Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and, pharmacokinetic study information.
 
@@ -133,9 +142,12 @@ For ChEMBL submission, molecular structures and assay description as depicted in
 
 Besides metadata, the diagram below also shows how to prepare numeric assay data.
 
-<!-- ```{figure_fairplus} bioactivity-figure2.mmd -->
+<!--  ```{figure} bioactivity-figure2.mmd.png -->
+<!-- --- -->
 <!-- name: bioactivity-figure2 -->
-<!-- subtitle: Preparing numeric assay data for bioactivity -->
+<!-- alt: Preparing numeric assay data for bioactivity -->
+<!-- --- -->
+<!-- Preparing numeric assay data for bioactivity -->
 <!-- ```  -->
 
 
@@ -184,9 +196,18 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 >- [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
 >- [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)
 
----
 
-## Authors:
+
+## References
+````{dropdown} **References**
+```{footbibliography}
+```
+````
+<!-- Visser, U., Abeyruwan, S., Vempati, U. et al. BioAssay Ontology (BAO): a semantic description of bioassays and high-throughput screening results. BMC Bioinformatics 12, 257 (2011). https://doi.org/10.1186/1471-2105-12-257 -->
+
+
+
+## Authors
 
 ```{authors_fairplus}
 AndreaZaliani: Writing - Original Draft, Editing, Conceptualization
@@ -194,16 +215,7 @@ Fuqi: Writing - Writing - Original Draft, Editing, Conceptualization
 Philippe: Writing - Review & Editing
 ```
 
----
-
-## References:
-```{footbibliography}
-```
-<!-- Visser, U., Abeyruwan, S., Vempati, U. et al. BioAssay Ontology (BAO): a semantic description of bioassays and high-throughput screening results. BMC Bioinformatics 12, 257 (2011). https://doi.org/10.1186/1471-2105-12-257 -->
-
----
-
-## Licence:
+## Licence
 
 ````{license_fairplus}
 CC-BY-4.0

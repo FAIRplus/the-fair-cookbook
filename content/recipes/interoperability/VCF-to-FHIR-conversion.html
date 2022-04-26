@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/VCF-to-FHIR-conversion.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Converting VCF file to HL7 FHIR JSON Genomic Report profile" />
-<meta property="og:description" content="Converting VCF file to HL7 FHIR JSON Genomic Report profile    &lt;br/&gt;   &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;," />
+<meta property="og:description" content="Converting VCF file to HL7 FHIR JSON Genomic Report profile  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,8 +117,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -132,19 +132,39 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
 <ul class="current nav sidenav_l1">
@@ -175,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -195,17 +215,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -466,34 +486,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -501,28 +562,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -532,7 +573,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -542,14 +629,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -561,7 +662,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/contributing.html">
+    <a class="reference internal" href="../afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -593,20 +694,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../help/myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -773,7 +860,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#take-home-message-from-using-the-vcf2fhir-python-library">
-     14.6.5. Take Home message from using the
+     14.6.5. Take home message from using the
      <code class="docutils literal notranslate">
       <span class="pre">
        vcf2fhir
@@ -827,8 +914,8 @@
 <span id="fcb-interop-vcf-fhir"></span><h1><span class="section-number">14. </span>Converting VCF file to HL7 FHIR JSON Genomic Report profile<a class="headerlink" href="#converting-vcf-file-to-hl7-fhir-json-genomic-report-profile" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
-<hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "File conversion, VCF to FHIR", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB058", "url": "https://w3id.org/faircookbook/FCB058"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "File conversion, VCF to FHIR", "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB058", "url": "https://w3id.org/faircookbook/FCB058"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -875,15 +962,29 @@ Yes
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist</div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000571">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
 </div>
 </div>
-<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-2">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a>
+ <a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.2C].md">[F+MM-1.2C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
 <a href="https://w3id.org/faircookbook/FCB058" class="text--purple-dark">FCB058
 </a></div>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="main-objectives">
 <h2><span class="section-number">14.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is to provide FAIR guidance relevant to the clinical domain by:</p>
@@ -898,11 +999,26 @@ Yes
 </div>
 <div class="section" id="graphical-overview">
 <h2><span class="section-number">14.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="fcb-interop-vcf-fhir-figure1">
-<img alt="Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload." src="../../../_images/vcf2fhir-json-overview.png" />
-<p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text">Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.</span><a class="headerlink" href="#fcb-interop-vcf-fhir-figure1" title="Permalink to this image">¶</a></p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="converting-a-vcf-open-standard-file-to-a-hl7-fhir-formatted-payload">
+<a class="reference internal image-reference" href="../../../_images/vcf2fhir-json-overview.png"><img alt="Converting a VCF open standard file to a HL7 FHIR formatted payload" src="../../../_images/vcf2fhir-json-overview.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text">Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.</span><a class="headerlink" href="#converting-a-vcf-open-standard-file-to-a-hl7-fhir-formatted-payload" title="Permalink to this image">¶</a></p>
 </div>
 </div>
+</details></div>
 <div class="section" id="user-stories">
 <h2><span class="section-number">14.3. </span>User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
 <p>The table below lists relevant use cases.</p>
@@ -1334,10 +1450,10 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </div>
 </div>
 <div class="section" id="take-home-message-from-using-the-vcf2fhir-python-library">
-<h3><span class="section-number">14.6.5. </span>Take Home message from using the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> python library<a class="headerlink" href="#take-home-message-from-using-the-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.6.5. </span>Take home message from using the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> python library<a class="headerlink" href="#take-home-message-from-using-the-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>an <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">capability</span></code> supporting generation of <code class="docutils literal notranslate"><span class="pre">HL7</span> <span class="pre">FHIR</span> <span class="pre">Genomics</span> <span class="pre">Report</span> <span class="pre">message</span></code> from VCF files.</p></li>
-<li><p>generation of LOINC annotated, JSON formated documents containing simple genetic variation information.</p></li>
+<li><p>generation of LOINC-annotated, JSON formatted documents containing simple genetic variation information.</p></li>
 <li><p>availability of a conversion error log, for quality control and error tracking tasks.</p></li>
 </ul>
 </div>
@@ -1349,8 +1465,8 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 <ul class="simple">
 <li><p>From a syntactic standpoint, the availability of genetic variation information at a granular level in an easily parseable form (JSON) is a gain for anyone looking at merging this information with other clinical messages.</p></li>
 <li><p>From a semantic standpoint, the reliance on <code class="docutils literal notranslate"><span class="pre">LOINC</span></code> vocabulary to mark up the patterns defined in the HL7 FHIR Genomics Reports enhances interoperation between systems by provided unambiguous annotations.</p></li>
-<li><p>Finally, as more systems are able to produce FHIR message from a variety of instruments or data sources, the availability of a FHIR message covering a subset of genetic variation available from testing facilities makes investigating and mining phenotypic and genotypic relations more straightforward.</p></li>
-<li><p>However, one needs to remember that the capability affored by the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> library is at an early stage and only supports simple cases. More efforts and more efforts is needed before a functionality is available at a Technical Readiness Level compatible with production systems.</p></li>
+<li><p>Finally, as more systems are able to produce FHIR messages from a variety of instruments or data sources, the availability of a FHIR message covering a subset of genetic variation available from testing facilities makes investigating and mining phenotypic and genotypic relations more straightforward.</p></li>
+<li><p>However, one needs to remember that the capability afforded by the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> library is at an early stage and only supports simple cases. More efforts and more efforts is needed before a functionality is available at a Technical Readiness Level compatible with production systems.</p></li>
 </ul>
 <p><strong>Any other important issues?</strong></p>
 <ul class="simple">
@@ -1367,61 +1483,84 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </ul>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="references">
 <h2><span class="section-number">14.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="bibtex-footbibliography-content/recipes/interoperability/VCF-to-FHIR-conversion-0"><dl class="footnote brackets">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/interoperability/VCF-to-FHIR-conversion-0"><dl class="footnote brackets">
 <dt class="label" id="pmid33653260"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>R. H. Dolin, S. R. Gothi, A. Boxwala, B. S. E. Heale, A. Husami, J. Jones, H. Khangar, S. Londhe, F. Naeymi-Rad, S. Rao, B. Rapchak, J. Shalaby, V. Suraj, N. Xie, S. Chamala, and G. Alterovitz. vcf2fhir: a utility to convert VCF files into HL7 FHIR format for genomics-EHR integration. <em>BMC Bioinformatics</em>, 22(1):104, Mar 2021.</p>
+<dd><p class="card-text">R. H. Dolin, S. R. Gothi, A. Boxwala, B. S. E. Heale, A. Husami, J. Jones, H. Khangar, S. Londhe, F. Naeymi-Rad, S. Rao, B. Rapchak, J. Shalaby, V. Suraj, N. Xie, S. Chamala, and G. Alterovitz. vcf2fhir: a utility to convert VCF files into HL7 FHIR format for genomics-EHR integration. <em>BMC Bioinformatics</em>, 22(1):104, Mar 2021.</p>
 </dd>
 </dl>
 </p>
-<!--Dolin, R.H., Gothi, S.R., Boxwala, A. et al. vcf2fhir: a utility to convert VCF files into HL7 FHIR format for genomics-EHR integration. BMC Bioinformatics 22, 104 (2021). https://doi.org/10.1186/s12859-021-04039-1 -->
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="authors">
 <h2><span class="section-number">14.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>ORCID</p></th>
-<th class="head"><p>Affiliation</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>ELIXIR Node</p></th>
-<th class="head"><p>Contribution</p></th>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p>Writing - Original Draft</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
 </tr>
-<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/vioannid"><img class="avatar-style" src="https://avatars.githubusercontent.com/vioannid"></img><div class="d-block">Vassilios Ioannidis</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0002-4209-2578"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>SIB</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-CH.svg" ></img></p></td>
-<td><p>Writing - Review &amp; Editing</p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/vioannid"></img><div class="d-block">Vassilios Ioannidis</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-4209-2578"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">SIB</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-CH.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/daniwelter"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0003-1058-2668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>University of Luxembourg</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
-<td><p>Writing - Review &amp; Editing</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0003-1058-2668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Luxembourg</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="license">
 <h2><span class="section-number">14.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>This page is released under the Creative Commons 4.0 BY license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
-<div class="toctree-wrapper compound">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><div class="toctree-wrapper compound">
 </div>
 <hr class="footnotes docutils" />
 </div>
@@ -1465,7 +1604,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

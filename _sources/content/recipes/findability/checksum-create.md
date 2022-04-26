@@ -1,6 +1,9 @@
 (fcb-checksum-create)=
 # How to create checksum files
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB052 
 :identifier_link: 'https://w3id.org/faircookbook/FCB052'
@@ -8,7 +11,9 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
-:has_executable_code: nope
+:maturity_level: 2
+:maturity_indicator: 1, 2
+  :has_executable_code: nope
 :recipe_name: How to create checksum files
 ```` 
 
@@ -17,7 +22,7 @@
 When copying a file ("source file") to a target location, it may become necessary
 to confirm that the actual content, i.e. the bits that make up the information, arrived correctly in the target system.
 Confirming the identity of two different files may be achieved by calculating
-a so-called "checksum" of the file
+a so-called **checksum** of the file
 in the source system, calculating the checksum in the target system, and comparing
 the outputs. The checksum is a proxy of the content of the file, but is much shorter.
 Because the algorithm is previously agreed on and shared between the source and target system,
@@ -28,10 +33,17 @@ the comparison of the checksum indicates whether the files are identical (within
 
 ## Graphical Overview
 
-```{figure_fairplus} checksum-create.md-figure1.mmd
+````{dropdown} 
+:open:
+```{figure} checksum-create.md-figure1.mmd.png
+---
+width: 450px
 name: checksum-create-figure1
-subtitle: When to apply this recipe.
+alt: When to apply this recipe.
+---
+When to apply this recipe.
 ```
+````
 
 
 ---
@@ -156,7 +168,9 @@ This recipe in its current form has the following limitations:
 - Wikipedia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 
 
----
+## References
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -164,8 +178,6 @@ This recipe in its current form has the following limitations:
 Robert: Writing - Original Draft
 ````
 
-
----
 
 ## License
 

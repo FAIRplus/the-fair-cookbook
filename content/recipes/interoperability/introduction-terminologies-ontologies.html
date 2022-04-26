@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/introduction-terminologies-ontologies.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Introduction to terminologies and ontologies" />
-<meta property="og:description" content="Introduction to terminologies and ontologies  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema" />
+<meta property="og:description" content="Introduction to terminologies and ontologies  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,8 +117,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -132,19 +132,39 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
 <ul class="current nav sidenav_l1">
@@ -175,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -195,17 +215,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -466,34 +486,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -501,28 +562,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -532,7 +573,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -542,14 +629,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -561,7 +662,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/contributing.html">
+    <a class="reference internal" href="../afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -593,20 +694,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../help/myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -781,8 +868,9 @@
   <div class="section" id="introduction-to-terminologies-and-ontologies">
 <span id="fcb-introduction-terminologies-ontologies"></span><h1><span class="section-number">3. </span>Introduction to terminologies and ontologies<a class="headerlink" href="#introduction-to-terminologies-and-ontologies" title="Permalink to this headline">¶</a></h1>
 <br/>
-<hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Introduction to terminologies and ontologies", "audience": ["Data Curator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Survey / Review", "identifier": {"@type": "PropertyValue", "name": "FCB019", "url": "https://w3id.org/faircookbook/FCB019"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<br/>
+<br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Introduction to terminologies and ontologies", "audience": ["Data Curator|T4FS_0000389", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Survey / Review", "identifier": {"@type": "PropertyValue", "name": "FCB019", "url": "https://w3id.org/faircookbook/FCB019"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -829,27 +917,53 @@ No
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue">Data Curator, Data Manager, Data Scientist</div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000389">Data Curator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
 </div>
 </div>
-<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-2">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a>
+ <a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.2C].md">[F+MM-1.2C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
 <a href="https://w3id.org/faircookbook/FCB019" class="text--purple-dark">FCB019
 </a></div>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="main-objectives">
 <h2><span class="section-number">3.1. </span>Main objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The aim of this recipe is to provide a compact introduction about <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminologies</span></code> and <code class="docutils literal notranslate"><span class="pre">ontologies</span></code>, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.</p>
 </div>
 <div class="section" id="controlled-terminology-or-ontology-what-s-the-difference">
 <h2><span class="section-number">3.2. </span>Controlled terminology or ontology: what’s the difference?<a class="headerlink" href="#controlled-terminology-or-ontology-what-s-the-difference" title="Permalink to this headline">¶</a></h2>
-<p>The need for <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">vocabulary</span></code> often arises in situations where validation of textual information is necessary for operational requirements.
-The main initial driver for data entry harmonization is to increase query recall. In its most basic form, <code class="docutils literal notranslate"><span class="pre">keywords</span></code> may be used to perform indexation. However, if relying on user input alone, the chances of typographic errors increases with the number of users. These unavoidable events accumulate over time and end up  hurting the accuracy of search results and this is the reason for offering sets of predefined values. It reduces the noise.
-However this can come at the cost of precision, as the predefined terms may not cover the exact thing users may need to describe. Furthermore, term mis-selection by the user is not eliminated and introduces another type of error.</p>
-<p>A <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> is a <em><code class="docutils literal notranslate"><span class="pre">normative</span></code></em> collection of terms, the spelling of which is fixed and for which additional information may be provided such as a <code class="docutils literal notranslate"><span class="pre">definition</span></code>, a set of <code class="docutils literal notranslate"><span class="pre">synonyms</span></code>, an <code class="docutils literal notranslate"><span class="pre">editor</span></code>, a <code class="docutils literal notranslate"><span class="pre">version</span></code>, as well as a <code class="docutils literal notranslate"><span class="pre">license</span></code> determining the condition of use. The set of information about a specific controlled terminology term is designated as <code class="docutils literal notranslate"><span class="pre">term</span> <span class="pre">metadata</span></code>. In a controlled terminology, terms appear as a <code class="docutils literal notranslate"><span class="pre">flat</span> <span class="pre">list</span></code>, meaning that no relationship between any of the entities the controlled terminology represents is captured in any formal way.
+<p>The need for <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">vocabulary</span></code> often arises in situations where validation of textual information is necessary
+for operational requirements.
+The main initial driver for data entry harmonization is to increase query recall.
+In its most basic form, <code class="docutils literal notranslate"><span class="pre">keywords</span></code> may be used to perform indexation.
+However, if relying on user input alone, the chances of typographic errors increases with the number of users.
+These unavoidable events accumulate over time and end up  hurting the accuracy of search results and this is the reason
+for offering sets of predefined values. It reduces the noise.
+However, this can come at the cost of precision, as the predefined terms may not cover the exact thing users
+may need to describe.
+Furthermore, term mis-selection by the user is not eliminated and introduces another type of error.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> is a <em><code class="docutils literal notranslate"><span class="pre">normative</span></code></em> collection of terms, the spelling of which is fixed and for which additional information may be provided such as a <code class="docutils literal notranslate"><span class="pre">definition</span></code>, a set of <code class="docutils literal notranslate"><span class="pre">synonyms</span></code>, an <code class="docutils literal notranslate"><span class="pre">editor</span></code>, a <code class="docutils literal notranslate"><span class="pre">version</span></code>, as well as a <code class="docutils literal notranslate"><span class="pre">license</span></code> determining the condition of use.
+The set of information about a specific controlled terminology term is designated as <code class="docutils literal notranslate"><span class="pre">term</span> <span class="pre">metadata</span></code>.
+In a controlled terminology, terms appear as a <code class="docutils literal notranslate"><span class="pre">flat</span> <span class="pre">list</span></code>, meaning that no relationship between any of the entities the controlled terminology represents is captured in any formal way.
 This is the main drawback and limitation of <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminologies</span></code>, which are often developed to support a data model or an application.</p>
-<p>An <code class="docutils literal notranslate"><span class="pre">ontology</span></code> on the other hand, is a <code class="docutils literal notranslate"><span class="pre">formal</span> <span class="pre">representation</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">domain</span> <span class="pre">knowledge</span> <span class="pre">where</span> <span class="pre">concepts</span> <span class="pre">are</span> <span class="pre">organized</span> <span class="pre">hierarchically</span></code>. The qualifier <code class="docutils literal notranslate"><span class="pre">formal</span></code> refers to a set of axioms and rules based on logic (e.g. <code class="docutils literal notranslate"><span class="pre">first</span> <span class="pre">order</span> <span class="pre">logic</span></code>) to structure, organize and check the consistency of the term hierarchy. As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry INCAtools or Robot tool).</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">ontology</span></code> on the other hand, is a <code class="docutils literal notranslate"><span class="pre">formal</span> <span class="pre">representation</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">domain</span> <span class="pre">knowledge</span> <span class="pre">where</span> <span class="pre">concepts</span> <span class="pre">are</span> <span class="pre">organized</span> <span class="pre">hierarchically</span></code>.
+The qualifier <code class="docutils literal notranslate"><span class="pre">formal</span></code> refers to a set of axioms and rules based on logic (e.g. <code class="docutils literal notranslate"><span class="pre">first</span> <span class="pre">order</span> <span class="pre">logic</span></code>) to structure,
+organize and check the consistency of the term hierarchy.
+As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry INCAtools or Robot tool).</p>
 </div>
 <div class="section" id="how-are-they-built-and-maintained-and-why-does-it-matter">
 <h2><span class="section-number">3.3. </span>How are they built and maintained and why does it matter?<a class="headerlink" href="#how-are-they-built-and-maintained-and-why-does-it-matter" title="Permalink to this headline">¶</a></h2>
@@ -962,63 +1076,87 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 </div>
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->
 </div>
-<hr class="docutils" />
 <div class="section" id="references">
 <h2><span class="section-number">3.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <ol class="simple">
-<li><p>RDF. <a class="reference external" href="https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/">https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/</a></p></li>
-<li><p>SKOS. <a class="reference external" href="https://www.w3.org/2004/02/skos/">https://www.w3.org/2004/02/skos/</a></p></li>
-<li><p>OWL. <a class="reference external" href="https://www.w3.org/OWL/">https://www.w3.org/OWL/</a></p></li>
-<li><p>Hermit. <a class="reference external" href="http://www.hermit-reasoner.com/">http://www.hermit-reasoner.com/</a></p></li>
-<li><p>Elk. <a class="reference external" href="http://www.cs.ox.ac.uk/isg/tools/ELK/">http://www.cs.ox.ac.uk/isg/tools/ELK/</a></p></li>
-<li><p>OBO Foundry. <a class="reference external" href="http://obofoundry.org/">http://obofoundry.org/</a></p></li>
-<li><p>CDISC. <a class="reference external" href="https://www.cdisc.org/standards">https://www.cdisc.org/standards</a></p></li>
-<li><p>CDISC Controlled Terminology. <a class="reference external" href="https://www.cdisc.org/standards/terminology">https://www.cdisc.org/standards/terminology</a></p></li>
-<li><p>LOINC. <a class="reference external" href="https://loinc.org/">https://loinc.org/</a></p></li>
-<li><p>Gene Ontology. <a class="reference external" href="http://geneontology.org/">http://geneontology.org/</a></p></li>
-<li><p>Protégé. <a class="reference external" href="https://protege.stanford.edu/">https://protege.stanford.edu/</a></p></li>
-<li><p>Topbraid composer. <a class="reference external" href="https://www.topquadrant.com/products/topbraid-composer/">https://www.topquadrant.com/products/topbraid-composer/</a></p></li>
-<li><p>INCAtools. <a class="reference external" href="https://github.com/INCATools">https://github.com/INCATools</a></p></li>
-<li><p>ROBOT. <a class="reference external" href="https://doi.org/10.1186/s12859-019-3002-3">R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.</a></p></li>
+<li><p class="card-text">RDF. <a class="reference external" href="https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/">https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/</a></p></li>
+<li><p class="card-text">SKOS. <a class="reference external" href="https://www.w3.org/2004/02/skos/">https://www.w3.org/2004/02/skos/</a></p></li>
+<li><p class="card-text">OWL. <a class="reference external" href="https://www.w3.org/OWL/">https://www.w3.org/OWL/</a></p></li>
+<li><p class="card-text">Hermit. <a class="reference external" href="http://www.hermit-reasoner.com/">http://www.hermit-reasoner.com/</a></p></li>
+<li><p class="card-text">Elk. <a class="reference external" href="http://www.cs.ox.ac.uk/isg/tools/ELK/">http://www.cs.ox.ac.uk/isg/tools/ELK/</a></p></li>
+<li><p class="card-text">OBO Foundry. <a class="reference external" href="http://obofoundry.org/">http://obofoundry.org/</a></p></li>
+<li><p class="card-text">CDISC. <a class="reference external" href="https://www.cdisc.org/standards">https://www.cdisc.org/standards</a></p></li>
+<li><p class="card-text">CDISC Controlled Terminology. <a class="reference external" href="https://www.cdisc.org/standards/terminology">https://www.cdisc.org/standards/terminology</a></p></li>
+<li><p class="card-text">LOINC. <a class="reference external" href="https://loinc.org/">https://loinc.org/</a></p></li>
+<li><p class="card-text">Gene Ontology. <a class="reference external" href="http://geneontology.org/">http://geneontology.org/</a></p></li>
+<li><p class="card-text">Protégé. <a class="reference external" href="https://protege.stanford.edu/">https://protege.stanford.edu/</a></p></li>
+<li><p class="card-text">Topbraid composer. <a class="reference external" href="https://www.topquadrant.com/products/topbraid-composer/">https://www.topquadrant.com/products/topbraid-composer/</a></p></li>
+<li><p class="card-text">INCAtools. <a class="reference external" href="https://github.com/INCATools">https://github.com/INCATools</a></p></li>
+<li><p class="card-text">ROBOT. <a class="reference external" href="https://doi.org/10.1186/s12859-019-3002-3">R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.</a></p></li>
 </ol>
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="authors">
 <h2><span class="section-number">3.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>ORCID</p></th>
-<th class="head"><p>Affiliation</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>ELIXIR Node</p></th>
-<th class="head"><p>Contribution</p></th>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p>Writing - Original Draft</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
 </tr>
-<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/AlasdairGray"><img class="avatar-style" src="https://avatars.githubusercontent.com/AlasdairGray"></img><div class="d-block">Alasdair J G Gray</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0002-5711-4872"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>Heriot Watt University</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p>Writing - Review &amp; Editing</p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/AlasdairGray"></img><div class="d-block">Alasdair J G Gray</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-5711-4872"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Heriot Watt University</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="license">
 <h2><span class="section-number">3.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>This page is released under the Creative Commons 4.0 BY license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
 </div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1059,7 +1197,7 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

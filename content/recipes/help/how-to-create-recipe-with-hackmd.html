@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/help/how-to-create-recipe-with-hackmd.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Add via HackMD" />
-<meta property="og:description" content="Add via HackMD  &lt;!-- **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**  **identifier:** [RX.X](RX.X)  **version:** [v1.0](v1.0)  ---  " />
+<meta property="og:description" content="Add via HackMD  Main Objectives  **This document aims to guide users through the process of getting set up to contribute content to the FAIR cookbook using Hack" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,8 +117,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -132,19 +132,39 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -175,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -195,17 +215,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -466,34 +486,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -501,28 +562,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -532,7 +573,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="current nav sidenav_l1">
@@ -542,14 +629,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -561,7 +662,7 @@
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/contributing.html">
+    <a class="reference internal" href="../afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -593,20 +694,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -709,12 +796,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-github-account-and-obtain-your-github-handle">
-   3.2. Create a github account and obtain your github handle
+   3.2. Create a GitHub account and obtain your GitHub handle
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation">
-   3.3. Request to be added to the FAIR Cookbook github repository and accept the invitation.
+   3.3. Request to be added to the FAIR Cookbook GitHub repository and accept the invitation.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -731,12 +818,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command">
-   3.5. Create a new branch under the FAIR Cookbook github repository using the following command:
+   3.5. Create a new branch under the FAIR Cookbook GitHub repository using the following command:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-hackmd-io-account-simply-using-your-github-credentials">
-   3.6. Create a HackMD.io account, simply using your github credentials
+   3.6. Create a HackMD.io account, simply using your GitHub credentials
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -773,12 +860,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   3.12. Authors:
+   3.12. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   3.13. License:
+   3.13. License
   </a>
  </li>
 </ul>
@@ -795,143 +882,429 @@
                 
   <div class="section" id="add-via-hackmd">
 <span id="fcb-help-recipe-hackmd"></span><h1><span class="section-number">3. </span>Add via HackMD<a class="headerlink" href="#add-via-hackmd" title="Permalink to this headline">¶</a></h1>
-<!-- **[The FAIR cookbook](https://fairplus.github.io/the-fair-cookbook/intro)**
-
-**identifier:** [RX.X](RX.X)
-
-**version:** [v1.0](v1.0)
-
----
-
-**_Difficulty level:_** moderate :triangular_flag_on_post: :triangular_flag_on_post: :white_circle:  :white_circle: :white_circle:
-
-**_Reading time:_** 30 minutes 
-
-**_Intended Audience:_** 
-
-> :heavy_check_mark: FAIR Cookbook Contributors
-
-> :heavy_check_mark: Data Managers
-
-> :heavy_check_mark: Data Scientists
-
-
-
-**_Recipe Type_**: Hands on
-
-**_Executable code_**: No
-
---- -->
 <div class="section" id="main-objectives">
 <h2><span class="section-number">3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><strong>This document aims to guide users through the process of getting set up to contribute content to <a class="reference external" href="https://fairplus.github.io/the-fair-cookbook/intro">the FAIR cookbook</a> using <a class="reference external" href="http://HackMD.io">HackMD.io</a> online editor.
-The document contains a checklist taking you point by point through the installation process and through the 2 main ways of using HackMD.</strong></p>
+<div><p>**This document aims to guide users through the process of getting set up to contribute content to <a class="reference external" href="https://fairplus.github.io/the-fair-cookbook/intro">the FAIR cookbook</a> using <a class="reference external" href="http://HackMD.io">HackMD.io</a> online editor.</p>
+<p>The document contains a checklist taking you point by point through the installation process and through the 2 main ways of using HackMD.**</p>
 </div></blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>⚡ <strong>IMPORTANT: Install the HackMD browser extension (<a class="reference external" href="https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh">Chrome</a>, <a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search">Firefox</a>)!</strong></p>
+<p>⚡ <strong>IMPORTANT: Install the HackMD browser extension (<a class="reference external" href="https://chrome.google.com/webstore/detail/hackmd-it/cnephjboabhkldgfpdokefccdofncdjh">Chrome</a>, <a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/hackmd-it/?src=search">Firefox</a>)</strong></p>
 </div>
-<p>At the current time, the <code class="docutils literal notranslate"><span class="pre">HackMD-it</span></code> browser extension is only available for Chrome and Firefox and <a class="reference external" href="https://hackmd.io/s/hackmd-it">this tutorial</a> details the installation procedure.
-Once you’ve carried the extension installation, any github repository for which you have access and for which HackMD app has been authorized (which is already the case for all FAIRplus github repositories), any <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> document will be readily editable using ‘HackMD’ and you should see the following <em>icon</em></p>
-<div> <img src="/images/k79IQUA.png" alt="drawing" style="width:145px;" border="1px solid black" align="top" /></div>
-<p>in the github repository bar as shown in the figure below:</p>
-<div> <img src="/images/yI8TRNM.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
-</br>
-<p>⚡ This button will only be visible from Chrome or Firefox once the <code class="docutils literal notranslate"><span class="pre">HackMD</span></code> browser extension has been installed.</p>
+<p>At the current time, the <strong>HackMD-it</strong> browser extension is only available for Chrome and Firefox and <a class="reference external" href="https://hackmd.io/s/hackmd-it">this tutorial</a> details the installation procedure.
+Once the extension installed, any <strong>Markdown</strong> document in any GitHub repository you have access to and for which HackMD app
+has been authorized (which is already the case for all FAIRplus GitHub repositories) will be readily editable using
+‘HackMD’ and you should see the following <em>icon</em> in the relevant menu bar:</p>
+<!-- <div> <img src="/images/k79IQUA.png" alt="drawing" style="width:145px;" border="1px solid black" align="top" /></div> -->
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="edits-with-hackmd-from-github">
+<a class="reference internal image-reference" href="../../../_images/k79IQUA.png"><img alt="edits with HackMD from GitHub" src="../../../_images/k79IQUA.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">edits with HackMD button from GitHub bar.</span><a class="headerlink" href="#edits-with-hackmd-from-github" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>The HackMD button <em>in-situ</em> from a GitHub repository bar:</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="f-github-repository">
+<a class="reference internal image-reference" href="../../../_images/yI8TRNM.png"><img alt="FAIRplus GitHub repository" src="../../../_images/yI8TRNM.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.13 </span><span class="caption-text">FAIRplus GitHub repository.</span><a class="headerlink" href="#f-github-repository" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- <div> <img src="../../../images/yI8TRNM.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div> -->
+<br/>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>⚡ This button will only be visible from Chrome or Firefox once the <strong>HackMD</strong> browser extension has been installed.</p>
 <p>🐙 This will not be visible from Safari, Brave or Internet Explorer browsers <em>even if</em> you have HackMD activated for your repository.</p>
 </div>
+</div>
 <div class="section" id="create-a-github-account-and-obtain-your-github-handle">
-<h2><span class="section-number">3.2. </span>Create a github account and obtain your github handle<a class="headerlink" href="#create-a-github-account-and-obtain-your-github-handle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Create a GitHub account and obtain your GitHub handle<a class="headerlink" href="#create-a-github-account-and-obtain-your-github-handle" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation">
-<h2><span class="section-number">3.3. </span>Request to be added to the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook">FAIR Cookbook github repository</a> and accept the invitation.<a class="headerlink" href="#request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation" title="Permalink to this headline">¶</a></h2>
-<div> <img src="/images/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
+<h2><span class="section-number">3.3. </span>Request to be added to the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook">FAIR Cookbook GitHub repository</a> and accept the invitation.<a class="headerlink" href="#request-to-be-added-to-the-fair-cookbook-github-repository-and-accept-the-invitation" title="Permalink to this headline">¶</a></h2>
+<!-- <div> <img src="../../../images/wyTn5aS.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div> -->
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="join-fairplus-cookbook-github">
+<a class="reference internal image-reference" href="../../../_images/wyTn5aS.png"><img alt="join FAIRplus Cookbook GitHub" src="../../../_images/wyTn5aS.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.14 </span><span class="caption-text">join FAIRplus Cookbook GitHub.</span><a class="headerlink" href="#join-fairplus-cookbook-github" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+</details></div>
 <div class="section" id="create-a-new-recipe">
 <h2><span class="section-number">3.4. </span>Create a new recipe<a class="headerlink" href="#create-a-new-recipe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="create-a-new-issue-in-the-issue-tracker">
 <h3><span class="section-number">3.4.1. </span>Create a new issue in the <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">issue tracker</a><a class="headerlink" href="#create-a-new-issue-in-the-issue-tracker" title="Permalink to this headline">¶</a></h3>
-<div> <img src="/images/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div>
-</br>
-<p>ℹ️  remember to assign yourself or a team member to the issue
-ℹ️  remember to assign the issue to a milestone
-ℹ️ remember to tag the issue with relevant label</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="new-recipe">
+<a class="reference internal image-reference" href="../../../_images/frsBwqc.png"><img alt="Creating a new recipe" src="../../../_images/frsBwqc.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.15 </span><span class="caption-text">Creating a new recipe.</span><a class="headerlink" href="#new-recipe" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- <div> <img src="../../../images/frsBwqc.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /></div> -->
+<br/>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ℹ️  remember to assign yourself or a team member to the issue</p>
+<p>ℹ️  remember to assign the issue to a milestone</p>
+<p>ℹ️  remember to tag the issue with relevant label</p>
+</div>
 </div>
 </div>
 <div class="section" id="create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command">
-<h2><span class="section-number">3.5. </span>Create a new branch under the FAIR Cookbook github repository using the following command:<a class="headerlink" href="#create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>git checkout -b recipe_xx master</p>
-</div></blockquote>
+<h2><span class="section-number">3.5. </span>Create a new branch under the FAIR Cookbook GitHub repository using the following command:<a class="headerlink" href="#create-a-new-branch-under-the-fair-cookbook-github-repository-using-the-following-command" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; git checkout -b recipe_xx master
+</pre></div>
+</div>
 </div>
 <div class="section" id="create-a-hackmd-io-account-simply-using-your-github-credentials">
-<h2><span class="section-number">3.6. </span>Create a <a class="reference external" href="https://hackmd.io">HackMD.io</a> account, simply using your github credentials<a class="headerlink" href="#create-a-hackmd-io-account-simply-using-your-github-credentials" title="Permalink to this headline">¶</a></h2>
-<div> <img src="/images/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" /></div>
+<h2><span class="section-number">3.6. </span>Create a <a class="reference external" href="https://hackmd.io">HackMD.io</a> account, simply using your GitHub credentials<a class="headerlink" href="#create-a-hackmd-io-account-simply-using-your-github-credentials" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="create-hackmd-account">
+<a class="reference internal image-reference" href="../../../_images/E2ok5ni.png"><img alt="Creating a HacKMD account" src="../../../_images/E2ok5ni.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.16 </span><span class="caption-text">Creating a HacKMD account.</span><a class="headerlink" href="#create-hackmd-account" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- <div> <img src="/images/E2ok5ni.png" alt="drawing" style="width:450px;" border="1px solid black" align="top" /></div> -->
 </div>
 <div class="section" id="getting-familiar-with-markdown">
 <h2><span class="section-number">3.7. </span>Getting familiar with MarkDown<a class="headerlink" href="#getting-familiar-with-markdown" title="Permalink to this headline">¶</a></h2>
-<p>Here is a <a class="reference external" href="https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/">good tutorial provided by Gitlab</a>
-<img alt="" src="../../../_images/Kt3d9eo.png" /></p>
+<p>Here is a <a class="reference external" href="https://about.gitlab.com/handbook/engineering/ux/technical-writing/markdown-guide/">good tutorial provided by Gitlab</a></p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../../_images/Kt3d9eo.png"><img alt="Getting familiar with Markdown" src="../../../_images/Kt3d9eo.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.17 </span><span class="caption-text">Getting familiar with Markdown.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- ![](/images/Kt3d9eo.png) -->
 </div>
 <div class="section" id="build-confidence-using-hackmd">
 <h2><span class="section-number">3.8. </span>Build confidence using HackMD<a class="headerlink" href="#build-confidence-using-hackmd" title="Permalink to this headline">¶</a></h2>
-<p><img alt="" src="../../../_images/bt012cm.png" /></p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="learning-hackmd">
+<a class="reference internal image-reference" href="../../../_images/bt012cm.png"><img alt="Learning HackMD" src="../../../_images/bt012cm.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.18 </span><span class="caption-text">Getting familiar with HackMD.</span><a class="headerlink" href="#learning-hackmd" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- ![](/images/bt012cm.png) -->
 <p>use the split view to have what you type immediately rendered.</p>
 </div>
 <div class="section" id="use-the-fairplus-recipe-template-as-guide">
 <h2><span class="section-number">3.9. </span>Use the FAIRplus Recipe Template as guide<a class="headerlink" href="#use-the-fairplus-recipe-template-as-guide" title="Permalink to this headline">¶</a></h2>
-<p>FAIRPlus Cookbook Team is working at establishing a standard layout for easing the creation of a new recipe. The template contains key sections and outlines, which will help boostrap the process.</p>
+<p>The FAIRPlus Cookbook Team is working at establishing a standard layout for easing the creation of a new recipe.
+The template contains key sections and outlines, which will help boostrap the process.</p>
 <p><a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/edit/dev/docs/content/recipes/help/recipe-template.md">recipe template</a></p>
 </div>
 <div class="section" id="writing-notes-with-hackmd-io">
 <h2><span class="section-number">3.10. </span>Writing notes with <a class="reference external" href="http://HackMD.io">HackMD.io</a>:<a class="headerlink" href="#writing-notes-with-hackmd-io" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>From a Github repository, by editing an existing Markdown</p></li>
+<li><p>From a GitHub repository, by editing an existing Markdown</p></li>
 </ol>
-<p>⚡  In order to be able to <code class="docutils literal notranslate"><span class="pre">push</span></code> a change to github from <a class="reference external" href="http://HackMD.io">HackMD.io</a>, it is <strong>required</strong> to first create a placeholder <code class="docutils literal notranslate"><span class="pre">markdown</span></code> file in the targeted github repository.</p>
-<p>For instance, you want to create an new recipe, you first need to create <code class="docutils literal notranslate"><span class="pre">my_new_recipe.md</span></code> file under a branch of the FAIRcookbook repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>⚡  In order to be able to <strong>push</strong> a change to GitHub from <a class="reference external" href="http://HackMD.io">HackMD.io</a>, it is <strong>required</strong> to first create a placeholder
+<strong>markdown</strong> file in the targeted GitHub repository.</p>
+</div>
+<p>For instance, you want to create a new recipe, you first need to create <em>my_new_recipe.md</em> file under a branch of the
+FAIR Cookbook repository.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch my_new_recipe.md
 git add my_new_recipe.md
 git push origin my_recipe_branch
 </pre></div>
 </div>
-<p>In a browser (one with the hackMD browser extension enabled), navigate to the recipe page on the github repository and click on the <code class="docutils literal notranslate"><span class="pre">hackMD</span></code> button ![](/images/k79IQUA.png =145x)</p>
-<p>This will launch the <a class="reference external" href="http://HackMD.io">HackMD.io</a> editor in a separate tab.</p>
-<p>⚡  Toggling back to the github page, notice the following message, which highlights 2 options, one allowing to switch back to the editor view, one allowing to end it.</p>
-<p><img alt="" src="../../../_images/3uqMaT3.png" /></p>
-<p>By pressing <code class="docutils literal notranslate"><span class="pre">Stop</span> <span class="pre">Editing</span></code>, <a class="reference external" href="http://HackMD.io">HackMD.io</a> tab closes and the user is taken back to Github page. The user is now offered to either <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">changes</span></code> or <code class="docutils literal notranslate"><span class="pre">cancel</span></code></p>
-<p>☢️ Pressing <code class="docutils literal notranslate"><span class="pre">cancel</span></code> will lose any changes made during the editing phase.</p>
-<p>ℹ️  Pressing <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">change</span></code> offers two options. We <strong>strongly recommend</strong> using the <code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">branch</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">commit</span> <span class="pre">and</span> <span class="pre">start</span> <span class="pre">a</span> <span class="pre">pull</span> <span class="pre">request</span></code> option when choosing to commit changes. This is good practice and always remember to assign a reviewer and set a milestone when sending the <code class="docutils literal notranslate"><span class="pre">pull</span> <span class="pre">request</span></code></p>
+<p>In a browser (one with the hackMD browser extension enabled), navigate to the recipe page on the GitHub repository
+and click on the <strong>hackMD</strong> button.</p>
+<!-- ![](/images/k79IQUA.png ) -->
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="hackmd-button">
+<a class="reference internal image-reference" href="../../../_images/k79IQUA.png"><img alt="HackMD button" src="../../../_images/k79IQUA.png" style="width: 145px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.19 </span><span class="caption-text">HackMD button.</span><a class="headerlink" href="#hackmd-button" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>This will launch the <a class="reference external" href="http://HackMD.io">HackMD.io</a> editor in a separate tab.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>⚡  Toggling back to the GitHub page, notice the following message, which highlights 2 options, one allowing to switch
+back to the editor view, one allowing to end it.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="hackmd-editor">
+<a class="reference internal image-reference" href="../../../_images/3uqMaT3.png"><img alt="hackmd editor" src="../../../_images/3uqMaT3.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.20 </span><span class="caption-text">hackmd editor .</span><a class="headerlink" href="#hackmd-editor" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- ![](/images/3uqMaT3.png) -->
+<p>By pressing <strong>Stop Editing</strong>, <a class="reference external" href="http://HackMD.io">HackMD.io</a> tab closes and the user is taken back to GitHub page. The user is now offered
+to either <strong>commit changes</strong> or <strong>cancel</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>☢️ Pressing <strong>cancel</strong> will lose any changes made during the editing phase.</p>
+<p>ℹ️  Pressing <strong>commit change</strong> offers two options. We <strong>strongly recommend</strong> using the <strong>create a new branch for this
+commit and start a pull request</strong> option when choosing to commit changes. This is good practice and always remember to
+assign a reviewer and set a milestone when sending the <strong>pull request</strong>.</p>
+</div>
 <ol class="simple">
 <li><p>Directly from HackMD by creating a new note from the tool itself</p></li>
 </ol>
-<p>To do so, open HackMD and go the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Note</span></code>
-![](/images/KMsANJL.png =345x)</p>
-<p>This will open a empty HackMD page and if one presses <code class="docutils literal notranslate"><span class="pre">pull</span> <span class="pre">from</span> <span class="pre">Github</span></code>, a pop-up will open and allow users to select:</p>
+<p>To do so, open HackMD and go the <strong>New Note</strong></p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="create-new-note-with-hackmd">
+<a class="reference internal image-reference" href="../../../_images/KMsANJL.png"><img alt="Create new Note with HackMD" src="../../../_images/KMsANJL.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.21 </span><span class="caption-text">Create new Note with HackMD.</span><a class="headerlink" href="#create-new-note-with-hackmd" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- ![](/images/KMsANJL.png =345x) -->
+<p>This will open an empty HackMD page and if one presses <strong>pull from GitHub</strong>, a pop-up will open and allow users to select:</p>
 <ul class="simple">
-<li><p>a github repository</p></li>
+<li><p>a GitHub repository</p></li>
 <li><p>a branch in the repository</p></li>
 <li><p>a file in that branch</p></li>
 </ul>
-<p>Fill in the relevant information (all required) before it is possible to hit the blue <code class="docutils literal notranslate"><span class="pre">pull</span></code> button.</p>
-<p><img alt="" src="../../../_images/Bccq6OD.png" /></p>
-<p>If the <code class="docutils literal notranslate"><span class="pre">pull</span></code> is successful, the user can now edit the document.</p>
-<p>When the edits are completed, the user can push the file back to github. To do so, one needs to hit the ‘…’ icon in the top right-hand corner of the HackMD menu bar, as show below:</p>
-<p>![](/images/0TdXGl0.png =400x)</p>
-<p>Navigate to <code class="docutils literal notranslate"><span class="pre">Versions</span></code>. This will bring the following window:</p>
-<p><img alt="" src="../../../_images/6AUdRLo.png" /></p>
-<p>Press the blue ‘Push to Github’ button to bring up the following menu:</p>
-<p><img alt="" src="../../../_images/zSMLtMU.png" /></p>
-<p>The process is very similar to that described when pulling a file. Except that is now possible to create a branch for the commit, an option we recommend using.</p>
-<p><img alt="" src="../../../_images/rheX0ib.png" /></p>
-<p>Fill all the necessary information and press the blue <code class="docutils literal notranslate"><span class="pre">Push</span></code> button.</p>
+<p>Fill in the relevant information (all required) before it is possible to hit the blue <strong>pull</strong> button.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="pulling-content-from-github">
+<a class="reference internal image-reference" href="../../../_images/Bccq6OD.png"><img alt="Pulling content from GitHub" src="../../../_images/Bccq6OD.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.22 </span><span class="caption-text">Pulling content from GitHub.</span><a class="headerlink" href="#pulling-content-from-github" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- ![](/images/Bccq6OD.png) -->
+<p>If the <strong>pull</strong> is successful, the user can now edit the document.</p>
+<p>When the edits are completed, the user can push the file back to GitHub. To do so, one needs to hit the ‘…’ icon in
+the top right-hand corner of the HackMD menu bar, as show below:</p>
+<!-- ![](/images/0TdXGl0.png =400x) -->
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="pushing-to-git-via-hackmd-ui-0">
+<a class="reference internal image-reference" href="../../../_images/0TdXGl0.png"><img alt="Pushing to git via HackMD UI-0" src="../../../_images/0TdXGl0.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.23 </span><span class="caption-text">Pushing to git via HackMD UI-0.</span><a class="headerlink" href="#pushing-to-git-via-hackmd-ui-0" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>Navigate to <strong>Versions</strong>. This will bring the following window:</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="check-versions">
+<a class="reference internal image-reference" href="../../../_images/6AUdRLo.png"><img alt="Check Versions" src="../../../_images/6AUdRLo.png" style="width: 900px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.24 </span><span class="caption-text">Check Versions.</span><a class="headerlink" href="#check-versions" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- ![](/images/6AUdRLo.png) -->
+<p>Press the blue <strong>Push to Github</strong> button to bring up the following menu:</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="pushing-to-git-via-hackmd-ui-1">
+<a class="reference internal image-reference" href="../../../_images/zSMLtMU.png"><img alt="Pushing to git via HackMD UI-1" src="../../../_images/zSMLtMU.png" style="width: 900px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.25 </span><span class="caption-text">Pushing to git via HackMD UI - Choosing a file.</span><a class="headerlink" href="#pushing-to-git-via-hackmd-ui-1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>The process is very similar to that described when pulling a file. Except that is now possible to create a branch for
+the commit, an option we recommend using.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="pushing-to-git-via-hackmd-ui-2">
+<a class="reference internal image-reference" href="../../../_images/rheX0ib.png"><img alt="Pushing to git via HackMD UI-2" src="../../../_images/rheX0ib.png" style="width: 900px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.26 </span><span class="caption-text">Pushing to git via HackMD UI - Creating a new file.</span><a class="headerlink" href="#pushing-to-git-via-hackmd-ui-2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>Fill all the necessary information and press the blue <strong>Push</strong> button.</p>
 </div>
 <div class="section" id="conclusion">
 <h2><span class="section-number">3.11. </span>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>This recipe should get you started to contribute content, writing markdown documents, following the FAIRplus guidance and FAIRplus recipe template.</p>
-<p>☢ If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the <a class="reference external" href="mailto:FAIRplus-cookbook&#37;&#52;&#48;elixir-europe&#46;org">dedicated email</a> or via our <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">github issue tracker</a>.</p>
+<div><p>This recipe should get you started to contribute content, writing Markdown documents, following the FAIRplus guidance
+and FAIRplus recipe template.</p>
+<p>☢ If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the
+<a class="reference external" href="mailto:FAIRplus-cookbook&#37;&#52;&#48;elixir-europe&#46;org">dedicated email</a> or via our <a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/issues">github issue tracker</a>.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
 <h3><span class="section-number">3.11.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
@@ -941,44 +1314,69 @@ git push origin my_recipe_branch
 <li><p><a class="reference external" href="https://the-fair-cookbook.netlify.app/recipes/help/recipe-template">FAIRplus recipe template</a></p></li>
 </ul>
 </div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">3.12. </span>Authors:<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.12. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Orcid</p></th>
-<th class="head"><p>Affiliation</p></th>
-<th class="head"><p>Type</p></th>
-<th class="text-align:center head"><p>Elixir Node</p></th>
-<th class="text-align:center head"><p>Credit Role</p></th>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div></p></td>
-<td><p><a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td class="text-align:center"><p><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
-<td class="text-align:center"><p>Writing - Original Draft</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
-<tr class="row-odd"><td><p><div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div></p></td>
-<td><p><a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td class="text-align:center"><p><img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img></p></td>
-<td class="text-align:center"><p>Writing - Review &amp; Editing, Funding acquisition</p></td>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/susannasansone"></img><div class="d-block">Susanna-Assunta Sansone</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-5306-5690"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="license">
-<h2><span class="section-number">3.13. </span>License:<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>This page is released under the Creative Commons 4.0 BY license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<h2><span class="section-number">3.13. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
 </div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1019,7 +1417,7 @@ git push origin my_recipe_branch
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

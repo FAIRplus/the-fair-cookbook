@@ -10,7 +10,9 @@
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 30
-:intended_audience: data_manager, data_scientist  
+:intended_audience: data_manager, data_scientist 
+:maturity_level: 2 
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: Making omics data matrix FAIR
 ```` 
@@ -24,7 +26,7 @@ The main purpose of this recipe is:
 
 - ensure that results presented in Excel files or PDF tables are made more open and unambiguous
 - provide an RDF representation
-- enable reproduciblity of results
+- enable reproducibility of results
 - evaluate efficiency of the method via a data integrate challenge
 ---
 
@@ -46,10 +48,17 @@ Scientific data is often stored as unstructured data in proprietary file formats
 
 ## Graphical Overview
 
-```{figure_fairplus} fair-data-matrix-recipe.md-figure1.mmd
+````{dropdown}
+:open:
+```{figure} fair-data-matrix-recipe.md-figure1.mmd.png
+---
+width: 800px
 name: fcb-fairify-examples-datamatrix-figure1
-subtitle: Overview of the FAIRification process of a data matrix.
+alt: Overview of the FAIRification process of a data matrix
+---
+Overview of the FAIRification process of a data matrix.
 ```
+````
 
 ---
 
@@ -159,12 +168,12 @@ We made the FAIRified outputs discoverable and citable by uploading them to Zeno
 To further demonstrate the value of such study design driven data representation, we applied a similar FAIRification process on the second data source. The results of this comparison are also released via Zenodo (https://doi.org/10.5281/zenodo.2640919).
 Lastly, we produced a study description file, in ISA-Tab format (https://doi.org/10.25504/FAIRsharing.53gp75), which references the Tabular Data Packages representing the results held in data matrices. The ISA file is suitable for deposition to MetaboLights, a public repository for metabolomics data recommended by several journals (https://doi.org/10.25504/FAIRsharing.kkdpxe).
 
----
+
 
 ## Reference
+````{dropdown} **Reference**
 Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics data matrices, an exemplar. Sci Data 6, 271 (2019) [doi:10.1038/s41597-019-0286-0](https://doi.org/10.1038/s41597-019-0286-0)
-
----
+````
 
 ## Authors
 
@@ -172,9 +181,6 @@ Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics dat
 Philippe: Writing - Original Draft
 Susanna: Writing - Review & Editing, Funding acquisition
 ````
-
-
----
 
 
 ## License

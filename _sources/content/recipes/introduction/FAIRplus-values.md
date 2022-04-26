@@ -10,7 +10,9 @@
 :difficulty_level: 1
 :recipe_type: perspective
 :reading_time_minutes: 15
-:intended_audience: everyone  
+:intended_audience: everyone 
+:maturity_level: 2  
+:maturity_indicator: 1, 2 
 :has_executable_code: nope
 :recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
 ```` -->
@@ -103,7 +105,10 @@ As there will be projects related to different subjects and/or with different ki
 A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR principles. This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
 
 
----
+## References
+
+````{dropdown} **Reference**
+````
 
 ## Authors
 
@@ -112,8 +117,6 @@ Alejandra: Writing - Original Draft
 Anne: Writing - Original Draft
 ````
 
-
----
 
 ## License
 

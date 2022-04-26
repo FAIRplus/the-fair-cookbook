@@ -1,7 +1,7 @@
 (fcb-interop-txmetadata)=
 # Metadata profile for transcriptomics
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -10,7 +10,9 @@
 :difficulty_level: 3
 :recipe_type: guidance
 :reading_time_minutes: 30
-:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist  
+:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist 
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Metadata profile for transcriptomics
 ```` 
@@ -19,7 +21,8 @@
 
 The main purpose of this recipe is:
 
-> To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments, from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing. 
+> To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments,
+> from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing. 
 
 
 ### Who is this recipe aimed at?
@@ -187,11 +190,15 @@ While it is essential that any transcriptomics metadata be annotated with ontolo
 |Nucleotide reference sequence|ReqSeq|Entity||
 
 
-## Summary
+## Conclusion
 
-Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to easily define a comprehensive metadata template to capture all the experimental variables to describe any transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata template is provided [here](creating-minimal-metadata-profiles.md)
+Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to
+easily define a comprehensive metadata template to capture all the experimental variables to describe any 
+transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata
+template is provided [here](creating-minimal-metadata-profiles.md)
 
----
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -203,10 +210,7 @@ Peter: <!-- TODO -->
 ````
 
 
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

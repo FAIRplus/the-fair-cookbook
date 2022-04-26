@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/reusability/provenance.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Provenance information" />
-<meta property="og:description" content="Provenance information  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@type&#34;: [&#34;sd" />
+<meta property="og:description" content="Provenance information  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,8 +117,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -132,19 +132,39 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
 <ul class="current nav sidenav_l1">
@@ -175,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -195,17 +215,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -466,34 +486,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -501,28 +562,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -532,7 +573,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -542,14 +629,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -561,7 +662,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/contributing.html">
+    <a class="reference internal" href="../afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -593,20 +694,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../help/myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -708,45 +795,91 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   5.2. Introduction
+  <a class="reference internal nav-link" href="#provenance-a-definition">
+   5.2. Provenance: a definition
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opm-open-provenance-model">
+     5.2.1. OPM Open Provenance Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-prov-data-model">
+     5.2.2. The PROV Data Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prov-vocabulary">
+     5.2.3. PROV vocabulary:
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prov-vocabulary">
-   5.3. PROV vocabulary
+  <a class="reference internal nav-link" href="#tools-for-creating-provenance-metadata">
+   5.3. Tools for creating provenance metadata
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#camflow">
-   5.4. CamFLow
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#camflow">
+     5.3.1. CamFLow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computational-workflows-and-provenance-information">
+     5.3.2. Computational workflows and Provenance information:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-of-cwlprov-document">
+       5.3.2.1. Example of CWLProv document
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cwltool-a-component-to-manage-workflow-information-and-generate-cwlprov-information">
+       5.3.2.2. CWLtool: a component to manage workflow information and generate CWLProv information
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cwlprov-py">
+       5.3.2.3. CWLProv-py
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#provenance-and-distributed-ledger-technology">
+     5.3.3. Provenance and distributed ledger technology
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   5.5. Conclusion
+   5.4. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     5.5.1. What to read next?
+     5.4.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   5.6. References
+   5.5. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   5.7. Authors
+   5.6. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   5.8. License
+   5.7. License
   </a>
  </li>
 </ul>
@@ -764,8 +897,9 @@
   <div class="section" id="provenance-information">
 <span id="fcb-reusability-provenance"></span><h1><span class="section-number">5. </span>Provenance information<a class="headerlink" href="#provenance-information" title="Permalink to this headline">¶</a></h1>
 <br/>
-<hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Provenance information", "audience": ["Principal Investigator", "Data Manager", "Data Scientist"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB036", "url": "https://w3id.org/faircookbook/FCB036"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H20M0S", "totalTime": "PT0H20M0S"} </script>
+<br/>
+<br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Provenance information", "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Background information", "identifier": {"@type": "PropertyValue", "name": "FCB036", "url": "https://w3id.org/faircookbook/FCB036"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H20M0S", "totalTime": "PT0H20M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -806,77 +940,188 @@ No
 <div class="section">
 <i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
 <div class="label">Recipe Type</div>
-<div class="sectionValue">Hands-on</div>
+<div class="sectionValue">Background information</div>
 </div>
 </div>
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist</div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000571">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
 </div>
 </div>
-<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-1">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a>
+ <a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.2C].md">[F+MM-1.2C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
 <a href="https://w3id.org/faircookbook/FCB036" class="text--purple-dark">FCB036
 </a></div>
 </div>
 </div>
-<hr class="docutils" />
-<!-- 
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-````
- -->
 <div class="section" id="main-objectives">
 <h2><span class="section-number">5.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essential. The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of quality are many. One of them is a check on the origin of the information, in other words, its <code class="docutils literal notranslate"><span class="pre">Provenance</span></code>. Provenance covers the elements detailing how the data was produced by identifying the agents (human, software, workflows) so a certain level of traceability and accountability can be established. The notions of <code class="docutils literal notranslate"><span class="pre">audit</span> <span class="pre">and</span> <span class="pre">trail</span></code> as well as <code class="docutils literal notranslate"><span class="pre">versioning</span></code> and <code class="docutils literal notranslate"><span class="pre">authorship</span></code> are essential to be able, should any distortion be identified in downstream analysis, to trace back to possible sources of error.</p>
+<p>In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essential.
+The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of
+quality are many. One of them is a check on the origin of the information, in other words, its <strong>Provenance</strong>.
+Provenance covers the elements detailing how the data was produced by identifying the agents
+(human, software, workflows) so a certain level of traceability and accountability can be established.
+The notions of <strong>audit and trail</strong> as well as <strong>versioning</strong> and <strong>authorship</strong> are essential to be able,
+should any distortion be identified in downstream analysis, to trace back to possible sources of error.</p>
 </div>
-<div class="section" id="introduction">
-<h2><span class="section-number">5.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Data provenance <a class="reference external" href="https://en.wikipedia.org/wiki/Data_lineage">https://en.wikipedia.org/wiki/Data_lineage</a></p>
+<div class="section" id="provenance-a-definition">
+<h2><span class="section-number">5.2. </span>Provenance: a definition<a class="headerlink" href="#provenance-a-definition" title="Permalink to this headline">¶</a></h2>
+<p><strong>“Provenance is information about entities, activities, and people involved in producing a piece of data or thing,
+which can be used to form assessments about its quality, reliability or trustworthiness”</strong>.
+Provenance has been an active field of academic research and several models have been developed over the year to cover the domain.
+The next section will introduce the most known models as well as detail how their overlap and what are the differences between these.</p>
+<p><strong>Data provenance</strong> is also referred to as <strong>data lineage</strong></p>
+<div class="section" id="opm-open-provenance-model">
+<h3><span class="section-number">5.2.1. </span>OPM Open Provenance Model<a class="headerlink" href="#opm-open-provenance-model" title="Permalink to this headline">¶</a></h3>
+<p>Published in 2011, the Open Provenance Model (OPM) <a class="footnote-reference brackets" href="#moreau2011743" id="id1">8</a> was the first formal model developed
+to cater for the reporting of provenance information with several main goals in mind:</p>
+<ul class="simple">
+<li><p>provide a domain agnostic, formal and actionable definition of provenance</p></li>
+<li><p>enable sharing of provenance information between systems, an issue of interoperability</p></li>
+<li><p>support tool development and implementation</p></li>
+<li><p>enable validation of provenance messages.</p></li>
+</ul>
+<p>The work was well-received and several workshops and working groups refined the specification which resulting in a
+specification being submitted to the World Wide Web Consortium.
+The following sections provides further insights into these efforts.</p>
 </div>
+<div class="section" id="the-prov-data-model">
+<h3><span class="section-number">5.2.2. </span>The PROV Data Model<a class="headerlink" href="#the-prov-data-model" title="Permalink to this headline">¶</a></h3>
+<p>This definition is taken from the W3C Provenance Data Model specifications <a class="footnote-reference brackets" href="#provdm" id="id2">1</a>.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="prov-dm-overview">
+<a class="reference internal image-reference" href="../../../_images/prov-dm-overview.png"><img alt="Overview of the Provenance Data Model main classes" src="../../../_images/prov-dm-overview.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Overview of the Provenance Data Model main classes.</span><a class="headerlink" href="#prov-dm-overview" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
 <div class="section" id="prov-vocabulary">
-<h2><span class="section-number">5.3. </span>PROV vocabulary<a class="headerlink" href="#prov-vocabulary" title="Permalink to this headline">¶</a></h2>
-<p>The W3C vetted a specification for an RDF vocabulary to express provenance information, the <a class="reference external" href="https://www.w3.org/TR/prov-overview/">W3C PROV</a>. Implementation can be made in RDF or JSON, since JSON-LD is now an official serialization of RDF.</p>
+<h3><span class="section-number">5.2.3. </span>PROV vocabulary:<a class="headerlink" href="#prov-vocabulary" title="Permalink to this headline">¶</a></h3>
+<p>The PROV-O Provenance Ontology <a class="footnote-reference brackets" href="#provo" id="id3">2</a> is a W3C-vetted specification of the Provenance Data Model as an OWL ontology.
+The namespace for PROV-O is <a class="reference external" href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov#</a>.
+It is meant to allow expressing provenance information as modeled in the provenance model
+<a class="reference external" href="https://www.w3.org/TR/prov-overview/">W3C PROV-DM</a> with Classes, Properties and relations defined in the W3C
+Ontology Web Language (OWL). Instances can therefore be represented in RDF and distributed in any of the official
+serialization, e.g. JSON-LD, RDF/XML, Turtle.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="prov-o-overview">
+<a class="reference internal image-reference" href="../../../_images/prov-o-overview.svg"><img alt="Overview of the Provenance Ontology main classes" src="../../../_images/prov-o-overview.svg" width="800px" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Overview of the Provenance Ontology main classes.</span><a class="headerlink" href="#prov-o-overview" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+</details><p>Below is an example of provenance information represented using the PROV-O ontology and serialized as RDF statements
+using turtle representation.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@prefix xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+@prefix :     &lt;http://example.org#&gt; .
+
+:bar_chart
+   a prov:Entity<span class="p">;</span>
+   prov:wasGeneratedBy  :illustrationActivity<span class="p">;</span>
+   prov:wasDerivedFrom  :aggregatedByRegions<span class="p">;</span>
+   prov:wasAttributedTo :derek<span class="p">;</span>
+.
+
+:derek
+   a foaf:Person, prov:Agent<span class="p">;</span>
+   foaf:givenName       <span class="s2">&quot;Derek&quot;</span><span class="p">;</span>
+   foaf:mbox            &lt;mailto:derek@example.org&gt;<span class="p">;</span>
+   prov:actedOnBehalfOf :natonal_newspaper_inc<span class="p">;</span>
+.
+
+:national_newspaper_inc 
+   a foaf:Organization, prov:Agent<span class="p">;</span>
+   foaf:name <span class="s2">&quot;National Newspaper, Inc.&quot;</span><span class="p">;</span>
+.
+
+:illustrationActivity 
+   a prov:Activity<span class="p">;</span> 
+   prov:used              :aggregatedByRegions<span class="p">;</span>
+   prov:wasAssociatedWith :derek<span class="p">;</span>
+   prov:wasInformedBy     :aggregationActivity<span class="p">;</span>
+.
+
+:aggregatedByRegions
+   a prov:Entity<span class="p">;</span>
+   prov:wasGeneratedBy  :aggregationActivity<span class="p">;</span>
+   prov:wasAttributedTo :derek<span class="p">;</span>
+.
+
+:aggregationActivity
+   a prov:Activity<span class="p">;</span>
+   prov:startedAtTime    <span class="s2">&quot;2011-07-14T01:01:01Z&quot;</span>^^xsd:dateTime<span class="p">;</span>
+   prov:wasAssociatedWith :derek<span class="p">;</span>
+   prov:used              :crimeData<span class="p">;</span>
+   prov:used              :nationalRegionsList<span class="p">;</span>
+   prov:endedAtTime      <span class="s2">&quot;2011-07-14T02:02:02Z&quot;</span>^^xsd:dateTime<span class="p">;</span>
+.
+
+:crimeData
+   a prov:Entity<span class="p">;</span>
+   prov:wasAttributedTo :government<span class="p">;</span>
+.
+:government a foaf:Organization, prov:Agent .
+
+:nationalRegionsList 
+   a prov:Entity<span class="p">;</span>
+   prov:wasAttributedTo :civil_action_group<span class="p">;</span>
+.
+:civil_action_group a foaf:Organization, prov:Agent .
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="tools-for-creating-provenance-metadata">
+<h2><span class="section-number">5.3. </span>Tools for creating provenance metadata<a class="headerlink" href="#tools-for-creating-provenance-metadata" title="Permalink to this headline">¶</a></h2>
+<p>In the previous section, we have detailed the landscape of formal models to represent provenance information.
+In this section, we will show how tools have implemented these models, or domain-specific extension of them as in the
+case of computation workflow provenance information.</p>
 <div class="section" id="camflow">
-<h2><span class="section-number">5.4. </span>CamFLow<a class="headerlink" href="#camflow" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://camflow.org/#output_format">CamFlow</a> is a Linux Security Module (LSM) designed to capture data provenance for the purpose of system audit <a class="footnote-reference brackets" href="#pasquier2017camflow" id="id1">1</a>.</p>
+<h3><span class="section-number">5.3.1. </span>CamFLow<a class="headerlink" href="#camflow" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://camflow.org/#output_format">CamFlow</a> is a Linux Security Module (LSM) designed to capture data provenance for
+the purpose of system audit <a class="footnote-reference brackets" href="#pasquier2017camflow" id="id4">9</a> and aims at capture information flow.</p>
 <p>CamFlow support 2 output formats.</p>
 <ul class="simple">
 <li><p>W3C PROV-JSON format</p></li>
@@ -915,63 +1160,307 @@ No
 <span class="o">}</span>
 </pre></div>
 </div>
-<!-- 
-## Workflow information: -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>CamFlow also concerns itself with a informatics system audit and as obvious from its design, is meanly focused on the security of Linux based systems. The CamFlow framework is highly configurable and allows <code class="docutils literal notranslate"><span class="pre">profiles</span></code> to be defined. This is a very low level solution and its use remains the confines to information security specialists.</p>
 </div>
-<div class="section" id="conclusion">
-<h2><span class="section-number">5.5. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-to-read-next">
-<h3><span class="section-number">5.5.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; * [How to meet community standards for annotation](./community-standards)
+<p>While this tool is probably of limited use to Life Sciences and bioinformatics applications, we mention it for two reasons:</p>
+<ul class="simple">
+<li><p>it provides one of the first example of an implementation (even if very basic) making use of the W3C Prov-O model.</p></li>
+<li><p>it provides an insight on how computational tool can deal with provenance information in ways which allow assessing
+systems health from a security point of view.</p></li>
+</ul>
+</div>
+<div class="section" id="computational-workflows-and-provenance-information">
+<h3><span class="section-number">5.3.2. </span>Computational workflows and Provenance information:<a class="headerlink" href="#computational-workflows-and-provenance-information" title="Permalink to this headline">¶</a></h3>
+<p>As seen when introducing the W3C Provenance Data Model and Provenance Ontology, three key entities are necessary to
+record and track lineage information:</p>
+<ul class="simple">
+<li><p>The Entity the origin of which we are concerned with.</p></li>
+<li><p>The Activity which resulted in the creation of the Entity</p></li>
+<li><p>The Agent which performed the Activity aforementioned.</p></li>
+</ul>
+<p>Because the PROV model is domain agnostic and very generic, it can be either applied as is, to any situation
+or it can also be extended and specialized to suit a particular domain on knowledge.
+To give an example, tracking provenance information in the field of bioinformatics shares features with provenance
+tracking as used in manufacturing, but it also has a number of specific features.
+In the field of bioinformatics, where computational pipelines, known as workflows, are assembled to process ever larger
+datasets on high performance computing infrastructure and cloud infrastructure, having the ability to access data
+lineage matters for a number for reasons, such as:</p>
+<ul class="simple">
+<li><p>audit and trail tasks for regulatory compliance, where every step of the data processing needs to be documented for submission.</p></li>
+<li><p>resource optimization and energy savings (e.g. should a workflow be executed again or not)</p></li>
+</ul>
+<p>It is those features which have been the focus of an extension as part of the work on computational biology workflows with CWLProv <a class="footnote-reference brackets" href="#gigascience-giz095" id="id5">6</a>, and which we will now cover.</p>
+<div class="section" id="example-of-cwlprov-document">
+<h4><span class="section-number">5.3.2.1. </span>Example of CWLProv document<a class="headerlink" href="#example-of-cwlprov-document" title="Permalink to this headline">¶</a></h4>
+<p>The infobox below shows an example of CWLProv RDF document which details how provenance information about the execution
+of CWL coded workflow may be represented.
+This document is take from the <a class="reference external" href="https://github.com/common-workflow-language/cwlprov/blob/main/prov.md">CWLProv github repository</a>.
+Such documents are generated and consumed by a feasibility demonstrator tool such as <a class="reference internal" href="../reusability.html"><span class="doc std std-doc">CWLtool</span></a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prefix id &lt;urn:uuid:&gt;
+prefix provenance &lt;arcp://uuid,73eab018-7b36-4f84-a845-aca8073bd46c/metadata/provenance/&gt;
+
+agent<span class="o">(</span>id:a606d227-bf10-4479-8d11-823bb932bbac, 
+    <span class="o">[</span>prov:type<span class="o">=</span><span class="s1">&#39;wfprov:WorkflowEngine&#39;</span>, prov:type<span class="o">=</span><span class="s1">&#39;prov:SoftwareAgent&#39;</span>, 
+     prov:label<span class="o">=</span><span class="s2">&quot;cwltool 1.0.20180817162414&quot;</span><span class="o">])</span>
+
+activity<span class="o">(</span>id:73eab018-7b36-4f84-a845-aca8073bd46c, <span class="m">2018</span>-08-21T15:20:35.059920, -, 
+    <span class="o">[</span>prov:type<span class="o">=</span><span class="s1">&#39;wfprov:WorkflowRun&#39;</span>, prov:label<span class="o">=</span><span class="s2">&quot;Run of workflow/packed.cwl#main&quot;</span><span class="o">])</span>
+wasStartedBy<span class="o">(</span>id:73eab018-7b36-4f84-a845-aca8073bd46c, -, id:a606d227-bf10-4479-8d11-823bb932bbac, <span class="m">2018</span>-08-21T15:20:35.060038<span class="o">)</span>
+
+activity<span class="o">(</span>id:e79fc8dc-6e40-4236-b22c-41fee22947a9, -, -, 
+     <span class="o">[</span>prov:type<span class="o">=</span><span class="s1">&#39;wfprov:ProcessRun&#39;</span>, prov:label<span class="o">=</span><span class="s2">&quot;Run of workflow/packed.cwl#main/compile&quot;</span><span class="o">])</span>
+wasStartedBy<span class="o">(</span>id:e79fc8dc-6e40-4236-b22c-41fee22947a9, -, id:73eab018-7b36-4f84-a845-aca8073bd46c, <span class="m">2018</span>-08-21T15:20:35.163189<span class="o">)</span>
+
+activity<span class="o">(</span>id:e79fc8dc-6e40-4236-b22c-41fee22947a9, -, -, 
+     <span class="o">[</span>prov:has_provenance<span class="o">=</span><span class="s1">&#39;provenance:workflow_compile.e79fc8dc-6e40-4236-b22c-41fee22947a9.cwlprov.provn&#39;</span>,
+      prov:has_provenance<span class="o">=</span><span class="s1">&#39;provenance:workflow_compile.e79fc8dc-6e40-4236-b22c-41fee22947a9.cwlprov.ttl&#39;</span>
+<span class="o">])</span>
 </pre></div>
 </div>
-<!--## References
-
-``{bibliography} ./../../_bibliography/bibliography-identifier-mapping.bib
-:filter: docname in docnames
-``` -->
-<!-- {download}`bibliography-identifier-mapping.bib <../interoperability/bibref/bibliography-identifier-mapping.bib>` -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Specific recipes about FAIR workflows are available in a specific chapter of the book.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>How widely supported are CWLprov documents?</p>
+<p>This is very part of academic research, meaning that these specifications demonstrate feasibility and capability.
+A number of collaborators of the CWLProv group have included such provenance information in their frameworks.
+Tools such as <code class="docutils literal notranslate"><span class="pre">Bagit</span></code> or specifications such as <code class="docutils literal notranslate"><span class="pre">Research</span> <span class="pre">Objects</span></code> recommended CWLProv documents to be included in
+specific folders of the archives when preparing them.</p>
+<p>See the <a class="reference external" href="https://github.com/common-workflow-language/cwlprov/blob/main/bagit.md">BagIt profile</a> for details on the CWLProv folder structure, and the
+<a class="reference external" href="https://github.com/common-workflow-language/cwlprov/blob/main/ro.md">Research Object profile</a> on how to declare the typing of the PROV files.</p>
+</div>
+</div>
+<div class="section" id="cwltool-a-component-to-manage-workflow-information-and-generate-cwlprov-information">
+<h4><span class="section-number">5.3.2.2. </span>CWLtool: a component to manage workflow information and generate CWLProv information<a class="headerlink" href="#cwltool-a-component-to-manage-workflow-information-and-generate-cwlprov-information" title="Permalink to this headline">¶</a></h4>
+<p>‘cwltool’ for Common Workflow Language tool is a python reference implementation for the
+<a class="reference external" href="https://www.commonwl.org/">Common Workflow Language</a>, which means that it supports the full set of CWL specifications
+and provides validation functions to check CWL documents.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cwltool
+</pre></div>
+</div>
+<p>cwltool is not the only implementation of the CWL specifications, others such as <a class="reference external" href="https://arvados.org/">Arvados</a> and
+<a class="reference external" href="https://toil.ucsc-cgl.org/">Toil</a> exist.
+In case these distinct implementations are also installed on the system, one needs to make sure a helper tool known as
+‘cwl-runner’ is also installed. The <em>key</em> function of ‘cwl-runner’ is to allow users to select which CWL implementation
+will be executed.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cwltool-runner
+</pre></div>
+</div>
+<p>For the purpose of this recipe, which is to show how provenance information can be generated by a tool such as
+cwltool <a class="footnote-reference brackets" href="#cwltool" id="id6">4</a>, users will need to make sure that a workflow is available before performing this conversion.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cwltool --print-rdf --rdf-serializer<span class="o">=</span>turtle mywf.cwl
+</pre></div>
+</div>
+</div>
+<div class="section" id="cwlprov-py">
+<h4><span class="section-number">5.3.2.3. </span>CWLProv-py<a class="headerlink" href="#cwlprov-py" title="Permalink to this headline">¶</a></h4>
+<p>This tool, also an output from the Common Workflow Language consortium, is solely intended as a validator for provenance
+information when available from Research Objects <a class="footnote-reference brackets" href="#id10" id="id7">3</a>.
+It is a standalone python package, which provides a command line interface (CLI) to read, inspect research objects
+capturing workflow execution information using the CWL syntax.</p>
+<p>To install the package, simply run the standard python install package pip:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cwlprov</span>
+</pre></div>
+</div>
+<p>To run ‘cwlprov’ following installation and using an exemplar CWL file, run the following command:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cwlprov</span> <span class="o">--</span><span class="n">quiet</span> <span class="o">--</span><span class="n">directory</span> <span class="o">./</span><span class="n">test</span><span class="o">/</span><span class="mf">1.</span><span class="n">cwl</span> <span class="n">validate</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="provenance-and-distributed-ledger-technology">
+<h3><span class="section-number">5.3.3. </span>Provenance and distributed ledger technology<a class="headerlink" href="#provenance-and-distributed-ledger-technology" title="Permalink to this headline">¶</a></h3>
+<p>With this section, we intend to cover another aspect associated with provenance information. It is the issue of
+trustworthiness of the information and how to ascertain that even if a provenance information message is valid,
+it actually contains authentic and untempered information.</p>
+<p>The raise of digital currencies such as bitcoin or ethereum has popularized the notion of ‘blockchain’, which is a type
+of what is known as “distributing ledger technology” (DLT).  Blockchains and DLT in general represent technological
+solution to the problem of trust in provenance. To achieve this goal, DLT relies on three key principles:</p>
+<ul class="simple">
+<li><p>distribution of information: in other words, the system is decentralized, meaning that no single entity holds the database.
+Instead, a multitude of copies of the information are available from a myriad of independent nodes.</p></li>
+<li><p>transparency:  this is a consequence of the distributed nature of the architecture. Transparency is understood as the
+availability of means of verification by being able to access independent sources of the reference information.
+This allows consistency checks to be performed and therefore provides the means of tempering detection.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Transparency does not equate open. Some blockchains are public but others are private, for instance to support domain
+specific applications ranging from financial services, supply chain or other sensitive area such as healthcare
+information <a class="footnote-reference brackets" href="#fsufs-2020-563424" id="id8">7</a>.</p>
+</div>
+<ul class="simple">
+<li><p>immutability: this is the last tenet of DLT and refers to the fact that once an entry has been to the distributed
+ledger, it is digitally signed and synchronized in the network by adding a new element (the block) to the blockchain.
+Each of the new is digitally signed via some cryptographic algorithm (e.g. Blake2). Any attempt to modify a particular
+block would result in changing its signature. This can be done but the cost could be prohibitively high as it would
+entail modifying all subsequent blocks in the chain. This architecture ensures the stability or immutability of the ledger.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Important</p>
+<p>This notion of immutability assumes that cryptographic hashes using to digital proof the contracts can not be broken.
+The most advanced algorithms somehow guarantee this given the current compute power available. However, it should not be
+taken for granted. A situation where cryptographic methods would be breached by disruptive technology such as breakthrough
+in quantum computing, are referred to as a <code class="docutils literal notranslate"><span class="pre">cryptographic</span> <span class="pre">armageddon</span></code> as it would wreak havoc on the entire edifice by
+allowing to rewrite a ledger, thus voiding trust in an instant <a class="footnote-reference brackets" href="#ncsc-crypto-whitepaper" id="id9">5</a>.
+Despite such alarmist claims, quantum computing methods could make attempts to tamper with a ledger impossible,
+thus reinforcing the approach.</p>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2><span class="section-number">5.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>With this FAIR Cookbook content, we have introduced the notion of Provenance information, providing a brief historical
+review of the domain model and given a few examples of tools implementing provenance information tracking.</p>
+<p>For a more in depth exploration of provenance information, we encourage our readers to follow up with more detailed
+material listed below:</p>
+<div class="section" id="what-to-read-next">
+<h3><span class="section-number">5.4.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB___">Generating ISA based metadata and packaging it as a research object programmatically</a></p></li>
+<li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB___">Making workflow information FAIR and depositing to Workflowhub</a></p></li>
+<li><p><a class="reference internal" href="../interoperability/transcriptomics-metadata.html#fcb-interop-txmetadata"><span class="std std-ref">How to meet community standards for annotation</span></a> <a class="reference internal" href="../interoperability/transcriptomics-metadata.html#fcb-interop-txmetadata"><span class="std std-ref">Metadata profile for transcriptomics</span></a></p></li>
+<li><p><a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html#fcb-fairify-examples-datamatrix"><span class="std std-ref">FAIR data matrix</span></a> <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html#fcb-fairify-examples-datamatrix"><span class="std std-ref">Making omics data matrix FAIR</span></a></p></li>
+<li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB008">Minid identifiers</a></p></li>
+</ul>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header bg-primary pa_dark docutils">
+<a class="reference internal image-reference" href="../../../_images/RDMkit_logo_inverted.svg" id="rdmtoolkit-logo"><img alt="../../../_images/RDMkit_logo_inverted.svg" height="40px" id="rdmtoolkit-logo" src="../../../_images/RDMkit_logo_inverted.svg" /></a>
+</div>
+<div class="card-body grey docutils">
+<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/data_transfer.html">More about <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Transfer</span></code> from the <code class="docutils literal notranslate"><span class="pre">RDM</span> <span class="pre">Toolkit</span></code></a></p>
+</div>
+</div>
+</div>
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header bg-primary pa_dark docutils">
+<a class="reference internal image-reference" href="../../../_images/pistoia_logo.png" id="fairtoolkit-logo"><img alt="../../../_images/pistoia_logo.png" class="align-center" id="fairtoolkit-logo" src="../../../_images/pistoia_logo.png" style="height: 40px;" /></a>
+</div>
+<div class="card-body grey docutils">
+<p class="card-text"><a class="reference external" href="https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/">More about <code class="docutils literal notranslate"><span class="pre">Identifier</span></code> from the <code class="docutils literal notranslate"><span class="pre">Pistoia</span> <span class="pre">Alliance</span> <span class="pre">FAIR</span> <span class="pre">toolkit</span></code></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></blockquote>
+<!--
+> :header: bg-primary pa_dark
+> ```{image} ./../../../../../../_static/images/logo/TTW.svg
+> :height: 40px
+> :align: center
+> :name: Turing-Way-logo
+> ```
+> ^^^
+> [The Turing Way Book of Data Sciences](https://the-turing-way.netlify.app/welcome.html/)
+> ---
+-->
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">5.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="bibtex-footbibliography-content/recipes/reusability/provenance-0"><dl class="footnote brackets">
-<dt class="label" id="pasquier2017camflow"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Thomas F. J.-M. Pasquier, Xueyuan Han, Mark Goldstein, Thomas Moyer, David M. Eyers, Margo I. Seltzer, and Jean Bacon. Practical whole-system provenance capture. <em>CoRR</em>, 2017. URL: <a class="reference external" href="http://arxiv.org/abs/1711.05296">http://arxiv.org/abs/1711.05296</a>, <a class="reference external" href="https://arxiv.org/abs/1711.05296">arXiv:1711.05296</a>.</p>
+<h2><span class="section-number">5.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Reference</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/reusability/provenance-0"><dl class="footnote brackets">
+<dt class="label" id="provdm"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p class="card-text">Provenance data model. URL: <a class="reference external" href="http://www.w3.org/TR/prov-dm/">http://www.w3.org/TR/prov-dm/</a>.</p>
+</dd>
+<dt class="label" id="provo"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p class="card-text">Provenance ontology vocabulary. URL: <a class="reference external" href="http://www.w3.org/TR/prov-o/">http://www.w3.org/TR/prov-o/</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dd><p class="card-text">Cwlprov-py. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.1471375">https://doi.org/10.5281/zenodo.1471375</a>.</p>
+</dd>
+<dt class="label" id="cwltool"><span class="brackets"><a class="fn-backref" href="#id6">4</a></span></dt>
+<dd><p class="card-text">Cwltool. URL: <a class="reference external" href="https://github.com/common-workflow-language/cwltool">https://github.com/common-workflow-language/cwltool</a>.</p>
+</dd>
+<dt class="label" id="ncsc-crypto-whitepaper"><span class="brackets"><a class="fn-backref" href="#id9">5</a></span></dt>
+<dd><p class="card-text">Cwltool. 2020. URL: <a class="reference external" href="https://www.ncsc.gov.uk/whitepaper/preparing-for-quantum-safe-cryptography">https://www.ncsc.gov.uk/whitepaper/preparing-for-quantum-safe-cryptography</a>.</p>
+</dd>
+<dt class="label" id="gigascience-giz095"><span class="brackets"><a class="fn-backref" href="#id5">6</a></span></dt>
+<dd><p class="card-text">Farah Zaib Khan, Stian Soiland-Reyes, Richard O Sinnott, Andrew Lonie, Carole Goble, and Michael R Crusoe. Sharing interoperable workflow provenance: a review of best practices and their practical application in cwlprov. <em>GigaScience</em>, 11 2019. giz095. URL: <a class="reference external" href="https://doi.org/10.1093/gigascience/giz095">https://doi.org/10.1093/gigascience/giz095</a>, <a class="reference external" href="https://arxiv.org/abs/https://academic.oup.com/gigascience/article-pdf/8/11/giz095/31149036/giz095.pdf">arXiv:https://academic.oup.com/gigascience/article-pdf/8/11/giz095/31149036/giz095.pdf</a>, <a class="reference external" href="https://doi.org/10.1093/gigascience/giz095">doi:10.1093/gigascience/giz095</a>.</p>
+</dd>
+<dt class="label" id="fsufs-2020-563424"><span class="brackets"><a class="fn-backref" href="#id8">7</a></span></dt>
+<dd><p class="card-text">Milan Markovic, Naomi Jacobs, Konrad Dryja, Peter Edwards, and Norval J. C. Strachan. Integrating internet of things, provenance, and blockchain to enhance trust in last mile food deliveries. <em>Frontiers in Sustainable Food Systems</em>, 2020. URL: <a class="reference external" href="https://www.frontiersin.org/article/10.3389/fsufs.2020.563424">https://www.frontiersin.org/article/10.3389/fsufs.2020.563424</a>, <a class="reference external" href="https://doi.org/10.3389/fsufs.2020.563424">doi:10.3389/fsufs.2020.563424</a>.</p>
+</dd>
+<dt class="label" id="moreau2011743"><span class="brackets"><a class="fn-backref" href="#id1">8</a></span></dt>
+<dd><p class="card-text">Luc Moreau, Ben Clifford, Juliana Freire, Joe Futrelle, Yolanda Gil, Paul Groth, Natalia Kwasnikowska, Simon Miles, Paolo Missier, Jim Myers, Beth Plale, Yogesh Simmhan, Eric Stephan, and Jan Van den Bussche. The open provenance model core specification (v1.1). <em>Future Generation Computer Systems</em>, 27(6):743–756, 2011. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0167739X10001275">https://www.sciencedirect.com/science/article/pii/S0167739X10001275</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.future.2010.07.005">doi:https://doi.org/10.1016/j.future.2010.07.005</a>.</p>
+</dd>
+<dt class="label" id="pasquier2017camflow"><span class="brackets"><a class="fn-backref" href="#id4">9</a></span></dt>
+<dd><p class="card-text">Thomas F. J.-M. Pasquier, Xueyuan Han, Mark Goldstein, Thomas Moyer, David M. Eyers, Margo I. Seltzer, and Jean Bacon. Practical whole-system provenance capture. <em>CoRR</em>, 2017. URL: <a class="reference external" href="http://arxiv.org/abs/1711.05296">http://arxiv.org/abs/1711.05296</a>, <a class="reference external" href="https://arxiv.org/abs/1711.05296">arXiv:1711.05296</a>.</p>
 </dd>
 </dl>
 </p>
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">5.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>ORCID</p></th>
-<th class="head"><p>Affiliation</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>ELIXIR Node</p></th>
-<th class="head"><p>Contribution</p></th>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p>Writing - Original Draft</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/weiguUL"></img><div class="d-block">Wei Gu</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0003-3951-6680"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Luxembourg</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
+<td><p class="card-text">Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="license">
-<h2><span class="section-number">5.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>This page is released under the Creative Commons 4.0 BY license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
-<hr class="footnotes docutils" />
+<h2><span class="section-number">5.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><hr class="footnotes docutils" />
 </div>
 </div>
 
@@ -1013,7 +1502,7 @@ No
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

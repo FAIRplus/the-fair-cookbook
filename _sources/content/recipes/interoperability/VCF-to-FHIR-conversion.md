@@ -1,7 +1,7 @@
 (fcb-interop-vcf_fhir)=
 # Converting VCF file to HL7 FHIR JSON Genomic Report profile 
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -11,6 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: File conversion, VCF to FHIR
 ```` 
@@ -26,10 +28,18 @@ The main purpose of this recipe is to provide FAIR guidance relevant to the clin
 
 ## Graphical Overview
 
-```{figure_fairplus} vcf2fhir-json-overview.png
-name: fcb-interop-vcf_fhir-figure1
-subtitle: Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.
+
+````{dropdown} 
+:open:
+```{figure} vcf2fhir-json-overview.png
+---
+width: 1200px
+name: Converting a VCF open standard file to a HL7 FHIR formatted payload
+alt: Converting a VCF open standard file to a HL7 FHIR formatted payload
+---
+Context for a scenario requiring converting a VCF open standard file to a HL7 FHIR formatted payload.
 ```
+````
 
 
 ## User Stories
@@ -433,10 +443,10 @@ logger.addHandler(ch)
 
 
 
-### Take Home message from using the `vcf2fhir` python library
+### Take home message from using the `vcf2fhir` python library
 
 * an `initial capability` supporting generation of `HL7 FHIR Genomics Report message` from VCF files.
-* generation of LOINC annotated, JSON formated documents containing simple genetic variation information.
+* generation of LOINC-annotated, JSON formatted documents containing simple genetic variation information.
 * availability of a conversion error log, for quality control and error tracking tasks.
 
 
@@ -450,8 +460,8 @@ logger.addHandler(ch)
 The conversion from VCF to HL7 FHIR JSON message has to do with the `**I and R**` of `FAIR`, that is `interoperability` and `reusability`.
 - From a syntactic standpoint, the availability of genetic variation information at a granular level in an easily parseable form (JSON) is a gain for anyone looking at merging this information with other clinical messages.
 - From a semantic standpoint, the reliance on `LOINC` vocabulary to mark up the patterns defined in the HL7 FHIR Genomics Reports enhances interoperation between systems by provided unambiguous annotations.
-- Finally, as more systems are able to produce FHIR message from a variety of instruments or data sources, the availability of a FHIR message covering a subset of genetic variation available from testing facilities makes investigating and mining phenotypic and genotypic relations more straightforward.
-- However, one needs to remember that the capability affored by the `vcf2fhir` library is at an early stage and only supports simple cases. More efforts and more efforts is needed before a functionality is available at a Technical Readiness Level compatible with production systems.
+- Finally, as more systems are able to produce FHIR messages from a variety of instruments or data sources, the availability of a FHIR message covering a subset of genetic variation available from testing facilities makes investigating and mining phenotypic and genotypic relations more straightforward.
+- However, one needs to remember that the capability afforded by the `vcf2fhir` library is at an early stage and only supports simple cases. More efforts and more efforts is needed before a functionality is available at a Technical Readiness Level compatible with production systems.
 
 **Any other important issues?**
 
@@ -470,35 +480,22 @@ The conversion from VCF to HL7 FHIR JSON message has to do with the `**I and R**
 
 
 
----
+
 
 ## References
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
-
-
-<!--Dolin, R.H., Gothi, S.R., Boxwala, A. et al. vcf2fhir: a utility to convert VCF files into HL7 FHIR format for genomics-EHR integration. BMC Bioinformatics 22, 104 (2021). https://doi.org/10.1186/s12859-021-04039-1 -->
-
-
-
-
-
----
+````
 
 ## Authors
-
 ````{authors_fairplus}
 Philippe: Writing - Original Draft
 Vassilios: Writing - Review & Editing
 Danielle: Writing - Review & Editing
 ````
 
-
----
-
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````

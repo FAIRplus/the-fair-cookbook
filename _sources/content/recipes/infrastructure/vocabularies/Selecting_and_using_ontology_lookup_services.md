@@ -1,4 +1,4 @@
-(fcb-ols)=
+(fcb-select-onto-service)=
 # Selecting an ontology lookup service
 
 +++
@@ -11,75 +11,133 @@
 :recipe_type: survey_review
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator, procurement_officer
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Selecting an ontology lookup service
 ````
 
-## Table of Contents
-
-**1) [Objective of the recipe: introduction to ontology lookup services](#heading=h.bb3h294tvdau)**
-
-**2) [Selecting an ontology lookup service](#bookmark=id.okwm6u2vsbft)**
-
-**3) [Overview of widespread ontology lookup services](#bookmark=id.x42hawpkzgd3)**
 
 
 
-## Main Objective: introduction to ontology lookup services
+## Main Objective: 
 
-This recipe provides guidance on the selection and exploitation of ontology lookup services. An ‘ontology lookup service’ refers to **any type of application, standalone or Web-based, that enables the use of existing ontologies to support knowledge formalization and sharing, by fostering ontology-based descriptions of knowledge**. Tools useful to build, edit or maintain ontologies are not considered ontology lookup services and thus are out of the scope of this recipe. 
+This recipe provides **guidance on the selection and exploitation of ontology lookup services** . 
 
-In essence, an ontology lookup service is a platform that provides users with the possibility to **search in a set of ontologies, the most suitable concepts to describe the semantics of a piece of knowledge of interest, usually available in the form of one or more keywords or a text excerpt**. Most ontology lookup services are available as Web applications: most of them also support programmatic access to their capabilities by means of (REST) APIs. Ontology lookup services can vary in the features that are provided, but often include:
+>* **[Objective of the recipe: introduction to ontology lookup services](#heading=h.bb3h294tvdau)**
+>
+>* **[Selecting an ontology lookup service](#bookmark=id.okwm6u2vsbft)**
+>
+>* **[Overview of widespread ontology lookup services](#bookmark=id.x42hawpkzgd3)**
 
-
-
-*   **Complex searching for concepts of interest**: most services implement advanced search features (i.e. scoping the search to specific ontologies or to specific parts of an ontology) or allow users to specify fine-grained patterns to aggregate or restrict the scope of search results.
-*   **Advanced browsing capabilities**, to explore the contents of a specific ontology by means of custom data navigation widgets such as tree-based views.
-*   **Managing distinct versions **of an ontology and alert its users when specific concepts become obsolete. 
-*   **Importing** user-provided ontologies, giving consumers the ability to leverage a service for other terminologies beyond those included.
-*   Programmatic means to **access and deploy instances of the ontology lookup service in the premises of its users** represents another differentiating feature, using relevant documentation.
-*   **Recommending **ontologies based on the input of a given term, with ontologies ranked according to custom-weighted criteria.
-*   Access to an active **user community **that supports and exploits a specific ontology lookup service, serving as an indication of widespread adoption and selection.
-This recipe presents guidelines and relevant considerations when choosing an ontology lookup service, followed by overview of existing public ontology lookup services and a comparison of their core features.
-
-
-## 2. Selecting An Ontology Lookup Service
-
-This section provides guidelines and suggestions on how to select and leverage an ontology lookup service, on the basis of the knowledge needs and ontology use patterns that characterize a specific knowledge-intensive project. Several aspects to consider when choosing an ontology lookup service are derived based on a series of commonly asked questions;
+An ***ontology lookup service*** 
+refers to *any type of application, standalone or Web-based, that enables the use of existing ontologies to support knowledge 
+formalization and sharing, by fostering ontology-based descriptions of knowledge*. 
 
 
 
-*   **Is the set of ontologies incorporated in the ontology lookup service <span style="text-decoration:underline;">suitable to formally describe the knowledge domain my project is interested in</span>?**
 
-    Ontology lookup services usually provide access and enable users to search and reference classes and properties of _a specific set of ontologies related to a specific knowledge domain_ (i.e. biomedical knowledge). When choosing an ontology lookup service it is important to verify whether the ontologies covered by a specific service are suitable to describe the content of our knowledge-intensive project. Besides a list of the ontologies covered, and interactive widgets to explore such ontologies (e.g. tree-based views), some ontology lookup services also provide _ontology recommendation capabilities:_ given some “sample” (i.e. text excerpt or list of keywords) of the knowledge we need to describe by means of available ontologies, the ontology lookup service ‘recommender’ suggests which are the best ontologies to use to this propose.
+Tools useful to build, edit or maintain ontologies are not considered ontology lookup services and thus are out of the scope of this recipe. 
 
-*   **Do I need to <span style="text-decoration:underline;">consider / rely on private ontologies in my project</span>? Do I need to <span style="text-decoration:underline;">use ontologies that are not already imported and thus available</span> in the ontology lookup service of my choice?**
+In essence, an ontology lookup service is a platform that provides users with the possibility to **search in a set of
+ontologies, the most suitable concepts to describe the semantics of a piece of knowledge of interest,
+usually available in the form of one or more keywords or a text excerpt**. 
 
-    Some ontology lookup services enable users to import external (i.e. user-provided) ontologies in order to incorporate the content of these ontologies in their search and recommendation capabilities. This feature could represent a key factor to consider when choosing an ontology lookup service since several knowledge-intensive projects rely on private ontologies or need to consider a set of additional ontologies not natively covered by a specific ontology lookup service.
+Most ontology lookup services are available as Web applications: most of them also support programmatic access to their 
+capabilities by means of (REST) APIs. Ontology lookup services can vary in the features that are provided, but often include:
 
-*   **Because of data privacy or data protection issues, do I need to <span style="text-decoration:underline;">use an instance of the ontology lookup service that is deployed locally on my private computing infrastructure</span>?**
 
-    Several ontology lookup services provide the possibility to deploy the service on the private computing infrastructure of its users. This feature would be particularly relevant when private ontologies are adopted in a knowledge-intensive project.
 
-*   **Which are the <span style="text-decoration:underline;">usage patterns I will rely on in order to exploit the ontology lookup service</span>? Will the 1) <span style="text-decoration:underline;">massive and systematic exploitation of the ontology search, 2) the recommendation features</span> of the ontology lookup service or 3) the integration of its capabilities in more complex systems, require the possibility to programmatically access the service by means of an application programming interface (API)?**
+* **Complex searching for concepts of interest**: most services implement advanced search features (i.e. scoping the search to specific ontologies or to specific parts of an ontology) or allow users to specify fine-grained patterns to aggregate or restrict the scope of search results.
+* **Advanced browsing capabilities**, to explore the contents of a specific ontology by means of custom data navigation widgets such as tree-based views.
+* **Managing distinct versions** of an ontology and alert its users when specific concepts become obsolete. 
+* **Importing** user-provided ontologies, giving consumers the ability to leverage a service for other terminologies beyond those included.
+* Programmatic means to **access and deploy instances of the ontology lookup service in the premises of its users** represents another differentiating feature, using relevant documentation.
+* **Recommending ontologies** based on the input of a given term, with ontologies ranked according to custom-weighted criteria.
+* Access to an **active user community** that supports and exploits a specific ontology lookup service, serving as an indication of widespread adoption and selection.
 
-    Ontology lookup services usually provide a (Web-based) user interface as the preferred way to interact with them to browse and search for ontologies, or recommend relevant concepts to describe contents of interest. In several scenarios, the possibility to programmatically interact with ontology lookup services would be extremely valuable; to this purpose, several ontology lookup services implement an API (mostly based on REST interactions) that enable the user to programmatically invoke the majority of ontology search features of the same service. In order to simplify the integration of the ontology lookup service support into external applications, several ontology lookup services provide users with language-specific clients to interact with them through their API. 
+This recipe presents guidelines and relevant considerations when choosing an ontology lookup service, followed by
+overview of existing public ontology lookup services and a comparison of their core features.
 
-*   **Is the <span style="text-decoration:underline;">distribution license</span> of the ontology lookup service compatible with the way I plan to exploit the features provided the same service in my project or with the way I plan to integrate the same service in my project?**
 
-    The licencing terms of the ontology lookup service of choice intended for use in a given context and knowledge-intensive project, is a key consideration when selecting an ontology lookup service: available ontology lookup services range from open-source applications to commercial tools and it is best to choose one with funding in mind.
+## Selecting An Ontology Lookup Service
 
-*   **Does the ontology lookup service manage <span style="text-decoration:underline;">ontology versioning and updates</span> so that I can easily reflect any ontology update into my knowledge-intensive project? **
+This section provides guidelines and suggestions on how to select and leverage an ontology lookup service, on the basis
+of the knowledge needs and ontology use patterns that characterize a specific knowledge-intensive project. 
 
-    Ontologies and terminologies usually evolve over time: when a new, updated version of an ontology used in a knowledge-intensive project becomes available, best practice suggests that we should also update the part of our projects that rely on such ontology. Some ontology lookup services implement specific procedures and tools to manage and propagate ontology updates; the availability of such tools would simplify the implementation of changes deriving from ontology updates in the projects under consideration.
+Several aspects to consider when choosing an ontology lookup service are derived based on a series of commonly asked questions;
 
-*   **Is the ontology lookup service <span style="text-decoration:underline;">supported by an active community of developers or by an active company</span>? Which are the available channels I can rely on to <span style="text-decoration:underline;">receive support</span> on the usage and integration of the ontology lookup service?**
 
-    The support of an active community of developers and users is a key aspect to take into account when choosing an ontology lookup service. This could be quantified by evaluating several factors of an ontology lookup service including: (i) availability of mailing or support lists; (ii) for open-source projects, using metrics such as the star-rating, the number of forks and followers and the frequency of commits of the project on the code-sharing platform used (e.g. GitHub); (iii) size of the community of users of the ontology lookup service (e.g. how many followers on social media accounts, how many clients advertised on the Website).
 
-## 3. Key Selection Criteria
+* **Is the set of ontologies incorporated in the ontology lookup service suitable to formally describe the knowledge domain my project is interested in?**
 
-The above questions have highlighted 20 factors which should be taken into account when choosing a service. These factors can be categorised into 3 groups; **ontology information, functionality** and **interfaces**, and include;
+    Ontology lookup services usually provide access and enable users to search and reference classes and properties of _a specific set of ontologies related to a specific knowledge domain_ (i.e. biomedical knowledge).
+    When choosing an ontology lookup service it is important to verify whether the ontologies covered by a specific service are suitable to describe the content of our knowledge-intensive project. 
+    Besides, a list of the ontologies covered, and interactive widgets to explore such ontologies (e.g. tree-based views), 
+    some ontology lookup services also provide _ontology recommendation capabilities:_ given some “sample” 
+    (i.e. text excerpt or list of keywords) of the knowledge we need to describe by means of available ontologies, 
+    the ontology lookup service ‘recommender’ suggests which are the best ontologies to use to this propose.
+
+* **Do I need to consider / rely on private ontologies in my project? Do I need to use ontologies that are not already 
+    imported and thus available in the ontology lookup service of my choice?**
+
+    Some ontology lookup services enable users to import external (i.e. user-provided) ontologies in order to incorporate
+    the content of these ontologies in their search and recommendation capabilities. 
+    This feature could represent a key factor to consider when choosing an ontology lookup service since several 
+    knowledge-intensive projects rely on private ontologies or need to consider a set of additional ontologies not 
+    natively covered by a specific ontology lookup service.
+
+* **Because of data privacy or data protection issues, do I need to use an instance of the ontology lookup service that
+is deployed locally on my private computing infrastructure?**
+
+    Several ontology-lookup services provide the possibility to deploy the service on the private computing 
+    infrastructure of its users. This feature would be particularly relevant when private ontologies are adopted in a 
+    knowledge-intensive project.
+
+* **Which are the usage patterns I will rely on in order to exploit the ontology lookup service? Will the 1)
+massive and systematic exploitation of the ontology search, 2) the recommendation features of the ontology lookup
+service or 3) the integration of its capabilities in more complex systems, require the possibility to programmatically 
+access the service by means of an application programming interface (API)?**
+
+    Ontology lookup services usually provide a (Web-based) user interface as the preferred way to interact with them to
+    browse and search for ontologies, or recommend relevant concepts to describe contents of interest. 
+    In several scenarios, the possibility to programmatically interact with ontology lookup services would be extremely
+    valuable; to this purpose, several ontology-lookup services implement an API (mostly based on REST interactions)
+    that enable the user to programmatically invoke the majority of ontology search features of the same service. 
+    In order to simplify the integration of the ontology lookup service support into external applications,  
+   several-ontology lookup services provide users with language-specific clients to interact with them through their API. 
+
+* **Is the distribution license of the ontology lookup service compatible with the way I plan to exploit the 
+features provided the same service in my project or with the way I plan to integrate the same service in my project?**
+
+    The licencing terms of the ontology lookup service of choice intended for use in a given context and 
+    knowledge-intensive project, is a key consideration when selecting an ontology lookup service: available 
+    ontology lookup services range from open-source applications to commercial tools, and it is best to choose one with funding in mind.
+
+* **Does the ontology lookup service manage ontology versioning and updates so that I can easily reflect any ontology 
+update into my knowledge-intensive project? **
+
+    Ontologies and terminologies usually evolve over time: when a new, updated version of an ontology used in a 
+    knowledge-intensive project becomes available, best practice suggests that we should also update the part of our 
+    projects that rely on such ontology. Some ontology lookup services implement specific procedures and tools to manage
+    and propagate ontology updates; the availability of such tools would simplify the implementation of changes deriving
+    from ontology updates in the projects under consideration.
+
+* **Is the ontology lookup service supported by an active community of developers
+or by an active company? Which are the available channels I can rely on to receive support on the usage and integration 
+of the ontology lookup service?**
+
+    The support of an active community of developers and users is a key aspect to take into account when choosing an 
+    ontology lookup service. This could be quantified by evaluating several factors of an ontology lookup service including:
+    (i) availability of mailing or support lists; (ii) for open-source projects, using metrics such as the star-rating,
+    the number of forks and followers and the frequency of commits of the project on the code-sharing platform used 
+    (e.g. GitHub); (iii) size of the community of users of the ontology lookup service (e.g. how many followers on social
+    media accounts, how many clients advertised on the Website).
+
+## Key Selection Criteria
+
+The above questions have highlighted 20 factors which should be taken into account when choosing a service. 
+These factors can be categorised into 3 groups; **ontology information, functionality** and **interfaces**, and include;
 
 ### **Ontology Information**
 
@@ -87,7 +145,7 @@ The above questions have highlighted 20 factors which should be taken into accou
 
 1. **URL**: the main URL where the ontology lookup service can be accessed
 2. **Latest version of service / data / code (where applicable**): the most recent version of both the content (i.e. ontologies) and the code of the ontology lookup service
-3. **Host Organisation**: the organization responsible for the maintenance of the ontology lookup service
+3. **Host Organisation**: the organisation responsible for the maintenance of the ontology lookup service
 4. **Public / private**: is the ontology lookup service a public or private infrastructure?
 5. **Licence**: the licence that regulates the use and cost of the ontology lookup service
 6. **Domain**: which is the knowledge domain covered by the ontologies referenced in the ontology lookup service?
@@ -123,16 +181,16 @@ Here, we have used the selection criteria above to provide an overview and compa
 
 
 
-- [x] [EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols/index)
-- [x] [BioPortal](https://bioportal.bioontology.org)
-- [x] [OHDSI Athena](https://athena.ohdsi.org/search-terms/start)
-- [x] [Ontobee and the OBO Foundry](http://www.ontobee.org)
+-  [EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols/index)
+-  [BioPortal](https://bioportal.bioontology.org)
+-  [OHDSI Athena](https://athena.ohdsi.org/search-terms/start)
+-  [Ontobee and the OBO Foundry](http://www.ontobee.org)
 
 The results of the analysis can be found below, else in tabular format [here](https://docs.google.com/spreadsheets/d/1kn1oEhsYJPiLI5gA12B1UsbLBRoSLGbOYcOMDG4614o/edit#gid=0).
 
 Note, the _‘last update of this table_’ field provides the date on which the ontology lookup service was last assessed.
 
-### **The EBI Ontology Lookup Service**
+### **The EBI Ontology Lookup Service** {footcite}`pmid20460452`
 
 <!-- **Overview by Francesco** -->
 
@@ -145,9 +203,8 @@ Note, the _‘last update of this table_’ field provides the date on which the
    </td>
   </tr>
   <tr>
-   <td><p style="text-align: right">
-<strong><em>Last update of this table</em></strong></p>
-
+   <td>
+<strong>Last update of this table</strong>
    </td>
    <td>14/04/2020
    </td>
@@ -285,22 +342,20 @@ Twitter: 116 followers
 </table>
 
 
-### **NCBO BioPortal**
+### **NCBO BioPortal** {footcite}`pmid23734708bioportal`
 
 <!-- **Overview by Francesco** -->
-
 
 <table>
   <tr>
    <td><strong>Name</strong>
    </td>
-   <td>Bioportal
+   <td>Bioportal 
    </td>
   </tr>
   <tr>
-   <td><p style="text-align: right">
-<strong><em>Last update of this table</em></strong></p>
-
+   <td>
+<strong>Last update of this table</strong>
    </td>
    <td>14/04/2020
    </td>
@@ -458,9 +513,10 @@ Twitter: 192 followers
 </table>
 
 
-### **OHDSI Athena**
+### **OHDSI Athena** {footcite}`ohdsi_athena`
 
 <!-- **Overview by Francesco** -->
+
 
 
 <table>
@@ -471,9 +527,8 @@ Twitter: 192 followers
    </td>
   </tr>
   <tr>
-   <td><p style="text-align: right">
-<strong><em>Last update of this table</em></strong></p>
-
+   <td>
+<strong>Last update of this table</strong>
    </td>
    <td>14/04/2020
    </td>
@@ -611,9 +666,10 @@ Twitter: 1.284 followers of the Observational Health Data Sciences and Informati
 </table>
 
 
-### **Ontobee and the OBO Foundry**
+### **Ontobee and the OBO Foundry** {footcite}`pmid27733503ontobee`
 
 <!-- **Overview by Francesco** -->
+
 
 
 <table>
@@ -624,9 +680,8 @@ Twitter: 1.284 followers of the Observational Health Data Sciences and Informati
    </td>
   </tr>
   <tr>
-   <td><p style="text-align: right">
-<strong><em>Last update of this table</em></strong></p>
-
+   <td>
+<strong>Last update of this table</strong>
    </td>
    <td>14/04/2020
    </td>
@@ -759,7 +814,15 @@ Twitter OBOFoundry account: 220 followers
   </tr>
 </table>
 
----
+
+
+## References
+````{dropdown} **References**
+```{footbibliography}
+```
+````
+
+
 
 ## Authors
 
@@ -770,8 +833,6 @@ Kurt: Writing - Original Draft
 Philippe: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

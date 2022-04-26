@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.11.1. Starting material</title>
+    <title>1. Starting material</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -60,8 +60,8 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="1.11.2. Structuring data" href="1-rose-metabolites-Python-analysis.html" />
-    <link rel="prev" title="1. Making omics data matrix FAIR" href="../fair-data-matrix-recipe.html" />
+    <link rel="next" title="2. Structuring data" href="1-rose-metabolites-Python-analysis.html" />
+    <link rel="prev" title="Making omics data matrix FAIR" href="../fair-data-matrix-recipe.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Starting material" />
-<meta property="og:description" content="Starting material  &lt;br /&gt;     &lt;i class=&#39;fa fa-qrcode fa-2x&#39; style=&#39;color:#7e0038;&#39;&gt;&lt;/i&gt;&lt;br&gt;  &lt;h4&gt;&lt;b&gt;Recipe metadata&lt;/b&gt;&lt;/h4&gt;  identifier: &lt;a href=&#34;http://w3id.o" />
+<meta property="og:description" content="Starting material  &lt;br/&gt; &lt;br/&gt;  &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@type&#34;" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,8 +117,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../introduction/priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="../../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -132,22 +132,42 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../introduction/fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="../../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../glossary-fair-terms.html">
+  <a class="reference internal" href="../../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../findability.html">
    Findability
@@ -175,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -195,17 +215,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -466,34 +486,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../../applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="../../maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="../fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -501,28 +562,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="../fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -532,7 +573,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -542,14 +629,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="../../afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="../../afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -561,7 +662,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../boilerplate/contributing.html">
+    <a class="reference internal" href="../../afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -593,20 +694,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../help/myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -718,6 +805,120 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   1.1. Background:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1.1.1. .
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-s-begin-by-installing-the-python-packages-allowing-easy-access-and-use-of-data-formatted-as-json-data-package">
+       1.1.1.1. 1. Let’s begin by installing the Python packages allowing easy access and use of data formatted as JSON Data Package
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reading-the-data">
+       1.1.1.2. 2. Reading the data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#following-a-manual-inspection-of-the-excel-source-getting-the-start-row-of-the-data-we-use-pandas-take-function">
+       1.1.1.3. 3. Following a manual inspection of the Excel Source, getting the start row of the data, we use Pandas take() function
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#we-then-extract-all-the-columns-of-interest-same-take-function-with-axis-set-to-1">
+       1.1.1.4. 4. We then extract all the columns of interest (same take() function, with -axis set to 1)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#we-now-rename-the-dataframe-automatically-generated-field-header-to-something-more-meaningful">
+       1.1.1.5. 5. We now rename the DataFrame automatically generated field header to something more meaningful
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#we-insert-2-new-fields-as-placeholders-for-chemical-information-descriptors">
+       1.1.1.6. 6. We insert 2 new fields as placeholders for chemical information descriptors
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#we-use-libchebi-to-retrieve-chebi-identifiers-and-inchi-from-a-chemical-name">
+       1.1.1.7. 7. We use LibChebi to retrieve CHEBI identifiers and InChi from a chemical name.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-following-steps-are-needed-to-perform-the-table-transformation-from-a-wide-layout-to-a-long-table-one">
+       1.1.1.8. 8. The following steps are needed to perform the table transformation from a ‘wide’ layout to a ‘long table’ one.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apparently-a-feature-in-pandas-dataframe-causes-a-mismatch-in-the-field-position">
+       1.1.1.9. Apparently a feature in Pandas DataFrame causes a mismatch in the field position.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#insert-a-new-field-unit-in-the-dataframe-at-position-3-and-setting-value-to-empty">
+       1.1.1.10. 11. Insert a new field ‘unit’ in the DataFrame at position 3 and setting value to empty.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adding-new-fields-for-each-of-the-independent-variable-and-associated-uri-copying-from-treatment-field">
+       1.1.1.11. 12. Adding new fields for each of the independent variable and associated URI, copying from ‘treatment field’.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#marking-up-with-ontology-terms-and-their-resolvable-uri-for-all-factor-values">
+       1.1.1.12. 13. Marking up with ontology terms and their resolvable URI for all factor values.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dealing-with-missing-values">
+       1.1.1.13. 14. Dealing with missing values:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reorganizing-columns-order-in-the-dataframe-file-to-match-the-frictionless-tabular-data-package-layout">
+       1.1.1.14. 15. Reorganizing columns order in the DataFrame/File to match the Frictionless Tabular Data Package Layout.
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusion">
+     1.1.2. Conclusion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   1.2. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   1.3. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   1.4. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -727,76 +928,93 @@
               <div>
                 
   <div class="section" id="starting-material">
-<span id="fcb-notebook-1"></span><h1><span class="section-number">1.11.1. </span>Starting material<a class="headerlink" href="#starting-material" title="Permalink to this headline">¶</a></h1>
-<br />
-<hr class="docutils" />
-<div class="sphinx-bs container-lg pb-3&lt;br&gt; docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fa fa-qrcode fa-2x' style='color:#7e0038;'></i><br></p>
+<span id="fcb-notebook-1"></span><h1><span class="section-number">1. </span>Starting material<a class="headerlink" href="#starting-material" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/><br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "FAIR Data Matrices", "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB038", "url": "https://w3id.org/faircookbook/FCB038"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+30 minutes
 </div>
-<div class="card-body docutils">
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="http://w3id.org/faircookbook/FCB038">FCB038</a>
- version: <a href="">v1.0</a>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+Yes
 </div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
 </div>
+</div></div>
+</div></div>
 </div>
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fa fa-fire fa-2x' style='color:#7e0038;'></i></p>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">FAIR Data Matrices</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
-<div class="card-body docutils">
-<h4><b>Difficulty level</b></h4>
-<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
-<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
-<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
-<i class='fa fa-fire fa-lg' style='color:#7e0038;'></i>
-<i class='fa fa-fire fa-lg' style='color:lightgrey'></i>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fas fa-clock fa-2x' style='color:#7e0038;'></i></p>
-</div>
-<div class="card-body docutils">
-<h4><b>Reading Time</b></h4>
-<i class='fa fa-clock fa-lg' style='color:#7e0038;'></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class='fa fa-globe fa-lg' style='color:#7e0038;'></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class='fa fa-play-circle fa-lg' style='color:#7e0038;'></i> Yes
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1&lt;br&gt; docutils">
-<div class="card w-100 rounded&lt;br&gt; docutils">
-<div class="card-header docutils">
-<p class="card-text"><i class='fa fa-users fa-2x' style='color:#7e0038;'></i></p>
-</div>
-<div class="card-body docutils">
-<h4><b>Intended Audience</b></h4>
-<!-- <p> <i class='fa fa-user-md fa-lg' style='color:#7e0038;'></i> Principal Investigator </p> -->
-<p> <i class='fa fa-database fa-lg' style='color:#7e0038;'></i> Data Manager </p>
-<p> <i class='fa fa-wrench fa-lg' style='color:#7e0038;'></i> Data Scientist </p>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Hands-on</div>
 </div>
 </div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000571">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
 </div>
 </div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-2">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a>
+ <a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.2C].md">[F+MM-1.2C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
 </div>
-<hr class="docutils" />
-<p>Background:</p>
-<p>Experimental results such as metabolite profiling data published in [1,2] can be straightfowardly reported using <a class="reference external" href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed as data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts.
-Here, we show how to use a set of python libraries to create a tabular data package from an Excel file, annotate it with ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of the data table.
-A few line of codes allow structure information around key study design descriptors: the independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package itself.</p>
-<ol class="simple">
-<li><p>Let’s begin by installing the Python packages allowing easy access and use of data formatted as JSON Data Package</p></li>
-</ol>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB038" class="text--purple-dark">FCB038
+</a></div>
+</div>
+</div>
+<div class="section" id="background">
+<h2><span class="section-number">1.1. </span>Background:<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Experimental results such as metabolite profiling data published in [1,2] can be straightforwardly reported using
+<a class="reference external" href="https://frictionlessdata.io/specs/tabular-data-package/">OKFN Data Packages</a>. Such components can be easily parsed as
+data frames and exploiting for data visualization purpose using libraries implementing graphical grammar concepts.
+Here, we show how to use a set of python libraries to create a tabular data package from an Excel file, annotate it with
+ontologies (CHEBI, PO, NCBITax) and validate the results against the JSON definition of the data table.
+A few line of codes allow structure information around key study design descriptors:
+the independent variables and their levels have been clearly and unambiguously declared in the Tabular Data Package
+itself.</p>
+<div class="section" id="id1">
+<h3><span class="section-number">1.1.1. </span>.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="let-s-begin-by-installing-the-python-packages-allowing-easy-access-and-use-of-data-formatted-as-json-data-package">
+<h4><span class="section-number">1.1.1.1. </span>1. Let’s begin by installing the Python packages allowing easy access and use of data formatted as JSON Data Package<a class="headerlink" href="#let-s-begin-by-installing-the-python-packages-allowing-easy-access-and-use-of-data-formatted-as-json-data-package" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -809,9 +1027,9 @@ A few line of codes allow structure information around key study design descript
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Reading the data</p></li>
-</ol>
+</div>
+<div class="section" id="reading-the-data">
+<h4><span class="section-number">1.1.1.2. </span>2. Reading the data<a class="headerlink" href="#reading-the-data" title="Permalink to this headline">¶</a></h4>
 <p>We now simply read in the Excel file corresponding to the Nature Genetics Supplementary Table from the Zenodo archive</p>
 <p>(DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.2598799">https://doi.org/10.5281/zenodo.2598799</a>)</p>
 <div class="cell docutils container">
@@ -835,9 +1053,10 @@ A few line of codes allow structure information around key study design descript
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Following a manual inspection of the Excel Source, getting the start row of the data, we use Pandas take() function to extract first a row of headers (hence -axis set to 0)</p></li>
-</ol>
+</div>
+<div class="section" id="following-a-manual-inspection-of-the-excel-source-getting-the-start-row-of-the-data-we-use-pandas-take-function">
+<h4><span class="section-number">1.1.1.3. </span>3. Following a manual inspection of the Excel Source, getting the start row of the data, we use Pandas take() function<a class="headerlink" href="#following-a-manual-inspection-of-the-excel-source-getting-the-start-row-of-the-data-we-use-pandas-take-function" title="Permalink to this headline">¶</a></h4>
+<p>to extract first a row of headers (hence -axis set to 0)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">13</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -845,9 +1064,9 @@ A few line of codes allow structure information around key study design descript
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>We then extract all the columns of interest (same take() function, with -axis set to 1)</p></li>
-</ol>
+</div>
+<div class="section" id="we-then-extract-all-the-columns-of-interest-same-take-function-with-axis-set-to-1">
+<h4><span class="section-number">1.1.1.4. </span>4. We then extract all the columns of interest (same take() function, with -axis set to 1)<a class="headerlink" href="#we-then-extract-all-the-columns-of-interest-same-take-function-with-axis-set-to-1" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_full</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">take</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -859,9 +1078,9 @@ A few line of codes allow structure information around key study design descript
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>We now rename the DataFrame automatically generated field header to something more meaningful</p></li>
-</ol>
+</div>
+<div class="section" id="we-now-rename-the-dataframe-automatically-generated-field-header-to-something-more-meaningful">
+<h4><span class="section-number">1.1.1.5. </span>5. We now rename the DataFrame automatically generated field header to something more meaningful<a class="headerlink" href="#we-now-rename-the-dataframe-automatically-generated-field-header-to-something-more-meaningful" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_slice</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 3&quot;</span><span class="p">:</span> <span class="s2">&quot;chemical_name&quot;</span><span class="p">,</span>
@@ -885,9 +1104,10 @@ A few line of codes allow structure information around key study design descript
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>We insert 2 new fields as placeholders for chemical information descriptors and reinitialize the dataframe index so row numbering start at 0, not 16</p></li>
-</ol>
+</div>
+<div class="section" id="we-insert-2-new-fields-as-placeholders-for-chemical-information-descriptors">
+<h4><span class="section-number">1.1.1.6. </span>6. We insert 2 new fields as placeholders for chemical information descriptors<a class="headerlink" href="#we-insert-2-new-fields-as-placeholders-for-chemical-information-descriptors" title="Permalink to this headline">¶</a></h4>
+<p>We then reinitialize the dataframe index so row numbering start at 0, not 16</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_slice</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
@@ -897,10 +1117,12 @@ A few line of codes allow structure information around key study design descript
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>We use LibChebi to retrieve CHEBI identifiers and InChi from a chemical name.
-Note: in this call, we retrieve only values for which an exact match on the chemical name is found in Chebi libchebi API does not allow easy searching on synonyms, thus we are failing to retrieve all relevant information. This is merely to showcase how to use libchebi.</p></li>
-</ol>
+</div>
+<div class="section" id="we-use-libchebi-to-retrieve-chebi-identifiers-and-inchi-from-a-chemical-name">
+<h4><span class="section-number">1.1.1.7. </span>7. We use LibChebi to retrieve CHEBI identifiers and InChi from a chemical name.<a class="headerlink" href="#we-use-libchebi-to-retrieve-chebi-identifiers-and-inchi-from-a-chemical-name" title="Permalink to this headline">¶</a></h4>
+<p>Note: in this call, we retrieve only values for which an exact match on the chemical name is found in Chebi libchebi
+API does not allow easy searching on synonyms, thus we are failing to retrieve all relevant information.
+This is merely to showcase how to use libchebi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">):</span>
@@ -917,10 +1139,14 @@ Note: in this call, we retrieve only values for which an exact match on the chem
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>The following steps are needed to perform the table transformation from a ‘wide’ layout to a ‘long table’ one. Prep stubnames - pick out all the feature_model variables and remove the model suffices ‘long table’. The layout is that relied on by Frictionless Tabular Data Packages and consumed by R ggplot2 library and Python plotnine library.
-Step1: obtain all the different ‘dimensions’ measured for a given condition (i.e. repeating fields with an increment suffix).</p></li>
-</ol>
+</div>
+<div class="section" id="the-following-steps-are-needed-to-perform-the-table-transformation-from-a-wide-layout-to-a-long-table-one">
+<h4><span class="section-number">1.1.1.8. </span>8. The following steps are needed to perform the table transformation from a ‘wide’ layout to a ‘long table’ one.<a class="headerlink" href="#the-following-steps-are-needed-to-perform-the-table-transformation-from-a-wide-layout-to-a-long-table-one" title="Permalink to this headline">¶</a></h4>
+<p>Prep stubnames - pick out all the feature_model variables and remove the model suffices ‘long table’.
+The layout is that relied on by Frictionless Tabular Data Packages and consumed by R ggplot2 library and Python plotnine library.</p>
+<ul class="simple">
+<li><p>Step1: obtain all the different ‘dimensions’ measured for a given condition (i.e. repeating fields with an increment suffix).</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_models</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">data_slice</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;(sample_mean|sem)_[0-9]&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
@@ -929,9 +1155,11 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Step2: invoke Pandas pd.wide_to_long() function to carry out the table transformation. See Pandas documentation for more information:  <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide_to_long.html">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide_to_long.html</a> and the excellent blog: <a class="reference external" href="https://medium.com/&#64;wangyuw/data-reshaping-with-pandas-explained-80b2f51f88d2">https://medium.com/&#64;wangyuw/data-reshaping-with-pandas-explained-80b2f51f88d2</a></p></li>
-</ol>
+<ul class="simple">
+<li><p>Step2: invoke Pandas pd.wide_to_long() function to carry out the table transformation. See Pandas documentation for
+more information:  <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide_to_long.html">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide_to_long.html</a> and the
+excellent blog: <a class="reference external" href="https://medium.com/&#64;wangyuw/data-reshaping-with-pandas-explained-80b2f51f88d2">https://medium.com/&#64;wangyuw/data-reshaping-with-pandas-explained-80b2f51f88d2</a></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">wide_to_long</span><span class="p">(</span><span class="n">data_slice</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">],</span> <span class="n">j</span><span class="o">=</span><span class="s1">&#39;treatment&#39;</span><span class="p">,</span> <span class="n">stubnames</span><span class="o">=</span><span class="n">features</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
@@ -939,9 +1167,12 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Apparently a feature in Pandas DataFrame causes a mismatch in the field position. We solve this by writing the DataFrame to file and reading it back in again, not ideal but it does the trick. So writing to a temporary file &amp;  reading from that file to solve the issue.</p></li>
-</ol>
+</div>
+<div class="section" id="apparently-a-feature-in-pandas-dataframe-causes-a-mismatch-in-the-field-position">
+<h4><span class="section-number">1.1.1.9. </span>Apparently a feature in Pandas DataFrame causes a mismatch in the field position.<a class="headerlink" href="#apparently-a-feature-in-pandas-dataframe-causes-a-mismatch-in-the-field-position" title="Permalink to this headline">¶</a></h4>
+<p>We solve this by writing the
+DataFrame to file and reading it back in again, not ideal but it does the trick. So writing to a temporary file &amp;
+reading from that file to solve the issue.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;long.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -956,9 +1187,9 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Insert a new field ‘unit’ in the DataFrame at position 3 and setting value to empty.</p></li>
-</ol>
+</div>
+<div class="section" id="insert-a-new-field-unit-in-the-dataframe-at-position-3-and-setting-value-to-empty">
+<h4><span class="section-number">1.1.1.10. </span>11. Insert a new field ‘unit’ in the DataFrame at position 3 and setting value to empty.<a class="headerlink" href="#insert-a-new-field-unit-in-the-dataframe-at-position-3-and-setting-value-to-empty" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
@@ -966,9 +1197,9 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Adding new fields for each of the independent variable and associated URI, copying from ‘treatment field’.</p></li>
-</ol>
+</div>
+<div class="section" id="adding-new-fields-for-each-of-the-independent-variable-and-associated-uri-copying-from-treatment-field">
+<h4><span class="section-number">1.1.1.11. </span>12. Adding new fields for each of the independent variable and associated URI, copying from ‘treatment field’.<a class="headerlink" href="#adding-new-fields-for-each-of-the-independent-variable-and-associated-uri-copying-from-treatment-field" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;var1_levels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span>
@@ -987,9 +1218,11 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Marking up with ontology terms and their resolvable URI for all factor values. This requires doing a manual mapping, better ways could be devised.</p></li>
-</ol>
+</div>
+<div class="section" id="marking-up-with-ontology-terms-and-their-resolvable-uri-for-all-factor-values">
+<h4><span class="section-number">1.1.1.12. </span>13. Marking up with ontology terms and their resolvable URI for all factor values.<a class="headerlink" href="#marking-up-with-ontology-terms-and-their-resolvable-uri-for-all-factor-values" title="Permalink to this headline">¶</a></h4>
+<p>This requires doing a manual mapping,
+better ways could be devised.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;R. chinensis </span><span class="se">\&#39;</span><span class="s1">Old Blush</span><span class="se">\&#39;</span><span class="s1"> sepals&#39;</span>
@@ -1043,9 +1276,11 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Dealing with missing values: setting empty values to zero for sample_mean and sem to enable calculation: to do this, we rely on Pandas fillna function.</p></li>
-</ol>
+</div>
+<div class="section" id="dealing-with-missing-values">
+<h4><span class="section-number">1.1.1.13. </span>14. Dealing with missing values:<a class="headerlink" href="#dealing-with-missing-values" title="Permalink to this headline">¶</a></h4>
+<p>setting empty values to zero for sample_mean and sem to enable calculation: to do this,
+we rely on Pandas fillna function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[</span><span class="s1">&#39;sample_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
@@ -1054,9 +1289,10 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Reorganizing columns order in the DataFrame/File to match the Frictionless Tabular Data Package Layout. This is done very easily in Pandas by passing desired column order as an array.</p></li>
-</ol>
+</div>
+<div class="section" id="reorganizing-columns-order-in-the-dataframe-file-to-match-the-frictionless-tabular-data-package-layout">
+<h4><span class="section-number">1.1.1.14. </span>15. Reorganizing columns order in the DataFrame/File to match the Frictionless Tabular Data Package Layout.<a class="headerlink" href="#reorganizing-columns-order-in-the-dataframe-file-to-match-the-frictionless-tabular-data-package-layout" title="Permalink to this headline">¶</a></h4>
+<p>This is done very easily in Pandas by passing desired column order as an array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_df_from_file</span> <span class="o">=</span> <span class="n">long_df_from_file</span><span class="p">[[</span><span class="s1">&#39;chemical_name&#39;</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">,</span> <span class="s1">&#39;chebi_identifier&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_levels&#39;</span><span class="p">,</span> <span class="s1">&#39;var1_uri&#39;</span><span class="p">,</span>
@@ -1068,7 +1304,8 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 <ol class="simple">
-<li><p>We are now ready to write the file to disk as a UTF-8 encoded comma delimited file, with double quoted values and we are also dropping the dataframe index from the output.</p></li>
+<li><p>We are now ready to write the file to disk as a UTF-8 encoded comma delimited file, with double-quoted values, and we
+are also dropping the dataframe index from the output.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1094,7 +1331,8 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 <ol class="simple">
-<li><p>The Final step is to validate the output against JSON data package specifications, which are stored in the JSON Tabular DataPackage Definition folder.</p></li>
+<li><p>The Final step is to validate the output against JSON data package specifications, which are stored in the
+JSON Tabular DataPackage Definition folder.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1132,19 +1370,93 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>This concludes this notebook, which shows how to convert a metabolite profiling dataset from a publication and create a FAIR data package. The other notebooks show you how to visualize and plot the dataset but also convert it to a semantic graph as a Linked Data representation, query it and plot from it.</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="1-rose-metabolites-Python-analysis.html"><span class="doc std std-doc">1-rose-metabolites-Python-analysis.ipynb</span></a></p></li>
-<li><p><a class="reference internal" href="2-rose-metabolites-Python-RDF-querying-analysis.html"><span class="doc std std-doc">2-rose-metabolites-Python-RDF-querying-analysis.ipynb</span></a></p></li>
-<li><p><a class="reference internal" href="3-rose-metabolites-R-analysis.html"><span class="doc std std-doc">3-rose-metabolites-R-analysis.ipynb</span></a>
-(NB: requires making an R kernel available to Jupyter)</p></li>
-</ul>
-</li>
-</ol>
-<p><strong>Bibliographic References</strong></p>
-<p><a class="reference external" href="https://doi.org/10.1126/science.aab0696">1. Magnard JL, Roccia A, Caissard JC, Vergne P, Sun P, Hecquet R, Dubois A, Hibrand-Saint Oyant L, Jullien F, Nicolè F, Raymond O, Huguet S, Baltenweck R, Meyer S, Claudel P, Jeauffre J, Rohmer M, Foucher F, Hugueney P, Bendahmane M, Baudino S. PLANT VOLATILES. Biosynthesis of monoterpene scent compounds in roses. Science. 2015 Jul 3;349(6243):81-3.</a></p>
-<p><a class="reference external" href="https://doi.org/10.1038/s41588-018-0110-3">2. Raymond O, Gouzy J, Just J, Badouin H, Verdenaud M, Lemainque A, Vergne P, Moja S, Choisne N, Pont C, Carrère S, Caissard JC, Couloux A, Cottret L, Aury JM, Szécsi J, Latrasse D, Madoui MA, François L, Fu X, Yang SH, Dubois A, Piola F, Larrieu A, Perez M, Labadie K, Perrier L, Govetto B, Labrousse Y, Villand P, Bardoux C, Boltz V, Lopez-Roques C, Heitzler P, Vernoux T, Vandenbussche M, Quesneville H, Boualem A, Bendahmane A, Liu C, Le Bris M, Salse J, Baudino S, Benhamed M, Wincker P, Bendahmane M. The Rosa genome provides new insights into the domestication of modern roses. Nat Genet. 2018 Jun;50(6):772-777.</a></p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h3><span class="section-number">1.1.2. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>This concludes this notebook, which shows how to convert a metabolite profiling dataset from a publication and
+create a FAIR data package. The other notebooks show you how to visualize and plot the dataset but also convert it to
+a semantic graph as a Linked Data representation, query it and plot from it.
+- <a class="reference internal" href="1-rose-metabolites-Python-analysis.html"><span class="doc std std-doc">1-rose-metabolites-Python-analysis.ipynb</span></a>
+- <a class="reference internal" href="2-rose-metabolites-Python-RDF-querying-analysis.html"><span class="doc std std-doc">2-rose-metabolites-Python-RDF-querying-analysis.ipynb</span></a>
+- <a class="reference internal" href="3-rose-metabolites-R-analysis.html"><span class="doc std std-doc">3-rose-metabolites-R-analysis.ipynb</span></a>
+(NB: requires making an R kernel available to Jupyter)</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">1.2. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><a class="reference external" href="https://doi.org/10.1126/science.aab0696">1. Magnard JL, Roccia A, Caissard JC, Vergne P, Sun P, Hecquet R, Dubois A, Hibrand-Saint Oyant L, Jullien F, Nicolè F,
+Raymond O, Huguet S, Baltenweck R, Meyer S, Claudel P, Jeauffre J, Rohmer M, Foucher F, Hugueney P, Bendahmane M,
+Baudino S. PLANT VOLATILES. Biosynthesis of monoterpene scent compounds in roses. Science. 2015 Jul 3;349(6243):81-3.</a></p>
+<p class="card-text"><a class="reference external" href="https://doi.org/10.1038/s41588-018-0110-3">2. Raymond O, Gouzy J, Just J, Badouin H, Verdenaud M, Lemainque A, Vergne P, Moja S, Choisne N, Pont C, Carrère S,
+Caissard JC, Couloux A, Cottret L, Aury JM, Szécsi J, Latrasse D, Madoui MA, François L, Fu X, Yang SH, Dubois A,
+Piola F, Larrieu A, Perez M, Labadie K, Perrier L, Govetto B, Labrousse Y, Villand P, Bardoux C, Boltz V,
+Lopez-Roques C, Heitzler P, Vernoux T, Vandenbussche M, Quesneville H, Boualem A, Bendahmane A, Liu C, Le Bris M,
+Salse J, Baudino S, Benhamed M, Wincker P, Bendahmane M. The Rosa genome provides new insights into the domestication
+of modern roses. Nat Genet. 2018 Jun;50(6):772-777.</a></p>
+</div>
+</details></div>
+<div class="section" id="authors">
+<h2><span class="section-number">1.3. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/susannasansone"></img><div class="d-block">Susanna-Assunta Sansone</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-5306-5690"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing, Funding Acquisition</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="license">
+<h2><span class="section-number">1.4. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1172,8 +1484,8 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../fair-data-matrix-recipe.html" title="previous page"><span class="section-number">1. </span>Making omics data matrix FAIR</a>
-    <a class='right-next' id="next-link" href="1-rose-metabolites-Python-analysis.html" title="next page"><span class="section-number">1.11.2. </span>Structuring data</a>
+    <a class='left-prev' id="prev-link" href="../fair-data-matrix-recipe.html" title="previous page">Making omics data matrix FAIR</a>
+    <a class='right-next' id="next-link" href="1-rose-metabolites-Python-analysis.html" title="next page"><span class="section-number">2. </span>Structuring data</a>
 
         </div>
         
@@ -1185,7 +1497,7 @@ Step1: obtain all the different ‘dimensions’ measured for a given condition 
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

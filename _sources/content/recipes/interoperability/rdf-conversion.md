@@ -1,6 +1,10 @@
 (fcb-rdf-conversion)=
 # An inventory of tools for converting your data to RDF
 
+<br/>
+<br/>
+
+
 ````{panels_fairplus}
 :identifier_text: FCB051
 :identifier_link: 'https://w3id.org/faircookbook/FCB051'
@@ -8,6 +12,8 @@
 :recipe_type: inventory
 :reading_time_minutes: 30
 :intended_audience: data_producer, data_engineer
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: An inventory of tools for converting your data to RDF
 ```` 
@@ -26,10 +32,16 @@ The main purpose of this recipe is:
 Figure {numref}`rdf-conversion-figure1` shows an example ETL workflow.
 
 
-```{figure_fairplus} rdf-conversion.md-figure1.mmd
+````{dropdown} 
+:open:
+```{figure} rdf-conversion.md-figure1.mmd.png
+---
 name: rdf-conversion-figure1
-subtitle: Building an ontology with Robot tool.
+alt: Building an ontology with Robot tool
+---
+Building an ontology with Robot tool.
 ```
+````
 
 ---
 
@@ -91,7 +103,7 @@ Based on these criteria, find the right tool in the table below. Jump to the sec
 | ----------------------------------------- | --- | --------------- | -------------- | ---------- | ------------- |
 | OpenRefine + RDF extension                | ✅   | +/-         | +/-        | ✅          |               |
 | TopBraid Composer (ME)1                   | ✅   |                 |                |            |               |
-| RML-based tools (RML mapper, SDM-RDFizer, Morph-KGC) |     | ✅               | ✅              |            |               |
+| RML-based tools (RML mapper, SDM-RDFizer) |     | ✅               | ✅              |            |               |
 | SPARQL-Generate                           |     | ✅               | ✅              |            |               |
 | Ontop (RDB only)                          |     | ✅               | ✅              |            | ✅             |
 | Virtuoso (proprietary tool)                                 |     |                 | ✅              |            | ✅             |
@@ -219,16 +231,15 @@ SDM-RDFizer is a Python-based tool which is similar to RMLMapper but is suited f
 
 *   For download and instructions, see [SDM-RDFizer (GitHub)](https://github.com/SDM-TIB/SDM-RDFizer).
 
-
-#### Morph-KGC
+### Morph-KGC
 
 Morph-KGC is a powerful engine to generate RDF and RDF-star knowledge graphs. It supports a wide range of relational databases and data file formats. It scales to large volumes of data and runs from the command line or as a python library (creating [RDFLib](https://github.com/RDFLib/rdflib) or [Oxigraph](https://github.com/oxigraph/oxigraph) graphs). It is also integrated in [kglab](https://github.com/DerwenAI/kglab), an abstraction layer for working with knowledge graphs using popular libraries.
 
-*   Download: [Morph-KGC](https://github.com/oeg-upm/morph-kgc).
-*   Documentation: [readthedocs](https://morph-kgc.readthedocs.io).
+* Download: [Morph-KGC](https://github.com/oeg-upm/morph-kgc).
+* Documentation: [readthedocs](https://morph-kgc.readthedocs.io).
 
-
-##  ## Other RML-based tools
+  
+#### Other RML-based tools
 
 There are other RML-based conversion tools that are more tailored to particular scenarios, for instance [RMLStreamer](https://github.com/RMLio/RMLStreamer) for streaming data. For an overview of feature completeness of tools, see the [RML Implementation Report](https://rml.io/implementation-report/).
 
@@ -289,30 +300,20 @@ For python there’s the [RDFLib](https://rdflib.dev/) package. Working in Jupyt
 For Java the two most common libraries for working with RDF are [Apache Jena](https://jena.apache.org/) and [Eclipse RDF4J](https://rdf4j.org/).
 
 
----
-
 #### What should I read next?
 
 * [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo)
 
 
----
+````{dropdown} **References**
+````
 
 ## Authors
-
-
 ````{authors_fairplus}
 Eelke: Writing - Original Draft
 Jolanda: Writing - Review & Editing
 Kees: Writing - Review & Editing
 ````
-
-Specific contributions:
-
-* Eelke van der Horst: original format  
-* Jolanda Strubel: minor improvements
-* Kees van Bochove: minor improvements
----
 
 
 ## License

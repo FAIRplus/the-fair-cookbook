@@ -1,7 +1,7 @@
 (fcb-find-zenodo)=
 # Depositing in Zenodo generic repository
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -10,7 +10,9 @@
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, data_scientist, funder  
+:intended_audience: principal_investigator, data_manager, data_scientist, funder
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: Depositing in Zenodo generic repository
 ```` 
@@ -26,10 +28,17 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 <!--
-```{figure_fairplus} ./zenodo.svg
+````{dropdown} 
+:open:
+```{figure} ./zenodo.svg
+---
+width: 500px
 name: 
-subtitle: The process of depositing to CERN Zenodo.
+alt: The process of depositing to CERN Zenodo
+---
+The process of depositing to CERN Zenodo.
 ```
+````
 ---
 -->
 
@@ -85,11 +94,17 @@ This section guides users through the key steps to perform to organize a deposit
 <!-- <div> <img src="/images/TYpr8jM.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" />
 </div> -->
 
-
-```{figure_fairplus} /images/TYpr8jM.png
-name: fcb-find-zenodo-figure1
-subtitle: Uploading files to Zenodo Repository.
+````{dropdown} 
+:open:
+```{figure} /images/TYpr8jM.png
+---
+height: 600px
+name: Uploading files to Zenodo
+alt: Uploading files to Zenodo
+---
+Uploading files to Zenodo Repository.
 ```
+````
 
 Files can be dragged and dropped, with the following limitations:
 * 5GB max each, 
@@ -101,23 +116,34 @@ Failing to do so will result in a failure to proceed with the submission and an 
 
 <!-- <img src="/images/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
 
-
-```{figure_fairplus} /images/LwMorlw.png
-name: fcb-find-zenodo-figure2
-subtitle: Starting the file upload to Zenodo Repository.
+````{dropdown} 
+:open:
+```{figure} /images/LwMorlw.png
+---
+height: 600px
+name: Starting the file upload to Zenodo
+alt: Starting the file upload  to Zenodo
+---
+Starting the file upload to Zenodo Repository.
 ```
-
+````
 
 The next key step is to select the `upload type`. In this instance, the `Dataset` is selected. This matters as it provide strong typing which is relied on by `search engine` and therefore impacts `findability`.
 
 
 <!-- <img src="/images/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
 
-
-```{figure_fairplus} /images/OYyz4dT.png
-name: fcb-find-zenodo-figure3
-subtitle: Selecting the upload type to Zenodo Repository.
+````{dropdown} 
+:open:
+```{figure} /images/OYyz4dT.png
+---
+height: 150px
+name: Selecting the upload type to Zenodo
+alt: Selecting the upload type to Zenodo
+---
+Selecting the upload type to Zenodo Repository.
 ```
+````
 
 
 ---
@@ -129,12 +155,17 @@ subtitle: Selecting the upload type to Zenodo Repository.
 
 <!-- <img src="/images/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
-
-```{figure_fairplus} /images/WmlqBjL.png
-name: fcb-find-zenodo-figure4
-subtitle: Basic metadata to report .
+````{dropdown} 
+:open:
+```{figure} /images/WmlqBjL.png
+---
+height: 600px
+name: Basic metadata to report 
+alt:  Basic metadata to report 
+---
+Basic metadata to report .
 ```
-
+````
 
 * **Reserve a Digital Object Identifier**: This is a service provided natively by the Zenodo service, by virtue of its integration with Datacite services. This is quite an important point as it means the Zenodo submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated information **can not be changed without creating a new version of the archive and therefore minting a new doi**
  
@@ -144,11 +175,17 @@ subtitle: Basic metadata to report .
 
 <!-- <img src="/images/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
-```{figure_fairplus} /images/9Bp91gX.png
-name: fcb-find-zenodo-figure5
-subtitle: Setting keywords associated with the Zenodo deposition .
+````{dropdown} 
+:open:
+```{figure} /images/9Bp91gX.png
+---
+height: 600px
+name: Setting keywords associated with the Zenodo deposition
+alt:  Setting keywords associated with the Zenodo deposition
+---
+Setting keywords associated with the Zenodo deposition .
 ```
-
+````
 
 
 ---
@@ -160,10 +197,17 @@ subtitle: Setting keywords associated with the Zenodo deposition .
 
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
-```{figure_fairplus} /images/fSxOjXe.png
-name: fcb-find-zenodo-figure6
-subtitle: Choosing a License is essential.
+````{dropdown} 
+:open:
+```{figure} /images/fSxOjXe.png
+---
+height: 400px
+name: Choosing a License is essential 
+alt:  Choosing a License is essential 
+---
+Choosing a License is essential.
 ```
+````
 
 
 
@@ -174,19 +218,33 @@ subtitle: Choosing a License is essential.
 
 <!-- <img src="/images/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
-```{figure_fairplus} /images/ty9rpXF.png
-name: fcb-find-zenodo-figure7
-subtitle: Setting access conditions.
+````{dropdown} 
+:open:
+```{figure} /images/ty9rpXF.png
+---
+height: 350px
+name: Setting access conditions
+alt:  Setting access conditions
+---
+Setting access conditions.
 ```
+````
 
 * Start typing to display more licenses available from Zenodo
 
 <!-- <img src="/images/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
 
-```{figure_fairplus} /images/249GhMg.png
-name: fcb-find-zenodo-figure8
-subtitle: Autocompletion prompts available licenses.
+````{dropdown} 
+:open:
+```{figure} /images/249GhMg.png
+---
+height: 150px
+name: Autocompletion prompts available licenses
+alt:  Autocompletion prompts available licenses
+---
+Autocompletion prompts available licenses.
 ```
+````
 
 
 
@@ -196,11 +254,18 @@ subtitle: Autocompletion prompts available licenses.
 Since the Zenodo mission is to collect EC funded data, the repository provides the means to lookup `Grant Information`:
 
 <!-- <img src="/images/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
- 
-```{figure_fairplus} /images/STjyFbT.png
-name: fcb-find-zenodo-figure9
-subtitle: Linking Funding to Zenodo Submission.
+
+````{dropdown} 
+:open:
+```{figure} /images/STjyFbT.png
+---
+height: 200px
+name: Linking Funding to Zenodo Submission
+alt:  Linking Funding to Zenodo Submission
+---
+Linking Funding to Zenodo Submission.
 ```
+````
 
 
   * Zenodo: openAIRE connected repository
@@ -214,11 +279,17 @@ subtitle: Linking Funding to Zenodo Submission.
 
 <!-- <img src="/images/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
- 
-```{figure_fairplus} /images/uhGZN5t.png
-name: fcb-find-zenodo-figure10
-subtitle: Miscellaneous Information about the Zenodo Submission.
+````{dropdown} 
+:open:
+```{figure} /images/uhGZN5t.png
+---
+height: 500px
+name: Miscellaneous Information about the Zenodo Submission
+alt:  Miscellaneous Information about the Zenodo Submission
+---
+Miscellaneous Information about the Zenodo Submission.
 ```
+````
 
 
   * Contributors
@@ -390,7 +461,7 @@ r.status_code
 > Data access and embargo dates can be reserved.
 > Findability via search engines is enhanced as Zenodo supports content negotiation, serving [schema.org](https://schema.org) based JSON-LD documents.
 > Users should however be reminded of the following limitations of the service:
-    > - Absence of contraints on the nature of the datafiles being uploaded.
+    > - Absence of constraints on the nature of the datafiles being uploaded.
     > - No domain specific awareness and domain specific metadata.
     > - Absence of connection with specialized repositories.
     > - Size limitation for a given datasets.
@@ -421,17 +492,18 @@ r.status_code
 | [JSON-LD](https://fairsharing.org/bsg-s001214/)|||
 
 
----
+
+## References
+````{dropdown} **References**
+````
+
 ## Authors
 
-<!-- TODO seems unlikely that all authors did review, but noone the original draft. Clarify -->
 ````{authors_fairplus}
-Philippe: Writing - Review & Editing, Conceptualization
+Philippe: Writing - Writing, Conceptualization
 Susanna: Writing - Review & Editing, Funding acquisition
 ````
 
-
----
 ## License
 
 ````{license_fairplus}

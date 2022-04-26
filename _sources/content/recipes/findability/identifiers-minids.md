@@ -1,7 +1,7 @@
 (fcb-find-id-minid)=
 # Minting identifiers with Minid
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -11,6 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: Minting identifiers with Minid
 ```` 
@@ -34,10 +36,17 @@ To create a **persistent**, **globally unique** and **resolvable identifier** us
 <!-- <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>
  -->
 
-```{figure_fairplus} identifiers-minids-fig1.png
-name: fcb-find-id-minid-figure1
-subtitle: An overview of the identifier minting process
+````{dropdown} 
+:open:
+```{figure} identifiers-minids-fig1.png
+---
+height: 550px
+name: Minting Minid
+alt: An overview of the identifier minting process
+---
+An overview of the identifier minting process.
 ```
+````
 
 
 
@@ -104,11 +113,17 @@ $ touch minid-config.cfg
  -->
   <!-- ![](/images/B5UbkpF.png) -->
 
-
-```{figure_fairplus} images/globus/globus-account-create.png
-name: fcb-find-id-minid-figure2
-subtitle: Creating a Globus account.
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-create.png
+---
+height: 500px
+name: Creating a Globus account
+alt: Creating a Globus account
+---
+Creating a Globus account.
 ```
+````
 
 
 
@@ -138,10 +153,17 @@ subtitle: Creating a Globus account.
   <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div>  -->
 
-```{figure_fairplus} images/globus/globus-account-login.png
-name: fcb-find-id-minid-figure3
-subtitle: Globus account login.
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-login.png
+---
+height: 250px
+name: Globus account login
+alt: Globus account login
+---
+Globus account login.
 ```
+````
   
   followed by:
 
@@ -154,10 +176,17 @@ subtitle: Globus account login.
 <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div> -->
 
-```{figure_fairplus} images/globus/globus-account-allow.png
-name: fcb-find-id-minid-figure4
-subtitle: Globus account allow.
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-allow.png
+---
+height: 550px
+name: Globus account allow
+alt: Globus account allow
+---
+Globus account allow.
 ```
+````
   
   If all goes well, the following browser screen will be shown:
 
@@ -171,10 +200,18 @@ subtitle: Globus account allow.
 </div>
  -->
 
-```{figure_fairplus} images/globus/globus-account-login-success.png
-name: fcb-find-id-minid-figure5
-subtitle: Globus account login success.
+
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-login-success.png
+---
+height: 200px
+name: Globus account login success
+alt: Globus account login success
+---
+Globus account login success.
 ```
+````
   
   While the terminal will show the following:
 
@@ -280,18 +317,17 @@ Below is a sample file manifest configuration file:
 Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets can be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
----_
-
-## Reference
-
+## References
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
+
 
 <!-- 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
 
 2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 
----
 
 ## Authors
 
@@ -299,9 +335,6 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 Mike: Writing - Original Draft
 Philippe: Writing - Review & Editing
 ````
-
-
---- 
 
 ## License
 

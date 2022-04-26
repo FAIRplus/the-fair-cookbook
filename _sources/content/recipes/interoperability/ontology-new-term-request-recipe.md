@@ -1,7 +1,7 @@
 (fcb-interop-ontorequest)=
 # Requesting new terms
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -10,7 +10,9 @@
 :difficulty_level: 1
 :recipe_type: guidance
 :reading_time_minutes: 15
-:intended_audience: terminology_manager, data_manager, data_scientist, ontologist  
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist 
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Requesting new terms
 ```` 
@@ -37,10 +39,18 @@ In most ontologies, everybody can request new terms. However, in some ontologies
     
 ## Graphical Overview
 
-```{figure_fairplus} onto-new-term.png
-name: fcb-interop-ontorequest-figure1
-subtitle: Process for requesting an new term to a terminology.
+
+````{dropdown} 
+:open:
+```{figure} onto-new-term.png
+---
+width: 650px
+name: Process for requesting an new term to a terminology
+alt: Process for requesting an new term to a terminology
+---
+Process for requesting an new term to a terminology.
 ```
+````
 
 ## Capability & Maturity Table
 
@@ -148,7 +158,10 @@ Changes or additions to UMLS can be requested by contacting [NLM Customer Suppor
 UMLS is updated in May and November of each year.
 
 
----
+
+## References
+````{dropdown} **References**
+````
 
 ## Authors
 
@@ -157,9 +170,6 @@ Ulrich: Writing - Original Draft
 Emma: Writing - Original Draft
 Philippe: Writing - Review & Editing, Conceptualization 
 ````
-
-
----
 
 ## License
 

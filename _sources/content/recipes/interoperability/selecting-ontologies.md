@@ -1,7 +1,7 @@
 (fcb-selecting-ontologies)=
 # Selecting terminologies and ontologies
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -10,7 +10,9 @@
 :difficulty_level: 1
 :recipe_type: guidance
 :reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist  
+:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Selecting terminologies and ontologies
 ```` 
@@ -23,10 +25,18 @@ The main purpose of this recipe is to provide guidance on how to select the most
 
 ## Graphical Overview
 
-```{figure_fairplus} selecting-ontologies.md-figure1.mmd
+
+````{dropdown} 
+:open:
+```{figure} selecting-ontologies.md-figure1.mmd.png
+---
+width: 1000px
 name: selecting-ontologies-figure1
-subtitle: Which ontology should be used? Depending on dataset context, domain specific resources may be mandated, such as Clinical Data Interchange Standards Consortium (CDISC), Observational Health Data Sciences and Informatics (OHDSI) or Open Biomedical Ontologies (OBO). The Experimantal Factor Ontology (EFO) is specifically used by EMBL-EBI ArrayExpress to annotated dataset.
+alt:  Which ontology should be used?
+---
+ Which ontology should be used? Depending on dataset context, domain specific resources may be mandated, such as Clinical Data Interchange Standards Consortium (CDISC), Observational Health Data Sciences and Informatics (OHDSI) or Open Biomedical Ontologies (OBO). The Experimantal Factor Ontology (EFO) is specifically used by EMBL-EBI ArrayExpress to annotated dataset.
 ```
+````
 
 
 ---
@@ -169,7 +179,7 @@ The resources listed here focus on providing structured vocabularies to describe
 |**Strain**|Rat Strain Ontology|http://purl.obolibrary.org/obo/rs.owl| | [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) | https://github.com/rat-genome-database/RS-Rat-Strain-Ontology/issues ||
 
 
-In research, many different model organism are used (e.g. Dogs, Monkeys...) and specialized resources are available for many model organisms, including C. elegans, Drosophila, Xenopus, Zebrafish, plants and fungi. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.
+In research, many different model organisms are used (e.g. Dogs, Monkeys...) and specialized resources are available for many model organisms, including C. elegans, Drosophila, Xenopus, Zebrafish, plants and fungi. Use the selection criteria introduced earlier to gauge their value in the data management workflow and their impact on data integration tasks.
 
 
 
@@ -239,7 +249,7 @@ This section highlights the major and most widely used OBO Foundry resources for
 |**Protein/peptide**| Protein Ontology (PRO) |https://proconsortium.org |BFO| [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/) |https://github.com/PROconsortium/PRoteinOntology/issues|
 
 
-Besides these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resources are relevant.
+Besides, these open ontologies, in the context of clinically relevant work where drug formulation require recording and description, the following resources are relevant.
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
 |--- |--- |--- |--- |--- |--- |
@@ -332,7 +342,6 @@ The notion is important to grasp as it also explains why not all ontologies are 
 
 
 
----
 ## Conclusions
 
 > Selecting semantic resources depends on many different factors. However, the most important factor remains the `context` of the data and associated landscape of data standards as well as the ultimate integration goal, which will dictate the final choice.
@@ -340,24 +349,23 @@ The notion is important to grasp as it also explains why not all ontologies are 
 >The selection process remains guided by the need to maximize the potential of data integration with datasets of similar nature and similar value. It also requires a good understanding of the technical and sometimes legal implications these choices will have.
 
 <!-- 
-TODO : fill in the links to what-should-I-read-next recipes
+TODO : fill in the links to what-should-I-read-next recipes -->
 
 > ### What should I read next?
-> * How to build an application ontology?<!-- TODO add a link to corresponding document -->
-> * How to select on ontology service?<!-- TODO add a link to corresponding document -->
-> * How to deploy an ontology server?<!-- TODO add a link to corresponding document -->
-> * How to establish a minimal metadata profile?<!-- TODO add a link to corresponding document -->
+> * How to build an application ontology? {ref}`fcb-interop-ontorobot`
+> * How to select on ontology service? {ref}`fcb-select-onto-service`
+> * How to deploy an ontology server? {ref}`fcb-select-onto-service-criteria`
+> * [How to establish a minimal metadata profile?]
+    > {ref}`fcb-interop-covid-metadata` 
 
-
----
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
 
 ## References
-
-
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 <!-- Smith, B., Ceusters, W., Klagges, B. et al. Relations in biomedical ontologies. Genome Biol 6, R46 (2005). https://doi.org/10.1186/gb-2005-6-5-r46
 
@@ -375,7 +383,6 @@ Hripcsak, George et al. “Observational Health Data Sciences and Informatics (O
  -->
 
 
----
 
 ## Authors
 
@@ -386,8 +393,6 @@ Danielle: Writing - Review & Editing
 Alasdair: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

@@ -1,6 +1,9 @@
 (fcb-fairify-examples-oncotrack)=
 # Oncotrack - observational clinical cohort datasets
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB044
 :identifier_link: http://w3id.org/faircookbook/FCB044
@@ -8,6 +11,8 @@
 :recipe_type: applied_example
 :reading_time_minutes: 10
 :intended_audience: data_manager, data_curator, ontologist
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Oncotrack - clinical cohort datasets
 ```` 
@@ -16,6 +21,7 @@
 ## Ingredients
 
 
+```{tabbed} Data Standards
 *   Metadata model
     *   [Oncotrack cohort metadata](https://drive.google.com/open?id=13xmazrUUWaCZVooL8d3HXZg7URfVlupM)
     *   [Oncotrack drug sensitivity data](https://drive.google.com/file/d/166IlLr-kZLBPoGLkxEyp7cLw8KFKtN1_/view?usp=sharing) 
@@ -28,6 +34,9 @@
     *   Output data: 
         *   tab-delimited text file
         *   JSON file (JSON schema: [BioSamples databases JSON schema](https://drive.google.com/open?id=1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY))
+```
+
+```{tabbed} Tools and software
 *   Tools and software
     *   Metadata extract and transform tool: R (Version 3.6.1)
         *   String parsing: R package stringi_1.4.3, stringr_1.4.0
@@ -37,28 +46,43 @@
     *   JSON schema validator: [Elixir JSON schema validator](https://github.com/elixir-europe/json-schema-validator)
     *   Ontology mapping: [ZOOMA](https://www.ebi.ac.uk/spot/zooma/)
     *   File Integrity check: md5sum (GNU coreutils) 8.28
+```
+
+
+
 
  	 	 	
 
 
 ## Objective
 
-This FAIRification pipeline converts the OncoTrack sample metadata to a structured and consistent data format, improves the findability, interoperability, and reusability of the metadata. The FAIRified metadata provides an enriched context to other Oncotrack derived datasets.
+This FAIRification pipeline converts the OncoTrack sample metadata to a structured and consistent data format, improves the findability, interoperability, and reusability of the metadata. 
+The FAIRified metadata provides an enriched context to other Oncotrack derived datasets {footcite}`pmid26978244`.
 
 
 ## Step-by-Step Process
 
-The FAIRification of Oncotrack metadata includes four steps: 1) accessing the data, 2) metadata extraction, transform and load (ETL) pipeline, 3) data curation and 4) data sharing. (Figure 1)
+The FAIRification of Oncotrack metadata includes four steps: 
+1) accessing the data
+2) metadata extraction, transform and load (ETL) pipeline,
+3) data curation and
+4) data sharing. (Figure 1)
 
 
 <!-- ![alt_text](image_0.png "image_tooltip")
 _Figure 1: OncoTrack metadata FAIRification pipeline_ -->	
 
-```{figure_fairplus} image_0.png
-name: fcb-fairify-examples-oncotrack-figure1
-subtitle: OncoTrack metadata FAIRification pipeline.
+````{dropdown}
+:open:
+```{figure} image_0.png
+---
+width: 800px
+name: OncoTrack metadata FAIRification pipeline.
+alt: OncoTrack metadata FAIRification pipeline.
+---
+OncoTrack metadata FAIRification pipeline.
 ```
-
+````
 
 ### Data Description
 
@@ -72,11 +96,17 @@ The original cohort metadata is stored in an Excel spreadsheet. Figure 2 is an e
 <!-- ![alt_text](image_1.png "image_tooltip")
 _Figure 2: Example of OncoTrack public cohort metadata -->_
 
-```{figure_fairplus} image_1.png
-name: fcb-fairify-examples-oncotrack-figure2
-subtitle: Example of OncoTrack public cohort metadata.
+````{dropdown}
+:open:
+```{figure} image_1.png
+---
+width: 800px
+name: Example of OncoTrack public cohort metadata.
+alt: Example of OncoTrack public cohort metadata.
+---
+Example of OncoTrack public cohort metadata.
 ```
-
+````
 
 
 The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drugs are tested on patient-derived organoid(PDO) and patient-derived xenografts(PDX) models in five sets of experiments. Different sets have their unique measurement methods, drug response scales. For example, in _Sheet 1: PDO drug response_ experiment, IC50 value is measured and defines the drug _response category_ (Figure 3a). In _Sheet 2: PDX drug response test_, the _response evaluation criteria in solid tumours (**RECIST**)_ scales defines the _drug response category_ (Figure 3b). In both examples, the _drug response category_ is marked by colour codes.
@@ -84,19 +114,31 @@ The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drug
 
 <!-- ![alt_text](image_2.png "image_tooltip") -->
 
-```{figure_fairplus} image_2.png
-name: fcb-fairify-examples-oncotrack-figure3
-subtitle: Example of OncoTrack.
+````{dropdown}
+:open:
+```{figure} image_2.png
+---
+width: 800px
+name: Example of OncoTrack.
+alt: .
+---
 ```
+````
 
 <!-- ![alt_text](image_3.png "image_tooltip")
 _Figure 3: Example of Oncotrack drug response data_ -->
 
-```{figure_fairplus} image_3.png
-name: fcb-fairify-examples-oncotrack-figure4
-subtitle: Example of Oncotrack drug response data.
+````{dropdown}
+:open:
+```{figure} image_3.png
+---
+width: 900px
+name: Example of Oncotrack drug response data.
+alt: Example of Oncotrack drug response data.
+---
+Example of Oncotrack drug response data.
 ```
-
+````
 
 ### Metadata ETL pipeline
 
@@ -110,11 +152,17 @@ The cohort metadata was converted to a[ tab-delimited table](https://docs.google
 <!-- ![alt_text](image_4.png "image_tooltip")
 _Figure 4: Example of the extracted cohort metadata_ -->
 
-
-```{figure_fairplus} image_4.png
-name: fcb-fairify-examples-oncotrack-figure5
-subtitle: Example of the extracted cohort metadata.
+````{dropdown}
+:open:
+```{figure} image_4.png
+---
+width: 800px
+name: Example of the extracted cohort metadata.
+alt: Example of the extracted cohort metadata.
+---
+Example of the extracted cohort metadata.
 ```
+````
 
 Drug sensitivity data were also extracted from the original spreadsheets. Each drug test per sample was listed as one entry. To coordinate different measurement approaches and response category scales, all drug sensitivity data were converted to a unified representation. All the measurement results were stored in Attribute _“Value”_, the drug response categorizes criteria were stored in Attribute _“Unit”,_ and the _drug response category_ was recalculated and stored in Attribute _“Response”._ Figure 5 is an example of the extracted drug sensitivity data. 1829 drug tests were extracted in total. The drug response summary is [here](https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing). 
 
@@ -122,11 +170,17 @@ Drug sensitivity data were also extracted from the original spreadsheets. Each d
 <!-- ![alt_text](image_5.png "image_tooltip")
 _Figure 5: Example of extracted drug sensitivity data_	 -->
 
-
-```{figure_fairplus} image_5.png
-name: fcb-fairify-examples-oncotrack-figure6
-subtitle: Example of extracted drug sensitivity data.
+````{dropdown}
+:open:
+```{figure} image_5.png
+---
+width: 800px
+name: Example of extracted drug sensitivity data.
+alt: Example of extracted drug sensitivity data.
+---
+Example of extracted drug sensitivity data.
 ```
+````
 
  	 	
 
@@ -163,10 +217,17 @@ The OncoTrack drug names were mapped to corresponding ontology terms in ChEBI an
 _Figure 6: Example of  ZOOMA ontology mapping results_
  -->
 
-```{figure_fairplus} image_6.jpg
-name: fcb-fairify-examples-oncotrack-figure7
-subtitle: Example of ZOOMA ontology mapping results.
+````{dropdown}
+:open:
+```{figure} image_6.jpg
+---
+width: 600px
+name: Example of ZOOMA ontology mapping results.
+alt: Example of ZOOMA ontology mapping results.
+---
+Example of ZOOMA ontology mapping results.
 ```
+````
 
 #### Data discrepancy
 
@@ -193,8 +254,9 @@ The public cohort metadata and drug sensitivity data were converted to tab-delim
 The current ontology annotation is limited to drug names. Other ontologies can be added upon request. More detailed administrative metadata will be added once getting permission from the OncoTrack consortium. The license will be added according to the drug release policy.
 
 
-## Supplementary materials
 
+## Supplementary materials
+````{dropdown} **Supplementary materials**
 Script 1: [Extract_cohort_metadata.R](https://drive.google.com/file/d/1bbMMKZnygZ8kccdnSj2R_BRLDhd0vAS-/view?usp=sharing)
 
 Script 2: [Extract_drugResponse_metadata.R](https://drive.google.com/open?id=1eNxdNFGN7GAw7Z0Cmk0k2BJiMMZ7wbel)
@@ -202,9 +264,16 @@ Script 2: [Extract_drugResponse_metadata.R](https://drive.google.com/open?id=1eN
 Script 3: [Transform to JSON.R](https://drive.google.com/file/d/18Ik3RryhWVFq9_2IIy6k8N-qpnP9Wgm3/view?usp=sharing)
 
 Supplementary figure 1: [Example of Sample 150-MET1-XEN2 in BioSamples database](https://drive.google.com/open?id=1ALOwGwB2RpWksH4TuGeye8qEnUm0ULVH)
+````
 
 
----
+## References
+`````{dropdown} **References**
+```{footbibliography}
+```
+`````
+
+
 
 ## Authors
 
@@ -213,7 +282,6 @@ Fuqi: Writing - Original Draft
 ````
 
 
----
 
 ## License
 

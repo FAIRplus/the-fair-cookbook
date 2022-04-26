@@ -1,0 +1,1472 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public knowledge graphs resources for life sciences</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/public-kg-resource-integration.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Datasets of relevance" href="training-datasets.html" />
+    <link rel="prev" title="Knowledge graphs and FAIR" href="FAIR-and-knowledge-graphs.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/public-kg-resource-integration.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Public knowledge graphs resources for life sciences" />
+<meta property="og:description" content="Public knowledge graphs resources for life sciences  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;:" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brief-FAIR-principles.html">
+   What are the FAIR principles?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="metadata-fair.html">
+   Metadata and FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/registeringDatasets.html">
+     5. Registering Datasets in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     6. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     7. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     8. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       8.9.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       8.9.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       8.9.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/introduction/public-kg-resource-integration.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/introduction/public-kg-resource-integration.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/introduction/public-kg-resource-integration.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-catalog-of-sparql-endpoints-for-life-sciences-yummydata">
+   A catalog of SPARQL Endpoints for Life Sciences: Yummydata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources-for-druggable-targets-predictions">
+   Resources for Druggable Targets Predictions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opentarget">
+     1. OpenTarget
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pharos">
+     2. Pharos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hetionet-an-integrative-network-of-disease">
+     3. Hetionet: an integrative network of disease
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drug-repurposing-knowledge-graph">
+     4. Drug Repurposing Knowledge graph
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clinical-knowledge-graph">
+     4. Clinical Knowledge Graph
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#astrazeneca-biological-insights-knowledge-graph-bikg">
+     5. AstraZeneca Biological Insights Knowledge Graph BIKG
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pykeen">
+   pyKEEN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-read-next">
+     What should I read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="public-knowledge-graphs-resources-for-life-sciences">
+<span id="fcb-public-kg"></span><h1>Public knowledge graphs resources for life sciences<a class="headerlink" href="#public-knowledge-graphs-resources-for-life-sciences" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/>
+<br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Public knowledge graphs resources for life sciences", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB0XX", "url": "https://w3id.org/faircookbook/FCB0XX"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+10 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Public knowledge graphs resources for life sciences</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Everyone</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-1">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB0XX" class="text--purple-dark">FCB0XX
+</a></div>
+</div>
+</div>
+<div class="section" id="main-objectives">
+<h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>In the following sections, we will cover the following topics:</p>
+<ol class="simple">
+<li><p>the known reference knowledge graphs to integrate with.</p></li>
+<li><p>the different scientific contexts.</p></li>
+<li><p>the impact for Pharma industry and EFPIA more broadly.</p></li>
+</ol>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>When it comes to research carried out by academic and industry ventures such as the Innovative Medicine Initiative of these
+European Union, three main scenarios can be outlined:</p>
+<ul class="simple">
+<li><p>identification of new drug targets, as it the case for the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/resolute">IMI Resolute</a> project for instance, which focuses on
+characterizing solute carriers and identifying potential candidates for “druggability”.</p></li>
+<li><p>development of new therapeutic products and techniques given a specific disease area, as in the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/aetionomy">IMI AETIONOMY</a> project.</p></li>
+<li><p>discovery of new drugs against pathogens as for instance the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/nd4bb">New Drugs for Bad Bugs (ND4BB)</a> project</p></li>
+</ul>
+<p>This gives a backdrop against which work to enhance interoperability of data generated by these projects needs to be aware of the existing data landscape.
+The purpose of the present content type is to provide a basic survey of the existing and the relevance to specific research contexts and tasks.
+This information may be useful when deciding on particular technical aspects such as choice of data interface, choice of terminology and controlled terminologies or, choice of data formats.</p>
+<p>We therefore focus the dataset scan on main entities such as Drugs / Chemicals and Disease / Clinical Research Data.</p>
+<p>Additionally, the availability of such information in specialized graph representations was also included as a selection criteria.
+Therefore, services providing SPARQL endpoint and Graph API for dataset access were considered and the following sections
+providing specific information and references for each of the resources and datasets are considered</p>
+</div>
+<div class="section" id="a-catalog-of-sparql-endpoints-for-life-sciences-yummydata">
+<h2>A catalog of SPARQL Endpoints for Life Sciences: Yummydata<a class="headerlink" href="#a-catalog-of-sparql-endpoints-for-life-sciences-yummydata" title="Permalink to this headline">¶</a></h2>
+<p>Yummydata is a catalog of SPARQL endpoints of interest to the biomedical community,
+maintained by the Database Center for Life Sciences in Kashiwa, Japan <a class="footnote-reference brackets" href="#pmid29688370" id="id1">9</a>.</p>
+<p>Database URL: <a class="reference external" href="http://yummydata.org/">http://yummydata.org/</a></p>
+<p>The resource can be viewed as a registry to resources as well as a monitoring services, which regularly checks the “health status”
+of the resources it indexes.</p>
+<p>The “health status” is reported as a “Umaka Score” which consolidates endpoint status according to six dimensions:
+<strong>Availability, Freshness, Operation, Usefulness, Validity, and Performance</strong>.</p>
+<p>It should be noted that Yummydata does not differentiate between semantic artefacts, such as an ontology, or a dataset
+represented in RDFLinked data.</p>
+<p>The authors of the resource highlight this point and underline that being able to distinguish
+between these types of graph explicitly may be required in the future.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>YummyData</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="yummydata">
+<img alt="YummyData, a registry of sparql endpoints" src="../../../_images/yummydata.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">YummyData, a registry of sparql endpoints</span><a class="headerlink" href="#yummydata" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+<div class="section" id="resources-for-druggable-targets-predictions">
+<h2>Resources for Druggable Targets Predictions<a class="headerlink" href="#resources-for-druggable-targets-predictions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="opentarget">
+<h3>1. OpenTarget<a class="headerlink" href="#opentarget" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://www.opentargets.org/">OpenTarget project</a> is a public private partnership aiming at providing a
+central resource based on public domain data to enable target identification and prioritisation, based on
+functional genomics data and GWAS data <a class="footnote-reference brackets" href="#nar-gkaa1027" id="id2">7</a>.
+Using a genome wide, evidence based approach, the OpenTarget project offers the possibility to obtain reliable information
+about validated targets against which design active compounds. Such approach has been shown to yield higher success in
+progressing potential therapeutic compounds along the clinical trial pipeline.</p>
+<p>All the data generated by the OpenTarget project is available for download and is accessible via</p>
+<ul class="simple">
+<li><p>a GraphQL application programming interface. <a class="reference external" href="https://api.genetics.opentargets.org/graphql">https://api.genetics.opentargets.org/graphql</a></p></li>
+<li><p>a Google Big Query interface. <a class="reference external" href="https://platform-docs.opentargets.org/data-access/google-bigquery">https://platform-docs.opentargets.org/data-access/google-bigquery</a></p></li>
+<li><p>a ftp download. <a class="reference external" href="https://platform.opentargets.org/downloads/data">https://platform.opentargets.org/downloads/data</a></p></li>
+</ul>
+<p>More recently, the dataset is also available from Amazon Web Services</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+OpenTarget project in AWS<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="opentarget-project-in-aws">
+<img alt="OpenTarget project in AWS" src="../../../_images/opentarget-aws.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">OpenTarget project in AWS</span><a class="headerlink" href="#opentarget-project-in-aws" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>The associated code is also open sourced, under an Apache License 2.0.
+More information is available here:
+<a class="reference external" href="https://genetics-docs.opentargets.org/data-access/data-download">https://genetics-docs.opentargets.org/data-access/data-download</a></p>
+<p>The OpenTarget project integrates data from several key resources listed in the project’s main publication.
+From an integration scenario standpoint, it is worth noting that data are annotated with semantic resources such as:</p>
+<ul class="simple">
+<li><p>EFO: Experimental Factor Ontology and associated open target slim EFO-OTAR</p></li>
+<li><p>MONDO: Diseases</p></li>
+<li><p>HPO: clinical signs, symptoms and phenotypes</p></li>
+<li><p>ECO: evidence code ontology to annotate confidence and reliability of findings</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>query genePrioritisationUsingL2G <span class="o">{</span>
+  studyLocus2GeneTable<span class="o">(</span>studyId: <span class="s2">&quot;FINNGEN_R5_E4_DM2&quot;</span>, variantId: <span class="s2">&quot;11_72752390_G_A&quot;</span><span class="o">)</span> <span class="o">{</span>
+    rows <span class="o">{</span>
+      gene <span class="o">{</span>
+        symbol
+        id
+      <span class="o">}</span>
+      yProbaModel
+      yProbaDistance
+      yProbaInteraction
+      yProbaMolecularQTL
+      yProbaPathogenicity
+      hasColoc
+      distanceToLocus
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="c1"># Import relevant libraries for HTTP request and JSON formatting</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Set study_id and variant_id variables</span>
+<span class="n">study_id</span> <span class="o">=</span> <span class="s2">&quot;FINNGEN_R5_E4_DM2&quot;</span>
+<span class="n">variant_id</span> <span class="o">=</span> <span class="s2">&quot;11_72752390_G_A&quot;</span>
+
+<span class="c1"># Build query string</span>
+<span class="n">query_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">  query genePrioritisationUsingL2G($myVariantId: String!, $myStudyId: String! ){</span>
+<span class="s2">    studyLocus2GeneTable(studyId: $myStudyId, variantId: $myVariantId){</span>
+<span class="s2">      rows {</span>
+<span class="s2">        gene {</span>
+<span class="s2">          symbol</span>
+<span class="s2">          id</span>
+<span class="s2">        }</span>
+<span class="s2">        yProbaModel</span>
+<span class="s2">        yProbaDistance</span>
+<span class="s2">        yProbaInteraction</span>
+<span class="s2">        yProbaMolecularQTL</span>
+<span class="s2">        yProbaPathogenicity</span>
+<span class="s2">        hasColoc</span>
+<span class="s2">        distanceToLocus</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Set variables object of arguments to be passed to endpoint</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;myVariantId&quot;</span><span class="p">:</span> <span class="n">variant_id</span><span class="p">,</span> <span class="s2">&quot;myStudyId&quot;</span><span class="p">:</span> <span class="n">study_id</span><span class="p">}</span>
+
+<span class="c1"># Set base URL of Genetics Portal GraphQL API endpoint</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://api.genetics.opentargets.org/graphql&quot;</span>
+
+<span class="c1"># Perform POST request and check status code of response</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">query_string</span><span class="p">,</span> <span class="s2">&quot;variables&quot;</span><span class="p">:</span> <span class="n">variables</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+
+<span class="c1"># Transform API response into JSON </span>
+<span class="n">api_response_as_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># Print first element of JSON response data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">api_response_as_json</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;studyLocus2GeneTable&quot;</span><span class="p">][</span><span class="s2">&quot;rows&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pharos">
+<h3>2. Pharos<a class="headerlink" href="#pharos" title="Permalink to this headline">¶</a></h3>
+<p>Pharos is a US NIH funded effort, which can be viewed as the counterpart to the European lead OpenTarget project <a class="footnote-reference brackets" href="#nar-gkw1072" id="id3">6</a>.</p>
+<p>Pharos comes on the back of initiative such as Illuminating the Druggable Genome (IDG) program
+(<a class="reference external" href="https://commonfund.nih.gov/idg/index">https://commonfund.nih.gov/idg/index</a>) and Target Central Resource Database (TCRD).</p>
+<p>Pharos integrates data from 66 different data sources, the list of which is available <a class="reference external" href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/45/D1/10.1093_nar_gkw1072/3/gkw1072_Supp.zip?Expires=1653384840&amp;Signature=kOr49PEQRpjs-NQN2Q~Vct~BpdLLJZhi-mAUoTqG9c7zxMrO7UiuCzNh~NyGt50JEqOYRC7DIx-h5h1rFPtphFUIsHDIjBa5mpndXfXZxcL4T-mVKbV92JzOpvqfErWGHjZ4859~qHXb3h97ngUwWl~7OdKVMSa0IutzE0eSns9Kdje25lpaWHhEI-5M946e1-l-IAbqC7~QYZXXqdDPGJi2BCEXVHI2SU8I2j8c~TwhFXioVfrN8LwJpLBw-iiWYTbInocWself9GCvmCbv2poNdYTJIaE03UYpI~l7YVah7sApesGOjlBDPppRiJLvDUf5TI6Y2pjliAECS8tJyg__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA">here</a></p>
+<p>Pharos information is organized around:</p>
+<ul class="simple">
+<li><p>Diseases</p></li>
+<li><p>Targets</p></li>
+<li><p>Ligands</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+Pharos<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../../../_images/pharos-project.png"><img alt="Pharos" src="../../../_images/pharos-project.png" style="width: 850px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Pharos</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>All the Pharos data can be queried via a GraphQL API:
+<a class="reference external" href="https://pharos.nih.gov/api">https://pharos.nih.gov/api</a></p>
+<p>From an integration scenario standpoint, Pharos integrates data with custom-built ontology, the <a class="reference external" href="http://drugtargetontology.org">Drug Target Ontology (DTO)</a>.</p>
+<p>The DTO reuses terms from well established resources such as:</p>
+<ul class="simple">
+<li><p>DO: Disease Ontology</p></li>
+<li><p>GO: Gene Ontology</p></li>
+<li><p>BAO: BioAssay Ontology</p></li>
+<li><p>GPCRO: GPCR Ontology</p></li>
+</ul>
+<p>Pharos source code is available under the MIT license, from <a class="reference external" href="https://spotlite.nih.gov/ncats/pharos">https://spotlite.nih.gov/ncats/pharos</a>.</p>
+</div>
+<div class="section" id="hetionet-an-integrative-network-of-disease">
+<h3>3. Hetionet: an integrative network of disease<a class="headerlink" href="#hetionet-an-integrative-network-of-disease" title="Permalink to this headline">¶</a></h3>
+<p>The main purpose of  Hetionet was  to predict <strong>new uses for existing drugs</strong>, as part of the “Project Rephetio” .</p>
+<p>Hetionet Version 1.0 corresponds to an ‘heterogeneous network’ (or HetNet) and contains 47,031 nodes of 11 types and
+2,250,197 relationships of 24 types, integrating data from 29 Resources to connect compounds, diseases, genes,
+anatomies, pathways, biological processes, molecular functions,
+cellular components, pharmacologic classes, side effects, and symptoms.</p>
+<p>For more details about the full list of source, consult the publication <a class="footnote-reference brackets" href="#pmid28936969" id="id5">5</a>.</p>
+<p><a class="reference external" href="https://zenodo.org/badge/latestdoi/56091268"><img alt="Latest Zenodo DOI" src="https://zenodo.org/badge/56091268.svg" /></a></p>
+<p>The network is available in four formats:</p>
+<ul class="simple">
+<li><p><strong>JSON</strong> — see <a class="reference external" href="https://github.com/hetio/hetionet/tree/master/hetnet/json"><code class="docutils literal notranslate"><span class="pre">hetnet/json</span></code></a></p></li>
+<li><p><strong>Neo4j</strong> — see <a class="reference external" href="https://github.com/hetio/hetionet/tree/master/hetnet/neo4j"><code class="docutils literal notranslate"><span class="pre">hetnet/neo4j</span></code></a> annd <a class="reference external" href="https://neo4j.het.io/browser/">https://neo4j.het.io/browser/</a></p></li>
+<li><p><strong>TSV</strong> — see <a class="reference external" href="https://github.com/hetio/hetionet/tree/master/hetnet/tsv"><code class="docutils literal notranslate"><span class="pre">hetnet/tsv</span></code></a></p></li>
+<li><p><strong>matrix</strong> — see <a class="reference external" href="https://github.com/hetio/hetionet/tree/master/hetnet/matrix"><code class="docutils literal notranslate"><span class="pre">hetnet/matrix</span></code></a></p></li>
+</ul>
+<p>GitHb Repository: <a class="reference external" href="https://github.com/hetio/hetionet">https://github.com/hetio/hetionet</a></p>
+<p>license: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
+<p>From an integration scenario standpoint, Hetionet integrates knowledge semantically by anchoring entities to
+several ontology “slims”, which are simplified versions of larger semantic artefacts.</p>
+<ul class="simple">
+<li><p>DO: disease ontology slim, with 137 terms considered.</p></li>
+<li><p>MESH: for signs and symptoms, with 438 terms considered</p></li>
+<li><p>SIDER: for side effects</p></li>
+<li><p>GO: Biological processes, cellular components, and molecular functions.</p></li>
+<li><p>UBERON: for anatomical terms.</p></li>
+</ul>
+<p>Mappings provide connection to chemical information via the use of InChI keys to unambiguously specific chemical structures.</p>
+</div>
+<div class="section" id="drug-repurposing-knowledge-graph">
+<h3>4. Drug Repurposing Knowledge graph<a class="headerlink" href="#drug-repurposing-knowledge-graph" title="Permalink to this headline">¶</a></h3>
+<p>Drug Repurposing Knowledge Graph (DRKG) is a comprehensive biological knowledge graph relating genes, compounds, diseases,
+biological processes, side effects and symptoms.</p>
+<p>DRKG includes information from six existing databases including DrugBank, Hetionet, GNBR, String, IntAct and DGIdb,
+and data collected from recent publications particularly related to Covid19.</p>
+<p>It includes 97,238 entities belonging to 13 entity-types; and 5,874,261 triplets belonging to 107 edge-types.</p>
+<p><a class="reference external" href="https://github.com/gnn4dr/DRKG/">https://github.com/gnn4dr/DRKG/</a></p>
+<p>A number of jupyter notebooks are available from the repository. They show how to use the Knowledge Graph and a pretrained model
+to explore drug repurposing possibilities:</p>
+<p><a class="reference external" href="https://github.com/gnn4dr/DRKG/blob/master/drug_repurpose/COVID-19_drug_repurposing_via_genes.ipynb">https://github.com/gnn4dr/DRKG/blob/master/drug_repurpose/COVID-19_drug_repurposing_via_genes.ipynb</a></p>
+<!--
+## OpenBiolink
+
+https://openbiolink.github.io/
+https://openbiolink.github.io/dataset/
+
+```python
+from openbiolink.obl2021 import OBL2021Dataset
+
+dl = OBL2021Dataset()
+
+train = dl.training # torch.tensor of shape(num_train,3)
+valid = dl.validation # torch.tensor of shape(num_val,3)
+```
+{footcite}`pmid32339214` 
+-->
+</div>
+<div class="section" id="clinical-knowledge-graph">
+<h3>4. Clinical Knowledge Graph<a class="headerlink" href="#clinical-knowledge-graph" title="Permalink to this headline">¶</a></h3>
+<p>The Clinical Knowledge Graph is an open source platform currently comprised of more than 16 million nodes and
+220 million relationships to represent relevant experimental data, public databases and the literature <a class="footnote-reference brackets" href="#santos2020-05-09-084897" id="id6">8</a>.</p>
+<p><a class="reference external" href="https://ckg.readthedocs.io/en/latest/INTRO.html">https://ckg.readthedocs.io/en/latest/INTRO.html</a></p>
+<p>From an integration scenario standpoint, the CKG integrates data using the following semantic resources:</p>
+<ul class="simple">
+<li><p>DO: Disease Ontology</p></li>
+<li><p>BTO: Brenda Tissue Ontology for anatomical entities and tissues.</p></li>
+<li><p>EFO: Experimental Factor Ontology</p></li>
+<li><p>HPO: Human Phenotype Ontology</p></li>
+<li><p>GO: Gene Ontology</p></li>
+<li><p>SNOMED-CT: which defines clinical terms and their associative relationships.</p></li>
+</ul>
+<p>The code for CKG is available from GitHub at: <a class="reference external" href="https://github.com/MannLabs/CKG">https://github.com/MannLabs/CKG</a> under a MIT License.</p>
+<p>CKG can be loaded and queried via a Neo4j graph database, a data dump of which is available from:  <a class="reference external" href="https://data.mendeley.com/datasets/mrcf7f4tc2/1">https://data.mendeley.com/datasets/mrcf7f4tc2/1</a></p>
+</div>
+<div class="section" id="astrazeneca-biological-insights-knowledge-graph-bikg">
+<h3>5. AstraZeneca Biological Insights Knowledge Graph BIKG<a class="headerlink" href="#astrazeneca-biological-insights-knowledge-graph-bikg" title="Permalink to this headline">¶</a></h3>
+<p>The BIKG is a resource developed by AstraZeneca to combine both public and internal data to facilitate knowledge
+discovery using machine learning over Knowledge Graphs.</p>
+<p>To build it, AstraZeneca developers created dedicated information extraction pipeline for mining unstructured text such
+as full text publications using Natural Language Processing techniques, as well as information obtained from specialized
+databases such as ChEMBL or Ensembl for chemical and gene products respectively, but also other datasets such as
+Hetionet and Open Target.</p>
+<p>The latest version of the BIKG consists  “of 10.9m nodes (of 22 types) and over 118 million unique edges (of 59 types, forming 398 different triples)”
+<a class="footnote-reference brackets" href="#geleta2021-10-28-466262" id="id7">4</a>.</p>
+<p>Interestingly, the BIKG pipelines also allow third-party datasets to be integrated.</p>
+<p>This step involves an ETL into the BIKG semantic model and the BIKG upper ontology (BIKG ULO).</p>
+<p>For integration purpose, the BIKG ULO is compatible with ontologies such as:</p>
+<ul class="simple">
+<li><p>UBERON: for anatomical terms</p></li>
+<li><p>GO:  Gene Ontology for Biological processes, cellular components, and molecular functions.</p></li>
+</ul>
+<p>BIKG can be accessed via a GraphQL API and the underlying data can be exported in 2 different graph formats, RDF or
+Neo4j/CSV for linked data graph or property graph representations respectively.</p>
+<p>Interestingly, two use cases for using the BIKG are discussed in the associated publications and clearly outline FAIRification goals.</p>
+<p>These use cases are:</p>
+<blockquote>
+<div><p>Target Identifications</p>
+<p>CRISPR Screen Hit ranking</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="pykeen">
+<h2>pyKEEN<a class="headerlink" href="#pykeen" title="Permalink to this headline">¶</a></h2>
+<p>PyKEEN (Python KnowlEdge EmbeddiNgs) is a Python package designed to train and evaluate knowledge graph embedding models
+(incorporating multi-modal information) <a class="footnote-reference brackets" href="#pmid34735335" id="id8">1</a>, <a class="footnote-reference brackets" href="#pmid30768158" id="id9">2</a>.</p>
+<p>So, as such, PyKEEN is more a tool than a Knowledge Graph, however PyKEEN contains many reference Knowledge Graphs and datasets
+which can be used for a variety of data science tasks and machine learning applications. PyKEEN is mainly geared towards helping developers
+train Knowledge Graph embedding models.</p>
+<p>The following figure shows a snippet of the various Knowledge Graphs available from the python package.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+pyKEEN datasets<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../../../_images/pykeen_datasets.png"><img alt="pykeen" src="../../../_images/pykeen_datasets.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">pykeen</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p class="card-text">pykeen</p>
+</div>
+</details><p>This is one of the main reason why we mention this library as it provides a context to data integration scenarios along with the datasets and tooling to do so.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pykeen.pipeline</span> <span class="kn">import</span> <span class="n">pipeline</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s1">&#39;TransE&#39;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s1">&#39;nations&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>To see an example of how to use the library, we highly recommended reading the following Medium blog post:</p>
+<p><a class="reference external" href="https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43">https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43</a></p>
+<p>and consult the associated jupyter notebook, which shows how to use your own dataset, understand the evaluation,
+and make novel link predictions:</p>
+<p><a class="reference external" href="https://github.com/tomasonjo/blogs/blob/master/pykeen/Hetionet%20-%20RotatE.ipynb">https://github.com/tomasonjo/blogs/blob/master/pykeen/Hetionet - RotatE.ipynb</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>With this recipe, the intent was to raise awareness in the wealth of Life Science information available as Knowledge Graph and ongoing integrative efforts.
+We have also tried to convey information about the license for each of the resources as well as some insights into the curation protocols specific to each the KG. This
+Finally, we wanted to highlight how some KGs are already used to train models and make predictions in the context of drug repurposing for instance.
+This is of particular interest in the context of the Innovative Medicine Initiative but not only, obviously.
+It certainly should provide food for thoughts when engaging with a FAIRification process and should help define FAIRification goals as well as
+the process to perform in order to be able to be compatible with specific resources for a specific task at hand.</p>
+</div></blockquote>
+<div class="section" id="what-should-i-read-next">
+<h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43">Knowledge graph- completion with pykeen and neo4j</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2112.06567">Implications of Topological Imbalance for Representation Learning on Biomedical Knowledge Graphs</a> <a class="footnote-reference brackets" href="#dblp-journals-corr-abs-2112-06567" id="id11">3</a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Reference</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/introduction/public-kg-resource-integration-0"><dl class="footnote brackets">
+<dt class="label" id="pmid34735335"><span class="brackets"><a class="fn-backref" href="#id8">1</a></span></dt>
+<dd><p class="card-text">M. Ali, M. Berrendorf, C. T. Hoyt, L. Vermue, M. Galkin, S. Sharifzadeh, A. Fischer, V. Tresp, and J. Lehmann. Bringing Light Into the Dark: A Large-scale Evaluation of Knowledge Graph Embedding Models under a Unified Framework. <em>IEEE Trans Pattern Anal Mach Intell</em>, Nov 2021.</p>
+</dd>
+<dt class="label" id="pmid30768158"><span class="brackets"><a class="fn-backref" href="#id9">2</a></span></dt>
+<dd><p class="card-text">M. Ali, C. T. Hoyt, D. Domingo-Fernández, J. Lehmann, and H. Jabeen. BioKEEN: a library for learning and evaluating biological knowledge graph embeddings. <em>Bioinformatics</em>, 35(18):3538–3540, 09 2019.</p>
+</dd>
+<dt class="label" id="dblp-journals-corr-abs-2112-06567"><span class="brackets"><a class="fn-backref" href="#id11">3</a></span></dt>
+<dd><p class="card-text">Stephen Bonner, Ufuk Kirik, Ola Engkvist, Jian Tang, and Ian P. Barrett. Implications of topological imbalance for representation learning on biomedical knowledge graphs. <em>CoRR</em>, 2021. URL: <a class="reference external" href="https://arxiv.org/abs/2112.06567">https://arxiv.org/abs/2112.06567</a>, <a class="reference external" href="https://arxiv.org/abs/2112.06567">arXiv:2112.06567</a>.</p>
+</dd>
+<dt class="label" id="geleta2021-10-28-466262"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
+<dd><p class="card-text">David Geleta, Andriy Nikolov, Gavin Edwards, Anna Gogleva, Richard Jackson, Erik Jansson, Andrej Lamov, Sebastian Nilsson, Marina Pettersson, Vladimir Poroshin, Benedek Rozemberczki, Timothy Scrivener, Michael Ughetto, and Eliseo Papa. Biological insights knowledge graph: an integrated knowledge graph to support drug development. <em>bioRxiv</em>, 2021. URL: <a class="reference external" href="https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262">https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262.full.pdf">arXiv:https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262.full.pdf</a>, <a class="reference external" href="https://doi.org/10.1101/2021.10.28.466262">doi:10.1101/2021.10.28.466262</a>.</p>
+</dd>
+<dt class="label" id="pmid28936969"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p class="card-text">D. S. Himmelstein, A. Lizee, C. Hessler, L. Brueggeman, S. L. Chen, D. Hadley, A. Green, P. Khankhanian, and S. E. Baranzini. Systematic integration of biomedical knowledge prioritizes drugs for repurposing. <em>Elife</em>, 09 2017.</p>
+</dd>
+<dt class="label" id="nar-gkw1072"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
+<dd><p class="card-text">Dac-Trung Nguyen, Stephen Mathias, Cristian Bologa, Soren Brunak, Nicolas Fernandez, Anna Gaulton, Anne Hersey, Jayme Holmes, Lars Juhl Jensen, Anneli Karlsson, Guixia Liu, Avi Ma’ayan, Geetha Mandava, Subramani Mani, Saurabh Mehta, John Overington, Juhee Patel, Andrew D. Rouillard, Stephan Schürer, Timothy Sheils, Anton Simeonov, Larry A. Sklar, Noel Southall, Oleg Ursu, Dusica Vidovic, Anna Waller, Jeremy Yang, Ajit Jadhav, Tudor I. Oprea, and Rajarshi Guha. Pharos: Collating protein information to shed light on the druggable genome. <em>Nucleic Acids Research</em>, 45(D1):D995–D1002, 11 2016. URL: <a class="reference external" href="https://doi.org/10.1093/nar/gkw1072">https://doi.org/10.1093/nar/gkw1072</a>, <a class="reference external" href="https://arxiv.org/abs/https://academic.oup.com/nar/article-pdf/45/D1/D995/8846748/gkw1072.pdf">arXiv:https://academic.oup.com/nar/article-pdf/45/D1/D995/8846748/gkw1072.pdf</a>, <a class="reference external" href="https://doi.org/10.1093/nar/gkw1072">doi:10.1093/nar/gkw1072</a>.</p>
+</dd>
+<dt class="label" id="nar-gkaa1027"><span class="brackets"><a class="fn-backref" href="#id2">7</a></span></dt>
+<dd><p class="card-text">David Ochoa, Andrew Hercules, Miguel Carmona, Daniel Suveges, Asier Gonzalez-Uriarte, Cinzia Malangone, Alfredo Miranda, Luca Fumis, Denise Carvalho-Silva, Michaela Spitzer, Jarrod Baker, Javier Ferrer, Arwa Raies, Olesya Razuvayevskaya, Adam Faulconbridge, Eirini Petsalaki, Prudence Mutowo, Sandra Machlitt-Northen, Gareth Peat, Elaine McAuley, Chuang Kee Ong, Edward Mountjoy, Maya Ghoussaini, Andrea Pierleoni, Eliseo Papa, Miguel Pignatelli, Gautier Koscielny, Mohd Karim, Jeremy Schwartzentruber, David G Hulcoop, Ian Dunham, and Ellen M McDonagh. Open Targets Platform: supporting systematic drug–target identification and prioritisation. <em>Nucleic Acids Research</em>, 49(D1):D1302–D1310, 11 2020. URL: <a class="reference external" href="https://doi.org/10.1093/nar/gkaa1027">https://doi.org/10.1093/nar/gkaa1027</a>, <a class="reference external" href="https://arxiv.org/abs/https://academic.oup.com/nar/article-pdf/49/D1/D1302/35363725/gkaa1027.pdf">arXiv:https://academic.oup.com/nar/article-pdf/49/D1/D1302/35363725/gkaa1027.pdf</a>, <a class="reference external" href="https://doi.org/10.1093/nar/gkaa1027">doi:10.1093/nar/gkaa1027</a>.</p>
+</dd>
+<dt class="label" id="santos2020-05-09-084897"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dd><p class="card-text">Alberto Santos, Ana R. Colaço, Annelaura B. Nielsen, Lili Niu, Philipp E. Geyer, Fabian Coscia, Nicolai J Wewer Albrechtsen, Filip Mundt, Lars Juhl Jensen, and Matthias Mann. Clinical knowledge graph integrates proteomics data into clinical decision-making. <em>bioRxiv</em>, 2020. URL: <a class="reference external" href="https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897">https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897.full.pdf">arXiv:https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897.full.pdf</a>, <a class="reference external" href="https://doi.org/10.1101/2020.05.09.084897">doi:10.1101/2020.05.09.084897</a>.</p>
+</dd>
+<dt class="label" id="pmid29688370"><span class="brackets"><a class="fn-backref" href="#id1">9</a></span></dt>
+<dd><p class="card-text">Y. Yamamoto, A. Yamaguchi, and A. Splendiani. YummyData: providing high-quality open life science data. <em>Database (Oxford)</em>, 01 2018.</p>
+</dd>
+</dl>
+</p>
+</div>
+</details></div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="FAIR-and-knowledge-graphs.html" title="previous page">Knowledge graphs and FAIR</a>
+    <a class='right-next' id="next-link" href="training-datasets.html" title="next page">Datasets of relevance</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

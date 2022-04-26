@@ -1,7 +1,7 @@
 (fcb-find-bs-dataset)=
 # Dataset page markup with Schema.org
 
-+++
+<br/>
 <br/>
 
 ````{panels_fairplus}
@@ -11,6 +11,8 @@
 :recipe_type: guidance
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Dataset page markup with Schema.org
 ```` 
@@ -28,10 +30,17 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 
-```{figure_fairplus} ./bs-dataset-mermaid.png
+````{dropdown} 
+:open:
+```{figure} ./bs-dataset-mermaid.png
+---
+width: 500px
 name: 
-subtitle: The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.
+alt: The process of annotating a dataset webpage with bioschema markup for Search Engine discovery
+---
+The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.
 ```
+````
 
 ---
 
@@ -62,10 +71,17 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
    3.  Click on the `Show Form` button
 
 
-```{figure_fairplus} BioschemasGenerator.png
+````{dropdown} 
+:open:
+```{figure} BioschemasGenerator.png
+---
 name: bioschemas-generator-start-screen-3
-subtitle: Bioschemas Generator start screen.
+alt: Bioschemas Generator start screen.
+
+---
+Bioschemas Generator start screen.
 ```
+````
 
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
 
@@ -76,10 +92,18 @@ subtitle: Bioschemas Generator start screen.
 
 <!--    ![Bioschemas Generator Dataset profile form](BioschemasGeneratorDatasetForm.png) -->
 
-```{figure_fairplus} BioschemasGeneratorDatasetForm.png
-name: fcb-find-bs-dataset-figure2
-subtitle: Bioschemas Generator Dataset profile form.
+
+````{dropdown} 
+:open:
+```{figure} BioschemasGeneratorDatasetForm.png
+---
+height: 550px
+name: Bioschemas Generator Dataset profile form
+alt: Bioschemas Generator Dataset profile form
+---
+Bioschemas Generator Dataset profile form.
 ``` 
+````
 
 4. You will now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our UniProtKB example, we get the following markup
 
@@ -217,7 +241,14 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
 | [HTML](http://edamontology.org/format_2331) | | |
 
----
+
+
+
+## References
+````{dropdown} **References**
+<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
+````
+
 
 ## Authors
 
@@ -227,14 +258,6 @@ Leyla: Writing - Review & Editing
 Philippe: Writing - Review & Editing
 ````
 
-
----
-
-## Footnotes
-
-<a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
-
----
 
 ## License
 

@@ -1,6 +1,8 @@
 (fcb-introduction-terminologies-ontologies)=
 # Introduction to terminologies and ontologies
 
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB019
@@ -9,6 +11,8 @@
 :recipe_type: survey_review
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Introduction to terminologies and ontologies
 ```` 
@@ -20,14 +24,26 @@ The aim of this recipe is to provide a compact introduction about `controlled te
 
 ## Controlled terminology or ontology: what's the difference?
 
-The need for `controlled vocabulary` often arises in situations where validation of textual information is necessary for operational requirements. 
-The main initial driver for data entry harmonization is to increase query recall. In its most basic form, `keywords` may be used to perform indexation. However, if relying on user input alone, the chances of typographic errors increases with the number of users. These unavoidable events accumulate over time and end up  hurting the accuracy of search results and this is the reason for offering sets of predefined values. It reduces the noise. 
-However this can come at the cost of precision, as the predefined terms may not cover the exact thing users may need to describe. Furthermore, term mis-selection by the user is not eliminated and introduces another type of error.
+The need for `controlled vocabulary` often arises in situations where validation of textual information is necessary 
+for operational requirements. 
+The main initial driver for data entry harmonization is to increase query recall. 
+In its most basic form, `keywords` may be used to perform indexation. 
+However, if relying on user input alone, the chances of typographic errors increases with the number of users. 
+These unavoidable events accumulate over time and end up  hurting the accuracy of search results and this is the reason
+for offering sets of predefined values. It reduces the noise. 
+However, this can come at the cost of precision, as the predefined terms may not cover the exact thing users 
+may need to describe. 
+Furthermore, term mis-selection by the user is not eliminated and introduces another type of error.
 
-A `controlled terminology` is a *`normative`* collection of terms, the spelling of which is fixed and for which additional information may be provided such as a `definition`, a set of `synonyms`, an `editor`, a `version`, as well as a `license` determining the condition of use. The set of information about a specific controlled terminology term is designated as `term metadata`. In a controlled terminology, terms appear as a `flat list`, meaning that no relationship between any of the entities the controlled terminology represents is captured in any formal way.
+A `controlled terminology` is a *`normative`* collection of terms, the spelling of which is fixed and for which additional information may be provided such as a `definition`, a set of `synonyms`, an `editor`, a `version`, as well as a `license` determining the condition of use. 
+The set of information about a specific controlled terminology term is designated as `term metadata`. 
+In a controlled terminology, terms appear as a `flat list`, meaning that no relationship between any of the entities the controlled terminology represents is captured in any formal way.
 This is the main drawback and limitation of `controlled terminologies`, which are often developed to support a data model or an application.
 
-An `ontology` on the other hand, is a `formal representation of a domain knowledge where concepts are organized hierarchically`. The qualifier `formal` refers to a set of axioms and rules based on logic (e.g. `first order logic`) to structure, organize and check the consistency of the term hierarchy. As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry INCAtools or Robot tool).
+An `ontology` on the other hand, is a `formal representation of a domain knowledge where concepts are organized hierarchically`.
+The qualifier `formal` refers to a set of axioms and rules based on logic (e.g. `first order logic`) to structure,
+organize and check the consistency of the term hierarchy. 
+As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry INCAtools or Robot tool).
 
 
     
@@ -155,10 +171,9 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->
 
----
 
 ## References
-
+````{dropdown} **References**
 1. RDF. https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/
 2. SKOS. https://www.w3.org/2004/02/skos/
 3. OWL. https://www.w3.org/OWL/
@@ -173,8 +188,8 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 12. Topbraid composer. https://www.topquadrant.com/products/topbraid-composer/
 13. INCAtools. https://github.com/INCATools
 14. ROBOT. [R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.](https://doi.org/10.1186/s12859-019-3002-3)
+````
 
----
 
 ## Authors
 
@@ -183,8 +198,6 @@ Philippe: Writing - Original Draft
 Alasdair: Writing - Review & Editing
 ````
 
-
----
 
 ## License
 

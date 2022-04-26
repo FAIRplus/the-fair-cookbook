@@ -1,0 +1,1671 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant genomic and genetic variation data submission to EMBL-EBI databases</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/reusability/miappe.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Maturity Progression" href="../maturity/isa-maturity-progression.html" />
+    <link rel="prev" title="Maturity Models" href="../maturity.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/reusability/miappe.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Plant genomic and genetic variation data submission to EMBL-EBI databases" />
+<meta property="og:description" content="Plant genomic and genetic variation data submission to EMBL-EBI databases  &lt;br&gt; &lt;br&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https:/" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/metadata-fair.html">
+   Metadata and FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/registeringDatasets.html">
+     5. Registering Datasets in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     6. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     7. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     8. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       8.9.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       8.9.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       8.9.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/reusability/miappe.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/reusability/miappe.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/reusability/miappe.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objective">
+   Main Objective
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview-of-the-fairification-objectives">
+   Graphical overview of the FAIRification Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
+   FAIRification Objectives, Inputs and Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-software-and-tools">
+   Table of Software and Tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-process">
+   Step-by-Step Process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-take-dna-sample">
+     Step 1: Take DNA sample
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-register-sample-material-at-biosamples">
+     Step 2: Register sample material at BioSamples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-perform-sequencing-of-dna-sample">
+     Step 3: Perform sequencing of DNA sample
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-register-and-submit-sequencing-reads-to-ena">
+     Step 4: Register and submit sequencing reads to ENA
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-study">
+       4.1 The Study
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-sample">
+       4.2 The Sample
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-read-data">
+       4.3 The Read Data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-check-if-used-reference-genome-assembly-is-available">
+     Step 5: Check if used reference genome assembly is available
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-6-analyse-sequencing-results">
+     Step 6: Analyse sequencing results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-7-prepare-genotyping-dataset-for-submission-of-vcf-file-to-eva">
+     Step 7: Prepare genotyping dataset for submission of VCF file to EVA
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#obligatory-meta-information-line">
+       Obligatory meta-information line :
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recommended-meta-information-lines">
+       Recommended meta-information lines :
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#in-case-of-adding-new-fields">
+       In case of adding new fields :
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-8-submit-vcf-file-to-eva">
+     Step 8: Submit VCF file to EVA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licence">
+   Licence
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="plant-genomic-and-genetic-variation-data-submission-to-embl-ebi-databases">
+<h1>Plant genomic and genetic variation data submission to EMBL-EBI databases<a class="headerlink" href="#plant-genomic-and-genetic-variation-data-submission-to-embl-ebi-databases" title="Permalink to this headline">¶</a></h1>
+<br>
+<br>
+<br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Plant genomic and genetic variation data submission to EMBL-EBI", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB0XX", "url": "https://w3id.org/faircookbook/FCB0XX"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+30 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Plant genomic and genetic variation data submission to EMBL-EBI</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Everyone</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-3">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-2.3R].md">[F+MM-2.3R]</a>
+ <a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-3.3C].md">[F+MM-3.3C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB0XX" class="text--purple-dark">FCB0XX
+</a></div>
+</div>
+</div>
+<div class="section" id="main-objective">
+<h2>Main Objective<a class="headerlink" href="#main-objective" title="Permalink to this headline">¶</a></h2>
+<p>Plant genotyping and phenotyping data are often used in combination to make evidence-based inferences about different
+trait expressions.
+A challenge here is not necessarily to collect the data, but to offer them in a stable way over the
+long term in public repositories with sufficient metadata information to make conclusions about them, in line with FAIR
+principles.
+Since these repositories are often not linked directly, it is even more important to provide metadata that
+allows users to recognise these links by their identifiers.
+A key point here is sample management:  the identifiers assigned here help both humans and machines to understand
+which experimental data are linked.</p>
+<p>The main objective of the recipe is to provide a means of submitting to public repositories and tracking genotyping
+data, with a particular focus on plants.  This includes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1) Submission of sample data and metadata information to BioSamples.
+2) Submission of sequencing data and metadata to ENA.
+3) Retrieval of the correct genome assembly for the genotyping experiment
+4) Conversion of the resulting analysis file (in VCF format) to be FAIR
+5) Submission of the genotyping results to EVA.
+</pre></div>
+</div>
+<p>In terms of FAIRification goals, this means obtaining stable, resolvable  identifiers for the datasets and meeting
+community annotation requirements as expressed in the MIAPPE requirements.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This recipe provides guidance for submitting plant genotyping data to public repositories. It explains in a step-wise
+fashion which work should be done and when. Special attention should be paid to the metadata maintenance of the data
+that will be deposited in different repositories as part of this recipe. A prerequisite for fully understanding
+this recipe is a basic knowledge of the <a class="reference external" href="https://fairsharing.org/bsg-s000543/">MIAPPE standard</a>.</p>
+<p>The exact listing of the metadata fields required for a FAIRification of the genotyping data set within a VCF file is
+also part of this recipe with examples and explanations (See details in Section 4.2).</p>
+</div>
+<div class="section" id="graphical-overview-of-the-fairification-objectives">
+<h2>Graphical overview of the FAIRification Objectives<a class="headerlink" href="#graphical-overview-of-the-fairification-objectives" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>FAIRification Objectives</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="fairification-objectives">
+<a class="reference internal image-reference" href="../../../_images/iqdjWqo.png"><img alt="FAIRification Objectives" src="../../../_images/iqdjWqo.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">FAIRification Objectives</span><a class="headerlink" href="#fairification-objectives" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+<div class="section" id="fairification-objectives-inputs-and-outputs">
+<h2>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Actions.Objectives.Tasks</p></th>
+<th class="head"><p>Input</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="http://edamontology.org/operation_3778">text annotation</a></p></td>
+<td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.nd9ce9">MIAPPE</a></p></td>
+<td><p><a class="reference external" href="http://edamontology.org/data_3779">annotated text</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://edamontology.org/operation_3434">conversion</a></p></td>
+<td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.cfzz0h">Variant File Format (.vcf)</a></p></td>
+<td><p><a class="reference external" href="http://edamontology.org/data_3779">annotated text</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://edamontology.org/operation_0336">format validation</a></p></td>
+<td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.cfzz0h">Variant File Format (.vcf)</a></p></td>
+<td><p><a class="reference external" href="http://edamontology.org/data_2048">report</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://edamontology.org/operation_0336">format validation</a></p></td>
+<td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.nd9ce9">MIAPPE</a></p></td>
+<td><p><a class="reference external" href="http://edamontology.org/data_2048">report</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-data-standards">
+<h2>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Formats</p></th>
+<th class="head"><p>Terminologies</p></th>
+<th class="head"><p>Model</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.r2ts5t">FASTQ</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.rz4vfg">FASTA</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.nd9ce9">MIAPPE</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.cfzz0h">Variant File Format (.vcf)</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ebi.ac.uk/biosamples/schemas/certification/plant-miappe.json">BioSamples - Plant MIAPPE checklist</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="table-of-software-and-tools">
+<h2>Table of Software and Tools<a class="headerlink" href="#table-of-software-and-tools" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ebi.ac.uk/biosamples/">BioSamples</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ebi.ac.uk/ena/browser/home">European Nucleotide Archive, ENA</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ebi.ac.uk/eva/">European Variation Archive,EVA</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.insdc.org/">International Nucleotide Sequence Database Collaboration</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/EBIvariation/vcf-validator/wiki/User%27s-Guide">VCF Validator</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://curl.se/">Curl</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="step-by-step-process">
+<h2>Step-by-Step Process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<!-- ### Step 1: Take DNA sample and register sample material at BioSamples -->
+<div class="section" id="step-1-take-dna-sample">
+<h3>Step 1: Take DNA sample<a class="headerlink" href="#step-1-take-dna-sample" title="Permalink to this headline">¶</a></h3>
+<p>The experimentalist takes a sample of plant biological material.
+The sample metadata are collected according to
+<em>the <a class="reference external" href="https://github.com/MIAPPE/MIAPPE/tree/master/MIAPPE_Checklist-Data-Model-v1.1">MIAPPE</a> specifications,
+Biological Material section</em>.
+It enriches minimal <a class="reference external" href="https://www.bioversityinternational.org/e-library/publications/detail/faobioversity-multi-crop-passport-descriptors-v21-mcpd-v21/">MCPD</a>
+fields with sample traceability information.</p>
+</div>
+<div class="section" id="step-2-register-sample-material-at-biosamples">
+<h3>Step 2: Register sample material at BioSamples<a class="headerlink" href="#step-2-register-sample-material-at-biosamples" title="Permalink to this headline">¶</a></h3>
+<p>This is done in general through JSON API (<a class="reference external" href="https://github.com/PBR/elixir-fondue-datathon/tree/master/test_data_set/BioSamples/scripts/python">Python</a>
+and <a class="reference external" href="https://github.com/PBR/elixir-fondue-datathon/tree/master/test_data_set/BioSamples/scripts/shell">Shell</a> commands are also available).
+Refer to the official <a class="reference external" href="https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_a_sample">documentation</a> for
+the complete details, for training material and slides regarding this, refer to <a class="footnote-reference brackets" href="#fondue-datathon" id="id1">3</a>.
+Here is the proposed procedure:</p>
+<ol class="simple">
+<li><p>Create a user account</p></li>
+</ol>
+<p>First you need an account to submit samples to EMBL-EBI BioSamples database. We recommend new users, or those planning
+to make downstream submissions to ENA, to use the Webin Authentication service. You can create a Webin account using
+<a class="reference external" href="https://www.ebi.ac.uk/ena/submit/sra/#home">Webin web interface</a>.
+Please refer to <a class="reference external" href="https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html">ENA documentation</a>
+for more details about creating an account.</p>
+<ol class="simple">
+<li><p>Login to the system and get a JSON Web Token (JWT)</p></li>
+</ol>
+<p>Webin uses JSON Web Token (JWT) for authentication. Use your login credentials to retrieve a JWT. You can either use
+the Webin <a class="reference external" href="https://www.ebi.ac.uk/ena/submit/webin/auth/swagger-ui/index.html?configUrl=/ena/submit/webin/auth/v3/api-docs/swagger-config">Swagger interface</a>
+(A) or a programmatic method (B):</p>
+<p>A: Go to <a class="reference external" href="https://www.ebi.ac.uk/ena/submit/webin/auth/swagger-ui/index.html?configUrl=/ena/submit/webin/auth/v3/api-docs/swagger-config#/AuthenticationAPI/getToken">Webin Swagger</a>
+and use POST /token endpoint to retrieve a JWT.</p>
+<p>B: Use CURL or a programmatic method.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span><span class="nv">TOKEN</span><span class="o">=</span><span class="k">$(</span>curl -X POST <span class="s2">&quot;https://www.ebi.ac.uk/ena/submit/webin/auth/token&quot;</span> -H <span class="s2">&quot;accept: */*&quot;</span> 
+-H <span class="s2">&quot;Content-Type: application/json&quot;</span> -d <span class="s2">&quot;{\&quot;authRealms\&quot;:[\&quot;ENA\&quot;],\&quot;password\&quot;:\&quot;PASSWORD\&quot;,\&quot;username\&quot;:\&quot;WEBIN_ID\&quot;}&quot;</span><span class="k">)</span><span class="sb">`</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Allocate accessions via the pre-accessioning endpoint.</p></li>
+</ol>
+<p>Use the pre-accessioning endpoint to reserve BioSamples ID. This will create  private, empty samples with future
+release dates. The only mandatory field for pre-accessioning is the sample name.</p>
+<p>The following CURL command returns 3 accessions as the body contains names for 3 samples.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>curl <span class="s1">&#39;https://www.ebi.ac.uk/biosamples/samples/bulk-accession?authProvider=WEBIN&#39;</span> 
+-i -X POST -H <span class="s2">&quot;Content-Type: application/json;charset=UTF-8&quot;</span> -H <span class="s2">&quot;Accept: application/hal+json&quot;</span> 
+-H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> -d <span class="s1">&#39;[{  &quot;name&quot; : &quot;FakeSample 1&quot;}, { &quot;name&quot; : &quot;FakeSample 2&quot;}, {  &quot;name&quot; : &quot;FakeSample 3&quot;}]&#39;</span><span class="sb">`</span>
+</pre></div>
+</div>
+<p>Please refer to the <a class="reference external" href="https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_a_sample">BioSamples documentation</a>.</p>
+<p>More general information is available on the RDMkit <a class="footnote-reference brackets" href="#rdmkit-plant-genomics-assembly" id="id2">1</a>.
+A specific checklist is used: <a class="reference external" href="https://www.ebi.ac.uk/biosamples/schemas/certification/plant-miappe.json">BioSamples - Plant MIAPPE checklist</a>.</p>
+<!-- ### Step 2: Sequence DNA sample and submit reads to ENA -->
+</div>
+<div class="section" id="step-3-perform-sequencing-of-dna-sample">
+<h3>Step 3: Perform sequencing of DNA sample<a class="headerlink" href="#step-3-perform-sequencing-of-dna-sample" title="Permalink to this headline">¶</a></h3>
+<p>The sequencing staff performs the sequencing of the DNA sample, which is followed by a quality control. The reads are
+then archived in the institutional Laboratory Information Management System (LIMS).</p>
+</div>
+<div class="section" id="step-4-register-and-submit-sequencing-reads-to-ena">
+<h3>Step 4: Register and submit sequencing reads to ENA<a class="headerlink" href="#step-4-register-and-submit-sequencing-reads-to-ena" title="Permalink to this headline">¶</a></h3>
+<p>Submit Sequencing reads to ENA, using BioSamples IDs to identify material.</p>
+<div class="section" id="the-study">
+<h4>4.1 The Study<a class="headerlink" href="#the-study" title="Permalink to this headline">¶</a></h4>
+<p>To begin, you should register a study. Recall that a study describes the purpose of the work you have done, groups other
+objects beneath it, and controls when the data becomes public. A study is required for all submissions to ENA.</p>
+<ol class="simple">
+<li><p>Log in to the <a class="reference external" href="https://www.ebi.ac.uk/ena/submit/sra/#home">Webin Submission Portal</a> with your Webin credentials.</p></li>
+<li><p>Click the ‘<strong>New Submission</strong>’ tab and find the ‘<strong>Register study (project)</strong>’ radio button. Click ‘<strong>Next</strong>’ to see
+the study registration interface</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>EMBL-EBI Webin Submission Interface</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="embl-ebi-webin-submission-interface">
+<a class="reference internal image-reference" href="../../../_images/JrDztCg.png"><img alt="EMBL-EBI Webin Submission Interface" src="../../../_images/JrDztCg.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">EMBL-EBI Webin Submission Interface</span><a class="headerlink" href="#embl-ebi-webin-submission-interface" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><ol class="simple">
+<li><p>The ‘<strong>Short Name</strong>’ field should be filled in with something brief and meaningful, e.g.:<em>barley_study_2021</em></p></li>
+<li><p>You should take time to provide a descriptive title and informative abstract for your own studies, but these can be
+edited later if needed. For now, use as your title: <em>GBS Study of Barley from &lt;Your Town/Lab&gt;</em></p></li>
+<li><p>When you have completed all required fields, click ‘<strong>Submit</strong>’ and then confirm.</p></li>
+<li><p>Now navigate to the ‘<strong>Studies</strong>’ tab to see the study you just registered. You might need to refresh the page!<br />
+Make a note of its accession numbers (<em>ERP#####</em>, <em>PRJEB#####</em>), which will resemble. For a submission, these would be
+the numbers you would cite in any publications involving the data.</p></li>
+</ol>
+</div>
+<div class="section" id="the-sample">
+<h4>4.2 The Sample<a class="headerlink" href="#the-sample" title="Permalink to this headline">¶</a></h4>
+<p>The next step is to register the sample, which will give other users essential context for the sequence data you are
+submitting. The sample describes the source biological material of your sequencing work.</p>
+<p>As discussed above, <strong>samples are best submitted through BioSamples</strong>.</p>
+<p>In ENA, samples are required to conform to a checklist of values. Checklists define a set of mandatory and recommended
+descriptor fields for a given type of sample. It is recommended that you look at these early and make sure you collect
+all required metadata items for the type of sample you will be registering.</p>
+<p>The selection of available checklists can be browsed at: <a class="reference external" href="https://www.ebi.ac.uk/ena/browser/checklists">https://www.ebi.ac.uk/ena/browser/checklists</a>.
+Currently, three plant specific checklists are available: <a class="reference external" href="https://www.ebi.ac.uk/ena/browser/view/ERC000020">ERC000020</a>, <a class="reference external" href="https://www.ebi.ac.uk/ena/browser/view/ERC000035">ERC000035</a> and <a class="reference external" href="https://www.ebi.ac.uk/ena/browser/view/ERC000037">ERC000037</a>.</p>
+<ol>
+<li><p>Return to the ‘<strong>New Submission</strong>’ tab in the submission service. You may need to click the ‘<strong>Restart Submission</strong>’
+button at the bottom of the page.</p></li>
+<li><p>Find the ‘<strong>Register samples</strong>’ radio button and click <strong>‘Next’</strong>.</p></li>
+<li><p>You must choose an appropriate checklist of values to be provided for your sample: click ‘<strong>Select checklist</strong>’ and
+expand the ‘<strong>Other checklists</strong>’ group to browse checklists of this type.</p></li>
+<li><p>Select the appropriate checklist. For general purposes ERC000037 (<strong>‘ENA Plant Sample Checklist’</strong>) should be the
+default when submitting plant sequencing data. Now click ‘<strong>Next</strong>’.
+add an image of the web ui for <a class="reference external" href="https://www.ebi.ac.uk/ena/browser/view/ERC000037">https://www.ebi.ac.uk/ena/browser/view/ERC000037</a></p></li>
+<li><p>Submitters now have the option of including additional fields in their checklist. It is not necessary to include any
+additional fields, but you can take this opportunity to see which fields are included by default, what requirements they have, and what else is available.</p>
+<p>Click ‘<strong>Next</strong>’.</p>
+</li>
+<li><p>Now you have the opportunity to construct a template for a submission of many samples: notice the phrase
+‘<strong>Template Basic Details</strong>’ at the top of the interface. This allows you to define values which are common to all
+samples in your submission.</p>
+<p>Since we are only submitting one sample, skip this screen by clicking ‘<strong>Next</strong>’.</p>
+</li>
+<li><p>On the next screen, click the ‘<strong>+ Add</strong>’ button to create your sample.</p></li>
+<li><p>Give a ‘Unique name’ to your sample:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> barley_sample_1
+</pre></div>
+</div>
+<p><strong>Hint:</strong> This value must always be unique among all samples submitted by your account!</p>
+</li>
+<li><p>Give your sample a title, e.g.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Barley sample from &lt;Your Town/Lab&gt; greenhouse
+</pre></div>
+</div>
+</li>
+<li><p>Write a brief description for your sample.</p></li>
+<li><p>Find the appropriate taxon for your sample: For example enter ‘<strong>Hordeum vulgare</strong>’ into the box and select it
+when it appears.</p>
+<p>Further taxonomic details are automatically filled below this box. This box will only accept values which match with
+a species-rank entry in the <a class="reference external" href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy database</a>.</p>
+</li>
+<li><p>Fill out the remaining details by reference to the values to the best of your knowledge. Only fields marked with
+a ***** are required, but it is best to fill as many fields as possible.</p></li>
+</ol>
+<p>Use a markdown directive (note: not supported by hackMD but supported by jupyter notebook)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can always find out more about what a field means and what information it accepts by hovering over the blue ‘i’.</p>
+</div>
+<ol>
+<li><p>By the time you have completed this, your sample will be well-annotated and     understandable to people finding it
+in the database later.</p>
+<p>You are ready to submit when all the checks on the right of the page are green ticks, and none are red crosses.</p>
+<p>Click ‘<strong>Submit</strong>’.</p>
+</li>
+<li><p>Now navigate to the ‘Samples’ tab to see the sample you just registered. You might need to refresh the page.</p>
+<p>Make a note of its accession numbers as you will need these later:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ERS####### and SAMEA####### 
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="the-read-data">
+<h4>4.3 The Read Data<a class="headerlink" href="#the-read-data" title="Permalink to this headline">¶</a></h4>
+<p>Now that study and sample metadata have been registered, it is time to submit the read data you have produced.</p>
+<ol>
+<li><p>Return to the ‘<strong>New Submission</strong>’ tab in the submission service. You may need to click the ‘<strong>Restart Submission</strong>’
+button at the bottom of the page.</p></li>
+<li><p>Find the ‘<strong>Submit sequence reads and experiments</strong>’ radio button and click</p></li>
+<li><p>Next, you are asked to choose which study these reads should be added to. Select the study you registered earlier and
+click ‘<strong>Next</strong>’.</p></li>
+<li><p>Now, you have the opportunity to register samples as part of this submission. However, you already registered a
+sample, so click ‘<strong>Skip</strong>’.</p></li>
+<li><p>Now, select ‘<strong>One Fastq file (Single)</strong>’ from the list of file options.</p></li>
+<li><p>Fill out the form to describe your experiments and register the files. Ordinarily, you would need to upload the files
+to a staging area before submitting them through this interface, refer to the <a class="reference external" href="https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html">ENA upload guidelines</a>.</p>
+<p>Appropriate metadata for your read data submission should look similar to this:</p>
+<ul class="simple">
+<li><p><strong>Sample reference:</strong> <em><enter the BioSamples accession here></em></p></li>
+<li><p><strong>Instrument Model:</strong> Illumina HiSeq 2500</p></li>
+<li><p><strong>Library Name:</strong> barley_library_1</p></li>
+<li><p><strong>Library Source:</strong> GENOMIC</p></li>
+<li><p><strong>Library Selection:</strong> Restriction Digest</p></li>
+<li><p><strong>Library Strategy:</strong> GBS</p></li>
+<li><p><strong>Library Layout:</strong> SINGLE</p></li>
+<li><p><strong>First File Name:</strong> HOR_1361_BRG.fastq.gz</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you did not note down your sample accession, you can safely visit the ‘<strong>Samples</strong>’ tab, copy the accession,
+then return to the New Submission tab: your progress will be saved.</p>
+</div>
+<ol class="simple">
+<li><p>Click ‘<strong>Submit</strong>’ and see if your submission validates successfully. If you encounter errors, try using the
+‘<strong>Download Template Spreadsheet’</strong> button, open the file and check it in this plain text format;
+it can be easier to fix errors this way than in the interface.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the use of template spreadsheets is the best way to submit multiple datasets through this interface.</p>
+</div>
+<ol class="simple">
+<li><p>If you manage to complete your submission, visit the ‘Runs’ tab to review your submission.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="step-5-check-if-used-reference-genome-assembly-is-available">
+<h3>Step 5: Check if used reference genome assembly is available<a class="headerlink" href="#step-5-check-if-used-reference-genome-assembly-is-available" title="Permalink to this headline">¶</a></h3>
+<p>Is a GCF / GCA accession number available ? Check on <a class="reference external" href="https://www.ebi.ac.uk/ena/browser">https://www.ebi.ac.uk/ena/browser</a>.</p>
+<ul class="simple">
+<li><p>If yes, proceed directly to VCF submission at step 4.</p></li>
+<li><p>If no, <a class="reference external" href="https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html">submit reference genome assembly</a>
+to <a class="reference external" href="https://www.insdc.org/">INSDC</a> (NCBI Genbank / EMBL-EBI ENA / DDBJ) and wait until accession number is issued,
+then proceed to step 4.</p></li>
+</ul>
+<!-- ### Step 6: Analyse sequencing results and submit VCF file to EVA -->
+</div>
+<div class="section" id="step-6-analyse-sequencing-results">
+<h3>Step 6: Analyse sequencing results<a class="headerlink" href="#step-6-analyse-sequencing-results" title="Permalink to this headline">¶</a></h3>
+<p>The bioinformatician performs the computational analysis, then the genotyping results are archived into the LIMS.</p>
+</div>
+<div class="section" id="step-7-prepare-genotyping-dataset-for-submission-of-vcf-file-to-eva">
+<h3>Step 7: Prepare genotyping dataset for submission of VCF file to EVA<a class="headerlink" href="#step-7-prepare-genotyping-dataset-for-submission-of-vcf-file-to-eva" title="Permalink to this headline">¶</a></h3>
+<p>In order to ensure interoperability of VCF files, in accordance with the good practice outlined in
+<a class="footnote-reference brackets" href="#beier-f1000r-2022" id="id3">2</a>, the following VCF meta-information lines should be used:</p>
+<div class="section" id="obligatory-meta-information-line">
+<h4>Obligatory meta-information line :<a class="headerlink" href="#obligatory-meta-information-line" title="Permalink to this headline">¶</a></h4>
+<p><strong>##fileformat</strong> : file format.</p>
+<blockquote>
+<div><p>Example:
+<code class="docutils literal notranslate"><span class="pre">##fileformat=VCFv4.3</span>&#160; </code></p>
+</div></blockquote>
+</div>
+<div class="section" id="recommended-meta-information-lines">
+<h4>Recommended meta-information lines :<a class="headerlink" href="#recommended-meta-information-lines" title="Permalink to this headline">¶</a></h4>
+<p><strong>##fileDate(Date)</strong>: creation date of the VCF in the basic form without separator: YYYYMMDD</p>
+<blockquote>
+<div><p>Example:
+<code class="docutils literal notranslate"><span class="pre">##fileDate=20120921</span></code></p>
+</div></blockquote>
+<p><strong>##bioinformatics_source (URL or URI)</strong>: Analytic approach usually consisting of chains of bioinformatics tools for
+creating the VCF file specified as the DOI of a publication, or more generally as URL/URI, like a public repository for
+the scripts used. The preferred way to describe this would be to use <a class="reference external" href="http://WorkflowHub.eu">WorkflowHub.eu</a> (possibly in CWL format) and to be
+fully transparent about the bioinformatics toolchain used to generate the results.</p>
+<blockquote>
+<div><p>Example:
+<code class="docutils literal notranslate"><span class="pre">##bioinformatics_source=&quot;doi.org/10.1038/s41588-018-0266-x&quot;</span></code></p>
+</div></blockquote>
+<p><strong>##reference_ac (assembly_accession)</strong>: accession number, including the version, of the reference sequence on
+which the variation data of the present VCF is based.</p>
+<blockquote>
+<div><p>Example:
+<code class="docutils literal notranslate"><span class="pre">##reference_ac=GCA_902498975.1</span> </code></p>
+</div></blockquote>
+<p><strong>##reference_url (DOI)</strong>: a DOI (or URL/URI) for downloading of this reference genome, preferably from one INSDC archive.</p>
+<blockquote>
+<div><p>Example:
+<code class="docutils literal notranslate"><span class="pre">##reference_url=&quot;ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/498/975/GCA_902498975.1_Morex_v2.0/GCA_902498975.1_Morex_v2.0_genomic.fna.gz&quot;</span></code></p>
+</div></blockquote>
+<p><strong>##contig (&lt;ID=ctg1, length=sequence_length, assembly=gca_accession, md5=md5_hash, species=NCBITaxon:id&gt;)</strong> :
+The individual sequence(s) of the reference genome.</p>
+<blockquote>
+<div><p>Example:
+<code class="docutils literal notranslate"><span class="pre">##contig=&lt;ID=chr1H,length=522466905,assembly=GCA_902498975.1,md5=8d21a35cc68340ecf40e2a8dec9428fa,species=NCBITaxon:4513&gt;</span></code></p>
+</div></blockquote>
+<p><strong>##SAMPLE(&lt;ID=<span class="math notranslate nohighlight">\(BioSample_accession, DOI=\)</span>url, ext_ID=$registry:identifier&gt;)</strong> : Describe the material whose variants
+are given in the genotype call columns in greater detail and can be extended using the specifications of the VCF format.</p>
+<p>In case no DOI exists and the material is held by a FAO-WIEWS (<a class="reference external" href="https://www.fao.org/wiews/background/en/">https://www.fao.org/wiews/background/en/</a>)
+recognised institution, the external ID consists of the FAO-WIEWS instcode, the genus and the accession number (see example 2).
+If the database is not registered with FAO-WIEWS and is not available under a DOI, the DNS of the holding institution,
+the database identifier, the identifier scheme and the identifier value should be provided (see example 3).
+For multiple external IDs the field should be used multiple times (delimited by commas).</p>
+<blockquote>
+<div><p>Examples:</p>
+<ul>
+<li><p>One genotype from a barley (<em>Hordeum vulgare</em>) GBS experiment with a DOI registered.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`##SAMPLE=&lt;ID=SAMEA104646767,DOI=&quot;doi.org/10.25642/IPK/GBIS/7811152&quot;&gt;`
+</pre></div>
+</div>
+</li>
+<li><p>One genotype from a barley (<em>Hordeum vulgare</em>) GBS experiment with the FAO-WIEWS code available but no DOI.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`##SAMPLE=&lt;ID=SAMEA104646767,ext_ID=&quot;DEU146:Hordeum:HOR 1361 BRG&quot;&gt;`
+</pre></div>
+</div>
+</li>
+<li><p>One genotype from a barley (<em>Hordeum vulgare</em>) GBS experiment with no DOI and no FAO-WIEWS code available.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>##SAMPLE=&lt;ID=SAMEA104646767,ext_ID=&quot;ipk-gatersleben.de:GBIS:akzessionId:7811152&quot;&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="in-case-of-adding-new-fields">
+<h4>In case of adding new fields :<a class="headerlink" href="#in-case-of-adding-new-fields" title="Permalink to this headline">¶</a></h4>
+<p>Please check the official format specifications to avoid redundancy and possible incompatibilities.</p>
+</div>
+</div>
+<div class="section" id="step-8-submit-vcf-file-to-eva">
+<h3>Step 8: Submit VCF file to EVA<a class="headerlink" href="#step-8-submit-vcf-file-to-eva" title="Permalink to this headline">¶</a></h3>
+<p>Once the metadata and data has been formatted according to the specifications above, make sure that the resulting VCF
+file complies with VCF specifications.
+For that purpose, we propose the <a class="reference external" href="https://github.com/EBIvariation/vcf-validator">VCF validator tool on GitHub</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcf_validator -i /path/to/file.vcf
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcf_validator -i /path/to/compressed_file.vcf.gz
+</pre></div>
+</div>
+<p>Once the file has been fully validated without any error messages, you can submit the VCF file to EVA, using
+BioSamples IDs to identify the material, GCF/GCA accession for the reference genome assembly, and ENA accession numbers
+for the sequencing reads of the material used. Refer to the official <a class="reference external" href="https://www.ebi.ac.uk/eva/?Submit-Data">documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>At this point, the VCF contains metadata and data formatted for the purpose of better discoverability and higher
+interoperability.
+Data could thus be more easily read and evaluated automatically by machines, and it is made easier to
+connect different data sources with each other, so that in general a higher degree of FAIR has been achieved.</p>
+<div class="section" id="what-to-read-next">
+<h3>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><a class="reference external" href="https://w3id.org/faircookbook/FCB___">Learn to move through maturity levels with ISA metadata model</a></p>
+<p><a class="reference external" href="https://w3id.org/faircookbook/FCB035">Learn to move expression allowed data use with ODRL and DUO</a></p>
+<p><a class="reference external" href="https://w3id.org/faircookbook/FCB___">Learn to make computational workflows FAIR</a></p>
+<p><a class="reference internal" href="../reusability.html"><span class="doc std std-doc">Check the following resources:</span></a></p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header bg-primary pa_dark docutils">
+<a class="reference internal image-reference" href="../../../_images/RDMkit_logo_inverted.svg" id="rdmtoolkit-logo"><img alt="../../../_images/RDMkit_logo_inverted.svg" height="40px" id="rdmtoolkit-logo" src="../../../_images/RDMkit_logo_inverted.svg" /></a>
+</div>
+<div class="card-body grey docutils">
+<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/plant_genomics_assembly.html">More about <code class="docutils literal notranslate"><span class="pre">Plant</span> <span class="pre">Genomics</span></code> from the <code class="docutils literal notranslate"><span class="pre">RDM</span> <span class="pre">Toolkit</span></code></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/reusability/miappe-0"><dl class="footnote brackets">
+<dt class="label" id="rdmkit-plant-genomics-assembly"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p class="card-text">A. F. Adam-Blondon, C. Pommier, D. Faria, E. Le Floch, P. Lieby, and S. Beier. Tool assembly - Plant Genomics. URL: <a class="reference external" href="https://rdmkit.elixir-europe.org/plant_genomics_assembly.html">https://rdmkit.elixir-europe.org/plant_genomics_assembly.html</a>.</p>
+</dd>
+<dt class="label" id="beier-f1000r-2022"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p class="card-text">S. Beier, A. Fiebig, C. Pommier, I. Liyanage, M. Lange, P. J. Kersey, S. Weise, R. Finkers, B. Koylass, T. Cezard, M. Courtot, B. Contreras-Moreira, G. Naamati, S. Dyer, and U. Scholz. Recommendations for the formatting of Variant Call Format (VCF) files to make plant genotyping data FAIR [version 1; peer review: 1 approved with reservations]. <em>F1000Res</em>, 2022. <a class="reference external" href="https://doi.org/10.12688/f1000research.109080.1">doi:10.12688/f1000research.109080.1</a>.</p>
+</dd>
+<dt class="label" id="fondue-datathon"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
+<dd><p class="card-text">M. Brouwer, C. Pommier, A. Fiebig, S. Beier, M. van Kaauwen, I. Liyanage, S. Holt, F. Xu, and B. Koylass. ELIXIR FONDUE Datathon. URL: <a class="reference external" href="https://github.com/PBR/elixir-fondue-datathon">https://github.com/PBR/elixir-fondue-datathon</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</details></div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/sebeier"></img><div class="d-block">Sebastian Beier</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-2177-8781"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Bioinformatics and Information Technology Group, Leibniz Institute of Plant Genetics and Crop Plant Research (IPK), 06466 Seeland, Germany</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/cpommier"></img><div class="d-block">Cyril Pommier</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-9040-8733"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Writing</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/ErwanLeFloch"></img><div class="d-block">Erwan LeFloch</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-1010-6859"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Université Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics facility, 78026, Versailles, France</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Writing</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/tburdett"></img><div class="d-block">Isuru Liyanage</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-4839-5158"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">EMBL-EBI</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/embl.png" ></img></p></td>
+<td><p class="card-text">Writing</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/fuqix"></img><div class="d-block">Fuqi Xu</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-5923-3859"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">EMBL-EBI</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/embl.png" ></img></p></td>
+<td><p class="card-text">Review &amp; Editing</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="licence">
+<h2>Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/reusability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../maturity.html" title="previous page">Maturity Models</a>
+    <a class='right-next' id="next-link" href="../maturity/isa-maturity-progression.html" title="next page">Maturity Progression</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

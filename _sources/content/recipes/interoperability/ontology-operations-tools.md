@@ -1,6 +1,8 @@
 (fcb-interop-onto-op)=
 # Ontology-related tools and services
 
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB022
@@ -8,7 +10,9 @@
 :difficulty_level: 5
 :recipe_type: survey_review
 :reading_time_minutes: 15
-:intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager  
+:intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager 
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Ontology-related tools and services
 ```` 
@@ -58,11 +62,20 @@ For an updated contents, please check the [FAIR tooling repository](https://gith
 ## Overview
 
 The figure below shows different ontology-related operations and their relationships, together with related tools and recipes.
- 
-```{figure_fairplus} ontology-operations-mermaid.png
-name: fcb-interop-onto-op-figure1
-subtitle: Overview of key aspects in ontology associated processes
+
+
+````{dropdown} 
+:open: 
+```{figure} ontology-operations-mermaid.png
+---
+width: 700px
+name: Overview of key aspects in ontology associated processes
+alt: Overview of key aspects in ontology associated processes
+---
+Overview of key aspects in ontology associated processes
 ```
+````
+
 The table below is an overview of ontology strategies tools identified. Details of each tools are provided below.
 
 |         Topic        |       Curated tools      |   Related tools in Bio.tools   |
@@ -198,7 +211,12 @@ To show how these tools can be used in real life examples, please check the rela
 <!-- - [Which vocabulary to use?](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html)
 - [Building an application ontology with Robot](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html) -->
 
----
+
+## References
+````{dropdown} **References**
+
+````
+
 
 ## Authors
 
@@ -210,7 +228,6 @@ Philippe: Writing - Review & Editing
 ````
 
 
----
 
 ## License
 

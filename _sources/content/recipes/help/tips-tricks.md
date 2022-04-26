@@ -12,12 +12,12 @@ The main purpose of this recipe is:
 
 ---
 ## 1. HackMD help and Documentation
-
+    
 If you are new the Markdown and HackMD, you may find the following to link quite valuable in getting you off the ground
 
 1. [HackMD feature](https://hackmd.io/s/features)
 
-Consider this a reference point as it really provides excellent basis for a successfull interaction with HackMD and Markdown.
+Consider this a reference point as it really provides excellent basis for a successful interaction with HackMD and Markdown.
 
 2. [MarkDown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
@@ -25,12 +25,19 @@ There are many such references online. This one is actually pretty good.
 
 3. [Emoji for Markdown cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet)
 
-For instance, if you'd like add a `warning` site, you can do th e following:
-
-```:warning:```
+For instance, if you'd like add a **warning** site, you can do th e following:
+````
+```{warning}
+put a note in this section
+```
+````
 which should be rendered as this sign:
 
-:warning:
+```{warning}
+This is a warning note.
+```
+This correspond to sphinx directive and more information is available from the jupyter-book
+
 
 ## 2. Styling Mermaid Flowchart:
 
@@ -40,7 +47,7 @@ We however provide some help with examples below
 
 ### Problem 1: My text is long and the box becomes huge
 
-use an html `<br>` tag to add a new line in the box, like so:
+use an html **<br>** tag to add a new line in the box, like so:
 
 ```
 subgraph one
@@ -54,8 +61,8 @@ subgraph one
 
 ### Problem 2: how to change font, box color?
 
-Use styling for the element using the `classDef` following by a short-name for this style.
-The mermaid element (boxes) can then be suffixed with that short-name using the triple colon `:::` as syntax marker.
+Use styling for the element using the **classDef** following by a short-name for this style.
+The mermaid element (boxes) can then be suffixed with that short-name using the triple colon **:::** as syntax marker.
 
 ```
 subgraph one
@@ -67,10 +74,11 @@ subgraph one
 ```
 ### Problem 3: how to change the color of the connectors?
 
-Use the `linkStyle` element.
-:warning: make sure to provide the right number of connector as comma separated integers. If you get an error, it is often down to a discrepancy on this parameter.
+Use the **linkStyle** element.
+:warning: make sure to provide the right number of connector as comma separated integers. 
+If you get an error, it is often down to a discrepancy on this parameter.
 
-The other argument are regular `CSS` like styling.
+The other argument are regular **CSS** like styling.
 
 ```
 subgraph one
@@ -95,7 +103,22 @@ To cut on the hardship, simply using the following online [Markdown table genera
 
 ![](/images/Pek2BoQ.png)
 
-The component is intuitive to use and support copy and pate from say Excel for instance. Do the necessary tuning and then hit the `Generate` button to produce the Table in MarkDown format. 
+
+````{dropdown}
+:open:
+```{figure} /images/Pek2BoQ.png
+---
+width: 800px
+name: Markdown table generator
+alt: Markdown table generator
+---
+Markdown table generator
+```
+````   
+
+
+The component is intuitive to use and support copy and pate from say Excel for instance. Do the necessary tuning and
+then hit the **Generate** button to produce the Table in MarkDown format. 
 Then, click on the green 'copy to clipboard button', go back to your markdown editor or HackMD and paste.
 
 job done!
@@ -110,7 +133,7 @@ When using HackMD, images can be inserting using the common toolbar and these ar
 
 but sizing is not properly supported which leads to rendering issues.
 
-To solve the issue, the `best` course of action is to use an HTML `div` tag, which can be styled at will, as shown below:
+To solve the issue, the **best** course of action is to use an HTML **div** tag, which can be styled at will, as shown below:
 
 ```HTML
 <div> <img 
@@ -122,14 +145,14 @@ align="top" />
 </div>
 ```
 
-Adjust the `width` element to resize the image to something satisfying. 
+Adjust the **width** element to resize the image to something satisfying. 
 
 
 ---
 
-## How to create workflow figures
+## How to create flowchart diagrams
 
-one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
+We recommend using **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
 
 ```
 graph LR;
@@ -139,23 +162,27 @@ graph LR;
     C -->|No| E[Vendor locked Data]
 ```
 
----
+Be sure to save the diagram in a text file with an "mmd" extension. 
+These files are processed by the build process to generate either png or svg files using the mermaid command line interface.
 
 
 
-## Authors:
+## References
 
-| Name                                                                                                                                                                            | Orcid                                                                                                         | Affiliation              | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/proccaserra'><img class='avatar-style' src='https://avatars.githubusercontent.com/proccaserra'></img><div class="d-block">Philippe Rocca-Serra</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0001-9853-5668'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Original Draft|
-| <div class="firstCol"><a target="_blank" href='https://github.com/susannasansone'><img class='avatar-style' src='https://avatars.githubusercontent.com/susannasansone'></img><div class="d-block">Susanna-Assunta Sansone</div></a> </div> | <a target="_blank" href='https://orcid.org/0000-0001-5306-5690'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Funding acquisition
+````{dropdown} **References**
+````
 
----
+## Authors
+
+````{authors_fairplus}
+Philippe: Writing - Review & Editing
+Susanna: Writing - Review & Editing
+````
 
 
+## License
 
-## License:
+````{license_fairplus}
+CC-BY-4.0
+````
 
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>

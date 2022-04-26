@@ -1,7 +1,8 @@
 (fcb-help-recipe-template)=
 # Git recipe template
 
-+++
+
+<br/>
 <br/>
 
 ```{admonition} Important
@@ -45,6 +46,8 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 :recipe_type: background_information
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, funder
+:maturity_level: 2  
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Recipe Template
 ```` 
@@ -77,9 +80,13 @@ All the images will be generated as png files.
 Then reference the figure using the Alan Turing Institute style as shown below:
 
 
-```{figure_fairplus} ./images/C-3PO_droid.png
-name: fcb-help-recipe-template-figure1
-subtitle: C-3PO_droid
+```{figure} ./images/C-3PO_droid.png
+---
+width: 200px
+name: This is a Robot
+alt: C-3PO_droid
+---
+C-3PO_droid 
 ```
 
 
@@ -169,7 +176,7 @@ import holoview
 ````{admonition} Tip
 :class: tip
 
-If you need to include bibliograhic reference, use the following syntax: 
+If you need to include bibliographic reference, use the following syntax: 
 
 ```md
 {footcite}`Gu2020`
@@ -177,7 +184,8 @@ If you need to include bibliograhic reference, use the following syntax:
 
 ````
 
-This style of referencing will show up in text like this {footcite}`Gu2020`, and clicking on the link will take you to the `Reference`section at the bottom of the page.
+This style of referencing will show up in text like this {footcite}`Gu2020`, and clicking on the link will take you to
+the `Reference`section at the bottom of the page.
 
 
 ### ... create workflow figures
@@ -186,14 +194,18 @@ If you want to include figures, please use the following
 
 
 <!-- 
-```{figure_fairplus} ./my_figure.svg
-name: fcb-help-recipe-template-figure1
-subtitle: the proper caption for the figure.
+```{figure} ./my_figure.svg
+---
+width: 700px
+name: the figure title
+alt: something to display if the link to the figure is broken
+---
+the proper caption for the figure.
 ```
 -->
 
 one may use the following **[mermaid](https://mermaid-js.github.io/mermaid/#/)** syntax:
-
+`````
 ````{panels} 
 :container: container-lg pb-3
 :column: col-lg-12 p-2
@@ -207,6 +219,8 @@ graph LR;
     C -->|No| E[Vendor locked Data]
 ```
 ````
+`````
+
 which is then rendered like this:
 
 ````{panels} 
@@ -223,8 +237,8 @@ graph LR;
 </div>
 ````
 
-Authors of graphical representations using the mermaid syntax can also style their graphs, as shown below
-
+Authors of graphical representations using the mermaid syntax can also style their graphs, as shown below:
+`````
 ````{panels} 
 :container: container-lg pb-3
 :column: col-lg-12 p-2
@@ -240,7 +254,7 @@ graph TD;
     style D fill:#0A749B,stroke:#333,stroke-width:2px
 </div>
 ````
-
+`````
 
 ---
 
@@ -255,16 +269,44 @@ graph TD;
 > * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
   [my-prefered-label](fcb-help-recipe-template)
 
+````{note}
+To the Reviewers and Editors: The following panels show how to link with external resources such as :
+* The RDMtoolkit
+* The Pistoia Alliance
+* The Turing Way Book of Data Science
+````
 
----
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ../../../images/logos/pistoia_logo.png
+> :height: 40px
+> :align: center
+> :name: FAIRtoolkit_logo
+> ```
+> ^^^
+> [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+> ````
+
 
 ## References:
 
+````{dropdown} **References**
 ```{footbibliography}
 ```
+````
 
 
----
 
 ## Authors
 
@@ -289,18 +331,22 @@ List the recipe contributors following the structure below and using the CASRAI 
 
 ```{admonition} Important
 :class: tip
-this section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
+This section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
 ```
 
+````{note}
+Consult the python file [global_variables_fairplus.py](https://github.com/FAIRplus/the-fair-cookbook/blob/migrating/_ext/global_variables_fairplus.py)
+````
 
-| Name                                                                                                                                                                                                                                       | Orcid                                                                                                                        | Affiliation                           | Type                                                                              |                                                              Elixir Node                                                              | Credit Role
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|
-| <div class="firstCol"><a target="_blank" href='https://github.com/'><img class='avatar-style' src='https://avatars.githubusercontent.com/no_github'></img><div class="d-block">John Duff</div></a>  </div>         | <a target="_blank" href='https://orcid.org/0000-0000-0000-0000'><i class='fab fa-orcid fa-2x text--orange'></i></a> | University of Oxford     | <i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i> | <img class='elixir-style' src='/the-fair-cookbook/_static/images/logo/Elixir/ELIXIR-UK.svg' ></img> | Writing - Review & Editing, Conceptualization
 
----
+````{authors_fairplus}
+Philippe: Writing - Review & Editing
+Wei: Writing - Review & Editing
+````
+
 
 ## License
-
 ````{license_fairplus}
 CC-BY-4.0
 ````
+

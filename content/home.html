@@ -116,8 +116,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="recipes/introduction/priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="recipes/introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -131,19 +131,39 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="recipes/introduction/fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="recipes/introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="recipes/glossary-fair-terms.html">
+  <a class="reference internal" href="recipes/introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -174,7 +194,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="recipes/findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -194,17 +214,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="recipes/findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="recipes/findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="recipes/findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -465,34 +485,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="recipes/applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="recipes/maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="recipes/applied-examples/fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -500,28 +561,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="recipes/applied-examples/etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="recipes/applied-examples/nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="recipes/applied-examples/resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="recipes/applied-examples/ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="recipes/applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -531,7 +572,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="recipes/applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recipes/applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -541,14 +628,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="recipes/boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="recipes/afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="recipes/boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="recipes/afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="recipes/afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="recipes/afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -560,7 +661,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="recipes/boilerplate/contributing.html">
+    <a class="reference internal" href="recipes/afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -592,20 +693,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="recipes/help/myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="recipes/boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="recipes/introduction/the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -722,13 +809,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#licence">
-   Licence
+  <a class="reference internal nav-link" href="#how-to-cite-it">
+   How to cite it
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-cite-it">
-   How to cite it
+  <a class="reference internal nav-link" href="#license">
+   License
   </a>
   <ul class="nav section-nav flex-column">
   </ul>
@@ -746,15 +833,12 @@
               <div>
                 
   <div class="section" id="fair-cookbook">
-<span id="fcb-home"></span><h1>FAIR Cookbook<a class="headerlink" href="#fair-cookbook" title="Permalink to this headline">¶</a></h1>
+<h1>FAIR Cookbook<a class="headerlink" href="#fair-cookbook" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
-<p><strong>Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and Reusable (FAIR).</strong></p>
+<p><strong>Created by researchers and data managers professionals,
+the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable,
+Accessible, Interoperable and Reusable (FAIR).</strong></p>
 <hr class="docutils" />
-<!-- ## The official site -->
-<!-- Visit [https://fairplus.github.io/the-fair-cookbook](https://fairplus.github.io/the-fair-cookbook) to see the web friendly **work-in-progress** version of the **FAIR Cookbook**.
-
-🛢️🚧 **This project is still in early phase and this is work in progress** 🚧🛢️
- -->
 <!--
 ## The FAIR Cookbook overview
 
@@ -762,12 +846,19 @@
  <img src="/the-fair-cookbook/_static/images/logo/imi-logo-fairplus-v1.png" alt="drawing" style="width:60px;" border="1px solid black" align="top" />  under grant agreement #802750 (2019-22).
 * The FAIR Cookbook is a project aiming at collating protocols for making data FAIR and provide examples of IMI dataset FAIRification.
 * The FAIR Cookbook is open source and licensed under CC-BY-4.0
-* The FAIR Cookbook is written using Markdown and deployed using `jupyter-book`
-* the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as `FAIR recipes`, and supporting code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly (quarterly) in order to reflect the progress made by the project and the various working groups, which bring together `academic` and `industry` partners.
+* The FAIR Cookbook is written using Markdown and deployed using *jupyter-book*
+* the FAIR Cookbook is hosted on github. The repository hosts  documentation, known as `FAIR recipes`, and supporting
+code in the form of `jupyter notebooks` about **`FAIRification processes`** and the content will be released regularly 
+(quarterly) in order to reflect the progress made by the project and the various working groups, which bring together `academic` and `industry` partners.
 -->
 <div class="section" id="turning-fair-into-practice">
 <h2>Turning FAIR into practice<a class="headerlink" href="#turning-fair-into-practice" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">FAIR Principles</a> put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are aspirational and generic. The FAIR Cookbook guides <em><code class="docutils literal notranslate"><span class="pre">researchers</span></code></em> and <em><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">stewards</span></code></em> of the Life Science domain in their FAIRification journey; and also provides <em><code class="docutils literal notranslate"><span class="pre">policy</span> <span class="pre">makers</span></code></em> and <em><code class="docutils literal notranslate"><span class="pre">trainers</span></code></em> with practical examples to recommend in their guidance and use in their educational material.</p>
+<p>The <a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">FAIR Principles</a> put specific emphasis on enhancing the ability of machines
+to automatically find and use the data, in addition to supporting its reuse by individuals.
+However, the FAIR Principles are aspirational and generic.
+The FAIR Cookbook guides <em><strong>researchers</strong></em> and <em><strong>data stewards</strong></em>
+of the Life Science domain in their FAIRification journey; and also provides <em><strong>policymakers</strong></em> and <em><strong>trainers</strong></em> with
+practical examples to recommend in their guidance and use in their educational material.</p>
 <!-- 
 ## Persona-based content browsing
 
@@ -882,8 +973,12 @@
 </div>
 <div class="section" id="learning-objectives">
 <h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
-<p>The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and indicators of FAIRness, the maturity model, the technologies, the tools and the standards available, as well as the skills required, and the challenges, to achieve and improve FAIRness.</p>
-<!-- Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve FAIRness; learn about the skills required, as well as the challenges.  -->
+<p>The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and indicators of FAIRness,
+the maturity model, the technologies, the tools and the standards available, as well as the skills required, and the
+challenges, to achieve and improve FAIRness.</p>
+<!-- Learn how to FAIRify a number of exemplar IMI datasets, putting the FAIR principles in practices; learn about 
+levels and indicators of FAIRness; the maturity model, the technologies and tools available to assess and improve 
+FAIRness; learn about the skills required, as well as the challenges.  -->
 <!-- ## The FAIRification Process
 
 ````{panels}
@@ -898,8 +993,11 @@
 </div>
 <div class="section" id="the-recipes">
 <h2>The recipes<a class="headerlink" href="#the-recipes" title="Permalink to this headline">¶</a></h2>
-<p>The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and level of difficulty. The FAIR Cookbook is a ‘live resource’; recipes are added and improved, iteratively, in an open manner, therefore bear with us if several sections are work in progress!
-Below there are links to some key recipes, click on them to explore their content; otherwise use the main menu on the left hand side to browse all the current recipes.</p>
+<p>The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your role), reading time, and
+level of difficulty. The FAIR Cookbook is a <strong>live resource</strong>, meaning that content is added and improved, iteratively,
+in an open manner, therefore bear with us if several sections are work in progress!
+Below there are links to some key recipes, click on them to explore their content; otherwise use the main menu on the
+left-hand side to browse all the current recipes.</p>
 <div class="sphinx-bs container-xl docutils">
 <div class="row docutils">
 <div class="d-flex col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 docutils">
@@ -1000,7 +1098,7 @@ Below there are links to some key recipes, click on them to explore their conten
 </div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="container-lg miniCards">
     <div class="row">
         <div class="col-12 col-xl-4">
@@ -1009,43 +1107,50 @@ Below there are links to some key recipes, click on them to explore their conten
                     <h4 class="my-0 d-table text--purple-dark" id="infrastructure">
                         <span class="bigLetter text--purple-dark"> 
                             <i class="fas fa-toolbox text--purple-dark"></i> 
+                        </span>
+<span class="cardTitle">
+<div class="recipeItem mb-2">
+<p><a class="reference internal" href="recipes/infrastructure.html#fcb-infrastructure"><span class="std std-ref">Infrastructure</span></a></p>
+</div>
+</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="examples">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-book text--purple-dark"></i> 
+                        </span>
+<span class="cardTitle">
+<div class="recipeItem mb-2">
+<p><a class="reference internal" href="recipes/applied-examples.html#fcb-applied-examples"><span class="std std-ref">Applied Examples</span></a></p>
+<!-- {ref}`fcb-applied-examples` -->
+</div>
+</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card FAIRcard">
+                <div class="card-header">
+                    <h4 class="my-0 d-table text--purple-dark" id="assessments">
+                        <span class="bigLetter text--purple-dark"> 
+                            <i class="fas fa-tasks text--purple-dark"></i> 
                         </span> 
                         <span class="cardTitle">
-<p><a class="reference internal" href="recipes/infrastructure.html#fcb-infrastructure"><span class="std std-ref">Infrastructure</span></a>
-</span>
-</h4>
+<div class="recipeItem mb-2">
+<p><a class="reference internal" href="recipes/assessing-fairness.html#fcb-assess"><span class="std std-ref">Assessment</span></a></p>
 </div>
-</div>
-</div>
-<div class="col-12 col-xl-4">
-<div class="card FAIRcard">
-<div class="card-header">
-<h4 class="my-0 d-table text--purple-dark" id="examples">
-<span class="bigLetter text--purple-dark">
-<i class="fas fa-book text--purple-dark"></i>
-</span>
-<span class="cardTitle"></p>
-<p><a class="reference internal" href="recipes/applied-examples.html#fcb-applied-examples"><span class="std std-ref">Applied Examples</span></a>
-</span>
-</h4>
-</div>
-</div>
-</div>
-<div class="col-12 col-xl-4">
-<div class="card FAIRcard">
-<div class="card-header">
-<h4 class="my-0 d-table text--purple-dark" id="assessments">
-<span class="bigLetter text--purple-dark">
-<i class="fas fa-tasks text--purple-dark"></i>
-</span>
-<span class="cardTitle"></p>
-<p><a class="reference internal" href="recipes/assessing-fairness.html#fcb-assess"><span class="std std-ref">Assessment</span></a>
-</span>
-</h4>
-</div>
-</div>
-</div>
-</div></p>
+                     </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- 
 
@@ -1063,7 +1168,7 @@ Below there are links to some key recipes, click on them to explore their conten
 	<div class="card">
 	  <div class="container">
 	 	<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-	    <h4><b>Search Engine Optimitization</b></h4>
+	    <h4><b>Search Engine Optimization</b></h4>
 	    <p>TODO: add text here</p>
 	  </span>
 	</span>
@@ -1209,23 +1314,45 @@ Below there are links to some key recipes, click on them to explore their conten
   </span>
 </span>
  
- -->
+-->
 <hr class="docutils" />
 <!-- ![](/cookbook-dev/assets/images//logo/imi-logo-fairplus-v1.png 50px) -->
 </div>
 <div class="section" id="contributors">
 <h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
-<p>The FAIR Cookbook is developed by a thriving <a class="reference internal" href="recipes/community.html#fcb-community"><span class="std std-ref">community of Life Science professionals</span></a>, in the academia and the industry sectors, including members of the ELIXIR community. Funded by the <a class="reference external" href="https://fairplus-project.eu/">IMI FAIRplus project</a>, a private-public partnership, the FAIR Cookbook is a community-driven resource that is being populated and improved, iteratively, in an open manner. If you want to participate, join us and <a class="reference internal" href="recipes/help.html#fcb-help"><span class="std std-ref">contribute</span></a>, or contact us at <a class="reference external" href="mailto:fairplus-cookbook&#37;&#52;&#48;elixir-europe&#46;org">fairplus-cookbook<span>&#64;</span>elixir-europe<span>&#46;</span>org</a></p>
+<p>The FAIR Cookbook is developed by a thriving <a class="reference internal" href="recipes/community.html#fcb-community"><span class="std std-ref">community of Life Science professionals</span></a>,
+in the academia and the industry sectors, including members of the ELIXIR community.
+Funded by the <a class="reference external" href="https://fairplus-project.eu/">IMI FAIRplus project</a>, a private-public partnership, the FAIR Cookbook is
+a community-driven resource that is being populated and improved,
+iteratively, in an open manner. If you want to participate, join us and <a class="reference internal" href="recipes/help.html#fcb-help"><span class="std std-ref">contribute</span></a>,
+or contact us at <a class="reference external" href="mailto:fairplus-cookbook&#37;&#52;&#48;elixir-europe&#46;org">fairplus-cookbook<span>&#64;</span>elixir-europe<span>&#46;</span>org</a></p>
 </div>
 <hr class="docutils" />
-<div class="section" id="licence">
-<h2>Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
-<p>All content of the FAIR Cookbook is licensed under the <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
-</div>
 <div class="section" id="how-to-cite-it">
 <h2>How to cite it<a class="headerlink" href="#how-to-cite-it" title="Permalink to this headline">¶</a></h2>
-<p>The FAIR Cookbook: a deliverable of the <a class="reference external" href="https://fairplus-project.eu/">FAIRplus project</a> (grant agreement 802750), funded by the <a class="reference external" href="https://www.imi.europa.eu">IMI programme</a>, a private-public partnership that receives support from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies.</p>
+<p>The FAIR Cookbook: a deliverable of the <a class="reference external" href="https://fairplus-project.eu/">FAIRplus project</a> (grant agreement 802750),
+funded by the <a class="reference external" href="https://www.imi.europa.eu">IMI programme</a>, a private-public partnership that receives support
+from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -1272,7 +1399,7 @@ Below there are links to some key recipes, click on them to explore their conten
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

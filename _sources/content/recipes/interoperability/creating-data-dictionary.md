@@ -1,6 +1,8 @@
 (fcb-interop-datadictionary)=
 # Creating data/variable dictionary
 
+<br/>
+<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB025
@@ -8,7 +10,9 @@
 :difficulty_level: 3
 :recipe_type: technical_guidance
 :reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, data_scientist  
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: nope
 :recipe_name: Creating data/variable dictionary
 ```` 
@@ -44,10 +48,18 @@ A well defined data dictionary is essential for data curation and analysis. It s
 
 ## Graphical overview
 
-```{figure_fairplus} creating-data-dictionary.md-figure1.mmd
+
+````{dropdown} 
+:open:
+```{figure} creating-data-dictionary.md-figure1.mmd.png
+---
+width: 1000px
 name: creating-data-dictionary-figure1
-subtitle: Data Dictionary.
+alt: Data Dictionary
+---
+Data Dictionary.
 ```
+````
 
 ---
 
@@ -185,7 +197,7 @@ Depending on the persistence system, how this needs to be specified varies. We p
 While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary.
 The [FAIRplus project](https://fairplus-project.eu/) is in the process of working with the [Innovative Medicine Initiative](https://www.imi.europa.eu/) [APPROACH](https://www.approachproject.eu/) and [ABIRISK](http://www.abirisk.eu/) projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.
 
----
+
 ## Conclusion
 
 This recipe covered an essential output of any research program, **namely the documentation of all variables recorded about study subjects and key metadata descriptors used in subsequence analysis in the form of a `data dictionary`**.
@@ -207,7 +219,6 @@ Why? Simply because if affords several key data management processes to take pla
   -->
 
 
----
 
 ## Authors
 
@@ -217,8 +228,6 @@ Wei: Writing - Original Draft
 Philippe: Writing - Original Draft
 ````
 
-
----
 
 
 ## License

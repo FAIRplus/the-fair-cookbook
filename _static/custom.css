@@ -40,15 +40,15 @@ main.jupyter-page,
 main.c-textbook__page,
 div.col-12.col-md-3.bd-sidebar.site-navigation.show
 {
-    font-family: "Avenir", Avenir, serif;
+    font-family: "Avenir", Effra, serif;
 }
 
 body {
-    font-family: Courier, Helvetica, sans-serif;
+    font-family: Courier, Effra, sans-serif;
 }
 
 html, html *:not(i) {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto',Effra, sans-serif !important;
 }
 
 nav.c-textbook__sidebar {
@@ -272,8 +272,8 @@ img.imageez {
 img.avatar-style {
     object-fit: cover;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     box-shadow: 3px 3px 11px rgba(66, 28, 100, 0.36);
     margin-right: 20px;
 }
@@ -464,9 +464,9 @@ div#site-navigation li.active {
 }
 
 #prev-link, #next-link {
-    border-radius: 20px;
+    border-radius: 12px;
     border: 0;
-    padding: 10px 20px;
+    padding: 10px 12px;
 }
 
 #prev-link:hover, #next-link:hover {
@@ -613,24 +613,33 @@ details table tr td,
 details table tr th,
 #authors table tr td,
 #authors table tr th{
-    border-top: 1px solid #fc7a4a;
+    /*border-top: 1px solid #fc7a4a;*/
+    border-top: 1px solid #421C6E;
 }
 
 #authors table tr th,
 details table tr th {
-    border-bottom: 1px solid #fc7a4a;
+    /*border-bottom: 1px solid #fc7a4a;*/
+    border-bottom: 1px solid #421C6E;
 }
 
 #authors table tbody,
 details table tbody {
-    border-right: 1px solid #fc7a4a;
-    border-bottom: 1px solid #fc7a4a;
+    /*border-right: 1px solid #fc7a4a;*/
+    /*border-bottom: 1px solid #fc7a4a;*/
+    border-right: 1px solid #421C6E;
+    border-bottom: 1px solid #421C6E;
 }
 
 #authors table,
 details table{
     display: table;
-    border-left: 1px solid #fc7a4a;
+    /*border-left: 1px solid #fc7a4a;*/
+    border-left: 1px solid #421C6E;
+    border-collapse: separate;
+    border-left: 0;
+    border-radius: 4px;
+    border-spacing: 0px;
 }
 
 div.topbar div.bd-toc {
@@ -698,7 +707,7 @@ div.topbar div.tocsection {
 }
 
 img.avatar-style {
-    border: 4px solid #fc7a4a;
+    border: 2px solid #fc7a4a;
     display: block;
     margin: auto;
 }
@@ -790,7 +799,7 @@ nav.c-textbook__sidebar {
 #authors table tr th,
 details table tr th {
     color: white;
-    background: #fc7a4a;
+    background: #421C6E;
     border-bottom: 0 !important;
     min-width: 100px;
 }
@@ -885,6 +894,61 @@ div.topbar {
 .darkgrey {
     background: #2a2e3d !important;
 }
+
+.pa_dark {
+    /*background: #003a53 !important;*/
+    background: #e5e4e2 !important;
+}
+
+.white {
+    background: #fefefe !important;
+}
+
+.pa_green {
+    background:#28a6b8 !important;
+    /*background: #00998b !important;*/
+/**/
+}
+
+.lightgray {
+    background: #a4a6a7 !important;
+}
+
+
+/* ######################### */
+/** TOOLTIP **/
+/* */
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    /*display: block;*/
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    /*visibility: hidden;*/
+    width: 120px;
+    background-color: black;
+    color: red;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    top: -5px;
+    left: 105%;
+
+    /*!* Position the tooltip text - see examples below! *!*/
+    /*position: absolute;*/
+    /*z-index: 1;*/
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/* ----------------------------------- */
+
+
 
 /* ################################################## */
 /**                  RECIPE CARDS                    **/
@@ -997,6 +1061,11 @@ div.topbar {
     font-size: 42px;
 }
 
+.recipe .section .sectionIcon2 {
+    font-size: 42px;
+    color: orangered;
+}
+
 .recipe .card-footer {
     padding: 0 10px;
     text-align: right;
@@ -1004,6 +1073,25 @@ div.topbar {
     color: grey;
     background: transparent !important;
 }
+
+
+.bars {
+  width: 50px;
+  height: auto;
+}
+
+.bars path {
+  fill: darkgrey;
+}
+
+.level-1 path.bar1,
+.level-2 path.bar1, .level-2 path.bar2,
+.level-3 path.bar1, .level-3 path.bar2, .level-3 path.bar3,
+.level-4 path.bar1, .level-4 path.bar2, .level-4 path.bar3, .level-4 path.bar4,
+.level-5 path {
+   fill: orangered !important;
+}
+
 
 
 

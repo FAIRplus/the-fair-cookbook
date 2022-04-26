@@ -1,6 +1,9 @@
 (fcb-access-aspera)=
 # Downloading data with Aspera
 
+<br/>
+<br/>
+
 ````{panels_fairplus}
 :identifier_text: FCB015
 :identifier_link: http://w3id.org/faircookbook/FCB015
@@ -8,6 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
 :has_executable_code: yeah
 :recipe_name: Downloading data with Aspera 
 ```` 
@@ -20,10 +25,14 @@ This recipe covers documentation of the popular Aspera Fast Transfer Protocol an
 
 ## Graphical overview
 
-```{figure_fairplus} aspera.md-figure1.mmd
+````{dropdown}
+:open:
+```{figure} aspera.md-figure1.mmd
+width: 650px
 name: aspera-figure1
 subtitle: Aspera Data Transfer Process.
 ```
+````
 
 ---
 ## Obtain Aspera services
@@ -32,7 +41,7 @@ subtitle: Aspera Data Transfer Process.
 * Apply for access.
 * Pay attention to the conditions.
 * Sign up if you are the appropriate person for this download/upload. 
-* Typically Aspera sites are locked down and need a username and password.
+* Typically, Aspera sites are locked down and need a username and password.
 * For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.
  
 ### Decide how you are going to access the data
@@ -87,7 +96,7 @@ ascp version 3.9.6.176292
 
 * For uploading much of the above applies. The main differences are:
   * Be aware of geographical zoning and which areas to upload to.
-  * Prepare data for ease of tranfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).
+  * Prepare data for ease of transfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).
 
 <!-- TODO (needed - no real example yet)
 * Example command line for uploading
@@ -106,19 +115,21 @@ ascp version 3.9.6.176292
   - {ref}`fcb-sftp` 
   - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
 
----
+
+## References
+````{dropdown} **References** 
+````
 
 ## Authors
 
 ````{authors_fairplus}
-Peter: Writing - Original Draft
-Philippe: Writing - Review & Editing, Conceptualization
+Peter: Writing - Original Draft, Conceptualization
+Philippe: Writing - Review & Editing
 ````
-
---- 
 
 ## License
 
 ````{license_fairplus}
 CC-BY-4.0
 ````
+

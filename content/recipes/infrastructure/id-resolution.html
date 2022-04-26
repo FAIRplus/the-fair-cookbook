@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/id-resolution.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Identifier resolution services" />
-<meta property="og:description" content="Identifier resolution services  &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@typ" />
+<meta property="og:description" content="Identifier resolution services  &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}, &#34;@type&#34;" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,8 +117,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/priorization.html">
-   Selecting projects for FAIRification
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
@@ -132,19 +132,39 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/fair-cro.html">
-   Practical Considerations for CROs to play FAIR
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../glossary-fair-terms.html">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  RECIPES
+  FAIR RECIPES
  </span>
 </p>
 <ul class="current nav sidenav_l1">
@@ -175,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/registeringDatasets.html">
-     5. How to Register a Dataset with Wikidata
+     5. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
@@ -195,17 +215,17 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       8.8.1. Data page markup with Bioschemas
+       8.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       8.8.2. Dataset page markup with Schema.org
+       8.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       8.8.3. Data catalogue markup
+       8.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -466,34 +486,75 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../applied-examples.html">
-   Applied examples
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
-     1. Making omics data matrices FAIR
+     Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
-       1.11.1. Starting material
+       1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
-       1.11.2. Structuring data
+       2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
-       1.11.3. Exploring data with SPARQL
+       3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
-       1.11.4. Integrating data
+       4. Integrating data
       </a>
      </li>
     </ul>
@@ -501,28 +562,8 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
-     2. eTox - toxicity datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
-     3. nd4bb - chemical activities datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
-     4. Oncotrack - clinical cohort datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
-     5. ReSOLUTE - transcriptomics datasets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
-     6. EHDEN-OHDSI
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
     </a>
    </li>
   </ul>
@@ -532,7 +573,53 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  ABOUT
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -542,14 +629,28 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/people.html">
-     1. Boards and contributors
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/code_of_conduct.html">
-     2. Code of conduct
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
     </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -561,7 +662,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../boilerplate/contributing.html">
+    <a class="reference internal" href="../afterword/contributing.html">
      1. How to contribute
     </a>
    </li>
@@ -593,20 +694,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../help/myst.html">
      7. Markdown cheatsheet
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../boilerplate.html">
-   Platform
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/the-turing-way.html">
-     1. Leveraging the Turing Way Book
     </a>
    </li>
   </ul>
@@ -711,81 +798,47 @@
   <a class="reference internal nav-link" href="#introduction">
    1.2. Introduction
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identifier-resolution-enabling-persistence-through-indirection">
+   1.3. Identifier Resolution - Enabling persistence through indirection
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definitions">
-     1.2.1. Definitions
+    <a class="reference internal nav-link" href="#introducing-curies-or-compact-uris">
+     1.3.1. Introducing CURIES or Compact URIs
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#landing-pages">
-       1.2.1.1. Landing pages
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dns-service">
-       1.2.1.2. DNS service
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#what-is-resolution">
-       1.2.1.3. What is resolution
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-need-for-a-level-of-indirection">
-       1.2.1.4. The need for a level of indirection
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1.3.2. Identifier Resolution services
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#purl-stands-for-persistent-url">
-     1.2.2. PURL stands for Persistent URL
+     1.3.3. PURL stands for Persistent URL
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resolution-services">
-     1.2.3. Resolution Services
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#w3id">
-       1.2.3.1. w3id
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ezid">
-       1.2.3.2. ezID
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#identifiers-org">
-       1.2.3.3. identifiers.org
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   1.3. Conclusion
+   1.4. Conclusion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   1.4. References
+   1.5. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   1.5. Authors
+   1.6. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   1.6. License
+   1.7. License
   </a>
  </li>
 </ul>
@@ -803,8 +856,7 @@
   <div class="section" id="fcb-infra-idres">
 <span id="identifier-resolution-services"></span><h1><span class="section-number">1. </span>Identifier resolution services<a class="headerlink" href="#fcb-infra-idres" title="Permalink to this headline">¶</a></h1>
 <br/>
-<hr class="docutils" />
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Identifier resolution services", "audience": ["Principal Investigator", "Data Manager", "Data Scientist", "Funder"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Background information", "identifier": {"@type": "PropertyValue", "name": "FCB046", "url": "https://w3id.org/faircookbook/FCB046"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Identifier resolution services", "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Funder|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Background information", "identifier": {"@type": "PropertyValue", "name": "FCB046", "url": "https://w3id.org/faircookbook/FCB046"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -851,15 +903,29 @@ No
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue">Principal Investigator, Data Manager, Data Scientist, Funder</div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000571">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a>, Funder</div>
 </div>
 </div>
-<div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-2">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a>
+ <a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.2C].md">[F+MM-1.2C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
 <a href="https://w3id.org/faircookbook/FCB046" class="text--purple-dark">FCB046
 </a></div>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="main-objective">
 <h2><span class="section-number">1.1. </span>Main Objective<a class="headerlink" href="#main-objective" title="Permalink to this headline">¶</a></h2>
 <p>Linked Data require on URL and HTTP protocols to ensure linking.</p>
@@ -867,75 +933,158 @@ No
 <div class="section" id="introduction">
 <h2><span class="section-number">1.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>CoolURI don’t change</p>
-<div class="section" id="definitions">
-<h3><span class="section-number">1.2.1. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="landing-pages">
-<h4><span class="section-number">1.2.1.1. </span>Landing pages<a class="headerlink" href="#landing-pages" title="Permalink to this headline">¶</a></h4>
 </div>
-<div class="section" id="dns-service">
-<h4><span class="section-number">1.2.1.2. </span>DNS service<a class="headerlink" href="#dns-service" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="identifier-resolution-enabling-persistence-through-indirection">
+<h2><span class="section-number">1.3. </span>Identifier Resolution - Enabling persistence through indirection<a class="headerlink" href="#identifier-resolution-enabling-persistence-through-indirection" title="Permalink to this headline">¶</a></h2>
+<p>This relates to the following FAIR principle mentioned in the introduction:</p>
+<blockquote>
+<div><p>A1. (Meta)data are retrievable by their identifier using a standardised communications protocol.</p>
+</div></blockquote>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">URI</span> <span class="pre">resolution</span></code> is fundamentally about directing requests to the relevant identified entity.</strong></p>
 </div>
-<div class="section" id="what-is-resolution">
-<h4><span class="section-number">1.2.1.3. </span>What is resolution<a class="headerlink" href="#what-is-resolution" title="Permalink to this headline">¶</a></h4>
+<p>The standard approach would be resolving a <code class="docutils literal notranslate"><span class="pre">HTTP</span> <span class="pre">GET</span></code> request using content negotiation to choose between different representations of the resource.</p>
+<p>A PURL is a <strong><code class="docutils literal notranslate"><span class="pre">persistent</span> <span class="pre">URL</span></code></strong>, meaning that it provides a <strong>permanent address to access a resource on the web</strong>.</p>
+<p>To understand the notion of PURL, one needs to first get familiar with the notion of <code class="docutils literal notranslate"><span class="pre">url</span> <span class="pre">indirection</span></code> (also known as <code class="docutils literal notranslate"><span class="pre">url</span> <span class="pre">redirect</span></code> or <code class="docutils literal notranslate"><span class="pre">url</span> <span class="pre">forwarding</span></code> ), which refers to the practice of providing a stable, fixed web address/url, but setting it up so that it points to another content, which may be periodically modified.</p>
+<p>When a user retrieves a PURL, they will be <strong><code class="docutils literal notranslate"><span class="pre">redirected</span></code></strong> to the current location of the resource.
+When an author needs to move a page, they can update the PURL to point to the new location.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>The practice of <strong>indirection</strong> comes handy as it ensures invariant url address for resources which are known to change, owing to version changes for instance or owing to change in ownership.</p>
 </div>
-<div class="section" id="the-need-for-a-level-of-indirection">
-<h4><span class="section-number">1.2.1.4. </span>The need for a level of indirection<a class="headerlink" href="#the-need-for-a-level-of-indirection" title="Permalink to this headline">¶</a></h4>
+<p>We can see this practice in action with the reliance on <a class="reference external" href="http://purl.org">purl.org</a> url for identifying OBO Foundry resources. For instance, the following url <a class="reference external" href="http://purl.obolibrary.org/obo/stato.owl"><code class="docutils literal notranslate"><span class="pre">http://purl.obolibrary.org/obo/stato.owl</span></code></a> is a redirect to the latest release of the file, which is <a class="reference external" href="https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl">https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl</a>.</p>
+<p>PURLs with a <code class="docutils literal notranslate"><span class="pre">common</span> <span class="pre">prefix</span></code> are grouped together into <strong>domains</strong>. Each domain has a single maintainer who can add new PURLs to the domain and make changes to existing PURLs within the domain.</p>
+<p>FAIR Principle A1 states that:</p>
+<blockquote>
+<div><p>(meta)data should be retrievable by its identifier.</p>
+</div></blockquote>
+<p>When the identifier is not a resolvable URL, then <code class="docutils literal notranslate"><span class="pre">Identifier</span> <span class="pre">Resolution</span> <span class="pre">Services</span></code> are required that know how to map an IRI to a location for the data.</p>
+<div class="section" id="introducing-curies-or-compact-uris">
+<h3><span class="section-number">1.3.1. </span>Introducing CURIES or Compact URIs<a class="headerlink" href="#introducing-curies-or-compact-uris" title="Permalink to this headline">¶</a></h3>
+<p>CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Working Group Note <a class="reference external" href="https://www.w3.org/TR/2010/NOTE-curie-20101216/">CURIE Syntax 1.0</a>, and provide a human readable shortening of IRIs.</p>
+<p>The CURIE consists of a <strong><code class="docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">prefix</span></code></strong> followed by the <strong><code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">identifier</span></code></strong>.</p>
+<p>There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI <code class="docutils literal notranslate"><span class="pre">[doi:10.1038/sdata.2016.18]</span></code> refers to the FAIR Principles paper. The Digital Object Identifier System web site (<a class="reference external" href="https://www.doi.org/">https://www.doi.org/</a>) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI to the website.The client will be redirected to the URL where the resource about the concept is located, e.g. for the FAIR Data Principles paper we can use the URL <a class="reference external" href="https://www.doi.org/10.1038/sdata.2016.18">https://www.doi.org/10.1038/sdata.2016.18</a> to resolve the paper’s DOI. This results in the client being taken to the page at <a class="reference external" href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Namespaces</span></code> can be defined <em>by convention</em>, such as the case with <code class="docutils literal notranslate"><span class="pre">doi</span></code>, and registered with services to allow for the resolution of CURIEs (see <a class="reference external" href="##identifier-resolution-services">Identifier Resolution Services</a> below). These are extensively used to map CURIEs to URLs that can be resolved.</p>
+<p>Going back to our <em>Life Science context</em>, we can use the following CURIE <code class="docutils literal notranslate"><span class="pre">[uniprot:P38398]</span></code> to refer to the UniProt record for the protein.</p>
+<p>This is very useful for including unambiguous, global identifiers in scientific articles.</p>
 </div>
+<div class="section" id="id1">
+<h3><span class="section-number">1.3.2. </span>Identifier Resolution services<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><a class="reference external" href="https://archive.org/services/purl/">purl.org</a></p>
+<blockquote>
+<div><p>The PURL system is a service of the Internet Archive, which provides an interface to administer domain. For more information about the service, visit <a class="reference external" href="https://archive.org/services/purl/help">https://archive.org/services/purl/help</a></p>
+</div></blockquote>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="https://w3id.org/">w3ids</a></p>
+<blockquote>
+<div><p>Permanent Identifiers for the Web. Secure, permanent URLs for your Web application that will stand the test of time.</p>
+<ul class="simple">
+<li><p>authority registration service</p></li>
+<li><p>resolution service</p></li>
+<li><p>redirection service:</p></li>
+</ul>
+<p>Send a request to add a redirect to the <a class="reference external" href="mailto:public-perma-id&#37;&#52;&#48;w3&#46;org">public-perma-id<span>&#64;</span>w3<span>&#46;</span>org</a> mailing list. Make sure to include the URL that you want on <a class="reference external" href="http://w3id.org">w3id.org</a>, the URL that you want to redirect to, and the HTTP code that you want to use when redirecting. An administrator will then create the redirect for you.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="http://identifiers.org/">Identifiers.org</a></p>
+<blockquote>
+<div><p><a class="reference external" href="https://identifiers.org">Identifiers.org</a> is a <strong>Resolution Service</strong> provides consistent access to life science data using <a class="reference external" href="https://www.w3.org/TR/2010/NOTE-curie-20101216/"><code class="docutils literal notranslate"><span class="pre">Compact</span> <span class="pre">Uniform</span> <span class="pre">Resource</span> <span class="pre">Identifiers</span></code></a>, hosted by the EBI provides a resolution service, both as a web form and through the URL pattern <a class="footnote-reference brackets" href="#juty2012" id="id2">1</a>.
+<code class="docutils literal notranslate"><span class="pre">Compact</span> <span class="pre">Identifiers</span></code> consist of an <code class="docutils literal notranslate"><span class="pre">assigned</span></code>, <code class="docutils literal notranslate"><span class="pre">unique</span></code> <code class="docutils literal notranslate"><span class="pre">prefix</span></code> and a <code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">provider</span> <span class="pre">designated</span></code> <strong><code class="docutils literal notranslate"><span class="pre">accession</span> <span class="pre">number</span></code></strong> (prefix:accession).
+The resolving location of <code class="docutils literal notranslate"><span class="pre">Compact</span> <span class="pre">Identifiers</span></code> is determined using information that is stored in the <a class="reference external" href="http://identifiers.org/">Identifiers.org Registry</a>.
+Datasets can register their <em>namespace <code class="docutils literal notranslate"><span class="pre">prefix</span></code></em> together with their <code class="docutils literal notranslate"><span class="pre">identifier</span> <span class="pre">pattern</span></code>. The service can then be used in the same way as the DOI resolution service. So for the UniProt page about BRCA1, we can resolve the CURIE <code class="docutils literal notranslate"><span class="pre">[uniprot:P38938]</span></code> using <a class="reference external" href="http://Identifiers.org">Identifiers.org</a>. This means that the URL <a class="reference external" href="https://identifiers.org/uniprot:P38938">https://identifiers.org/uniprot:P38938</a> resolves to the UniProt page <a class="reference external" href="https://www.uniprot.org/uniprot/P38938">https://www.uniprot.org/uniprot/P38938</a>.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://n2t.net/">Name2Things</a></p>
+<blockquote>
+<div><p><a class="reference external" href="https://n2t.net/">Name2Things</a> (N2T) is a <strong>Resolution Service</strong>, maintained at the California Digital Library (CDL) within the University of California (UC) Office of the President. CDL supports electronic library services for ten UC campuses and affiliated law schools, medical centers, and national laboratories, as well as hundreds of museums, herbaria, botanical gardens, etc. Similar to URL shorteners like <a class="reference external" href="http://bit.ly">bit.ly</a>, N2T serves content <strong>indirectly</strong>.
+N2T can store more than one “target” (forwarding link) for an identifier, as well as any kind or amount of metadata (descriptive information)
+<a class="reference external" href="http://N2T.net">N2T.net</a> is also a “meta-resolver”. In collaboration with <a class="reference external" href="http://identifiers.org">identifiers.org</a>, it recognizes over 600 well-known identifier types and knows where their respective servers are. Failing to find forwarding information for a specific individual identifier, it uses the identifier’s type to look for an overall target rule.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://bioregistry.io/">Bioregistry</a></p>
+<blockquote>
+<div><p><a class="reference external" href="https://bioregistry.io/">Bioregistry</a> is a <strong>Resolution Service</strong>, developed in a <a class="reference external" href="https://github.com/biopragmatics/bioregistry">GitHub repository</a>. Like <a class="reference external" href="http://Identifiers.org">Identifiers.org</a> it has a registry, but also a registry of registries, and it imports data from <a class="reference external" href="http://Identifiers.org">Identifiers.org</a> and Name-to-Thing but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be <a class="reference external" href="https://github.com/biopragmatics/bioregistry/issues/new/choose">registered via GitHub issues</a>. Compact identifiers are supported and the URL <a class="reference external" href="https://bioregistry.io/chebi:138488">https://bioregistry.io/chebi:138488</a> resolves to the ChEBI page <a class="reference external" href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488">https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488</a>. Bioregistry provides an <a class="reference external" href="https://bioregistry.io/apidocs/">API to query the registry</a> itself.</p>
+</div></blockquote>
+</li>
+</ul>
 </div>
 <div class="section" id="purl-stands-for-persistent-url">
-<h3><span class="section-number">1.2.2. </span>PURL stands for Persistent URL<a class="headerlink" href="#purl-stands-for-persistent-url" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.3. </span>PURL stands for Persistent URL<a class="headerlink" href="#purl-stands-for-persistent-url" title="Permalink to this headline">¶</a></h3>
 <p>As defined in <a class="reference external" href="https://archive.org/services/purl/help">https://archive.org/services/purl/help</a>, PURL are <code class="docutils literal notranslate"><span class="pre">persistent</span> <span class="pre">URL</span></code> and they provide a permanent http address to access a  resource on the web [<a class="reference external" href="https://archive.org/services/purl/help">https://archive.org/services/purl/help</a>].
 The PURL service is administered by the Internet Archive. Users can request domains from the service under which to administer and mint persistent url.</p>
 </div>
-<div class="section" id="resolution-services">
-<h3><span class="section-number">1.2.3. </span>Resolution Services<a class="headerlink" href="#resolution-services" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="w3id">
-<h4><span class="section-number">1.2.3.1. </span>w3id<a class="headerlink" href="#w3id" title="Permalink to this headline">¶</a></h4>
-<p>A service provided by <a class="reference external" href="http://www.w3.org/community/perma-id/">W3C Permanent Identifier Community Group</a> to provide HTTPS based, secured identifiers for Linked Data and a resolution service supporting them.</p>
-<p>Refer to the community page for a complete guidance on how to create new identifiers.</p>
-</div>
-<div class="section" id="ezid">
-<h4><span class="section-number">1.2.3.2. </span><a class="reference external" href="https://ezid.cdlib.org/">ezID</a><a class="headerlink" href="#ezid" title="Permalink to this headline">¶</a></h4>
-</div>
-<div class="section" id="identifiers-org">
-<h4><span class="section-number">1.2.3.3. </span><a class="reference external" href="https://identifiers.org">identifiers.org</a><a class="headerlink" href="#identifiers-org" title="Permalink to this headline">¶</a></h4>
-</div>
-</div>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">1.3. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">1.4. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/infrastructure/id-resolution-0"><dl class="footnote brackets">
+<dt class="label" id="juty2012"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p class="card-text">N. Juty, N. Le Novère, and C. Laibe. Identifiers.org and MIRIAM Registry: community resources to provide persistent identification. <em>Nucleic Acids Res</em>, 40(Database issue):D580–586, Jan 2012.</p>
+</dd>
+</dl>
+</p>
 </div>
+</details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">1.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>ORCID</p></th>
-<th class="head"><p>Affiliation</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>ELIXIR Node</p></th>
-<th class="head"><p>Contribution</p></th>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><div class="firstCol"><a target="_blank" href="https://github.com/proccaserra"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
-<td><p><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p>University of Oxford</p></td>
-<td><p><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p>Writing - Original Draft</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="license">
-<h2><span class="section-number">1.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>This page is released under the Creative Commons 4.0 BY license.</p>
-<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a></p>
+<h2><span class="section-number">1.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><hr class="footnotes docutils" />
 </div>
 </div>
 
@@ -977,7 +1126,7 @@ The PURL service is administered by the Internet Archive. Users can request doma
         
             &copy; Copyright 2020.<br/>
           <div class="extra_footer">
-            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.png" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.png" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.png" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
           </div>
       </p>
     </div>

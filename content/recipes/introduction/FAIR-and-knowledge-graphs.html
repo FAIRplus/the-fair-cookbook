@@ -1,0 +1,1653 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge graphs and FAIR</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.core.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/FAIR-and-knowledge-graphs.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Public knowledge graphs resources for life sciences" href="public-kg-resource-integration.html" />
+    <link rel="prev" title="FAIR and the notion of metadata" href="metadata-fair.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/FAIR-and-knowledge-graphs.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Knowledge graphs and FAIR" />
+<meta property="og:description" content="Knowledge graphs and FAIR  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/&#34;}" />
+<meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   FAIR Cookbook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brief-FAIR-principles.html">
+   What are the FAIR principles?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="metadata-fair.html">
+   Metadata and FAIR
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   FAIR and Knowledge Graphs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/registeringDatasets.html">
+     5. Registering Datasets in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     6. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     7. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     8. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       8.9.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       8.9.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       8.9.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       2.12.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       7.12.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.12.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     8. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     9. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       9.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       9.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       9.4.3. Bioactivity data profile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     10. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     11. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     12. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     13. Extraction, transformation, and loading process
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     14. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       14.10.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     2. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     3. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     4. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       4.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       4.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       4.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/introduction/FAIR-and-knowledge-graphs.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/introduction/FAIR-and-knowledge-graphs.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/introduction/FAIR-and-knowledge-graphs.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-knowledge-graph-and-graph-databases">
+   What are knowledge graph and graph databases?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-different-types-of-knowledge-graphs">
+   The different types of knowledge graphs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rdf-graphs">
+     1. RDF graphs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#i-defining-rdf-resource-description-framework">
+       i. Defining RDF, Resource Description Framework
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ii-persisting-rdf-graphs-rdf-triple-stores">
+         ii. Persisting RDF graphs: RDF triple Stores
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded-the-w3c-shacl-shape-constraint-language">
+         iii. Validating and controlling the quality of the RDF data being loaded - the W3C SHACL SHApe Constraint Language
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#iv-querying-an-rdf-graph-the-w3c-sparql-query-language">
+         iv. Querying an RDF graph - the W3C SPARQL Query Language
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#property-graphs">
+     2. Property graphs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apache-tinkerpop-framework-and-gremlin-graph-traversal-language">
+       2.1 Apache Tinkerpop framework and Gremlin graph traversal language
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#neo4j-property-graph-database-and-cypher-query-language">
+       2.2 Neo4j property graph database and Cypher Query Language
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rdf-graphs-or-labeled-property-graphs-which-has-the-upper-hand">
+     3. RDF graphs or Labeled Property graphs, which has the upper hand?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#towards-a-unified-standard-for-querying-lpg-gql-specifications">
+     4. Towards a unified standard for querying LPG: GQL specifications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-are-knowledge-graphs-generated">
+   How are knowledge graphs generated?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#semantic-models-and-ontologies-when-knowledge-engineers-step-in">
+     Semantic models and ontologies: when knowledge engineers step in.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-fair-and-kr-relate-and-why-does-it-matter">
+   How do FAIR and KR relate and why does it matter?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     What to read next:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="knowledge-graphs-and-fair">
+<span id="fcb-intro-kr"></span><h1>Knowledge graphs and FAIR<a class="headerlink" href="#knowledge-graphs-and-fair" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/>
+<br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Knowledge graphs and FAIR", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB0XX", "url": "https://w3id.org/faircookbook/FCB0XX"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+10 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Knowledge graphs and FAIR</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Everyone</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-1">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB0XX" class="text--purple-dark">FCB0XX
+</a></div>
+</div>
+</div>
+<div class="section" id="main-objectives">
+<h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>In the following sections, we will cover the following topics:</p>
+<blockquote>
+<div><ol class="simple">
+<li><p>the typology of knowledge graphs (KG).</p></li>
+<li><p>the different technologies supporting them.</p></li>
+<li><p>the relation between FAIR and KGs.</p></li>
+<li><p>the methods to generate knowledge graphs.</p></li>
+<li><p>the impact of graph-based representations on what it means to deliver FAIR data and services.</p></li>
+<li><p>the impact for Pharma industry and EFPIA more broadly.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="what-are-knowledge-graph-and-graph-databases">
+<h2>What are knowledge graph and graph databases?<a class="headerlink" href="#what-are-knowledge-graph-and-graph-databases" title="Permalink to this headline">¶</a></h2>
+<p>Knowledge Graph (KG) and graph databases constitute a new approach to representation and storage of data.
+Until fairly recently, the storage of information mainly relied on <code class="docutils literal notranslate"><span class="pre">Relational</span> <span class="pre">Database</span> <span class="pre">Management</span> <span class="pre">Systems</span></code> (RDBMS),
+which have been to work-horse of database building. With relational database approach, information is modelled according
+to an <code class="docutils literal notranslate"><span class="pre">Entity</span> <span class="pre">Relationship</span> <span class="pre">Model</span> <span class="pre">(ER</span> <span class="pre">model/ER</span> <span class="pre">diagram</span></code>, the development of which undergoes a series of formal steps.
+One of these steps involves a process known as <code class="docutils literal notranslate"><span class="pre">schema</span> <span class="pre">normalization</span></code> to ensure that key entities and their attributes
+can be stored in <code class="docutils literal notranslate"><span class="pre">tables</span></code> in the most parsimonious way.
+This step is necessary to ensure query performance and optimization. Relational database approaches track and store
+relations between entities using what is known as <code class="docutils literal notranslate"><span class="pre">linking</span> <span class="pre">tables</span></code>.
+These are essentially maps between object identifiers, thus logging the relations 2 instances of objects may have.
+When interrogating a database operating under this paradigm (e.g. mysql, postgresql, oracle db to name a few),
+the database engine needs to run <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> operations, a type of SQL queries hitting the table of objects and any
+linking table holding the information about the relations between objects.
+While sophisticated optimization methods exist to ensure query performance does not suffer as both data volume grows or
+complexity of the underlying model increases, this form of information storage may suffer from performance issue in
+certain situations.
+An added criticism often leveled to RDBMS based database is the rigidity, which manifests itself in the difficulty and
+complexity of changing the underlying model, leading to potentially complex migration tasks.
+This can become a limitation when knowledge representation in a particular domain requires frequent changes
+for whatever reason.
+So it is in this context that the advent of <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">(oriented)</span> <span class="pre">databases</span></code> (sometimes referred to as NoSQL database,
+for ‘Not Only SQL database’), came about, with a new paradigm and bold claims.
+Over the last 20 years, the idea of storing knowledge as a graph <code class="docutils literal notranslate"><span class="pre">G=(v</span> <span class="pre">for</span> <span class="pre">vertex,e</span> <span class="pre">for</span> <span class="pre">edge)</span></code>,
+even if not new at all from a theoretical perspective, has undergone tremendous progress to the point that a transition,
+in some sectors of the industry, is taking place. It is not that graph-oriented data storage is replacing RDBMS storage,
+but it is certainly true that for some domain specific representations and tasks, <code class="docutils literal notranslate"><span class="pre">Knowledge</span> <span class="pre">Graphs</span></code> (KG)
+and graph databases are seen as more suited. The claim is that they are capable of offering new insights,
+with better performance, owing to the optimization of their query engine for fast traversals.
+It is this property that makes graph databases special compared to RDBMS.
+These benefits warrant the significant investments made to develop tools and frameworks to support KG storage solutions.
+It also means that KG are becoming mainstream.
+As always with all technologies and tooling, one needs to understand the task at hand and choose the most suitable
+solutions for addressing a specific challenge.</p>
+<p>To understand the notion of <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code>, we need to remind ourselves about some elements of information theory,
+data structure and data storage, as well as some geometric interpretation of relationship between entities,
+which is often what turns data into knowledge.</p>
+<p>Information, in digital forms, relies on formal representations and an array of methods to store and retrieve
+information. Up until the last 10 years, relational databases and Relational DataBase Management Systems (RDBMS)
+have been provided the backbone of information storage solutions, and still do so today.
+However, advances in both theoretical information representation models and technical solutions led to the development
+of so-called <code class="docutils literal notranslate"><span class="pre">NO-SQL</span></code> solutions (for ‘Not-only Structured Query language’), supporting the onset of <strong>graph-based
+representations of information</strong>, in contrast to <strong>relational-model based representation</strong>.</p>
+</div>
+<div class="section" id="the-different-types-of-knowledge-graphs">
+<h2>The different types of knowledge graphs<a class="headerlink" href="#the-different-types-of-knowledge-graphs" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>The 2 main types of Knowledge Graph - Graphical Overview</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="kg-typology">
+<a class="reference internal image-reference" href="../../../_images/kg-typology.png"><img alt="Knowledge Graph Types" src="../../../_images/kg-typology.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Data Use</span><a class="headerlink" href="#kg-typology" title="Permalink to this image">¶</a></p>
+</div>
+<p class="card-text">RDF Graph and Labeled Property graphs</p>
+</div>
+</details><div class="admonition-so-how-does-graph-theory-come-to-meet-knowledge-representation admonition">
+<p class="admonition-title"><strong>So how does graph theory come to meet knowledge representation?</strong></p>
+<p>We need here to introduce the definition of a graph:</p>
+<p>A graph is a set of nodes (also known as vertex) connected via edges.
+When the edges connected any two nodes carry a direction information, they defined a specific and important subfamily
+of graphs known as <code class="docutils literal notranslate"><span class="pre">directed</span> <span class="pre">graphs</span></code>.
+When cycles aren’t allowed, a new subtype of graph is defined. Such graphs are known as <code class="docutils literal notranslate"><span class="pre">directed</span> <span class="pre">acyclic</span> <span class="pre">graphs</span></code>.</p>
+<p>Volumes have been written about what graphs are and the underlying mathematical theories describing their properties.
+The readership can refer to the following resources for a complete overview and training.
+The purpose of this section is simply to provide a rapid overview of what knowledge graphs are and their typology,
+as one needs to be aware of the differences that exist between the different kinds of graphs and also understand the
+consequences both theoretical and technical to fully appreciate the pros and cons of the various implementations
+available out there.
+The following sections intend to provide a compact review and guide newcomers through the jargon and the various
+acronyms founds in the literature on the topic.</p>
+</div>
+<div class="section" id="rdf-graphs">
+<h3>1. RDF graphs<a class="headerlink" href="#rdf-graphs" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="i-defining-rdf-resource-description-framework">
+<h4>i. Defining RDF, Resource Description Framework<a class="headerlink" href="#i-defining-rdf-resource-description-framework" title="Permalink to this headline">¶</a></h4>
+<p>Here, we need to introduce the notion of representing statements as a predicate of the following form:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;subject&gt;&lt;predicate&gt;&lt;object&gt;
+</pre></div>
+</div>
+<p>such as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>P53 protein<span class="sb">`</span> <span class="sb">`</span>interacts with<span class="sb">`</span> <span class="sb">`</span>DNA<span class="sb">`</span>.
+</pre></div>
+</div>
+<p>This statement can be formally expressed using a dedicated syntax called <a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">RDF</a>,
+standing for “resource description framework”, one of the W3C standards supporting the vision of a <strong>Semantic Web</strong> as
+outlined by Sir Tim Berners-Lee and colleagues <a class="footnote-reference brackets" href="#bernerslee2001semantic" id="id1">4</a>.
+In this instance, because the relation <code class="docutils literal notranslate"><span class="pre">binds</span> <span class="pre">to</span></code> is directional, we are creating the simplest form of directed graph,
+by establishing an <code class="docutils literal notranslate"><span class="pre">edge</span> <span class="pre">between</span> <span class="pre">two</span> <span class="pre">nodes</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">syntax</span></code> allows the expression of <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">statements</span></code>, which can be built and grouped in an <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graph</span></code>.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>When does a RDF Graph become a Linked Data Graph?</strong></p>
+<p>When all the entities in an RDF statement are identified and available as <code class="docutils literal notranslate"><span class="pre">Universal</span> <span class="pre">Resource</span> <span class="pre">Identifiers(URI)</span></code>,
+the RDF graph then becomes a <code class="docutils literal notranslate"><span class="pre">Linked</span> <span class="pre">Data</span> <span class="pre">Graph</span></code>, since each entity is no longer an <code class="docutils literal notranslate"><span class="pre">plain</span> <span class="pre">literal</span></code> and can now be
+<strong>looked up by means of HTTP requests</strong> .</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>P53 protein<span class="sb">`</span> <span class="sb">`</span>physically interacts with<span class="sb">`</span> <span class="sb">`</span>DNA<span class="sb">`</span>.
+</pre></div>
+</div>
+<p>using Wikidata identifiers can be expressed as:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>&quot;@wdt&quot;: &quot;https://www.wikidata.org/wiki/&quot;
+[<span class="nt">wdt:Q283350</span>](<span class="na">https://www.wikidata.org/wiki/Q283350</span>) [<span class="nt">wdt:Property:P129</span>](<span class="na">https://www.wikidata.org/wiki/Property:P129</span>) 
+[<span class="nt">wdt:Q7430</span>](<span class="na">https://www.wikidata.org/wiki/Q7430</span>)
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h5><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<p>So let’s go back to the statement about the gene product of the P53 gene.
+The formal and structured representation of a fact about that gene is now a well established technique.
+Therefore, one can see that natural fit between the data structure and knowledge gathered and accumulated by scientists.
+This is why knowledge graphs have gained so much traction in recent years.
+In fact, a number of developments converged to make this form of representation effective and above all useful
+for computational work.</p>
+</div>
+<div class="section" id="ii-persisting-rdf-graphs-rdf-triple-stores">
+<h5>ii. Persisting RDF graphs: RDF triple Stores<a class="headerlink" href="#ii-persisting-rdf-graphs-rdf-triple-stores" title="Permalink to this headline">¶</a></h5>
+<p>RDF graph objects can be persisted in specialized databases, <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graph</span> <span class="pre">databases</span></code> also known as <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">triple</span> <span class="pre">stores</span></code>.
+To view some of the most performant and successful solutions, see the table below. There is extensive literature
+comparing the merits of the various solutions.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>Well known RDF triple store solutions</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p class="card-text">name</p></th>
+<th class="text-align:left head"><p class="card-text">vendor</p></th>
+<th class="text-align:left head"><p class="card-text">site</p></th>
+<th class="text-align:right head"><p class="card-text">performance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p class="card-text">Allelograph</p></td>
+<td class="text-align:left"><p class="card-text"></p></td>
+<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://allegrograph.com/products/allegrograph/">https://allegrograph.com/products/allegrograph/</a></p></td>
+<td class="text-align:right"><p class="card-text"></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p class="card-text">Blazegraph</p></td>
+<td class="text-align:left"><p class="card-text"></p></td>
+<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://github.com/blazegraph">https://github.com/blazegraph</a></p></td>
+<td class="text-align:right"><p class="card-text"></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p class="card-text">GraphDB</p></td>
+<td class="text-align:left"><p class="card-text"></p></td>
+<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://www.ontotext.com/products/graphdb/">https://www.ontotext.com/products/graphdb/</a></p></td>
+<td class="text-align:right"><p class="card-text">OWL inference</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p class="card-text">Stardog</p></td>
+<td class="text-align:left"><p class="card-text"></p></td>
+<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://www.stardog.com/">https://www.stardog.com/</a></p></td>
+<td class="text-align:right"><p class="card-text"></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p class="card-text">Virtuoso</p></td>
+<td class="text-align:left"><p class="card-text"></p></td>
+<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://virtuoso.openlinksw.com/">https://virtuoso.openlinksw.com/</a></p></td>
+<td class="text-align:right"><p class="card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded-the-w3c-shacl-shape-constraint-language">
+<h5>iii. Validating and controlling the quality of the RDF data being loaded - the W3C SHACL SHApe Constraint Language<a class="headerlink" href="#iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded-the-w3c-shacl-shape-constraint-language" title="Permalink to this headline">¶</a></h5>
+<p>RDF graphs / Linked data triples can be generated fairly rapidly.
+The W3C has produced a specification detailing a constraint language which allows data managers to control the so-called
+<code class="docutils literal notranslate"><span class="pre">shape</span></code> of the RDF graph coming in.</p>
+<ul class="simple">
+<li><p>This language known as <a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a> (pronounced <code class="docutils literal notranslate"><span class="pre">shackle</span></code>) for <code class="docutils literal notranslate"><span class="pre">SHApe</span> <span class="pre">Constraint</span> <span class="pre">Language</span></code>,
+allow to express a set of conditions to validate RDF graphs/RDF statements. SHACL expressions are RDF statements
+themselves and the constraint profiles can themselves be stored in an RDF triple store.
+SHACL specifications are implemented in TopQuadrant TopBraid Composer tool</p></li>
+<li><p>A competing specification, know as <a class="reference external" href="https://shex.io/">SHEX</a> for <code class="docutils literal notranslate"><span class="pre">Shape</span> <span class="pre">Expression</span></code>, provides a similar functionality,
+but isn’t a W3C approved specifications, even though SHEX is proving quite popular and with a strong following.</p></li>
+</ul>
+</div>
+<div class="section" id="iv-querying-an-rdf-graph-the-w3c-sparql-query-language">
+<h5>iv. Querying an RDF graph - the W3C SPARQL Query Language<a class="headerlink" href="#iv-querying-an-rdf-graph-the-w3c-sparql-query-language" title="Permalink to this headline">¶</a></h5>
+<p>RDF graphs stored in RDF triple stores, such as Virtuoso <a class="footnote-reference brackets" href="#virtuoso" id="id3">2</a>, Blazegraph <a class="footnote-reference brackets" href="#blazegraph" id="id4">1</a>,
+can be queried using a dedicated query language defined by a W3C specification known as
+<a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1</a>.
+SPARQL stands for <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">Query</span> <span class="pre">Language</span></code>, (pronounced <code class="docutils literal notranslate"><span class="pre">sparkle</span></code>) <a class="footnote-reference brackets" href="#sparql" id="id5">3</a>.
+The results of a SPARQL query are a <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">set</span></code> or <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graph</span></code> and is therefore <strong>a collection of RDF triples</strong>.</p>
+<p>An impressive feature of the SPARQL query language is its ability to perform <code class="docutils literal notranslate"><span class="pre">mashups</span></code> by performing federated queries
+over a number of ‘SERVICES’, i.e. RDF triple store endpoints and return an RDF graph which contains triples assembled
+from a number of resources.</p>
+<p>We still need to introduce several key concepts to provide a fuller picture of knowledge graph, how they are generated
+and why they matter.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>SPARQL query example: Metabolites and the species they are found in</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="wikidata-sparql">
+<a class="reference internal image-reference" href="../../../_images/wikidata-sparql.jpg"><img alt="wikidata sparql" src="../../../_images/wikidata-sparql.jpg" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A SPARQL query over Wikidata RDF endpoint</span><a class="headerlink" href="#wikidata-sparql" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>SPARQL query example on WikiData: Cell lines with names that could also be URLs</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="wikidata-sparql-endpoint">
+<a class="reference internal image-reference" href="../../../_images/wikidata-sparql-celllines.jpg"><img alt="wikidata sparql endpoint" src="../../../_images/wikidata-sparql-celllines.jpg" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">A SPARQL query over Wikidata RDF endpoint: Cell lines with names that could also be URLs (Internet of Cell Lines)</span><a class="headerlink" href="#wikidata-sparql-endpoint" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>For more information about SPARQL queries over Wikidata, see <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_(Internet_of_Cell_Lines)">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="property-graphs">
+<h3>2. Property graphs<a class="headerlink" href="#property-graphs" title="Permalink to this headline">¶</a></h3>
+<p>Like <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>, <code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code> are too used to build <code class="docutils literal notranslate"><span class="pre">Knowledge</span> <span class="pre">graphs</span></code>.
+However, unlike <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>, <code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code> allows the vertices (aka the <code class="docutils literal notranslate"><span class="pre">edge</span></code>) to carry <em>annotations</em>,
+which can be queried. These <code class="docutils literal notranslate"><span class="pre">annotations</span></code> are called <code class="docutils literal notranslate"><span class="pre">properties</span></code> hence the denomination <code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code>,
+also referred to as <strong><code class="docutils literal notranslate"><span class="pre">Labeled</span> <span class="pre">Property</span> <span class="pre">Graphs</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">LPG</span></code></strong>.
+<code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code> have inherent interesting properties which set them aside from <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>.
+For instance, in PG/LPG, both <code class="docutils literal notranslate"><span class="pre">nodes</span></code> and <code class="docutils literal notranslate"><span class="pre">edges</span></code> have:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(1..1)</span> <span class="pre">identifier</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(1..n)</span> <span class="pre">annotations</span></code>, in the form of sets of <code class="docutils literal notranslate"><span class="pre">{key:value}</span></code> pairs<br />
+in addition, <code class="docutils literal notranslate"><span class="pre">edges</span></code> have a <code class="docutils literal notranslate"><span class="pre">Type</span></code></p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Important</p>
+<p>The main thing to remember is that what distinguishes RDF graphs from Labeled Property graphs is that fact that the
+edges in a LPG can carry annotations.
+This allows for interesting properties which affect the querying options available to developers and data miners.
+It is this difference that has been exploited to develop an entire environment of software solutions supported LPG
+based knowledge representation and exploitation.</p>
+</div>
+<p>These <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> constitute the main <strong>data structure</strong> supported by two key resources which have gain notoriety
+and visibility: one open-source and one commercial. In the following sections, we will provide a brief summary of their
+salient points and also, limitations.</p>
+<div class="section" id="apache-tinkerpop-framework-and-gremlin-graph-traversal-language">
+<h4>2.1 Apache Tinkerpop framework and Gremlin graph traversal language<a class="headerlink" href="#apache-tinkerpop-framework-and-gremlin-graph-traversal-language" title="Permalink to this headline">¶</a></h4>
+<p>The Apache foundation released in 2009 the <a class="reference external" href="http://tinkerpop.apache.org/">Apache Tinkerpop framework</a> as an open source
+initiative, licensed under Apache License 2.0 terms.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://tinkerpop.apache.org/">Apache Tinkerpop</a> is a <strong>vendor agnostic graph database storage framework</strong> using on <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> as
+underlying data structure.  As a framework, Tinkerpop is developed as an abstract layer, meant to ensure vendor
+neutrality, allowing developers to decide about architecture choices and tests while coding against a standardized
+interface.</p></li>
+<li><p><a class="reference external" href="https://tinkerpop.apache.org/docs/3.6.0/tutorials/gremlins-anatomy/">Apache Gremlin</a> is the <strong>query language</strong> powering Tinkerpop and its interactions with the underlying data stored
+as property graphs. Gremlin is a <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">traversal</span> <span class="pre">language</span></code> optimized for speed and fast access.
+Defined by Marko Rodrigues, Gremlin language specifications are detailed in the following publication
+<a class="footnote-reference brackets" href="#id10" id="id6">8</a> and is supported by libraries available in the most popular programming
+language. Extensive documentation and training is available from the dedicated Apache project pages,
+including a set of <a class="reference external" href="https://tinkerpop.apache.org/docs/current/recipes/"><code class="docutils literal notranslate"><span class="pre">recipes</span></code></a> to make the most of the
+Gremlin language.</p></li>
+</ul>
+<p>Below is an example of a Gremlin instruction as coded in python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gremlin_python.process.traversal</span> <span class="kn">import</span> <span class="n">T</span>
+<span class="kn">from</span> <span class="nn">gremlin_python.process.traversal</span> <span class="kn">import</span> <span class="n">Cardinality</span>
+
+<span class="nb">id</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">id</span>
+<span class="n">single</span> <span class="o">=</span> <span class="n">Cardinality</span><span class="o">.</span><span class="n">single</span>
+
+<span class="k">def</span> <span class="nf">create_vertex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vid</span><span class="p">,</span> <span class="n">vlabel</span><span class="p">):</span>
+    <span class="c1"># default database cardinality is used when Cardinality argument is not specified</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">addV</span><span class="p">(</span><span class="n">vlabel</span><span class="p">)</span><span class="o">.</span><span class="n">property</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">vid</span><span class="p">)</span><span class="o">.</span> \
+      <span class="nb">property</span><span class="p">(</span><span class="n">single</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;Apache&#39;</span><span class="p">)</span><span class="o">.</span> \
+      <span class="nb">property</span><span class="p">(</span><span class="s1">&#39;lastname&#39;</span><span class="p">,</span> <span class="s1">&#39;Tinkerpop&#39;</span><span class="p">)</span><span class="o">.</span> \
+      <span class="nb">next</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>A Gremlin query to answer a request such <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">the</span> <span class="pre">names</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">people</span> <span class="pre">vertex</span> <span class="pre">&quot;1&quot;</span> <span class="pre">knows</span> <span class="pre">who</span> <span class="pre">are</span> <span class="pre">over</span> <span class="pre">the</span> <span class="pre">age</span> <span class="pre">of</span> <span class="pre">30</span></code>.</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">.</span><span class="na">V</span><span class="o">()</span> 
+<span class="n">g</span><span class="o">.</span><span class="na">V</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> 
+<span class="n">g</span><span class="o">.</span><span class="na">V</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">values</span><span class="o">(</span><span class="s1">&#39;name&#39;</span><span class="o">)</span> 
+<span class="n">g</span><span class="o">.</span><span class="na">V</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">outE</span><span class="o">(</span><span class="s1">&#39;knows&#39;</span><span class="o">)</span>
+<span class="n">g</span><span class="o">.</span><span class="na">V</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">outE</span><span class="o">(</span><span class="s1">&#39;knows&#39;</span><span class="o">).</span><span class="na">inV</span><span class="o">().</span><span class="na">values</span><span class="o">(</span><span class="s1">&#39;name&#39;</span><span class="o">)</span> 
+<span class="n">g</span><span class="o">.</span><span class="na">V</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">out</span><span class="o">(</span><span class="s1">&#39;knows&#39;</span><span class="o">).</span><span class="na">values</span><span class="o">(</span><span class="s1">&#39;name&#39;</span><span class="o">)</span> 
+<span class="n">g</span><span class="o">.</span><span class="na">V</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">out</span><span class="o">(</span><span class="s1">&#39;knows&#39;</span><span class="o">).</span><span class="na">has</span><span class="o">(</span><span class="s1">&#39;age&#39;</span><span class="o">,</span> <span class="n">gt</span><span class="o">(</span><span class="mi">30</span><span class="o">)).</span><span class="na">values</span><span class="o">(</span><span class="s1">&#39;name&#39;</span><span class="o">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="neo4j-property-graph-database-and-cypher-query-language">
+<h4>2.2 Neo4j property graph database and Cypher Query Language<a class="headerlink" href="#neo4j-property-graph-database-and-cypher-query-language" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://neo4j.com">Neo4j</a> is a commercial offering for building knowledge graphs relying on property graphs.
+Backing the approach, the team developed a dedicated query language for <code class="docutils literal notranslate"><span class="pre">Labeled</span> <span class="pre">property</span> <span class="pre">graphs</span></code>.
+This language is known as <code class="docutils literal notranslate"><span class="pre">CYPHER</span></code>.</p>
+<p>Neo4j databases have shown promises in biology and bioinformatics for its ability to allow for fast graph traversals,
+which matches the requirements of cell biologists, modelers and computational scientists who need to explore a growing
+ensemble of molecular pathways, that is to say graphs of interactions and reactions.
+An illustration of that natural fit is the uptake of the Neo4j technology by a project such as <code class="docutils literal notranslate"> <span class="pre">Disease</span> <span class="pre">Maps</span></code>,
+Reactome <a class="footnote-reference brackets" href="#pmid29377902" id="id7">6</a> and KnetMiners <a class="footnote-reference brackets" href="#pmid30085931" id="id8">5</a>.</p>
+<p>The Reactome database builds on Neo4j to allow navigation of reactions and pathways.</p>
+<p>A complete tutorial to query Reactome using the <code class="docutils literal notranslate"><span class="pre">Cypher</span> <span class="pre">language</span></code> to interrogate the underlying Neo4j store is
+available <a class="reference external" href="https://reactome.org/dev/graph-database/extract-participating-molecules">here</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//All reactions <span class="k">for</span> the pathway with stable identifier R-HSA-198933
+MATCH <span class="o">(</span>p:Pathway<span class="o">{</span>stId:<span class="s2">&quot;R-HSA-983169&quot;</span><span class="o">})</span>-<span class="o">[</span>:hasEvent*<span class="o">]</span>-&gt;<span class="o">(</span>rle:ReactionLikeEvent<span class="o">)</span>
+RETURN p.stId AS Pathway, rle.stId AS Reaction, rle.displayName AS ReactionName
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>CYPHER query example on Reactome: Comparison with SQL</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="reactome-cypher-query">
+<a class="reference internal image-reference" href="../../../_images/pcbi.1005968.g001.jpg"><img alt="reactome cypher query" src="../../../_images/pcbi.1005968.g001.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">CYPHER query example on Reactome: Comparison with SQL. From Fabregat et al,2018. 10.1371/journal.pcbi.1005968</span><a class="headerlink" href="#reactome-cypher-query" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>While its origin dates back to 2000, the company recently grabbed headlines for a <a class="reference external" href="https://neo4j.com/press-releases/neo4j-announces-seriesf-funding/">very successful IPO</a> which netted circa 350 millions USD of venture capital funding. Such a success is testament to the robustness and validity of the approach taken by the group of computer scientists who built the solutions from the ground up to deliver one of the most successful solution for property graph based knowledge representation and querying.make full use of Neo4j representation and infrastructure capabilities.</p>
+<p>Neo4J open-sourced the Cypher query language and made it available via GitHub as part of the <code class="docutils literal notranslate"><span class="pre">open-cypher</span></code> project</p>
+<p>A <a class="reference external" href="https://neo4j.com/developer/cypher/">large body of documentation and training material is available</a>,
+supporting developers in getting up to speed with the language.</p>
+<p>More recently, Neo4j also joined the <a class="reference external" href="https://graphql.org/foundation/">graphQL foundation</a>,
+<em>“a neutral, non-profit home for the GraphQL assets and ongoing collaboration, and hosted by The Linux Foundation”</em> to
+quote the landing page of the organization.</p>
+<blockquote>
+<div><p><strong>Why this matters?</strong>
+It matters because <a class="reference external" href="https://graphql.org/">GraphQL specification</a> allows to build robust Application Programming
+Interface and make it easier to build full stack applications from scratch while offering great flexibility in
+interfacing with the data.
+But the main idea here is that the <code class="docutils literal notranslate"><span class="pre">GraphQL</span></code> way of representing data is a natural fit to database systems
+which are natively <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">databases</span></code>, such as Neo4j.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="rdf-graphs-or-labeled-property-graphs-which-has-the-upper-hand">
+<h3>3. RDF graphs or Labeled Property graphs, which has the upper hand?<a class="headerlink" href="#rdf-graphs-or-labeled-property-graphs-which-has-the-upper-hand" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes, nothing beats a diagram to drive forward the strengths and the weaknesses of technical stacks.
+In the diagram below, which provides an overview of the specifications and standards available to support the
+knowledge graph, two things strike the keen reader:</p>
+<ol>
+<li><p>RDF graphs technology is backed by a large number of World Wide Web Consortium (W3C) standards for the <strong>semantic web</strong>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>W3C RDF</p></li>
+<li><p>WC3 RDFS</p></li>
+<li><p>W3C OWL</p></li>
+<li><p>W3C SHACL</p></li>
+<li><p>W3C SPARQL 1.1</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Content Validation</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>RDF graphs content can be validated (i.e. checked) with 2 equally functional <code class="docutils literal notranslate"><span class="pre">constraint</span></code> languages,
+SHEX and SHACL.
+Using these languages, the “shape” of the RDF graph can be controlled.</p></li>
+<li><p>With property graphs, until the introduction of an adapter in the Neo4j library, this task proved hard to achieve.
+This becomes a drawback as it means a property graph database may become <code class="docutils literal notranslate"><span class="pre">contaminated</span></code> with incorrect data.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Besides this point, two additional features can give RDF graphs the edge (no pun intended!) over labeled property graphs
+(even if it also depends on the use cases and ultimate goal):</p>
+<ol>
+<li><p>IRI support and Linked data</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the RDF specification by construction allows the use of IRI to uniquely identify nodes
+and have globally unique resolvable identifiers for resources.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Native semantics and the possibility of inference</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Backed by RDFS and OWL semantics, RDF graphs are built on a technology stack developed to deliver the
+<code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">semantic</span> <span class="pre">web</span></code> as envisioned by Sir Tim Bernards-Lee. Tools known as <em>reasoners</em> , use first order logic to
+perform type and instance classification but also generate <code class="docutils literal notranslate"><span class="pre">entailments</span></code>, which correspond to new statements
+resulting from inference made from the explicit assertions in the underlying ontologies or graph.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="towards-a-unified-standard-for-querying-lpg-gql-specifications">
+<h3>4. Towards a unified standard for querying LPG: GQL specifications<a class="headerlink" href="#towards-a-unified-standard-for-querying-lpg-gql-specifications" title="Permalink to this headline">¶</a></h3>
+<p>What now?
+In the previous 2 sections, we have highlighted 2 of the most successful projects leveraging the power of
+Property Graphs as data structure for storing information and building knowledge graphs.
+However, none of these implementations are officially an approved W3C standards. While it does not really matter
+at this stage, it was realized that such fragmentation was hurting and in 2019, the <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">Graph</span> <span class="pre">Query</span> <span class="pre">Language</span></code> (oGQL)
+working group released an initial specification</p>
+</div>
+</div>
+<div class="section" id="how-are-knowledge-graphs-generated">
+<h2>How are knowledge graphs generated?<a class="headerlink" href="#how-are-knowledge-graphs-generated" title="Permalink to this headline">¶</a></h2>
+<p><a class="footnote-reference brackets" href="#pmid32637040" id="id9">7</a></p>
+<div class="section" id="semantic-models-and-ontologies-when-knowledge-engineers-step-in">
+<h3>Semantic models and ontologies: when knowledge engineers step in.<a class="headerlink" href="#semantic-models-and-ontologies-when-knowledge-engineers-step-in" title="Permalink to this headline">¶</a></h3>
+<p>In the previous section, we saw how to create an RDF statement.</p>
+<p><code class="docutils literal notranslate"><span class="pre">P53</span> <span class="pre">gene</span> <span class="pre">transcript</span></code> <code class="docutils literal notranslate"><span class="pre">binds</span> <span class="pre">to</span></code> <code class="docutils literal notranslate"><span class="pre">DNA</span></code>.</p>
+<p>which structured in N-turle RDF syntax looks like this</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>introduce RDF statement with free text
+</pre></div>
+</div>
+<p>The representation is neat and tidy but one can not help noticing that all the strings are stored as free text.
+A problem arises when trying to accumulate knowledge from different sources.
+One needs to add a layer of semantics to <code class="docutils literal notranslate"><span class="pre">type</span></code> each of the element of an RDF statement.
+Ontologies are the resources which provide this layer of semantics which make it possible to integrate data in
+knowledge graphs.</p>
+<p>Ontologies are <strong>formal resources developed by experts in a domain</strong>.
+Ontologies also rely on RDF language for their representation but their purpose is different.</p>
+<p>These ontologies set the rules and constraints grounded in first order logic to define a type.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>P53 gene transcript a RDF:type go:Transcript<span class="p">;</span>
+DNA a RDF:type chebi:molecularEntity
+binds_to
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>text mining</p></li>
+<li><p>ETL</p></li>
+<li><p>machine learning</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-do-fair-and-kr-relate-and-why-does-it-matter">
+<h2>How do FAIR and KR relate and why does it matter?<a class="headerlink" href="#how-do-fair-and-kr-relate-and-why-does-it-matter" title="Permalink to this headline">¶</a></h2>
+<p>FAIR is chiefly about 3 things: metadata, metadata and metadata.
+Not only that, but metadata which should be <strong>active</strong>, that is usable by machines for quick mobilisation and
+use by software agents.
+In this context, the availability of semantic web technologies completely aligns with the key requirements defined
+by the FAIR principles.</p>
+<p>But <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> are not equivalent.
+Not all FAIR data is a knowledge graph and not all knowledge graphs are FAIR.
+However, providing metadata about a dataset in the form of Linked Data graph is a significant path
+towards making data FAIR.
+Furthermore, the availability of knowledge representation in a graph data structure is particularly useful
+for machine learning and artificial intelligence approach.
+Why is that so? or is it just another chain of fashionable term “du jour”?</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Knowledge graphs are a powerful and flexible to represent information. Their properties and features lend themselves
+to data driven approaches and make them a data structure of choice for certain types of artificial intelligence and
+machine learning applications. As with all technical solutions, it is no panacea, no silver bullet.
+They however are a technology which can greatly enhance certain tasks and are of particular relevance for representing
+metadata, data about the data  in a FAIR way.</p>
+<div class="section" id="what-to-read-next">
+<h3>What to read next:<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html#fcb-introduction-terminologies-ontologies"><span class="std std-ref">Introduction to terminologies and ontologies</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html#fcb-interop-covid-metadata"><span class="std std-ref">Metadata profile validation in RDF</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/ETL-tools.html#fcb-interop-etl"><span class="std std-ref">Extraction, transformation, and loading process</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/introduction/FAIR-and-knowledge-graphs-0"><dl class="footnote brackets">
+<dt class="label" id="blazegraph"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p class="card-text">Blazegraph. URL: <a class="reference external" href="https://blazegraph.com/">https://blazegraph.com/</a>.</p>
+</dd>
+<dt class="label" id="virtuoso"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p class="card-text">Virtuoso rdf triple store. URL: <a class="reference external" href="https://virtuoso.openlinksw.com/">https://virtuoso.openlinksw.com/</a>.</p>
+</dd>
+<dt class="label" id="sparql"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dd><p class="card-text">W3c sparql query language 1.1. URL: <a class="reference external" href="https://www.w3.org/TR/sparql11-overview/">https://www.w3.org/TR/sparql11-overview/</a>.</p>
+</dd>
+<dt class="label" id="bernerslee2001semantic"><span class="brackets"><a class="fn-backref" href="#id1">4</a></span></dt>
+<dd><p class="card-text">Tim Berners-Lee, James Hendler, and Ora Lassila. The semantic web. <em>Scientific American</em>, 284(5):34–43, May 2001. URL: <a class="reference external" href="http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21">http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21</a>.</p>
+</dd>
+<dt class="label" id="pmid30085931"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dd><p class="card-text">M. Brandizi, A. Singh, C. Rawlings, and K. Hassani-Pak. Towards FAIRer Biological Knowledge Networks Using a Hybrid Linked Data and Graph Database Approach. <em>J Integr Bioinform</em>, Aug 2018.</p>
+</dd>
+<dt class="label" id="pmid29377902"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dd><p class="card-text">A. Fabregat, F. Korninger, G. Viteri, K. Sidiropoulos, P. Marin-Garcia, P. Ping, G. Wu, L. Stein, P. D’Eustachio, and H. Hermjakob. Reactome graph database: Efficient access to complex pathway data. <em>PLoS Comput Biol</em>, 14(1):e1005968, 01 2018.</p>
+</dd>
+<dt class="label" id="pmid32637040"><span class="brackets"><a class="fn-backref" href="#id9">7</a></span></dt>
+<dd><p class="card-text">D. N. Nicholson and C. S. Greene. Constructing knowledge graphs and their biomedical applications. <em>Comput Struct Biotechnol J</em>, 18:1414–1428, 2020.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dd><p class="card-text">Marko A. Rodriguez. The gremlin graph traversal machine and language (invited talk). In <em>Proceedings of the 15th Symposium on Database Programming Languages</em>, DBPL 2015, 1–10. New York, NY, USA, 2015. Association for Computing Machinery. URL: <a class="reference external" href="https://doi.org/10.1145/2815072.2815073">https://doi.org/10.1145/2815072.2815073</a>, <a class="reference external" href="https://doi.org/10.1145/2815072.2815073">doi:10.1145/2815072.2815073</a>.</p>
+</dd>
+</dl>
+</p>
+<p class="card-text">[1]. <a class="reference external" href="https://www.turing.ac.uk/research/interest-groups/knowledge-graphs">https://www.turing.ac.uk/research/interest-groups/knowledge-graphs</a></p>
+<p class="card-text">[2]. <a class="reference external" href="https://web.stanford.edu/class/cs520/">https://web.stanford.edu/class/cs520/</a></p>
+<p class="card-text">[3]. <a class="reference external" href="http://ai.stanford.edu/blog/introduction-to-knowledge-graphs/">http://ai.stanford.edu/blog/introduction-to-knowledge-graphs/</a></p>
+<p class="card-text">[4].<a class="reference external" href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/">https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/</a></p>
+<p class="card-text">[5]. <a class="reference external" href="https://www.futurelearn.com/courses/linked-data">https://www.futurelearn.com/courses/linked-data</a></p>
+<p class="card-text">[6]. <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327409/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327409/</a> (Constructing knowledge graphs and their biomedical applications)</p>
+<p class="card-text">[7]. <a class="reference external" href="https://douroucouli.wordpress.com/2019/03/14/biological-knowledge-graph-modeling-design-patterns/">https://douroucouli.wordpress.com/2019/03/14/biological-knowledge-graph-modeling-design-patterns/</a></p>
+<p class="card-text">[8]. wikidata</p>
+<p class="card-text">[9]. monarch knowledge graph</p>
+<p class="card-text">[10]. NCATS biomedical data translator</p>
+<p class="card-text">[11]. Google graph</p>
+<p class="card-text">[12].<a class="reference external" href="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-00940-y">https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-00940-y</a></p>
+</div>
+</details></div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft, Editing, Conceptualization</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/terazus"></img><div class="d-block">Dominique Batista</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-2109-489X"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/susannasansone"></img><div class="d-block">Susanna-Assunta Sansone</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-5306-5690"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="metadata-fair.html" title="previous page">FAIR and the notion of metadata</a>
+    <a class='right-next' id="next-link" href="public-kg-resource-integration.html" title="next page">Public knowledge graphs resources for life sciences</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            <script>mermaid.init();</script> <div class="container-lg mt-3"> <div class="row"> <div class="col-xl-3"> <div class="footerImages"> <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a> <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a> <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a> </div> <div class="mb-3"> Grant agreement 802750 </div> </div> <div class="col-xl-6 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li> <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li> </ul> </div> <div class="col-6 d-flex" style="justify-content:center"> <ul> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li> <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a> <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license. </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-171697285-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
