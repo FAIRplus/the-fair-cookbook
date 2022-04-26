@@ -23,7 +23,10 @@
 
 The main purpose of this recipe is:
 
-> To provide an overview of elements that could help users in prioritization and selection of potential projects, processes, or data for FAIRification. For each of these elements, we provide comparative benefits between different stages and justify the order of the stages required for FAIRification. Finally, we also highlight the reasons for making the data FAIR.
+> To provide an overview of elements that could help users in prioritization and selection of potential projects,
+> processes, or data for FAIRification. 
+> For each of these elements, we provide comparative benefits between different stages and justify the order of the 
+> stages required for FAIRification. Finally, we also highlight the reasons for making the data FAIR.
 
 
 ## Introduction
@@ -35,8 +38,9 @@ have been considered and "battle-tested".
 
 The recipe is structured in the following way:
 * We begin by pointing out the reasons why one should to make their dataset FAIR. 
-* Following this, a brief overview of the dataset corpus formulation. Once the team has collected all the necessary data,
-it can now pass through the prioritization phase. Here, a thorough assessment of the dataset based on certain criteria is done. This assessment, in turn, leads to the development of a scorecard.
+* Following this, a brief overview of the dataset corpus formulation. Once "the team" has collected all the necessary data,
+it can now pass through the prioritization phase. Here, a thorough assessment of the dataset based on certain criteria is done. 
+This assessment, in turn, leads to the development of a "scorecard".
 * Finally, with the points each dataset has earned in the scorecard, a ranking can be established and projects or 
 datasets can be prioritized.
 
@@ -245,6 +249,11 @@ ii. Identify a funder or publisher recommended repository accepting this data ty
 
 **Hence, projects that have the above two pointers addressed should be prioritized over those that do not.**
 
+In summation, each project gets a score based on the aforementioned factors and this score-based assessment of projects 
+would in turn lead to development of a scorecard {footcite}`prioritization_template`.
+
+## Prioritisation between different project-based factors
+
 Along with the above criteria, two more factors play a crucial role in the prioritization process:
 
 - The first is the **time management**. Since the FAIRification process can depend on a number of factors,
@@ -257,8 +266,12 @@ Such roadblocks should be identified and rectified if possible prior to starting
 Each of these criteria have an independent stance and when creating a scoreboard, a personalized priority between 
 these factors need to be made. For example, if people have data champions within their FAIRification team, they would 
 prioritize data availability and access factor over the data champions factor. 
-To provide a granular overview of the criteria, classification based on two factors, cost and value, has been made as 
-shown in the table below.
+
+Another prioritisation schema that could be used for intra-factor ranking could be the cost and value benefits of each of the factors {footcite}`10.1162/dint_a_00109`. 
+The cost factors refer to the set of indicators or aspects that influence the costs associated with the FAIRification
+process, while the value factors can be defined as the value proposition for performing the FAIRification. 
+To provide a granular overview of this criteria, classification based on two factors, cost and value, has been shown in the table below.
+
 
 | Value criteria | Cost criteria |
 | ----------- | ----------- |
@@ -267,13 +280,20 @@ shown in the table below.
 | Data Type   | Partners involved |
 
 ---
-## Scorecard formulation and ranking
 
-Overall, for each of the criteria, a rank can be assigned based on the priority decided by the PSP team.
-This ranked-based assessment of projects would in turn lead to development of a scoreboard (Figure below).
-To enable ranking of projects, an additive sum of each of these criteria should be used, thereby directing each project
-with one final score. In the end, a descending ranking of the projects can be achieved, and the top k number of projects
-can be selected for FAIRification by the PSP team and handed over to the FAIR experts.
+## Project ranking and prioritisation
+
+Overall, in the scorecard, each project is assigned a score based on certain criteria. 
+To enable ranking of projects, an additive sum of each of these criteria should be used, thereby assigning each 
+project with one final score. 
+In the end, a descending ranking of the projects can be achieved, and the top projects can be selected for FAIRification
+by the PSP team and handed over to the people responsible for the FAIRification process.
+
+The prioritisation and selection schema mentioned in this recipe was successfully adapted and applied for the 
+FAIRification process within IMI {footcite}`d1_report`.
+A snapshot of the scorecard used within IMI for selecting and prioritising FAIRification projects
+can be seen below {footcite}`prioritization_template`.
+
 
 <!--
 <div style="justify-content: center;">
@@ -293,12 +313,16 @@ Score card template.
 ````
 
 
-The detailed description of each of the scores can be found on the [scorecard template](https://zenodo.org/record/5778431#.YbikDxNKhH1).
-
 ---
 ## Conclusion
 
-> Faced with a larger number of projects needing FAIRification, it is necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding the benefits of making their data FAIR, provided suggestions for assisting in establishing a prioritization procedure. Hence, the aim of the recipe was to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. Additionally, it provides the readers with a scorecard template that may be translated and used for their use cases.
+> Faced with a larger number of projects needing FAIRification, it is necessary to establish a process for ranking and
+> prioritizing these projects. The recipe, besides reminding the benefits of making their data FAIR, provided 
+> suggestions for assisting in establishing a prioritization procedure. 
+> Hence, the aim of the recipe was to provide the readers with a wider perspective of criteria they could use for 
+> ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on 
+> their needs or requirements. 
+> Additionally, it provides the readers with a scorecard template that may be translated and used for their use cases.
 > 
 > ## What to read next section
 > * [Data catalog](fcb-find-bs-catalog)
@@ -309,12 +333,13 @@ The detailed description of each of the scores can be found on the [scorecard te
 
 ## References
 ````{dropdown} **Reference**
+````
+<!--
 1. [Report on IMI projects for data types and current technical solutions](https://zenodo.org/record/4428721#.YbmWNL3MJPZ)
 1. [The first 15 IMI data sets selected and available for inclusion in WP 2](https://zenodo.org/record/4428746#.YboFUr3MJPZ)
-1. [Exploring the current practices: Cost and Benefits](https://direct.mit.edu/dint/article/3/4/507/107429/Exploring-the-Current-Practices-Costs-and-Benefits) 
+1. [Exploring the current practices: Cost and Benefits](https://direct.mit.edu/dint/article/3/4/507/107429/Exploring-the-Current-Practices-Costs-and-Benefits)
 1. [Scorecard formulation template](https://zenodo.org/record/5778431#.YbikDxNKhH1)
-````
-
+-->
 
 ## Authors
 
