@@ -29,7 +29,7 @@ The main purpose of this recipe is:
 ---
 ## Introduction
 
-Upon reading the [FAIR principles](fcb-fairprinciples), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR or Data Management for that matter, the first hurdle is to grasp the notion of 'metadata' and this alone can be a challenge.
+Upon reading the [FAIR principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR or Data Management for that matter, the first hurdle is to grasp the notion of 'metadata' and this alone can be a challenge.
 Below are a number of commonly found definitions of metadata:
 
 * the recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidataMetadata`.
@@ -58,7 +58,7 @@ In the following sections, we will delve further into the possibly controversial
 :open:
 ```{figure} metadata-fair-figure.png
 ---
-width: 8500px
+width: 850px
 name: Metadata overview
 alt: Metadata overview
 ---
@@ -79,7 +79,7 @@ This is really the fundamental of metadata, things should at least be described 
 Depending on the domain of knowledge, descriptive metadata complexity can increase.
 Taking an example, let's consider the domain of a bibliographic record and let's look at a bibtex {footcite}`bibtex` record:
 
-```bash=
+```bash
 @Article{Alter2020DATS,
    Author="Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. ",
    Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model for discovering data access and use requirements}",
@@ -95,11 +95,15 @@ Each key in this json object corresponds to a metadata element the definition of
 
 ### 2. Structural metadata
 
-Structural metadata concerns itself with provide descriptors allowing agents to understand how data is organised so this type of metadata could provide information about the layout of a table, the relations between elements, and their types.
+Structural metadata concerns itself with providing descriptors allowing agents to understand how data is organised so 
+this type of metadata could provide information about the layout of a table, the relations between elements, and their types.
+Here, there are historical two important models to know about:
 
-```bash=
-TODO: include example
-```
+* [OAI-PMH](https://www.openarchives.org/pmh/) 
+OAI-PMH stands for the *Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)* and is a low-barrier mechanism for repository interoperability.
+
+* [Portland Common Data Model](https://pcdm.org/2016/04/18/models) 
+
 
 ### 3. Administrative metadata
 

@@ -93,8 +93,8 @@ Workflows are ubiquitous in the data science ecosystem.
 The ability to automate repetitive tasks to build complex pipelines, schedule and distribute tasks to cloud 
 infrastructures have popularized the use of workflow engine and somehow contributing to  reducing the risk of errors 
 associated with human operator fatigue.
-Workflow engines such as Galaxy {footcite}`Galaxy`, Snakemake{footcite}`snakemake`, Cromwell{footcite}`cromwell`, 
-Knime{footcite}`knime`, Apache Airflow{footcite}`Galaxy`, Cavatica {footcite}`cavatica` and Toil {footcite}`toil`
+Workflow engines such as Galaxy {footcite}`galaxy`, Snakemake{footcite}`pmid34035898`, Cromwell{footcite}`cromwell`, 
+Knime{footcite}`knime`, Apache Airflow{footcite}`apache_airflow`,  and Toil {footcite}`pmid28398314`
 to name a few offerings, have popularized the use of workflows in the field of life science computational applications. 
 This however be can also become a source of difficulty when buying-in in a particular platform and then trying to exchange information
 with other platforms or migration away from the initial choice.
@@ -426,10 +426,10 @@ which is presented below.
 ```{figure} workflowhub-eu-1.png
 ---
 width: 700px
-name: workflowhub.eu website
-alt: workflowhub.eu website
+name: workflowhub.eu website 1
+alt: workflowhub.eu website 1
 ---
-The european workflowhub  website.
+The european workflowhub website 1.
 ```
 ````
 
@@ -438,10 +438,10 @@ The european workflowhub  website.
 ```{figure} ./workflowhub-eu-2.png
 ---
 width: 700px
-name: workflowhub.eu website
-alt: workflowhub.eu website
+name: workflowhub.eu website 2
+alt: workflowhub.eu website 2
 ---
-The european workflowhub website.
+The european workflowhub website 2.
 ```
 ````
 
@@ -458,7 +458,7 @@ The main thing about Apache Airflow is that code is used to generate the workflo
 For more information, refer to this tutorial: https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html. 
 
 A tool developed by Michael Kotliar, Andrey V Kartashov, Artem Barski brings CWL support to the Apache Airflow 
-framework, meaning that CWL expressed workflow can now be executed on the platform {footcite}`10.1093/gigascience/giz084`
+framework, meaning that CWL expressed workflow can now be executed on the platform {footcite}`cwl-airflow`.
 
 ````{dropdown}
 :open:

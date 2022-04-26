@@ -142,8 +142,8 @@ Here is a [good tutorial provided by Gitlab](https://about.gitlab.com/handbook/e
 ```{figure} ../../../images/Kt3d9eo.png
 ---
 width: 800px
-name: prov-o-overview
-alt: Overview of the Provenance Ontology main classes
+name: Getting familiar with Markdown
+alt: Getting familiar with Markdown
 ---
 Getting familiar with Markdown.
 ```

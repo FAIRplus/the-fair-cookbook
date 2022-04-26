@@ -164,6 +164,7 @@ with the corresponding Python code available on Zenodo:
 or this [GitHub repository](https://github.com/rgiessmann/data-management-for-high-content-screening)
 2. Organize your metadata according to the metadata template sheet.
 
+
 ````{dropdown}
 :open:
 ```{figure} ../../../images/bioimage-excel.png

@@ -294,8 +294,8 @@ A number of collaborators of the CWLProv group have included such provenance inf
 Tools such as `Bagit` or specifications such as `Research Objects` recommended CWLProv documents to be included in 
 specific folders of the archives when preparing them.
 
-See the [BagIt profile](bagit.md) for details on the CWLProv folder structure, and the 
-[Research Object profile](ro.md) on how to declare the typing of the PROV files.
+See the [BagIt profile](https://github.com/common-workflow-language/cwlprov/blob/main/bagit.md) for details on the CWLProv folder structure, and the 
+[Research Object profile](https://github.com/common-workflow-language/cwlprov/blob/main/ro.md) on how to declare the typing of the PROV files.
 
 ````
 
@@ -404,7 +404,7 @@ material listed below:
 
 > * [Generating ISA based metadata and packaging it as a research object programmatically](https://w3id.org/faircookbook/FCB___)
 > * [Making workflow information FAIR and depositing to Workflowhub](https://w3id.org/faircookbook/FCB___)
-> * [How to meet community standards for annotation](./community-standards) {ref}`fcb-interop-txmetadata`
+> * [How to meet community standards for annotation](fcb-interop-txmetadata) {ref}`fcb-interop-txmetadata`
 > * [FAIR data matrix](fcb-fairify-examples-datamatrix) {ref}`fcb-fairify-examples-datamatrix`
 > * [Minid identifiers](https://w3id.org/faircookbook/FCB008)
 >

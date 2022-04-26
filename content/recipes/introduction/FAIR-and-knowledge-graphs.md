@@ -139,7 +139,7 @@ such as:
 
 This statement can be formally expressed using a dedicated syntax called [RDF](https://www.w3.org/TR/rdf11-concepts/), 
 standing for "resource description framework", one of the W3C standards supporting the vision of a **Semantic Web** as 
-outlined by Sir Tim Bernard Lee {footcite}`RDF`.
+outlined by Sir Tim Berners-Lee and colleagues {footcite}`bernerslee2001semantic`.
 In this instance, because the relation `binds to` is directional, we are creating the simplest form of directed graph,
 by establishing an `edge between two nodes`.
 
@@ -212,10 +212,10 @@ but isn't a W3C approved specifications, even though SHEX is proving quite popul
 
 ##### iv. Querying an RDF graph - the W3C SPARQL Query Language
 
-RDF graphs stored in RDF triple stores, such as Virtuoso {footcite}`virtuoso`, Blazegraph{footcite}`allelograph`, 
+RDF graphs stored in RDF triple stores, such as Virtuoso {footcite}`virtuoso`, Blazegraph {footcite}`blazegraph`, 
 can be queried using a dedicated query language defined by a W3C specification known as 
 [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/).
-SPARQL stands for `SPARQL Query Language`, (pronounced `sparkle`){footcite}`sparql`. 
+SPARQL stands for `SPARQL Query Language`, (pronounced `sparkle`) {footcite}`sparql`. 
 The results of a SPARQL query are a `result set` or `RDF graph` and is therefore **a collection of RDF triples**.
 
 An impressive feature of the SPARQL query language is its ability to perform `mashups` by performing federated queries
@@ -283,11 +283,11 @@ salient points and also, limitations.
 
 The Apache foundation released in 2009 the [Apache Tinkerpop framework](http://tinkerpop.apache.org/) as an open source
 initiative, licensed under Apache License 2.0 terms.
-* [Apache Tinkerpop]() is a **vendor agnostic graph database storage framework** using on `property graphs` as 
+* [Apache Tinkerpop](http://tinkerpop.apache.org/) is a **vendor agnostic graph database storage framework** using on `property graphs` as 
 underlying data structure.  As a framework, Tinkerpop is developed as an abstract layer, meant to ensure vendor 
 neutrality, allowing developers to decide about architecture choices and tests while coding against a standardized
 interface.
-* [Apache Gremlin]() is the **query language** powering Tinkerpop and its interactions with the underlying data stored
+* [Apache Gremlin](https://tinkerpop.apache.org/docs/3.6.0/tutorials/gremlins-anatomy/) is the **query language** powering Tinkerpop and its interactions with the underlying data stored
 as property graphs. Gremlin is a `graph traversal language` optimized for speed and fast access. 
 Defined by Marko Rodrigues, Gremlin language specifications are detailed in the following publication 
 {footcite}`10.1145/2815072.2815073` and is supported by libraries available in the most popular programming

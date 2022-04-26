@@ -83,7 +83,7 @@ lab results, electronic documentation, and bedside monitor trends and waveforms.
 - **Description**: A corpus containing 4,993 abstracts annotated with `(P)articipants`, `(I)nterventions`, and `(O)utcomes`.
 
 Training labels are sourced from AMT workers and aggregated to reduce noise. 
-Test labels are collected from medical professionals. {footcite}`https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Presentation.pdf`
+Test labels are collected from medical professionals. {footcite}`lee_evans_CDMV5_test_data`
 - **Format**: *ad-hoc*, UTF-8 text file with tab delimited values
 - **Availability**: https://github.com/bepnye/EBM-NLP
 - **Purpose**: Corpus for training and testing Natural Language Processing algorithms
