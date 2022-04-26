@@ -1725,6 +1725,11 @@ or to decide whether to perform new ones.
 
 ## Reference
 ````{dropdown} **Reference**
+```{footbibliography}
+```
+````
+
+<!--
 [1]. Common Workflow Language, v1.0. Specification, Common Workflow Language working group. https://w3id.org/cwl/v1.0/ doi:10.6084/m9.figshare.3115156.v2
 
 [2]. [Apache airflow](https://airflow.apache.org/)
@@ -1736,8 +1741,7 @@ or to decide whether to perform new ones.
 [5].  Simonyan V, Goecks J, Mazumder R. Biocompute Objects—A Step towards Evaluation and Validation of Biomedical Scientific Computations. PDA journal of pharmaceutical science and technology. 2017;71(2):136-146. doi:10.5731/pdajpst.2016.006734.
 
 [6].BCO App: tools for generating BioCompute Objects from next-generation sequencing workflows and computations.   https://doi.org/10.12688/f1000research.25902.1
-````
-
+-->
 
 
 ## Authors
