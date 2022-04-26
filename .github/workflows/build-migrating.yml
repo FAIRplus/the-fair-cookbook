@@ -1,9 +1,9 @@
-name: build-from-migrating-branch-and-deploy-to-external-repo
+name: build-from-main-branch-and-deploy-to-external-repo
 on:
   workflow_dispatch:
   push:
     branches:
-      - migrating
+      - main
 
 jobs:
   build-and-deploy-to-other-repo:
@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
       with:
         persist-credentials: false
-        ref: migrating
+        ref: main
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
@@ -59,7 +59,7 @@ jobs:
             jupyter-client==6.1.12
             jupyter-core==4.7.1
             jupyter-packaging==0.9.2
-            jupyter-server==1.6.4
+            jupyter-server==1.15.4
             jupyter-server-mathjax==0.2.2
             jupyter-sphinx==0.3.1
             jupyterbook-latex==0.2.0
@@ -174,7 +174,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         SSH: true
-        BASE_BRANCH: migrating #The branch of this repository which should be transfered from.
+        BASE_BRANCH: main #The branch of this repository which should be transfered from.
         REPOSITORY_NAME: FAIRplus/the-fair-cookbook # The repository on github.com to which will be deployed = pushed.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: _build/html # The folder the action should deploy.
