@@ -161,9 +161,10 @@ In this recipe, we introduced the concept of metadata and presented a possible t
 ---
 ## References
 
-
+````{dropdown} **References**
 ```{footbibliography}
-```	
+```
+````
 
 <!-- 1. [Understanding metadata](https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf)
 1. [what-is-metadata-and-why-is-it-important-data](https://www.opendatasoft.com/en/blog/what-is-metadata-and-why-is-it-important-data)
