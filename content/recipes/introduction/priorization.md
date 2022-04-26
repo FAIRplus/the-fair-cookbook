@@ -68,7 +68,7 @@ Prioritization overview.
 ## Determining the need for FAIRification
 
 Before understanding why and how to *prioritize* projects for the FAIR pipeline, it is essential to understand 
-*the need* for FAIRification of data. The list below identifies key reasons why one should make data FAIR: 
+*the need* for FAIRification of data {footcite}`d3_report`. The list below identifies key reasons why one should make data FAIR: 
 * Increase impact and visibility:
     - Standardising published project/dataset metadata using a well-accepted metadata model and getting indexed by
   major community resources helps in increasing the visibility and impact of the data within the scientific community.
@@ -333,6 +333,8 @@ Score card template.
 
 ## References
 ````{dropdown} **Reference**
+```{footbibliography}
+```
 ````
 <!--
 1. [Report on IMI projects for data types and current technical solutions](https://zenodo.org/record/4428721#.YbmWNL3MJPZ)

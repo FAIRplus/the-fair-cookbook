@@ -211,7 +211,7 @@ Pharos information is organized around:
 :open:
 ```{figure} ../../../images/pharos-project.png
 ---
-width: 8    50px
+width: 850px
 name: Pharos
 alt: Pharos
 ---
