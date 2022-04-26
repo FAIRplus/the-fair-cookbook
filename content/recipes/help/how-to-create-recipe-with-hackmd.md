@@ -226,10 +226,10 @@ back to the editor view, one allowing to end it.
 ```{figure} ../../../images/3uqMaT3.png
 ---
 width: 800px
-name: prov-o-overview
-alt: Overview of the Provenance Ontology main classes
+name: hackmd editor 
+alt: hackmd editor 
 ---
-Overview of the Provenance Ontology main classes.
+hackmd editor .
 ```
 ````
 
