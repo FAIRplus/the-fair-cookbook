@@ -2,7 +2,7 @@
 
 [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://faircookbook.elixir-europe.org/content/home.html)    
 ![license](https://img.shields.io/badge/license-CC--BY--4.0-blue)
-![build](https://github.com/FAIRplus/the-fair-cookbook/actions/workflows/build-migrating.yml/badge.svg?branch=migrating)
+![build](https://github.com/FAIRplus/the-fair-cookbook/actions/workflows/build-migrating.yml/badge.svg?branch=main)
 [![contribute content](https://img.shields.io/badge/contribute-content-blueviolet)](https://github.com/FAIRplus/the-fair-cookbook/issues/new?assignees=proccaserra&labels=issue+type%3A+meta+checklist%2Cauthor%27s+task%3A+write+abstract%2Ceditor%27s+task%3A+identify+author&template=meta-checklist.md&title=TitleOfRecipe)
 
 
