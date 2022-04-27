@@ -27,6 +27,8 @@ The main purpose of this recipe is:
 
 ### Using the OPSIN website
 
+The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
+
 ### Automating translations with Google Colab
 
 Google Colab allows us to use Python to automate conversions of IUPAC names.
