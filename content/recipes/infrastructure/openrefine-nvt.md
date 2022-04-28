@@ -405,7 +405,19 @@ The RDF plugin in OpenRefine allows to map a table in OpenRefine to a graph patt
 [ADD LINK TO TUTORIALS]
 
 
-![alt_text](images/image1.png "image_tooltip")
+
+````{dropdown}
+:open:
+```{figure} ../../../images/rdf-align-openrefine.png
+---
+width: 800px
+name: RDF schema alignment in OpenRefine
+alt: RDF schema alignment in OpenRefine
+---
+RDF schema alignment in OpenRefine
+```
+````
+
 
 
 The system assists the users in defining how the table should look like in RDF, fundamentally providing a template editor.
@@ -423,23 +435,32 @@ It covers different input formats (e.g.: JSON and hierarchical content).
 In terms of functionality, it is different from OpenRefine in some fundamental ways:
 
 
-
 * **Use of ontologies**. When mapping a dataset to RDF, one can create the required classes and properties URIs “while doing the mapping”.
 Karma requires the full ontology to map to to be present a-priori.
 * **Mapping suggestions**. Thanks to knowing the target ontology, Karma can learn from previous mappings and provide increasingly accurate suggestions.
 * **User interface**. Karma allows to paint the graph pattern over the table, while OpenRefine has a more crude text-based interface.
 * **Data reconciliation**. This is very limited in Karma (limited to three entity types only!).
-* **Generic data transformation**. Both tools can apply simple data transformations (e.g.: via javascript function). 
-[VERIFY WHAT LANGUAGE]. However, OpenRefine is far more complete in these functionalities.
+* **Generic data transformation**. Both tools can apply simple data transformations (e.g.: via javascript function).  
+However, OpenRefine is far more complete in these functionalities.
 * **Batch processing**. Karma is an editor that saves a specification file that can then be invoked via the 
 web interface but also via command line and eventually in a high performance spark environment. 
 OpenRefine batch capabilities are very limited (In the latest version, OpenRefine is also implementing a spark architecture, albeit locally on the Desktop machine).
-Karma expresses mappings in the KARMA language, that is an extension of R2RML.
+Karma expresses mappings in the KARMA language, that is an extension of [R2RML](https://www.w3.org/TR/r2rml/).
 
 An example of a mapping session in Karma:
 
+````{dropdown}
+:open:
+```{figure} ../../../images/rdf-align-karma.png
+---
+width: 800px
+name: RDF schema alignment in Karma
+alt: RDF schema alignment in Karma
+---
+RDF schema alignment in Karma
+```
+````
 
-![alt_text](images/image2.png "image_tooltip")
 
 
 [[https://github.com/szeke/karma-tcdl-tutorial/wiki](https://github.com/szeke/karma-tcdl-tutorial/wiki)]
@@ -501,34 +522,36 @@ A particular aspect of (automated) FAIRification would then be to have systems a
 
 #### RelFinder 
 
-Once we have information as a KG, it’s useful to have tools to explore it.
-One such simple tool is RelFinder ([http://www.visualdataweb.org/relfinder.php](http://www.visualdataweb.org/relfinder.php) ).
+Once we have information as a KG, it is useful to have tools to explore it.
+One such simple tool is [RelFinder](http://www.visualdataweb.org/relfinder.php) ).
 
 The tool can be pointed to a triplestore and allows discovering connections between two or more entities.
-Its capabilities are very limited, and it does not perform an exhaustive search.
+Its capabilities are very limited, and it does not perform an exhaustive search, and being implemented in Flash, it is now obsolete.
 However, it is a useful tool to demonstrate why a KG is useful.
-
-The tool was implemented in Flash and is now obsolete.
 
 An implementation on a more modern technology stack is available at [https://github.com/FAIRplus/RelFinderNG](https://github.com/FAIRplus/RelFinderNG),
 
-
-
-Relation to :
-
-[https://graphdb.ontotext.com/documentation/standard/loading-data-using-ontorefine.html](https://graphdb.ontotext.com/documentation/standard/loading-data-using-ontorefine.html)
-
-
+and many more tools and libraries exist to provide visual insights over KG
+https://graphdb.ontotext.com/documentation/free/devhub/custom-graph-views.html
 
 ## Conclusion:
 
-TODO:
+This content provides a basic overview of reconciliation tools for dealing with relative lightweight processes to convert tabular data to an RDF Linked Data graph.
+It completements content related to ETL to RDF.
+While a lot of material already exists about using OpenRefine for performing such tasks, the value added by the recipe 
+rests on the setting up of a Wikibase instance to provide the reconciliation reference.
+
 
 > What to read next? 
 > 
->  {ref}`stuff`
+> [An inventory of tools for converting data to RDF](https://w3id.org/faircookbook/FCB051)
+> 
+> [Creating Linked Data with OpenRefine](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e)
 >
->  {ref}`other_stuff`
+> [Using OntoRefine to Transform Tabular Data into Linked Data](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e
+> 
+> [OntoRefine](https://graphdb.ontotext.com/documentation/free/loading-data-using-ontorefine.html) tutorial by [OntoText](https://www.ontotext.com/knowledgehub/fundamentals/ontorefine-2/)
+
 
 
 ## References
