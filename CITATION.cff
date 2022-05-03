@@ -1,0 +1,307 @@
+cff-version: 1.2.0
+message: If you use this resource, please cite it using these metadata.
+title: The FAIR Cookbook
+abstract: Practical Guidance on how to make data FAIR and move through data maturity
+  levels.
+authors:
+- family-names: Rocca-Serra
+  given-names: Philippe
+  orcid: https://orcid.org/0000-0001-9853-5668
+  affiliation: University of Oxford
+- family-names: J G Gray
+  given-names: Alasdair
+  orcid: https://orcid.org/0000-0002-5711-4872
+  affiliation: Heriot Watt University
+- family-names: Delfin Rossaro
+  given-names: Alejandra
+  orcid: https://orcid.org/0000-0002-5423-4203
+  affiliation: Universite Paul Sabatier
+- family-names: Splendiani
+  given-names: Andrea
+  orcid: https://orcid.org/0000-0002-3201-9617
+  affiliation: Novartis AG
+- family-names: Zaliani
+  given-names: Andrea
+  orcid: https://orcid.org/0000-0002-1740-8390
+  affiliation: Fraunhofer Institute
+- family-names: Pippow
+  given-names: Andreas
+  orcid: https://orcid.org/0000-0003-1301-2580
+  affiliation: Fraunhofer Institute
+- family-names: Cambon-Thomsen
+  given-names: Anne
+  orcid: https://orcid.org/0000-0001-8793-3644
+  affiliation: Universite Paul Sabatier
+- family-names: Sedani
+  given-names: Ashni
+  orcid: https://orcid.org/0000-0002-2424-3483
+  affiliation: GSK
+- family-names: Goble
+  given-names: Carole
+  orcid: https://orcid.org/0000-0003-1219-2137
+  affiliation: University of Manchester
+- family-names: Evelo
+  given-names: Chris
+  orcid: https://orcid.org/0000-0002-5301-3142
+  affiliation: Maastricht University
+- family-names: Kee Ong
+  given-names: Chuang
+  affiliation: Astra-Zeneca
+- family-names: Wood
+  given-names: Colin
+  affiliation: Astra-Zeneca
+- family-names: Pommier
+  given-names: Cyril
+  orcid: https://orcid.org/0000-0002-9040-8733
+  affiliation: "Universit\xE9 Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics\
+    \ facility, 78026, Versailles, France"
+- family-names: J. B. Clarke
+  given-names: Daniel
+  orcid: https://orcid.org/0000-0003-3471-7416
+  affiliation: Icahn School of Medicine at Mount Sinai
+- family-names: Welter
+  given-names: Danielle
+  orcid: https://orcid.org/0000-0003-1058-2668
+  affiliation: University of Luxembourg
+- family-names: Henderson
+  given-names: David
+  orcid: https://orcid.org/0000-0002-6433-200X
+  affiliation: Bayer AG
+- family-names: Batista
+  given-names: Dominique
+  orcid: https://orcid.org/0000-0002-2109-489X
+  affiliation: University of Oxford
+- family-names: Reilly
+  given-names: Dorothy
+  affiliation: Novartis AG
+- family-names: Alharbi
+  given-names: Ebtisam
+  affiliation: University of Manchester
+- family-names: van der Horst
+  given-names: Eelke
+  orcid: https://orcid.org/0000-0002-8777-5612
+  affiliation: The Hyve
+- family-names: Willighagen
+  given-names: Egon
+  orcid: https://orcid.org/0000-0001-7542-0286
+  affiliation: Maastricht University
+- family-names: Reynares
+  given-names: Emiliano
+  orcid: https://orcid.org/0000-0002-5109-3716
+  affiliation: Boehringer-Ingelheim AG
+- family-names: Vos
+  given-names: Emma
+  orcid: https://orcid.org/0000-0002-8589-0609
+  affiliation: The Hyve
+- family-names: LeFloch
+  given-names: Erwan
+  orcid: https://orcid.org/0000-0002-1010-6859
+  affiliation: "Universit\xE9 Paris-Saclay, INRAE, BioinfOmics, Plant bioinformatics\
+    \ facility, 78026, Versailles, France"
+- family-names: Marin del Pico
+  given-names: Eva
+  orcid: https://orcid.org/0000-0001-8324-2897
+  affiliation: Barcelona Supercomputing Centre
+- family-names: Ronzano
+  given-names: Francesco
+  orcid: https://orcid.org/0000-0001-5037-9061
+  affiliation: IMIM
+- family-names: Kroh
+  given-names: Franziska
+  affiliation: Fraunhofer Institute
+- family-names: Xu
+  given-names: Fuqi
+  orcid: https://orcid.org/0000-0002-5923-3859
+  affiliation: EMBL-EBI
+- family-names: Backianathan
+  given-names: Gabriel
+  affiliation: Novartis AG
+- family-names: Papadotas
+  given-names: George
+  affiliation: GSK
+- family-names: Witt
+  given-names: Gesa
+  orcid: https://orcid.org/0000-0003-2344-706X
+  affiliation: Fraunhofer Institute
+- family-names: Hurst
+  given-names: Hannah
+  affiliation: EMBL-EBI
+- family-names: Van Vlijmen
+  given-names: Herman
+  orcid: https://orcid.org/0000-0002-1915-3141
+  affiliation: Janssen
+- family-names: Emam
+  given-names: Ibrahim
+  orcid: https://orcid.org/0000-0002-7561-2787
+  affiliation: Imperial College London
+- family-names: Liyanage
+  given-names: Isuru
+  orcid: https://orcid.org/0000-0002-4839-5158
+  affiliation: EMBL-EBI
+- family-names: Neefs
+  given-names: Jean-Marc
+  affiliation: Janssen
+- family-names: Strubel
+  given-names: Jolanda
+  orcid: https://orcid.org/0000-0001-6675-4639
+  affiliation: The Hyve
+- family-names: Quast
+  given-names: Karsten
+  affiliation: Boehringer-Ingelheim AG
+- family-names: van Bochove
+  given-names: Kees
+  orcid: https://orcid.org/0000-0002-8589-0609
+  affiliation: The Hyve
+- family-names: Dauth
+  given-names: Kurt
+  affiliation: Boehringer-Ingelheim AG
+- family-names: Furlong
+  given-names: Laura
+  orcid: https://orcid.org/0000-0002-9383-528X
+  affiliation: IMIM
+- family-names: Garcia
+  given-names: Leyla
+  orcid: https://orcid.org/0000-0003-3986-0510
+  affiliation: ZB MED Information Centre for life sciences
+- family-names: Giovanni
+  given-names: Lucas
+  orcid: https://orcid.org/0000-0001-6518-9535
+  affiliation: Maastricht University
+- family-names: Kohler
+  given-names: Manfred
+  affiliation: Fraunhofer Institute
+- family-names: Pruess
+  given-names: Manuela
+  orcid: https://orcid.org/0000-0002-6857-5543
+  affiliation: SIB
+- family-names: Ibberson
+  given-names: Mark
+  orcid: https://orcid.org/0000-0003-3152-5670
+  affiliation: SIB
+- family-names: Cook
+  given-names: Martin
+  affiliation: Elixir Europe
+- family-names: Courtot
+  given-names: Melanie
+  orcid: https://orcid.org/0000-0002-9551-6370
+  affiliation: EMBL-EBI
+- family-names: d'Arcy
+  given-names: Mike
+  orcid: https://orcid.org/0000-0003-2280-917X
+  affiliation: University of Southern California
+- family-names: Juty
+  given-names: Nick
+  orcid: https://orcid.org/0000-0002-2036-8350
+  affiliation: University of Manchester
+- family-names: Lynch
+  given-names: Nick
+  orcid: https://orcid.org/0000-0002-8997-5298
+  affiliation: OpenPhacts
+- family-names: Engkvist
+  given-names: Ola
+  orcid: https://orcid.org/0000-0003-4970-6461
+  affiliation: Astra-Zeneca
+- family-names: Deniz Beyan
+  given-names: Oya
+  orcid: https://orcid.org/0000-0001-7611-3501
+  affiliation: Fraunhofer Institute
+- family-names: Peeters
+  given-names: Paul
+  orcid: https://orcid.org/0000-0001-9915-2933
+  affiliation: Janssen
+- family-names: Woollard
+  given-names: Peter
+  orcid: https://orcid.org/0000-0002-7654-6902
+  affiliation: GSK
+- family-names: Papadopoulos
+  given-names: Petros
+  orcid: https://orcid.org/0000-0002-8110-7576
+  affiliation: Heriot Watt University
+- family-names: Gribbon
+  given-names: Philip
+  orcid: https://orcid.org/0000-0001-7655-2459
+  affiliation: Fraunhofer Institute
+- family-names: Sahay
+  given-names: Ratnesh
+  affiliation: Astra-Zeneca
+- family-names: Giessmann
+  given-names: Robert
+  orcid: https://orcid.org/0000-0002-0254-1500
+  affiliation: Bayer AG
+- family-names: Verbeeck
+  given-names: Rudi
+  orcid: https://orcid.org/0000-0001-5445-6095
+  affiliation: Janssen
+- family-names: Capella Gutierrez
+  given-names: Salvador
+  orcid: https://orcid.org/0000-0002-0309-604X
+  affiliation: Barcelona Supercomputing Centre
+- family-names: Lusher
+  given-names: Scott
+  affiliation: Janssen
+- family-names: Beier
+  given-names: Sebastian
+  orcid: https://orcid.org/0000-0002-2177-8781
+  affiliation: Bioinformatics and Information Technology Group, Leibniz Institute
+    of Plant Genetics and Crop Plant Research (IPK), 06466 Seeland, Germany
+- family-names: Singh
+  given-names: Sukhi
+  orcid: https://orcid.org/0000-0001-8324-2897
+  affiliation: The Hyve
+- family-names: Sansone
+  given-names: Susanna-Assunta
+  orcid: https://orcid.org/0000-0001-5306-5690
+  affiliation: University of Oxford
+- family-names: Plasterer
+  given-names: Tom
+  affiliation: Astra-Zeneca
+- family-names: Burdett
+  given-names: Tony
+  orcid: https://orcid.org/0000-0002-2513-5396
+  affiliation: EMBL-EBI
+- family-names: Abbassi-Daloii
+  given-names: Tooba
+  orcid: https://orcid.org/0000-0002-4904-3269
+  affiliation: Maastricht University
+- family-names: Goldmann
+  given-names: Ulrich
+  orcid: https://orcid.org/0000-0003-1120-6912
+  affiliation: CEMM
+- family-names: "Grou\xE8s"
+  given-names: Valentin
+  orcid: https://orcid.org/0000-0001-6501-0806
+  affiliation: University of Luxembourg
+- family-names: Ioannidis
+  given-names: Vassilios
+  orcid: https://orcid.org/0000-0002-4209-2578
+  affiliation: SIB
+- family-names: P. Satagopam
+  given-names: Venkata
+  orcid: https://orcid.org/0000-0002-6532-5880
+  affiliation: University of Luxembourg
+- family-names: Sedlyarov
+  given-names: Vitaly
+  orcid: https://orcid.org/0000-0002-9872-3535
+  affiliation: Boehringer-Ingelheim AG
+- family-names: Gu
+  given-names: Wei
+  orcid: https://orcid.org/0000-0003-3951-6680
+  affiliation: University of Luxembourg
+- family-names: Gaidya
+  given-names: Yojana
+  orcid: https://orcid.org/0000-0002-7683-0452
+  affiliation: Fraunhofer Institute
+- family-names: Warnes
+  given-names: Zachary
+  orcid: https://orcid.org/0000-0002-7777-6013
+  affiliation: Maastricht University
+version: 0.1.0
+date-released: '2022-04-30'
+identifiers:
+- type: doi
+  value: 10.0000.1234/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._[]()\:;
+  description: A pseudo-DOI testing all allowed characters.
+license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
+repository-code: https://github.com/FAIRplus/the-fair-cookbook/
+url: https://faircookbook.elixir-europe.org/content/home.html
