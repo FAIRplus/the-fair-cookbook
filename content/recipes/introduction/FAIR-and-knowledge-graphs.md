@@ -39,8 +39,10 @@ which have been to work-horse of database building. With relational database app
 to an `Entity Relationship Model (ER model/ER diagram`, the development of which undergoes a series of formal steps. 
 One of these steps involves a process known as `schema normalization` to ensure that key entities and their attributes 
 can be stored in `tables` in the most parsimonious way. 
+
 This step is necessary to ensure query performance and optimization. Relational database approaches track and store 
 relations between entities using what is known as `linking tables`. 
+
 These are essentially maps between object identifiers, thus logging the relations 2 instances of objects may have.
 When interrogating a database operating under this paradigm (e.g. mysql, postgresql, oracle db to name a few), 
 the database engine needs to run `JOIN` operations, a type of SQL queries hitting the table of objects and any 
