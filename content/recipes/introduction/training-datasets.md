@@ -5,15 +5,15 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: FCB0XX
-:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
+:identifier_text: FCB069
+:identifier_link: 'https://w3id.org/faircookbook/FCB069'
 :difficulty_level: 1
 :recipe_type: guidance
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist  
 :has_executable_code: nope
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 0
+:maturity_indicator: 0
 :recipe_name: Datasets of relevance
 ```` 
 
