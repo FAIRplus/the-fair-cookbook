@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Public knowledge graphs resources for life sciences" href="public-kg-resource-integration.html" />
-    <link rel="prev" title="FAIR and the notion of metadata" href="metadata-fair.html" />
+    <link rel="prev" title="Datasets of relevance" href="training-datasets.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -131,6 +131,11 @@
    Metadata and FAIR
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    FAIR and Knowledge Graphs
@@ -139,11 +144,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="public-kg-resource-integration.html">
    Public Knowledge Graphs for Life Sciences
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="training-datasets.html">
-   Datasets to train on FAIRification
   </a>
  </li>
  <li class="toctree-l1">
@@ -927,7 +927,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Knowledge graphs and FAIR", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB0XX", "url": "https://w3id.org/faircookbook/FCB0XX"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Knowledge graphs and FAIR", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB070", "url": "https://w3id.org/faircookbook/FCB070"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -978,7 +978,7 @@ No
 </div>
 </div>
 <div class="section" style="flex-grow: 1;">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-1">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars not applicable">
 <path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
 <path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
 <path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
@@ -987,12 +987,12 @@ No
 </svg>
 <div class="sectionContent">
 <div class="label">Maturity Level & Indicator</div>
-<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a></div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"not applicable.md">not applicable</a></div>
 <div class="tooltip">hover me
 <span class="tooltiptext">Tooltip text</span></div>
 </div>
 </div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://w3id.org/faircookbook/FCB0XX" class="text--purple-dark">FCB0XX
+<a href="https://w3id.org/faircookbook/FCB070" class="text--purple-dark">FCB070
 </a></div>
 </div>
 </div>
@@ -1065,7 +1065,7 @@ representations of information</strong>, in contrast to <strong>relational-model
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="kg-typology">
 <a class="reference internal image-reference" href="../../../_images/kg-typology.png"><img alt="Knowledge Graph Types" src="../../../_images/kg-typology.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Data Use</span><a class="headerlink" href="#kg-typology" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Data Use</span><a class="headerlink" href="#kg-typology" title="Permalink to this image">¶</a></p>
 </div>
 <p class="card-text">RDF Graph and Labeled Property graphs</p>
 </div>
@@ -1212,7 +1212,7 @@ and why they matter.</p>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="wikidata-sparql">
 <a class="reference internal image-reference" href="../../../_images/wikidata-sparql.jpg"><img alt="wikidata sparql" src="../../../_images/wikidata-sparql.jpg" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A SPARQL query over Wikidata RDF endpoint</span><a class="headerlink" href="#wikidata-sparql" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">A SPARQL query over Wikidata RDF endpoint</span><a class="headerlink" href="#wikidata-sparql" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3" open="open">
@@ -1224,7 +1224,7 @@ and why they matter.</p>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="wikidata-sparql-endpoint">
 <a class="reference internal image-reference" href="../../../_images/wikidata-sparql-celllines.jpg"><img alt="wikidata sparql endpoint" src="../../../_images/wikidata-sparql-celllines.jpg" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">A SPARQL query over Wikidata RDF endpoint: Cell lines with names that could also be URLs (Internet of Cell Lines)</span><a class="headerlink" href="#wikidata-sparql-endpoint" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">A SPARQL query over Wikidata RDF endpoint: Cell lines with names that could also be URLs (Internet of Cell Lines)</span><a class="headerlink" href="#wikidata-sparql-endpoint" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>For more information about SPARQL queries over Wikidata, see <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_(Internet_of_Cell_Lines)">here</a>.</p>
@@ -1325,7 +1325,7 @@ RETURN p.stId AS Pathway, rle.stId AS Reaction, rle.displayName AS ReactionName
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="reactome-cypher-query">
 <a class="reference internal image-reference" href="../../../_images/pcbi.1005968.g001.jpg"><img alt="reactome cypher query" src="../../../_images/pcbi.1005968.g001.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">CYPHER query example on Reactome: Comparison with SQL. From Fabregat et al,2018. 10.1371/journal.pcbi.1005968</span><a class="headerlink" href="#reactome-cypher-query" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">CYPHER query example on Reactome: Comparison with SQL. From Fabregat et al,2018. 10.1371/journal.pcbi.1005968</span><a class="headerlink" href="#reactome-cypher-query" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>While its origin dates back to 2000, the company recently grabbed headlines for a <a class="reference external" href="https://neo4j.com/press-releases/neo4j-announces-seriesf-funding/">very successful IPO</a> which netted circa 350 millions USD of venture capital funding. Such a success is testament to the robustness and validity of the approach taken by the group of computer scientists who built the solutions from the ground up to deliver one of the most successful solution for property graph based knowledge representation and querying.make full use of Neo4j representation and infrastructure capabilities.</p>
@@ -1610,7 +1610,7 @@ metadata, data about the data  in a FAIR way.</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="metadata-fair.html" title="previous page">FAIR and the notion of metadata</a>
+    <a class='left-prev' id="prev-link" href="training-datasets.html" title="previous page">Datasets of relevance</a>
     <a class='right-next' id="next-link" href="public-kg-resource-integration.html" title="next page">Public knowledge graphs resources for life sciences</a>
 
         </div>

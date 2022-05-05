@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Datasets of relevance" href="training-datasets.html" />
+    <link rel="next" title="Prioritization of projects for FAIRification" href="priorization.html" />
     <link rel="prev" title="Knowledge graphs and FAIR" href="FAIR-and-knowledge-graphs.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -132,6 +132,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="FAIR-and-knowledge-graphs.html">
    FAIR and Knowledge Graphs
   </a>
@@ -139,11 +144,6 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Public Knowledge Graphs for Life Sciences
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="training-datasets.html">
-   Datasets to train on FAIRification
   </a>
  </li>
  <li class="toctree-l1">
@@ -890,7 +890,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Public knowledge graphs resources for life sciences", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB0XX", "url": "https://w3id.org/faircookbook/FCB0XX"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Public knowledge graphs resources for life sciences", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB071", "url": "https://w3id.org/faircookbook/FCB071"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -941,7 +941,7 @@ No
 </div>
 </div>
 <div class="section" style="flex-grow: 1;">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars level-1">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars not applicable">
 <path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
 <path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
 <path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
@@ -950,12 +950,12 @@ No
 </svg>
 <div class="sectionContent">
 <div class="label">Maturity Level & Indicator</div>
-<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"[F+MM-1.1C].md">[F+MM-1.1C]</a></div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"not applicable.md">not applicable</a></div>
 <div class="tooltip">hover me
 <span class="tooltiptext">Tooltip text</span></div>
 </div>
 </div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://w3id.org/faircookbook/FCB0XX" class="text--purple-dark">FCB0XX
+<a href="https://w3id.org/faircookbook/FCB071" class="text--purple-dark">FCB071
 </a></div>
 </div>
 </div>
@@ -1008,7 +1008,7 @@ between these types of graph explicitly may be required in the future.</p>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="yummydata">
 <img alt="YummyData, a registry of sparql endpoints" src="../../../_images/yummydata.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">YummyData, a registry of sparql endpoints</span><a class="headerlink" href="#yummydata" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">YummyData, a registry of sparql endpoints</span><a class="headerlink" href="#yummydata" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1038,7 +1038,7 @@ OpenTarget project in AWS<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="opentarget-project-in-aws">
 <img alt="OpenTarget project in AWS" src="../../../_images/opentarget-aws.png" />
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">OpenTarget project in AWS</span><a class="headerlink" href="#opentarget-project-in-aws" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">OpenTarget project in AWS</span><a class="headerlink" href="#opentarget-project-in-aws" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>The associated code is also open sourced, under an Apache License 2.0.
@@ -1141,7 +1141,7 @@ Pharos<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../../../_images/pharos-project.png"><img alt="Pharos" src="../../../_images/pharos-project.png" style="width: 850px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Pharos</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Pharos</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>All the Pharos data can be queried via a GraphQL API:
@@ -1274,7 +1274,7 @@ pyKEEN datasets<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="id10">
 <a class="reference internal image-reference" href="../../../_images/pykeen_datasets.png"><img alt="pykeen" src="../../../_images/pykeen_datasets.png" style="width: 750px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">pykeen</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">pykeen</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <p class="card-text">pykeen</p>
 </div>
@@ -1430,7 +1430,7 @@ the process to perform in order to be able to be compatible with specific resour
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="FAIR-and-knowledge-graphs.html" title="previous page">Knowledge graphs and FAIR</a>
-    <a class='right-next' id="next-link" href="training-datasets.html" title="next page">Datasets of relevance</a>
+    <a class='right-next' id="next-link" href="priorization.html" title="next page">Prioritization of projects for FAIRification</a>
 
         </div>
         

@@ -6,15 +6,15 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: FCB0XX
-:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
+:identifier_text: FCB070
+:identifier_link: 'https://w3id.org/faircookbook/FCB070'
 :difficulty_level: 2
 :recipe_type: guidance
 :reading_time_minutes: 10
 :intended_audience:  everyone 
 :has_executable_code: nope
-:maturity_level: 1
-:maturity_indicator: 1
+:maturity_level: 0
+:maturity_indicator: 0
 :recipe_name: Knowledge graphs and FAIR
 ```` 
 

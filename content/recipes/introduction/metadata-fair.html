@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Knowledge graphs and FAIR" href="FAIR-and-knowledge-graphs.html" />
+    <link rel="next" title="Datasets of relevance" href="training-datasets.html" />
     <link rel="prev" title="Ethical values of FAIR" href="FAIRplus-values.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/metadata-fair.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="FAIR and the notion of metadata" />
-<meta property="og:description" content="FAIR and the notion of metadata    &lt;br/&gt;   &lt;!-- ````{panels_fairplus} :identifier_text: FCB0XX :identifier_link: &#39;https://w3id.org/faircookbook/FCB0XX&#39; :difficu" />
+<meta property="og:description" content="FAIR and the notion of metadata    &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;sdo&#34;: &#34;https://schema.org/&#34;, &#34;bs&#34;: &#34;https://bioschema.org/" />
 <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -132,6 +132,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="FAIR-and-knowledge-graphs.html">
    FAIR and Knowledge Graphs
   </a>
@@ -139,11 +144,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="public-kg-resource-integration.html">
    Public Knowledge Graphs for Life Sciences
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="training-datasets.html">
-   Datasets to train on FAIRification
   </a>
  </li>
  <li class="toctree-l1">
@@ -888,20 +888,76 @@
   <div class="section" id="fair-and-the-notion-of-metadata">
 <span id="fcb-metadata"></span><h1>FAIR and the notion of metadata<a class="headerlink" href="#fair-and-the-notion-of-metadata" title="Permalink to this headline">¶</a></h1>
 <br/>
-<!--
-````{panels_fairplus}
-:identifier_text: FCB0XX
-:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
-:difficulty_level: 1
-:recipe_type: guidance
-:reading_time_minutes: 10
-:intended_audience:  everyone 
-:maturity_level: 1
-:maturity_indicator: 1
-:has_executable_code: nope
-:recipe_name: FAIR and the notion of metadata
-```` 
--->
+<br/>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "FAIR and the notion of metadata", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB068", "url": "https://w3id.org/faircookbook/FCB068"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+10 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">FAIR and the notion of metadata</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Everyone</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars not applicable">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><a href="https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"not applicable.md">not applicable</a></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB068" class="text--purple-dark">FCB068
+</a></div>
+</div>
+</div>
 <div class="section" id="main-objectives">
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is:</p>
@@ -1152,7 +1208,7 @@ As with all human things, there will be redundant, overlapping, competing effort
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="FAIRplus-values.html" title="previous page">Ethical values of FAIR</a>
-    <a class='right-next' id="next-link" href="FAIR-and-knowledge-graphs.html" title="next page">Knowledge graphs and FAIR</a>
+    <a class='right-next' id="next-link" href="training-datasets.html" title="next page">Datasets of relevance</a>
 
         </div>
         
