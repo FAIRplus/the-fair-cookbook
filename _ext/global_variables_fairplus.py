@@ -43,6 +43,7 @@ CONTROLLED_VOCABULARY_DIFFICULTY_LEVEL = {
 }
 
 CONTROLLED_VOCABULARY_MATURITY_LEVEL = {
+    "0" : "not applicable",
     "1" : "level-1",
     "2" : "level-2",
     "3" : "level-3",
@@ -51,6 +52,7 @@ CONTROLLED_VOCABULARY_MATURITY_LEVEL = {
 }
 
 CONTROLLED_VOCABULARY_MATURITY_INDICATOR = {
+    "0" : "not applicable",
     "1" : "[F+MM-1.1C]",
     "2" : "[F+MM-1.2C]", 
     "3"  : "[F+MM-1.3C]",

@@ -4,20 +4,20 @@
 +++
 <br/>
 
-<!--
+
 ````{panels_fairplus}
-:identifier_text: FCB0XX
-:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
+:identifier_text: FCB068
+:identifier_link: 'https://w3id.org/faircookbook/FCB068'
 :difficulty_level: 1
 :recipe_type: guidance
 :reading_time_minutes: 10
 :intended_audience:  everyone 
-:maturity_level: 1
-:maturity_indicator: 1
+:maturity_level: 0
+:maturity_indicator: 0
 :has_executable_code: nope
 :recipe_name: FAIR and the notion of metadata
 ```` 
--->
+
 
 
 ## Main Objectives 

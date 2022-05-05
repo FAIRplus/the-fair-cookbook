@@ -6,8 +6,8 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: FCBXYZ
-:identifier_link: 'https://w3id.org/faircookbook/FCBXYZ'
+:identifier_text: FCB062
+:identifier_link: 'https://w3id.org/faircookbook/FCB062'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 15
