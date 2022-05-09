@@ -27,7 +27,7 @@ Here, we focus on “fully FAIRifying” data “*a posteriori*”.
 That is to express the content of the information (entities, attributes, relations, values) via ontologies 
 (when applicable) and, in particular, through URIs.
 
-Information so processed results in an RDF/Linked Data graph, that can be seen as a specific implementation
+The processed information in an RDF/Linked Data graph, that can be seen as a specific implementation
 of a Knowledge Graph (KG in short).
 By virtue of using coherent URIs, different datasets are automatically (logically) merged when represented as a graph.
 
