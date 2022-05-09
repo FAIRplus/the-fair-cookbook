@@ -27,7 +27,7 @@ Here, we focus on “fully FAIRifying” data “*a posteriori*”.
 That is to express the content of the information (entities, attributes, relations, values) via ontologies 
 (when applicable) and, in particular, through URIs.
 
-Information so processed results in an RDF/Linked Data graph, that can be seen as a specific implementation
+The processed information results in an RDF/Linked Data graph, that can be seen as a specific implementation
 of a Knowledge Graph (KG in short).
 By virtue of using coherent URIs, different datasets are automatically (logically) merged when represented as a graph.
 
@@ -47,7 +47,7 @@ to the entities names refer to.
 
 2. **Map the structure of the data to an ontology**.
 
-This is akin to reconciling properties (referred by a name, e.g.: a column name) to relations, attributes and classes in an ontology.
+This is akin to reconciling properties (referred by a name, e.g.: a column name) to relations, attributes, and classes in an ontology.
 Except for simple cases, such mappings go beyond simple names to URI relations and generally include **small graph patterns**.
 
 ```{note}
@@ -57,8 +57,8 @@ but often necessary. For instance, split an "address" in "Country", "Street", "C
 
 We mentioned that we assume here that source data is represented as one or more CSV files.
 There are some considerations to be taken if files are in multiple tables (as extra attention can be paid to "linking keys") or
-in more complex structures (XML, JSON).
-Tabular data covers a prominent use case for data FAIRification and is a building block of more complex conversions.
+in complex data structures such as XML, JSON etc.
+Tabular data covers a prominent use case for data FAIRification and is a building block for complex conversions.
 
 We focus here on data (rather than metadata), though the distinction between the two vanishes when information is 
 expressed as a KG.
@@ -76,9 +76,9 @@ or more references** and eventually additional information.
 We generally need:
 
 1. A **source of knowledge** to reconcile to. This could be expressed as a knowledge graph (KG), see {ref}`fcb-public-kg`.
-2. A **system implementing some logic to reconcile** a dataset to such a knowledge base, ideally automated. 
+2. A **system implementing some logic to reconcile** a dataset to such a knowledge base, that is ideally automated. 
 Such a system would receive as input at least a reference (e.g.: name) to the entity, but could also receive additional
-attributes or more in general some context for the name.
+attributes or context for the name.
 3. Ideally a system to perform *Quality Assessment (QA)* and curation (especially if point 2 is automated).
 
 
@@ -87,7 +87,7 @@ attributes or more in general some context for the name.
 OpenRefine is a Desktop tool to cleanse data that proposes a simple workflow for data reconciliation {footcite}`openrefine`. 
 In particular, users can load data as a table, and for a column, they can call a “reconciliation service”:
 this will suggest what are the types of entity in a column (e.g.: drugs, treatments) and the user can then ask to
-reconcile to entities of one or more of these types. OR will then present candidates URIs, together with a preview 
+reconcile to entities of one or more of these types. OpenRefine will then present candidates URIs, together with a preview 
 (when URIs are resolvable) and confidence so that the user can control the proper reconciliation.
 
 
@@ -103,7 +103,7 @@ OpenRefine
 ```
 ````
 
-OR: [https://docs.openrefine.org/manual/reconciling](https://docs.openrefine.org/manual/reconciling)
+OpenRefine: [https://docs.openrefine.org/manual/reconciling](https://docs.openrefine.org/manual/reconciling)
 
 In practice, OpenRefine presents an interface for QA and curation on a set of reconciliation proposals. 
 Such proposals are provided by reconciliation services: systems that implement a set of OpenRefine compatible APIs.
@@ -114,7 +114,7 @@ Via a plugin called **grefine-rdf-extension** [https://github.com/fadmaa/grefine
 It is also possible to use a generic triple-store as a reconciliation service.
 
 ```{note}
-In that case, the triple-store should  contain a list of entities, with labels in one or more languages and the corresponding classes. 
+In that case, the triple-store should contain a list of entities, with labels in one or more languages and the corresponding classes. 
 The triple-store should also be accessible on the network where OpenRefine is running.
 (no authorisation is possible, except via extensions).
 ```
@@ -195,7 +195,7 @@ When reference data and ontology exist in a triplestore, a simpler way to suppor
 its [grefine RDF extension plugin](https://github.com/fadmaa/grefine-rdf-extension). 
 This allows to specify any triplestore as a reconciliation service, provided it contains suitable content
 (e.g.: instances with labels and their categorisation in classes).
-This extension  graphical user interface(GUI) for exporting data of Google Refine projects in RDF format. 
+This extension graphical user interface (GUI) for exporting data of Google Refine projects in RDF format. 
 The export is based on mapping the data to a template graph using the GUI.
 
 The [RDF transform extension](https://github.com/AtesComp/rdf-transform) now replaces 'grefine' 
