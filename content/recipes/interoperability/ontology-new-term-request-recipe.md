@@ -52,8 +52,6 @@ Process for requesting an new term to a terminology.
 ```
 ````
 
-## Capability & Maturity Table
-
 
 ## FAIRification Objectives, Inputs and Outputs
 | Actions.Objectives.Tasks  | Input | Output  |

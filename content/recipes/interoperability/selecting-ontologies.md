@@ -38,16 +38,6 @@ alt:  Which ontology should be used?
 ```
 ````
 
-
----
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-
 ---
 
 ## Context is everything

@@ -51,15 +51,6 @@ Search Engine Optimization.
 
 ---
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findabililty | minimal | repeatable |
-| Interoperability | minimal | |
-
----
-
 ## Main body of the recipe
 
 ### Finding web pages

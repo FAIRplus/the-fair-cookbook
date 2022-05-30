@@ -49,14 +49,6 @@ not existent
 
 ---
 
-## Capability and Maturity Table.
-
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-
 ## FAIRification Objectives, Inputs and Outputs
 
 COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology. 

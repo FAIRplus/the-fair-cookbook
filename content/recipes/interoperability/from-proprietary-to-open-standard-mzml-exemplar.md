@@ -45,13 +45,6 @@ Converting to an open standard file format.
 
 ---
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
----
 
 ## FAIRification Objectives, Inputs and Outputs
 

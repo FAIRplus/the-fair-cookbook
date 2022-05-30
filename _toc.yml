@@ -10,16 +10,16 @@
       title: What are the FAIR principles?
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
-    - file: content/recipes/introduction/metadata-fair #FCB0XX
+    - file: content/recipes/introduction/metadata-fair #FCB068PRE
       title: Metadata and FAIR
-    - file: content/recipes/introduction/FAIR-and-knowledge-graphs
-      title: FAIR and Knowledge Graphs
-    - file: content/recipes/introduction/public-kg-resource-integration
-      title: Public Knowledge Graphs for Life Sciences
-    - file: content/recipes/introduction/training-datasets
+    - file: content/recipes/introduction/training-datasets #FCB069PRE
       title: Datasets to train on FAIRification
-    - file: content/recipes/introduction/priorization
-      title: Selecting projects for FAIRification  #FCB055
+    - file: content/recipes/introduction/FAIR-and-knowledge-graphs #FCB070PRE
+      title: FAIR and Knowledge Graphs
+    - file: content/recipes/introduction/public-kg-resource-integration #FCB071PRE
+      title: Public Knowledge Graphs for Life Sciences
+    - file: content/recipes/introduction/priorization #FCB055
+      title: Selecting projects for FAIRification
     - file: content/recipes/introduction/fair-cro #FCB056
       title: Practical Considerations for a CRO to do FAIR
     - file: content/recipes/introduction/glossary-fair-terms
@@ -52,7 +52,7 @@
         title: Minting identifiers with Minid #FCB008
       - file: content/recipes/findability/zenodo-deposition
         title: Depositing in Zenodo generic repository #FCB009
-      - file: content/recipes/findability/registeringDatasets
+      - file: content/recipes/findability/registeringDatasets #FCB060PRE
         title: Registering Datasets in Wikidata
       - file: content/recipes/findability/checksum-create
         title: Describe data by checksums #FCB052
@@ -113,7 +113,7 @@
               - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
                 title: Metadata profile validation in RDF #FCB028
               - file: content/recipes/interoperability/bioactivity-profile
-                title: Bioactivity data profile #FCB057TENTATIVE
+                title: Bioactivity data profile #FCB057
           - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar  
             title: Converting from proprietary to open format #FCB029
           - file: content/recipes/interoperability/rdf-conversion 
@@ -123,10 +123,10 @@
           - file: content/recipes/interoperability/ETL-tools
             title: Extraction, transformation, and loading process #FCB031
           - file: content/recipes/interoperability/VCF-to-FHIR-conversion
-            title: Clinical Genetic Information as FHIR JSON #FCB058TENTATIVE
+            title: Clinical Genetic Information as FHIR JSON #FCB058
             sections:
               - file: content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb
-                title: Converting VCF file to FHIR JSON #FCB059TENTATIVE
+                title: Converting VCF file to FHIR JSON #FCB059
 
     - file: content/recipes/reusability
       title: Reusability
@@ -164,6 +164,8 @@
                 title: Selecting a look-up service #FCB004
               - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
                 title: Deploying the EBI OLS #FCB005
+          - file: content/recipes/infrastructure/openrefine-nvt
+            title: Reconciliation with OpenRefine
 
     - file: content/recipes/assessing-fairness
       title: Assessment
@@ -193,18 +195,18 @@
     - file: content/recipes/maturity
       title: A Model To Gauge Dataset Maturity
       sections:
-        - file: content/recipes/reusability/miappe
+        - file: content/recipes/reusability/miappe #FCB061PRE
           title: Improving dataset maturity - the MIAPPE use case
         - file: content/recipes/maturity/isa-maturity-progression
           title: Moving through maturity levels with ISA
           sections:
-            - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb
+            - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb #FCB063PRE
               title: Creating a basic ISA document
-            - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb
+            - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb #FCB064PRE
               title: Making a community compliant - ISA in JSON
-            - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb
+            - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb #FCB065PRE
               title: Moving to a semantically typed version - ISA in RDF
-            - file: content/recipes/maturity/isa-as-RO.ipynb
+            - file: content/recipes/maturity/isa-as-RO.ipynb #FCB066PRE
               title: Packaging ISA as a Research Object (RO)
   #            - file: content/recipes/maturity/isa-ro-zenodo-deposition
   #              title: Programmatic deposition to Zenodo
@@ -221,7 +223,7 @@
             - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
               title: Integrating data #FCB041
         - file: content/recipes/applied-examples/fair-workflows
-          title: Making Computational Workflows FAIR
+          title: Making Computational Workflows FAIR #FCB062PRE
 
 #- part: FAIRification Fairs
 #  chapters:
@@ -259,7 +261,7 @@
         - file: content/recipes/applied-examples/ehden-ohdsi
           title: IMI EHDEN-OHDSI #FCB054
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
-          title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067TENTATIVE
+          title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067
 
 
 - part: AFTERWORD

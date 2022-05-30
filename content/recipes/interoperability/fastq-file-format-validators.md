@@ -53,12 +53,6 @@ The table below lists common file validation use cases. This recipe provides sol
 |Data librarian| Check files downloaded from unknown sources before deposition| Ensure the file is usable in the future.|
 
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-|Interoperability |minimal |	repeatable|
-
 ---
 
 ## FAIRification Objectives, Inputs and Outputs

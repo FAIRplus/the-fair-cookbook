@@ -42,13 +42,7 @@ Data Use
 ```
 ````
 
----
 
-## Capability and Maturity Table.
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
- | :------------- | :------------- | :------------- |
- | Interoperability | minimal | repeatable |
 
 ---
 

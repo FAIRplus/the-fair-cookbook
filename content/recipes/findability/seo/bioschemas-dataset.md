@@ -44,16 +44,6 @@ The process of annotating a dataset webpage with bioschema markup for Search Eng
 
 ---
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-| Interoperability | minimal |   |
-
-
----
-
 ## Method
 
 We will outline the steps for marking up a page in your site that is about a specific dataset that you publish. The resulting markup will be compliant with both [Google's Dataset markup guidelines](https://developers.google.com/search/docs/data-types/dataset) and the [Bioschemas Dataset Profile](https://bioschemas.org/profiles/Dataset). The resulting webpage will be indexable by the major search engines and should eventually appear in [Google's Dataset Search Tool](https://datasetsearch.research.google.com/).
