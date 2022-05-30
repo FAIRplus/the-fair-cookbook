@@ -40,15 +40,6 @@ Building an ontology with Robot tool.
 ```
 ````
 
-
-## Capability & Maturity Table
-
-<!-- TO DO -->
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
 ---
 
 ## FAIRification Objectives, Inputs and Outputs

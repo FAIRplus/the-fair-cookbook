@@ -86,16 +86,7 @@ The tools list above aims to provide a basic overview of what is available on th
 * Knowledge requirement:
 
    * General familiarity with data cleaning, data loading tasks.
-
----
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | automated |
-
-
+   
 ---
 
 ## FAIRification Objectives, Inputs and Outputs

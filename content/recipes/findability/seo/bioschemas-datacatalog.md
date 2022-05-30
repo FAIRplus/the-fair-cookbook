@@ -44,15 +44,6 @@ The process of annotating a data catalog webpage with bioschema markup for Searc
 
 ---
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-| Interoperability | minimal |  |
-
----
-
 ## Method
 
 We will outline the steps for marking up a page in your site that is about multiple datasets. The resulting markup will be compliant with both [Google's Dataset markup guidelines](https://developers.google.com/search/docs/data-types/dataset#publication) and the [Bioschemas DataCatalog Profile](https://bioschemas.org/profiles/DataCatalog). 

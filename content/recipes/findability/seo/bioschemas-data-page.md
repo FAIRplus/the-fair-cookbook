@@ -43,15 +43,6 @@ The process of annotated a webpage with Bioschemas markup to support machine pro
 
 ---
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-| Interoperability | minimal |  |
-
----
-
 ## Method
 
 We will outline the steps for embedding machine processable mark up within a web page in your site. As a specific example, we will use the Wikidata page for [BRCA1](https://www.wikidata.org/wiki/Q227339).

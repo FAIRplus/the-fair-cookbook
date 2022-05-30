@@ -44,13 +44,6 @@ The process of depositing to CERN Zenodo.
 
 <!-- TODO -->
 
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-
 ---
 ## Introduction to Zenodo repository
 

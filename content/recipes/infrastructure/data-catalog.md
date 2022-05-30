@@ -46,15 +46,6 @@ Building and populating a data catalogue
 
 ---
 
-## Capability & Maturity Table 
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-| Interoperability | minimal | repeatable |
-
----
-
 ## User Story
 For **role.Data Scientists**, it is essential to be able to *action.identify* and *action.discover* datasets of potential
 relevance in the context of *action.data integration* and *action.meta-analytical work*.

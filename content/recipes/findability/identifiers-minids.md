@@ -50,14 +50,6 @@ An overview of the identifier minting process.
 
 
 
-
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| identifier minting | minimal | repeatable |
-
 ---
 
 ## FAIRification Objectives, Inputs and Outputs
