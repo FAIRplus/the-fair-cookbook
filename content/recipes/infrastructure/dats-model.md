@@ -32,12 +32,11 @@ ___
 2. [Graphical Overview of the FAIRification Recipe Objectives](#Graphical%20Overview%20of%20the%20FAIRification%20Recipe%20Objectives)
 3. Requirements
 4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
-5. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-6. [Table of Data Standards](#Table%20of%20Data%20Standards)
-7. [Main Content goes here...](#Main%20Content)
+5. [Table of Data Standards](#Table%20of%20Data%20Standards)
+6. [Main Content goes here...](#Main%20Content)
     * [... writing executable code](#Executable%20Code%20in%20Notebook)
     * [... creating workflow figures](#How%20to%20create%20workflow%20figures)
-8. [License](#License)
+7. [License](#License)
 
 ---
 
@@ -85,15 +84,7 @@ ___
 
 ---
 
-## Capability & Maturity Table
 
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-Help to fill this table out can be found ...(not yet)...
-
-----
 
 ## FAIRification Objectives, Inputs and Outputs
 
