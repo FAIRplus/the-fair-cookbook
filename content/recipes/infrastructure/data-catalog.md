@@ -30,6 +30,15 @@ We will cover the following points:
 6. facet oriented searching
 7. minting of stable, persistent and resolvable identifiers
 
+```{tabbed} Table of Data Standards
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| JSON<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
+| RDF<!-- TODO add a link to corresponding document -->  | DCAT v1<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
+| RDF<!-- TODO add a link to corresponding document -->  | DCAT v2<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
+| JSON-LD<!-- TODO add a link to corresponding document -->  | Schema.org<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
+``` 
+
 ---
 
 
@@ -103,19 +112,6 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
     * [NIH DataMed](https://datamed.org/)
     * [EMBL-EBI OMICS-DI](https://www.omicsdi.org/)
     * [Bayer AG Colid](https://bayer-group.github.io/COLID-Documentation/)
-
-
----
-
-
-## Table of Data Standards
-
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| JSON<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
-| RDF<!-- TODO add a link to corresponding document -->  | DCAT v1<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
-| RDF<!-- TODO add a link to corresponding document -->  | DCAT v2<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
-| JSON-LD<!-- TODO add a link to corresponding document -->  | Schema.org<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
 
 
 ---
