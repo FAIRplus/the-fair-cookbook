@@ -47,13 +47,13 @@ The main purpose of this recipe is:
 
 ````{dropdown} 
 :open:
-```{figure} ./zenodo.svg
+```{figure} /images/zenodo.png
 ---
 width: 500px
 name: 
 alt: The process of depositing to CERN Zenodo
 ---
-The process of depositing to CERN Zenodo.
+The Zenodo homepage.
 ```
 ````
 ---
