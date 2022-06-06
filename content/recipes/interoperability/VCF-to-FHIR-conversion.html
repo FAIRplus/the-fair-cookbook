@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="14.10.1. Introduction to the VCF2FHIR python library" href="vcf2fhir/FAIRcookbook-vcf2fhir.html" />
+    <link rel="next" title="14.9.1. Introduction to the VCF2FHIR python library" href="vcf2fhir/FAIRcookbook-vcf2fhir.html" />
     <link rel="prev" title="13. Extraction, transformation, and loading process" href="ETL-tools.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -805,28 +810,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capability-maturity-table">
-   14.4. Capability &amp; Maturity Table
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   14.5. FAIRification Objectives, Inputs and Outputs
+   14.4. FAIRification Objectives, Inputs and Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#table-of-data-standards">
-   14.6. Table of Data Standards
+   14.5. Table of Data Standards
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#requirements">
-     14.6.1. Requirements
+     14.5.1. Requirements
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#installing-vcf2fhir-python-library">
-     14.6.2. Installing
+     14.5.2. Installing
      <code class="docutils literal notranslate">
       <span class="pre">
        vcf2fhir
@@ -837,7 +837,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-vcf2fhir-package">
-     14.6.3. Using
+     14.5.3. Using
      <code class="docutils literal notranslate">
       <span class="pre">
        vcf2fhir
@@ -848,19 +848,19 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conversion-from-vcf-to-fhir">
-     14.6.4. Conversion from VCF to FHIR
+     14.5.4. Conversion from VCF to FHIR
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#built-in-support-conversion-error-logging">
-       14.6.4.1. Built-in Support Conversion Error Logging
+       14.5.4.1. Built-in Support Conversion Error Logging
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#take-home-message-from-using-the-vcf2fhir-python-library">
-     14.6.5. Take home message from using the
+     14.5.5. Take home message from using the
      <code class="docutils literal notranslate">
       <span class="pre">
        vcf2fhir
@@ -873,29 +873,29 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   14.7. Conclusion
+   14.6. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     14.7.1. What to read next
+     14.6.1. What to read next
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   14.8. References
+   14.7. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   14.9. Authors
+   14.8. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   14.10. License
+   14.9. License
   </a>
  </li>
 </ul>
@@ -915,7 +915,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "File conversion, VCF to FHIR", "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB058", "url": "https://w3id.org/faircookbook/FCB058"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "File conversion, VCF to FHIR", "description": "File conversion, VCF to FHIR", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB058", "url": "https://w3id.org/faircookbook/FCB058"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -1045,26 +1045,9 @@ Yes
 </tbody>
 </table>
 </div>
-<div class="section" id="capability-maturity-table">
-<h2><span class="section-number">14.4. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
-<th class="text-align:left head"><p>Initial Maturity Level</p></th>
-<th class="text-align:left head"><p>Final Maturity Level</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>Interoperability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <hr class="docutils" />
 <div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">14.5. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.4. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
@@ -1081,7 +1064,7 @@ Yes
 </table>
 </div>
 <div class="section" id="table-of-data-standards">
-<h2><span class="section-number">14.6. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.5. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
@@ -1131,7 +1114,7 @@ It is considered to be the <em>de facto</em> standard for reporting genetic vari
 </ul>
 </div>
 <div class="section" id="requirements">
-<h3><span class="section-number">14.6.1. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.1. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
 <p>Users should be at ease with command line interfaces.</p>
 <p>In order for the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> python library to run, the following libraries need to be present on the system.</p>
 <table class="colwidths-auto table">
@@ -1163,14 +1146,14 @@ It is considered to be the <em>de facto</em> standard for reporting genetic vari
 </div>
 </div>
 <div class="section" id="installing-vcf2fhir-python-library">
-<h3><span class="section-number">14.6.2. </span>Installing <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> python library:<a class="headerlink" href="#installing-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.2. </span>Installing <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> python library:<a class="headerlink" href="#installing-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h3>
 <p>Since the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> is available from <a class="reference external" href="https://pypi.org">pypi.org</a>, we can also install the vcf2fhir binary using <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install vcf2fhir
 </pre></div>
 </div>
 </div>
 <div class="section" id="using-vcf2fhir-package">
-<h3><span class="section-number">14.6.3. </span>Using <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> package:<a class="headerlink" href="#using-vcf2fhir-package" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.3. </span>Using <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> package:<a class="headerlink" href="#using-vcf2fhir-package" title="Permalink to this headline">¶</a></h3>
 <p>In order to use the <code class="docutils literal notranslate"><span class="pre">VCF</span> <span class="pre">to</span> <span class="pre">FHIR</span> <span class="pre">converter</span></code> function provided by the library, one needs to first obtain VCF files.
 Not only that, but as we indicated in the introduction, the version of the VCF files should be at least v4.1. Furthermore, they should be such that they contain only <code class="docutils literal notranslate"><span class="pre">simple</span> <span class="pre">variant</span></code> information and not <code class="docutils literal notranslate"><span class="pre">structural</span> <span class="pre">variants</span></code> (a type of genetic variations which aren’t currently supported by the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> library).</p>
 <div class="tip admonition">
@@ -1208,7 +1191,7 @@ Not only that, but as we indicated in the introduction, the version of the VCF f
 </div>
 </div>
 <div class="section" id="conversion-from-vcf-to-fhir">
-<h3><span class="section-number">14.6.4. </span>Conversion from VCF to FHIR<a class="headerlink" href="#conversion-from-vcf-to-fhir" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.4. </span>Conversion from VCF to FHIR<a class="headerlink" href="#conversion-from-vcf-to-fhir" title="Permalink to this headline">¶</a></h3>
 <p>The conversion command can be issued as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vcf2fhir</span>
 
@@ -1420,7 +1403,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </pre></div>
 </div>
 <div class="section" id="built-in-support-conversion-error-logging">
-<h4><span class="section-number">14.6.4.1. </span>Built-in Support Conversion Error Logging<a class="headerlink" href="#built-in-support-conversion-error-logging" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">14.5.4.1. </span>Built-in Support Conversion Error Logging<a class="headerlink" href="#built-in-support-conversion-error-logging" title="Permalink to this headline">¶</a></h4>
 <p>No conversion tool is failsafe. Therefore, the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> library provides 2 distinct logging functions, which plug naturally into the python generic error logging package.</p>
 <ul class="simple">
 <li><p><strong>vcf2fhir.general</strong>: this mode provides the standard library logging functions.</p></li>
@@ -1450,7 +1433,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </div>
 </div>
 <div class="section" id="take-home-message-from-using-the-vcf2fhir-python-library">
-<h3><span class="section-number">14.6.5. </span>Take home message from using the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> python library<a class="headerlink" href="#take-home-message-from-using-the-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.5. </span>Take home message from using the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> python library<a class="headerlink" href="#take-home-message-from-using-the-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>an <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">capability</span></code> supporting generation of <code class="docutils literal notranslate"><span class="pre">HL7</span> <span class="pre">FHIR</span> <span class="pre">Genomics</span> <span class="pre">Report</span> <span class="pre">message</span></code> from VCF files.</p></li>
 <li><p>generation of LOINC-annotated, JSON formatted documents containing simple genetic variation information.</p></li>
@@ -1459,7 +1442,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </div>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">14.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p><strong>Why does this matter and how does it relate to FAIR?</strong></p>
 <p>The conversion from VCF to HL7 FHIR JSON message has to do with the <code class="docutils literal notranslate"><span class="pre">**I</span> <span class="pre">and</span> <span class="pre">R**</span></code> of <code class="docutils literal notranslate"><span class="pre">FAIR</span></code>, that is <code class="docutils literal notranslate"><span class="pre">interoperability</span></code> and <code class="docutils literal notranslate"><span class="pre">reusability</span></code>.</p>
 <ul class="simple">
@@ -1474,7 +1457,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 <li><p>Finally, it is important to realize that the resulting JSON message, as it is, lacks important metadata to be fully and properly FAIR (e.g., <code class="docutils literal notranslate"><span class="pre">licence</span> <span class="pre">information</span></code>). One has therefore to see this <code class="docutils literal notranslate"><span class="pre">capability</span></code> as one of the many elements that needs to be put together to build and deliver a FAIR infrastructure. For instance, this HL7 JSON message could be embedded in a more complex system, which would package information and deliver a FAIR payload.</p></li>
 </ul>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">14.7.1. </span>What to read next<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.6.1. </span>What to read next<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/EHRN2FHIR.md">From Electronic Health Records Notes to FHIR</a></p></li>
 <li><p>Pistoia Alliance FAIR4Clinical Guidance - An Introduction</p></li>
@@ -1484,7 +1467,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">14.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1501,7 +1484,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">14.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1546,7 +1529,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">14.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1592,7 +1575,7 @@ Note the use of <a class="reference external" href="https://fairsharing.org/FAIR
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="ETL-tools.html" title="previous page"><span class="section-number">13. </span>Extraction, transformation, and loading process</a>
-    <a class='right-next' id="next-link" href="vcf2fhir/FAIRcookbook-vcf2fhir.html" title="next page"><span class="section-number">14.10.1. </span>Introduction to the VCF2FHIR python library</a>
+    <a class='right-next' id="next-link" href="vcf2fhir/FAIRcookbook-vcf2fhir.html" title="next page"><span class="section-number">14.9.1. </span>Introduction to the VCF2FHIR python library</a>
 
         </div>
         

@@ -54,16 +54,6 @@ Overview of key aspects in Identifier Mapping
 ````
 
 ---
-
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-| Identifier mapping ||repeatable|
-
----
 <!-- 
 ## FAIRification Objectives, Inputs and Outputs
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.12.2. Application ontology for metabolomics</title>
+    <title>7.11.2. Application ontology for metabolomics</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -44,9 +44,9 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
-    <script src="../../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="8. Creating data/variable dictionary" href="../creating-data-dictionary.html" />
-    <link rel="prev" title="7.12.1. Competency questions for the Ontology ROBOT use case" href="competency-questions.html" />
+    <link rel="prev" title="7.11.1. Competency questions for the Ontology ROBOT use case" href="competency-questions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="current collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -813,62 +818,62 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
-   7.12.2.1. Overview
+   7.11.2.1. Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#obtaining-and-installing-robot">
-   7.12.2.2. Obtaining and installing robot
+   7.11.2.2. Obtaining and installing robot
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#downloading-reference-ontologies-key-resources">
-   7.12.2.3. 1. Downloading Reference Ontologies &amp; Key Resources:
+   7.11.2.3. 1. Downloading Reference Ontologies &amp; Key Resources:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#module-extraction-from-seeds-using-the-mireot-approach">
-   7.12.2.4. 2. Module Extraction from seeds using the MIREOT approach:
+   7.11.2.4. 2. Module Extraction from seeds using the MIREOT approach:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#merging-extracted-modules-into-application-ontology">
-   7.12.2.5. 3. Merging Extracted Modules into Application Ontology:
+   7.11.2.5. 3. Merging Extracted Modules into Application Ontology:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#working-with-elk-reasoner-with-robot-materialize">
-   7.12.2.6. 4. Working with ELK reasoner with Robot Materialize:
+   7.11.2.6. 4. Working with ELK reasoner with Robot Materialize:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#convert-to-obo-format">
-   7.12.2.7. 5. Convert to OBO Format:
+   7.11.2.7. 5. Convert to OBO Format:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#importing-stato-and-nmrcv-ontology">
-   7.12.2.8. 6. Importing stato and nmrCV ontology
+   7.11.2.8. 6. Importing stato and nmrCV ontology
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#export-as-tabular-representation-in-excel-format">
-   7.12.2.9. 7. Export as Tabular Representation in Excel format
+   7.11.2.9. 7. Export as Tabular Representation in Excel format
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   7.12.2.10. References
+   7.11.2.10. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   7.12.2.11. Authors
+   7.11.2.11. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   7.12.2.12. License
+   7.11.2.12. License
   </a>
  </li>
 </ul>
@@ -884,11 +889,11 @@
               <div>
                 
   <div class="section" id="application-ontology-for-metabolomics">
-<h1><span class="section-number">7.12.2. </span>Application ontology for metabolomics<a class="headerlink" href="#application-ontology-for-metabolomics" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7.11.2. </span>Application ontology for metabolomics<a class="headerlink" href="#application-ontology-for-metabolomics" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "MSIO build process", "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB038", "url": "https://w3id.org/faircookbook/FCB038"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "MSIO build process", "description": "MSIO build process", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB038", "url": "https://w3id.org/faircookbook/FCB038"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -959,11 +964,11 @@ Yes
 </div>
 </div>
 <div class="section" id="overview">
-<h2><span class="section-number">7.12.2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">MSIO</span> <span class="pre">an</span> <span class="pre">Application</span> <span class="pre">Ontology</span> <span class="pre">for</span> <span class="pre">Metabolomics.</span> <span class="pre">We</span> <span class="pre">detail</span> <span class="pre">how</span> <span class="pre">we</span> <span class="pre">use</span> <span class="pre">OBO</span> <span class="pre">Foundry</span> <span class="pre">ROBOT</span> <span class="pre">tool</span> <span class="pre">for</span> <span class="pre">generating</span> <span class="pre">the</span> <span class="pre">ontology</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">seeds,</span> <span class="pre">which</span> <span class="pre">have</span> <span class="pre">been</span> <span class="pre">established</span> <span class="pre">by</span> <span class="pre">manual</span> <span class="pre">selection</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">key</span> <span class="pre">classes</span> <span class="pre">to</span> <span class="pre">build</span> <span class="pre">a</span> <span class="pre">mild</span> <span class="pre">level</span> <span class="pre">ontology</span> <span class="pre">for</span> <span class="pre">experiments.</span> <span class="pre">MSIO</span> <span class="pre">specific</span> <span class="pre">classes</span> <span class="pre">are</span> <span class="pre">added</span> <span class="pre">the</span> <span class="pre">MSIO</span> <span class="pre">namespace</span> <span class="pre">but</span> <span class="pre">remain</span> <span class="pre">compatible</span> <span class="pre">with</span> <span class="pre">OBI</span> <span class="pre">for</span> <span class="pre">which</span> <span class="pre">MSIO</span> <span class="pre">can</span> <span class="pre">become</span> <span class="pre">a</span> <span class="pre">module.</span></code> <br></p>
 </div>
 <div class="section" id="obtaining-and-installing-robot">
-<h2><span class="section-number">7.12.2.2. </span>Obtaining and installing robot<a class="headerlink" href="#obtaining-and-installing-robot" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.2. </span>Obtaining and installing robot<a class="headerlink" href="#obtaining-and-installing-robot" title="Permalink to this headline">¶</a></h2>
 <p>The robot tool is available from: <a class="reference external" href="http://robot.obolibrary.org/">http://robot.obolibrary.org/</a> with detailed instructions available from the official pages.
 One may obtain the <a class="reference external" href="https://github.com/ontodev/robot/releases">latest official version</a> or the <a class="reference external" href="https://build.obolibrary.io/job/ontodev/job/robot/job/master/lastSuccessfulBuild/artifact/bin/robot.jar">latest successful build</a> from the obofoundry project. This the latter option we go for in this notebook as we want to test a new function available from version 1.7, onwards.</p>
 <div class="cell docutils container">
@@ -1023,7 +1028,7 @@ One may obtain the <a class="reference external" href="https://github.com/ontode
 </div>
 </div>
 <div class="section" id="downloading-reference-ontologies-key-resources">
-<h2><span class="section-number">7.12.2.3. </span>1. Downloading Reference Ontologies &amp; Key Resources:<a class="headerlink" href="#downloading-reference-ontologies-key-resources" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.3. </span>1. Downloading Reference Ontologies &amp; Key Resources:<a class="headerlink" href="#downloading-reference-ontologies-key-resources" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ontoresource_dir</span><span class="o">=</span><span class="s2">&quot;ontology-sources-test&quot;</span>
@@ -1042,7 +1047,7 @@ One may obtain the <a class="reference external" href="https://github.com/ontode
 </div>
 </div>
 <div class="section" id="module-extraction-from-seeds-using-the-mireot-approach">
-<h2><span class="section-number">7.12.2.4. </span>2. Module Extraction from seeds using the MIREOT approach:<a class="headerlink" href="#module-extraction-from-seeds-using-the-mireot-approach" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.4. </span>2. Module Extraction from seeds using the MIREOT approach:<a class="headerlink" href="#module-extraction-from-seeds-using-the-mireot-approach" title="Permalink to this headline">¶</a></h2>
 <p>Using a number of seed files, which contains the classes manually selected by the ontology developers,
 we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011-0087">MIREOT method</a></p>
 <div class="cell docutils container">
@@ -1074,7 +1079,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </div>
 <div class="section" id="merging-extracted-modules-into-application-ontology">
-<h2><span class="section-number">7.12.2.5. </span>3. Merging Extracted Modules into Application Ontology:<a class="headerlink" href="#merging-extracted-modules-into-application-ontology" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.5. </span>3. Merging Extracted Modules into Application Ontology:<a class="headerlink" href="#merging-extracted-modules-into-application-ontology" title="Permalink to this headline">¶</a></h2>
 <p>This step simply fuses all the input OWL files into one single output, avoiding use of import statements.<br/>
 :octocat: A <code class="docutils literal notranslate"><span class="pre">merge</span></code> can be <em>undone</em> with <code class="docutils literal notranslate"><span class="pre">unmerge</span></code> command also available from <code class="docutils literal notranslate"><span class="pre">robot</span> <span class="pre">tool</span></code>.</p>
 <div class="cell docutils container">
@@ -1103,7 +1108,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </div>
 <div class="section" id="working-with-elk-reasoner-with-robot-materialize">
-<h2><span class="section-number">7.12.2.6. </span>4. Working with ELK reasoner with Robot Materialize:<a class="headerlink" href="#working-with-elk-reasoner-with-robot-materialize" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.6. </span>4. Working with ELK reasoner with Robot Materialize:<a class="headerlink" href="#working-with-elk-reasoner-with-robot-materialize" title="Permalink to this headline">¶</a></h2>
 <p>With this step, the goal is to ensure that the ontology is logically consistent. This can only be checked by running a <code class="docutils literal notranslate"><span class="pre">reasoner</span></code>, which will formally assess the various axioms used in the ontology and classify the classes bases on these constraints. Robot allows this step to be performed and provides various options as to which reasoner to offer. Here, the <a class="reference external" href="https://www.cs.ox.ac.uk/isg/tools/ELK/">ELK reasoner</a> is used.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1120,7 +1125,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </div>
 <div class="section" id="convert-to-obo-format">
-<h2><span class="section-number">7.12.2.7. </span>5. Convert to OBO Format:<a class="headerlink" href="#convert-to-obo-format" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.7. </span>5. Convert to OBO Format:<a class="headerlink" href="#convert-to-obo-format" title="Permalink to this headline">¶</a></h2>
 <p>The module extraction, merging and reasoning function produce Ontology Web Language (<a class="reference external" href="https://www.w3.org/TR/owl-features/">OWL</a>) documents. For reaching a wider audience and to allow use by some data entry tools, it is interesting to release the ontology in the <a class="reference external" href="https://owlcollab.github.io/oboformat/doc/GO.format.obo-1_4.html">OBO format</a>. The following section details how to invoke the command.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1141,7 +1146,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </div>
 <div class="section" id="importing-stato-and-nmrcv-ontology">
-<h2><span class="section-number">7.12.2.8. </span>6. Importing stato and nmrCV ontology<a class="headerlink" href="#importing-stato-and-nmrcv-ontology" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.8. </span>6. Importing stato and nmrCV ontology<a class="headerlink" href="#importing-stato-and-nmrcv-ontology" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># if not os.path.exists(&quot;ontology-msio-merge&quot;):</span>
@@ -1157,7 +1162,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </div>
 <div class="section" id="export-as-tabular-representation-in-excel-format">
-<h2><span class="section-number">7.12.2.9. </span>7. Export as Tabular Representation in Excel format<a class="headerlink" href="#export-as-tabular-representation-in-excel-format" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.9. </span>7. Export as Tabular Representation in Excel format<a class="headerlink" href="#export-as-tabular-representation-in-excel-format" title="Permalink to this headline">¶</a></h2>
 <p>A new function in Robot tool (starting with version 1.7) provides the option of exporting the classes and properties of an ontology in a tabular representation, which can be useful to engage with users and curators for review and extension. The following section details how to invoke the command.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1178,7 +1183,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">7.12.2.10. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.10. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1201,7 +1206,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">7.12.2.11. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.11. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1246,7 +1251,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">7.12.2.12. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.11.2.12. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1288,7 +1293,7 @@ we use the <a class="reference external" href="http://dx.doi.org/10.3233/AO-2011
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="competency-questions.html" title="previous page"><span class="section-number">7.12.1. </span>Competency questions for the Ontology ROBOT use case</a>
+    <a class='left-prev' id="prev-link" href="competency-questions.html" title="previous page"><span class="section-number">7.11.1. </span>Competency questions for the Ontology ROBOT use case</a>
     <a class='right-next' id="next-link" href="../creating-data-dictionary.html" title="next page"><span class="section-number">8. </span>Creating data/variable dictionary</a>
 
         </div>

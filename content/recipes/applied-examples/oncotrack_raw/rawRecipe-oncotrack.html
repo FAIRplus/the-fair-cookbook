@@ -44,9 +44,9 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
-    <script src="../../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -890,7 +895,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Oncotrack - clinical cohort datasets", "audience": ["Data Manager|T4FS_0000520", "Data Curator|T4FS_0000389", "Ontologist|T4FS_0000567"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Experience Report / Applied Example", "identifier": {"@type": "PropertyValue", "name": "FCB044", "url": "http://w3id.org/faircookbook/FCB044"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Oncotrack - clinical cohort datasets", "description": "Oncotrack - clinical cohort datasets", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Data Manager|T4FS_0000520", "Data Curator|T4FS_0000389", "Ontologist|T4FS_0000567"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Experience Report / Applied Example", "identifier": {"@type": "PropertyValue", "name": "FCB044", "url": "http://w3id.org/faircookbook/FCB044"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -963,8 +968,8 @@ No
 <div class="section" id="ingredients">
 <h2><span class="section-number">3.1. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="477083c4-e355-4492-907c-b2a08569c8dd" name="73fb3d40-e50a-4ef7-b64a-65dfad99deba" type="radio">
-</input><label class="tabbed-label" for="477083c4-e355-4492-907c-b2a08569c8dd">
+<input checked="checked" id="8512cc2a-2a3c-41d3-b4b3-ee4ac2ac10b2" name="7d29c8d4-1aa3-46c0-b8ed-e8ec18251aba" type="radio">
+</input><label class="tabbed-label" for="8512cc2a-2a3c-41d3-b4b3-ee4ac2ac10b2">
 Data Standards</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Metadata model</p>
@@ -993,8 +998,8 @@ Data Standards</label><div class="tabbed-content docutils">
 </li>
 </ul>
 </div>
-<input id="b4e0abb5-816e-4111-b316-72f2c9f3418b" name="73fb3d40-e50a-4ef7-b64a-65dfad99deba" type="radio">
-</input><label class="tabbed-label" for="b4e0abb5-816e-4111-b316-72f2c9f3418b">
+<input id="fe71340b-d689-4ab6-9de9-d85322a1fd66" name="7d29c8d4-1aa3-46c0-b8ed-e8ec18251aba" type="radio">
+</input><label class="tabbed-label" for="fe71340b-d689-4ab6-9de9-d85322a1fd66">
 Tools and software</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Tools and software</p>

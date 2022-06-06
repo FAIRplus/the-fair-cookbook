@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -904,7 +909,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Transferring data with SFTP", "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB014", "url": "https://w3id.org/faircookbook/FCB014"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Transferring data with SFTP", "description": "Transferring data with SFTP", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB014", "url": "https://w3id.org/faircookbook/FCB014"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -1003,14 +1008,6 @@ systems. After transfer and integrity check, files would be typically removed by
 not existent
 
 ---
-
-## Capability and Maturity Table.
-
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
 
 ## FAIRification Objectives, Inputs and Outputs
 
@@ -1211,12 +1208,14 @@ iii. then the sender deletes the files on the FTP server.</p>
 <div class="section" id="what-to-read-next">
 <h3><span class="section-number">1.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p><a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol">Wikipedia article on SFTP</a></p>
-<p><a class="reference external" href="https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/">The Geek Stuff, FTP and SFTP Beginners guide with 10 examples</a></p>
-<p><a class="reference external" href="https://hpc.uni.lu/users/docs/filetransfer.html">Example of customization for a specific institution: University of Luxembourg File Transfer</a></p>
-<p><a class="reference external" href="https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/">Setting up an SFTP server on CentOS</a></p>
-<p><a class="reference internal" href="aspera.html#fcb-access-aspera"><span class="std std-ref">Downloading data with Aspera</span></a></p>
-<p><a class="reference external" href="https://rclone.org">Rclone</a></p>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol">Wikipedia article on SFTP</a></p></li>
+<li><p><a class="reference external" href="https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/">The Geek Stuff, FTP and SFTP Beginners guide with 10 examples</a></p></li>
+<li><p><a class="reference external" href="https://hpc.uni.lu/users/docs/filetransfer.html">Example of customization for a specific institution: University of Luxembourg File Transfer</a></p></li>
+<li><p><a class="reference external" href="https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/">Setting up an SFTP server on CentOS</a></p></li>
+<li><p><a class="reference internal" href="aspera.html#fcb-access-aspera"><span class="std std-ref">Downloading data with Aspera</span></a></p></li>
+<li><p><a class="reference external" href="https://rclone.org">Rclone</a></p></li>
+</ul>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-4 docutils">

@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -795,9 +800,21 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fair-and-knowledge-graphs">
+   FAIR and Knowledge Graphs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-are-knowledge-graph-and-graph-databases">
    What are knowledge graph and graph databases?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relational-databases-and-graph-databases">
+     Relational Databases and Graph Databases
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-different-types-of-knowledge-graphs">
@@ -815,17 +832,13 @@
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#ii-persisting-rdf-graphs-rdf-triple-stores">
          ii. Persisting RDF graphs: RDF triple Stores
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded-the-w3c-shacl-shape-constraint-language">
-         iii. Validating and controlling the quality of the RDF data being loaded - the W3C SHACL SHApe Constraint Language
+        <a class="reference internal nav-link" href="#iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded">
+         iii. Validating and controlling the quality of the RDF data being loaded -
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
@@ -865,23 +878,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-are-knowledge-graphs-generated">
-   How are knowledge graphs generated?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#semantic-models-and-ontologies-when-knowledge-engineers-step-in">
-     Semantic models and ontologies: when knowledge engineers step in.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-fair-and-kr-relate-and-why-does-it-matter">
-   How do FAIR and KR relate and why does it matter?
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
@@ -927,7 +923,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Knowledge graphs and FAIR", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB070", "url": "https://w3id.org/faircookbook/FCB070"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Knowledge graphs and FAIR", "description": "Knowledge graphs and FAIR", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB070", "url": "https://w3id.org/faircookbook/FCB070"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -999,60 +995,70 @@ No
 <div class="section" id="main-objectives">
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>In the following sections, we will cover the following topics:</p>
-<blockquote>
-<div><ol class="simple">
+<ol class="simple">
+<li><p>the relation between FAIR and KGs.</p></li>
 <li><p>the typology of knowledge graphs (KG).</p></li>
 <li><p>the different technologies supporting them.</p></li>
-<li><p>the relation between FAIR and KGs.</p></li>
 <li><p>the methods to generate knowledge graphs.</p></li>
 <li><p>the impact of graph-based representations on what it means to deliver FAIR data and services.</p></li>
-<li><p>the impact for Pharma industry and EFPIA more broadly.</p></li>
 </ol>
+<!-- 6. the impact for Pharma industry and EFPIA more broadly -->
+</div>
+<div class="section" id="fair-and-knowledge-graphs">
+<h2>FAIR and Knowledge Graphs<a class="headerlink" href="#fair-and-knowledge-graphs" title="Permalink to this headline">¶</a></h2>
+<p>FAIR is chiefly about three things: metadata, metadata and metadata.</p>
+<p>Not only that, but metadata which should be <strong>active</strong>, that is usable by software agents without the need of human intervention,
+thanks to the resolvable links found in the electronic documents and the associated semantics available to the agent.
+The goal is to speed up data handling by ensuring enough information is provided to machines.</p>
+<p>In this context, the availability of semantic web technologies completely aligns with the key requirements defined by
+the FAIR principles.
+Thus, providing metadata about a dataset in the form of Linked Data Graph is a significant path towards making data FAIR.
+Furthermore, the availability of knowledge representation in a graph data structure, or knowledge graphs,
+provides contextual information about the dataset and shows the relationship between data and curated domain knowledge,
+which is particularly useful for machine learning and artificial intelligence approach.</p>
+<blockquote>
+<div><p>But <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> are not equivalent. Not all FAIR data is a knowledge graph and not all knowledge graphs are FAIR.</p>
 </div></blockquote>
 </div>
 <div class="section" id="what-are-knowledge-graph-and-graph-databases">
 <h2>What are knowledge graph and graph databases?<a class="headerlink" href="#what-are-knowledge-graph-and-graph-databases" title="Permalink to this headline">¶</a></h2>
-<p>Knowledge Graph (KG) and graph databases constitute a new approach to representation and storage of data.
-Until fairly recently, the storage of information mainly relied on <code class="docutils literal notranslate"><span class="pre">Relational</span> <span class="pre">Database</span> <span class="pre">Management</span> <span class="pre">Systems</span></code> (RDBMS),
-which have been to work-horse of database building. With relational database approach, information is modelled according
-to an <code class="docutils literal notranslate"><span class="pre">Entity</span> <span class="pre">Relationship</span> <span class="pre">Model</span> <span class="pre">(ER</span> <span class="pre">model/ER</span> <span class="pre">diagram</span></code>, the development of which undergoes a series of formal steps.
-One of these steps involves a process known as <code class="docutils literal notranslate"><span class="pre">schema</span> <span class="pre">normalization</span></code> to ensure that key entities and their attributes
-can be stored in <code class="docutils literal notranslate"><span class="pre">tables</span></code> in the most parsimonious way.
-This step is necessary to ensure query performance and optimization. Relational database approaches track and store
-relations between entities using what is known as <code class="docutils literal notranslate"><span class="pre">linking</span> <span class="pre">tables</span></code>.
-These are essentially maps between object identifiers, thus logging the relations 2 instances of objects may have.
-When interrogating a database operating under this paradigm (e.g. mysql, postgresql, oracle db to name a few),
-the database engine needs to run <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> operations, a type of SQL queries hitting the table of objects and any
-linking table holding the information about the relations between objects.
-While sophisticated optimization methods exist to ensure query performance does not suffer as both data volume grows or
-complexity of the underlying model increases, this form of information storage may suffer from performance issue in
-certain situations.
-An added criticism often leveled to RDBMS based database is the rigidity, which manifests itself in the difficulty and
-complexity of changing the underlying model, leading to potentially complex migration tasks.
-This can become a limitation when knowledge representation in a particular domain requires frequent changes
-for whatever reason.
-So it is in this context that the advent of <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">(oriented)</span> <span class="pre">databases</span></code> (sometimes referred to as NoSQL database,
-for ‘Not Only SQL database’), came about, with a new paradigm and bold claims.
-Over the last 20 years, the idea of storing knowledge as a graph <code class="docutils literal notranslate"><span class="pre">G=(v</span> <span class="pre">for</span> <span class="pre">vertex,e</span> <span class="pre">for</span> <span class="pre">edge)</span></code>,
+<p>Knowledge Graph (KG) and graph databases constitute a new approach to representation, storage and querying of data.</p>
+<p>To understand the notion of <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code>, we need to remind ourselves about some elements of information theory, data structure, and data storage, as well as some geometric interpretation of relationship between entities, which is often what turns data into knowledge.</p>
+<p>Information, in digital forms, relies on formal representations and an array of methods to store and retrieve information. Up until the last 10 years, Relational DataBase Management Systems (RDBMS) have been provided the backbone of information storage solutions, and still do so today. However, advances in both theoretical information representation models and technical solutions led to the development of so-called <code class="docutils literal notranslate"><span class="pre">NO-SQL</span></code> solutions (for ‘Not-only Structured Query language’), supporting the onset of <strong>graph-based representations of information</strong>, in contrast to <strong>relational-model based representation</strong>. Knowledge graphs are knowledge bases which use graph-based data structure or topology to represent entities and the relationships between them.</p>
+<div class="admonition-so-how-does-graph-theory-come-to-meet-knowledge-representation admonition">
+<p class="admonition-title"><strong>So how does graph theory come to meet knowledge representation?</strong></p>
+<p>We need here to introduce the definition of a graph:</p>
+<p>A graph is a set of nodes (also known as vertex) connected via edges.
+When the edges connected any two nodes carry a direction information, they defined a specific and important subfamily of graphs known as <code class="docutils literal notranslate"><span class="pre">directed</span> <span class="pre">graphs</span></code>. On the other hand, if there is absence of directionality information on the edges, such graphs are known as <code class="docutils literal notranslate"><span class="pre">undirected</span> <span class="pre">graphs</span></code>.</p>
+<p>A graph can also contain cycles. This means that when traversing the graph from a starting or source node to an ending or target node (terminologically referred to as a path), in case of cycles, the sorurce and target node are the same. Such graphs are commonly known as <code class="docutils literal notranslate"><span class="pre">cyclic</span> <span class="pre">graphs</span></code>.</p>
+<p>When cycles aren’t allowed, a new subtype of graph is defined. Such graphs are known as <code class="docutils literal notranslate"><span class="pre">directed</span> <span class="pre">acyclic</span> <span class="pre">graphs</span></code> (DAG).</p>
+<p>Volumes have been written about what graphs are and the underlying mathematical theories describing their properties. The readership can refer to the following resources for a complete overview and training. The purpose of this section is simply to provide a rapid overview of what knowledge graphs are and their typology, as one needs to be aware of the differences that exist between the different kinds of graphs and also understand the consequences both theoretical and technical to fully appreciate the pros and cons of the various implementations
+available out there.</p>
+<p>The following sections intend to provide a compact review and guide newcomers through the jargon and the various acronyms founds in the literature on the topic.</p>
+</div>
+<div class="section" id="relational-databases-and-graph-databases">
+<h3>Relational Databases and Graph Databases<a class="headerlink" href="#relational-databases-and-graph-databases" title="Permalink to this headline">¶</a></h3>
+<p>Until fairly recently, the storage of information mainly relied on RDBMS,
+which have been to work-horse of database building. With relational database approach, information is modelled according to an <code class="docutils literal notranslate"><span class="pre">Entity</span> <span class="pre">Relationship</span> <span class="pre">Model</span> <span class="pre">(ER</span> <span class="pre">model/ER</span> <span class="pre">diagram)</span></code>, the development of which undergoes a series of formal steps.</p>
+<p>One of these steps involves a process known as <code class="docutils literal notranslate"><span class="pre">schema</span> <span class="pre">normalization</span></code> to ensure that key entities and their attributes can be stored in <code class="docutils literal notranslate"><span class="pre">tables</span></code> in the most parsimonious way. This step is necessary to ensure query performance and optimization.</p>
+<p>Relational database approaches track and store relations between entities using what is known as <code class="docutils literal notranslate"><span class="pre">linking</span> <span class="pre">tables</span></code>. When interrogating a database operating under this paradigm (e.g. MySQL, PostgreSQL, Oracle DB, to name a few), the database engine needs to run <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> operations, a type of SQL queries hitting the table of entities and any linking table holding the information about the relations between entities.</p>
+<p>While sophisticated optimization methods exist to ensure query performance does not suffer as both data volume grows or complexity of the underlying model increases, this form of information storage may suffer from performance issue in certain situations.</p>
+<p>An added criticism often leveled to RDBMS based database is the rigidity, which manifests itself in the difficulty and complexity of changing the underlying model, leading to potentially complex migration tasks.
+This can become a limitation when knowledge representation in a particular domain requires frequent changes for whatever reason.</p>
+<p>So it is in this context that the advent of <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">(oriented)</span> <span class="pre">databases</span></code> (sometimes referred to as NoSQL database, for ‘Not Only SQL database’), came about, with a new paradigm and bold claims.
+Over the last 20 years, the idea of storing knowledge as a graph <code class="docutils literal notranslate"><span class="pre">G=(v</span> <span class="pre">for</span> <span class="pre">vertex,</span> <span class="pre">e</span> <span class="pre">for</span> <span class="pre">edge)</span></code>,
 even if not new at all from a theoretical perspective, has undergone tremendous progress to the point that a transition,
-in some sectors of the industry, is taking place. It is not that graph-oriented data storage is replacing RDBMS storage,
-but it is certainly true that for some domain specific representations and tasks, <code class="docutils literal notranslate"><span class="pre">Knowledge</span> <span class="pre">Graphs</span></code> (KG)
-and graph databases are seen as more suited. The claim is that they are capable of offering new insights,
-with better performance, owing to the optimization of their query engine for fast traversals.
-It is this property that makes graph databases special compared to RDBMS.
-These benefits warrant the significant investments made to develop tools and frameworks to support KG storage solutions.
-It also means that KG are becoming mainstream.
-As always with all technologies and tooling, one needs to understand the task at hand and choose the most suitable
+in some sectors of the industry, is taking place.</p>
+<p>KGs and graph databases claim to be capable of offering new insights with better performance,
+owning to the optimization of their query engine for fast traversals.
+With description logics (DL), knowledge graphs represent knowledge to allow “intelligent” machines and algorithms to reason over and work with.
+Hence, for some domain specific representations and tasks, <code class="docutils literal notranslate"><span class="pre">Knowledge</span> <span class="pre">Graphs</span></code> (KG)
+and graph databases are seen as more suited than RDBMS storage.</p>
+<p>These benefits warrant the significant investments made to develop tools and frameworks to support KG storage solutions.
+It also means that KG are becoming mainstream.</p>
+<p>It is not that graph-oriented data storage is replacing RDBMS storage. As always, with all technologies and tooling, one needs to understand the task at hand and choose the most suitable
 solutions for addressing a specific challenge.</p>
-<p>To understand the notion of <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code>, we need to remind ourselves about some elements of information theory,
-data structure and data storage, as well as some geometric interpretation of relationship between entities,
-which is often what turns data into knowledge.</p>
-<p>Information, in digital forms, relies on formal representations and an array of methods to store and retrieve
-information. Up until the last 10 years, relational databases and Relational DataBase Management Systems (RDBMS)
-have been provided the backbone of information storage solutions, and still do so today.
-However, advances in both theoretical information representation models and technical solutions led to the development
-of so-called <code class="docutils literal notranslate"><span class="pre">NO-SQL</span></code> solutions (for ‘Not-only Structured Query language’), supporting the onset of <strong>graph-based
-representations of information</strong>, in contrast to <strong>relational-model based representation</strong>.</p>
+</div>
 </div>
 <div class="section" id="the-different-types-of-knowledge-graphs">
 <h2>The different types of knowledge graphs<a class="headerlink" href="#the-different-types-of-knowledge-graphs" title="Permalink to this headline">¶</a></h2>
@@ -1069,40 +1075,17 @@ representations of information</strong>, in contrast to <strong>relational-model
 </div>
 <p class="card-text">RDF Graph and Labeled Property graphs</p>
 </div>
-</details><div class="admonition-so-how-does-graph-theory-come-to-meet-knowledge-representation admonition">
-<p class="admonition-title"><strong>So how does graph theory come to meet knowledge representation?</strong></p>
-<p>We need here to introduce the definition of a graph:</p>
-<p>A graph is a set of nodes (also known as vertex) connected via edges.
-When the edges connected any two nodes carry a direction information, they defined a specific and important subfamily
-of graphs known as <code class="docutils literal notranslate"><span class="pre">directed</span> <span class="pre">graphs</span></code>.
-When cycles aren’t allowed, a new subtype of graph is defined. Such graphs are known as <code class="docutils literal notranslate"><span class="pre">directed</span> <span class="pre">acyclic</span> <span class="pre">graphs</span></code>.</p>
-<p>Volumes have been written about what graphs are and the underlying mathematical theories describing their properties.
-The readership can refer to the following resources for a complete overview and training.
-The purpose of this section is simply to provide a rapid overview of what knowledge graphs are and their typology,
-as one needs to be aware of the differences that exist between the different kinds of graphs and also understand the
-consequences both theoretical and technical to fully appreciate the pros and cons of the various implementations
-available out there.
-The following sections intend to provide a compact review and guide newcomers through the jargon and the various
-acronyms founds in the literature on the topic.</p>
-</div>
-<div class="section" id="rdf-graphs">
+</details><div class="section" id="rdf-graphs">
 <h3>1. RDF graphs<a class="headerlink" href="#rdf-graphs" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="i-defining-rdf-resource-description-framework">
 <h4>i. Defining RDF, Resource Description Framework<a class="headerlink" href="#i-defining-rdf-resource-description-framework" title="Permalink to this headline">¶</a></h4>
-<p>Here, we need to introduce the notion of representing statements as a predicate of the following form:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;subject&gt;&lt;predicate&gt;&lt;object&gt;
-</pre></div>
-</div>
-<p>such as:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>P53 protein<span class="sb">`</span> <span class="sb">`</span>interacts with<span class="sb">`</span> <span class="sb">`</span>DNA<span class="sb">`</span>.
-</pre></div>
-</div>
+<p>Here, we need to introduce the notion of representing statements as a predicate of the following form:
+<code class="docutils literal notranslate"><span class="pre">&lt;subject&gt;&lt;predicate&gt;&lt;object&gt;</span></code>, such as: <code class="docutils literal notranslate"><span class="pre">'P53</span> <span class="pre">protein'</span> <span class="pre">'interacts_with'</span> <span class="pre">'DNA'</span></code>.</p>
 <p>This statement can be formally expressed using a dedicated syntax called <a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">RDF</a>,
-standing for “resource description framework”, one of the W3C standards supporting the vision of a <strong>Semantic Web</strong> as
-outlined by Sir Tim Berners-Lee and colleagues <a class="footnote-reference brackets" href="#bernerslee2001semantic" id="id1">4</a>.
-In this instance, because the relation <code class="docutils literal notranslate"><span class="pre">binds</span> <span class="pre">to</span></code> is directional, we are creating the simplest form of directed graph,
-by establishing an <code class="docutils literal notranslate"><span class="pre">edge</span> <span class="pre">between</span> <span class="pre">two</span> <span class="pre">nodes</span></code>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">syntax</span></code> allows the expression of <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">statements</span></code>, which can be built and grouped in an <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graph</span></code>.</p>
+standing for “Resource Description Framework”, one of the World Wide Web Consortium (W3C) standards supporting the vision of a <strong>Semantic Web</strong> as
+outlined by Sir Tim Berners-Lee and colleagues <a class="footnote-reference brackets" href="#bernerslee2001semantic" id="id1">3</a>.
+In this instance, because the relation <code class="docutils literal notranslate"><span class="pre">'interacts_with'</span></code> is directional, we are creating the simplest form of directed graph,
+by establishing an <code class="docutils literal notranslate"><span class="pre">edge</span></code> between two <code class="docutils literal notranslate"><span class="pre">nodes</span></code>.</p>
 <div class="tip admonition">
 <p class="admonition-title"><strong>When does a RDF Graph become a Linked Data Graph?</strong></p>
 <p>When all the entities in an RDF statement are identified and available as <code class="docutils literal notranslate"><span class="pre">Universal</span> <span class="pre">Resource</span> <span class="pre">Identifiers(URI)</span></code>,
@@ -1118,85 +1101,41 @@ the RDF graph then becomes a <code class="docutils literal notranslate"><span cl
 </pre></div>
 </div>
 </div>
-<div class="section" id="id2">
-<h5><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<p>The <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">syntax</span></code> allows the expression of <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">statements</span></code>, which can be built and grouped in an <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graph</span></code>.</p>
 <p>So let’s go back to the statement about the gene product of the P53 gene.
 The formal and structured representation of a fact about that gene is now a well established technique.
 Therefore, one can see that natural fit between the data structure and knowledge gathered and accumulated by scientists.
 This is why knowledge graphs have gained so much traction in recent years.
 In fact, a number of developments converged to make this form of representation effective and above all useful
 for computational work.</p>
-</div>
 <div class="section" id="ii-persisting-rdf-graphs-rdf-triple-stores">
 <h5>ii. Persisting RDF graphs: RDF triple Stores<a class="headerlink" href="#ii-persisting-rdf-graphs-rdf-triple-stores" title="Permalink to this headline">¶</a></h5>
 <p>RDF graph objects can be persisted in specialized databases, <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graph</span> <span class="pre">databases</span></code> also known as <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">triple</span> <span class="pre">stores</span></code>.
-To view some of the most performant and successful solutions, see the table below. There is extensive literature
-comparing the merits of the various solutions.</p>
-<details class="sphinx-bs dropdown card mb-3" open="open">
-<summary class="summary-title card-header">
-<strong>Well known RDF triple store solutions</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p class="card-text">name</p></th>
-<th class="text-align:left head"><p class="card-text">vendor</p></th>
-<th class="text-align:left head"><p class="card-text">site</p></th>
-<th class="text-align:right head"><p class="card-text">performance</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p class="card-text">Allelograph</p></td>
-<td class="text-align:left"><p class="card-text"></p></td>
-<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://allegrograph.com/products/allegrograph/">https://allegrograph.com/products/allegrograph/</a></p></td>
-<td class="text-align:right"><p class="card-text"></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p class="card-text">Blazegraph</p></td>
-<td class="text-align:left"><p class="card-text"></p></td>
-<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://github.com/blazegraph">https://github.com/blazegraph</a></p></td>
-<td class="text-align:right"><p class="card-text"></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p class="card-text">GraphDB</p></td>
-<td class="text-align:left"><p class="card-text"></p></td>
-<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://www.ontotext.com/products/graphdb/">https://www.ontotext.com/products/graphdb/</a></p></td>
-<td class="text-align:right"><p class="card-text">OWL inference</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p class="card-text">Stardog</p></td>
-<td class="text-align:left"><p class="card-text"></p></td>
-<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://www.stardog.com/">https://www.stardog.com/</a></p></td>
-<td class="text-align:right"><p class="card-text"></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p class="card-text">Virtuoso</p></td>
-<td class="text-align:left"><p class="card-text"></p></td>
-<td class="text-align:left"><p class="card-text"><a class="reference external" href="https://virtuoso.openlinksw.com/">https://virtuoso.openlinksw.com/</a></p></td>
-<td class="text-align:right"><p class="card-text"></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</details></div>
-<div class="section" id="iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded-the-w3c-shacl-shape-constraint-language">
-<h5>iii. Validating and controlling the quality of the RDF data being loaded - the W3C SHACL SHApe Constraint Language<a class="headerlink" href="#iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded-the-w3c-shacl-shape-constraint-language" title="Permalink to this headline">¶</a></h5>
-<p>RDF graphs / Linked data triples can be generated fairly rapidly.
-The W3C has produced a specification detailing a constraint language which allows data managers to control the so-called
-<code class="docutils literal notranslate"><span class="pre">shape</span></code> of the RDF graph coming in.</p>
+Some of the most performant and successful solutions are:</p>
 <ul class="simple">
-<li><p>This language known as <a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a> (pronounced <code class="docutils literal notranslate"><span class="pre">shackle</span></code>) for <code class="docutils literal notranslate"><span class="pre">SHApe</span> <span class="pre">Constraint</span> <span class="pre">Language</span></code>,
-allow to express a set of conditions to validate RDF graphs/RDF statements. SHACL expressions are RDF statements
-themselves and the constraint profiles can themselves be stored in an RDF triple store.
-SHACL specifications are implemented in TopQuadrant TopBraid Composer tool</p></li>
-<li><p>A competing specification, know as <a class="reference external" href="https://shex.io/">SHEX</a> for <code class="docutils literal notranslate"><span class="pre">Shape</span> <span class="pre">Expression</span></code>, provides a similar functionality,
-but isn’t a W3C approved specifications, even though SHEX is proving quite popular and with a strong following.</p></li>
+<li><p><a class="reference external" href="https://allegrograph.com/products/allegrograph/">Allegrograph</a></p></li>
+<li><p><a class="reference external" href="https://github.com/blazegraph">Blazegraph</a></p></li>
+<li><p><a class="reference external" href="https://www.ontotext.com/products/graphdb">GraphDB</a></p></li>
+<li><p><a class="reference external" href="https://www.stardog.com/">Stardog</a></p></li>
+<li><p><a class="reference external" href="https://virtuoso.openlinksw.com">Virtuoso</a></p></li>
 </ul>
+</div>
+<div class="section" id="iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded">
+<h5>iii. Validating and controlling the quality of the RDF data being loaded -<a class="headerlink" href="#iii-validating-and-controlling-the-quality-of-the-rdf-data-being-loaded" title="Permalink to this headline">¶</a></h5>
+<p>To validate and control the quality of the fast emerging RDF triples.
+The W3C has produced a specification detailing a constraint language which allows data managers to control the so-called
+<code class="docutils literal notranslate"><span class="pre">shape</span></code> of the RDF graph coming in. The W3C SHACL SHApe Constraint Language, known as <a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a> (pronounced <code class="docutils literal notranslate"><span class="pre">shackle</span></code>),
+allow to express a set of conditions to validate RDF graphs/RDF statements. SHACL expressions are RDF statements
+and the constraint profiles can be stored in an RDF triple store.
+SHACL specifications are implemented in the <a class="reference external" href="https://www.topquadrant.com/products/topbraid-composer/">TopQuadrant TopBraid Composer tool</a>.</p>
+<p>A competing specification, know as <a class="reference external" href="https://shex.io/">SHEX</a> for <code class="docutils literal notranslate"><span class="pre">Shape</span> <span class="pre">Expression</span></code>, provides a similar functionality,
+but isn’t a W3C approved specifications, even though SHEX is proving quite popular and with a strong following.</p>
 </div>
 <div class="section" id="iv-querying-an-rdf-graph-the-w3c-sparql-query-language">
 <h5>iv. Querying an RDF graph - the W3C SPARQL Query Language<a class="headerlink" href="#iv-querying-an-rdf-graph-the-w3c-sparql-query-language" title="Permalink to this headline">¶</a></h5>
-<p>RDF graphs stored in RDF triple stores, such as Virtuoso <a class="footnote-reference brackets" href="#virtuoso" id="id3">2</a>, Blazegraph <a class="footnote-reference brackets" href="#blazegraph" id="id4">1</a>,
-can be queried using a dedicated query language defined by a W3C specification known as
+<p>RDF graphs stored in RDF triple stores can be queried using a dedicated query language defined by a W3C specification known as
 <a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1</a>.
-SPARQL stands for <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">Query</span> <span class="pre">Language</span></code>, (pronounced <code class="docutils literal notranslate"><span class="pre">sparkle</span></code>) <a class="footnote-reference brackets" href="#sparql" id="id5">3</a>.
+SPARQL stands for <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">Query</span> <span class="pre">Language</span></code>, (pronounced <code class="docutils literal notranslate"><span class="pre">sparkle</span></code>) <a class="footnote-reference brackets" href="#sparql" id="id2">1</a>.
 The results of a SPARQL query are a <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">set</span></code> or <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graph</span></code> and is therefore <strong>a collection of RDF triples</strong>.</p>
 <p>An impressive feature of the SPARQL query language is its ability to perform <code class="docutils literal notranslate"><span class="pre">mashups</span></code> by performing federated queries
 over a number of ‘SERVICES’, i.e. RDF triple store endpoints and return an RDF graph which contains triples assembled
@@ -1227,23 +1166,24 @@ and why they matter.</p>
 <p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">A SPARQL query over Wikidata RDF endpoint: Cell lines with names that could also be URLs (Internet of Cell Lines)</span><a class="headerlink" href="#wikidata-sparql-endpoint" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</details><p>For more information about SPARQL queries over Wikidata, see <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_(Internet_of_Cell_Lines)">here</a>.</p>
+</details><p>Wikidata provides a list of SPARQL query examples,
+see <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_(Internet_of_Cell_Lines)">here</a>.</p>
 </div>
 </div>
 </div>
 <div class="section" id="property-graphs">
 <h3>2. Property graphs<a class="headerlink" href="#property-graphs" title="Permalink to this headline">¶</a></h3>
-<p>Like <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>, <code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code> are too used to build <code class="docutils literal notranslate"><span class="pre">Knowledge</span> <span class="pre">graphs</span></code>.
-However, unlike <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>, <code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code> allows the vertices (aka the <code class="docutils literal notranslate"><span class="pre">edge</span></code>) to carry <em>annotations</em>,
+<p>Like <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>, <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs(PG)</span></code> are also used to build <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code>.
+However, unlike <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>, <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">graphs</span></code> allows the vertices (aka the <code class="docutils literal notranslate"><span class="pre">edge</span></code>) to carry <em>annotations</em>,
 which can be queried. These <code class="docutils literal notranslate"><span class="pre">annotations</span></code> are called <code class="docutils literal notranslate"><span class="pre">properties</span></code> hence the denomination <code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code>,
-also referred to as <strong><code class="docutils literal notranslate"><span class="pre">Labeled</span> <span class="pre">Property</span> <span class="pre">Graphs</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">LPG</span></code></strong>.
-<code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code> have inherent interesting properties which set them aside from <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>.
+also referred to as <strong><code class="docutils literal notranslate"><span class="pre">Labeled</span> <span class="pre">Property</span> <span class="pre">Graphs</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">LPG</span></code></strong>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Property</span> <span class="pre">graphs</span></code> have inherent interesting properties which set them aside from <code class="docutils literal notranslate"><span class="pre">RDF</span> <span class="pre">graphs</span></code>.
 For instance, in PG/LPG, both <code class="docutils literal notranslate"><span class="pre">nodes</span></code> and <code class="docutils literal notranslate"><span class="pre">edges</span></code> have:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">(1..1)</span> <span class="pre">identifier</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(1..n)</span> <span class="pre">annotations</span></code>, in the form of sets of <code class="docutils literal notranslate"><span class="pre">{key:value}</span></code> pairs<br />
-in addition, <code class="docutils literal notranslate"><span class="pre">edges</span></code> have a <code class="docutils literal notranslate"><span class="pre">Type</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(1..n)</span> <span class="pre">annotations</span></code>, in the form of sets of <code class="docutils literal notranslate"><span class="pre">{key:value}</span></code> pairs</p></li>
 </ul>
+<p>In addition, <code class="docutils literal notranslate"><span class="pre">edges</span></code> have a <code class="docutils literal notranslate"><span class="pre">Type</span></code>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Important</p>
 <p>The main thing to remember is that what distinguishes RDF graphs from Labeled Property graphs is that fact that the
@@ -1267,7 +1207,7 @@ interface.</p></li>
 <li><p><a class="reference external" href="https://tinkerpop.apache.org/docs/3.6.0/tutorials/gremlins-anatomy/">Apache Gremlin</a> is the <strong>query language</strong> powering Tinkerpop and its interactions with the underlying data stored
 as property graphs. Gremlin is a <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">traversal</span> <span class="pre">language</span></code> optimized for speed and fast access.
 Defined by Marko Rodrigues, Gremlin language specifications are detailed in the following publication
-<a class="footnote-reference brackets" href="#id10" id="id6">8</a> and is supported by libraries available in the most popular programming
+<a class="footnote-reference brackets" href="#id8" id="id3">7</a> and is supported by libraries available in the most popular programming
 language. Extensive documentation and training is available from the dedicated Apache project pages,
 including a set of <a class="reference external" href="https://tinkerpop.apache.org/docs/current/recipes/"><code class="docutils literal notranslate"><span class="pre">recipes</span></code></a> to make the most of the
 Gremlin language.</p></li>
@@ -1279,7 +1219,7 @@ Gremlin language.</p></li>
 <span class="nb">id</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">id</span>
 <span class="n">single</span> <span class="o">=</span> <span class="n">Cardinality</span><span class="o">.</span><span class="n">single</span>
 
-<span class="k">def</span> <span class="nf">create_vertex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vid</span><span class="p">,</span> <span class="n">vlabel</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">create_vertex</span><span class="p">(</span><span class="n">vid</span><span class="p">,</span> <span class="n">vlabel</span><span class="p">):</span>
     <span class="c1"># default database cardinality is used when Cardinality argument is not specified</span>
     <span class="n">g</span><span class="o">.</span><span class="n">addV</span><span class="p">(</span><span class="n">vlabel</span><span class="p">)</span><span class="o">.</span><span class="n">property</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">vid</span><span class="p">)</span><span class="o">.</span> \
       <span class="nb">property</span><span class="p">(</span><span class="n">single</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;Apache&#39;</span><span class="p">)</span><span class="o">.</span> \
@@ -1304,11 +1244,13 @@ Gremlin language.</p></li>
 Backing the approach, the team developed a dedicated query language for <code class="docutils literal notranslate"><span class="pre">Labeled</span> <span class="pre">property</span> <span class="pre">graphs</span></code>.
 This language is known as <code class="docutils literal notranslate"><span class="pre">CYPHER</span></code>.</p>
 <p>Neo4j databases have shown promises in biology and bioinformatics for its ability to allow for fast graph traversals,
-which matches the requirements of cell biologists, modelers and computational scientists who need to explore a growing
+which matches the requirements of cell biologists, modelers, and computational scientists who need to explore a growing
 ensemble of molecular pathways, that is to say graphs of interactions and reactions.
 An illustration of that natural fit is the uptake of the Neo4j technology by a project such as <code class="docutils literal notranslate"> <span class="pre">Disease</span> <span class="pre">Maps</span></code>,
-Reactome <a class="footnote-reference brackets" href="#pmid29377902" id="id7">6</a> and KnetMiners <a class="footnote-reference brackets" href="#pmid30085931" id="id8">5</a>.</p>
-<p>The Reactome database builds on Neo4j to allow navigation of reactions and pathways.</p>
+Reactome <a class="footnote-reference brackets" href="#pmid29377902" id="id4">5</a> and KnetMiners <a class="footnote-reference brackets" href="#pmid30085931" id="id5">4</a>.</p>
+<ul class="simple">
+<li><p>The <a class="reference external" href="https://reactome.org/">Reactome database</a> builds on Neo4j to allow navigation of reactions and pathways.</p></li>
+</ul>
 <p>A complete tutorial to query Reactome using the <code class="docutils literal notranslate"><span class="pre">Cypher</span> <span class="pre">language</span></code> to interrogate the underlying Neo4j store is
 available <a class="reference external" href="https://reactome.org/dev/graph-database/extract-participating-molecules">here</a>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//All reactions <span class="k">for</span> the pathway with stable identifier R-HSA-198933
@@ -1328,16 +1270,26 @@ RETURN p.stId AS Pathway, rle.stId AS Reaction, rle.displayName AS ReactionName
 <p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">CYPHER query example on Reactome: Comparison with SQL. From Fabregat et al,2018. 10.1371/journal.pcbi.1005968</span><a class="headerlink" href="#reactome-cypher-query" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</details><p>While its origin dates back to 2000, the company recently grabbed headlines for a <a class="reference external" href="https://neo4j.com/press-releases/neo4j-announces-seriesf-funding/">very successful IPO</a> which netted circa 350 millions USD of venture capital funding. Such a success is testament to the robustness and validity of the approach taken by the group of computer scientists who built the solutions from the ground up to deliver one of the most successful solution for property graph based knowledge representation and querying.make full use of Neo4j representation and infrastructure capabilities.</p>
-<p>Neo4J open-sourced the Cypher query language and made it available via GitHub as part of the <code class="docutils literal notranslate"><span class="pre">open-cypher</span></code> project</p>
+</details><ul class="simple">
+<li><p>The [PDBe-KB](PDBe-KG <a class="reference external" href="https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download">https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download</a>) is another relevant resources in the fields of
+bioinformatics which is available as a Neo4j graph database. PDBe-KB is a community-driven resource managed by the PDBe
+team, collating functional annotations and predictions for structure data in the PDB archive, the content of which is distributed
+under CC-BY-4 license. PDFe-KB can be downloaded [here](PDBe-KG <a class="reference external" href="https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download">https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download</a>).</p></li>
+</ul>
+<p>While Neo4j origin dates back to 2000, the company recently grabbed headlines for a <a class="reference external" href="https://neo4j.com/press-releases/neo4j-announces-seriesf-funding/">very successful IPO</a>
+which netted circa 350 millions USD of venture capital funding. Such a success is testament to the robustness and
+validity of the approach taken by the group of computer scientists who built the solutions from the ground up to
+deliver one of the most successful solution for property graph based knowledge representation and querying making
+full use of Neo4j representation and infrastructure capabilities.</p>
+<p>Neo4J open-sourced the Cypher query language and made it available via GitHub as part of the <a class="reference external" href="https://github.com/opencypher">open-cypher</a> project</p>
 <p>A <a class="reference external" href="https://neo4j.com/developer/cypher/">large body of documentation and training material is available</a>,
 supporting developers in getting up to speed with the language.</p>
 <p>More recently, Neo4j also joined the <a class="reference external" href="https://graphql.org/foundation/">graphQL foundation</a>,
 <em>“a neutral, non-profit home for the GraphQL assets and ongoing collaboration, and hosted by The Linux Foundation”</em> to
 quote the landing page of the organization.</p>
 <blockquote>
-<div><p><strong>Why this matters?</strong>
-It matters because <a class="reference external" href="https://graphql.org/">GraphQL specification</a> allows to build robust Application Programming
+<div><p><strong>Why this matters?</strong></p>
+<p>It matters because <a class="reference external" href="https://graphql.org/">GraphQL specification</a> allows building robust Application Programming
 Interface and make it easier to build full stack applications from scratch while offering great flexibility in
 interfacing with the data.
 But the main idea here is that the <code class="docutils literal notranslate"><span class="pre">GraphQL</span></code> way of representing data is a natural fit to database systems
@@ -1348,10 +1300,10 @@ which are natively <code class="docutils literal notranslate"><span class="pre">
 <div class="section" id="rdf-graphs-or-labeled-property-graphs-which-has-the-upper-hand">
 <h3>3. RDF graphs or Labeled Property graphs, which has the upper hand?<a class="headerlink" href="#rdf-graphs-or-labeled-property-graphs-which-has-the-upper-hand" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes, nothing beats a diagram to drive forward the strengths and the weaknesses of technical stacks.
-In the diagram below, which provides an overview of the specifications and standards available to support the
+In the diagram presented in figure 4, which provides an overview of the specifications and standards available to support the
 knowledge graph, two things strike the keen reader:</p>
 <ol>
-<li><p>RDF graphs technology is backed by a large number of World Wide Web Consortium (W3C) standards for the <strong>semantic web</strong>.</p>
+<li><p>RDF graphs technology is backed by a large number of W3C standards for the <strong>semantic web</strong>.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>W3C RDF</p></li>
@@ -1389,13 +1341,16 @@ and have globally unique resolvable identifiers for resources.</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p>Backed by RDFS and OWL semantics, RDF graphs are built on a technology stack developed to deliver the
-<code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">semantic</span> <span class="pre">web</span></code> as envisioned by Sir Tim Bernards-Lee. Tools known as <em>reasoners</em> , use first order logic to
+<code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">semantic</span> <span class="pre">web</span></code> as envisioned by Sir Tim Berners-Lee. Tools known as <em>reasoners</em> , use first order logic to
 perform type and instance classification but also generate <code class="docutils literal notranslate"><span class="pre">entailments</span></code>, which correspond to new statements
 resulting from inference made from the explicit assertions in the underlying ontologies or graph.</p></li>
 </ul>
 </div></blockquote>
 </li>
 </ol>
+<p>Worth of notice, comparisons between the two approaches do exist. For instance, Alocci and colleagues ran a comparison
+of between RDF triple stores and Property graph in the context of Glycan substructure and their assessment can serve as
+basis for deciding to go for on or the other <a class="footnote-reference brackets" href="#pmid26656740" id="id6">2</a>.</p>
 </div>
 <div class="section" id="towards-a-unified-standard-for-querying-lpg-gql-specifications">
 <h3>4. Towards a unified standard for querying LPG: GQL specifications<a class="headerlink" href="#towards-a-unified-standard-for-querying-lpg-gql-specifications" title="Permalink to this headline">¶</a></h3>
@@ -1404,67 +1359,59 @@ In the previous 2 sections, we have highlighted 2 of the most successful project
 Property Graphs as data structure for storing information and building knowledge graphs.
 However, none of these implementations are officially an approved W3C standards. While it does not really matter
 at this stage, it was realized that such fragmentation was hurting and in 2019, the <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">Graph</span> <span class="pre">Query</span> <span class="pre">Language</span></code> (oGQL)
-working group released an initial specification</p>
+working group released an initial specification.</p>
 </div>
-</div>
-<div class="section" id="how-are-knowledge-graphs-generated">
-<h2>How are knowledge graphs generated?<a class="headerlink" href="#how-are-knowledge-graphs-generated" title="Permalink to this headline">¶</a></h2>
-<p><a class="footnote-reference brackets" href="#pmid32637040" id="id9">7</a></p>
-<div class="section" id="semantic-models-and-ontologies-when-knowledge-engineers-step-in">
-<h3>Semantic models and ontologies: when knowledge engineers step in.<a class="headerlink" href="#semantic-models-and-ontologies-when-knowledge-engineers-step-in" title="Permalink to this headline">¶</a></h3>
-<p>In the previous section, we saw how to create an RDF statement.</p>
-<p><code class="docutils literal notranslate"><span class="pre">P53</span> <span class="pre">gene</span> <span class="pre">transcript</span></code> <code class="docutils literal notranslate"><span class="pre">binds</span> <span class="pre">to</span></code> <code class="docutils literal notranslate"><span class="pre">DNA</span></code>.</p>
-<p>which structured in N-turle RDF syntax looks like this</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>introduce RDF statement with free text
-</pre></div>
-</div>
-<p>The representation is neat and tidy but one can not help noticing that all the strings are stored as free text.
-A problem arises when trying to accumulate knowledge from different sources.
-One needs to add a layer of semantics to <code class="docutils literal notranslate"><span class="pre">type</span></code> each of the element of an RDF statement.
-Ontologies are the resources which provide this layer of semantics which make it possible to integrate data in
-knowledge graphs.</p>
-<p>Ontologies are <strong>formal resources developed by experts in a domain</strong>.
-Ontologies also rely on RDF language for their representation but their purpose is different.</p>
-<p>These ontologies set the rules and constraints grounded in first order logic to define a type.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>P53 gene transcript a RDF:type go:Transcript<span class="p">;</span>
-DNA a RDF:type chebi:molecularEntity
-binds_to
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>text mining</p></li>
-<li><p>ETL</p></li>
-<li><p>machine learning</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="how-do-fair-and-kr-relate-and-why-does-it-matter">
-<h2>How do FAIR and KR relate and why does it matter?<a class="headerlink" href="#how-do-fair-and-kr-relate-and-why-does-it-matter" title="Permalink to this headline">¶</a></h2>
-<p>FAIR is chiefly about 3 things: metadata, metadata and metadata.
-Not only that, but metadata which should be <strong>active</strong>, that is usable by machines for quick mobilisation and
-use by software agents.
-In this context, the availability of semantic web technologies completely aligns with the key requirements defined
-by the FAIR principles.</p>
-<p>But <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">knowledge</span> <span class="pre">graphs</span></code> are not equivalent.
-Not all FAIR data is a knowledge graph and not all knowledge graphs are FAIR.
-However, providing metadata about a dataset in the form of Linked Data graph is a significant path
-towards making data FAIR.
-Furthermore, the availability of knowledge representation in a graph data structure is particularly useful
-for machine learning and artificial intelligence approach.
-Why is that so? or is it just another chain of fashionable term “du jour”?</p>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<p>Knowledge graphs are a powerful and flexible to represent information. Their properties and features lend themselves
-to data driven approaches and make them a data structure of choice for certain types of artificial intelligence and
-machine learning applications. As with all technical solutions, it is no panacea, no silver bullet.
+<p>Knowledge graphs are a powerful and flexible way to represent information.
+Their properties and features lend themselves to data driven approaches and make them a data structure of choice for
+certain types of artificial intelligence and machine learning applications.
+As with all technical solutions, it is no panacea, no silver bullet.
 They however are a technology which can greatly enhance certain tasks and are of particular relevance for representing
 metadata, data about the data  in a FAIR way.</p>
 <div class="section" id="what-to-read-next">
 <h3>What to read next:<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><ul class="simple">
+<div><p>Having read about what knowledge graphs are and their typology, the next key thing is to learn about how are knowledge graphs generated.
+This is when we need to introduce the notion of semantic models and ontologies and when knowledge engineers step in.</p>
+<p>The main concerns are to 1) provide foundational domain models as well as 2) instantiations of data under these models.
+To take a simple example, let’s consider converting natural text into a data structure which can be easily manipulated by software agents.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>P53 gene transcript<span class="sb">`</span> <span class="sb">`</span>binds to<span class="sb">`</span> <span class="sb">`</span>DNA<span class="sb">`</span>.
+</pre></div>
+</div>
+<p>In order to do this, several steps are necessary and some requires specific resources to be available.
+One step is known as ‘Name Entity Recognition’ (NER), which as the name says aims to cast strings into specific bins such ‘noun’, ‘verb’, ‘qualifier’, etc.
+Another step, following the NER step would be the anchoring of these entities to a semantic framework and this step is known as ‘semantic mark-up’ or sometimes ‘mapping to ontologies’.</p>
+<p>Ontologies are the resources which provide this layer of semantics which make it possible to integrate data in
+knowledge graphs. Ontologies are <strong>formal resources developed by experts in a domain</strong>.
+Ontologies also rely on RDF language for their representation but their purpose is different.</p>
+<p>These ontologies set the rules and constraints grounded in first order logic to define a type.</p>
+<p>The representation is neat and tidy but one can not help noticing that all the strings are stored as free text.
+A problem arises when trying to accumulate knowledge from different sources.
+One needs to add a layer of semantics to <code class="docutils literal notranslate"><span class="pre">type</span></code> each of the element of an RDF statement.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@prefix go: &lt;go:&gt;
+@prefix uniprot: &lt;uniprot:&gt;
+@prefix chebi: &lt;chebi:&gt;
+P53 gene transcript a RDF:type go:Transcript<span class="p">;</span>
+DNA a RDF:type chebi:molecularEntity
+binds_to
+</pre></div>
+</div>
+<p>This taster is really meant to encourage our readers to dive into the following contents, which range from how to build controlled terminology,
+how to select ontologies or how to perform NER.
+Check out those content and  recipes!</p>
+<ul class="simple">
+<li><p>Constructing knowledge graphs and their biomedical applications <a class="footnote-reference brackets" href="#pmid32637040" id="id7">6</a>, a review by Nicholson &amp; Greene</p></li>
 <li><p><a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html#fcb-introduction-terminologies-ontologies"><span class="std std-ref">Introduction to terminologies and ontologies</span></a></p></li>
+</ul>
+</div></blockquote>
+<!-- >- {ref}`fcb-skos-terminology`
+>- {ref}`fcb-ner`
+>- {ref}`fcb-ontologies`
+-->
+<blockquote>
+<div><ul class="simple">
 <li><p><a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html#fcb-interop-covid-metadata"><span class="std std-ref">Metadata profile validation in RDF</span></a></p></li>
 <li><p><a class="reference internal" href="../interoperability/ETL-tools.html#fcb-interop-etl"><span class="std std-ref">Extraction, transformation, and loading process</span></a></p></li>
 </ul>
@@ -1481,46 +1428,58 @@ metadata, data about the data  in a FAIR way.</p>
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text" id="bibtex-footbibliography-content/recipes/introduction/FAIR-and-knowledge-graphs-0"><dl class="footnote brackets">
-<dt class="label" id="blazegraph"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
-<dd><p class="card-text">Blazegraph. URL: <a class="reference external" href="https://blazegraph.com/">https://blazegraph.com/</a>.</p>
-</dd>
-<dt class="label" id="virtuoso"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
-<dd><p class="card-text">Virtuoso rdf triple store. URL: <a class="reference external" href="https://virtuoso.openlinksw.com/">https://virtuoso.openlinksw.com/</a>.</p>
-</dd>
-<dt class="label" id="sparql"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dt class="label" id="sparql"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p class="card-text">W3c sparql query language 1.1. URL: <a class="reference external" href="https://www.w3.org/TR/sparql11-overview/">https://www.w3.org/TR/sparql11-overview/</a>.</p>
 </dd>
-<dt class="label" id="bernerslee2001semantic"><span class="brackets"><a class="fn-backref" href="#id1">4</a></span></dt>
+<dt class="label" id="pmid26656740"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
+<dd><p class="card-text">D. Alocci, J. Mariethoz, O. Horlacher, J. T. Bolleman, M. P. Campbell, and F. Lisacek. Property Graph vs RDF Triple Store: A Comparison on Glycan Substructure Search. <em>PLoS One</em>, 10(12):e0144578, 2015.</p>
+</dd>
+<dt class="label" id="bernerslee2001semantic"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
 <dd><p class="card-text">Tim Berners-Lee, James Hendler, and Ora Lassila. The semantic web. <em>Scientific American</em>, 284(5):34–43, May 2001. URL: <a class="reference external" href="http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21">http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21</a>.</p>
 </dd>
-<dt class="label" id="pmid30085931"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dt class="label" id="pmid30085931"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
 <dd><p class="card-text">M. Brandizi, A. Singh, C. Rawlings, and K. Hassani-Pak. Towards FAIRer Biological Knowledge Networks Using a Hybrid Linked Data and Graph Database Approach. <em>J Integr Bioinform</em>, Aug 2018.</p>
 </dd>
-<dt class="label" id="pmid29377902"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dt class="label" id="pmid29377902"><span class="brackets"><a class="fn-backref" href="#id4">5</a></span></dt>
 <dd><p class="card-text">A. Fabregat, F. Korninger, G. Viteri, K. Sidiropoulos, P. Marin-Garcia, P. Ping, G. Wu, L. Stein, P. D’Eustachio, and H. Hermjakob. Reactome graph database: Efficient access to complex pathway data. <em>PLoS Comput Biol</em>, 14(1):e1005968, 01 2018.</p>
 </dd>
-<dt class="label" id="pmid32637040"><span class="brackets"><a class="fn-backref" href="#id9">7</a></span></dt>
+<dt class="label" id="pmid32637040"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
 <dd><p class="card-text">D. N. Nicholson and C. S. Greene. Constructing knowledge graphs and their biomedical applications. <em>Comput Struct Biotechnol J</em>, 18:1414–1428, 2020.</p>
 </dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id3">7</a></span></dt>
 <dd><p class="card-text">Marko A. Rodriguez. The gremlin graph traversal machine and language (invited talk). In <em>Proceedings of the 15th Symposium on Database Programming Languages</em>, DBPL 2015, 1–10. New York, NY, USA, 2015. Association for Computing Machinery. URL: <a class="reference external" href="https://doi.org/10.1145/2815072.2815073">https://doi.org/10.1145/2815072.2815073</a>, <a class="reference external" href="https://doi.org/10.1145/2815072.2815073">doi:10.1145/2815072.2815073</a>.</p>
 </dd>
 </dl>
 </p>
-<p class="card-text">[1]. <a class="reference external" href="https://www.turing.ac.uk/research/interest-groups/knowledge-graphs">https://www.turing.ac.uk/research/interest-groups/knowledge-graphs</a></p>
-<p class="card-text">[2]. <a class="reference external" href="https://web.stanford.edu/class/cs520/">https://web.stanford.edu/class/cs520/</a></p>
-<p class="card-text">[3]. <a class="reference external" href="http://ai.stanford.edu/blog/introduction-to-knowledge-graphs/">http://ai.stanford.edu/blog/introduction-to-knowledge-graphs/</a></p>
-<p class="card-text">[4].<a class="reference external" href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/">https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/</a></p>
-<p class="card-text">[5]. <a class="reference external" href="https://www.futurelearn.com/courses/linked-data">https://www.futurelearn.com/courses/linked-data</a></p>
-<p class="card-text">[6]. <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327409/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327409/</a> (Constructing knowledge graphs and their biomedical applications)</p>
-<p class="card-text">[7]. <a class="reference external" href="https://douroucouli.wordpress.com/2019/03/14/biological-knowledge-graph-modeling-design-patterns/">https://douroucouli.wordpress.com/2019/03/14/biological-knowledge-graph-modeling-design-patterns/</a></p>
-<p class="card-text">[8]. wikidata</p>
-<p class="card-text">[9]. monarch knowledge graph</p>
-<p class="card-text">[10]. NCATS biomedical data translator</p>
-<p class="card-text">[11]. Google graph</p>
-<p class="card-text">[12].<a class="reference external" href="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-00940-y">https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-00940-y</a></p>
 </div>
-</details></div>
+</details><!--
+
+[1]. https://www.turing.ac.uk/research/interest-groups/knowledge-graphs
+
+[2]. https://web.stanford.edu/class/cs520/
+
+[3]. http://ai.stanford.edu/blog/introduction-to-knowledge-graphs/
+
+[4].https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/
+
+[5]. https://www.futurelearn.com/courses/linked-data
+
+[6]. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327409/ (Constructing knowledge graphs and their biomedical applications)
+
+[7]. https://douroucouli.wordpress.com/2019/03/14/biological-knowledge-graph-modeling-design-patterns/
+
+[8]. wikidata
+
+[9]. monarch knowledge graph
+
+[10]. NCATS biomedical data translator
+
+[11]. Google graph
+
+[12].https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-00940-y
+
+-->
+</div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
@@ -1561,6 +1520,20 @@ metadata, data about the data  in a FAIR way.</p>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
 <td><p class="card-text">Writing - Review &amp; Editing</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/fuqix"></img><div class="d-block">Fuqi Xu</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-5923-3859"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">EMBL-EBI</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/embl.png" ></img></p></td>
+<td><p class="card-text">Review &amp; Editing</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/YojanaGadiya"></img><div class="d-block">Yojana Gaidya</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-7683-0452"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Fraunhofer Institute</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>

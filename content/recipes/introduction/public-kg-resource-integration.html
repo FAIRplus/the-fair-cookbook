@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -830,13 +835,18 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openbiolink">
+     5. OpenBiolink
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#clinical-knowledge-graph">
-     4. Clinical Knowledge Graph
+     6. Clinical Knowledge Graph
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#astrazeneca-biological-insights-knowledge-graph-bikg">
-     5. AstraZeneca Biological Insights Knowledge Graph BIKG
+     7. AstraZeneca Biological Insights Knowledge Graph BIKG
     </a>
    </li>
   </ul>
@@ -890,7 +900,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Public knowledge graphs resources for life sciences", "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB071", "url": "https://w3id.org/faircookbook/FCB071"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Public knowledge graphs resources for life sciences", "description": "Public knowledge graphs resources for life sciences", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Everyone|NA"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB071", "url": "https://w3id.org/faircookbook/FCB071"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -970,35 +980,28 @@ No
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>When it comes to research carried out by academic and industry ventures such as the Innovative Medicine Initiative of these
-European Union, three main scenarios can be outlined:</p>
+<p>When it comes to research carried out by academic and industry ventures such as the Innovative Medicine Initiative of these European Union, three main scenarios can be outlined:</p>
 <ul class="simple">
-<li><p>identification of new drug targets, as it the case for the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/resolute">IMI Resolute</a> project for instance, which focuses on
+<li><p>Identification of new drug targets, as it the case for the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/resolute">IMI Resolute</a> project for instance, which focuses on
 characterizing solute carriers and identifying potential candidates for “druggability”.</p></li>
-<li><p>development of new therapeutic products and techniques given a specific disease area, as in the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/aetionomy">IMI AETIONOMY</a> project.</p></li>
-<li><p>discovery of new drugs against pathogens as for instance the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/nd4bb">New Drugs for Bad Bugs (ND4BB)</a> project</p></li>
+<li><p>Development of new therapeutic products and techniques given a specific disease area, as in the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/aetionomy">IMI AETIONOMY</a> project.</p></li>
+<li><p>Discovery of new drugs against pathogens as for instance the <a class="reference external" href="https://www.imi.europa.eu/projects-results/project-factsheets/nd4bb">New Drugs for Bad Bugs (ND4BB)</a> project.</p></li>
 </ul>
-<p>This gives a backdrop against which work to enhance interoperability of data generated by these projects needs to be aware of the existing data landscape.
-The purpose of the present content type is to provide a basic survey of the existing and the relevance to specific research contexts and tasks.
-This information may be useful when deciding on particular technical aspects such as choice of data interface, choice of terminology and controlled terminologies or, choice of data formats.</p>
-<p>We therefore focus the dataset scan on main entities such as Drugs / Chemicals and Disease / Clinical Research Data.</p>
-<p>Additionally, the availability of such information in specialized graph representations was also included as a selection criteria.
-Therefore, services providing SPARQL endpoint and Graph API for dataset access were considered and the following sections
-providing specific information and references for each of the resources and datasets are considered</p>
+<p>This gives a backdrop against which work to enhance interoperability of data generated by these projects needs to be aware of the existing data landscape.</p>
+<p>The purpose of the present content type is to provide a basic survey of the existing, and the relevance to specific research contexts and tasks. This information may be useful when deciding on particular technical aspects such as choice of data interface, choice of terminology and controlled terminologies or, choice of data formats.</p>
+<p>We therefore focus the dataset scan on main entities such as Drugs / Chemicals and Disease / Clinical Research Data. Such datasets are popularly known as Knowledge Graphs (KGs).</p>
+<p>Additionally, the availability of such information in specialized graph representations was also included as a selection criteria. Therefore, services providing SPARQL endpoint and Graph API for dataset access were considered and the following sections providing specific information and references for each of the resources and datasets are considered</p>
 </div>
 <div class="section" id="a-catalog-of-sparql-endpoints-for-life-sciences-yummydata">
 <h2>A catalog of SPARQL Endpoints for Life Sciences: Yummydata<a class="headerlink" href="#a-catalog-of-sparql-endpoints-for-life-sciences-yummydata" title="Permalink to this headline">¶</a></h2>
-<p>Yummydata is a catalog of SPARQL endpoints of interest to the biomedical community,
-maintained by the Database Center for Life Sciences in Kashiwa, Japan <a class="footnote-reference brackets" href="#pmid29688370" id="id1">9</a>.</p>
+<p>Yummydata is a catalog of SPARQL endpoints of interest to the biomedical community, maintained by the Database Center for Life Sciences in Kashiwa, Japan <a class="footnote-reference brackets" href="#pmid29688370" id="id1">13</a>.</p>
 <p>Database URL: <a class="reference external" href="http://yummydata.org/">http://yummydata.org/</a></p>
-<p>The resource can be viewed as a registry to resources as well as a monitoring services, which regularly checks the “health status”
-of the resources it indexes.</p>
+<p>The resource can be viewed as a registry to resources as well as a monitoring services, which regularly checks the “health status” of the resources it indexes.</p>
 <p>The “health status” is reported as a “Umaka Score” which consolidates endpoint status according to six dimensions:
 <strong>Availability, Freshness, Operation, Usefulness, Validity, and Performance</strong>.</p>
 <p>It should be noted that Yummydata does not differentiate between semantic artefacts, such as an ontology, or a dataset
 represented in RDFLinked data.</p>
-<p>The authors of the resource highlight this point and underline that being able to distinguish
-between these types of graph explicitly may be required in the future.</p>
+<p>The authors of the resource highlight this point and underline that being able to distinguish between these types of graph explicitly may be required in the future.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <strong>YummyData</strong><div class="summary-down docutils">
@@ -1017,11 +1020,9 @@ between these types of graph explicitly may be required in the future.</p>
 <div class="section" id="opentarget">
 <h3>1. OpenTarget<a class="headerlink" href="#opentarget" title="Permalink to this headline">¶</a></h3>
 <p>The <a class="reference external" href="https://www.opentargets.org/">OpenTarget project</a> is a public private partnership aiming at providing a
-central resource based on public domain data to enable target identification and prioritisation, based on
-functional genomics data and GWAS data <a class="footnote-reference brackets" href="#nar-gkaa1027" id="id2">7</a>.
-Using a genome wide, evidence based approach, the OpenTarget project offers the possibility to obtain reliable information
-about validated targets against which design active compounds. Such approach has been shown to yield higher success in
-progressing potential therapeutic compounds along the clinical trial pipeline.</p>
+central resource based on public domain data to enable target identification and prioritisation, based on functional genomics data and GWAS data <a class="footnote-reference brackets" href="#nar-gkaa1027" id="id2">10</a>.</p>
+<p>Using a genome wide, evidence based approach, the OpenTarget project offers the possibility to obtain reliable information
+about validated targets against which design active compounds. Such approach has been shown to yield higher success in progressing potential therapeutic compounds along the clinical trial pipeline.</p>
 <p>All the data generated by the OpenTarget project is available for download and is accessible via</p>
 <ul class="simple">
 <li><p>a GraphQL application programming interface. <a class="reference external" href="https://api.genetics.opentargets.org/graphql">https://api.genetics.opentargets.org/graphql</a></p></li>
@@ -1041,9 +1042,8 @@ OpenTarget project in AWS<div class="summary-down docutils">
 <p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">OpenTarget project in AWS</span><a class="headerlink" href="#opentarget-project-in-aws" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</details><p>The associated code is also open sourced, under an Apache License 2.0.
-More information is available here:
-<a class="reference external" href="https://genetics-docs.opentargets.org/data-access/data-download">https://genetics-docs.opentargets.org/data-access/data-download</a></p>
+</details><p>The associated code is also open sourced, under an Apache License 2.0. More information is available here: <a class="reference external" href="https://genetics-docs.opentargets.org/data-access/data-download">https://genetics-docs.opentargets.org/data-access/data-download</a></p>
+<p>GitHub Repository: <a class="reference external" href="https://github.com/opentargets">https://github.com/opentargets</a></p>
 <p>The OpenTarget project integrates data from several key resources listed in the project’s main publication.
 From an integration scenario standpoint, it is worth noting that data are annotated with semantic resources such as:</p>
 <ul class="simple">
@@ -1122,9 +1122,8 @@ From an integration scenario standpoint, it is worth noting that data are annota
 </div>
 <div class="section" id="pharos">
 <h3>2. Pharos<a class="headerlink" href="#pharos" title="Permalink to this headline">¶</a></h3>
-<p>Pharos is a US NIH funded effort, which can be viewed as the counterpart to the European lead OpenTarget project <a class="footnote-reference brackets" href="#nar-gkw1072" id="id3">6</a>.</p>
-<p>Pharos comes on the back of initiative such as Illuminating the Druggable Genome (IDG) program
-(<a class="reference external" href="https://commonfund.nih.gov/idg/index">https://commonfund.nih.gov/idg/index</a>) and Target Central Resource Database (TCRD).</p>
+<p>Pharos is a US NIH funded effort, which can be viewed as the counterpart to the European lead OpenTarget project <a class="footnote-reference brackets" href="#nar-gkw1072" id="id3">9</a>.</p>
+<p>Pharos comes on the back of initiative such as Illuminating the Druggable Genome (IDG) program (<a class="reference external" href="https://commonfund.nih.gov/idg/index">https://commonfund.nih.gov/idg/index</a>) and Target Central Resource Database (TCRD).</p>
 <p>Pharos integrates data from 66 different data sources, the list of which is available <a class="reference external" href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/45/D1/10.1093_nar_gkw1072/3/gkw1072_Supp.zip?Expires=1653384840&amp;Signature=kOr49PEQRpjs-NQN2Q~Vct~BpdLLJZhi-mAUoTqG9c7zxMrO7UiuCzNh~NyGt50JEqOYRC7DIx-h5h1rFPtphFUIsHDIjBa5mpndXfXZxcL4T-mVKbV92JzOpvqfErWGHjZ4859~qHXb3h97ngUwWl~7OdKVMSa0IutzE0eSns9Kdje25lpaWHhEI-5M946e1-l-IAbqC7~QYZXXqdDPGJi2BCEXVHI2SU8I2j8c~TwhFXioVfrN8LwJpLBw-iiWYTbInocWself9GCvmCbv2poNdYTJIaE03UYpI~l7YVah7sApesGOjlBDPppRiJLvDUf5TI6Y2pjliAECS8tJyg__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA">here</a></p>
 <p>Pharos information is organized around:</p>
 <ul class="simple">
@@ -1144,8 +1143,7 @@ Pharos<div class="summary-down docutils">
 <p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Pharos</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</details><p>All the Pharos data can be queried via a GraphQL API:
-<a class="reference external" href="https://pharos.nih.gov/api">https://pharos.nih.gov/api</a></p>
+</details><p>All the Pharos data can be queried via a GraphQL API: <a class="reference external" href="https://pharos.nih.gov/api">https://pharos.nih.gov/api</a></p>
 <p>From an integration scenario standpoint, Pharos integrates data with custom-built ontology, the <a class="reference external" href="http://drugtargetontology.org">Drug Target Ontology (DTO)</a>.</p>
 <p>The DTO reuses terms from well established resources such as:</p>
 <ul class="simple">
@@ -1159,11 +1157,9 @@ Pharos<div class="summary-down docutils">
 <div class="section" id="hetionet-an-integrative-network-of-disease">
 <h3>3. Hetionet: an integrative network of disease<a class="headerlink" href="#hetionet-an-integrative-network-of-disease" title="Permalink to this headline">¶</a></h3>
 <p>The main purpose of  Hetionet was  to predict <strong>new uses for existing drugs</strong>, as part of the “Project Rephetio” .</p>
-<p>Hetionet Version 1.0 corresponds to an ‘heterogeneous network’ (or HetNet) and contains 47,031 nodes of 11 types and
-2,250,197 relationships of 24 types, integrating data from 29 Resources to connect compounds, diseases, genes,
-anatomies, pathways, biological processes, molecular functions,
-cellular components, pharmacologic classes, side effects, and symptoms.</p>
-<p>For more details about the full list of source, consult the publication <a class="footnote-reference brackets" href="#pmid28936969" id="id5">5</a>.</p>
+<p>Hetionet Version 1.0 corresponds to an ‘heterogeneous network’ (or HetNet) and contains 47,031 nodes of 11 types and 2,250,197 relationships of 24 types, integrating data from 29 Resources to connect compounds, diseases, genes,
+anatomies, pathways, biological processes, molecular functions, cellular components, pharmacologic classes, side effects, and symptoms.</p>
+<p>For more details about the full list of source, consult the publication <a class="footnote-reference brackets" href="#pmid28936969" id="id5">8</a>.</p>
 <p><a class="reference external" href="https://zenodo.org/badge/latestdoi/56091268"><img alt="Latest Zenodo DOI" src="https://zenodo.org/badge/56091268.svg" /></a></p>
 <p>The network is available in four formats:</p>
 <ul class="simple">
@@ -1174,8 +1170,7 @@ cellular components, pharmacologic classes, side effects, and symptoms.</p>
 </ul>
 <p>GitHb Repository: <a class="reference external" href="https://github.com/hetio/hetionet">https://github.com/hetio/hetionet</a></p>
 <p>license: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
-<p>From an integration scenario standpoint, Hetionet integrates knowledge semantically by anchoring entities to
-several ontology “slims”, which are simplified versions of larger semantic artefacts.</p>
+<p>From an integration scenario standpoint, Hetionet integrates knowledge semantically by anchoring entities to several ontology “slims”, which are simplified versions of larger semantic artefacts.</p>
 <ul class="simple">
 <li><p>DO: disease ontology slim, with 137 terms considered.</p></li>
 <li><p>MESH: for signs and symptoms, with 438 terms considered</p></li>
@@ -1187,37 +1182,32 @@ several ontology “slims”, which are simplified versions of larger semantic a
 </div>
 <div class="section" id="drug-repurposing-knowledge-graph">
 <h3>4. Drug Repurposing Knowledge graph<a class="headerlink" href="#drug-repurposing-knowledge-graph" title="Permalink to this headline">¶</a></h3>
-<p>Drug Repurposing Knowledge Graph (DRKG) is a comprehensive biological knowledge graph relating genes, compounds, diseases,
-biological processes, side effects and symptoms.</p>
-<p>DRKG includes information from six existing databases including DrugBank, Hetionet, GNBR, String, IntAct and DGIdb,
-and data collected from recent publications particularly related to Covid19.</p>
-<p>It includes 97,238 entities belonging to 13 entity-types; and 5,874,261 triplets belonging to 107 edge-types.</p>
-<p><a class="reference external" href="https://github.com/gnn4dr/DRKG/">https://github.com/gnn4dr/DRKG/</a></p>
-<p>A number of jupyter notebooks are available from the repository. They show how to use the Knowledge Graph and a pretrained model
-to explore drug repurposing possibilities:</p>
-<p><a class="reference external" href="https://github.com/gnn4dr/DRKG/blob/master/drug_repurpose/COVID-19_drug_repurposing_via_genes.ipynb">https://github.com/gnn4dr/DRKG/blob/master/drug_repurpose/COVID-19_drug_repurposing_via_genes.ipynb</a></p>
-<!--
-## OpenBiolink
+<p>Drug Repurposing Knowledge Graph (DRKG) is a comprehensive biological KG relating genes, compounds, diseases, biological processes, side effects, and symptoms.</p>
+<p>DRKG includes information from six existing databases including DrugBank, Hetionet, GNBR, String, IntAct and DGIdb, and data collected from recent publications particularly related to Covid-19.</p>
+<p>It includes 97,238 entities belonging to 13 entity-types; and 5,874,261 triples belonging to 107 edge-types.</p>
+<p>GitHb Repository: <a class="reference external" href="https://github.com/gnn4dr/DRKG/">https://github.com/gnn4dr/DRKG/</a></p>
+<p>A number of jupyter notebooks are available from the repository. They show how to use the KGs to explore drug repurposing possibilities with help of a pretrained model:</p>
+<p>Knowledge Graph training notebook: <a class="reference external" href="https://github.com/gnn4dr/DRKG/blob/master/drug_repurpose/COVID-19_drug_repurposing_via_genes.ipynb">https://github.com/gnn4dr/DRKG/blob/master/drug_repurpose/COVID-19_drug_repurposing_via_genes.ipynb</a></p>
+</div>
+<div class="section" id="openbiolink">
+<h3>5. OpenBiolink<a class="headerlink" href="#openbiolink" title="Permalink to this headline">¶</a></h3>
+<p>OpenBioLink is an open benchmark dataset that serve as training or evaluation datasets for link prediction models <a class="footnote-reference brackets" href="#rpath-paper-ddomingo" id="id6">6</a>, <a class="footnote-reference brackets" href="#drug2ways-ddomingo" id="id7">11</a>. It is an ensembl of large independent resource connecting drugs to disease via proteins. These resources include STRING, GO, DisGeNet, HPO, STITCH, CTD, HPO, DrugCentral, and SIDER.</p>
+<p>Taking a deeper dive into the KG statistics, there are 24,806 entities that are either drugs, proteins, indications or phenotype and 2,35.881 triples that are part of 4 edge-types.</p>
+<p>GitHb Repository: <a class="reference external" href="https://openbiolink.github.io/">https://openbiolink.github.io/</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">openbiolink.obl2021</span> <span class="kn">import</span> <span class="n">OBL2021Dataset</span>
 
-https://openbiolink.github.io/
-https://openbiolink.github.io/dataset/
+<span class="n">dl</span> <span class="o">=</span> <span class="n">OBL2021Dataset</span><span class="p">()</span>
 
-```python
-from openbiolink.obl2021 import OBL2021Dataset
-
-dl = OBL2021Dataset()
-
-train = dl.training # torch.tensor of shape(num_train,3)
-valid = dl.validation # torch.tensor of shape(num_val,3)
-```
-{footcite}`pmid32339214` 
--->
+<span class="n">train</span> <span class="o">=</span> <span class="n">dl</span><span class="o">.</span><span class="n">training</span> <span class="c1"># torch.tensor of shape(num_train,3)</span>
+<span class="n">valid</span> <span class="o">=</span> <span class="n">dl</span><span class="o">.</span><span class="n">validation</span> <span class="c1"># torch.tensor of shape(num_val,3)</span>
+</pre></div>
+</div>
+<p><a class="footnote-reference brackets" href="#pmid32339214" id="id8">5</a></p>
 </div>
 <div class="section" id="clinical-knowledge-graph">
-<h3>4. Clinical Knowledge Graph<a class="headerlink" href="#clinical-knowledge-graph" title="Permalink to this headline">¶</a></h3>
-<p>The Clinical Knowledge Graph is an open source platform currently comprised of more than 16 million nodes and
-220 million relationships to represent relevant experimental data, public databases and the literature <a class="footnote-reference brackets" href="#santos2020-05-09-084897" id="id6">8</a>.</p>
-<p><a class="reference external" href="https://ckg.readthedocs.io/en/latest/INTRO.html">https://ckg.readthedocs.io/en/latest/INTRO.html</a></p>
+<h3>6. Clinical Knowledge Graph<a class="headerlink" href="#clinical-knowledge-graph" title="Permalink to this headline">¶</a></h3>
+<p>The Clinical Knowledge Graph is an open source platform currently comprised of more than 16 million nodes and 220 million relationships to represent relevant experimental data, public databases and the literature <a class="footnote-reference brackets" href="#santos2020-05-09-084897" id="id9">12</a>.</p>
+<p>Documentation: <a class="reference external" href="https://ckg.readthedocs.io/en/latest/INTRO.html">https://ckg.readthedocs.io/en/latest/INTRO.html</a></p>
 <p>From an integration scenario standpoint, the CKG integrates data using the following semantic resources:</p>
 <ul class="simple">
 <li><p>DO: Disease Ontology</p></li>
@@ -1228,29 +1218,21 @@ valid = dl.validation # torch.tensor of shape(num_val,3)
 <li><p>SNOMED-CT: which defines clinical terms and their associative relationships.</p></li>
 </ul>
 <p>The code for CKG is available from GitHub at: <a class="reference external" href="https://github.com/MannLabs/CKG">https://github.com/MannLabs/CKG</a> under a MIT License.</p>
-<p>CKG can be loaded and queried via a Neo4j graph database, a data dump of which is available from:  <a class="reference external" href="https://data.mendeley.com/datasets/mrcf7f4tc2/1">https://data.mendeley.com/datasets/mrcf7f4tc2/1</a></p>
+<p>CKG can be loaded and queried via a Neo4j graph database, a data dump of which is available from: <a class="reference external" href="https://data.mendeley.com/datasets/mrcf7f4tc2/1">https://data.mendeley.com/datasets/mrcf7f4tc2/1</a>.</p>
 </div>
 <div class="section" id="astrazeneca-biological-insights-knowledge-graph-bikg">
-<h3>5. AstraZeneca Biological Insights Knowledge Graph BIKG<a class="headerlink" href="#astrazeneca-biological-insights-knowledge-graph-bikg" title="Permalink to this headline">¶</a></h3>
-<p>The BIKG is a resource developed by AstraZeneca to combine both public and internal data to facilitate knowledge
-discovery using machine learning over Knowledge Graphs.</p>
-<p>To build it, AstraZeneca developers created dedicated information extraction pipeline for mining unstructured text such
-as full text publications using Natural Language Processing techniques, as well as information obtained from specialized
-databases such as ChEMBL or Ensembl for chemical and gene products respectively, but also other datasets such as
-Hetionet and Open Target.</p>
-<p>The latest version of the BIKG consists  “of 10.9m nodes (of 22 types) and over 118 million unique edges (of 59 types, forming 398 different triples)”
-<a class="footnote-reference brackets" href="#geleta2021-10-28-466262" id="id7">4</a>.</p>
-<p>Interestingly, the BIKG pipelines also allow third-party datasets to be integrated.</p>
-<p>This step involves an ETL into the BIKG semantic model and the BIKG upper ontology (BIKG ULO).</p>
+<h3>7. AstraZeneca Biological Insights Knowledge Graph BIKG<a class="headerlink" href="#astrazeneca-biological-insights-knowledge-graph-bikg" title="Permalink to this headline">¶</a></h3>
+<p>The BIKG is a resource developed by AstraZeneca to combine both public and internal data to facilitate knowledge discovery using machine learning over KG.</p>
+<p>To build it, AstraZeneca developers created dedicated information extraction pipeline for mining unstructured text such as full text publications using Natural Language Processing (NLP) techniques, as well as information obtained from specialized databases such as ChEMBL or Ensembl for chemical and gene products respectively, but also other datasets such as Hetionet and Open Target.</p>
+<p>The latest version of the BIKG consists of 10.9m nodes (of 22 types) and over 118 million unique edges (of 59 types, forming 398 different triples)” <a class="footnote-reference brackets" href="#geleta2021-10-28-466262" id="id10">7</a>.</p>
+<p>Interestingly, the BIKG pipelines also allow third-party datasets to be integrated. This step involves an ETL into the BIKG semantic model and the BIKG upper ontology (BIKG ULO).</p>
 <p>For integration purpose, the BIKG ULO is compatible with ontologies such as:</p>
 <ul class="simple">
 <li><p>UBERON: for anatomical terms</p></li>
 <li><p>GO:  Gene Ontology for Biological processes, cellular components, and molecular functions.</p></li>
 </ul>
-<p>BIKG can be accessed via a GraphQL API and the underlying data can be exported in 2 different graph formats, RDF or
-Neo4j/CSV for linked data graph or property graph representations respectively.</p>
-<p>Interestingly, two use cases for using the BIKG are discussed in the associated publications and clearly outline FAIRification goals.</p>
-<p>These use cases are:</p>
+<p>BIKG can be accessed via a GraphQL API and the underlying data can be exported in 2 different graph formats, RDF or Neo4j/CSV for linked data graph or property graph representations respectively.</p>
+<p>Interestingly, two use cases for using the BIKG are discussed in the associated publications and clearly outline FAIRification goals. These use cases are:</p>
 <blockquote>
 <div><p>Target Identifications</p>
 <p>CRISPR Screen Hit ranking</p>
@@ -1259,12 +1241,10 @@ Neo4j/CSV for linked data graph or property graph representations respectively.<
 </div>
 <div class="section" id="pykeen">
 <h2>pyKEEN<a class="headerlink" href="#pykeen" title="Permalink to this headline">¶</a></h2>
-<p>PyKEEN (Python KnowlEdge EmbeddiNgs) is a Python package designed to train and evaluate knowledge graph embedding models
-(incorporating multi-modal information) <a class="footnote-reference brackets" href="#pmid34735335" id="id8">1</a>, <a class="footnote-reference brackets" href="#pmid30768158" id="id9">2</a>.</p>
-<p>So, as such, PyKEEN is more a tool than a Knowledge Graph, however PyKEEN contains many reference Knowledge Graphs and datasets
-which can be used for a variety of data science tasks and machine learning applications. PyKEEN is mainly geared towards helping developers
-train Knowledge Graph embedding models.</p>
-<p>The following figure shows a snippet of the various Knowledge Graphs available from the python package.</p>
+<p>PyKEEN (Python KnowlEdge EmbeddiNgs) is a Python package designed to train and evaluate knowledge graph embedding models (KGEM) (incorporating multi-modal information) <a class="footnote-reference brackets" href="#pmid34735335" id="id11">1</a>, <a class="footnote-reference brackets" href="#pmid30768158" id="id12">2</a>.</p>
+<p>GitHb Repository: <a class="reference external" href="https://github.com/pykeen/pykeen">https://github.com/pykeen/pykeen</a></p>
+<p>So, as such, PyKEEN is more a tool than a KG, however PyKEEN contains many reference KGs and datasets which can be used for a variety of data science tasks and machine learning applications. PyKEEN is mainly geared towards helping developers train KGEM for tasks such as link prediction.</p>
+<p>The following figure shows a snippet of the various KGs available from the python package.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 pyKEEN datasets<div class="summary-down docutils">
@@ -1272,9 +1252,9 @@ pyKEEN datasets<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="figure align-default" id="id10">
+<div class="figure align-default" id="id13">
 <a class="reference internal image-reference" href="../../../_images/pykeen_datasets.png"><img alt="pykeen" src="../../../_images/pykeen_datasets.png" style="width: 750px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">pykeen</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">pykeen</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 <p class="card-text">pykeen</p>
 </div>
@@ -1287,28 +1267,25 @@ pyKEEN datasets<div class="summary-down docutils">
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>To see an example of how to use the library, we highly recommended reading the following Medium blog post:</p>
-<p><a class="reference external" href="https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43">https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43</a></p>
-<p>and consult the associated jupyter notebook, which shows how to use your own dataset, understand the evaluation,
-and make novel link predictions:</p>
-<p><a class="reference external" href="https://github.com/tomasonjo/blogs/blob/master/pykeen/Hetionet%20-%20RotatE.ipynb">https://github.com/tomasonjo/blogs/blob/master/pykeen/Hetionet - RotatE.ipynb</a></p>
+<p>To see an example of how to use the library, we highly recommended reading the <a class="reference external" href="https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43">Medium blog post</a> and consult the associated jupyter notebook, which shows how to use your own dataset, understand the evaluation, and make novel link predictions:</p>
+<p>Link Prediction example notebook: <a class="reference external" href="https://github.com/tomasonjo/blogs/blob/master/pykeen/Hetionet%20-%20RotatE.ipynb">https://github.com/tomasonjo/blogs/blob/master/pykeen/Hetionet - RotatE.ipynb</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>With this recipe, the intent was to raise awareness in the wealth of Life Science information available as Knowledge Graph and ongoing integrative efforts.
-We have also tried to convey information about the license for each of the resources as well as some insights into the curation protocols specific to each the KG. This
+We have also tried to convey information about the license for each of the resources as well as some insights into the curation protocols specific to each the KG.
 Finally, we wanted to highlight how some KGs are already used to train models and make predictions in the context of drug repurposing for instance.
 This is of particular interest in the context of the Innovative Medicine Initiative but not only, obviously.
-It certainly should provide food for thoughts when engaging with a FAIRification process and should help define FAIRification goals as well as
-the process to perform in order to be able to be compatible with specific resources for a specific task at hand.</p>
+It certainly should provide food for thoughts when engaging with a FAIRification process and should help define FAIRification goals as well as the process to perform in order to be able to be compatible with specific resources for a specific task at hand.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
 <h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43">Knowledge graph- completion with pykeen and neo4j</a></p></li>
-<li><p><a class="reference external" href="https://arxiv.org/abs/2112.06567">Implications of Topological Imbalance for Representation Learning on Biomedical Knowledge Graphs</a> <a class="footnote-reference brackets" href="#dblp-journals-corr-abs-2112-06567" id="id11">3</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43">Knowledge graph completion with pykeen and neo4j</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2112.06567">Implications of Topological Imbalance for Representation Learning on Biomedical Knowledge Graphs</a> <a class="footnote-reference brackets" href="#dblp-journals-corr-abs-2112-06567" id="id14">4</a></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.48550/arXiv.2102.10062">A Review of Biomedical Datasets Relating to Drug Discovery: A Knowledge Graph Perspective</a> <a class="footnote-reference brackets" href="#https-doi-org-10-48550-arxiv-2102-10062" id="id15">3</a></p></li>
 </ul>
 </div>
 </div>
@@ -1323,31 +1300,43 @@ the process to perform in order to be able to be compatible with specific resour
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text" id="bibtex-footbibliography-content/recipes/introduction/public-kg-resource-integration-0"><dl class="footnote brackets">
-<dt class="label" id="pmid34735335"><span class="brackets"><a class="fn-backref" href="#id8">1</a></span></dt>
+<dt class="label" id="pmid34735335"><span class="brackets"><a class="fn-backref" href="#id11">1</a></span></dt>
 <dd><p class="card-text">M. Ali, M. Berrendorf, C. T. Hoyt, L. Vermue, M. Galkin, S. Sharifzadeh, A. Fischer, V. Tresp, and J. Lehmann. Bringing Light Into the Dark: A Large-scale Evaluation of Knowledge Graph Embedding Models under a Unified Framework. <em>IEEE Trans Pattern Anal Mach Intell</em>, Nov 2021.</p>
 </dd>
-<dt class="label" id="pmid30768158"><span class="brackets"><a class="fn-backref" href="#id9">2</a></span></dt>
+<dt class="label" id="pmid30768158"><span class="brackets"><a class="fn-backref" href="#id12">2</a></span></dt>
 <dd><p class="card-text">M. Ali, C. T. Hoyt, D. Domingo-Fernández, J. Lehmann, and H. Jabeen. BioKEEN: a library for learning and evaluating biological knowledge graph embeddings. <em>Bioinformatics</em>, 35(18):3538–3540, 09 2019.</p>
 </dd>
-<dt class="label" id="dblp-journals-corr-abs-2112-06567"><span class="brackets"><a class="fn-backref" href="#id11">3</a></span></dt>
+<dt class="label" id="https-doi-org-10-48550-arxiv-2102-10062"><span class="brackets"><a class="fn-backref" href="#id15">3</a></span></dt>
+<dd><p class="card-text">Stephen Bonner, Ian P Barrett, Cheng Ye, Rowan Swiers, Ola Engkvist, Andreas Bender, Charles Tapley Hoyt, and William L Hamilton. A review of biomedical datasets relating to drug discovery: a knowledge graph perspective. 2021. URL: <a class="reference external" href="https://arxiv.org/abs/2102.10062">https://arxiv.org/abs/2102.10062</a>, <a class="reference external" href="https://doi.org/10.48550/ARXIV.2102.10062">doi:10.48550/ARXIV.2102.10062</a>.</p>
+</dd>
+<dt class="label" id="dblp-journals-corr-abs-2112-06567"><span class="brackets"><a class="fn-backref" href="#id14">4</a></span></dt>
 <dd><p class="card-text">Stephen Bonner, Ufuk Kirik, Ola Engkvist, Jian Tang, and Ian P. Barrett. Implications of topological imbalance for representation learning on biomedical knowledge graphs. <em>CoRR</em>, 2021. URL: <a class="reference external" href="https://arxiv.org/abs/2112.06567">https://arxiv.org/abs/2112.06567</a>, <a class="reference external" href="https://arxiv.org/abs/2112.06567">arXiv:2112.06567</a>.</p>
 </dd>
-<dt class="label" id="geleta2021-10-28-466262"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
+<dt class="label" id="pmid32339214"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dd><p class="card-text">A. Breit, S. Ott, A. Agibetov, and M. Samwald. OpenBioLink: a benchmarking framework for large-scale biomedical link prediction. <em>Bioinformatics</em>, 36(13):4097–4098, 07 2020.</p>
+</dd>
+<dt class="label" id="rpath-paper-ddomingo"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p class="card-text">Daniel Domingo-Fernández, Yojana Gadiya, Abhishek Patel, Sarah Mubeen, Daniel Rivas-Barragan, Chris W. Diana, Biswapriya B. Misra, David Healey, Joe Rokicki, and Viswa Colluru. Causal reasoning over knowledge graphs leveraging drug-perturbed and disease-specific transcriptomic signatures for drug discovery. <em>bioRxiv</em>, 2021. URL: <a class="reference external" href="https://www.biorxiv.org/content/early/2021/09/15/2021.09.12.459579">https://www.biorxiv.org/content/early/2021/09/15/2021.09.12.459579</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.biorxiv.org/content/early/2021/09/15/2021.09.12.459579.full.pdf">arXiv:https://www.biorxiv.org/content/early/2021/09/15/2021.09.12.459579.full.pdf</a>, <a class="reference external" href="https://doi.org/10.1101/2021.09.12.459579">doi:10.1101/2021.09.12.459579</a>.</p>
+</dd>
+<dt class="label" id="geleta2021-10-28-466262"><span class="brackets"><a class="fn-backref" href="#id10">7</a></span></dt>
 <dd><p class="card-text">David Geleta, Andriy Nikolov, Gavin Edwards, Anna Gogleva, Richard Jackson, Erik Jansson, Andrej Lamov, Sebastian Nilsson, Marina Pettersson, Vladimir Poroshin, Benedek Rozemberczki, Timothy Scrivener, Michael Ughetto, and Eliseo Papa. Biological insights knowledge graph: an integrated knowledge graph to support drug development. <em>bioRxiv</em>, 2021. URL: <a class="reference external" href="https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262">https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262.full.pdf">arXiv:https://www.biorxiv.org/content/early/2021/11/01/2021.10.28.466262.full.pdf</a>, <a class="reference external" href="https://doi.org/10.1101/2021.10.28.466262">doi:10.1101/2021.10.28.466262</a>.</p>
 </dd>
-<dt class="label" id="pmid28936969"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="pmid28936969"><span class="brackets"><a class="fn-backref" href="#id5">8</a></span></dt>
 <dd><p class="card-text">D. S. Himmelstein, A. Lizee, C. Hessler, L. Brueggeman, S. L. Chen, D. Hadley, A. Green, P. Khankhanian, and S. E. Baranzini. Systematic integration of biomedical knowledge prioritizes drugs for repurposing. <em>Elife</em>, 09 2017.</p>
 </dd>
-<dt class="label" id="nar-gkw1072"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
+<dt class="label" id="nar-gkw1072"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
 <dd><p class="card-text">Dac-Trung Nguyen, Stephen Mathias, Cristian Bologa, Soren Brunak, Nicolas Fernandez, Anna Gaulton, Anne Hersey, Jayme Holmes, Lars Juhl Jensen, Anneli Karlsson, Guixia Liu, Avi Ma’ayan, Geetha Mandava, Subramani Mani, Saurabh Mehta, John Overington, Juhee Patel, Andrew D. Rouillard, Stephan Schürer, Timothy Sheils, Anton Simeonov, Larry A. Sklar, Noel Southall, Oleg Ursu, Dusica Vidovic, Anna Waller, Jeremy Yang, Ajit Jadhav, Tudor I. Oprea, and Rajarshi Guha. Pharos: Collating protein information to shed light on the druggable genome. <em>Nucleic Acids Research</em>, 45(D1):D995–D1002, 11 2016. URL: <a class="reference external" href="https://doi.org/10.1093/nar/gkw1072">https://doi.org/10.1093/nar/gkw1072</a>, <a class="reference external" href="https://arxiv.org/abs/https://academic.oup.com/nar/article-pdf/45/D1/D995/8846748/gkw1072.pdf">arXiv:https://academic.oup.com/nar/article-pdf/45/D1/D995/8846748/gkw1072.pdf</a>, <a class="reference external" href="https://doi.org/10.1093/nar/gkw1072">doi:10.1093/nar/gkw1072</a>.</p>
 </dd>
-<dt class="label" id="nar-gkaa1027"><span class="brackets"><a class="fn-backref" href="#id2">7</a></span></dt>
+<dt class="label" id="nar-gkaa1027"><span class="brackets"><a class="fn-backref" href="#id2">10</a></span></dt>
 <dd><p class="card-text">David Ochoa, Andrew Hercules, Miguel Carmona, Daniel Suveges, Asier Gonzalez-Uriarte, Cinzia Malangone, Alfredo Miranda, Luca Fumis, Denise Carvalho-Silva, Michaela Spitzer, Jarrod Baker, Javier Ferrer, Arwa Raies, Olesya Razuvayevskaya, Adam Faulconbridge, Eirini Petsalaki, Prudence Mutowo, Sandra Machlitt-Northen, Gareth Peat, Elaine McAuley, Chuang Kee Ong, Edward Mountjoy, Maya Ghoussaini, Andrea Pierleoni, Eliseo Papa, Miguel Pignatelli, Gautier Koscielny, Mohd Karim, Jeremy Schwartzentruber, David G Hulcoop, Ian Dunham, and Ellen M McDonagh. Open Targets Platform: supporting systematic drug–target identification and prioritisation. <em>Nucleic Acids Research</em>, 49(D1):D1302–D1310, 11 2020. URL: <a class="reference external" href="https://doi.org/10.1093/nar/gkaa1027">https://doi.org/10.1093/nar/gkaa1027</a>, <a class="reference external" href="https://arxiv.org/abs/https://academic.oup.com/nar/article-pdf/49/D1/D1302/35363725/gkaa1027.pdf">arXiv:https://academic.oup.com/nar/article-pdf/49/D1/D1302/35363725/gkaa1027.pdf</a>, <a class="reference external" href="https://doi.org/10.1093/nar/gkaa1027">doi:10.1093/nar/gkaa1027</a>.</p>
 </dd>
-<dt class="label" id="santos2020-05-09-084897"><span class="brackets"><a class="fn-backref" href="#id6">8</a></span></dt>
+<dt class="label" id="drug2ways-ddomingo"><span class="brackets"><a class="fn-backref" href="#id7">11</a></span></dt>
+<dd><p class="card-text">Daniel Rivas-Barragan, Sarah Mubeen, Francesc Guim Bernat, Martin Hofmann-Apitius, and Daniel Domingo-Fernández. Drug2ways: reasoning over causal paths in biological networks for drug discovery. <em>PLOS Computational Biology</em>, 16(12):1–21, 12 2020. URL: <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1008464">https://doi.org/10.1371/journal.pcbi.1008464</a>, <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1008464">doi:10.1371/journal.pcbi.1008464</a>.</p>
+</dd>
+<dt class="label" id="santos2020-05-09-084897"><span class="brackets"><a class="fn-backref" href="#id9">12</a></span></dt>
 <dd><p class="card-text">Alberto Santos, Ana R. Colaço, Annelaura B. Nielsen, Lili Niu, Philipp E. Geyer, Fabian Coscia, Nicolai J Wewer Albrechtsen, Filip Mundt, Lars Juhl Jensen, and Matthias Mann. Clinical knowledge graph integrates proteomics data into clinical decision-making. <em>bioRxiv</em>, 2020. URL: <a class="reference external" href="https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897">https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897.full.pdf">arXiv:https://www.biorxiv.org/content/early/2020/05/10/2020.05.09.084897.full.pdf</a>, <a class="reference external" href="https://doi.org/10.1101/2020.05.09.084897">doi:10.1101/2020.05.09.084897</a>.</p>
 </dd>
-<dt class="label" id="pmid29688370"><span class="brackets"><a class="fn-backref" href="#id1">9</a></span></dt>
+<dt class="label" id="pmid29688370"><span class="brackets"><a class="fn-backref" href="#id1">13</a></span></dt>
 <dd><p class="card-text">Y. Yamamoto, A. Yamaguchi, and A. Splendiani. YummyData: providing high-quality open life science data. <em>Database (Oxford)</em>, 01 2018.</p>
 </dd>
 </dl>
@@ -1380,6 +1369,13 @@ the process to perform in order to be able to be compatible with specific resour
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
 <td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/YojanaGadiya"></img><div class="d-block">Yojana Gaidya</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-7683-0452"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Fraunhofer Institute</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>

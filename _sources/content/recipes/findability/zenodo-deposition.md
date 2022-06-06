@@ -23,35 +23,42 @@ The main purpose of this recipe is:
 
 > To show how to take advantage of CERN Zenodo repository to document the existence of datasets, thus increasing its findability. This is of particular relevant for IMI projects since Zenodo is aimed to support the European Commission (EC) nascent Open Data policy and is commissioned by the EC.
 
+
+```{tabbed} FAIRification Objectives, Inputs and Outputs
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [deposition](http://edamontology.org/operation_3431)  | [text](http://edamontology.org/data_3671)  | [DOI](http://edamontology.org/data_1188)  |
+||file||
+
+```
+```{tabbed} Table of Data Standards
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [Datacite](https://fairsharing.org/fairsharing.me4qwe)  | none  |   |
+| [JSON](https://fairsharing.org/bsg-s001212/)|||
+| [JSON-LD](https://fairsharing.org/bsg-s001214/)|||
+```
+
+
 ---
 
 ## Graphical Overview
 
-<!--
+
 ````{dropdown} 
 :open:
-```{figure} ./zenodo.svg
+```{figure} /images/zenodo.png
 ---
 width: 500px
 name: 
 alt: The process of depositing to CERN Zenodo
 ---
-The process of depositing to CERN Zenodo.
+The Zenodo homepage.
 ```
 ````
 ---
--->
-
-<!-- TODO -->
 
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-
----
 ## Introduction to Zenodo repository
 
 ### What is Zenodo?
@@ -472,24 +479,19 @@ r.status_code
 > * [How to build a data catalogue?](fcb-infra-build-catalog)
 > * How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document -->
 > * [What is search engine optimization?](fcb-find-seo)
-
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [deposition](http://edamontology.org/operation_3431)  | [text](http://edamontology.org/data_3671)  | [DOI](http://edamontology.org/data_1188)  |
-||file||
-
-
-
-## Table of Data Standards
-
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [Datacite](https://fairsharing.org/fairsharing.me4qwe)  | none  |   |
-| [JSON](https://fairsharing.org/bsg-s001212/)|||
-| [JSON-LD](https://fairsharing.org/bsg-s001214/)|||
+> 
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Data Publication` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_publication.html)
+> ````
 
 
 

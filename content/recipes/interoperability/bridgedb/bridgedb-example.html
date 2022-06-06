@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.12.1. Using BridgeDb web services</title>
+    <title>2.11.1. Using BridgeDb web services</title>
     
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -44,9 +44,9 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
-    <script src="../../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="current collapse-ul">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -813,27 +818,27 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
-   2.12.1.1. Overview
+   2.11.1.1. Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#querying-the-ws">
-   2.12.1.2. Querying the WS
+   2.11.1.2. Querying the WS
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#case-1">
-   2.12.1.3. Case 1
+   2.11.1.3. Case 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#case-2">
-   2.12.1.4. Case 2
+   2.11.1.4. Case 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-script">
-   2.12.1.5. Using Script
+   2.11.1.5. Using Script
   </a>
  </li>
 </ul>
@@ -849,11 +854,11 @@
               <div>
                 
   <div class="section" id="using-bridgedb-web-services">
-<span id="fcb-bridgedbnotebook"></span><h1><span class="section-number">2.12.1. </span>Using BridgeDb web services<a class="headerlink" href="#using-bridgedb-web-services" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-bridgedbnotebook"></span><h1><span class="section-number">2.11.1. </span>Using BridgeDb web services<a class="headerlink" href="#using-bridgedb-web-services" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Using BridgeDb web services", "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB018", "url": "http://w3id.org/faircookbook/FCB018"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Using BridgeDb web services", "description": "Using BridgeDb web services", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB018", "url": "http://w3id.org/faircookbook/FCB018"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H30M0S", "totalTime": "PT0H30M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -923,7 +928,7 @@ Yes
 </div>
 </div>
 <br/><div class="section" id="overview">
-<h2><span class="section-number">2.12.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.11.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>In this notebook I will present two use cases for BridgeDb with the purpose of identifier mapping:</p>
 <ul class="simple">
 <li><p>Mapping data from a recognized data source by BridgeDb to another recognized data source (<a class="reference external" href="https://github.com/bridgedb/BridgeDb/blob/2dba5780260421de311cb3064df79e16a396b887/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv">see here</a>). For example mapping data identifiers from HGNC to Ensembl.</p></li>
@@ -947,7 +952,7 @@ Yes
 </div>
 </details></div>
 <div class="section" id="querying-the-ws">
-<h2><span class="section-number">2.12.1.2. </span>Querying the WS<a class="headerlink" href="#querying-the-ws" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.11.1.2. </span>Querying the WS<a class="headerlink" href="#querying-the-ws" title="Permalink to this headline">¶</a></h2>
 <p>To query the Webservice we define below the url and the patterns for a single request and a batch request. You can find the docs <a class="reference external" href="https://bridgedb.github.io/swagger/">here</a>. We will use Python’s requests library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1016,7 +1021,7 @@ Yes
 </div>
 </div>
 <div class="section" id="case-1">
-<h2><span class="section-number">2.12.1.3. </span>Case 1<a class="headerlink" href="#case-1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.11.1.3. </span>Case 1<a class="headerlink" href="#case-1" title="Permalink to this headline">¶</a></h2>
 <p>Here we first load the case 1 example data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1190,7 +1195,7 @@ Yes
 </div>
 </div>
 <div class="section" id="case-2">
-<h2><span class="section-number">2.12.1.4. </span>Case 2<a class="headerlink" href="#case-2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.11.1.4. </span>Case 2<a class="headerlink" href="#case-2" title="Permalink to this headline">¶</a></h2>
 <p>Here we first load the case 2 example data and perform the same steps as before</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1382,7 +1387,7 @@ Yes
 </div>
 </div>
 <div class="section" id="using-script">
-<h2><span class="section-number">2.12.1.5. </span>Using Script<a class="headerlink" href="#using-script" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.11.1.5. </span>Using Script<a class="headerlink" href="#using-script" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bridgedb_script</span> <span class="kn">import</span> <span class="n">get_mappings</span>

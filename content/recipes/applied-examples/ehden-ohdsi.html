@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -912,7 +917,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "EHDEN OHDSI discovery with Schema.org", "audience": ["Terminology Manager|T4FS_0000568", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Ontologist|T4FS_0000567"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Experience Report / Applied Example", "identifier": {"@type": "PropertyValue", "name": "FCB054", "url": "https://w3id.org/faircookbook/FCB054"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "EHDEN OHDSI discovery with Schema.org", "description": "EHDEN OHDSI discovery with Schema.org", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Terminology Manager|T4FS_0000568", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Ontologist|T4FS_0000567"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Experience Report / Applied Example", "identifier": {"@type": "PropertyValue", "name": "FCB054", "url": "https://w3id.org/faircookbook/FCB054"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -1101,7 +1106,7 @@ the main focus of the FAIRification was on developing structured metadata, speci
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure0">
 <img alt="Recipe Steps" src="../../../_images/ehden-ohdsi.md-figure0.mmd.png" />
-<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Recipe Steps</span><a class="headerlink" href="#ehden-ohdsi-figure0" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Recipe Steps</span><a class="headerlink" href="#ehden-ohdsi-figure0" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1112,7 +1117,7 @@ the main focus of the FAIRification was on developing structured metadata, speci
 <p>In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which
 kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM
 itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more.
-Each digital resource itself can consist of multiple (sub) digital resources, as shown in <a class="reference internal" href="#ehden-ohdsi-figure1"><span class="std std-numref">Fig. 5.8</span></a>.</p>
+Each digital resource itself can consist of multiple (sub) digital resources, as shown in <a class="reference internal" href="#ehden-ohdsi-figure1"><span class="std std-numref">Fig. 5.13</span></a>.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1129,7 +1134,7 @@ Each digital resource itself can consist of multiple (sub) digital resources, as
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure1">
 <img alt="Inventory and prioritization of digital resources" src="../../../_images/ehden-ohdsi.md-figure1.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from <a class="reference external" href="https://zenodo.org/record/4474373">EHDEN D4.5</a>).</span><a class="headerlink" href="#ehden-ohdsi-figure1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from <a class="reference external" href="https://zenodo.org/record/4474373">EHDEN D4.5</a>).</span><a class="headerlink" href="#ehden-ohdsi-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>Prioritization of initial digital resources to FAIRify was important, as the OHDSI ecosystem is quite extensive.
@@ -1176,7 +1181,7 @@ data on the internet and to make the data discoverable.</p>
 <li><p><a class="reference external" href="https://schema.org/Organization">Organization</a>: represents an organization, such as a university</p></li>
 <li><p><a class="reference external" href="https://schema.org/Person">Person</a>: represents a person and is mainly used to indicate the authors of / researchers involved in the study</p></li>
 </ul>
-<p><a class="reference internal" href="#ehden-ohdsi-figure-2"><span class="std std-numref">Fig. 5.9</span></a> shows part of the relevant metadata elements in the model.</p>
+<p><a class="reference internal" href="#ehden-ohdsi-figure-2"><span class="std std-numref">Fig. 5.14</span></a> shows part of the relevant metadata elements in the model.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1193,7 +1198,7 @@ data on the internet and to make the data discoverable.</p>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure-2">
 <img alt="Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings." src="../../../_images/ehden-ohdsi.md-figure2.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Part of the metadata model. Here, each class (orange) and relationship is represented as a <a class="reference external" href="http://schema.org">schema.org</a> concept. Literals (yellow) are data types, e.g integers or strings.</span><a class="headerlink" href="#ehden-ohdsi-figure-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Part of the metadata model. Here, each class (orange) and relationship is represented as a <a class="reference external" href="http://schema.org">schema.org</a> concept. Literals (yellow) are data types, e.g integers or strings.</span><a class="headerlink" href="#ehden-ohdsi-figure-2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>RDF representation of two <a class="reference external" href="http://Schema.org">Schema.org</a> types, written in Turtle:</p>
@@ -1308,7 +1313,7 @@ schema:sameAs &quot;http://purl.bioontology.org/ontology/RXNORM/“1546359&quot;
 </div>
 <p>The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML output
 from that which contains the article text but also embeds the entered metadata as JSON-LD
-(see <a class="reference internal" href="#ehden-ohdsi-figure3"><span class="std std-numref">Fig. 5.10</span></a>). In order to do this, we have written custom processing logic that takes the YAML
+(see <a class="reference internal" href="#ehden-ohdsi-figure3"><span class="std std-numref">Fig. 5.15</span></a>). In order to do this, we have written custom processing logic that takes the YAML
 data as input and formats this into RDF in accordance with the metadata model.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1326,7 +1331,7 @@ data as input and formats this into RDF in accordance with the metadata model.</
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure3">
 <img alt="Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project." src="../../../_images/ehden-ohdsi.md-figure3.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.</span><a class="headerlink" href="#ehden-ohdsi-figure3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.</span><a class="headerlink" href="#ehden-ohdsi-figure3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1437,7 +1442,7 @@ In the front end of the website, this metadata is shown in a human-readable way.
 <h3><span class="section-number">5.6.9. </span>Final result<a class="headerlink" href="#final-result" title="Permalink to this headline">¶</a></h3>
 <p>The final result of applying all these steps looks like this: an HTML page in the browser with JSON-LD metadata under
 the hood.
-A screenshot of the HTML page is presented in <a class="reference internal" href="#ehden-ohdsi-figure6"><span class="std std-numref">Fig. 5.11</span></a>.</p>
+A screenshot of the HTML page is presented in <a class="reference internal" href="#ehden-ohdsi-figure6"><span class="std std-numref">Fig. 5.16</span></a>.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1454,13 +1459,13 @@ A screenshot of the HTML page is presented in <a class="reference internal" href
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure6">
 <img alt="This screenshot shows the &quot;study&quot; view of the Hugo covid19 app, here the entry &quot;covid19icarius&quot; (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the &quot;JSON-LD&quot; tab would allow to see the corresponding JSON-LD for this record." src="../../../_images/ehden-ohdsi.md-figure6.png" />
-<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">This screenshot shows the “study” view of the Hugo covid19 app, here the entry “covid19icarius” (<a class="reference external" href="https://covid19.ohdsi.app/study/covid19icarius/">https://covid19.ohdsi.app/study/covid19icarius/</a>). The selected tab shows collapsed details sections, whereas the “JSON-LD” tab would allow to see the corresponding JSON-LD for this record.</span><a class="headerlink" href="#ehden-ohdsi-figure6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.16 </span><span class="caption-text">This screenshot shows the “study” view of the Hugo covid19 app, here the entry “covid19icarius” (<a class="reference external" href="https://covid19.ohdsi.app/study/covid19icarius/">https://covid19.ohdsi.app/study/covid19icarius/</a>). The selected tab shows collapsed details sections, whereas the “JSON-LD” tab would allow to see the corresponding JSON-LD for this record.</span><a class="headerlink" href="#ehden-ohdsi-figure6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>In the HTML page of the record, the HTML head element is augmented with a script element which embeds the same JSON-LD
 information payload and makes it available to search engines’ crawlers.</p>
 <p>Finally, with all this in place, one may now use the dedicated Google Dataset Search site to discover new covid-related
-datasets. <a class="reference internal" href="#ehden-ohdsi-figure7"><span class="std std-numref">Fig. 5.12</span></a> shows the ICARIUS dataset, which was highlighted in the previous sections,
+datasets. <a class="reference internal" href="#ehden-ohdsi-figure7"><span class="std std-numref">Fig. 5.17</span></a> shows the ICARIUS dataset, which was highlighted in the previous sections,
 as indexed in Google Dataset Search.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1478,7 +1483,7 @@ as indexed in Google Dataset Search.</p>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure7">
 <img alt="The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe." src="../../../_images/ehden-ohdsi.md-figure7.png" />
-<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.</span><a class="headerlink" href="#ehden-ohdsi-figure7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.17 </span><span class="caption-text">The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.</span><a class="headerlink" href="#ehden-ohdsi-figure7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>

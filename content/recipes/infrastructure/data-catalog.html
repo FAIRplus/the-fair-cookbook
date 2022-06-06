@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -800,72 +805,62 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capability-maturity-table">
-   2.3. Capability &amp; Maturity Table
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#user-story">
-   2.4. User Story
+   2.3. User Story
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-body-of-the-recipe">
-   2.5. Main body of the recipe
+   2.4. Main body of the recipe
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-is-a-data-catalogue">
-     2.5.1. What is a Data Catalogue?
+     2.4.1. What is a Data Catalogue?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-are-the-standards-supporting-establishing-a-data-catalogue">
-     2.5.2. What are the standards supporting establishing a data catalogue?
+     2.4.2. What are the standards supporting establishing a data catalogue?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-are-data-catalogue-populated">
-     2.5.3. How are Data Catalogue populated?
+     2.4.3. How are Data Catalogue populated?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-are-examples-of-data-catalogues">
-     2.5.4. What are examples of Data Catalogues?
+     2.4.4. What are examples of Data Catalogues?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-data-standards">
-   2.6. Table of Data Standards
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   2.7. Conclusion
+   2.5. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-read-next">
-     2.7.1. What should I read next?
+     2.5.1. What should I read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   2.8. References
+   2.6. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   2.9. Authors
+   2.7. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   2.10. License
+   2.8. License
   </a>
  </li>
 </ul>
@@ -883,7 +878,7 @@
   <div class="section" id="building-a-catalogue-of-datasets">
 <span id="fcb-infra-build-catalog"></span><h1><span class="section-number">2. </span>Building a catalogue of datasets<a class="headerlink" href="#building-a-catalogue-of-datasets" title="Permalink to this headline">¶</a></h1>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Building a catalogue of datasets", "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Software Developer|NA", "System Administrator|T4FS_0000570"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB047", "url": "https://w3id.org/faircookbook/FCB047"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H60M0S", "totalTime": "PT0H60M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Building a catalogue of datasets", "description": "Building a catalogue of datasets", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Software Developer|NA", "System Administrator|T4FS_0000570"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB047", "url": "https://w3id.org/faircookbook/FCB047"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H60M0S", "totalTime": "PT0H60M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -969,102 +964,10 @@ Yes
 <li><p>facet oriented searching</p></li>
 <li><p>minting of stable, persistent and resolvable identifiers</p></li>
 </ol>
-</div>
-<hr class="docutils" />
-<div class="section" id="graphical-overview">
-<h2><span class="section-number">2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="data-catalog-figure1">
-<img alt="Building and populating a data catalogue" src="../../../_images/data-catalog.md-figure1.mmd.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Building and populating a data catalogue</span><a class="headerlink" href="#data-catalog-figure1" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="capability-maturity-table">
-<h2><span class="section-number">2.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
-<th class="text-align:left head"><p>Initial Maturity Level</p></th>
-<th class="text-align:left head"><p>Final Maturity Level</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>Findability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>Interoperability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="section" id="user-story">
-<h2><span class="section-number">2.4. </span>User Story<a class="headerlink" href="#user-story" title="Permalink to this headline">¶</a></h2>
-<p>For <strong>role.Data Scientists</strong>, it is essential to be able to <em>action.identify</em> and <em>action.discover</em> datasets of potential
-relevance in the context of <em>action.data integration</em> and <em>action.meta-analytical work</em>.</p>
-<p>For <strong>role.Database Managers</strong>, a lightweight solution is needed to support a shallow indexing supported fast ingest
-without intense curation, but good potential for data discovery. Works should rely on approved data standards.</p>
-<p>For <strong>role.lab scientists</strong>, the key is to have a minimal burden when having to <em>action.deposit</em> a dataset to an
-institutional archive or simply <em>action.register</em> to dataset to the <strong>data catalogue</strong>.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="main-body-of-the-recipe">
-<h2><span class="section-number">2.5. </span>Main body of the recipe<a class="headerlink" href="#main-body-of-the-recipe" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-is-a-data-catalogue">
-<h3><span class="section-number">2.5.1. </span>What is a Data Catalogue?<a class="headerlink" href="#what-is-a-data-catalogue" title="Permalink to this headline">¶</a></h3>
-<p>A <strong>Data Catalogue</strong> is a resource meant to allow fast identification of <strong>Data set</strong>. In keeping with the familiar notion
-of catalogue, (be it that of an exhibition or that of brand products), the notion of <strong>data catalogue</strong> needs to be
-understood as the compendium of <strong>short descriptive metadata elements</strong> about an actual set of data. The
-<strong>Data Index or Data Catalogue</strong> <em><strong>does not</strong></em> store the datasets themselves but provides information
-about where the datasets can be obtained from. Therefore, <strong>Data Catalogues</strong> are often used to index the content of
-‘<strong>Data Repositories</strong> and ** Data Archives**, which provide hosting solutions for the actual datasets, which are often
-organized (but not always)’ around specific <strong>data types</strong> or <strong>data production modalities</strong>
-(e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence archives and so on.)</p>
-</div>
-<div class="section" id="what-are-the-standards-supporting-establishing-a-data-catalogue">
-<h3><span class="section-number">2.5.2. </span>What are the standards supporting establishing a data catalogue?<a class="headerlink" href="#what-are-the-standards-supporting-establishing-a-data-catalogue" title="Permalink to this headline">¶</a></h3>
-<p><strong>Data Catalogues</strong> have been identified as critical infrastructure and therefore a number of model exist to support their implementation.</p>
-<ol class="simple">
-<li><p>DATS:
-The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the
-NIH-BD2K projects and underpins the <a class="reference external" href="https://datamed.org/">datamed catalogue</a>, the aim of which was to produce a
-prototype of a <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/29346583/"><strong>Pubmed for Datasets</strong></a>.</p></li>
-<li><p>DCAT:
-In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document -->
-(v1 and the newly released version 2) provide a vocabulary to express <strong>data catalogue metadata</strong> in <strong>RDF</strong>.</p></li>
-<li><p><a class="reference external" href="http://Schema.org">Schema.org</a>:
-The vocabulary developed by the consortium of search engines has defined a metadata profile for <a class="reference external" href="https://schema.org/Dataset"><strong>Dataset</strong></a>,
-<a class="reference external" href="https://schema.org/DataCatalog"><strong>Data Catalogue</strong></a></p></li>
-</ol>
-</div>
-<div class="section" id="how-are-data-catalogue-populated">
-<h3><span class="section-number">2.5.3. </span>How are Data Catalogue populated?<a class="headerlink" href="#how-are-data-catalogue-populated" title="Permalink to this headline">¶</a></h3>
-<p>A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories or harvesting JSON-LD files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more</p>
-</div>
-<div class="section" id="what-are-examples-of-data-catalogues">
-<h3><span class="section-number">2.5.4. </span>What are examples of Data Catalogues?<a class="headerlink" href="#what-are-examples-of-data-catalogues" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Commercial solutions:</p>
-<ul>
-<li><p><a class="reference external" href="https://www.collibra.com/data-catalog">Collibra</a></p></li>
-</ul>
-</li>
-<li><p>Open source solutions:</p>
-<ul>
-<li><p><a class="reference external" href="https://datamed.org/">NIH DataMed</a></p></li>
-<li><p><a class="reference external" href="https://www.omicsdi.org/">EMBL-EBI OMICS-DI</a></p></li>
-<li><p><a class="reference external" href="https://bayer-group.github.io/COLID-Documentation/">Bayer AG Colid</a></p></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="table-of-data-standards">
-<h2><span class="section-number">2.6. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<div class="tabbed-set docutils">
+<input checked="checked" id="fe1d2917-8776-4675-ae7b-f1686c336aed" name="c12bfd48-586e-464c-89a3-fb611a276d7f" type="radio">
+</input><label class="tabbed-label" for="fe1d2917-8776-4675-ae7b-f1686c336aed">
+Table of Data Standards</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
@@ -1092,12 +995,84 @@ The vocabulary developed by the consortium of search engines has defined a metad
 </tbody>
 </table>
 </div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="data-catalog-figure1">
+<img alt="Building and populating a data catalogue" src="../../../_images/data-catalog.md-figure1.mmd.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Building and populating a data catalogue</span><a class="headerlink" href="#data-catalog-figure1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="user-story">
+<h2><span class="section-number">2.3. </span>User Story<a class="headerlink" href="#user-story" title="Permalink to this headline">¶</a></h2>
+<p>For <strong>role.Data Scientists</strong>, it is essential to be able to <em>action.identify</em> and <em>action.discover</em> datasets of potential
+relevance in the context of <em>action.data integration</em> and <em>action.meta-analytical work</em>.</p>
+<p>For <strong>role.Database Managers</strong>, a lightweight solution is needed to support a shallow indexing supported fast ingest
+without intense curation, but good potential for data discovery. Works should rely on approved data standards.</p>
+<p>For <strong>role.lab scientists</strong>, the key is to have a minimal burden when having to <em>action.deposit</em> a dataset to an
+institutional archive or simply <em>action.register</em> to dataset to the <strong>data catalogue</strong>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-body-of-the-recipe">
+<h2><span class="section-number">2.4. </span>Main body of the recipe<a class="headerlink" href="#main-body-of-the-recipe" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-a-data-catalogue">
+<h3><span class="section-number">2.4.1. </span>What is a Data Catalogue?<a class="headerlink" href="#what-is-a-data-catalogue" title="Permalink to this headline">¶</a></h3>
+<p>A <strong>Data Catalogue</strong> is a resource meant to allow fast identification of <strong>Data set</strong>. In keeping with the familiar notion
+of catalogue, (be it that of an exhibition or that of brand products), the notion of <strong>data catalogue</strong> needs to be
+understood as the compendium of <strong>short descriptive metadata elements</strong> about an actual set of data. The
+<strong>Data Index or Data Catalogue</strong> <em><strong>does not</strong></em> store the datasets themselves but provides information
+about where the datasets can be obtained from. Therefore, <strong>Data Catalogues</strong> are often used to index the content of
+‘<strong>Data Repositories</strong> and ** Data Archives**, which provide hosting solutions for the actual datasets, which are often
+organized (but not always)’ around specific <strong>data types</strong> or <strong>data production modalities</strong>
+(e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence archives and so on.)</p>
+</div>
+<div class="section" id="what-are-the-standards-supporting-establishing-a-data-catalogue">
+<h3><span class="section-number">2.4.2. </span>What are the standards supporting establishing a data catalogue?<a class="headerlink" href="#what-are-the-standards-supporting-establishing-a-data-catalogue" title="Permalink to this headline">¶</a></h3>
+<p><strong>Data Catalogues</strong> have been identified as critical infrastructure and therefore a number of model exist to support their implementation.</p>
+<ol class="simple">
+<li><p>DATS:
+The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the
+NIH-BD2K projects and underpins the <a class="reference external" href="https://datamed.org/">datamed catalogue</a>, the aim of which was to produce a
+prototype of a <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/29346583/"><strong>Pubmed for Datasets</strong></a>.</p></li>
+<li><p>DCAT:
+In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document -->
+(v1 and the newly released version 2) provide a vocabulary to express <strong>data catalogue metadata</strong> in <strong>RDF</strong>.</p></li>
+<li><p><a class="reference external" href="http://Schema.org">Schema.org</a>:
+The vocabulary developed by the consortium of search engines has defined a metadata profile for <a class="reference external" href="https://schema.org/Dataset"><strong>Dataset</strong></a>,
+<a class="reference external" href="https://schema.org/DataCatalog"><strong>Data Catalogue</strong></a></p></li>
+</ol>
+</div>
+<div class="section" id="how-are-data-catalogue-populated">
+<h3><span class="section-number">2.4.3. </span>How are Data Catalogue populated?<a class="headerlink" href="#how-are-data-catalogue-populated" title="Permalink to this headline">¶</a></h3>
+<p>A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories or harvesting JSON-LD files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more</p>
+</div>
+<div class="section" id="what-are-examples-of-data-catalogues">
+<h3><span class="section-number">2.4.4. </span>What are examples of Data Catalogues?<a class="headerlink" href="#what-are-examples-of-data-catalogues" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Commercial solutions:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.collibra.com/data-catalog">Collibra</a></p></li>
+</ul>
+</li>
+<li><p>Open source solutions:</p>
+<ul>
+<li><p><a class="reference external" href="https://datamed.org/">NIH DataMed</a></p></li>
+<li><p><a class="reference external" href="https://www.omicsdi.org/">EMBL-EBI OMICS-DI</a></p></li>
+<li><p><a class="reference external" href="https://bayer-group.github.io/COLID-Documentation/">Bayer AG Colid</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <hr class="docutils" />
 <div class="section" id="conclusion">
-<h2><span class="section-number">2.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>This recipe introduced the general concept of data catalogue and why they constitute a key capability to deliver data discoverability.</p>
 <div class="section" id="what-should-i-read-next">
-<h3><span class="section-number">2.7.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <p>We encourage the readers to either delve deeper into the specific of data catalogues by consulting the following recipes</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="data-catalog-deployment.html#fcb-infra-imi-cat-deploy"><span class="std std-ref">Deploying the IMI data catalogue</span></a></p></li>
@@ -1113,7 +1088,7 @@ interoperability and reusability, see the following:</p>
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">2.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1124,7 +1099,7 @@ interoperability and reusability, see the following:</p>
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">2.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <!-- TODO seems unlikely that all authors did review, but no-one the original draft. Clarify -->
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1163,7 +1138,7 @@ interoperability and reusability, see the following:</p>
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">2.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">

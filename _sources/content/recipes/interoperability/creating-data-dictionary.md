@@ -20,10 +20,9 @@
 <!-- # Table of Contents
 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 2. [User Stories](#User%20Stories)
-3. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-4. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
-5. [An Example of Data Dictionary](#An%20Example%20of%20Data%20Dictionary)
-6. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary) -->
+3. [FAIRification Objectives, Inputs and Outputs](#FAIRification%20Objectives,%20Inputs%20and%20Outputs)
+4. [An Example of Data Dictionary](#An%20Example%20of%20Data%20Dictionary)
+5. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary) -->
 
 ## Main FAIRification Objectives
 
@@ -60,14 +59,6 @@ alt: Data Dictionary
 Data Dictionary.
 ```
 ````
-
----
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
 
 ---
 
@@ -211,9 +202,22 @@ Why? Simply because if affords several key data management processes to take pla
 ### What to read next?
 
 > - {ref}`fcb-selecting-ontologies`
-> - {ref}`fcb-interop-etl` (*in preparation*)
+> - {ref}`fcb-interop-etl`
 > - Key issues to be aware of when planning [Extract-Transform-Load processes]( TODO add link)
-
+> 
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Metadata Management` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
+> ````
+> 
 <!--
  >- {ref}`fcb-interop-ontomapping` (*in preparation*)
   -->

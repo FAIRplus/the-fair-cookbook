@@ -44,9 +44,9 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
-    <script src="../../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Assessment" href="../../assessing-fairness.html" />
+    <link rel="next" title="5. Using OpenRefine and Karma for FAIRification" href="../openrefine-nvt.html" />
     <link rel="prev" title="4.2. Selecting an ontology lookup service" href="Selecting_and_using_ontology_lookup_services.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -902,7 +907,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Deploying the EBI OLS", "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Terminology Manager|T4FS_0000568", "System Administrator|T4FS_0000570"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB005", "url": "https://w3id.org/faircookbook/FCB005"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H20M0S", "totalTime": "PT0H20M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Deploying the EBI OLS", "description": "Deploying the EBI OLS", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Terminology Manager|T4FS_0000568", "System Administrator|T4FS_0000570"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB005", "url": "https://w3id.org/faircookbook/FCB005"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H20M0S", "totalTime": "PT0H20M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -1030,7 +1035,7 @@ specific policies regarding tool deployment the use of containerized application
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ols-deploy">
-<img alt="Deploying EMBL-EBI OLS" src="../../../../_images/ols-deploy.svg" /><p class="caption"><span class="caption-number">Fig. 4.29 </span><span class="caption-text">Deploying EMBL-EBI Ontology Lookup Service</span><a class="headerlink" href="#ols-deploy" title="Permalink to this image">¶</a></p>
+<img alt="Deploying EMBL-EBI OLS" src="../../../../_images/ols-deploy.svg" /><p class="caption"><span class="caption-number">Fig. 4.30 </span><span class="caption-text">Deploying EMBL-EBI Ontology Lookup Service</span><a class="headerlink" href="#ols-deploy" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1046,8 +1051,8 @@ specific policies regarding tool deployment the use of containerized application
 <div class="section" id="install-dependencies">
 <h3><span class="section-number">4.3.6.1. </span>1. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7ee86a9a-aad4-4c90-9fb8-9a82cfca5f37" name="9faf819d-4d7b-47d0-a734-a8241fb35681" type="radio">
-</input><label class="tabbed-label" for="7ee86a9a-aad4-4c90-9fb8-9a82cfca5f37">
+<input checked="checked" id="f4b91600-c839-4565-80b2-17e00faa0413" name="ad286943-973e-4af8-be64-77103a511eaa" type="radio">
+</input><label class="tabbed-label" for="f4b91600-c839-4565-80b2-17e00faa0413">
 Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1071,8 +1076,8 @@ Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils
 </tbody>
 </table>
 </div>
-<input id="07cd9757-f2cf-4fff-8a3b-445195ca7926" name="9faf819d-4d7b-47d0-a734-a8241fb35681" type="radio">
-</input><label class="tabbed-label" for="07cd9757-f2cf-4fff-8a3b-445195ca7926">
+<input id="9f37bf1b-f643-4570-bfb4-98359cc011c0" name="ad286943-973e-4af8-be64-77103a511eaa" type="radio">
+</input><label class="tabbed-label" for="9f37bf1b-f643-4570-bfb4-98359cc011c0">
 Windows-based environment (Windows 10 64bits)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1415,7 +1420,7 @@ user interface for searching and browsing ontologies and ontology terms.</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="Selecting_and_using_ontology_lookup_services.html" title="previous page"><span class="section-number">4.2. </span>Selecting an ontology lookup service</a>
-    <a class='right-next' id="next-link" href="../../assessing-fairness.html" title="next page">Assessment</a>
+    <a class='right-next' id="next-link" href="../openrefine-nvt.html" title="next page"><span class="section-number">5. </span>Using OpenRefine and Karma for FAIRification</a>
 
         </div>
         

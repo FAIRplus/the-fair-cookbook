@@ -44,9 +44,9 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mermaid.js"></script>
     <script src="../../../_static/mermaid.core.js"></script>
     <script src="../../../_static/mermaid.min.js"></script>
-    <script src="../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="4. Selecting terminologies and ontologies" href="selecting-ontologies.html" />
-    <link rel="prev" title="2.12.1. Using BridgeDb web services" href="bridgedb/bridgedb-example.html" />
+    <link rel="prev" title="2.11.1. Using BridgeDb web services" href="bridgedb/bridgedb-example.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -870,7 +875,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Introduction to terminologies and ontologies", "audience": ["Data Curator|T4FS_0000389", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Survey / Review", "identifier": {"@type": "PropertyValue", "name": "FCB019", "url": "https://w3id.org/faircookbook/FCB019"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Introduction to terminologies and ontologies", "description": "Introduction to terminologies and ontologies", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Data Curator|T4FS_0000389", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Survey / Review", "identifier": {"@type": "PropertyValue", "name": "FCB019", "url": "https://w3id.org/faircookbook/FCB019"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H15M0S", "totalTime": "PT0H15M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -1073,6 +1078,20 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 <li><p><a class="reference internal" href="ontology-robot-recipe.html#fcb-interop-ontorobot"><span class="std std-ref">Building an application ontology with ROBOT</span></a></p></li>
 <li><p><a class="reference internal" href="ontology-operations-tools.html#fcb-interop-onto-op"><span class="std std-ref">Ontology-related tools and services</span></a></p></li>
 </ul>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header bg-primary pa_dark docutils">
+<a class="reference internal image-reference" href="../../../_images/RDMkit_logo_inverted.svg" id="rdmtoolkit-logo"><img alt="../../../_images/RDMkit_logo_inverted.svg" height="40px" id="rdmtoolkit-logo" src="../../../_images/RDMkit_logo_inverted.svg" /></a>
+</div>
+<div class="card-body grey docutils">
+<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/metadata_management.html">More about <code class="docutils literal notranslate"><span class="pre">Metadata</span> <span class="pre">Management</span></code> from the <code class="docutils literal notranslate"><span class="pre">RDM</span> <span class="pre">Toolkit</span></code></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->
 </div>
@@ -1184,7 +1203,7 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="bridgedb/bridgedb-example.html" title="previous page"><span class="section-number">2.12.1. </span>Using BridgeDb web services</a>
+    <a class='left-prev' id="prev-link" href="bridgedb/bridgedb-example.html" title="previous page"><span class="section-number">2.11.1. </span>Using BridgeDb web services</a>
     <a class='right-next' id="next-link" href="selecting-ontologies.html" title="next page"><span class="section-number">4. </span>Selecting terminologies and ontologies</a>
 
         </div>

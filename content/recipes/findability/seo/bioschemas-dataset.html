@@ -44,9 +44,9 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
-    <script src="../../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -800,38 +805,35 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capability-maturity-table">
-   8.9.2.3. Capability &amp; Maturity Table
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method">
-   8.9.2.4. Method
+   8.9.2.3. Method
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   8.9.2.5. FAIRification Objectives, Inputs and Outputs
+  <a class="reference internal nav-link" href="#conclusion">
+   8.9.2.4. Conclusion
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-data-standards">
-   8.9.2.6. Table of Data Standards
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     8.9.2.4.1. What to read next?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   8.9.2.7. References
+   8.9.2.5. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   8.9.2.8. Authors
+   8.9.2.6. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   8.9.2.9. License
+   8.9.2.7. License
   </a>
  </li>
 </ul>
@@ -851,7 +853,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Dataset page markup with Schema.org", "audience": ["Software Developer|NA", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB012", "url": "https://w3id.org/faircookbook/FCB012"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Dataset page markup with Schema.org", "description": "Dataset page markup with Schema.org", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Software Developer|NA", "Data Scientist|T4FS_0000566"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB012", "url": "https://w3id.org/faircookbook/FCB012"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H10M0S", "totalTime": "PT0H10M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -927,6 +929,52 @@ No
 <blockquote>
 <div><p>To embed <code class="docutils literal notranslate"><span class="pre">Schema.org</span></code> markup in a web page representing a dataset.</p>
 </div></blockquote>
+<div class="tabbed-set docutils">
+<input checked="checked" id="8ee02089-7993-4d41-a79d-324f42492a6f" name="1c9d4c1c-bd45-4b0a-9c87-ff7f21308fe9" type="radio">
+</input><label class="tabbed-label" for="8ee02089-7993-4d41-a79d-324f42492a6f">
+FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_3778">text annotation</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/data_3779">annotated text</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_2428">validation</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/data_2048">report</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="cefaf2fb-2dd9-4499-a184-7cc283bd3f1e" name="1c9d4c1c-bd45-4b0a-9c87-ff7f21308fe9" type="radio">
+</input><label class="tabbed-label" for="cefaf2fb-2dd9-4499-a184-7cc283bd3f1e">
+Table of Data Standards</label><div class="tabbed-content docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/format_3749">JSON-LD</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/data_2353">RDF</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/format_2331">HTML</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
@@ -952,30 +1000,8 @@ No
 </div>
 </details></div>
 <hr class="docutils" />
-<div class="section" id="capability-maturity-table">
-<h2><span class="section-number">8.9.2.3. </span>Capability &amp; Maturity Table<a class="headerlink" href="#capability-maturity-table" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Capability</p></th>
-<th class="text-align:left head"><p>Initial Maturity Level</p></th>
-<th class="text-align:left head"><p>Final Maturity Level</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>Findability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p>repeatable</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>Interoperability</p></td>
-<td class="text-align:left"><p>minimal</p></td>
-<td class="text-align:left"><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
 <div class="section" id="method">
-<h2><span class="section-number">8.9.2.4. </span>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.9.2.3. </span>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
 <p>We will outline the steps for marking up a page in your site that is about a specific dataset that you publish. The resulting markup will be compliant with both <a class="reference external" href="https://developers.google.com/search/docs/data-types/dataset">Google’s Dataset markup guidelines</a> and the <a class="reference external" href="https://bioschemas.org/profiles/Dataset">Bioschemas Dataset Profile</a>. The resulting webpage will be indexable by the major search engines and should eventually appear in <a class="reference external" href="https://datasetsearch.research.google.com/">Google’s Dataset Search Tool</a>.</p>
 <p>We will use <a class="reference external" href="https://www.uniprot.org/uniprot/">UniProtKB</a> as an example for this recipe.</p>
 <ol class="simple">
@@ -1118,82 +1144,66 @@ No
 </li>
 <li><p>Once you are happy with your markup, include the <code class="docutils literal notranslate"><span class="pre">JSON-LD</span></code>, script tags and all, at the bottom of your HTML page template. Make sure that this is before the closing <code class="docutils literal notranslate"><span class="pre">&lt;/html&gt;</span></code> tag</p></li>
 <li><p>If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database. For example, the follow snippet uses variables of the form <code class="docutils literal notranslate"><span class="pre">%%%PAGEURL%%%</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;application/ld+json&quot;</span><span class="o">&gt;</span>
-<span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%%</span><span class="s2">%PAGEURL</span><span class="si">%%</span><span class="s2">%&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%%</span><span class="s2">%DOI</span><span class="si">%%</span><span class="s2">%&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. &quot;</span><span class="p">,</span>
-      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UniProt Consortium&quot;</span>
-    <span class="p">}</span>
-    <span class="o">...</span>
-  <span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;application/ld+json&quot;</span><span class="o">&gt;</span>
+   <span class="p">{</span>
+     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%%</span><span class="s2">%PAGEURL</span><span class="si">%%</span><span class="s2">%&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+         <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%%</span><span class="s2">%DOI</span><span class="si">%%</span><span class="s2">%&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span>
+       <span class="p">}</span>
+     <span class="p">],</span>
+     <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+         <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;dct:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. &quot;</span><span class="p">,</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UniProt Consortium&quot;</span>
+       <span class="p">}</span>
+       <span class="o">...</span>
+     <span class="p">]</span>
+   <span class="p">}</span>
+  <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
 </ol>
-  </script>
-   ```
 <p>Your site should now generate dataset pages with embedded markup.</p>
 <p>Once you have deployed this on your web server, you can test it with the <a class="reference external" href="http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/">Bioschemas Validator</a> which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup><a class="reference external" href="#bioschemas-validator">1</a></sup>.</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">8.9.2.5. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
-<th class="text-align:left head"><p>Input</p></th>
-<th class="text-align:left head"><p>Output</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_3778">text annotation</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/data_3779">annotated text</a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/operation_2428">validation</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.hzdzq8">schema.org</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/data_2048">report</a></p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="conclusion">
+<h2><span class="section-number">8.9.2.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-to-read-next">
+<h3><span class="section-number">8.9.2.4.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="bioschemas-data-page.html#fcb-find-bs-data"><span class="std std-ref">Data page markup with Bioschemas</span></a></p></li>
+<li><p><a class="reference internal" href="bioschemas-datacatalog.html#fcb-find-bs-catalog"><span class="std std-ref">Data catalogue markup</span></a></p></li>
+<li><p><a class="reference internal" href="#fcb-find-bs-dataset"><span class="std std-ref">Dataset page markup with Schema.org</span></a></p></li>
+</ul>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header bg-primary pa_dark docutils">
+<a class="reference internal image-reference" href="../../../../_images/RDMkit_logo_inverted.svg" id="rdmtoolkit-logo"><img alt="../../../../_images/RDMkit_logo_inverted.svg" height="40px" id="rdmtoolkit-logo" src="../../../../_images/RDMkit_logo_inverted.svg" /></a>
 </div>
-<div class="section" id="table-of-data-standards">
-<h2><span class="section-number">8.9.2.6. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
-<th class="text-align:left head"><p>Terminologies</p></th>
-<th class="text-align:left head"><p>Models</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/format_3749">JSON-LD</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="https://fairsharing.org/FAIRsharing.20sbr9">Bioschemas</a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/data_2353">RDF</a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://edamontology.org/format_2331">HTML</a></p></td>
-<td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p></p></td>
-</tr>
-</tbody>
-</table>
+<div class="card-body grey docutils">
+<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/machine_actionability.html">More about <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Actionability</span></code> from the <code class="docutils literal notranslate"><span class="pre">RDM</span> <span class="pre">Toolkit</span></code></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">8.9.2.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.9.2.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1205,7 +1215,7 @@ No
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">8.9.2.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.9.2.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1250,7 +1260,7 @@ No
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">8.9.2.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.9.2.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">

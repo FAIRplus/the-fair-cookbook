@@ -44,9 +44,9 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mermaid.js"></script>
     <script src="../../../../_static/mermaid.core.js"></script>
     <script src="../../../../_static/mermaid.min.js"></script>
-    <script src="../../../../_static/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -272,7 +272,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/bridgedb/bridgedb-example.html">
-       2.12.1. Using BridgeDb web services
+       2.11.1. Using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -306,12 +306,12 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/competency-questions.html">
-       7.12.1. Competency questions for the Ontology ROBOT use case
+       7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.12.2. Application ontology for metabolomics
+       7.11.2. Application ontology for metabolomics
       </a>
      </li>
     </ul>
@@ -374,7 +374,7 @@
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.10.1. Converting VCF file to FHIR JSON
+       14.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -462,6 +462,11 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../openrefine-nvt.html">
+     5. Using OpenRefine and Karma for FAIRification
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -1014,7 +1019,7 @@
 <span id="fcb-select-onto-service-criteria"></span><h1><span class="section-number">4.1. </span>Portals and lookup services<a class="headerlink" href="#portals-and-lookup-services" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Portals and lookup services", "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Terminology Manager|T4FS_0000568", "System Administrator|T4FS_0000570"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Technical Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB003", "url": "https://w3id.org/faircookbook/FCB003"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H20M0S", "totalTime": "PT0H20M0S"} </script>
+<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Portals and lookup services", "description": "Portals and lookup services", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Terminology Manager|T4FS_0000568", "System Administrator|T4FS_0000570"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Technical Guidance", "identifier": {"@type": "PropertyValue", "name": "FCB003", "url": "https://w3id.org/faircookbook/FCB003"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H20M0S", "totalTime": "PT0H20M0S"} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -1317,7 +1322,7 @@ summing up the total numbers from each atomic ranking criteria will allow to cho
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure1">
 <a class="reference internal image-reference" href="../../../../_images/onto-services-figure1.svg"><img alt="Overall Process for Selecting Ontology Services" src="../../../../_images/onto-services-figure1.svg" width="450px" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.19 </span><span class="caption-text">Overall Process for Selecting Ontology Services</span><a class="headerlink" href="#onto-services-figure1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.20 </span><span class="caption-text">Overall Process for Selecting Ontology Services</span><a class="headerlink" href="#onto-services-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><div class="section" id="high-level-gap-analysis">
@@ -1340,7 +1345,7 @@ either by the offerings of the tool or by some additional tool customization.</p
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure2">
-<img alt="Ontology Services High Level Gap Analysis" src="../../../../_images/onto-services-figure2.svg" /><p class="caption"><span class="caption-number">Fig. 4.20 </span><span class="caption-text">Ontology Services High Level Gap Analysis</span><a class="headerlink" href="#onto-services-figure2" title="Permalink to this image">¶</a></p>
+<img alt="Ontology Services High Level Gap Analysis" src="../../../../_images/onto-services-figure2.svg" /><p class="caption"><span class="caption-number">Fig. 4.21 </span><span class="caption-text">Ontology Services High Level Gap Analysis</span><a class="headerlink" href="#onto-services-figure2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 2: High Level Gap Analysis -->
@@ -1372,7 +1377,7 @@ of the scope of this recipe.</p>
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure3">
-<img alt="Ontology Services  Low Level Gap Analysis" src="../../../../_images/onto-services-figure3.svg" /><p class="caption"><span class="caption-number">Fig. 4.21 </span><span class="caption-text">Ontology Services Low Level Gap Analysis</span><a class="headerlink" href="#onto-services-figure3" title="Permalink to this image">¶</a></p>
+<img alt="Ontology Services  Low Level Gap Analysis" src="../../../../_images/onto-services-figure3.svg" /><p class="caption"><span class="caption-number">Fig. 4.22 </span><span class="caption-text">Ontology Services Low Level Gap Analysis</span><a class="headerlink" href="#onto-services-figure3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 3: Low Level Gap Analysis -->
@@ -1386,7 +1391,7 @@ functional questions<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure4">
-<img alt="Typical Low Level Functional Questions" src="../../../../_images/onto-services-figure4.svg" /><p class="caption"><span class="caption-number">Fig. 4.22 </span><span class="caption-text">Typical Low Level Functional Questions</span><a class="headerlink" href="#onto-services-figure4" title="Permalink to this image">¶</a></p>
+<img alt="Typical Low Level Functional Questions" src="../../../../_images/onto-services-figure4.svg" /><p class="caption"><span class="caption-number">Fig. 4.23 </span><span class="caption-text">Typical Low Level Functional Questions</span><a class="headerlink" href="#onto-services-figure4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 4: Typical Low Level Functional Questions -->
@@ -1398,7 +1403,7 @@ user interface questions<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure5">
-<img alt="Typical Low Level Interface Questions" src="../../../../_images/onto-services-figure5.svg" /><p class="caption"><span class="caption-number">Fig. 4.23 </span><span class="caption-text">Typical Low Level Interface Questions</span><a class="headerlink" href="#onto-services-figure5" title="Permalink to this image">¶</a></p>
+<img alt="Typical Low Level Interface Questions" src="../../../../_images/onto-services-figure5.svg" /><p class="caption"><span class="caption-number">Fig. 4.24 </span><span class="caption-text">Typical Low Level Interface Questions</span><a class="headerlink" href="#onto-services-figure5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 5: Typical Low Level Interface Questions -->
@@ -1410,7 +1415,7 @@ Architecture questions<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure6">
-<img alt="Typical Low Level Architecture Questions" src="../../../../_images/onto-services-figure6.svg" /><p class="caption"><span class="caption-number">Fig. 4.24 </span><span class="caption-text">Typical Low Level Architecture Questions</span><a class="headerlink" href="#onto-services-figure6" title="Permalink to this image">¶</a></p>
+<img alt="Typical Low Level Architecture Questions" src="../../../../_images/onto-services-figure6.svg" /><p class="caption"><span class="caption-number">Fig. 4.25 </span><span class="caption-text">Typical Low Level Architecture Questions</span><a class="headerlink" href="#onto-services-figure6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 6: Typical Low Level Architecture Questions -->
@@ -1422,7 +1427,7 @@ Costs questions<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure7">
-<img alt="Typical Low Level Costs Questions" src="../../../../_images/onto-services-figure7.svg" /><p class="caption"><span class="caption-number">Fig. 4.25 </span><span class="caption-text">Typical Low Level Costs Questions</span><a class="headerlink" href="#onto-services-figure7" title="Permalink to this image">¶</a></p>
+<img alt="Typical Low Level Costs Questions" src="../../../../_images/onto-services-figure7.svg" /><p class="caption"><span class="caption-number">Fig. 4.26 </span><span class="caption-text">Typical Low Level Costs Questions</span><a class="headerlink" href="#onto-services-figure7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 7: Typical Low Level Costs Questions -->
@@ -1434,7 +1439,7 @@ Performance questions<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure8">
-<img alt="Typical Low Level Performance Questions" src="../../../../_images/onto-services-figure8.svg" /><p class="caption"><span class="caption-number">Fig. 4.26 </span><span class="caption-text">Typical Low Level Performance Questions</span><a class="headerlink" href="#onto-services-figure8" title="Permalink to this image">¶</a></p>
+<img alt="Typical Low Level Performance Questions" src="../../../../_images/onto-services-figure8.svg" /><p class="caption"><span class="caption-number">Fig. 4.27 </span><span class="caption-text">Typical Low Level Performance Questions</span><a class="headerlink" href="#onto-services-figure8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 8: Typical Low Level Performance Questions -->
@@ -1446,7 +1451,7 @@ Delivery questions<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure9">
-<img alt="Typical Low Level Delivery Questions" src="../../../../_images/onto-services-figure9.svg" /><p class="caption"><span class="caption-number">Fig. 4.27 </span><span class="caption-text">Typical Low Level Delivery Questions</span><a class="headerlink" href="#onto-services-figure9" title="Permalink to this image">¶</a></p>
+<img alt="Typical Low Level Delivery Questions" src="../../../../_images/onto-services-figure9.svg" /><p class="caption"><span class="caption-number">Fig. 4.28 </span><span class="caption-text">Typical Low Level Delivery Questions</span><a class="headerlink" href="#onto-services-figure9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 9: Typical Low Level Delivery Questions -->
@@ -1458,7 +1463,7 @@ Support questions<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="onto-services-figure10">
-<img alt="Typical Low Level Support Questions" src="../../../../_images/onto-services-figure10.svg" /><p class="caption"><span class="caption-number">Fig. 4.28 </span><span class="caption-text">Typical Low Level Support Questions</span><a class="headerlink" href="#onto-services-figure10" title="Permalink to this image">¶</a></p>
+<img alt="Typical Low Level Support Questions" src="../../../../_images/onto-services-figure10.svg" /><p class="caption"><span class="caption-number">Fig. 4.29 </span><span class="caption-text">Typical Low Level Support Questions</span><a class="headerlink" href="#onto-services-figure10" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- Figure 10: Typical Low Level Support Questions -->

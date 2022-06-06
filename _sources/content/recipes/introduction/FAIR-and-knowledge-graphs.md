@@ -22,68 +22,88 @@
 
 In the following sections, we will cover the following topics:
 
->1. the typology of knowledge graphs (KG).
->2. the different technologies supporting them.
->3. the relation between FAIR and KGs.
->4. the methods to generate knowledge graphs.
->5. the impact of graph-based representations on what it means to deliver FAIR data and services.
->6. the impact for Pharma industry and EFPIA more broadly.
+1. the relation between FAIR and KGs.
+2. the typology of knowledge graphs (KG).
+3. the different technologies supporting them.
+4. the methods to generate knowledge graphs.
+5. the impact of graph-based representations on what it means to deliver FAIR data and services.
+<!-- 6. the impact for Pharma industry and EFPIA more broadly -->
 
 
+
+## FAIR and Knowledge Graphs
+
+FAIR is chiefly about three things: metadata, metadata and metadata. 
+
+Not only that, but metadata which should be **active**, that is usable by software agents without the need of human intervention,
+thanks to the resolvable links found in the electronic documents and the associated semantics available to the agent.
+The goal is to speed up data handling by ensuring enough information is provided to machines.
+
+In this context, the availability of semantic web technologies completely aligns with the key requirements defined by 
+the FAIR principles. 
+Thus, providing metadata about a dataset in the form of Linked Data Graph is a significant path towards making data FAIR.
+Furthermore, the availability of knowledge representation in a graph data structure, or knowledge graphs, 
+provides contextual information about the dataset and shows the relationship between data and curated domain knowledge,
+which is particularly useful for machine learning and artificial intelligence approach. 
+
+> But `FAIR data` and `knowledge graphs` are not equivalent. Not all FAIR data is a knowledge graph and not all knowledge graphs are FAIR.
 
 ## What are knowledge graph and graph databases?
 
-Knowledge Graph (KG) and graph databases constitute a new approach to representation and storage of data.
-Until fairly recently, the storage of information mainly relied on `Relational Database Management Systems` (RDBMS), 
-which have been to work-horse of database building. With relational database approach, information is modelled according
-to an `Entity Relationship Model (ER model/ER diagram`, the development of which undergoes a series of formal steps. 
-One of these steps involves a process known as `schema normalization` to ensure that key entities and their attributes 
-can be stored in `tables` in the most parsimonious way. 
-This step is necessary to ensure query performance and optimization. Relational database approaches track and store 
-relations between entities using what is known as `linking tables`. 
-These are essentially maps between object identifiers, thus logging the relations 2 instances of objects may have.
-When interrogating a database operating under this paradigm (e.g. mysql, postgresql, oracle db to name a few), 
-the database engine needs to run `JOIN` operations, a type of SQL queries hitting the table of objects and any 
-linking table holding the information about the relations between objects.
-While sophisticated optimization methods exist to ensure query performance does not suffer as both data volume grows or 
-complexity of the underlying model increases, this form of information storage may suffer from performance issue in 
-certain situations.
-An added criticism often leveled to RDBMS based database is the rigidity, which manifests itself in the difficulty and
-complexity of changing the underlying model, leading to potentially complex migration tasks. 
-This can become a limitation when knowledge representation in a particular domain requires frequent changes
-for whatever reason.
-So it is in this context that the advent of `graph (oriented) databases` (sometimes referred to as NoSQL database,
-for 'Not Only SQL database'), came about, with a new paradigm and bold claims.
-Over the last 20 years, the idea of storing knowledge as a graph `G=(v for vertex,e for edge)`,
+Knowledge Graph (KG) and graph databases constitute a new approach to representation, storage and querying of data.
+
+To understand the notion of `knowledge graphs`, we need to remind ourselves about some elements of information theory, data structure, and data storage, as well as some geometric interpretation of relationship between entities, which is often what turns data into knowledge.
+
+Information, in digital forms, relies on formal representations and an array of methods to store and retrieve information. Up until the last 10 years, Relational DataBase Management Systems (RDBMS) have been provided the backbone of information storage solutions, and still do so today. However, advances in both theoretical information representation models and technical solutions led to the development of so-called `NO-SQL` solutions (for 'Not-only Structured Query language'), supporting the onset of **graph-based representations of information**, in contrast to **relational-model based representation**. Knowledge graphs are knowledge bases which use graph-based data structure or topology to represent entities and the relationships between them.
+
+```{admonition} **So how does graph theory come to meet knowledge representation?**
+
+We need here to introduce the definition of a graph:
+
+A graph is a set of nodes (also known as vertex) connected via edges. 
+When the edges connected any two nodes carry a direction information, they defined a specific and important subfamily of graphs known as `directed graphs`. On the other hand, if there is absence of directionality information on the edges, such graphs are known as `undirected graphs`.
+
+A graph can also contain cycles. This means that when traversing the graph from a starting or source node to an ending or target node (terminologically referred to as a path), in case of cycles, the sorurce and target node are the same. Such graphs are commonly known as `cyclic graphs`.
+
+When cycles aren't allowed, a new subtype of graph is defined. Such graphs are known as `directed acyclic graphs` (DAG).
+
+Volumes have been written about what graphs are and the underlying mathematical theories describing their properties. The readership can refer to the following resources for a complete overview and training. The purpose of this section is simply to provide a rapid overview of what knowledge graphs are and their typology, as one needs to be aware of the differences that exist between the different kinds of graphs and also understand the consequences both theoretical and technical to fully appreciate the pros and cons of the various implementations
+available out there.
+
+The following sections intend to provide a compact review and guide newcomers through the jargon and the various acronyms founds in the literature on the topic.
+```
+### Relational Databases and Graph Databases
+
+Until fairly recently, the storage of information mainly relied on RDBMS, 
+which have been to work-horse of database building. With relational database approach, information is modelled according to an `Entity Relationship Model (ER model/ER diagram)`, the development of which undergoes a series of formal steps. 
+
+One of these steps involves a process known as `schema normalization` to ensure that key entities and their attributes can be stored in `tables` in the most parsimonious way. This step is necessary to ensure query performance and optimization. 
+
+Relational database approaches track and store relations between entities using what is known as `linking tables`. When interrogating a database operating under this paradigm (e.g. MySQL, PostgreSQL, Oracle DB, to name a few), the database engine needs to run `JOIN` operations, a type of SQL queries hitting the table of entities and any linking table holding the information about the relations between entities. 
+
+While sophisticated optimization methods exist to ensure query performance does not suffer as both data volume grows or complexity of the underlying model increases, this form of information storage may suffer from performance issue in certain situations.
+
+An added criticism often leveled to RDBMS based database is the rigidity, which manifests itself in the difficulty and complexity of changing the underlying model, leading to potentially complex migration tasks. 
+This can become a limitation when knowledge representation in a particular domain requires frequent changes for whatever reason.
+
+So it is in this context that the advent of `graph (oriented) databases` (sometimes referred to as NoSQL database, for 'Not Only SQL database'), came about, with a new paradigm and bold claims. 
+Over the last 20 years, the idea of storing knowledge as a graph `G=(v for vertex, e for edge)`,
 even if not new at all from a theoretical perspective, has undergone tremendous progress to the point that a transition,
-in some sectors of the industry, is taking place. It is not that graph-oriented data storage is replacing RDBMS storage, 
-but it is certainly true that for some domain specific representations and tasks, `Knowledge Graphs` (KG)
-and graph databases are seen as more suited. The claim is that they are capable of offering new insights,
-with better performance, owing to the optimization of their query engine for fast traversals.
-It is this property that makes graph databases special compared to RDBMS. 
+in some sectors of the industry, is taking place.
+
+KGs and graph databases claim to be capable of offering new insights with better performance, 
+owning to the optimization of their query engine for fast traversals. 
+With description logics (DL), knowledge graphs represent knowledge to allow "intelligent" machines and algorithms to reason over and work with.
+Hence, for some domain specific representations and tasks, `Knowledge Graphs` (KG)
+and graph databases are seen as more suited than RDBMS storage.
+
 These benefits warrant the significant investments made to develop tools and frameworks to support KG storage solutions. 
 It also means that KG are becoming mainstream.
-As always with all technologies and tooling, one needs to understand the task at hand and choose the most suitable 
+
+ It is not that graph-oriented data storage is replacing RDBMS storage. As always, with all technologies and tooling, one needs to understand the task at hand and choose the most suitable 
 solutions for addressing a specific challenge. 
 
-
-To understand the notion of `knowledge graphs`, we need to remind ourselves about some elements of information theory,
-data structure and data storage, as well as some geometric interpretation of relationship between entities,
-which is often what turns data into knowledge.
-
-Information, in digital forms, relies on formal representations and an array of methods to store and retrieve
-information. Up until the last 10 years, relational databases and Relational DataBase Management Systems (RDBMS) 
-have been provided the backbone of information storage solutions, and still do so today. 
-However, advances in both theoretical information representation models and technical solutions led to the development
-of so-called `NO-SQL` solutions (for 'Not-only Structured Query language'), supporting the onset of **graph-based
-representations of information**, in contrast to **relational-model based representation**.
-
-
-
-
 ## The different types of knowledge graphs
-
-
 
 ````{dropdown} **The 2 main types of Knowledge Graph - Graphical Overview**
 :open:
@@ -100,51 +120,17 @@ Data Use
 RDF Graph and Labeled Property graphs
 ````
 
-
-
-```{admonition} **So how does graph theory come to meet knowledge representation?**
-
-We need here to introduce the definition of a graph:
-
-A graph is a set of nodes (also known as vertex) connected via edges. 
-When the edges connected any two nodes carry a direction information, they defined a specific and important subfamily
-of graphs known as `directed graphs`.
-When cycles aren't allowed, a new subtype of graph is defined. Such graphs are known as `directed acyclic graphs`.
-
-Volumes have been written about what graphs are and the underlying mathematical theories describing their properties. 
-The readership can refer to the following resources for a complete overview and training. 
-The purpose of this section is simply to provide a rapid overview of what knowledge graphs are and their typology,
-as one needs to be aware of the differences that exist between the different kinds of graphs and also understand the 
-consequences both theoretical and technical to fully appreciate the pros and cons of the various implementations
-available out there.
-The following sections intend to provide a compact review and guide newcomers through the jargon and the various
-acronyms founds in the literature on the topic.
-```
-
 ### 1. RDF graphs
 
-
 #### i. Defining RDF, Resource Description Framework
-
 Here, we need to introduce the notion of representing statements as a predicate of the following form:
-```bash
-<subject><predicate><object>
-```
-
-such as:
-
-```bash
-`P53 protein` `interacts with` `DNA`.
-```
+`<subject><predicate><object>`, such as: `'P53 protein' 'interacts_with' 'DNA'`.
 
 This statement can be formally expressed using a dedicated syntax called [RDF](https://www.w3.org/TR/rdf11-concepts/), 
-standing for "resource description framework", one of the W3C standards supporting the vision of a **Semantic Web** as 
+standing for "Resource Description Framework", one of the World Wide Web Consortium (W3C) standards supporting the vision of a **Semantic Web** as 
 outlined by Sir Tim Berners-Lee and colleagues {footcite}`bernerslee2001semantic`.
-In this instance, because the relation `binds to` is directional, we are creating the simplest form of directed graph,
-by establishing an `edge between two nodes`.
-
-
-The `RDF syntax` allows the expression of `RDF statements`, which can be built and grouped in an `RDF graph`.
+In this instance, because the relation `'interacts_with'` is directional, we are creating the simplest form of directed graph,
+by establishing an `edge` between two `nodes`.
 
 ``````{admonition} **When does a RDF Graph become a Linked Data Graph?**
 :class: tip
@@ -165,10 +151,9 @@ using Wikidata identifiers can be expressed as:
 ````
 ``````
 
+The `RDF syntax` allows the expression of `RDF statements`, which can be built and grouped in an `RDF graph`.
 
-#####
-
-So let's go back to the statement about the gene product of the P53 gene. 
+So let’s go back to the statement about the gene product of the P53 gene. 
 The formal and structured representation of a fact about that gene is now a well established technique.
 Therefore, one can see that natural fit between the data structure and knowledge gathered and accumulated by scientists.
 This is why knowledge graphs have gained so much traction in recent years. 
@@ -180,40 +165,29 @@ for computational work.
 ##### ii. Persisting RDF graphs: RDF triple Stores
 
 RDF graph objects can be persisted in specialized databases, `RDF graph databases` also known as `RDF triple stores`. 
-To view some of the most performant and successful solutions, see the table below. There is extensive literature
-comparing the merits of the various solutions.
-
-```{dropdown} **Well known RDF triple store solutions**
-:open:
-| name | vendor | site | performance|
-|:---|:---|:---|---:|
-|Allelograph||https://allegrograph.com/products/allegrograph/|
-|Blazegraph||https://github.com/blazegraph||
-|GraphDB||https://www.ontotext.com/products/graphdb/|OWL inference|
-|Stardog||https://www.stardog.com/|
-|Virtuoso||https://virtuoso.openlinksw.com/|
-```
+Some of the most performant and successful solutions are:
+- [Allegrograph](https://allegrograph.com/products/allegrograph/)
+- [Blazegraph](https://github.com/blazegraph)
+- [GraphDB](https://www.ontotext.com/products/graphdb)
+- [Stardog](https://www.stardog.com/)
+- [Virtuoso](https://virtuoso.openlinksw.com)
 
 
-##### iii. Validating and controlling the quality of the RDF data being loaded - the W3C SHACL SHApe Constraint Language
+##### iii. Validating and controlling the quality of the RDF data being loaded - 
 
-RDF graphs / Linked data triples can be generated fairly rapidly.
+To validate and control the quality of the fast emerging RDF triples.
 The W3C has produced a specification detailing a constraint language which allows data managers to control the so-called
-`shape` of the RDF graph coming in. 
-- This language known as [SHACL](https://www.w3.org/TR/shacl/) (pronounced `shackle`) for `SHApe Constraint Language`, 
+`shape` of the RDF graph coming in. The W3C SHACL SHApe Constraint Language, known as [SHACL](https://www.w3.org/TR/shacl/) (pronounced `shackle`),
 allow to express a set of conditions to validate RDF graphs/RDF statements. SHACL expressions are RDF statements 
-themselves and the constraint profiles can themselves be stored in an RDF triple store.
-SHACL specifications are implemented in TopQuadrant TopBraid Composer tool
+and the constraint profiles can be stored in an RDF triple store. 
+SHACL specifications are implemented in the [TopQuadrant TopBraid Composer tool](https://www.topquadrant.com/products/topbraid-composer/).
 
-- A competing specification, know as [SHEX](https://shex.io/) for `Shape Expression`, provides a similar functionality,
+A competing specification, know as [SHEX](https://shex.io/) for `Shape Expression`, provides a similar functionality,
 but isn't a W3C approved specifications, even though SHEX is proving quite popular and with a strong following.
-
-
 
 ##### iv. Querying an RDF graph - the W3C SPARQL Query Language
 
-RDF graphs stored in RDF triple stores, such as Virtuoso {footcite}`virtuoso`, Blazegraph {footcite}`blazegraph`, 
-can be queried using a dedicated query language defined by a W3C specification known as 
+RDF graphs stored in RDF triple stores can be queried using a dedicated query language defined by a W3C specification known as 
 [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/).
 SPARQL stands for `SPARQL Query Language`, (pronounced `sparkle`) {footcite}`sparql`. 
 The results of a SPARQL query are a `result set` or `RDF graph` and is therefore **a collection of RDF triples**.
@@ -250,21 +224,23 @@ A SPARQL query over Wikidata RDF endpoint: Cell lines with names that could also
 ```
 ````
 
-For more information about SPARQL queries over Wikidata, see [here](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_\(Internet_of_Cell_Lines\)).
-     
+Wikidata provides a list of SPARQL query examples,
+see [here](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_\(Internet_of_Cell_Lines\)).
+
+
 ### 2. Property graphs
     
-Like `RDF graphs`, `Property graphs` are too used to build `Knowledge graphs`.
-However, unlike `RDF graphs`, `Property graphs` allows the vertices (aka the `edge`) to carry *annotations*,
+Like `RDF graphs`, `property graphs(PG)` are also used to build `knowledge graphs`.
+However, unlike `RDF graphs`, `property graphs` allows the vertices (aka the `edge`) to carry *annotations*,
 which can be queried. These `annotations` are called `properties` hence the denomination `Property graphs`,
 also referred to as **`Labeled Property Graphs`** or **`LPG`**.
+
 `Property graphs` have inherent interesting properties which set them aside from `RDF graphs`.
 For instance, in PG/LPG, both `nodes` and `edges` have:
 - `(1..1) identifier`        
 - `(1..n) annotations`, in the form of sets of `{key:value}` pairs    
-in addition, `edges` have a `Type`
 
-
+In addition, `edges` have a `Type`. 
 
 ```{admonition} Important
 :class: tip
@@ -304,7 +280,7 @@ from gremlin_python.process.traversal import Cardinality
 id = T.id
 single = Cardinality.single
 
-def create_vertex(self, vid, vlabel):
+def create_vertex(vid, vlabel):
     # default database cardinality is used when Cardinality argument is not specified
     g.addV(vlabel).property(id, vid). \
       property(single, 'name', 'Apache'). \
@@ -334,12 +310,12 @@ Backing the approach, the team developed a dedicated query language for `Labeled
 This language is known as `CYPHER`.
 
 Neo4j databases have shown promises in biology and bioinformatics for its ability to allow for fast graph traversals, 
-which matches the requirements of cell biologists, modelers and computational scientists who need to explore a growing
+which matches the requirements of cell biologists, modelers, and computational scientists who need to explore a growing
 ensemble of molecular pathways, that is to say graphs of interactions and reactions.
 An illustration of that natural fit is the uptake of the Neo4j technology by a project such as ` Disease Maps`, 
 Reactome {footcite}`pmid29377902` and KnetMiners {footcite}`pmid30085931`.
 
-The Reactome database builds on Neo4j to allow navigation of reactions and pathways.
+* The [Reactome database](https://reactome.org/) builds on Neo4j to allow navigation of reactions and pathways.
 
 A complete tutorial to query Reactome using the `Cypher language` to interrogate the underlying Neo4j store is
 available [here](https://reactome.org/dev/graph-database/extract-participating-molecules).
@@ -363,12 +339,20 @@ CYPHER query example on Reactome: Comparison with SQL. From Fabregat et al,2018.
 ```
 ````
 
+* The [PDBe-KB](PDBe-KG https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download) is another relevant resources in the fields of
+bioinformatics which is available as a Neo4j graph database. PDBe-KB is a community-driven resource managed by the PDBe
+team, collating functional annotations and predictions for structure data in the PDB archive, the content of which is distributed
+under CC-BY-4 license. PDFe-KB can be downloaded [here](PDBe-KG https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download).
 
 
 
-While its origin dates back to 2000, the company recently grabbed headlines for a [very successful IPO](https://neo4j.com/press-releases/neo4j-announces-seriesf-funding/) which netted circa 350 millions USD of venture capital funding. Such a success is testament to the robustness and validity of the approach taken by the group of computer scientists who built the solutions from the ground up to deliver one of the most successful solution for property graph based knowledge representation and querying.make full use of Neo4j representation and infrastructure capabilities.
+While Neo4j origin dates back to 2000, the company recently grabbed headlines for a [very successful IPO](https://neo4j.com/press-releases/neo4j-announces-seriesf-funding/) 
+which netted circa 350 millions USD of venture capital funding. Such a success is testament to the robustness and 
+validity of the approach taken by the group of computer scientists who built the solutions from the ground up to
+deliver one of the most successful solution for property graph based knowledge representation and querying making 
+full use of Neo4j representation and infrastructure capabilities.
 
-Neo4J open-sourced the Cypher query language and made it available via GitHub as part of the `open-cypher` project
+Neo4J open-sourced the Cypher query language and made it available via GitHub as part of the [open-cypher](https://github.com/opencypher) project
  
  
 A [large body of documentation and training material is available](https://neo4j.com/developer/cypher/), 
@@ -379,7 +363,8 @@ More recently, Neo4j also joined the [graphQL foundation](https://graphql.org/fo
 quote the landing page of the organization.
 
 >**Why this matters?**
-> It matters because [GraphQL specification](https://graphql.org/) allows to build robust Application Programming 
+> 
+> It matters because [GraphQL specification](https://graphql.org/) allows building robust Application Programming 
 > Interface and make it easier to build full stack applications from scratch while offering great flexibility in 
 > interfacing with the data. 
 > But the main idea here is that the `GraphQL` way of representing data is a natural fit to database systems
@@ -388,12 +373,11 @@ quote the landing page of the organization.
 
 ### 3. RDF graphs or Labeled Property graphs, which has the upper hand?
 
-
 Sometimes, nothing beats a diagram to drive forward the strengths and the weaknesses of technical stacks.
-In the diagram below, which provides an overview of the specifications and standards available to support the
+In the diagram presented in figure 4, which provides an overview of the specifications and standards available to support the
 knowledge graph, two things strike the keen reader:
 
-1. RDF graphs technology is backed by a large number of World Wide Web Consortium (W3C) standards for the **semantic web**.
+1. RDF graphs technology is backed by a large number of W3C standards for the **semantic web**.
     >- W3C RDF
     >- WC3 RDFS
     >- W3C OWL
@@ -416,12 +400,13 @@ Besides this point, two additional features can give RDF graphs the edge (no pun
 
 4. Native semantics and the possibility of inference
     >- Backed by RDFS and OWL semantics, RDF graphs are built on a technology stack developed to deliver the
-    `the semantic web` as envisioned by Sir Tim Bernards-Lee. Tools known as *reasoners* , use first order logic to
+    `the semantic web` as envisioned by Sir Tim Berners-Lee. Tools known as *reasoners* , use first order logic to
     perform type and instance classification but also generate `entailments`, which correspond to new statements 
     resulting from inference made from the explicit assertions in the underlying ontologies or graph.
-    
-
-
+ 
+Worth of notice, comparisons between the two approaches do exist. For instance, Alocci and colleagues ran a comparison
+of between RDF triple stores and Property graph in the context of Glycan substructure and their assessment can serve as
+basis for deciding to go for on or the other {footcite}`pmid26656740`.
 
 
 ### 4. Towards a unified standard for querying LPG: GQL specifications
@@ -431,89 +416,77 @@ In the previous 2 sections, we have highlighted 2 of the most successful project
 Property Graphs as data structure for storing information and building knowledge graphs. 
 However, none of these implementations are officially an approved W3C standards. While it does not really matter
 at this stage, it was realized that such fragmentation was hurting and in 2019, the `open Graph Query Language` (oGQL) 
-working group released an initial specification
-
-
-## How are knowledge graphs generated?
-
-{footcite}`pmid32637040`
-
-
-### Semantic models and ontologies: when knowledge engineers step in.
-
-In the previous section, we saw how to create an RDF statement.
-
-`P53 gene transcript` `binds to` `DNA`.
-
-which structured in N-turle RDF syntax looks like this
-
-```bash
-introduce RDF statement with free text
-```
-
-The representation is neat and tidy but one can not help noticing that all the strings are stored as free text. 
-A problem arises when trying to accumulate knowledge from different sources.
-One needs to add a layer of semantics to `type` each of the element of an RDF statement.
-Ontologies are the resources which provide this layer of semantics which make it possible to integrate data in
-knowledge graphs.
-
-Ontologies are **formal resources developed by experts in a domain**.
-Ontologies also rely on RDF language for their representation but their purpose is different.
-
-These ontologies set the rules and constraints grounded in first order logic to define a type.
-
-```bash
-P53 gene transcript a RDF:type go:Transcript;
-DNA a RDF:type chebi:molecularEntity
-binds_to
-```
-
-
-- text mining
-- ETL
-- machine learning
-
-
-
-## How do FAIR and KR relate and why does it matter?
-
-FAIR is chiefly about 3 things: metadata, metadata and metadata. 
-Not only that, but metadata which should be **active**, that is usable by machines for quick mobilisation and 
-use by software agents.
-In this context, the availability of semantic web technologies completely aligns with the key requirements defined
-by the FAIR principles.
-
-But `FAIR data` and `knowledge graphs` are not equivalent. 
-Not all FAIR data is a knowledge graph and not all knowledge graphs are FAIR.
-However, providing metadata about a dataset in the form of Linked Data graph is a significant path
-towards making data FAIR.
-Furthermore, the availability of knowledge representation in a graph data structure is particularly useful
-for machine learning and artificial intelligence approach. 
-Why is that so? or is it just another chain of fashionable term "du jour"?
+working group released an initial specification.
 
 
 
 ## Conclusion
 
-Knowledge graphs are a powerful and flexible to represent information. Their properties and features lend themselves
-to data driven approaches and make them a data structure of choice for certain types of artificial intelligence and
-machine learning applications. As with all technical solutions, it is no panacea, no silver bullet.
+Knowledge graphs are a powerful and flexible way to represent information. 
+Their properties and features lend themselves to data driven approaches and make them a data structure of choice for 
+certain types of artificial intelligence and machine learning applications. 
+As with all technical solutions, it is no panacea, no silver bullet.
 They however are a technology which can greatly enhance certain tasks and are of particular relevance for representing
 metadata, data about the data  in a FAIR way.
 
+
 ### What to read next:
 
-> - {ref}`fcb-introduction-terminologies-ontologies`
-> - {ref}`fcb-interop-covid-metadata`
-> - {ref}`fcb-interop-etl`
-
-
+> Having read about what knowledge graphs are and their typology, the next key thing is to learn about how are knowledge graphs generated.
+> This is when we need to introduce the notion of semantic models and ontologies and when knowledge engineers step in.
+>
+> The main concerns are to 1) provide foundational domain models as well as 2) instantiations of data under these models. 
+> To take a simple example, let's consider converting natural text into a data structure which can be easily manipulated by software agents.
+>
+> ```bash
+> `P53 gene transcript` `binds to` `DNA`.
+> ```
+> In order to do this, several steps are necessary and some requires specific resources to be available. 
+> One step is known as 'Name Entity Recognition' (NER), which as the name says aims to cast strings into specific bins such 'noun', 'verb', 'qualifier', etc.
+> Another step, following the NER step would be the anchoring of these entities to a semantic framework and this step is known as 'semantic mark-up' or sometimes 'mapping to ontologies'.
+>
+> Ontologies are the resources which provide this layer of semantics which make it possible to integrate data in
+> knowledge graphs. Ontologies are **formal resources developed by experts in a domain**.
+> Ontologies also rely on RDF language for their representation but their purpose is different.
+> 
+> These ontologies set the rules and constraints grounded in first order logic to define a type.
+> 
+> The representation is neat and tidy but one can not help noticing that all the strings are stored as free text.
+> A problem arises when trying to accumulate knowledge from different sources.
+> One needs to add a layer of semantics to `type` each of the element of an RDF statement.
+> 
+>```bash
+>@prefix go: <go:>
+>@prefix uniprot: <uniprot:>
+>@prefix chebi: <chebi:>
+> P53 gene transcript a RDF:type go:Transcript;
+> DNA a RDF:type chebi:molecularEntity
+> binds_to
+>```
+>
+>This taster is really meant to encourage our readers to dive into the following contents, which range from how to build controlled terminology, 
+>how to select ontologies or how to perform NER.
+> Check out those content and  recipes!
+>
+>- Constructing knowledge graphs and their biomedical applications {footcite}`pmid32637040`, a review by Nicholson & Greene
+>- {ref}`fcb-introduction-terminologies-ontologies`
+<!-- >- {ref}`fcb-skos-terminology`
+>- {ref}`fcb-ner`
+>- {ref}`fcb-ontologies`
+-->
+>- {ref}`fcb-interop-covid-metadata`
+>- {ref}`fcb-interop-etl`
 
 ## References
 
 ````{dropdown} **References** 
 ```{footbibliography}
 ```
+
+````
+
+<!--
+
 [1]. https://www.turing.ac.uk/research/interest-groups/knowledge-graphs
 
 [2]. https://web.stanford.edu/class/cs520/
@@ -538,8 +511,7 @@ metadata, data about the data  in a FAIR way.
 
 [12].https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-00940-y
 
-````
-
+-->
 
  
 ## Authors
@@ -547,6 +519,8 @@ metadata, data about the data  in a FAIR way.
 Philippe: Writing - Original Draft, Editing, Conceptualization
 Dominique: Writing - Review & Editing
 Susanna: Writing - Review & Editing
+Fuqi: Review & Editing
+Yojana: Review & Editing
 ````
 
 
