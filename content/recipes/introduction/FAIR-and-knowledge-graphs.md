@@ -470,9 +470,10 @@ metadata, data about the data  in a FAIR way.
 >
 >- Constructing knowledge graphs and their biomedical applications {footcite}`pmid32637040`, a review by Nicholson & Greene
 >- {ref}`fcb-introduction-terminologies-ontologies`
->- {ref}`fcb-skos-terminology`
->- {ref}`fcb-ontologies`
+<!-- >- {ref}`fcb-skos-terminology`
 >- {ref}`fcb-ner`
+>- {ref}`fcb-ontologies`
+-->
 >- {ref}`fcb-interop-covid-metadata`
 >- {ref}`fcb-interop-etl`
 
