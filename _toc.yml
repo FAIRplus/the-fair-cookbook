@@ -165,7 +165,8 @@
               - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
                 title: Deploying the EBI OLS #FCB005
           - file: content/recipes/infrastructure/openrefine-nvt
-            title: Reconciliation with OpenRefine
+            title: Using OpenRefine and Karma for FAIRification
+
 
     - file: content/recipes/assessing-fairness
       title: Assessment

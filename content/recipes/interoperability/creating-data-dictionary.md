@@ -202,9 +202,22 @@ Why? Simply because if affords several key data management processes to take pla
 ### What to read next?
 
 > - {ref}`fcb-selecting-ontologies`
-> - {ref}`fcb-interop-etl` (*in preparation*)
+> - {ref}`fcb-interop-etl`
 > - Key issues to be aware of when planning [Extract-Transform-Load processes]( TODO add link)
-
+> 
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Metadata Management` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
+> ````
+> 
 <!--
  >- {ref}`fcb-interop-ontomapping` (*in preparation*)
   -->

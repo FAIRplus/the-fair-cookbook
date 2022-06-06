@@ -24,6 +24,22 @@ The main purpose of this recipe is:
 
 > To embed `Schema.org` markup in a web page representing a dataset.
 
+
+
+```{tabbed} FAIRification Objectives, Inputs and Outputs
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [text annotation](http://edamontology.org/operation_3778)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [annotated text](http://edamontology.org/data_3779)  |
+| [validation](http://edamontology.org/operation_2428) | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [report](http://edamontology.org/data_2048) |
+```
+```{tabbed} Table of Data Standards
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
+| [HTML](http://edamontology.org/format_2331) | | |
+```
+
+
 ---
 
 
@@ -185,29 +201,29 @@ Bioschemas Generator Dataset profile form.
 8. If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
    ```
-   <script type="application/ld+json">
-   {
-     "@context": "http://schema.org",
-     "@id": "%%%PAGEURL%%%",
-     "@type": "Dataset",
-     "citation": [
-       {
-         "@id": "%%%DOI%%%",
-         "@type": "CreativeWork"
-       }
-     ],
-     "creator": [
-       {
-         "@context": "http://schema.org",
-         "@type": "Organization",
-         "dct:conformsTo": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
-         "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. ",
-         "name": "UniProt Consortium"
-       }
-       ...
-     ]
-   }
-  </script>
+      <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@id": "%%%PAGEURL%%%",
+        "@type": "Dataset",
+        "citation": [
+          {
+            "@id": "%%%DOI%%%",
+            "@type": "CreativeWork"
+          }
+        ],
+        "creator": [
+          {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "dct:conformsTo": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+            "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. ",
+            "name": "UniProt Consortium"
+          }
+          ...
+        ]
+      }
+     </script>
    ```
 
 Your site should now generate dataset pages with embedded markup. 
@@ -216,21 +232,29 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 
 ---
 
-## FAIRification Objectives, Inputs and Outputs
 
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [text annotation](http://edamontology.org/operation_3778)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [annotated text](http://edamontology.org/data_3779)  |
-| [validation](http://edamontology.org/operation_2428) | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [report](http://edamontology.org/data_2048) |
+## Conclusion
 
 
-## Table of Data Standards
+### What to read next?
 
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
-| [HTML](http://edamontology.org/format_2331) | | |
-
+>
+> - {ref}`fcb-find-bs-data`
+> - {ref}`fcb-find-bs-catalog`
+> - {ref}`fcb-find-bs-dataset`
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../../images/logos/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Machine Actionability` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> ````
 
 
 

@@ -468,11 +468,11 @@ connect different data sources with each other, so that in general a higher degr
 
 ### What to read next? 
 >
-> [Learn to move through maturity levels with ISA metadata model](https://w3id.org/faircookbook/FCB___)
+> [Learn to move through maturity levels with ISA metadata model](https://faircookbook.elixir-europe.org/content/recipes/maturity/isa-maturity-progression.html)
 > 
 > [Learn to move expression allowed data use with ODRL and DUO](https://w3id.org/faircookbook/FCB035)
 > 
-> [Learn to make computational workflows FAIR](https://w3id.org/faircookbook/FCB___)
+> [Learn to make computational workflows FAIR](https://w3id.org/faircookbook/FCB062)
 > 
 > [Check the following resources:]()
 > ````{panels}

@@ -204,6 +204,33 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 
 
 
+## Conclusion
+
+
+### What to read next?
+
+> - {ref}`fcb-find-bs-data`
+> - {ref}`fcb-find-bs-catalog`
+> - {ref}`fcb-find-bs-dataset`
+> 
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> :height: 40px
+> :name: rdmtoolkit_logo
+> ```
+> ^^^
+> [More about `Machine Actionability` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> ````
+
+
+
+
+
+
 ## References
 ````{dropdown} **References**
 ````

@@ -35,7 +35,7 @@ For simplicity, we focus here on "input" data that is represented as tables.
 
 Two fundamental steps are needed to perform such transformation:
 
-1. **Reconcile entities**. 
+* **Reconcile entities**. 
 
 That is assigning the same URIs to the same entities, even when these are referred to by different names.
 
@@ -45,7 +45,7 @@ It remains that in this step, we should go beyond names (labels) and use **coher
 to the entities names refer to.
 ```
 
-2. **Map the structure of the data to an ontology**.
+* **Map the structure of the data to an ontology**.
 
 This is akin to reconciling properties (referred by a name, e.g.: a column name) to relations, attributes, and classes in an ontology.
 Except for simple cases, such mappings go beyond simple names to URI relations and generally include **small graph patterns**.
@@ -96,7 +96,7 @@ reconcile to entities of one or more of these types. OpenRefine will then presen
 ```{figure} ../../../images/openrefine.png
 ---
 width: 800px
-name: openrefine
+name: openrefine-screenshot
 alt: OpenRefine
 ---
 OpenRefine
@@ -332,7 +332,8 @@ After reconciliation, we could imagine this data to look like:
 
 To express the above as a graph, we need to make the structure or this table explicit, referring to an ontology, example, for people and relations.
 
-````{admonition} 
+```{admonition} Tip
+:class: tip
 
 Wikidata uses 2 sets of uri 
 
@@ -342,7 +343,7 @@ Wikidata uses 2 sets of uri
 
 Important point to bear in mind when using Wikidata.
 
-````
+```
 
 Note that first we could map:
 
@@ -537,20 +538,20 @@ https://graphdb.ontotext.com/documentation/free/devhub/custom-graph-views.html
 ## Conclusion:
 
 This content provides a basic overview of reconciliation tools for dealing with relative lightweight processes to convert tabular data to an RDF Linked Data graph.
-It completements content related to ETL to RDF.
+It complements content related to ETL to RDF.
 While a lot of material already exists about using OpenRefine for performing such tasks, the value added by the recipe 
 rests on the setting up of a Wikibase instance to provide the reconciliation reference.
 
 
 > What to read next? 
 > 
-> [An inventory of tools for converting data to RDF](https://w3id.org/faircookbook/FCB051)
+> * [An inventory of tools for converting data to RDF](https://w3id.org/faircookbook/FCB051)
 > 
-> [Creating Linked Data with OpenRefine](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e)
+> * [Creating Linked Data with OpenRefine](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e)
 >
-> [Using OntoRefine to Transform Tabular Data into Linked Data](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e
+> * [Using OntoRefine to Transform Tabular Data into Linked Data](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e
 > 
-> [OntoRefine](https://graphdb.ontotext.com/documentation/free/loading-data-using-ontorefine.html) tutorial by [OntoText](https://www.ontotext.com/knowledgehub/fundamentals/ontorefine-2/)
+> * [OntoRefine](https://graphdb.ontotext.com/documentation/free/loading-data-using-ontorefine.html) tutorial by [OntoText](https://www.ontotext.com/knowledgehub/fundamentals/ontorefine-2/)
 
 
 
@@ -566,6 +567,7 @@ rests on the setting up of a Wikibase instance to provide the reconciliation ref
 ````{authors_fairplus}
 AndreaSplendiani: Writing - Original Draft
 Philippe: Review & Editing
+Yojana: Review & Editing
 ````
 
 <!-- 
