@@ -69,7 +69,7 @@ If you do not have a license for your software, it is effectively unusable by th
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```

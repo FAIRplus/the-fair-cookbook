@@ -465,7 +465,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 > ---
 > :header: bg-primary pa_dark
 > :body: grey
-  > ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+  > ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```

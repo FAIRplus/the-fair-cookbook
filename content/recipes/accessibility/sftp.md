@@ -271,7 +271,7 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
 > :name: rdmtoolkit_logo
 > ```
