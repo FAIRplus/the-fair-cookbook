@@ -244,10 +244,10 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 > :body: grey
 > ```{image} ../../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Machine Actionability` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
 > ````
 
 

@@ -212,10 +212,10 @@ They may also require that the recipient of the combined work can re-link the mo
 > :body: grey
 > ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Licensing` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/licensing.html)
+> [More about `Licensing` from the `RDMkit`](https://rdmkit.elixir-europe.org/licensing.html)
 > ---
 > :header: bg-primary pa_dark
 > ```{image} ../../../images/logos/TTW.svg

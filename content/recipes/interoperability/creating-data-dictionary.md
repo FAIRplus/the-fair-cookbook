@@ -212,10 +212,10 @@ Why? Simply because if affords several key data management processes to take pla
 > :body: grey
 > ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Metadata Management` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
+> [More about `Metadata Management` from the `RDMkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
 > ````
 > 
 <!--
