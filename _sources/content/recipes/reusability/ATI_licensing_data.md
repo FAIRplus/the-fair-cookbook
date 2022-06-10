@@ -129,12 +129,12 @@ If you would like to read more about the challenges and finer points of licensin
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Licensing` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/licensing.html)
+> [More about `Licensing` from the `RDMkit`](https://rdmkit.elixir-europe.org/licensing.html)
 > ---
 > :header: bg-primary pa_dark
 > ```{image} ../../../images/logos/TTW.svg

@@ -218,12 +218,12 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Machine Actionability` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
 > ````
 
 

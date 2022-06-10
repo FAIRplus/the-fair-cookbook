@@ -174,12 +174,12 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Metadata Management` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
+> [More about `Metadata Management` from the `RDMkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
 > ````
 > 
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->
