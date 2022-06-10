@@ -480,12 +480,12 @@ connect different data sources with each other, so that in general a higher degr
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Plant Genomics` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/plant_genomics_assembly.html)
+> [More about `Plant Genomics` from the `RDMkit`](https://rdmkit.elixir-europe.org/plant_genomics_assembly.html)
 > ````
 >
 
