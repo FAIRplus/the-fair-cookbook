@@ -287,6 +287,11 @@ There is also an open-source edition available, known as OpenLink Virtuoso.
 *   [OpenLink Virtuoso (GitHub)](https://github.com/openlink/virtuoso-opensource)
 
 
+#### Ontopic Studio
+
+[Ontopic Studio](https://ontopic.ai/en/ontopic-studio/) is a no-code environment for building RDF Knowledge Graphs. It integrates a lean ontology editor, a mapping editor and a Ontop-based SPARQL endpoint. The forms based UI is fast and avoids nasty mistyping. Authoring of SQL statements can be avoided in most cases. The generated ontologies and mappings are completely standards compliant and integrate well with most RDF toolchains, in particular with those based on Ontop.
+
+
 ## Alternative approaches
 
 ### Coding yourself
