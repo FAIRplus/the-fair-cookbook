@@ -52,13 +52,6 @@ The table below lists relevant use cases.
 |Data consumer| Integrate patient genetic information| Have seamless integration with other FHIR messages from other sources| 
 |Data manager| Unify clinical information in one format| Facilitate reuse and mining by clinicians|
 
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-|Interoperability |minimal |	repeatable|
-
 ---
 
 ## FAIRification Objectives, Inputs and Outputs

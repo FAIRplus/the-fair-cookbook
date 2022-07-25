@@ -22,9 +22,7 @@
 ## Table of Contents
 <!-- 1. [Main FAIRification Objectives](#Main%20FAIRification%20Objectives)
 
-2. [Capability & Maturity Table](#Capability%20&%20Maturity%20Table)
-
-3. [License](#License) -->
+2. [License](#License) -->
 
 This document aims to identify the values underlying or correlated with the FAIR principles (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR. Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights.
 

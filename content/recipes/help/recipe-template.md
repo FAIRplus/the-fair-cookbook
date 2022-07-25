@@ -102,26 +102,7 @@ C-3PO_droid
    * read Recipe 1 first!
 * knowledge requirement:
    * be sure to know what OBO is, or read it here: ...link to knowledge...
-
----
-
-## Capability & Maturity Table
-
-```{admonition} Important
-:class: tip
-this section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
-```
-
-This section is meant for authors to describe the specific `capability` which they aim to bring from one `maturity level` to the next.
-This is therefore to document the methods used **to enable change** at the level of information process
-The table is therefore structure to identify the capability, the **initial** maturity level it is estimated to be and the **final** maturity it has been brought to.
-
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-
+   
 
 ---
 
@@ -281,12 +262,12 @@ To the Reviewers and Editors: The following panels show how to link with externa
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
 > ---
 > :header: bg-primary pa_dark
 > ```{image} ../../../images/logos/pistoia_logo.png

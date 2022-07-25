@@ -112,9 +112,21 @@ ascp version 3.9.6.176292
 
 ### What to read next?
 
-  - {ref}`fcb-sftp` 
-  - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
-
+>  - {ref}`fcb-sftp` 
+>  - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo.svg
+> :height: 40px
+> :name: rdmkit_logo
+> ```
+> ^^^
+> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> ````
 
 ## References
 ````{dropdown} **References** 

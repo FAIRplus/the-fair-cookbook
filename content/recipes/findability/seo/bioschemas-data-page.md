@@ -23,6 +23,20 @@ The main purpose of this recipe is:
 
 > To markup a webpage representing a data record with `Bioschemas` compliant markup.
 
+
+```{tabbed} FAIRification Objectives, Inputs and Outputs
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [text annotation](http://edamontology.org/operation_3778)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [annotated text](http://edamontology.org/data_3779)  |
+| [validation](http://edamontology.org/operation_2428) | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [report](http://edamontology.org/data_2048) |
+```
+```{tabbed} Table of Data Standards
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
+| [HTML](http://edamontology.org/format_2331) | | |
+```
+
 ---
 
 
@@ -40,15 +54,6 @@ alt: The process of annotated a webpage with Bioschemas markup to support machin
 The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
 ```
 ````
-
----
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-| Interoperability | minimal |  |
 
 ---
 
@@ -223,20 +228,28 @@ Once you have deployed this on your web server, you can test it with the [Biosch
 
 ---
 
-## FAIRification Objectives, Inputs and Outputs
 
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [text annotation](http://edamontology.org/operation_3778)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [annotated text](http://edamontology.org/data_3779)  |
-| [validation](http://edamontology.org/operation_2428) | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [report](http://edamontology.org/data_2048) |
+## Conclusion
 
 
-## Table of Data Standards
+### What to read next?
 
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
-| [HTML](http://edamontology.org/format_2331) | | |
+> - {ref}`fcb-find-bs-catalog`
+> - {ref}`fcb-find-bs-dataset`
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../../images/logos/RDMkit_logo.svg
+> :height: 40px
+> :name: rdmkit_logo
+> ```
+> ^^^
+> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> ````
+
 
 
 

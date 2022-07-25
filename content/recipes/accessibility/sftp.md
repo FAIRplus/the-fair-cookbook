@@ -49,14 +49,6 @@ not existent
 
 ---
 
-## Capability and Maturity Table.
-
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-
 ## FAIRification Objectives, Inputs and Outputs
 
 COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology. 
@@ -262,29 +254,29 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 
 ### What to read next?
 
-> [Wikipedia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+> * [Wikipedia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 >
-> [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
+> * [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
 >
-> [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
+> * [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
 >
-> [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
+> * [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
 >
-> {ref}`fcb-access-aspera`
+> * {ref}`fcb-access-aspera`
 >
-> [Rclone](https://rclone.org)
+> * [Rclone](https://rclone.org)
 >
 > ````{panels}
 > :column: col-4
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Data Transfer` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
 > ````
 
 

@@ -468,11 +468,11 @@ connect different data sources with each other, so that in general a higher degr
 
 ### What to read next? 
 >
-> [Learn to move through maturity levels with ISA metadata model](https://w3id.org/faircookbook/FCB___)
+> [Learn to move through maturity levels with ISA metadata model](https://faircookbook.elixir-europe.org/content/recipes/maturity/isa-maturity-progression.html)
 > 
 > [Learn to move expression allowed data use with ODRL and DUO](https://w3id.org/faircookbook/FCB035)
 > 
-> [Learn to make computational workflows FAIR](https://w3id.org/faircookbook/FCB___)
+> [Learn to make computational workflows FAIR](https://w3id.org/faircookbook/FCB062)
 > 
 > [Check the following resources:]()
 > ````{panels}
@@ -480,12 +480,12 @@ connect different data sources with each other, so that in general a higher degr
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Plant Genomics` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/plant_genomics_assembly.html)
+> [More about `Plant Genomics` from the `RDMkit`](https://rdmkit.elixir-europe.org/plant_genomics_assembly.html)
 > ````
 >
 

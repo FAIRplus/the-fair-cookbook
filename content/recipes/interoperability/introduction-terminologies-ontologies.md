@@ -168,7 +168,20 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 > * {ref}`fcb-interop-ontorequest`
 > * {ref}`fcb-interop-ontorobot`
 > * {ref}`fcb-interop-onto-op`
-
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo.svg
+> :height: 40px
+> :name: rdmkit_logo
+> ```
+> ^^^
+> [More about `Metadata Management` from the `RDMkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
+> ````
+> 
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->
 
 

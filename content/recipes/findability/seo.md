@@ -51,15 +51,6 @@ Search Engine Optimization.
 
 ---
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findabililty | minimal | repeatable |
-| Interoperability | minimal | |
-
----
-
 ## Main body of the recipe
 
 ### Finding web pages
@@ -210,6 +201,33 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 | :------------- | :------------- | :------------- |
 |  [JSON-LD](http://edamontology.org/format_3749)  | [Schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [RDF](http://edamontology.org/data_2353)  |
 | [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
+
+
+
+## Conclusion
+
+
+### What to read next?
+
+> - {ref}`fcb-find-bs-data`
+> - {ref}`fcb-find-bs-catalog`
+> - {ref}`fcb-find-bs-dataset`
+> 
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo.svg
+> :height: 40px
+> :name: rdmkit_logo
+> ```
+> ^^^
+> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> ````
+
+
+
 
 
 

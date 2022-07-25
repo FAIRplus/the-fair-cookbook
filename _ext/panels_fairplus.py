@@ -277,6 +277,13 @@ class PanelFairplus(Directive):
             "@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"},
             "@type": ["sdo:HowTo", "bs:TrainingMaterial"],
             "name": self.options["recipe_name"],
+            "description": self.options["recipe_name"],
+            "keywords": [],
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+                "@type": "CreativeWork"
+            },
+            "inLanguage": ["en-GB"],
             "audience": [CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
                          for target in self.options["intended_audience"]],
             "isPartOf": [

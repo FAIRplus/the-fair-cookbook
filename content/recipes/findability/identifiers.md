@@ -465,12 +465,12 @@ This is very useful for including unambiguous, global identifiers in scientific 
 > ---
 > :header: bg-primary pa_dark
 > :body: grey
-  > ```{image} ../../../images/logos/RDMkit_logo_inverted.svg
+  > ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
-> :name: rdmtoolkit_logo
+> :name: rdmkit_logo
 > ```
 > ^^^
-> [More about `Identifiers` from the `RDM Toolkit`](https://rdmkit.elixir-europe.org/identifiers.html)
+> [More about `Identifiers` from the `RDMkit`](https://rdmkit.elixir-europe.org/identifiers.html)
 > ````
 
 

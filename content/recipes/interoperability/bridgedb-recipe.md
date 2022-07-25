@@ -70,15 +70,6 @@ This recipe has the following requirements:
     * BridgeDb R package installed
 ---
 
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | Minimal | Repeatable |
-| Reusability | Minimal| Reusable|
-
----
-
 ## Tools
 
 The table below lists the software that is used to execute the examples in this recipe.

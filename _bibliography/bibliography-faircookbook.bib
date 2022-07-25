@@ -2384,3 +2384,67 @@ series = {DBPL 2015}
   doi          = {10.15497/rda00050},
   url          = {https://doi.org/10.15497/rda00050}
 }
+
+@article {rpath_paper_ddomingo,
+	author = {Domingo-Fern{\'a}ndez, Daniel and Gadiya, Yojana and Patel, Abhishek and Mubeen, Sarah and Rivas-Barragan, Daniel and Diana, Chris W. and Misra, Biswapriya B. and Healey, David and Rokicki, Joe and Colluru, Viswa},
+	title = {Causal reasoning over knowledge graphs leveraging drug-perturbed and disease-specific transcriptomic signatures for drug discovery},
+	elocation-id = {2021.09.12.459579},
+	year = {2021},
+	doi = {10.1101/2021.09.12.459579},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {Network-based approaches are becoming increasingly popular for drug discovery as they provide a systems-level overview of the mechanisms underlying disease pathophysiology. They have demonstrated significant early promise over other methods of biological data representation, such as in target discovery, side effect prediction and drug repurposing. In parallel, an explosion of -omics data for the deep characterization of biological systems routinely uncovers molecular signatures of disease for similar applications. Here, we present RPath, a novel algorithm that prioritizes drugs for a given disease by reasoning over causal paths in a knowledge graph (KG), guided by both drug-perturbed as well as disease-specific transcriptomic signatures. First, our approach identifies the causal paths that connect a drug to a particular disease. Next, it reasons over these paths to identify those that correlate with the transcriptional signatures observed in a drug-perturbation experiment, and anti-correlate to signatures observed in the disease of interest. The paths which match this signature profile are then proposed to represent the mechanism of action of the drug. We demonstrate how RPath consistently prioritizes clinically investigated drug-disease pairs on multiple datasets and KGs, achieving better performance over other similar methodologies. Furthermore, we present two applications showing how one can deconvolute the predictions made by RPath as well as predict novel targets. Finally, we have made the source code and data publicly available at https://github.com/enveda/RPath.Competing Interest StatementWe declare competing interests. DDF, YG, AP, CWD, BBM, DH, JR, and VC are employees of Enveda Biosciences Inc. during the course of this work and have real or potential ownership interest in Enveda Biosciences Inc.},
+	URL = {https://www.biorxiv.org/content/early/2021/09/15/2021.09.12.459579},
+	eprint = {https://www.biorxiv.org/content/early/2021/09/15/2021.09.12.459579.full.pdf},
+	journal = {bioRxiv}
+}
+
+@article{drug2ways_ddomingo,
+    doi = {10.1371/journal.pcbi.1008464},
+    author = {Rivas-Barragan, Daniel AND Mubeen, Sarah AND Guim Bernat, Francesc AND Hofmann-Apitius, Martin AND Domingo-Fernández, Daniel},
+    journal = {PLOS Computational Biology},
+    publisher = {Public Library of Science},
+    title = {Drug2ways: Reasoning over causal paths in biological networks for drug discovery},
+    year = {2020},
+    month = {12},
+    volume = {16},
+    url = {https://doi.org/10.1371/journal.pcbi.1008464},
+    pages = {1-21},
+    abstract = {Elucidating the causal mechanisms responsible for disease can reveal potential therapeutic targets for pharmacological intervention and, accordingly, guide drug repositioning and discovery. In essence, the topology of a network can reveal the impact a drug candidate may have on a given biological state, leading the way for enhanced disease characterization and the design of advanced therapies. Network-based approaches, in particular, are highly suited for these purposes as they hold the capacity to identify the molecular mechanisms underlying disease. Here, we present drug2ways, a novel methodology that leverages multimodal causal networks for predicting drug candidates. Drug2ways implements an efficient algorithm which reasons over causal paths in large-scale biological networks to propose drug candidates for a given disease. We validate our approach using clinical trial information and demonstrate how drug2ways can be used for multiple applications to identify: i) single-target drug candidates, ii) candidates with polypharmacological properties that can optimize multiple targets, and iii) candidates for combination therapy. Finally, we make drug2ways available to the scientific community as a Python package that enables conducting these applications on multiple standard network formats.},
+    number = {12},
+
+}
+
+@misc{https://doi.org/10.48550/arxiv.2102.10062,
+  doi = {10.48550/ARXIV.2102.10062},
+  url = {https://arxiv.org/abs/2102.10062},
+  author = {Bonner, Stephen and Barrett, Ian P and Ye, Cheng and Swiers, Rowan and Engkvist, Ola and Bender, Andreas and Hoyt, Charles Tapley and Hamilton, William L},
+  keywords = {Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {A Review of Biomedical Datasets Relating to Drug Discovery: A Knowledge Graph Perspective},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+@article{openrefine,
+  author    = {Antonin Delpeuch},
+  title     = {A survey of OpenRefine reconciliation services},
+  journal   = {CoRR},
+  volume    = {abs/1906.08092},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1906.08092},
+  eprinttype = {arXiv},
+  eprint    = {1906.08092},
+  timestamp = {Mon, 24 Jun 2019 17:28:45 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1906-08092.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@Article{pmid26656740,
+   Author="Alocci, D.  and Mariethoz, J.  and Horlacher, O.  and Bolleman, J. T.  and Campbell, M. P.  and Lisacek, F. ",
+   Title="{{P}roperty {G}raph vs {R}{D}{F} {T}riple {S}tore: {A} {C}omparison on {G}lycan {S}ubstructure {S}earch}",
+   Journal="PLoS One",
+   Year="2015",
+   Volume="10",
+   Number="12",
+   Pages="e0144578"
+}
