@@ -12,7 +12,6 @@ cffi==1.14.5
 chardet==4.0.0
 click==7.1.2
 colorama==0.4.4
-cython==0.29.24
 decorator==5.0.7
 defusedxml==0.7.1
 deprecation==2.1.0
@@ -55,7 +54,7 @@ nbdime==3.1.1
 nbformat==5.2.0
 nest-asyncio==1.5.1
 nested-lookup==0.2.22
-notebook>=6.4.1
+notebook==6.3.0
 packaging==20.9
 pandocfilters==1.4.3
 parso==0.8.2
@@ -77,7 +76,6 @@ PyYAML==5.4.1
 pyzmq==22.0.3
 requests==2.25.1
 Send2Trash==1.5.0
-setuptools>=46.4.0
 six==1.15.0
 smmap==4.0.0
 sniffio==1.2.0
@@ -106,10 +104,8 @@ tomlkit==0.7.0
 tornado==6.1
 traitlets==5.0.5
 uc-micro-py==1.0.1
-urllib3==1.26.5
-vcf2fhir==0.1.0
+urllib3==1.26.4
 wcwidth==0.2.5
 webencodings==0.5.1
 widgetsnbextension==3.5.1
-wheel==0.37.0
 zipp==3.4.1
