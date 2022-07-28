@@ -63,7 +63,7 @@ We will outline the steps for embedding machine processable mark up within a web
 
 1. Identify a data page in your site for which you will develop markup
 
-2. Open the [Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
+2. Open the [Bioschemas Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
    1.  Select the type of data page that you are marking up, i.e. the primary subject of the page. In the example we will use `Gene`. Here are the Bioschemas [profiles](https://bioschemas.org/profiles/) that you can choose from<sup>[1](#draft-profiles)</sup>. 
 
@@ -156,7 +156,7 @@ We will outline the steps for embedding machine processable mark up within a web
       "sameAs": [
         "https://meshb.nlm.nih.gov/#/record/ui?ui=D019398",
         "https://www.ncbi.nlm.nih.gov/nuccore/NR_027676",
-        "htts://identifiers.org/ensembl/ENSG00000012048",
+        "https://identifiers.org/ensembl/ENSG00000012048",
         "https://www.ncbi.nlm.nih.gov/gene/672",
         "https://identifiers.org/ncbigene/672"
       ],
@@ -217,7 +217,7 @@ We will outline the steps for embedding machine processable mark up within a web
        have `MolecularEntity` markup on their chemical pages and `Protein` markup on their target pages so would need to 
        complete this process twice.
     
-       Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[2](#bioschemas-validator)</sup>.
+       Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[2](#bioschemas-validator)</sup>.
 
 ---
 
