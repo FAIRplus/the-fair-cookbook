@@ -103,6 +103,40 @@ Assay-level metadata covers any metadata directly related to the preparation of 
 - QC information
 - Workflow metadata
 
+The figure below shows an excerpt of the Human Cell Atlas json schema for describing the process of sequencing. 
+
+
+````{dropdown}
+:open:
+```{figure} hca_sequencing_json_schema.png
+---
+name: human cell atlas sequencing json schema
+alt: human cell atlas sequencing json schema.
+---
+human cell atlas sequencing json schema.
+```
+````
+
+```{note}
+Note the key attributes for which controlled vocabulary may be directly specified as a `json schema ENUM` (e.g. line 79) or may be specified
+via a reference to a dedicated ontology schema as in `  "$ref": "module/ontology/biological_macromolecule_ontology.json"` (e.g. line 82)
+```
+
+````{dropdown}
+:open:
+```{figure} hca_library_amplification_ontology_json_schema.png
+---
+name: hca_library_amplification_ontology_json_schema
+alt: hca_library_amplification_ontology_json_schema.
+---
+human cell atlas sequencing json schema.
+```
+````
+
+```{note}
+Note how the `ontology` element defines a `graph restriction` pointing to a branch in a semantic resource, (EFO in this case).
+```
+
 #### Suggested metadata fields
 
 The following table contains a non-exhaustive list of suggested minimum metadata fields for assays. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE and HCA. This list can and should be further broken down based on specific technologies used, such as microarrays or whole genome sequencing.
