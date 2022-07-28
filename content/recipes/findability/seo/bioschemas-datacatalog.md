@@ -66,7 +66,7 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
 
 1. Identify the page in your site about a specific dataset, e.g. https://fairsharing.org/
 
-2. Open the  [Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
+2. Open the  [Bioschemas Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
    1.  Select `DataCatalog` from the Bioschemas Profile dropdown
 
@@ -244,7 +244,7 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
    
    Your site should now include DataCatalog markup. 
    
-   Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
+   Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
 
 ---
 
