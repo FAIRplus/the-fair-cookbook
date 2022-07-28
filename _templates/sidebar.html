@@ -1,5 +1,5 @@
-<div class="nav-drawer d-flex flex-column px-5 grey lighten-3" style="height:100%;padding-top: 40px;">
-    <div class="nav-tree">
+<div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+    <div class="nav-tree grey px-5 lighten-3">
     {%- for sidebartemplate in sidebars %}
         {% if sidebartemplate != "sidebar-search-bs.html" %}
             {% include sidebartemplate %}
@@ -7,15 +7,17 @@
     {%- endfor %}
     </div>
 
-    <div class="img-block d-flex flex-column justify-end" style="flex-grow: 1">
-        <a href="https://fair-wizard.com/" target="_blank">
-            <img src="https://fair-wizard.com/static/fair-wizard-logo-inverted.svg" class="grey lighten-1 logo elevation-2" alt="The FAIR Wizard">
+    <div
+        class="external-links img-block d-flex flex-column justify-end grey px-5 lighten-3 pb-5"
+        style="flex-grow: 1; border-bottom: 1px solid #ccc !important"
+    >
+        <h6 class="text-center text-decoration-underline bold mb-2"> Our other projects </h6>
+        <a href="https://github.com/FAIRplus/FAIR_wizard" target="_blank" class="text-center secondary--text">
+            The FAIR Wizard
         </a>
     </div>
 
-    <v-divider></v-divider>
-
-    <div class="text-center pb-5">
+    <div class="text-center px-5 lighten-3 grey py-2">
         Powered by <a href="https://jupyterbook.org" class="secondary--text">Jupyter Book</a>
     </div>
 </div>
