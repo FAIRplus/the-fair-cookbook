@@ -821,7 +821,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#step-by-step-process">
-   7.6. Step by step process
+   7.6. Step-by-step process
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1056,7 +1056,8 @@ Yes
 <blockquote>
 <div><p>The main purpose of this recipe is building an application ontology from source ontologies using <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> <a class="footnote-reference brackets" href="#pmid31357927" id="id1">2</a> via a sustainable dynamic pipeline to allow seamless integration of source ontology updates <a class="footnote-reference brackets" href="#arp2015" id="id2">1</a>.</p>
 </div></blockquote>
-<p>An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> synchronized with the <code class="docutils literal notranslate"><span class="pre">reference</span> <span class="pre">ontologies</span></code> that imports are made from.  We aim to document how a certain level of automation can be achieved.</p>
+<p>An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus.
+Thus, it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> synchronized with the <code class="docutils literal notranslate"><span class="pre">reference</span> <span class="pre">ontologies</span></code> that imports are made from.  We aim to document how a certain level of automation can be achieved.</p>
 <p><a class="reference external" href="http://robot.obolibrary.org/">ROBOT</a> is an open source tool for ontology development. It supports ontology editing, ontology annotation, ontology format conversion, and other functions. It runs on the Java Virtual Machine (JVM) and can be used through command line tools on Windows, macOS and Linux.</p>
 </div>
 <div class="section" id="graphical-overview">
@@ -1159,7 +1160,7 @@ Yes
 </table>
 </div>
 <div class="section" id="step-by-step-process">
-<h2><span class="section-number">7.6. </span>Step by step process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.6. </span>Step-by-step process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="preliminary-requirements">
 <h3><span class="section-number">7.6.1. </span>Preliminary requirements<a class="headerlink" href="#preliminary-requirements" title="Permalink to this headline">¶</a></h3>
 <p>The development of an <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">ontology</span></code> requires joint contributions from <code class="docutils literal notranslate"><span class="pre">domain</span> <span class="pre">experts</span></code>, <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span> <span class="pre">owners</span></code> and <code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">developers</span></code>. The domain expert provides essential domain knowledge. The use case owners defines the <code class="docutils literal notranslate"><span class="pre">competency</span> <span class="pre">questions</span></code> of the application ontology. And the ontology developers are <code class="docutils literal notranslate"><span class="pre">IT</span> <span class="pre">specialists</span></code> working on the construction of the application ontology.</p>
@@ -1210,7 +1211,7 @@ Yes
 <td class="text-align:left"><p>➕ Identify all data generated from primary cells whose origin is the lung.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>➕ Identify all data generated from celllines whose origin is the lung.</p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from cell lines whose origin is the lung.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p><strong>Questions including single genes or gene sets</strong></p></td>
 <td class="text-align:left"><p></p></td>
@@ -1234,7 +1235,7 @@ Yes
 <td class="text-align:left"><p>➕ Identify all data from patients treated with a specific medication.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>➕ Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.</p></td>
+<td class="text-align:left"><p>➕ Identify all data generated from cells / cell lines that have been treated with compounds targeting a member of a specific pathway.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>➕ What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease</p></td>
@@ -1314,7 +1315,7 @@ Yes
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Disease</p></td>
-<td><p><a class="reference external" href="http://www.obofoundry.org/ontology/mondo.html">Mondo Disease Ontology, MONDO</a><br> <a class="reference external" href="https://disease-ontology.org/">Disease Ontology, DIOD</a><br></p></td>
+<td><p><a class="reference external" href="http://www.obofoundry.org/ontology/mondo.html">Mondo Disease Ontology, MONDO</a><br> <a class="reference external" href="https://disease-ontology.org/">Disease Ontology, DOID</a><br></p></td>
 </tr>
 <tr class="row-odd"><td><p>Species</p></td>
 <td><p><a class="reference external" href="http://www.obofoundry.org/ontology/ncbitaxon.html">NCBI organismal classification, NCBItaxon</a></p></td>
@@ -1359,7 +1360,7 @@ Yes
 </div>
 </div>
 </details><p><a class="reference external" href="https://www.ebi.ac.uk/spot/zooma/">ZOOMA</a> is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the <a class="reference external" href="https://www.ebi.ac.uk">European Bioinformatics Institute (EMBL-EBI)</a>
-. It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the <a class="reference external" href="https://www.ebi.ac.uk/ols/index">Ontology Lookup Service (OLS)</a>. Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.</p>
+. It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated data sources, or ontologies from the <a class="reference external" href="https://www.ebi.ac.uk/ols/index">Ontology Lookup Service (OLS)</a>. Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been fed with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.</p>
 <p>The <a class="reference external" href="https://bioportal.bioontology.org/annotator">NCBO Annotator</a> is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal ontologies.</p>
 <p>Both the <code class="docutils literal notranslate"><span class="pre">Zooma</span></code> and <code class="docutils literal notranslate"><span class="pre">NCBO</span> <span class="pre">Annotator</span> <span class="pre">service</span></code> provides a <code class="docutils literal notranslate"><span class="pre">web</span> <span class="pre">interface</span></code> and a <code class="docutils literal notranslate"><span class="pre">REST</span> <span class="pre">API</span></code> to identify the seed terms by annotation of free text. Two scripts able to automate the annotation of a set of free text terms are shown following.</p>
 </div>
@@ -1411,23 +1412,23 @@ Yes
 </pre></div>
 </div>
 <p>Running the above script to get the seeds for the terms <code class="docutils literal notranslate"><span class="pre">male</span></code>, <code class="docutils literal notranslate"><span class="pre">female</span></code>, and <code class="docutils literal notranslate"><span class="pre">unknown</span></code> generates the following results:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;http://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.orpha.net/ORDO/Orphanet_288 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003850 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003952 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0009471 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0000203 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003863 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0000616 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://purl.obolibrary.org/obo/HP_0000952 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003853 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_1001331 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0003769 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://purl.obolibrary.org/obo/HP_0000132 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0000408 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0008549 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
- <span class="s1">&#39;http://www.ebi.ac.uk/efo/EFO_0001642 # unknown-Confidence:MEDIUM&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;https://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.orpha.net/ORDO/Orphanet_288 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0003850 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0003952 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0009471 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0000203 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0003863 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0000616 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://purl.obolibrary.org/obo/HP_0000952 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0003853 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_1001331 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0003769 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://purl.obolibrary.org/obo/HP_0000132 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0000408 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0008549 # unknown-Confidence:MEDIUM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;https://www.ebi.ac.uk/efo/EFO_0001642 # unknown-Confidence:MEDIUM&#39;</span><span class="p">]</span>
 <span class="p">[]</span>
 </pre></div>
 </div>
@@ -1456,7 +1457,7 @@ Yes
                   <span class="s1">&#39;exclude_numbers&#39;</span><span class="p">:</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span>
                   <span class="s1">&#39;whole_word_only&#39;</span><span class="p">:</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span>
                   <span class="s1">&#39;exclude_synonyms&#39;</span><span class="p">:</span> <span class="s1">&#39;false&#39;</span><span class="p">}</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://data.bioontology.org/annotator&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">ploads</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://data.bioontology.org/annotator&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">ploads</span><span class="p">)</span>
         
         <span class="kn">import</span> <span class="nn">json</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -1489,7 +1490,7 @@ Yes
 </div>
 <div class="section" id="step-2-2-3-seed-term-extraction-with-sparql">
 <h4><span class="section-number">7.6.3.5. </span>Step 2.2.3 Seed term extraction with SPARQL<a class="headerlink" href="#step-2-2-3-seed-term-extraction-with-sparql" title="Permalink to this headline">¶</a></h4>
-<p>Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">query</span></code>. Here, we generate a subset of <code class="docutils literal notranslate"><span class="pre">UBERON</span></code> terms which have a crossreference to either <code class="docutils literal notranslate"><span class="pre">FMA</span> <span class="pre">(for</span> <span class="pre">human</span> <span class="pre">anatomy)</span></code> or <code class="docutils literal notranslate"><span class="pre">MA</span> <span class="pre">(for</span> <span class="pre">mouse</span> <span class="pre">anatomy)</span></code> terms, since our example datasets includes human, mouse and rat data.</p>
+<p>Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">query</span></code>. Here, we generate a subset of <code class="docutils literal notranslate"><span class="pre">UBERON</span></code> terms which have a cross-reference to either <code class="docutils literal notranslate"><span class="pre">FMA</span> <span class="pre">(for</span> <span class="pre">human</span> <span class="pre">anatomy)</span></code> or <code class="docutils literal notranslate"><span class="pre">MA</span> <span class="pre">(for</span> <span class="pre">mouse</span> <span class="pre">anatomy)</span></code> terms, since our example datasets includes human, mouse and rat data.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX scdo: &lt;http://scdontology.h3abionet.org/ontology/&gt;
 PREFIX obo: &lt;http://purl.obolibrary.org/obo/&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -1522,7 +1523,7 @@ FILTER regex<span class="o">(</span> ?xref, <span class="s2">&quot;^FMA|^MA:&quo
 </div>
 <div class="section" id="step-3-extract-ontology-modules-from-source-ontologies">
 <h3><span class="section-number">7.6.4. </span>Step 3: Extract ontology modules from source ontologies<a class="headerlink" href="#step-3-extract-ontology-modules-from-source-ontologies" title="Permalink to this headline">¶</a></h3>
-<p>Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend to collect all steps together into a script or <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> to avoid missing steps. <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.</p>
+<p>Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend collecting all steps together into a script or <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> to avoid missing steps. <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.</p>
 <div class="section" id="step-3-1-get-source-ontology-files">
 <h4><span class="section-number">7.6.4.1. </span>Step 3.1 Get source ontology files<a class="headerlink" href="#step-3-1-get-source-ontology-files" title="Permalink to this headline">¶</a></h4>
 <p>We recommend starting each (re)build of the application ontology with the latest versions of the source ontologies unless there is a good reason not to update to the latest version. Ideally, this should be done automatically, for example through a shell script that CURLs all ontologies from their source URIs, e.g.</p>
@@ -1548,7 +1549,7 @@ FILTER regex<span class="o">(</span> ?xref, <span class="s2">&quot;^FMA|^MA:&quo
 <ul class="simple">
 <li><p><em>method</em>: <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> uses 4 different algorithms to generate a module.  <code class="docutils literal notranslate"><span class="pre">TOP</span></code>, <code class="docutils literal notranslate"><span class="pre">BOT</span></code>, <code class="docutils literal notranslate"><span class="pre">STAR</span></code> (all from the SLME method), and <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code>. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The <code class="docutils literal notranslate"><span class="pre">STAR</span></code> method creates a module by pulling all the properties and axioms of the seed classes but nothing else. <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code> uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.</p></li>
 <li><p><em>input</em>: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.</p></li>
-<li><p><em>imports</em>: this argument allows to specify whether or not to include imported ontologies. Note that the default is to do so using the value <code class="docutils literal notranslate"><span class="pre">include</span></code>. Choose <code class="docutils literal notranslate"><span class="pre">exclude</span></code> otherwise.</p></li>
+<li><p><em>imports</em>: this argument allows specifying whether or not to include imported ontologies. Note that the default is to do so using the value <code class="docutils literal notranslate"><span class="pre">include</span></code>. Choose <code class="docutils literal notranslate"><span class="pre">exclude</span></code> otherwise.</p></li>
 <li><p><em>term-file</em>: the text file holding the list of classes of interested identified by their iri (e.g. <a class="reference external" href="http://purl.obolibrary.org/obo/UBERON_0001235">http://purl.obolibrary.org/obo/UBERON_0001235</a> # adrenal cortex).</p></li>
 <li><p><em>intermediates</em>: specific to the <code class="docutils literal notranslate"><span class="pre">MIREOT</span></code> method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (<code class="docutils literal notranslate"><span class="pre">all</span></code>,<code class="docutils literal notranslate"><span class="pre">minimal</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>).</p></li>
 <li><p><em>output</em>: the path to the owl file holding the results of the module extraction.</p></li>
@@ -1644,7 +1645,7 @@ The <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_l
 <div class="section" id="step-5-merge-ontology-modules-and-umbrella-ontology">
 <h3><span class="section-number">7.6.6. </span>Step 5: Merge ontology modules and umbrella ontology<a class="headerlink" href="#step-5-merge-ontology-modules-and-umbrella-ontology" title="Permalink to this headline">¶</a></h3>
 <p>Merging the ontology modules previously extracted and the umbrella ontology locally built produces a first draft of the application ontology.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">merge</span></code> ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> command merging the umbrella ontology and the modules is shown:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">merge</span></code> ROBOT command allows combining two or more separate input ontology modules into a single ontology. Following, the <code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> command merging the umbrella ontology and the modules is shown:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -jar robot.jar merge <span class="se">\</span>
     --input ./ontology_modules/iao_mireot_robot_module_1.owl <span class="se">\</span>
     --input ./ontology_modules/obi_mireot_robot_module_2.owl <span class="se">\</span>
@@ -1715,12 +1716,12 @@ robot convert <span class="se">\</span>
 </div>
 <div class="section" id="step-7-assess-coverage-of-the-ontology-scope">
 <h3><span class="section-number">7.6.8. </span>Step 7: Assess coverage of the ontology scope<a class="headerlink" href="#step-7-assess-coverage-of-the-ontology-scope" title="Permalink to this headline">¶</a></h3>
-<p>The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">queries</span></code> and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span> <span class="pre">owner</span></code> and o<code class="docutils literal notranslate"><span class="pre">ntology</span> <span class="pre">developer</span></code> can also collaborate on the assessment of the competency questions answers/results.</p>
+<p>The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">queries</span></code> and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">case</span> <span class="pre">owner</span></code> and <code class="docutils literal notranslate"><span class="pre">ontology</span> <span class="pre">developer</span></code> can also collaborate on the assessment of the competency questions answers/results.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ROBOT</span></code> provides the <code class="docutils literal notranslate"><span class="pre">query</span></code> command to perform <code class="docutils literal notranslate"><span class="pre">SPARQL</span> <span class="pre">queries</span></code>  against an ontology to verify and validate the ontology.</p>
-<p>The query command runs SPARQL <code class="docutils literal notranslate"><span class="pre">ASK</span></code>, <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, and <code class="docutils literal notranslate"><span class="pre">CONSTRUCT</span></code> queries by using the <code class="docutils literal notranslate"><span class="pre">--query</span></code> option with two arguments: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">query</span> <span class="pre">file</span></code> and <code class="docutils literal notranslate"><span class="pre">an</span> <span class="pre">output</span> <span class="pre">file</span></code>. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> and use the <code class="docutils literal notranslate"><span class="pre">--queries</span></code> option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown as follows.</p>
+<p>The query command runs SPARQL <code class="docutils literal notranslate"><span class="pre">ASK</span></code>, <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, and <code class="docutils literal notranslate"><span class="pre">CONSTRUCT</span></code> queries by using the <code class="docutils literal notranslate"><span class="pre">--query</span></code> option with two arguments: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">query</span> <span class="pre">file</span></code> and <code class="docutils literal notranslate"><span class="pre">an</span> <span class="pre">output</span> <span class="pre">file</span></code>. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> and use the <code class="docutils literal notranslate"><span class="pre">--queries</span></code> option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. A pattern example of this command is shown as follows.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>robot query --input &lt;input_ontology_file&gt; <span class="se">\</span>
     --queries &lt;query_file&gt; <span class="se">\</span>
-    --output-dir &lt;path_to_rsults&gt; results/
+    --output-dir &lt;path_to_results&gt; results/
 </pre></div>
 </div>
 </div>
@@ -1728,17 +1729,19 @@ robot convert <span class="se">\</span>
 <div class="section" id="conclusions">
 <h2><span class="section-number">7.7. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. This more advanced recipe has identified and described all the different steps that one needs to consider to build such a resource. While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date. It is therefore also critical to understand the benefits of contributing to existing open efforts.</p>
+<div><p>Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle.
+This more advanced recipe has identified and described all the different steps that one needs to consider building such a resource.
+While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date.
+It is therefore also critical to understand the benefits of contributing to existing open efforts.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
 <h3><span class="section-number">7.7.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 </div>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
+<li><p>OBO Foundry Semantic Engineering training and the <a class="reference external" href="https://oboacademy.github.io/obook/tutorial/robot-tutorial-1/">Robot tutorial</a></p></li>
 <li><p><a class="reference internal" href="creating-minimal-metadata-profiles.html#fcb-interop-metadataprofile"><span class="std std-ref">Creating a metadata profile</span></a>  <!-- How to establish a minimal metadata profile? --> <!-- TODO add a link to corresponding document --></p></li>
 <li><p><a class="reference internal" href="ontology-new-term-request-recipe.html#fcb-interop-ontorequest"><span class="std std-ref">Requesting new terms</span></a> <!-- How to submit/request terms to an ontology ?--> <!-- TODO add a link to corresponding document --></p></li>
 </ul>
-</div></blockquote>
 </div>
 <div class="section" id="references">
 <h2><span class="section-number">7.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
