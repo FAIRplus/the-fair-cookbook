@@ -1,0 +1,42 @@
+{%- extends "layout.html" %}
+{% set title = _('Search') %}
+{%- block scripts %}
+    {{ super() }}
+    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+    <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+{%- endblock %}
+{% block extrahead %}
+  <script src="{{ pathto('searchindex.js', 1) }}" defer></script>
+  {{ super() }}
+{% endblock %}
+{% block body %}
+  <div id="fallback" class="admonition warning">
+  <script>$('#fallback').hide();</script>
+  <p> {% trans %} Please activate JavaScript to enable the search functionality. {% endtrans %} </p>
+  </div>
+  <div class="fixed-te">
+    <i> {% trans %} Searching for multiple words only shows matches that contain all words.{% endtrans %} </i>
+    <form action="" method="get">
+      <v-text-field
+          outlined
+          type="text"
+          name="q"
+          aria-labelledby="search-documentation"
+          value=""
+          hide-details
+          color="secondary"
+          label="Search this book"
+          class="my-3"
+      >
+      </v-text-field>
+      <v-btn type="submit" value="{{ _('search') }}" class="secondary white--text"> Search </v-btn>
+    </form>
+  </div>
+  {% if search_performed %}
+    {% if not search_results %}
+      <p> {{ _('Your search did not match any documents. Please make sure that all words are spelled correctly and that you\'ve selected enough categories.') }} </p>
+    {% endif %}
+  {% endif %}
+  <div id="search-results">
+  </div>
+{% endblock %}
