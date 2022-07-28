@@ -1,4 +1,4 @@
-<div class="topbar container-xl fixed-top pl-0">
+<div class="topbar container-xl fixed-top pl-0 primary lighten-1 py-2" style="height:65px !important;">
     <div class="topbar-contents row" style="margin: initial !important;">
         <div class="col topbar-main d-flex align-center">
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
@@ -11,9 +11,9 @@
             </button>
 
             {% if theme_single_page != True %}
-            <a href="{{ pathto('index') }}">
-                <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="The FAIR Cookbook">
-            </a>
+                <a href="{{ pathto('index') }}">
+                    <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="The FAIR Cookbook">
+                </a>
             {% endif %}
 
             <v-spacer> </v-spacer>

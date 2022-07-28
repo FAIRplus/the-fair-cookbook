@@ -1,20 +1,10 @@
 <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
-    <div class="nav-tree grey px-5 lighten-3">
+    <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
     {%- for sidebartemplate in sidebars %}
         {% if sidebartemplate != "sidebar-search-bs.html" %}
             {% include sidebartemplate %}
         {% endif %}
     {%- endfor %}
-    </div>
-
-    <div
-        class="external-links img-block d-flex flex-column justify-end grey px-5 lighten-3 pb-5"
-        style="flex-grow: 1; border-bottom: 1px solid #ccc !important"
-    >
-        <h6 class="text-center text-decoration-underline bold mb-2"> Our other projects </h6>
-        <a href="https://github.com/FAIRplus/FAIR_wizard" target="_blank" class="text-center secondary--text">
-            The FAIR Wizard
-        </a>
     </div>
 
     <div class="text-center px-5 lighten-3 grey py-2">
