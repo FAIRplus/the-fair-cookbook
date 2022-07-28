@@ -70,7 +70,7 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
 1. Identify the page in your site about a specific dataset, e.g. https://www.uniprot.org/uniprot/
 
-2. Open the  [Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
+2. Open the  [Bioschemas Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
    1.  Select `Dataset` from the Bioschemas Profile dropdown
 
@@ -229,7 +229,7 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
    Your site should now generate dataset pages with embedded markup. 
 
-   Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
+   Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[1](#bioschemas-validator)</sup>.
 
 ---
 
