@@ -265,6 +265,12 @@
           title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067
 
 
+- part: Tools
+  chapters:
+    - file: content/search-wizard
+      title: Search Wizard
+
+
 - part: AFTERWORD
   chapters:
     - file: content/recipes/community

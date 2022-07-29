@@ -1,0 +1,268 @@
+{% set title = _('Search') %}
+
+<script>
+    Vue.component("Searchme", {
+        data() {
+            return {
+                test: 'test1',
+                recipes: [],
+                headers: [
+                    {
+                        text: 'Identifier',
+                        value: 'identifier',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'recipe name',
+                        value: 'name',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'recipe type',
+                        value: 'type',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Reading time',
+                        value: 'reading_time',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Executable code',
+                        value: 'executable',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Audience',
+                        value: 'audience',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Maturity Level',
+                        value: 'maturity',
+                        align: 'left',
+                        sortable: true,
+                    }
+                ],
+                all_recipes: [],
+                inputs: {
+                    name: null,
+                    recipeType: {
+                        values: [],
+                        value: null
+                    },
+                    audience: {
+                        values: [],
+                        value: null
+                    },
+                    readingTime: {
+                        min: 0,
+                        max: 60,
+                        range: [0, 60],
+                        labels: [
+                            "0 min", null,
+                            "10 min", null,
+                            "20 min", null,
+                            "30 min", null,
+                            "40 min", null,
+                            "50 min", null,
+                            "60 min"
+                        ]
+                    },
+                    executable: {
+                        value: 0,
+                        labels: ["Both", "Yes", "No"]
+                    },
+                }
+            }
+        },
+        methods: {
+            async getData(){
+                const response = await fetch('/_static/recipes.json');
+                const data = await response.json();
+                this.recipes = Object.entries(data).map((key, value) => {
+                    const recipe = key[1]
+
+                    // Add autocomplete values for recipe types
+                    if (!this.inputs.recipeType.values.includes(recipe.type)) {
+                        this.inputs.recipeType.values.push(recipe.type)
+                    }
+
+                    // Add autocomplete values for audience
+                    recipe.audience.forEach(audience => {
+                        if (!this.inputs.audience.values.includes(audience)) {
+                            this.inputs.audience.values.push(audience)
+                        }
+                    })
+
+                    return recipe
+
+                })
+                this.all_recipes = [ ...this.recipes ]
+            },
+            filterRecipes() {
+                let recipes = []
+                this.all_recipes.forEach(recipe => {
+                    const name = this.hasName(recipe)
+                    const type = this.hasType(recipe)
+                    const readingTime = this.inReadingTime(recipe)
+                    const audience = this.hasAudience(recipe)
+                    const executable = this.isExecutable(recipe)
+                    if (name && type && readingTime && audience && executable) { recipes.push(recipe) }
+                })
+                this.recipes = recipes
+            },
+            hasName(recipe){
+                if (!this.inputs.name) { return true }
+                return recipe.name.toLowerCase().includes(this.inputs.name.toLowerCase())
+            },
+            hasType(recipe){
+                if (!this.inputs.recipeType.value) { return true }
+                return recipe.type.toLowerCase().includes(this.inputs.recipeType.value.toLowerCase())
+            },
+            inReadingTime(recipe) {
+                if (this.inputs.readingTime.range[0] === 0 && this.inputs.readingTime.range[1] === 0) { return true }
+                const readingTime = recipe.reading_time
+                return readingTime >= this.inputs.readingTime.range[0] && readingTime <= this.inputs.readingTime.range[1]
+            },
+            hasAudience(recipe){
+                if (!this.inputs.audience.value) { return true }
+                return recipe.audience.includes(this.inputs.audience.value)
+            },
+            isExecutable(recipe) {
+                const mapping = {
+                    1: "Yes",
+                    2: "No"
+                }
+                if (this.inputs.executable.value === 0) { return true }
+                else {
+                    const value = mapping[this.inputs.executable.value]
+                    return recipe.executable.toLowerCase() === value.toLowerCase()
+                }
+            }
+        },
+        mounted() { this.getData(); },
+        template: `
+            <div class="search-wizard">
+                <h1 class="mb-5"> Search the cookbook recipes </h1>
+                <v-container fluid>
+                    <v-row>
+                        <v-col cols="12">
+                            <v-card>
+                                <v-card-text>
+                                    <v-form id="searchRecipesFilters" ref="searchRecipesFilters">
+                                        <v-container fluid>
+                                            <v-row>
+                                                <v-col cols="4">
+                                                    <v-text-field
+                                                        outlined
+                                                        v-model="inputs.name"
+                                                        label="Search recipes names"
+                                                        @input="filterRecipes"
+                                                        hide-details
+                                                        dense
+                                                    > </v-text-field>
+                                                </v-col>
+                                                <v-col cols="4">
+                                                    <v-autocomplete
+                                                        :items="inputs.recipeType.values"
+                                                        v-model="inputs.recipeType.value"
+                                                        label="Search recipes by type"
+                                                        outlined
+                                                        @input="filterRecipes"
+                                                        hide-details
+                                                        dense
+                                                    > </v-autocomplete>
+                                                </v-col>
+                                                <v-col cols="4">
+                                                    <v-autocomplete
+                                                        :items="inputs.audience.values"
+                                                        v-model="inputs.audience.value"
+                                                        label="Search recipes by audience"
+                                                        outlined
+                                                        @input="filterRecipes"
+                                                        hide-details
+                                                        dense
+                                                    > </v-autocomplete>
+                                                </v-col>
+                                            </v-row>
+                                            <v-row>
+                                                <v-col cols="6">
+                                                    <div
+                                                        class="pa-4 pt-1"
+                                                        style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px"
+                                                    >
+                                                        <span class="field-name">Search recipes by reading time</span>
+                                                        <v-range-slider
+                                                            v-model="inputs.readingTime.range"
+                                                            :max="inputs.readingTime.max"
+                                                            :min="inputs.readingTime.min"
+                                                            :tick-labels="inputs.readingTime.labels"
+                                                            ticks="always"
+                                                            tick-size="4"
+                                                            step="5"
+                                                            class="align-center"
+                                                            color="primary"
+                                                            track-color="secondary"
+                                                            thumb-color="primary"
+                                                            @input="filterRecipes"
+                                                            hide-details
+                                                        ></v-range-slider>
+                                                    </div>
+                                                </v-col>
+                                                <v-col cols="3">
+                                                    <div class="pa-4 pt-1" style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px">
+                                                        <span class="field-name">Contains executable code</span>
+                                                        <v-slider
+                                                            v-model="inputs.executable.value"
+                                                            min="0"
+                                                            max="2"
+                                                            step="1"
+                                                            ticks="always"
+                                                            tick-size="4"
+                                                            :tick-labels="inputs.executable.labels"
+                                                            color="secondary"
+                                                            track-color="secondary"
+                                                            thumb-color="primary"
+                                                            @input="filterRecipes"
+                                                            hide-details
+                                                        > </v-slider>
+                                                    </div>
+                                                </v-col>
+                                            </v-row>
+                                        </v-container>
+                                    </v-form>
+                                </v-card-text>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="12">
+                            <v-card>
+                                <v-data-table
+                                    class="searchRecipesResults"
+                                    fixed-header
+                                    height="68vh"
+                                    :items="recipes"
+                                    :items-per-page="-1"
+                                    :headers="headers"
+                                    hide-default-footer
+                                > </v-data-table>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+        `
+    })
+</script>
+
+{% block body %}
+    <Searchme> </Searchme>
+{% endblock %}

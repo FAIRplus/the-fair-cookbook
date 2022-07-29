@@ -62,16 +62,22 @@
                     <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
                         <v-container fluid id="main-content" class="pa-0">
                             <v-row class="d-flex">
-                                <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
-                                    {% block body %} {% endblock %}
-                                </v-col>
-                                <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
-                                    <div style="position: fixed">{{ generate_toc_html() }}</div>
-                                </div>
+                                {% if pagename != 'content/search-wizard' %}
+                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                        {% block body %} {% endblock %}
+                                    </v-col>
+                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                        <div style="position: fixed">{{ generate_toc_html() }}</div>
+                                    </div>
+                                {% else %}
+                                    <v-col class="col-12 px-10 pt-10 mt-3">
+                                        {% include "search-wizard.html" %}
+                                    </v-col>
+                                {% endif %}
                             </v-row>
 
                             {% if theme_show_prev_next %}
-                                <v-row>
+                                <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         {{ prev_next(prev, next) }}
                                     </div>
@@ -123,7 +129,8 @@
                     warning: '#FFC107'
                 }
             }
-        }
+        },
+        icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
 </script>
