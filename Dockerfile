@@ -61,7 +61,7 @@ RUN pip install                                  \
             nbformat==5.1.3                      \
             nest-asyncio==1.5.1                  \
             nested-lookup==0.2.22                \
-            notebook>=6.4.1                      \
+            notebook>=6.4.12                      \
             packaging==20.9                      \
             pandocfilters==1.4.3                 \
             parso==0.8.2                         \
@@ -111,7 +111,7 @@ RUN pip install                                  \
             tornado==6.1                         \
             traitlets==5.0.5                     \
             uc-micro-py==1.0.1                   \
-            urllib3==1.26.4                      \
+            urllib3==1.26.5                      \
             wcwidth==0.2.5                       \
             webencodings==0.5.1                  \
             widgetsnbextension==3.5.1            \
