@@ -14,25 +14,25 @@
                         sortable: true,
                     },
                     {
-                        text: 'recipe name',
+                        text: 'Recipe Name',
                         value: 'name',
                         align: 'left',
                         sortable: true,
                     },
                     {
-                        text: 'recipe type',
+                        text: 'Recipe Type',
                         value: 'type',
                         align: 'left',
                         sortable: true,
                     },
                     {
-                        text: 'Reading time',
+                        text: 'Reading Time',
                         value: 'reading_time',
                         align: 'left',
                         sortable: true,
                     },
                     {
-                        text: 'Executable code',
+                        text: 'Executable Code',
                         value: 'executable',
                         align: 'left',
                         sortable: true,
@@ -51,6 +51,7 @@
                     }
                 ],
                 all_recipes: [],
+                loading: false,
                 inputs: {
                     name: null,
                     recipeType: {
@@ -79,13 +80,16 @@
                         value: 0,
                         labels: ["Both", "Yes", "No"]
                     },
+                    maturity: 0
                 }
             }
         },
         methods: {
             async getData(){
+                this.loading = true
                 const response = await fetch('/_static/recipes.json');
                 const data = await response.json();
+                this.loading = false
                 this.recipes = Object.entries(data).map((key, value) => {
                     const recipe = key[1]
 
@@ -114,7 +118,8 @@
                     const readingTime = this.inReadingTime(recipe)
                     const audience = this.hasAudience(recipe)
                     const executable = this.isExecutable(recipe)
-                    if (name && type && readingTime && audience && executable) { recipes.push(recipe) }
+                    const maturity = this.hasMaturity(recipe)
+                    if (name && type && readingTime && audience && executable && maturity) { recipes.push(recipe) }
                 })
                 this.recipes = recipes
             },
@@ -150,10 +155,23 @@
                if (recipe.executable === "Yes") { return "primary" }
                return "secondary"
             },
+            resetFilters() {
+                this.recipes = [ ...this.all_recipes ]
+                this.inputs.name = null
+                this.inputs.recipeType.value = null
+                this.inputs.audience.value = null
+                this.inputs.readingTime.value = [0, 60]
+                this.inputs.executable.value = 0
+                this.inputs.maturity = 0
+            },
+            hasMaturity(recipe) {
+                if (this.inputs.maturity === 0) { return true }
+                return recipe.maturity >= this.inputs.maturity
+            }
         },
         mounted() { this.getData(); },
         template: `
-            <div class="search-wizard">
+            <div class="search-wizard" id="search-wizard">
                 <h1 class="mb-5"> Search the cookbook recipes </h1>
                 <v-container fluid>
                     <v-row>
@@ -163,7 +181,7 @@
                                     <v-form id="searchRecipesFilters" ref="searchRecipesFilters">
                                         <v-container fluid>
                                             <v-row>
-                                                <v-col cols="4">
+                                                <v-col xl="4" lg="4" md="4" sm="12" xs="12" cols="12">
                                                     <v-text-field
                                                         outlined
                                                         v-model="inputs.name"
@@ -173,7 +191,7 @@
                                                         dense
                                                     > </v-text-field>
                                                 </v-col>
-                                                <v-col cols="4">
+                                                <v-col xl="4" lg="4" md="4" sm="12" xs="12" cols="12">
                                                     <v-autocomplete
                                                         :items="inputs.recipeType.values"
                                                         v-model="inputs.recipeType.value"
@@ -184,7 +202,7 @@
                                                         dense
                                                     > </v-autocomplete>
                                                 </v-col>
-                                                <v-col cols="4">
+                                                <v-col xl="4" lg="4" md="4" sm="12" xs="12" cols="12">
                                                     <v-autocomplete
                                                         :items="inputs.audience.values"
                                                         v-model="inputs.audience.value"
@@ -195,9 +213,7 @@
                                                         dense
                                                     > </v-autocomplete>
                                                 </v-col>
-                                            </v-row>
-                                            <v-row>
-                                                <v-col cols="6">
+                                                <v-col xl="6" lg="8" md="12" sm="12" xs="12" cols="12" id="readingTime">
                                                     <div
                                                         class="pa-4 pt-1"
                                                         style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px"
@@ -220,7 +236,7 @@
                                                         ></v-range-slider>
                                                     </div>
                                                 </v-col>
-                                                <v-col cols="3">
+                                                <v-col xl="2" lg="4" md="12" sm="12" xs="12" cols="12">
                                                     <div class="pa-4 pt-1" style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px">
                                                         <span class="field-name">Contains executable code</span>
                                                         <v-slider
@@ -239,14 +255,30 @@
                                                         > </v-slider>
                                                     </div>
                                                 </v-col>
+                                                <v-col xl="3" lg="4" md="6" sm="12" xs="12" cols="12">
+                                                    <div class="pa-4 pt-1" style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px; padding-bottom: 8px !important">
+                                                        <span class="field-name">Search by maturity level</span>
+                                                        <v-rating
+                                                            v-model="inputs.maturity"
+                                                            background-color="grey lighten-1"
+                                                            color="primary"
+                                                            empty-icon="far fa-circle"
+                                                            full-icon="fas fa-circle"
+                                                            @input="filterRecipes"
+                                                        ></v-rating>
+                                                    </div>
+                                                </v-col>
+                                                <v-col xl="1" lg="2" md="6" sm="12" xs="12" cols="12" class="d-flex justify-end align-end">
+                                                    <v-btn color="secondary" @click="resetFilters()">
+                                                        Reset
+                                                    </v-btn>
+                                                </v-col>
                                             </v-row>
                                         </v-container>
                                     </v-form>
                                 </v-card-text>
                             </v-card>
                         </v-col>
-                    </v-row>
-                    <v-row>
                         <v-col cols="12">
                             <v-card>
                                 <v-data-table
@@ -256,6 +288,7 @@
                                     :items="recipes"
                                     :items-per-page="-1"
                                     :headers="headers"
+                                    :mobile-breakpoint="900"
                                     hide-default-footer
                                 >
                                     <template v-slot:item.identifier="{ item }">

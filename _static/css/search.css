@@ -83,3 +83,18 @@
         right: -230px;
     }
 }
+
+@media (max-width: 900px) {
+    #search-wizard .v-data-table__wrapper {
+        height: auto !important;
+    }
+    #searchRecipesFilters .v-slider__tick-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    #searchRecipesFilters .v-slider__tick-label {
+        font-size: 10px;
+    }
+}
