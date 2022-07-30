@@ -356,7 +356,8 @@ class PanelFairplus(Directive):
             'audience': audience,
             'type': CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
             'identifier': self.options["identifier_text"],
-            'maturity': self.options["maturity_level"]
+            'maturity': self.options["maturity_level"],
+            'url': self.options["identifier_link"],
         }
         with open(json_path, 'r') as f:
             json_data = json.load(f)

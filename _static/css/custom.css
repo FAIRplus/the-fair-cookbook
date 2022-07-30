@@ -1158,3 +1158,7 @@ input.rounded {
 #site-navigation.bd-sidebar {
     margin-top: 0 !important;
 }
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free" !important;
+}

@@ -145,7 +145,11 @@
                     const value = mapping[this.inputs.executable.value]
                     return recipe.executable.toLowerCase() === value.toLowerCase()
                 }
-            }
+            },
+            getColor(recipe) {
+               if (recipe.executable === "Yes") { return "primary" }
+               return "secondary"
+            },
         },
         mounted() { this.getData(); },
         template: `
@@ -253,7 +257,37 @@
                                     :items-per-page="-1"
                                     :headers="headers"
                                     hide-default-footer
-                                > </v-data-table>
+                                >
+                                    <template v-slot:item.identifier="{ item }">
+                                        <v-chip color="grey lighten-2" label>
+                                            <v-icon small left> fas fa-fingerprint </v-icon> {{ '{{ item.identifier }}' }}
+                                        </v-chip>
+                                    </template>
+                                    <template v-slot:item.name="{ item }">
+                                        <a :href="item.url" class="body-2 font-weight-bolder" > {{ '{{ item.name }}' }} </a>
+                                    </template>
+                                    <template v-slot:item.executable="{ item }">
+                                        <v-chip class="white--text" :color="getColor(item)"> {{ '{{ item.executable }}' }} </v-chip>
+                                    </template>
+                                    <template v-slot:item.audience="{ item }">
+                                        {{ '{{ item.audience.join(", ") }}' }}
+                                    </template>
+                                    <template v-slot:item.reading_time="{ item }">
+                                        ~{{ '{{ item.reading_time }}' }} min
+                                    </template>
+                                    <template v-slot:item.maturity="{ item }">
+                                        <v-rating
+                                            v-model="item.maturity"
+                                            readonly
+                                            background-color="grey lighten-1"
+                                            color="primary"
+                                            empty-icon="far fa-circle"
+                                            full-icon="fas fa-circle"
+                                            dense
+                                            small
+                                        ></v-rating>
+                                    </template>
+                                </v-data-table>
                             </v-card>
                         </v-col>
                     </v-row>
