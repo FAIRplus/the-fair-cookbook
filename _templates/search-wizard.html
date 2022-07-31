@@ -185,6 +185,7 @@
                                                 label="Search recipes names"
                                                 @input="filterRecipes"
                                                 dense
+                                                color="secondary"
                                             > </v-text-field>
                                         </v-col>
                                         <v-col cols="12" class="pa-4">
@@ -194,6 +195,7 @@
                                                 label="Search recipes by type"
                                                 @input="filterRecipes"
                                                 dense
+                                                color="secondary"
                                             > </v-autocomplete>
                                         </v-col>
                                         <v-col cols="12" class="pa-4">
@@ -203,6 +205,7 @@
                                                 label="Search recipes by audience"
                                                 @input="filterRecipes"
                                                 dense
+                                                color="secondary"
                                             > </v-autocomplete>
                                         </v-col>
                                         <v-col cols="12" id="readingTime" class="px-3">
@@ -213,12 +216,12 @@
                                                     :max="inputs.readingTime.max"
                                                     :min="inputs.readingTime.min"
                                                     ticks="always"
-                                                    tick-size="4"
+                                                    tick-size="2"
                                                     step="5"
                                                     class="align-center"
-                                                    color="primary"
-                                                    track-color="secondary"
-                                                    thumb-color="primary"
+                                                    track-color="grey"
+                                                    color="secondary"
+                                                    thumb-color="secondary"
                                                     @input="filterRecipes"
                                                     hide-details
                                                     :tick-labels="readingTimeLabels"
@@ -238,7 +241,7 @@
                                                     :tick-labels="inputs.executable.labels"
                                                     color="secondary"
                                                     track-color="secondary"
-                                                    thumb-color="primary"
+                                                    thumb-color="secondary"
                                                     @input="filterRecipes"
                                                     hide-details
                                                 > </v-slider>
@@ -250,11 +253,12 @@
                                                 <v-rating
                                                     v-model="inputs.maturity"
                                                     background-color="grey lighten-1"
-                                                    color="primary"
+                                                    color="secondary"
                                                     empty-icon="far fa-circle"
                                                     full-icon="fas fa-circle"
                                                     @input="filterRecipes"
                                                     class="pl-3 pt-2"
+                                                    clearable
                                                 ></v-rating>
                                             </div>
                                             <v-divider></v-divider>
@@ -301,7 +305,7 @@
                                         v-model="item.maturity"
                                         readonly
                                         background-color="grey lighten-1"
-                                        color="primary"
+                                        color="secondary"
                                         empty-icon="far fa-circle"
                                         full-icon="fas fa-circle"
                                         dense

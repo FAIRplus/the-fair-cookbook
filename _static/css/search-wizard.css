@@ -20,7 +20,6 @@
 .v-data-table__wrapper {
     scrollbar-color: rgb(252, 117, 81) #E0E0E0;
     scrollbar-width: thin;
-    scrollbar-radius: 5px;
 }
 
 .v-data-table__wrapper::-webkit-scrollbar {
