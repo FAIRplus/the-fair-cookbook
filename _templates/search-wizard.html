@@ -65,16 +65,7 @@
                     readingTime: {
                         min: 0,
                         max: 60,
-                        range: [0, 60],
-                        labels: [
-                            "0 min", null,
-                            "10 min", null,
-                            "20 min", null,
-                            "30 min", null,
-                            "40 min", null,
-                            "50 min", null,
-                            "60 min"
-                        ]
+                        range: [0, 60]
                     },
                     executable: {
                         value: 0,
@@ -82,6 +73,13 @@
                     },
                     maturity: 0
                 }
+            }
+        },
+        computed: {
+            readingTimeLabels() {
+                const min = `From ${this.inputs.readingTime.range[0]} min`
+                const max = `To ${this.inputs.readingTime.range[1]} min`
+                return [min, null, null, null, null, null, null, null, null, null, null, null, max]
             }
         },
         methods: {
@@ -152,8 +150,8 @@
                 }
             },
             getColor(recipe) {
-               if (recipe.executable === "Yes") { return "primary" }
-               return "secondary"
+                if (recipe.executable === "Yes") { return "primary" }
+                return "secondary"
             },
             resetFilters() {
                 this.recipes = [ ...this.all_recipes ]
@@ -173,155 +171,144 @@
         template: `
             <div class="search-wizard" id="search-wizard">
                 <h1 class="mb-5"> Search the cookbook recipes </h1>
+                <hr class="docutils">
                 <v-container fluid>
                     <v-row>
-                        <v-col cols="12">
-                            <v-card>
-                                <v-card-text>
-                                    <v-form id="searchRecipesFilters" ref="searchRecipesFilters">
-                                        <v-container fluid>
-                                            <v-row>
-                                                <v-col xl="4" lg="4" md="4" sm="12" xs="12" cols="12">
-                                                    <v-text-field
-                                                        outlined
-                                                        v-model="inputs.name"
-                                                        label="Search recipes names"
-                                                        @input="filterRecipes"
-                                                        hide-details
-                                                        dense
-                                                    > </v-text-field>
-                                                </v-col>
-                                                <v-col xl="4" lg="4" md="4" sm="12" xs="12" cols="12">
-                                                    <v-autocomplete
-                                                        :items="inputs.recipeType.values"
-                                                        v-model="inputs.recipeType.value"
-                                                        label="Search recipes by type"
-                                                        outlined
-                                                        @input="filterRecipes"
-                                                        hide-details
-                                                        dense
-                                                    > </v-autocomplete>
-                                                </v-col>
-                                                <v-col xl="4" lg="4" md="4" sm="12" xs="12" cols="12">
-                                                    <v-autocomplete
-                                                        :items="inputs.audience.values"
-                                                        v-model="inputs.audience.value"
-                                                        label="Search recipes by audience"
-                                                        outlined
-                                                        @input="filterRecipes"
-                                                        hide-details
-                                                        dense
-                                                    > </v-autocomplete>
-                                                </v-col>
-                                                <v-col xl="6" lg="8" md="12" sm="12" xs="12" cols="12" id="readingTime">
-                                                    <div
-                                                        class="pa-4 pt-1"
-                                                        style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px"
-                                                    >
-                                                        <span class="field-name">Search recipes by reading time</span>
-                                                        <v-range-slider
-                                                            v-model="inputs.readingTime.range"
-                                                            :max="inputs.readingTime.max"
-                                                            :min="inputs.readingTime.min"
-                                                            :tick-labels="inputs.readingTime.labels"
-                                                            ticks="always"
-                                                            tick-size="4"
-                                                            step="5"
-                                                            class="align-center"
-                                                            color="primary"
-                                                            track-color="secondary"
-                                                            thumb-color="primary"
-                                                            @input="filterRecipes"
-                                                            hide-details
-                                                        ></v-range-slider>
-                                                    </div>
-                                                </v-col>
-                                                <v-col xl="2" lg="4" md="12" sm="12" xs="12" cols="12">
-                                                    <div class="pa-4 pt-1" style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px">
-                                                        <span class="field-name">Contains executable code</span>
-                                                        <v-slider
-                                                            v-model="inputs.executable.value"
-                                                            min="0"
-                                                            max="2"
-                                                            step="1"
-                                                            ticks="always"
-                                                            tick-size="4"
-                                                            :tick-labels="inputs.executable.labels"
-                                                            color="secondary"
-                                                            track-color="secondary"
-                                                            thumb-color="primary"
-                                                            @input="filterRecipes"
-                                                            hide-details
-                                                        > </v-slider>
-                                                    </div>
-                                                </v-col>
-                                                <v-col xl="3" lg="4" md="6" sm="12" xs="12" cols="12">
-                                                    <div class="pa-4 pt-1" style="border: 1px solid rgba(0, 0, 0, 0.4); border-radius:5px; padding-bottom: 8px !important">
-                                                        <span class="field-name">Search by maturity level</span>
-                                                        <v-rating
-                                                            v-model="inputs.maturity"
-                                                            background-color="grey lighten-1"
-                                                            color="primary"
-                                                            empty-icon="far fa-circle"
-                                                            full-icon="fas fa-circle"
-                                                            @input="filterRecipes"
-                                                        ></v-rating>
-                                                    </div>
-                                                </v-col>
-                                                <v-col xl="1" lg="2" md="6" sm="12" xs="12" cols="12" class="d-flex justify-end align-end">
-                                                    <v-btn color="secondary" @click="resetFilters()">
-                                                        Reset
-                                                    </v-btn>
-                                                </v-col>
-                                            </v-row>
-                                        </v-container>
-                                    </v-form>
-                                </v-card-text>
-                            </v-card>
+                        <v-col xl="2" cols="12" class="pt-8 grey lighten-3">
+                            <v-form id="searchRecipesFilters" ref="searchRecipesFilters">
+                                <v-container fluid class="pa-0">
+                                    <v-row no-gutters> <v-col cols="12"> <span class="secondary--text h3">Filters:</h3></v-col></v-row>
+                                    <v-row no-gutters>
+                                        <v-col cols="12" class="pa-4">
+                                            <v-text-field
+                                                v-model="inputs.name"
+                                                label="Search recipes names"
+                                                @input="filterRecipes"
+                                                dense
+                                            > </v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" class="pa-4">
+                                            <v-autocomplete
+                                                :items="inputs.recipeType.values"
+                                                v-model="inputs.recipeType.value"
+                                                label="Search recipes by type"
+                                                @input="filterRecipes"
+                                                dense
+                                            > </v-autocomplete>
+                                        </v-col>
+                                        <v-col cols="12" class="pa-4">
+                                            <v-autocomplete
+                                                :items="inputs.audience.values"
+                                                v-model="inputs.audience.value"
+                                                label="Search recipes by audience"
+                                                @input="filterRecipes"
+                                                dense
+                                            > </v-autocomplete>
+                                        </v-col>
+                                        <v-col cols="12" id="readingTime" class="px-3">
+                                            <span class="field-name v-label theme--light">Reading Time</span>
+                                            <div class="px-4 mb-3">
+                                                <v-range-slider
+                                                    v-model="inputs.readingTime.range"
+                                                    :max="inputs.readingTime.max"
+                                                    :min="inputs.readingTime.min"
+                                                    ticks="always"
+                                                    tick-size="4"
+                                                    step="5"
+                                                    class="align-center"
+                                                    color="primary"
+                                                    track-color="secondary"
+                                                    thumb-color="primary"
+                                                    @input="filterRecipes"
+                                                    hide-details
+                                                    :tick-labels="readingTimeLabels"
+                                                ></v-range-slider>
+                                            </div>
+                                        </v-col>
+                                        <v-col cols="12" class="py-5 px-3">
+                                            <span class="field-name v-label theme--light">Executable code</span>
+                                            <div class="px-4 mb-6">
+                                                <v-slider
+                                                    v-model="inputs.executable.value"
+                                                    min="0"
+                                                    max="2"
+                                                    step="1"
+                                                    ticks="always"
+                                                    tick-size="4"
+                                                    :tick-labels="inputs.executable.labels"
+                                                    color="secondary"
+                                                    track-color="secondary"
+                                                    thumb-color="primary"
+                                                    @input="filterRecipes"
+                                                    hide-details
+                                                > </v-slider>
+                                            </div>
+                                        </v-col>
+                                        <v-col cols="12" class="px-3">
+                                            <span class="field-name mb-3 v-label theme--light">Maturity Level</span>
+                                            <div class="d-flex justify-center align-center">
+                                                <v-rating
+                                                    v-model="inputs.maturity"
+                                                    background-color="grey lighten-1"
+                                                    color="primary"
+                                                    empty-icon="far fa-circle"
+                                                    full-icon="fas fa-circle"
+                                                    @input="filterRecipes"
+                                                    class="pl-3 pt-2"
+                                                ></v-rating>
+                                            </div>
+                                            <v-divider></v-divider>
+                                        </v-col>
+                                        <v-col cols="12" class="d-flex justify-end align-end mt-2 pt-2 pr-3">
+                                            <v-btn color="secondary" @click="resetFilters()">
+                                                Reset
+                                            </v-btn>
+                                        </v-col>
+                                    </v-row>
+                                </v-container>
+                            </v-form>
                         </v-col>
-                        <v-col cols="12">
-                            <v-card>
-                                <v-data-table
-                                    class="searchRecipesResults"
-                                    fixed-header
-                                    height="68vh"
-                                    :items="recipes"
-                                    :items-per-page="-1"
-                                    :headers="headers"
-                                    :mobile-breakpoint="900"
-                                    hide-default-footer
-                                >
-                                    <template v-slot:item.identifier="{ item }">
-                                        <v-chip color="grey lighten-2" label>
-                                            <v-icon small left> fas fa-fingerprint </v-icon> {{ '{{ item.identifier }}' }}
-                                        </v-chip>
-                                    </template>
-                                    <template v-slot:item.name="{ item }">
-                                        <a :href="item.url" class="body-2 font-weight-bolder" > {{ '{{ item.name }}' }} </a>
-                                    </template>
-                                    <template v-slot:item.executable="{ item }">
-                                        <v-chip class="white--text" :color="getColor(item)"> {{ '{{ item.executable }}' }} </v-chip>
-                                    </template>
-                                    <template v-slot:item.audience="{ item }">
-                                        {{ '{{ item.audience.join(", ") }}' }}
-                                    </template>
-                                    <template v-slot:item.reading_time="{ item }">
-                                        ~{{ '{{ item.reading_time }}' }} min
-                                    </template>
-                                    <template v-slot:item.maturity="{ item }">
-                                        <v-rating
-                                            v-model="item.maturity"
-                                            readonly
-                                            background-color="grey lighten-1"
-                                            color="primary"
-                                            empty-icon="far fa-circle"
-                                            full-icon="fas fa-circle"
-                                            dense
-                                            small
-                                        ></v-rating>
-                                    </template>
-                                </v-data-table>
-                            </v-card>
+                        <v-col xl="10" cols="12">
+                            <v-data-table
+                                class="searchRecipesResults pl-5"
+                                fixed-header
+                                height="83vh"
+                                :items="recipes"
+                                :items-per-page="-1"
+                                :headers="headers"
+                                :mobile-breakpoint="900"
+                                hide-default-footer
+                            >
+                                <template v-slot:item.identifier="{ item }">
+                                    <v-chip color="grey lighten-2" label>
+                                        <v-icon small left> fas fa-fingerprint </v-icon> {{ '{{ item.identifier }}' }}
+                                    </v-chip>
+                                </template>
+                                <template v-slot:item.name="{ item }">
+                                    <a :href="item.url" class="body-2 font-weight-bolder" > {{ '{{ item.name }}' }} </a>
+                                </template>
+                                <template v-slot:item.executable="{ item }">
+                                    <v-chip class="white--text" :color="getColor(item)"> {{ '{{ item.executable }}' }} </v-chip>
+                                </template>
+                                <template v-slot:item.audience="{ item }">
+                                    {{ '{{ item.audience.join(", ") }}' }}
+                                </template>
+                                <template v-slot:item.reading_time="{ item }">
+                                    ~{{ '{{ item.reading_time }}' }} min
+                                </template>
+                                <template v-slot:item.maturity="{ item }">
+                                    <v-rating
+                                        v-model="item.maturity"
+                                        readonly
+                                        background-color="grey lighten-1"
+                                        color="primary"
+                                        empty-icon="far fa-circle"
+                                        full-icon="fas fa-circle"
+                                        dense
+                                        small
+                                    ></v-rating>
+                                </template>
+                            </v-data-table>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -331,5 +318,5 @@
 </script>
 
 {% block body %}
-    <Searchme> </Searchme>
+<Searchme> </Searchme>
 {% endblock %}
