@@ -37,3 +37,7 @@
 .v-data-table__wrapper::-webkit-scrollbar-corner {
     background: #000;
 }
+
+#search-wizard a.v-chip:hover, #search-wizard a.v-chip *:hover {
+    text-decoration: none !important;
+}
