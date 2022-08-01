@@ -41,7 +41,7 @@ RUN pip install                                  \
             jupyter-client==6.1.12               \
             jupyter-core==4.7.1                  \
             jupyter-packaging==0.9.2             \
-            jupyter-server==1.15.4                \
+            jupyter-server==1.15.4               \
             jupyter-server-mathjax==0.2.2        \
             jupyter-sphinx==0.3.1                \
             jupyterbook-latex==0.2.0             \
@@ -61,7 +61,7 @@ RUN pip install                                  \
             nbformat==5.1.3                      \
             nest-asyncio==1.5.1                  \
             nested-lookup==0.2.22                \
-            notebook>=6.4.12                      \
+            notebook>=6.4.12                     \
             packaging==20.9                      \
             pandocfilters==1.4.3                 \
             parso==0.8.2                         \
@@ -103,6 +103,7 @@ RUN pip install                                  \
             sphinxcontrib-qthelp==1.0.3          \
             sphinxcontrib-serializinghtml==1.1.4 \
             sphinx-sitemap==2.2.0                \
+            sphinxcontrib-youtube==1.2.0         \
             SQLAlchemy==1.3.24                   \
             terminado==0.9.4                     \
             testpath==0.4.4                      \
@@ -116,7 +117,7 @@ RUN pip install                                  \
             webencodings==0.5.1                  \
             widgetsnbextension==3.5.1            \
             zipp==3.4.1                          \
-            pygments-csv-lexer==0.1.3             
+            pygments-csv-lexer==0.1.3
 
 # Document
 RUN pip freeze > /pip_freeze_actual.txt

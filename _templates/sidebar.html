@@ -1,0 +1,13 @@
+<div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+    <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
+    {%- for sidebartemplate in sidebars %}
+        {% if sidebartemplate != "sidebar-search-bs.html" %}
+            {% include sidebartemplate %}
+        {% endif %}
+    {%- endfor %}
+    </div>
+
+    <div class="text-center px-5 lighten-3 grey py-2">
+        Powered by <a href="https://jupyterbook.org" class="secondary--text">Jupyter Book</a>
+    </div>
+</div>

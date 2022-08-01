@@ -149,7 +149,6 @@ class PanelFairplus(Directive):
             sphinx.errors.ExtensionError(
                 _make_string_red("The colon (i.e. the character ':') is not allowed in recipe_name: %s" % (self.options["recipe_name"])))
 
-
     def _create_content(self):
         content = []
         content.extend([
@@ -207,7 +206,7 @@ class PanelFairplus(Directive):
                         '</div>',
                     '</div>',
                     '<div class="section" style="flex-grow: 1;">',
-                        f'<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars {self.get_maturity()}">',
+                        f'<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars {self.get_maturity()}">',
                           '<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>',
                           '<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />',  
                           '<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />',
@@ -264,9 +263,15 @@ class PanelFairplus(Directive):
         Gets the list of improved maturity indicators
         :return str: a string properly formatted containing the list of audience targets
         """
-        return "\n ".join(["<a href=\"https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/\"" + CONTROLLED_VOCABULARY_MATURITY_INDICATOR[target]+".md\">"+CONTROLLED_VOCABULARY_MATURITY_INDICATOR[target]+"</a>"
-                          for target in self.options["maturity_indicator"]])
-
+        indicators = '<v-chip-group>'
+        base_url = "https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"
+        for indicator in self.options['maturity_indicator']:
+            label = CONTROLLED_VOCABULARY_MATURITY_INDICATOR[indicator].replace('[', '').replace(']', '')
+            href = base_url + label
+            indicators += ('<v-chip href="{}" class="secondary white--text" target="_blank" label>'
+                           '{}</v-chip>').format(href, label)
+        indicators += '</v-chip-group>'
+        return indicators
 
     def get_ld(self):
         """
@@ -312,9 +317,7 @@ class PanelFairplus(Directive):
     def run(self):
 
         self._clean_options()
-
         new_content = self._create_content()
-
         if len(self.content) > 0:
             common_filename = self.content.items[0][0]
             for index, (filename, linenumber) in enumerate(self.content.items):
@@ -337,16 +340,17 @@ class PanelFairplus(Directive):
 
 def setup(app):
     app.setup_extension("sphinx_panels")
-
     app.add_directive("panels_fairplus", PanelFairplus)
-
     return {
         'version': '0.1',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
 
+
 escape_character_to_make_a_string_red_start = "\033[91m"
 escape_character_to_make_a_string_red_end   = "\033[0m"
+
+
 def _make_string_red(string):
     return escape_character_to_make_a_string_red_start + string + escape_character_to_make_a_string_red_end
