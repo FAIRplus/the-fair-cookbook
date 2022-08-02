@@ -82,7 +82,7 @@ RUN pip install                                  \
             PyYAML==5.4.1                        \
             pyzmq==22.0.3                        \
             requests==2.25.1                     \
-            Send2Trash==1.5.0                    \
+            Send2Trash>=1.8.0                    \
             six==1.15.0                          \
             smmap==4.0.0                         \
             sniffio==1.2.0                       \
