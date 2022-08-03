@@ -20,48 +20,13 @@ html:
   use_edit_page_button      : True  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : True  # Whether to add a link to your repository button
   use_issues_button         : True  # Whether to add an "open an issue" button
-  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  home_page_in_navbar       : True  # Whether to include your home page in the left Navigation Bar
   baseurl                   : "https://fairplus.github.io/the-fair-cookbook"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
-  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+  extra_navbar              : ""
   extra_footer              :  # Will be displayed underneath the footer.
-    <script>mermaid.init();</script>
-    <div class="container-lg mt-3">
-      <div class="row">
-        <div class="col-xl-3">
-            <div class="footerImages">
-              <a href="https://europa.eu/"><img src="../../../_static/images/logo/eu-flag.svg" height="20" alt="EU flag" style="float:center""></a>
-              <a href="https://www.imi.europa.eu/"><img src="../../../_static/images/logo/imi-logo.svg" height="20" alt="IMI logo" style="float:center""></a>
-              <a href="https://efpia.eu"><img src="../../../_static/images/logo/efpia-logo.svg" height="20" alt="EFPIA logo" style="float:center""></a>
-            </div>
-            <div class="mb-3"> Grant agreement 802750 </div>
-        </div>
-        <div class="col-xl-6 d-flex">
-          <div class="container">
-            <div class="row">
-              <div class="col-6 d-flex" style="justify-content:center">
-                <ul>
-                  <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
-                  <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
-                </ul>
-              </div>
-              <div class="col-6 d-flex" style="justify-content:center">
-                <ul>
-                  <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/boilerplate/people.html  "> Contributors </a> </li> </li>
-                  <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <a href="https://elixir-europe.org/" target="_blank"><img src="../../../_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo" style="float:center""></a>
-          <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
-        </div>
-      </div>
-    </div>
-    <div class="row_footer my-3">
-      The FAIR Cookbook is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a> (CC BY 4.0) license.
-    </div>
+    <script>
+      mermaid.init()
+    </script>
   google_analytics_id       : "UA-171697285-1"  # A GA id that can be used to track book views.
   comments:
     hypothesis: false
@@ -90,14 +55,17 @@ repository:
 #     - sphinx_sitemap 
 sphinx:
    # - sphinx_tabs.tabs
-  config                    :   # key-value pairs to directly over-ride the Sphinx configuration
+  config                    : # key-value pairs to directly over-ride the Sphinx configuration
+    templates_path          : ['_templates']
     html_extra_path         : ["_inject_after_build"]
     html_baseurl            : 'https://fairplus.github.io/the-fair-cookbook'
 #    html_theme_options: {
 #      "search_bar_text": "Search for FAIR recipes (^_^) "
 #    }
+
   extra_extensions:   # A list of extra extensions to load by Sphinx.
     - sphinx_sitemap
+    - sphinxcontrib.youtube
   local_extensions:
     authors_fairplus: _ext/
     figure_fairplus: _ext/
@@ -110,5 +78,5 @@ parse:
 bibtex_bibfiles:
    - ./_bibliography/bibliography-faircookbook.bib
 
-
 bibtex_reference_style: author_year
+
