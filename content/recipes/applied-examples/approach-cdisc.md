@@ -26,7 +26,7 @@ This recipe provides a general guide for mapping a clinical trial dataset to CDI
 
 The recipe will cover the following elements:
 
-> * Provide a general overview of the challenges of mapping a on-conforming data dictionary to CDISC.
+> * Provide a general overview of the challenges of mapping a non-conforming data dictionary to CDISC.
 
 > * Illustrate the mapping process using the above projects.
 
@@ -63,19 +63,12 @@ Recipe Steps
 
 ---
 
-## FAIRification Objectives, Inputs and Outputs
+<!--## FAIRification Objectives, Inputs and Outputs
 
-```{admonition} Important
-:class: tip
-this section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
-```
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChi](https://fairsharing.org/FAIRsharing.ddk9t9) |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-| [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [annotated text](http://edamontology.org/data_3779)  |
+| [text annotation](http://edamontology.org/operation_3778)  | local data dictionary  | [annotated text](http://edamontology.org/data_3779)  |-->
 
 
 ## Table of Data Standards
@@ -87,32 +80,66 @@ this section is relied upon by another component developed by FAIRplus to enhanc
 
 ---
 
+## General challenges of mapping to CDISC-SDTM
+
+[CDISC-SDTM](https://www.cdisc.org/standards/foundational/sdtm) is a standard model and framework for organising, annotating and formatting data from clinical trials. Regulatory agencies such as the US FDA require clinical trial results to be submitted in this format. While SDMT is a very complex framework with a high learning curve, its ubiquity in the field of clinical trials makes it a useful interoperability tool for comparing and combining datasets. The SDTM Implementation Guide ([SDTMIG](https://www.cdisc.org/standards/foundational/sdtmig)) provides expanded guidance on implementing SDTM for specific use cases or "domains". A general introduction to the SDTMIG is available [on the CDISC website](https://www.cdisc.org/standards/foundational/sdtmig/primer).
+
+Given the complexity of CDISC standards, any project team intending conversion of their datasets to SDTM at any point in the project life cycle should aim to align with the standard as early on in the process as possible. Data dictionaries and data collection instruments should where possible be aligned to the relevant CDISC standards to facilitate data conversions later on. In particular, CDISC standards provide procedures and guidelines for encoding project-specific data that might not fit into the existing domains.
+
+Commercial solutions are available to address all of these use cases but these are outside the scope of this recipe. We will focus on outlining how to perform the mapping process manually, without bespoke tooling.
+
+
 ## Step-by-step process
 
-* initial review of data dictionary - how is it setup, how many properties, what vocabularies (if any) are used
-* assigning of properties to CDISC domains and first pass mapping of each properties
-* review of particularly complex properties against data (actual or synthetic) to refine domain and property allocations
-* identification of problematic properties - eg value and unit encoded in the same field that need splitting, single property that maps to multiple CDISC properties based on value of another variable or vice-versa
-* putting together an ETL template
-* implement ETL scripts
-* migrate data to CDISC 
+### Initial review of the data dictionary & identification of relevant domains
 
-* specific problems encountered with mapping APPROACH, eg assumptions based on missing elements that are required in CDISC
+Before any mapping can take place, it is essential to gain a good understanding of the project's data dictionary, ie its list of variables, their types, definitions and domains. A good data dictionary will already split properties into domains, for example by data collection instrument or other data source. Guidance for creating a data dictionary is available [elsewhere in this Cookbook](../interoperability/creating-data-dictionary.md). This step may also include reviewing actual data to refine contexts.
+ 
+Once a good understanding of the data dictionary has been gained, the main domains from the SDTMIG that apply to this data need to be identified. Common domains that will occur in most clinical trial datasets include Demographics (DM), Medical History (MH), Laboratory Test Results (LB), Adverse Events (AE) and Vital Signs (VS).
+
+The ABIRISK data dictionary already used a similar setup to CDISC-SDTM, which made this step relatively straight-forward. The APPROACH data dictionary on the other hand used categories that, while providing a clear structure to the data, did not align directly with SDTMIG domains. This made the identification of appropriate domains more difficult and the initial list had to be revised several times during the variable mapping process, when variables were identified that didn't fit within the primary domain matched to a data dictionary category.  
 
 
+### Assignment of properties to domains and mapping to SDTMIG variables
 
+Mapping of data dictionary properties to SDTMIG variables falls into several categories:
+
+* Direct match - a property from the data dictionary directly matches a variable in the SDTMIG 
+* Combination - two or more properties from the data dictionary need be combined into a single SDTM variable. As an example, sample collection times in the APPROACH dataset were recorded as separate variables for year, month, day, hour and minute. In SDTM, these were combined into LB.LBDTC.
+* Splitting - a property from the dataset needs to be split into component parts. This is commonly the case if values and units were captured together in the same field.
+* Derivation - some values might be derived from another value, for exampe using a logical decision tree "if A=x, then value=y" or transformed, eg converting a laboratory result reported in non-standard units into standard units.
+* Fixed value - an implicit field in the original dataset may correspond to a fixed value for an SDTMIG variable. In the APPROACH dataset, the demographics property "Age" has the unit "years" implied in the property description as the inclusion criteria for the trial specify adult subjects only. DM.AGEU is a required value so in this particular conversion, "YEARS" is set a fixed value.
+* One-to-many/many-to-one - In some cases, a single property might map to multiple SDTMIG variables, depending on the corresponding value in the dataset. Equally, multiple properties may map to the same SDTMIG variable. 
+* Unmappable properties - some project-specific properties may not have an equivalent SDTMIG variable at all. If the property and its values are important for the interpretation of the dataset overall, this scenario may require the creation of a custom domain. Equally however, some properties may simply be out of scope of SDTM. The APPROACH data dictionary contains a number of such properties, including checks whether a given CRF, examination or questionnaire was completed or sample collected, and properties to identify the coder or analyst. 
+* Auto-generated - some SDTM variables such as "STUDYID" or sequence ID ("-SEQ") will likely not be encoded directly in the dataset and need to be autogenerated or autocompleted during the data transformation process.
+
+
+### Putting together an ETL template
+
+For most of the scenarios listed above, with the exception of direct one-to-one matches, ETL scripts will need to be implemented in order to convert the data into an SDTM-compliant format. As the implementation of scripts was outside the scope of our mapping work, we instead implemented a template that could be used as a basis to generate the scripts. A copy of our template can be downloaded from [this URL](https://webdav-r3lab.uni.lu/public/datacatalog_documents//dataset/df780ac2-c79d-11ec-9b1d-acde48001122/APPROACH_CDISC-SDTM_mappings.xlsx).
+
+
+
+### Issues, pitfalls and caveats
+
+One major issue that we encountered with both our mapping projects was the absence of data that was not encoded in the data dictionary. The SDTM includes an entire area called the "Trial Design Model", which provides a structured way of representing all activities of a clinical trial, such as planned visits, treatment arms and inclusion and exclusion criteria. While this information is a key component of a completely SDTM-compliant dataset, it was not part of the data dictionary and was therefore not part of the mapping strategy. As a result, any ETL process covering the data alone would not have generated a fully SDTM-compliant dataset. 
+
+Another area of the SDTMIG we did not include in our mappings was the representation of relationships in the data, such as those between different records for a given subject (RELREC domain). These relationships need to be factored into any ETL procedures.
 
 
 ---
 
 ## Conclusion
 
-> Summerize Key Learnings of the recipe.
+>  * We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC-SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.
 > 
+> * The CDISC-SDTM standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.
+> 
+> * The high level of detailed knowledge of the standard required to successfully convert a dataset to SDTM presents a significant hurdle 
 
 ### What should I read next?
-> * [Ontology mappings?](./tips-tricks.md)
-> * [Data dictionary?](./tips-tricks.md)
+> * [Ontology mappings](../interoperability/selecting-ontologies.md)
+> * [Data dictionary](../interoperability/creating-data-dictionary.md)
 
 
 
