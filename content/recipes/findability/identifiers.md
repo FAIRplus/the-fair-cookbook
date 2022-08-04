@@ -11,8 +11,8 @@
 :recipe_type: background_information
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist 
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 1
+:maturity_indicator: 1
 :has_executable_code: nope
 :recipe_name: Unique, persistent identifiers
 ```` 

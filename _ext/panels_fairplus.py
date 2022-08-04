@@ -264,7 +264,7 @@ class PanelFairplus(Directive):
         :return str: a string properly formatted containing the list of audience targets
         """
         indicators = '<v-chip-group>'
-        base_url = "https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"
+        base_url = "https://w3id.org/Data-Maturity/"
         for indicator in self.options['maturity_indicator']:
             label = CONTROLLED_VOCABULARY_MATURITY_INDICATOR[indicator].replace('[', '').replace(']', '')
             href = base_url + label
