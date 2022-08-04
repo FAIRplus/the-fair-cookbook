@@ -11,8 +11,8 @@
 :recipe_type: guidance
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 3
+:maturity_indicator: 33
 :has_executable_code: nope
 :recipe_name: Selecting terminologies and ontologies
 ```` 

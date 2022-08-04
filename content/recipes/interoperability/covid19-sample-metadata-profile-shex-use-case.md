@@ -11,8 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 4
+:maturity_indicator: 56, 58
 :has_executable_code: yeah
 :recipe_name: Metadata profile validation in RDF
 ```` 
