@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/materialdesignicons.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -48,6 +49,7 @@
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
     <script src="../../../../_static/js/mermaid.js"></script>
+    <script src="../../../../_static/js/vuetify.js"></script>
     <script src="../../../../_static/js/mermaid.min.js"></script>
     <script src="../../../../_static/js/mermaid.core.js"></script>
     <script src="../../../../_static/js/vue.min.js"></script>
@@ -66,9 +68,16 @@
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="8.9.2. Dataset page markup with Schema.org" href="bioschemas-dataset.html" />
     <link rel="prev" title="8. Search engine optimization" href="../seo.html" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.7/vuetify.js" integrity="sha512-eZGCLzrDKLB070Ac/O0q0q1fOrty4fFio8mmVVV63XwP/7YJbweKfmASFujVMS0Pj/5ObQnbn4eiNY+WOAPPhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/seo/bioschemas-data-page.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Data page markup with Bioschemas" />
+<meta property="og:description" content="Data page markup with Bioschemas  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org" />
+ <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
+<meta name="twitter:card" content="summary" />
   </head>
 <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
 
@@ -196,10 +205,46 @@
                     <div
                         class=" bd-sidebar site-navigation show"
                         id="site-navigation"
-                        style="width:300px"
+                        style="width:350px"
                     >
                         
                             <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+
+    <div class="testTOC">
+        <script>
+    Vue.component("Navigation", {
+        data() { return { recipes: {} }},
+        methods: {
+            async getData(){
+                const recipes = await fetch('/_static/recipes.json')
+                this.recipes = await recipes.json();
+                this.parseDom()
+            },
+            parseDom() {
+                const links = Array.prototype.slice.call(document.getElementsByClassName("reference internal"))
+                const icon = '<i class="fas fa-play-circle grey lighten-3 secondary--text ml-2"></i>'
+                links.forEach(link => {
+                    const recipeSplit = link.innerText.split(". ")
+                    const recipeName = recipeSplit[recipeSplit.length - 1].trim()
+                    recipeSplit.pop()
+                    recipeSplit.forEach(pref => { pref = pref.trim() })
+                    const prefix = recipeSplit.length > 0 ? recipeSplit.join(".") + "." : null
+                    const content = prefix ? `${prefix} ${recipeName}` : recipeName
+                    if (Object.keys(this.recipes).includes(recipeName)) {
+                        if (this.recipes[recipeName].executable === 'Yes') link.innerHTML = content + icon
+                    }
+                })
+            }
+        },
+        mounted() { this.getData() }
+    })
+</script>
+
+
+<Navigation> </Navigation>
+
+    </div>
+
     <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
         
         
@@ -723,6 +768,18 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Tools
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../search-wizard.html">
+   Search Wizard
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   AFTERWORD
  </span>
 </p>
@@ -823,8 +880,9 @@
                     <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
                         <v-container fluid id="main-content" class="pa-0">
                             <v-row class="d-flex">
-                                <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
-                                    
+                                
+                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                        
   <div class="section" id="data-page-markup-with-bioschemas">
 <span id="fcb-find-bs-data"></span><h1><span class="section-number">8.9.1. </span>Data page markup with Bioschemas<a class="headerlink" href="#data-page-markup-with-bioschemas" title="Permalink to this headline">¶</a></h1>
 <br/>
@@ -906,8 +964,8 @@ No
 <div><p>To markup a webpage representing a data record with <code class="docutils literal notranslate"><span class="pre">Bioschemas</span></code> compliant markup.</p>
 </div></blockquote>
 <div class="tabbed-set docutils">
-<input checked="checked" id="48bc1301-d52c-4059-9eb8-7320a9fed72b" name="3d202457-1e36-40fb-b80a-c0d26bd37d85" type="radio">
-</input><label class="tabbed-label" for="48bc1301-d52c-4059-9eb8-7320a9fed72b">
+<input checked="checked" id="cf40a850-bc54-4882-a2d8-4094ee86f91c" name="814231fe-54e1-43e3-b978-8c29c945e699" type="radio">
+</input><label class="tabbed-label" for="cf40a850-bc54-4882-a2d8-4094ee86f91c">
 FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -928,8 +986,8 @@ FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content d
 </tbody>
 </table>
 </div>
-<input id="0879688b-bf4a-42ec-88f9-c1e13b1ea6ea" name="3d202457-1e36-40fb-b80a-c0d26bd37d85" type="radio">
-</input><label class="tabbed-label" for="0879688b-bf4a-42ec-88f9-c1e13b1ea6ea">
+<input id="07443b0e-3568-42f7-858d-cf0b59e2ac90" name="814231fe-54e1-43e3-b978-8c29c945e699" type="radio">
+</input><label class="tabbed-label" for="07443b0e-3568-42f7-858d-cf0b59e2ac90">
 Table of Data Standards</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1263,9 +1321,9 @@ complete this process twice.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-                                </v-col>
-                                <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
-                                    <div style="position: fixed">
+                                    </v-col>
+                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                        <div style="position: fixed">
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i>
             Contents
@@ -1318,11 +1376,12 @@ complete this process twice.</p>
 
         </nav>
         </div>
-                                </div>
+                                    </div>
+                                
                             </v-row>
 
                             
-                                <v-row>
+                                <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
 <a class='left-prev' id="prev-link" href="../seo.html" title="previous page"><span class="section-number">8. </span>Search engine optimization</a>
@@ -1419,7 +1478,8 @@ complete this process twice.</p>
                     warning: '#FFC107'
                 }
             }
-        }
+        },
+        icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
 </script>

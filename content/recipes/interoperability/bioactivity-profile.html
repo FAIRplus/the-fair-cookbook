@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -48,6 +49,7 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/vuetify.js"></script>
     <script src="../../../_static/js/mermaid.min.js"></script>
     <script src="../../../_static/js/mermaid.core.js"></script>
     <script src="../../../_static/js/vue.min.js"></script>
@@ -66,9 +68,16 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="10. Converting from proprietary to open format" href="from-proprietary-to-open-standard-mzml-exemplar.html" />
     <link rel="prev" title="9.4.2. Metadata profile validation in RDF" href="covid19-sample-metadata-profile-shex-use-case.html" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.7/vuetify.js" integrity="sha512-eZGCLzrDKLB070Ac/O0q0q1fOrty4fFio8mmVVV63XwP/7YJbweKfmASFujVMS0Pj/5ObQnbn4eiNY+WOAPPhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/bioactivity-profile.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Bioactivity data profile" />
+<meta property="og:description" content="Bioactivity data profile  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org/dc/term" />
+ <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
+<meta name="twitter:card" content="summary" />
   </head>
 <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
 
@@ -196,10 +205,46 @@
                     <div
                         class=" bd-sidebar site-navigation show"
                         id="site-navigation"
-                        style="width:300px"
+                        style="width:350px"
                     >
                         
                             <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+
+    <div class="testTOC">
+        <script>
+    Vue.component("Navigation", {
+        data() { return { recipes: {} }},
+        methods: {
+            async getData(){
+                const recipes = await fetch('/_static/recipes.json')
+                this.recipes = await recipes.json();
+                this.parseDom()
+            },
+            parseDom() {
+                const links = Array.prototype.slice.call(document.getElementsByClassName("reference internal"))
+                const icon = '<i class="fas fa-play-circle grey lighten-3 secondary--text ml-2"></i>'
+                links.forEach(link => {
+                    const recipeSplit = link.innerText.split(". ")
+                    const recipeName = recipeSplit[recipeSplit.length - 1].trim()
+                    recipeSplit.pop()
+                    recipeSplit.forEach(pref => { pref = pref.trim() })
+                    const prefix = recipeSplit.length > 0 ? recipeSplit.join(".") + "." : null
+                    const content = prefix ? `${prefix} ${recipeName}` : recipeName
+                    if (Object.keys(this.recipes).includes(recipeName)) {
+                        if (this.recipes[recipeName].executable === 'Yes') link.innerHTML = content + icon
+                    }
+                })
+            }
+        },
+        mounted() { this.getData() }
+    })
+</script>
+
+
+<Navigation> </Navigation>
+
+    </div>
+
     <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
         
         
@@ -723,6 +768,18 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Tools
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../search-wizard.html">
+   Search Wizard
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   AFTERWORD
  </span>
 </p>
@@ -823,8 +880,9 @@
                     <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
                         <v-container fluid id="main-content" class="pa-0">
                             <v-row class="d-flex">
-                                <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
-                                    
+                                
+                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                        
   <div class="section" id="bioactivity-data-profile">
 <span id="fcb-bioactivity-profile"></span><h1><span class="section-number">9.4.3. </span>Bioactivity data profile<a class="headerlink" href="#bioactivity-data-profile" title="Permalink to this headline">¶</a></h1>
 <br/>
@@ -1190,9 +1248,9 @@ It can be easily mapped to other resources such as <a class="reference external"
     </script>
     <script>kernelName = 'python3'</script>
 
-                                </v-col>
-                                <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
-                                    <div style="position: fixed">
+                                    </v-col>
+                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                        <div style="position: fixed">
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i>
             Contents
@@ -1265,11 +1323,12 @@ It can be easily mapped to other resources such as <a class="reference external"
 
         </nav>
         </div>
-                                </div>
+                                    </div>
+                                
                             </v-row>
 
                             
-                                <v-row>
+                                <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
 <a class='left-prev' id="prev-link" href="covid19-sample-metadata-profile-shex-use-case.html" title="previous page"><span class="section-number">9.4.2. </span>Metadata profile validation in RDF</a>
@@ -1366,7 +1425,8 @@ It can be easily mapped to other resources such as <a class="reference external"
                     warning: '#FFC107'
                 }
             }
-        }
+        },
+        icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
 </script>
