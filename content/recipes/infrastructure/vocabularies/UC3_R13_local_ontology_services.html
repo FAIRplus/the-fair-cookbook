@@ -830,7 +830,7 @@
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"}, "@type": ["sdo:HowTo", "bs:TrainingMaterial"], "name": "Deploying the EBI OLS", "description": "Deploying the EBI OLS", "keywords": [], "conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "inLanguage": ["en-GB"], "audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Terminology Manager|T4FS_0000568", "System Administrator|T4FS_0000570"], "isPartOf": [{"@type": "CreativeWork", "url": "https://fairplus.github.io/the-fair-cookbook/", "name": "The FAIR Cookbook"}], "learningResourceType": "Hands-on", "identifier": {"@type": "PropertyValue", "name": "FCB005", "url": "https://w3id.org/faircookbook/FCB005"}, "license": {"@type": "CreativeWork", "url": "https://creativecommons.org/licenses/by/4.0/", "name": "CC-BY-4.0"}, "timeRequired": "PT0H20M0S", "totalTime": "PT0H20M0S"} </script>
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB005", "sdo:name": "Deploying the EBI OLS", "sdo:description": "Deploying the EBI OLS", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Terminology Manager|T4FS_0000568", "System Administrator|T4FS_0000570"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Hands-on", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB005", "dso:url": "https://w3id.org/faircookbook/FCB005", "owl:sameAs": "https://identifiers.org/fcb:FCB005"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB005#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB005#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB005#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB005#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -973,8 +973,8 @@ specific policies regarding tool deployment the use of containerized application
 <div class="section" id="install-dependencies">
 <h3><span class="section-number">4.3.6.1. </span>1. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7b9f024d-8f0a-41d0-8858-3396b18f7e7d" name="8dfe06a9-9d53-4997-90dc-4b54ef623e71" type="radio">
-</input><label class="tabbed-label" for="7b9f024d-8f0a-41d0-8858-3396b18f7e7d">
+<input checked="checked" id="5409525d-199d-44fe-b0a6-db559054f3c9" name="770fabe6-c210-4f63-9a2f-b236c4cad945" type="radio">
+</input><label class="tabbed-label" for="5409525d-199d-44fe-b0a6-db559054f3c9">
 Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -998,8 +998,8 @@ Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils
 </tbody>
 </table>
 </div>
-<input id="761d5481-047a-41c7-b70f-06c497352d83" name="8dfe06a9-9d53-4997-90dc-4b54ef623e71" type="radio">
-</input><label class="tabbed-label" for="761d5481-047a-41c7-b70f-06c497352d83">
+<input id="ffe6ec1d-6375-4cbf-988c-d78b4ed17b32" name="770fabe6-c210-4f63-9a2f-b236c4cad945" type="radio">
+</input><label class="tabbed-label" for="ffe6ec1d-6375-4cbf-988c-d78b4ed17b32">
 Windows-based environment (Windows 10 64bits)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
