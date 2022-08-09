@@ -902,21 +902,22 @@ No
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is:</p>
 <blockquote>
-<div><p>To introduce the notion of metadata and detail why their matter in the context of FAIR. This recipe aims to provide insights into the different types of metadata, why they differ, and how they relate to each other. Finally, we also highlight the various models and vocabularies available as well as explain what it means to make metadata machine actionable.</p>
+<div><p>To introduce the notion of metadata and detail why it matters in the context of FAIR.
+This recipe aims to provide insights into the different types of metadata, why they differ, and how they relate to each other. We also introduce semantics elements, such as controlled vocabularies, to make metadata machine actionable.</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Upon reading the <a class="reference internal" href="brief-FAIR-principles.html#fcb-fair-principles"><span class="std std-ref">FAIR principles</span></a>, one can’t help but notice that everything rests on the availability of <strong>machine readable metadata</strong>. For a number of newcomers to FAIR or Data Management for that matter, the first hurdle is to grasp the notion of ‘metadata’ and this alone can be a challenge.
+<p>Upon reading the <a class="reference internal" href="brief-FAIR-principles.html#fcb-fair-principles"><span class="std std-ref">FAIR principles</span></a>, one can’t help but notice that everything rests on the availability of <strong>machine readable metadata</strong>. For a number of newcomers to FAIR or Data Management for that matter, the first hurdle is to grasp the notion of ‘metadata’.
 Below are a number of commonly found definitions of metadata:</p>
 <ul class="simple">
-<li><p>the recursive definition <strong>“data about the data”</strong>, which provides the idea that to understand data, you need extra data describing it <a class="footnote-reference brackets" href="#wikidatametadata" id="id1">4</a>.</p></li>
-<li><p>the formal definition <strong>“set of agreed-upon descriptors to denote an entity”</strong>, which indicates that a social contract is needed to ensure we all mean the same thing when adding a descriptor.</p></li>
-<li><p>the poetic definition <strong>“a love note to the future about data”</strong>, which conveys the notion that providing descriptors about data is an altruistic and caring action.</p></li>
-<li><p>the fractal definition  <strong>“your metadata is my data”</strong>, which conveys the notion that <code class="docutils literal notranslate"><span class="pre">quantity</span> <span class="pre">has</span> <span class="pre">a</span> <span class="pre">quality</span> <span class="pre">all</span> <span class="pre">of</span> <span class="pre">its</span> <span class="pre">own</span></code> when it comes to metadata, and by accumulating enough metadata, however small, statistical handling may reveal patterns and provide insights. This in fact can have unforeseen and possibly untowards consequences, such as loss of privacy and risks of reidentification of supposedly anonymized data.</p></li>
+<li><p>The recursive definition <strong>“data about the data”</strong>, which provides the idea that to understand data, you need extra data describing it <a class="footnote-reference brackets" href="#wikidatametadata" id="id1">4</a>.</p></li>
+<li><p>The formal definition <strong>“set of agreed-upon descriptors to denote an entity”</strong>, which indicates that a social contract is needed to ensure we all mean the same thing when adding a descriptor.</p></li>
+<li><p>The poetic definition <strong>“a love note to the future about data”</strong>, which conveys the notion that providing descriptors about data is an altruistic and caring action.</p></li>
+<li><p>The fractal definition  <strong>“your metadata is my data”</strong>, which conveys the notion that <code class="docutils literal notranslate"><span class="pre">quantity</span> <span class="pre">has</span> <span class="pre">a</span> <span class="pre">quality</span> <span class="pre">all</span> <span class="pre">of</span> <span class="pre">its</span> <span class="pre">own</span></code> when it comes to metadata, and by accumulating enough metadata, however small, statistical handling may reveal patterns and provide insights. This in fact can have unforeseen and possibly untoward consequences, such as loss of privacy and risks of reidentification of supposedly anonymized data.</p></li>
 </ul>
-<p>So, already we have the feeling that <em>metadata</em> is indeed important and above all pervasive in any modern society which relies on information technology.</p>
+<p>The definitions above hints that <em>metadata</em> is indeed important and above all pervasive in any modern society which relies on information technology.</p>
 <p>In the following sections, we will delve further into the possibly controversial typology of metadata <a class="footnote-reference brackets" href="#nisometadata" id="id2">5</a>.</p>
 </div>
 <hr class="docutils" />
@@ -949,13 +950,13 @@ Below are a number of commonly found definitions of metadata:</p>
 <hr class="docutils" />
 <div class="section" id="different-shades-of-metadata">
 <h2>Different shades of metadata<a class="headerlink" href="#different-shades-of-metadata" title="Permalink to this headline">¶</a></h2>
-<p>In this section, we will simply build on the illustration presented above and provide more details and attempt to frame the context of each of these definitions.
-Remember that for each of these definitions, we are actually talking about tags used to provide information about an entity, be it a physical object (e.g. a chair in your favourite furniture supplier) or a digital object (e.g, a file on a server).</p>
+<p>In this section, we will build on the illustration presented above, provide more details, and frame the context of each of these definitions.
+Remember that for each of these definitions, we are actually talking about tags used to provide information about an entity, be it a physical object (e.g. a chair in your favourite furniture supplier) or a digital object (e.g. a file on a server).</p>
 <div class="section" id="descriptive-metadata">
 <h3>1. Descriptive metadata<a class="headerlink" href="#descriptive-metadata" title="Permalink to this headline">¶</a></h3>
-<p>This is really the fundamental of metadata, things should at least be described by a <code class="docutils literal notranslate"><span class="pre">label</span></code>, or <code class="docutils literal notranslate"><span class="pre">name</span></code>, which is a probably the simplest form of metadata: a small string denoting a thing.
+<p>This is the fundamental of metadata, things should at least be described by a label, <code class="docutils literal notranslate"><span class="pre">name</span></code>, which is probably the simplest form of metadata: <em>a small string denoting a thing</em>.
 Depending on the domain of knowledge, descriptive metadata complexity can increase.
-Taking an example, let’s consider the domain of a bibliographic record and let’s look at a bibtex <a class="footnote-reference brackets" href="#bibtex" id="id3">2</a> record:</p>
+Taking an example, let’s consider the domain of a bibliographic record and look at a BibTex <a class="footnote-reference brackets" href="#bibtex" id="id3">2</a> record:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@Article<span class="o">{</span>Alter2020DATS,
    <span class="nv">Author</span><span class="o">=</span><span class="s2">&quot;Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. &quot;</span>,
    <span class="nv">Title</span><span class="o">=</span><span class="s2">&quot;{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model for discovering data access and use requirements}&quot;</span>,
@@ -967,32 +968,35 @@ Taking an example, let’s consider the domain of a bibliographic record and let
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>In this object, seven metadata element are provided, each of them meant to receive a specific category of information about a journal article.
-Each key in this json object corresponds to a metadata element the definition of which can be found in <a class="footnote-reference brackets" href="#bibtex" id="id4">2</a>.</p>
+<p>In this object, seven metadata elements are provided, each of them meant to receive a specific category of information about a journal article.
+Each key in this JSON object corresponds to a metadata element the definition of which can be found in the BiBTex specification<a class="footnote-reference brackets" href="#bibtex" id="id4">2</a>.</p>
 </div>
 <div class="section" id="structural-metadata">
 <h3>2. Structural metadata<a class="headerlink" href="#structural-metadata" title="Permalink to this headline">¶</a></h3>
-<p>Structural metadata concerns itself with providing descriptors allowing agents to understand how data is organised so
-this type of metadata could provide information about the layout of a table, the relations between elements, and their types.
-Here, there are historical two important models to know about:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.openarchives.org/pmh/">OAI-PMH</a>
-OAI-PMH stands for the <em>Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)</em> and is a low-barrier mechanism for repository interoperability.</p></li>
-<li><p><a class="reference external" href="https://pcdm.org/2016/04/18/models">Portland Common Data Model</a></p></li>
+<p>Structural metadata concerns itself with providing descriptors allowing agents to understand how data is organised.
+This type of metadata could provide information about the layout of a table, the relations between elements, and their types.
+Here are two historically important models:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.openarchives.org/pmh/">OAI-PMH</a></p>
+<p>OAI-PMH stands for the <em>Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)</em> and is a low-barrier mechanism for repository interoperability.</p>
+</li>
+<li><p><a class="reference external" href="https://pcdm.org/2016/04/18/models">Portland Common Data Model</a></p>
+<p>The Portland Common Data Model aims to underlie a wide range of repositories and data asset management applications.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="administrative-metadata">
 <h3>3. Administrative metadata<a class="headerlink" href="#administrative-metadata" title="Permalink to this headline">¶</a></h3>
-<p>Administrative metadata covers things like record identifier and can also include specialization such as:</p>
+<p>Administrative metadata covers things like record identifiers and can also include specialization such as:</p>
 <div class="section" id="provenance-metadata">
 <h4>3.1 Provenance metadata<a class="headerlink" href="#provenance-metadata" title="Permalink to this headline">¶</a></h4>
-<p>This subtype of metadata is mainly concerned with capturing information about the agents and processes which produced the entity. So processes such as creation, modification, conversion should be described as well as the dates on which these have been executing and by whom. Versioning information also falls into this category of metadata information <a class="footnote-reference brackets" href="#casraiprovenance" id="id5">1</a>.
-This used to be known as “Audit and Trail” information as it allows understanding how information was generated and therefore provides tokens of trust and evidence which can be used to establish validity, reliability, and trust-worthiness of data.</p>
+<p>This subtype of metadata is mainly concerned with capturing information about the agents and processes which produced the entity. So processes such as creation, modification, and conversion should be described, as well as the dates on which these have been executed and by whom. Versioning information also falls into this category of metadata information <a class="footnote-reference brackets" href="#casraiprovenance" id="id5">1</a>.
+This used to be known as “Audit Trail” information as it allows understanding of how information was generated and therefore provides tokens of trust and evidence which can be used to establish validity, reliability, and trustworthiness of data.</p>
 </div>
 <div class="section" id="legal-metadata">
 <h4>3.2 Legal metadata<a class="headerlink" href="#legal-metadata" title="Permalink to this headline">¶</a></h4>
-<p>This subtype of metadata concerned itself with providing tag to allow information about the condition of use of the data, copyright information, patent coverage, and likewise topic.
-Why this matters? Well it is essentially a piece of information to know about a dataset to decide if data use is allowed or not as the implication of failing to comply with the terms of use can be far-reaching.</p>
+<p>This subtype of metadata concerns itself with providing tags to allow information about the condition of use of the data, copyright information, patent coverage, and likewise topic.
+It is essentially a piece of information to know about a dataset to decide if data use is allowed or not, as the implication of failing to comply with the terms of use can be far-reaching.</p>
 </div>
 </div>
 <div class="section" id="quality-metadata">
@@ -1001,16 +1005,16 @@ Why this matters? Well it is essentially a piece of information to know about a 
 It can range from quantitative metrics such as the variance or standard error of a variable or more qualitative aspects such as a discrete ranking <a class="footnote-reference brackets" href="#dataeuropa" id="id6">3</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This typology can easily be critisized as the boundaries between to different domains can be something blurred by underlying semantic models, granularity levels so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.</p>
+<p>This typology can easily be criticised as the boundaries between different domains can be something blurred by underlying semantic models and granularity levels, so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.</p>
 </div>
 </div>
 </div>
 <div class="section" id="semantic-frameworks-for-metadata">
 <h2>Semantic frameworks for metadata<a class="headerlink" href="#semantic-frameworks-for-metadata" title="Permalink to this headline">¶</a></h2>
 <p>We have given an overview of the basic definitions of what metadata is and its various possible flavours.
-This raises an unanswered key question: How does it work in real life? For this, we need to look at some technical details and since we are dealing with things FAIR, we inevitably slide back into the notion of Linked Data and Resource Description Framework.
+This raises an unanswered key question: How does it work in real life? For this, we need to look at some technical details and since we are dealing with things FAIR, we inevitably slide back into the notion of Linked Data and Resource Description Framework(RDF).
 This essentially means that we can not talk about machine actionable metadata (referred to in some quarters as ‘active metadata’) without talking about <strong>semantics</strong> and <strong>controlled terminologies</strong> on the one hand, and on the other hand about <strong>syntax</strong> and <strong>serialization format</strong>.
-This is simply because for computational methods to work, there needs to be agreements, social-contracts, and protocols in places to define things to enable interoperability.
+This is simply because for computational methods to work, there need to be agreements, social-contracts, and protocols in place to define things to enable interoperability.
 As with all human things, there will be redundant, overlapping, competing efforts vying for a domain of knowledge. Semantic models for metadata do not escape this.</p>
 </div>
 <hr class="docutils" />
@@ -1022,7 +1026,7 @@ As with all human things, there will be redundant, overlapping, competing effort
 <div class="section" id="what-to-read-next-section">
 <h2>What to read next section<a class="headerlink" href="#what-to-read-next-section" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/faircookbook/FCBXXX">FAIR and Knowledge Graphs</a></p></li>
+<li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB070">FAIR and Knowledge Graphs</a></p></li>
 <li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB026">Creating a metadata profile</a></p></li>
 <li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB036">Provenance Information</a></p></li>
 <li><p><a class="reference external" href="https://w3id.org/faircookbook/FCB035">Declaring permitted use</a></p></li>
@@ -1051,7 +1055,7 @@ As with all human things, there will be redundant, overlapping, competing effort
 <dd><p class="card-text">Metadata definition in wikipedia. URL: <a class="reference external" href="https://en.wikipedia.org/wiki/Metadata">https://en.wikipedia.org/wiki/Metadata</a>.</p>
 </dd>
 <dt class="label" id="nisometadata"><span class="brackets"><a class="fn-backref" href="#id2">5</a></span></dt>
-<dd><p class="card-text">Jenn Riley. Understanting metadata. 2017. URL: <a class="reference external" href="https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf">https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf</a>.</p>
+<dd><p class="card-text">Jenn Riley. Understanding metadata. 2017. URL: <a class="reference external" href="https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf">https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf</a>.</p>
 </dd>
 </dl>
 </p>
@@ -1097,6 +1101,13 @@ As with all human things, there will be redundant, overlapping, competing effort
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
 <td><p class="card-text">Writing - Reviewing</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/fuqix"></img><div class="d-block">Fuqi Xu</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-5923-3859"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">EMBL-EBI</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/embl.png" ></img></p></td>
+<td><p class="card-text">Reviewing</p></td>
 </tr>
 </tbody>
 </table>

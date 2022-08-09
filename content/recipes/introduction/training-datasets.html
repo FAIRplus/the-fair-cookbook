@@ -901,27 +901,30 @@ No
 </div>
 <div class="section" id="main-objectives">
 <h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This recipe aims to provide example clinical datasets to allow users to get familiar with the process of handling clinical datasets
+and develop related computational tools while minimizing the challenges of accessing real-world human data.</p>
+</div></blockquote>
 <p>The FAIR cookbook aims to provide hands-on, practical advice on how to deliver FAIR data through interactions with
-Innovative Medicine Initiative projects. These research projects, by nature often involve patient-centric information
-but dealing with real-world data and human-centric information, clinical data, in particular, is challenging.
-It most often mandates interacting with DACs, i.e. Data Access Committees, and undergoing a vetting process,
+Innovative Medicine Initiative(IMI) projects. These research projects, by nature, often involve patient-centric information.
+But dealing with real-world data and human-centric information, clinical data, in particular, is challenging.
+It most often mandates interacting with Data Access Committees (DACs), and undergoes a vetting process,
 which can be lengthy and convoluted. This can become a hindrance if the focus of the work is to deliver training on
 the computational methods available to deal with such data rather than data custody-related tasks,
 however important these are.</p>
-<p>This FAIR cookbook recipe aims to provide a list of relevant resources belonging to the realm of clinical data so
-readers can, with the minimal hassle :</p>
+<p>This recipe aims to provide a list of relevant resources belonging to the realm of clinical data so readers can, with minimal hassle :</p>
 <ul class="simple">
-<li><p>familiarize with the data types (for instance, how do Electronic Health records look like).</p></li>
+<li><p>familiarize with clinical data types, such as Electronic Health Records(EHR).</p></li>
 <li><p>familiarize with the procedures to gain access to sensitive data.</p></li>
 <li><p>obtain datasets with which to work and hone computational skills.</p></li>
 </ul>
 <p>The recipe will cover two types of datasets:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">datasets</span></code> such as the MIMIC-III dataset <a class="footnote-reference brackets" href="#pmid27219127" id="id1">2</a>, which corresponds to actual medical notes data
+<li><p><code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">datasets</span></code>, such as the Medical Information Mart for Intensive Care III(MIMIC-III) dataset <a class="footnote-reference brackets" href="#pmid27219127" id="id1">2</a>, which corresponds to actual medical notes data
 for which data access requests must be made but which are made available to computational scientists
 for research purposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">synthetic</span> <span class="pre">datasets</span></code>, which are available without restrictions since produced by computational methods
-and independent of any real patient. While handy, this type of data may come with a number of limitations prospective
+and are independent of any real patient. While handy, this type of data may come with a number of limitations prospective
 users need to be aware of.</p></li>
 </ul>
 <div class="section" id="electronic-health-records-the-mimic-iii-critical-care-database">
@@ -943,15 +946,6 @@ users need to be aware of.</p></li>
 <ul class="simple">
 <li><p class="card-text"><strong>Data Type</strong>: Electronic Medical Notes</p></li>
 <li><p class="card-text"><strong>Nature of the data</strong>: Real Patient Data</p></li>
-<li><p class="card-text"><strong>Availability</strong>:
-<strong><strong>Requesting Access</strong></strong>:<br />
-<a class="reference external" href="https://mimic.mit.edu/docs/gettingstarted/">https://mimic.mit.edu/docs/gettingstarted/</a>
-<a class="reference external" href="https://mimic.physionet.org/gettingstarted/access/">https://mimic.physionet.org/gettingstarted/access/</a></p>
-<ul>
-<li><p class="card-text"><a class="reference external" href="https://mimic.physionet.org/about/mimic/">https://mimic.physionet.org/about/mimic/</a></p></li>
-<li><p class="card-text">From Amazon Web Service Public Data: <a class="reference external" href="https://registry.opendata.aws/mimiciii/">https://registry.opendata.aws/mimiciii/</a></p></li>
-</ul>
-</li>
 <li><p class="card-text"><strong>Description</strong>: MIMIC-III (Medical Information Mart for Intensive Care III) is a large, freely-available database
 comprising de-identified health-related data associated with over forty thousand patients who stayed in critical care
 units of the Beth Israel Deaconess Medical Center between 2001 and 2012. <a class="footnote-reference brackets" href="#pmid27219127" id="id2">2</a>.
@@ -962,12 +956,23 @@ and mortality (both in and out of hospital).</p></li>
 and electronic tool development. It is notable for three factors: it is freely available to researchers worldwide.
 It encompasses a diverse and very large population of ICU patients. it contains high temporal resolution data including
 lab results, electronic documentation, and bedside monitor trends and waveforms.</p></li>
+<li><p class="card-text"><strong>Availability</strong>:</p>
+<ul>
+<li><p class="card-text"><a class="reference external" href="https://mimic.physionet.org/about/mimic/">https://mimic.physionet.org/about/mimic/</a></p></li>
+<li><p class="card-text">From Amazon Web Service Public Data: <a class="reference external" href="https://registry.opendata.aws/mimiciii/">https://registry.opendata.aws/mimiciii/</a></p></li>
+</ul>
+</li>
+<li><p class="card-text"><strong>Requesting access</strong>:</p>
+<ul>
+<li><p class="card-text"><a class="reference external" href="https://mimic.mit.edu/docs/gettingstarted/">https://mimic.mit.edu/docs/gettingstarted/</a></p></li>
+</ul>
+</li>
 <li><p class="card-text"><strong>Format</strong>: SQL database dump</p></li>
-<li><p class="card-text"><strong>License</strong>: <a class="reference external" href="https://physionet.org/content/mimiciii/view-license/1.4/">https://physionet.org/content/mimiciii/view-license/1.4/</a></p></li>
+<li><p class="card-text"><strong>License</strong>: <a class="reference external" href="https://physionet.org/content/mimiciii/view-license/1.4/">PhysioNet Credentialed Health Data License 1.5.0</a></p></li>
 <li><p class="card-text"><strong>Examples of use</strong>:</p>
 <ul>
-<li><p class="card-text"><a class="reference external" href="https://aws.amazon.com/blogs/big-data/perform-biomedical-informatics-without-a-database-using-mimic-iii-data-and-amazon-athena/">https://aws.amazon.com/blogs/big-data/perform-biomedical-informatics-without-a-database-using-mimic-iii-data-and-amazon-athena/</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://aws.amazon.com/blogs/machine-learning/building-predictive-disease-models-using-amazon-sagemaker-with-amazon-healthlake-normalized-data/">https://aws.amazon.com/blogs/machine-learning/building-predictive-disease-models-using-amazon-sagemaker-with-amazon-healthlake-normalized-data/</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://aws.amazon.com/blogs/big-data/perform-biomedical-informatics-without-a-database-using-mimic-iii-data-and-amazon-athena/">Perform biomedical informatics without a database using MIMIC-III data and Amazon Athena</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://aws.amazon.com/blogs/machine-learning/building-predictive-disease-models-using-amazon-sagemaker-with-amazon-healthlake-normalized-data/">Building predictive disease models using Amazon SageMaker with Amazon HealthLake normalized data</a></p></li>
 </ul>
 </li>
 </ul>
@@ -992,16 +997,18 @@ lab results, electronic documentation, and bedside monitor trends and waveforms.
 <ul class="simple">
 <li><p class="card-text"><strong>Data Type</strong>: Electronic Medical Notes</p></li>
 <li><p class="card-text"><strong>Nature of the data</strong>: Synthetic Data</p></li>
-<li><p class="card-text"><strong>Description</strong>: A corpus containing 4,993 abstracts annotated with <code class="docutils literal notranslate"><span class="pre">(P)articipants</span></code>, <code class="docutils literal notranslate"><span class="pre">(I)nterventions</span></code>, and <code class="docutils literal notranslate"><span class="pre">(O)utcomes</span></code>.</p></li>
-</ul>
-<p class="card-text">Training labels are sourced from AMT workers and aggregated to reduce noise.
-Test labels are collected from medical professionals. <a class="footnote-reference brackets" href="#lee-evans-cdmv5-test-data" id="id3">1</a></p>
-<ul class="simple">
-<li><p class="card-text"><strong>Format</strong>: <em>ad-hoc</em>, UTF-8 text file with tab delimited values</p></li>
-<li><p class="card-text"><strong>Availability</strong>: <a class="reference external" href="https://github.com/bepnye/EBM-NLP">https://github.com/bepnye/EBM-NLP</a></p></li>
+<li><p class="card-text"><strong>Description</strong>: A corpus containing 4,993 abstracts annotated with <code class="docutils literal notranslate"><span class="pre">(P)articipants</span></code>, <code class="docutils literal notranslate"><span class="pre">(I)nterventions</span></code>, and <code class="docutils literal notranslate"><span class="pre">(O)utcomes</span></code>.
+Training labels are sourced from AMT workers and aggregated to reduce noise.
+Test labels are collected from medical professionals. <a class="footnote-reference brackets" href="#lee-evans-cdmv5-test-data" id="id3">1</a></p></li>
 <li><p class="card-text"><strong>Purpose</strong>: Corpus for training and testing Natural Language Processing algorithms</p></li>
-<li><p class="card-text"><strong>License</strong>: <a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p></li>
+<li><p class="card-text"><strong>Availability</strong>: <a class="reference external" href="https://github.com/bepnye/EBM-NLP">https://github.com/bepnye/EBM-NLP</a></p></li>
+<li><p class="card-text"><strong>Format</strong>: <em>ad-hoc</em>, UTF-8 text file with tab-delimited values</p></li>
+<li><p class="card-text"><strong>License</strong>: <a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">APACHE license, Version 2.0</a></p></li>
 </ul>
+</div>
+</details></div>
+<div class="section" id="electronics-medical-notes-synpuf-1000-person-dataset-omop-cdm-v5-standard">
+<h3>Electronics Medical Notes: SynPUF 1000 person dataset &amp; OMOP-CDM v5 standard<a class="headerlink" href="#electronics-medical-notes-synpuf-1000-person-dataset-omop-cdm-v5-standard" title="Permalink to this headline">¶</a></h3>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1020,12 +1027,8 @@ Test labels are collected from medical professionals. <a class="footnote-referen
 <li><p class="card-text"><strong>Data Type</strong>: Electronic Medical Notes</p></li>
 <li><p class="card-text"><strong>Nature of the data</strong>: Synthetic Data</p></li>
 <li><p class="card-text"><strong>Description</strong>: This test data set, generated by  Lee Evans while working at LTS Computing LLC is an OMOP-CDM version 5
-formatted collection of
-1000 patient sample of CMS 2008-2010 Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF).
-The information held in the dataset  corresponds to Synthetic patients &amp; medicare claims/prescription data.
-he dataset can be downloaded in a compressed (zipped) format from LTS Computing LLC website: <a class="reference external" href="http://www.ltscomputingllc">http://www.ltscomputingllc</a></p></li>
-<li><p class="card-text"><strong>Format</strong>: OMOP CDM v5.2.2</p></li>
-<li><p class="card-text"><strong>Availability</strong>: <a class="reference external" href="http://www.ltscomputingllc.com/downloads/">http://www.ltscomputingllc.com/downloads/</a></p></li>
+formatted collection of 1000 patient samples of CMS 2008-2010 Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF).
+The information held in the dataset corresponds to synthetic patients &amp; medicare claims or prescription data.</p></li>
 <li><p class="card-text"><strong>Purpose</strong>:</p>
 <ul>
 <li><p class="card-text">Public data to demo the OHDSI Ontologies</p></li>
@@ -1034,17 +1037,27 @@ he dataset can be downloaded in a compressed (zipped) format from LTS Computing 
 <li><p class="card-text">OHDSI tools training</p></li>
 </ul>
 </li>
+<li><p class="card-text"><strong>Availability</strong>: <a class="reference external" href="http://www.ltscomputingllc.com/downloads/">http://www.ltscomputingllc.com/downloads/</a></p></li>
+<li><p class="card-text"><strong>Format</strong>: <a class="reference external" href="https://github.com/OHDSI/CommonDataModel/releases/tag/v5.2.2">OMOP CDM v5.2.2</a> and CSV files compatible with the OMOP CDM V5.2.2 format.</p></li>
 <li><p class="card-text"><strong>License</strong>: LTS Computing LLC license</p></li>
 </ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+SynPUF 1000 person dataset in OMOP CDM v5.2.2 format:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">This synthetic dataset corresponds to 1000 person composite dataset:</p>
+<p class="card-text"><a class="reference external" href="http://www.ltscomputingllc.com/wp-content/uploads/2018/08/synpuf1k_omop_cdm_5.2.2.zip">http://www.ltscomputingllc.com/wp-content/uploads/2018/08/synpuf1k_omop_cdm_5.2.2.zip</a></p>
+<p class="card-text">For more information about the OMOP Common Data Model, refer to the following:</p>
+<p class="card-text">CDM 5.2.2 DDL for the OHDSI supported DBMSs is available health-related</p>
+<p class="card-text"><a class="reference external" href="https://github.com/OHDSI/CommonDataModel/tree/v5.2.2">https://github.com/OHDSI/CommonDataModel/tree/v5.2.2</a></p>
 </div>
 </details></div>
 </details></div>
 <div class="section" id="synthean-electronic-health-records">
 <h3>Synthean Electronic Health Records<a class="headerlink" href="#synthean-electronic-health-records" title="Permalink to this headline">¶</a></h3>
-<p>One of the main bottlenecks for data miners is the lack of dataset availability of electronic health records, due to,
-as we saw it to HIPAA concerns. To bypass these roadblocks, several tools have been developed to generate synthetic datasets,
-free of any restrictions. Below, we provide information about one such tool.</p>
-<p><a class="reference external" href="https://github.com/synthetichealth/synthea/wiki">https://github.com/synthetichealth/synthea/wiki</a></p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1062,17 +1075,23 @@ free of any restrictions. Below, we provide information about one such tool.</p>
 <ul class="simple">
 <li><p class="card-text"><strong>Data Type</strong>: Electronic Health Records</p></li>
 <li><p class="card-text"><strong>Nature of the data</strong>: Synthetic EHR</p></li>
-<li><p class="card-text"><strong>Description</strong>: Synthean, Synthetic Electronic Health Records generating software <a class="footnote-reference brackets" href="#pmid29025144" id="id4">3</a></p></li>
-<li><p class="card-text"><strong>Format</strong>: HL7 FHIR</p></li>
-<li><p class="card-text"><strong>Availability</strong>:
-<a class="reference external" href="https://synthetichealth.github.io/synthea/">https://synthetichealth.github.io/synthea/</a>
-<a class="reference external" href="https://synthea.mitre.org/downloads">https://synthea.mitre.org/downloads</a></p></li>
+<li><p class="card-text"><strong>Description</strong>: One of the main bottlenecks for data miners is the lack of dataset availability of electronic health records, due to
+Health Insurance Portability and Accountability Act (HIPAA) concerns. Synthean, Synthetic Electronic Health Records generating software <a class="footnote-reference brackets" href="#pmid29025144" id="id4">3</a>
+is one of the tools developed to generate synthetic datasets without restrictions to bypass these roadblocks.</p></li>
 <li><p class="card-text"><strong>Purpose</strong>:</p>
 <ul>
 <li><p class="card-text">Generation of synthetic training dataset for data mining and algorithm development</p></li>
 </ul>
 </li>
-<li><p class="card-text"><strong>License</strong>: CC0 - “Public Domain Dedication”</p></li>
+<li><p class="card-text"><strong>Availability</strong>:</p>
+<ul>
+<li><p class="card-text"><a class="reference external" href="https://synthetichealth.github.io/synthea/">Synthea Official website</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://synthea.mitre.org/downloads">SyntheticMass Data Downloads</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://github.com/synthetichealth/synthea/">Synthea Patient Generator</a></p></li>
+</ul>
+</li>
+<li><p class="card-text"><strong>Format</strong>: HL7 FHIR, CCDA, CSV and others</p></li>
+<li><p class="card-text"><strong>License</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 - “Public Domain Dedication”</a></p></li>
 </ul>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1085,57 +1104,6 @@ Exemplar datasets available for download<div class="summary-down docutils">
 <a class="reference internal image-reference" href="../../../_images/Synthea-synthdata.png"><img alt="Exemplar Synthetic EHR datasets available for download in HL7 FHIR" src="../../../_images/Synthea-synthdata.png" style="width: 900px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Exemplar Synthetic EHR datasets available for download in HL7 FHIR</span><a class="headerlink" href="#exemplar-synthetic-ehr-datasets-available-for-download-in-hl7-fhir" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-</details></div>
-</details></div>
-<div class="section" id="synthetic-electronic-medical-notes-the-omop-cdmv5-test-data">
-<h3>Synthetic Electronic Medical Notes: the OMOP CDMv5 Test Data<a class="headerlink" href="#synthetic-electronic-medical-notes-the-omop-cdmv5-test-data" title="Permalink to this headline">¶</a></h3>
-<details class="sphinx-bs dropdown card mb-3" open="open">
-<summary class="summary-title card-header">
-<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
-    class="octicon no-title" aria-hidden="true">
-  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
-    <circle cx="0" cy="12" r="6"></circle>
-    <circle cx="18" cy="12" r="6"></circle>
-    <circle cx="36" cy="12" r="6"></circle>
-  </g>
-</svg><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<ul class="simple">
-<li><p class="card-text"><strong>Data Type</strong>: Electronic Medical Notes</p></li>
-<li><p class="card-text"><strong>Nature of the data</strong>: Synthetic Data</p></li>
-<li><p class="card-text"><strong>Description</strong>: This test data set, generated by  Lee Evans while working at LTS Computing LLC is an OMOP-CDM version 5
-formatted collection of
-1000 patient sample of CMS 2008-2010 Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF).
-The information held in the dataset  corresponds to Synthetic patients &amp; medicare claims/prescription data.
-he dataset can be downloaded in a compressed (zipped) format from LTS Computing LLC website: <a class="reference external" href="http://www.ltscomputingllc">http://www.ltscomputingllc</a></p></li>
-<li><p class="card-text"><strong>Format</strong>: OMOP CDM v5.2.2</p></li>
-<li><p class="card-text"><strong>Availability</strong>: <a class="reference external" href="http://www.ltscomputingllc.com/downloads/">http://www.ltscomputingllc.com/downloads/</a></p></li>
-<li><p class="card-text"><strong>Purpose</strong>:</p>
-<ul>
-<li><p class="card-text">Public data to demo the OHDSI Ontologies</p></li>
-<li><p class="card-text">Benchmark performance</p></li>
-<li><p class="card-text">Developing &amp; testing OHDSI tools</p></li>
-<li><p class="card-text">OHDSI tools training</p></li>
-</ul>
-</li>
-<li><p class="card-text"><strong>License</strong>: LTS Computing LLC license</p></li>
-</ul>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-SynPUF 1000 person dataset in OMOP CDM v5.2.2 format:<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">This synthetic dataset corresponds to 1000 person composite dataset:</p>
-<p class="card-text"><a class="reference external" href="http://www.ltscomputingllc.com/wp-content/uploads/2018/08/synpuf1k_omop_cdm_5.2.2.zip">http://www.ltscomputingllc.com/wp-content/uploads/2018/08/synpuf1k_omop_cdm_5.2.2.zip</a></p>
-<p class="card-text">For more information about the OMOP Common Data Model, refer to the following:</p>
-<p class="card-text">CDM 5.2.2 DDL for the OHDSI supported DBMSs is available health-related</p>
-<p class="card-text"><a class="reference external" href="https://github.com/OHDSI/CommonDataModel/tree/v5.2.2">https://github.com/OHDSI/CommonDataModel/tree/v5.2.2</a></p>
 </div>
 </details></div>
 </details></div>
@@ -1157,14 +1125,9 @@ SynPUF 1000 person dataset in OMOP CDM v5.2.2 format:<div class="summary-down do
 </summary><div class="summary-content card-body docutils">
 <ul class="simple">
 <li><p class="card-text"><strong>Data Type</strong>: Clinical Trial Data</p></li>
-<li><p class="card-text"><strong>Nature of the data</strong>: Dummy Trial Data</p></li>
-<li><p class="card-text"><strong>Description</strong>: This is a sample study dataset containing CDISC SDTM formatted data files created originally by CDISC
-for demo purposes. This dataset can be used by anyone who is interested in CDISC SDTM formatted dataset. This version
-is used to demonstrate loading standard clinical datasets into PlatformTM: a data custodianship platform for
-translational research data.
-Live demo here: <a class="reference external" href="https://platformtm.cloud/app/#/projects/15/main">https://platformtm.cloud/app/#/projects/15/main</a></p></li>
-<li><p class="card-text"><strong>Format</strong>: CDISC SDTM</p></li>
-<li><p class="card-text"><strong>Availability</strong>: <a class="reference external" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/51B6NK">https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/51B6NK</a></p></li>
+<li><p class="card-text"><strong>Nature of the data</strong>: Synthetic Data</p></li>
+<li><p class="card-text"><strong>Description</strong>: This is a sample study dataset containing <a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtm">CDISC SDTM</a> formatted data files created originally by CDISC
+for demo purposes. This dataset can be used by anyone who is interested in CDISC SDTM formatted dataset.</p></li>
 <li><p class="card-text"><strong>Purpose</strong>:</p>
 <ul>
 <li><p class="card-text">Benchmark performance</p></li>
@@ -1172,35 +1135,10 @@ Live demo here: <a class="reference external" href="https://platformtm.cloud/app
 <li><p class="card-text">CDISC SDTM tools training</p></li>
 </ul>
 </li>
-<li><p class="card-text"><strong>License</strong>: CC0 - “Public Domain Dedication”</p></li>
-</ul>
-</div>
-</details></div>
-<div class="section" id="observational-data-in-omop-cdm-format">
-<h3>Observational Data in OMOP CDM format:<a class="headerlink" href="#observational-data-in-omop-cdm-format" title="Permalink to this headline">¶</a></h3>
-<details class="sphinx-bs dropdown card mb-3" open="open">
-<summary class="summary-title card-header">
-<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
-    class="octicon no-title" aria-hidden="true">
-  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
-    <circle cx="0" cy="12" r="6"></circle>
-    <circle cx="18" cy="12" r="6"></circle>
-    <circle cx="36" cy="12" r="6"></circle>
-  </g>
-</svg><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<ul class="simple">
-<li><p class="card-text"><strong>Data Type</strong>: Observational Data</p></li>
-<li><p class="card-text"><strong>Nature of the data</strong>: Dummy Trial Data</p></li>
-<li><p class="card-text"><strong>Description</strong>:</p></li>
-<li><p class="card-text"><strong>Format</strong>: OMOP CDM v5</p></li>
-<li><p class="card-text"><strong>Availability</strong>:</p></li>
-<li><p class="card-text"><strong>Purpose</strong>:
-*</p></li>
-<li><p class="card-text"><strong>License</strong>: CC0 - “Public Domain Dedication”</p></li>
+<li><p class="card-text"><strong>Availability</strong>: <a class="reference external" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/51B6NK">CDISC-SDTM sample study</a></p></li>
+<li><p class="card-text"><strong>Format</strong>: CDISC SDTM</p></li>
+<li><p class="card-text"><strong>License</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 - “Public Domain Dedication”</a></p></li>
+<li><p class="card-text"><strong>Examples of use</strong>: <a class="reference external" href="https://platformtm.cloud/app/#/projects/15/main">loading standard clinical datasets into PlatformTM live demo</a></p></li>
 </ul>
 </div>
 </details></div>
@@ -1208,22 +1146,16 @@ Live demo here: <a class="reference external" href="https://platformtm.cloud/app
 <hr class="docutils" />
 <div class="section" id="conclusions">
 <h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>This content provides you with a set of resources to kick start your exploration of unstructured text in clinical context.
-These are useful resources for gaining familiarity with these data types.
+<p>This content provides you with a set of resources to kick start your exploration of unstructured text in clinical context.
 Remember to understand the data stewardship requirements that go along with handling real clinical data but also the limitations associated with some synthetic datasets.</p>
-</div></blockquote>
 <!-- 
-TODO : fill in the links to what-should-I-read-next recipes -->
-<div class="section" id="what-should-i-read-next">
-<h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>How to request data access and deal with data access committees? <!-- TODO add a link to corresponding document --></p></li>
-<li><p>How to do NER on EHR with NLP?<!-- TODO add a link to corresponding document --></p></li>
-<li><p>How to deal with unstructured text?<!-- TODO add a link to corresponding document --></p></li>
-</ul>
-</div>
-<hr class="docutils" />
+TODO : fill in the links to what-should-I-read-next recipes 
+
+> ### What should I read next?
+> * How to request data access and deal with data access committees? < TODO add a link to corresponding document >
+> * How to do NER on EHR with NLP?< TODO add a link to corresponding document >
+> * How to deal with unstructured text?< TODO add a link to corresponding document >
+--->
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
 </div>
 <div class="section" id="references">
@@ -1295,6 +1227,13 @@ https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Prese
 <td><p class="card-text"></p></td>
 <td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/fuqix"></img><div class="d-block">Fuqi Xu</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-5923-3859"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">EMBL-EBI</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/embl.png" ></img></p></td>
+<td><p class="card-text">Reviewing</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1363,23 +1302,18 @@ https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Prese
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electronics-medical-notes-synpuf-1000-person-dataset-omop-cdm-v5-standard">
+     Electronics Medical Notes: SynPUF 1000 person dataset &amp; OMOP-CDM v5 standard
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#synthean-electronic-health-records">
      Synthean Electronic Health Records
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthetic-electronic-medical-notes-the-omop-cdmv5-test-data">
-     Synthetic Electronic Medical Notes: the OMOP CDMv5 Test Data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#clinical-trial-data-in-cdisc-sdtm-format">
      Clinical Trial Data in CDISC SDTM format:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#observational-data-in-omop-cdm-format">
-     Observational Data in OMOP CDM format:
     </a>
    </li>
   </ul>
@@ -1388,13 +1322,6 @@ https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Prese
   <a class="reference internal nav-link" href="#conclusions">
    Conclusions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-should-i-read-next">
-     What should I read next?
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
