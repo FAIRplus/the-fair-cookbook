@@ -90,7 +90,7 @@ Test labels are collected from medical professionals. {footcite}`lee_evans_CDMV5
 - **License**: [APACHE license, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 ````
 
-### Electronics Medical Notes: SynPUF 1000 person dataset
+### Electronics Medical Notes: SynPUF 1000 person dataset & OMOP-CDM v5 standard
 `````{dropdown}
 :open:
 - **Data Type**: Electronic Medical Notes
