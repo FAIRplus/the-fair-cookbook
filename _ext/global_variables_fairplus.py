@@ -53,8 +53,8 @@ CONTROLLED_VOCABULARY_MATURITY_LEVEL = {
 
 CONTROLLED_VOCABULARY_MATURITY_INDICATOR = {
     "0" : "not applicable",
-	"1" : "[DSM-1-C0]"
-	"2" : "[DSM-1-C1]"
+	"1" : "[DSM-1-C0]",
+	"2" : "[DSM-1-C1]",
 	"3" : "[DSM-1-C2]",
 	"4" : "[DSM-1-C3]",
 	"5" : "[DSM-1-H1]",
