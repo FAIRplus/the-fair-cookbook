@@ -268,7 +268,7 @@ class PanelFairplus(Directive):
         :return str: a string properly formatted containing the list of audience targets
         """
         indicators = '<v-chip-group>'
-        base_url = "https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/"
+        base_url = "https://w3id.org/Data-Maturity/"
         for indicator in self.options['maturity_indicator']:
             label = CONTROLLED_VOCABULARY_MATURITY_INDICATOR[indicator].replace('[', '').replace(']', '')
             href = base_url + label
@@ -283,38 +283,89 @@ class PanelFairplus(Directive):
         :return: a json-ld representation of the recipe
         """
         json_ld = {
-            "@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"},
-            "@type": ["sdo:HowTo", "bs:TrainingMaterial"],
-            "name": self.options["recipe_name"],
-            "description": self.options["recipe_name"],
-            "keywords": [],
-            "conformsTo": {
+            "@context": {
+                "bs": "https://bioschema.org/",
+                "dc": "http://purl.org/dc/terms/",
+                "owl": "http://www.w3.org/2002/07/owl#",
+                "sdo": "https://schema.org/",
+            },
+            "@type": ["sdo:HowTo", "sdo:LearningResource"],
+            "@id": self.options["identifier_link"],
+            "sdo:name": self.options["recipe_name"],
+            "sdo:description": self.options["recipe_name"],
+            "sdo:keywords": [],
+            "dc:conformsTo": {
                 "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
                 "@type": "CreativeWork"
             },
-            "inLanguage": ["en-GB"],
-            "audience": [CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
-                         for target in self.options["intended_audience"]],
-            "isPartOf": [
+            "sdo:inLanguage": ["en-GB"],
+            "sdo:audience": [CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
+                             for target in self.options["intended_audience"]],
+            "sdo:isPartOf": [
                 {
                     "@type": "CreativeWork",
-                    "url": "https://fairplus.github.io/the-fair-cookbook/",
-                    "name": "The FAIR Cookbook"
+                    "@id": "https://fairplus.github.io/the-fair-cookbook/",
+                    "sdo:url": "https://fairplus.github.io/the-fair-cookbook/",
+                    "sdo:name": "The FAIR Cookbook"
                 }
             ],
-            "learningResourceType": CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
-            "identifier": {
+            "sdo:learningResourceType": CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
+            "sdo:identifier": {
                 "@type": "PropertyValue",
-                "name": self.options["identifier_text"],
-                "url": self.options["identifier_link"]
+                "@id": "",
+                "sdo:name": self.options["identifier_text"],
+                "dso:url": self.options["identifier_link"],
+                "owl:sameAs": "https://identifiers.org/fcb:%s" % str(self.options["identifier_text"])
             },
-            "license": {
+            "sdo:license": {
                 "@type": "CreativeWork",
-                "url": "https://creativecommons.org/licenses/by/4.0/",
-                "name": "CC-BY-4.0"
+                "@id": "https://creativecommons.org/licenses/by/4.0/",
+                "sdo:url": "https://creativecommons.org/licenses/by/4.0/",
+                "sdo:name": "CC-BY-4.0"
             },
-            "timeRequired": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
-            "totalTime": "PT0H%sM0S" % str(self.options["reading_time_minutes"])
+            "sdo:timeRequired": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
+            "sdo:totalTime": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
+            "sdo:step": [{
+                "@type": "sdo:HowToSection",
+                "sdo:position": "1",
+                "sdo:name": "Overview",
+                "sdo:url": self.options["identifier_link"] + "#main-objectives",
+                "sdo:itemListElement": [{"@type": "sdo:HowToStep",
+                                         "sdo:position": "1",
+                                         "sdo:name": "",
+                                         "sdo:itemListElement": [{"@type": "sdo:HowToDirection",
+                                                                  "sdo:position": "1",
+                                                                  "sdo:name": "step-by-step section",
+                                                                  "sdo:text": "Follow the step-by-step section.",
+                                                                  "sdo:url": self.options["identifier_link"]
+                                                                             + "#main-objectives",},
+                                                                 {"@type": "sdo:HowToTip",
+                                                                  "sdo:position": "2",
+                                                                  "sdo:name": "Reporting an issue",
+                                                                  "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!",
+                                                                  "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]
+                                         }
+                                        ]},
+                {
+                    "@type": "sdo:HowToSection",
+                    "sdo:position": "2",
+                    "sdo:name": "Conclusion",
+                    "sdo:url": self.options["identifier_link"] + "#conclusion",
+                    "sdo:itemListElement": [{"@type": "sdo:HowToStep",
+                                             "sdo:position": "1",
+                                             "sdo:name": "",
+                                             "sdo:itemListElement": [{"@type": "sdo:HowToDirection",
+                                                                      "sdo:position": "1",
+                                                                      "sdo:name": "conclusion section",
+                                                                      "sdo:text": "What to read next?",
+                                                                      "sdo:url": self.options["identifier_link"]
+                                                                                 + "#conclusion"},
+                                                                     {"@type": "sdo:HowToTip",
+                                                                      "sdo:position": "2",
+                                                                      "sdo:name": "Reporting an issue",
+                                                                      "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!",
+                                                                      "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}
+            ]
         }
         return '<script type="application/ld+json"> %s </script>' % dumps(json_ld)
 

@@ -54,7 +54,7 @@ nbdime==3.1.1
 nbformat==5.2.0
 nest-asyncio==1.5.1
 nested-lookup==0.2.22
-notebook==6.3.0
+notebook>=6.4.12
 packaging==20.9
 pandocfilters==1.4.3
 parso==0.8.2
@@ -75,7 +75,7 @@ pytz==2021.1
 PyYAML==5.4.1
 pyzmq==22.0.3
 requests==2.25.1
-Send2Trash==1.5.0
+Send2Trash>=1.8.0
 six==1.15.0
 smmap==4.0.0
 sniffio==1.2.0
@@ -105,7 +105,7 @@ tomlkit==0.7.0
 tornado==6.1
 traitlets==5.0.5
 uc-micro-py==1.0.1
-urllib3==1.26.4
+urllib3==1.26.5
 wcwidth==0.2.5
 webencodings==0.5.1
 widgetsnbextension==3.5.1
