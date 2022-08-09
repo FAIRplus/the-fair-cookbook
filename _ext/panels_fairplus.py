@@ -1,3 +1,6 @@
+from os import path
+import json
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
@@ -150,6 +153,7 @@ class PanelFairplus(Directive):
                 _make_string_red("The colon (i.e. the character ':') is not allowed in recipe_name: %s" % (self.options["recipe_name"])))
 
     def _create_content(self):
+        self.build_json()
         content = []
         content.extend([
             '<br/>',
@@ -387,6 +391,30 @@ class PanelFairplus(Directive):
         node = nodes.container()
         self.state.nested_parse(self.content, self.content_offset, node)
         return node.children
+
+    def build_json(self):
+        here_path = path.dirname(path.abspath(__file__))
+        json_path = path.join(here_path, '..', '_static', 'recipes.json')
+
+        audience = []
+        for target in self.options["intended_audience"]:
+            audience.append(CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target].split("|")[0])
+
+        recipe = {
+            'name': self.options['recipe_name'],
+            'reading_time': self.options["reading_time_minutes"],
+            'executable': CONTROLLED_VOCABULARY_EXECUTABLE_CODE[self.options["has_executable_code"]],
+            'audience': audience,
+            'type': CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
+            'identifier': self.options["identifier_text"],
+            'maturity': self.options["maturity_level"],
+            'url': self.options["identifier_link"],
+        }
+        with open(json_path, 'r') as f:
+            json_data = json.load(f)
+        json_data[recipe['name']] = recipe
+        with open(json_path, 'w') as f:
+            json.dump(json_data, f)
 
 
 def setup(app):

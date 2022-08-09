@@ -22,9 +22,16 @@
 {%- endblock %}
 
 {%- block extrahead %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.7/vuetify.js" integrity="sha512-eZGCLzrDKLB070Ac/O0q0q1fOrty4fFio8mmVVV63XwP/7YJbweKfmASFujVMS0Pj/5ObQnbn4eiNY+WOAPPhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="{{ pageurl }}" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="{% if pagetitle %}{{ pagetitle | e }}{% else %}{{ docstitle | e }}{% endif %}" />
+<meta property="og:description" content="{{ page_description | e }}" />
+{% if logourl %} <meta property="og:image"       content="{{ logourl }}" /> {% endif %}
+<meta name="twitter:card" content="summary" />
 {%- endblock %}
 
 {# Silence the sidebar's, relbar's #}
@@ -52,7 +59,7 @@
                     <div
                         class="{{ sidebar_width_class }} bd-sidebar site-navigation show{% if is_single_page %} single-page{% endif %}"
                         id="site-navigation"
-                        style="width:300px"
+                        style="width:350px"
                     >
                         {% if not is_single_page %}
                             {% include "sidebar.html" %}
@@ -62,16 +69,22 @@
                     <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
                         <v-container fluid id="main-content" class="pa-0">
                             <v-row class="d-flex">
-                                <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
-                                    {% block body %} {% endblock %}
-                                </v-col>
-                                <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
-                                    <div style="position: fixed">{{ generate_toc_html() }}</div>
-                                </div>
+                                {% if pagename != 'content/search-wizard' %}
+                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                        {% block body %} {% endblock %}
+                                    </v-col>
+                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                        <div style="position: fixed">{{ generate_toc_html() }}</div>
+                                    </div>
+                                {% else %}
+                                    <v-col class="col-12 px-10 pt-10 mt-3">
+                                        {% include "search-wizard.html" %}
+                                    </v-col>
+                                {% endif %}
                             </v-row>
 
                             {% if theme_show_prev_next %}
-                                <v-row>
+                                <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         {{ prev_next(prev, next) }}
                                     </div>
@@ -123,7 +136,8 @@
                     warning: '#FFC107'
                 }
             }
-        }
+        },
+        icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
 </script>
