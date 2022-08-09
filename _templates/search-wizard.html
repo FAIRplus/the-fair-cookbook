@@ -159,7 +159,7 @@
                 this.inputs.recipeType.value = null
                 this.inputs.audience.value = null
                 this.inputs.readingTime.value = [0, 60]
-                this.inputs.executable.value = 0
+                this.inputs.executable.value = 1
                 this.inputs.maturity = 0
             },
             hasMaturity(recipe) {
@@ -264,6 +264,7 @@
                                         </v-col>
                                         <v-col cols="12" class="d-flex justify-end align-end mt-2 pt-2 pr-3">
                                             <v-btn color="secondary" @click="resetFilters()">
+                                            <v-icon small left class="white--text">fas fa-trash</v-icon>
                                                 Reset
                                             </v-btn>
                                         </v-col>
