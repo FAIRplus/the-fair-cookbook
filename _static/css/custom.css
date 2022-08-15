@@ -1184,24 +1184,23 @@ footer {
 
 .bar {
     height: 5px;
-    background-color: #421C6E;
     margin: 10px 0 0 0;
     opacity: 0.1;
 }
 
 .barsStart {
-    -webkit-transform: skew(30deg);
-    -moz-transform: skew(30deg);
-    -o-transform: skew(30deg);
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -o-transform: skew(-30deg);
     bottom: 0;
     left: -10vw;
     overflow: hidden;
 }
 
 .barsEnd {
-    -webkit-transform: skew(-30deg);
-    -moz-transform: skew(-30deg);
-    -o-transform: skew(-30deg);
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    -o-transform: skew(30deg);
     top: 0;
     right: -10vw;
     overflow: hidden;
