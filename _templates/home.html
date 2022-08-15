@@ -1,0 +1,127 @@
+<v-col cols="12">
+    <v-container
+        fluid class="primary lighten-1 pa-0 d-flex flex-column justify-center align-center"
+        style="height:102vh"
+    >
+        <div class=" animate__animated animate__backInLeft homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
+            <h1 class="white--text"> The <span class="secondary--text">FAIR</span> Cookbook </h1>
+            <h2 class="white--text text-center pa-4 mt-0" style="font-size:1.2rem; font-weight: lighter">
+                Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the
+                Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and
+                Reusable.
+            </h2>
+            <div class="d-flex justify-center align-center">
+                <v-btn class="secondary white--text mr-2" large href="./recipes/introduction/FAIR-cookbook-audience.html">
+                    Learn more
+                </v-btn>
+                <v-btn class="success white--text mx-2" large>
+                    Search Recipes
+                </v-btn>
+            </div>
+        </div>
+        <v-btn fab class="primary--text white mb-6">
+            <v-icon x-larg @click="$vuetify.goTo('#more', {})"> fa fa-arrow-down</v-icon>
+        </v-btn>
+    </v-container>
+
+    <v-container
+        fluid
+        class="pa-0 d-flex justify-center align-center grey lighten-2"
+    >
+        <v-container fluid style="height:100%" class="pa-0">
+            <v-row no-gutters justify-center>
+                <v-col
+                   cols="12"
+                   sm="12"
+                   xs="12"
+                   md="12"
+                   lg="6"
+                   xl="6"
+                   style="height:100vh"
+                   class="d-flex flex-column justify-center align-center px-5 pt-12"
+                   id="more"
+                >
+                    <div>
+                        <h2 class="text-center"> Learning objectives </h2>
+                        <p class="text-center">
+                            The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and
+                            indicators of FAIRness, the maturity model, the technologies, the tools and the standards
+                            available, as well as the skills required, and the challenges, to achieve and improve FAIRness.
+                        </p>
+                        <v-container>
+                        <v-row justify="center">
+                            <v-col
+                                cols="12"
+                                xm="12"
+                                sm="12"
+                                md="3"
+                                lg="3"
+                                class="d-flex justify-center align-center"
+                            >
+                                <v-btn class="primary white--text">
+                                    <v-icon class="white--text" left small> fas fa-toolbox </v-icon> Infrastructure
+                                </v-btn>
+                            </v-col>
+                            <v-col
+                                cols="12"
+                                xm="12"
+                                sm="12"
+                                md="3"
+                                lg="3"
+                                class="d-flex justify-center align-center"
+                            >
+                                <v-btn class="primary white--text">
+                                    <v-icon class="white--text" left small> fas fa-book </v-icon> Applied examples
+                                </v-btn>
+                            </v-col>
+                            <v-col
+                                cols="12"
+                                xm="12"
+                                sm="12"
+                                md="3"
+                                lg="3"
+                                class="d-flex justify-center align-center"
+                            >
+                                <v-btn class="primary white--text">
+                                    <v-icon class="white--text" left small> fas fa-tasks </v-icon> Assessments
+                                </v-btn>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                    </div>
+                    <div class="position-absolute py-5 barsStart">
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar3"></div>
+                    </div>
+                </v-col>
+                <v-col
+                   cols="12"
+                   sm="12"
+                   xs="12"
+                   md="12"
+                   lg="6"
+                   xl="6"
+                   style="height:100vh"
+                   class="d-flex flex-column justify-center align-center px-5"
+                >
+                    <div class="position-absolute py-5 pt-12 mt-8 d-flex flex-column align-end barsEnd">
+                        <div class="bar bar3"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar1"></div>
+                    </div>
+                    <h2> The recipes </h2>
+                    <p class="text-center">
+                        The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your
+                        role), reading time, and level of difficulty. The FAIR Cookbook is a live resource, meaning
+                        that content is added and improved, iteratively, in an open manner, therefore bear with us if
+                        several sections are work in progress! Below there are links to some key recipes, click on
+                        them to explore their content; otherwise use the main menu on the left-hand side to browse all
+                        the current recipes.
+                    </p>
+                </v-col>
+            </v-row>
+        </v-container>
+    </v-container>
+
+</v-col>
