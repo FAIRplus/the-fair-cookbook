@@ -3,7 +3,7 @@
         fluid class="primary lighten-1 pa-0 d-flex flex-column justify-center align-center"
         style="height:102vh"
     >
-        <div class=" animate__animated animate__backInLeft homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
+        <div class="animate__animated animate__backInLeft homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
             <h1 class="white--text"> The <span class="secondary--text">FAIR</span> Cookbook </h1>
             <h2 class="white--text text-center pa-4 mt-0" style="font-size:1.2rem; font-weight: lighter">
                 Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the
@@ -20,7 +20,8 @@
             </div>
         </div>
         <v-btn fab class="primary--text white mb-6">
-            <v-icon x-larg @click="$vuetify.goTo('#more', {})"> fa fa-arrow-down</v-icon>
+            <v-icon x-larg @click="$vuetify.goTo('#more', {})"
+        id="more"> fa fa-arrow-down</v-icon>
         </v-btn>
     </v-container>
 
@@ -29,6 +30,60 @@
         class="pa-0 d-flex justify-center align-center grey lighten-2"
     >
         <v-container fluid style="height:100%" class="pa-0">
+            <lazyload></lazyload>
+        </v-container>
+    </v-container>
+</v-col>
+
+<script>
+    Vue.component("Lazyload", {
+        data() {
+            return {
+                isActive: {
+                    screenOne: false
+                },
+                items: [
+                    {
+                        title: "Findability",
+                        icon: 'F',
+                        content: [
+                            { text: "Unique, persistent identifiers", link: ""},
+                            { text: "Search engine optimization", link: ""},
+                        ]
+                    },
+                    {
+                        title: 'Accessibility',
+                        icon: 'A',
+                        content: [
+                            { text: "Transferring data with SFTP", link: ""},
+                            { text: "Downloading data with Aspera", link: ""},
+                        ]
+                    },
+                    {
+                        title: 'Interoperability',
+                        icon: 'I',
+                        content: [
+                            { text: "Selecting terminologies and ontologies", link: ""},
+                            { text: "Creating a metadata profile", link: ""},
+                        ]
+                    },
+                    {
+                        title: 'Reusability',
+                        icon: 'R',
+                        content: [
+                            { text: "Data licenses", link: ""},
+                            { text: "Declaring data’s permitted uses", link: ""},
+                        ]
+                    },
+                  ],
+            }
+        },
+        template: `
+            <v-lazy
+            v-model="isActive.screenOne"
+            :options="{ threshold: .1 }"
+            style="height:100%"
+        >
             <v-row no-gutters justify-center>
                 <v-col
                    cols="12"
@@ -37,62 +92,66 @@
                    md="12"
                    lg="6"
                    xl="6"
-                   style="height:100vh"
-                   class="d-flex flex-column justify-center align-center px-5 pt-12"
-                   id="more"
+                   style="min-height:95vh"
+                   class="d-flex flex-column justify-center align-start px-10 pt-12"
                 >
-                    <div>
-                        <h2 class="text-center"> Learning objectives </h2>
-                        <p class="text-center">
+                    <div class="d-flex flex-column justify-center" style="height:100%">
+                        <div class="animate__animated animate__zoomIn">
+                            <h2 class="text-center"> Learning objectives </h2>
+                            <p class="text-center">
                             The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and
                             indicators of FAIRness, the maturity model, the technologies, the tools and the standards
                             available, as well as the skills required, and the challenges, to achieve and improve FAIRness.
                         </p>
-                        <v-container>
-                        <v-row justify="center">
-                            <v-col
-                                cols="12"
-                                xm="12"
-                                sm="12"
-                                md="3"
-                                lg="3"
-                                class="d-flex justify-center align-center"
-                            >
-                                <v-btn class="primary white--text">
-                                    <v-icon class="white--text" left small> fas fa-toolbox </v-icon> Infrastructure
-                                </v-btn>
-                            </v-col>
-                            <v-col
-                                cols="12"
-                                xm="12"
-                                sm="12"
-                                md="3"
-                                lg="3"
-                                class="d-flex justify-center align-center"
-                            >
-                                <v-btn class="primary white--text">
-                                    <v-icon class="white--text" left small> fas fa-book </v-icon> Applied examples
-                                </v-btn>
-                            </v-col>
-                            <v-col
-                                cols="12"
-                                xm="12"
-                                sm="12"
-                                md="3"
-                                lg="3"
-                                class="d-flex justify-center align-center"
-                            >
-                                <v-btn class="primary white--text">
-                                    <v-icon class="white--text" left small> fas fa-tasks </v-icon> Assessments
-                                </v-btn>
-                            </v-col>
-                        </v-row>
-                    </v-container>
-                    </div>
-                    <div class="position-absolute py-5 barsStart">
-                        <div class="bar bar1"></div>
-                        <div class="bar bar2"></div>
-                        <div class="bar bar3"></div>
+                            <v-container>
+                            <v-row justify="center">
+                                <v-col
+                                    cols="12"
+                                    xm="12"
+                                    sm="12"
+                                    md="3"
+                                    lg="5"
+                                    xl="3"
+                                    class="d-flex justify-center align-center"
+                                >
+                                    <v-btn class="primary white--text">
+                                        <v-icon class="white--text" left small> fas fa-toolbox </v-icon> Infrastructure
+                                    </v-btn>
+                                </v-col>
+                                <v-col
+                                    cols="12"
+                                    xm="12"
+                                    sm="12"
+                                    md="3"
+                                    lg="5"
+                                    xl="3"
+                                    class="d-flex justify-center align-center"
+                                >
+                                    <v-btn class="primary white--text">
+                                        <v-icon class="white--text" left small> fas fa-book </v-icon> Applied examples
+                                    </v-btn>
+                                </v-col>
+                                <v-col
+                                    cols="12"
+                                    xm="12"
+                                    sm="12"
+                                    md="3"
+                                    lg="5"
+                                    xl="3"
+                                    class="d-flex justify-center align-center"
+                                >
+                                    <v-btn class="primary white--text">
+                                        <v-icon class="white--text" left small> fas fa-tasks </v-icon> Assessments
+                                    </v-btn>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+                        </div>
+                        <div class="position-absolute py-5 barsStart">
+                            <div class="bar bar1"></div>
+                            <div class="bar bar2"></div>
+                            <div class="bar bar3"></div>
+                        </div>
                     </div>
                 </v-col>
                 <v-col
@@ -102,26 +161,72 @@
                    md="12"
                    lg="6"
                    xl="6"
-                   style="height:100vh"
-                   class="d-flex flex-column justify-center align-center px-5"
+                   style="min-height:95vh"
+                   class="d-flex flex-column justify-center px-10"
                 >
-                    <div class="position-absolute py-5 pt-12 mt-8 d-flex flex-column align-end barsEnd">
+                    <div class="position-absolute py-5 d-flex flex-column align-end barsEnd">
                         <div class="bar bar3"></div>
                         <div class="bar bar2"></div>
                         <div class="bar bar1"></div>
                     </div>
-                    <h2> The recipes </h2>
-                    <p class="text-center">
-                        The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your
-                        role), reading time, and level of difficulty. The FAIR Cookbook is a live resource, meaning
-                        that content is added and improved, iteratively, in an open manner, therefore bear with us if
-                        several sections are work in progress! Below there are links to some key recipes, click on
-                        them to explore their content; otherwise use the main menu on the left-hand side to browse all
-                        the current recipes.
-                    </p>
+                    <div class="animate__animated animate__zoomIn d-flex justify-center align-center flex-column">
+                        <h2> The recipes </h2>
+                        <p class="text-center">
+                            The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your
+                            role), reading time, and level of difficulty. The FAIR Cookbook is a live resource, meaning
+                            that content is added and improved, iteratively, in an open manner, therefore bear with us if
+                            several sections are work in progress! Below there are links to some key recipes, click on
+                            them to explore their content; otherwise use the main menu on the left-hand side to browse all
+                            the current recipes.
+                        </p>
+                    </div>
+                    <v-container>
+                        <v-row justify="center">
+                            <v-col
+                              v-for="(item, i) in items" :key="i"
+                              color="primary"
+                              fill-dot
+                              cols="12"
+                              xs="12"
+                              sm="8"
+                              md="5"
+                              lg="6"
+                              xl="5"
+                            >
+                              <v-card color="primary lighten-1 white--text d-flex flex-column" style="height:100%">
+                                <v-card-title class="text-h5">
+                                    <v-btn
+                                        fab
+                                        class="text-h4 mr-3 primary lighten-1 white--text d-flex justify-center align-center"
+                                        style="border:2px solid white !important"
+                                    >
+                                        {{ '{{ item.icon }}' }}
+                                    </v-btn>
+                                    {{ '{{ item.title }}' }}
+                                </v-card-title>
+                                <v-card-text
+                                    class="grey lighten-2 primary--text py-3 d-flex flex-column"
+                                    style="flex-grow:1"
+                                >
+                                <div style="flex-grow:1">
+                                  <p class="pb-0 mb-0"> <b> EXEMPLAR RECIPES <b> </p>
+                                  <ul class="d-flex flex-row">
+                                    <li v-for="(content, y) in item.content" :key="'content_' + i + y" class="mr-10">
+                                        <a :href="content.link"> {{ '{{ content.text }}' }} </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                  <v-btn color="primary lighten-1" class="mx-0" outlined>
+                                    Learn more
+                                  </v-btn>
+                                </v-card-text>
+                              </v-card>
+                            </v-col>
+                      </v-row>
+                    </v-container>
                 </v-col>
             </v-row>
-        </v-container>
-    </v-container>
-
-</v-col>
+        </v-lazy>
+        `
+    })
+</script>

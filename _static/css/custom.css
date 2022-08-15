@@ -1176,16 +1176,17 @@ footer {
 
 
 @media(max-width: 1265px){
-    .barsStart {
+    .barsStart, .bar, .barsEnd {
         display:none
     }
 }
 
 
 .bar {
-    height: 20px;
+    height: 5px;
     background-color: #421C6E;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
+    opacity: 0.1;
 }
 
 .barsStart {
@@ -1194,6 +1195,7 @@ footer {
     -o-transform: skew(30deg);
     bottom: 0;
     left: -10vw;
+    overflow: hidden;
 }
 
 .barsEnd {
@@ -1202,14 +1204,15 @@ footer {
     -o-transform: skew(-30deg);
     top: 0;
     right: -10vw;
+    overflow: hidden;
 }
 
 .bar1 {
-    width: 70vh;
+    width: 80vw;
 }
 .bar2 {
-    width: 80vh;
+    width: 90vw;
 }
 .bar3 {
-    width: 90vh;
+    width: 100vw;
 }
