@@ -1,15 +1,23 @@
 <v-col cols="12">
     <v-container
-        fluid class="primary lighten-1 pa-0 d-flex flex-column justify-center align-center"
-        style="height:102vh"
-    >
-        <div class="animate__animated animate__backInLeft homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
+        class="primary lighten-1 pa-0 d-flex flex-column justify-center align-center"
+        fluid style="height:102vh">
+        <div class="homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
             <h1 class="white--text"> The <span class="secondary--text">FAIR</span> Cookbook </h1>
-            <h2 class="white--text text-center pa-4 mt-0" style="font-size:1.2rem; font-weight: lighter">
-                Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the
-                Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and
-                Reusable.
-            </h2>
+            <v-container>
+                <h2 class="white--text text-center pa-4 mt-0"
+                    style="font-size:1.2rem; font-weight: lighter">
+                    <p class="text-italic animate__animated animate__slideInLeft">Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the
+                    Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and
+                    Reusable.</p>
+                    <v-divider class="white my-8"></v-divider>
+                    <p class="animate__animated animate__slideInRight">The <span class="secondary--text">FAIR Principles</span> put specific emphasis on enhancing the ability of machines to automatically find and
+                    use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are
+                    aspirational and generic. The FAIR Cookbook guides researchers and data stewards of the Life Science
+                    domain in their FAIRification journey; and also provides policymakers and trainers with practical
+                    examples to recommend in their guidance and use in their educational material.</p>
+                </h2>
+            </v-container>
             <div class="d-flex justify-center align-center">
                 <v-btn class="secondary white--text mr-2" large href="./recipes/introduction/FAIR-cookbook-audience.html">
                     Learn more
@@ -23,11 +31,12 @@
             <v-icon id="more"> fa fa-arrow-down</v-icon>
         </v-btn>
     </v-container>
-    <lazyload></lazyload>
+    <Lazyloada></Lazyloada>
+    <Lazyloadb></Lazyloadb>
 </v-col>
 
 <script>
-    Vue.component("Lazyload", {
+    Vue.component("Lazyloada", {
         data() {
             return {
                 isActive: {
@@ -86,7 +95,7 @@
         template: `
         <v-lazy
             v-model="isActive.screenOne"
-            :options="{ threshold: .1 }"
+            :options="{ threshold: 1.0 }"
         >
             <v-container fluid class="pa-0 grey lighten-2">
                 <v-row no-gutters justify="center">
@@ -97,12 +106,11 @@
                        md="12"
                        lg="6"
                        xl="8"
-                       style="min-height:40vh"
+                       style="min-height:24vh"
                        class="d-flex flex-column justify-center align-start"
                     >
-                        <div class="animate__animated animate__zoomIn">
+                        <div>
                             <h2 class="text-center"> Learning objectives </h2>
-                            <div class="bar barLeft"></div>
                             <p class="text-center">
                                 The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and
                                 indicators of FAIRness, the maturity model, the technologies, the tools and the standards
@@ -141,10 +149,10 @@
                        md="12"
                        lg="12"
                        xl="12"
-                       style="min-height:60vh"
+                       style="min-height:41vh"
                        class="d-flex flex-column justify-center"
                     >
-                        <v-container class="animate__animated animate__zoomIn d-flex justify-center align-center flex-column">
+                        <v-container class="d-flex justify-center align-center flex-column">
                             <h2> The recipes </h2>
                             <p class="text-center">
                                 The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your
@@ -155,8 +163,8 @@
                                 the current recipes.
                             </p>
                         </v-container>
-                        <v-container fluid>
-                            <v-row justify="center">
+                        <v-container fluid class="px-10">
+                            <v-row justify="center" class="px-10">
                                 <v-col
                                   v-for="(item, i) in items" :key="i"
                                   color="primary"
@@ -169,7 +177,7 @@
                                   xl="3"
                                 >
                                   <v-card
-                                      color="grey lighten-2 primary--text d-flex flex-column"
+                                      color="grey lighten-2 primary--text d-flex flex-column animate__animated animate__flipInY"
                                       style="height:100%; border: 1px solid #9e9e9e !important"
                                   >
                                     <v-card-title class="text-h5">
@@ -202,6 +210,57 @@
                                 </v-col>
                           </v-row>
                         </v-container>
+                    </v-col>
+                </v-row>
+                <v-row no-gutters justify="center">
+                    <v-col
+                       cols="12"
+                       sm="12"
+                       xs="12"
+                       md="12"
+                       lg="6"
+                       xl="8"
+                       style="min-height:24vh"
+                       class="d-flex flex-column justify-center align-start"
+                    >
+                        <div class="">
+                            <h2 class="text-center"> Contributors </h2>
+                            <p class="text-center">
+                                The FAIR Cookbook is developed by a thriving community of Life Science professionals,
+                                in the academia and the industry sectors, including members of the ELIXIR community.
+                                Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a
+                                community-driven resource that is being populated and improved, iteratively, in an open
+                                manner. If you want to participate, join us and contribute, or contact us at
+                                fairplus-cookbook@elixir-europe.org
+                            </p>
+                        </div>
+                    </v-col>
+                </v-row>
+                <v-row justify="center">
+                    <v-btn @click="$vuetify.goTo('#next', {})" fab class="primary--text white mb-6">
+                        <v-icon id="next"> fa fa-arrow-down</v-icon>
+                    </v-btn>
+                </v-row>
+            </v-container>
+        </v-lazy>
+        `
+    })
+
+    Vue.component("Lazyloadb", {
+        data() {
+            return {
+                isActive: {
+                    screenTwo: false
+                }
+            }
+        },
+        template: `
+        <v-lazy v-model="isActive.screenTwo" :options="{ threshold: 1.0 }">
+            <v-container fluid class="pa-0">
+                <v-row no-gutters>
+                    <v-col cols="6" class="primary lighten-1 white--text" style="min-height: 100vh">
+                    </v-col>
+                    <v-col cols="6" class="grey lighten-2 primary--text" style="min-height: 100vh">
                     </v-col>
                 </v-row>
             </v-container>
