@@ -1166,10 +1166,6 @@ input.rounded {
     font-family: "Font Awesome 5 Free" !important;
 }
 
-footer {
-    border-top: 0 !important;
-}
-
 .v-application--wrap {
     min-height: initial !important;
 }
