@@ -24,7 +24,7 @@
                 <v-btn class="secondary white--text mr-2" large href="./recipes/introduction/FAIR-cookbook-audience.html">
                     Learn more
                 </v-btn>
-                <v-btn class="success white--text mx-2" large>
+                <v-btn class="success white--text mx-2" large href="./search-wizard.html">
                     Search Recipes
                 </v-btn>
             </div>
@@ -79,10 +79,10 @@
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
                             class="d-flex flex-column justify-center align-center primary lighten-1 py-3"
                         >
-                            <v-btn fab x-large>
+                            <v-btn fab x-large disabled>
                                 <v-icon class="primary--text"> fas fa-plus</v-icon>
                             </v-btn>
-                            <v-chip class="primary--text mt-2" color="white">
+                            <v-chip class="primary--text mt-2" color="white" disabled>
                                 Lorep Ipsum
                             </v-chip>
                         </v-col>
@@ -95,14 +95,16 @@
                     <v-row justify="center">
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center primary lighten-1 py-3"
+                            class="primary lighten-1 py-3"
                         >
-                            <v-btn fab x-large>
-                                <v-icon class="primary--text"> fas fa-toolbox</v-icon>
-                            </v-btn>
-                            <v-chip class="primary--text mt-2" color="white">
+                            <a href="./recipes/infrastructure.html" class="d-flex flex-column justify-center align-center">
+                                <v-btn fab x-large>
+                                    <v-icon class="primary--text"> fas fa-toolbox</v-icon>
+                                </v-btn>
+                                <v-chip class="primary--text mt-2" color="white">
                                 Infrastructure
                             </v-chip>
+                            </a>
                         </v-col>
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
@@ -110,14 +112,16 @@
                         ></v-col>
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center primary lighten-1 py-3"
+                            class="primary lighten-1 py-3"
                         >
-                            <v-btn fab x-large>
-                                <v-icon class="primary--text mt-2"> fas fa-tasks </v-icon>
-                            </v-btn>
-                            <v-chip class="primary--text mt-2" color="white">
-                                Assessments
-                            </v-chip>
+                            <a href="./recipes/assessing-fairness.html" class="d-flex flex-column justify-center align-center">
+                                <v-btn fab x-large>
+                                    <v-icon class="primary--text mt-2"> fas fa-tasks </v-icon>
+                                </v-btn>
+                                <v-chip class="primary--text mt-2" color="white">
+                                    Assessments
+                                </v-chip>
+                            </a>
                         </v-col>
                     </v-row>
 
@@ -128,14 +132,16 @@
                         ></v-col>
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center primary lighten-1 py-3"
+                            class="primary lighten-1 py-3"
                         >
-                            <v-btn fab x-large>
-                                <v-icon class="primary--text"> fas fa-book</v-icon>
-                            </v-btn>
-                            <v-chip class="primary--text mt-2" color="white">
-                                Applied Examples
-                            </v-chip>
+                            <a href="./recipes/applied-examples.html" class="d-flex flex-column justify-center align-center">
+                                <v-btn fab x-large>
+                                    <v-icon class="primary--text"> fas fa-book</v-icon>
+                                </v-btn>
+                                <v-chip class="primary--text mt-2" color="white">
+                                    Applied Examples
+                                </v-chip>
+                            </a>
                         </v-col>
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
@@ -162,12 +168,17 @@
                 <div class="">
                     <h2 class="text-center"> Contributors </h2>
                     <p class="text-center text-subtitle-1">
-                        The FAIR Cookbook is developed by a thriving community of Life Science professionals,
+                        The FAIR Cookbook is developed by a thriving
+                        <a class="accent--text" href='/recipes/community.html#fcb-community'>community of Life Science professionals</a>,
                         in the academia and the industry sectors, including members of the ELIXIR community.
-                        Funded by the IMI FAIRplus project, a private-public partnership, the FAIR Cookbook is a
+                        Funded by the
+                        <a class="accent--text" href='https://fairplus-project.eu/' target="_blank">IMI FAIRplus project</a>,
+                        a private-public partnership, the FAIR Cookbook is a
                         community-driven resource that is being populated and improved, iteratively, in an open
-                        manner. If you want to participate, join us and contribute, or contact us at
-                        fairplus-cookbook@elixir-europe.org
+                        manner. If you want to participate, join us and
+                        <a class="accent--text" href='./recipes/help.html'>contribute</a>,
+                        or contact us at
+                        <a class="accent--text" href='mailto:fairplus-cookbook@elixir-europe.org'>fairplus-cookbook@elixir-europe.org</a>
                     </p>
                 </div>
             </v-col>
@@ -193,33 +204,55 @@
                         title: "Findability",
                         icon: 'F',
                         content: [
-                            { text: "Unique, persistent identifiers", link: ""},
-                            { text: "Search engine optimization", link: ""},
-                        ]
+                            {
+                                text: "Unique, persistent identifiers",
+                                link: "./recipes/findability/identifiers.html#fcb-find-identifiers"
+                            },
+                            {
+                                text: "Search engine optimization",
+                                link: "./recipes/findability/seo.html#fcb-find-seo"
+                            },
+                        ],
+                        link: './recipes/findability.html'
                     },
                     {
                         title: 'Accessibility',
                         icon: 'A',
                         content: [
-                            { text: "Transferring data with SFTP", link: ""},
-                            { text: "Downloading data with Aspera", link: ""},
-                        ]
+                            { text: "Transferring data with SFTP", link: "./recipes/accessibility/sftp.html"},
+                            { text: "Downloading data with Aspera", link: "/recipes/accessibility/aspera.html"},
+                        ],
+                        link: './recipes/accessibility.html'
                     },
                     {
                         title: 'Interoperability',
                         icon: 'I',
                         content: [
-                            { text: "Selecting terminologies and ontologies", link: ""},
-                            { text: "Creating a metadata profile", link: ""},
-                        ]
+                            {
+                                text: "Selecting terminologies and ontologies",
+                                link: "./recipes/interoperability/selecting-ontologies.html"
+                            },
+                            {
+                                text: "Creating a metadata profile",
+                                link: "./recipes/interoperability/creating-minimal-metadata-profiles.html"
+                            },
+                        ],
+                        link: './recipes/interoperability.html'
                     },
                     {
                         title: 'Reusability',
                         icon: 'R',
                         content: [
-                            { text: "Data licenses", link: ""},
-                            { text: "Declaring data’s permitted uses", link: ""},
-                        ]
+                            {
+                                text: "Data licenses",
+                                link: "./recipes/reusability/ATI_licensing_data.html"
+                            },
+                            {
+                                text: "Declaring data’s permitted uses",
+                                link: "./recipes/reusability/expressing-data-use.html"
+                            },
+                        ],
+                        link: './recipes/reusability.html'
                     },
                   ]
             }
@@ -233,7 +266,7 @@
                             <h2 class="white--text"> The recipes </h2>
                             <p class="text-center text-subtitle-1">
                                 The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your
-                                role), reading time, and level of difficulty. The FAIR Cookbook is a live resource, meaning
+                                role), reading time, and level of difficulty. The FAIR Cookbook is a <b>live resource</b>, meaning
                                 that content is added and improved, iteratively, in an open manner, therefore bear with us if
                                 several sections are work in progress! Below there are links to some key recipes, click on
                                 them to explore their content; otherwise use the main menu on the left-hand side to browse all
@@ -286,7 +319,7 @@
                                             </li>
                                           </ul>
                                         </div>
-                                          <v-btn color="primary white--text" class="mx-0">
+                                          <v-btn color="primary white--text" class="mx-0" :href="item.link">
                                             Learn more
                                           </v-btn>
                                         </v-card-text>
