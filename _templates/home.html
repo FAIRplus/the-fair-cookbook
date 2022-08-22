@@ -1,0 +1,338 @@
+<v-col cols="12">
+    <!-- SCREEN ONE -->
+    <v-container
+        class="primary lighten-1 pa-0 d-flex flex-column justify-center align-center"
+        fluid style="min-height:102vh"
+    >
+        <div class="homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
+            <h1 class="white--text pt-10 mt-10"> The <span class="secondary--text">FAIR</span> Cookbook </h1>
+            <v-container>
+                <h2 class="white--text text-center pa-4 mt-0" style="font-size:1.2rem; font-weight: lighter">
+                    <p class="text-subtitle-2 animate__animated animate__slideInLeft">
+                        <b>Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the
+                        Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and
+                        Reusable.</b>
+                    </p>
+                    <v-divider class="white my-8"></v-divider>
+                    <p class="text-subtitle-2 animate__animated animate__slideInRight">The <span class="secondary--text">FAIR Principles</span> put specific emphasis on enhancing the ability of machines to automatically find and
+                    use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are
+                    aspirational and generic. The FAIR Cookbook guides researchers and data stewards of the Life Science
+                    domain in their FAIRification journey; and also provides policymakers and trainers with practical
+                    examples to recommend in their guidance and use in their educational material.</p>
+                </h2>
+            </v-container>
+            <div class="d-flex justify-center align-center">
+                <v-btn class="secondary white--text mr-2" large href="./recipes/introduction/FAIR-cookbook-audience.html">
+                    Learn more
+                </v-btn>
+                <v-btn class="success white--text mx-2" large href="./search-wizard.html">
+                    Search Recipes
+                </v-btn>
+            </div>
+        </div>
+        <v-btn @click="$vuetify.goTo('#more', {})" fab class="primary--text white mb-6">
+            <v-icon id="more"> fa fa-arrow-down</v-icon>
+        </v-btn>
+    </v-container>
+
+    <!-- SCREEN TWO -->
+    <v-container fluid class="pa-0 grey lighten-2">
+        <!-- TOP SECTION -->
+        <v-row no-gutters justify="start" style="min-height:50vh">
+
+            <!-- LEFT COLUMN -->
+            <v-col
+               cols="12"
+               sm="12"
+               xs="12"
+               md="12"
+               lg="6"
+               xl="6"
+               class="d-flex flex-column justify-center align-start"
+            >
+                <div>
+                    <h2 class="text-center"> Learning objectives </h2>
+                    <p class="text-center px-2 text-subtitle-1">
+                        The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and
+                        indicators of FAIRness, the maturity model, the technologies, the tools and the standards
+                        available, as well as the skills required, and the challenges, to achieve and improve FAIRness.
+                    </p>
+                </div>
+            </v-col>
+
+            <!-- RIGHT COLUMN -->
+            <v-col
+               cols="12"
+               sm="12"
+               xs="12"
+               md="12"
+               lg="6"
+               xl="6"
+               class="d-flex flex-column justify-center align-start"
+            >
+                <v-container class="pt-5" style="height: 100%;">
+                    <v-row justify="center" style="height: 35%;">
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="d-flex flex-column justify-center align-center transparent py-3"
+                        ></v-col>
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="d-flex flex-column justify-center align-center primary lighten-1 py-3"
+                        >
+                            <v-btn fab x-large disabled>
+                                <v-icon class="primary--text"> fas fa-plus</v-icon>
+                            </v-btn>
+                            <v-chip class="primary--text mt-2" color="white" disabled>
+                                Lorep Ipsum
+                            </v-chip>
+                        </v-col>
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="d-flex flex-column justify-center align-center transparent py-3"
+                        ></v-col>
+                    </v-row>
+
+                    <v-row justify="center" style="height: 35%;">
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center "
+                        >
+                            <a href="./recipes/infrastructure.html" class="d-flex flex-column justify-center align-center">
+                                <v-btn fab x-large>
+                                    <v-icon class="primary--text"> fas fa-toolbox</v-icon>
+                                </v-btn>
+                                <v-chip class="primary--text mt-2" color="white">
+                                Infrastructure
+                            </v-chip>
+                            </a>
+                        </v-col>
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="d-flex flex-column justify-center align-center transparent py-3"
+                        ></v-col>
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center "
+                        >
+                            <a href="./recipes/assessing-fairness.html" class="d-flex flex-column justify-center align-center">
+                                <v-btn fab x-large>
+                                    <v-icon class="primary--text mt-2"> fas fa-tasks </v-icon>
+                                </v-btn>
+                                <v-chip class="primary--text mt-2" color="white">
+                                    Assessments
+                                </v-chip>
+                            </a>
+                        </v-col>
+                    </v-row>
+
+                    <v-row justify="center" style="height: 35%;">
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="d-flex flex-column justify-center align-center transparent py-3"
+                        ></v-col>
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center "
+                        >
+                            <a href="./recipes/applied-examples.html" class="d-flex flex-column justify-center align-center">
+                                <v-btn fab x-large>
+                                    <v-icon class="primary--text"> fas fa-book</v-icon>
+                                </v-btn>
+                                <v-chip class="primary--text mt-2" color="white">
+                                    Applied Examples
+                                </v-chip>
+                            </a>
+                        </v-col>
+                        <v-col
+                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
+                            class="d-flex flex-column justify-center align-center transparent py-3"
+                        ></v-col>
+                    </v-row>
+                </v-container>
+            </v-col>
+
+        </v-row>
+
+        <!-- BOTTOM SECTION -->
+        <v-row no-gutters justify="end">
+            <v-col
+               cols="12"
+               sm="12"
+               xs="12"
+               md="12"
+               lg="6"
+               xl="6"
+               style="min-height:38vh"
+               class="d-flex flex-column justify-center align-start"
+            >
+                <div class="">
+                    <h2 class="text-center"> Contributors </h2>
+                    <p class="text-center text-subtitle-1 px-3">
+                        The FAIR Cookbook is developed by a thriving
+                        <a class="accent--text" href='/recipes/community.html#fcb-community'>community of Life Science professionals</a>,
+                        in the academia and the industry sectors, including members of the ELIXIR community.
+                        Funded by the
+                        <a class="accent--text" href='https://fairplus-project.eu/' target="_blank">IMI FAIRplus project</a>,
+                        a private-public partnership, the FAIR Cookbook is a
+                        community-driven resource that is being populated and improved, iteratively, in an open
+                        manner. If you want to participate, join us and
+                        <a class="accent--text" href='./recipes/help.html'>contribute</a>,
+                        or contact us at
+                        <a class="accent--text" href='mailto:fairplus-cookbook@elixir-europe.org'>fairplus-cookbook@elixir-europe.org</a>
+                    </p>
+                </div>
+            </v-col>
+        </v-row>
+        <v-row no-gutters justify="center" class="mt-0 d-flex align-start" style="min-height: 9vh">
+            <v-btn @click="$vuetify.goTo('#recipes', {})" fab class="primary--text white mb-6">
+                <v-icon> fa fa-arrow-down</v-icon>
+            </v-btn>
+        </v-row>
+    </v-container>
+
+    <!-- SCREEN THREE -->
+    <Lazyload></Lazyload>
+</v-col>
+
+<script>
+    Vue.component("Lazyload", {
+        data() {
+            return {
+                isActive: false,
+                items: [
+                    {
+                        title: "Findability",
+                        icon: 'F',
+                        content: [
+                            {
+                                text: "Unique, persistent identifiers",
+                                link: "./recipes/findability/identifiers.html#fcb-find-identifiers"
+                            },
+                            {
+                                text: "Search engine optimization",
+                                link: "./recipes/findability/seo.html#fcb-find-seo"
+                            },
+                        ],
+                        link: './recipes/findability.html'
+                    },
+                    {
+                        title: 'Accessibility',
+                        icon: 'A',
+                        content: [
+                            { text: "Transferring data with SFTP", link: "./recipes/accessibility/sftp.html"},
+                            { text: "Downloading data with Aspera", link: "/recipes/accessibility/aspera.html"},
+                        ],
+                        link: './recipes/accessibility.html'
+                    },
+                    {
+                        title: 'Interoperability',
+                        icon: 'I',
+                        content: [
+                            {
+                                text: "Selecting terminologies and ontologies",
+                                link: "./recipes/interoperability/selecting-ontologies.html"
+                            },
+                            {
+                                text: "Creating a metadata profile",
+                                link: "./recipes/interoperability/creating-minimal-metadata-profiles.html"
+                            },
+                        ],
+                        link: './recipes/interoperability.html'
+                    },
+                    {
+                        title: 'Reusability',
+                        icon: 'R',
+                        content: [
+                            {
+                                text: "Data licenses",
+                                link: "./recipes/reusability/ATI_licensing_data.html"
+                            },
+                            {
+                                text: "Declaring data’s permitted uses",
+                                link: "./recipes/reusability/expressing-data-use.html"
+                            },
+                        ],
+                        link: './recipes/reusability.html'
+                    },
+                  ]
+            }
+        },
+        template: `
+        <v-lazy v-model="isActive" :options="{ threshold: 1.0 }" id="recipes">
+            <v-container fluid class="pa-0">
+                <v-row no-gutters style="min-height: 100vh">
+                    <v-col cols="12" xl="6" lg="6" md="6" sm="12" xs="12" class="primary lighten-1 white--text">
+                        <v-container class="d-flex justify-center align-center flex-column animate__animated animate__bounceInLeft" style="height:100%">
+                            <h2 class="white--text"> The recipes </h2>
+                            <p class="text-center text-subtitle-1">
+                                The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your
+                                role), reading time, and level of difficulty. The FAIR Cookbook is a <b>live resource</b>, meaning
+                                that content is added and improved, iteratively, in an open manner, therefore bear with us if
+                                several sections are work in progress! Below there are links to some key recipes, click on
+                                them to explore their content; otherwise use the main menu on the left-hand side to browse all
+                                the current recipes.
+                            </p>
+                        </v-container>
+                    </v-col>
+                    <v-col cols="12" xl="6" lg="6" md="6" sm="12" xs="12"
+                        class="primary d-flex flex-column justify-center align-center"
+                    >
+                        <div class="d-flex flex-column justify-center align-center">
+                            <v-container fluid>
+                                <v-row justify="center" class="align-center">
+                                    <v-col
+                                      v-for="(item, i) in items" :key="i"
+                                      color="primary"
+                                      fill-dot
+                                      cols="12"
+                                      xs="12"
+                                      sm="6"
+                                      md="12"
+                                      lg="6"
+                                      xl="6"
+                                      style="height:100%"
+                                      class="d-flex"
+                                    >
+                                      <v-card
+                                          color="primary lighten-1 white--text d-flex flex-column animate__animated animate__bounceInRight"
+                                          style="min-height: 246px; width:100%"
+                                      >
+                                        <v-card-title class="text-h5">
+                                            <v-btn
+                                                fab
+                                                class="text-h4 mr-3 primary lighten-1 white--text d-flex justify-center align-center"
+                                                style="border:2px solid white !important"
+                                            >
+                                                {{ '{{ item.icon }}' }}
+                                            </v-btn>
+                                            {{ '{{ item.title }}' }}
+                                        </v-card-title>
+                                        <v-card-text
+                                            class="primary lighten-1 grey--text d-flex flex-column"
+                                            style="flex-grow:1"
+                                        >
+                                        <div style="flex-grow:1">
+                                          <p class="pb-0 mb-0 grey--text"> <b> EXEMPLAR RECIPES <b> </p>
+                                          <ul class="d-flex flex-row">
+                                            <li v-for="(content, y) in item.content" :key="'content_' + i + y" class="mr-10">
+                                                <a :href="content.link" class="white--text"> {{ '{{ content.text }}' }} </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                          <v-btn color="primary white--text" class="mx-0" :href="item.link">
+                                            Learn more
+                                          </v-btn>
+                                        </v-card-text>
+                                      </v-card>
+                                    </v-col>
+                              </v-row>
+                            </v-container>
+                        </div>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-lazy>
+        `
+    })
+</script>

@@ -1087,8 +1087,11 @@ div.topbar {
    fill: orangered !important;
 }
 
-
-
+@media (max-width: 735px) {
+    .extraButtons {
+        display: none;
+    }
+}
 
 @media (max-width: 1250px) {
     .recipe {
@@ -1161,4 +1164,15 @@ input.rounded {
 
 .fa, .far, .fas {
     font-family: "Font Awesome 5 Free" !important;
+}
+
+.v-application--wrap {
+    min-height: initial !important;
+}
+
+
+@media(max-width: 1265px){
+    .barsStart, .bar, .barsEnd {
+        display:none
+    }
 }
