@@ -1,32 +1,37 @@
-<v-col cols="12">
+<v-col cols="12" id="homepage">
     <!-- SCREEN ONE -->
     <v-container
         class="primary lighten-1 pa-0 d-flex flex-column justify-center align-center"
         fluid style="min-height:102vh"
     >
         <div class="homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
-            <h1 class="white--text pt-10 mt-10"> The <span class="secondary--text">FAIR</span> Cookbook </h1>
+            <h1 class="white--text pt-10 mt-10" style="font-size: 4rem !important;">
+                The <span class="secondary--text">FAIR</span> Cookbook
+                <span
+                    class="d-flex justify-end align-end mt-1 font-italic"
+                    :class="$vuetify.breakpoint.smAndUp ? 'justify-end' : 'justify-center'"
+                    style="font-size:2.9rem !important"
+                >
+                    for FAIR doers
+                </span>
+            </h1>
             <v-container>
-                <h2 class="white--text text-center pa-4 mt-0" style="font-size:1.2rem; font-weight: lighter">
-                    <p class="text-subtitle-2 animate__animated animate__slideInLeft">
-                        <b>Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the
-                        Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and
-                        Reusable.</b>
+                <h2 class="white--text text-center pa-4 mt-0">
+                    <p class="animate__animated animate__slideInLeft" style="font-size: 2rem !important;">
+                        <b style="line-height:2rem">
+                            An online, <span class="secondary--text">open</span> and <span class="secondary--text">live</span>
+                            resource for the Life Sciences with recipes that help you to make
+                            and keep data Findable, Accessible, Interoperable and Reusable; in one word FAIR.
+                        </b>
                     </p>
-                    <v-divider class="white my-8"></v-divider>
-                    <p class="text-subtitle-2 animate__animated animate__slideInRight">The <span class="secondary--text">FAIR Principles</span> put specific emphasis on enhancing the ability of machines to automatically find and
-                    use the data, in addition to supporting its reuse by individuals. However, the FAIR Principles are
-                    aspirational and generic. The FAIR Cookbook guides researchers and data stewards of the Life Science
-                    domain in their FAIRification journey; and also provides policymakers and trainers with practical
-                    examples to recommend in their guidance and use in their educational material.</p>
                 </h2>
             </v-container>
             <div class="d-flex justify-center align-center">
-                <v-btn class="secondary white--text mr-2" large href="./recipes/introduction/FAIR-cookbook-audience.html">
+                <v-btn x-large class="secondary white--text mr-2" large href="./recipes/introduction/FAIR-cookbook-audience.html">
                     Learn more
                 </v-btn>
-                <v-btn class="success white--text mx-2" large href="./search-wizard.html">
-                    Search Recipes
+                <v-btn x-large class="success white--text mx-2" large @click="$vuetify.goTo('#more', {})">
+                    See Recipes
                 </v-btn>
             </div>
         </div>
@@ -78,7 +83,7 @@
                         ></v-col>
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center primary lighten-1 py-3"
+                            class="d-flex flex-column justify-center align-center primary lighten-1 py-3 elevate"
                         >
                             <v-btn fab x-large disabled>
                                 <v-icon class="primary--text"> fas fa-plus</v-icon>
@@ -96,7 +101,7 @@
                     <v-row justify="center" style="height: 35%;">
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center "
+                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center elevate"
                         >
                             <a href="./recipes/infrastructure.html" class="d-flex flex-column justify-center align-center">
                                 <v-btn fab x-large>
@@ -113,7 +118,7 @@
                         ></v-col>
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center "
+                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center elevate"
                         >
                             <a href="./recipes/assessing-fairness.html" class="d-flex flex-column justify-center align-center">
                                 <v-btn fab x-large>
@@ -133,7 +138,7 @@
                         ></v-col>
                         <v-col
                             cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center "
+                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center elevate"
                         >
                             <a href="./recipes/applied-examples.html" class="d-flex flex-column justify-center align-center">
                                 <v-btn fab x-large>
@@ -280,7 +285,7 @@
                     >
                         <div class="d-flex flex-column justify-center align-center">
                             <v-container fluid>
-                                <v-row justify="center" class="align-center">
+                                <v-row justify="center" class="align-center px-5">
                                     <v-col
                                       v-for="(item, i) in items" :key="i"
                                       color="primary"
@@ -290,12 +295,13 @@
                                       sm="6"
                                       md="12"
                                       lg="6"
-                                      xl="6"
+                                      xl="5"
                                       style="height:100%"
                                       class="d-flex"
+                                      :class="'rotate-' + i"
                                     >
                                       <v-card
-                                          color="primary lighten-1 white--text d-flex flex-column animate__animated animate__bounceInRight"
+                                          class="primary lighten-1 white--text d-flex flex-column animate__animated animate__zoomInDown"
                                           style="min-height: 246px; width:100%"
                                       >
                                         <v-card-title class="text-h5">
