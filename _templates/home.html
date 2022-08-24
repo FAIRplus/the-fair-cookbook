@@ -5,20 +5,20 @@
         fluid style="min-height:102vh"
     >
         <div class="homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
-            <h1 class="white--text pt-10 mt-10" style="font-size: 80px !important;">
+            <h1 class="white--text pt-10 mt-10" style="font-size: 50px !important;">
                 The <span class="secondary--text">FAIR</span> Cookbook
                 <span
                     class="d-flex justify-end align-end mt-1 font-italic"
                     :class="$vuetify.breakpoint.smAndUp ? 'justify-end' : 'justify-center'"
-                    style="font-size:58px !important"
+                    style="font-size:35px !important"
                 >
                     for FAIR doers
                 </span>
             </h1>
             <v-container>
                 <h2 class="white--text text-center pa-4 mt-0">
-                    <p class="animate__animated animate__slideInLeft" style="font-size: 50px !important;">
-                        <b style="line-height:3.5rem">
+                    <p class="animate__animated animate__slideInLeft" style="font-size: 30px !important;">
+                        <b :style="$vuetify.breakpoint.mdAndUp ? 'line-height:3.2rem' : '' ">
                             An online, <span class="secondary--text">open</span> and <span class="secondary--text">live</span>
                             resource for the Life Sciences with recipes that help you to make
                             and keep data Findable, Accessible, Interoperable and Reusable; in one word FAIR.
@@ -41,163 +41,35 @@
     </v-container>
 
     <!-- SCREEN TWO -->
-    <v-container fluid class="pa-0 grey lighten-2">
+    <Lazyload></Lazyload>
+
+    <!-- SCREEN THREE -->
+    <v-container fluid class="pa-0 py-10 primary lighten-1 white--text d-flex flex-column justify-center align-center" style="min-height:90vh">
+
         <!-- TOP SECTION -->
-        <v-row no-gutters justify="start" style="min-height:50vh">
+        <v-row no-gutters justify="start" v-if="$vuetify.breakpoint.xlOnly" >
+            <userscards> </userscards>
+            <userstext> </userstext>
+        </v-row>
 
-            <!-- LEFT COLUMN -->
-            <v-col
-               cols="12"
-               sm="12"
-               xs="12"
-               md="12"
-               lg="6"
-               xl="6"
-               class="d-flex flex-column justify-center align-start"
-            >
-                <div>
-                    <h2 class="text-center"> Learning objectives </h2>
-                    <p class="text-center px-2 text-subtitle-1">
-                        The FAIR Cookbook provides recipes for you to learn: how to FAIRify datasets, the levels and
-                        indicators of FAIRness, the maturity model, the technologies, the tools and the standards
-                        available, as well as the skills required, and the challenges, to achieve and improve FAIRness.
-                    </p>
-                </div>
-            </v-col>
-
-            <!-- RIGHT COLUMN -->
-            <v-col
-               cols="12"
-               sm="12"
-               xs="12"
-               md="12"
-               lg="6"
-               xl="6"
-               class="d-flex flex-column justify-center align-start"
-            >
-                <v-container class="pt-5" style="height: 100%;">
-                    <v-row justify="center" style="height: 35%;">
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center transparent py-3"
-                        ></v-col>
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center primary lighten-1 py-3 elevate"
-                        >
-                            <v-btn fab x-large disabled>
-                                <v-icon class="primary--text"> fas fa-plus</v-icon>
-                            </v-btn>
-                            <v-chip class="primary--text mt-2" color="white" disabled>
-                                Lorep Ipsum
-                            </v-chip>
-                        </v-col>
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center transparent py-3"
-                        ></v-col>
-                    </v-row>
-
-                    <v-row justify="center" style="height: 35%;">
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center elevate"
-                        >
-                            <a href="./recipes/infrastructure.html" class="d-flex flex-column justify-center align-center">
-                                <v-btn fab x-large>
-                                    <v-icon class="primary--text"> fas fa-toolbox</v-icon>
-                                </v-btn>
-                                <v-chip class="primary--text mt-2" color="white">
-                                Infrastructure
-                            </v-chip>
-                            </a>
-                        </v-col>
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center transparent py-3"
-                        ></v-col>
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center elevate"
-                        >
-                            <a href="./recipes/assessing-fairness.html" class="d-flex flex-column justify-center align-center">
-                                <v-btn fab x-large>
-                                    <v-icon class="primary--text mt-2"> fas fa-tasks </v-icon>
-                                </v-btn>
-                                <v-chip class="primary--text mt-2" color="white">
-                                    Assessments
-                                </v-chip>
-                            </a>
-                        </v-col>
-                    </v-row>
-
-                    <v-row justify="center" style="height: 35%;">
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center transparent py-3"
-                        ></v-col>
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="primary lighten-1 py-3 d-flex flex-column justify-center align-center elevate"
-                        >
-                            <a href="./recipes/applied-examples.html" class="d-flex flex-column justify-center align-center">
-                                <v-btn fab x-large>
-                                    <v-icon class="primary--text"> fas fa-book</v-icon>
-                                </v-btn>
-                                <v-chip class="primary--text mt-2" color="white">
-                                    Applied Examples
-                                </v-chip>
-                            </a>
-                        </v-col>
-                        <v-col
-                            cols="4" xl="2" lg="3" md="4" sm="4" xs="4"
-                            class="d-flex flex-column justify-center align-center transparent py-3"
-                        ></v-col>
-                    </v-row>
-                </v-container>
-            </v-col>
-
+        <v-row v-else no-gutters justify="end" class="pb-10">
+            <userstext> </userstext>
+            <userscards> </userscards>
         </v-row>
 
         <!-- BOTTOM SECTION -->
-        <v-row no-gutters justify="end">
-            <v-col
-               cols="12"
-               sm="12"
-               xs="12"
-               md="12"
-               lg="6"
-               xl="6"
-               style="min-height:38vh"
-               class="d-flex flex-column justify-center align-start"
-            >
-                <div class="">
-                    <h2 class="text-center"> Contributors </h2>
-                    <p class="text-center text-subtitle-1 px-3">
-                        The FAIR Cookbook is developed by a thriving
-                        <a class="accent--text" href='/recipes/community.html#fcb-community'>community of Life Science professionals</a>,
-                        in the academia and the industry sectors, including members of the ELIXIR community.
-                        Funded by the
-                        <a class="accent--text" href='https://fairplus-project.eu/' target="_blank">IMI FAIRplus project</a>,
-                        a private-public partnership, the FAIR Cookbook is a
-                        community-driven resource that is being populated and improved, iteratively, in an open
-                        manner. If you want to participate, join us and
-                        <a class="accent--text" href='./recipes/help.html'>contribute</a>,
-                        or contact us at
-                        <a class="accent--text" href='mailto:fairplus-cookbook@elixir-europe.org'>fairplus-cookbook@elixir-europe.org</a>
-                    </p>
-                </div>
-            </v-col>
+        <v-row no-gutters justify="end" class="pb-10" v-if="$vuetify.breakpoint.xlOnly">
+            <contributetext> </contributetext>
+            <contributecards> </contributecards>
         </v-row>
-        <v-row no-gutters justify="center" class="mt-0 d-flex align-start" style="min-height: 9vh">
-            <v-btn @click="$vuetify.goTo('#recipes', {})" fab class="primary--text white mb-6">
-                <v-icon> fa fa-arrow-down</v-icon>
-            </v-btn>
+
+        <v-row v-else no-gutters justify="end" class="pb-10">
+            <contributetext> </contributetext>
+            <contributecards> </contributecards>
         </v-row>
+
     </v-container>
 
-    <!-- SCREEN THREE -->
-    <Lazyload></Lazyload>
 </v-col>
 
 <script>
@@ -260,85 +132,400 @@
                         ],
                         link: './recipes/reusability.html'
                     },
-                  ]
+                ],
+                recipes: [
+                    {
+                        title: "Infrastructure",
+                        link: "./recipes/infrastructure.html",
+                        icon: "fas fa-toolbox"
+                    },
+                    {
+                        title: "Assessments",
+                        link: "./recipes/assessing-fairness.html",
+                        icon: "fas fa-tasks"
+                    },
+                    {
+                        title: "Applied Examples",
+                        link: "./recipes/applied-examples.html",
+                        icon: "fas fa-book"
+                    },
+                    {
+                        title: "Maturity model",
+                        link: "./recipes/",
+                        icon: "fas fa-plus"
+                    }
+                ]
             }
         },
         template: `
-        <v-lazy v-model="isActive" :options="{ threshold: 1.0 }" id="recipes">
-            <v-container fluid class="pa-0">
-                <v-row no-gutters style="min-height: 100vh">
-                    <v-col cols="12" xl="6" lg="6" md="6" sm="12" xs="12" class="primary lighten-1 white--text">
-                        <v-container class="d-flex justify-center align-center flex-column animate__animated animate__bounceInLeft" style="height:100%">
-                            <h2 class="white--text"> The recipes </h2>
-                            <p class="text-center text-subtitle-1">
-                                The FAIR Cookbook organizes the recipes according to the FAIR elements, audience type (your
-                                role), reading time, and level of difficulty. The FAIR Cookbook is a <b>live resource</b>, meaning
-                                that content is added and improved, iteratively, in an open manner, therefore bear with us if
-                                several sections are work in progress! Below there are links to some key recipes, click on
-                                them to explore their content; otherwise use the main menu on the left-hand side to browse all
-                                the current recipes.
-                            </p>
-                        </v-container>
-                    </v-col>
-                    <v-col cols="12" xl="6" lg="6" md="6" sm="12" xs="12"
-                        class="primary d-flex flex-column justify-center align-center"
-                    >
-                        <div class="d-flex flex-column justify-center align-center">
-                            <v-container fluid>
-                                <v-row justify="center" class="align-center px-5">
-                                    <v-col
-                                      v-for="(item, i) in items" :key="i"
-                                      color="primary"
-                                      fill-dot
-                                      cols="12"
-                                      xs="12"
-                                      sm="6"
-                                      md="12"
-                                      lg="6"
-                                      xl="5"
-                                      style="height:100%"
-                                      class="d-flex"
-                                      :class="'rotate-' + i"
-                                    >
-                                      <v-card
-                                          class="primary lighten-1 white--text d-flex flex-column animate__animated animate__zoomInDown"
-                                          style="min-height: 246px; width:100%"
-                                      >
-                                        <v-card-title class="text-h5">
-                                            <v-btn
-                                                fab
-                                                class="text-h4 mr-3 primary lighten-1 white--text d-flex justify-center align-center"
-                                                style="border:2px solid white !important"
-                                            >
-                                                {{ '{{ item.icon }}' }}
-                                            </v-btn>
-                                            {{ '{{ item.title }}' }}
-                                        </v-card-title>
-                                        <v-card-text
-                                            class="primary lighten-1 grey--text d-flex flex-column"
-                                            style="flex-grow:1"
-                                        >
-                                        <div style="flex-grow:1">
-                                          <p class="pb-0 mb-0 grey--text"> <b> EXEMPLAR RECIPES <b> </p>
-                                          <ul class="d-flex flex-row">
-                                            <li v-for="(content, y) in item.content" :key="'content_' + i + y" class="mr-10">
-                                                <a :href="content.link" class="white--text"> {{ '{{ content.text }}' }} </a>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                          <v-btn color="primary white--text" class="mx-0" :href="item.link">
-                                            Learn more
-                                          </v-btn>
-                                        </v-card-text>
-                                      </v-card>
-                                    </v-col>
-                              </v-row>
+            <v-lazy v-model="isActive" :options="{ threshold: 1.0 }" id="recipes">
+                <v-container fluid class="pa-0 d-flex flex-column grey lighten-2" style="min-height: 95vh">
+    
+                    <!-- TEXT -->
+                    <v-row no-gutters class="flex-grow-0">
+                        <v-col cols="12" class="grey lighten-2">
+                            <v-container class="d-flex flex-column" :class="$vuetify.breakpoint.lgAndUp ? 'align-start' : 'align-center'">
+                                <h2
+                                    class="text-h2 pb-5 primary--text"
+                                    style="border-bottom:10px solid"
+                                    :class="$vuetify.breakpoint.lgAndDown ? 'mt-0' : ''"
+                                >
+                                    The recipes
+                                </h2>
+                                <p class="text-h4" :class="$vuetify.breakpoint.lgAndUp ? '' : 'text-center'">
+                                    Guiding you through the key steps of a FAIRification journey.
+                                </p>
+                                <p class="text-h6 mb-0" :class="$vuetify.breakpoint.lgAndUp ? '' : 'text-center'">
+                                    Recipes provide you with the levels and indicators of FAIRness,
+                                    the maturity model, the technologies, the tools and the standards available, as well as the
+                                    skills required, and the challenges, to achieve and improve FAIRness.
+                                    <br>
+                                    Each recipe tells you the audience type, reading time, level of difficulty, and the level
+                                    of FAIR maturity it allows you to reach. Recipes are  <b class="primary--text">citable</b> via their unique identifier,
+                                    and their authors are <b class="primary--text">credited</b>.
+                                </p>
                             </v-container>
-                        </div>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-lazy>
+                        </v-col>
+                    </v-row>
+    
+                    <!-- LOGO BREAKER -->
+                    <v-row justify="center" class="flex-grow-0" :no-gutters="$vuetify.breakpoint.lgAndDown" :class="$vuetify.breakpoint.lgAndDown ? 'mt-0' : 'mt-10'">
+                        <v-col cols="1" class="d-flex justify-center align-center" :class="$vuetify.breakpoint.lgAndDown ? 'pa-0' : ''">
+                            <img src="/_static/images/fairplus-mini.png" style="width:75px; height:auto" alt="FAIRPlus Logo">
+                        </v-col>
+                    </v-row>
+    
+                    <!-- CARDS -->
+                    <v-row no-gutters class="flex-grow-1" justify="center">
+                        <v-col cols="12" class="d-flex justify-center align-center">
+                            <v-container>
+                                <CardsLargeContainer :items="items" v-if="$vuetify.breakpoint.lgAndUp" :recipes="recipes"> </CardsLargeContainer>
+                                <CardsSmallContainer :items="items" v-else :recipes="recipes"> </CardsSmallContainer>
+                            </v-container>
+                        </v-col>
+                    </v-row>
+    
+                    <!-- NEXT -->
+                    <v-row justify="center" class="flex-grow-0 py-4">
+                        <v-btn @click="$vuetify.goTo('#here', {})" fab class="primary--text white mb-4">
+                            <v-icon id="here"> fa fa-arrow-down</v-icon>
+                        </v-btn>
+                    </v-row>
+    
+                </v-container>
+            </v-lazy>
         `
     })
+
+    Vue.component("CardsLargeContainer", {
+        props: {
+            items: {type: Array, default: []},
+            recipes: {type: Array, default: []}
+        },
+        template: `
+            <v-row>
+                <v-col cols="3" class="rotate-0">
+                    <v-row>
+                        <FairCard :item="items[0]"> </FairCard>
+                    </v-row>
+                    <v-row>
+                       <Recipe :recipe="recipes[0]" />
+                    </v-row>
+                </v-col>
+                <v-col cols="3">
+                    <v-row>
+                        <FairCard :item="items[1]"> </FAIRCard>
+                    </v-row>
+                    <v-row>
+                        <Recipe :recipe="recipes[1]" />
+                    </v-row>
+                </v-col>
+                <v-col cols="3">
+                    <v-row>
+                        <FairCard :item="items[2]"> </FAIRCard>
+                    </v-row>
+                    <v-row>
+                        <Recipe :recipe="recipes[2]" />
+                    </v-row>
+                </v-col>
+                <v-col cols="3" class="rotate-3">
+                    <v-row>
+                        <FairCard :item="items[3]"> </FAIRCard>
+                    </v-row>
+                    <v-row>
+                        <Recipe :recipe="recipes[3]" :disabled="true" />
+                    </v-row>
+                </v-col>
+            </v-row>
+        `
+    })
+    Vue.component("CardsSmallContainer", {
+        props: {
+            items: {type: Array, default: []},
+            recipes: {type: Array, default: []}
+        },
+        template: `
+            <v-row no-gutters>
+                <v-col cols="12">
+                    <v-container class="pa-0">
+                        <v-row>
+                            <v-col cols="12" md="6">
+                                <FairCard :item="items[0]"> </FairCard>
+                            </v-col>
+                            <v-col cols="12" md="6">
+                                <FairCard :item="items[1]"> </FairCard>
+                            </v-col>
+                            <v-col cols="12" md="6">
+                                <FairCard :item="items[2]"> </FairCard>
+                            </v-col>
+                            <v-col cols="12" md="6">
+                                <FairCard :item="items[3]"> </FairCard>
+                            </v-col>
+                        </v-row>
+                        <v-row>
+                            <v-col cols="12" md="6">
+                                <Recipe :recipe="recipes[0]" />
+                            </v-col>
+                            <v-col cols="12" md="6">
+                                <Recipe :recipe="recipes[1]" />
+                            </v-col>
+                            <v-col cols="12" md="6">
+                                <Recipe :recipe="recipes[2]" />
+                            </v-col>
+                            <v-col cols="12" md="6">
+                                <Recipe :recipe="recipes[3]" :disabled="true" />
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-col>
+            </v-row>
+        `
+    })
+
+    Vue.component("FairCard", {
+        props: {
+            item: {type: Object, default: {}},
+        },
+        template: `
+            <v-col cols="12">
+                <v-card color="primary lighten-1" class="d-flex flex-column animate__animated animate__zoomInDown">
+                    <v-card-title class="text-h5 white--text">
+                        <v-btn
+                            fab
+                            class="text-h4 mr-3 white primary--text d-flex justify-center align-center"
+                        >
+                            {{ '{{ item.icon }}' }}
+                        </v-btn>
+                        {{ '{{ item.title }}' }}
+                    </v-card-title>
+                    <v-card-text class="primary lighten-1 grey--text d-flex flex-column flex-grow-1" style="flex-grow:1">
+                        <div style="flex-grow:1">
+                          <p class="pb-0 mb-0 grey--text"> <b> EXEMPLAR RECIPES <b> </p>
+                          <ul>
+                            <li v-for="(content, y) in item.content" :key="'content_' + item.title + y" class="mr-10">
+                                <a :href="content.link" class="white--text"> {{ '{{ content.text }}' }} </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <v-btn color="primary white--text" class="mx-0" :href="item.link">
+                            Learn more
+                        </v-btn>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+        `
+    })
+    Vue.component('Recipe', {
+        props: {
+            recipe: {type: Object, default: {}},
+            disabled: {type: Boolean, default: false }
+        },
+        template: `
+             <v-col cols="12">
+                    <v-card class="white--text primary lighten-1 animate__animated animate__zoomInUp" style="width:100%" :disabled="disabled">
+                        <v-card-title class="d-flex justify-center align-center flex-column">
+                            {{ '{{ recipe.title }}' }} <br>
+                            <v-btn x-large fab><v-icon class="primary--text"> {{ '{{ recipe.icon }}' }} </v-icon></v-btn>
+                        </v-card-title>
+                        <v-card-actions class="d-flex">
+                            <v-btn color="primary white--text flex-grow-1" class="mx-0" :href="recipe.link">
+                                Learn more
+                            </v-btn>
+                        </v-card-actions>
+                </v-card>
+             </v-col>
+        `
+    })
+
+    Vue.component('userstext', {
+        template: `
+            <v-col
+               cols="12"
+               sm="12"
+               xs="12"
+               md="12"
+               lg="12"
+               xl="6"
+               class="d-flex flex-column justify-start"
+               :class="$vuetify.breakpoint.xlOnly ? 'align-start' : 'align-center'"
+            >
+                <h2 class="white--text text-h2 pb-4" style="border-bottom:10px solid"> Users </h2>
+                <p class="px-2 text-h5" :class="$vuetify.breakpoint.xlOnly ? 'text-left' : 'text-center'">
+                    If you are a <span class="secondary--text">researcher</span> or <span class="secondary--text">data steward</span> we assist you in
+                    your FAIRification journey.
+                    <br>
+                    If you are a <span class="secondary--text">policymaker</span> or <span class="secondary--text">trainer</span>
+                    we provide you with practical examples to recommend in your guidance and use in your educational material.
+                    <br>
+                    If you are a <span class="secondary--text">data manager professional</span> also contribute recipes, share your FAIR expertise, and get credited!
+                </p>
+            </v-col>
+        `
+    })
+    Vue.component('userscards', {
+        computed: {
+            styles() {
+                let styles = ''
+                this.$vuetify.breakpoint.mdAndUp ? styles += ' height: 200px; ' : styles += ' height:150px; '
+                this.$vuetify.breakpoint.lgAndUp ? styles += ' padding: 0 255px; ' : styles += 'padding: 0 10px;'
+                return styles
+            }
+        },
+        template: `
+            <v-col
+               cols="12"
+               sm="12"
+               xs="12"
+               md="12"
+               lg="12"
+               xl="6"
+               class="d-flex flex-column justify-center align-start"
+            >
+                <v-container style="height: 100%;">
+                    <v-row justify="center" :style="$vuetify.breakpoint.mdAndUp ? 'height: 200px' : 'height:150px'">
+                        <v-card
+                            style="height:100%"
+                            :style="$vuetify.breakpoint.mdAndUp ? 'width:200px' : 'width:150px'"
+                            rounded="circle" color="white"
+                            class="d-flex flex-column justify-center align-center text-h3 secondary--text"
+                        >
+                            <span>Use</span> <span>it</span>
+                        </v-card>
+                    </v-row>
+                    <v-row :style="styles" class="d-flex" justify="space-between">
+                        <v-card
+                            class="flex-grow-0 d-flex flex-column justify-center align-center text-h3 secondary--text"
+                            style="height:100%"
+                            :style="$vuetify.breakpoint.mdAndUp ? 'width:200px' : 'width:150px'"
+                            rounded="circle" color="white"
+                        >
+                            <span>Join</span> <span>it</span>
+                        </v-card>
+                        <div class="flex-grow-1"></div>
+                        <v-card
+                            class="flex-grow-0 d-flex flex-column justify-center align-center text-h3 secondary--text"
+                            style="height:100%"
+                            :style="$vuetify.breakpoint.mdAndUp ? 'width:200px' : 'width:150px'"
+                            rounded="circle" color="white"
+                        >
+                            <span>Adopt</span> <span>it</span>
+                        </v-card>
+                    </v-row>
+                </v-container>
+            </v-col>
+        `
+    })
+
+    Vue.component('contributetext', {
+        template: `
+            <v-col
+               cols="12"
+               sm="12"
+               xs="12"
+               md="12"
+               lg="12"
+               xl="6"
+               class="d-flex flex-column justify-end"
+               :class="$vuetify.breakpoint.xlOnly ? 'align-end' : 'align-center'"
+            >
+                <h2 class="text-left white--text text-h2 pb-4" style="border-bottom:10px solid"> Contributions </h2>
+                <p class="text-h5 px-2" :class="$vuetify.breakpoint.xlOnly ? 'text-right' : 'text-center'">
+                    As a community-driven <b class="secondary--text">live resource</b>, recipes are added and improved, iteratively, covering more
+                    use cases, in an open manner, moderated by an Editorial Board.
+                    Join our thriving <a class="secondary--text" href='/recipes/community.html#fcb-community'>community</a>
+                    of Life Science professionals and FAIR experts from the academic and
+                    industry sectors and <a class="secondary--text" href='./recipes/help.html'>contribute</a> to get credited via your ORCID. <br>
+                    For any question, contact us at <a class="secondary--text" href='mailto:fairplus-cookbook@elixir-europe.org'>fairplus-cookbook@elixir-europe.org</a>.
+                </p>
+            </v-col>
+        `
+    })
+    Vue.component('contributecards', {
+        computed: {
+            styles() {
+                let styles = ''
+                this.$vuetify.breakpoint.mdAndUp ? styles += ' height: 200px; ' : styles += ' height:150px; '
+                this.$vuetify.breakpoint.lgAndUp ? styles += ' padding: 0 255px; ' : styles += 'padding: 0 10px;'
+                console.log(styles)
+                return styles
+            },
+        },
+        template: `
+            <v-col
+               cols="12"
+               sm="12"
+               xs="12"
+               md="12"
+               lg="12"
+               xl="6"
+               class="d-flex flex-column justify-end align-end"
+            >
+                <v-container>
+                    <v-row :style="styles" class="d-flex" justify="space-between">
+                        <v-card
+                            class="flex-grow-0 d-flex justify-center align-center flex-column"
+                            :class="$vuetify.breakpoint.mdAndUp ? 'text-h5' : 'text-h6'"
+                            style="height:100%"
+                            :style="$vuetify.breakpoint.mdAndUp ? 'width:200px' : 'width:150px'"
+                            rounded="circle" color="white"
+                        >
+                            <span class=" secondary--text" :class="$vuetify.breakpoint.mdAndUp ? 'text-h1' : 'text-h2'">
+                                71
+                            </span>
+                            <span class="primary--text">Recipes</span>
+                        </v-card>
+                        <div class="flex-grow-1"></div>
+                        <v-card
+                            style="height:100%"
+                            :style="$vuetify.breakpoint.mdAndUp ? 'width:200px' : 'width:150px'"
+                            rounded="circle" color="white"
+                            class="d-flex justify-center align-center flex-column"
+                            :class="$vuetify.breakpoint.mdAndUp ? 'text-h5' : 'text-h6'"
+                        >
+                            <span class=" secondary--text" :class="$vuetify.breakpoint.mdAndUp ? 'text-h1' : 'text-h2'">
+                                91
+                            </span>
+                            <span class="primary--text">Authors</span>
+                        </v-card>
+                    </v-row>
+                    <v-row justify="center" :style="$vuetify.breakpoint.mdAndUp ? 'height: 200px' : 'height:150px'">
+                        <v-card
+                            class="flex-grow-0 d-flex justify-center align-center flex-column"
+                            :class="$vuetify.breakpoint.mdAndUp ? 'text-h5' : 'text-h6'"
+                            style="height:100%"
+                            :style="$vuetify.breakpoint.mdAndUp ? 'width:200px' : 'width:150px'"
+                            rounded="circle" color="white"
+                        >
+                           <span class=" secondary--text" :class="$vuetify.breakpoint.mdAndUp ? 'text-h1' : 'text-h2'">
+                               22
+                           </span>
+
+                           <span class="primary--text">Data Types</span>
+                        </v-card>
+                    </v-row>
+                </v-container>
+            </v-col>
+        `
+    })
+
 </script>

@@ -1170,9 +1170,16 @@ input.rounded {
     min-height: initial !important;
 }
 
+.rotate-0 {
+    transform-origin: right -200px;
+    transform: perspective(1500px) rotateY(16deg);
+}
 
-@media(max-width: 1265px){
-    .barsStart, .bar, .barsEnd {
-        display:none
-    }
+.rotate-3 {
+    transform-origin: left -200px;
+    transform: perspective(1500px) rotateY(-16deg);
+}
+
+.elevate {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
 }
