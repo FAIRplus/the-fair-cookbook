@@ -141,6 +141,9 @@ name: etl-2-cdisc-figure1
 alt: CDISC SDTM ETL Template 
 ---
 CDISC SDTM ETL Template 
+```
+````
+
 
 ### Issues, pitfalls and caveats
 
