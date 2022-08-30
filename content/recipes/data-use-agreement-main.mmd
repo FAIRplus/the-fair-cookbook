@@ -1,0 +1,14 @@
+graph TD
+
+subgraph .
+  F(Data Use Agreement):::box1 -->|defines|G(data use limitations):::box1
+  G -->|allows|G1(disease specific research):::box1
+  F -->|imposes|F3(data use requirements, <br> e.g. `geographical restriction`):::box1
+  G -->|prohibits|F2(data redistribution):::box1
+  F -->|defines|F4(conditions of access):::box1
+end
+
+classDef box1 font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+
+
+linkStyle 1,2,3,4,0 font-family:avenir,stroke:black,stroke-width:1px,color:darkred

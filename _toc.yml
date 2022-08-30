@@ -139,6 +139,8 @@
         - file: content/recipes/reusability/ATI_licensing_data
           title: Data licenses #FCB034
         # - file: content/recipes/reusability/license-selection
+        - file: content/recipes/dpia
+          title: Data Protection Impact Assessment and Data Privacy
         - file: content/recipes/reusability/expressing-data-use 
           title: Declaring data's permitted uses #FCB035
         - file: content/recipes/reusability/provenance
