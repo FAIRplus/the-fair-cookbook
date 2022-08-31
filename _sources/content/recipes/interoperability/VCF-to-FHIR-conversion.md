@@ -14,7 +14,7 @@
 :maturity_level: 2
 :maturity_indicator: 1, 2
 :has_executable_code: yeah
-:recipe_name: File conversion, VCF to FHIR
+:recipe_name: Converting VCF file to FHIR JSON
 ```` 
 
 ## Main Objectives

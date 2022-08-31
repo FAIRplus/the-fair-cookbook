@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practical Considerations for CROs to play FAIR</title>
+    <title>7. Mapping of clinical trial data to CDISC-SDTM: a practical example based on APPROACH and ABIRISK</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -61,21 +61,21 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/fair-cro.html" />
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/approach-cdisc.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Glossary" href="glossary-fair-terms.html" />
-    <link rel="prev" title="Prioritization of projects for FAIRification" href="priorization.html" />
+    <link rel="next" title="Search Wizard" href="../../search-wizard.html" />
+    <link rel="prev" title="6. IMI EUBOPEN FAIR High-Content Screening data deposition" href="eubopen-hcs-bioimage.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/fair-cro.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/approach-cdisc.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Practical Considerations for CROs to play FAIR" />
-<meta property="og:description" content="Practical Considerations for CROs to play FAIR    &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: " />
+<meta property="og:title"       content="Mapping of clinical trial data to CDISC-SDTM: a practical example based on APPROACH and ABIRISK" />
+<meta property="og:description" content="Mapping of clinical trial data to CDISC-SDTM: a practical example based on APPROACH and ABIRISK  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@co" />
  <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
 <meta name="twitter:card" content="summary" />
   </head>
@@ -117,7 +117,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/recipes/introduction/fair-cro.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/applied-examples/approach-cdisc.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -157,7 +157,7 @@
         
         <a
             class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/introduction/fair-cro.html&body=Your%20issue%20content%20here."
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/applied-examples/approach-cdisc.html&body=Your%20issue%20content%20here."
         >
             <button type="button"
                     class="btn btn-secondary topbarbtn"
@@ -166,7 +166,7 @@
                 title="Open an issue"
             >
                 <i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/introduction/fair-cro.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/applied-examples/approach-cdisc.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -254,54 +254,54 @@
   FOREWORD
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="FAIR-cookbook-audience.html">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
    Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="brief-FAIR-principles.html">
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
    What are the FAIR principles?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="FAIRplus-values.html">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
    Ethical values of FAIR
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="metadata-fair.html">
+  <a class="reference internal" href="../introduction/metadata-fair.html">
    Metadata and FAIR
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="training-datasets.html">
+  <a class="reference internal" href="../introduction/training-datasets.html">
    Datasets to train on FAIRification
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="FAIR-and-knowledge-graphs.html">
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
    FAIR and Knowledge Graphs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="public-kg-resource-integration.html">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
    Public Knowledge Graphs for Life Sciences
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="priorization.html">
+  <a class="reference internal" href="../introduction/priorization.html">
    Selecting projects for FAIRification
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
    Practical Considerations for a CRO to do FAIR
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="glossary-fair-terms.html">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
    Glossary
   </a>
  </li>
@@ -682,27 +682,27 @@
     </i>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+    <a class="reference internal" href="fair-data-matrix-recipe.html">
      Making omics data matrices FAIR
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+      <a class="reference internal" href="fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
        1. Starting material
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+      <a class="reference internal" href="fair-data-matrix/1-rose-metabolites-Python-analysis.html">
        2. Structuring data
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+      <a class="reference internal" href="fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
        3. Exploring data with SPARQL
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+      <a class="reference internal" href="fair-data-matrix/3-rose-metabolites-R-analysis.html">
        4. Integrating data
       </a>
      </li>
@@ -711,7 +711,7 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+    <a class="reference internal" href="fair-workflows.html">
      Making Computational Workflows FAIR
     </a>
    </li>
@@ -725,44 +725,44 @@
   FAIRified Datasets
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../applied-examples.html">
    Applied examples
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/etox.html">
+    <a class="reference internal" href="etox.html">
      1. IMI eTox - toxicity datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/nd4bb.html">
+    <a class="reference internal" href="nd4bb.html">
      2. IMI nd4bb - chemical activities datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+    <a class="reference internal" href="oncotrack_raw/rawRecipe-oncotrack.html">
      3. IMI Oncotrack - clinical cohort datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+    <a class="reference internal" href="resolute_raw/resolute.html">
      4. IMI ReSOLUTE - transcriptomics datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+    <a class="reference internal" href="ehden-ohdsi.html">
      5. IMI EHDEN-OHDSI
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+    <a class="reference internal" href="eubopen-hcs-bioimage.html">
      6. IMI EUBOPEN FAIR High-Content Screening data deposition
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../applied-examples/approach-cdisc.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      7. Mapping datasets to CDISC-SDTM
     </a>
    </li>
@@ -888,12 +888,12 @@
                                 
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
-  <div class="section" id="practical-considerations-for-cros-to-play-fair">
-<span id="fcb-intro-cro"></span><h1>Practical Considerations for CROs to play FAIR<a class="headerlink" href="#practical-considerations-for-cros-to-play-fair" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="mapping-of-clinical-trial-data-to-cdisc-sdtm-a-practical-example-based-on-approach-and-abirisk">
+<span id="fcb-approach-cdisc"></span><h1><span class="section-number">7. </span>Mapping of clinical trial data to CDISC-SDTM: a practical example based on APPROACH and ABIRISK<a class="headerlink" href="#mapping-of-clinical-trial-data-to-cdisc-sdtm-a-practical-example-based-on-approach-and-abirisk" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "http://w3id.org/faircookbook/FCB056", "sdo:name": "Practical Considerations for CROs to play FAIR", "sdo:description": "Practical Considerations for CROs to play FAIR", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Procurement Officer|T4FS_0000572", "Principal Investigator|T4FS_0000571", "Data Curator|T4FS_0000389", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Background information", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB056", "dso:url": "http://w3id.org/faircookbook/FCB056", "owl:sameAs": "https://identifiers.org/fcb:FCB056"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H15M0S", "sdo:totalTime": "PT0H15M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "http://w3id.org/faircookbook/FCB056#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "http://w3id.org/faircookbook/FCB056#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "http://w3id.org/faircookbook/FCB056#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "http://w3id.org/faircookbook/FCB056#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB000", "sdo:name": "Mapping datasets to CDISC-SDTM", "sdo:description": "Mapping datasets to CDISC-SDTM", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000571", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Terminology Manager|T4FS_0000568", "Ontologist|T4FS_0000567"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Experience Report / Applied Example", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB000", "dso:url": "https://w3id.org/faircookbook/FCB000", "owl:sameAs": "https://identifiers.org/fcb:FCB000"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB000#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB000#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB000#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB000#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -903,7 +903,7 @@
 <i class="itemIcon fa fa-clock fa-2x text--white"></i>
 <div class="itemContent">
 <div class="label"> Reading Time </div>
-15 minutes
+20 minutes
 </div>
 </div></div>
 <div class="item"><div class="itemContainer">
@@ -919,7 +919,7 @@ No
 <div class="label" style="position:relative; left:-6px">Difficulty</div>
 <i class="fa fa-fire"></i>
 <i class="fa fa-fire"></i>
-<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire"></i>
 <i class="fa fa-fire" style="color:grey"></i>
 <i class="fa fa-fire" style="color:grey"></i>
 </div>
@@ -928,23 +928,23 @@ No
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Practical Considerations for CROs to play FAIR</div>
+<div style="flex-grow:1; margin-right:5px">Mapping datasets to CDISC-SDTM</div>
 <img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
 <i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
 <div class="label">Recipe Type</div>
-<div class="sectionValue">Background information</div>
+<div class="sectionValue">Experience Report / Applied Example</div>
 </div>
 </div>
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000572">Procurement Officer</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000571">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000389">Data Curator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000571">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000568">Terminology Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000567">Ontologist</a></div>
 </div>
 </div>
 <div class="section" style="flex-grow: 1;">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars level-2">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars level-3">
 <path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
 <path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
 <path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
@@ -953,150 +953,228 @@ No
 </svg>
 <div class="sectionContent">
 <div class="label">Maturity Level & Indicator</div>
-<div class="sectionValue"><v-chip-group><v-chip href="https://w3id.org/Data-Maturity/DSM-1-C0" class="secondary white--text" target="_blank" label>DSM-1-C0</v-chip><v-chip href="https://w3id.org/Data-Maturity/DSM-1-C1" class="secondary white--text" target="_blank" label>DSM-1-C1</v-chip></v-chip-group></div>
+<div class="sectionValue"><v-chip-group><v-chip href="https://w3id.org/Data-Maturity/DSM-2-C5" class="secondary white--text" target="_blank" label>DSM-2-C5</v-chip><v-chip href="https://w3id.org/Data-Maturity/DSM-2-H1" class="secondary white--text" target="_blank" label>DSM-2-H1</v-chip></v-chip-group></div>
 <div class="tooltip">hover me
 <span class="tooltiptext">Tooltip text</span></div>
 </div>
 </div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="http://w3id.org/faircookbook/FCB056" class="text--purple-dark">FCB056
+<a href="https://w3id.org/faircookbook/FCB000" class="text--purple-dark">FCB000
 </a></div>
 </div>
 </div>
-<div class="section" id="main-objective">
-<h2>Main Objective<a class="headerlink" href="#main-objective" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="background">
-<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
-<p>It is undeniable that there is an ever-growing need to manage data in terms of both volume and complexity within the life sciences sector. Technological advances have certainly paved the way to handle large volumes of data in the past decade or so. However, the ability to <code class="docutils literal notranslate"><span class="pre">semantically</span></code> connect and exchange information within and between organizations remains a challenge to most part even today. Coupled with the need to manage compliances, regulations, newer discoveries in disease areas and audits, the ability to manage, store and access data is certainly an uphill task.</p>
-</div>
-<div class="section" id="goals">
-<h3>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h3>
-<p>This recipe intends to enumerate ideas that one should consider within the context of Contract Research Organizations (CRO) and how adopting and applying FAIR principles will generate a higher ROI over the long run. We also will explore key scenarios in mitigating some of the repeated ETL pains that CROs face on a regular basis when managing data in the life sciences sector.
-While the recipe tries to encompass research topics, the focus remains within the clinical landscape.</p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="origins-purpose-and-evolution">
-<h2>Origins, purpose and evolution:<a class="headerlink" href="#origins-purpose-and-evolution" title="Permalink to this headline">¶</a></h2>
-<p>CROs have their roots dating back to early 1980s and even earlier in some cases. Providing services to pharmaceuticals companies in the broader areas of animal testing eventually panned out to a full-blown suite of services including <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">collection</span></code>, <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">management</span></code> and <code class="docutils literal notranslate"><span class="pre">statistical</span> <span class="pre">consulting</span></code>. However, with decades of expertise under their belts, these niche organizations have evolved into a dominant force that is more or less capable of doing all the work of the sponsor with oversight as needed.</p>
-<div class="section" id="challenges">
-<h3>Challenges:<a class="headerlink" href="#challenges" title="Permalink to this headline">¶</a></h3>
-<p>One must recall the promises of lower execution costs, high data quality and ability to scale on demand in terms of resources without any (or slight) budget constraints (largely) has made CROs a go-to service provider. With the burden of proof lying on the shoulders of CROs, we run into the age-old question of cost versus time analysis, which sets in motion a series of events. Recall that CROs are not sponsor specific but rather service providers. Having said the above, listed below are a few challenges faced by CROs from a data management standpoint:</p>
-<ol class="simple">
-<li><p>Time to delivery versus cost Ratio</p></li>
-<li><p>Expertise retention and turn cycles</p></li>
-<li><p>Poor data quality and inadequate validation frameworks (at source)</p></li>
-<li><p>Lack of metadata  or lack of metadata enrichment thereof</p></li>
-<li><p>Poorly constructed or mis-handled <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">management</span> <span class="pre">plans</span></code> (DMP)</p></li>
-<li><p>Lack of resources or lack of understanding of data itself.</p></li>
-<li><p>Infrastructure problems</p></li>
-<li><p>Delivery models</p>
-<ul class="simple">
-<li><p>Functional Services Provider (FSP) (almost extinct)</p></li>
-<li><p>Consulting resources that are time limited</p></li>
-</ul>
-</li>
-<li><p>Issues with Extraction-Transform-Load (ETL) setups and pain areas for mitigation, moving towards FAIR</p>
-<ul class="simple">
-<li><p>Data un-availability either due to poor <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Handling</span> <span class="pre">Plan</span></code> (DHP) policies or set-ups</p></li>
-<li><p>Lack of coherence when it comes to data types across a portfolio of studies</p></li>
-<li><p>Lack of adherence to standardized metadata or poorly defined metadata</p></li>
-<li><p>Lack of data persistence (metadata outliving the data)</p></li>
-<li><p>Infrastructure and legacy programming techniques</p></li>
-<li><p>Lack of adherence to controlled terminologies or ontologies</p></li>
-<li><p>Change in metadata model over time to accommodate complex business decisions (variability)</p></li>
-</ul>
-</li>
-</ol>
-</div>
-<div class="section" id="considerations">
-<h3>Considerations:<a class="headerlink" href="#considerations" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p><strong>Understanding cost versus time</strong>: Data FAIRification is still a topic that is gaining traction within scientific communities since most of its roots come from research. Research organizations working with Pharma are very cost-driven and tend to skim out topics, which do not provide a strong ROI in the near short term. Multiply this by the fact that such organizations come in all sizes and are located globally to primarily drive down cost. The ability to employ or divert resources to engage in data FAIRification may not justify the cost vs time metric. We also need to consider that CROs are driven by sponsor demands and it would be more prudent to have a top-down approach to empower them to build a cultural and process shift towards such endeavors.</p></li>
-<li><p><strong>Partner with Standard Developing Organisations and contribute towards open tooling</strong>: Building and managing ontologies are a key driver in enabling a FAIR data environment since the very essence of binding domains (topics of interest) rely heavily on uniform and shared concepts that can be mapped and linked across in a systematic method between siloed data entities. Open Tooling and working with Standards Data Organizations (SDOs) enables CROs in the context of data management to develop a deeper understanding of the industry workings and demonstrate industry expertise within such domains of interest.</p>
-<ul class="simple">
-<li><p>Precompetitive initiatives, examples of which can be found under the <a class="reference external" href="https://pistoiaalliance.org">Pistoia Alliance initiative</a> represent an outstanding value for money. Efforts such as OpenTargets, CTTV about target identifications are successful examples, as are initiatives in the area of semantics resources. Indeed, needs for shared vocabularies are huge in domain such as biological reagents (antibodies, cell lines, constructs) but also standardized ways to describe assays. Resources such as <a class="reference external" href="https://antibodyregistry.org">Antibody Registry</a>, <a class="reference external" href="https://web.expasy.org/cellosaurus/">Cellosaurus</a>, <a class="reference external" href="https://addgene.org">addgene</a>, but also <a class="reference external" href="https://www.bioassayexpress.com/">bioassayexpress</a> represent areas where Pharma and CRO cooperating on these topics would be considerable gains.</p></li>
-<li><p>Test data Factory tool (TDF) from PHUSE’s Shared Code Analyses Working Group (SCAWG) is yet another initiative; dynamically build synthetic datasets for testing out solutions driven by CDISC data standards particularly SDTM and ADaM. This is a very novel concept and can enable research organizations and others as a whole to test out varied scenarios with clearly documented deviations from data standards.</p></li>
-<li><p>FAIR toolkit (<a class="reference external" href="https://fairtoolkit.pistoiaalliance.org/">https://fairtoolkit.pistoiaalliance.org/</a>) &amp; <a class="reference external" href="https://w3id.org/AmIFAIR">FAIR Evaluator</a> are both excellent resources to gain a deeper perspective on the “HOW” aspect of data FAIRification. The toolkit can enable service providers such as CROs to utilize real world use cases implemented by Pharmaceuticals and research alike. It also encompasses methods such as tools and trainings allowing one to deep-dive into implementation aspects of FAIR principles. More Details on FAIR Evaluator can be found at <a class="reference external" href="https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#%21/about">https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/about</a></p></li>
-</ul>
-</li>
-<li><p><strong>The case for cultural mindset shift</strong>:
-It is evident that with changes comes challenges and the move towards being FAIR is no exception. Cost versus time ratio is possibly not the only factor that could prove to be a hurdle. Resistance to data sharing, existing infrastructure that may be FAIR to some degree (in most cases ‘F’) or use cases that may be specific enough to not require adopting FAIR are other factors that need to be considered. Collaborative effort between stakeholders and CRO’s combined with a top-down mandate can enable us to realize a stronger ROI, ability to share data and a measurable metric to show pre and post FAIRification combined with visible benefits will pave the way for easier adoption and implementation of FAIR principles.</p></li>
-<li><p><strong>Emphasize on building critical in-house data skills</strong>:
-There is an upward growth trend of skills deficit not due the lack of resources rather; the role of data service providers are usually limited to a fixed scope of deliverables, which is time, constrained. While the current skills can manifest a set of experts in their own rights, the vision to build a FAIR future requires constant collaboration and up-skilling. It is therefore vital to have a deeper understanding of topics such as open standards protocols (http, w3c), role that ontologies play in describing data, scope of URI’s and IRI’s in the clinical context, RDF and what linked data means and how it binds it all to-gether in the semantic landscape. This requires a lot of time and investment but is a necessity for a FAIRer future.</p></li>
-<li><p><strong>Scope and Data Cleansing</strong>:
-It may be a worthwhile effort to narrow down scope of data that requires FAIRification prior to embarking on this journey. This can also mean that we can identify the list of potential studies that require additional curation which can range from metadata enrichment, handling missing values and applying necessary terminologies as agreed (based on prior decided set such as UCUM).The scope can also be limited to a group of indications or TA (leverage TAUGs from CDISC CFAST) and then bind with the data model for machine readability (key stone for interoperability).</p></li>
-<li><p><strong>Machine Readable Data Management Plans</strong>:
-The DMP is probably the most vital document that containing key information regarding how data will be created, collected, transferred and utilized. It also entails out detailed descriptions about the collection mechanisms, audit procedures and key study protocol related information. Having a machine readable DMP can show immediate and significant cost savings and in the process aim for ‘FAIR by design’, which also is a living document throughout the lifecycle of the data.
-Utilizing existing data exchange standards such as CDISC ODM (Operational data model) and CDISC SDM-XML (Study data model) can prove to be very useful. It would be valuable to see what common data elements exist that is utilized in the DMP such as study title, phase, databases and protocol version. The key would be to ensure over time we can mine for existing DMP’s and possibly (hopefully) come up with a set of common data elements that can be re-purposed. Since, CROs are a goldmine for such information it would be a valuable endeavor to pursue.</p></li>
-<li><p><strong>Scoring Mechanisms using Data Maturity Indicators</strong>:
-Start with harmonized data models to leverage standard terminologies and a fixed set of studies for a given therapeutic area. By having a closed environment with a fixed set of variables (list of studies) it will be easier to show FAIRification.
-b.	Score at dataset level and eventually by source (if multiple sources are utilized) against the FAIR principles – using a scale range as needed (binary or limits (0 -5) )
-c.	Persist scores over time to understand and detect a change of state and show baseline.
-d.	Expand scope to see if scoring can be calculated for ETL pipelines on the fly as ingestion happens across sources.
-e.	Revisit and improvise if needed. This can also act as a KPI to show value of FAIRification</p></li>
-<li><p><strong>Ontologies and Interoperability</strong>:
-Building, managing, sharing and using ontologies are one of the cornerstone principles to enable high quality data and interoperability. ETL processes suffer largely due to poorly defined ontologies rule sets. This in part may be due to lack of data understanding, values that were either not mapped or incorrectly mapped. Even in standardized systems, using controlled terminologies cited at (<a class="reference external" href="https://datascience.cancer.gov/resources/cancer-vocabulary/cdisc-terminology">https://datascience.cancer.gov/resources/cancer-vocabulary/cdisc-terminology</a>) mixed flavors of data values created at the study source can cause confusion. Example a patient’s final treatment disposition status presented as “CP” instead of “COMPLETED”.  Utilizing units of measure have their own set of challenges. It is therefore paramount to understand an ontology driven data will not only enable us to align closer to FAIR principles but also mitigate quirky data issues.
-In the context of clinical data landscape, the SHARE API facilitated by CDISC harmonizes controlled terminologies can be utilized to bind biomedical concepts that describe relationships between data values and both within and across disease areas.</p></li>
-<li><p><strong>Dashboards, Persistence and monitoring</strong>:
-The ability to visualize data maturity and persist information over time to detect or present a positive change in state can add tremendous value; both to sponsors and service providers. Several open-source tools are readily available that can build dynamic charts to present data with fine granularity. An example from the sponsor’s end may be the ability to visualize various CRO / vendor data sources and clearly infer what needs to be improved any by how much. Persistence (of data) pays and in this case can tell us over time which guiding principles will need attention. Note, not all principles or indicators may apply and we may need to build custom indicators depending on business decisions.</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="returns-on-investments-benefits">
-<h2>Returns on Investments - Benefits:<a class="headerlink" href="#returns-on-investments-benefits" title="Permalink to this headline">¶</a></h2>
-<p>It is important to keep in mind the potential benefits brought about FAIRification processes. We list below just a few of those:</p>
-<ul class="simple">
-<li><p>Capability in quickly adjusting to changing business demands and improvised search capabilities, <em>e.g. a subset of population within a disease area across a specific age group being administered a certain concomitant medications</em>.</p></li>
-<li><p>Enhanced methodology for target identification and drug repurposing.</p></li>
-<li><p>Ability to pool data and perform ad-hoc analysis in an effective method.</p></li>
-<li><p>Reduction in study set-up times, high data quality and annotations can provide significant cost savings in the long term.</p></li>
-<li><p>Increased capabilities for Artificial Intelligence and Machine Learning applications, as data scientists who rely on high quality searchable data which can be more easily mobilized and re-used to build algorithms – either to screen for compounds or run simulations to understand the drug’s mechanism of action (MOA).</p></li>
-</ul>
-</div>
-<div class="section" id="key-performance-indicators">
-<h2>Key Performance Indicators:<a class="headerlink" href="#key-performance-indicators" title="Permalink to this headline">¶</a></h2>
-<p>Of course, when considering enacting a policy change such as rolling out FAIR data management practice and implementing the necessary infrastructure and associated roles, one may wish to define a number of metric or performance indicators to track the effect of such implementation on business operations. In the context of engagement with CROs, the following measurements may be considered to gauge trends and effects.</p>
-<ul class="simple">
-<li><p><strong>Number of datasets that are empty at source over a specified time interval</strong>, either due to updates to rule definitions or other factors.</p></li>
-<li><p><strong>Time taken for making data available to end-user</strong> <code class="docutils literal notranslate"><span class="pre">post</span> <span class="pre">patient</span> <span class="pre">enrollment</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">collection</span> <span class="pre">at</span> <span class="pre">site(s)</span></code>.</p></li>
-<li><p><strong>Number of missing values for <code class="docutils literal notranslate"><span class="pre">consent</span> <span class="pre">data</span></code></strong> especially, when a protocol amendment is completed and secondary consents are not registered.</p></li>
-<li><p><strong>Number of patients who have incorrect visit description at treatment or study discontinuation stage</strong> that causes ambiguity in data interpretation.</p></li>
-<li><p><strong>Scoring values for FAIR data</strong> that indicate:</p>
-<ul>
-<li><p>what has changed</p></li>
-<li><p>rate of change (<em>for instance, time taken to achieve score of 3 to 4 on a scale of 5 for Findability</em>)</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<hr class="docutils" />
-<div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<p>With this content, we intended to bring forward the experience gained <em>“from the trenches”</em> of data management by highlighting how the FAIR practice could inform key decisions when engaging with Contract Research Organizations, from defining tasks, identifying required capabilities to defining metrics of performance for tracking trends and effects. This goes beyond the notion of FAIR data and touches on the need to also track and assess the quality of data and processes.</p>
-<div class="section" id="what-to-read-next">
-<h3>What to read next<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="main-objectives">
+<h2><span class="section-number">7.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>This recipe provides a general guide for mapping a clinical trial dataset to <a class="reference external" href="https://doi.org/10.25504/FAIRsharing.s51qk5">CDISC Study Data Tabulated Model</a> (CDISC-SDTM) using practical examples from two Innovative Medicine Initiative projects, APPROACH and ABIRISK.</p>
+<p>The recipe will cover the following elements:</p>
 <blockquote>
-<div><p><a class="reference internal" href="../assessing-fairness.html#fcb-assess"><span class="std std-ref">Assessment</span></a></p>
-<p><a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html#fcb-assess-fair-fairshake"><span class="std std-ref">FAIRshake tool</span></a></p>
-<p><a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html#fcb-assess-fair-automatic-evaluator"><span class="std std-ref">FAIR Evaluator tool</span></a></p>
-<p><a class="reference internal" href="../interoperability/ETL-tools.html#fcb-interop-etl"><span class="std std-ref">Extraction, transformation, and loading process</span></a></p>
-<p><a class="reference external" href="https://doi.org/10.1016/j.drudis.2022.01.006">FAIR+Q: FAIR data and data quality by the Pistoia Alliance</a></p>
+<div><ul class="simple">
+<li><p>Provide a general overview of the challenges of mapping a non-conforming data dictionary to CDISC STDM standard and CDISC Vocabulary.</p></li>
+<li><p>Illustrate the mapping process using the above projects.</p></li>
+<li><p>Describe the Extract-Transform-Load (ETL) processes necessary to convert the data to CDISC-SDTM based on the mapped data dictionary.</p></li>
+</ul>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
-<details class="sphinx-bs dropdown card mb-3">
+<hr class="docutils" />
+<div class="section" id="graphical-overview">
+<h2><span class="section-number">7.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
-<strong>Reference</strong><div class="summary-down docutils">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="approach-cdisc-figure0">
+<a class="reference internal image-reference" href="../../../_images/approach-cdisc.md-figure0.mmd.png"><img alt="Recipe Steps" src="../../../_images/approach-cdisc.md-figure0.mmd.png" style="height: 1000px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Recipe Steps</span><a class="headerlink" href="#approach-cdisc-figure0" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+<hr class="docutils" />
+<div class="section" id="requirements">
+<h2><span class="section-number">7.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Technical requirements:</p>
+<ul>
+<li><p>Knowledge of relational databases is an advantage</p></li>
+<li><p>Fluency in a scripting language such as bash, Python or R</p></li>
+</ul>
+</li>
+<li><p>Knowledge requirement:</p>
+<ul>
+<li><p>A thorough understanding of CDISC standards, in particular CDISC-SDTM, is essential</p></li>
+<li><p>understanding of what a  <a class="reference internal" href="../interoperability/creating-data-dictionary.html"><span class="doc std std-doc">data dictionary</span></a> is.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<!--## FAIRification Objectives, Inputs and Outputs
+
+
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [text annotation](http://edamontology.org/operation_3778)  | local data dictionary  | [annotated text](http://edamontology.org/data_3779)  |-->
+</div>
+<div class="section" id="table-of-data-standards">
+<h2><span class="section-number">7.4. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtm">CDISC-SDTM</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://www.cdisc.org/standards/terminology/controlled-terminology">CDISC terminology</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtm/sdtm-v2-0">CDISC-SDTM v2</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtmig/sdtmig-v3-4">CDISC-SDTMIG 3.4</a></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="general-challenges-of-mapping-to-cdisc-sdtm">
+<h2><span class="section-number">7.5. </span>General challenges of mapping to CDISC-SDTM<a class="headerlink" href="#general-challenges-of-mapping-to-cdisc-sdtm" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtm">CDISC-SDTM</a> is a standard model and framework for organising,
+annotating and formatting data from clinical trials <a class="footnote-reference brackets" href="#sdtm" id="id1">3</a>. Regulatory agencies, such as the
+<a class="reference external" href="https://www.fda.gov/media/122970/download">US FDA</a>, require clinical trial results to be submitted in this format.
+While SDTM is a very complex framework with a high learning curve, its ubiquity in the field of clinical trials makes
+it a useful interoperability tool for comparing and combining datasets.
+The SDTM Implementation Guide (<a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtmig">SDTMIG</a>) provides expanded guidance
+on implementing SDTM for specific use cases or “domains” <a class="footnote-reference brackets" href="#sdtm-v2" id="id2">1</a>. A general introduction to the SDTMIG is available
+<a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtmig/primer">on the CDISC website</a> <a class="footnote-reference brackets" href="#sdtmig-v3-4" id="id3">2</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Given the complexity of CDISC standards, any project team intending conversion of their datasets to SDTM at any point
+in the project life cycle should aim to align with the standard <strong>as early on in the process as possible</strong>.</p>
+<p>Data dictionaries and data collection instruments should, where possible, be aligned to the relevant CDISC standards to
+facilitate data conversions later on. In particular, CDISC standards provide procedures and guidelines for encoding
+project-specific data that might not fit into the existing domains.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Commercial solutions are available to address all of these use cases but these are outside the scope of this recipe.</p>
+<p>We will focus on outlining how to perform the mapping process manually, without bespoke tooling.</p>
+</div>
+</div>
+<div class="section" id="step-by-step-process">
+<h2><span class="section-number">7.6. </span>Step-by-step process<a class="headerlink" href="#step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="initial-review-of-the-data-dictionary-identification-of-relevant-domains">
+<h3><span class="section-number">7.6.1. </span>Initial review of the data dictionary &amp; identification of relevant domains<a class="headerlink" href="#initial-review-of-the-data-dictionary-identification-of-relevant-domains" title="Permalink to this headline">¶</a></h3>
+<p>Before any mapping can take place, it is essential to gain a good understanding of the project’s data dictionary, i.e.
+its list of variables, their types, definitions and domains.</p>
+<p>A good data dictionary will already split properties into domains, for example: by data collection instrument or other data source.</p>
+<p>Guidance for creating a data dictionary is available <a class="reference internal" href="../interoperability/creating-data-dictionary.html"><span class="doc std std-doc">elsewhere in this Cookbook</span></a>.</p>
+<p>This step may also include reviewing actual data to refine contexts.</p>
+<p>Once a good understanding of the data dictionary has been gained, the main domains from the SDTMIG that apply to this
+data need to be identified. Common domains that will occur in most clinical trial datasets include Demographics (DM),
+Medical History (MH), Laboratory Test Results (LB), Adverse Events (AE) and Vital Signs (VS).</p>
+<ul class="simple">
+<li><p>The ABIRISK data dictionary already used a similar setup to CDISC-SDTM, which made this step relatively straight-forward.</p></li>
+<li><p>The APPROACH data dictionary on the other hand used categories that, while providing a clear structure to the data,
+did not align directly with SDTMIG domains. This made the identification of appropriate domains more difficult and the
+initial list had to be revised several times during the variable mapping process, when variables were identified that
+didn’t fit within the primary domain matched to a data dictionary category.</p></li>
+</ul>
+</div>
+<div class="section" id="assignment-of-properties-to-domains-and-mapping-to-sdtmig-variables">
+<h3><span class="section-number">7.6.2. </span>Assignment of properties to domains and mapping to SDTMIG variables<a class="headerlink" href="#assignment-of-properties-to-domains-and-mapping-to-sdtmig-variables" title="Permalink to this headline">¶</a></h3>
+<p>Mapping of data dictionary properties to SDTMIG variables falls into several categories:</p>
+<ul class="simple">
+<li><p>Direct match - a property from the data dictionary directly matches a variable in the SDTMIG.</p></li>
+<li><p>Combination - two or more properties from the data dictionary need be combined into a single SDTM variable. As an example, sample collection times in the APPROACH dataset were recorded as separate variables for year, month, day, hour and minute. In SDTM, these were combined into LB.LBDTC.</p></li>
+<li><p>Splitting - a property from the dataset needs to be split into component parts. This is commonly the case if values and units were captured together in the same field.</p></li>
+<li><p>Derivation - some values might be derived from another value, for example using a logical decision tree “if A=x, then value=y” or transformed, e.g. converting a laboratory result reported in non-standard units into standard units.</p></li>
+<li><p>Fixed value - an implicit field in the original dataset may correspond to a fixed value for an SDTMIG variable. In the APPROACH dataset, the demographics property “Age” has the unit “years” implied in the property description as the inclusion criteria for the trial specify adult subjects only. DM.AGEU is a required value so in this particular conversion, “YEARS” is set a fixed value.</p></li>
+<li><p>One-to-many/many-to-one - In some cases, a single property might map to multiple SDTMIG variables, depending on the corresponding value in the dataset. Equally, multiple properties may map to the same SDTMIG variable.</p></li>
+<li><p>Unmappable properties - some project-specific properties may not have an equivalent SDTMIG variable at all. If the property and its values are important for the interpretation of the dataset overall, this scenario may require the creation of a custom domain. Equally however, some properties may simply be out of scope of SDTM. The APPROACH data dictionary contains a number of such properties, including checks whether a given CRF, examination or questionnaire was completed or sample collected, and properties to identify the coder or analyst.</p></li>
+<li><p>Auto-generated - some SDTM variables such as “STUDYID” or sequence ID (“-SEQ”) will likely not be encoded directly in the dataset and need to be autogenerated or autocompleted during the data transformation process.</p></li>
+</ul>
+</div>
+<div class="section" id="putting-together-an-etl-template">
+<h3><span class="section-number">7.6.3. </span>Putting together an ETL template<a class="headerlink" href="#putting-together-an-etl-template" title="Permalink to this headline">¶</a></h3>
+<p>For most of the scenarios listed above, with the exception of direct one-to-one matches, ETL scripts will need to be implemented in order to convert the data into an SDTM-compliant format. As the implementation of scripts was outside the scope of our mapping work, we instead implemented a template that could be used as a basis to generate the scripts. A copy of our template can be downloaded from <a class="reference external" href="https://webdav-r3lab.uni.lu/public/datacatalog_documents//dataset/df780ac2-c79d-11ec-9b1d-acde48001122/APPROACH_CDISC-SDTM_mappings.xlsx">this URL</a>.</p>
+<p>A recipe on ETL processes is available <a class="reference internal" href="../interoperability/ETL-tools.html"><span class="doc std std-doc">elswhere in this resource</span></a></p>
+</div>
+<div class="section" id="issues-pitfalls-and-caveats">
+<h3><span class="section-number">7.6.4. </span>Issues, pitfalls and caveats<a class="headerlink" href="#issues-pitfalls-and-caveats" title="Permalink to this headline">¶</a></h3>
+<p>One major issue that we encountered with both our mapping projects was trial/study data coverage gaps from the respective
+study data dictionaries.
+The SDTM includes an entire area called the “Trial Design Model”, which provides a structured way of representing all
+activities of a clinical trial, such as planned visits, treatment arms and inclusion and exclusion criteria.
+While this information is a key component of a completely SDTM-compliant dataset, it was not part of the data dictionary
+and was therefore not part of the mapping strategy.
+As a result, any ETL process covering the data alone would not have generated a fully SDTM-compliant dataset.
+Another area of the SDTMIG we did not include in our mappings was the representation of relationships in the data,
+such as those between different records for a given subject (RELREC domain).
+These relationships need to be factored into any ETL procedures but require additional documents, distinct from the
+Data Dictionary <em>stricto-sensu</em> and these relations cannot only be established working from a data dictionary,
+which only lists variables.
+In order to build those links, actual subject, specimen and visit information is needed. This information is specified
+in the SDTM syntax itself, which is outside the scope of this specific document.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusion">
+<h2><span class="section-number">7.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC-SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.</p></li>
+<li><p>The CDISC-SDTM standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.</p></li>
+<li><p>The high level of detailed knowledge of the standard required to successfully convert a dataset to SDTM presents a significant hurdle</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="what-should-i-read-next">
+<h3><span class="section-number">7.7.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../interoperability/selecting-ontologies.html"><span class="doc std std-doc">Ontology mappings</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/creating-data-dictionary.html"><span class="doc std std-doc">Data dictionary</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/ETL-tools.html"><span class="doc std std-doc">ETL processes</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">7.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/applied-examples/approach-cdisc-0"><dl class="footnote brackets">
+<dt class="label" id="sdtm-v2"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p class="card-text">Version 2.0 of the study data tabulation model (sdtm). 2021. URL: <a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtm/sdtm-v2-0">https://www.cdisc.org/standards/foundational/sdtm/sdtm-v2-0</a>.</p>
+</dd>
+<dt class="label" id="sdtmig-v3-4"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p class="card-text">Version 3.4 of the study data tabulation model implementation guide (sdtmig): human clinical trials is intended to guide the organization, structure, and format of standard clinical trial tabulation datasets may be used for various purposes, including publication, warehousing, meta-analyses, and regulatory submission. it should be used in close concert with sdtm v2.0. 2021. URL: <a class="reference external" href="https://www.cdisc.org/standards/foundational/sdtmig/sdtmig-v3-4">https://www.cdisc.org/standards/foundational/sdtmig/sdtmig-v3-4</a>.</p>
+</dd>
+<dt class="label" id="sdtm"><span class="brackets"><a class="fn-backref" href="#id1">3</a></span></dt>
+<dd><p class="card-text">Wayne R Kubick, Stephen Ruberg, and Edward Helton. Toward a comprehensive cdisc submission data standard. <em>Drug information journal</em>, 41(3):373–382, 2007.</p>
+</dd>
+</dl>
+</p>
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1115,26 +1193,26 @@ The ability to visualize data maturity and persist information over time to dete
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/denoa1"></img><div class="d-block">Gabriel Backianathan</div></a></div></p></td>
-<td><p class="card-text"></p></td>
-<td><p class="card-text">Novartis AG</p></td>
-<td><p class="card-text"><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
-<td><p class="card-text"></p></td>
-<td><p class="card-text">Writing - Original Draft, Conceptualization</p></td>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0003-1058-2668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Luxembourg</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
 </tr>
 <tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
 <td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
 <td><p class="card-text">University of Oxford</p></td>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p class="card-text">Writing - Review &amp; Writing</p></td>
+<td><p class="card-text">Writing - Review &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </details></div>
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1148,7 +1226,8 @@ The ability to visualize data maturity and persist information over time to dete
     <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
     <br/>
 </div>
-</details></div>
+</details><hr class="footnotes docutils" />
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1164,7 +1243,7 @@ The ability to visualize data maturity and persist information over time to dete
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/recipes/introduction"
+            path: "./content/recipes/applied-examples"
         },
         predefinedOutput: true
     }
@@ -1181,74 +1260,82 @@ The ability to visualize data maturity and persist information over time to dete
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-objective">
-   Main Objective
+  <a class="reference internal nav-link" href="#main-objectives">
+   7.1. Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   7.2. Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   7.3. Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   7.4. Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-challenges-of-mapping-to-cdisc-sdtm">
+   7.5. General challenges of mapping to CDISC-SDTM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-process">
+   7.6. Step-by-step process
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#background">
-     Background
+    <a class="reference internal nav-link" href="#initial-review-of-the-data-dictionary-identification-of-relevant-domains">
+     7.6.1. Initial review of the data dictionary &amp; identification of relevant domains
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#goals">
-     Goals
+    <a class="reference internal nav-link" href="#assignment-of-properties-to-domains-and-mapping-to-sdtmig-variables">
+     7.6.2. Assignment of properties to domains and mapping to SDTMIG variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#putting-together-an-etl-template">
+     7.6.3. Putting together an ETL template
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#issues-pitfalls-and-caveats">
+     7.6.4. Issues, pitfalls and caveats
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#origins-purpose-and-evolution">
-   Origins, purpose and evolution:
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#challenges">
-     Challenges:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#considerations">
-     Considerations:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#returns-on-investments-benefits">
-   Returns on Investments - Benefits:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#key-performance-indicators">
-   Key Performance Indicators:
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
+   7.7. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-to-read-next">
-     What to read next
+    <a class="reference internal nav-link" href="#what-should-i-read-next">
+     7.7.1. What should I read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
+  <a class="reference internal nav-link" href="#references">
+   7.8. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   Authors
+   7.9. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   License
+   7.10. License
   </a>
  </li>
 </ul>
@@ -1263,8 +1350,8 @@ The ability to visualize data maturity and persist information over time to dete
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="priorization.html" title="previous page">Prioritization of projects for FAIRification</a>
-<a class='right-next' id="next-link" href="glossary-fair-terms.html" title="next page">Glossary</a>
+<a class='left-prev' id="prev-link" href="eubopen-hcs-bioimage.html" title="previous page"><span class="section-number">6. </span>IMI EUBOPEN FAIR High-Content Screening data deposition</a>
+<a class='right-next' id="next-link" href="../../search-wizard.html" title="next page">Search Wizard</a>
 
                                     </div>
                                 </v-row>
