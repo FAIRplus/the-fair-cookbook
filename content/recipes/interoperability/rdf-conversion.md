@@ -12,8 +12,8 @@
 :recipe_type: inventory
 :reading_time_minutes: 30
 :intended_audience: data_producer, data_engineer
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 4
+:maturity_indicator: 57
 :has_executable_code: nope
 :recipe_name: An inventory of tools for converting your data to RDF
 ```` 

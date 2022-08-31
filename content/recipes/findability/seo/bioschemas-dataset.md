@@ -11,8 +11,8 @@
 :recipe_type: guidance
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 1
+:maturity_indicator: 13, 14
 :has_executable_code: nope
 :recipe_name: Dataset page markup with Schema.org
 ```` 
