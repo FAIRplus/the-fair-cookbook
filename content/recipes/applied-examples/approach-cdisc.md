@@ -1,4 +1,4 @@
-(fcb-help-recipe-template)=
+(fcb-approach-cdisc)=
 # Mapping of clinical trial data to CDISC-SDTM: a practical example based on APPROACH and ABIRISK
 
 
@@ -22,15 +22,15 @@
 
 ## Main Objectives
 
-This recipe provides a general guide for mapping a clinical trial dataset to [CDISC Study Data Tabulated Model](https://doi.org/10.25504/FAIRsharing.s51qk5) (CDISC-SDTM) {footcite}`sdtm` using practical examples from two Innovative Medicine Initiative projects, APPROACH and ABIRISK.
+This recipe provides a general guide for mapping a clinical trial dataset to [CDISC Study Data Tabulated Model](https://doi.org/10.25504/FAIRsharing.s51qk5) (CDISC-SDTM) using practical examples from two Innovative Medicine Initiative projects, APPROACH and ABIRISK.
 
 The recipe will cover the following elements:
 
-> * Provide a general overview of the challenges of mapping a non-conforming data dictionary to CDISC STDM and CDISC Vocabulary.
-
+> * Provide a general overview of the challenges of mapping a non-conforming data dictionary to CDISC STDM standard and CDISC Vocabulary.
+>
 > * Illustrate the mapping process using the above projects.
-
-> * Describe the ETL processes necessary to convert the data to CDISC-SDTM based on the mapped data dictionary.
+>
+> * Describe the Extract-Transform-Load (ETL) processes necessary to convert the data to CDISC-SDTM based on the mapped data dictionary.
 
 ---
 
@@ -42,6 +42,7 @@ The recipe will cover the following elements:
 ```{figure} approach-cdisc.md-figure0.mmd.png
 ---
 name: approach-cdisc-figure0
+height: 1000 px
 alt: Recipe Steps
 ---
 Recipe Steps
@@ -59,6 +60,7 @@ Recipe Steps
    * Fluency in a scripting language such as bash, Python or R
 * Knowledge requirement:
    * A thorough understanding of CDISC standards, in particular CDISC-SDTM, is essential
+   * understanding of what a  [data dictionary](../interoperability/creating-data-dictionary.md) is.
    
 
 ---
@@ -76,18 +78,29 @@ Recipe Steps
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-|  NA |  [CDISC terminology](https://www.cdisc.org/standards/terminology/controlled-terminology) | [CDISC-SDTM](https://www.cdisc.org/standards/foundational/sdtm)  |
-
+| [CDISC-SDTM](https://www.cdisc.org/standards/foundational/sdtm)  |  [CDISC terminology](https://www.cdisc.org/standards/terminology/controlled-terminology) | |
+| [CDISC-SDTM v2](https://www.cdisc.org/standards/foundational/sdtm/sdtm-v2-0)| | |
+| [CDISC-SDTMIG 3.4](https://www.cdisc.org/standards/foundational/sdtmig/sdtmig-v3-4)| | |
 ---
 
 ## General challenges of mapping to CDISC-SDTM
 
-[CDISC-SDTM](https://www.cdisc.org/standards/foundational/sdtm) is a standard model and framework for organising, annotating and formatting data from clinical trials. Regulatory agencies, such as the [US FDA](https://www.fda.gov/media/122970/download), require clinical trial results to be submitted in this format. While SDTM is a very complex framework with a high learning curve, its ubiquity in the field of clinical trials makes it a useful interoperability tool for comparing and combining datasets. The SDTM Implementation Guide ([SDTMIG](https://www.cdisc.org/standards/foundational/sdtmig)) provides expanded guidance on implementing SDTM for specific use cases or "domains". A general introduction to the SDTMIG is available [on the CDISC website](https://www.cdisc.org/standards/foundational/sdtmig/primer).
+[CDISC-SDTM](https://www.cdisc.org/standards/foundational/sdtm) is a standard model and framework for organising, 
+annotating and formatting data from clinical trials {footcite}`sdtm`. Regulatory agencies, such as the
+[US FDA](https://www.fda.gov/media/122970/download), require clinical trial results to be submitted in this format. 
+While SDTM is a very complex framework with a high learning curve, its ubiquity in the field of clinical trials makes 
+it a useful interoperability tool for comparing and combining datasets. 
+The SDTM Implementation Guide ([SDTMIG](https://www.cdisc.org/standards/foundational/sdtmig)) provides expanded guidance
+on implementing SDTM for specific use cases or "domains" {footcite}`sdtm_v2`. A general introduction to the SDTMIG is available 
+[on the CDISC website](https://www.cdisc.org/standards/foundational/sdtmig/primer) {footcite}`sdtmig_v3_4`.
 
 ```{warning}
-Given the complexity of CDISC standards, any project team intending conversion of their datasets to SDTM at any point in the project life cycle should aim to align with the standard *as early on in the process as possible*. 
+Given the complexity of CDISC standards, any project team intending conversion of their datasets to SDTM at any point 
+in the project life cycle should aim to align with the standard **as early on in the process as possible**. 
 
-Data dictionaries and data collection instruments should, where possible, be aligned to the relevant CDISC standards to facilitate data conversions later on. In particular, CDISC standards provide procedures and guidelines for encoding project-specific data that might not fit into the existing domains.
+Data dictionaries and data collection instruments should, where possible, be aligned to the relevant CDISC standards to
+facilitate data conversions later on. In particular, CDISC standards provide procedures and guidelines for encoding 
+project-specific data that might not fit into the existing domains.
 ```
 
 ```{note}
@@ -101,7 +114,8 @@ We will focus on outlining how to perform the mapping process manually, without 
 
 ### Initial review of the data dictionary & identification of relevant domains
 
-Before any mapping can take place, it is essential to gain a good understanding of the project's data dictionary, i.e. its list of variables, their types, definitions and domains. 
+Before any mapping can take place, it is essential to gain a good understanding of the project's data dictionary, i.e. 
+its list of variables, their types, definitions and domains. 
 
 A good data dictionary will already split properties into domains, for example: by data collection instrument or other data source. 
 
@@ -109,10 +123,15 @@ Guidance for creating a data dictionary is available [elsewhere in this Cookbook
 
 This step may also include reviewing actual data to refine contexts.
  
-Once a good understanding of the data dictionary has been gained, the main domains from the SDTMIG that apply to this data need to be identified. Common domains that will occur in most clinical trial datasets include Demographics (DM), Medical History (MH), Laboratory Test Results (LB), Adverse Events (AE) and Vital Signs (VS).
+Once a good understanding of the data dictionary has been gained, the main domains from the SDTMIG that apply to this
+data need to be identified. Common domains that will occur in most clinical trial datasets include Demographics (DM), 
+Medical History (MH), Laboratory Test Results (LB), Adverse Events (AE) and Vital Signs (VS).
 
 * The ABIRISK data dictionary already used a similar setup to CDISC-SDTM, which made this step relatively straight-forward. 
-* The APPROACH data dictionary on the other hand used categories that, while providing a clear structure to the data, did not align directly with SDTMIG domains. This made the identification of appropriate domains more difficult and the initial list had to be revised several times during the variable mapping process, when variables were identified that didn't fit within the primary domain matched to a data dictionary category.  
+* The APPROACH data dictionary on the other hand used categories that, while providing a clear structure to the data, 
+did not align directly with SDTMIG domains. This made the identification of appropriate domains more difficult and the
+initial list had to be revised several times during the variable mapping process, when variables were identified that 
+didn't fit within the primary domain matched to a data dictionary category.  
 
 
 ### Assignment of properties to domains and mapping to SDTMIG variables
@@ -136,21 +155,29 @@ For most of the scenarios listed above, with the exception of direct one-to-one 
 A recipe on ETL processes is available [elswhere in this resource](../interoperability/ETL-tools.md)
 
 
-
 ### Issues, pitfalls and caveats
 
-One major issue that we encountered with both our mapping projects was trial/study data coverage gaps from the respective study data dictionaries. The SDTM includes an entire area called the "Trial Design Model", which provides a structured way of representing all activities of a clinical trial, such as planned visits, treatment arms and inclusion and exclusion criteria. While this information is a key component of a completely SDTM-compliant dataset, it was not part of the data dictionary and was therefore not part of the mapping strategy. As a result, any ETL process covering the data alone would not have generated a fully SDTM-compliant dataset. 
-
-Another area of the SDTMIG we did not include in our mappings was the representation of relationships in the data, such as those between different records for a given subject (RELREC domain). These relationships need to be factored into any ETL procedures but require additional documents, distinct from the Data Dictionary *stricto-sensu*.
-
-TODO: provide an explanation as to why these were not done:" i.e. these relations cannot only be established working from a data dictionary, which only lists variables. Actual subject, specimen and visit information is needed to build those links.
+One major issue that we encountered with both our mapping projects was trial/study data coverage gaps from the respective
+study data dictionaries. 
+The SDTM includes an entire area called the "Trial Design Model", which provides a structured way of representing all 
+activities of a clinical trial, such as planned visits, treatment arms and inclusion and exclusion criteria. 
+While this information is a key component of a completely SDTM-compliant dataset, it was not part of the data dictionary
+and was therefore not part of the mapping strategy. 
+As a result, any ETL process covering the data alone would not have generated a fully SDTM-compliant dataset.
+Another area of the SDTMIG we did not include in our mappings was the representation of relationships in the data,
+such as those between different records for a given subject (RELREC domain).
+These relationships need to be factored into any ETL procedures but require additional documents, distinct from the
+Data Dictionary *stricto-sensu* and these relations cannot only be established working from a data dictionary,
+which only lists variables. 
+In order to build those links, actual subject, specimen and visit information is needed. This information is specified 
+in the SDTM syntax itself, which is outside the scope of this specific document.
 
 
 ---
 
 ## Conclusion
 
->  * We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC-SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.
+> * We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC-SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.
 > 
 > * The CDISC-SDTM standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.
 > 
@@ -163,7 +190,7 @@ TODO: provide an explanation as to why these were not done:" i.e. these relation
 
 
 
-## References:
+## References
 
 ````{dropdown} **References**
 ```{footbibliography}
