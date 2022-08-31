@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Creating data/variable dictionary</title>
+    <title>9. Creating data/variable dictionary</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -65,8 +65,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="9. Creating a metadata profile" href="creating-minimal-metadata-profiles.html" />
-    <link rel="prev" title="7.11.2. Application ontology for metabolomics" href="ontology-robot-recipe/MSIO-robot-build-process.html" />
+    <link rel="next" title="10. Creating a metadata profile" href="creating-minimal-metadata-profiles.html" />
+    <link rel="prev" title="8. Ontology mapping with Ontology Xref Service (OxO)" href="ontology-alignment-oxo.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -462,29 +462,34 @@
     <i class="fas fa-chevron-down">
     </i>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ontology-alignment-oxo.html">
+     8. Ontology mapping with Ontology Xref Service (OxO)
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     8. Creating a data/variable dictionary
+     9. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="creating-minimal-metadata-profiles.html">
-     9. Creating a metadata profile
+     10. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="transcriptomics-metadata.html">
-       9.4.1. Metadata profile for transcriptomics
+       10.4.1. Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
-       9.4.2. Metadata profile validation in RDF
+       10.4.2. Metadata profile validation in RDF
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioactivity-profile.html">
-       9.4.3. Bioactivity data profile
+       10.4.3. Bioactivity data profile
       </a>
      </li>
     </ul>
@@ -493,32 +498,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
-     10. Converting from proprietary to open format
+     11. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rdf-conversion.html">
-     11. An inventory of tools for converting your data to RDF
+     12. An inventory of tools for converting your data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     12. File format validation, FASTQ example
+     13. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ETL-tools.html">
-     13. Extraction, transformation, and loading process
+     14. Extraction, transformation, and loading process
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="VCF-to-FHIR-conversion.html">
-     14. Clinical Genetic Information as FHIR JSON
+     15. Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.9.1. Converting VCF file to FHIR JSON
+       15.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -889,7 +894,7 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="creating-data-variable-dictionary">
-<span id="fcb-interop-datadictionary"></span><h1><span class="section-number">8. </span>Creating data/variable dictionary<a class="headerlink" href="#creating-data-variable-dictionary" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-interop-datadictionary"></span><h1><span class="section-number">9. </span>Creating data/variable dictionary<a class="headerlink" href="#creating-data-variable-dictionary" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -969,7 +974,7 @@ No
 4. [An Example of Data Dictionary](#An%20Example%20of%20Data%20Dictionary)
 5. [Factors to be considered when building a data dictionary](#Factors%20to%20be%20considered%20when%20building%20a%20data%20dictionary) -->
 <div class="section" id="main-fairification-objectives">
-<h2><span class="section-number">8.1. </span>Main FAIRification Objectives<a class="headerlink" href="#main-fairification-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Main FAIRification Objectives<a class="headerlink" href="#main-fairification-objectives" title="Permalink to this headline">¶</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> is a file (or collection of files) which unambiguously declares, defines and annotates all the variables collected in a project and associated to a dataset.</p>
 <p>Building a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span></code> means delivering a machine-actionable list of variables, thus greatly helping in assessing the <strong>interoperability potential</strong> of a dataset.</p>
 <p>Presenting a <code class="docutils literal notranslate"><span class="pre">FAIR</span> <span class="pre">data</span> <span class="pre">dictionary</span> <span class="pre">template</span></code> is also meant to be useful to deal with current <a class="reference external" href="https://www.imi.europa.eu/">IMI</a> projects as well as guide future ones.</p>
@@ -984,12 +989,12 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="user-stories">
-<h2><span class="section-number">8.2. </span>User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
 <p>A well defined data dictionary is essential for data curation and analysis. It should contain all information needed for data collection and subsequent processing of data.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">8.3. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1006,13 +1011,13 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="creating-data-dictionary-figure1">
 <a class="reference internal image-reference" href="../../../_images/creating-data-dictionary.md-figure1.mmd.png"><img alt="Data Dictionary" src="../../../_images/creating-data-dictionary.md-figure1.mmd.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.12 </span><span class="caption-text">Data Dictionary.</span><a class="headerlink" href="#creating-data-dictionary-figure1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Data Dictionary.</span><a class="headerlink" href="#creating-data-dictionary-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">8.4. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
@@ -1029,7 +1034,7 @@ No
 </table>
 </div>
 <div class="section" id="table-of-data-standards">
-<h2><span class="section-number">8.5. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
@@ -1062,7 +1067,7 @@ No
 </table>
 </div>
 <div class="section" id="an-example-of-data-dictionary">
-<h2><span class="section-number">8.6. </span>An Example of Data Dictionary<a class="headerlink" href="#an-example-of-data-dictionary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.6. </span>An Example of Data Dictionary<a class="headerlink" href="#an-example-of-data-dictionary" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>File Name</p></th>
@@ -1532,7 +1537,7 @@ No
 </div>
 <hr class="docutils" />
 <div class="section" id="elements-that-should-be-included-when-building-a-data-dictionary">
-<h2><span class="section-number">8.7. </span>Elements that should be included when building a data dictionary<a class="headerlink" href="#elements-that-should-be-included-when-building-a-data-dictionary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.7. </span>Elements that should be included when building a data dictionary<a class="headerlink" href="#elements-that-should-be-included-when-building-a-data-dictionary" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><strong>File Name:</strong> The file that contains the annotated variable(s).</p></li>
 <li><p><strong>Variable Name:</strong> Name of the variable (field).</p></li>
@@ -1555,7 +1560,7 @@ No
 <li><p><strong>Comments:</strong> Optional, for futher information.</p></li>
 </ul>
 <div class="section" id="what-fields-to-include-in-a-data-dictionary">
-<h3><span class="section-number">8.7.1. </span>What fields to include in a data dictionary?<a class="headerlink" href="#what-fields-to-include-in-a-data-dictionary" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.7.1. </span>What fields to include in a data dictionary?<a class="headerlink" href="#what-fields-to-include-in-a-data-dictionary" title="Permalink to this headline">¶</a></h3>
 <p>The right fields to include in a data dictionary are strongly dependent on the needs of the project and its context.</p>
 <ul class="simple">
 <li><p>As a starting point, review existing community standards or minimum information checklists for your subject area to identify recommended fields (see for example recipes on <a class="reference internal" href="transcriptomics-metadata.html"><span class="doc std std-doc">minimal metadata profiles for transcriptomics metadata</span></a> and <a class="reference internal" href="creating-minimal-metadata-profiles.html"><span class="doc std std-doc">guidance on creating minimal metadata profiles</span></a>). We recommend consulting three key resources:</p>
@@ -1575,12 +1580,12 @@ No
 </ul>
 </div>
 <div class="section" id="a-note-on-using-standards-such-as-cdisc">
-<h3><span class="section-number">8.7.2. </span>A note on using standards such as CDISC<a class="headerlink" href="#a-note-on-using-standards-such-as-cdisc" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.7.2. </span>A note on using standards such as CDISC<a class="headerlink" href="#a-note-on-using-standards-such-as-cdisc" title="Permalink to this headline">¶</a></h3>
 <p>Comprehensive standards such as CDISC offer a complete tabulation model for data capture, consolidation and analysis. CDISC should not be used in a cherrypicking fashion to map variables but rather full compliance with the standard should be ensured, both structurally and in terms of what data is collected.</p>
 <p>CDISC-compliant datasets group variables slightly differently to the format suggested here. Records are grouped by <code class="docutils literal notranslate"><span class="pre">Domain</span></code> such as vital signs (VS) and demographics (DM). Records represent one single measurement, so rather than capturing both height and weight in one record, like in the data dictionary here, these would be separate records in the VS domain, with test name (VSTESTCD) height or weight, respectively. CDISC also has a specific way of cross-referencing records, which is not cleanly mappable to do simpler approach suggested in this sample data dictionary. For further information on the CDISC model, please visit <a class="reference external" href="https://www.cdisc.org/">https://www.cdisc.org/</a>.</p>
 </div>
 <div class="section" id="indicate-how-missing-values-are-dealt-with">
-<h3><span class="section-number">8.7.3. </span>Indicate how missing values are dealt with:<a class="headerlink" href="#indicate-how-missing-values-are-dealt-with" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.7.3. </span>Indicate how missing values are dealt with:<a class="headerlink" href="#indicate-how-missing-values-are-dealt-with" title="Permalink to this headline">¶</a></h3>
 <p>Data collection is never plain sailing. Patients drop out from studies, animals die, cell cultures or laboratory tests  fail. This results in holes in the datasets. However, without a clear plan to record missing data point unambiguously, empty cells in a record can be the cause of analysis pains.
 It is therefore important and good practice to detail in a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> what is a legimitate form to indicate a <code class="docutils literal notranslate"><span class="pre">missing</span> <span class="pre">value</span></code>, which should be interpreted as <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 <p>Depending on the persistence system, how this needs to be specified varies. We provide an example on how to do so in the context of a Frictionless Tabular package. The specifications provide more information about how to specify how missing values should look like:</p>
@@ -1593,7 +1598,7 @@ It is therefore important and good practice to detail in a <code class="docutils
 </pre></div>
 </div>
 <div class="section" id="remember-to-provide-descriptive-metadata-for-the-data-dictionary-itself">
-<h4><span class="section-number">8.7.3.1. </span>Remember to provide descriptive metadata for the data dictionary itself<a class="headerlink" href="#remember-to-provide-descriptive-metadata-for-the-data-dictionary-itself" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">9.7.3.1. </span>Remember to provide descriptive metadata for the data dictionary itself<a class="headerlink" href="#remember-to-provide-descriptive-metadata-for-the-data-dictionary-itself" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>filename (with extension)</p></li>
 <li><p>checksum (preferably a SHA2 checksum)</p></li>
@@ -1603,17 +1608,17 @@ It is therefore important and good practice to detail in a <code class="docutils
 </ul>
 </div>
 <div class="section" id="remember-to-provide-the-data-dictionary-in-an-open-syntax">
-<h4><span class="section-number">8.7.3.2. </span>Remember to provide the data dictionary in an open syntax<a class="headerlink" href="#remember-to-provide-the-data-dictionary-in-an-open-syntax" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">9.7.3.2. </span>Remember to provide the data dictionary in an open syntax<a class="headerlink" href="#remember-to-provide-the-data-dictionary-in-an-open-syntax" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 </div>
 <div class="section" id="data-dictionary-mapping-in-fairplus">
-<h2><span class="section-number">8.8. </span>Data Dictionary Mapping in FAIRplus<a class="headerlink" href="#data-dictionary-mapping-in-fairplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.8. </span>Data Dictionary Mapping in FAIRplus<a class="headerlink" href="#data-dictionary-mapping-in-fairplus" title="Permalink to this headline">¶</a></h2>
 <p>While the most desirable approach is of course to design a fully FAIR data dictionary at the start of a project, it is possible to retroactively FAIRify a data dictionary.
 The <a class="reference external" href="https://fairplus-project.eu/">FAIRplus project</a> is in the process of working with the <a class="reference external" href="https://www.imi.europa.eu/">Innovative Medicine Initiative</a> <a class="reference external" href="https://www.approachproject.eu/">APPROACH</a> and <a class="reference external" href="http://www.abirisk.eu/">ABIRISK</a> projects to assist with the FAIRification of their data dictionaries with a view to improving both the findability and interoperability of their datasets.</p>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">8.9. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>This recipe covered an essential output of any research program, <strong>namely the documentation of all variables recorded about study subjects and key metadata descriptors used in subsequence analysis in the form of a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code></strong>.
 The creation and provision of such a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">dictionary</span></code> should be a central component of any <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">management</span> <span class="pre">plan</span></code> and should be one of the key deliverable of any IMI project.
 Why? Simply because if affords several key data management processes to take place</p>
@@ -1624,7 +1629,7 @@ Why? Simply because if affords several key data management processes to take pla
 <li><p>Finally, in the context of the <a class="reference external" href="https://www.imi.europa.eu/">Innovative Medicine Initiative</a>, delivering <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Dictionaries</span></code> contributes to making research output more FAIR.</p></li>
 </ul>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">8.9.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.9.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="selecting-ontologies.html#fcb-selecting-ontologies"><span class="std std-ref">Selecting terminologies and ontologies</span></a></p></li>
@@ -1652,7 +1657,7 @@ Why? Simply because if affords several key data management processes to take pla
 </div>
 </div>
 <div class="section" id="authors">
-<h2><span class="section-number">8.10. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.10. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1697,7 +1702,7 @@ Why? Simply because if affords several key data management processes to take pla
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">8.11. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.11. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1745,62 +1750,62 @@ Why? Simply because if affords several key data management processes to take pla
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-fairification-objectives">
-   8.1. Main FAIRification Objectives
+   9.1. Main FAIRification Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#user-stories">
-   8.2. User Stories
+   9.2. User Stories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   8.3. Graphical overview
+   9.3. Graphical overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   8.4. FAIRification Objectives, Inputs and Outputs
+   9.4. FAIRification Objectives, Inputs and Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#table-of-data-standards">
-   8.5. Table of Data Standards
+   9.5. Table of Data Standards
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#an-example-of-data-dictionary">
-   8.6. An Example of Data Dictionary
+   9.6. An Example of Data Dictionary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#elements-that-should-be-included-when-building-a-data-dictionary">
-   8.7. Elements that should be included when building a data dictionary
+   9.7. Elements that should be included when building a data dictionary
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-fields-to-include-in-a-data-dictionary">
-     8.7.1. What fields to include in a data dictionary?
+     9.7.1. What fields to include in a data dictionary?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-note-on-using-standards-such-as-cdisc">
-     8.7.2. A note on using standards such as CDISC
+     9.7.2. A note on using standards such as CDISC
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indicate-how-missing-values-are-dealt-with">
-     8.7.3. Indicate how missing values are dealt with:
+     9.7.3. Indicate how missing values are dealt with:
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#remember-to-provide-descriptive-metadata-for-the-data-dictionary-itself">
-       8.7.3.1. Remember to provide descriptive metadata for the data dictionary itself
+       9.7.3.1. Remember to provide descriptive metadata for the data dictionary itself
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#remember-to-provide-the-data-dictionary-in-an-open-syntax">
-       8.7.3.2. Remember to provide the data dictionary in an open syntax
+       9.7.3.2. Remember to provide the data dictionary in an open syntax
       </a>
      </li>
     </ul>
@@ -1809,29 +1814,29 @@ Why? Simply because if affords several key data management processes to take pla
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-dictionary-mapping-in-fairplus">
-   8.8. Data Dictionary Mapping in FAIRplus
+   9.8. Data Dictionary Mapping in FAIRplus
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   8.9. Conclusion
+   9.9. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     8.9.1. What to read next?
+     9.9.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   8.10. Authors
+   9.10. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   8.11. License
+   9.11. License
   </a>
  </li>
 </ul>
@@ -1846,8 +1851,8 @@ Why? Simply because if affords several key data management processes to take pla
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="ontology-robot-recipe/MSIO-robot-build-process.html" title="previous page"><span class="section-number">7.11.2. </span>Application ontology for metabolomics</a>
-<a class='right-next' id="next-link" href="creating-minimal-metadata-profiles.html" title="next page"><span class="section-number">9. </span>Creating a metadata profile</a>
+<a class='left-prev' id="prev-link" href="ontology-alignment-oxo.html" title="previous page"><span class="section-number">8. </span>Ontology mapping with Ontology Xref Service (OxO)</a>
+<a class='right-next' id="next-link" href="creating-minimal-metadata-profiles.html" title="next page"><span class="section-number">10. </span>Creating a metadata profile</a>
 
                                     </div>
                                 </v-row>

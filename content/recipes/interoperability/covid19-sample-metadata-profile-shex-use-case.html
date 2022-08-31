@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9.4.2. Metadata profile validation in RDF</title>
+    <title>10.4.2. Metadata profile validation in RDF</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -65,8 +65,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="9.4.3. Bioactivity data profile" href="bioactivity-profile.html" />
-    <link rel="prev" title="9.4.1. Metadata profile for transcriptomics" href="transcriptomics-metadata.html" />
+    <link rel="next" title="10.4.3. Bioactivity data profile" href="bioactivity-profile.html" />
+    <link rel="prev" title="10.4.1. Metadata profile for transcriptomics" href="transcriptomics-metadata.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -463,28 +463,33 @@
     </i>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="ontology-alignment-oxo.html">
+     8. Ontology mapping with Ontology Xref Service (OxO)
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="creating-data-dictionary.html">
-     8. Creating a data/variable dictionary
+     9. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="creating-minimal-metadata-profiles.html">
-     9. Creating a metadata profile
+     10. Creating a metadata profile
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="transcriptomics-metadata.html">
-       9.4.1. Metadata profile for transcriptomics
+       10.4.1. Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       9.4.2. Metadata profile validation in RDF
+       10.4.2. Metadata profile validation in RDF
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioactivity-profile.html">
-       9.4.3. Bioactivity data profile
+       10.4.3. Bioactivity data profile
       </a>
      </li>
     </ul>
@@ -493,32 +498,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
-     10. Converting from proprietary to open format
+     11. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rdf-conversion.html">
-     11. An inventory of tools for converting your data to RDF
+     12. An inventory of tools for converting your data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     12. File format validation, FASTQ example
+     13. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ETL-tools.html">
-     13. Extraction, transformation, and loading process
+     14. Extraction, transformation, and loading process
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="VCF-to-FHIR-conversion.html">
-     14. Clinical Genetic Information as FHIR JSON
+     15. Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.9.1. Converting VCF file to FHIR JSON
+       15.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -889,7 +894,7 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="metadata-profile-validation-in-rdf">
-<span id="fcb-interop-covid-metadata"></span><h1><span class="section-number">9.4.2. </span>Metadata profile validation in RDF<a class="headerlink" href="#metadata-profile-validation-in-rdf" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-interop-covid-metadata"></span><h1><span class="section-number">10.4.2. </span>Metadata profile validation in RDF<a class="headerlink" href="#metadata-profile-validation-in-rdf" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -963,13 +968,13 @@ Yes
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">9.4.2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of this recipe is to show how to create a metadata collection form complying with a community minimal information checklist (MIUViG), in the context of Covid-19 strain sequencing assays carried on patient collected samples.
 In addition, the recipe includes the conversion of sample metadata to an RDF/Linked Data graph and checks its structure for conformance to requirement using the ShapeExpression specifications.
 Finally, use queries expressed in SPARQL are shown to demonstrate potential data integration scenarios.</p>
 </div>
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">9.4.2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -986,12 +991,12 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="building-a-commmunity-compliant-metadata-profile">
 <a class="reference internal image-reference" href="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png"><img alt="building a commmunity compliant metadata profile" src="../../../_images/covid19-sample-metadata-profile-shex-use-case-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.2 </span><span class="caption-text">Building a commmunity compliant metadata profile.</span><a class="headerlink" href="#building-a-commmunity-compliant-metadata-profile" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">9.4.2.3. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.3. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
@@ -1016,7 +1021,7 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 </table>
 </div>
 <div class="section" id="table-of-data-standards">
-<h2><span class="section-number">9.4.2.4. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.4. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
@@ -1053,7 +1058,7 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 </table>
 </div>
 <div class="section" id="tools">
-<h2><span class="section-number">9.4.2.5. </span>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.5. </span>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Tool Name</p></th>
@@ -1074,7 +1079,7 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 </table>
 </div>
 <div class="section" id="introduction">
-<h2><span class="section-number">9.4.2.6. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.6. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>:information_source:
 This recipe is adapted from work carried during the Elixir Covid-19 biohackathon, by the ontology and workflow tracks and presented <a class="reference external" href="http://covid19.genenetwork.org/">here</a> and detailed in the <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/paper/paper.md">following manuscript</a> while all the code and associated material is hosted on this <a class="reference external" href="https://github.com/arvados/bh20-seq-resource">github repository</a>.</p>
@@ -1099,7 +1104,7 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 <p>The following sections detail each of these steps</p>
 </div>
 <div class="section" id="defining-the-metadata-fields">
-<h2><span class="section-number">9.4.2.7. </span>Defining the metadata fields<a class="headerlink" href="#defining-the-metadata-fields" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.7. </span>Defining the metadata fields<a class="headerlink" href="#defining-the-metadata-fields" title="Permalink to this headline">¶</a></h2>
 <!-- <div><img src="/images/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
 <div><img src="/images/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
 <details class="sphinx-bs dropdown card mb-3" open="open">
@@ -1118,17 +1123,17 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../../_images/lwV1cPd.png"><img alt="Defining the metadata fields" src="../../../_images/lwV1cPd.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Defining the metadata fields</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Defining the metadata fields</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="defining-the-metadata-fields-1">
 <a class="reference internal image-reference" href="../../../_images/1ahQLjy.png"><img alt="Defining the metadata fields-1" src="../../../_images/1ahQLjy.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.4 </span><span class="caption-text">Defining the metadata fields-1</span><a class="headerlink" href="#defining-the-metadata-fields-1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">Defining the metadata fields-1</span><a class="headerlink" href="#defining-the-metadata-fields-1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p><br>Based on the <a class="reference external" href="https://gensc.org/">Genome Standards Consortium</a> metadata requirement profile for uncultivated viral sample, also known as the <a class="reference external" href="https://github.com/GenomicsStandardsConsortium/mixs/blob/master/UViGs_MIxS.xlsx">Minimum Information About an Uncultivated Virus Genome (MIUViG)</a>, the first step is to anchor the tags defined by GSC and approved by the those <strong>International Nucleotide Sequence Database Collaboration</strong> (<a class="reference external" href="http://www.insdc.org/">INSDC</a>) tags to one (or more) semantic framework(s).</p>
 </div>
 <div class="section" id="semantic-anchoring-of-metadata-element">
-<h2><span class="section-number">9.4.2.8. </span>Semantic anchoring of metadata element:<a class="headerlink" href="#semantic-anchoring-of-metadata-element" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.8. </span>Semantic anchoring of metadata element:<a class="headerlink" href="#semantic-anchoring-of-metadata-element" title="Permalink to this headline">¶</a></h2>
 <p>Several distinct to the following resources mappings have been made by the developers :</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://obofoundry.org">OBO Foundry</a></p></li>
@@ -1153,7 +1158,7 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../../../_images/Ro92a7D.png"><img alt="Semantic anchoring of metadata element" src="../../../_images/Ro92a7D.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.5 </span><span class="caption-text">Semantic anchoring of metadata element</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.5 </span><span class="caption-text">Semantic anchoring of metadata element</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><br>
@@ -1176,13 +1181,13 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="semantic-anchoring-of-metadata-element-final">
 <a class="reference internal image-reference" href="../../../_images/Lc7FcPs.png"><img alt="Semantic anchoring of metadata element - final" src="../../../_images/Lc7FcPs.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">Semantic anchoring of metadata element - final</span><a class="headerlink" href="#semantic-anchoring-of-metadata-element-final" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.6 </span><span class="caption-text">Semantic anchoring of metadata element - final</span><a class="headerlink" href="#semantic-anchoring-of-metadata-element-final" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><br>
 </div>
 <div class="section" id="metadata-schema-definition-using-salad-schema-language">
-<h2><span class="section-number">9.4.2.9. </span>1. metadata schema definition using SALAD schema language:<a class="headerlink" href="#metadata-schema-definition-using-salad-schema-language" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.9. </span>1. metadata schema definition using SALAD schema language:<a class="headerlink" href="#metadata-schema-definition-using-salad-schema-language" title="Permalink to this headline">¶</a></h2>
 <p>Quoting the project’s documentation, “<em><a class="reference external" href="https://github.com/common-workflow-language/schema_salad">the Semantic Annotations for Linked Avro Data (SALAD)</a> is a schema language for describing JSON or YAML structured linked data documents. <code class="docutils literal notranslate"><span class="pre">SALAD</span> <span class="pre">schema</span></code> describes rules for preprocessing, structural validation, and hyperlink checking for documents described by a Salad schema. Salad supports rich data modeling with inheritance, template specialization, object identifiers, object references, documentation generation, code generation, and transformation to RDF. SALAD provides a bridge between document and record oriented data modeling and the Semantic Web.”</em></p>
 <p>The SALAD schema is used extensively by the <a class="reference external" href="https://github.com/common-workflow-language">Common Workflow Language(CWL)</a> for defining and specifying computational workflows.
 But in this example, we are using the SALAD schema to capture the annotation requirements in a <a class="reference external" href="https://yaml.org">YAML</a> document, while also embedding the semantics constraints, which can then be used to  to build a web form (see below) but also support conversion to RDF/LinkedData.</p>
@@ -1251,7 +1256,7 @@ But in this example, we are using the SALAD schema to capture the annotation req
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">source</span></code>: <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml">https://github.com/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml</a></p>
 <div class="section" id="the-corresponding-metadata-acquisition-web-form">
-<h3><span class="section-number">9.4.2.9.1. </span>The corresponding metadata acquisition web form:<a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.2.9.1. </span>The corresponding metadata acquisition web form:<a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form" title="Permalink to this headline">¶</a></h3>
 <!-- <div><img src="/images/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1290,13 +1295,13 @@ But in this example, we are using the SALAD schema to capture the annotation req
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="the-corresponding-metadata-acquisition-web-form-2">
 <a class="reference internal image-reference" href="../../../_images/RR5GSgi.png"><img alt="The corresponding metadata acquisition web form 2" src="../../../_images/RR5GSgi.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.7 </span><span class="caption-text">The corresponding metadata acquisition web form</span><a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.7 </span><span class="caption-text">The corresponding metadata acquisition web form</span><a class="headerlink" href="#the-corresponding-metadata-acquisition-web-form-2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 </div>
 <div class="section" id="exemplar-instance-data">
-<h2><span class="section-number">9.4.2.10. </span>2. Exemplar instance data:<a class="headerlink" href="#exemplar-instance-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.10. </span>2. Exemplar instance data:<a class="headerlink" href="#exemplar-instance-data" title="Permalink to this headline">¶</a></h2>
 <p>When users submit information via the form (or by other programatic means), an instance YAML file is generated, which looks like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>id: placeholder
 
@@ -1349,7 +1354,7 @@ submitter:
 <p><code class="docutils literal notranslate"><span class="pre">source</span></code>: <a class="reference external" href="https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml">https://github.com/arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml</a></p>
 </div>
 <div class="section" id="conversion-from-yaml-to-rdf">
-<h2><span class="section-number">9.4.2.11. </span>3. Conversion from YAML to RDF:<a class="headerlink" href="#conversion-from-yaml-to-rdf" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.11. </span>3. Conversion from YAML to RDF:<a class="headerlink" href="#conversion-from-yaml-to-rdf" title="Permalink to this headline">¶</a></h2>
 <p>Using the schema SALAD python package, the YAML instance file can be easily converted to RDF as shown in the code snippet below:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install schema_salad
 </pre></div>
@@ -1364,15 +1369,15 @@ submitter:
 </div>
 </div>
 <div class="section" id="rdf-graph-validation-with-shex-expression">
-<h2><span class="section-number">9.4.2.12. </span>4. RDF graph validation with ShEx expression:<a class="headerlink" href="#rdf-graph-validation-with-shex-expression" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.12. </span>4. RDF graph validation with ShEx expression:<a class="headerlink" href="#rdf-graph-validation-with-shex-expression" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what-is-shex">
-<h3><span class="section-number">9.4.2.12.1. </span>4.1 What is ShEx?<a class="headerlink" href="#what-is-shex" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.2.12.1. </span>4.1 What is ShEx?<a class="headerlink" href="#what-is-shex" title="Permalink to this headline">¶</a></h3>
 <p>ShEx stands for <code class="docutils literal notranslate"><span class="pre">Shape</span> <span class="pre">Expression</span></code> and is a syntax for validating and describing RDF graphs. ShEx expressions can be used both to describe RDF and check the conformance of RDF data. The ShEx language  specification was published by the W3C Shape Expressions Community Group but it is not a W3C Standard nor is it on the W3C Standards Track.</p>
 <p>It should be noted that the current W3C Technical Recommendations for RDF shape validation is the <a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL specification</a>.</p>
 <p>ShEx was selected owing to its simplicity, ease of use and availability of experts.</p>
 </div>
 <div class="section" id="why-is-this-needed">
-<h3><span class="section-number">9.4.2.12.2. </span>4.2 Why is this needed?<a class="headerlink" href="#why-is-this-needed" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.2.12.2. </span>4.2 Why is this needed?<a class="headerlink" href="#why-is-this-needed" title="Permalink to this headline">¶</a></h3>
 <p>While defining a SALAD schema using YAML allows to list key entities and their attributes, it does not allow to check constraints. This has to be done on the RDF which needs to be checks for compliancee against a set of constraints which can be expressed using ShEx. Working with a ShEx expert (<a class="reference external" href="http://di002.edv.uniovi.es/~labra/">Dr Jose Emilio Labra Gayo - (Oviedo Uni)</a>, the following <a class="reference external" href="https://shex.io/shex-semantics/">Shape Expression syntax</a> profile was developed and used to validate the RDF before persistence to the SPARQL endpoint.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX : &lt;https://raw.githubusercontent.com/arvados/bh20-seq-resource/master/bh20sequploader/bh20seq-shex.rdf#&gt;
 PREFIX MainSchema: &lt;http://biohackathon.org/bh20-seq-schema#MainSchema/&gt;
@@ -1464,7 +1469,7 @@ PREFIX wikidata: &lt;http://www.wikidata.org/entity/&gt;
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="weso-shape-expression-viewer">
 <a class="reference internal image-reference" href="../../../_images/z2rriQu.png"><img alt="WESO SHape Expression Viewer" src="../../../_images/z2rriQu.png" style="width: 1200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.8 </span><span class="caption-text">WESO SHape Expression Viewer</span><a class="headerlink" href="#weso-shape-expression-viewer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.8 </span><span class="caption-text">WESO SHape Expression Viewer</span><a class="headerlink" href="#weso-shape-expression-viewer" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><!-- ![](/images/z2rriQu.png) -->
@@ -1472,16 +1477,16 @@ PREFIX wikidata: &lt;http://www.wikidata.org/entity/&gt;
 </div>
 </div>
 <div class="section" id="sparql-queries-available-here">
-<h2><span class="section-number">9.4.2.13. </span>5. SPARQL queries available here:<a class="headerlink" href="#sparql-queries-available-here" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.13. </span>5. SPARQL queries available here:<a class="headerlink" href="#sparql-queries-available-here" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://covid19.genenetwork.org/blog?id=using-covid-19-pubseq-part1">http://covid19.genenetwork.org/blog?id=using-covid-19-pubseq-part1</a></p>
 <div class="section" id="the-sparql-endpoint">
-<h3><span class="section-number">9.4.2.13.1. </span>5.1. The SPARQL endpoint<a class="headerlink" href="#the-sparql-endpoint" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.2.13.1. </span>5.1. The SPARQL endpoint<a class="headerlink" href="#the-sparql-endpoint" title="Permalink to this headline">¶</a></h3>
 <p>The following endpoint during the Elixir Covid-19 Biohackthon and metadata information converted from the YAML definition to RDF turtle format was loaded in the following SPARQL Endpoint.</p>
 <p><a class="reference external" href="http://sparql.genenetwork.org/sparql/">http://sparql.genenetwork.org/sparql/</a></p>
 <p>The collection of metadata in rdf format is available for download: <a class="reference external" href="https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl">https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl</a></p>
 </div>
 <div class="section" id="exploring-the-metadata-described-the-fastq-sequence-files">
-<h3><span class="section-number">9.4.2.13.2. </span>5.2. Exploring the metadata described the FASTQ sequence files<a class="headerlink" href="#exploring-the-metadata-described-the-fastq-sequence-files" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.2.13.2. </span>5.2. Exploring the metadata described the FASTQ sequence files<a class="headerlink" href="#exploring-the-metadata-described-the-fastq-sequence-files" title="Permalink to this headline">¶</a></h3>
 <p>Limiting search to metadata add <a class="reference external" href="http://covid-19.genenetwork.org/graph/metadata.ttl">http://covid-19.genenetwork.org/graph/metadata.ttl</a> in the top input box. Now you can find a predicate for submitter that looks like <a class="reference external" href="http://biohackathon.org/bh20-seq-schema#MainSchema/submitter">http://biohackathon.org/bh20-seq-schema#MainSchema/submitter</a>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PREFIX pubseq: &lt;http://biohackathon.org/bh20-seq-schema#MainSchema/&gt;
 PREFIX sio: &lt;http://semanticscience.org/resource/&gt;
@@ -1495,7 +1500,7 @@ PREFIX sio: &lt;http://semanticscience.org/resource/&gt;
 </div>
 </div>
 <div class="section" id="conclusions">
-<h2><span class="section-number">9.4.2.14. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.14. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF and Shape Express standard.
 Other approaches are possible and we provide details in a dedicated recipe where JSON schema<!-- TODO add a link to corresponding document --> and JSON-LD<!-- TODO add a link to corresponding document --> technologies are used.
@@ -1505,7 +1510,7 @@ There are some caveats or improvements which could be made. For instance, the de
 Another improvement could be a better integration with repositories such FAIRsharing or the main sequence data submission systems such as INSDC deposition pipelines.</p>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
-<h3><span class="section-number">9.4.2.14.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.2.14.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>How to validate a FASTQ sequencing file?<!-- TODO add a link to corresponding document --></p></li>
 <li><p>How to express Minimal Metadata checklist in machine readable format<!-- TODO add a link to corresponding document --></p></li>
@@ -1515,7 +1520,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">9.4.2.15. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.15. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1531,7 +1536,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">9.4.2.16. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.16. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1576,7 +1581,7 @@ Another improvement could be a better integration with repositories such FAIRsha
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">9.4.2.17. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.2.17. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1624,125 +1629,125 @@ Another improvement could be a better integration with repositories such FAIRsha
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   9.4.2.1. Main Objectives
+   10.4.2.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   9.4.2.2. Graphical Overview
+   10.4.2.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   9.4.2.3. FAIRification Objectives, Inputs and Outputs
+   10.4.2.3. FAIRification Objectives, Inputs and Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#table-of-data-standards">
-   9.4.2.4. Table of Data Standards
+   10.4.2.4. Table of Data Standards
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tools">
-   9.4.2.5. Tools
+   10.4.2.5. Tools
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   9.4.2.6. Introduction
+   10.4.2.6. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defining-the-metadata-fields">
-   9.4.2.7. Defining the metadata fields
+   10.4.2.7. Defining the metadata fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#semantic-anchoring-of-metadata-element">
-   9.4.2.8. Semantic anchoring of metadata element:
+   10.4.2.8. Semantic anchoring of metadata element:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#metadata-schema-definition-using-salad-schema-language">
-   9.4.2.9. 1. metadata schema definition using SALAD schema language:
+   10.4.2.9. 1. metadata schema definition using SALAD schema language:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-corresponding-metadata-acquisition-web-form">
-     9.4.2.9.1. The corresponding metadata acquisition web form:
+     10.4.2.9.1. The corresponding metadata acquisition web form:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exemplar-instance-data">
-   9.4.2.10. 2. Exemplar instance data:
+   10.4.2.10. 2. Exemplar instance data:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion-from-yaml-to-rdf">
-   9.4.2.11. 3. Conversion from YAML to RDF:
+   10.4.2.11. 3. Conversion from YAML to RDF:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rdf-graph-validation-with-shex-expression">
-   9.4.2.12. 4. RDF graph validation with ShEx expression:
+   10.4.2.12. 4. RDF graph validation with ShEx expression:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-is-shex">
-     9.4.2.12.1. 4.1 What is ShEx?
+     10.4.2.12.1. 4.1 What is ShEx?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#why-is-this-needed">
-     9.4.2.12.2. 4.2 Why is this needed?
+     10.4.2.12.2. 4.2 Why is this needed?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sparql-queries-available-here">
-   9.4.2.13. 5. SPARQL queries available here:
+   10.4.2.13. 5. SPARQL queries available here:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-sparql-endpoint">
-     9.4.2.13.1. 5.1. The SPARQL endpoint
+     10.4.2.13.1. 5.1. The SPARQL endpoint
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exploring-the-metadata-described-the-fastq-sequence-files">
-     9.4.2.13.2. 5.2. Exploring the metadata described the FASTQ sequence files
+     10.4.2.13.2. 5.2. Exploring the metadata described the FASTQ sequence files
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusions">
-   9.4.2.14. Conclusions
+   10.4.2.14. Conclusions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-read-next">
-     9.4.2.14.1. What should I read next?
+     10.4.2.14.1. What should I read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   9.4.2.15. References
+   10.4.2.15. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   9.4.2.16. Authors
+   10.4.2.16. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   9.4.2.17. License
+   10.4.2.17. License
   </a>
  </li>
 </ul>
@@ -1757,8 +1762,8 @@ Another improvement could be a better integration with repositories such FAIRsha
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="transcriptomics-metadata.html" title="previous page"><span class="section-number">9.4.1. </span>Metadata profile for transcriptomics</a>
-<a class='right-next' id="next-link" href="bioactivity-profile.html" title="next page"><span class="section-number">9.4.3. </span>Bioactivity data profile</a>
+<a class='left-prev' id="prev-link" href="transcriptomics-metadata.html" title="previous page"><span class="section-number">10.4.1. </span>Metadata profile for transcriptomics</a>
+<a class='right-next' id="next-link" href="bioactivity-profile.html" title="next page"><span class="section-number">10.4.3. </span>Bioactivity data profile</a>
 
                                     </div>
                                 </v-row>

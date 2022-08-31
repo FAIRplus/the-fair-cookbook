@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9.4.1. Metadata profile for transcriptomics</title>
+    <title>10.4.1. Metadata profile for transcriptomics</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -65,8 +65,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="9.4.2. Metadata profile validation in RDF" href="covid19-sample-metadata-profile-shex-use-case.html" />
-    <link rel="prev" title="9. Creating a metadata profile" href="creating-minimal-metadata-profiles.html" />
+    <link rel="next" title="10.4.2. Metadata profile validation in RDF" href="covid19-sample-metadata-profile-shex-use-case.html" />
+    <link rel="prev" title="10. Creating a metadata profile" href="creating-minimal-metadata-profiles.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -463,28 +463,33 @@
     </i>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="ontology-alignment-oxo.html">
+     8. Ontology mapping with Ontology Xref Service (OxO)
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="creating-data-dictionary.html">
-     8. Creating a data/variable dictionary
+     9. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="creating-minimal-metadata-profiles.html">
-     9. Creating a metadata profile
+     10. Creating a metadata profile
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       9.4.1. Metadata profile for transcriptomics
+       10.4.1. Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
-       9.4.2. Metadata profile validation in RDF
+       10.4.2. Metadata profile validation in RDF
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioactivity-profile.html">
-       9.4.3. Bioactivity data profile
+       10.4.3. Bioactivity data profile
       </a>
      </li>
     </ul>
@@ -493,32 +498,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
-     10. Converting from proprietary to open format
+     11. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rdf-conversion.html">
-     11. An inventory of tools for converting your data to RDF
+     12. An inventory of tools for converting your data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     12. File format validation, FASTQ example
+     13. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ETL-tools.html">
-     13. Extraction, transformation, and loading process
+     14. Extraction, transformation, and loading process
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="VCF-to-FHIR-conversion.html">
-     14. Clinical Genetic Information as FHIR JSON
+     15. Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.9.1. Converting VCF file to FHIR JSON
+       15.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -889,7 +894,7 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="metadata-profile-for-transcriptomics">
-<span id="fcb-interop-txmetadata"></span><h1><span class="section-number">9.4.1. </span>Metadata profile for transcriptomics<a class="headerlink" href="#metadata-profile-for-transcriptomics" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-interop-txmetadata"></span><h1><span class="section-number">10.4.1. </span>Metadata profile for transcriptomics<a class="headerlink" href="#metadata-profile-for-transcriptomics" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -963,24 +968,24 @@ No
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">9.4.1.1. </span>Main Objectives:<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.1.1. </span>Main Objectives:<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is:</p>
 <blockquote>
 <div><p>To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments,
 from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing.</p>
 </div></blockquote>
 <div class="section" id="who-is-this-recipe-aimed-at">
-<h3><span class="section-number">9.4.1.1.1. </span>Who is this recipe aimed at?<a class="headerlink" href="#who-is-this-recipe-aimed-at" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.1.1.1. </span>Who is this recipe aimed at?<a class="headerlink" href="#who-is-this-recipe-aimed-at" title="Permalink to this headline">¶</a></h3>
 <p>This document is aimed at anyone interested in the metadata, and specifically the ontology annotations, required to capture variables and experimental factors related to a transcriptomics experiment. General knowledge of transcriptomics experiments would be beneficial. No specific technical knowledge is required.</p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="transcriptomics-data-model">
-<h2><span class="section-number">9.4.1.2. </span>Transcriptomics Data model<a class="headerlink" href="#transcriptomics-data-model" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.1.2. </span>Transcriptomics Data model<a class="headerlink" href="#transcriptomics-data-model" title="Permalink to this headline">¶</a></h2>
 <p>Large sections of any transcriptomics data model are not unique to transcriptomics experiments but are common to a wide range of experiments in the biomedical domain. This includes general project- and sample-level information, which will be briefly covered in this recipe but will also be covered in more depth elsewhere.</p>
 <p>Where possible, metadata should be mapped to ontologies to maximise the FAIRness of any dataset. This recipe will suggest possible ontologies for metadata fields where these are available. These lists may however not be exhaustive as new ontologies emerge regularly.</p>
 <div class="section" id="existing-standards-and-checklists">
-<h3><span class="section-number">9.4.1.2.1. </span>Existing standards and checklists<a class="headerlink" href="#existing-standards-and-checklists" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.1.2.1. </span>Existing standards and checklists<a class="headerlink" href="#existing-standards-and-checklists" title="Permalink to this headline">¶</a></h3>
 <p>A set of well-established standards and minimum metadata checklists exist for various aspects of transcriptomics. They include:</p>
 <p>Minimum Information About a Microarray Experiment (MIAME) - MIAME is intended to specify all the information necessary for an unambiguous interpretation of a microarray experiment, and potentially to reproduce it. MIAME defines the content but not the format for this information. The MIAME standard has been in existence for over 20 years and has been widely adopted across the scientific community. The data models of the major transcriptomics repositories such as ArrayExpress, the Expression Atlas and the Gene Expression Omnibus (GEO) are MIAME-compliant.</p>
 <p>Minimum Information about a high-throughput nucleotide SEQuencing Experiment (MINSEQE) - MINSEQE describes the minimum metadata that is needed to enable the unambiguous interpretation and facilitate reproduction of the results of the experiment. By analogy to the MIAME guidelines for microarray experiments, adherence to the MINSEQE guidelines will improve integration of multiple experiments across different modalities, thereby maximising the value of high-throughput research. MINSEQE has been integrated into a number of transcriptomics and sequencing archives.</p>
@@ -988,18 +993,18 @@ from standard case-control to dosage-response designs, and from microarrays to s
 <p>Human Cell Atlas Metadata (HCA-Metadata) - the HCA metadata model provides a concrete specification for capturing the metadata for single cell sequencing experiments. It is based on the three standards above, while focusing on the specific requirements of the single cell space.</p>
 </div>
 <div class="section" id="minimum-metadata-vs-desirable-metadata">
-<h3><span class="section-number">9.4.1.2.2. </span>Minimum metadata vs desirable metadata<a class="headerlink" href="#minimum-metadata-vs-desirable-metadata" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.1.2.2. </span>Minimum metadata vs desirable metadata<a class="headerlink" href="#minimum-metadata-vs-desirable-metadata" title="Permalink to this headline">¶</a></h3>
 <p>A minimum metadata set constitutes metadata items that always need to be supplied with any experimental data. For validation purposes, these should not be omittable. Desirable or recommended metadata items on the other hand should be supplied if available but will not cause a validation failure if absent.</p>
 </div>
 <div class="section" id="common-metadata">
-<h3><span class="section-number">9.4.1.2.3. </span>Common metadata<a class="headerlink" href="#common-metadata" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.1.2.3. </span>Common metadata<a class="headerlink" href="#common-metadata" title="Permalink to this headline">¶</a></h3>
 <p>Common metadata include any information that is not specific to transcriptomics experiments but applies to most experiments in the biomedical domain. They include:</p>
 <ul class="simple">
 <li><p>Project level metadata</p></li>
 <li><p>Common sample level metadata such as species, tissue, cell type etc.</p></li>
 </ul>
 <div class="section" id="suggested-metadata-fields">
-<h4><span class="section-number">9.4.1.2.3.1. </span>Suggested metadata fields<a class="headerlink" href="#suggested-metadata-fields" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.1.2.3.1. </span>Suggested metadata fields<a class="headerlink" href="#suggested-metadata-fields" title="Permalink to this headline">¶</a></h4>
 <p>The following table contains a non-exhaustive list of suggested minimum metadata fields for biological samples. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE, FAANG and HCA. Fields were included if they occurred in at least two of the standards.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1125,7 +1130,7 @@ from standard case-control to dosage-response designs, and from microarrays to s
 </div>
 </div>
 <div class="section" id="assay-metadata">
-<h3><span class="section-number">9.4.1.2.4. </span>Assay metadata<a class="headerlink" href="#assay-metadata" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.1.2.4. </span>Assay metadata<a class="headerlink" href="#assay-metadata" title="Permalink to this headline">¶</a></h3>
 <p>Assay-level metadata covers any metadata directly related to the preparation of the biomaterial undergoing the assay and the process of performing the assay. Most, though not all, of this metadata is specific to transcriptomics. Examples include:</p>
 <ul class="simple">
 <li><p>Library information, including what sample the library was originally derived from and whether any replicates are biological or technical</p></li>
@@ -1137,7 +1142,7 @@ from standard case-control to dosage-response designs, and from microarrays to s
 <li><p>Workflow metadata</p></li>
 </ul>
 <div class="section" id="id1">
-<h4><span class="section-number">9.4.1.2.4.1. </span>Suggested metadata fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.1.2.4.1. </span>Suggested metadata fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>The following table contains a non-exhaustive list of suggested minimum metadata fields for assays. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE and HCA. This list can and should be further broken down based on specific technologies used, such as microarrays or whole genome sequencing.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1268,7 +1273,7 @@ from standard case-control to dosage-response designs, and from microarrays to s
 </div>
 </div>
 <div class="section" id="analysis-metadata">
-<h3><span class="section-number">9.4.1.2.5. </span>Analysis metadata<a class="headerlink" href="#analysis-metadata" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.1.2.5. </span>Analysis metadata<a class="headerlink" href="#analysis-metadata" title="Permalink to this headline">¶</a></h3>
 <p>Analysis-level metadata includes any metadata related to the files that come out of the experiment, from the sequencing or imaging files generated directly by the machine to files generated during the various stages of processing and analysis, as well as details of any analyses performed. It is very important to always capture versions of software and reference genomes used in order to allow accurate replication of results. Analysis metadata includes</p>
 <ul class="simple">
 <li><p>Type of analysis</p></li>
@@ -1277,7 +1282,7 @@ from standard case-control to dosage-response designs, and from microarrays to s
 <li><p>Summarisation of data, e.g. enrichment analysis</p></li>
 </ul>
 <div class="section" id="id2">
-<h4><span class="section-number">9.4.1.2.5.1. </span>Suggested metadata fields<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.1.2.5.1. </span>Suggested metadata fields<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>The following table contains a non-exhaustive list of suggested minimum metadata fields for analyses. The collection is based on a range of existing metadata standards, including MIAME, MINSEQE and HCA. This list can and should be further broken down based on the specific analysis type (primary, secondary or teriatry analysis, meta-analysis etc)</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1354,7 +1359,7 @@ from standard case-control to dosage-response designs, and from microarrays to s
 </div>
 </div>
 <div class="section" id="ontologies-for-transcriptomics-data">
-<h2><span class="section-number">9.4.1.3. </span>Ontologies for transcriptomics data<a class="headerlink" href="#ontologies-for-transcriptomics-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.1.3. </span>Ontologies for transcriptomics data<a class="headerlink" href="#ontologies-for-transcriptomics-data" title="Permalink to this headline">¶</a></h2>
 <p>While it is essential that any transcriptomics metadata be annotated with ontology terms wherever possible, there is no absolute set of ontologies that must be used above all others. There is however a consensus set of ontologies and other standardised resources that are commonly used in transcriptomics metadata, including in the main data archives. The most commonly used ontologies and fields they apply to are listed below. This table represents an absolute minimum of ontology annotations that should be included in a transcriptomics metadata set for it to be considered as FAIR. Not all fields suggested for ontology annotation in the previous section are repeated here for this reason.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1434,7 +1439,7 @@ from standard case-control to dosage-response designs, and from microarrays to s
 </table>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">9.4.1.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.1.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to
 easily define a comprehensive metadata template to capture all the experimental variables to describe any
 transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata
@@ -1449,7 +1454,7 @@ template is provided <a class="reference internal" href="creating-minimal-metada
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">9.4.1.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.1.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <!-- TODO clarify the contribution of Karsten and Peter -->
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1495,7 +1500,7 @@ template is provided <a class="reference internal" href="creating-minimal-metada
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">9.4.1.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.1.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1543,63 +1548,63 @@ template is provided <a class="reference internal" href="creating-minimal-metada
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   9.4.1.1. Main Objectives:
+   10.4.1.1. Main Objectives:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#who-is-this-recipe-aimed-at">
-     9.4.1.1.1. Who is this recipe aimed at?
+     10.4.1.1.1. Who is this recipe aimed at?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#transcriptomics-data-model">
-   9.4.1.2. Transcriptomics Data model
+   10.4.1.2. Transcriptomics Data model
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#existing-standards-and-checklists">
-     9.4.1.2.1. Existing standards and checklists
+     10.4.1.2.1. Existing standards and checklists
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#minimum-metadata-vs-desirable-metadata">
-     9.4.1.2.2. Minimum metadata vs desirable metadata
+     10.4.1.2.2. Minimum metadata vs desirable metadata
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#common-metadata">
-     9.4.1.2.3. Common metadata
+     10.4.1.2.3. Common metadata
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#suggested-metadata-fields">
-       9.4.1.2.3.1. Suggested metadata fields
+       10.4.1.2.3.1. Suggested metadata fields
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assay-metadata">
-     9.4.1.2.4. Assay metadata
+     10.4.1.2.4. Assay metadata
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       9.4.1.2.4.1. Suggested metadata fields
+       10.4.1.2.4.1. Suggested metadata fields
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#analysis-metadata">
-     9.4.1.2.5. Analysis metadata
+     10.4.1.2.5. Analysis metadata
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       9.4.1.2.5.1. Suggested metadata fields
+       10.4.1.2.5.1. Suggested metadata fields
       </a>
      </li>
     </ul>
@@ -1608,22 +1613,22 @@ template is provided <a class="reference internal" href="creating-minimal-metada
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ontologies-for-transcriptomics-data">
-   9.4.1.3. Ontologies for transcriptomics data
+   10.4.1.3. Ontologies for transcriptomics data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   9.4.1.4. Conclusion
+   10.4.1.4. Conclusion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   9.4.1.5. Authors
+   10.4.1.5. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   9.4.1.6. License
+   10.4.1.6. License
   </a>
  </li>
 </ul>
@@ -1638,8 +1643,8 @@ template is provided <a class="reference internal" href="creating-minimal-metada
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="creating-minimal-metadata-profiles.html" title="previous page"><span class="section-number">9. </span>Creating a metadata profile</a>
-<a class='right-next' id="next-link" href="covid19-sample-metadata-profile-shex-use-case.html" title="next page"><span class="section-number">9.4.2. </span>Metadata profile validation in RDF</a>
+<a class='left-prev' id="prev-link" href="creating-minimal-metadata-profiles.html" title="previous page"><span class="section-number">10. </span>Creating a metadata profile</a>
+<a class='right-next' id="next-link" href="covid19-sample-metadata-profile-shex-use-case.html" title="next page"><span class="section-number">10.4.2. </span>Metadata profile validation in RDF</a>
 
                                     </div>
                                 </v-row>

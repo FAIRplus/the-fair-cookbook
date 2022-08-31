@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Creating a metadata profile</title>
+    <title>10. Creating a metadata profile</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -65,8 +65,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="9.4.1. Metadata profile for transcriptomics" href="transcriptomics-metadata.html" />
-    <link rel="prev" title="8. Creating data/variable dictionary" href="creating-data-dictionary.html" />
+    <link rel="next" title="10.4.1. Metadata profile for transcriptomics" href="transcriptomics-metadata.html" />
+    <link rel="prev" title="9. Creating data/variable dictionary" href="creating-data-dictionary.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -463,28 +463,33 @@
     </i>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="ontology-alignment-oxo.html">
+     8. Ontology mapping with Ontology Xref Service (OxO)
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="creating-data-dictionary.html">
-     8. Creating a data/variable dictionary
+     9. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="current reference internal" href="#">
-     9. Creating a metadata profile
+     10. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="transcriptomics-metadata.html">
-       9.4.1. Metadata profile for transcriptomics
+       10.4.1. Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
-       9.4.2. Metadata profile validation in RDF
+       10.4.2. Metadata profile validation in RDF
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioactivity-profile.html">
-       9.4.3. Bioactivity data profile
+       10.4.3. Bioactivity data profile
       </a>
      </li>
     </ul>
@@ -493,32 +498,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
-     10. Converting from proprietary to open format
+     11. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rdf-conversion.html">
-     11. An inventory of tools for converting your data to RDF
+     12. An inventory of tools for converting your data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     12. File format validation, FASTQ example
+     13. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ETL-tools.html">
-     13. Extraction, transformation, and loading process
+     14. Extraction, transformation, and loading process
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="VCF-to-FHIR-conversion.html">
-     14. Clinical Genetic Information as FHIR JSON
+     15. Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.9.1. Converting VCF file to FHIR JSON
+       15.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -889,7 +894,7 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="creating-a-metadata-profile">
-<span id="fcb-interop-metadataprofile"></span><h1><span class="section-number">9. </span>Creating a metadata profile<a class="headerlink" href="#creating-a-metadata-profile" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-interop-metadataprofile"></span><h1><span class="section-number">10. </span>Creating a metadata profile<a class="headerlink" href="#creating-a-metadata-profile" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -963,7 +968,7 @@ Yes
 </div>
 </div>
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">9.1. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -980,23 +985,23 @@ Yes
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="building-a-minimal-metadata-profile">
 <a class="reference internal image-reference" href="../../../_images/creating-minimal-metadata-profiles-mermaid.png"><img alt="Building a minimal metadata profile" src="../../../_images/creating-minimal-metadata-profiles-mermaid.png" style="height: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Building a minimal metadata profile.</span><a class="headerlink" href="#building-a-minimal-metadata-profile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Building a minimal metadata profile.</span><a class="headerlink" href="#building-a-minimal-metadata-profile" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="how-to-generate-a-metadata-template">
-<h2><span class="section-number">9.2. </span>How to generate a metadata template<a class="headerlink" href="#how-to-generate-a-metadata-template" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.2. </span>How to generate a metadata template<a class="headerlink" href="#how-to-generate-a-metadata-template" title="Permalink to this headline">¶</a></h2>
 <p>The following steps are intended as a starting point to guide the generation of a metadata template.</p>
 <div class="section" id="step-1-define-competency-questions">
-<h3><span class="section-number">9.2.1. </span>Step 1: Define competency questions<a class="headerlink" href="#step-1-define-competency-questions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.2.1. </span>Step 1: Define competency questions<a class="headerlink" href="#step-1-define-competency-questions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>What are the questions you would like to address with the template?
 Without a set of competency questions, important variables may easily be forgotten. It is equally possible to collect too much metadata, making the resulting metadata model opaque and difficult to navigate. Competency questions serve as a guide to identify the most relevant experimental factors.</p></li>
 </ul>
 </div>
 <div class="section" id="step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions">
-<h3><span class="section-number">9.2.2. </span>Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions<a class="headerlink" href="#step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.2.2. </span>Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions<a class="headerlink" href="#step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Compile metadata from different sources</p></li>
 <li><p>Generate a consolidated view on metadata by merging attributes as far as possible</p></li>
@@ -1011,7 +1016,7 @@ Without a set of competency questions, important variables may easily be forgott
 </ul>
 </div>
 <div class="section" id="step-3-introduce-semantics-into-the-template">
-<h3><span class="section-number">9.2.3. </span>Step 3: Introduce semantics into the template<a class="headerlink" href="#step-3-introduce-semantics-into-the-template" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.2.3. </span>Step 3: Introduce semantics into the template<a class="headerlink" href="#step-3-introduce-semantics-into-the-template" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Identify most important objects to be represented in the model (e.g. study, sample, treatment, result, etc.)</p></li>
 <li><p>Make sure to have an appropriate naming strategy for the objects (e.g. an NGSstudy is an OMICSstudy is a Study; do not call an NGSstudy a Study; make sure the granularity fits your purposes)</p></li>
@@ -1023,7 +1028,7 @@ Without a set of competency questions, important variables may easily be forgott
 </ul>
 </div>
 <div class="section" id="step-4-reality-check">
-<h3><span class="section-number">9.2.4. </span>Step 4:  Reality check<a class="headerlink" href="#step-4-reality-check" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.2.4. </span>Step 4:  Reality check<a class="headerlink" href="#step-4-reality-check" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Introduce measures allowing to identify errors in reported data according to your model</p></li>
 <li><p>Expose your model to actual data delivered by independent colleagues and capture the errors and gaps that occurred</p></li>
@@ -1033,7 +1038,7 @@ Without a set of competency questions, important variables may easily be forgott
 </ul>
 </div>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">9.2.5. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.2.5. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html#fcb-interop-covid-metadata"><span class="std std-ref">Metadata profile validation in RDF</span></a></p></li>
 </ul>
@@ -1054,7 +1059,7 @@ Without a set of competency questions, important variables may easily be forgott
 </div>
 </div>
 <div class="section" id="authors">
-<h2><span class="section-number">9.3. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.3. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1085,7 +1090,7 @@ Without a set of competency questions, important variables may easily be forgott
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">9.4. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1135,49 +1140,49 @@ Without a set of competency questions, important variables may easily be forgott
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   9.1. Graphical Overview
+   10.1. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-generate-a-metadata-template">
-   9.2. How to generate a metadata template
+   10.2. How to generate a metadata template
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-1-define-competency-questions">
-     9.2.1. Step 1: Define competency questions
+     10.2.1. Step 1: Define competency questions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions">
-     9.2.2. Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions
+     10.2.2. Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-3-introduce-semantics-into-the-template">
-     9.2.3. Step 3: Introduce semantics into the template
+     10.2.3. Step 3: Introduce semantics into the template
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-4-reality-check">
-     9.2.4. Step 4:  Reality check
+     10.2.4. Step 4:  Reality check
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     9.2.5. What to read next?
+     10.2.5. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   9.3. Authors
+   10.3. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   9.4. License
+   10.4. License
   </a>
  </li>
 </ul>
@@ -1192,8 +1197,8 @@ Without a set of competency questions, important variables may easily be forgott
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="creating-data-dictionary.html" title="previous page"><span class="section-number">8. </span>Creating data/variable dictionary</a>
-<a class='right-next' id="next-link" href="transcriptomics-metadata.html" title="next page"><span class="section-number">9.4.1. </span>Metadata profile for transcriptomics</a>
+<a class='left-prev' id="prev-link" href="creating-data-dictionary.html" title="previous page"><span class="section-number">9. </span>Creating data/variable dictionary</a>
+<a class='right-next' id="next-link" href="transcriptomics-metadata.html" title="next page"><span class="section-number">10.4.1. </span>Metadata profile for transcriptomics</a>
 
                                     </div>
                                 </v-row>

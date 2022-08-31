@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13. Extraction, transformation, and loading process</title>
+    <title>14. Extraction, transformation, and loading process</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -65,8 +65,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="14. Converting VCF file to HL7 FHIR JSON Genomic Report profile" href="VCF-to-FHIR-conversion.html" />
-    <link rel="prev" title="12. File format validation, FASTQ example" href="fastq-file-format-validators.html" />
+    <link rel="next" title="15. Converting VCF file to HL7 FHIR JSON Genomic Report profile" href="VCF-to-FHIR-conversion.html" />
+    <link rel="prev" title="13. File format validation, FASTQ example" href="fastq-file-format-validators.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -463,28 +463,33 @@
     </i>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="ontology-alignment-oxo.html">
+     8. Ontology mapping with Ontology Xref Service (OxO)
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="creating-data-dictionary.html">
-     8. Creating a data/variable dictionary
+     9. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="creating-minimal-metadata-profiles.html">
-     9. Creating a metadata profile
+     10. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="transcriptomics-metadata.html">
-       9.4.1. Metadata profile for transcriptomics
+       10.4.1. Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
-       9.4.2. Metadata profile validation in RDF
+       10.4.2. Metadata profile validation in RDF
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioactivity-profile.html">
-       9.4.3. Bioactivity data profile
+       10.4.3. Bioactivity data profile
       </a>
      </li>
     </ul>
@@ -493,32 +498,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
-     10. Converting from proprietary to open format
+     11. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rdf-conversion.html">
-     11. An inventory of tools for converting your data to RDF
+     12. An inventory of tools for converting your data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     12. File format validation, FASTQ example
+     13. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     13. Extraction, transformation, and loading process
+     14. Extraction, transformation, and loading process
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="VCF-to-FHIR-conversion.html">
-     14. Clinical Genetic Information as FHIR JSON
+     15. Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       14.9.1. Converting VCF file to FHIR JSON
+       15.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
     </ul>
@@ -889,7 +894,7 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="extraction-transformation-and-loading-process">
-<span id="fcb-interop-etl"></span><h1><span class="section-number">13. </span>Extraction, transformation, and loading process<a class="headerlink" href="#extraction-transformation-and-loading-process" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-interop-etl"></span><h1><span class="section-number">14. </span>Extraction, transformation, and loading process<a class="headerlink" href="#extraction-transformation-and-loading-process" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -963,7 +968,7 @@ No
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">13.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>This recipe identifies tools for <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">extraction</span></code>, <code class="docutils literal notranslate"><span class="pre">transformation</span></code>, and <code class="docutils literal notranslate"><span class="pre">loading</span></code> (ETL).
 ETL is the process of collecting data from one source to persist it in another designated system in which the data is represented differently <a class="footnote-reference brackets" href="#etl-wiki" id="id1">1</a>.
 A common use case in data science is to build a scalable and portable ETL system to extract data from various sources, transform said-data into a cohesive dataset, and load the data to an internal or public database to support data exploration.</p>
@@ -979,7 +984,7 @@ To provide feedback on this content or report issues, please do so via the <a cl
 </div>
 </div>
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">13.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <p>The figure below shows different ETL-related operations and their relationships, together with related tools and recipes.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -997,7 +1002,7 @@ To provide feedback on this content or report issues, please do so via the <a cl
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="overview-of-key-aspects-in-etl-process">
 <a class="reference internal image-reference" href="../../../_images/ETL-tools-mermaid.png"><img alt="Overview of key aspects in ETL process" src="../../../_images/ETL-tools-mermaid.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13.1 </span><span class="caption-text">Overview of key aspects in ETL process</span><a class="headerlink" href="#overview-of-key-aspects-in-etl-process" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text">Overview of key aspects in ETL process</span><a class="headerlink" href="#overview-of-key-aspects-in-etl-process" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>The table below is an overview of ETL tools identified.
@@ -1083,7 +1088,7 @@ For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fc
 </div>
 </div>
 <div class="section" id="requirements">
-<h2><span class="section-number">13.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Knowledge requirement:</p>
 <ul>
@@ -1094,7 +1099,7 @@ For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fc
 </div>
 <hr class="docutils" />
 <div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">13.4. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.4. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
@@ -1124,7 +1129,7 @@ For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fc
 </div>
 <hr class="docutils" />
 <div class="section" id="operations">
-<h2><span class="section-number">13.5. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.5. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
 <!-- <h3 id=Data-query-and-retrieval>Data query and retrieval</h3> -->
 <p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">query</span> <span class="pre">and</span> <span class="pre">retrieval</span></code> is the process of extracting structured or unstructured data from different sources. The process of identifying and obtaining data from data management systems.</p>
 <p><strong>Manually curated list of tools</strong></p>
@@ -1270,7 +1275,7 @@ For ETL tools for RDF data model, please check the dedicated recipe<!-- {ref}`fc
 </table>
 <!-- <h3 id=Data-transformation>Data transformation</h3> -->
 <div class="section" id="data-transformation">
-<h3><span class="section-number">13.5.1. </span>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.1. </span>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">transformation</span></code> is the process of converting the data format, structure, and value for a specific goal, which may include meeting a specific data standards.</p>
 <p>Below are listed common operations in data transformation:</p>
 <ul class="simple">
@@ -1382,7 +1387,7 @@ The process of gathering data and presenting it, usually, in a summarized format
 <!-- <h3 id=Data-deposition>Data deposition</h3> -->
 </div>
 <div class="section" id="data-deposition">
-<h3><span class="section-number">13.5.2. </span>Data Deposition<a class="headerlink" href="#data-deposition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.2. </span>Data Deposition<a class="headerlink" href="#data-deposition" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">deposition</span></code> is the process of loading data to hosting (end) destinations, such as public data archives and data warehouses.</p>
 <p><strong>Manually curated list of tools</strong></p>
 <table class="colwidths-auto table">
@@ -1442,7 +1447,7 @@ The process of gathering data and presenting it, usually, in a summarized format
 </table>
 </div>
 <div class="section" id="example-use-case">
-<h3><span class="section-number">13.5.3. </span>Example use case:<a class="headerlink" href="#example-use-case" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.3. </span>Example use case:<a class="headerlink" href="#example-use-case" title="Permalink to this headline">¶</a></h3>
 <p>To show how some of these tools may be used, the following related recipes provide further guidance with real life examples.</p>
 <ol class="simple">
 <li><p><a class="reference internal" href="fastq-file-format-validators.html#fcb-interop-fastqval"><span class="std std-ref">File format validation, FASTQ example</span></a></p></li>
@@ -1454,7 +1459,7 @@ The process of gathering data and presenting it, usually, in a summarized format
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">13.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1471,7 +1476,7 @@ The process of gathering data and presenting it, usually, in a summarized format
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">13.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1523,7 +1528,7 @@ The process of gathering data and presenting it, usually, in a summarized format
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">13.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1572,59 +1577,59 @@ The process of gathering data and presenting it, usually, in a summarized format
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   13.1. Main Objectives
+   14.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   13.2. Graphical Overview
+   14.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#requirements">
-   13.3. Requirements
+   14.3. Requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   13.4. FAIRification Objectives, Inputs and Outputs
+   14.4. FAIRification Objectives, Inputs and Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations">
-   13.5. Operations
+   14.5. Operations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-transformation">
-     13.5.1. Data transformation
+     14.5.1. Data transformation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-deposition">
-     13.5.2. Data Deposition
+     14.5.2. Data Deposition
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-use-case">
-     13.5.3. Example use case:
+     14.5.3. Example use case:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   13.6. References
+   14.6. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   13.7. Authors
+   14.7. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   13.8. License
+   14.8. License
   </a>
  </li>
 </ul>
@@ -1639,8 +1644,8 @@ The process of gathering data and presenting it, usually, in a summarized format
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="fastq-file-format-validators.html" title="previous page"><span class="section-number">12. </span>File format validation, FASTQ example</a>
-<a class='right-next' id="next-link" href="VCF-to-FHIR-conversion.html" title="next page"><span class="section-number">14. </span>Converting VCF file to HL7 FHIR JSON Genomic Report profile</a>
+<a class='left-prev' id="prev-link" href="fastq-file-format-validators.html" title="previous page"><span class="section-number">13. </span>File format validation, FASTQ example</a>
+<a class='right-next' id="next-link" href="VCF-to-FHIR-conversion.html" title="next page"><span class="section-number">15. </span>Converting VCF file to HL7 FHIR JSON Genomic Report profile</a>
 
                                     </div>
                                 </v-row>
