@@ -11,8 +11,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, ontologist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 4
+:maturity_indicator: 59
 :has_executable_code: yeah
 :recipe_name: Declaring data's permitted uses
 ```` 
