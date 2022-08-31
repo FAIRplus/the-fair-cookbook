@@ -21,7 +21,8 @@
 
 > The main purpose of this recipe is building an application ontology from source ontologies using `ROBOT` {footcite}`pmid31357927` via a sustainable dynamic pipeline to allow seamless integration of source ontology updates {footcite}`Arp2015`. 
 
-An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. Thus it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
+An application ontology is a semantic artefact which is developed to answer the needs of a specific application or focus. 
+Thus, it may borrow terms from a number of reference ontologies, which can be extremely large but whose broad coverage may not be required by the application ontology. Yet, it is critical to keep the `application ontology` synchronized with the `reference ontologies` that imports are made from.  We aim to document how a certain level of automation can be achieved.
 
 [ROBOT](http://robot.obolibrary.org/) is an open source tool for ontology development. It supports ontology editing, ontology annotation, ontology format conversion, and other functions. It runs on the Java Virtual Machine (JVM) and can be used through command line tools on Windows, macOS and Linux.
 
@@ -75,7 +76,7 @@ Building an ontology with Robot tool.
 |Hermit|[http://www.hermit-reasoner.com/](http://www.hermit-reasoner.com/)|ontology reasoner|
 
 
-## Step by step process
+## Step-by-step process
 
 ### Preliminary requirements
 
@@ -104,7 +105,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 |                                                       | ➕ Identify all data generated from a specific tissues obtained from mouse models that are related to a specific disease.              |
 |                                                       | ➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
 |                                                       | ➕ Identify all data generated from primary cells whose origin is the lung.                                                            |
-|                                                       | ➕ Identify all data generated from celllines whose origin is the lung.                                                                |
+|                                                       | ➕ Identify all data generated from cell lines whose origin is the lung.                                                                |
 | **Questions including single genes or gene sets**     |                                                                                                                                       |
 |                                                       | ➕ What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
 |                                                       | ➕ What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
@@ -112,7 +113,7 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 | **Questions including compound or treatment information** |                                                                                                                                       |
 |                                                       | ➕ Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
 |                                                       | ➕ Identify all data from patients treated with a specific medication.                                                                 |
-|                                                       | ➕ Identify all data generated from cells / celllines that have been treated with compounds targeting a member of a specific pathway.  |
+|                                                       | ➕ Identify all data generated from cells / cell lines that have been treated with compounds targeting a member of a specific pathway.  |
 |                                                       | ➕ What is the expression of PPARg in lung tissue upon treatment with a specific compound in patients suffering from a specific disease |
 
 
@@ -150,7 +151,7 @@ The example dataset includes metadata related to disease, species, cell lines, t
 
 |Domain|Reference Ontologies|
 |----|----|
-|Disease| [Mondo Disease Ontology, MONDO](http://www.obofoundry.org/ontology/mondo.html)<br> [Disease Ontology, DIOD](https://disease-ontology.org/)<br> |
+|Disease| [Mondo Disease Ontology, MONDO](http://www.obofoundry.org/ontology/mondo.html)<br> [Disease Ontology, DOID](https://disease-ontology.org/)<br> |
 |Species|[NCBI organismal classification, NCBItaxon](http://www.obofoundry.org/ontology/ncbitaxon.html)|
 |Cell line|[Cell Ontology, CL](http://www.obofoundry.org/ontology/cl.html)<br> [Cell Line Ontology, CLO](http://www.obofoundry.org/ontology/clo.html)|
 |Tissue|[NCI Thesaurus OBO Edition, NCIT](http://www.obofoundry.org/ontology/ncit.html)<br> [Ontology for MIRNA Target, OMIT](http://www.obofoundry.org/ontology/omit.html)<br> [Uberon multi-species anatomy ontology, UBERON](http://www.obofoundry.org/ontology/uberon.html)|
@@ -182,7 +183,7 @@ Ontology seed term selection approaches.
 
 
 [ZOOMA](https://www.ebi.ac.uk/spot/zooma/) is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the [European Bioinformatics Institute (EMBL-EBI)](https://www.ebi.ac.uk)
-. It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated datasources, or ontologies from the [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/index). Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been feeded with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
+. It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated data sources, or ontologies from the [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/index). Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been fed with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
 
 The [NCBO Annotator](https://bioportal.bioontology.org/annotator) is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal ontologies.
 
@@ -237,23 +238,23 @@ if __name__ == "__main__":
 ```
 Running the above script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
 ```python
-['http://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH',
- 'http://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH',
- 'http://www.orpha.net/ORDO/Orphanet_288 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0003850 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0003952 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0009471 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0000203 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0003863 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0000616 # unknown-Confidence:MEDIUM',
- 'http://purl.obolibrary.org/obo/HP_0000952 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0003853 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_1001331 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0003769 # unknown-Confidence:MEDIUM',
- 'http://purl.obolibrary.org/obo/HP_0000132 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0000408 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0008549 # unknown-Confidence:MEDIUM',
- 'http://www.ebi.ac.uk/efo/EFO_0001642 # unknown-Confidence:MEDIUM']
+['https://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH',
+ 'https://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH',
+ 'https://www.orpha.net/ORDO/Orphanet_288 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003850 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003952 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0009471 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0000203 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003863 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0000616 # unknown-Confidence:MEDIUM',
+ 'https://purl.obolibrary.org/obo/HP_0000952 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003853 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_1001331 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003769 # unknown-Confidence:MEDIUM',
+ 'https://purl.obolibrary.org/obo/HP_0000132 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0000408 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0008549 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0001642 # unknown-Confidence:MEDIUM']
 []
 ```
 #### Seed term extraction with NCBO Annotator
@@ -281,7 +282,7 @@ def get_annotations(propertyValues, ontologies = ''):
                   'exclude_numbers': 'false',
                   'whole_word_only': 'true',
                   'exclude_synonyms': 'false'}
-        r = requests.get('http://data.bioontology.org/annotator', params=ploads)
+        r = requests.get('https://data.bioontology.org/annotator', params=ploads)
         
         import json
         data = json.loads(r.text)
@@ -314,7 +315,7 @@ Running the above script to get the seeds for the terms `male`, `female`, and `u
 
 #### Step 2.2.3 Seed term extraction with SPARQL 
 
-Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL query`. Here, we generate a subset of `UBERON` terms which have a crossreference to either `FMA (for human anatomy)` or `MA (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
+Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL query`. Here, we generate a subset of `UBERON` terms which have a cross-reference to either `FMA (for human anatomy)` or `MA (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
 
 ```bash
 PREFIX scdo: <http://scdontology.h3abionet.org/ontology/>
@@ -348,7 +349,7 @@ FILTER regex( ?xref, "^FMA|^MA:", "i")
 
 ### Step 3: Extract ontology modules from source ontologies
 
-Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend to collect all steps together into a script or `Makefile` to avoid missing steps. `ROBOT` steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.
+Module extractions from ontologies can be run manually and in an ad hoc fashion. We would however recommend collecting all steps together into a script or `Makefile` to avoid missing steps. `ROBOT` steps can in theory be chained together into single large commands. Practical experience however teaches that this can have unexpected consequences as well as making debugging difficult in the event of an issue. It is therefore advisable to split extractions and merges out into individual steps with intermediate artefacts which can be deleted at the end of the process chain.
 
 #### Step 3.1 Get source ontology files
 
@@ -378,7 +379,7 @@ The `robot` extract command takes several arguments:
 
 * *method*: `ROBOT` uses 4 different algorithms to generate a module.  `TOP`, `BOT`, `STAR` (all from the SLME method), and `MIREOT`. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The `STAR` method creates a module by pulling all the properties and axioms of the seed classes but nothing else. `MIREOT` uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
 * *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
-* *imports*: this argument allows to specify whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
+* *imports*: this argument allows specifying whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
 * *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex).
 * *intermediates*: specific to the `MIREOT` method, it allows to let the algorithm know how much or how little to extract. It has 3 levels (`all`,`minimal`, `none`).
 * *output*: the path to the owl file holding the results of the module extraction.
@@ -439,7 +440,7 @@ The {ref}`fcb-infra-localols` option is recommended by this recipe, given that `
 
 Merging the ontology modules previously extracted and the umbrella ontology locally built produces a first draft of the application ontology. 
 
-The `merge` ROBOT command allows to combines two or more separate input ontology modules into a single ontology. Following, the `ROBOT` command merging the umbrella ontology and the modules is shown:
+The `merge` ROBOT command allows combining two or more separate input ontology modules into a single ontology. Following, the `ROBOT` command merging the umbrella ontology and the modules is shown:
 
 ```bash
 java -jar robot.jar merge \
@@ -520,27 +521,31 @@ robot convert \
 
 ### Step 7: Assess coverage of the ontology scope
 
-The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of `SPARQL queries` and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The `use case owner` and o`ntology developer` can also collaborate on the assessment of the competency questions answers/results. 
+The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of `SPARQL queries` and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The `use case owner` and `ontology developer` can also collaborate on the assessment of the competency questions answers/results. 
 
 `ROBOT` provides the `query` command to perform `SPARQL queries`  against an ontology to verify and validate the ontology.
 
-The query command runs SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: `a query file` and `an output file`. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. An pattern example of this command is shown as follows.
+The query command runs SPARQL `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: `a query file` and `an output file`. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. A pattern example of this command is shown as follows.
 
 ```bash
 robot query --input <input_ontology_file> \
     --queries <query_file> \
-    --output-dir <path_to_rsults> results/
+    --output-dir <path_to_results> results/
 ```
 
 
 ## Conclusions
 
-> Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. This more advanced recipe has identified and described all the different steps that one needs to consider to build such a resource. While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date. It is therefore also critical to understand the benefits of contributing to existing open efforts.    
+> Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. 
+> This more advanced recipe has identified and described all the different steps that one needs to consider building such a resource.
+> While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date.
+> It is therefore also critical to understand the benefits of contributing to existing open efforts.    
 
 > ### What should I read next?
-
-> * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile? --> <!-- TODO add a link to corresponding document -->
-> * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?--> <!-- TODO add a link to corresponding document -->
+>
+* OBO Foundry Semantic Engineering training and the [Robot tutorial](https://oboacademy.github.io/obook/tutorial/robot-tutorial-1/) 
+* {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile? --> <!-- TODO add a link to corresponding document -->
+* {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?--> <!-- TODO add a link to corresponding document -->
 
 
 
