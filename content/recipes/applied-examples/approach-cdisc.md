@@ -135,18 +135,6 @@ For most of the scenarios listed above, with the exception of direct one-to-one 
 
 A recipe on ETL processes is available [elswhere in this resource](../interoperability/ETL-tools.md)
 
-````{dropdown}
-:open:
-```{figure} etl-2-cdisc-figure1.png
----
-name: etl-2-cdisc-figure1
-alt: CDISC SDTM ETL Template 
----
-CDISC SDTM ETL Template 
-```
-````
-
-
 
 
 ### Issues, pitfalls and caveats
