@@ -1,3 +1,4 @@
+todo.md
 .DS_Store
 docs/_site/
 docs/.sass-cache
@@ -7,5 +8,13 @@ docs/_config_netlify.yml
 docs/_build/
 .jekyll-cache/
 pip-environment-cookbook-jb06.txt
-
+__pycache__
+*.pyc
 .github/workflows/build-master.yml
+_build/
+venv/
+# robert's local symlinks:
+docker.sh
+extract-warnings.sh
+#
+.idea

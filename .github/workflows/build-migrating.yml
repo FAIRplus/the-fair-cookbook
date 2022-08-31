@@ -1,0 +1,69 @@
+name: build-from-main-branch-and-deploy-to-external-repo
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy-to-other-repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout dev branch 🛎️
+      uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      with:
+        persist-credentials: false
+        ref: main
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Record Python version
+      run: python -V
+    - name: Install jupyter-book==0.10.2 and fixed dependencies
+      run: pip install -r requirements.txt
+    - name: Record used pip packages
+      run: pip freeze 
+    - name: Install mermaid via npm
+      run: npm install @mermaid-js/mermaid-cli
+    - name: Record mermaid version 
+      run: ./node_modules/.bin/mmdc -V 
+    - name: Search all mermaid files and record a list of them
+      run: find . -iname "*.mmd" > list_of_all_mermaid_files 
+    - name: Print the list of mermaid files 
+      run: cat list_of_all_mermaid_files
+    - name: Convert all mermaid files to various output formats -- standard png
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.png ; done
+    - name: Convert all mermaid files to various output formats -- hi-res png
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 1600 -o $line.hi-res.png ; done
+    - name: Convert all mermaid files to various output formats -- lo-res png
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.lo-res.png ; done
+    - name: Convert all mermaid files to various output formats -- svg
+      run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -o $line.svg ; done
+    - name: Cleanup of intermediates
+      run: rm list_of_all_mermaid_files
+    - name: Remove mermaid and cleanup npm files
+      run: rm -rf ./node_modules
+    - name: Build jupyter-book
+      run: jupyter-book build . 2>&1 | tee ./build.log
+    - name: Let the build fail if there are errors in the build of the jupyter_book 
+      run: grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1
+      shell: bash {0}
+    - name: Clean up build log (remove escape characters)
+      run: sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
+    - name: Check for important warnings
+      run: ./scripts/extract-warnings.sh 
+    - name: Install SSH Client 🔑
+      uses: webfactory/ssh-agent@v0.4.1
+      with:
+        # ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+        ssh-private-key: ${{ secrets.DEPLOY_GHPAGES_INTO_MAIN_REPO }}  ## for push into the-fair-cookbook
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        SSH: true
+        BASE_BRANCH: main #The branch of this repository which should be transfered from.
+        REPOSITORY_NAME: FAIRplus/the-fair-cookbook # The repository on github.com to which will be deployed = pushed.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: _build/html # The folder the action should deploy.
+        

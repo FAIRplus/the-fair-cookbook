@@ -1,60 +1,30 @@
 (fcb-find-id-minid)=
-# Identifier Minting Service with Minid Client
+# Minting identifiers with Minid
 
-+++
+<br/>
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">R X.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 10 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
-````
-
----
+````{panels_fairplus}
+:identifier_text: FCB008
+:identifier_link: 'https://w3id.org/faircookbook/FCB008'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist  
+:maturity_level: 1
+:maturity_indicator: 1
+:has_executable_code: yeah
+:recipe_name: Minting identifiers with Minid
+```` 
 
 
 ## Main Objectives
 
 The main purpose of this recipe is:
 
-To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release.
+To create a **persistent**, **globally unique** and **resolvable identifier** using the ***Minid client*** accessing the Minid 2.0 release {footcite}`Madduri2019` {footcite}`minid-identifiers`.
 
-___
+---
 
 
 ## Graphical Overview
@@ -66,6 +36,8 @@ ___
 <!-- <div><img src="https://github.com/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>
  -->
 
+````{dropdown} 
+:open:
 ```{figure} identifiers-minids-fig1.png
 ---
 height: 550px
@@ -74,16 +46,9 @@ alt: An overview of the identifier minting process
 ---
 An overview of the identifier minting process.
 ```
+````
 
 
-
-
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| identifier minting | minimal | repeatable |
 
 ---
 
@@ -93,7 +58,7 @@ An overview of the identifier minting process.
 | :------------- | :------------- | :------------- |
 | [service invokation](http://edamontology.org/operation_3763)  | [file](http://purl.obolibrary.org/obo/STATO_0000002)  | [guid](http://edamontology.org/data_0976)  |
 
-___
+---
 
 
 ## Installing the minid 2.0 client
@@ -111,7 +76,7 @@ pip3 install --pre minid
 use the dev branch to obtain to source
 [minid github repository](https://github.com/fair-research/minid)
 
-___
+---
 
 ## Configuration
 
@@ -138,10 +103,11 @@ $ touch minid-config.cfg
   <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
 </div> 
  -->
-  <!-- ![](https://i.imgur.com/B5UbkpF.png) -->
+  <!-- ![](/images/B5UbkpF.png) -->
 
-
-```{figure} images/globus/globus-account-create.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-create.png
 ---
 height: 500px
 name: Creating a Globus account
@@ -149,6 +115,7 @@ alt: Creating a Globus account
 ---
 Creating a Globus account.
 ```
+````
 
 
 
@@ -170,7 +137,7 @@ Creating a Globus account.
   This will open the GlobusID login page. Simply enter your credentials obtained from 2.
 
 <!-- ![](./images/globus/globus-account-login.png) -->
-<!-- ![](https://i.imgur.com/2OZFcJa.png) -->
+<!-- ![](/images/2OZFcJa.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -178,7 +145,9 @@ Creating a Globus account.
   <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div>  -->
 
-```{figure} images/globus/globus-account-login.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-login.png
 ---
 height: 250px
 name: Globus account login
@@ -186,11 +155,12 @@ alt: Globus account login
 ---
 Globus account login.
 ```
+````
   
   followed by:
 
 <!-- ![](./images/globus/globus-account-allow.png) -->
-<!-- ![](https://i.imgur.com/avzyAFZ.png) -->
+<!-- ![](/images/avzyAFZ.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -198,7 +168,9 @@ Globus account login.
 <img src="https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div> -->
 
-```{figure} images/globus/globus-account-allow.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-allow.png
 ---
 height: 550px
 name: Globus account allow
@@ -206,11 +178,12 @@ alt: Globus account allow
 ---
 Globus account allow.
 ```
+````
   
   If all goes well, the following browser screen will be shown:
 
 <!-- ![](./images/globus/globus-account-login-success.png) -->
-<!-- ![](https://i.imgur.com/THYPg4E.png) -->
+<!-- ![](/images/THYPg4E.png) -->
 <!-- <div>
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
@@ -219,7 +192,10 @@ Globus account allow.
 </div>
  -->
 
-```{figure} images/globus/globus-account-login-success.png
+
+````{dropdown} 
+:open:
+```{figure} ../../../images/globus-account-login-success.png
 ---
 height: 200px
 name: Globus account login success
@@ -227,6 +203,7 @@ alt: Globus account login success
 ---
 Globus account login success.
 ```
+````
   
   While the terminal will show the following:
 
@@ -281,7 +258,7 @@ $ minid -h
 
 Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>).
 
-----
+---
 
 ### file manifest format
 
@@ -329,33 +306,30 @@ Below is a sample file manifest configuration file:
 
 ## Conclusions
 
-Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets get be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
+Using the `Minid` service, resources can now generate stable, resolvable identifiers for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets can be looked up using a standard protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
-____
+## References
+````{dropdown} **References**
+```{footbibliography}
+```
+````
 
-## Reference
 
-1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
+<!-- 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIRness. PLoS ONE 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
 
-2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles
+2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 
-----
 
 ## Authors
 
-| Name           | Affiliation    | orcid          | CrediT role   |
-| :------------- | :------------- | :------------- |:------------- |
-| Mike d'Arcy  |   |  [0000-0003-2280-917X](http://orcid.org/0000-0003-2280-917X) |  Writing - Original Draft |
-| Philippe Rocca-Sera | Oxford University| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668)| reviewer |
-| | | | |
+````{authors_fairplus}
+Mike: Writing - Original Draft
+Philippe: Writing - Review & Editing
+````
 
+## License
 
-
---- 
-
-## License:
-
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

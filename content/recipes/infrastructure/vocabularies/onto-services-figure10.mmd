@@ -1,0 +1,12 @@
+graph TB;
+
+subgraph "Support (per component)"
+Sup1[Was the system continuously improved?]
+Sup2[Do you have confidence in the future development of the system?]
+Sup3[Do you have a fallback if further support for the product is frozen?]
+Sup4[Do you have confidence that bugs are fixed in a reasonable time frame?]
+Sup5[Is commercial support available?]
+SupL[Is the support quality sufficient for you?]
+end
+
+Sup1 --> Sup2 --> Sup3 --> Sup4  --> Sup5 --> SupL

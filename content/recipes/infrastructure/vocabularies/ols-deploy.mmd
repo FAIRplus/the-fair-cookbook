@@ -1,0 +1,30 @@
+graph LR
+    A[Install dependencies] --> B[Import ontologies]
+    B --> C[Set up and start local OLS]
+    C --> D[Manage ontologies]
+    D --> C
+
+
+    subgraph Get ontology resources
+    B1([From the online sources])
+    B2([From local files])
+    end
+
+    subgraph Ontology management
+    E([Add new ontologies])
+    F([Update existing ontologies])
+    G([Delete ontologies])
+    end
+
+    B1-.-> B
+    B2 -.->B
+
+    E -.-> D
+    F -.-> D
+    G -.-> D
+
+    style E fill:#FFFF99
+    style F fill:#FFFF99
+    style G fill:#FFFF99
+    style B1 fill:#FFFF99
+    style B2 fill:#FFFF99

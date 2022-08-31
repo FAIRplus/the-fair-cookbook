@@ -1,0 +1,246 @@
+<div id="app">
+    <v-app id="inspire">
+        <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+            <v-timeline-item
+                    color="purple lighten-2"
+                    fill-dot
+                    right
+            >
+                <v-card>
+                    <v-card-title class="purple lighten-2">
+                        <v-icon
+                                dark
+                                size="42"
+                                class="mr-4"
+                        >
+                            mdi-magnify
+                        </v-icon>
+                        <h2 class="text-h4 white--text font-weight-light">
+                            Define FAIRification Goals
+                        </h2>
+                    </v-card-title>
+                    <v-container>
+                        <v-row>
+                            <v-col
+                                    cols="12"
+                                    md="10"
+                            >
+                                - Findability : formulate an ontology for the in-vivo bioassay protocol data across the antibiotic drug discovery domain. </br>
+
+                                - Accessible:  deposit the ontology on open source platforms allowing its accessibility to AMR communities across geographical locations.</br>
+
+                                - Interoperability: provide a mechanism to map ontology terms to bioassay protocols for standardisation of protocols across various contributing institutes.</br>
+
+
+                            </v-col>
+                            <v-col
+                                    class="hidden-sm-and-down text-right"
+                                    md="2"
+                            >
+                                <v-icon size="64">
+                                    mdi-calendar-text
+                                </v-icon>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-card>
+            </v-timeline-item>
+
+            <v-timeline-item
+                    color="amber lighten-1"
+                    fill-dot
+                    left
+                    small
+            >
+                <v-card>
+                    <v-card-title class="amber lighten-1 justify-end">
+                        <h2 class="text-h4 mr-4 white--text font-weight-light">
+                            Project Examination & Survey
+                        </h2>
+                        <v-icon
+                                dark
+                                size="42"
+                        >
+                            mdi-home-outline
+                        </v-icon>
+                    </v-card-title>
+                    <v-container>
+                        <v-row>
+                            <v-col
+                                    cols="12"
+                                    md="8"
+                            >
+                                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+                            </v-col>
+                            <v-col
+                                    cols="12"
+                                    md="4"
+                            >
+                                Lorem ipsum dolor sit amet, no nam oblique veritus.
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-card>
+            </v-timeline-item>
+
+            <v-timeline-item
+                    color="cyan lighten-1"
+                    fill-dot
+                    right
+            >
+                <v-card>
+                    <v-card-title class="cyan lighten-1">
+                        <v-icon
+                                class="mr-4"
+                                dark
+                                size="42"
+                        >
+                            mdi-email-outline
+                        </v-icon>
+                        <h2 class="text-h4 white--text font-weight-light">
+                            Domain Modeling
+                        </h2>
+                    </v-card-title>
+                    <v-container>
+                        <v-row>
+                            <v-col
+                                    v-for="n in 3"
+                                    :key="n"
+                                    cols="12"
+                                    md="4"
+                            >
+                                Lorem ipsum dolor sit amet, no nam oblique veritus no nam oblique.
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-card>
+            </v-timeline-item>
+
+            <v-timeline-item
+                    color="red lighten-1"
+                    fill-dot
+                    left
+                    small
+            >
+                <v-card>
+                    <v-card-title class="red lighten-1 justify-end">
+                        <h2 class="text-h4 mr-4 white--text font-weight-light">
+                            Select Standards (Format & Vocabularies)
+                        </h2>
+                        <v-icon
+                                dark
+                                size="42"
+                        >
+                            mdi-account-multiple-outline
+                        </v-icon>
+                    </v-card-title>
+                    <v-container>
+                        <v-row>
+                            <v-col
+                                    class="hidden-sm-and-down"
+                                    md="2"
+                            >
+                                <v-icon size="64">
+                                    mdi-server-network
+                                </v-icon>
+                            </v-col>
+                            <v-col
+                                    cols="12"
+                                    md="10"
+                            >
+                                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus.
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-card>
+            </v-timeline-item>
+
+            <v-timeline-item
+                    color="green lighten-1"
+                    fill-dot
+                    right
+            >
+                <v-card>
+                    <v-card-title class="green lighten-1">
+                        <v-icon
+                                class="mr-4"
+                                dark
+                                size="42"
+                        >
+                            mdi-phone-in-talk
+                        </v-icon>
+                        <h2 class="text-h4 white--text font-weight-light">
+                            Define Identifier Schemes
+                        </h2>
+                    </v-card-title>
+                    <v-container>
+                        <v-row>
+                            <v-col>
+                                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-card>
+            </v-timeline-item>
+
+            <v-timeline-item  color="blue darken-4"   fill-dot left
+            >
+                <v-card>
+                    <v-card-title class="blue darken-4">
+                        <v-icon
+                                class="mr-4"
+                                dark
+                                size="42"
+                        >
+                            mdi-phone-in-talk
+                        </v-icon>
+                        <h2 class="text-h4 white--text font-weight-light">
+                            Hosting
+                        </h2>
+                    </v-card-title>
+                    <v-container>
+                        <v-row>
+                            <v-col>
+                                Define Hosting Service <br/>
+                                Define Versioning Policy <br/>
+                                Define Access Policy <br/>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-card>
+            </v-timeline-item>
+        </v-timeline>
+
+        </v-timeline>
+
+
+
+    </v-app>
+</div>
+
+
+{%- block footer %}
+<v-container fluid>
+    <v-row no-gutter>
+        <v-col cols="12"> {%- include "footer.html" %} </v-col>
+    </v-row>
+</v-container>
+<script type="application/javascript">
+    const vuetify = new Vuetify({
+        theme: {
+            themes: {
+                light: {
+                    primary: '#421C6E',
+                    secondary: '#FC7A4A',
+                    accent: '#8038D1',
+                    error: '#FF5252',
+                    info: '#2196F3',
+                    success: '#7E0038',
+                    warning: '#FFC107'
+                }
+            }
+        }
+    })
+    const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+</script>
+{%- endblock %}

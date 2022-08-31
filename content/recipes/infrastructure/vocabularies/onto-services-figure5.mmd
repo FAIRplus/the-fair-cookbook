@@ -1,0 +1,12 @@
+graph TB;
+subgraph Interface Questions
+Int1[Is the upload of Ontologies supported?]
+Int2[Are all required upload ontology formats supported?]
+Int3[Is the download of Ontologies supported?]
+Int4[Are all required download ontology formats supported?]
+Int5[Is RestAPI interface supported?]
+Int6[Is SPARQL endpoint supported?]
+IntL[Is federation supported for SPARQL endpoint?]
+end
+
+Int1 --> Int2 --> Int3 --> Int4 --> Int5 --> Int6 -->  IntL

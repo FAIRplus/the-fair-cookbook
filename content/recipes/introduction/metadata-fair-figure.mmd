@@ -1,0 +1,30 @@
+graph LR
+    H(data):::box --> |is described by|A(metadata):::box
+    A --> |a kind of|B(descriptive metadata):::box
+    A -->|a kind of|C(structural metadata):::box
+    A -->|a kind of|D(administrative metadata):::box
+    D -->|a kind of|E(legal metadata):::box
+    D -->|a kind of|F(provenance metadata):::box
+    A -->|a kind of|G(data quality metadata):::box
+
+    B -->|e.g.|B1(title):::box1
+    B -->|e.g.|B2(description):::box1
+
+    C -->|e.g.|C1(field):::box1
+    C -->|e.g.|C2(row):::box1
+
+    D -->|e.g.|D1(funder):::box1
+    D -->|e.g.|D2(grant identifier):::box1
+
+    E -->|e.g.|E1(license):::box1
+    E -->|e.g.|E2(rights):::box1
+
+    F -->|e.g.|F1(generated with software):::box1
+    F -->|e.g.|F2(originator):::box1
+
+    G -->|e.g.|G1(percentage):::box1
+    G -->|e.g.|G2(coverage):::box1
+
+classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
+classDef box1 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
+linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir;

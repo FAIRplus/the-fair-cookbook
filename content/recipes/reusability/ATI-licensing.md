@@ -1,6 +1,22 @@
-
 (rr-licensing)=
 # Licensing
+
+<br/>
+<br/>
+
+````{panels_fairplus}
+:identifier_text: FCB032
+:identifier_link: 'https://w3id.org/faircookbook/FCB032'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Licensing
+```` 
+
 
 ````{note} 
 <!-- 
@@ -45,3 +61,26 @@ Do not make any important decisions based solely on the contents of this chapter
 Without a license, all rights are with the author of the code, and that means nobody else can use, copy, distribute, or modify the work without consent.
 A license gives this consent.
 If you do not have a license for your software, it is effectively unusable by the whole research community.
+
+
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo.svg
+> :height: 40px
+> :name: rdmkit_logo
+> ```
+> ^^^
+> [More about `Licensing` from the `RDMkit`](https://rdmkit.elixir-europe.org/licensing.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ../../../images/logos/TTW.svg
+> :height: 40px
+> :align: center
+> :name: Turing-Way-logo
+> ```
+> ^^^
+> [The Turing Way Book of Data Sciences](https://the-turing-way.netlify.app/reproducible-research/licensing.html)

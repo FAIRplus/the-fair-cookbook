@@ -1,56 +1,21 @@
 (fcb-interop-covid-metadata)=
-# Metadata Profile Validation in RDF with Shape Expression:
+# Metadata profile validation in RDF 
 
-+++
+<br/>
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Hands-on
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> Yes
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-````
-
-___
-
-## The Covid-19 sample metadata use case 
-
-___
+````{panels_fairplus}
+:identifier_text: FCB028
+:identifier_link: 'https://w3id.org/faircookbook/FCB028'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 4
+:maturity_indicator: 56, 58
+:has_executable_code: yeah
+:recipe_name: Metadata profile validation in RDF
+```` 
 
 ## Main Objectives
 
@@ -62,6 +27,8 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 ## Graphical Overview
 
 
+````{dropdown} 
+:open:
 ```{figure} covid19-sample-metadata-profile-shex-use-case-mermaid.png
 ---
 width: 800px
@@ -70,6 +37,33 @@ alt: building a commmunity compliant metadata profile
 ---
 Building a commmunity compliant metadata profile.
 ```
+````
+
+## FAIRification Objectives, Inputs and Outputs
+
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| semantic markup<!-- TODO add a link to corresponding document -->|text<!-- TODO add a link to corresponding document -->  | URI<!-- TODO add a link to corresponding document -->|
+| constraint validation<!-- TODO add a link to corresponding document -->  | text<!-- TODO add a link to corresponding document -->  | DOI<!-- TODO add a link to corresponding document -->  |
+||file||
+
+## Table of Data Standards
+
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [YAML](https://yaml.org)  | [EFO](https://fairsharing.org/FAIRsharing.1gr4tz)  |  [MIxS](https://fairsharing.org/bsg-s000518/) |
+| [RDF](https://www.w3.org/TR/rdf11-concepts/)|[SIO](https://fairsharing.org/FAIRsharing.dpkb5f)|MIUVIG<!-- TODO add a link to corresponding document -->|
+| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)||
+| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)||
+| |[OBO foundry](https://fairsharing.org/biodbcore-001083/)||
+| |[Wikidata](https://fairsharing.org/FAIRsharing.PB6595)||
+
+## Tools
+| Tool Name| capability|
+|:--|:--|
+| [Semantic Annotation for Linked Arvado Data (SALAD)](https://www.commonwl.org/draft-3/SchemaSalad.html)  | conversion from  YAML to RDF |
+|[WESO shExVisualize](http://rdfshape.weso.es/shExVisualize) | Shape expression syntax visualization |
+| [Virtuoso](https://virtuoso.openlinksw.com/) | RDF triple store |
 
 
 
@@ -100,11 +94,13 @@ The following sections detail each of these steps
 
 ## Defining the metadata fields
 
-<!-- <div><img src="https://i.imgur.com/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
-<div><img src="https://i.imgur.com/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
+<!-- <div><img src="/images/lwV1cPd.png" width="300" style="border:1px solid black"/></div>
+<div><img src="/images/1ahQLjy.png" width="300" style="border:1px solid black"/></div>  -->
 
 
-```{figure} https://i.imgur.com/lwV1cPd.png
+````{dropdown} 
+:open:
+```{figure} /images/lwV1cPd.png
 ---
 width: 300px
 name: Defining the metadata fields
@@ -113,7 +109,8 @@ alt: Defining the metadata fields
 Defining the metadata fields
 ```
 
-```{figure} https://i.imgur.com/1ahQLjy.png
+
+```{figure} /images/1ahQLjy.png
 ---
 width: 300px
 name: Defining the metadata fields-1
@@ -121,6 +118,7 @@ alt: Defining the metadata fields-1
 ---
 Defining the metadata fields-1
 ```
+````
 
 
 <br>Based on the [Genome Standards Consortium](https://gensc.org/) metadata requirement profile for uncultivated viral sample, also known as the [Minimum Information About an Uncultivated Virus Genome (MIUViG)](https://github.com/GenomicsStandardsConsortium/mixs/blob/master/UViGs_MIxS.xlsx), the first step is to anchor the tags defined by GSC and approved by the those **International Nucleotide Sequence Database Collaboration** ([INSDC](http://www.insdc.org/)) tags to one (or more) semantic framework(s).
@@ -135,10 +133,13 @@ Several distinct to the following resources mappings have been made by the devel
 - [Wikidata](https://wikidata.org)
 - [schema.org](https://schema.org)
 
-<!-- ![](https://i.imgur.com/Ro92a7D.png) -->
-<!-- <div><img src="https://i.imgur.com/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
+<!-- ![](/images/Ro92a7D.png) -->
+<!-- <div><img src="/images/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
 
-```{figure} https://i.imgur.com/Ro92a7D.png
+
+````{dropdown} 
+:open:
+```{figure} /images/Ro92a7D.png
 ---
 width: 800px
 name: Semantic anchoring of metadata element
@@ -146,7 +147,7 @@ alt: Semantic anchoring of metadata element
 ---
 Semantic anchoring of metadata element
 ```
-
+````
 
 
 <br>
@@ -154,10 +155,13 @@ Semantic anchoring of metadata element
 However, for the final implementation, only the OBO related mappings have been used as show in the following figure.
 
 
-<!-- <div><img src="https://i.imgur.com/Lc7FcPs.png" width="800" style="border:1px solid black"/></div> -->
-<!-- ![](https://i.imgur.com/Lc7FcPs.png) -->
+<!-- <div><img src="/images/Lc7FcPs.png" width="800" style="border:1px solid black"/></div> -->
+<!-- ![](/images/Lc7FcPs.png) -->
 
-```{figure} https://i.imgur.com/Lc7FcPs.png
+
+````{dropdown} 
+:open:
+```{figure} /images/Lc7FcPs.png
 ---
 width: 800px
 name: Semantic anchoring of metadata element - final
@@ -165,6 +169,7 @@ alt: Semantic anchoring of metadata element - final
 ---
 Semantic anchoring of metadata element - final
 ```
+````
 
 
 
@@ -250,24 +255,30 @@ $graph:
 
 ### The corresponding metadata acquisition web form:
 
-<!-- <div><img src="https://i.imgur.com/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
+<!-- <div><img src="/images/5eQN9hw.png" width="800" style="border:1px solid black"/></div> -->
 
-```{figure} https://i.imgur.com/5eQN9hw.png
+
+````{dropdown} 
+:open:
+```{figure} /images/5eQN9hw.png
 ---
 width: 800px
 name: The corresponding metadata acquisition web form
 alt: The corresponding metadata acquisition web form
 ---
 ```
+````
 
-<!-- ![](https://i.imgur.com/5eQN9hw.png) -->
+<!-- ![](/images/5eQN9hw.png) -->
 
-<!-- <div><img src="https://i.imgur.com/RR5GSgi.png" width="800" style="border:1px solid black"/></div> -->
+<!-- <div><img src="/images/RR5GSgi.png" width="800" style="border:1px solid black"/></div> -->
 
-<!-- ![](https://i.imgur.com/RR5GSgi.png) -->
+<!-- ![](/images/RR5GSgi.png) -->
 
 
-```{figure} https://i.imgur.com/RR5GSgi.png
+````{dropdown} 
+:open:
+```{figure} /images/RR5GSgi.png
 ---
 width: 800px
 name: The corresponding metadata acquisition web form 2
@@ -275,12 +286,13 @@ alt: The corresponding metadata acquisition web form 2
 ---
 The corresponding metadata acquisition web form
 ```
+````
 
 
 ## 2. Exemplar instance data:
 
 
-When users submit information via the form (or by other programatic means), a instance YAML file is generated, which looks like this:
+When users submit information via the form (or by other programatic means), an instance YAML file is generated, which looks like this:
 
 
 ```bash
@@ -446,10 +458,13 @@ PREFIX wikidata: <http://www.wikidata.org/entity/>
 
 Using the [WESO](http://www.weso.es/) developed [RDF shape viewer](http://rdfshape.weso.es/),  Shape Expression can be rendered graphical. In the example below a [schema.org](https://schema.org) base shex expression in presented.
 
-<!-- <div><img src="https://i.imgur.com/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
+<!-- <div><img src="/images/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
  -->
 
-```{figure} https://i.imgur.com/z2rriQu.png
+
+````{dropdown} 
+:open:
+```{figure} /images/z2rriQu.png
 ---
 width: 1200px
 name: WESO SHape Expression Viewer
@@ -457,9 +472,9 @@ alt: WESO SHape Expression Viewer
 ---
 WESO SHape Expression Viewer
 ```
+````
 
-
-<!-- ![](https://i.imgur.com/z2rriQu.png) -->
+<!-- ![](/images/z2rriQu.png) -->
 
 There is a blog focusing mainly on the sequence analysis but there is a section on metadata validation.
 
@@ -491,80 +506,44 @@ select distinct ?sample ?p ?o
 ```
 
 
----
 
 ## Conclusions
 
 > In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF and Shape Express standard. 
-> Other approaches are possible and we provide details in a dedicated recipe where [JSON schema]() and [JSON-LD]() technologies are used. 
+> Other approaches are possible and we provide details in a dedicated recipe where JSON schema<!-- TODO add a link to corresponding document --> and JSON-LD<!-- TODO add a link to corresponding document --> technologies are used. 
 > This recipe tackles an important aspect of the FAIR principles, shining the light on the need to provide sufficient descriptive metadata to associate with an assay data file to allow its correct interpretation.
 > The recipe therefore provides a piece of the jigsaw to establish a FAIR datasets.
 > There are some caveats or improvements which could be made. For instance, the devised shex expression and the associated instance RDF graph  could be assigned a persistent identifiers (PID).
 > Another improvement could be a better integration with repositories such FAIRsharing or the main sequence data submission systems such as INSDC deposition pipelines.
 >
 > ### What should I read next?
-> * [How to validate a FASTQ sequencing file?]()
-> * [How to express Minimal Metadata checklist in machine readable format]()
-> * [How to validate metadata with JSON Schema?]()
-> * [How to perform data integration with SPARQL?]()
-
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [semantic markup]()|[text]()  | [URI]()|
-| [constraint validation]()  | [text]()  | [DOI]()  |
-||file||
-
-## Table of Data Standards
-
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [YAML](https://yaml.org)  | [EFO](https://fairsharing.org/FAIRsharing.1gr4tz)  |  [MIxS](https://fairsharing.org/bsg-s000518/) |
-| [RDF](https://www.w3.org/TR/rdf11-concepts/)|[SIO](https://fairsharing.org/FAIRsharing.dpkb5f)|[MIUVIG]()|
-| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)||
-| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)||
-| |[OBO foundry](https://fairsharing.org/biodbcore-001083/)||
-| |[Wikidata](https://fairsharing.org/FAIRsharing.PB6595)||
-
-## Tools
-| Tool Name| capability|
-|:--|:--|
-| [Semantic Annotation for Linked Arvado Data (SALAD)](https://www.commonwl.org/draft-3/SchemaSalad.html)  | conversion from  YAML to RDF |
-|[WESO shExVisualize](http://rdfshape.weso.es/shExVisualize) | Shape expression syntax visualization |
-| [Virtuoso](https://virtuoso.openlinksw.com/) | RDF triple store |
+> * How to validate a FASTQ sequencing file?<!-- TODO add a link to corresponding document -->
+> * How to express Minimal Metadata checklist in machine readable format<!-- TODO add a link to corresponding document -->
+> * How to validate metadata with JSON Schema?<!-- TODO add a link to corresponding document -->
+> * How to perform data integration with SPARQL?<!-- TODO add a link to corresponding document -->
 
 
 
 
-___ 
 
-## Bibliographic reference
-
-
+## References
+````{dropdown} **References**
 [1]. Avro - http://avro.apache.org
 [2]. metaschema - https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml
 [3]. schema salad - http://www.commonwl.org/v1.0/SchemaSalad.html
 [4]. https://www.w3.org/RDF/
 [5]. https://shex.io/shex-semantics/
+````
 
-
-___
 
 ## Authors
-
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft, Shex expression, ontology mapping |
-| Danielle Welter |  University of Luxembourg | [0000-0003-1058-2668](https://orcid.org/orcid.org/0000-0003-1058-2668)| Review, ontology mapping| 
-| Jose Emilio Labra Gayo |  University of Oviedo | [0000-0001-8907-5348](https://orcid.org/orcid.org/0000-0001-8907-5348)|	Shex Expression 
-|Robert Giessmann|Bayer AG|[0000-0002-0254-1500](https://orcid.org/orcid.org/0000-0002-0254-1500)|Reviewer|
-
-___
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+Danielle: Writing - Review & Editing
+Robert: Writing - Review & Editing
+````
 
 ## License
-
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

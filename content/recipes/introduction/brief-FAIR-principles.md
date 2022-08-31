@@ -1,52 +1,21 @@
+(fcb-fair-principles)=
 # What are the FAIR Principles?
 
 +++
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Background Information
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
-<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
-<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
-<p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p>
-````
-
-___
+<!-- ````{panels_fairplus}
+:identifier_text: RX.X
+:identifier_link: 'https://example.com'
+:difficulty_level: 1
+:recipe_type: background_information
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist, funder
+:maturity_level: 2 
+:maturity_indicator: 1, 2
+:has_executable_code: nope
+:recipe_name: What are the FAIR Principles?
+```` -->
 
 ## Introduction
 
@@ -58,12 +27,9 @@ Owing to the success of the principles, now endorsed by funding agencies (IMI, W
 
 ## The FAIR Guiding Principles
 
-<!-- <div>
-	<img src="https://i.imgur.com/RxkoNed.png" width="550" style="border:1px solid black;align:center"/>
-</div>
 
-doi: 10.1038/sdata.2016.18
- -->
+
+````{dropdown} **The FAIR principles manuscript**
 
 ```{figure} https://i.imgur.com/RxkoNed.png
 ---
@@ -74,9 +40,74 @@ alt: the cover page for the FAIR principle article as published in Scientific Da
 _The FAIR Principles_ the cover pages for the FAIR principle articles as published in Scientific Data. https://doi.org/10.1038/sdata.2016.18.
 ```
 
+````
 
 
-````{panels}
+<!-- <div>
+	<img src="https://i.imgur.com/RxkoNed.png" width="550" style="border:1px solid black;align:center"/>
+</div>
+
+doi: 10.1038/sdata.2016.18
+ -->
+
+````{dropdown} **Findability**
+:open:
+> **To be Findable:**
+
+>F1. (meta)data are assigned a **`globally unique and persistent identifier`**
+>
+>F2. data are described with **`rich metadata`** (defined by R1 below)
+>
+>F3. metadata **`clearly and explicitly include the identifier of the data it describes`**
+>
+>F4. (meta)data are registered or **`indexed in a searchable resource`**
+````
+
+````{dropdown} **Accessibility**
+:open:
+
+> **To be Accessible:**
+
+>A1. (meta)data are retrievable by their identifier using **`a standardized communications protocol`**
+>
+>A1.1 the protocol is **`open, free, and universally implementable`**
+>
+>A1.2 the protocol allows for an **`authentication and authorization procedure`**, where necessary
+>
+>A2. **`metadata are accessible`**, even when the data are no longer available
+
+````
+
+````{dropdown} **Interoperability**
+:open:
+
+> **To be Interoperable:**
+
+>I1. (meta)data use a **`formal, accessible, shared, and broadly applicable language for knowledge representation`**.
+>
+>I2. (meta)data use **`vocabularies that follow FAIR principles`**
+>
+>I3. (meta)data include **`qualified references to other (meta)data`**
+````
+
+````{dropdown} **Reusability**
+:open:
+
+> **To be Reusable:**
+
+>R1. meta(data) are **`richly described with a plurality of accurate and relevant attributes`**
+>
+>R1.1. (meta)data are released with a **`clear and accessible data usage license`**
+>
+>R1.2. (meta)data are associated with **`detailed provenance`**
+>
+>R1.3. (meta)data meet domain-relevant **`community standards`**
+
+````
+
+
+
+<!-- ````{panels}
 :container: container-lg pb-3
 :column: col-lg-12 p-2
 :card: rounded
@@ -85,6 +116,7 @@ _The FAIR Principles_ the cover pages for the FAIR principle articles as publish
 ```{tabbed} F. 
 
 > To be Findable:
+
 >F1. (meta)data are assigned a **globally unique and persistent identifier**
 >
 >F2. data are described with **rich metadata** (defined by R1 below)
@@ -96,6 +128,7 @@ _The FAIR Principles_ the cover pages for the FAIR principle articles as publish
 
 ```{tabbed} A.
 > To be Accessible:
+
 >A1. (meta)data are retrievable by their identifier using **a standardized communications protocol**
 >
 >A1.1 the protocol is **open, free, and universally implementable**
@@ -107,6 +140,7 @@ _The FAIR Principles_ the cover pages for the FAIR principle articles as publish
 
 ```{tabbed} I. 
 > To be Interoperable:
+
 >I1. (meta)data use a **formal, accessible, shared, and broadly applicable language for knowledge representation**.
 >
 >I2. (meta)data use **vocabularies that follow FAIR principles**
@@ -116,6 +150,7 @@ _The FAIR Principles_ the cover pages for the FAIR principle articles as publish
 
 ```{tabbed} R.
 > To be Reusable:
+
 >R1. meta(data) are richly described with a **plurality of accurate and relevant attributes**
 >
 >R1.1. (meta)data are released with a **clear and accessible data usage license**
@@ -124,7 +159,9 @@ _The FAIR Principles_ the cover pages for the FAIR principle articles as publish
 >
 >R1.3. (meta)data meet domain-relevant **community standards**
 ```
-````
+```` -->
+
+
 
 
 ## The FAIR principles and FAIRplus
@@ -134,125 +171,161 @@ The principles will be the organizing principle for the FAIRplus Cookbook. While
 
 ## FAIRplus Recipe & FAIR principles
 
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-search fa-2x" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>FINDABILITY</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Search Engine Optimitization</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Open Archive Deposition</b></h4>
-<p>TODO: add text here </p>
----
-<i class="fa fa-cog fa-lg" style="color:#fc7a4a;"></i>
-^^^
-<h4><b>Annotation</b></h4>
-<p>TODO: add text here</p>
-````
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-cloud fa-2x" style="color:#8038d1;"></i>
-^^^
-<h4><b>ACCESSIBILITY</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#8038d1;"></i>
-^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
-````
+`````{dropdown} **Recipe content according the FAIR principles**
 
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
+
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-search fa-2x mr-3"></i>
+    <b class="cardLabel"> FINDABILITY </b>
+</h4>
+^^^
+TODO: add text here
 ---
 
-<i class="fa fa-puzzle-piece fa-2x" style="color:#300861;"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Search Engine Optimitization</b>
+</h4>
 ^^^
-<h4><b>INTEROPERABILITY</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Open Archive Deposition</b>
+</h4>
 ^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#300861;"></i>
+<h4 class="my-0 d-table secondary text--white">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Annotation</b>
+</h4>
 ^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa ffa-cog fa-lg" style="color:#300861;"></i>
-^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ````
 
 ````{panels}
 :container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
+
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cloud fa-2x mr-3"></i>
+    <b class="cardLabel">ACCESSIBILITY</b>
+</h4>
+^^^
+TODO: add text here
 ---
 
-<i class="fa fa-recycle fa-2x" style="color:#7e0038;"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Access condition</b>
+</h4>
 ^^^
-<h4><b>REUSABILITY</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">License selection</b>
+</h4>
 ^^^
-<h4><b>Access condition</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ---
 
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
+<h4 class="my-0 d-table text--white purple-light">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Standards</b>
+</h4>
 ^^^
-<h4><b>License selection</b></h4>
-<p>TODO: add text here</p>
----
-
-<i class="fa fa-cog fa-lg" style="color:#7e0038;"></i>
-^^^
-<h4><b>Standards</b></h4>
-<p>TODO: add text here</p>
+TODO: add text here
 ````
 
-___
+````{panels}
+:container: container-lg pb-3
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
+---
+
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-puzzle-piece fa-2x mr-3"></i>
+    <b class="cardLabel">INTEROPERABILITY</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3 "></i>
+    <b class="cardLabel">Access condition</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3 "></i>
+    <b class="cardLabel">License selection</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white purple-dark">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Standards</b>
+</h4>
+^^^
+TODO: add text here
+````
+
+````{panels}
+:container: container-lg pb-3
+:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
+:card: rounded d-flex setHeight
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-recycle fa-2x mr-3"></i>
+    <b class="cardLabel">REUSABILITY</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Access condition</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">License selection</b>
+</h4>
+^^^
+TODO: add text here
+---
+
+<h4 class="my-0 d-table text--white red">
+    <i class="fa fa-cog fa-2x mr-3"></i>
+    <b class="cardLabel">Standards</b>
+</h4>
+^^^
+TODO: add text here
+````
+`````
+
+---
  
 ## Conclusions
 
@@ -261,37 +334,35 @@ This section should be seen as a refresher for any one unclear about the FAIR pr
 > ### What to read read next?
 > * [The ethical values of FAIR](./FAIRplus-values)
 > * [Assessing FAIRness](../assessing-fairness)
-> * [What is IMI](./what-is-IMI.md)
-
-___
-
-## Reference
 
 
+---
+
+## References
+
+````{dropdown} **Reference**
 <!-- ```{bibliography} ./fair.bib
   :style: alpha
 ``` -->
-
-<!-- 
 1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
-2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6 -->
+2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6 
 
-___
+````
+
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Writing - Original Draft|
-|Susanna Assunta Sansone|University of Oxford, Data Readiness Group| [0000-0001-5306-5690](https://orcid.org/orcid.org/0000-0001-5306-5690)|Writing - Original Draft|
-||||Review|
-||||Review|
+````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Original Draft
+````
 
-___
+
 
 ## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
-
+````{license_fairplus}
+CC-BY-4.0
+````
 
 

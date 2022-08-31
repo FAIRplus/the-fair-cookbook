@@ -1,60 +1,28 @@
 (fcb-interop-txmetadata)=
-# Establishing a Metadata Profile for Transcriptomics
+# Metadata profile for transcriptomics
 
-+++
+<br/>
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 30 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator </p>
-<p> <i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager </p>
-<p> <i class="fa fa-tags fa-lg" style="color:#7e0038;"></i> Terminology Manager </p> 
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Ontologist </p>
-````
-
----
+````{panels_fairplus}
+:identifier_text: FCB027
+:identifier_link: 'https://w3id.org/faircookbook/FCB027'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist 
+:maturity_level: 3
+:maturity_indicator: 30
+:has_executable_code: nope
+:recipe_name: Metadata profile for transcriptomics
+```` 
 
 ## Main Objectives:
 
 The main purpose of this recipe is:
 
-> To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments, from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing. 
+> To provide guidance on the minimum set of metadata and semantics required to describe any transcriptomics experiments,
+> from standard case-control to dosage-response designs, and from microarrays to single cell RNA sequencing. 
 
 
 ### Who is this recipe aimed at?
@@ -62,16 +30,7 @@ The main purpose of this recipe is:
 This document is aimed at anyone interested in the metadata, and specifically the ontology annotations, required to capture variables and experimental factors related to a transcriptomics experiment. General knowledge of transcriptomics experiments would be beneficial. No specific technical knowledge is required.
 
 
-
-___
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-___
+---
 
 ## Transcriptomics Data model 
 
@@ -222,28 +181,27 @@ While it is essential that any transcriptomics metadata be annotated with ontolo
 |Nucleotide reference sequence|ReqSeq|Entity||
 
 
-## Summary
+## Conclusion
 
-Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to easily define a comprehensive metadata template to capture all the experimental variables to describe any transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata template is provided [here](creating-minimal-metadata-profiles.md)
+Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to
+easily define a comprehensive metadata template to capture all the experimental variables to describe any 
+transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata
+template is provided [here](creating-minimal-metadata-profiles.md)
 
-___
-
-
+````{dropdown} **References**
+````
 
 ## Authors
 
-| Name | Affiliation  | Orcid | Credit role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Danielle Welter |  LCSB, University of Luxembourg| [0000-0003-1058-2668](https://orcid.org/orcid.org/0000-0003-1058-2668) | Writing - Original Draft |
-|Karsten Quast|||
-|Peter Woollard|||
-
-
-___
+<!-- TODO clarify the contribution of Karsten and Peter -->
+````{authors_fairplus}
+Danielle: Writing - Review & Editing
+Karsten: <!-- TODO -->
+Peter: <!-- TODO -->
+````
 
 
 ## License
-
-This page is released under the Creative Commons 4.0 BY license.
-
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+````{license_fairplus}
+CC-BY-4.0
+````

@@ -1,0 +1,48 @@
+graph TD
+
+subgraph .
+
+  KG(Knowledge Graph):::box1 o--o|has_child| RG(RDF Graph):::box1
+  KG o--o |has_child|PrpG(Property Graph):::box1
+
+  subgraph '
+    
+    RG o==o|content validated by|SC(SHACL):::box4
+    RG o==o|content validated by|SX(SHEX):::box4
+    RG o==o|stored in|TS(Triple Store):::box5
+    TS o==o|e.g.|TSex1(Blazegraph):::box5
+    TS o==o|e.g.|TSex2(Stardog):::box5
+    TS o==o|e.g.|TSex3(Ontotext's GraphDB):::box5
+    TS o==o|e.g.|TSex4(etc...):::box5
+
+    SC o==o|stored in|TS
+    SX o==o|stored in|TS
+    TSex1 o--o|queried with|QL(SPARQL):::box3
+    TSex2 o--o|queried with|QL(SPARQL):::box3
+    TSex3 o--o|queried with|QL(SPARQL):::box3
+    TSex4 o--o|queried with|QL(SPARQL):::box3
+    RG o--o|queried with|QL(SPARQL):::box3
+  end
+
+
+  subgraph ''
+
+    PrpG o==o|stored in|GDB(graph database):::box5
+    GDB o==o|e.g.|GDBex1(Neo4j):::box5
+    GDB o==o|e.g.|GDBex2(TinkerPop):::box5
+    GDBex1 o--o|queried with|Cy(CYPHER):::box3
+    GDBex2 o--o|queried with|Gr(Gremlin):::box3
+  end
+
+
+end
+
+
+  classDef box1 font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+  classDef box2 font-family:avenir,font-size:14px,fill:green,stroke:#222,color:#fff,stroke-width:1px
+  classDef box3 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
+  classDef box4 font-family:avenir,font-size:14px,fill:green,stroke:#222,color:#fff,stroke-width:1px
+  classDef box5 font-family:avenir,font-size:14px,fill:red,stroke:#222,color:#fff,stroke-width:1px
+ 
+  linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 color:#ffffff,stroke:#2a9fc9
+

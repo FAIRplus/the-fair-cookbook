@@ -1,0 +1,10 @@
+graph TD
+    step1[Inventarisation and prioritisation of the digital resources]:::box --> step2[Defining a semantic model for relevant metadata elements]:::box
+    step2 --> step3[OHDSI extension to Schema.org vocabulary]:::box
+    step3 --> step4[Metadata capture using YAML]:::box
+    step4 --> step5[Embedding the metadata in the website as JSON-LD]:::box
+    step5 --> step6[Making a sitemap file and letting crawlers know]:::box
+    step6 --> step7[Generate final website version using HUGO]:::box
+
+classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
+linkStyle 0,1,2,3,4 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir;

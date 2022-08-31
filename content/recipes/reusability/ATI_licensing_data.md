@@ -1,9 +1,24 @@
 (rr-licensing-data)=
-# Data Licenses
+# Data licenses
+
+<br/>
+<br/>
+
+````{panels_fairplus}
+:identifier_text: FCB034
+:identifier_link: 'https://w3id.org/faircookbook/FCB034'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone 
+:maturity_level: 3
+:maturity_indicator: 35
+:has_executable_code: nope
+:recipe_name: Data licenses
+```` 
+
 
 ````{note} 
-<!-- 
-<a href="https://the-turing-way.netlify.app/welcome"><img src="../../../_images/turing-way-logo.jpg" alt="ati" width="60px"></a> -->
 ```{image} images/turing-way-logo.jpg 
 :width: 60px
 :align: right
@@ -11,6 +26,7 @@
 [The sections about licensing are original content from The Turing Way](https://the-turing-way.netlify.app/welcome) and are included in the FAIRCookbook for convenience. Please cite keeping this in mind.
 > The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. [http://doi.org/10.5281/zenodo.3233986](http://doi.org/10.5281/zenodo.3233986)
 ````
+
 
 Like a software license, a data license governs what someone else can do with data that you create or own and that you make accessible to others through, for example, a data repository.
 Data licenses vary based on different criteria, such as:
@@ -25,7 +41,7 @@ As a result, accessibility to your data is affected by the data license you choo
 
 Creative Commons or CC provides a number of licenses that can be used with a wide variety of creations that might otherwise fall under copyright restrictions, including music, art, books and photographs.
 Although not tailored for data, CC licenses can be used as data licenses because they are easy to understand.
-Its website includes a [summary page](https://creativecommons.org/about/cclicenses/){cite}`creativecommons2020licenses` outlining all the available licenses, explained with simple visual symbols.
+Its website includes a [summary page](https://creativecommons.org/about/cclicenses/){footcite}`creativecommons2020licenses` outlining all the available licenses, explained with simple visual symbols.
 
 (rr-licensing-data-cc-permissions)=
 ### Permission Levels
@@ -51,19 +67,19 @@ This means that anyone can modify, redistribute or build on your work.
 Further, by using CC0, you forfeit the right to attribution.
 Instead, you have to rely on norms such as good citation practices in academic communities to be recognized as the creator.
 Several organizations, such as museums, governmental bodies and scientific publishers, have chosen CC0 for access to at least part of their data.
-In many instances, data repositories maintained by universities recommend CC0 as the default option, such as the [4TU.Centre for Research Data](https://researchdata.4tu.nl/en/use-4turesearchdata/archive-research-data/upload-your-data-in-our-data-archive/licencing/).
+In many instances, data repositories maintained by universities recommend CC0 as the default option, such as the [4TU.Centre for Research Data](https://data.4tu.nl/info/fileadmin/user_upload/Documenten/Data_collection_policy_2020.pdf).
 
 (rr-licensing-data-odc)=
 ## Open Data Commons
 
 Open Data Commons provides three licenses that can be applied specifically to data.
-The [webpages](https://opendatacommons.org/licenses/index.html) {cite}`odk2020odc` of each of these licenses include human-readable summaries, with the ramifications of the legalese explained in a concise format.
+The [webpages](https://opendatacommons.org/licenses/index.html) {footcite}`odk2020odc` of each of these licenses include human-readable summaries, with the ramifications of the legalese explained in a concise format.
 
 (rr-licensing-data-odc-pddl)=
 ### The Public Domain Dedication and License or PDDL
 
 The PDDL is analogous to CC0, where you waive all your rights to the data you are putting into the public domain.
-It comes with a [set of recommended community norms](https://opendatacommons.org/licenses/pddl/norms.html), which are not mandatory to include and do not form a legal contract but can be useful to have as a guide to encourage fair, open sharing of data.
+It comes with a [set of recommended community norms](https://opendatacommons.org/norms/odc-by-sa/), which are not mandatory to include and do not form a legal contract but can be useful to have as a guide to encourage fair, open sharing of data.
 It is also possible to put together a customized set of norms that serve your data-sharing community better.
 
 (rr-licensing-data-odc-odc-by)=
@@ -91,16 +107,48 @@ CC licenses also cover copyrights and other neighbouring rights.
 
 Another difference is the availability of a standardised Community Norms document with the PDDL.
 The lack of such a document with CC0 means that you have to rely on community norms, which may often be unspoken or unwritten and can vary from community to community, to ensure fair attribution.
-A comparison between the PDDL and CC0 is provided [here](https://opendatacommons.org/faq.1.html).
+A comparison between the PDDL and CC0 is provided [here](https://opendatacommons.org/faq/).
 
 (rr-licensing-data-options)=
 ## Other Licensing Options
 
 It is also possible to choose other data licenses that may have been developed with a specific use case or community in mind or that are not in widespread global use.
-These include licenses that were developed by national governments, such as the [Norwegian License for Open Government Data](https://data.norge.no/nlod/en/) {cite}`nlod2020governmentdata`.
+These include licenses that were developed by national governments, such as the [Norwegian License for Open Government Data](https://data.norge.no/nlod/en/) {footcite}`nlod2020governmentdata`.
 Often, such licenses are the recommended data licensing option within the corresponding country, especially for data created or owned by their public bodies.
 Another example is the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) or OGL, which was developed by The National Archives, UK.
 
-The [Data Curation Center (DCC) guide](https://www.dcc.ac.uk/guidance/how-guides/license-research-data) {cite}`ball2011license` on how to license research data expatiates on the licenses discussed in this chapter, and gives more information about [Prepared Licenses](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-6000), [Bespoke Licenses](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-7000), [Multiple Licensing](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-13000) and [Mechanisms for Licensing Data](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-14000).
+The [Data Curation Center (DCC) guide](https://www.dcc.ac.uk/guidance/how-guides/license-research-data) {footcite}`ball2011license` on how to license research data expatiates on the licenses discussed in this chapter, and gives more information about [Prepared Licenses](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-6000), [Bespoke Licenses](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-7000), [Multiple Licensing](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-13000) and [Mechanisms for Licensing Data](https://www.dcc.ac.uk/guidance/how-guides/license-research-data#x1-14000).
 
 If you would like to read more about the challenges and finer points of licensing, [this article](https://research.okfn.org/avoiding-data-use-silos/) is a great resource to get you started.
+
+### What to read next?
+
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../images/logos/RDMkit_logo.svg
+> :height: 40px
+> :name: rdmkit_logo
+> ```
+> ^^^
+> [More about `Licensing` from the `RDMkit`](https://rdmkit.elixir-europe.org/licensing.html)
+> ---
+> :header: bg-primary pa_dark
+> ```{image} ../../../images/logos/TTW.svg
+> :height: 40px
+> :align: center
+> :name: Turing-Way-logo
+> ```
+> ^^^
+> [The Turing Way Book of Data Sciences: Data Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-data.html)
+
+
+
+## References
+````{dropdown} **Reference**
+```{footbibliography} 
+```
+````

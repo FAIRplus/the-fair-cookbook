@@ -1,0 +1,28 @@
+graph TD
+
+subgraph ..
+A00(Clinic / Healthcare Provision Centre):::box2 -->|provides|A11(Genetic consultation <br> & <br> Genetic Testing):::box2
+end
+
+
+A11:::box1 -->|generates genotyping information as|B(Variant Call Format File):::box1
+
+
+A11 -->|records|EHR(Electronic Health Record / Electronic Medical Notes):::box1
+
+B-->|converted to |B0(HL7 FHIR Genomics Report message)
+B-->|uses `vcf2fhir` python library|B0
+B0:::box1 -->|annotated with|D([LOINC terminology])
+B0 -->|formatted as|E([JSON format])
+
+
+A0 -->|integrates with|A1
+EHR -->|converted to|A1(HL7 FHIR Electronic Medical Notes):::box1
+
+A0(Data Scientists mining phenotype / genotype information):::box3 -->|integrates with|B0:::box1
+
+classDef box1 font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
+classDef box2 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
+classDef box3 font-family:avenir,font-size:14px,fill:gray,color:#fff,font:#fff, stroke-width:1px
+    
+linkStyle 0,1,2,3,4,5,6,7,8,9 font-family:avenir,stroke:black,stroke-width:1px,color:#fff

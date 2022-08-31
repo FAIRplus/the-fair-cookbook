@@ -1,0 +1,43 @@
+.searchRecipesResults .v-data-footer {
+    margin: 0 !important;
+}
+
+@media (max-width: 900px) {
+    #search-wizard .v-data-table__wrapper {
+        height: auto !important;
+    }
+    #searchRecipesFilters .v-slider__tick-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    #searchRecipesFilters .v-slider__tick-label {
+        font-size: 10px;
+    }
+}
+
+.v-data-table__wrapper {
+    scrollbar-color: rgb(252, 117, 81) #E0E0E0;
+    scrollbar-width: thin;
+}
+
+.v-data-table__wrapper::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #E0E0E0;
+    -webkit-border-radius: 5px;
+}
+
+.v-data-table__wrapper::-webkit-scrollbar-thumb {
+    background: rgb(252, 117, 81);
+    -webkit-border-radius: 5px;
+}
+
+.v-data-table__wrapper::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+#search-wizard a.v-chip:hover, #search-wizard a.v-chip *:hover {
+    text-decoration: none !important;
+}

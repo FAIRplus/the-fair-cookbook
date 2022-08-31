@@ -1,52 +1,21 @@
 (fcb-find-bs-data)=
-# Findability: Data Page Markup with Bioschemas 
+# Data page markup with Bioschemas 
 
-+++
+<br/>
 <br/>
 
-----
-
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
-
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">R X.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 10 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-globe fa-lg" style="color:#7e0038;"></i> Guidance
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p> <i class="fa fa-cogs fa-lg" style="color:#7e0038;"></i> Software Developer </p>
-<p> <i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist </p> 
-````
-
-___
-
+````{panels_fairplus}
+:identifier_text: FCB011
+:identifier_link: 'https://w3id.org/faircookbook/FCB011'
+:difficulty_level: 2
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist  
+:maturity_level: 1
+:maturity_indicator: 13, 14
+:has_executable_code: nope
+:recipe_name: Data page markup with Bioschemas
+```` 
 
 ## Main Objectives
 
@@ -54,243 +23,249 @@ The main purpose of this recipe is:
 
 > To markup a webpage representing a data record with `Bioschemas` compliant markup.
 
-___
+
+```{tabbed} FAIRification Objectives, Inputs and Outputs
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [text annotation](https://edamontology.org/operation_3778)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [annotated text](https://edamontology.org/data_3779)  |
+| [validation](https://edamontology.org/operation_2428) | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [report](https://edamontology.org/data_2048) |
+```
+```{tabbed} Table of Data Standards
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [JSON-LD](https://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](https://edamontology.org/data_2353)  |
+| [HTML](https://edamontology.org/format_2331) | | |
+```
+
+---
 
 
 ## Graphical Overview
 
 
+````{dropdown} 
+:open:
 ```{figure} ./bs-data-mermaid.png
 ---
 width: 800px
 name: 
-alt: The process of annotated a webpage with bioschema markup for Search Engine discovery
+alt: The process of annotated a webpage with Bioschemas markup to support machine processing of the page
 ---
-The process of annotated a webpage with bioschema markup for Search Engine discovery.
+The process of annotated a webpage with Bioschemas markup to support machine processing of the page.
 ```
+````
 
-
-___
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Findability | minimal | repeatable |
-| Interoperability | minimal |  |
-
-----
+---
 
 ## Method
 
-We will outline the steps for marking up a page in your site. As a specific example, we will use the Wikidata page for [BRCA1](https://www.wikidata.org/wiki/Q227339).
+We will outline the steps for embedding machine processable mark up within a web page in your site. As a specific example, we will use the Wikidata page for [BRCA1](https://www.wikidata.org/wiki/Q227339).
 
 1. Identify a data page in your site for which you will develop markup
 
-2. Open the [Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
+2. Open the [Bioschemas Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
-   1.  Select the type of data page that you are marking up. In the example we will use `GeneRecord`. Here are the main data record profiles to choose from <sup>[1](#draft-profiles)</sup>. 
+   1.  Select the type of data page that you are marking up, i.e. the primary subject of the page. In the example we will use `Gene`. Here are the Bioschemas [profiles](https://bioschemas.org/profiles/) that you can choose from<sup>[1](#draft-profiles)</sup>. 
 
-      - `ChemicalSubstanceRecord` for a page about a chemical substance composed of molecular entities
+        - `ChemicalSubstance` for a page about a chemical substance composed of molecular entities
 
-      - `GeneRecord` for a page about a gene
+        - `Gene` for a page about a gene
 
-      - `MolecularEntityRecord` for a page about a single molecular entity
+        - `MolecularEntity` for a page about a single molecular entity
 
-      - `ProteinRecord` for a page about a protein
+        - `Protein` for a page about a protein
 
-      - `Sample` for a page about a biological sample
+        - `BioSample` for a page about a biological sample
+        
+        - `Taxon` for a page about a taxon
       
-      - `Taxon` for a page about a taxon
-      
-   2. Enter the URL of the page in URL box, e.g. `https://www.wikidata.org/wiki/Q227339`
+   2. Enter the URL of the page in URL box, e.g. `https://www.wikidata.org/wiki/Q227339`. Note that this URL will be used as the identifier for the resource being described in the markup.
 
    3. Click on the `Show Form` button
-
-<!--    ![Bioschemas Generator start screen](BioschemasGenerator.png) -->
-
-
-```{figure} BioschemasGenerator.png
----
-height: 550px
-name: Bioschemas Generator start screen
-alt: Bioschemas Generator start screen
----
-Bioschemas Generator start screen.
-```
-
-
+    
+    ````{dropdown} 
+    :open:
+    ```{figure} BioschemasGenerator.png
+    ---
+    name: bioschemas-generator-start-screen-2
+    alt: Bioschemas Generator start screen.
+    
+    ---
+    Bioschemas Generator start screen.
+    ```
+    ````
+    
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
 
    - You should complete all *Minimum* properties and as many *Recommended* properties as possible. You can show/hide properties using the `Additional Properties` buttons.
    - The form defaults to the data type with the first alphabetical character, e.g. for `identifier` this defaults to `PropertyValue` but `Text` or `URL ` will be more appropriate in most cases
-   - For XXXRecord pages, the first `identifier` property refers to the web page while the second `identifier` property refers to the chemical, gene, protein, ...
    - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
-
-<!--    ![Bioschemas Generator GeneRecord profile form](BioschemasGeneratorGeneRecordForm.png) -->
-
-
-```{figure} BioschemasGeneratorGeneRecordForm.png
----
-height: 550px
-name: Bioschemas Generator GeneRecord profile form
-alt: Bioschemas Generator GeneRecord profile form
----
-Bioschemas Generator GeneRecord profile form.
-```
-
-   
+    
+    ````{dropdown} 
+    :open:
+    ```{figure} BioschemasGeneratorGeneForm.png
+    ---
+    height: 550px
+    name: Bioschemas Generator Gene profile form
+    alt: Bioschemas Generator Gene profile form
+    ---
+    Bioschemas Generator Gene profile form.
+    ```
+    ````
+    
 4. You should now see the generated markup in `JSON-LD` format. You can click on the `Microdata` and `RDFa` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON-LD`. For our Wikidata example, we get the following markup
 
-```python
-<script type="application/ld+json" >
-{
- "@context": "http://schema.org",
- "@id": "https://www.wikidata.org/wiki/Q227339",
- "@type": "DataRecord",
- "dct:conformsTo": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14",
- "identifier": "https://www.wikidata.org/wiki/Q227339",
- "mainEntity": {
-   "@type": "Gene",
-   "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
-   "identifier": "Q227339",
-   "description": "protein-coding gene in the species Homo sapiens",
-   "encodesBioChemEntity": {
-     "@type": "BioChemEntity",
-     "@id": "https://www.wikidata.org/wiki/Q17487737"
-   },
-   "isPartOfBioChemEntity": {
-     "@type": "BioChemEntity",
-     "@id": "https://www.wikidata.org/wiki/Q220677"
-   },
-   "url": "https://www.wikidata.org/wiki/Q227339",
-   "alternateName": [
-     "breast cancer 1, early onset",
-     "BRCAI",
-			"BRCC1",
-			"BROVCA1",
-			"IRIS",
-			"PNCA4",
-			"PPP1R53",
-			"PSCP",
-			"RNF53",
-			"FANCS",
-			"breast cancer 1",
-			"BRCA1, DNA repair associated",
-			"BRCA1 DNA repair associated"
-   ],
-   "image": {
-     "@type": "ImageObject",
-     "@id": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Protein_BRCA1_PDB_1jm7.png/220px-Protein_BRCA1_PDB_1jm7.png"
-   },
-   "taxonomicRange": {
-     "@type": "Taxon",
-     "@id": "https://www.wikidata.org/wiki/Q15978631"
-   },
-   "sameAs": [
-     "https://meshb.nlm.nih.gov/#/record/ui?ui=D019398",
-     "https://www.ncbi.nlm.nih.gov/nuccore/NR_027676",
-     "http://identifiers.org/ensembl/ENSG00000012048",
-     "https://www.ncbi.nlm.nih.gov/gene/672"
-   ]
- },
- "sameAs": [
-   "http://identifiers.org/ncbigene/672"
- ]
-}
-</script >
-```
-
+    ```html
+    <script type="application/ld+json" >
+    {
+      "@context": "https://schema.org",
+      "@id": "https://www.wikidata.org/wiki/Q227339",
+      "@type": "Gene",
+      "alternateName": [
+        "breast cancer 1, early onset",
+        "BRCAI",
+        "BRCC1",
+        "BROVCA1",
+        "IRIS",
+        "PNCA4",
+        "PPP1R53",
+        "PSCP",
+        "RNF53",
+        "FANCS",
+        "breast cancer 1",
+        "BRCA1, DNA repair associated",
+        "BRCA1 DNA repair associated"
+      ],
+      "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
+      "description": "protein-coding gene in the species Homo sapiens",
+      "encodesBioChemEntity": {
+        "@type": "BioChemEntity",
+        "@id": "https://www.wikidata.org/wiki/Q17487737"
+      },
+      "identifier": "https://www.wikidata.org/wiki/Q227339",
+      "identifier": "Q227339",
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Protein_BRCA1_PDB_1jm7.png/220px-Protein_BRCA1_PDB_1jm7.png"
+      },
+      "isPartOfBioChemEntity": {
+        "@type": "BioChemEntity",
+        "@id": "https://www.wikidata.org/wiki/Q220677"
+      },
+      "name": "BRCA1", 
+      "sameAs": [
+        "https://meshb.nlm.nih.gov/#/record/ui?ui=D019398",
+        "https://www.ncbi.nlm.nih.gov/nuccore/NR_027676",
+        "https://identifiers.org/ensembl/ENSG00000012048",
+        "https://www.ncbi.nlm.nih.gov/gene/672",
+        "https://identifiers.org/ncbigene/672"
+      ],
+      "taxonomicRange": {
+        "@type": "Taxon",
+        "@id": "https://www.wikidata.org/wiki/Q15978631"
+      },
+      "url": "https://www.wikidata.org/wiki/Q227339"
+    }
+    </script >
+    ```
+    
 5. Download or copy and paste the generated markup
-
+    
 6. Make adjustments for any bits that could not be properly entered through the form. 
 
      For example, for our generated markup we would change
 
-```bash
-"encodesBioChemEntity": {
-     "@type": "BioChemEntity",
-     "@id": "https://www.wikidata.org/wiki/Q17487737"
-   },
-```
+    ```
+    "encodesBioChemEntity": {
+      "@type": "BioChemEntity",
+      "@id": "https://www.wikidata.org/wiki/Q17487737"
+    },
+    ```
 
-     to
+    to
 
-```bash
-"encodesBioChemEntity": {
-     "@type": "Protein",
-     "@id": "https://www.wikidata.org/wiki/Q17487737"
-   },
-```
+    ```
+    "encodesBioChemEntity": {
+      "@type": "Protein",
+      "@id": "https://www.wikidata.org/wiki/Q17487737"
+    },
+    ```
 
-     You can test that your JSON-LD is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
+    You can test that your JSON-LD is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
 
+    
 7. Once you are happy with your markup, include the `JSON-LD`, script tags and all, at the bottom of your HTML page template. Make sure that this is before the closing `</html>` tag
+    
+   1. Replace the values in your markup with variables that your web page templating system will replace with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
-8. Replace the values in your markup with variables that your web page templating system will replace with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
+       ```html
+       <script type="application/ld+json" >
+       {
+         "@context": "https://schema.org",
+         "@id": "%%%PAGEURL%%%",
+         "@type": "Gene",
+         "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
+         "identifier": "%%%PAGEURL%%%",
+         "description": "%%%DESCRIPTION%%%",
+         ...
+       }
+       ```
+   
+       Your site should now generate data pages with embedded markup.
 
-```bash
-<script type="application/ld+json" >
-{
- "@context": "http://schema.org",
- "@id": "%%%PAGEURL%%%",
- "@type": "DataRecord",
- "dct:conformsTo": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14",
- "identifier": "%%%PAGEURL%%%",
- "mainEntity": {
-   "@type": "Gene",
-   "dct:conformsTo": "https://bioschemas.org/profiles/Gene/0.7-RELEASE",
-   "identifier": "%%%ACCESSIONNUMBER%%%",
-   "description": "%%%DESCRIPTION%%%",
-   ...
-}
-```
+       You should complete this process for each different type of data that you include in your site, e.g. ChEMBL would
+       have `MolecularEntity` markup on their chemical pages and `Protein` markup on their target pages so would need to 
+       complete this process twice.
+    
+       Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[2](#bioschemas-validator)</sup>.
 
-     
-
-Your site should now generate data pages with embedded markup. 
-
-You should complete this process for each different type of data that you include in your site, e.g. ChEMBL would have `MolecularEntity` markup on their chemical pages and `Protein` markup on their target pages so would need to complete this process twice.
-
-Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas profiles<sup>[2](#bioschemas-validator)</sup>.
-
-----
-
-## FAIRification Objectives, Inputs and Outputs
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [text annotation](http://edamontology.org/operation_3778)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [annotated text](http://edamontology.org/data_3779)  |
-| [validation](http://edamontology.org/operation_2428) | [schema.org](https://fairsharing.org/FAIRsharing.hzdzq8) | [report](http://edamontology.org/data_2048) |
+---
 
 
-## Table of Data Standards
+## Conclusion
 
-| Data Formats  | Terminologies | Models  |
-| :------------- | :------------- | :------------- |
-| [JSON-LD](http://edamontology.org/format_3749)  | [Bioschemas](https://fairsharing.org/FAIRsharing.20sbr9) | [RDF](http://edamontology.org/data_2353)  |
-| [HTML](http://edamontology.org/format_2331) | | |
-___
 
-## Authors:
+### What to read next?
 
-| Name          | Affiliation                                                  | orcid                                                        | CrediT role              |
-| :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------- |
-| Alasdair Gray | Bioschemas Community Lead / Heriot-Watt Unviersity / ELIXIR-UK | [0000-0002-5711-4872](https://orcid.org/0000-0002-5711-4872) | Writing - Original Draft |
-| Leyla Garcia | Bioschemas Community / ZB MED Information Centre for life sciences, Knowledge Management Group | [0000-0003-3986-0510](https://orcid.org/0000-0003-3986-0510) | External review |
+> - {ref}`fcb-find-bs-catalog`
+> - {ref}`fcb-find-bs-dataset`
+>
+> ````{panels}
+> :column: col-4
+> :card: border-2
+> :header: bg-primary pa_dark
+> :body: grey
+> ```{image} ../../../../images/logos/RDMkit_logo.svg
+> :height: 40px
+> :name: rdmkit_logo
+> ```
+> ^^^
+> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> ````
 
-___
 
-## Footnotes
 
+
+
+## References
+````{dropdown} **References**
 <a name="draft-profiles">1</a>: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile.  
 <a name="bioschemas-validator">2</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.
+````
 
-___
 
-## License:
+## Authors
 
-This page is released under the Creative Commons 4.0 BY license.
+````{authors_fairplus}
+Alasdair: Writing - Original Draft
+Leyla: Writing - Review & Editing
+Philippe: Writing - Review & Editing
+````
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" height="20"/></a>
+
+## License
+
+````{license_fairplus}
+CC-BY-4.0
+````
 
