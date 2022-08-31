@@ -1,7 +1,6 @@
 (fcb-interop-oxo)=
 # Ontology mapping with Ontology Xref Service (OxO)
 
-+++
 <br/>
 
 
@@ -13,6 +12,8 @@
 :reading_time_minutes: 30
 :intended_audience: ontologist, terminology_manager, data_scientist, data_curator, data_manager 
 :has_executable_code: nope
+:maturity_level: 1
+:maturity_indicator: 1
 :recipe_name: Ontology mapping with Ontology Xref Service (OxO)
 ```` 
 
@@ -20,55 +21,31 @@
 
 ## Main Objectives
 
-Different ontology terms can describe the same concept, which makes it difficult for data integration. `Ontology mapping`, or ontology alignment, is the process of determining correspondences between equivalent concepts in alternative ontologies and distinct vocabularies. 
+Different ontology terms can describe the same concept, which makes it difficult for data integration.
+`Ontology mapping`, or ontology alignment, is the process of determining correspondences between equivalent
+concepts in alternative ontologies and distinct vocabularies. 
 
-OxO maps terms in different ontologies, vocabularies and coding standards using evidence collected mainly from the Ontology Lookup Service (OLS), Unified Medical Language System (UMLS), but also from other sources. 
+OxO maps terms in different ontologies, vocabularies and coding standards using evidence collected mainly 
+from the Ontology Lookup Service (OLS), Unified Medical Language System (UMLS), but also from other sources. 
 
-This recipe shows how to use the [EMBL-EBI Ontology Xref Service (OxO)](https://www.ebi.ac.uk/spot/oxo/) service to map ontology terms between source and target vocabularies.
+This recipe shows how to use the [EMBL-EBI Ontology Xref Service (OxO)](https://www.ebi.ac.uk/spot/oxo/) service
+to map ontology terms between source and target vocabularies {footcite}`oxo` .
 
 ## Graphical Overview
 
-```mermaid
-graph TB
-    A[Identify source ontology term ID]
-    B[Select target ontology]
-    C[Perform mapping]
-    D[Review mapping results]
-    
-    B-->A
-    A-->C
-    C-->D
-    
-    E((OLS))
-    F((ZOOMA))
-    G((OxO))
-    
-    A-.-E
-    A-.-F
-    B-.-E
-    D-.-E
-    C-.-G
-    
-    style A stroke:#757575,stroke-width:3px
-    style B stroke:#757575,stroke-width:3px
-    style C stroke:#757575,stroke-width:3px
-    style D stroke:#757575,stroke-width:3px
 
-    
-    style E fill:#708c98 ,stroke-width:0px
-    style F fill:#708c98 ,stroke-width:0px
-    style G fill:#708c98 ,stroke-width:0px
-    
+````{dropdown} 
+:open:
+```{figure} ontology-align-oxo.mmd.png
+---
+height: 550px
+name: Aligning Ontologies
+alt: An overview of the ontology alignment process
+---
+An overview of the ontology alignment process
 ```
+````
 
-```{figure} ./oxo.png
----
-width: 500px
-name: The process of using EMBL-EBI OxO, an Ontology Mapping Service
-alt: The process of using EMBL-EBI OxO, an Ontology Mapping Service
----
-The process of using EMBL-EBI OxO, an Ontology Mapping Service.
-```
 
 ## Requirements
 * recipe dependency:
@@ -79,12 +56,6 @@ The process of using EMBL-EBI OxO, an Ontology Mapping Service.
    * Familiar with ontology and other vocabularies
 * technical requirements:
     * Experience with API or Bash scripts allows users to try the automated solutions.
-
-## Capability & Maturity Table
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable,automatable |
 
 
 
@@ -119,12 +90,10 @@ Obviously, a target vocabulary needs to be selected before mapping. A variety of
 
 OxO allows users to explore the mapping status between the target vocabulary and other vocabularies. Figure 1 shows how terms in MONDO are linked to terms in other ontologies. MONDO has over 16,000 mappings to terms in UMLS. It is also mapped to terms in DOID, Ophanet, OMIM, MeSH, etc.
 
-<!-- ![](https://i.imgur.com/bi5WoIf.png)
 
-<div align="center">Figure1: Ontology mapping overview</div>
- -->
-
-```{figure} https://i.imgur.com/bi5WoIf.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/bi5WoIf.png
 ---
 width: 600px
 name: OxO summary result overview
@@ -132,7 +101,7 @@ alt: OxO summary result overview
 ---
 OxO summary result overview.
 ```
-
+````
 
 ### Step 2: Provide the source vocabulary term ID
 
@@ -155,10 +124,9 @@ In this example, we set the `mapping distance` to 1, which uses high confidence 
 Having greater mapping distance returns more mappings but decreases the mapping confidence. 
 
 
-<!-- ![](https://i.imgur.com/1EepmN9.png)
-<div align="center">Figure 2: Ontology mapping with OxO user inputs.</div> -->
-
-```{figure} https://i.imgur.com/bi5WoIf.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/1EepmN9.png
 ---
 width: 600px
 name: OxO mapping with direct user inputs.
@@ -166,15 +134,14 @@ alt: OxO mapping with direct user inputs
 ---
 OxO mapping with direct user inputs
 ```
-
+````
 
 Figure 3 shows the corresponding mapping results. Both terms have been mapped to 'MONDO:0005148'. The results can be downloaded as flat-table(tsv) files.
 
 
-<!-- ![](https://i.imgur.com/l1z8OgL.png)
-<div align="center">Figure 3: Mapping results</div> -->
-
-```{figure} https://i.imgur.com/bi5WoIf.png
+````{dropdown} 
+:open:
+```{figure} ../../../images/l1z8OgL.png
 ---
 width: 600px
 name: OxO mapping results tabular view
@@ -182,23 +149,23 @@ alt: OxO mapping results tabular view
 ---
 OxO mapping results tabular view.
 ```
+````
 
 ### Step 4: Review mapping results
 
 To ensure the quality of the mapping, users are recommended to review the mapping results, especially when the mapping distance increases. OxO allows users to explore vocabulary term relationships (see figure 4) by providing a network view of all linked terms. Users can also find more information about each term in the [Ontology lookup service](https://www.ebi.ac.uk/ols/index).
 
-<!-- ![](https://i.imgur.com/937iuPV.jpg)
-<div align="center">Figure 4: MONDO term overview</div> -->
-
-```{figure} https://i.imgur.com/937iuPV.jpg
+````{dropdown} 
+:open:
+```{figure} ../../../images/937iuPV.jpg
 ---
 width: 600px
-name: OxO mapping results review: MONDO example
-alt: OxO mapping results review: MONDO example
+name: OxO mapping results review - MONDO example
+alt: OxO mapping results review - MONDO example
 ---
-OxO mapping results review: MONDO example.
+OxO mapping results review - MONDO example.
 ```
-
+````
 
 ## Using OxO service programmatically
 
@@ -274,22 +241,30 @@ This recipe presented OxO, EMBL-EBI tool for performing ontology mapping as an e
 In the context of a FAIRification workflow, a tool such as OxO comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
 
 > ### What should I read next?
-> * [How to build a data dictionary?](fcb-interop-datadict)
-> * [How to build a semantic model?](fcb-interop-semmod)
+> * [How to build a data dictionary?](fcb-interop-datadictionary)
+> * [How to build an ontology using robot?](fcb-interop-ontorobot)
+
+
+
+## References
+````{dropdown} **References**
+```{footbibliography}
+```
+````
 
 
 ## Authors
 
-| Name | Affiliation  | orcid | CrediT role  |
-| :------------- | :------------- | :------------- |:------------- |
-| Fuqi Xu|[EMBL-EBI](www.ebi.ac.uk)| [0000-0002-5923-3859](https://orcid.org/orcid.org/0000-0002-5923-3859) | Writing - Original Draft |
-| Philippe Rocca-Serra |  University of Oxford, Data Readiness Group| [0000-0001-9853-5668](https://orcid.org/orcid.org/0000-0001-9853-5668) | Review |
-
-___
+````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Karsten: Writing - Original Draft
+Peter: Writing - Original Draft
+Philippe: Writing - Review & Editing
+````
 
 
 ## License
 
-<a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" height="20"/></a>
-
-
+````{license_fairplus}
+CC-BY-4.0
+````
