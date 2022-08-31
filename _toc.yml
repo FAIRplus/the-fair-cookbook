@@ -151,6 +151,8 @@
       sections:
           - file: content/recipes/infrastructure/id-resolution
             title: Identifier resolution services #FCB046
+          - file: content/recipes/infrastructure/gupri
+            title: Creating resolvable identifiers
           - file: content/recipes/infrastructure/data-catalog
             title: Building a catalogue of datasets #FCB047
           - file: content/recipes/infrastructure/data-catalog-deployment
