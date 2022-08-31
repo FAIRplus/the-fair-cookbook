@@ -263,7 +263,8 @@
           title: IMI EHDEN-OHDSI #FCB054
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
           title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067
-
+        - file: content/recipes/applied-examples/approach-cdisc
+          title: Mapping datasets to CDISC-SDTM
 
 - part: Tools
   chapters:
