@@ -157,7 +157,7 @@ To ensure the quality of the mapping, users are recommended to review the mappin
 
 ````{dropdown} 
 :open:
-```{figure} ../../../images/937iuPV.jpg
+```{figure} ../../../images/937iuPV.png
 ---
 width: 600px
 name: OxO mapping results review - MONDO example
