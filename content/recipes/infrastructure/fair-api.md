@@ -1,8 +1,8 @@
 # Developing FAIR API for the Web
 
 ````{panels_fairplus}
-:identifier_text: FCB0XX
-:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
+:identifier_text: FCB073
+:identifier_link: 'https://w3id.org/faircookbook/FCB073'
 :difficulty_level: 3
 :recipe_type: technical_guidance
 :reading_time_minutes: 30
@@ -14,6 +14,17 @@
 ```` 
 
 
+
+---
+
+````{note} 
+
+```{image} ../../../images/logos/CFDE-logo.png 
+:width: 100px
+:align: right
+```
+This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
+
 **Authors**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
 **Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
@@ -22,7 +33,8 @@
 
 **License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
----
+
+````
 
 ## Background
 
@@ -173,7 +185,7 @@ The result will be a webview that opens to the side with the Swagger Editor.
 :open:
 ```{figure} ../../../images/ss5.png
 ---
-width: 800px
+height: 800px
 name: Swagger Editor
 alt: Swagger Editor
 ---
@@ -609,10 +621,15 @@ programming languages and other standardized systems.
 
 ### What to read next?
 
+This content type focus on using OpenAPI.
 
-> [Grlc](http://grlc.io/)
-> [GraphQL]|(https://graphql.org/) 
-> [ISA-graphql](https://github.com/ISA-tools/isa-api/tree/develop/isatools/graphQL)
+> [Grlc](http://grlc.io/): "converting your SPARQL queries into RESTful APIs"
+>
+> [GraphQL](https://graphql.org/):  "a Query Language for your API"
+> 
+> [OpenAPI-to-GraphQL](https://github.com/IBM/openapi-to-graphql) "From OpenAPI-to-GraphQL "
+> 
+> [ISA-graphql](https://github.com/ISA-tools/isa-api/tree/develop/isatools/graphQL) "an example of a GraphQL querying mechanism built to interrogate ISA metadata".
 
 
 
@@ -620,7 +637,7 @@ programming languages and other standardized systems.
 
 ````{dropdown} **Reference**
 <!-- ```{footbibliography}
-``` -->
+``` -->git stat
 ````
 
 

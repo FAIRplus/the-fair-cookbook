@@ -1,17 +1,6 @@
 (fcb-assess-fair-fairshake)=
 # FAIRshake tool
 
-A tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.
-
-````{note} 
-
-```{image} ./images/CFDE-logo.png 
-:width: 100px
-:align: right
-```
-This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
-````
-
 <br/>
 <br/>
 
@@ -29,6 +18,17 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 ```` 
 
 
+````{note} 
+
+```{image} ./images/CFDE-logo.png 
+:width: 100px
+:align: right
+```
+This is a tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.
+
+This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
+````
+
 ## Background
 
 Adhering to [FAIRness](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) is somewhat abstract. While all of the components of becoming FAIR can be addressed at some level, it remains difficult to provide a concrete answer about whether something is indeed FAIR or not. In general, improvement is only real if it can be measured. To address this limitation of the FAIR guidelines, [FAIRshake](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fairshake) was created with the basic goal of making FAIR more concrete and measurable. While FAIRshake provides a catalog of community-contributed ways to characterize FAIRness, it is still up to a given project to decide which of these criteria they will adopt and/or create {footcite}`Clarke2019`.
@@ -44,6 +44,7 @@ FAIRshake provides:
 
 
 ## Motivation
+
 
 By selecting and adhering to a rubric or set of metrics shared by other projects, a resource can independently assert metric conformance thus improving interoperability between resources that share those metrics. Each metric defines a concrete ideal criterion that is desired and satisfaction of that metric can be represented as a percentage or a number between 0 and 1. Some metrics may be categorical, in which case their contribution can be defined as discrete scores from 0 (least desirable) to 1 (most desirable). Given these normalized bounds, we can always compute a single scalar within the same range by finding the mean value of scores.
 
