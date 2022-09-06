@@ -103,6 +103,8 @@
                 title: Competency questions for the Ontology ROBOT use case
               - file: content/recipes/interoperability/ontology-robot-recipe/MSIO-robot-build-process.ipynb
                 title: Application ontology for metabolomics  #FCB024
+          - file: content/recipes/interoperability/ontology-alignment-oxo
+            title: Ontology mapping with Ontology Xref Service (OxO)
           - file: content/recipes/interoperability/creating-data-dictionary 
             title: Creating a data/variable dictionary #FCB025
           - file: content/recipes/interoperability/creating-minimal-metadata-profiles
@@ -265,7 +267,8 @@
           title: IMI EHDEN-OHDSI #FCB054
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
           title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067
-
+        - file: content/recipes/applied-examples/approach-cdisc
+          title: Mapping datasets to CDISC-SDTM
 
 - part: Tools
   chapters:
