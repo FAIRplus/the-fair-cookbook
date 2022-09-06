@@ -22,6 +22,8 @@
       title: Selecting projects for FAIRification
     - file: content/recipes/introduction/fair-cro #FCB056
       title: Practical Considerations for a CRO to do FAIR
+    - file: content/recipes/introduction/dpia #FCB074
+      title: Data Protection Impact Assessment and Data Privacy
     - file: content/recipes/introduction/glossary-fair-terms
       title: Glossary
  
@@ -141,8 +143,6 @@
         - file: content/recipes/reusability/ATI_licensing_data
           title: Data licenses #FCB034
         # - file: content/recipes/reusability/license-selection
-        - file: content/recipes/dpia
-          title: Data Protection Impact Assessment and Data Privacy
         - file: content/recipes/reusability/expressing-data-use 
           title: Declaring data's permitted uses #FCB035
         - file: content/recipes/reusability/provenance

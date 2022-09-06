@@ -8,8 +8,8 @@
 ---
 
 ````{panels_fairplus}
-:identifier_text: FCB0xx
-:identifier_link: 'https://w3id.org/faircookbook/FCB0xx'
+:identifier_text: FCB074
+:identifier_link: 'https://w3id.org/faircookbook/FCB074'
 :difficulty_level: 2
 :recipe_type: technical_guidance
 :reading_time_minutes: 15
@@ -44,7 +44,7 @@ use this section to provide a decision tree for the overall process described in
 For more information about the syntax used to generate the diagram, please refer to the [following documentation](https://mermaid-js.github.io/mermaid/#/flowchart)
 ```
 
-```{figure} ./reusability/images/dpia-process-overview.png
+```{figure} ../../../images/dpia-process-overview.png
 ---
 width: 800px
 name: DPIA_overview-TODO
@@ -110,7 +110,7 @@ how to code such information in machine-readable form thanks to the 'Data Privac
 
 
 
-```{figure} ./reusability/images/dpv_in_protege.png
+```{figure} ../../../images/dpv_in_protege.png
 ---
 width: 800px
 name: DPIA_RDF
@@ -356,7 +356,7 @@ For more information, see the dedicated github repository: https://github.com/co
 {footcite}`pandit_harshvardhan_j_2022_6783955`
 ```
 
-```{figure} ./reusability/images/riskonto-protege-ontograf.png
+```{figure} ../../../images/riskonto-protege-ontograf.png
 ---
 width: 900px
 name: riskonto viewed with Ontograf in Protégé 5.5
@@ -429,7 +429,7 @@ sensitive information. Privacy preserving use of data is of paramount importance
 
 ````{dropdown}
 :open:
-```{figure} ./reusability/images/data-use-agreement-main.png
+```{figure} ../../../images/data-use-agreement-main.png
 ---
 width: 850px
 name: data-use-agreement
@@ -496,7 +496,7 @@ It is the responsibility of the implementer to also ensure that the legal inform
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../images/logos/RDMkit_logo.svg
+> ```{image} ../../../images/logos/RDMkit_logo.svg
 > :height: 40px
 > :name: rdmkit_logo
 > ```
@@ -504,7 +504,7 @@ It is the responsibility of the implementer to also ensure that the legal inform
 > [More about `Data Protection` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_protection)
 > ---
 > :header: bg-primary pa_dark
-> ```{image} ../../images/logos/pistoia_logo.png
+> ```{image} ../../../images/logos/pistoia_logo.png
 > :height: 40px
 > :align: center
 > :name: FAIRtoolkit_logo
@@ -514,7 +514,7 @@ It is the responsibility of the implementer to also ensure that the legal inform
 > ````
 
 
-## References:
+## References
 
 ````{dropdown} **References**
 ```{footbibliography}
