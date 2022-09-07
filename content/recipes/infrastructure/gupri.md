@@ -2,8 +2,8 @@
 # Creating resolvable identifiers
 
 ````{panels_fairplus}
-:identifier_text: FCB0XX
-:identifier_link: 'https://w3id.org/faircookbook/FCB0XX'
+:identifier_text: FCB077
+:identifier_link: 'https://w3id.org/faircookbook/FCB077'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 30

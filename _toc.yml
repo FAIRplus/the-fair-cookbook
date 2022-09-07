@@ -10,13 +10,13 @@
       title: What are the FAIR principles?
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
-    - file: content/recipes/introduction/metadata-fair #FCB068PRE
+    - file: content/recipes/introduction/metadata-fair #FCB068
       title: Metadata and FAIR
-    - file: content/recipes/introduction/training-datasets #FCB069PRE
+    - file: content/recipes/introduction/training-datasets #FCB069
       title: Datasets to train on FAIRification
-    - file: content/recipes/introduction/FAIR-and-knowledge-graphs #FCB070PRE
+    - file: content/recipes/introduction/FAIR-and-knowledge-graphs #FCB070
       title: FAIR and Knowledge Graphs
-    - file: content/recipes/introduction/public-kg-resource-integration #FCB071PRE
+    - file: content/recipes/introduction/public-kg-resource-integration #FCB071
       title: Public Knowledge Graphs for Life Sciences
     - file: content/recipes/introduction/priorization #FCB055
       title: Selecting projects for FAIRification
@@ -52,8 +52,8 @@
         title: Minting identifiers with Minid #FCB008
       - file: content/recipes/findability/zenodo-deposition
         title: Depositing in Zenodo generic repository #FCB009
-      - file: content/recipes/findability/registeringDatasets #FCB060PRE
-        title: Registering Datasets in Wikidata
+      - file: content/recipes/findability/registeringDatasets
+        title: Registering Datasets in Wikidata #FCB060
       - file: content/recipes/findability/checksum-create
         title: Describe data by checksums #FCB052
       - file: content/recipes/findability/checksum-validate
@@ -152,7 +152,7 @@
           - file: content/recipes/infrastructure/id-resolution
             title: Identifier resolution services #FCB046
           - file: content/recipes/infrastructure/gupri
-            title: Creating resolvable identifiers
+            title: Creating resolvable identifiers #FCB077PRE
           - file: content/recipes/infrastructure/data-catalog
             title: Building a catalogue of datasets #FCB047
           - file: content/recipes/infrastructure/data-catalog-deployment
@@ -167,7 +167,7 @@
               - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
                 title: Deploying the EBI OLS #FCB005
           - file: content/recipes/infrastructure/openrefine-nvt
-            title: Using OpenRefine and Karma for FAIRification
+            title: Using OpenRefine and Karma for FAIRification #FCB075PRE
 
 
     - file: content/recipes/assessing-fairness
@@ -198,18 +198,18 @@
     - file: content/recipes/maturity
       title: A Model To Gauge Dataset Maturity
       sections:
-        - file: content/recipes/reusability/miappe #FCB061PRE
+        - file: content/recipes/reusability/miappe #FCB061
           title: Improving dataset maturity - the MIAPPE use case
         - file: content/recipes/maturity/isa-maturity-progression
           title: Moving through maturity levels with ISA
           sections:
-            - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb #FCB063PRE
+            - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb #FCB063
               title: Creating a basic ISA document
-            - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb #FCB064PRE
+            - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb #FCB064
               title: Making a community compliant - ISA in JSON
-            - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb #FCB065PRE
+            - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb #FCB065
               title: Moving to a semantically typed version - ISA in RDF
-            - file: content/recipes/maturity/isa-as-RO.ipynb #FCB066PRE
+            - file: content/recipes/maturity/isa-as-RO.ipynb #FCB066
               title: Packaging ISA as a Research Object (RO)
   #            - file: content/recipes/maturity/isa-ro-zenodo-deposition
   #              title: Programmatic deposition to Zenodo
@@ -226,25 +226,7 @@
             - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
               title: Integrating data #FCB041
         - file: content/recipes/applied-examples/fair-workflows
-          title: Making Computational Workflows FAIR #FCB062PRE
-
-#- part: FAIRification Fairs
-#  chapters:
-#    - file: content/recipes/maturity
-#      title: Moving through dataset maturity
-#      numbered: true
-#      sections:
-#    - file: content/recipes/maturity/l1
-#      title: Recipes reaching Level I
-#      sections:
-#        - file: content/recipes/infrastructure/id-resolution
-#          title: Identifier resolution services #FCB046
-#    - file: content/recipes/maturity/l2
-#      title: Recipes reaching Level II
-#    - file: content/recipes/maturity/levelthree
-#      title: Recipes reaching Level III
-#    - file: content/recipes/maturity/levelfour
-#      title: Recipes reaching Level IV
+          title: Making Computational Workflows FAIR #FCB062
 
 
 - part: FAIRified Datasets
@@ -266,7 +248,7 @@
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
           title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067
         - file: content/recipes/applied-examples/approach-cdisc
-          title: Mapping datasets to CDISC-SDTM
+          title: Mapping datasets to CDISC-SDTM #FCB078PRE
 
 - part: Tools
   chapters:
