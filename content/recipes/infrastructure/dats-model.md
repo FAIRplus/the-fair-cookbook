@@ -23,7 +23,9 @@
 
 The main purpose of this recipe is:
 
-> Provid a summary statement about the purpose of the recipe.
+>* Provide a general introduction to the Data Tag Suite model for representing project, study and dataset metadata
+>* Compare the model to other relevant data catalogue models
+>* Highlight challenges in implementing the model in a data catalogue
 
 ---
 
@@ -34,17 +36,6 @@ The main purpose of this recipe is:
 
 
 ---
-
-## FAIRification Objectives, Inputs and Outputs
-
-<!--TO DO-->
-
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChi](https://fairsharing.org/FAIRsharing.ddk9t9) |
-| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
-| [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [annotated text](http://edamontology.org/data_3779)  |
 
 
 ## Table of Data Standards
@@ -60,23 +51,30 @@ The main purpose of this recipe is:
 
 ## Model overview
 
-> intro paragraph about the model
+Data Tag Suits (DATS) is a data description model designed and produced to describe datasets being ingested in DataMed, a prototype for data discovery developed as part of the bioCADDIE project. DATS was co-developed by the Oxford e-Research Centre and the NIH Data Common Big Data to Knowledge (BD2K) initiative, where it was used to uniformly represent metadata across a number of projects, including the Genotype-Tissue Expression project (GTEx) and Trans-Omics for Precision Medicine (TOPMed).
+
+DATS is semantically compatible with the Data Catalog Vocabulary (DCAT), a Resource Description Framework (RDF) vocabulary designed to facilitate interoperability among data catalogues published on the web, as well as schema.org (SDO), which is a community-driven effort with a similar interoperability goal to DCAT but a more general-purpose scope.
+
+The original DATS model centered around concept of a "Dataset", an entity that covers technical aspects such as licensing, data types and distributions. The Dataset is produced by or is the input or output of a “Study”, which contains elements that are specific to life, environmental and biomedical science domains, and which models experimental processes, cohorts and protocol information. To meet the requirements of project-generated datasets, the DATS model was extended to include the third core concept of “Project”, covering general information such as title, publications, funding and contributors.
+
 
 ### Core objects
 
-> paragraph introducing the core object triangle
+The DATS model centres around three core objects, "Project", "Study" and "Dataset", each of which contains a set of sub-objects, which in turn can be nested down to the lowest unitary object (which contains no further objects), which is the “Annotation”. Project, Study and Dataset relate to each other in a triangular fashion as shown in figure 1.
+
+At first glance, the three core objects make the DATS model reminiscent of the ISA (Investigation, Study, Assay) model for describing experimental processes. There are however several key differences between the two. For one, ISA has a waterfall structure whereby any instance of the model has to contain a Study object between an Investigation and an Assay. In DATS on the other hand, it is possible for a Dataset to be directly dependent on a Project, without any Study information. This is relevant for datasets such as knowledge graphs or synthetic datasets, for which no study metadata may be available. Additionally, DATS focuses on the technical details, availability and use restrictions of datasets whereas the purpose of the ISA model is to describe experimental procedures in great detail. While the DATS Study covers some of this information, it is much less comprehensive or central to the captured data than for ISA.
 
 #### Project
 
-> project object
+The Project object was not part of the original version of DATS. It was added in the second version as a means of linking different studies and datasets under one common parent as well as capture information such as project contacts or consortium information, publications not linked to one specific study, funding sources, project websites and start/end dates.
 
 #### Study
 
-> study object
+The Study object
 
 #### Dataset
 
-> dataset object
+The Dataset object was the central concept of the initial DATS model but became an equal 
 
 
 ### Sub-objects
@@ -84,11 +82,17 @@ The main purpose of this recipe is:
 
 ### Assumptions
 
+* study/dataset can't exist without a project
+
 
 ### Ontology annotations
 
 
 ### Encoding in JSON-LD
+
+## DATS in context
+
+## Implementing DATS in a data catalogue
 
 
 ---
