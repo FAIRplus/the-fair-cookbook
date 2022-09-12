@@ -38,46 +38,19 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 
 ---
 
-````{panels}
-:container: container-lg pb-3
-:column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-1
-:card: rounded
+````{panels_fairplus}
+:identifier_text: FCBxxx
+:identifier_link: 'https://w3id.org/faircookbook/FCBxxx'
+:difficulty_level: <select a level, from 1 to 5 >
+:recipe_type: hands-on, background_information, guidance, technical_guidance, survey
+:reading_time_minutes: e.g. 15
+:intended_audience: chemoinformatician, data_curator, data_manager, data_scientist  
+:maturity_level: <select a level, from 1 to 5 >
+:maturity_indicator: <select a level, from 1 to 55, refering to the FAIRplus DSM guidance.
+:has_executable_code: yeah
+:recipe_name: a name that should match the recipe name used in the table of content
+```` 
 
-<i class="fa fa-qrcode fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Recipe metadata</b></h4>
- identifier: <a href="">RX.X</a> 
- version: <a href="">v1.0</a>
-
----
-<i class="fa fa-fire fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Difficulty level</b></h4>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:#7e0038;"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-<i class="fa fa-fire fa-lg" style="color:lightgrey"></i>
-
----
-<i class="fas fa-clock fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Reading Time</b></h4>
-<i class="fa fa-clock fa-lg" style="color:#7e0038;"></i> 15 minutes
-<h4><b>Recipe Type</b></h4>
-<i class="fa fa-laptop fa-lg" style="color:#7e0038;"></i> Background Information
-<h4><b>Executable Code</b></h4>
-<i class="fa fa-play-circle fa-lg" style="color:#7e0038;"></i> No
-
----
-<i class="fa fa-users fa-2x" style="color:#7e0038;"></i>
-^^^
-<h4><b>Intended Audience</b></h4>
-<p><i class="fa fa-user-md fa-lg" style="color:#7e0038;"></i> Principal Investigator</p>
-<p><i class="fa fa-database fa-lg" style="color:#7e0038;"></i> Data Manager</p>
-<p><i class="fa fa-wrench fa-lg" style="color:#7e0038;"></i> Data Scientist</p>
-<p><i class="fa fa-money fa-lg" style="color:#7e0038;"></i> Funder</p>
-````
 
 
 ---
@@ -149,32 +122,22 @@ classDiagram
 
 ---
 
-## Capability & Maturity Table
-
-This section is meant for authors to describe the specific `capability` which they aim to bring from one `maturity level` to the next.
-This is therefore to document the methods used **to enable change** at the level of information process
-The table is therefore structure to identify the capability, the **initial** maturity level it is estimated to be and the **final** maturity it has been brought to.
-
-
-| Capability  | Initial Maturity Level | Final Maturity Level  |
-| :------------- | :------------- | :------------- |
-| Interoperability | minimal | repeatable |
-
-```{admonition} Important
-:class: tip
-this section is relied upon by another component developed by FAIRplus to enhance search and presentation. It is therefore important to comply with the layout. 
-```
-
----
 
 ## FAIRification Objectives, Inputs and Outputs
 
-| Actions.Objectives.Tasks  | Input | Output  |
-| :------------- | :------------- | :------------- |
+
+```{tabbed} FAIRification Objectives, Inputs and Outputs
 | [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChi](https://fairsharing.org/FAIRsharing.ddk9t9) |
 | [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
 | [text annotation](http://edamontology.org/operation_3778)  | [Human Phenotype Ontology](https://fairsharing.org/FAIRsharing.kbtt7f)  | [annotated text](http://edamontology.org/data_3779)  |
+```
+```{tabbed} Tools
+* Skill dependency:
+   * Bash experience (for example)
+* Technical requirements:
+   * Python (for example)
+```
 
 
 ## Table of Data Standards
