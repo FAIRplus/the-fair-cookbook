@@ -93,8 +93,7 @@ it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>.
 This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
 
 
-An example endpoint in an OpenAPI Editor:  
-<!-- ![An example endpoint in an OpenAPI Editor](./fair-api-images/ss1.png) -->
+An example endpoint in an OpenAPI Editor:
 
 ````{dropdown}
 :open:
@@ -108,8 +107,7 @@ An example endpoint in an OpenAPI Editor
 ```
 ````
 
-A real response in an OpenAPI Editor:  
-<!-- ![A real response in an OpenAPI Editor](./fair-api-images/ss2.png) -->
+A real response in an OpenAPI Editor:
 
 ````{dropdown}
 :open:
@@ -142,7 +140,6 @@ Until our pull request is merged, the modified extension can be accessed [here](
 The `vsix` file can be installed with [Visual Studio Code](https://code.visualstudio.com/).
 
 It can be installed from `Ctrl+Shift+P` with the action "Install from VSIX"
-<!-- ![Install from VSIX dialog](./fair-api-images/ss3.png) -->
 
 ````{dropdown}
 :open:
@@ -162,7 +159,6 @@ And selecting the `.vsix` file you downloaded.
 Once installed, a swagger file can be edited by opening the swagger.yaml (that we will be writing throughout the rest of
 the recipe), using `Ctrl+Shift+P` again and choosing the action "Preview Swagger".
 
-<!-- ![Previewing swagger](fair-api-images/ss4.png) -->
 
 
 ````{dropdown}
@@ -179,13 +175,12 @@ Previewing swagger
 
 The result will be a webview that opens to the side with the Swagger Editor.
 
-<!-- ![Swagger Editor](./fair-api-images/ss5.png) -->
 
 ````{dropdown}
 :open:
 ```{figure} ../../../images/ss5.png
 ---
-height: 800px
+width: 1100px
 name: Swagger Editor
 alt: Swagger Editor
 ---
@@ -367,11 +362,10 @@ Parameters can be added in other places as well. Google, for instance, describes
 
 In the case of a `POST` you might use, `in: body` referring to the content you send with your request.
 
-Again, every parameters is validatable with JSONSchema. In our current example, we have used a JSONSchema pattern to constrain the type of string acceptable by the endpoint. In the case of a body, it could be an elaborate JSON object such as our response schema.
+Again, every parameter is validatable with JSONSchema. In our current example, we have used a JSONSchema pattern to constrain the type of string acceptable by the endpoint. In the case of a body, it could be an elaborate JSON object such as our response schema.
 
 Finally, we have included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
-![](./fair-api-images/ss2.png)
 
 ````{dropdown}
 :open:
