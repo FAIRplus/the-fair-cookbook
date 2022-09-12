@@ -104,7 +104,7 @@
               - file: content/recipes/interoperability/ontology-robot-recipe/MSIO-robot-build-process.ipynb
                 title: Application ontology for metabolomics  #FCB024
           - file: content/recipes/interoperability/ontology-alignment-oxo
-            title: Ontology mapping with Ontology Xref Service (OxO)
+            title: Ontology mapping with Ontology Xref Service (OxO) #FCB076PRE
           - file: content/recipes/interoperability/creating-data-dictionary 
             title: Creating a data/variable dictionary #FCB025
           - file: content/recipes/interoperability/creating-minimal-metadata-profiles
